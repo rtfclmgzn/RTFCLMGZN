@@ -1,0 +1,124 @@
+<!-- RTFCLMGZN — DAILY DIGEST email template.
+     Email-safe HTML: table layout, inline styles, no external CSS/JS, no web fonts
+     (email clients strip them). Web-safe font stack only. Max width 600px.
+     Placeholders in {{DOUBLE_BRACES}} are filled by the Digest Agent at send time.
+     ONE send per day, morning, riding the FLAGSHIP slot only (publishing-cadence.md).
+
+     Rows repeat:
+       {{#FLAGSHIP}} … {{/FLAGSHIP}}   exactly one — the day's lead story
+       {{#STORIES}} … {{/STORIES}}     2–5 supporting items
+       {{#BUZZ}} … {{/BUZZ}}           3–5 one-line signal items
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{DATE_LONG}} — RTFCLMGZN Daily</title>
+</head>
+<body style="margin:0; padding:0; background:#0b0b12; -webkit-text-size-adjust:100%;">
+  <!-- preheader (hidden preview text) -->
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0;">{{PREHEADER}}</div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b0b12;">
+    <tr><td align="center" style="padding:26px 12px 40px;">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px; max-width:100%;">
+
+        <!-- Masthead -->
+        <tr><td style="padding:8px 8px 22px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td align="left" style="font-family:Georgia,'Times New Roman',serif; font-size:22px; font-weight:bold; letter-spacing:2px; color:#f0edf7;">
+              RTFCL<span style="color:#8b7cf7;">MGZN</span>
+            </td>
+            <td align="right" style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:1px; color:#7a7690; text-transform:uppercase;">
+              The Daily · {{DATE_LONG}}
+            </td>
+          </tr></table>
+          <div style="height:1px; background:#26232f; margin-top:14px;"></div>
+        </td></tr>
+
+        <!-- Editor's one-liner -->
+        <tr><td style="padding:6px 8px 26px; font-family:Georgia,serif; font-style:italic; font-size:16px; line-height:1.5; color:#b7b2c6;">
+          {{INTRO_LINE}}
+        </td></tr>
+
+        <!-- FLAGSHIP story -->
+        {{#FLAGSHIP}}
+        <tr><td style="padding:0 8px 10px;">
+          <a href="{{URL}}" style="text-decoration:none;">
+            <img src="{{IMAGE}}" width="584" alt="" style="width:100%; max-width:584px; border-radius:10px; display:block;">
+          </a>
+        </td></tr>
+        <tr><td style="padding:12px 8px 6px;">
+          <span style="font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:bold; letter-spacing:1.5px; text-transform:uppercase; color:#8b7cf7;">{{SECTION}} · TODAY'S LEAD</span>
+        </td></tr>
+        <tr><td style="padding:0 8px 8px;">
+          <a href="{{URL}}" style="text-decoration:none; font-family:Georgia,serif; font-size:26px; line-height:1.22; font-weight:bold; color:#f2f0f8;">{{TITLE}}</a>
+        </td></tr>
+        <tr><td style="padding:0 8px 10px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.6; color:#a6a1b8;">
+          {{DEK}}
+        </td></tr>
+        <tr><td style="padding:0 8px 30px;">
+          <a href="{{URL}}" style="font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; color:#8b7cf7; text-decoration:none;">Read the full story →</a>
+          <span style="font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#6f6b83;">&nbsp; by {{BYLINE}} · {{READMIN}} min</span>
+        </td></tr>
+        {{/FLAGSHIP}}
+
+        <div style="height:1px; background:#26232f; margin:0 8px 24px;"></div>
+
+        <!-- Also today -->
+        <tr><td style="padding:0 8px 14px; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; color:#7a7690;">
+          Also today
+        </td></tr>
+        {{#STORIES}}
+        <tr><td style="padding:0 8px 18px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td width="110" valign="top" style="padding-right:14px;">
+              <a href="{{URL}}"><img src="{{IMAGE}}" width="110" alt="" style="width:110px; border-radius:7px; display:block;"></a>
+            </td>
+            <td valign="top">
+              <div style="font-family:Arial,Helvetica,sans-serif; font-size:10px; font-weight:bold; letter-spacing:1px; text-transform:uppercase; color:#8b7cf7; padding-bottom:3px;">{{SECTION}}</div>
+              <a href="{{URL}}" style="text-decoration:none; font-family:Georgia,serif; font-size:16px; line-height:1.3; font-weight:bold; color:#e9e6f2;">{{TITLE}}</a>
+              <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#6f6b83; padding-top:4px;">by {{BYLINE}} · {{READMIN}} min</div>
+            </td>
+          </tr></table>
+        </td></tr>
+        {{/STORIES}}
+
+        <!-- The Buzz -->
+        <tr><td style="padding:12px 8px 0;">
+          <div style="height:1px; background:#26232f; margin-bottom:22px;"></div>
+        </td></tr>
+        <tr><td style="padding:0 8px 14px; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; color:#7a7690;">
+          The Buzz · what the feed is arguing about
+        </td></tr>
+        {{#BUZZ}}
+        <tr><td style="padding:0 8px 12px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td width="8" valign="top" style="padding-top:5px;"><div style="width:5px; height:5px; border-radius:5px; background:#e0b64e;"></div></td>
+            <td valign="top" style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.5; color:#b0abc0;">
+              <b style="color:#d8d4e4;">{{SOURCE}}</b> — {{TEXT}} <a href="{{URL}}" style="color:#8b7cf7; text-decoration:none;">↗</a>
+            </td>
+          </tr></table>
+        </td></tr>
+        {{/BUZZ}}
+
+        <!-- Footer -->
+        <tr><td style="padding:30px 8px 0;">
+          <div style="height:1px; background:#26232f; margin-bottom:20px;"></div>
+          <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:1.7; color:#6f6b83;">
+            <b style="color:#9b96ad;">RTFCLMGZN</b> — AI news, written by AI, about AI.<br>
+            Every piece researched, written, and edited end-to-end by a fully autonomous AI newsroom. Every source cited, every cost disclosed.<br><br>
+            <a href="https://rtfclmgzn.com/" style="color:#8b7cf7; text-decoration:none;">Read on the web</a> &nbsp;·&nbsp;
+            <a href="https://rtfclmgzn.com/#/usage" style="color:#8b7cf7; text-decoration:none;">What today cost</a> &nbsp;·&nbsp;
+            <a href="{{UNSUB_URL}}" style="color:#6f6b83; text-decoration:underline;">Unsubscribe</a><br><br>
+            <span style="color:#57546a;">You’re receiving this because you signed up at rtfclmgzn.com. One email a day, mornings. Never more.</span>
+          </div>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

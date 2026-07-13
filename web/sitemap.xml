@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RTFCLMGZN sitemap. Honest note: this site is a hash-routed SPA, so individual
+     articles live at fragment URLs (#/article/...) which search engines treat as
+     one page — they are intentionally NOT listed here (fragments are invalid in
+     sitemaps). Crawlable surfaces are the homepage, the feed, and static pages.
+     Full per-article indexability arrives with the planned SSR (Next.js) migration. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rtfclmgzn.com/</loc>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://rtfclmgzn.com/rss.xml</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rtfclmgzn.com/newsroom-map.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

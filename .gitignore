@@ -1,0 +1,32 @@
+# --- secrets: NEVER commit ---
+agents/social/.secrets.json
+**/.secrets.json
+*.key
+.env
+.env.*
+
+# --- local backups & scratch (not part of the site) ---
+_img-png-backup/
+*.tmp
+*.bak
+
+# --- OS noise ---
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# macOS / Windows
+ehthumbs.db

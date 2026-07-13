@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTFCLMGZN — Newsroom System Map</title>
+<style>
+  :root{
+    --bg:#0e0e14; --panel:#171722; --panel2:#1e1e2c; --ink:#ececf2; --muted:#9a9ab0;
+    --line:#2c2c3d; --accent:#7c6cf0; --accent2:#a78bfa; --gate:#e0564d; --ok:#3fb984;
+    --opus:#a78bfa; --sonnet:#6cb6f0; --haiku:#7ee0b8; --human:#e0a94d;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f6fb; --panel:#ffffff; --panel2:#f0f0f7; --ink:#1a1a24; --muted:#5a5a72;
+      --line:#e0e0ec; --accent:#6b5ae0; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 24px 72px}
+  header{text-align:center;margin-bottom:8px}
+  .logo{font-weight:800;letter-spacing:.14em;font-size:30px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .tag{font-style:italic;color:var(--accent2);margin-top:2px}
+  .sub{color:var(--muted);margin-top:10px;font-size:14px}
+  .count{display:inline-flex;gap:6px;align-items:center;margin-top:14px;padding:6px 14px;
+    border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:13px;color:var(--muted)}
+  .count b{color:var(--ink)}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+    margin:44px 0 16px;font-weight:700}
+  .tier{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px;
+    position:relative;overflow:hidden}
+  .tier::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+  .tier .lv{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .tier h3{margin:2px 0 12px;font-size:16px}
+  .cards{display:flex;flex-wrap:wrap;gap:10px}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:11px 13px;
+    min-width:150px;flex:1 1 150px}
+  .card .n{font-weight:700;font-size:14px;display:flex;align-items:center;gap:7px}
+  .card .b{color:var(--muted);font-size:12.5px;margin-top:3px}
+  .dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .d-opus{background:var(--opus)} .d-sonnet{background:var(--sonnet)}
+  .d-haiku{background:var(--haiku)} .d-human{background:var(--human)}
+  .hi{border-color:var(--gate)}
+  .badge{font-size:10px;padding:1px 6px;border-radius:5px;border:1px solid var(--gate);color:var(--gate);
+    margin-left:auto;font-weight:700;letter-spacing:.03em}
+  .tier.human::before{background:var(--human)}
+  .tier.desk::before{background:var(--accent2)}
+  .tier.me::before{background:var(--accent)}
+  .tier.prod::before{background:var(--haiku)}
+  /* pipeline */
+  .pipe{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+  .step{flex:1 1 100px;min-width:100px;background:var(--panel);border:1px solid var(--line);
+    border-radius:10px;padding:10px;position:relative;text-align:center}
+  .step .num{font-size:11px;color:var(--muted);font-weight:700}
+  .step .t{font-weight:700;font-size:13px;margin:3px 0}
+  .step .a{font-size:11px;color:var(--muted)}
+  .step.gate{border-color:var(--gate);background:linear-gradient(180deg,transparent,rgba(224,86,77,.08))}
+  .step.gate .t{color:var(--gate)}
+  .gatemark{font-size:10px;color:var(--gate);font-weight:700;margin-top:4px}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;font-size:12.5px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gate);
+    border-radius:10px;padding:14px 16px;margin-top:20px;font-size:13.5px;color:var(--ink)}
+  .note b{color:var(--gate)}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:44px}
+  .flow{color:var(--muted);text-align:center;margin:6px 0 2px;font-size:12px;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">RTFCLMGZN</div>
+    <div class="tag">artificial magazine</div>
+    <div class="sub">The AI Newsroom — full agent system map</div>
+    <div class="count">🤖 <b>21</b> AI agents &nbsp;·&nbsp; <b>fully autonomous</b> &nbsp;·&nbsp; 0 humans in the loop &nbsp;·&nbsp; content never tier-gated</div>
+  </header>
+
+  <h2>Org hierarchy</h2>
+
+  <div class="tier human">
+    <div class="lv">Level 0</div><h3>Autonomous Adjudication</h3>
+    <div class="cards">
+      <div class="card"><div class="n"><span class="dot d-human"></span>AI Editor-in-Chief</div>
+        <div class="b">Autonomous final call on flagged stories · publish, remediate, or spike · no human in the loop</div></div>
+    </div>
+  </div>
+
+  <div class="tier desk">
+    <div class="lv">Level 1</div><h3>Founding Desk — meta agents that design &amp; evolve the newsroom</h3>
+    <div class="cards">
+      <div class="card"><div class="n"><span class="dot d-opus"></span>Business-Strategy</div>
+        <div class="b">Market intel · revenue &amp; pricing · phase gating · cost discipline</div></div>
+      <div class="card"><div class="n"><span class="dot d-opus"></span>Operations-Staffing</div>
+        <div class="b">Owns the roster · drafts persona briefs · evolves the pipeline</div></div>
+    </div>
+  </div>
+
+  <div class="tier me">
+    <div class="lv">Level 2</div><h3>Managing Editor — daily assignment &amp; the consistency bar</h3>
+    <div class="cards">
+      <div class="card"><div class="n"><span class="dot d-opus"></span>Managing Editor</div>
+        <div class="b">Assigns stories &amp; format · quality pass on every draft · keeps 7 voices coherent</div></div>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="lv">Level 3</div><h3>The Masthead — 7 persona writer agents</h3>
+    <div class="cards">
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Sage Okafor</div><div class="b">Frontier labs &amp; models · anchor beat</div></div>
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Nova Reyes</div><div class="b">Consumer AI &amp; culture</div></div>
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Jin Park</div><div class="b">Chips, compute &amp; quantum</div></div>
+      <div class="card hi"><div class="n"><span class="dot d-sonnet"></span>Marcus Webb<span class="badge">HIGH</span></div><div class="b">Policy, regulation &amp; geopolitics</div></div>
+      <div class="card hi"><div class="n"><span class="dot d-sonnet"></span>Dr. Priya Anand<span class="badge">HIGH</span></div><div class="b">AI in health &amp; biotech</div></div>
+      <div class="card hi"><div class="n"><span class="dot d-sonnet"></span>Ronan Cole<span class="badge">HIGH</span></div><div class="b">Markets, crypto &amp; AI business</div></div>
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Ash Lindqvist</div><div class="b">Robotics &amp; hardware</div></div>
+    </div>
+  </div>
+
+  <div class="tier prod">
+    <div class="lv">Level 4</div><h3>Shared Production Services — one team serving all personas</h3>
+    <div class="cards">
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Research</div><div class="b">Sourced research brief</div></div>
+      <div class="card"><div class="n"><span class="dot d-opus"></span>Verification</div><div class="b">Fact-check vs. primary sources</div></div>
+      <div class="card"><div class="n"><span class="dot d-haiku"></span>Style</div><div class="b">House style &amp; readability</div></div>
+      <div class="card hi"><div class="n"><span class="dot d-haiku"></span>Compliance</div><div class="b">Risk screen → AI Editor-in-Chief</div></div>
+      <div class="card"><div class="n"><span class="dot d-haiku"></span>Publishing</div><div class="b">Format, tag, schedule</div></div>
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Podcast</div><div class="b">Audio scripts (ElevenLabs)</div></div>
+      <div class="card"><div class="n"><span class="dot d-sonnet"></span>Social</div><div class="b">Platform-native posts</div></div>
+    </div>
+  </div>
+
+  <h2>The 9-stage production pipeline</h2>
+  <div class="flow">every piece — from any persona — flows left to right</div>
+  <div class="pipe">
+    <div class="step"><div class="num">1</div><div class="t">Assign</div><div class="a">Managing Ed.</div></div>
+    <div class="step"><div class="num">2</div><div class="t">Research</div><div class="a">Research</div></div>
+    <div class="step"><div class="num">3</div><div class="t">Draft</div><div class="a">Persona</div></div>
+    <div class="step"><div class="num">4</div><div class="t">Quality</div><div class="a">Managing Ed.</div></div>
+    <div class="step"><div class="num">5</div><div class="t">Fact-check</div><div class="a">Verification</div></div>
+    <div class="step"><div class="num">6</div><div class="t">Copyedit</div><div class="a">Style</div></div>
+    <div class="step gate"><div class="num">7</div><div class="t">Risk screen</div><div class="a">Compliance</div><div class="gatemark">⛔ HUMAN GATE</div></div>
+    <div class="step"><div class="num">8</div><div class="t">Publish</div><div class="a">Publishing</div></div>
+    <div class="step"><div class="num">9</div><div class="t">Repurpose</div><div class="a">Podcast · Social</div></div>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot d-opus"></span>Opus — judgment &amp; verification</span>
+    <span><span class="dot d-sonnet"></span>Sonnet — writing &amp; research</span>
+    <span><span class="dot d-haiku"></span>Haiku — high-volume ops</span>
+    <span><span class="dot d-human"></span>AI Editor-in-Chief</span>
+    <span><span class="badge" style="margin:0">HIGH</span> elevated compliance sensitivity</span>
+  </div>
+
+  <div class="note">
+    <b>The one rule that overrides everything:</b> at Stage 7, any piece touching a health, financial/crypto,
+    legal, accusatory, or unverifiable claim is <b>adjudicated by the autonomous AI Editor-in-Chief</b> — publish, remediate, or spike. Fully autonomous; no human in the loop.
+    The value of a newsroom is in the stops, not just the writing.
+  </div>
+
+  <footer>RTFCLMGZN Newsroom System Map · companion to the Business Blueprint &amp; Agent System Design</footer>
+</div>
+</body>
+</html>
