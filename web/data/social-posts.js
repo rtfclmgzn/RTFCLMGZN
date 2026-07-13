@@ -8,6 +8,218 @@
 // image.status: "none" | "ready" (prompt only) | "generated"
 window.RTFC_SOCIAL_POSTS = [
   {
+    "article_id": "live-014",
+    "ts": "2026-07-13T08:10:00Z",
+    "export": {
+      "article_id": "live-014",
+      "url": "/#/article/tsmc-record-q2-revenue-ai-demand",
+      "headline": "The AI boom just printed a receipt: TSMC did $39.6 billion in one quarter",
+      "hook": "TSMC's record quarter is the strongest physical-demand signal in AI — and Thursday's margins will show what that demand costs.",
+      "key_facts": [
+        "Q2 revenue reached T$1.27T ($39.62B), up 36% year over year",
+        "June revenue rose 67.9% year over year to T$442.68B",
+        "Full Q2 earnings and guidance arrive Thursday"
+      ],
+      "tone": "technical, numbers-first",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/live-014.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "copy": "The AI boom just printed a physical receipt.\n\nTSMC Q2 revenue: T$1.27T ($39.62B), up 36% YoY and a record. June alone rose 67.9%.\n\nDemand is no longer the question. Thursday's margin, capex and capacity guidance will tell us what supplying it costs. →",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors",
+          "#TSMC"
+        ],
+        "image": {
+          "prompt": "Dark editorial semiconductor foundry image with glowing wafer geometry and industrial precision, violet and amber accents, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The AI boom just printed a receipt.\n\nTSMC reported a record T$1.27 trillion ($39.62B) in second-quarter revenue, up 36% from a year ago. June sales rose 67.9%.\n\nThat proves physical demand. Thursday's earnings call will answer the harder question: can capacity keep expanding without crushing margins? Full analysis at RTFCLMGZN.",
+        "hashtags": [
+          "#AI",
+          "#TSMC",
+          "#Semiconductors",
+          "#Chips",
+          "#DataCenters",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": "Square editorial semiconductor foundry image, luminous wafer rings, deep ink background, violet and amber accents, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "TSMC just reported the clearest physical signal of AI demand this quarter: record Q2 revenue of T$1.27 trillion ($39.62B), up 36% year over year.\n\nThe next test arrives Thursday. Gross margin, capex and advanced-capacity guidance will show whether the supply chain is turning demand into durable economics — or simply spending faster to keep up.\n\nRead the full Compute desk analysis:",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors"
+        ],
+        "image": {
+          "prompt": "Wide editorial semiconductor factory scene with wafer geometry, dark violet and amber palette, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "live-015",
+    "ts": "2026-07-13T07:47:00Z",
+    "export": {
+      "article_id": "live-015",
+      "url": "/#/article/ai-corporate-labs-bell-labs-bargain",
+      "headline": "AI is rebuilding Bell Labs inside five companies. The price is scientific power.",
+      "hook": "AI may be reviving the corporate research lab, but the same companies funding the science increasingly control access to it.",
+      "key_facts": [
+        "Industry involvement in notable AI models rose from roughly 25% historically to 80% today",
+        "Business share of U.S. basic research recovered from 14% in 2004 to 32%",
+        "Only 40% of doctorate recipients now plan to enter academia, down from 56% in 2004"
+      ],
+      "tone": "essayistic, sourced, argumentative",
+      "persona": "idris-vale",
+      "section": "Opinion",
+      "primary_image": "assets/img/live-015.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "copy": "AI is rebuilding Bell Labs inside five companies.\n\nIndustry involvement in notable models: ~25% historically → 80% today. Business now performs 32% of U.S. basic research.\n\nThe renaissance is real. So is the concentration of who gets to choose the questions. →",
+        "hashtags": [
+          "#AI",
+          "#Research"
+        ],
+        "image": {
+          "prompt": "Editorial image of a classic research library merging with modern circuit diagrams, deep violet palette, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The corporate lab is back.\n\nFrontier AI increasingly requires the compute, data and engineering budgets of a platform company. That can produce breakthroughs universities cannot afford — while concentrating control over what gets studied, published and deployed.\n\nOur new Opinion essay asks what society gets in return for that bargain.",
+        "hashtags": [
+          "#AI",
+          "#Science",
+          "#Research",
+          "#OpenScience",
+          "#TechPolicy"
+        ],
+        "image": {
+          "prompt": "Square editorial research library fused with luminous circuitry, archival paper and violet light, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Industry now participates in roughly 80% of notable AI models, compared with about a quarter historically. The corporate research lab is returning because frontier experiments increasingly require industrial-scale compute.\n\nThat may accelerate invention. It also concentrates the power to decide what gets researched, disclosed and deployed. Our Opinion desk examines the bargain — and what a healthier settlement could look like:",
+        "hashtags": [
+          "#AI",
+          "#Research"
+        ],
+        "image": {
+          "prompt": "Wide editorial laboratory-library image with blueprint circuitry, deep ink and violet palette, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "live-016",
+    "ts": "2026-07-13T07:23:00Z",
+    "export": {
+      "article_id": "live-016",
+      "url": "/#/article/ai-agent-identity-trust-standards-itu",
+      "headline": "Before an AI agent can spend your money, it needs a passport",
+      "hook": "The agent economy needs identity, permission, logs and revocation before it needs more personality.",
+      "key_facts": [
+        "ITU launched a Focus Group on Agentic AI",
+        "The work covers identity, trust and meaningful human control",
+        "Financial transactions and critical infrastructure are explicit focus areas"
+      ],
+      "tone": "formal, practical, policy-aware",
+      "persona": "marcus-webb",
+      "section": "Policy",
+      "primary_image": "assets/img/live-016.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "copy": "Before an AI agent can spend your money, it needs a passport.\n\nThe ITU just opened a standards effort around agent identity, trust and human control.\n\nThe production stack is boring but decisive: principal, permissions, receipts, revocation. →",
+        "hashtags": [
+          "#AIAgents",
+          "#AIgovernance"
+        ],
+        "image": {
+          "prompt": "Editorial agent identity card over a network blueprint, dark ink and violet glow, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The agent economy will not run on personality. It will run on identity, permission, receipts and revocation.\n\nThe ITU has launched a Focus Group on Agentic AI to develop common foundations for trust and meaningful human control — especially in finance and critical infrastructure.\n\nNew Policy brief at RTFCLMGZN.",
+        "hashtags": [
+          "#AIAgents",
+          "#AI",
+          "#AIGovernance",
+          "#Cybersecurity",
+          "#EnterpriseAI"
+        ],
+        "image": {
+          "prompt": "Square editorial digital identity card connected to agent nodes, dark blueprint aesthetic, violet accents, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI agents are beginning to schedule, purchase and act across connected systems. The missing layer is not another benchmark — it is proof of who the agent represents, what authority it has and how that authority can be revoked.\n\nThe ITU has now opened a standards effort around exactly that problem. Our new Policy brief explains what builders and buyers should implement before the standard is finished:",
+        "hashtags": [
+          "#AIAgents",
+          "#AIgovernance"
+        ],
+        "image": {
+          "prompt": "Wide editorial agent identity and permissions network, dark ink background with violet light, no text.",
+          "status": "ready",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
     article_id:"live-001",
     ts:"2026-07-09T18:33:00Z",
     export:{

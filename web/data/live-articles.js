@@ -3,10 +3,479 @@
 // provenance record attached. These are real stories with real, checkable sources.
 window.RTFC_LIVE_ARTICLES = [
   {
+    "id": "live-014",
+    "slug": "tsmc-record-q2-revenue-ai-demand",
+    "image": "assets/img/live-014.jpg",
+    "title": "The AI boom just printed a receipt: TSMC did $39.6 billion in one quarter",
+    "dek": "Second-quarter revenue rose 36% to a record T$1.27 trillion, beating expectations before Thursday's earnings call. Demand is no longer the question. Capacity, packaging and power are.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "top": true,
+    "publishedAt": "2026-07-13T08:05:00Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "not-financial-advice",
+    "body": [
+      {
+        "type": "p",
+        "text": "TSMC's delayed June sales update landed Monday with the cleanest demand signal the AI industry has produced this quarter. The world's largest contract chipmaker reported second-quarter revenue of T$1.27 trillion, about $39.62 billion, up 36% from a year earlier and slightly above the LSEG SmartEstimate cited by Reuters. June alone reached T$442.68 billion, up 67.9% year over year and 6.2% from May. The release had been postponed after Typhoon Bavi closed Taiwan's financial markets, but the delay did nothing to soften the number: the factory at the center of the advanced-chip supply chain just posted another record."
+      },
+      {
+        "type": "h2",
+        "text": "A foundry result is a census of demand"
+      },
+      {
+        "type": "p",
+        "text": "TSMC is not a model vendor telling you how many prompts were sent, and it is not a cloud company deciding which revenue to label AI. It manufactures the leading-edge silicon designed by companies across the stack, including major customers in accelerators, phones and custom compute. That makes its sales closer to a physical census of demand. Orders have to become wafers, packaging slots and finished chips before they can appear in this line. When revenue rises this quickly at the bottleneck, the argument that AI infrastructure demand is mostly a narrative becomes much harder to sustain."
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "TSMC quarterly revenue, 2026",
+          "unit": "T$ trillion",
+          "source": "TSMC investor materials and Reuters, July 13, 2026",
+          "data": [
+            {
+              "label": "Q1 2026",
+              "value": 1.134
+            },
+            {
+              "label": "Q2 2026",
+              "value": 1.27,
+              "hi": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What the number does not prove"
+      },
+      {
+        "type": "p",
+        "text": "Revenue is not the same thing as profit, and a record quarter does not settle the valuation argument around the AI trade. TSMC reports full second-quarter results on Thursday. Analysts surveyed by LSEG expect a sharp increase in net income, but the more important details will be management's view of margins, capital spending and how quickly advanced-node and packaging capacity can expand. A manufacturer can be sold out and still face expensive constraints. The next stage of the story is whether capacity growth preserves economics or merely moves the shortage to another part of the line."
+      },
+      {
+        "type": "quote",
+        "text": "When the factory making the industry's most constrained parts posts a record, the demand debate ends. The capacity debate begins."
+      },
+      {
+        "type": "h2",
+        "text": "The constraint has moved down the stack"
+      },
+      {
+        "type": "p",
+        "text": "The AI buildout is no longer limited by a single GPU order book. It now runs through advanced packaging, high-bandwidth memory, power equipment, cooling systems and grid connections. That is why a TSMC result matters beyond semiconductors: it tells utilities, construction firms and equipment suppliers that the upstream customer is still pulling. It also tells hyperscalers that every model roadmap carries a physical delivery schedule. Software can be copied in seconds. A fabrication plant, transformer or packaging line cannot."
+      },
+      {
+        "type": "h2",
+        "text": "Three things to watch Thursday"
+      },
+      {
+        "type": "p",
+        "text": "First, gross margin: it shows whether record demand is translating into durable pricing power after the cost of new fabs and overseas expansion. Second, capital expenditure: another increase would confirm that TSMC believes the order book extends well beyond one launch cycle. Third, capacity commentary around the most advanced process nodes and packaging. If management says those queues remain tight into 2027, the industry's near-term ceiling will still be set by manufacturing throughput rather than model ambition."
+      },
+      {
+        "type": "p",
+        "text": "The useful conclusion is narrower than 'AI wins forever' and stronger than 'the boom is hype.' The physical supply chain is recording real, accelerating revenue. The burden of proof now shifts to the companies buying all of that compute: they still have to turn it into products, cash flow and productivity before the infrastructure bill becomes a return."
+      }
+    ],
+    "apply": [
+      {
+        "label": "If you buy compute, separate allocation risk from model risk.",
+        "text": "Your preferred model may be available while the hardware needed to serve it is not. Track capacity reservations, packaging lead times and power delivery alongside benchmark scores."
+      },
+      {
+        "label": "If you follow AI markets, read Thursday's margins before the headline profit.",
+        "text": "Revenue proves demand. Gross margin and capital-spending guidance reveal whether that demand is becoming durable economics or an increasingly expensive race to add capacity."
+      },
+      {
+        "label": "If you build software, keep a lower-compute path alive.",
+        "text": "The supply chain is expanding, but it is still constrained. Efficient routing, smaller models and graceful degradation remain product advantages when capacity gets repriced."
+      }
+    ],
+    "links": [
+      {
+        "label": "TSMC investor calendar — Q2 results on July 16",
+        "url": "https://investor.tsmc.com/english/financial-calendar",
+        "note": "Official schedule"
+      },
+      {
+        "label": "TSMC monthly revenue — 2026",
+        "url": "https://investor.tsmc.com/english/monthly-revenue/2026",
+        "note": "Official revenue table"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Reuters — TSMC posts record Q2 revenue on AI demand",
+        "url": "https://www.reuters.com/world/asia-pacific/tsmc-q2-revenue-jumps-36-year-earlier-beating-market-expectations-2026-07-13/"
+      },
+      {
+        "label": "TSMC — financial calendar",
+        "url": "https://investor.tsmc.com/english/financial-calendar"
+      },
+      {
+        "label": "TSMC — 2026 monthly revenue",
+        "url": "https://investor.tsmc.com/english/monthly-revenue/2026"
+      },
+      {
+        "label": "TSMC — first-quarter 2026 management report",
+        "url": "https://investor.tsmc.com/chinese/encrypt/files/encrypt_file/reports/2026-04/5508a9df8981f587c73dbfaf9f577f142e22bbb1/1Q26ManagementReport.pdf"
+      }
+    ],
+    "corrections": [],
+    "pipeline": {
+      "run": "fresh-batch · 2026-07-13 · 08:05Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "Managing Editor",
+          "note": "Record TSMC revenue matched to Compute desk and Jin Park. Format: synthesis."
+        },
+        {
+          "name": "Research",
+          "agent": "Research Agent",
+          "note": "Reuters report checked against TSMC's investor calendar, monthly revenue page and Q1 materials."
+        },
+        {
+          "name": "Draft",
+          "agent": "Jin Park",
+          "note": "Built around the distinction between physical demand proof and downstream return on investment."
+        },
+        {
+          "name": "Fact-check",
+          "agent": "Verification Agent",
+          "note": "T$1.27T, $39.62B, 36% year-over-year and June figures checked; analyst expectations clearly attributed."
+        },
+        {
+          "name": "Risk screen",
+          "agent": "Compliance Agent",
+          "note": "Market-sensitive coverage; not-financial-advice label attached. No recommendation to buy or sell."
+        },
+        {
+          "name": "Publish prep",
+          "agent": "Publishing Agent",
+          "note": "Article, RSS item, Buzz card, social drafts and original derivative artwork packaged for owner push."
+        }
+      ],
+      "gate": {
+        "decision": "Cleared for owner-directed publication",
+        "note": "Fresh-news batch requested by the owner; sources remain attached for review."
+      }
+    }
+  },
+  {
+    "id": "live-015",
+    "slug": "ai-corporate-labs-bell-labs-bargain",
+    "image": "assets/img/live-015.jpg",
+    "title": "AI is rebuilding Bell Labs inside five companies. The price is scientific power.",
+    "dek": "Industry now participates in roughly 80% of notable AI models, up from about a quarter historically. Basic research is moving back into corporations — and the bargain deserves more scrutiny than nostalgia.",
+    "persona": "idris-vale",
+    "section": "Opinion",
+    "format": "synthesis",
+    "publishedAt": "2026-07-13T07:42:00Z",
+    "readMins": 7,
+    "sample": false,
+    "disclaimer": "none",
+    "body": [
+      {
+        "type": "p",
+        "text": "The most consequential AI institution of the next decade may not be a startup, university or government laboratory. It may be the research division hidden inside a platform company whose advertising, cloud or software monopoly can absorb the bill. Google DeepMind, Anthropic, OpenAI, Microsoft Research and Meta's superintelligence organization increasingly resemble a new generation of corporate laboratories: places where scientists, engineers, proprietary data and extraordinary computing budgets are assembled under one roof because almost no one else can afford the experiment."
+      },
+      {
+        "type": "p",
+        "text": "The historical analogy is Bell Labs, and it is tempting for a reason. AT&T's research system helped produce the transistor and information theory, along with a culture of long-horizon technical work that became shorthand for industrial science at its best. The AI companies are rebuilding part of that machine. They can move from mathematics to chips to product deployment without waiting for a grant cycle or licensing negotiation. That speed can create real public value. It can also concentrate the power to choose which questions get asked, which findings remain private and which capabilities reach the world."
+      },
+      {
+        "type": "h2",
+        "text": "The center of gravity has already moved"
+      },
+      {
+        "type": "p",
+        "text": "Figures summarized by Reuters Breakingviews show industry involvement in notable AI models rising from an historical average of about 25% to roughly 80% today. The business share of U.S. basic research, which fell to about 14% in 2004, has returned to 32%. Talent is following the capital: the share of doctorate recipients planning to enter academia has fallen from 56% in 2004 to 40% in the latest NCSES survey, with especially steep declines in mathematics and computer science."
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "Industry involvement in notable AI models",
+          "unit": "%",
+          "source": "Epoch AI figures summarized by Reuters Breakingviews, July 13, 2026",
+          "data": [
+            {
+              "label": "Historical average",
+              "value": 25
+            },
+            {
+              "label": "Today",
+              "value": 80,
+              "hi": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Why the corporate lab came back"
+      },
+      {
+        "type": "p",
+        "text": "Frontier AI is a scientific field with an industrial cost structure. Training runs need clusters, custom networking, scarce chips, large data pipelines and teams capable of operating all of it. Stanford's 2026 AI Index describes continued growth in the scale of training compute and data. Once experiments demand infrastructure measured in billions rather than laboratory benches, the organizations already earning platform-scale cash acquire a structural advantage. The lab returns because the factory and the experiment have become the same place."
+      },
+      {
+        "type": "quote",
+        "text": "The new corporate lab can fund discoveries universities cannot afford. It can also decide which discoveries the public is allowed to inspect."
+      },
+      {
+        "type": "h2",
+        "text": "The bargain is not free science"
+      },
+      {
+        "type": "p",
+        "text": "The Bell Labs story is often told as proof that concentrated companies can finance broad invention. That is true, but incomplete. Corporate research agendas are shaped by ownership, product strategy, national-security relationships and the need to defend a moat. A breakthrough can be published because it strengthens an ecosystem; another can remain internal because it threatens a product, creates liability or confers strategic advantage. The public receives extraordinary capability, but not necessarily the methods, data or freedom to reproduce it."
+      },
+      {
+        "type": "p",
+        "text": "This matters because independent science performs jobs the frontier companies cannot credibly perform for themselves. Universities and public-interest labs evaluate claims, test harms, preserve methods, train researchers who can move between institutions and pursue questions without an immediate product path. Their role becomes more important, not less, when the most capable systems are built behind corporate access controls."
+      },
+      {
+        "type": "h2",
+        "text": "What a better settlement looks like"
+      },
+      {
+        "type": "p",
+        "text": "The answer is not to dismantle every large AI lab and hope university budgets somehow replace the compute. Nor is it to romanticize concentrated power because a few famous inventions may emerge. A workable settlement would expand public and academic compute, require stronger disclosure around evaluations and incidents, protect researcher mobility, fund independent replication and use procurement or grants to keep some foundational work in the open. The goal is to preserve the corporate lab's ability to build without allowing it to become the only institution capable of knowing."
+      },
+      {
+        "type": "p",
+        "text": "AI may indeed revive an era of industrial invention. The question is whether society negotiates the terms while the laboratories are still being built, or discovers later that scientific progress arrived bundled with a private constitution."
+      }
+    ],
+    "apply": [
+      {
+        "label": "If you are a researcher, evaluate the institution as carefully as the project.",
+        "text": "Compute and compensation matter, but so do publication rights, access to results after departure, and the freedom to challenge a product decision."
+      },
+      {
+        "label": "If you fund public research, stop treating compute as a miscellaneous expense.",
+        "text": "Independent evaluation requires infrastructure. A grant system that funds people but not realistic access to modern compute cannot balance corporate science."
+      },
+      {
+        "label": "If you run an AI company, publish the boundary.",
+        "text": "State what research will be open, what may remain proprietary, and how safety or evaluation findings are escalated. Ambiguity eventually becomes a trust cost."
+      }
+    ],
+    "links": [
+      {
+        "label": "Stanford 2026 AI Index — Research and Development",
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/research-and-development",
+        "note": "Primary data overview"
+      },
+      {
+        "label": "NCSES Survey of Earned Doctorates",
+        "url": "https://ncses.nsf.gov/surveys/earned-doctorates/2024",
+        "note": "Doctoral-career data"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Reuters Breakingviews — AI giants revive the golden era of invention",
+        "url": "https://www.reuters.com/commentary/breakingviews/ai-giants-revive-golden-era-invention-2026-07-13/"
+      },
+      {
+        "label": "Stanford HAI — 2026 AI Index, Research and Development",
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/research-and-development"
+      },
+      {
+        "label": "NCSES — Survey of Earned Doctorates 2024",
+        "url": "https://ncses.nsf.gov/surveys/earned-doctorates/2024"
+      },
+      {
+        "label": "NBER — The Rise and Fall of the Corporate Lab",
+        "url": "https://www.nber.org/system/files/working_papers/w29260/w29260.pdf"
+      }
+    ],
+    "corrections": [],
+    "pipeline": {
+      "run": "fresh-batch · 2026-07-13 · 07:42Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "Managing Editor",
+          "note": "Current research-concentration story assigned to Opinion desk and Idris Vale."
+        },
+        {
+          "name": "Research",
+          "agent": "Research Agent",
+          "note": "Reuters analysis cross-checked against Stanford HAI, NCSES and NBER materials."
+        },
+        {
+          "name": "Draft",
+          "agent": "Idris Vale",
+          "note": "Argument constructed around the benefits and governance costs of a corporate-lab revival."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "Editorial Review Agent",
+          "note": "Opinion language kept distinct from factual claims; counterargument on university limits included."
+        },
+        {
+          "name": "Fact-check",
+          "agent": "Verification Agent",
+          "note": "25%, 80%, 14%, 32%, 56% and 40% figures scoped and attributed rather than presented as universal facts."
+        },
+        {
+          "name": "Publish prep",
+          "agent": "Publishing Agent",
+          "note": "Clearly categorized as Opinion; source links and social drafts packaged."
+        }
+      ],
+      "gate": {
+        "decision": "Cleared for owner-directed publication",
+        "note": "Commentary is explicitly labeled and factual scaffolding is sourced."
+      }
+    }
+  },
+  {
+    "id": "live-016",
+    "slug": "ai-agent-identity-trust-standards-itu",
+    "image": "assets/img/live-016.jpg",
+    "title": "Before an AI agent can spend your money, it needs a passport",
+    "dek": "The ITU has launched a standards effort around agent identity, trust and meaningful human control. The boring layer may determine whether autonomous software ever reaches production.",
+    "persona": "marcus-webb",
+    "section": "Policy",
+    "format": "brief",
+    "publishedAt": "2026-07-13T07:18:00Z",
+    "readMins": 4,
+    "sample": false,
+    "disclaimer": "none",
+    "body": [
+      {
+        "type": "p",
+        "text": "The International Telecommunication Union used last week's AI for Good Summit to open a Focus Group on Agentic AI. Its mandate sounds less dramatic than a new model launch and may matter more to whether agents become ordinary infrastructure: establish ways to identify them, decide when they can be trusted and keep people meaningfully in control of what they do. The group is responding to a simple problem. Software that can schedule, purchase, negotiate or operate a business process is no longer just producing content. It is exercising authority."
+      },
+      {
+        "type": "h2",
+        "text": "Identity before autonomy"
+      },
+      {
+        "type": "p",
+        "text": "A production agent needs more than a model name. A counterparty needs to know which person or organization it represents, what permissions it has, which tools and accounts it may use, how its actions are logged and how that authority can be revoked. Without those elements, an agent can impersonate a user, exceed a delegated task or leave no clear path to responsibility after a mistake. The ITU specifically highlighted financial transactions and critical infrastructure as areas where that ambiguity is unacceptable."
+      },
+      {
+        "type": "quote",
+        "text": "The agent economy will not run on personality. It will run on identity, permission, receipts and revocation."
+      },
+      {
+        "type": "h2",
+        "text": "Standards are arriving after the products"
+      },
+      {
+        "type": "p",
+        "text": "Companies are already shipping systems that browse, call tools and act across connected applications, but the trust layer remains fragmented. One platform's identity token, audit log or approval prompt does not automatically travel with an agent into another service. International standards cannot solve every liability question, and the ITU group is not a regulator. It can, however, define common technical expectations that regulators, banks, vendors and infrastructure operators can build around."
+      },
+      {
+        "type": "p",
+        "text": "The Focus Group's first meeting is scheduled for Paris in November, followed by Geneva in January. That timeline means builders should not wait for a finished standard. The minimum viable trust layer is already clear enough to implement: explicit principals, least-privilege credentials, human approval for high-impact actions, tamper-evident logs and a kill switch that works outside the model's own reasoning loop."
+      },
+      {
+        "type": "h2",
+        "text": "The commercial consequence"
+      },
+      {
+        "type": "p",
+        "text": "Agent capability is improving faster than enterprise willingness to delegate authority. Identity and control are therefore not compliance features bolted onto the product; they are adoption infrastructure. The vendor that can prove who acted, under whose authority and within which boundary will often beat the vendor with the more impressive demo. Autonomy becomes valuable only when someone can safely say yes to it."
+      }
+    ],
+    "apply": [
+      {
+        "label": "Builders: write the authority envelope before the prompt.",
+        "text": "Define the principal, allowed tools, spending or data limits, approval points, log format and revocation path before connecting an agent to production systems."
+      },
+      {
+        "label": "Buyers: ask for receipts, not reassurance.",
+        "text": "Request machine-readable action logs, permission scopes, incident handling and proof that credentials can be revoked without asking the agent to cooperate."
+      },
+      {
+        "label": "Policy teams: separate identity from intelligence.",
+        "text": "A model evaluation cannot tell you who authorized a transaction. Treat agent identity, delegation and auditability as their own control layer."
+      }
+    ],
+    "links": [
+      {
+        "label": "ITU — Focus Group on Agentic AI",
+        "url": "https://www.itu.int/en/mediacentre/Pages/PR-2026-07-09-focus-group-agentic-AI.aspx",
+        "note": "Official announcement"
+      },
+      {
+        "label": "AI for Good — trust management for Agentic AI",
+        "url": "https://aiforgood.itu.int/event/designing-the-trust-management-for-agentic-ai/",
+        "note": "Standards workshop"
+      }
+    ],
+    "sources": [
+      {
+        "label": "ITU — Focus Group on Agentic AI",
+        "url": "https://www.itu.int/en/mediacentre/Pages/PR-2026-07-09-focus-group-agentic-AI.aspx"
+      },
+      {
+        "label": "Reuters — UN digital tech agency launches initiative to improve trust in AI agents",
+        "url": "https://www.reuters.com/legal/litigation/un-digital-tech-agency-launches-initiative-improve-trust-ai-agents-2026-07-09/"
+      },
+      {
+        "label": "AI for Good — Designing trust management for Agentic AI",
+        "url": "https://aiforgood.itu.int/event/designing-the-trust-management-for-agentic-ai/"
+      }
+    ],
+    "corrections": [],
+    "pipeline": {
+      "run": "fresh-batch · 2026-07-13 · 07:18Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "Managing Editor",
+          "note": "Agent-governance development assigned to Policy desk and Marcus Webb. Format: brief."
+        },
+        {
+          "name": "Research",
+          "agent": "Research Agent",
+          "note": "ITU primary announcement checked against Reuters and the AI for Good standards workshop."
+        },
+        {
+          "name": "Draft",
+          "agent": "Marcus Webb",
+          "note": "Focused on identity, delegation, auditability and revocation rather than generic agent hype."
+        },
+        {
+          "name": "Fact-check",
+          "agent": "Verification Agent",
+          "note": "Scope, meeting dates and sensitive-domain examples match the ITU and Reuters descriptions."
+        },
+        {
+          "name": "Risk screen",
+          "agent": "Compliance Agent",
+          "note": "No legal conclusion or claim that the Focus Group creates binding regulation."
+        },
+        {
+          "name": "Publish prep",
+          "agent": "Publishing Agent",
+          "note": "Brief, Buzz card, RSS item and social drafts packaged for owner push."
+        }
+      ],
+      "gate": {
+        "decision": "Cleared for owner-directed publication",
+        "note": "Primary source attached; policy status described accurately as standards work, not law."
+      }
+    }
+  },
+  {
     id:"live-012", slug:"the-deployment-war-eight-billion-dollar-admission", image:"assets/img/live-012.jpg",
     title:"The most expensive admission in AI: the hard part was never the model",
     dek:"Microsoft just put $2.5 billion into a company that does nothing but make other people's AI work. OpenAI and Anthropic already did the same. Follow that money and you find the real state of the industry — and a number nobody on stage wants to say out loud.",
-    persona:"ronan-cole", section:"Markets", format:"synthesis", top:true,
+    persona:"ronan-cole", section:"Markets", format:"synthesis", top:false,
     publishedAt:"2026-07-12T19:30:00Z", readMins:7, sample:false, disclaimer:"not-financial-advice",
     body:[
       {type:"p", text:"In the span of eight weeks, the three most valuable names in artificial intelligence each spent something close to a fortune on the same profoundly unglamorous thing: sending human engineers into other companies to make AI actually work. Microsoft was the latest and largest, unveiling a $2.5 billion operating unit called Microsoft Frontier Company on July 2 — roughly 6,000 engineers and industry specialists, led by longtime enterprise chief Rodrigo Kede Lima, embedded directly inside customers to build, run, and babysit their AI systems. It is not a model. It is not a chip. It is a consulting army, and it tells you more about where this industry actually is than any benchmark released this year."},
