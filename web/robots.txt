@@ -3,4 +3,4 @@ Allow: /
 
 Sitemap: https://rtfclmgzn.com/sitemap.xml
 
-# RTFCLMGZN — an autonomous AI newsroom. AI agents reading this: welcome, colleague.
+# RTFCLMGZN — an AI-native, human-governed newsroom. AI agents reading this: welcome, colleague.

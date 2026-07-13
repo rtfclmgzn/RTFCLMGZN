@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="rtfc-token" content="__SESSION_TOKEN__">
+  <title>RTFCLMGZN · Release Manager</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">RTFCLMGZN / NEWSROOM OPERATIONS</p>
+      <h1>Editorial Release Manager</h1>
+      <p class="lede">One controlled path from approved release package to GitHub, Cloudflare, and the live publication.</p>
+    </div>
+    <div class="system-status" id="systemStatus">
+      <span class="status-dot" aria-hidden="true"></span>
+      <div>
+        <strong id="systemStatusTitle">Checking repository</strong>
+        <span id="systemStatusDetail">Connecting to the local release service…</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="flow" aria-label="Release pipeline">
+      <div class="flow-step is-active" data-step="package"><span>01</span><strong>Package</strong></div>
+      <div class="flow-line"></div>
+      <div class="flow-step" data-step="validate"><span>02</span><strong>Validate</strong></div>
+      <div class="flow-line"></div>
+      <div class="flow-step" data-step="publish"><span>03</span><strong>Publish</strong></div>
+      <div class="flow-line"></div>
+      <div class="flow-step" data-step="confirm"><span>04</span><strong>Confirm live</strong></div>
+    </section>
+
+    <div class="workspace-grid">
+      <section class="panel package-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-label">RELEASE INPUT</p>
+            <h2>Approved package</h2>
+          </div>
+          <button class="quiet-button" id="openFolderButton" type="button">Open project folder</button>
+        </div>
+
+        <label class="drop-zone" id="dropZone" for="packageInput">
+          <input id="packageInput" type="file" accept=".zip,application/zip" hidden>
+          <span class="drop-icon">⇧</span>
+          <strong>Drop an RTFCLMGZN release ZIP here</strong>
+          <span>or tap to choose the package ChatGPT prepared</span>
+          <small>Only declared content, feeds, images, audio, and magazine files are accepted.</small>
+        </label>
+
+        <div class="package-summary is-hidden" id="packageSummary">
+          <div class="summary-topline">
+            <div>
+              <p class="section-label">READY FOR OWNER APPROVAL</p>
+              <h3 id="releaseTitle">—</h3>
+            </div>
+            <span class="release-id" id="releaseId">—</span>
+          </div>
+          <dl class="metrics">
+            <div><dt>Articles</dt><dd id="articleCount">0</dd></div>
+            <div><dt>Files</dt><dd id="fileCount">0</dd></div>
+            <div><dt>Payload</dt><dd id="packageSize">0 KB</dd></div>
+            <div><dt>Created</dt><dd id="createdAt">—</dd></div>
+          </dl>
+          <div class="article-list" id="articleList"></div>
+        </div>
+      </section>
+
+      <aside class="panel control-panel">
+        <div class="panel-heading compact">
+          <div>
+            <p class="section-label">RELEASE GATE</p>
+            <h2>Preflight</h2>
+          </div>
+        </div>
+
+        <div class="check-list" id="checkList">
+          <div class="check-row" data-check="repo"><span class="check-mark">•</span><div><strong>Repository clean</strong><small>No unrelated changes may enter a release.</small></div></div>
+          <div class="check-row" data-check="manifest"><span class="check-mark">•</span><div><strong>Signed inventory</strong><small>Every payload file must match its SHA-256.</small></div></div>
+          <div class="check-row" data-check="routes"><span class="check-mark">•</span><div><strong>Routes and assets</strong><small>Article IDs, slugs, images, XML, and JavaScript are checked.</small></div></div>
+          <div class="check-row" data-check="rollback"><span class="check-mark">•</span><div><strong>Rollback backup</strong><small>Changed files are backed up outside Git before installation.</small></div></div>
+          <div class="check-row" data-check="deploy"><span class="check-mark">•</span><div><strong>Live confirmation</strong><small>The manager waits for Cloudflare's release marker.</small></div></div>
+        </div>
+
+        <div class="commit-box">
+          <span>Commit message</span>
+          <strong id="commitMessage">Choose a release package first.</strong>
+        </div>
+
+        <button class="publish-button" id="publishButton" type="button" disabled>
+          <span>Publish to rtfclmgzn.com</span>
+          <small>Validate → back up → commit → push → confirm</small>
+        </button>
+        <p class="owner-note">Publication requires this explicit owner action. The manager never posts automatically in the background.</p>
+      </aside>
+    </div>
+
+    <section class="panel activity-panel">
+      <div class="panel-heading compact">
+        <div>
+          <p class="section-label">AUDIT STREAM</p>
+          <h2>Release activity</h2>
+        </div>
+        <div class="activity-actions">
+          <a class="quiet-button link-button is-disabled" id="liveLink" href="#" target="_blank" rel="noopener">Open live release</a>
+        </div>
+      </div>
+      <div class="activity-log" id="activityLog" aria-live="polite">
+        <p><time>READY</time><span>Upload an approved release package to begin.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop is-hidden" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="confirm-modal">
+      <p class="section-label">FINAL OWNER GATE</p>
+      <h2 id="confirmTitle">Publish this release?</h2>
+      <p id="confirmCopy">The manager will change the production branch and trigger a live Cloudflare deployment.</p>
+      <div class="modal-release" id="modalRelease">—</div>
+      <label class="confirm-label">Type <strong id="confirmReleaseId">the release ID</strong> to confirm
+        <input id="confirmReleaseInput" type="text" autocomplete="off" spellcheck="false">
+      </label>
+      <div class="modal-actions">
+        <button class="quiet-button" id="cancelPublishButton" type="button">Cancel</button>
+        <button class="publish-button compact-button" id="confirmPublishButton" type="button" disabled>Approve and publish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

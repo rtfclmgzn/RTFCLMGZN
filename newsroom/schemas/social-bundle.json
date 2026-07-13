@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "x": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "alt_text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "alt_text"
+      ],
+      "additionalProperties": false
+    },
+    "instagram": {
+      "type": "object",
+      "properties": {
+        "caption": {
+          "type": "string"
+        },
+        "alt_text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "caption",
+        "alt_text"
+      ],
+      "additionalProperties": false
+    },
+    "facebook": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "alt_text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "alt_text"
+      ],
+      "additionalProperties": false
+    },
+    "newsletter": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string"
+        },
+        "preview": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "subject",
+        "preview",
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "x",
+    "instagram",
+    "facebook",
+    "newsletter",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

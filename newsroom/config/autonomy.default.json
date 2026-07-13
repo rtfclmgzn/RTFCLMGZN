@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "mode": "draft_only",
+  "site_url": "https://rtfclmgzn.com",
+  "owner_name": "0baak",
+  "providers": {
+    "priority": [
+      "openai",
+      "gemini"
+    ],
+    "openai": {
+      "enabled": true,
+      "endpoint": "https://api.openai.com/v1/responses",
+      "models": {
+        "reasoning-pro": "gpt-5.6-sol",
+        "reasoning-high": "gpt-5.6-terra",
+        "balanced": "gpt-5.6-terra",
+        "utility": "gpt-5.6-luna",
+        "general": "gpt-5.6-terra",
+        "structured-fast": "gpt-5.6-luna"
+      },
+      "reasoning_effort": {
+        "reasoning-pro": "high",
+        "reasoning-high": "medium",
+        "balanced": "low",
+        "utility": "low",
+        "general": "low",
+        "structured-fast": "low"
+      },
+      "timeout_seconds": 240,
+      "max_retries": 3,
+      "store": false,
+      "pricing_per_million": {
+        "gpt-5.6-sol": {
+          "input": 5.0,
+          "output": 30.0
+        },
+        "gpt-5.6-terra": {
+          "input": 2.5,
+          "output": 15.0
+        },
+        "gpt-5.6-luna": {
+          "input": 1.0,
+          "output": 6.0
+        }
+      },
+      "web_search_per_call": 0.01,
+      "pricing_checked_at": "2026-07-13"
+    },
+    "gemini": {
+      "enabled": true,
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+      "models": {
+        "reasoning-pro": "gemini-3.1-pro-preview",
+        "reasoning-high": "gemini-3.5-flash",
+        "balanced": "gemini-3.5-flash",
+        "utility": "gemini-3.1-flash-lite",
+        "image": "gemini-3.1-flash-image",
+        "general": "gemini-3.5-flash",
+        "structured-fast": "gemini-3.1-flash-lite"
+      },
+      "timeout_seconds": 240,
+      "max_retries": 3,
+      "store": false,
+      "pricing_per_million": {
+        "gemini-3.1-pro-preview": {
+          "input": 2.0,
+          "output": 12.0
+        },
+        "gemini-3.5-flash": {
+          "input": 2.7,
+          "output": 16.2
+        },
+        "gemini-3.1-flash-lite": {
+          "input": 0.25,
+          "output": 1.5
+        }
+      },
+      "web_search_per_call": 0.014,
+      "pricing_checked_at": "2026-07-13",
+      "reasoning_effort": {
+        "reasoning-pro": "high",
+        "reasoning-high": "high",
+        "balanced": "medium",
+        "utility": "low",
+        "general": "medium",
+        "structured-fast": "low"
+      }
+    }
+  },
+  "schedule": {
+    "enabled": false,
+    "interval_minutes": 180,
+    "quiet_hours_utc": {
+      "start": 5,
+      "end": 10
+    },
+    "run_on_start": false
+  },
+  "limits": {
+    "stories_per_cycle": 2,
+    "stories_per_day": 6,
+    "candidates_per_cycle": 12,
+    "provider_calls_per_cycle": 30,
+    "web_search_calls_per_cycle": 16,
+    "daily_budget_usd": 25.0,
+    "monthly_budget_usd": 250.0,
+    "minimum_cycle_spacing_minutes": 90
+  },
+  "editorial": {
+    "lookback_hours": 36,
+    "minimum_sources": 2,
+    "minimum_independent_sources": 2,
+    "minimum_primary_sources": 1,
+    "minimum_verification_score": 0.9,
+    "minimum_editorial_score": 0.86,
+    "minimum_confidence_score": 0.88,
+    "maximum_title_similarity": 0.82,
+    "require_published_date": true,
+    "blocked_auto_publish_sections": [
+      "Health",
+      "Markets",
+      "Policy"
+    ],
+    "blocked_auto_publish_topics": [
+      "medical advice",
+      "investment advice",
+      "legal advice",
+      "elections",
+      "crime accusation",
+      "minors",
+      "personal data",
+      "breaking casualty report"
+    ]
+  },
+  "publication": {
+    "auto_publish_enabled": false,
+    "allowed_risk_levels": [
+      "R1"
+    ],
+    "require_exact_version_gate": true,
+    "push_to_github": true,
+    "verify_cloudflare": true,
+    "staging_only": false,
+    "maximum_auto_publishes_per_day": 3,
+    "minimum_owner_approved_releases_before_autopublish": 1,
+    "owner_preauthorization": {
+      "enabled": false,
+      "owner": "0baak",
+      "acknowledged_at": "",
+      "policy_version": "bounded-publication-v1.0",
+      "max_age_hours": 168
+    },
+    "require_clean_git_worktree": true,
+    "minimum_seconds_between_publishes": 300
+  },
+  "distribution": {
+    "generate_social_drafts": true,
+    "auto_post_meta": false,
+    "auto_post_instagram": false,
+    "auto_post_x": false,
+    "maximum_posts_per_channel_per_day": 4,
+    "meta_graph_version": "v25.0",
+    "meta_graph_base": "https://graph.facebook.com",
+    "queue_only_until_published": true,
+    "dispatch_after_publish": true
+  },
+  "observability": {
+    "log_level": "INFO",
+    "retain_days": 30,
+    "redact_prompts": false,
+    "record_provider_payloads": false,
+    "audit_provider_calls": true
+  }
+}

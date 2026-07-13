@@ -1,0 +1,84 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approve",
+        "revise",
+        "reject"
+      ]
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "headline_accuracy_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "structure_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "originality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "source_transparency_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "major",
+              "minor"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "suggested_fix": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "severity",
+          "message",
+          "suggested_fix"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "decision",
+    "score",
+    "headline_accuracy_score",
+    "structure_score",
+    "originality_score",
+    "source_transparency_score",
+    "issues",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

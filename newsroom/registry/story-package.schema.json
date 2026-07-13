@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rtfclmgzn.com/schemas/newsroom-story-package-v1.json",
+  "title": "RTFCLMGZN Newsroom Story Package",
+  "type": "object",
+  "required": ["schema_version", "story", "workflow"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "story": {
+      "type": "object",
+      "required": ["slug", "title", "dek", "persona", "section", "format", "body", "sources"],
+      "properties": {
+        "slug": {"type": "string"},
+        "title": {"type": "string"},
+        "dek": {"type": "string"},
+        "persona": {"type": "string"},
+        "section": {"type": "string"},
+        "format": {"enum": ["brief", "synthesis", "research"]},
+        "body": {"type": "array"},
+        "sources": {"type": "array"}
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "required": ["artifacts", "risk_level", "recommendation"],
+      "properties": {
+        "artifacts": {"type": "array"},
+        "risk_level": {"enum": ["R1", "R2", "R3"]},
+        "recommendation": {"enum": ["approve", "revise", "reject"]}
+      }
+    }
+  }
+}

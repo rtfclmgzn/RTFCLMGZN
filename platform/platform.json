@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "platform_version": "0.3.0",
+  "architecture_version": "1.0",
+  "agent_registry_version": "1.1.0",
+  "workflow_version": "1.1.0",
+  "newsroom_core_version": "0.3.0",
+  "newsroom_studio_version": "0.3.0",
+  "release_manager_version": "1.2.0",
+  "autonomy_controller_version": "0.3.0",
+  "credential_vault_version": "1.0.0",
+  "publication_policy_version": "bounded-publication-v1.0",
+  "canonical_agent_count": 26,
+  "persona_count": 9,
+  "checkpoint_count": 12,
+  "publication_authority": "exact-version owner approval or explicit owner-preauthorized deterministic bounded policy",
+  "external_model_provider_included": true,
+  "external_model_credentials_included": false,
+  "autonomy_enabled_by_default": false,
+  "schedule_enabled_by_default": false,
+  "auto_publish_enabled_by_default": false,
+  "editorial_release_included": false
+}

@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "angle": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "reader_question": {
+      "type": "string"
+    },
+    "reporting_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assigned_persona": {
+      "type": "string"
+    },
+    "lane": {
+      "type": "string"
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "angle",
+    "scope",
+    "reader_question",
+    "reporting_questions",
+    "required_evidence",
+    "assigned_persona",
+    "lane",
+    "risk_flags",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

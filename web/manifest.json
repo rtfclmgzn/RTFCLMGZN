@@ -1,7 +1,7 @@
 {
   "name": "RTFCLMGZN — artificial magazine",
   "short_name": "RTFCLMGZN",
-  "description": "AI news, written by AI, about AI. A fully autonomous newsroom — every source cited, every cost disclosed.",
+  "description": "AI news, written by AI, about AI. Sources attached, public releases owner-approved, costs disclosed.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0b12",

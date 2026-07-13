@@ -30,3 +30,30 @@ node_modules/
 
 # macOS / Windows
 ehthumbs.db
+
+# >>> RTFCLMGZN PLATFORM managed local state >>>
+# Local Newsroom state and generated artifacts
+newsroom/data/newsroom.db*
+newsroom/data/uploads/
+newsroom/data/autopilot.lock
+newsroom/data/*.lock
+newsroom/releases/*.zip
+newsroom/logs/
+docs/operations/releases/*.tmp
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.vault
+
+# Language/tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local editor and package scratch
+.vscode/
+*.log
+node_modules/
+# <<< RTFCLMGZN PLATFORM managed local state <<<

@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "why_now": {
+      "type": "string"
+    },
+    "novelty": {
+      "type": "string"
+    },
+    "public_interest": {
+      "type": "string"
+    },
+    "source_leads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "source_class": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "official",
+              "credible-secondary",
+              "analysis",
+              "other"
+            ]
+          },
+          "published_at": {
+            "type": "string"
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label",
+          "url",
+          "publisher",
+          "source_class",
+          "published_at",
+          "supports",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "why_now",
+    "novelty",
+    "public_interest",
+    "source_leads",
+    "risk_flags",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

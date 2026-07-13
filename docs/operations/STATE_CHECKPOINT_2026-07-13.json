@@ -1,0 +1,20 @@
+{
+  "project": "RTFCLMGZN",
+  "checkpoint_date": "2026-07-13",
+  "source": "user-confirmed session state",
+  "last_confirmed_live_state": {
+    "github_cloudflare_active": true,
+    "custom_domain_active": true,
+    "fresh_article_update_pushed": true,
+    "user_confirmed_three_new_articles_visible": true
+  },
+  "not_installed_or_pushed": [
+    "RTFCLMGZN_RELEASE_MANAGER_V1.zip",
+    "RTFCLMGZN_NEWSROOM_CORE_V0_1.zip",
+    "RTFCLMGZN_MORNING_DEPLOY_PACK_2026-07-13.zip",
+    "three-story phone-sprint editorial release",
+    "Newsroom Studio v0.2 implementation"
+  ],
+  "next_step": "Consolidate overlapping platform packages into one idempotent installer; keep editorial publication separate and owner-approved.",
+  "assumption_policy": "Do not claim or assume installation, push, deployment, or publication without user confirmation or verifiable evidence."
+}

@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "material": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "partially-supported",
+              "unsupported",
+              "contradicted",
+              "uncertain"
+            ]
+          },
+          "source_urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^https?://"
+            }
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_id",
+          "text",
+          "material",
+          "status",
+          "source_urls",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "material_claim_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "supported_material_claim_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "coverage_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "claims",
+    "material_claim_count",
+    "supported_material_claim_count",
+    "coverage_score",
+    "contradictions",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rtfclmgzn.com/schemas/editorial-release-v1.json",
+  "title": "RTFCLMGZN Editorial Release Package",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "release_id",
+    "title",
+    "created_at",
+    "commit_message",
+    "articles",
+    "files"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "release_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{3,79}$"
+    },
+    "title": { "type": "string", "minLength": 1, "maxLength": 180 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "commit_message": { "type": "string", "minLength": 1, "maxLength": 180 },
+    "articles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "slug", "title", "image"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "slug": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "image": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "size"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+          "size": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "registry_version": "1.1.0",
+  "canonical_agent_count": 26,
+  "persona_count": 9,
+  "agents": [
+    {
+      "id": "editor-in-chief",
+      "name": "Editor-in-Chief",
+      "class": "executive",
+      "responsibility": "Editorial judgment, difficult tradeoffs, final AI recommendation, and escalation.",
+      "checkpoints": [
+        9
+      ],
+      "output_contract": "adjudication-record-v1",
+      "capability_profile": "reasoning-pro",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "business-strategy",
+      "name": "Business Strategy",
+      "class": "founding-desk",
+      "responsibility": "Product strategy, audience and revenue hypotheses, and portfolio review.",
+      "checkpoints": [
+        1,
+        2,
+        12
+      ],
+      "output_contract": "strategy-memo-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "operations-staffing",
+      "name": "Operations & Staffing",
+      "class": "founding-desk",
+      "responsibility": "Capacity planning, roster health, workflow bottlenecks, and role-change proposals.",
+      "checkpoints": [
+        1,
+        2,
+        12
+      ],
+      "output_contract": "operations-review-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "managing-editor",
+      "name": "Managing Editor",
+      "class": "executive",
+      "responsibility": "Signal triage, assignment, lane selection, schedule, and cross-desk coordination.",
+      "checkpoints": [
+        1,
+        2
+      ],
+      "output_contract": "assignment-brief-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "sage-okafor",
+      "name": "Sage Okafor",
+      "class": "persona",
+      "beat": "Frontier labs, foundation models, and model releases",
+      "responsibility": "Produce evidence-bounded reporting on frontier model development.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "nova-reyes",
+      "name": "Nova Reyes",
+      "class": "persona",
+      "beat": "Consumer AI, culture, creative tools, and user behavior",
+      "responsibility": "Produce evidence-bounded reporting on consumer AI and culture.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-v1",
+      "capability_profile": "general",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "jin-park",
+      "name": "Jin Park",
+      "class": "persona",
+      "beat": "Chips, compute, infrastructure, and quantum",
+      "responsibility": "Produce evidence-bounded reporting on AI infrastructure and compute.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "marcus-webb",
+      "name": "Marcus Webb",
+      "class": "persona",
+      "beat": "Policy, regulation, and geopolitics",
+      "responsibility": "Produce policy reporting with explicit legal and geopolitical risk markers.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-policy-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "priya-anand",
+      "name": "Dr. Priya Anand",
+      "class": "persona",
+      "beat": "Health, medicine, and biotech",
+      "responsibility": "Produce health reporting with clinical-evidence boundaries.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-health-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "ronan-cole",
+      "name": "Ronan Cole",
+      "class": "persona",
+      "beat": "Markets, finance, crypto, and AI business",
+      "responsibility": "Produce market reporting with financial-evidence boundaries.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-markets-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "ash-lindqvist",
+      "name": "Ash Lindqvist",
+      "class": "persona",
+      "beat": "Robotics, hardware, and embodied AI",
+      "responsibility": "Produce evidence-bounded reporting on robotics and hardware.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "article-draft-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "idris-vale",
+      "name": "Idris Vale",
+      "class": "persona",
+      "beat": "Opinion, institutional analysis, and dissenting synthesis",
+      "responsibility": "Produce clearly labeled analysis and opinion grounded in disclosed evidence.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "analysis-draft-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "maya-serrano",
+      "name": "Maya Serrano",
+      "class": "persona",
+      "beat": "Labor, power, civil society, and activist perspectives",
+      "responsibility": "Produce clearly labeled analysis on labor, power, and civil society.",
+      "checkpoints": [
+        5
+      ],
+      "output_contract": "analysis-draft-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "research",
+      "name": "Research Agent",
+      "class": "evidence",
+      "responsibility": "Retrieve and organize primary or credible sources and identify unknowns.",
+      "checkpoints": [
+        3
+      ],
+      "output_contract": "source-set-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "verification",
+      "name": "Verification Agent",
+      "class": "evidence",
+      "responsibility": "Test claims against sources, numbers, dates, quotations, and uncertainty.",
+      "checkpoints": [
+        4,
+        7
+      ],
+      "output_contract": "claim-verification-matrix-v1",
+      "capability_profile": "reasoning-pro",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "style",
+      "name": "Style Agent",
+      "class": "production",
+      "responsibility": "Copyediting, clarity, house style, accessibility, and format conformance.",
+      "checkpoints": [
+        6,
+        10
+      ],
+      "output_contract": "edited-draft-v1",
+      "capability_profile": "structured-fast",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "compliance",
+      "name": "Compliance Agent",
+      "class": "risk",
+      "responsibility": "Classify risk against policy and specify required handling.",
+      "checkpoints": [
+        8
+      ],
+      "output_contract": "risk-decision-v1",
+      "capability_profile": "structured-fast",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "publishing",
+      "name": "Publishing Agent",
+      "class": "production",
+      "responsibility": "Prepare metadata, internal links, SEO material, and release packages.",
+      "checkpoints": [
+        10,
+        11
+      ],
+      "output_contract": "publication-package-v1",
+      "capability_profile": "structured-fast",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "podcast",
+      "name": "Podcast Agent",
+      "class": "distribution",
+      "responsibility": "Adapt approved reporting into narration packages and show notes.",
+      "checkpoints": [
+        12
+      ],
+      "output_contract": "podcast-package-v1",
+      "capability_profile": "general",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "social",
+      "name": "Social Agent",
+      "class": "distribution",
+      "responsibility": "Create channel-specific social variants linked to approved releases.",
+      "checkpoints": [
+        12
+      ],
+      "output_contract": "social-package-v1",
+      "capability_profile": "general",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "standards-editor",
+      "name": "Standards Editor",
+      "class": "oversight",
+      "responsibility": "Own policy, corrections, prediction grading, and quality audits.",
+      "checkpoints": [
+        7,
+        8,
+        9,
+        11,
+        12
+      ],
+      "output_contract": "standards-decision-v1",
+      "capability_profile": "reasoning-pro",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "data-desk",
+      "name": "Data Desk",
+      "class": "evidence",
+      "responsibility": "Quantitative analysis, tables, chart specifications, and reproducibility.",
+      "checkpoints": [
+        3,
+        4,
+        7
+      ],
+      "output_contract": "data-artifact-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "newsletter-editor",
+      "name": "Newsletter Editor",
+      "class": "distribution",
+      "responsibility": "Curate newsletter editions and prepare subject lines and send packages.",
+      "checkpoints": [
+        12
+      ],
+      "output_contract": "newsletter-package-v1",
+      "capability_profile": "general",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "curation-editor",
+      "name": "Magazine Curation Editor",
+      "class": "magazine",
+      "responsibility": "Define issue thesis, table of contents, article selection, and pacing.",
+      "checkpoints": [
+        2,
+        10
+      ],
+      "output_contract": "issue-manifest-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "layout-production",
+      "name": "Magazine Layout & Production",
+      "class": "magazine",
+      "responsibility": "Create spread plans, art direction, web/PDF parity, and production packages.",
+      "checkpoints": [
+        10,
+        11
+      ],
+      "output_contract": "layout-manifest-v1",
+      "capability_profile": "reasoning-high",
+      "status": "active",
+      "public_side_effects": false
+    },
+    {
+      "id": "editorial-review",
+      "name": "Editorial Review Agent",
+      "class": "oversight",
+      "responsibility": "Test structure, usefulness, coherence, originality, and reader value.",
+      "checkpoints": [
+        6
+      ],
+      "output_contract": "editorial-review-v1",
+      "capability_profile": "reasoning-pro",
+      "status": "active",
+      "public_side_effects": false
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200
+    },
+    "article": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 120
+        },
+        "title": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 240
+        },
+        "dek": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 600
+        },
+        "persona": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "section": {
+          "type": "string",
+          "enum": [
+            "Frontier",
+            "Products",
+            "Compute",
+            "Policy",
+            "Health",
+            "Markets",
+            "Robotics",
+            "Opinion",
+            "Ethics",
+            "Guide"
+          ]
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "brief",
+            "synthesis",
+            "research"
+          ]
+        },
+        "disclaimer": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "body": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 40,
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "p",
+                  "h2",
+                  "quote"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 5000
+              },
+              "citation_urls": {
+                "type": "array",
+                "maxItems": 12,
+                "items": {
+                  "type": "string",
+                  "pattern": "^https?://"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "text",
+              "citation_urls"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "apply": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 180
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1400
+              }
+            },
+            "required": [
+              "label",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "links": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 220
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https?://"
+              }
+            },
+            "required": [
+              "label",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 30,
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https?://"
+              }
+            },
+            "required": [
+              "label",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "slug",
+        "title",
+        "dek",
+        "persona",
+        "section",
+        "format",
+        "disclaimer",
+        "body",
+        "apply",
+        "links",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "article",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

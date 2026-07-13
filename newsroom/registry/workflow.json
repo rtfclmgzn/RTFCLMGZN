@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "workflow_version": "1.1.0",
+  "workflow_id": "canonical-editorial-12",
+  "checkpoints": [
+    {
+      "number": 1,
+      "id": "signal-intake",
+      "name": "Signal intake",
+      "owner": "managing-editor",
+      "artifact_type": "signal-record",
+      "status": "candidate",
+      "next_status": "assignment"
+    },
+    {
+      "number": 2,
+      "id": "assignment",
+      "name": "Assignment and lane selection",
+      "owner": "managing-editor",
+      "artifact_type": "assignment-brief",
+      "status": "assignment",
+      "next_status": "research"
+    },
+    {
+      "number": 3,
+      "id": "evidence-collection",
+      "name": "Evidence collection",
+      "owner": "research",
+      "artifact_type": "source-set",
+      "status": "research",
+      "next_status": "claim-map"
+    },
+    {
+      "number": 4,
+      "id": "claim-map",
+      "name": "Claim-map construction",
+      "owner": "verification",
+      "artifact_type": "claim-map",
+      "status": "claim-map",
+      "next_status": "draft"
+    },
+    {
+      "number": 5,
+      "id": "draft",
+      "name": "Draft",
+      "owner": "persona",
+      "artifact_type": "article-draft",
+      "status": "draft",
+      "next_status": "editorial-review"
+    },
+    {
+      "number": 6,
+      "id": "editorial-review",
+      "name": "Editorial quality review",
+      "owner": "editorial-review",
+      "artifact_type": "editorial-review",
+      "status": "editorial-review",
+      "next_status": "verification"
+    },
+    {
+      "number": 7,
+      "id": "verification",
+      "name": "Fact verification",
+      "owner": "verification",
+      "artifact_type": "verification-matrix",
+      "status": "verification",
+      "next_status": "compliance"
+    },
+    {
+      "number": 8,
+      "id": "compliance",
+      "name": "Risk and compliance classification",
+      "owner": "compliance",
+      "artifact_type": "risk-decision",
+      "status": "compliance",
+      "next_status": "awaiting-approval"
+    },
+    {
+      "number": 9,
+      "id": "adjudication",
+      "name": "Adjudication and owner approval",
+      "owner": "editor-in-chief",
+      "artifact_type": "adjudication-record",
+      "status": "awaiting-approval",
+      "next_status": "packaging",
+      "requires_owner_approval": true
+    },
+    {
+      "number": 10,
+      "id": "packaging",
+      "name": "Packaging",
+      "owner": "publishing",
+      "artifact_type": "publication-package",
+      "status": "packaging",
+      "next_status": "release-validation"
+    },
+    {
+      "number": 11,
+      "id": "release-validation",
+      "name": "Release validation and publication",
+      "owner": "publishing",
+      "artifact_type": "release-record",
+      "status": "release-validation",
+      "next_status": "monitoring"
+    },
+    {
+      "number": 12,
+      "id": "distribution-monitoring",
+      "name": "Distribution, monitoring, and corrections",
+      "owner": "standards-editor",
+      "artifact_type": "monitoring-record",
+      "status": "monitoring",
+      "next_status": "monitoring"
+    }
+  ]
+}

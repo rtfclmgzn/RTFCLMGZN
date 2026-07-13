@@ -1,0 +1,150 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "dek": {
+            "type": "string"
+          },
+          "why_now": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string",
+            "enum": [
+              "Frontier",
+              "Products",
+              "Compute",
+              "Policy",
+              "Health",
+              "Markets",
+              "Robotics",
+              "Opinion",
+              "Ethics",
+              "Guide"
+            ]
+          },
+          "lane": {
+            "type": "string",
+            "enum": [
+              "brief",
+              "synthesis",
+              "research"
+            ]
+          },
+          "persona_id": {
+            "type": "string"
+          },
+          "priority_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "novelty_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "impact_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": [
+              "R1",
+              "R2",
+              "R3"
+            ]
+          },
+          "source_leads": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "pattern": "^https?://"
+                },
+                "publisher": {
+                  "type": "string"
+                },
+                "source_class": {
+                  "type": "string",
+                  "enum": [
+                    "primary",
+                    "official",
+                    "credible-secondary",
+                    "analysis",
+                    "other"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "supports": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "notes": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "label",
+                "url",
+                "publisher",
+                "source_class",
+                "published_at",
+                "supports",
+                "notes"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "topic_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "dek",
+          "why_now",
+          "section",
+          "lane",
+          "persona_id",
+          "priority_score",
+          "novelty_score",
+          "impact_score",
+          "risk_level",
+          "source_leads",
+          "topic_tags"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "summary",
+    "candidates"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approve",
+        "revise",
+        "reject"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "privacy_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "legal_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "financial_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "health_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "auto_publish_blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_disclaimer": {
+      "type": "string"
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "decision",
+    "risk_level",
+    "risk_flags",
+    "privacy_flags",
+    "legal_flags",
+    "financial_flags",
+    "health_flags",
+    "auto_publish_blockers",
+    "required_disclaimer",
+    "publishable"
+  ],
+  "additionalProperties": false
+}

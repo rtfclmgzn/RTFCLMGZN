@@ -1,0 +1,19 @@
+{
+  "release_id": "2026-07-13-evening-desk",
+  "title": "Evening desk · AI infrastructure and policy",
+  "commit_message": "Publish evening AI desk release",
+  "articles": [
+    {
+      "id": "live-017",
+      "slug": "example-article-slug",
+      "title": "Example article title",
+      "image": "assets/img/live-017.jpg"
+    }
+  ],
+  "paths": [
+    "web/data/live-articles.js",
+    "web/data/social-posts.js",
+    "web/rss.xml",
+    "web/assets/img/live-017.jpg"
+  ]
+}

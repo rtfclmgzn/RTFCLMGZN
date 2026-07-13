@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>RTFCLMGZN // Newsroom Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanline"></div>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">RTFCLMGZN // PRIVATE CONTROL PLANE</div>
+      <h1>Newsroom Studio <span>v0.3</span></h1>
+      <p class="top-sub">26-agent editorial runtime · deterministic release authority · local-only control surface</p>
+    </div>
+    <div class="top-actions">
+      <button id="refreshBtn" class="ghost">Refresh</button>
+      <button id="configureBtn" class="ghost">Configure Autopilot</button>
+      <button id="releaseManagerBtn" class="ghost">Release Manager</button>
+      <button id="demoBtn" class="ghost">Safe demo</button>
+      <button id="importBtn" class="accent">Import package</button>
+      <input id="importFile" type="file" accept=".json,.zip" hidden>
+      <button id="newBtn" class="primary">New candidate</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="status-grid" id="statusGrid"></section>
+
+    <section class="autonomy-panel panel">
+      <div class="panel-head autonomy-head">
+        <div>
+          <div class="eyebrow">AUTOPILOT CONTROL</div>
+          <h2>Bounded newsroom cycles</h2>
+          <p>Models research and produce artifacts. Deterministic policy owns state, budgets, approvals, Git, release, and distribution.</p>
+        </div>
+        <div class="autonomy-actions">
+          <button id="runDraftBtn" class="accent">Run research + draft cycle</button>
+          <button id="runBoundedBtn" class="primary">Run configured cycle</button>
+          <button id="dispatchBtn" class="ghost">Dispatch ready posts</button>
+        </div>
+      </div>
+      <div class="autonomy-grid">
+        <div class="autonomy-card">
+          <span>Mode</span><b id="autoMode">—</b><small id="autoSchedule">—</small>
+        </div>
+        <div class="autonomy-card">
+          <span>Providers</span><b id="autoProviders">—</b><small id="autoCredentials">—</small>
+        </div>
+        <div class="autonomy-card">
+          <span>Daily budget</span><b id="autoDailyBudget">—</b><small id="autoDailySpend">—</small>
+        </div>
+        <div class="autonomy-card">
+          <span>Monthly budget</span><b id="autoMonthlyBudget">—</b><small id="autoMonthlySpend">—</small>
+        </div>
+        <div class="autonomy-card">
+          <span>Today</span><b id="autoToday">—</b><small id="autoPublishes">—</small>
+        </div>
+        <div class="autonomy-card">
+          <span>Distribution</span><b id="autoDistribution">—</b><small id="autoDistributionDetail">—</small>
+        </div>
+      </div>
+      <div class="cycle-strip" id="cycleStrip"></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel story-panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">STORY QUEUE</div><h2>Active work</h2></div>
+          <span id="storyCount" class="pill">0</span>
+        </div>
+        <div id="storyList" class="story-list"></div>
+      </aside>
+
+      <section class="panel detail-panel">
+        <div id="emptyState" class="empty-state">
+          <div class="orb"></div>
+          <h2>Select a story</h2>
+          <p>Run a governed cycle, create a candidate, import a story package, or execute the non-publishable fixture demo. Nothing publishes without the configured deterministic release gate.</p>
+        </div>
+        <div id="storyDetail" hidden></div>
+      </section>
+
+      <aside class="panel pulse-panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">AUDIT STREAM</div><h2>Pulse</h2></div>
+          <span class="live-dot">LOCAL</span>
+        </div>
+        <div id="eventList" class="event-list"></div>
+      </aside>
+    </section>
+
+    <section class="bottom-grid">
+      <section class="panel queue-panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">DISTRIBUTION QUEUE</div><h2>Channel handoffs</h2></div>
+          <span id="distributionCount" class="pill">0</span>
+        </div>
+        <div id="distributionList" class="distribution-list"></div>
+      </section>
+
+      <section class="panel registry-panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">CANONICAL REGISTRY</div><h2>26 agents · 9 personas · 12 checkpoints</h2></div>
+          <button id="toggleRegistry" class="ghost">Show registry</button>
+        </div>
+        <div id="registryBody" hidden></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="newDialog">
+    <form method="dialog" id="newForm" class="dialog-form">
+      <div class="dialog-head">
+        <div><div class="eyebrow">CREATE CANDIDATE</div><h2>Open a newsroom record</h2></div>
+        <button value="cancel" class="icon-btn" aria-label="Close">×</button>
+      </div>
+      <label>Working title<input name="title" required maxlength="240"></label>
+      <label>Slug<input name="slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="lowercase-hyphen-slug"></label>
+      <label>Assignment brief<textarea name="brief" required rows="5"></textarea></label>
+      <div class="form-grid">
+        <label>Lane<select name="lane"><option>synthesis</option><option>brief</option><option>research</option></select></label>
+        <label>Persona<select name="persona_id" id="personaSelect"></select></label>
+        <label>Section<select name="section"><option>Frontier</option><option>Products</option><option>Compute</option><option>Policy</option><option>Health</option><option>Markets</option><option>Robotics</option><option>Opinion</option><option>Ethics</option><option>Guide</option></select></label>
+        <label>Format<select name="format"><option>synthesis</option><option>brief</option><option>research</option></select></label>
+      </div>
+      <div class="dialog-actions"><button value="cancel" class="ghost">Cancel</button><button type="submit" value="default" class="primary">Create candidate</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="publishDialog">
+    <form method="dialog" id="publishForm" class="dialog-form">
+      <div class="dialog-head">
+        <div><div class="eyebrow danger-text">PUBLIC RELEASE GATE</div><h2>Confirm publication</h2></div>
+        <button value="cancel" class="icon-btn" aria-label="Close">×</button>
+      </div>
+      <p>This validates the checksum-sealed package, commits it, pushes it to GitHub, and verifies the deployment. Approval remains tied to the exact draft hash.</p>
+      <label>Type the exact slug to confirm<input id="publishSlugInput" autocomplete="off" required></label>
+      <div class="dialog-actions"><button value="cancel" class="ghost">Cancel</button><button type="submit" value="default" class="danger">Publish approved story</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="autonomyDialog">
+    <form method="dialog" id="autonomyForm" class="dialog-form">
+      <div class="dialog-head">
+        <div><div class="eyebrow danger-text">BOUNDARY CONFIRMATION</div><h2>Run configured newsroom cycle</h2></div>
+        <button value="cancel" class="icon-btn" aria-label="Close">×</button>
+      </div>
+      <p>The cycle follows the locally saved mode. In bounded-autopublish mode, only preauthorized R1 stories passing every deterministic gate may proceed to publication.</p>
+      <label class="check-row"><input id="allowPublishCheck" type="checkbox"> Permit this cycle to execute a previously configured bounded publication authorization</label>
+      <label id="autonomyConfirmLabel" hidden>Type <b>RUN BOUNDED AUTOPILOT</b><input id="autonomyConfirmInput" autocomplete="off"></label>
+      <div class="dialog-actions"><button value="cancel" class="ghost">Cancel</button><button type="submit" value="default" class="primary">Start cycle</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="taskDialog">
+    <div class="dialog-form task-dialog">
+      <div class="dialog-head">
+        <div><div class="eyebrow">LIVE ACTIVITY</div><h2 id="taskTitle">Working</h2></div>
+        <button id="closeTaskBtn" class="icon-btn" aria-label="Close">×</button>
+      </div>
+      <pre id="taskLog" class="task-log"></pre>
+      <div id="taskResult"></div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
