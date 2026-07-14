@@ -5,7 +5,7 @@
     {
       id: "live-017",
       slug: "openai-gpt-5-6-sol-terra-luna-ai-work",
-      image: "assets/img/live-016.jpg",
+      image: "assets/img/live-017-cover.png",
       title: "OpenAI’s GPT-5.6 lineup turns one model into a working system",
       dek: "Sol, Terra and Luna point to a product strategy built around routing deep reasoning, everyday work and lower-cost throughput through different systems.",
       persona: "sage-okafor",
@@ -52,7 +52,7 @@
     {
       id: "live-018",
       slug: "ai-infrastructure-race-datacenters-power-gpus",
-      image: "assets/img/newsroom/newsroom-0133cf82.jpg",
+      image: "assets/img/live-018-cover.png",
       title: "The AI infrastructure race has moved from GPUs to grids",
       dek: "Compute remains scarce, but electricity, cooling, interconnection and permitting are becoming the constraints that determine how quickly AI capacity can actually come online.",
       persona: "jin-park",
@@ -103,7 +103,7 @@
     {
       id: "live-019",
       slug: "meta-google-anthropic-openai-ai-arms-race",
-      image: "assets/img/live-014-tsmc-fab.webp",
+      image: "assets/img/live-019-cover.png",
       title: "The AI arms race is becoming an ecosystem war",
       dek: "OpenAI, Google, Anthropic and Meta are competing across models, distribution, infrastructure, developers and enterprise trust. A benchmark lead alone is no longer enough.",
       persona: "ronan-cole",

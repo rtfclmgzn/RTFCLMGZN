@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "rtfc-web",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["--yes", "serve", "-l", "4321", "web"],
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["devserver.py"],
       "port": 4321
     }
   ]
