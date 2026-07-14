@@ -342,7 +342,7 @@ window.RTFC_LIVE_ARTICLES = [
   {
     "id": "live-016",
     "slug": "ai-agent-identity-trust-standards-itu",
-    "image": "assets/img/live-016.jpg",
+    "image": "assets/img/live-016.svg",
     "title": "Before an AI agent can spend your money, it needs a passport",
     "dek": "The ITU has launched a standards effort around agent identity, trust and meaningful human control. The boring layer may determine whether autonomous software ever reaches production.",
     "persona": "marcus-webb",
@@ -430,7 +430,12 @@ window.RTFC_LIVE_ARTICLES = [
         "url": "https://aiforgood.itu.int/event/designing-the-trust-management-for-agentic-ai/"
       }
     ],
-    "corrections": [],
+    "corrections": [
+      {
+        "at": "2026-07-14T06:28:47Z",
+        "text": "Restored the missing article artwork."
+      }
+    ],
     "pipeline": {
       "run": "fresh-batch · 2026-07-13 · 07:18Z",
       "stages": [
