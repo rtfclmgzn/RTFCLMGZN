@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "release_id": "20260714T070514Z-replace-live-014-with-tsmc-fab-cover",
+  "title": "Replace live-014 with a TSMC fabrication cover",
+  "created_at": "2026-07-14T07:05:14Z",
+  "commit_message": "Replace live-014 with TSMC fab cover",
+  "changes": [
+    "Added an article-specific 600x338 WebP cover showing an advanced semiconductor fabrication line and luminous wafer.",
+    "Changed live-014 and its staged social export from the generic chip image to the new TSMC fabrication cover.",
+    "Recorded the artwork correction in the public article record.",
+    "Bumped every browser cache marker from 151 to 152."
+  ],
+  "articles": [
+    {
+      "slug": "tsmc-record-q2-revenue-ai-demand",
+      "image": "assets/img/live-014-tsmc-fab.webp"
+    }
+  ],
+  "cache_version": 152,
+  "validation": {
+    "image_format": "WebP",
+    "image_dimensions": "600x338",
+    "image_size_bytes": 36558,
+    "article_data_syntax": "validated before ref update",
+    "social_data_syntax": "validated before ref update",
+    "cache_markers": "all 23 set to 152",
+    "owner_instruction": "direct corrective release"
+  },
+  "manager_version": "1.2.1-compatible",
+  "publication_path": "GitHub connector equivalent after explicit owner correction request"
+}

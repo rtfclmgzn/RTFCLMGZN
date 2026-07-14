@@ -5,7 +5,7 @@ window.RTFC_LIVE_ARTICLES = [
   {
     "id": "live-014",
     "slug": "tsmc-record-q2-revenue-ai-demand",
-    "image": "assets/img/live-014.jpg",
+    "image": "assets/img/live-014-tsmc-fab.webp",
     "title": "The AI boom just printed a receipt: TSMC did $39.6 billion in one quarter",
     "dek": "Second-quarter revenue rose 36% to a record T$1.27 trillion, beating expectations before Thursday's earnings call. Demand is no longer the question. Capacity, packaging and power are.",
     "persona": "jin-park",
@@ -126,7 +126,12 @@ window.RTFC_LIVE_ARTICLES = [
         "url": "https://investor.tsmc.com/chinese/encrypt/files/encrypt_file/reports/2026-04/5508a9df8981f587c73dbfaf9f577f142e22bbb1/1Q26ManagementReport.pdf"
       }
     ],
-    "corrections": [],
+    "corrections": [
+      {
+        "at": "2026-07-14T07:05:14Z",
+        "text": "Replaced the generic chip artwork with an article-specific TSMC fabrication cover."
+      }
+    ],
     "pipeline": {
       "run": "fresh-batch · 2026-07-13 · 08:05Z",
       "stages": [

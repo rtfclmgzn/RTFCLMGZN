@@ -23,7 +23,7 @@ window.RTFC_SOCIAL_POSTS = [
       "tone": "technical, numbers-first",
       "persona": "jin-park",
       "section": "Compute",
-      "primary_image": "assets/img/live-014.jpg",
+      "primary_image": "assets/img/live-014-tsmc-fab.webp",
       "disclaimer": "not-financial-advice"
     },
     "posts": [
