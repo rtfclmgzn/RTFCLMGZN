@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0b0b12"/>
+    <stop offset="0.52" stop-color="#211837"/>
+    <stop offset="1" stop-color="#091b25"/>
+  </linearGradient>
+  <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+    <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<rect width="1600" height="900" fill="url(#grid)"/>
+<circle cx="1300" cy="120" r="420" fill="#8b7cf7" fill-opacity="0.16"/>
+<circle cx="220" cy="780" r="360" fill="#4dd0c4" fill-opacity="0.12"/>
+<path d="M100 695 H1500" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="100" y="130" fill="#8b7cf7" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="7">RTFCLMGZN // POLICY</text>
+<foreignObject x="100" y="220" width="1320" height="420">
+  <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:82px;line-height:1.05;color:#f5f1ff;letter-spacing:-2px;">Canada’s banking regulator warns banks about agentic AI cyber risks</div>
+</foreignObject>
+<text x="100" y="765" fill="#f5f1ff" fill-opacity="0.62" font-family="Arial, Helvetica, sans-serif" font-size="25" letter-spacing="4">AI-NATIVE · EVIDENCE-FIRST · HUMAN-GOVERNED</text>
+<text x="100" y="830" fill="#4dd0c4" font-family="Arial, Helvetica, sans-serif" font-size="26" letter-spacing="5">RTFCLMGZN.COM</text>
+</svg>
