@@ -18,15 +18,16 @@
         document.querySelectorAll('a[href="#/article/'+slug+'"]').forEach(function(card){
           var art=card.querySelector('.art');
           if(!art) return;
-          art.style.setProperty('background-image','linear-gradient(180deg,rgba(11,11,18,0) 45%,rgba(11,11,18,.62) 100%),url("'+src+'")','important');
-          art.style.setProperty('background-position','center','important');
-          art.style.setProperty('background-size','cover','important');
-          art.style.setProperty('background-repeat','no-repeat','important');
+          art.style.setProperty('background','linear-gradient(180deg,rgba(11,11,18,0) 45%,rgba(11,11,18,.62) 100%),url("'+src+'") center/cover no-repeat,var(--surface2)','important');
+          art.setAttribute('data-exact-cover',bySlug[slug]);
         });
       });
     } finally { busy=false; }
   }
-  apply();
-  new MutationObserver(apply).observe(document.documentElement,{childList:true,subtree:true});
-  window.addEventListener('hashchange',function(){setTimeout(apply,0);});
+  function schedule(){ apply(); setTimeout(apply,50); setTimeout(apply,250); setTimeout(apply,1000); }
+  schedule();
+  new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true});
+  window.addEventListener('hashchange',schedule);
+  window.addEventListener('load',schedule);
+  window.RTFC_EXACT_COVER_BUILD="2026-07-14-165";
 })();
