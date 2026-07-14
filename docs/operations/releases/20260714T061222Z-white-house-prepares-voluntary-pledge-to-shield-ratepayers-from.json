@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "release_id": "20260714T061222Z-white-house-prepares-voluntary-pledge-to-shield-ratepayers-from",
+  "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
+  "created_at": "2026-07-14T06:12:22Z",
+  "commit_message": "Publish newsroom story: White House plans new voluntary AI power-cost pledge, Reuters reports",
+  "articles": [
+    {
+      "id": "newsroom-38feadfa",
+      "slug": "white-house-prepares-voluntary-pledge-to-shield-ratepayers-from-ai-data-center-power-costs",
+      "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
+      "image": "assets/img/newsroom/newsroom-38feadfa.svg"
+    }
+  ],
+  "approval": {
+    "approver": "0baak",
+    "artifact_id": "owner-supervised-repair-v2:38feadfa-a044-4104-bb67-d3d171e72647",
+    "artifact_sha256": "7179077c236d7f75702840fc77022b429ef6b259e419765281532db0cdd6638b",
+    "approved_at": "2026-07-14T06:12:22Z"
+  },
+  "files": [
+    {
+      "path": "web/data/newsroom-articles.js",
+      "sha256": "a682b80fba2e6bea985620741aea1a4a1838a1ade51058c4c5327e7f8acc62e4",
+      "size": 12258
+    },
+    {
+      "path": "web/rss.xml",
+      "sha256": "6424813120daccb8a5bdeb2720d75daed14f6b43537c5cc278d8ba0aced69bf1",
+      "size": 13391
+    },
+    {
+      "path": "web/assets/img/newsroom/newsroom-38feadfa.svg",
+      "sha256": "4be128e9749646e81f8b4a2e233c871f1376045e860c01764da18b06253fcc44",
+      "size": 1566
+    }
+  ],
+  "validated_at": "2026-07-14T06:12:22Z",
+  "cache_version": 148,
+  "manager_version": "1.2.0-compatible",
+  "backup_path": "Git history parent 13e01e5b8e0cd6c55c2761100141b08ecd914f24",
+  "publication_path": "GitHub connector equivalent after exact-version owner approval"
+}
