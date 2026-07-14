@@ -45,6 +45,14 @@
     return date.toLocaleString();
   }
   function money(value) { return "$" + Number(value || 0).toFixed(2); }
+  function asArray(value) { return Array.isArray(value) ? value : []; }
+  function safeStringify(value) {
+    try {
+      return JSON.stringify(value, function (_key, item) {
+        return typeof item === "number" && !Number.isFinite(item) ? null : item;
+      }, 2);
+    } catch (_error) { return "Artifact could not be rendered as text."; }
+  }
   function statusClass(status) {
     if (status === "published" || status === "sent" || status === "succeeded") return "published";
     if (status === "awaiting-approval" || status === "owner-review" || status === "held") return "approval";
@@ -128,9 +136,14 @@
     list.innerHTML = state.stories.map(function (story) {
       return '<button class="story-card ' + (state.selected === story.id ? "active" : "") + '" data-story="' + esc(story.id) + '"><h3>' + esc(story.title) + '</h3><div class="meta-row"><span class="tag ' + statusClass(story.status) + '">' + esc(story.status) + '</span><span class="tag">CP ' + esc(story.current_checkpoint) + '</span><span class="tag">' + esc(story.persona_id) + '</span></div><small>' + esc(when(story.updated_at)) + '</small></button>';
     }).join("");
-    list.querySelectorAll("[data-story]").forEach(function (button) {
-      button.addEventListener("click", function () { selectStory(button.dataset.story); });
-    });
+    if (!list._storyClickBound) {
+      list.addEventListener("click", function (event) {
+        var node = event.target;
+        while (node && node !== list && !(node.dataset && node.dataset.story)) node = node.parentElement;
+        if (node && node.dataset && node.dataset.story) selectStory(node.dataset.story);
+      });
+      list._storyClickBound = true;
+    }
   }
 
   function renderEvents() {
@@ -156,11 +169,29 @@
   }
 
   async function selectStory(id) {
+    if (!id) { toast("Story ID is missing.", true); return; }
+    state.selected = id;
+    renderStories();
+    renderStoryLoading();
     try {
-      state.selected = id; renderStories();
       var story = await api("/api/stories/" + encodeURIComponent(id));
       renderDetail(story);
-    } catch (error) { toast(error.message, true); }
+    } catch (error) {
+      renderStoryError(error);
+      toast(error.message, true);
+    }
+  }
+  function renderStoryLoading() {
+    var empty = document.getElementById("emptyState"), container = document.getElementById("storyDetail");
+    empty.hidden = true; container.hidden = false;
+    container.innerHTML = '<div class="detail-wrap"><span class="tag">loading</span><h2 class="detail-title">Loading story…</h2><p class="detail-dek">Reading sources, claims, policy decisions, and artifacts.</p></div>';
+  }
+  function renderStoryError(error) {
+    var empty = document.getElementById("emptyState"), container = document.getElementById("storyDetail");
+    empty.hidden = true; container.hidden = false;
+    container.innerHTML = '<div class="detail-wrap"><span class="tag blocked">viewer error</span><h2 class="detail-title">Story details could not be displayed</h2><p class="detail-dek">' + esc(error && error.message ? error.message : "Unknown Story Viewer error") + '</p><button id="retryStoryBtn" class="accent">Retry story</button></div>';
+    var retry = document.getElementById("retryStoryBtn");
+    if (retry) retry.addEventListener("click", function () { selectStory(state.selected); });
   }
   function clearDetail() {
     state.selected = null;
@@ -173,7 +204,7 @@
     var container = document.getElementById("storyDetail");
     document.getElementById("emptyState").hidden = true;
     container.hidden = false;
-    var checkpoint = Number(story.current_checkpoint), releases = story.releases || [];
+    var checkpoint = Number(story.current_checkpoint), releases = asArray(story.releases);
     var readyRelease = releases.find(function (release) { return release.status === "ready"; });
     var actions = [];
     if (story.origin === "fixture-demo" && checkpoint < 9) actions.push('<button data-action="fixture" class="accent">Run next fixture checkpoint</button>');
@@ -184,20 +215,20 @@
     if (story.status === "packaging") actions.push('<button data-action="package" class="accent">Build release package</button>');
     if (readyRelease) actions.push('<button data-action="publish" class="danger">Publish to production</button>');
 
-    var policy = (story.policy_decisions || [])[0];
-    var policyHtml = policy ? '<div class="gate-note"><b>Deterministic policy: ' + esc(policy.decision) + '</b><br>' + esc((policy.reason_codes || []).join(" · ") || "All configured release criteria passed") + '<br><small>Policy ' + esc(policy.policy_version) + ' · exact draft ' + esc(String(policy.artifact_sha256 || "").slice(0, 12)) + '</small></div>' : '';
-    var timeline = (state.registry && state.registry.checkpoints || []).map(function (cp) {
+    var policy = asArray(story.policy_decisions)[0];
+    var policyHtml = policy ? '<div class="gate-note"><b>Deterministic policy: ' + esc(policy.decision) + '</b><br>' + esc((Array.isArray(policy.reason_codes) ? policy.reason_codes : []).join(" · ") || "All configured release criteria passed") + '<br><small>Policy ' + esc(policy.policy_version) + ' · exact draft ' + esc(String(policy.artifact_sha256 || "").slice(0, 12)) + '</small></div>' : '';
+    var timeline = asArray(state.registry && state.registry.checkpoints).map(function (cp) {
       var cls = cp.number < checkpoint ? "done" : (cp.number === checkpoint ? "current" : "");
       return '<div class="timeline-row ' + cls + '"><div class="timeline-num">' + cp.number + '</div><div class="timeline-copy"><b>' + esc(cp.name) + '</b><span>' + esc(cp.owner) + '</span></div></div>';
     }).join("");
-    var sources = (story.sources || []).map(function (source) {
+    var sources = asArray(story.sources).map(function (source) {
       return '<div class="source-card"><b>' + esc(source.label) + '</b><a href="' + esc(source.url) + '" target="_blank" rel="noreferrer">' + esc(source.url) + '</a><p>' + esc(source.source_class) + (source.publisher ? " · " + esc(source.publisher) : "") + '</p></div>';
     }).join("") || '<p class="muted">No sources recorded.</p>';
-    var claims = (story.claims || []).map(function (claim) {
+    var claims = asArray(story.claims).map(function (claim) {
       return '<div class="source-card"><b>' + esc(claim.status) + '</b><p>' + esc(claim.text) + '</p></div>';
     }).join("") || '<p class="muted">No claim map persisted yet.</p>';
-    var artifacts = (story.artifacts || []).map(function (artifact) {
-      return '<details class="artifact-card"><summary>CP ' + esc(artifact.checkpoint) + ' · ' + esc(artifact.agent_id) + ' · v' + esc(artifact.version) + ' · ' + esc(String(artifact.sha256).slice(0, 12)) + '</summary><pre>' + esc(JSON.stringify(artifact.content, null, 2)) + '</pre></details>';
+    var artifacts = asArray(story.artifacts).map(function (artifact) {
+      return '<details class="artifact-card"><summary>CP ' + esc(artifact.checkpoint) + ' · ' + esc(artifact.agent_id) + ' · v' + esc(artifact.version) + ' · ' + esc(String(artifact.sha256).slice(0, 12)) + '</summary><pre>' + esc(safeStringify(artifact.content)) + '</pre></details>';
     }).join("") || '<p class="muted">No artifacts yet.</p>';
 
     container.innerHTML = '<div class="detail-wrap"><div class="meta-row"><span class="tag ' + statusClass(story.status) + '">' + esc(story.status) + '</span><span class="tag">' + esc(story.section) + '</span><span class="tag">' + esc(story.automation_mode) + '</span><span class="tag">risk ' + esc(story.risk_level) + '</span></div><h2 class="detail-title">' + esc(story.title) + '</h2><p class="detail-dek">' + esc(story.dek || story.brief) + '</p><div class="detail-actions">' + actions.join("") + '</div>' + policyHtml + '<h3 class="section-title">Workflow</h3><div class="timeline">' + timeline + '</div><h3 class="section-title">Sources</h3><form id="sourceForm" class="mini-form"><input name="label" placeholder="Source label" required><input name="url" type="url" placeholder="https://…" required><button class="ghost">Add source</button></form><div class="stack">' + sources + '</div><h3 class="section-title">Claims</h3><div class="stack">' + claims + '</div><h3 class="section-title">Artifacts</h3>' + artifacts + '</div>';
@@ -206,6 +237,7 @@
       button.addEventListener("click", function () { storyAction(story, button.dataset.action); });
     });
     var sourceForm = document.getElementById("sourceForm");
+    if (!sourceForm) return;
     sourceForm.addEventListener("submit", async function (event) {
       event.preventDefault();
       try {

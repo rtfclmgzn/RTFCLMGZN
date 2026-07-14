@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import base64
+import math
 import mimetypes
 import os
 import secrets
@@ -23,7 +25,7 @@ from .core.package_importer import MAX_PACKAGE_BYTES
 from .core.service import NewsroomError, NewsroomService
 
 APP_NAME = "RTFCLMGZN Newsroom Core"
-APP_VERSION = "0.3.2"
+APP_VERSION = "0.3.3"
 DEFAULT_PORT = 8787
 
 
@@ -118,6 +120,23 @@ class NewsroomServer(ThreadingHTTPServer):
         self.token = token
         self.ui_root = ui_root
         self.tasks = TaskStore()
+
+
+def _json_safe(value: Any) -> Any:
+    """Return a strict-JSON-safe representation without leaking binary data."""
+    if value is None or isinstance(value, (str, bool, int)):
+        return value
+    if isinstance(value, float):
+        return value if math.isfinite(value) else None
+    if isinstance(value, Path):
+        return str(value)
+    if isinstance(value, bytes):
+        return {"encoding": "base64", "data": base64.b64encode(value).decode("ascii")}
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple, set)):
+        return [_json_safe(item) for item in value]
+    return str(value)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -402,7 +421,10 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def _json(self, value: Any, *, status: HTTPStatus = HTTPStatus.OK) -> None:
-        data = json.dumps(value, ensure_ascii=False).encode("utf-8")
+        # Browser JSON.parse rejects NaN/Infinity and cannot decode arbitrary Python
+        # objects. Normalize every API response so one unusual model value cannot
+        # make the entire Story Viewer appear unresponsive.
+        data = json.dumps(_json_safe(value), ensure_ascii=False, allow_nan=False).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))

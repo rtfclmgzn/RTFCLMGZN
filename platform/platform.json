@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "platform_version": "0.3.2",
+  "platform_version": "0.3.3",
   "architecture_version": "1.0",
   "agent_registry_version": "1.1.0",
   "workflow_version": "1.1.0",
-  "newsroom_core_version": "0.3.2",
-  "newsroom_studio_version": "0.3.2",
+  "newsroom_core_version": "0.3.3",
+  "newsroom_studio_version": "0.3.3",
   "release_manager_version": "1.2.0",
   "autonomy_controller_version": "0.3.2",
   "credential_vault_version": "1.0.0",
@@ -27,5 +27,8 @@
   "batch_shared_source_cache": true,
   "batch_shared_model_calls": true,
   "batch_minimum_directly_fetched_sources": 1,
-  "batch_minimum_independent_source_domains": 2
+  "batch_minimum_independent_source_domains": 2,
+  "story_viewer_hotfix_version": "0.3.3",
+  "strict_json_api_responses": true,
+  "story_detail_error_recovery": true
 }

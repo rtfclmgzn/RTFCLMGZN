@@ -20,7 +20,7 @@ from .core.database import SCHEMA_VERSION
 from .core.service import NewsroomError, NewsroomService
 from .security.vault import VaultError
 
-PLATFORM_VERSION = "0.3.2"
+PLATFORM_VERSION = "0.3.3"
 
 
 def doctor(repo_root: Path, service: NewsroomService) -> tuple[bool, dict[str, Any]]:

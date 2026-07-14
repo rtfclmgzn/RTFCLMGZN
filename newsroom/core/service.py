@@ -51,7 +51,7 @@ class NewsroomService:
     def health(self) -> dict[str, Any]:
         return {
             "ok": True,
-            "version": "0.3.0",
+            "version": "0.3.3",
             "repo_root": str(self.repo_root),
             "database": str(self.database.path),
             "agent_count": len(self.registry.agents),
