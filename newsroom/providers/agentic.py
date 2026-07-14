@@ -72,7 +72,7 @@ class AgenticProvider(Provider):
             ),
             schema_name=schema_name,
             schema=schema,
-            use_web_search=checkpoint in {1, 3, 7},
+            use_web_search=checkpoint == 3,
         )
         validate(response.data, schema)
         content = dict(response.data)

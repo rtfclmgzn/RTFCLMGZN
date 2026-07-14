@@ -95,7 +95,7 @@ Return at most {int(limits['candidates_per_cycle'])} candidates. Prefer primary 
 """
         instructions = """You are the RTFCLMGZN signal-intake desk. Search current web sources. Return only the requested JSON. Never invent a URL or publication date. If fewer than the requested number meet the evidence threshold, return fewer candidates."""
         response = self.router.generate(
-            capability_profile="reasoning-high",
+            capability_profile="structured-fast",
             instructions=instructions,
             prompt=prompt,
             schema_name="discovery_batch",

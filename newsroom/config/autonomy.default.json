@@ -100,9 +100,9 @@
   "limits": {
     "stories_per_cycle": 2,
     "stories_per_day": 6,
-    "candidates_per_cycle": 12,
+    "candidates_per_cycle": 6,
     "provider_calls_per_cycle": 30,
-    "web_search_calls_per_cycle": 16,
+    "web_search_calls_per_cycle": 24,
     "daily_budget_usd": 25.0,
     "monthly_budget_usd": 250.0,
     "minimum_cycle_spacing_minutes": 90
