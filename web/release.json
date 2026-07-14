@@ -1,32 +1,32 @@
 {
-  "release_id": "20260714T062847Z-correct-hcltech-currency-and-upgrade-newsroom-art",
-  "title": "Correct HCLTech currency context and upgrade newsroom artwork",
-  "published_at": "2026-07-14T06:28:47Z",
-  "cache_version": 150,
+  "release_id": "20260714T065137Z-replace-wrapper-art-with-direct-jpeg",
+  "title": "Replace non-rendering wrapper artwork with direct JPEG covers",
+  "published_at": "2026-07-14T06:51:37Z",
+  "cache_version": 151,
   "articles": [
     {
       "id": "newsroom-0133cf82",
       "slug": "hcltech-india-ai-data-center-investment",
       "title": "HCLTech plans ₹3,500 crore (about $370 million) for India AI data centers",
-      "image": "assets/img/newsroom/newsroom-0133cf82.svg"
+      "image": "assets/img/newsroom/newsroom-0133cf82.jpg"
     },
     {
       "id": "newsroom-38feadfa",
       "slug": "white-house-prepares-voluntary-pledge-to-shield-ratepayers-from-ai-data-center-power-costs",
       "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
-      "image": "assets/img/newsroom/newsroom-38feadfa.svg"
+      "image": "assets/img/newsroom/newsroom-38feadfa.jpg"
     },
     {
       "id": "newsroom-4814e454",
       "slug": "canada-osfi-agentic-ai-cyber-risks",
       "title": "Canada’s banking regulator warns banks about agentic AI cyber risks",
-      "image": "assets/img/newsroom/newsroom-4814e454.svg"
+      "image": "assets/img/newsroom/newsroom-4814e454.jpg"
     },
     {
       "id": "live-016",
       "slug": "ai-agent-identity-trust-standards-itu",
       "title": "Before an AI agent can spend your money, it needs a passport",
-      "image": "assets/img/live-016.svg"
+      "image": "assets/img/live-016.jpg"
     }
   ],
   "manager_version": "1.2.0-compatible"

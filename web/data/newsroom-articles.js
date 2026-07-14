@@ -70,7 +70,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "id": "newsroom-0133cf82",
-    "image": "assets/img/newsroom/newsroom-0133cf82.svg",
+    "image": "assets/img/newsroom/newsroom-0133cf82.jpg",
     "top": false,
     "sample": false,
     "corrections": [
@@ -197,7 +197,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "id": "newsroom-38feadfa",
-    "image": "assets/img/newsroom/newsroom-38feadfa.svg",
+    "image": "assets/img/newsroom/newsroom-38feadfa.jpg",
     "top": false,
     "sample": false,
     "corrections": [],
@@ -314,7 +314,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "id": "newsroom-4814e454",
-    "image": "assets/img/newsroom/newsroom-4814e454.svg",
+    "image": "assets/img/newsroom/newsroom-4814e454.jpg",
     "top": false,
     "sample": false,
     "corrections": [],
