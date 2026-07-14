@@ -1,43 +1,50 @@
-// THE SCOREBOARD — how the models actually compare: strength vs. cost.
+// THE SCOREBOARD — how the models actually compare: independent strength vs. cost.
 // Maintained by the Data Desk. Two numbers per model:
-//   score : a 0–100 composite "intelligence index" aggregated from published, independent
-//           benchmarks (coding, reasoning, knowledge) in the style of Artificial Analysis.
-//           Higher = stronger. It is an AGGREGATE, not one test — see `basisNote` + sources.
-//   pin/pout : list price per 1M input/output tokens. `est:true` marks an estimate where a
-//           lab hasn't published the exact figure (shown with a ~). Unknown = null.
-// The page derives VALUE = strength per dollar, so you can see the thing that actually
-// matters: not just who's smartest, and not just who's cheapest, but the ratio.
-// RULES: scores move only when independent benchmarks move; never inflate a lab's own number.
+//   score : the current Artificial Analysis Intelligence Index for the named reasoning mode.
+//           This is an independent aggregate across coding, reasoning, and knowledge evaluations.
+//   pin/pout : vendor list price per 1M input/output tokens where published. The UI derives
+//           a value view from strength and cost; exact provider/runtime pricing can vary.
+// RULES: never substitute vendor self-reported benchmark claims for the independent index;
+// refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "July 12, 2026",
-  basisNote: "Strength is a 0–100 composite of independent coding, reasoning, and knowledge benchmarks (anchored to Artificial Analysis' Intelligence & Coding indices and the SWE-Bench / Terminal-Bench figures in our coverage). It's an aggregate snapshot, not a single test — and it moves as new independent results land.",
+  updated: "July 14, 2026",
+  scannedAt: "2026-07-14T19:08:00Z",
+  basisNote: "Strength is the current Artificial Analysis Intelligence Index for a representative high-capability reasoning mode. Prices are vendor list prices stored separately from the independent score. This snapshot was cross-checked against the live Artificial Analysis model leaderboard; SWE-bench and Terminal-Bench remain supporting coding signals rather than being blended by hand into an opaque house score.",
   rows: [
-    { model:"GPT-5.6 Sol",      lab:"OpenAI",    score:83, pin:5,    pout:25,   est:true,  status:"released",
-      note:"The new flagship. Tops the independent aggregate — and priced roughly half of Fable 5, which is the story of the summer." },
-    { model:"Fable 5",          lab:"Anthropic", score:80, pin:10,   pout:50,   status:"released",
-      note:"Premium frontier model; still leads on the hardest agentic-coding evals, but now the most expensive seat in the house." },
-    { model:"GLM-5.2",          lab:"Z.ai",      score:74, pin:0.6,  pout:2,    est:true,  status:"released",
-      note:"The value bomb: frontier-adjacent strength at a fraction of the price — the engine behind Chinese models' US enterprise surge." },
-    { model:"Opus 4.8",         lab:"Anthropic", score:73, pin:5,    pout:25,   status:"released",
-      note:"The proven workhorse — strong agentic coding (SWE-Bench Pro 69%), well-understood, widely deployed." },
-    { model:"GPT-5.6 Terra",    lab:"OpenAI",    score:72, pin:2.50, pout:15,   status:"released",
-      note:"The mid-tier that reset the market. Near-flagship strength at a third of flagship price — the default most builders should start on." },
-    { model:"Grok 4.5",         lab:"xAI",       score:68, pin:2,    pout:6,    status:"released",
-      note:"Fourth-place intelligence at a first-place price — strong value, but watch its independently-measured hallucination rate." },
-    { model:"GPT 5.5",          lab:"OpenAI",    score:66, pin:5,    pout:30,   status:"released",
-      note:"Previous-gen flagship; capable and everywhere, but out-priced and out-scored by the 5.6 tiers now." },
-    { model:"Gemini 3.5 Flash", lab:"Google",    score:61, pin:0.5,  pout:2,    est:true,  status:"released",
-      note:"Cheap and fast; a big jump over the prior Flash. Google's volume play while Pro is delayed." },
-    { model:"Muse Spark 1.1",   lab:"Meta",      score:60, pin:1.25, pout:4.25, status:"released",
-      note:"Meta's first paid model — built for large-context agentic work; solid value, unproven at the top." },
-    { model:"GPT-5.6 Luna",     lab:"OpenAI",    score:55, pin:1,    pout:6,    status:"released",
-      note:"The budget tier: not the smartest, but plenty for summarizing, sorting, and first drafts at rock-bottom cost." },
-    { model:"Gemini 3.5 Pro",   lab:"Google",    score:null, pin:null, pout:null, status:"delayed",
-      note:"Promised for June, slipped to July after enterprise testers flagged reasoning issues. No independent scores yet." }
+    { model:"Claude Fable 5",      mode:"with fallback", lab:"Anthropic", score:60, pin:10,   pout:50, status:"released",
+      note:"Current independent leader by one point. Maximum capability, but still the most expensive model in this comparison." },
+    { model:"GPT-5.6 Sol",         mode:"max",           lab:"OpenAI",    score:59, pin:5,    pout:25, status:"released",
+      note:"One point off the lead at roughly half Fable 5's token price; the strongest price-performance result at the very top." },
+    { model:"Claude Opus 4.8",     mode:"max",           lab:"Anthropic", score:56, pin:5,    pout:25, status:"released",
+      note:"Tied with Sol high on the independent index and still a proven premium agentic-coding workhorse." },
+    { model:"GPT-5.6 Sol",         mode:"high",          lab:"OpenAI",    score:56, pin:5,    pout:25, status:"released",
+      note:"Near-max capability with less deliberation than Sol max; useful when latency matters more than the final few points." },
+    { model:"GPT-5.6 Terra",       mode:"max",           lab:"OpenAI",    score:55, pin:2.5,  pout:15, status:"released",
+      note:"The daily-driver standout: only four points behind Sol max at a materially lower price." },
+    { model:"GPT-5.5",             mode:"xhigh",         lab:"OpenAI",    score:55, pin:5,    pout:30, status:"released",
+      note:"Previous generation still scores well, but Terra max now matches it at a much lower cost." },
+    { model:"Grok 4.5",            mode:"high",          lab:"xAI",       score:54, pin:2,    pout:6, status:"released",
+      note:"Strong independent score and aggressive pricing; remains one of the best value frontier options." },
+    { model:"Claude Sonnet 5",     mode:"max",           lab:"Anthropic", score:53, pin:2,    pout:10, status:"released",
+      note:"A strong middle tier for coding and agent work, with a substantially better cost profile than Opus or Fable." },
+    { model:"GPT-5.6 Luna",        mode:"max",           lab:"OpenAI",    score:51, pin:1,    pout:6, status:"released",
+      note:"Budget model with a surprisingly high independent score; especially compelling for high-volume routed workloads." },
+    { model:"GLM-5.2",             mode:"max",           lab:"Z.ai",      score:51, pin:0.6,  pout:2, status:"released",
+      note:"Matches Luna max on the index at extremely low list pricing — the current value outlier." },
+    { model:"Muse Spark 1.1",      mode:"xhigh",         lab:"Meta",      score:51, pin:1.25, pout:4.25, status:"released",
+      note:"Now independently measured at the same score as Luna max and GLM-5.2 max; no longer merely an unproven launch entry." },
+    { model:"Gemini 3.5 Flash",    mode:"default",       lab:"Google",    score:50, pin:0.5,  pout:2, status:"released",
+      note:"Fast, inexpensive, and only one index point behind the 51-point cluster." },
+    { model:"Gemini 3.1 Pro Preview", mode:"default",    lab:"Google",    score:46, pin:null, pout:null, status:"preview",
+      note:"The current independently measured Google Pro entry. Pricing is omitted here until the Data Desk verifies the exact public API rate used by the benchmark provider." },
+    { model:"DeepSeek V4 Pro",     mode:"max",           lab:"DeepSeek",  score:44, pin:null, pout:null, status:"released",
+      note:"Lower raw index than the frontier leaders, but a notable open-market value candidate once exact provider pricing is normalized." }
   ],
   sources: [
-    { label:"Our teardown: Grok 4.5 — benchmarks, pricing, the hallucination caveat", url:"#/article/grok-4-5-the-price-is-the-product" },
-    { label:"Our coverage: GPT-5.6 Sol/Terra/Luna public launch & pricing", url:"#/article/gpt-5-6-sol-terra-luna-launch" },
-    { label:"Our coverage: Chinese models (GLM-5.2) and the price war", url:"#/article/chinese-models-us-enterprise-share" }
+    { label:"Artificial Analysis — live LLM leaderboard", url:"https://artificialanalysis.ai/leaderboards/models" },
+    { label:"SWE-bench — official coding-agent leaderboards", url:"https://www.swebench.com/" },
+    { label:"Terminal-Bench — official terminal-agent leaderboard", url:"https://www.tbench.ai/leaderboard" },
+    { label:"Our coverage: GPT-5.6 Sol/Terra/Luna public launch", url:"#/article/gpt-5-6-sol-terra-luna-launch" },
+    { label:"Our coverage: Chinese models and the price war", url:"#/article/chinese-models-us-enterprise-share" }
   ]
 };
