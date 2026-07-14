@@ -1,4 +1,4 @@
-// RTFCLMGZN cover-image usage registry and 90-day cooldown validator.
+// RTFCLMGZN cover-image usage registry and hard 90-day publication gate.
 // Loaded after every article data file and before app.js.
 (function () {
   "use strict";
@@ -16,6 +16,14 @@
 
   function normalizePath(path) {
     return String(path || "").trim().replace(/^\.\//, "");
+  }
+
+  function isProductionCover(path) {
+    path = normalizePath(path).toLowerCase();
+    if (!path) return false;
+    if (path.indexOf("data:image/svg") === 0) return false;
+    if (/\.svg(?:\?|$)/.test(path)) return false;
+    return /\.(?:jpe?g|png|webp|avif)(?:\?|$)/.test(path) || /^data:image\/(?:jpeg|png|webp|avif);/.test(path);
   }
 
   function buildRegistry(articles) {
@@ -53,7 +61,7 @@
 
   function eligible(path, articleId, nowIso, batchPaths) {
     path = normalizePath(path);
-    if (!path) return false;
+    if (!isProductionCover(path)) return false;
     if ((batchPaths || []).indexOf(path) >= 0) return false;
 
     var rows = buildRegistry(allArticles()).filter(function (row) { return row.path === path; });
@@ -77,6 +85,9 @@
       if (!path) {
         errors.push({ code: "missing-cover", article_id: article.id, message: "Article has no cover image." });
         return;
+      }
+      if (!isProductionCover(path)) {
+        errors.push({ code: "non-production-cover", article_id: article.id, path: path, message: "Article cover must be raster editorial artwork; SVG and placeholder covers are forbidden." });
       }
 
       if (batchIds.indexOf(article.id) >= 0) {
@@ -116,24 +127,38 @@
     return { ok: errors.length === 0, cooldown_days: COOLDOWN_DAYS, errors: errors };
   }
 
+  function assertPublishable(articles, options) {
+    var result = validate(articles, options);
+    if (!result.ok) {
+      var detail = result.errors.map(function (e) { return e.code + ":" + (e.article_id || "unknown") + (e.path ? "@" + e.path : ""); }).join(", ");
+      throw new Error("COVER PUBLICATION BLOCKED — " + detail + ". Select another eligible library image or generate a proper Gemini/Nano Banana cover.");
+    }
+    return result;
+  }
+
   window.RTFC_IMAGE_USAGE = buildRegistry(allArticles());
   window.RTFC_IMAGE_USAGE_POLICY = {
     cooldown_days: COOLDOWN_DAYS,
     no_same_batch_reuse: true,
     same_article_updates_may_retain_cover: true,
     library_first_after_cooldown_filter: true,
-    generate_when_no_eligible_library_image: true
+    generate_when_no_eligible_library_image: true,
+    placeholder_fallback_allowed: false,
+    raster_editorial_art_required: true,
+    on_conflict: "block publication until an eligible library or Gemini/Nano Banana cover exists"
   };
   window.RTFC_IMAGE_USAGE_API = {
     buildRegistry: buildRegistry,
     eligible: eligible,
     validate: validate,
-    normalizePath: normalizePath
+    assertPublishable: assertPublishable,
+    normalizePath: normalizePath,
+    isProductionCover: isProductionCover
   };
 
   var audit = validate(allArticles());
   window.RTFC_IMAGE_USAGE_AUDIT = audit;
-  if (!audit.ok && typeof console !== "undefined" && console.warn) {
-    console.warn("RTFCLMGZN cover cooldown audit found existing violations:", audit.errors);
+  if (!audit.ok && typeof console !== "undefined" && console.error) {
+    console.error("RTFCLMGZN cover publication audit failed:", audit.errors);
   }
 })();
