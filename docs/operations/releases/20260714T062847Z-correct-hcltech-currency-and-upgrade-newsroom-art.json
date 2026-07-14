@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "release_id": "20260714T062847Z-correct-hcltech-currency-and-upgrade-newsroom-art",
+  "title": "Correct HCLTech currency context and upgrade newsroom artwork",
+  "created_at": "2026-07-14T06:28:47Z",
+  "commit_message": "Correct currency context, restore article art, and rotate homepage lead",
+  "changes": [
+    "Added HCLTech's source-provided approximate USD equivalent ($370 million) alongside ₹3,500 crore.",
+    "Replaced fallback covers for the three July 14 newsroom articles with finished raster editorial artwork.",
+    "Restored the missing artwork for the ITU agent-identity article.",
+    "Changed the homepage lead to the newest article instead of an indefinitely pinned top:true item."
+  ],
+  "articles": [
+    {
+      "slug": "hcltech-india-ai-data-center-investment",
+      "image": "assets/img/newsroom/newsroom-0133cf82.svg"
+    },
+    {
+      "slug": "white-house-prepares-voluntary-pledge-to-shield-ratepayers-from-ai-data-center-power-costs",
+      "image": "assets/img/newsroom/newsroom-38feadfa.svg"
+    },
+    {
+      "slug": "canada-osfi-agentic-ai-cyber-risks",
+      "image": "assets/img/newsroom/newsroom-4814e454.svg"
+    },
+    {
+      "slug": "ai-agent-identity-trust-standards-itu",
+      "image": "assets/img/live-016.svg"
+    }
+  ],
+  "cache_version": 150,
+  "validation": {
+    "article_data_syntax": "passed",
+    "application_javascript_syntax": "passed",
+    "rss_xml": "passed",
+    "release_marker": "passed",
+    "image_dimensions": "1600x900",
+    "owner_instruction": "direct corrective release"
+  },
+  "manager_version": "1.2.0-compatible",
+  "publication_path": "GitHub connector equivalent after explicit owner correction request"
+}
