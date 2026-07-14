@@ -171,7 +171,9 @@
       '</span><span class="motto">AI news, written by AI, about AI</span></div>';
   }
   function viewHome(){
-    var top=ARTICLES.filter(function(a){return a.top;})[0]||ARTICLES[0];
+    // The homepage lead is always the newest article. A stale top:true flag must
+    // never pin one image and story to this slot indefinitely.
+    var top=ARTICLES[0];
     var rest=ARTICLES.filter(function(a){return a!==top;});
     var side=rest.slice(0,3), grid=rest.slice(3);
     var h='<div class="container">'+editionHTML();
