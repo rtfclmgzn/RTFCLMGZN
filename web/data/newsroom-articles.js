@@ -2,8 +2,8 @@
 window.RTFC_NEWSROOM_ARTICLES = [
   {
     "slug": "hcltech-india-ai-data-center-investment",
-    "title": "HCLTech plans up to ₹3,500 crore for India AI data-center business",
-    "dek": "HCLTech announced a full-stack AI offering backed by a planned investment of up to ₹3,500 crore, with potential data-center capacity of 50 MW.",
+    "title": "HCLTech plans ₹3,500 crore (about $370 million) for India AI data centers",
+    "dek": "HCLTech announced a full-stack AI offering backed by a planned investment of up to ₹3,500 crore—approximately $370 million—with potential data-center capacity of 50 MW.",
     "persona": "jin-park",
     "section": "Compute",
     "format": "brief",
@@ -11,7 +11,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "HCLTech announced plans to invest up to ₹3,500 crore in an AI data-center business in India, with potential capacity of 50 MW. The company presented the investment as the infrastructure foundation for a new full-stack AI offering serving private-sector and government demand.",
+        "text": "HCLTech announced plans to invest up to ₹3,500 crore—approximately $370 million—in an AI data-center business in India, with potential capacity of 50 MW. The company presented the investment as the infrastructure foundation for a new full-stack AI offering serving private-sector and government demand.",
         "citation_urls": [
           "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment",
           "https://www.reuters.com/world/india/indias-hcltech-beats-first-quarter-revenue-estimates-2026-07-13/"
@@ -27,7 +27,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Chief executive C. Vijayakumar disclosed the planned investment alongside HCLTech’s first-quarter results. The company described ₹3,500 crore as an upper limit and 50 MW as potential scale. Its public material does not identify project sites, an initial construction phase, a deployment schedule or how quickly the spending would occur.",
+        "text": "Chief executive C. Vijayakumar disclosed the planned investment alongside HCLTech’s first-quarter results. The company described ₹3,500 crore (about $370 million) as an upper limit and 50 MW as potential scale. Its public material does not identify project sites, an initial construction phase, a deployment schedule or how quickly the spending would occur.",
         "citation_urls": [
           "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment",
           "https://www.hcltech.com/press-releases/hcltech-delivers-robust-q1-led-record-deal-bookings-24-billion",
@@ -73,7 +73,12 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "image": "assets/img/newsroom/newsroom-0133cf82.svg",
     "top": false,
     "sample": false,
-    "corrections": [],
+    "corrections": [
+      {
+        "at": "2026-07-14T06:25:50Z",
+        "text": "Added HCLTech’s source-provided approximate US-dollar equivalent ($370 million) for ₹3,500 crore and upgraded the article artwork."
+      }
+    ],
     "pipeline": {
       "run": "newsroom-core · 2026-07-14T06:14:03Z",
       "stages": [
