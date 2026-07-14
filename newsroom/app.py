@@ -23,7 +23,7 @@ from .core.package_importer import MAX_PACKAGE_BYTES
 from .core.service import NewsroomError, NewsroomService
 
 APP_NAME = "RTFCLMGZN Newsroom Core"
-APP_VERSION = "0.3.0"
+APP_VERSION = "0.3.2"
 DEFAULT_PORT = 8787
 
 

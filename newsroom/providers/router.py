@@ -57,6 +57,9 @@ class ProviderRouter:
             reasoning = (provider_config.get("reasoning_effort") or {}).get(
                 capability_profile
             )
+            max_output_tokens = (provider_config.get("max_output_tokens") or {}).get(
+                capability_profile
+            )
             try:
                 return provider.generate(
                     model=model,
@@ -66,6 +69,9 @@ class ProviderRouter:
                     schema=schema,
                     use_web_search=use_web_search,
                     reasoning_effort=reasoning,
+                    max_output_tokens=(
+                        int(max_output_tokens) if max_output_tokens is not None else None
+                    ),
                 )
             except Exception as exc:
                 failures.append(f"{provider_name}: {exc}")

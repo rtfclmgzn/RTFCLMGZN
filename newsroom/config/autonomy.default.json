@@ -45,7 +45,15 @@
         }
       },
       "web_search_per_call": 0.01,
-      "pricing_checked_at": "2026-07-13"
+      "pricing_checked_at": "2026-07-13",
+      "max_output_tokens": {
+        "reasoning-pro": 12000,
+        "reasoning-high": 10000,
+        "balanced": 9000,
+        "utility": 3000,
+        "general": 8000,
+        "structured-fast": 7000
+      }
     },
     "gemini": {
       "enabled": true,
@@ -85,33 +93,41 @@
         "utility": "low",
         "general": "medium",
         "structured-fast": "low"
+      },
+      "max_output_tokens": {
+        "reasoning-pro": 12000,
+        "reasoning-high": 10000,
+        "balanced": 9000,
+        "utility": 3000,
+        "general": 8000,
+        "structured-fast": 7000
       }
     }
   },
   "schedule": {
     "enabled": false,
-    "interval_minutes": 180,
+    "interval_minutes": 240,
     "quiet_hours_utc": {
-      "start": 5,
-      "end": 10
+      "start": 0,
+      "end": 0
     },
     "run_on_start": false
   },
   "limits": {
-    "stories_per_cycle": 2,
-    "stories_per_day": 6,
-    "candidates_per_cycle": 6,
-    "provider_calls_per_cycle": 30,
-    "web_search_calls_per_cycle": 24,
-    "daily_budget_usd": 25.0,
-    "monthly_budget_usd": 250.0,
-    "minimum_cycle_spacing_minutes": 90
+    "stories_per_cycle": 3,
+    "stories_per_day": 12,
+    "candidates_per_cycle": 9,
+    "provider_calls_per_cycle": 12,
+    "web_search_calls_per_cycle": 16,
+    "daily_budget_usd": 1.0,
+    "monthly_budget_usd": 30.0,
+    "minimum_cycle_spacing_minutes": 210
   },
   "editorial": {
     "lookback_hours": 36,
     "minimum_sources": 2,
     "minimum_independent_sources": 2,
-    "minimum_primary_sources": 1,
+    "minimum_primary_sources": 0,
     "minimum_verification_score": 0.9,
     "minimum_editorial_score": 0.86,
     "minimum_confidence_score": 0.88,
@@ -131,7 +147,8 @@
       "minors",
       "personal data",
       "breaking casualty report"
-    ]
+    ],
+    "minimum_fetched_sources": 1
   },
   "publication": {
     "auto_publish_enabled": false,
@@ -142,7 +159,7 @@
     "push_to_github": true,
     "verify_cloudflare": true,
     "staging_only": false,
-    "maximum_auto_publishes_per_day": 3,
+    "maximum_auto_publishes_per_day": 12,
     "minimum_owner_approved_releases_before_autopublish": 1,
     "owner_preauthorization": {
       "enabled": false,
@@ -171,5 +188,43 @@
     "redact_prompts": false,
     "record_provider_payloads": false,
     "audit_provider_calls": true
+  },
+  "batch": {
+    "enabled": true,
+    "scan_interval_minutes": 240,
+    "maximum_stories_per_scan": 3,
+    "research_articles_per_week": 2,
+    "budget_reserve_usd": 0.08,
+    "minimum_composite_score": {
+      "brief": 0.64,
+      "synthesis": 0.76,
+      "research": 0.88
+    },
+    "daily_lane_caps": {
+      "brief": 9,
+      "synthesis": 3,
+      "research": 1
+    },
+    "estimated_cost_per_story_usd": {
+      "brief": 0.035,
+      "synthesis": 0.095,
+      "research": 0.3
+    },
+    "model_profiles": {
+      "brief_compose": "structured-fast",
+      "brief_review": "structured-fast",
+      "synthesis_compose": "balanced",
+      "synthesis_review": "balanced",
+      "research_compose": "reasoning-high",
+      "research_review": "reasoning-pro"
+    },
+    "source_fetch": {
+      "enabled": true,
+      "timeout_seconds": 12,
+      "max_bytes": 524288,
+      "max_excerpt_chars": 5000,
+      "cache_ttl_hours": 12,
+      "max_unique_sources_per_cycle": 12
+    }
   }
 }

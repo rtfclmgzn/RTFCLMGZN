@@ -177,6 +177,17 @@ def validate_config(config: dict[str, Any]) -> dict[str, Any]:
                 raise ConfigError(
                     f"providers.{provider_name}.reasoning_effort.{profile} is invalid"
                 )
+        max_output_tokens = provider.get("max_output_tokens") or {}
+        if not isinstance(max_output_tokens, dict):
+            raise ConfigError(f"providers.{provider_name}.max_output_tokens must be an object")
+        for profile, limit in max_output_tokens.items():
+            _nonempty_string(profile, f"providers.{provider_name}.max_output profile", 120)
+            _integer(
+                limit,
+                f"providers.{provider_name}.max_output_tokens.{profile}",
+                256,
+                128000,
+            )
         _integer(
             provider.get("timeout_seconds"),
             f"providers.{provider_name}.timeout_seconds",
@@ -249,6 +260,69 @@ def validate_config(config: dict[str, Any]) -> dict[str, Any]:
     if float(limits["daily_budget_usd"]) > float(limits["monthly_budget_usd"]):
         raise ConfigError("limits.daily_budget_usd may not exceed monthly_budget_usd")
 
+    batch = config.get("batch")
+    if not isinstance(batch, dict):
+        raise ConfigError("batch must be an object")
+    _boolean(batch.get("enabled"), "batch.enabled")
+    _integer(batch.get("scan_interval_minutes"), "batch.scan_interval_minutes", 60, 1440)
+    _integer(batch.get("maximum_stories_per_scan"), "batch.maximum_stories_per_scan", 0, 3)
+    _integer(batch.get("research_articles_per_week"), "batch.research_articles_per_week", 0, 7)
+    _number(batch.get("budget_reserve_usd"), "batch.budget_reserve_usd", 0, 100)
+    for object_name in (
+        "minimum_composite_score",
+        "daily_lane_caps",
+        "estimated_cost_per_story_usd",
+        "model_profiles",
+    ):
+        if not isinstance(batch.get(object_name), dict):
+            raise ConfigError(f"batch.{object_name} must be an object")
+    for lane in ("brief", "synthesis", "research"):
+        _number(
+            batch["minimum_composite_score"].get(lane),
+            f"batch.minimum_composite_score.{lane}",
+            0,
+            1,
+        )
+        _integer(
+            batch["daily_lane_caps"].get(lane),
+            f"batch.daily_lane_caps.{lane}",
+            0,
+            30,
+        )
+        _number(
+            batch["estimated_cost_per_story_usd"].get(lane),
+            f"batch.estimated_cost_per_story_usd.{lane}",
+            0,
+            100,
+        )
+        for stage in ("compose", "review"):
+            _nonempty_string(
+                batch["model_profiles"].get(f"{lane}_{stage}"),
+                f"batch.model_profiles.{lane}_{stage}",
+                120,
+            )
+    source_fetch = batch.get("source_fetch")
+    if not isinstance(source_fetch, dict):
+        raise ConfigError("batch.source_fetch must be an object")
+    _boolean(source_fetch.get("enabled"), "batch.source_fetch.enabled")
+    _integer(source_fetch.get("timeout_seconds"), "batch.source_fetch.timeout_seconds", 2, 120)
+    _integer(source_fetch.get("max_bytes"), "batch.source_fetch.max_bytes", 16384, 5242880)
+    _integer(
+        source_fetch.get("max_excerpt_chars"),
+        "batch.source_fetch.max_excerpt_chars",
+        500,
+        20000,
+    )
+    _number(source_fetch.get("cache_ttl_hours"), "batch.source_fetch.cache_ttl_hours", 0.25, 168)
+    _integer(
+        source_fetch.get("max_unique_sources_per_cycle"),
+        "batch.source_fetch.max_unique_sources_per_cycle",
+        2,
+        50,
+    )
+    if int(batch["maximum_stories_per_scan"]) > int(limits["stories_per_cycle"]):
+        raise ConfigError("batch.maximum_stories_per_scan may not exceed limits.stories_per_cycle")
+
     editorial = config.get("editorial")
     if not isinstance(editorial, dict):
         raise ConfigError("editorial must be an object")
@@ -260,12 +334,14 @@ def validate_config(config: dict[str, Any]) -> dict[str, Any]:
         "maximum_title_similarity",
     ):
         _number(editorial.get(field), f"editorial.{field}", 0, 1)
-    for field in ("minimum_sources", "minimum_independent_sources", "minimum_primary_sources"):
+    for field in ("minimum_sources", "minimum_independent_sources", "minimum_primary_sources", "minimum_fetched_sources"):
         _integer(editorial.get(field), f"editorial.{field}", 0, 20)
     if int(editorial["minimum_independent_sources"]) > int(editorial["minimum_sources"]):
         raise ConfigError("editorial.minimum_independent_sources may not exceed minimum_sources")
     if int(editorial["minimum_primary_sources"]) > int(editorial["minimum_sources"]):
         raise ConfigError("editorial.minimum_primary_sources may not exceed minimum_sources")
+    if int(editorial["minimum_fetched_sources"]) > int(editorial["minimum_sources"]):
+        raise ConfigError("editorial.minimum_fetched_sources may not exceed minimum_sources")
     _boolean(editorial.get("require_published_date"), "editorial.require_published_date")
     _string_list(
         editorial.get("blocked_auto_publish_sections"),

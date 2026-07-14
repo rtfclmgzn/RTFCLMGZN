@@ -12,6 +12,7 @@ from typing import Any, Callable
 from ..core.contracts import content_hash, utc_now
 from ..core.service import NewsroomError, NewsroomService
 from ..providers.agentic import AgenticProvider
+from ..providers.batch_agentic import BatchAgenticProvider, BatchCallAudit, BatchPlanner
 from ..providers.router import ProviderRouter
 from ..security.vault import CredentialVault
 from .budget import BudgetError, BudgetGuard
@@ -108,9 +109,18 @@ class AutonomyController:
         self.router = router or ProviderRouter(self.config, self.vault)
         self.repository = AutonomyRepository(service.database)
         self.budget = BudgetGuard(self.repository, self.config["limits"])
-        self.agent_provider = agent_provider or AgenticProvider(
-            self.repo_root, service.registry, self.config, self.router
-        )
+        batch_enabled = bool((self.config.get("batch") or {}).get("enabled"))
+        if agent_provider is not None:
+            self.agent_provider = agent_provider
+        elif batch_enabled:
+            self.agent_provider = BatchAgenticProvider(
+                self.repo_root, service.registry, self.config, self.router
+            )
+        else:
+            self.agent_provider = AgenticProvider(
+                self.repo_root, service.registry, self.config, self.router
+            )
+        self.batch_planner = BatchPlanner(self.config) if batch_enabled else None
         self.discovery = discovery_engine or DiscoveryEngine(
             self.repo_root, self.config, service.registry, self.router
         )
@@ -136,7 +146,7 @@ class AutonomyController:
         owner_approved_release_count = self.repository.owner_approved_releases_count()
         return {
             "ok": True,
-            "version": "0.3.0",
+            "version": "0.3.2",
             "mode": self.config["mode"],
             "schedule": dict(self.config["schedule"]),
             "publication": {
@@ -153,6 +163,17 @@ class AutonomyController:
                     )
                 ),
                 "policy_version": POLICY_VERSION,
+            },
+            "batch": {
+                "enabled": bool((self.config.get("batch") or {}).get("enabled")),
+                "scan_interval_minutes": int(
+                    (self.config.get("batch") or {}).get("scan_interval_minutes", 240)
+                ),
+                "maximum_stories_per_scan": int(
+                    (self.config.get("batch") or {}).get("maximum_stories_per_scan", 3)
+                ),
+                "daily_lane_counts": self.repository.stories_created_today_by_lane(),
+                "weekly_lane_counts": self.repository.stories_created_this_week_by_lane(),
             },
             "providers": {
                 "available": self.router.available_providers(),
@@ -366,11 +387,76 @@ class AutonomyController:
                 int(self.config["limits"]["stories_per_cycle"]),
                 remaining_today,
             )
-            selected = self._select_unique_candidates(
-                candidates, take, reserve=not dry_run
-            )
+            if self.batch_planner is not None:
+                budget_status = self.budget.status()
+                daily_counts = self.repository.stories_created_today_by_lane()
+                weekly_counts = self.repository.stories_created_this_week_by_lane()
+                plan = self.batch_planner.select(
+                    candidates,
+                    min(
+                        take,
+                        int(
+                            (self.config.get("batch") or {}).get(
+                                "maximum_stories_per_scan", 3
+                            )
+                        ),
+                    ),
+                    daily_counts=daily_counts,
+                    weekly_research_count=int(weekly_counts.get("research", 0)),
+                    remaining_daily_budget=budget_status.remaining_daily,
+                )
+                selected = self._select_unique_candidates(
+                    list(plan.selected), len(plan.selected), reserve=not dry_run
+                )
+                summary["batch_plan"] = {
+                    "estimated_story_cost_usd": plan.estimated_cost_usd,
+                    "lane_counts": plan.lane_counts,
+                    "skipped_for_cost": plan.skipped_for_cost,
+                    "skipped_for_threshold": plan.skipped_for_threshold,
+                    "remaining_daily_budget_before_generation": budget_status.remaining_daily,
+                }
+                logger(
+                    "Batch plan: "
+                    + ", ".join(
+                        f"{lane}={count}" for lane, count in plan.lane_counts.items()
+                    )
+                    + f"; estimated story cost ${plan.estimated_cost_usd:.4f}"
+                )
+            else:
+                selected = self._select_unique_candidates(
+                    candidates, take, reserve=not dry_run
+                )
             selected_count = len(selected)
             logger(f"Selected {selected_count} unique candidates")
+
+            if (
+                not dry_run
+                and selected
+                and hasattr(self.agent_provider, "prepare_batch")
+            ):
+                try:
+                    preparation = self.agent_provider.prepare_batch(
+                        selected,
+                        before_call=lambda: self._assert_call_capacity(cycle_id),
+                        record_call=lambda audit: self._record_batch_call(
+                            cycle_id, audit
+                        ),
+                    )
+                    summary["batch_preparation"] = preparation
+                    logger(
+                        f"Prepared {preparation.get('prepared_count', 0)} stories in "
+                        f"{preparation.get('model_call_count', 0)} shared model calls; "
+                        f"{preparation.get('fetched_source_count', 0)} sources fetched"
+                    )
+                except Exception:
+                    for candidate in selected:
+                        self.repository.release_unattached_dedupe_key(
+                            story_key(
+                                candidate.title,
+                                [source["url"] for source in candidate.source_leads],
+                            )
+                        )
+                    raise
 
             if dry_run:
                 story_results = [
@@ -899,6 +985,11 @@ class AutonomyController:
         )
         if not run:
             raise AutonomyError("Provider run audit record is missing")
+        if str(run.get("provider") or "") == "batch-cache":
+            # The actual shared compose/review calls are recorded once per batch.
+            # Cached checkpoint artifacts remain in the runs table without being
+            # double-counted as provider calls or model spend.
+            return
         usage = json.loads(run.get("usage_json") or "{}")
         cost = estimate_cost_usd(self.config, run["provider"], run["model"], usage)
         self.repository.record_provider_call(
@@ -917,6 +1008,19 @@ class AutonomyController:
             error=run.get("error") or "",
             cost_usd=cost,
             run_id=run["id"],
+        )
+
+    def _record_batch_call(self, cycle_id: str, audit: BatchCallAudit) -> None:
+        self._record_direct_call(
+            cycle_id=cycle_id,
+            story_id=None,
+            checkpoint=audit.checkpoint,
+            agent_id=audit.agent_id,
+            usage=audit.usage,
+            request_value=audit.request_value,
+            response_value=audit.response_value,
+            started_at=audit.started_at,
+            finished_at=audit.finished_at,
         )
 
     def _record_direct_call(

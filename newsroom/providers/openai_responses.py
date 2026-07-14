@@ -30,6 +30,7 @@ class OpenAIResponsesProvider:
         schema: dict[str, Any],
         use_web_search: bool = False,
         reasoning_effort: str | None = None,
+        max_output_tokens: int | None = None,
     ) -> StructuredResponse:
         api_key = self.vault.get("openai_api_key")
         if not api_key:
@@ -54,6 +55,8 @@ class OpenAIResponsesProvider:
             body["tools"] = [{"type": "web_search"}]
         if reasoning_effort:
             body["reasoning"] = {"effort": reasoning_effort}
+        if max_output_tokens is not None:
+            body["max_output_tokens"] = max(256, min(int(max_output_tokens), 128000))
         response = post_json(
             str(self.config["endpoint"]),
             headers={"Authorization": f"Bearer {api_key}"},

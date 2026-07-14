@@ -15,11 +15,11 @@ class PlatformContractTests(unittest.TestCase):
 
     def test_platform_contract_is_canonical_and_contains_no_editorial_release(self) -> None:
         contract = json.loads((self.root / "platform" / "platform.json").read_text("utf-8"))
-        self.assertEqual("0.3.0", contract["platform_version"])
+        self.assertEqual("0.3.2", contract["platform_version"])
         self.assertEqual(26, contract["canonical_agent_count"])
         self.assertEqual(9, contract["persona_count"])
         self.assertEqual(12, contract["checkpoint_count"])
-        self.assertEqual("0.3.0", contract["newsroom_studio_version"])
+        self.assertEqual("0.3.2", contract["newsroom_studio_version"])
         self.assertTrue(contract["external_model_provider_included"])
         self.assertFalse(contract["external_model_credentials_included"])
         self.assertFalse(contract["schedule_enabled_by_default"])

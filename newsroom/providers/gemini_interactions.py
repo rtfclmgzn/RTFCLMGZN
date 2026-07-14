@@ -30,6 +30,7 @@ class GeminiInteractionsProvider:
         schema: dict[str, Any],
         use_web_search: bool = False,
         reasoning_effort: str | None = None,
+        max_output_tokens: int | None = None,
     ) -> StructuredResponse:
         del schema_name  # Gemini binds the JSON Schema directly to response_format.
         api_key = self.vault.get("gemini_api_key")
@@ -49,11 +50,16 @@ class GeminiInteractionsProvider:
             },
         }
         thinking_level = self._thinking_level(reasoning_effort)
+        generation_config: dict[str, Any] = {}
         if thinking_level:
-            body["generation_config"] = {
+            generation_config.update({
                 "thinking_level": thinking_level,
                 "thinking_summaries": "none",
-            }
+            })
+        if max_output_tokens is not None:
+            generation_config["max_output_tokens"] = max(256, min(int(max_output_tokens), 128000))
+        if generation_config:
+            body["generation_config"] = generation_config
         if use_web_search:
             body["tools"] = [{"type": "google_search"}]
         response = post_json(

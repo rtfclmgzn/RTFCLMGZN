@@ -32,6 +32,8 @@ class DistributionEngine:
         self.router = router
 
     def generate_bundle(self, story: dict[str, Any], article: dict[str, Any]) -> dict[str, Any]:
+        if bool((self.config.get("batch") or {}).get("enabled")):
+            return self._deterministic_bundle(story, article)
         schema = load_schema("social-bundle.json")
         prompt = (
             "Create an accurate distribution package for the supplied article. "
@@ -73,6 +75,47 @@ class DistributionEngine:
             "response_id": response.response_id,
             "usage": response.usage,
         }
+        return result
+
+    def _deterministic_bundle(
+        self, story: dict[str, Any], article: dict[str, Any]
+    ) -> dict[str, Any]:
+        """Create accurate zero-model-cost channel drafts from the article boundary."""
+        title = str(article.get("title") or story.get("title") or "RTFCLMGZN update").strip()
+        dek = str(article.get("dek") or story.get("dek") or "").strip()
+        section = str(story.get("section") or article.get("section") or "Intelligence").strip()
+        persona = str(story.get("persona_id") or article.get("persona") or "RTFCLMGZN").strip()
+        lead = title if not dek else f"{title} — {dek}"
+        alt = f"Editorial artwork for {title}"[:500]
+        result = {
+            "summary": "Deterministic distribution drafts generated from the article; no model call used.",
+            "x": {"text": lead[:275].rstrip(), "alt_text": alt},
+            "instagram": {
+                "caption": (lead + f"\n\n{section} · {persona}")[:2200],
+                "alt_text": alt,
+            },
+            "facebook": {"text": lead[:5000], "alt_text": alt},
+            "newsletter": {
+                "subject": title[:180],
+                "preview": dek[:300] or title[:300],
+                "body": (dek or title)[:5000],
+            },
+            "publishable": True,
+            "_provenance": {
+                "provider": "deterministic",
+                "model": "distribution-template-v1",
+                "response_id": "",
+                "usage": {
+                    "input_tokens": 0,
+                    "output_tokens": 0,
+                    "search_calls": 0,
+                },
+            },
+        }
+        validate(
+            {key: value for key, value in result.items() if key != "_provenance"},
+            load_schema("social-bundle.json"),
+        )
         return result
 
     def queue_bundle(

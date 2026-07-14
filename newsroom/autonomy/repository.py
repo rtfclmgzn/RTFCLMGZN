@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import sqlite3
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from ..core.contracts import utc_now
@@ -163,6 +163,36 @@ class AutonomyRepository:
             (start.isoformat().replace("+00:00", "Z"),),
         )
         return int((row or {}).get("n") or 0)
+
+    def stories_created_today_by_lane(self) -> dict[str, int]:
+        now = datetime.now(timezone.utc)
+        start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+        rows = self.database.fetch_all(
+            """
+            SELECT format, COUNT(*) AS n
+              FROM stories
+             WHERE created_at>=? AND origin='autonomy'
+             GROUP BY format
+            """,
+            (start.isoformat().replace("+00:00", "Z"),),
+        )
+        return {str(row["format"]): int(row["n"]) for row in rows}
+
+    def stories_created_this_week_by_lane(self) -> dict[str, int]:
+        now = datetime.now(timezone.utc)
+        start = (now - timedelta(days=now.weekday())).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+        rows = self.database.fetch_all(
+            """
+            SELECT format, COUNT(*) AS n
+              FROM stories
+             WHERE created_at>=? AND origin='autonomy'
+             GROUP BY format
+            """,
+            (start.isoformat().replace("+00:00", "Z"),),
+        )
+        return {str(row["format"]): int(row["n"]) for row in rows}
 
     def publishes_today(self) -> int:
         now = datetime.now(timezone.utc)
