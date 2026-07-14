@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "release_id": "20260714T060957Z-canada-osfi-agentic-ai-cyber-risks",
+  "title": "Canada’s banking regulator warns banks about agentic AI cyber risks",
+  "created_at": "2026-07-14T06:09:57Z",
+  "commit_message": "Publish newsroom story: Canada’s banking regulator warns banks about agentic AI cyber risks",
+  "articles": [
+    {
+      "id": "newsroom-4814e454",
+      "slug": "canada-osfi-agentic-ai-cyber-risks",
+      "title": "Canada’s banking regulator warns banks about agentic AI cyber risks",
+      "image": "assets/img/newsroom/newsroom-4814e454.svg"
+    }
+  ],
+  "approval": {
+    "approver": "0baak",
+    "artifact_id": "owner-supervised-repair-v2:4814e454-5ab3-481d-b036-02945a80fb54",
+    "artifact_sha256": "e835c15fc85174a87ebb7370de99ed8d228d68bd40d0e81aa9e5f99f57bb644c",
+    "approved_at": "2026-07-14T06:09:57Z"
+  },
+  "files": [
+    {
+      "path": "web/data/newsroom-articles.js",
+      "sha256": "6cea2e213d68eb60a911106d40309d235e239fbdb5b3737dc6648213a831a77a",
+      "size": 5930
+    },
+    {
+      "path": "web/rss.xml",
+      "sha256": "6c9644120ba005c889650a7ef8d53dcc5c235cfd87a2ecf8fdc13b28a5ffb71f",
+      "size": 12801
+    },
+    {
+      "path": "web/assets/img/newsroom/newsroom-4814e454.svg",
+      "sha256": "47914fe60e5246a06453352989512e55598232c713a8e7bf1c46d648632f4c0b",
+      "size": 1611
+    }
+  ],
+  "validated_at": "2026-07-14T06:09:57Z",
+  "cache_version": 147,
+  "manager_version": "1.2.0-compatible",
+  "backup_path": "Git history parent 2528ddb0d34748c59d84ed485a2a3c0d81a7b663",
+  "publication_path": "GitHub connector equivalent after exact-version owner approval"
+}
