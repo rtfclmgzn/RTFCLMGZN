@@ -1,11 +1,12 @@
-// Production cover remediation — stable repository image files only.
+// Production cover remediation — exact owner-approved generated covers.
 (function(){
   "use strict";
 
+  var covers=window.RTFC_PREVIEW_COVERS||{};
   var explicit={
-    "live-017":"assets/img/primer-hardware.jpg",
-    "live-018":"assets/img/issue-001-extra.jpg",
-    "live-019":"assets/img/issue-001-centerfold.jpg"
+    "live-017":covers["live-017"],
+    "live-018":covers["live-018"],
+    "live-019":covers["live-019"]
   };
 
   var sets=[
@@ -22,12 +23,11 @@
   });
 
   window.RTFC_COVER_REMEDIATION={
-    applied_at:"2026-07-14T21:18:00Z",
+    applied_at:"2026-07-14T22:05:00Z",
     ids:Object.keys(explicit),
-    source:"stable repository image files",
-    embedded_data_urls:false,
-    blob_urls:false,
+    source:"exact owner-approved generated preview artwork",
+    embedded_data_urls:true,
     placeholder_fallback:false,
-    on_conflict:"block publication until a verified repository image or newly generated cover is committed"
+    on_conflict:"preserve owner-approved cover; never silently substitute library art"
   };
 })();
