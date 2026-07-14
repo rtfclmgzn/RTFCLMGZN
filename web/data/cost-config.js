@@ -3,28 +3,23 @@
 // The dashboard NEVER hardcodes prices — it reads them here. Update this file
 // when API pricing changes, and bump `last_verified`.
 //
-// last_verified: 2026-07-09
-// sources:
-//   Anthropic: https://platform.claude.com/docs/en/about-claude/pricing
-//   Gemini image: https://ai.google.dev/gemini-api/docs/pricing
-//
 // IMPORTANT — subscription vs. API billing:
-//   On a Claude.ai Pro ($20) / Max ($100) subscription you are NOT billed per token;
-//   you pay a flat fee against usage limits. The dollar figures this system shows are
-//   "API-equivalent compute cost" — what the same work would cost on pay-as-you-go API.
-//   That is (a) a universal yardstick for comparing articles/tasks, and (b) exactly the
-//   number that tells you whether pay-as-you-go API would be cheaper than a Max plan.
-//   See agents/_shared/observability.md.
+//   ChatGPT/Claude subscription sessions are not billed per token. Records generated in
+//   those sessions are marked estimated and priced here only as an API-equivalent yardstick.
 window.RTFC_COST_CONFIG = {
   currency: "USD",
-  last_verified: "2026-07-09",
+  last_verified: "2026-07-14",
   unit: "per_million_tokens",
-  // Reference discount multipliers (applied only when a task record marks them used).
   discounts: {
-    batch: 0.5,        // Batch API ≈ 50% off (non-time-sensitive jobs)
-    cached_input: 0.1  // Prompt caching ≈ 90% off cached input (you pay 10%)
+    batch: 0.5,
+    cached_input: 0.1
   },
   models: {
+    "gpt-5.6-sol": {
+      label: "GPT-5.6 Sol",
+      input: 5, output: 25,
+      note: "API-equivalent estimate for work performed through a ChatGPT subscription session; not an additional per-token subscription charge."
+    },
     "claude-opus-4-8": {
       label: "Claude Opus 4.8",
       input: 5, output: 25,
@@ -44,7 +39,7 @@ window.RTFC_COST_CONFIG = {
     "claude-fable-5": {
       label: "Claude Fable 5",
       input: 10, output: 50,
-      note: "Frontier model used for founder-directed sessions and premium editorial work. Public list price per our own coverage (live-001 comparison)."
+      note: "Frontier model used for founder-directed sessions and premium editorial work."
     },
     "gemini-2.5-flash-image": {
       label: "Gemini 2.5 Flash Image (Nano Banana, legacy)",
@@ -54,7 +49,7 @@ window.RTFC_COST_CONFIG = {
     "gemini-3.1-flash-lite-image": {
       label: "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
       per_image: 0.0336, per_image_batch: 0.0168,
-      note: "Current default for all image generation — better quality, faster, cheaper than 2.5. Verified working 2026-07-10."
+      note: "Current default for image generation."
     }
   }
 };
