@@ -1,14 +1,14 @@
 {
-  "release_id": "20260714T061222Z-white-house-prepares-voluntary-pledge-to-shield-ratepayers-from",
-  "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
-  "published_at": "2026-07-14T06:12:22Z",
-  "cache_version": 148,
+  "release_id": "20260714T061403Z-hcltech-india-ai-data-center-investment",
+  "title": "HCLTech plans up to ₹3,500 crore for India AI data-center business",
+  "published_at": "2026-07-14T06:14:03Z",
+  "cache_version": 149,
   "articles": [
     {
-      "id": "newsroom-38feadfa",
-      "slug": "white-house-prepares-voluntary-pledge-to-shield-ratepayers-from-ai-data-center-power-costs",
-      "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
-      "image": "assets/img/newsroom/newsroom-38feadfa.svg"
+      "id": "newsroom-0133cf82",
+      "slug": "hcltech-india-ai-data-center-investment",
+      "title": "HCLTech plans up to ₹3,500 crore for India AI data-center business",
+      "image": "assets/img/newsroom/newsroom-0133cf82.svg"
     }
   ],
   "manager_version": "1.2.0-compatible"
