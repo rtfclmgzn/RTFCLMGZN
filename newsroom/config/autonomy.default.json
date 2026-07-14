@@ -206,9 +206,9 @@
       "research": 1
     },
     "estimated_cost_per_story_usd": {
-      "brief": 0.035,
+      "brief": 0.045,
       "synthesis": 0.095,
-      "research": 0.3
+      "research": 0.32
     },
     "model_profiles": {
       "brief_compose": "structured-fast",
@@ -216,7 +216,10 @@
       "synthesis_compose": "balanced",
       "synthesis_review": "balanced",
       "research_compose": "reasoning-high",
-      "research_review": "reasoning-pro"
+      "research_review": "reasoning-pro",
+      "brief_repair": "balanced",
+      "synthesis_repair": "balanced",
+      "research_repair": "reasoning-high"
     },
     "source_fetch": {
       "enabled": true,
@@ -225,6 +228,8 @@
       "max_excerpt_chars": 5000,
       "cache_ttl_hours": 12,
       "max_unique_sources_per_cycle": 12
-    }
+    },
+    "review_repair_enabled": true,
+    "maximum_repair_passes": 1
   }
 }

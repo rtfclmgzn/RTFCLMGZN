@@ -32,5 +32,11 @@
   "strict_json_api_responses": true,
   "story_detail_error_recovery": true,
   "story_viewer_css_hotfix_version": "0.3.4",
-  "hidden_attribute_css_enforced": true
+  "hidden_attribute_css_enforced": true,
+  "review_gate_repair_version": "0.3.5",
+  "shared_review_repair_enabled": true,
+  "maximum_shared_repair_passes": 1,
+  "deterministic_persona_routing": true,
+  "routine_candidate_priority_enabled": true,
+  "compliance_owner_review_separated": true
 }

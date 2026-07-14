@@ -120,9 +120,12 @@ Return at most {int(limits['candidates_per_cycle'])} candidates for a shared new
             if any(title_similarity(title, old) >= max_similarity for old in existing_titles + seen_titles):
                 continue
             section = str(raw["section"])
-            persona = str(raw.get("persona_id") or "")
+            # Beat ownership is deterministic. The discovery model proposes the story,
+            # while the newsroom assigns the canonical editor for that section.
+            persona = PERSONA_BY_SECTION.get(section, "sage-okafor")
             if persona not in self.registry.persona_ids():
-                persona = PERSONA_BY_SECTION.get(section, "sage-okafor")
+                suggested = str(raw.get("persona_id") or "")
+                persona = suggested if suggested in self.registry.persona_ids() else "sage-okafor"
             sources = tuple(
                 source
                 for source in raw.get("source_leads", [])

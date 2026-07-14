@@ -6,6 +6,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 from .dedupe import canonical_url, is_public_http_url
+from .review_gate import classify_compliance_blockers
 
 POLICY_VERSION = "bounded-publication-v1.0"
 
@@ -180,15 +181,21 @@ class PublicationPolicy:
         verification_score = min(reported_verification, deterministic_coverage)
         editorial_score = float(review.get("score") or 0)
         confidence = min(verification_score, editorial_score)
-        unsupported = list(verification.get("unsupported_material_claims") or [])
-        unsupported.extend(
+        unsupported_rows = [
+            row for row in material_claims if row.get("status") != "supported"
+        ]
+        unsupported = [
             str(row.get("text") or row.get("claim_id") or "claim")
-            for row in material_claims
-            if row.get("status") in {"unsupported", "contradicted", "uncertain", "unverified"}
-        )
+            for row in unsupported_rows
+        ]
+        if unsupported_rows:
+            unsupported.extend(verification.get("unsupported_material_claims") or [])
         contradictions = list(verification.get("contradictions") or [])
         contradictions.extend(claim_map.get("contradictions") or [])
         blockers = list(compliance.get("auto_publish_blockers") or [])
+        hard_compliance_blockers, owner_compliance_blockers = classify_compliance_blockers(
+            blockers
+        )
         section = str(story.get("section") or "")
         story_document = story.get("story") if isinstance(story.get("story"), dict) else {}
         topic_tags = story.get("topic_tags") or story_document.get("topic_tags") or []
@@ -234,10 +241,18 @@ class PublicationPolicy:
             hard.append("unsupported-material-claims")
         if contradictions:
             hard.append("unresolved-contradictions")
-        if compliance.get("decision") != "approve":
-            hard.append("compliance-not-approved")
-        if blockers:
-            hard.append("compliance-auto-publish-blockers")
+        compliance_decision = str(compliance.get("decision") or "").lower()
+        if compliance_decision == "reject":
+            hard.append("compliance-rejected")
+        elif compliance_decision != "approve":
+            if hard_compliance_blockers or not bool(compliance.get("publishable", True)):
+                hard.append("compliance-not-approved")
+            else:
+                owner_review.append("compliance-requires-owner-review")
+        if hard_compliance_blockers:
+            hard.append("compliance-hard-blockers")
+        if owner_compliance_blockers:
+            owner_review.append("compliance-auto-publish-restriction")
 
         if risk not in set(publication["allowed_risk_levels"]):
             owner_review.append("risk-level-requires-owner-review")
@@ -295,6 +310,8 @@ class PublicationPolicy:
             "unsupported_material_claim_count": len(set(str(v) for v in unsupported)),
             "contradiction_count": len(set(str(v) for v in contradictions)),
             "compliance_blocker_count": len(blockers),
+            "compliance_hard_blocker_count": len(hard_compliance_blockers),
+            "compliance_owner_review_blocker_count": len(owner_compliance_blockers),
             "unverified_url_count": len(unknown_article_urls),
             "missing_checkpoint_count": len(missing_checkpoints),
             "publishes_today": publishes_today,
