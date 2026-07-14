@@ -1,6 +1,131 @@
 // Generated only by RTFCLMGZN Newsroom Core after exact-version owner approval.
 window.RTFC_NEWSROOM_ARTICLES = [
   {
+    "slug": "hcltech-india-ai-data-center-investment",
+    "title": "HCLTech plans up to ₹3,500 crore for India AI data-center business",
+    "dek": "HCLTech announced a full-stack AI offering backed by a planned investment of up to ₹3,500 crore, with potential data-center capacity of 50 MW.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "brief",
+    "disclaimer": "none",
+    "body": [
+      {
+        "type": "p",
+        "text": "HCLTech announced plans to invest up to ₹3,500 crore in an AI data-center business in India, with potential capacity of 50 MW. The company presented the investment as the infrastructure foundation for a new full-stack AI offering serving private-sector and government demand.",
+        "citation_urls": [
+          "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment",
+          "https://www.reuters.com/world/india/indias-hcltech-beats-first-quarter-revenue-estimates-2026-07-13/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "HCLTech says the offering combines its existing capabilities in AI data-center design, DevOps, AI cloud operations and software. The strategy is intended to let customers buy infrastructure and services as an integrated package. The announcement does not identify customers, signed sovereign-compute contracts or operating deployments.",
+        "citation_urls": [
+          "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment",
+          "https://www.hcltech.com/press-releases/hcltech-delivers-robust-q1-led-record-deal-bookings-24-billion"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Chief executive C. Vijayakumar disclosed the planned investment alongside HCLTech’s first-quarter results. The company described ₹3,500 crore as an upper limit and 50 MW as potential scale. Its public material does not identify project sites, an initial construction phase, a deployment schedule or how quickly the spending would occur.",
+        "citation_urls": [
+          "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment",
+          "https://www.hcltech.com/press-releases/hcltech-delivers-robust-q1-led-record-deal-bookings-24-billion",
+          "https://www.reuters.com/world/india/indias-hcltech-beats-first-quarter-revenue-estimates-2026-07-13/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The strategic significance is that one of India’s largest technology-services companies is putting substantial capital behind the physical layer of AI delivery. Execution will matter more than the headline number: site selection, power and cooling agreements, initial capacity and named customers will show whether the plan becomes a meaningful infrastructure business.",
+        "citation_urls": [
+          "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment",
+          "https://www.reuters.com/world/india/indias-hcltech-beats-first-quarter-revenue-estimates-2026-07-13/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Site announcements, power and cooling partners, initial capacity, construction timing, and evidence of enterprise or government workloads moving onto the platform."
+      }
+    ],
+    "links": [
+      {
+        "label": "HCLTech — Full-stack AI offering and AI data-center investment",
+        "url": "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment"
+      }
+    ],
+    "sources": [
+      {
+        "label": "HCLTech — Full-stack AI offering and AI data-center investment",
+        "url": "https://www.hcltech.com/press-releases/hcltech-launches-full-stack-ai-offering-powered-new-ai-data-center-investment"
+      },
+      {
+        "label": "HCLTech — Q1 results and data-center plan",
+        "url": "https://www.hcltech.com/press-releases/hcltech-delivers-robust-q1-led-record-deal-bookings-24-billion"
+      },
+      {
+        "label": "Reuters — HCLTech enters the data-center business",
+        "url": "https://www.reuters.com/world/india/indias-hcltech-beats-first-quarter-revenue-estimates-2026-07-13/"
+      }
+    ],
+    "id": "newsroom-0133cf82",
+    "image": "assets/img/newsroom/newsroom-0133cf82.svg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "newsroom-core · 2026-07-14T06:14:03Z",
+      "stages": [
+        {
+          "name": "Checkpoint 1",
+          "agent": "managing-editor",
+          "note": "Shared scan selected HCLTech’s planned AI data-center investment."
+        },
+        {
+          "name": "Checkpoint 2",
+          "agent": "managing-editor",
+          "note": "Compute ownership corrected to Jin Park during the audited repair."
+        },
+        {
+          "name": "Checkpoint 3",
+          "agent": "research",
+          "note": "HCLTech’s announcement checked against independent reporting."
+        },
+        {
+          "name": "Checkpoint 4",
+          "agent": "verification",
+          "note": "Investment maximum and potential capacity retained; unsupported deployment claims removed."
+        },
+        {
+          "name": "Checkpoint 5",
+          "agent": "jin-park",
+          "note": "Compact brief rebuilt from the exact owner-approved repaired text."
+        },
+        {
+          "name": "Checkpoint 6",
+          "agent": "editorial-review",
+          "note": "Truncated caveat repaired and prospective claims qualified."
+        },
+        {
+          "name": "Checkpoint 7",
+          "agent": "verification",
+          "note": "Material claims reconciled to company and independent sources."
+        },
+        {
+          "name": "Checkpoint 8",
+          "agent": "compliance",
+          "note": "R1 corporate infrastructure report; maximum and potential scale kept explicit."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Exact repaired artifact 73bfb8b8f301 approved by 0baak."
+      }
+    },
+    "publishedAt": "2026-07-14T06:14:03Z"
+  },
+  {
     "slug": "white-house-prepares-voluntary-pledge-to-shield-ratepayers-from-ai-data-center-power-costs",
     "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
     "dek": "The administration is preparing another voluntary industry commitment intended to keep AI data-center electricity costs from being shifted to existing utility customers, according to Reuters.",
