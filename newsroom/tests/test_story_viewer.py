@@ -31,6 +31,10 @@ class StoryViewerRepairTests(unittest.TestCase):
         self.assertTrue(contract["strict_json_api_responses"])
         self.assertTrue(contract["story_detail_error_recovery"])
 
+    def test_hidden_attribute_wins_over_empty_state_display(self) -> None:
+        styles = (self.root / "newsroom" / "ui" / "styles.css").read_text("utf-8")
+        self.assertIn("[hidden]{display:none!important}", styles)
+
 
 if __name__ == "__main__":
     unittest.main()

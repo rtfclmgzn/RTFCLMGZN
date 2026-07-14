@@ -30,5 +30,7 @@
   "batch_minimum_independent_source_domains": 2,
   "story_viewer_hotfix_version": "0.3.3",
   "strict_json_api_responses": true,
-  "story_detail_error_recovery": true
+  "story_detail_error_recovery": true,
+  "story_viewer_css_hotfix_version": "0.3.4",
+  "hidden_attribute_css_enforced": true
 }
