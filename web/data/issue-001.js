@@ -76,14 +76,14 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The most technically interesting claim in the launch isn't a benchmark. OpenAI says it will serve Sol on Cerebras wafer-scale hardware at up to **750 tokens per second** — roughly fifteen times conventional GPU inference. If that number survives contact with production traffic, it changes what a flagship is **for**: reasoning-heavy work that was too slow to sit inside an interactive product becomes something you can put behind a chat box. Treat it as a vendor claim until independent measurements land — but note that speed, not raw capability, is where this launch chose to plant its flag." ] },
 
     { kind:"text", layout:"runoverAlt", folio:"Act I · The Frontier",
-      cont:"GPT-5.6 · CONTINUED",
+      cont:"GPT-5.6 · CONTINUED", end:true,
       crosshead:"The airbag rollout — and the shield framing",
+      image:"assets/img/issue-001-vetted-gate.jpg", cap:"Two weeks behind the vetted-partner wall — the new airbag.",
       pull:"A staged rollout costs two weeks of momentum. A post-launch suspension costs a news cycle, enterprise trust, and measurable customer migration.",
       body:[
-        "Don't skip past how this launch was staged, because it's a template you'll see again. GPT-5.6 was previewed on June 26 and then spent nearly two weeks accessible only to government-vetted partners — a controlled-release pattern that would have seemed paranoid a year ago and now reads as industry prudence. The ghost at that feast is obvious: Fable 5 launched wide on June 9 and was suspended by Commerce Department order three days later after a reported jailbreak, spending most of June dark. Every lab watched that sequence and drew the same conclusion. The vetted-partner preview is the new airbag, and OpenAI just demonstrated it at flagship scale.",
-        "The framing was just as deliberate. OpenAI presented Sol not as its smartest model but as its most advanced **cybersecurity** model to date — competitive on exploit-finding benchmarks while, per the company, using roughly a third of the tokens to get there. In a launch cycle where every lab reflexively claims the smartest model, OpenAI chose a different flag: the best at **defense**. That positioning is doing real strategic work, because a June executive order created a voluntary federal review for 'covered frontier models,' with the qualifying criterion centered on exactly this capability. Launching your flagship as a shield, in the month regulators began classifying models by their swords, is not a coincidence of timing.",
-        "'Voluntary' is the load-bearing word, and it is doing more work than it appears to. In a market this concentrated, a framework the leading players participate in becomes the de facto standard everyone else is measured against — once the top labs submit to review, a lab that declines is advertising that it has something to hide. ==Voluntary in law, mandatory in practice.== And there's a stranger incentive underneath: your benchmark scores now partly determine your regulatory burden. Scoring high on offensive-security evals invites review and launch friction; scoring lower avoids it. A regime meant to increase safety may quietly reward labs for shading the exact measurements regulators most need to be accurate.",
-        "Three things will tell you whether this launch mattered by August: independent benchmarks on Sol against Fable 5 and Opus 4.8; whether Terra's $2.50/$15 forces a reprice from Anthropic or Google; and the Cerebras serving numbers under real load. The launch-day story is access. The real story, as always, arrives two weeks later in other people's measurements." ] },
+        "Don't skip past how this launch was staged, because it's a template you'll see again. GPT-5.6 spent nearly two weeks accessible only to government-vetted partners — a pattern that would have seemed paranoid a year ago and now reads as prudence. The ghost at that feast: Fable 5 launched wide on June 9 and was suspended by Commerce Department order three days later, spending most of June dark. Every lab drew the same conclusion. The vetted-partner preview is the new airbag, and OpenAI just demonstrated it at flagship scale.",
+        "The framing was just as deliberate. OpenAI presented Sol not as its smartest model but as its most advanced **cybersecurity** model to date — the best at **defense**, in the month a June executive order created a voluntary federal review for 'covered frontier models,' keyed to exactly this capability. That timing is not a coincidence. And 'voluntary' is the load-bearing word: once the top labs submit to review, a lab that declines is advertising that it has something to hide. ==Voluntary in law, mandatory in practice.==",
+        "The stranger incentive underneath: your benchmark scores now partly determine your regulatory burden — scoring high on offensive-security evals invites launch friction; scoring lower avoids it. Watch three things by August: independent benchmarks on Sol, whether Terra's pricing forces a reprice from Anthropic or Google, and the Cerebras numbers under real load. The real story, as always, arrives two weeks later in other people's measurements." ] },
 
     { kind:"text", layout:"statFeature", folio:"Act I · The Board",
       title:"The models, by the numbers",
@@ -111,7 +111,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The bet is simple: for a huge slice of real work, 'good enough and cheaper' beats 'best and dear.' Whether that holds depends on two numbers buried in the fine print — and they deserve their own page. ++— continued overleaf ++" ] },
 
     { kind:"text", layout:"runover", folio:"Act I · The Bet",
-      cont:"GROK'S WAGER · CONTINUED",
+      cont:"GROK'S WAGER · CONTINUED", end:true,
       crosshead:"The fine print worth more than any score",
       image:"assets/img/issue-001-error-cascade.jpg", cap:"An agent's mistake doesn't sit still — it compounds down the chain.",
       body:[
@@ -140,7 +140,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
 
     { kind:"text", layout:"runoverAlt", folio:"Act I · The Pressure",
       cont:"A THIRD OF THE TOKENS · CONTINUED",
-      crosshead:"The price war is already here",
+      crosshead:"The price war is already here", end:true,
       image:"assets/img/issue-001-electric-storm.jpg", cap:"The half-year's quietest earthquake, still gathering.",
       pull:"The ban was a stress test nobody asked for. The result: the US enterprise stack is far more model-agnostic than anyone believed.",
       body:[
@@ -194,7 +194,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
 
     { kind:"text", layout:"runoverAlt", folio:"Act II · The Number",
       cont:"$510 BILLION · CONTINUED",
-      crosshead:"Two truths — and the skeptic's footnote",
+      crosshead:"Two truths — and the skeptic's footnote", end:true,
       image:"assets/img/issue-001-capital-well.jpg", cap:"Conviction and fragility: the same chart, read twice.",
       pull:"Concentration is efficient on the way up and merciless on the way down — and you don't choose which direction you experience it from.",
       body:[
@@ -219,7 +219,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The milestone has a simple meaning: ==the AI buildout's least glamorous bottleneck now has a ticker American money can buy directly.== The dirty secret of the accelerator business is that the processor spends much of its time waiting for memory — and the company that makes the memory just raised a war chest in the currency of the customers driving the shortage. ++— continued overleaf ++" ] },
 
     { kind:"text", layout:"runover", folio:"Act II · The Supply Chain",
-      cont:"THE MEMORY BUSINESS · CONTINUED",
+      cont:"THE MEMORY BUSINESS · CONTINUED", end:true,
       crosshead:"Why New York, why now — and the week the map went global",
       image:"assets/img/issue-001-fab-hall.jpg", cap:"HBM4 demands capital at a scale that makes even a giant think hard.",
       body:[
@@ -254,7 +254,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
 
     { kind:"text", layout:"runoverAlt", folio:"Act II · The Crunch",
       cont:"THE CRUNCH · CONTINUED",
-      crosshead:"The circular question — and the power ceiling",
+      crosshead:"The circular question — and the power ceiling", end:true,
       image:"assets/img/issue-001-wafer-launch.jpg", cap:"You can pull silicon forward. You cannot pull a gigawatt forward.",
       pull:"The ecosystem is, to a meaningful degree, funding its own boom — efficient on the way up, unforgiving on the way down.",
       body:[
@@ -307,8 +307,9 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "You can reasonably dispute the last percentage point. You cannot dispute that this is a categorically different kind of evidence than the field has ever produced before — and that shift, from demo to deployment, is the whole act. A robot that works for eleven months is not a research result. It's a depreciating asset with a utilization rate, and utilization rates show up in filings." ] },
 
     { kind:"text", layout:"runoverAlt", folio:"Act III · The Floor",
-      cont:"30,000 CARS · CONTINUED",
+      cont:"30,000 CARS · CONTINUED", end:true,
       crosshead:"The field is moving, not just the one robot",
+      image:"assets/img/issue-001-diaspora.jpg", cap:"The engineers who built the leading robots are leaving to found the next ones.",
       pull:"For the first time, the question is no longer 'can it do the work?' It's 'how many, how fast, and how cheap?'",
       body:[
         "This isn't a solo data point, which is what makes it read as an inflection rather than a stunt. Figure is now talking about roughly **100,000 units over four years**, with a manufacturing facility — BotQ — designed for 12,000 robots in its first year. That is the language of a company planning production runs, not demo days. Tesla's **Optimus V3**, with its 22-degree-of-freedom hands, the AI5 chip, and Grok voice integration, is entering low-volume production at Fremont this summer — the clearest move Tesla has made from science project toward product line.",
@@ -327,7 +328,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The humanoid business is about to file quarterly reports — and ==the demo-video era is ending because public markets don't accept demo videos.== ++— continued overleaf ++" ] },
 
     { kind:"text", layout:"runover", folio:"Act III · The Audit",
-      cont:"THE PAPERWORK · CONTINUED",
+      cont:"THE PAPERWORK · CONTINUED", end:true,
       crosshead:"Two theses, one audit",
       image:"assets/img/issue-001-robot-fleet.jpg", cap:"Disclosure is the real event — the numbers that can't be edited.",
       body:[
@@ -376,7 +377,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
 
     { kind:"text", layout:"runoverAlt", folio:"Act IV · The Receipt",
       cont:"THE RECEIPT · CONTINUED",
-      crosshead:"The bull case, the bear case — and the heavyweights",
+      crosshead:"The bull case, the bear case — and the heavyweights", end:true,
       image:"assets/img/a6.jpg", cap:"Phase III is where drugs go to fail. It's the only test that settles this.",
       pull:"The pipeline argument is over. The proof argument has begun.",
       body:[
@@ -396,7 +397,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "What UpDoc establishes is narrower but still historic — that a conversational model interacting directly with patients can pass the bar at all. ==Every clinical AI team in the country just got an existence proof and a template.== ++— continued overleaf ++" ] },
 
     { kind:"text", layout:"runover", folio:"Act IV · The Clearance",
-      cont:"THE CLEARANCE · CONTINUED",
+      cont:"THE CLEARANCE · CONTINUED", end:true,
       crosshead:"The pathway fight coming next",
       pull:"Whoever clears the de novo route first doesn't just get a product to market. They decide where the door goes.",
       body:[
@@ -415,7 +416,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The rules draw a line no other jurisdiction has drawn in law: between AI that ==works for you== and AI that ==bonds with you==. ++— continued overleaf ++" ] },
 
     { kind:"text", layout:"runover", folio:"Act IV · The Line",
-      cont:"THE LINE · CONTINUED",
+      cont:"THE LINE · CONTINUED", end:true,
       crosshead:"Why this travels beyond China",
       image:"assets/img/issue-001-circuit-heart.jpg", cap:"Half alive, half powered down — the category the rules switched off.",
       body:[
@@ -443,8 +444,9 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The litigation calculus cuts interestingly both ways. Trade-secret suits usually settle, because trials mean **discovery** — and discovery here would pry open OpenAI's entire unreleased device program to Apple's lawyers, and potentially Apple's supply-chain playbook to OpenAI's. Both companies have secrets worth more than any judgment. That's the strongest argument this ends in a negotiated number rather than a verdict — and why the filing itself, not the outcome, may be the main event." ] },
 
     { kind:"text", layout:"runoverAlt", folio:"Act IV · The Courtroom",
-      cont:"APPLE v OPENAI · CONTINUED",
+      cont:"APPLE v OPENAI · CONTINUED", end:true,
       crosshead:"The filing that lands on every HR desk",
+      image:"assets/img/issue-001-badge-return.jpg", cap:"Every departing engineer's laptop return just became a ceremony.",
       pull:"Trade-secret law doesn't prohibit hiring a competitor's people. It prohibits taking the competitor's stuff.",
       body:[
         "Whatever a court eventually decides, the filing itself changes behavior industry-wide, starting immediately. The AI hiring market has run for three years on aggressive poaching at extraordinary compensation — reports around this suit cite **400-plus former Apple employees now at OpenAI**. What this case does is put a price on sloppy hiring hygiene: every AI lab's counsel is re-reading onboarding checklists this weekend, every departing engineer's laptop return just became a ceremony, and every 'show us what you worked on' interview question just got a lot more dangerous to ask.",
@@ -472,8 +474,9 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "Meta also shipped **Muse Spark 1.1** into this same news cycle — a model built explicitly for agentic work, and, quietly, Meta's **first paid model**, at $1.25/$4.25 per million tokens. That word 'paid' is its own story: Meta's whole AI posture has been the open-weights foil to the closed labs, and a metered model says it now wants direct API revenue — competing with OpenAI and Anthropic on their turf and their business model. If the paid tier grows and the open cadence slows, the industry's most-cited counterexample to closed AI will have quietly changed sides." ] },
 
     { kind:"text", layout:"runoverAlt", folio:"Act IV · The Admission",
-      cont:"THE SHRUG · CONTINUED",
+      cont:"THE SHRUG · CONTINUED", end:true,
       crosshead:"The human ledger",
+      image:"assets/img/issue-001-empty-desks.jpg", cap:"8,000 desks emptied in May; the payoff window moved in July.",
       pull:"An admission against interest, from the lab with the most to lose by making it, is the rare signal you can trust more — not less.",
       body:[
         "Inside the company, the story reads differently than in an earnings model. The May cuts targeted integrity, cybersecurity, and Reality Labs while sparing AI infrastructure and monetization; reported morale metrics have cratered — employee-forum ratings down by a quarter, median total compensation reportedly down nearly **$30,000** — with workers describing the sensation of training their own replacements. Whatever the agent timeline turns out to be, the sequencing is brutal in hindsight: ==the layoffs were justified by an AI pivot whose payoff the CEO then publicly moved three to six months down the road.==",

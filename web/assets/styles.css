@@ -1995,3 +1995,17 @@ html.xlating::after{ content:""; position:fixed; z-index:99999; top:50%; left:50
 .tp-runover.tp-ro-alt .tp-ro-img{ order:3; }
 .tp-runover.tp-ro-alt .tp-ro-cols{ order:4; }
 .tp-runover.tp-ro-alt .tp-fact{ order:5; }
+
+/* ============ V32 · FOLIO CLEARANCE + END MARKS (layout-scan pass, 2026-07-14) ============ */
+/* The scan found content kissing the running head/foot on split, data, and
+   bottomImage pages. Content must clear the folios on every layout. */
+.tp-split .tp-col{ padding:8.5% 6% 7.2% !important; }
+.tp-split .tp-img .tp-cap{ padding:7% 7% 8.5% !important; }
+.mpage.light.tp.tp-data{ padding:8% 7.5% 7.2% !important; }
+.tp-bottom .tp-bt-img .tp-cap{ padding:4% 7% 7.5% !important; }
+/* magazine end mark — closes every feature's final page */
+.tp-ro-end{ display:inline-block; margin-left:7px; color:var(--accent); font-size:1.25cqh; vertical-align:baseline; }
+/* V32b — caption clearance must be height-based: the folio sits ~4.5cqh from the
+   page foot, while % padding tracks WIDTH. cqh keeps captions above it at any size. */
+.tp-split .tp-img .tp-cap{ padding-bottom:5.6cqh !important; }
+.tp-bottom .tp-bt-img .tp-cap{ padding-bottom:5.6cqh !important; }

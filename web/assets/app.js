@@ -1755,7 +1755,8 @@
       var roSpot=img?'<div class="tp-ro-img" style="background-image:url(\''+img+'\')">'+cap+'</div>':'';
       var roMid=Math.ceil(pg.body.length/2), roFlow='';
       pg.body.forEach(function(t,i){
-        roFlow+='<p>'+fmtBody(t)+'</p>';
+        var last=(i===pg.body.length-1);
+        roFlow+='<p>'+fmtBody(t)+(pg.end&&last?' <span class="tp-ro-end">◈</span>':'')+'</p>';
         if(pg.pull && i===roMid-1) roFlow+='<div class="tp-ro-pull">“'+esc(pg.pull)+'”</div>';
       });
       return '<div class="mpage light tp tp-runover'+(lay==="runoverAlt"?' tp-ro-alt':'')+'">'+folio+roHead+roX+
