@@ -739,5 +739,184 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-14T22:38:05Z"
+  },
+  {
+    "slug": "1x-neo-hand-dexterity-hardware-ceiling",
+    "title": "1X built a robot hand good enough that the software is now the problem",
+    "dek": "25 degrees of freedom, 45N fingertips, IP68 and food-safe, hundreds already off the line. 1X says the point is to remove the hardware ceiling. By its own framing, that moves the bottleneck somewhere harder to fix.",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "body": [
+      {
+        "type": "p",
+        "text": "1X Technologies unveiled a new tendon-driven hand for its Neo humanoid on July 9. The specification is unusually concrete for this industry. The company describes 25 degrees of freedom — 22 fully actuated in the fingers and palm, plus three at the wrist — driven by what it calls the 1X Tendon Drive at gear ratios of roughly 5:1 to 15:1. Peak torque reaches 3.5 Nm at the thumb CMC joint and 2.6 Nm at the finger MCP joints, with distal flexion forces up to 45N and a wrist delivering 17.75 Nm. Positioning accuracy is quoted at ±0.2 mm.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Those gear ratios are the tell. Most robot hands run transmissions around 100:1 or 200:1, which makes a joint strong and precise but effectively deaf — it cannot feel what it is touching, because the gearbox swamps the signal. 1X went two orders of magnitude lower. The company says all 25 degrees of freedom are natively force-controlled and fully backdrivable, so each joint reports force while it moves. Fingertips add high-resolution tactile sensing that measures normal force, contact location and shear.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands",
+          "https://www.forbes.com/sites/johnkoetsier/2026/07/09/human-level-hands-1x-just-gave-humanoid-robot-neo-something-close/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The practical translation, in 1X’s demonstrations and contemporaneous reporting: enough strength to lift a 20-pound kettlebell, enough delicacy to pull grapes off a stem, install a light bulb, and pick a screw up off the floor. Shear sensing is what lets a hand notice a glass beginning to slip and tighten before it falls.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands",
+          "https://www.forbes.com/sites/johnkoetsier/2026/07/09/human-level-hands-1x-just-gave-humanoid-robot-neo-something-close/",
+          "https://www.dezeen.com/2026/07/13/1x-technologies-neo-robot-hand/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Built for a house, not a demo reel",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Two details matter more than the torque figures, because they are about living in a home rather than performing on a stage. The hands are IP68 waterproof and food-safe, which means Neo can cook and then wash its own hands. And 1X says the wrist joints have been proven well beyond two million cycles under high loads, with the hands designed to hold performance after millions of interaction cycles.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Durability and washability are not glamorous specifications. They are the ones that separate a robot that can do a task once, on camera, from a machine that can do it a thousand times in a kitchen without being rebuilt. Most humanoid hand announcements do not quote cycle counts, because most humanoid hands are not being asked to survive that.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "1X also says it has capacity to produce 10,000 hands this year, and that hundreds have already come off a scalable production line. That is a claim about manufacturing, not about research, and it is the kind of claim that becomes checkable quickly.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The ceiling moved somewhere harder",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "1X is explicit about why it built this: to remove the hardware ceiling on what humanoids can do, so that, in its words, AI models are no longer limited by dexterity. Read that claim closely and it contains an admission. If dexterity was the ceiling and the ceiling is now gone, whatever the robot still cannot do is no longer the hand’s fault.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Forbes put the same point less diplomatically, observing that Neo will ship with more hardware capability than the AI currently knows how to use. That is the honest state of humanoid robotics in mid-2026: the mechanical problem is closer to solved than the intelligence problem. A hand that reports force at every joint and shear at every fingertip produces an enormous, richly labeled stream of contact data. Something has to know what to do with it.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/johnkoetsier/2026/07/09/human-level-hands-1x-just-gave-humanoid-robot-neo-something-close/",
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "A hand that can feel a glass slipping is only useful if something upstream knows what slipping means.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "There is a plausible reason 1X built the hardware ahead of the software anyway. The company frames each hand as perceiving by acting: every joint reports force, every fingertip reports contact and shear, and every grasp arrives pre-labeled for learning-based manipulation. That is a data-collection argument. You cannot train a model on tactile experience you never captured, and you cannot capture it with a hand that cannot feel. On that logic, shipping hardware the AI cannot yet exploit is not a mistake — it is how you get the training data to close the gap.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Nearly every number here is 1X’s own. The torque figures, the ±0.2 mm accuracy, the two-million-cycle wrist testing, the 10,000-hand capacity and the IP68 rating are company specifications and demonstrations, not independent measurements, and no third party has published a teardown or a benchmark against them. “Match or surpass human capability” is a marketing frame, not a measured result; human hands have roughly 27 degrees of freedom depending on how you count, and a degree-of-freedom count is not dexterity.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands",
+          "https://www.dezeen.com/2026/07/13/1x-technologies-neo-robot-hand/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The gap between a curated demonstration and a robot that folds your laundry unsupervised is where this entire category has repeatedly stalled. 1X has now given itself the strongest possible version of the excuse-free position: if Neo cannot do a household task, it will be much harder to blame the hand. The next honest checkpoint is not another specification sheet. It is unedited footage of these hands working through a real, unstaged task list in a real home — and whether the hundreds already built become the thousands promised.",
+        "citation_urls": [
+          "https://www.1x.tech/discover/neos-hands",
+          "https://www.forbes.com/sites/johnkoetsier/2026/07/09/human-level-hands-1x-just-gave-humanoid-robot-neo-something-close/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Independent teardowns or third-party benchmarks against 1X’s torque, accuracy and cycle-life numbers; unedited long-form footage of unstaged household tasks; and whether the stated 10,000-hand capacity actually materializes this year."
+      },
+      {
+        "label": "How to read spec sheets like this",
+        "text": "Degrees of freedom count joints, not competence. The more informative figures here are the low 5:1–15:1 gear ratios and the shear sensing, because they determine whether a hand can feel what it is doing — and that is what learning-based manipulation needs."
+      }
+    ],
+    "links": [
+      {
+        "label": "1X — NEO’s Hands: An API to the Physical World",
+        "url": "https://www.1x.tech/discover/neos-hands"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1X Technologies — NEO’s Hands: An API to the Physical World (primary)",
+        "url": "https://www.1x.tech/discover/neos-hands"
+      },
+      {
+        "label": "Forbes — Human-Level Hands? 1X Just Gave Humanoid Robot Neo Something Close",
+        "url": "https://www.forbes.com/sites/johnkoetsier/2026/07/09/human-level-hands-1x-just-gave-humanoid-robot-neo-something-close/"
+      },
+      {
+        "label": "Dezeen — 1X Technologies designs humanoid hand to “match or surpass human capability”",
+        "url": "https://www.dezeen.com/2026/07/13/1x-technologies-neo-robot-hand/"
+      }
+    ],
+    "id": "newsroom-1x-neo-hand",
+    "image": "assets/img/newsroom/newsroom-1x-neo-hand.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-15T01:40:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Owner tip, not a Newsroom Core cycle: a YouTube video title bundling five claims. No autonomous checkpoints ran on this story."
+        },
+        {
+          "name": "Claim triage",
+          "agent": "research",
+          "note": "The tip’s five claims were checked individually. “GPT-6 already” is false — no announcement, model card or date exists; GPT-5.6 shipped July 9. Claude Opus 5 and Kimi K3 are unconfirmed rumor with no company statement. No evidence of a Fable 5.1 was found. Only the 1X Neo hand was independently confirmed, so only it was filed."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "Every figure taken from 1X’s own published specification. A discrepancy was resolved at the source: secondary reporting described “25 actuated degrees of freedom”, while 1X states 25 DoF comprising 22 fully actuated in the fingers and palm plus 3 at the wrist. 1X’s breakdown is used."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Filed as synthesis on one primary and two independent secondary sources. Company specifications are labelled as company claims throughout; no independent teardown exists to corroborate them."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak’s direction. The four unverifiable claims in the originating tip were declined and are recorded above rather than published."
+      }
+    },
+    "publishedAt": "2026-07-15T01:40:00Z"
   }
 ];
