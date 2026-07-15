@@ -1746,6 +1746,21 @@
         '<div class="tp-bt-text">'+kick+'<h2 class="tp-title tp-title-lg">'+T+'</h2><div class="tp-body">'+body+'</div>'+pull+'</div>'+
         '<div class="tp-bt-img" style="background-image:url(\''+img+'\')">'+cap+'</div></div>';
     }
+    if(lay==="runover"||lay==="runoverAlt"){ // continuation sheets — ONE article flowing across pages.
+      // No fresh headline: a "continued" rule, an optional crosshead, then two justified
+      // magazine columns. The article, not the page, is the unit (founder, 2026-07-14).
+      // runoverAlt rides its spot image above the columns for adjacent-page variety.
+      var roHead='<div class="tp-ro-head"><span class="tp-ro-rule"></span><span class="tp-ro-cont">'+esc(pg.cont||"continued")+'</span><span class="tp-ro-rule"></span></div>';
+      var roX=pg.crosshead?'<h3 class="tp-ro-x">'+esc(pg.crosshead)+'</h3>':'';
+      var roSpot=img?'<div class="tp-ro-img" style="background-image:url(\''+img+'\')">'+cap+'</div>':'';
+      var roMid=Math.ceil(pg.body.length/2), roFlow='';
+      pg.body.forEach(function(t,i){
+        roFlow+='<p>'+fmtBody(t)+'</p>';
+        if(pg.pull && i===roMid-1) roFlow+='<div class="tp-ro-pull">“'+esc(pg.pull)+'”</div>';
+      });
+      return '<div class="mpage light tp tp-runover'+(lay==="runoverAlt"?' tp-ro-alt':'')+'">'+folio+roHead+roX+
+        '<div class="tp-ro-cols">'+roFlow+'</div>'+roSpot+fact+'</div>';
+    }
     // posterTop (default) — big image up top, title dropped on the art, copy + fact below
     return '<div class="mpage light tp tp-poster">'+folio+
       '<div class="tp-hero" style="background-image:linear-gradient(184deg,rgba(8,5,16,.04) 32%,rgba(8,5,16,.5) 76%,rgba(8,5,16,.86)),url(\''+img+'\')">'+
@@ -1907,6 +1922,7 @@
       var B='<div class="mpage mfoldhalf" style="background:url(\''+esc(base)+'-2.jpg\') center/cover"></div>';
       return A+B;
     }
+    if(pg.kind==="text"&&(pg.layout||"").indexOf("runover")===0){ return featureText(pg,folio); } // runovers may carry no image — never let them fall to the plain-title branch
     if(pg.kind==="text"&&pg.layout==="top"){ return featureText(pg,folio); }
     if(pg.kind==="text"&&pg.layout==="overlay"){
       return '<div class="mpage l-ov" style="background:url(\''+pg.image+'\') center/cover">'+folio+
