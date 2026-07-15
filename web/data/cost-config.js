@@ -20,6 +20,21 @@ window.RTFC_COST_CONFIG = {
       input: 5, output: 25,
       note: "API-equivalent estimate for work performed through a ChatGPT subscription session; not an additional per-token subscription charge."
     },
+    "gpt-5.6-terra": {
+      label: "GPT-5.6 Terra",
+      input: 2.5, output: 15,
+      note: "Newsroom Core compose/review model for brief and synthesis lanes. Rates mirror the autonomy provider table in newsroom/config/autonomy.default.json; billed per token via the OpenAI API, not a subscription."
+    },
+    "gpt-5.6-luna": {
+      label: "GPT-5.6 Luna",
+      input: 1, output: 6,
+      note: "Newsroom Core discovery and structured-fast lane. Rates mirror the autonomy provider table in newsroom/config/autonomy.default.json; billed per token via the OpenAI API, not a subscription."
+    },
+    "openai-web-search": {
+      label: "OpenAI web search (per call)",
+      per_image: 0.01, per_image_batch: 0.01,
+      note: "Per-call web-search tool billing, not an image model. Priced through the per-call field because the ledger has no separate search-call rate; `images` carries the search-call count."
+    },
     "claude-opus-4-8": {
       label: "Claude Opus 4.8",
       input: 5, output: 25,

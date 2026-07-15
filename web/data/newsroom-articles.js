@@ -368,5 +368,157 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-14T06:09:57Z"
+  },
+  {
+    "slug": "nebius-reflection-ai-compute-capacity-deal",
+    "title": "Nebius sells more than $1 billion of compute to Reflection AI through 2029",
+    "dek": "The open-model developer has now locked in multiyear capacity from two suppliers in a matter of weeks, betting that access rather than price is the binding constraint.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "brief",
+    "disclaimer": "none",
+    "body": [
+      {
+        "type": "p",
+        "text": "Nebius has agreed to sell more than $1 billion of computing capacity to Reflection AI through 2029, giving the open-model developer access to Nvidia’s GB300 chips. TechCrunch characterized the agreement as a $1 billion deal; Reuters and Bloomberg described it as more than $1 billion in capacity. Every figure here comes from reporting, not from a company filing or announcement.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+          "https://www.investing.com/news/stock-market-news/ai-startup-reflection-signs-over-1-billion-computing-deal-with-nebius-4790506",
+          "https://www.bloomberg.com/news/articles/2026-07-14/nebius-to-sell-1-billion-in-ai-capacity-to-startup-reflection"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Reflection was founded in 2024 by two former Google DeepMind researchers, Misha Laskin and Ioannis Antonoglou, who had worked on the PaLM and Gemini model families. The company is valued at about $8 billion and has raised roughly $2.6 billion from backers including Nvidia, Sequoia Capital and Lightspeed Venture Partners. It builds open-weight models and autonomous coding agents, positioning itself as an alternative to closed-source labs.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+          "https://www.bloomberg.com/news/articles/2026-07-14/nebius-to-sell-1-billion-in-ai-capacity-to-startup-reflection"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A second compute contract in weeks",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The Nebius agreement follows a similar arrangement Reflection signed with SpaceX a few weeks earlier for access to the same class of Nvidia chips. Media reports put that deal in the multibillion-dollar range, at roughly $150 million a month running through 2029. Two multiyear supply contracts in quick succession is the notable part, not either headline number on its own.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+          "https://www.investing.com/news/stock-market-news/ai-startup-reflection-signs-over-1-billion-computing-deal-with-nebius-4790506"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Nebius’s newsroom carried no announcement of the transaction at publication; its most recent release, dated July 2, is unrelated. Chip quantities, the delivery schedule and the payment structure are not public. Nebius — formerly the international arm of the Russian technology company Yandex — saw its shares rise on the reports.",
+        "citation_urls": [
+          "https://nebius.com/newsroom",
+          "https://www.investing.com/news/stock-market-news/ai-startup-reflection-signs-over-1-billion-computing-deal-with-nebius-4790506"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The strategic signal is where compute is being locked up. A company two years old, with $2.6 billion raised, is committing to multiyear capacity from more than one supplier rather than buying as it goes. That is a bet that access, not price, is the binding constraint on training frontier-scale open models — and it pushes the risk onto whoever guessed wrong about what demand looks like in 2029.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+          "https://www.bloomberg.com/news/articles/2026-07-14/nebius-to-sell-1-billion-in-ai-capacity-to-startup-reflection"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "An official Nebius announcement or securities filing confirming the terms, disclosed chip counts and a delivery schedule, and whether Reflection’s open-weight releases actually follow the compute it has now contracted."
+      }
+    ],
+    "links": [
+      {
+        "label": "Nebius newsroom",
+        "url": "https://nebius.com/newsroom"
+      }
+    ],
+    "sources": [
+      {
+        "label": "TechCrunch — Reflection inks $1B compute deal with Nebius",
+        "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/"
+      },
+      {
+        "label": "Reuters via Investing.com — AI startup Reflection signs over $1 billion computing deal with Nebius",
+        "url": "https://www.investing.com/news/stock-market-news/ai-startup-reflection-signs-over-1-billion-computing-deal-with-nebius-4790506"
+      },
+      {
+        "label": "Bloomberg — Nebius to sell $1 billion in AI capacity to startup Reflection",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-14/nebius-to-sell-1-billion-in-ai-capacity-to-startup-reflection"
+      },
+      {
+        "label": "Nebius newsroom — no announcement of the transaction at publication",
+        "url": "https://nebius.com/newsroom"
+      }
+    ],
+    "id": "newsroom-0645db76",
+    "image": "assets/img/newsroom/newsroom-0645db76.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "newsroom-core · 2026-07-14T22:37:12Z",
+      "stages": [
+        {
+          "name": "Checkpoint 1",
+          "agent": "managing-editor",
+          "note": "Cycle 8e1f7740 discovery selected the Nebius–Reflection compute agreement from 4 candidates."
+        },
+        {
+          "name": "Checkpoint 2",
+          "agent": "managing-editor",
+          "note": "Assigned to the Compute desk as a brief on a two-source event."
+        },
+        {
+          "name": "Checkpoint 3",
+          "agent": "research",
+          "note": "Collected TechCrunch and Reuters-via-Investing.com reporting plus the Nebius newsroom."
+        },
+        {
+          "name": "Checkpoint 4",
+          "agent": "verification",
+          "note": "Six material claims mapped to sources; all returned supported."
+        },
+        {
+          "name": "Checkpoint 5",
+          "agent": "jin-park",
+          "note": "Brief drafted to the evidence the pipeline had fetched."
+        },
+        {
+          "name": "Checkpoint 6",
+          "agent": "editorial-review",
+          "note": "Editorial score 0.94."
+        },
+        {
+          "name": "Checkpoint 7",
+          "agent": "verification",
+          "note": "Verification score 0.9935. The $1B versus “more than $1B” discrepancy was attributed to each outlet rather than collapsed into one number."
+        },
+        {
+          "name": "Checkpoint 8",
+          "agent": "compliance",
+          "note": "R1 corporate infrastructure report."
+        },
+        {
+          "name": "Pre-staging re-verification",
+          "agent": "editor-in-chief",
+          "note": "Independent source re-check added the 2029 term, the GB300 chip model, valuation and funding detail, and removed the draft’s caveat that contract length was unspecified — that caveat was contradicted by Bloomberg and Reuters. Nebius newsroom re-checked directly: no company announcement, confirming the draft’s negative claim."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Policy blocked cycle artifact 6ad7ffe3 (autopublish-acceptance-history-insufficient, unresolved-contradictions, source-publication-date-missing). Revised against independent re-verification of TechCrunch, Reuters, Bloomberg and the Nebius newsroom, then approved for release by 0baak."
+      }
+    },
+    "publishedAt": "2026-07-14T22:37:12Z"
   }
 ];
