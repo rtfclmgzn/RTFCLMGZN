@@ -95,6 +95,31 @@ def _dedupe_text(values: Iterable[Any]) -> list[str]:
     return result
 
 
+def split_contradictions(values: Iterable[Any]) -> tuple[list[str], list[str]]:
+    """Separate unresolved contradictions from ones the draft already settled.
+
+    Verification models are asked to *record* contradictions, including source
+    discrepancies they resolved by attributing each figure rather than collapsing
+    them into one unsupported number. A settled discrepancy is evidence of good
+    handling, not a reason to reject. Legacy plain-string entries carry no
+    resolution status, so they stay unresolved and the gate fails closed.
+    """
+
+    unresolved: list[str] = []
+    resolved: list[str] = []
+    for raw in values:
+        if isinstance(raw, dict):
+            text = str(raw.get("description") or "").strip()
+            if not text:
+                continue
+            (resolved if raw.get("resolved") else unresolved).append(text)
+            continue
+        text = str(raw or "").strip()
+        if text:
+            unresolved.append(text)
+    return _dedupe_text(unresolved), _dedupe_text(resolved)
+
+
 def _canonical_urls(values: Iterable[Any], allowed: set[str]) -> list[str]:
     result: list[str] = []
     seen: set[str] = set()
@@ -216,12 +241,12 @@ def normalize_review_bundle(
     soft_uncertain = [
         item for item in material if item["status"] in {"partially-supported", "uncertain"}
     ]
-    contradictions = _dedupe_text(
+    unresolved_contradictions, resolved_contradictions = split_contradictions(
         list(verification.get("contradictions") or [])
         + list(claim_map.get("contradictions") or [])
     )
     minimum_verification = float(editorial_cfg["minimum_verification_score"])
-    if hard_unsupported or contradictions:
+    if hard_unsupported or unresolved_contradictions:
         verification_decision = "reject"
     elif soft_uncertain or deterministic_score < minimum_verification:
         verification_decision = "revise"
@@ -233,7 +258,8 @@ def normalize_review_bundle(
     verification["unsupported_material_claims"] = _dedupe_text(
         [item["text"] for item in hard_unsupported]
     )
-    verification["contradictions"] = contradictions
+    verification["contradictions"] = unresolved_contradictions
+    verification["resolved_contradictions"] = resolved_contradictions
     verification["publishable"] = verification_decision == "approve"
 
     candidate_risk = str(getattr(candidate, "risk_level", "R3") or "R3")

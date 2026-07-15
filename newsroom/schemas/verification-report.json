@@ -78,7 +78,23 @@
     "contradictions": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "resolved": {
+            "type": "boolean"
+          },
+          "resolution": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "description",
+          "resolved"
+        ],
+        "additionalProperties": false
       }
     },
     "source_count": {

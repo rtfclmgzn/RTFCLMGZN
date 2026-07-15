@@ -80,10 +80,10 @@ class PromptLibrary:
             1: "Identify and characterize the signal. Confirm recency, novelty, public-interest value, and initial source leads.",
             2: "Create a precise assignment brief: angle, scope, lane, persona, questions, evidence threshold, and risks.",
             3: "Build an evidence dossier. Search current sources when tools are available. Prefer primary documents and independent corroboration.",
-            4: "Build a claim map. Every material claim must list supporting source URLs, support type, and confidence. Mark conflicts explicitly.",
-            5: "Draft a complete RTFCLMGZN article using only the evidence dossier and claim map. Do not add unsupported facts.",
-            6: "Perform editorial review for structure, clarity, originality, headline accuracy, sourcing, and reader value. Return a score and actionable issues.",
-            7: "Verify every material claim against cited evidence. Return coverage, contradictions, unsupported claims, and a verification score.",
+            4: "Build a claim map. Every material claim must list supporting source URLs, support type, and confidence. Mark conflicts explicitly. For each contradiction set resolved=true only when the draft already settles it honestly (for example by attributing each source's figure separately instead of collapsing them into one unsupported number), and describe how in `resolution`. Set resolved=false when the conflict still stands unaddressed.",
+            5: "Draft a complete RTFCLMGZN article using only the evidence dossier and claim map. Do not add unsupported facts. `disclaimer` must be exactly one of: none, not-financial-advice, not-medical-advice. Use not-financial-advice for any story about securities, markets, valuations, funding or company financial performance, and not-medical-advice for health or clinical claims.",
+            6: "Perform editorial review for structure, clarity, originality, headline accuracy, sourcing, and reader value. Return a score and actionable issues. Judge whether the headline and lede reflect the most significant verified fact available, not a secondary angle.",
+            7: "Verify every material claim against cited evidence. Return coverage, contradictions, unsupported claims, and a verification score. For each contradiction set resolved=true only when the draft already settles it honestly, and explain how in `resolution`; set resolved=false when it still stands. Unresolved contradictions block publication, so do not mark a conflict resolved unless the draft text genuinely handles it.",
             8: "Classify legal, reputational, privacy, safety, market, health, and policy risk. Identify any reason automatic publication must be blocked.",
         }
         return (

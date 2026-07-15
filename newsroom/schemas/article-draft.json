@@ -54,7 +54,11 @@
         },
         "disclaimer": {
           "type": "string",
-          "maxLength": 100
+          "enum": [
+            "none",
+            "not-financial-advice",
+            "not-medical-advice"
+          ]
         },
         "body": {
           "type": "array",

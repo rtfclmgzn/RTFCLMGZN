@@ -6,7 +6,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 from .dedupe import canonical_url, is_public_http_url
-from .review_gate import classify_compliance_blockers
+from .review_gate import classify_compliance_blockers, split_contradictions
 
 POLICY_VERSION = "bounded-publication-v1.0"
 
@@ -190,8 +190,10 @@ class PublicationPolicy:
         ]
         if unsupported_rows:
             unsupported.extend(verification.get("unsupported_material_claims") or [])
-        contradictions = list(verification.get("contradictions") or [])
-        contradictions.extend(claim_map.get("contradictions") or [])
+        contradictions, resolved_contradictions = split_contradictions(
+            list(verification.get("contradictions") or [])
+            + list(claim_map.get("contradictions") or [])
+        )
         blockers = list(compliance.get("auto_publish_blockers") or [])
         hard_compliance_blockers, owner_compliance_blockers = classify_compliance_blockers(
             blockers
@@ -308,7 +310,8 @@ class PublicationPolicy:
             "material_claim_count": len(material_claims),
             "supported_material_claim_count": len(supported_material),
             "unsupported_material_claim_count": len(set(str(v) for v in unsupported)),
-            "contradiction_count": len(set(str(v) for v in contradictions)),
+            "contradiction_count": len(contradictions),
+            "resolved_contradiction_count": len(resolved_contradictions),
             "compliance_blocker_count": len(blockers),
             "compliance_hard_blocker_count": len(hard_compliance_blockers),
             "compliance_owner_review_blocker_count": len(owner_compliance_blockers),
