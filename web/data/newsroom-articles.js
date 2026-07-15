@@ -520,5 +520,224 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-14T22:37:12Z"
+  },
+  {
+    "slug": "ibm-preliminary-q2-2026-revenue-miss",
+    "title": "IBM lost about $70 billion in a day — while its operating earnings per share rose",
+    "dek": "A $660 million revenue miss erased roughly a quarter of IBM’s market value. Operating EPS was up 5% and operating pre-tax margin improved. What the market repriced was not the quarter’s profit.",
+    "persona": "ronan-cole",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "body": [
+      {
+        "type": "p",
+        "text": "IBM told investors on July 14 that preliminary second-quarter revenue was $17.2 billion, up 1 percent. Analysts had expected $17.86 billion, according to LSEG data cited by Reuters. That gap — roughly $660 million, or about 3.7 percent — was followed by a decline of about 25 percent in IBM’s shares, which Reuters reported put the stock on course for a steeper single-day fall than it suffered during the 1987 Black Monday crash. Reuters calculated that around $70 billion would come off IBM’s $272.78 billion market value if the losses held.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm",
+          "https://www.investing.com/news/stock-market-news/ibm-expects-secondquarter-revenue-below-estimates-4790496"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The size of that reaction is difficult to square with the profit lines in the same disclosure. IBM reported operating (non-GAAP) diluted earnings per share of $2.93, up 5 percent, and an operating pre-tax income margin of 19.2 percent, up 30 basis points. GAAP diluted EPS was $2.27, down 2 percent, and GAAP gross margin slipped 100 basis points to 57.7 percent. Year to date, the company reported $7.8 billion of net cash from operating activities and $4.8 billion of free cash flow. On the measures IBM itself leads with, profitability improved.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What IBM says happened",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "IBM’s explanation is specific and unusually blunt. The company said that in the last few weeks of June, it saw clients shift their quarterly capital spending toward servers, storage and memory purchases to secure supply-constrained infrastructure ahead of expected price increases. That is a description of buyers reordering the sequence of their spending under scarcity — not of demand disappearing.",
+        "citation_urls": [
+          "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors",
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "But IBM did not present that shift as the main cause of its own shortfall. It pointed at itself.",
+        "citation_urls": [
+          "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“We did not adapt and move quickly enough, and numerous large deals failed to close on the timelines we expected, driving the majority of our shortfall.” — Arvind Krishna, letter to IBM investors",
+        "citation_urls": [
+          "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors",
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That sentence does more work than the revenue number. A quarter lost to an industry-wide budget shift is a story about the market. A quarter in which management says it did not move quickly enough, and that the majority of the shortfall came from deals that failed to close on expected timelines, is a story about execution. IBM published both explanations in the same letter, and weighted the second one.",
+        "citation_urls": [
+          "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The segments disagree with the headline",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Read at the segment level, the quarter is far less uniform than “revenue miss” suggests. Software revenue rose 5 percent, with Red Hat growth accelerating sequentially to 11 percent. Consulting revenue was flat, up 1 percent at constant currency. Infrastructure revenue fell 7 percent — yet within it, IBM said distributed infrastructure grew 37 percent on strength in Power and Storage, exited the quarter with approximately $500 million of backlog, and delivered its best performance in reported history.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The damage concentrated in one place: the Z mainframe platform and the software stack attached to it, which IBM said fell short primarily in Transaction Processing. That concentration matters because it is the part of IBM most tightly coupled to a single hardware purchasing decision. When a customer defers the platform, the software that rides on it defers too. A portfolio label like “infrastructure down 7 percent” conceals a business growing 37 percent sitting next to a business that stalled.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm",
+          "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Some Z softness was expected. IBM had told investors in April that it would be wrapping on the z17 launch in the second quarter and guided infrastructure to decline in the low single digits for the year, because z17 had been the strongest start to a mainframe program in company history. IBM also reported indicators that its installed position held: clients representing 85 percent of installed MIPS maintained or grew capacity, and z17 ran at nearly 130 percent program-to-program against z16. The surprise was not that Z declined. It was the magnitude, and that the attached software went with it.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What actually got repriced",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "A 25 percent move on a 3.7 percent revenue miss is not arithmetic. Nothing in the profit lines justifies erasing a quarter of a company’s value: operating EPS rose, operating pre-tax margin widened, and free cash flow was $4.8 billion year to date. What changed was the story investors were holding about how reliably IBM converts a pipeline into revenue — and management supplied the evidence for the downgrade itself, in writing, in the same letter.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm",
+          "https://www.investing.com/news/stock-market-news/ibm-expects-secondquarter-revenue-below-estimates-4790496"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "There is a broader signal underneath, and it is narrower than the one being drawn elsewhere. IBM is a single company-level account of clients pulling capital forward into scarce hardware. It is not a market-wide survey, IBM did not say the redirected spending was AI-related, and it published no customer-level data. It is evidence that when buyers believe physical capacity is scarce or about to cost more, the order of their purchases can change — and that vendors selling software coupled to that hardware can absorb the timing risk. It is not evidence that enterprise software demand weakened.",
+        "citation_urls": [
+          "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors",
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "These figures are preliminary. IBM said it is still working to close its financial reporting for the quarter and that final results could be slightly different. The letter does not cleanly separate the contributions of supply constraints, expected price increases, cybersecurity distraction and IBM’s own execution — it names all four. It does not say whether the delayed deals convert next quarter, slip further, or disappear. That question, not this quarter’s revenue line, is what the next report has to answer.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Read the segments, not the label",
+        "text": "“Infrastructure down 7 percent” contained a distributed-infrastructure business up 37 percent with $500 million of backlog. Portfolio-level percentages routinely average together businesses in opposite conditions."
+      },
+      {
+        "label": "Separate deferral from cancellation",
+        "text": "IBM described changed buying patterns and deals missing expected timelines. Neither is a measure of demand destroyed, and IBM did not quantify future deal conversion."
+      },
+      {
+        "label": "Watch coupling risk",
+        "text": "The shortfall concentrated where software was attached to a hardware platform decision. Revenue tied to someone else’s capital-purchase timing inherits that timing."
+      }
+    ],
+    "links": [
+      {
+        "label": "IBM — Arvind Krishna’s letter to investors (preliminary Q2 2026)",
+        "url": "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors"
+      },
+      {
+        "label": "SEC — IBM Form 8-K, Exhibit 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+      }
+    ],
+    "sources": [
+      {
+        "label": "SEC — IBM Form 8-K Exhibit 99.1, preliminary Q2 2026 results (primary)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
+      },
+      {
+        "label": "IBM — Arvind Krishna’s letter to IBM investors (primary)",
+        "url": "https://newsroom.ibm.com/2026-07-14-Arvind-Krishnas-Letter-to-IBM-Investors"
+      },
+      {
+        "label": "Reuters via Investing.com — IBM expects second-quarter revenue below estimates",
+        "url": "https://www.investing.com/news/stock-market-news/ibm-expects-secondquarter-revenue-below-estimates-4790496"
+      }
+    ],
+    "id": "newsroom-9075dabd",
+    "image": "assets/img/newsroom/newsroom-9075dabd.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "newsroom-core · 2026-07-14T22:38:05Z",
+      "stages": [
+        {
+          "name": "Checkpoint 1",
+          "agent": "managing-editor",
+          "note": "Cycle 8e1f7740 discovery selected IBM’s preliminary second-quarter disclosure."
+        },
+        {
+          "name": "Checkpoint 2",
+          "agent": "managing-editor",
+          "note": "Assigned to the Markets desk as a synthesis on a primary-source filing."
+        },
+        {
+          "name": "Checkpoint 3",
+          "agent": "research",
+          "note": "Collected IBM’s investor letter plus Reuters-via-Investing.com and AP reporting."
+        },
+        {
+          "name": "Checkpoint 4",
+          "agent": "verification",
+          "note": "Claims mapped against the investor letter; verification score 0.998."
+        },
+        {
+          "name": "Checkpoint 5",
+          "agent": "ronan-cole",
+          "note": "Synthesis drafted from the investor letter."
+        },
+        {
+          "name": "Checkpoint 6",
+          "agent": "editorial-review",
+          "note": "Editorial score 0.95."
+        },
+        {
+          "name": "Checkpoint 7",
+          "agent": "verification",
+          "note": "Material claims reconciled; no unsupported claims and no contradictions."
+        },
+        {
+          "name": "Checkpoint 8",
+          "agent": "compliance",
+          "note": "R2, Markets — section requires owner review before release."
+        },
+        {
+          "name": "Pre-publication re-verification",
+          "agent": "editor-in-chief",
+          "note": "Every figure re-checked against IBM’s SEC Form 8-K Exhibit 99.1, which was added as the primary source and confirmed the letter verbatim. The draft omitted the market event entirely: it did not report the ~25% share decline, the ~$70 billion market-value loss, the $17.86 billion LSEG consensus, or that operating EPS rose 5% while operating pre-tax margin widened 30bps. Those were added and the piece was reframed to lead with them. The draft’s free-text disclaimer did not match the rendered enum and was corrected to not-financial-advice. The unused AP source was dropped because it could not be independently retrieved."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Policy blocked cycle artifact cd178723 (compliance-rejected, risk-level-requires-owner-review, section-requires-owner-review, autopublish-acceptance-history-insufficient). Markets is a blocked auto-publish section by design; released here by explicit direction from 0baak after independent primary-source re-verification."
+      }
+    },
+    "publishedAt": "2026-07-14T22:38:05Z"
   }
 ];
