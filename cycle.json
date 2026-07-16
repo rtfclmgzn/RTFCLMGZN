@@ -1,0 +1,51 @@
+{
+  "cycle_id": "8e1f7740-441d-4b75-b939-37568b6f782d",
+  "status": "succeeded",
+  "mode": "draft_only",
+  "started_at": "2026-07-14T22:37:09Z",
+  "finished_at": "2026-07-14T22:40:19Z",
+  "candidate_count": 4,
+  "selected_count": 3,
+  "packaged_count": 0,
+  "published_count": 0,
+  "cost_usd": 0.418187,
+  "stories": [
+    {
+      "story_id": "0645db76-36a1-4910-988c-4d208075b140",
+      "slug": "reflection-ai-signs-more-than-1-billion-compute-capacity-deal-with-nebius",
+      "title": "Reflection AI signs $1 billion compute deal with Nebius",
+      "outcome": "blocked",
+      "policy_decision": "blocked",
+      "decision_id": "b0a92a75-040b-47db-8de1-003b735be4de",
+      "packaged": false,
+      "published": false,
+      "release_id": null,
+      "error": ""
+    },
+    {
+      "story_id": "baeab329-96d0-4712-96aa-f5c4b196443f",
+      "slug": "white-house-launches-gold-eagle-ai-enabled-vulnerability-coordination-initiative",
+      "title": "White House announces GOLD EAGLE cyber-vulnerability clearinghouse",
+      "outcome": "blocked",
+      "policy_decision": "blocked",
+      "decision_id": "0698cc88-0d6e-4a61-852c-b18a9c180619",
+      "packaged": false,
+      "published": false,
+      "release_id": null,
+      "error": ""
+    },
+    {
+      "story_id": "9075dabd-2ae7-4306-a3ea-95559b93180b",
+      "slug": "ibm-warns-ai-infrastructure-spending-is-displacing-software-budgets-as-preliminary-q2-revenue-misses",
+      "title": "IBM’s preliminary quarter shows how infrastructure urgency can reorder software spending",
+      "outcome": "blocked",
+      "policy_decision": "blocked",
+      "decision_id": "74386029-a001-4282-8bfb-9b923515135a",
+      "packaged": false,
+      "published": false,
+      "release_id": null,
+      "error": ""
+    }
+  ],
+  "reason": ""
+}
