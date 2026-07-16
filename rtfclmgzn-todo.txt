@@ -1,0 +1,20 @@
+rtfclmgzn to do list (total site overhaul):
+
+- (do!) tldr sections need to be more simplified (still too long)
+
+- (do!) articles need a "share" button to easily share article link 
+- (ask?) cloudflare cron can handle scheduled tasks? which ones can it do? buzz and scoreboard page? 5x a day article sourcing/generation/publishing (using the agent system we have)? link openai api?
+
+- (ask?) using primer 001, what rules and specifications are understood? can we implement that for primer 000? primer 000 magazine needs to be more extensive and thorough for first-timer/newbie in AI.. have to go more in-depth, and by end of magazine, reader should be proficient and caught up to speed with the AI world.
+
+- (do!/ask?) from top bar, remove: frontier, products, compute, policy, health, markets, robotics, ethics sections. make it: optimize the ordering of the remainder (?) suggest the best before proceeding. 
+
+- (do!) masthead page; update icons for each editor to have their "avatar photos" (photos located in D:\BUSINESS\RTFCLMGZN\image-library\personas). make sure to update sitewide; all articles, anywhere their name/icon shows up, masthead page, etc (make the avatar thumbnail icon a bit bigger on their individual persona pages, like on rtfclmgzn.com/#/persona/[persona_name] pages). also (on masthead page), when someone clicks the avatar icon, i want a very aesthetic and cool pop-up closeup of the photo which will enlarge the photo by a nice reasonable amount, which will have an X and also will close out if clicked outside of the photo window.
+
+- (do!) use D:\BUSINESS\RTFCLMGZN\image-library\art; scan each photo and create relevant metadata with relevant information like all information regarding each photo, push to github, allow agents and the whole system to be able to use the library for aticle posts and for the magazine (try to pull from this library half the time, to add more variation and save some nano banana api money), using the rule; no photo (whether it's in this folder or gemini created) can reouccur on a magazine or article a second time within 3 months after initial usage
+
+- (do!) formatting on the bottom of the page, like "next edition in.." formatting needs to be fixed, doesn't look proper. 
+
+- (do!) magazine navigation needs some work; when using mouse wheel, animation from page to page is buttery smooth and glides. but using arrow keys and the left/right arrow buttons, it is very stuttery and visually uncomfortable. 
+
+- (ask?) what else can we do to make this website even more better and remarkably unbelievable/valuable to those who are lucky to discover it?
