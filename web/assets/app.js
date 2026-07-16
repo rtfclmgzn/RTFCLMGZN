@@ -277,6 +277,14 @@
     return '<aside class="apply apply-'+key+'"><div class="apply-head"><span class="apply-ic">'+ty.ic+'</span>'+ty.head+'</div>'+
       '<ul>'+items+'</ul></aside>';
   }
+  // TL;DR — the story's main points as bullets at the end of the piece, so the gist
+  // is scannable at a glance. Schema: a.tldr = ["point", ...]. A jump chip under the
+  // cover (rendered in viewArticle) deep-links here via rtfcJump('tldr').
+  function tldrHTML(a){
+    if(!a.tldr || !a.tldr.length) return "";
+    return '<aside class="tldr" id="tldr"><div class="tldr-head"><span class="tldr-ic">⚡</span>TL;DR<span class="tldr-sub">the story at a glance</span></div>'+
+      '<ul>'+a.tldr.map(function(x){return '<li>'+fmtBody(x)+'</li>';}).join("")+'</ul></aside>';
+  }
   // Action links — when a piece names a product/release/tool, give the reader the door to it.
   // Schema: a.links = [{label, url, note?}]. Rendered as a prominent "Go there" block.
   function linksHTML(a){
@@ -441,8 +449,9 @@
       '<div class="dateline"><span class="dl-sec" style="color:'+col+'">'+esc(a.section)+'</span> · '+when(a.publishedAt)+' · '+readTime(a)+' min read'+saveBtns(a.id,true)+'</div>'+
       articleToolsHTML(a)+
       '<div class="hero" style="'+artFill(a,true)+'">'+artGlyph(a,col)+'</div>'+
+      ((a.tldr&&a.tldr.length)?'<div class="tldr-jumpwrap"><button class="tldr-jump" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the TL;DR summary">TL;DR <span class="tj-arrow">↓</span></button></div>':'')+
       tocHTML+
-      '<div class="prose">'+bodyHTML+'</div>'+ (a.steps?guideStepsHTML(a):"") +
+      '<div class="prose">'+bodyHTML+'</div>'+ (a.steps?guideStepsHTML(a):"") + tldrHTML(a) +
       (applySeg>=0?'<div data-ra="'+applySeg+'" class="ra-wrap">'+applyHTML(a)+'</div>':applyHTML(a))+
       linksHTML(a)+
       reactsHTML(a.id)+
@@ -2414,6 +2423,14 @@
     revealWhenTranslated(3000);
   }
   window.addEventListener("hashchange",route);
+  // Clicking the RTFCLMGZN logo or "Home" while already on the home page doesn't change
+  // the hash (so no hashchange/route fires) — scroll back to the top instead.
+  document.addEventListener("click",function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href="#/"]'):null;
+    if(!a) return;
+    var onHome=(location.hash.replace(/^#/,"")||"/")==="/";
+    if(onHome){ e.preventDefault(); window.scrollTo({top:0,behavior:"smooth"}); }
+  });
 
   /* ---------- reading progress ---------- */
   function onScroll(){

@@ -430,6 +430,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       }
     ],
+    "tldr": [
+      "Nebius has agreed to sell more than $1 billion of computing capacity to Reflection AI through 2029, giving the open-model developer access to Nvidia’s GB300 chips — per TechCrunch, Reuters and Bloomberg reporting, not a company filing.",
+      "It is Reflection’s second multiyear compute contract in weeks, following a SpaceX arrangement reported at roughly $150 million a month through 2029.",
+      "Reflection, founded in 2024 by two former DeepMind researchers, is valued at about $8 billion and has raised roughly $2.6 billion from backers including Nvidia, Sequoia and Lightspeed.",
+      "Chip quantities, the delivery schedule and the payment structure are not public, and Nebius had made no official announcement at publication.",
+      "The strategic signal: a two-year-old company is locking up multiyear capacity from multiple suppliers — a bet that access, not price, is the binding constraint on training frontier-scale open models."
+    ],
     "apply": [
       {
         "label": "What to watch",
@@ -640,6 +647,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://www.sec.gov/Archives/edgar/data/0000051143/000005114326000070/ibm-20260714xex991.htm"
         ]
       }
+    ],
+    "tldr": [
+      "IBM’s preliminary Q2 revenue of $17.2 billion missed the $17.86 billion consensus by about 3.7% — and its shares fell roughly 25%, erasing about $70 billion of market value.",
+      "The profit lines in the same disclosure improved: operating EPS rose 5% to $2.93, operating pre-tax margin widened 30 basis points, and free cash flow was $4.8 billion year to date.",
+      "CEO Arvind Krishna weighted execution over market conditions: IBM “did not adapt and move quickly enough,” and large deals failing to close on expected timelines drove the majority of the shortfall.",
+      "The weakness concentrated in the Z mainframe platform and its attached Transaction Processing software; within the same segment, distributed infrastructure grew 37% with about $500 million of backlog.",
+      "IBM described clients pulling capital spending forward into scarce hardware — a deferral story, not evidence that enterprise software demand weakened. Figures are preliminary and could change."
     ],
     "apply": [
       {
@@ -852,6 +866,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://www.forbes.com/sites/johnkoetsier/2026/07/09/human-level-hands-1x-just-gave-humanoid-robot-neo-something-close/"
         ]
       }
+    ],
+    "tldr": [
+      "1X unveiled a tendon-driven hand for its Neo humanoid: 25 degrees of freedom, up to 45N fingertip force, ±0.2 mm positioning accuracy, IP68 waterproof and food-safe.",
+      "Unusually low 5:1–15:1 gear ratios make every joint force-controlled and backdrivable, and fingertips sense force, contact location and shear — the hand can feel what it is touching.",
+      "1X says hundreds of hands have already come off a scalable production line, with capacity for 10,000 this year.",
+      "The stated goal is to remove the hardware ceiling on humanoids — which by 1X’s own framing moves the bottleneck to software: Neo ships with more capability than its AI currently knows how to use.",
+      "Nearly every figure is 1X’s own specification or demonstration; no independent teardown or third-party benchmark exists yet."
     ],
     "apply": [
       {
