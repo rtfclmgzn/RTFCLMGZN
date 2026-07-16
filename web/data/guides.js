@@ -9,6 +9,14 @@ window.RTFC_GUIDES = [
     publishedAt:"2026-07-10T11:00:00Z", readMins:4, sample:false, disclaimer:"none",
     outcome:"You'll write a request that gets a usable answer on the first try — on any model, for any task.",
     gtime:"5 min", glevel:"Beginner",
+    tldr:[
+      "The highest-leverage AI skill isn't prompting tricks — it's writing a brief the way a good manager delegates. A four-word prompt gets a generic answer because it asked for something generic; nothing about the model has to change.",
+      "Give the AI a role first. That one line sets the vocabulary, judgment and standards for everything that follows.",
+      "State the job in one sentence — one request, one outcome. If you need two things, that's two briefs.",
+      "Add the two or three facts that make it yours (the audience, the hook, the tone only you know), then set constraints: length, format, what to avoid. Constraints don't limit the model, they aim it.",
+      "End with the ask-back line — the step almost nobody uses. It makes the model surface the gaps in your thinking before it wastes a draft, and half the time answering its questions is what tells you what you actually wanted.",
+      "Never accept the first draft; react to it. Each reaction takes five seconds and compounds — three rounds of steering beats an hour writing the perfect prompt up front."
+    ],
     body:[
       {type:"p", text:"A brilliant marketer I know told me she'd 'tried AI and it wasn't good.' Her prompt had been four words: **'write a launch email.'** The model gave her something generic because she'd asked for something generic. We spent ninety seconds rewriting it the way she'd brief a new hire — and the second output made her sit back in her chair. Nothing about the model changed. The brief did."},
       {type:"p", text:"That's the whole skill, and it works on every model, every time. Here it is as six steps you can reuse tonight."}
@@ -37,6 +45,14 @@ window.RTFC_GUIDES = [
     dek:"AI's most dangerous failure isn't being wrong — it's being wrong in a fluent, confident, plausible voice. Here's the working newsroom's toolkit for catching it, in about the time it takes to read this.",
     persona:"sage-okafor", section:"Guide", format:"synthesis",
     publishedAt:"2026-07-11T09:00:00Z", readMins:5, sample:false, disclaimer:"none",
+    tldr:[
+      "The dangerous failure isn't that AI is wrong — it's that it's wrong in a fluent, confident, plausible voice. A lawyer once filed a brief citing six perfectly on-point court decisions that were entirely invented.",
+      "A language model is trained to produce text that is plausible, not text that is true. Most of the time those overlap, which is why the tools are useful; the skill is knowing exactly where the overlap breaks.",
+      "Hallucination isn't random — it clusters on anything precise and verifiable: specific numbers, direct quotes, names paired with claims, citations, dates, legal or medical specifics, and anything recent or obscure. Vague, widely-repeated knowledge is where models are safest.",
+      "The thirty-second check is three questions: Is anything here load-bearing? Did it give a source I can actually open? And the move almost nobody makes — ask the model how it knows. A grounded model gets more specific; a bluffing one hedges, softens and walks the claim back. That reversal is the tell.",
+      "Two habits make it automatic: demand sources for anything factual and actually open one (the common mistake isn't trusting AI, it's trusting AI that provided a link nobody clicked), and for anything important ask a second model the same question and watch where they disagree.",
+      "None of this makes AI less useful — it makes it safe to use for the things that matter. The people who get long-term value aren't the ones who trust these tools most or least, but the ones who know precisely which sentence to double-check."
+    ],
     body:[
       {type:"p", text:"Here is the failure mode that should worry you, and it isn't the one in the movies. A lawyer in a real 2023 case filed a brief citing six court decisions that supported his argument perfectly. They were exactly on point. They were also entirely invented — an AI had produced them, complete with plausible case names, plausible citations, and plausible judges, and the lawyer had trusted them because they read exactly like real law. The problem was never that the model was wrong. The problem was how good it was at being wrong."},
       {type:"p", text:"That's the whole thing you need to internalize about these tools: a language model is trained to produce text that is *plausible*, not text that is *true*. Most of the time plausible and true overlap, which is why the tools are useful. The skill — the one that separates people who get burned from people who don't — is knowing exactly where that overlap breaks, and having a thirty-second habit for the moments that matter."},
@@ -67,6 +83,14 @@ window.RTFC_GUIDES = [
     dek:"New models drop every week and the leaderboards are mostly noise. The durable skill isn't knowing which model is 'best' — it's matching the job to the right class of tool. A framework that outlasts the next launch.",
     persona:"jin-park", section:"Guide", format:"synthesis",
     publishedAt:"2026-07-09T13:00:00Z", readMins:5, sample:false, disclaimer:"none",
+    tldr:[
+      "There is no 'best model,' the same way there is no best vehicle — a cargo ship and a motorcycle are both correct answers to completely different questions. Name the job first, then reach for the class of tool built for it.",
+      "Match the shape of the work: fast, high-volume, low-stakes tasks want a small cheap model; hard multi-step reasoning wants a frontier reasoning model; long documents want a large-context model; code wants a coding-tuned model; anything genuinely private wants a model on infrastructure you control.",
+      "The big labs now sell families, not models — a flagship, a mid-tier and a budget tier at prices differing by 5 to 25 times. GPT-5.6 ships as Sol, Terra and Luna. Those tiers are a menu, and most people order far too expensively out of habit.",
+      "The vast majority of real work runs perfectly on the cheap tier. Escalate to the flagship for the genuinely hard 10%, not the routine 90% — that ratio is the single biggest lever on what AI costs you.",
+      "A concrete example: independent testing this year found a task that ran about $2.50 on a budget model and near $12 on a flagship, for output a careful reader couldn't tell apart. That's a 5x bill for zero gain.",
+      "The durable habit is draft cheap, escalate hard: start on a fast, cheap model and only escalate the same prompt if it visibly struggles. That intuition outlasts every leaderboard, because the names keep changing and the job-to-tool mapping doesn't."
+    ],
     body:[
       {type:"p", text:"Every week a new model launches, tops a benchmark, and sets off a round of 'is this the new best AI?' It's the wrong question, and chasing it will keep you permanently one launch behind. I spend my days looking at the hardware and economics underneath these systems, and from down there the truth is plain: there is no 'best model,' the same way there is no 'best vehicle.' A cargo ship and a motorcycle are both correct answers — to completely different questions. The skill that actually compounds is learning to name the job first, then reach for the class of tool built for it."},
       {type:"h2", text:"Name the job, not the model"},

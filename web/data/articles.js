@@ -8,6 +8,14 @@ window.RTFC_ARTICLES = [
     dek:"Sol, Terra, and Luna went generally available July 9. The headline isn't raw intelligence — it's that OpenAI is positioning its flagship as the most capable cyber-defense model yet, and that framing is doing real strategic work.",
     persona:"sage-okafor", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-10T09:54:25Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "OpenAI opened the GPT-5.6 family — Sol, Terra and Luna — to general availability on July 9, with Sol replacing ChatGPT's default model silently, for hundreds of millions of users, with no prompt to opt in or out.",
+      "The news isn't the capability bump — it's the positioning. OpenAI pitched Sol as its most advanced cybersecurity model to date rather than its smartest, and where a company chooses to compete signals where it thinks the fight moved.",
+      "OpenAI claims Sol is competitive with Anthropic's Mythos on exploit-generation benchmarks using roughly a third of the tokens. If that holds, it is an economics story wearing safety's clothes: efficiency is what lets you run a capability at scale rather than as a demo.",
+      "The timing is strategic, not coincidental: the U.S. government is standing up a review regime that classifies frontier models by exactly the cyber capability OpenAI is now marketing.",
+      "'Cybersecurity model' cuts both ways — the same skill that finds flaws to defend finds flaws to exploit. Anthropic's Fable 5 was pulled offline for 19 days over precisely this dual-use problem.",
+      "The token-efficiency figures are OpenAI's own, and independent researchers have not stress-tested Sol at scale. A benchmark you can't inspect is a claim, not a measurement."
+    ],
     body:[
       {type:"p", text:"OpenAI opened the GPT-5.6 family — Sol, Terra, and Luna — to general availability on July 9, with Sol now serving as ChatGPT's default model. After months of the tier being gated to roughly twenty government-vetted partner organizations, the whole world is now talking to Sol, whether it knows it or not. For most of the hundreds of millions of people who open ChatGPT, the model behind the box changed overnight, silently, with no prompt to opt in or out. That alone is worth pausing on: the default is the product for the vast majority of users, and the default just moved."},
       {type:"p", text:"But the genuinely interesting move here isn't the capability bump. Every model launch comes with a capability bump; they've become almost rhythmic. The interesting move is the positioning. OpenAI is presenting Sol not as its smartest model but as its most advanced cybersecurity model to date — competitive with Anthropic's Mythos on exploit-generation benchmarks while, per the company, using roughly a third of the tokens to get there. In a launch cycle where every lab reflexively claims the smartest model, OpenAI deliberately chose a different flag to plant: the best at security. When a company changes the axis it competes on, that's a tell about where it thinks the ground is shifting."},
@@ -39,6 +47,14 @@ window.RTFC_ARTICLES = [
     dek:"A June executive order created a voluntary government review for 'covered frontier models.' After Fable 5 spent 19 days offline, that framework is no longer theoretical — it's the new gate every frontier lab plans around.",
     persona:"marcus-webb", section:"Policy", format:"synthesis",
     publishedAt:"2026-07-10T08:43:40Z", readMins:7, sample:false, disclaimer:"none",
+    tldr: [
+      "A June 2, 2026 executive order created the first structured federal process for reviewing advanced AI before public release — the moment the U.S. government formally asserted a role in deciding which frontier models ship.",
+      "Developers of 'covered frontier models' may give federal agencies up to 30 days of pre-release access, and agencies were directed to build a classified benchmarking process — with the qualifying criterion centered on a model's cyber capabilities.",
+      "'Voluntary' is the load-bearing word. In a market this concentrated, once the leading labs submit to review, declining advertises that you have something to hide: voluntary in law, mandatory in practice.",
+      "It stopped being theoretical when the Commerce Department ordered Claude Fable 5 suspended under export-control authority after a demonstrated jailbreak produced working exploit code — taking it offline worldwide for 19 days.",
+      "The design creates a perverse incentive: scoring high on offensive-security evaluations invites regulatory friction, so labs are quietly rewarded for scoring lower on the exact capabilities regulators most want measured.",
+      "Because the qualifying threshold is classified, the public cannot see where the line is drawn — making independent oversight of the overseers structurally difficult. A bipartisan draft bill and an Illinois state law are both already in play."
+    ],
     body:[
       {type:"p", text:"On June 2, 2026, the White House signed \"Promoting Advanced Artificial Intelligence Innovation and Security,\" an executive order establishing — for the first time — a structured federal process for reviewing advanced AI before it reaches the public. It arrived with far less noise than most AI news, and that undersells it: this is the moment the American government began, formally, to assert a role in deciding which frontier models are safe to ship. Read against the actual text rather than the headlines, its logic is narrow but consequential. It creates a voluntary framework under which developers of \"covered frontier models\" may give federal agencies access for up to 30 days before a wide release, and it directs agencies to build, within 60 days, a classified benchmarking process to determine which models qualify as \"covered\" — with the qualifying criterion centered on a model's cyber capabilities."},
       {type:"p", text:"\"Voluntary\" is the load-bearing word in that description, and it is doing far more work than it appears to. In a market this concentrated — where a handful of labs account for the overwhelming majority of frontier capability — a framework the leading players participate in becomes the de facto standard everyone else is measured against. Once the top labs submit to review, a lab that declines is no longer exercising a neutral option; it is advertising that it has something to hide. Voluntary in law, mandatory in practice. That is not a criticism of the design so much as a description of how standards actually propagate in oligopolies, and anyone reading the word 'voluntary' as 'optional' has misread the situation."},
@@ -71,6 +87,13 @@ window.RTFC_ARTICLES = [
     dek:"Muse Spark 1.1 shipped July 9 at $1.25 / $4.25 per million tokens — Meta's first paid model. The price is fine; the strategy shift is the story.",
     persona:"sage-okafor", section:"Frontier", format:"brief",
     publishedAt:"2026-07-09T22:30:40Z", readMins:2, sample:false, disclaimer:"none",
+    tldr: [
+      "Meta shipped Muse Spark 1.1 on July 9 at $1.25 per million input tokens and $4.25 per million output, undercutting the frontier on price.",
+      "The specs aren't the story. The word 'paid' is: this is Meta's first model with a price tag on it.",
+      "Meta's entire AI posture has been the open-weights foil to the closed labs — release it, let the ecosystem build, capture value indirectly. A metered model says Meta now wants direct API revenue.",
+      "That puts Meta on OpenAI's and Anthropic's turf and business model, not just competing on open weights and vibes.",
+      "The signal to watch: if the paid tier grows while the open cadence slows, the industry's most-cited counterexample to closed AI will have quietly changed sides."
+    ],
     body:[
       {type:"p", text:"Meta shipped Muse Spark 1.1 on July 9 at $1.25 per million input tokens and $4.25 per million output — undercutting the frontier on price, as you'd expect. The specs will get parsed elsewhere. The thing to actually register is the word \"paid.\" This is Meta's first model with a price tag on it."},
       {type:"p", text:"Meta's whole AI posture has been the open-weights foil to the closed labs — release it, let the ecosystem build, capture value indirectly. A paid, metered model is a different animal: it says Meta now wants direct API revenue, which means it's competing with OpenAI and Anthropic on their turf and their business model, not just on vibes and open weights. Whether Spark is any good matters less, this week, than the fact that the most prominent 'free and open' player just put out a toll booth."},
@@ -88,6 +111,14 @@ window.RTFC_ARTICLES = [
     dek:"Blackwell is sold out through mid-2026, Rubin is arriving early, and hyperscaler capex is up 80% year over year. Underneath the demand story is a quieter one: HBM memory, not GPUs, is now the binding constraint.",
     persona:"jin-park", section:"Compute", format:"synthesis",
     publishedAt:"2026-07-09T20:45:57Z", readMins:9, sample:false, disclaimer:"none",
+    tldr: [
+      "NVIDIA pulled its next-generation Rubin platform forward roughly two quarters from 2027. That isn't confidence — it's triage: Blackwell is effectively sold out through mid-2026 with hundreds of billions in demand queued behind it.",
+      "Microsoft, Google, Amazon and Meta are collectively pouring roughly $650 billion into AI infrastructure in 2026, up 80% year over year. Bank of America raised its global semiconductor forecast to $1.3 trillion, a 30% mid-year jump that almost never happens.",
+      "The binding constraint is no longer the GPU — it's High Bandwidth Memory. Only SK Hynix, Samsung and Micron make it at scale, and a new line takes years and billions. A GPU you can't feed is a GPU that stalls.",
+      "Scarcity is handing NVIDIA's rivals their opening: AMD's data-center revenue hit $5.8 billion in Q1 2026, up 57%, anchored by a five-year deal to supply OpenAI with MI450 chips. CUDA still makes the moat deep, but moats get tested at the margin.",
+      "The money is increasingly circular — the largest AI companies are simultaneously each other's customers, investors and suppliers, so a dollar of 'demand' and a dollar of 'investment' can be the same dollar wearing two hats.",
+      "Power is the ceiling nobody has hit yet. You can pull a chip generation forward two quarters; you cannot pull a gigawatt-scale grid interconnection forward the same way."
+    ],
     body:[
       {type:"p", text:"NVIDIA's next-generation Rubin platform, originally slated for 2027, is now expected roughly two quarters ahead of schedule. That single scheduling change tells you more about the state of AI infrastructure than any benchmark released this month. Pulling a chip generation forward is not something a company does casually. It compresses validation timelines, strains a supply chain already running at its limit, and risks shipping silicon before the manufacturing process has fully matured. You accept those risks for one reason: the current generation is gone, and the buyers are lined up down the block waving checks."},
       {type:"p", text:"Blackwell, NVIDIA's current architecture, has been effectively sold out through mid-2026, and the demand queued behind it is measured not in units but in hundreds of billions of dollars. When a product that costs tens of thousands per unit is sold out a year forward, the rational move is to bring the next product to market faster — and that is precisely what NVIDIA is doing. Rubin arriving early isn't confidence. It's triage."},
@@ -129,6 +160,14 @@ window.RTFC_ARTICLES = [
     dek:"H1 2026 beat all of 2025 combined. But strip out OpenAI and Anthropic and the picture changes — this isn't a broad boom, it's a historic concentration wearing a boom's clothing.",
     persona:"ronan-cole", section:"Markets", format:"synthesis",
     publishedAt:"2026-07-09T17:00:32Z", readMins:6, sample:false, disclaimer:"not-financial-advice",
+    tldr: [
+      "Global venture funding hit $510 billion in the first half of 2026 — more than the $440 billion invested in all of 2025 combined, and a record for any half-year.",
+      "OpenAI and Anthropic alone accounted for $217 billion, roughly 43% of all startup funding on the planet, across every sector. That's not a rising tide — it's a gravity well.",
+      "'Record year' can be the most misleading phrase in the market: for a founder outside the top handful, the aggregate is up and their odds may be down at the same time, because the aggregate is carried by rounds they'll never be in.",
+      "The mega-rounds recalibrated what 'a lot of money' means — Prometheus closed a $12 billion Series B at a $41 billion valuation, led by JPMorgan and BlackRock; DeepSeek raised $7.4 billion at north of $50 billion.",
+      "The concentration signals conviction and fragility at once: the most sophisticated institutions on earth are underwriting frontier AI directly, but the health of the whole market is now hostage to a very small number of outcomes.",
+      "Funding is an input, not an outcome. None of these valuations is verifiable against durable revenue from the outside, and the dot-com peak was also a record-funding era — right up until it wasn't."
+    ],
     body:[
       {type:"p", text:"Global venture funding hit $510 billion in the first half of 2026 — more than the $440 billion invested in all of 2025 combined, and a record for any half-year on record. Nearly 40 AI startups reached unicorn status in those six months, at valuations ranging from $1 billion to $41 billion. Every instinct trained on headlines says boom, and the word is not wrong. But the desk's job is never to stop at the headline number; it is to check the instinct against the distribution underneath it. And the distribution here tells a very different, much stranger story than 'the market is hot.'"},
       {type:"h2", text:"The number under the number"},
@@ -160,6 +199,14 @@ window.RTFC_ARTICLES = [
     dek:"Figure 02 logged eleven months on a real assembly line at 99% accuracy. Tesla's Optimus V3 enters production this summer. After years of highlight reels, the story is finally about hours on the job.",
     persona:"ash-lindqvist", section:"Robotics", format:"synthesis",
     publishedAt:"2026-07-09T16:33:23Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "Figure reports its Figure 02 humanoids assembled more than 30,000 BMW vehicles at the Spartanburg plant across an eleven-month deployment, at 99% accuracy, running roughly ten hours a day.",
+      "Duration is the great honesty test this clears: a robot can be choreographed through ninety impressive seconds, but not through eleven months of ten-hour days on a paying customer's line.",
+      "The 99% accuracy figure is Figure's own and deserves independent confirmation — but unlike a viral clip, the claim carries a named customer, a named plant, a specified duration and a specified duty cycle.",
+      "The whole field is moving, not one robot: Figure is talking about ~100,000 units over four years, Tesla's Optimus V3 enters low-volume production at Fremont this summer, and ex-Optimus engineers are founding rivals like Paris-based UMA.",
+      "An automotive assembly line is structured, repetitive and heavily engineered — exactly where humanoids should succeed first, and still a long way from a cluttered warehouse aisle, a hospital corridor or a kitchen.",
+      "The central question has changed from 'can it actually do the work?' to 'how many, how fast, and how cheap?' Unit economics that beat the alternative are what ultimately decide it."
+    ],
     body:[
       {type:"p", text:"I have spent a lot of columns on this desk applying the demo-versus-shipping checklist to viral robot clips — the staged lighting, the chosen objects, the mystery take count, the ninety-second runtime that hides everything that happens at minute thirty. It's a skeptic's job, and it's the right job, because the humanoid field has run for years on highlight reels that raise rounds and prove nothing. So it is worth saying plainly, and even a little against my own reflexes, when the thing on the far side of that checklist finally arrives. Figure reports that its Figure 02 humanoids assembled over 30,000 BMW vehicles at the Spartanburg plant across an eleven-month deployment, at 99% accuracy, running roughly ten hours a day. That is not a staged kitchen with a robot catching one teacup for the camera. That is a real production line, a real duty cycle, and a real duration — the three things the highlight reels never had."},
       {type:"h2", text:"Why this clears the bar the clips never could"},
@@ -189,6 +236,14 @@ window.RTFC_ARTICLES = [
     dek:"The field is entering its proving year: 15 programs in Phase 3, 15–20 more expected to reach pivotal trials. An evidence-graded look at the moment AI drug discovery stops being a promise and becomes a result — or doesn't.",
     persona:"priya-anand", section:"Health", format:"synthesis",
     publishedAt:"2026-07-09T14:17:17Z", readMins:7, sample:false, disclaimer:"not-medical-advice",
+    tldr: [
+      "There are more than 200 AI-discovered drugs in clinical development, roughly 15 of them in Phase 3, and zero have received FDA approval. The third number matters most: the field has produced no finished medicine.",
+      "2026 is the year the denominator resolves — industry estimates suggest 15 to 20 AI-associated programs may enter pivotal Phase III trials this year.",
+      "Phase III is where drugs go to fail: roughly half of conventional drugs that reach it don't survive it. Mouse studies, biomarkers and elegant molecular design cannot substitute for it.",
+      "The milestones so far are real but none is an approval: the field cleared its first Phase IIa test in 2025, and Relay Therapeutics' zovegalisib holds Breakthrough Therapy Designation and is in Phase 3 for metastatic breast cancer.",
+      "Both cases are live. Bull: discovery timelines genuinely compress and the wave hasn't had time to reach the finish line. Bear: discovery was never the bottleneck — combinatorial chemistry and high-throughput screening also produced more candidates without moving the Phase III failure rate.",
+      "The informative signal is the cohort rate, not a single approval: as the 15–20 pivotal programs read out, does the AI-discovered class clear Phase III meaningfully better than the historical baseline?"
+    ],
     body:[
       {type:"p", text:"Here is the state of AI drug discovery in mid-2026, stated as plainly as the evidence allows: there are more than 200 AI-discovered drugs in clinical development, roughly 15 of them in Phase 3, and zero have received FDA approval. All three of those numbers matter, and the third one matters most. This is a field that has absorbed extraordinary capital, generated extraordinary activity, and — as of today — produced no finished medicine. Any honest accounting starts there, because everything else in this story is provisional until that number moves off zero."},
       {type:"p", text:"That is not a dismissal — it is the honest denominator, and denominators are what this beat exists to enforce. And 2026 is the year the denominator finally starts to resolve, because industry estimates suggest 15 to 20 AI-associated programs may enter pivotal Phase III trials this year. To understand why that matters, you need to understand what Phase III actually is: the large, expensive, multi-year test of whether a drug improves human outcomes in a population big enough to mean something. It is where the field's optimism has always deferred its reckoning, because Phase III is where drugs go to fail — roughly half of all conventional drugs that reach it don't survive it, and that's after decades of refinement in how candidates get chosen. Mouse studies cannot substitute for it. Biomarkers cannot substitute for it. Elegant molecular design cannot substitute for it. Which means we are about to learn, with real human data, whether AI-driven discovery produces medicines that work in people — or merely candidates that looked wonderful on the way in."},
@@ -219,6 +274,14 @@ window.RTFC_ARTICLES = [
     dek:"Even Realities hit a $1B valuation on a $150M raise, led by an ex-Apple engineer. After a decade of false starts, AI is quietly making the glasses form factor actually make sense — here's what's real and what to try.",
     persona:"nova-reyes", section:"Products", format:"synthesis",
     publishedAt:"2026-07-09T12:20:42Z", readMins:5, sample:false, disclaimer:"none",
+    tldr: [
+      "Even Realities, founded by former Apple engineer Will Wang, raised $150 million in a pre-Series B that lifted it to a $1 billion valuation — a decade after Google Glass buried the category.",
+      "What changed isn't the hardware, it's the AI. Glass tried to put a screen on your face; the AI-native pitch makes the glasses eyes and ears for an assistant that lives in the cloud — an input device rather than an output device.",
+      "The use cases that work today are narrow and ambient: live translation whispered at conversational speed, hands-free capture and recall, turn-by-turn guidance, quick what-am-I-looking-at lookups. Small daily utilities are historically what makes wearables stick.",
+      "The use cases that don't work yet are the ones the concept videos sell: rich persistent AR overlays and all-day battery under real load. The physics of optics, heat and batteries wasn't repealed — it was sidestepped by making the display optional.",
+      "Glasses that see and hear everything are a privacy proposition before they're a product one. The violated social contract, not the battery life, is what actually killed Glass — and it sharpens as the assistant gets smarter.",
+      "Watch three things: whether battery life quietly crosses the all-day threshold, whether incumbents like Meta's Ray-Ban line force startups toward niches or acquisitions, and whether anyone ships a trust feature legible enough to become the category's seatbelt."
+    ],
     body:[
       {type:"p", text:"In 2013, a Google engineer walked into a San Francisco bar wearing a $1,500 face computer, and by the time the cultural dust settled, 'Glasshole' had entered the dictionary and an entire product category had been buried with full honors. That funeral is worth remembering this week, because Even Realities — a smart-glasses startup founded by former Apple engineer Will Wang — just raised $150 million in a pre-Series B that lifted it to a $1 billion valuation. A decade after the first wave of face computers face-planted in that bar, glasses are back, the money is bigger than ever, and the thing that changed isn't the hardware. It's the AI behind it."},
       {type:"p", text:"Here's the honest version of why this form factor suddenly works when it so publicly didn't before. Google Glass failed — and the AR headsets after it struggled — because they tried to put a screen on your face: a smartphone's worth of interface crammed into hardware with no room for it, solving a problem nobody had. The AI-native pitch is fundamentally different. The glasses aren't a display; they're a pair of eyes and ears for an assistant that lives in the cloud, whispering the answer rather than showing you an app. Less screen, more sense. That inversion — from output device to input device — is a genuinely better fit for what a pair of glasses can physically be, and it's the real reason the money is flowing again."},

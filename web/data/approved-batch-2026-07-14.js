@@ -15,6 +15,14 @@
       publishedAt: "2026-07-14T18:00:00Z",
       sample: false,
       disclaimer: "none",
+      tldr: [
+        "The important change isn't that individual models are stronger — it's that the product around them is becoming a coordinated system that picks the right kind of intelligence before the user notices there was a choice.",
+        "Different workloads reward different tradeoffs: deep research and hard coding justify slower, more capable reasoning; routine drafting rewards speed; repeated automation needs predictable cost and throughput.",
+        "A family like Sol, Terra and Luna makes those differences explicit. The names matter less than the architecture they represent: one product on the surface, an operating environment underneath.",
+        "Once a platform offers multiple systems, routing quality matters as much as model quality. A bad router wastes money sending simple tasks to expensive models — and damages trust sending high-stakes ones to weak models.",
+        "This is why benchmark leadership is becoming less decisive: benchmarks measure whether a model solves a defined problem, not whether the product selects the right model, preserves context, handles failure or integrates with existing software.",
+        "The moat is moving from the model to the system — routing, tool execution, memory, identity, permissions, observability and a recovery path when automation fails."
+      ],
       body: [
         { type: "p", text: "The most important change in advanced AI is not simply that individual models are becoming stronger. It is that the product around them is becoming a coordinated system. Different workloads reward different tradeoffs: deep research and difficult coding justify slower, more capable reasoning; routine drafting and summarization reward speed; repeated automation needs predictable cost and throughput. A mature AI platform increasingly has to make those choices before the user even notices there was a choice to make." },
         { type: "h2", text: "Specialization replaces the one-model assumption" },
@@ -62,6 +70,14 @@
       publishedAt: "2026-07-14T18:02:00Z",
       sample: false,
       disclaimer: "none",
+      tldr: [
+        "The infrastructure race is no longer reducible to securing accelerators. A usable cluster also needs high-bandwidth memory, networking, rack power, cooling, substations, transmission capacity and permission to connect it all.",
+        "The bottleneck is now a chain, not a component — a delay at any point can strand expensive hardware or push a deployment back by months.",
+        "Advantage shifts from placing the largest chip order to systems engineering: securing sites, negotiating power, designing dense cooling, obtaining permits and coordinating construction so one constraint doesn't invalidate the plan.",
+        "Electrical engineering has become product strategy. Latency, regional availability, uptime and inference cost all depend on where and how capacity is built — customers experience it as software performance.",
+        "The grid is not infinite. Large data centers arrive as concentrated industrial loads requiring new substations, transmission or generation, raising political questions about who pays and whether households absorb part of the bill.",
+        "Power-flexible operation could help: training checkpoints and batch inference may shift with grid conditions, making the control plane that schedules compute as strategically important as the hardware. Megawatts, cooling and construction discipline are becoming the scoreboard."
+      ],
       body: [
         { type: "p", text: "The AI infrastructure race is no longer reducible to securing more accelerators. Chips remain essential, but a usable cluster also needs high-bandwidth memory, networking, rack power, cooling, substations, transmission capacity and permission to connect it all. A delay at any point in that chain can strand expensive hardware or push a deployment back by months. The physical system has become too large and too interdependent for any one component to define the outcome." },
         { type: "h2", text: "The bottleneck is now a chain" },
@@ -113,6 +129,14 @@
       publishedAt: "2026-07-14T18:04:00Z",
       sample: false,
       disclaimer: "not-financial-advice",
+      tldr: [
+        "The market presents itself as a sequence of model launches, but the durable contest is wider: developer access, enterprise contracts, consumer distribution, infrastructure, data controls and talent.",
+        "Each player enters with a different advantage — OpenAI has product recognition and direct user habit; Google can distribute through search, cloud, productivity and Android; Anthropic has built around enterprise use, controllability and safety governance; Meta has mass consumer reach and an ecosystem strategy.",
+        "Benchmarks are no longer enough. A model that leads a technical evaluation can lose commercial ground when it's expensive, hard to integrate or disconnected from the tools people already use.",
+        "Developers choose more than an API — tooling, documentation, rate limits, observability, data policies, regional availability and roadmap. Switching means rewriting prompts and evaluation suites, which makes trust a form of lock-in.",
+        "Enterprise trust is a market asset: procurement weighs security, uptime, support, contractual terms and data control over raw intelligence. A provider that keeps changing behavior or pricing can lose confidence while improving its model.",
+        "Compound advantages decide it — more users attract developers, more integrations attract enterprises, more revenue funds infrastructure. The company with the best model on a given morning may not own the most valuable ecosystem a year later."
+      ],
       body: [
         { type: "p", text: "The AI market still presents itself as a sequence of model launches, but the durable contest is much wider. OpenAI, Google, Anthropic and Meta are competing over the complete environment around intelligence: developer access, enterprise contracts, consumer distribution, infrastructure, data controls and the talent capable of building the next generation. A benchmark result may dominate a news cycle, yet the company that wins the cycle may not win the market." },
         { type: "h2", text: "Each company enters with a different advantage" },

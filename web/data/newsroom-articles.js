@@ -8,6 +8,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "section": "Compute",
     "format": "brief",
     "disclaimer": "none",
+    "tldr": [
+      "HCLTech announced plans to invest up to ₹3,500 crore — approximately $370 million — in an AI data-center business in India, with potential capacity of 50 MW.",
+      "The company presented it as the infrastructure foundation for a new full-stack AI offering combining data-center design, DevOps, AI cloud operations and software, sold to private-sector and government demand as an integrated package.",
+      "Chief executive C. Vijayakumar disclosed the plan alongside HCLTech's first-quarter results, describing ₹3,500 crore as an upper limit and 50 MW as potential scale.",
+      "The announcement does not identify customers, signed sovereign-compute contracts or operating deployments, and the public material gives no project sites, initial construction phase, deployment schedule or spending pace.",
+      "The strategic significance is that one of India's largest technology-services companies is putting substantial capital behind the physical layer of AI delivery — but execution will matter more than the headline number."
+    ],
     "body": [
       {
         "type": "p",
@@ -138,6 +145,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "section": "Policy",
     "format": "brief",
     "disclaimer": "none",
+    "tldr": [
+      "The White House is preparing to bring utilities and data-center developers together around voluntary commitments intended to prevent existing electricity customers from bearing AI-related power costs, Reuters reported on July 13.",
+      "Three people familiar with the plans told Reuters the event's timing and participant list were still unsettled — this is a developing policy effort, not a finalized government program.",
+      "The available reporting does not establish a binding tariff, an enforcement mechanism or a final timetable.",
+      "A related framework already exists: in March, Amazon, Google, Meta, Microsoft, OpenAI, Oracle and xAI signed the White House's Ratepayer Protection Pledge, committing to build, bring or buy new generation, pay for the power-delivery upgrades their data centers require, and negotiate separate rate structures with utilities and state governments.",
+      "What remains unknown is whether the new effort adds signatories, changes the March commitments or creates measurable protections beyond the existing voluntary pledge. Those details — not the event itself — will determine whether it changes who pays for AI infrastructure."
+    ],
     "body": [
       {
         "type": "p",
@@ -260,6 +274,14 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "section": "Policy",
     "format": "brief",
     "disclaimer": "none",
+    "tldr": [
+      "Canada's Office of the Superintendent of Financial Institutions put generative and agentic AI on the operational-risk agenda for banks and insurers with a July 1 Technology Risk Bulletin on the technology, cybersecurity and operational-resilience implications of increasingly capable AI.",
+      "The bulletin is advisory, not a new rule. OSFI says technology risk bulletins are timely supervisory communications highlighting current and emerging risks, but are not regulatory expectations.",
+      "Reuters separately reported that an April 29 OSFI email warned major financial institutions that advanced AI models could increase cyber threats and compress the time available to identify and respond to vulnerabilities.",
+      "That email reportedly referenced Anthropic's Claude Mythos by name — a model-specific warning that comes from the email obtained by Reuters, not from the public bulletin itself.",
+      "The immediate issue for institutions is response speed: powerful models may change how quickly vulnerabilities can be found and exploited, while banks still have to govern their own use of agentic systems.",
+      "OSFI has not announced a mandatory implementation standard or explained how it will assess compliance. The next meaningful signal is whether this advisory material becomes formal guidance or produces institution-specific remediation requests."
+    ],
     "body": [
       {
         "type": "p",

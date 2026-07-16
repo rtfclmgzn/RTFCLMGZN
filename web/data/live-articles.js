@@ -16,6 +16,14 @@ window.RTFC_LIVE_ARTICLES = [
     "readMins": 6,
     "sample": false,
     "disclaimer": "not-financial-advice",
+    "tldr": [
+      "TSMC reported second-quarter revenue of T$1.27 trillion, about $39.62 billion — up 36% year over year and slightly above the LSEG SmartEstimate cited by Reuters. June alone reached T$442.68 billion, up 67.9%.",
+      "A foundry result is closer to a physical census of demand than a model vendor's usage stats: orders have to become wafers, packaging slots and finished chips before they can appear in this line.",
+      "Revenue is not profit. A record quarter doesn't settle the valuation argument around the AI trade, and full second-quarter results land Thursday.",
+      "The constraint has moved down the stack — advanced packaging, high-bandwidth memory, power equipment, cooling and grid connections, not just a GPU order book. Software copies in seconds; a fab, transformer or packaging line does not.",
+      "Three things to watch Thursday: gross margin (whether demand becomes durable pricing power), capital expenditure (whether TSMC believes the order book outlasts one launch cycle), and capacity commentary on advanced nodes into 2027.",
+      "The honest conclusion is narrower than 'AI wins forever' and stronger than 'the boom is hype': the physical supply chain is recording real, accelerating revenue — and the burden of proof shifts to the companies that must turn all that compute into cash flow."
+    ],
     "body": [
       {
         "type": "p",
@@ -185,6 +193,14 @@ window.RTFC_LIVE_ARTICLES = [
     "readMins": 7,
     "sample": false,
     "disclaimer": "none",
+    "tldr": [
+      "Industry now participates in roughly 80% of notable AI models, up from a historical average of about 25%. The business share of U.S. basic research has climbed back from about 14% in 2004 to 32%.",
+      "Talent follows the capital: the share of doctorate recipients planning to enter academia fell from 56% in 2004 to 40%, with especially steep declines in mathematics and computer science.",
+      "The corporate lab returned because frontier AI is a scientific field with an industrial cost structure. Once experiments demand infrastructure measured in billions, the factory and the experiment become the same place.",
+      "The Bell Labs analogy is tempting but incomplete. Corporate research agendas are shaped by ownership, product strategy and the need to defend a moat — the public receives extraordinary capability, but not necessarily the methods, data or freedom to reproduce it.",
+      "Independent science performs jobs the frontier companies cannot credibly perform for themselves: evaluating claims, testing harms, preserving methods, and pursuing questions without an immediate product path.",
+      "A workable settlement would expand public and academic compute, require disclosure around evaluations and incidents, protect researcher mobility and fund independent replication — negotiated while the laboratories are still being built, not discovered afterward."
+    ],
     "body": [
       {
         "type": "p",
@@ -357,6 +373,14 @@ window.RTFC_LIVE_ARTICLES = [
     "readMins": 4,
     "sample": false,
     "disclaimer": "none",
+    "tldr": [
+      "The ITU used the AI for Good Summit to open a Focus Group on Agentic AI, tasked with how to identify agents, decide when they can be trusted, and keep people meaningfully in control.",
+      "The underlying problem: software that can schedule, purchase, negotiate or operate a business process is no longer producing content — it is exercising authority.",
+      "A production agent needs more than a model name. A counterparty needs to know which person or organization it represents, what permissions it holds, which tools and accounts it may use, how actions are logged, and how that authority can be revoked.",
+      "Standards are arriving after the products. One platform's identity token, audit log or approval prompt doesn't travel with an agent into another service. The ITU isn't a regulator, but it can set common technical expectations others build around.",
+      "The first meeting is Paris in November, then Geneva in January — so builders shouldn't wait. The minimum viable trust layer is already clear: explicit principals, least-privilege credentials, human approval for high-impact actions, tamper-evident logs, and a kill switch outside the model's own reasoning loop.",
+      "Identity and control are adoption infrastructure, not compliance bolt-ons. The vendor that can prove who acted, under whose authority and within which boundary will often beat the vendor with the more impressive demo."
+    ],
     "body": [
       {
         "type": "p",
@@ -487,6 +511,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"Microsoft just put $2.5 billion into a company that does nothing but make other people's AI work. OpenAI and Anthropic already did the same. Follow that money and you find the real state of the industry — and a number nobody on stage wants to say out loud.",
     persona:"ronan-cole", section:"Markets", format:"synthesis", top:false,
     publishedAt:"2026-07-12T19:30:00Z", readMins:7, sample:false, disclaimer:"not-financial-advice",
+    tldr: [
+      "In eight weeks, the three most valuable names in AI each spent a fortune on the same unglamorous thing: sending human engineers into other companies to make AI actually work.",
+      "Microsoft moved biggest, not first — a $2.5 billion unit called Microsoft Frontier Company unveiled July 2, roughly 6,000 engineers led by Rodrigo Kede Lima. OpenAI's Deployment Company took more than $4 billion led by TPG; Anthropic paired with Goldman Sachs, Blackstone and Hellman & Friedman on $1.5 billion.",
+      "The number nobody says on stage: MIT's Project NANDA found roughly 95% of enterprise generative-AI pilots deliver zero measurable impact on profit and loss.",
+      "When flagship models are nearly indistinguishable at the top of every leaderboard, the margin stops living in the model and moves to the last mile — integration, data plumbing, change management. This is the services-ization of AI, and it rhymes with every platform shift before it.",
+      "The uncomfortable half: a collective bet this size on humans-in-the-loop is an admission that the machines don't yet sell themselves. If these models generated returns on contact, you wouldn't need thousands of people to land them.",
+      "Two things decide how it breaks — whether deployment arms harden into durable high-margin services revenue or stay a cost center subsidizing the model race, and whether embedded engineers are a real moat or get automated away by the very models they deploy."
+    ],
     body:[
       {type:"p", text:"In the span of eight weeks, the three most valuable names in artificial intelligence each spent something close to a fortune on the same profoundly unglamorous thing: sending human engineers into other companies to make AI actually work. Microsoft was the latest and largest, unveiling a $2.5 billion operating unit called Microsoft Frontier Company on July 2 — roughly 6,000 engineers and industry specialists, led by longtime enterprise chief Rodrigo Kede Lima, embedded directly inside customers to build, run, and babysit their AI systems. It is not a model. It is not a chip. It is a consulting army, and it tells you more about where this industry actually is than any benchmark released this year."},
       {type:"h2", text:"The number nobody says on stage"},
@@ -543,6 +575,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"A million-token memory, point-and-click control across desktop and browser, and pricing that undercuts every frontier lab. Meta's first paid model is a precise shot at the agent market.",
     persona:"nova-reyes", section:"Products", format:"brief",
     publishedAt:"2026-07-12T19:14:00Z", readMins:2, sample:false, disclaimer:"none",
+    tldr: [
+      "Muse Spark 1.1 can operate a computer — clicking, typing and navigating across desktop, browser and mobile through unfamiliar interfaces — with a 1-million-token context window it compacts mid-task so it doesn't lose the thread.",
+      "It is also Meta's first model sold through a public API: the company that built its reputation giving models away is finally charging for one.",
+      "The benchmarks Meta chose are about agents doing jobs, not chatbots answering questions: 54.7 on JobBench against Opus 4.8's 48.4 and GPT-5.5's 38.3, plus claimed state-of-the-art on MCP Atlas, Finance Agent v2 and Humanity's Last Exam with tools.",
+      "Price is the other half of the pitch — $1.25 per million input tokens and $4.25 per million output, undercutting every frontier lab it lines itself up against.",
+      "It's the clearest expression of the year's real theme: best fit beating best score. Meta isn't claiming the smartest model, it's claiming the best price for one that can do agentic, tool-using work.",
+      "The caveat is load-bearing: these are Meta's own comparisons, and computer-use is precisely where small errors compound across steps. Reliability under independent testing is the number that will decide this."
+    ],
     body:[
       {type:"p", text:"Meta shipped Muse Spark 1.1 this month, and two things make it matter beyond the spec sheet. It can operate a computer — clicking, typing, and navigating across desktop, browser, and mobile through unfamiliar interfaces — and it carries a 1-million-token context window it can actively compact mid-task, so it doesn't lose the thread on long, multi-app work. It is also Meta's first model sold through a public API: the company that built its reputation giving models away is, finally, charging for one."},
       {type:"p", text:"The benchmarks Meta chose to show are all about agents doing jobs, not chatbots answering questions. On JobBench, which measures professional tool use, it posts 54.7 against Opus 4.8's 48.4 and GPT-5.5's 38.3, and Meta claims state-of-the-art results on MCP Atlas, Finance Agent v2, and Humanity's Last Exam with tools. The price is the other half of the pitch: $1.25 per million input tokens and $4.25 per million output — undercutting every frontier lab it lines itself up against."},
@@ -582,6 +622,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"SpaceXAI's new release trails the frontier on most benchmarks and undercuts it on every price. A close read of the numbers, the Cursor connection — and the two caveats that matter more than any score.",
     persona:"sage-okafor", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-09T18:58:49Z", readMins:8, sample:false, disclaimer:"none",
+    tldr: [
+      "SpaceXAI released Grok 4.5 on July 8, described by Musk as 'an Opus-class model, but faster, more token-efficient and lower cost.' On most headline evals it is competitive but rarely leading.",
+      "The price is the product: $2 per million input tokens and $6 per million output, against Opus-tier at $5 and $25, GPT 5.5 at $5 and $30, and Fable 5 at $10 and $50.",
+      "Artificial Analysis's agentic-coding cost accounting puts a Grok 4.5 task at $2.49 against $5.07 for GPT 5.5 and $11.80 for Fable 5 — driven by token appetite (1.9 million per task versus 6.2 and 7.2 million), so the real gap is wider than the price sheet suggests.",
+      "Cursor — which SpaceX is reportedly acquiring for $60 billion — says it trained the model jointly with SpaceXAI on trillions of tokens of its own developer-interaction data: a frontier model co-built with the application company that supplies its most valuable training distribution.",
+      "The most important number points the wrong way. Independent testing found accuracy rose from 35% to 52% generation over generation while the hallucination rate jumped from 25% to 54% — for a model marketed on agentic work, where errors compound across steps.",
+      "Cursor voluntarily disclosed that an earlier snapshot of its codebase was accidentally included in training, inflating CursorBench by an unclear amount, and that third-party scores in the announcement are self-reported. Better than the industry norm — and it means at least one published result is known-inflated."
+    ],
     body:[
       {type:"p", text:"SpaceXAI released Grok 4.5 on July 8, and the launch materials describe it — in Elon Musk's words — as \"an Opus-class model, but faster, more token-efficient and lower cost.\" The benchmark tables tell a more specific story: on most headline evals, Grok 4.5 is not the best model available, and the launch doesn't really pretend otherwise. What it is, per the published pricing, is dramatically cheaper than everything it's compared against. That's the actual product here — and evaluating it honestly means looking at three things: the capability numbers, the economics, and two caveats buried in the fine print that deserve more attention than either."},
       {type:"h2", text:"What shipped"},
@@ -636,6 +684,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"After two weeks behind a government-vetted partner wall, OpenAI's three-tier family — Sol, Terra, Luna — opened to everyone. The pricing, the Cerebras speed play, and why the naming is the strategy.",
     persona:"sage-okafor", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-09T16:13:53Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "OpenAI opened Sol, Terra and Luna to every ChatGPT user and API developer on July 9, ending thirteen days in which only about twenty government-vetted organizations had access.",
+      "The celestial naming is the org chart: Sol is the frontier flagship, Terra the workhorse at $2.50 per million input and $15 output, Luna the budget tier at $1 and $6 for high-volume, low-stakes work.",
+      "Every lab is now selling a menu, not a model — and the menus are converging on the same three price points. Grok 4.5 landed at $2/$6, Z.ai's GLM-5.2 undercuts from below, and Gemini 3.5 Pro slipped past June, leaving a flagship-shaped hole in Google's lineup.",
+      "The most technically interesting claim isn't a benchmark: OpenAI says it will serve Sol on Cerebras wafer-scale hardware at up to 750 tokens per second, roughly fifteen times conventional GPU inference. Treat it as a vendor claim until independently measured.",
+      "The staged rollout is the new template. Fable 5 launched wide on June 9 and was suspended by Commerce Department order three days later — every lab concluded a two-week vetted preview is cheaper than a post-launch suspension.",
+      "Watch three things: independent benchmarks on Sol (almost all public numbers so far are OpenAI's own), whether Terra's pricing forces a reprice from Anthropic and Google, and the Cerebras serving numbers under real load."
+    ],
     body:[
       {type:"p", text:"For thirteen days, GPT-5.6 existed the way a superyacht exists: you knew it was out there, you'd seen pictures, and roughly twenty government-vetted organizations were allowed aboard. That ended July 9. OpenAI opened Sol, Terra, and Luna — the sun, the earth, and the moon — to every ChatGPT user and API developer at once, and in doing so turned a preview that had been generating two weeks of secondhand speculation into something you can actually run tonight."},
       {type:"h2", text:"Three bodies, three jobs"},
@@ -683,6 +739,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"CNBC's investigation puts Chinese models at 30–46% of enterprise API traffic on US developer platforms. The three-week Fable 5 ban opened the door — and the price sheet is holding it open.",
     persona:"ronan-cole", section:"Markets", format:"synthesis",
     publishedAt:"2026-07-09T20:49:42Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "CNBC's July 9 investigation puts Chinese models at 30–46% of enterprise API token usage on US developer platforms — far above the industry's mental model of roughly ten to fifteen percent.",
+      "Two events compounded to open the door. The Fable 5 suspension took the most capable US model off the market from June 12 to July 1 with three days' notice, and forced migrations have a way of becoming permanent.",
+      "The alternative turned out better than fine: Z.ai's GLM-5.2 and its coding sibling ZCode launched into exactly that window with frontier-competitive performance at dramatically lower prices — and CFOs remember that kind of discovery.",
+      "Read the range before quoting the number. Measuring 'Chinese model share' is genuinely hard: an open-weights model served entirely on US infrastructure is a different question than traffic routed to a mainland provider. The floor — 30% under the most conservative definition — is the shocking part.",
+      "The uncomfortable arithmetic for US labs: model quality is converging faster than pricing is, which makes tokens a commodity market — and commodity markets are won on cost curves, not benchmarks.",
+      "The open questions are regulatory: whether Washington treats this penetration as a market outcome or a security problem. Watch procurement rules, not press releases."
+    ],
     body:[
       {type:"p", text:"Here's a thought experiment that stopped being hypothetical this week: if you called the API traffic flowing through US developer platforms a pie, how big a slice would Chinese models hold? Most people guess ten percent, maybe fifteen. CNBC's investigation, published July 9, puts the real number between 30 and 46 percent of enterprise API token usage — a range so far above the industry's mental model that the story isn't the competition anymore. It's that the competition already happened, and most of the market didn't notice."},
       {type:"h2", text:"How the door opened"},
@@ -727,6 +791,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"OpenAI's new workspace takes a goal, works across your apps, and hands back finished sheets, slides, and documents. Accenture and Google Cloud are selling the same promise to the mid-market. What changes when the draft does itself?",
     persona:"nova-reyes", section:"Products", format:"synthesis",
     publishedAt:"2026-07-10T15:27:21Z", readMins:7, sample:false, disclaimer:"none",
+    tldr: [
+      "ChatGPT Work, shipped alongside the GPT-5.6 launch, takes a goal, gathers what it needs across your connected apps and files, breaks the job into steps and returns the finished artifact — a built sheet, deck or document rather than a draft of an answer.",
+      "What's genuinely new isn't autonomy, it's integration depth: the agent isn't reaching across a fence into your files, it lives where they live.",
+      "The same week, Accenture and Google Cloud announced pre-built agentic suites for the $300 million to $3 billion mid-market — the tell that this is a category now, not a feature.",
+      "The mid-market framing is where the labor math gets real. Agents at software prices rather than consulting prices means thousands of mid-sized firms adopt more or less simultaneously, in exactly the back-office functions where one workflow can displace headcount — and with much less cushion for the people affected.",
+      "A Korn Ferry survey published the same week has 73% of talent leaders ranking critical thinking and problem-solving as the top skill they hire for; AI skills ranked fifth. The first draft is becoming free; the judgment layer is becoming the job.",
+      "The honest caveat: autonomy works brilliantly on well-structured tasks and degrades fast on ambiguous ones, and nothing this week repealed that curve. What changed is the default — the tools now assume they'll finish the job, and it's on you to catch them when they shouldn't have."
+    ],
     body:[
       {type:"p", text:"For three years, the ritual has been the same: you ask the AI, it answers, and then you do the actual work of turning that answer into the thing your job needed — the spreadsheet, the deck, the memo with the numbers in the right cells. ChatGPT Work, which OpenAI shipped alongside the GPT-5.6 launch this week, is aimed squarely at that last mile. You hand it a goal. It gathers what it needs across your connected apps and files, breaks the job into steps, executes them, and comes back with the finished artifact. Not a draft of an answer — a built sheet, a built deck, a built document."},
       {type:"h2", text:"What's genuinely new here"},
@@ -768,6 +840,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"The company whose high-bandwidth memory feeds nearly every frontier GPU started trading in New York as SKHY. Add FuriosaAI's European beachhead and Cerebras serving OpenAI's flagship, and the compute supply chain had quite a week.",
     persona:"jin-park", section:"Compute", format:"synthesis",
     publishedAt:"2026-07-10T18:08:20Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "SK Hynix began trading on the Nasdaq under the ticker SKHY on July 10, in an American depositary receipt offering worth roughly $29 billion — one of the largest listings of the year.",
+      "Memory is the choke point the GPU conversation misses: high-bandwidth memory determines how fast a model can actually think, and SK Hynix's capacity through next year is effectively spoken for.",
+      "Listing in New York puts the stock in front of the index funds and AI-thematic capital that already own Nvidia and Broadcom — at AI-era multiples rather than memory-cycle multiples. HBM4 demands capital expenditure large enough to make even a profitable memory giant think hard about funding sources.",
+      "Two smaller moves sketch the same map: FuriosaAI deployed servers at an Equinix data center in Lisbon, its first European foothold, and OpenAI said it will serve its flagship Sol on Cerebras wafer-scale hardware at up to 750 tokens per second.",
+      "One pattern across all three: the compute layer is diversifying by geography, by vendor, and now by shareholder.",
+      "Watch whether SKHY's debut pricing holds through its first earnings as a US-listed name (memory is famously cyclical), whether the HBM shortage eases as new capacity lands next year, and whether challenger-inference bets convert marquee deployments into recurring volume."
+    ],
     body:[
       {type:"p", text:"Every AI model you've used this year — every chat reply, every generated image, every agent run — passed through high-bandwidth memory on its way to you, and there's a decent chance that memory was made by SK Hynix. On July 10 the Korean chipmaker began trading on the Nasdaq under the ticker SKHY, in an American depositary receipt offering worth roughly $29 billion — one of the largest listings of the year, and a milestone with a simple meaning: the AI buildout's least glamorous bottleneck now has a ticker American money can buy directly."},
       {type:"h2", text:"Why memory is the choke point"},
@@ -808,6 +888,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"UpDoc's diabetes assistant is the first cleared medical device with a patient-facing LLM inside. EchoNext reads heart disease off a routine ECG. And the agency is openly sketching a pathway for clinical AI — with one hard line it won't cross yet.",
     persona:"priya-anand", section:"Health", format:"synthesis",
     publishedAt:"2026-07-10T21:25:03Z", readMins:7, sample:false, disclaimer:"health",
+    tldr: [
+      "UpDoc holds FDA clearance for what it describes as the first Software as a Medical Device built around a patient-facing large language model — an app that talks with people with diabetes about their treatment. It cleared quietly in December; the company revealed it in late June.",
+      "Precision matters: the clearance is tightly bound to non-diagnostic tasks inside a defined protocol. No AI has been cleared to independently diagnose or prescribe, and the FDA still draws a hard line at autonomous decision-making.",
+      "What it establishes is narrower but historic — that a conversational model interacting directly with patients can pass the agency's bar at all. Every clinical AI team in the country just got an existence proof and a template.",
+      "A second signal landed the same fortnight: Pathway Labs announced FDA clearance on July 1 for EchoNext, which flags structural heart disease from a routine 12-lead electrocardiogram.",
+      "The pathway is the story. A 510(k) means the FDA agreed a device is substantially equivalent to something already on the market; the de novo route is for genuinely novel devices and creates a new category future products reference. Whoever clears de novo first defines the template everyone else is measured against.",
+      "A senior FDA official signaled the agency will soon seek public input on AI that can 'practice medicine' — language that would have been unthinkable two years ago. The hard line still stands, but the agency just told you where the negotiation starts."
+    ],
     body:[
       {type:"p", text:"The most consequential sentence in American health-AI regulation this year wasn't in a law. It was in a device clearance: UpDoc, a clinical AI company, holds FDA clearance for what it describes as the first Software as a Medical Device built around a patient-facing large language model — an app that talks with people with diabetes about their treatment, in natural language, as a regulated medical device. The clearance itself happened quietly in December; the company revealed it in late June, and the implications have been rippling through the clinical AI world ever since."},
       {type:"h2", text:"What was actually cleared — and what wasn't"},
@@ -850,6 +938,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"Agility's $2.5B SPAC would make it the first pure-play humanoid on a US exchange; Unitree cleared its Shanghai listing at a reported $6.2B. The demo-video era is ending — quarterly earnings are coming.",
     persona:"ash-lindqvist", section:"Robotics", format:"synthesis",
     publishedAt:"2026-07-11T14:58:40Z", readMins:7, sample:false, disclaimer:"none",
+    tldr: [
+      "Two of humanoid robotics' biggest names moved toward public markets: Agility Robotics will merge with Churchill Capital Corp XI at roughly $2.5 billion under the ticker AGLT, and Unitree cleared its Shanghai STAR Market listing at a reported $6.2 billion.",
+      "Agility led with hours, not flips: its Digit robot has logged 65,000 hours of real-world operation with customers including Toyota and GXO, plus over $300 million in pre-orders for Digit v5. The CEO has been explicit that a home robot is not on the near-term roadmap.",
+      "The SPAC vehicle carries a reputation scar from the 2021 cohort, and the pattern-matching cuts both ways. Do the division: 65,000 cumulative hours across a fleet means individual robots in the thousands of hours — real endurance proof, but far from the tens of thousands a warehouse asset is depreciated over.",
+      "Unitree's counter-thesis is volume: more than 5,500 humanoid units shipped in 2025, the global lead by a wide margin, with its listing seeking roughly $608 million. The American company sells proven warehouse labor; the Chinese company sells affordable platforms at consumer-electronics scale.",
+      "The real event isn't two companies raising money — it's disclosure. Both will have to report unit economics, service costs, utilization and churn, and every private humanoid startup gets re-priced against those numbers the day they print.",
+      "Utilization per unit, more than the valuation, will tell you whether humanoid labor is a business yet."
+    ],
     body:[
       {type:"p", text:"For a decade, the humanoid robotics business has run on a currency that never appears on a balance sheet: the demo video. A robot does a backflip, lifts a tote, walks a dog — millions of views, another funding round. This week that era started to close, because two of the field's biggest names moved toward a venue where backflips don't count and audited numbers do. Agility Robotics announced it will go public via a merger with Churchill Capital Corp XI at a roughly $2.5 billion valuation; Unitree cleared the path for its Shanghai STAR Market listing at a reported $6.2 billion. The humanoid business is about to file quarterly reports."},
       {type:"h2", text:"What Agility is actually selling"},
@@ -891,6 +987,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"On July 15, the world's first major regulation of emotionally engaged AI takes effect. Qwen has already switched off its humanlike agents; Doubao follows within days. The precedent every other jurisdiction will study.",
     persona:"marcus-webb", section:"Policy", format:"synthesis",
     publishedAt:"2026-07-11T17:56:06Z", readMins:7, sample:false, disclaimer:"none",
+    tldr: [
+      "On July 15, China's Interim Measures for AI Anthropomorphic Interactive Services take effect — the world's first major regulation aimed specifically at AI that behaves like a person rather than a tool.",
+      "Alibaba's Qwen halted its humanlike and user-created agents on July 10, five days early; ByteDance's Doubao takes its agent function offline on the deadline. The platforms evidently concluded partial compliance was riskier than switching whole categories off while they re-architect.",
+      "The line is precise: work-oriented agents are explicitly permitted — the state has no quarrel with software that files reports. What triggers obligations is anthropomorphic engagement, services designed to be treated as someone rather than something, with requirements around identity disclosure, usage patterns and protections for minors.",
+      "The contrast with Washington the same week was almost theatrical: a scheduled Oval Office signing for a new AI executive order was abruptly cancelled on July 8, the second summer running in which US AI policy advanced by draft, leak and postponement.",
+      "This isn't a romanticization — the same machinery that regulates companion AI in a quarter also bans whole categories of speech with it, and a great deal of harmless creativity went dark too. But as pure regulatory capacity, it demonstrates that moving fast on AI governance is possible for a state that decides to.",
+      "It travels beyond China because the harms it gestures at — dependency, parasocial manipulation of minors, synthetic intimacy at scale — appear in every market, and Western regulators have addressed them with nothing sturdier than app-store policies. The measures are now a natural experiment the rest of the world watches for free."
+    ],
     body:[
       {type:"p", text:"Somewhere in Hangzhou this week, an engineer executed one of the stranger deployment tasks of 2026: turning off the warmth. Alibaba's Qwen halted its humanlike and user-created agents on July 10, five days ahead of the deadline set by China's Interim Measures for AI Anthropomorphic Interactive Services — the world's first major regulation aimed specifically at AI that behaves like a person rather than a tool. ByteDance's Doubao takes its agent function offline on July 15, the day the measures bite. The rules, issued in April by the Cyberspace Administration of China and four other agencies, draw a line no other jurisdiction has drawn in law: between AI that works for you and AI that bonds with you."},
       {type:"h2", text:"What the measures actually regulate"},
@@ -932,6 +1036,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"Two years after putting ChatGPT in the iPhone, Apple is accusing its former partner — and two named ex-employees — of a coordinated scheme to take hardware secrets. What the complaint actually alleges, and what it means for everyone hiring in AI.",
     persona:"ronan-cole", section:"Markets", format:"synthesis",
     publishedAt:"2026-07-11T20:41:04Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "Apple sued OpenAI in federal court in Northern California on July 10, alleging that 'at every level, from members of its Technical Staff to its Chief Hardware Officer,' OpenAI has been stealing Apple's trade secrets — two years after the two companies put ChatGPT in the iPhone together.",
+      "These are allegations, filed but not yet tested in court; OpenAI and the individual defendants are entitled to contest every word.",
+      "The complaint names OpenAI entities, Jony Ive's io Products, and two former Apple employees: Tang Yew Tan, a former iPhone and Watch product design VP now OpenAI's hardware chief, and Chang Liu, a former senior system electrical engineer. It alleges Tan directed still-employed Apple candidates to bring 'actual parts' to interviews for 'show and tell,' and that Liu kept a work laptop and downloaded dozens of confidential hardware files.",
+      "This is a hardware company suing over hardware. OpenAI bought io Products for $6.4 billion and is building consumer devices — what's alleged taken isn't model weights or training data but product designs, manufacturing processes and supply-chain strategy.",
+      "Trade-secret suits usually settle, because trials mean discovery — which here would pry open OpenAI's unreleased device program to Apple's lawyers and potentially Apple's supply-chain playbook to OpenAI's. Both have secrets worth more than any judgment, which is why the filing itself may be the main event.",
+      "The industry effect is immediate regardless of outcome: reports around the suit cite 400-plus former Apple employees now at OpenAI. Trade-secret law doesn't prohibit hiring a competitor's people — it prohibits taking their stuff — and that line is about to be drawn, expensively, in public."
+    ],
     body:[
       {type:"p", text:"In 2024, Apple and OpenAI stood on the same stage: ChatGPT was going into the iPhone, and the partnership was the industry's marquee alliance. On July 10, 2026, Apple filed suit against OpenAI in federal court in Northern California — alleging, in the complaint's own words, that \"at every level, from members of its Technical Staff to its Chief Hardware Officer, and in coordination with business partners, OpenAI has been stealing Apple's trade secrets and confidential information.\" Partner to plaintiff in two years. The AI era's most consequential relationship now runs through a courtroom."},
       {type:"h2", text:"What the complaint alleges"},
@@ -976,6 +1088,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"At an internal town hall, the first major-lab CEO said the quiet part: four months of agent development 'hasn't really accelerated in the way that we expected.' After 8,000 layoffs and a doubled capex budget, the candor is the story.",
     persona:"sage-okafor", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-11T22:14:19Z", readMins:6, sample:false, disclaimer:"none",
+    tldr: [
+      "At an internal town hall on July 2, per a recording heard by Reuters, Mark Zuckerberg told employees that Meta's AI agent development over the prior four months 'hasn't really accelerated in the way that we expected' — apparently the first such public concession from a major-lab CEO.",
+      "The numbers around it: roughly 8,000 employees cut in May (about a tenth of the workforce), capex guidance of $125 to $145 billion for 2026 (more than double last year), and a reorganization Zuckerberg conceded wasn't as 'clean' as planned.",
+      "Precision matters — this is a delay claim, not a dead-end claim. He said the rate of improvement undershot expectations and that restructuring bets 'haven't come to fruition yet,' while expecting meaningful benefits within three to six months.",
+      "The likeliest culprit is the least glamorous: reliability. An agent's mistake compounds across every subsequent step, so the gap between a dazzling demo and a deployable product is measured in error rates — grinding engineering that doesn't respond to headcount or capex the way training runs do.",
+      "The human ledger is brutal in hindsight: May's cuts hit integrity, cybersecurity and Reality Labs while sparing AI infrastructure, with employee-forum ratings reportedly down by a quarter and median total compensation down nearly $30,000 — layoffs justified by an AI pivot whose payoff the CEO then moved three to six months out.",
+      "It's the most useful data point of the year on where agents actually are. Companies exaggerate progress by default, so an admission against interest from the lab with the most to lose is a signal you can trust more, not less — especially with OpenAI shipping ChatGPT Work the same week."
+    ],
     body:[
       {type:"p", text:"Every frontier lab has a sentence it must never say out loud, and on July 2, Mark Zuckerberg said Meta's. At an internal town hall — per a recording heard by Reuters — he told employees that the company's AI agent development over the prior four months \"hasn't really accelerated in the way that we expected.\" Read that against the numbers around it: roughly 8,000 employees cut in May (about a tenth of the workforce), capex guidance of $125 to $145 billion for 2026 — more than double last year's outlay — and a reorganization Zuckerberg himself conceded was not as \"clean\" as planned. The candor appears to be a first: no other major-lab CEO has publicly conceded that the agent acceleration isn't arriving on schedule."},
       {type:"h2", text:"What he actually said, and didn't"},
@@ -1017,6 +1137,14 @@ window.RTFC_LIVE_ARTICLES = [
     dek:"A drug whose target AND chemistry were both found by generative AI completed a peer-reviewed Phase IIa trial. Anthropic is standing up a drug program for neglected diseases, and Eli Lilly switched on a pharma supercomputer. The 'AI medicine' era has a receipt now.",
     persona:"priya-anand", section:"Health", format:"synthesis",
     publishedAt:"2026-07-12T00:46:26Z", readMins:6, sample:false, disclaimer:"health",
+    tldr: [
+      "Insilico Medicine's Rentosertib — a compound where both the biological target and the chemistry were identified by generative AI — completed a Phase IIa trial in idiopathic pulmonary fibrosis, the first peer-reviewed Phase IIa result of its kind.",
+      "This is the fuller version of the promise: plenty of 'AI-discovered' drugs used AI for one half or as a screening assistant. AI-identified target plus AI-generated compound plus peer-reviewed mid-stage human data is a different claim.",
+      "The disease explains the stakes. 'Idiopathic' is medicine's honest word for we don't know why — and when a cause is murky, choosing a biological target is the hardest, most failure-prone bet in the entire pipeline, made years before any evidence arrives.",
+      "One trial is not a cure and Phase IIa is a waypoint: most drugs that pass Phase II still fail. What it retires is the argument that the approach can't produce clinic-grade chemistry at all.",
+      "The heavyweights are treating it as real: Eli Lilly inaugurated LillyPod, a pharmaceutical AI supercomputer built on NVIDIA DGX SuperPOD, and Anthropic launched Claude Science aimed at neglected diseases — the conditions traditional pharma skips because the economics don't clear.",
+      "For patients, nothing changes at the next appointment, and 'AI-discovered' is not a marker of quality — the trial process, not the discovery method, is what protects you. The pipeline argument is over; the proof argument has begun."
+    ],
     body:[
       {type:"p", text:"For years, the skeptic's line on AI drug discovery was airtight: wake me when a molecule an AI actually found survives contact with human biology, in a real trial, written up where peers can pick it apart. That alarm just went off. Insilico Medicine's Rentosertib — a compound where *both* the biological target and the chemistry were identified by the company's generative-AI platform — completed a Phase IIa trial in idiopathic pulmonary fibrosis, the first peer-reviewed Phase IIa result of its kind. One trial is not a cure, and Phase IIa is a waypoint, not a finish line. But the category just crossed from promising slideware to published clinical evidence, and that's a different kind of fact."},
       {type:"h2", text:"Why this particular milestone matters"},
