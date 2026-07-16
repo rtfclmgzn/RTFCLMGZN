@@ -59,15 +59,15 @@ def slugify(value: str, maximum: int = 100) -> str:
 
 
 PERSONA_BY_SECTION = {
-    "Frontier": "sage-okafor",
+    "Frontier": "luka-petrovic",
     "Products": "nova-reyes",
     "Compute": "jin-park",
-    "Policy": "marcus-webb",
+    "Policy": "evelyn-zhao",
     "Health": "priya-anand",
-    "Markets": "ronan-cole",
+    "Markets": "kian-farzan",
     "Robotics": "ash-lindqvist",
-    "Opinion": "idris-vale",
-    "Ethics": "maya-serrano",
+    "Opinion": "sage-okafor",
+    "Ethics": "samira-nasser",
     "Guide": "nova-reyes",
 }
 
@@ -122,10 +122,10 @@ Return at most {int(limits['candidates_per_cycle'])} candidates for a shared new
             section = str(raw["section"])
             # Beat ownership is deterministic. The discovery model proposes the story,
             # while the newsroom assigns the canonical editor for that section.
-            persona = PERSONA_BY_SECTION.get(section, "sage-okafor")
+            persona = PERSONA_BY_SECTION.get(section, "luka-petrovic")
             if persona not in self.registry.persona_ids():
                 suggested = str(raw.get("persona_id") or "")
-                persona = suggested if suggested in self.registry.persona_ids() else "sage-okafor"
+                persona = suggested if suggested in self.registry.persona_ids() else "luka-petrovic"
             sources = tuple(
                 source
                 for source in raw.get("source_leads", [])

@@ -54,7 +54,7 @@ Each `*.agent.md` file has YAML frontmatter (`name`, `role`, `model`, `reports_t
 | Model | Agents |
 |---|---|
 | Opus  | Business-Strategy, Operations-Staffing, Managing Editor, Verification |
-| Sonnet | All 7 personas, Research, Podcast, Social |
+| Sonnet | Most personas (per `.agent.md` frontmatter), Research, Podcast, Social |
 | Haiku | Style, Compliance (flagging), Publishing |
 
 ## The one rule that overrides everything

@@ -6,12 +6,8 @@
   "sage-okafor": "agents/personas/sage-okafor.agent.md",
   "nova-reyes": "agents/personas/nova-reyes.agent.md",
   "jin-park": "agents/personas/jin-park.agent.md",
-  "marcus-webb": "agents/personas/marcus-webb.agent.md",
   "priya-anand": "agents/personas/priya-anand.agent.md",
-  "ronan-cole": "agents/personas/ronan-cole.agent.md",
   "ash-lindqvist": "agents/personas/ash-lindqvist.agent.md",
-  "idris-vale": "agents/personas/idris-vale.agent.md",
-  "maya-serrano": "agents/personas/maya-serrano.agent.md",
   "research": "agents/production/research.agent.md",
   "verification": "agents/production/verification.agent.md",
   "style": "agents/production/style.agent.md",
@@ -24,5 +20,9 @@
   "newsletter-editor": "agents/email/newsletter-editor.agent.md",
   "curation-editor": "agents/magazine/curation-editor.agent.md",
   "layout-production": "agents/magazine/layout-production.agent.md",
-  "editorial-review": "agents/review/editorial-review.agent.md"
+  "editorial-review": "agents/review/editorial-review.agent.md",
+  "luka-petrovic": "agents/personas/luka-petrovic.agent.md",
+  "evelyn-zhao": "agents/personas/evelyn-zhao.agent.md",
+  "kian-farzan": "agents/personas/kian-farzan.agent.md",
+  "samira-nasser": "agents/personas/samira-nasser.agent.md"
 }

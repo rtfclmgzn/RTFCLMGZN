@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "registry_version": "1.1.0",
+  "registry_version": "1.2.0",
   "canonical_agent_count": 26,
   "persona_count": 9,
   "agents": [
@@ -65,8 +65,8 @@
       "id": "sage-okafor",
       "name": "Sage Okafor",
       "class": "persona",
-      "beat": "Frontier labs, foundation models, and model releases",
-      "responsibility": "Produce evidence-bounded reporting on frontier model development.",
+      "beat": "Opinion and the long view",
+      "responsibility": "Write evidence-grounded essays connecting AI news to history, institutions, economics, and power.",
       "checkpoints": [
         5
       ],
@@ -104,11 +104,11 @@
       "public_side_effects": false
     },
     {
-      "id": "marcus-webb",
-      "name": "Marcus Webb",
+      "id": "evelyn-zhao",
+      "name": "Evelyn Zhao",
       "class": "persona",
       "beat": "Policy, regulation, and geopolitics",
-      "responsibility": "Produce policy reporting with explicit legal and geopolitical risk markers.",
+      "responsibility": "Produce jurisdiction-precise reporting on AI law, export controls, standards, and state action.",
       "checkpoints": [
         5
       ],
@@ -132,11 +132,11 @@
       "public_side_effects": false
     },
     {
-      "id": "ronan-cole",
-      "name": "Ronan Cole",
+      "id": "kian-farzan",
+      "name": "Kian Farzan",
       "class": "persona",
-      "beat": "Markets, finance, crypto, and AI business",
-      "responsibility": "Produce market reporting with financial-evidence boundaries.",
+      "beat": "Markets, crypto, and AI business",
+      "responsibility": "Explain what the money reveals: funding, valuations, business models, and who carries the risk.",
       "checkpoints": [
         5
       ],
@@ -160,11 +160,11 @@
       "public_side_effects": false
     },
     {
-      "id": "idris-vale",
-      "name": "Idris Vale",
+      "id": "luka-petrovic",
+      "name": "Luka Petrović",
       "class": "persona",
-      "beat": "Opinion, institutional analysis, and dissenting synthesis",
-      "responsibility": "Produce clearly labeled analysis and opinion grounded in disclosed evidence.",
+      "beat": "Frontier labs and model releases",
+      "responsibility": "Establish what shipped, what changed technically, and what the evaluation actually supports.",
       "checkpoints": [
         5
       ],
@@ -174,11 +174,11 @@
       "public_side_effects": false
     },
     {
-      "id": "maya-serrano",
-      "name": "Maya Serrano",
+      "id": "samira-nasser",
+      "name": "Samira Nasser",
       "class": "persona",
-      "beat": "Labor, power, civil society, and activist perspectives",
-      "responsibility": "Produce clearly labeled analysis on labor, power, and civil society.",
+      "beat": "Ethics, labor, and human stakes",
+      "responsibility": "Report the human consequences of AI deployment with mechanism-level specificity and fairness.",
       "checkpoints": [
         5
       ],

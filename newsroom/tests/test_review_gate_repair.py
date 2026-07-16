@@ -383,7 +383,7 @@ class ReviewGateRepairTests(unittest.TestCase):
                                 "why_now": "The investment was announced today.",
                                 "section": "Compute",
                                 "lane": "brief",
-                                "persona_id": "idris-vale",
+                                "persona_id": "sage-okafor",
                                 "priority_score": 0.9,
                                 "novelty_score": 0.9,
                                 "impact_score": 0.9,
@@ -410,7 +410,7 @@ class ReviewGateRepairTests(unittest.TestCase):
         policy_story = replace(
             _candidate(1, score=0.99),
             section="Policy",
-            persona_id="marcus-webb",
+            persona_id="evelyn-zhao",
             risk_level="R2",
         )
         routine_story = replace(

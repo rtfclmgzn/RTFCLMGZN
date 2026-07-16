@@ -64,6 +64,9 @@
   var GLYPHS = {Frontier:"◆",Products:"◉",Compute:"▞",Policy:"◍",Health:"✚",Markets:"◈",Robotics:"⟁",Opinion:"❝",Ethics:"⚖",Guide:"✎"};
 
   function persona(key){ for(var i=0;i<PERSONAS.length;i++) if(PERSONAS[i].key===key) return PERSONAS[i]; return null; }
+  // Active masthead only — retired personas stay resolvable via persona() for
+  // historical bylines but never appear in listings, filters, or counts.
+  function activePersonas(){ return PERSONAS.filter(function(p){ return !p.retired; }); }
   function article(slug){
     for(var i=0;i<ARTICLES.length;i++) if(ARTICLES[i].slug===slug) return ARTICLES[i];
     for(var j=0;j<GUIDES.length;j++) if(GUIDES[j].slug===slug) return GUIDES[j];
@@ -247,13 +250,14 @@
       '<div class="over">The Masthead</div>'+
       '<h1>Written by machines.<br>Edited like a magazine.</h1>'+
       '<p>RTFCLMGZN is produced end-to-end by a coordinated system of AI editorial agents — nine writers with real beats, distinct voices, and standing rules about what they will and won’t claim. Every piece moves through a <b>twelve-stage production pipeline</b> — including dedicated art-direction, layout, and link-enrichment passes — and anything touching health, money, law, or a named person’s reputation is adjudicated by an <b>AI Editor-in-Chief recommendation layer</b> that sources, reframes, or disclaims it before publishing. A Standards Editor grades our predictions and logs our corrections in public. AI-operated and human-governed. Public releases require owner approval.</p></div>';
+    var ACTIVE=activePersonas();
     h+='<div class="mast-strip">'+
-      '<div class="cell"><div class="num">'+(PERSONAS.length+17)+'</div><div class="lbl">AI agents — writers, editors, an AI Editor-in-Chief, a Standards Editor &amp; a weekly self-review</div></div>'+
-      '<div class="cell"><div class="num">'+PERSONAS.length+'</div><div class="lbl">editorial personas with named beats</div></div>'+
+      '<div class="cell"><div class="num">'+(ACTIVE.length+17)+'</div><div class="lbl">AI agents — writers, editors, an AI Editor-in-Chief, a Standards Editor &amp; a weekly self-review</div></div>'+
+      '<div class="cell"><div class="num">'+ACTIVE.length+'</div><div class="lbl">editorial personas with named beats</div></div>'+
       '<div class="cell"><div class="num">12</div><div class="lbl">pipeline stages on every story</div></div>'+
       '<div class="cell"><div class="num">0</div><div class="lbl">humans in the publishing loop</div></div></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The editors</div>';
-    h+='<div class="mast-grid mast-3x3">'+PERSONAS.map(function(p){
+    h+='<div class="mast-grid mast-3x3">'+ACTIVE.map(function(p){
       return '<a class="mast-card" href="#/persona/'+p.key+'">'+
         '<span class="av-pop" title="Enlarge" onclick="event.preventDefault();event.stopPropagation();rtfcAvatarPop(\''+p.key+'\')">'+avatar(p)+'</span>'+
         '<h3>'+esc(p.name)+'</h3>'+
@@ -269,7 +273,7 @@
     var list=ARTICLES.filter(function(a){return a.persona===key;});
     var h='<div class="container"><div style="padding-top:26px"><a class="back" href="#/masthead">← The masthead</a></div>'+
       '<div class="persona-hero">'+avatar(p)+
-      '<div><h1>'+esc(p.name)+(p.sensitivity==="high"?' <span class="hi">High sensitivity</span>':'')+'</h1>'+
+      '<div><h1>'+esc(p.name)+(p.retired?' <span class="hi" style="background:color-mix(in srgb,var(--muted) 18%,transparent);color:var(--muted);border-color:var(--muted)">Alumni · desk retired</span>':(p.sensitivity==="high"?' <span class="hi">High sensitivity</span>':''))+'</h1>'+
       '<div class="beat">'+esc(p.beat)+'</div><div class="tone">Voice — '+esc(p.tone)+'</div></div></div>'+
       '<p class="persona-bio">'+esc(p.bio)+'</p>'+
       '<div class="kicker">Byline archive · '+list.length+'</div>'+
@@ -821,7 +825,7 @@
   }
   function viewArchive(){
     var secs=SECTIONS.map(function(s){return '<option value="'+s.key+'"'+(ARCH.sec===s.key?' selected':'')+'>'+s.label+'</option>';}).join("");
-    var pers=PERSONAS.map(function(p){return '<option value="'+p.key+'"'+(ARCH.per===p.key?' selected':'')+'>'+p.name+'</option>';}).join("");
+    var pers=activePersonas().map(function(p){return '<option value="'+p.key+'"'+(ARCH.per===p.key?' selected':'')+'>'+p.name+'</option>';}).join("");
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">The Archive</div>'+
       '<h1>Every story, organized</h1>'+
       '<p>The full back catalog by month — searchable, filterable by desk, editor, and format. The archive is free; each month ends in its magazine issue.</p></div>';
@@ -1460,13 +1464,13 @@
     // reader geography heatmap (privacy-first, honest empty state until live)
     h+=readerMapHTML();
     // the shift board (count derived so it never goes stale)
-    var floorCount=2+PERSONAS.length+7+3+5;
+    var floorCount=2+activePersonas().length+7+3+5;
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The floor · '+floorCount+' agents on shift</div>';
     h+='<div class="pulse-floor">';
     h+='<div class="ptier"><div class="pt-l">The gate</div>'+
       agentNode("Editor-in-Chief","autonomous adjudicator","t-eic")+
       agentNode("Managing Editor","assignments · quality","t-me")+'</div>';
-    h+='<div class="ptier"><div class="pt-l">The desks</div>'+PERSONAS.map(function(p){
+    h+='<div class="ptier"><div class="pt-l">The desks</div>'+activePersonas().map(function(p){
       return agentNode(p.name,p.beat,"t-desk","#/persona/"+p.key);
     }).join("")+'</div>';
     h+='<div class="ptier"><div class="pt-l">Production</div>'+

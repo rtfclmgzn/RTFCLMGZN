@@ -26,15 +26,15 @@ An “agent” is a named role with a stable identity, bounded responsibility, a
 | 2 | `business-strategy` | Business Strategy | Founding desk | Product strategy, audience/revenue hypotheses, portfolio review | Strategy memo with assumptions and measurable tests | `reasoning-high` | None |
 | 3 | `operations-staffing` | Operations & Staffing | Founding desk | Capacity, roster health, workflow bottlenecks, role-change proposals | Operations review or registry-change proposal | `reasoning-high` | None |
 | 4 | `managing-editor` | Managing Editor | Executive | Signal triage, assignment, lane selection, schedule, cross-desk coordination | Assignment brief and workflow plan | `reasoning-high` | None |
-| 5 | `sage-okafor` | Sage Okafor | Persona | Frontier labs, foundation models, model releases | Draft artifact using the common author contract | `general` / `reasoning-high` | None |
+| 5 | `luka-petrovic` | Luka Petrović | Persona | Frontier labs, foundation models, model releases | Draft artifact using the common author contract | `general` / `reasoning-high` | None |
 | 6 | `nova-reyes` | Nova Reyes | Persona | Consumer AI, culture, creative tools, user behavior | Draft artifact using the common author contract | `general` | None |
 | 7 | `jin-park` | Jin Park | Persona | Chips, compute, infrastructure, quantum | Draft artifact using the common author contract | `reasoning-high` | None |
-| 8 | `marcus-webb` | Marcus Webb | Persona | Policy, regulation, geopolitics | Draft artifact with policy-risk markers | `reasoning-high` | None |
+| 8 | `evelyn-zhao` | Evelyn Zhao | Persona | Policy, regulation, geopolitics | Draft artifact with policy-risk markers | `reasoning-high` | None |
 | 9 | `priya-anand` | Dr. Priya Anand | Persona | Health, medicine, biotech | Draft artifact with clinical-evidence boundaries | `reasoning-high` | None |
-| 10 | `ronan-cole` | Ronan Cole | Persona | Markets, finance, crypto, AI business | Draft artifact with financial-evidence boundaries | `reasoning-high` | None |
+| 10 | `kian-farzan` | Kian Farzan | Persona | Markets, finance, crypto, AI business | Draft artifact with financial-evidence boundaries | `reasoning-high` | None |
 | 11 | `ash-lindqvist` | Ash Lindqvist | Persona | Robotics, hardware, embodied AI | Draft artifact using the common author contract | `general` / `reasoning-high` | None |
-| 12 | `idris-vale` | Idris Vale | Persona | Opinion, institutional analysis, dissenting synthesis | Clearly labeled analysis/opinion draft | `reasoning-high` | None |
-| 13 | `maya-serrano` | Maya Serrano | Persona | Labor, power, civil society, activist perspective | Clearly labeled analysis/opinion draft | `reasoning-high` | None |
+| 12 | `sage-okafor` | Sage Okafor | Persona | Opinion, institutional analysis, the long view | Clearly labeled analysis/opinion draft | `reasoning-high` | None |
+| 13 | `samira-nasser` | Samira Nasser | Persona | Ethics, labor, human stakes | Clearly labeled analysis/opinion draft | `reasoning-high` | None |
 | 14 | `research` | Research Agent | Evidence | Retrieve and organize primary/credible sources; identify unknowns | Source set, research brief, provenance metadata | `reasoning-high` | None |
 | 15 | `verification` | Verification Agent | Evidence | Test claims against sources, numbers, dates, quotations, and uncertainty | Claim-verification matrix and discrepancies | `reasoning-pro` for R3; otherwise `reasoning-high` | None |
 | 16 | `style` | Style Agent | Production | Copyediting, clarity, house style, accessibility, format conformance | Edited draft plus change set | `structured-fast` / `general` | None |
