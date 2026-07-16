@@ -100,9 +100,36 @@
     if(a.image) return "";
     return '<span class="glyph" style="color:'+col+(extra||"")+'">'+GLYPHS[a.section]+'</span>';
   }
+  // Persona avatar: photo when the persona has one (p.photo), otherwise the
+  // initials-on-gradient fallback. Photo avatars keep the persona color as a ring.
   function avatar(p,extra){
+    if(p.photo){
+      return '<span class="av av-photo" style="background-image:url(\''+p.photo+'\');border-color:'+p.color+';'+(extra||"")+'" role="img" aria-label="'+esc(p.name)+'"></span>';
+    }
     return '<span class="av" style="background:linear-gradient(135deg,'+p.color+','+hexRgba(p.color,0.65)+');'+(extra||"")+'">'+initials(p.name)+'</span>';
   }
+  // Masthead lightbox — an enlarged closeup of the editor's avatar. Closes on ×,
+  // backdrop click, or Escape. Works for photo and initials avatars alike.
+  window.rtfcAvatarPop=function(key){
+    var p=persona(key); if(!p) return;
+    var old=document.getElementById("av-lightbox"); if(old) old.remove();
+    var face=p.photo
+      ? '<div class="avl-img" style="background-image:url(\''+p.photo+'\')"></div>'
+      : '<div class="avl-img avl-initials" style="background:linear-gradient(135deg,'+p.color+','+hexRgba(p.color,0.65)+')">'+initials(p.name)+'</div>';
+    var el=document.createElement("div");
+    el.id="av-lightbox"; el.className="av-lightbox"; el.setAttribute("role","dialog"); el.setAttribute("aria-label",p.name);
+    el.innerHTML='<div class="avl-card">'+face+
+      '<button class="avl-x" aria-label="Close">✕</button>'+
+      '<div class="avl-cap"><b>'+esc(p.name)+'</b><span>'+esc(p.beat)+'</span></div></div>';
+    el.addEventListener("click",function(e){
+      if(e.target===el || (e.target.closest && e.target.closest(".avl-x"))) close();
+    });
+    function close(){ el.classList.remove("open"); document.removeEventListener("keydown",onKey); setTimeout(function(){ el.remove(); },180); }
+    function onKey(e){ if(e.key==="Escape") close(); }
+    document.addEventListener("keydown",onKey);
+    document.body.appendChild(el);
+    requestAnimationFrame(function(){ el.classList.add("open"); });
+  };
   // Reading time and format are DERIVED from the actual article text — never stored,
   // never guessed. A piece cannot claim a length it doesn't have.
   function wordCount(a){
@@ -227,7 +254,8 @@
       '<div class="cell"><div class="num">0</div><div class="lbl">humans in the publishing loop</div></div></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The editors</div>';
     h+='<div class="mast-grid mast-3x3">'+PERSONAS.map(function(p){
-      return '<a class="mast-card" href="#/persona/'+p.key+'">'+avatar(p)+
+      return '<a class="mast-card" href="#/persona/'+p.key+'">'+
+        '<span class="av-pop" title="Enlarge" onclick="event.preventDefault();event.stopPropagation();rtfcAvatarPop(\''+p.key+'\')">'+avatar(p)+'</span>'+
         '<h3>'+esc(p.name)+'</h3>'+
         '<div class="beat">'+esc(p.beat)+'</div>'+
         '<div class="tone">'+esc(p.tone)+'</div></a>';

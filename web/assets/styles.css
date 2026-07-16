@@ -360,8 +360,37 @@ nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,tr
 
 /* ---------- persona page ---------- */
 .persona-hero{display:flex;gap:26px;align-items:center;padding:44px 0 30px;flex-wrap:wrap}
-.persona-hero .av{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;
-  font-size:30px;font-weight:800;color:#fff;flex:none;box-shadow:var(--shadow)}
+.persona-hero .av{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;
+  font-size:38px;font-weight:800;color:#fff;flex:none;box-shadow:var(--shadow)}
+
+/* photo avatars — any .av can carry a portrait; the persona color becomes a ring */
+.av-photo{background-size:cover;background-position:center top;border:2px solid transparent;
+  color:transparent;font-size:0 !important}
+.av-pop{display:contents;cursor:zoom-in}
+.av-pop .av{cursor:zoom-in;transition:transform .15s ease,box-shadow .15s ease}
+.av-pop:hover .av{transform:scale(1.06);box-shadow:0 8px 26px -8px rgba(0,0,0,.55)}
+
+/* masthead avatar lightbox */
+.av-lightbox{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;
+  background:rgba(8,6,14,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  opacity:0;transition:opacity .18s ease}
+.av-lightbox.open{opacity:1}
+.avl-card{position:relative;transform:scale(.92);transition:transform .2s cubic-bezier(.2,.9,.3,1.2)}
+.av-lightbox.open .avl-card{transform:scale(1)}
+.avl-img{width:min(70vw,440px);height:min(70vw,440px);border-radius:24px;
+  background-size:cover;background-position:center top;box-shadow:0 40px 90px -20px rgba(0,0,0,.7);
+  border:1px solid color-mix(in srgb,#fff 14%,transparent)}
+.avl-img.avl-initials{display:grid;place-items:center;font-family:var(--serif);
+  font-size:clamp(90px,18vw,150px);font-weight:800;color:#fff}
+.avl-x{position:absolute;top:-14px;right:-14px;width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--hairline);background:var(--bg);color:var(--ink);font-size:15px;
+  cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 22px -8px rgba(0,0,0,.6);
+  transition:transform .12s,border-color .12s}
+.avl-x:hover{transform:scale(1.1);border-color:var(--accent2)}
+.avl-cap{position:absolute;left:0;right:0;bottom:0;padding:38px 22px 16px;border-radius:0 0 24px 24px;
+  background:linear-gradient(180deg,transparent,rgba(5,4,10,.82));display:flex;flex-direction:column;gap:2px}
+.avl-cap b{font-family:var(--serif);font-size:22px;color:#fff;letter-spacing:-.01em}
+.avl-cap span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:650}
 .persona-hero h1{font-family:var(--serif);margin:0 0 6px;font-size:38px;font-weight:650;letter-spacing:-.015em}
 .persona-hero .beat{color:var(--accent2);font-weight:600;font-size:15px;letter-spacing:.02em}
 .persona-hero .tone{font-size:13.5px;color:var(--muted);margin-top:7px;font-style:italic;font-family:var(--serif)}
