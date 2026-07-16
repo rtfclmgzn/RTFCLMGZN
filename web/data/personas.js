@@ -1,7 +1,7 @@
 // Persona masthead — mirrors agents/personas/*.agent.md (Persona Training v2.0)
-// key must match article.persona. Retired personas stay at the bottom with
-// retired:true so historical bylines keep resolving; they never appear on the
-// masthead, in filters, or in routing.
+// key must match article.persona. All published articles are credited to the
+// active nine-editor lineup (owner-directed reassignment, July 2026 migration);
+// pre-migration bylines live in git history.
 window.RTFC_PERSONAS = [
   { key:"luka-petrovic", name:"Luka Petrović",   beat:"Frontier Labs & Model Releases", section:"Frontier",
     tone:"Austere, technically exacting, evaluation-first", color:"#7c6cf0", sensitivity:"standard",
@@ -40,20 +40,6 @@ window.RTFC_PERSONAS = [
     photo:"assets/img/personas/samira-nasser.jpg",
     bio:"The human consequences of AI — labor, rights, surveillance, safety. Asks who absorbed the friction so the system could look seamless, and what recourse they have when it's wrong." },
 
-  // ---- Alumni (retired desks) — kept so historical bylines resolve. Never routed, never listed.
-  // Sage Okafor's 2026 Frontier-era pieces keep persona:"sage-okafor" — same editor, new desk. ----
-  { key:"marcus-webb",   retired:true, name:"Marcus Webb",     beat:"Policy, Regulation & Geopolitics", section:"Policy",
-    tone:"Formal, careful with claims", color:"#3fb984", sensitivity:"high",
-    bio:"Alumni. Covered the rules and politics shaping AI through July 2026. Desk now owned by Evelyn Zhao." },
-  { key:"ronan-cole",    retired:true, name:"Ronan Cole",      beat:"Markets, Crypto & AI Business", section:"Markets",
-    tone:"Brisk, numbers-driven", color:"#c48af0", sensitivity:"high",
-    bio:"Alumni. Covered the money — funding, valuations, the AI–crypto edge — through July 2026. Desk now owned by Kian Farzan." },
-  { key:"idris-vale",    retired:true, name:"Idris Vale",      beat:"Opinion & The Long View", section:"Opinion",
-    tone:"Essayistic, argumentative, literary", color:"#c98b5a", sensitivity:"high",
-    bio:"Alumni. Wrote the big-think essays and pointed dissents through July 2026. Desk now owned by Sage Okafor." },
-  { key:"maya-serrano",  retired:true, name:"Maya Serrano",    beat:"Ethics, Labor & Human Stakes", section:"Ethics",
-    tone:"Principled, human-centered", color:"#7bb274", sensitivity:"high",
-    bio:"Alumni. Covered AI's human stakes as clearly-marked advocacy through July 2026. Desk now owned by Samira Nasser." },
 ];
 
 // Sections ARE the desks — one per editor, so the taxonomy mirrors the masthead.

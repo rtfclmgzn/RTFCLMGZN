@@ -51,26 +51,25 @@ initials-on-gradient. Masthead avatars open a lightbox closeup.
 Known cosmetic nit: ash/nova/priya source PNGs carry a small generator badge
 in the top-left corner, visible only in the enlarged lightbox view.
 
-## Historical articles (compatibility layer)
+## Historical articles (owner-directed full reassignment, July 16 2026)
 
-Bylines are immutable. Retired personas remain in `web/data/personas.js`
-flagged `retired:true`, so `persona()` still resolves them for old articles,
-their persona pages render with an "Alumni · desk retired" badge, and audio
-intros keep working. They are excluded (via `activePersonas()`) from: the
-masthead grid and counts, the archive author filter, and the Control Room
-desks board. Pipeline-side, retired slugs are absent from the registry, spec
-map, and routing, so nothing new can ever be assigned to them.
-Sage Okafor's 2026 Frontier-era articles keep `persona:"sage-okafor"` — same
-editor, new desk; his page now shows the Opinion beat.
+The owner directed a complete byline reassignment: **every** published
+article, prediction, usage-log row, social post, and RSS item is credited to
+the active nine-editor lineup. Marcus Webb → Evelyn Zhao (6 pieces),
+Ronan Cole → Kian Farzan (6), Idris Vale → Sage Okafor (1 Opinion essay),
+and Sage Okafor's seven Frontier-era pieces (incl. pipeline agent records
+and the Great Repricing co-author slot) → Luka Petrović. Maya Serrano had
+no published bylines. Retired personas were then removed from
+`web/data/personas.js` entirely — zero references to the retired lineup
+remain anywhere under `web/` (test-enforced). Pre-migration bylines are
+recoverable from git history (commits ≤ `97be183`).
 
-Intentionally retained retired references (historical records, not active
-config): article data files (`articles.js`, `live-articles.js`,
-`approved-batch-2026-07-14.js`, `newsroom-articles.js`, `research.js`),
-`usage-log.js`, `social-posts.js`, `rss.xml` items published before the
-migration, `HANDOVER-FOR-CHATGPT.md`, `RTFCLMGZN_Agent_System_Design.md`,
-`docs/architecture/00_EXECUTIVE_AUDIT.md` (dated audit),
-`agents/examples/sample-pipeline-run.md`, `agents/email/daily-digest-sample.html`,
-and everything under `agents/personas/_old/`.
+`activePersonas()` in app.js remains the pattern for listing surfaces, and
+`persona()` still guards against unknown keys. The retired names survive
+only in non-web historical documents: `HANDOVER-FOR-CHATGPT.md`,
+`RTFCLMGZN_Agent_System_Design.md`, `docs/architecture/00_EXECUTIVE_AUDIT.md`
+(dated audit), `agents/examples/sample-pipeline-run.md`,
+`agents/email/daily-digest-sample.html`, and `agents/personas/_old/`.
 
 ## Validation
 

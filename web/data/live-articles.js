@@ -185,7 +185,7 @@ window.RTFC_LIVE_ARTICLES = [
     "image": "assets/img/live-015.jpg",
     "title": "AI is rebuilding Bell Labs inside five companies. The price is scientific power.",
     "dek": "Industry now participates in roughly 80% of notable AI models, up from about a quarter historically. Basic research is moving back into corporations — and the bargain deserves more scrutiny than nostalgia.",
-    "persona": "idris-vale",
+    "persona": "sage-okafor",
     "section": "Opinion",
     "format": "synthesis",
     "publishedAt": "2026-07-13T07:42:00Z",
@@ -324,7 +324,7 @@ window.RTFC_LIVE_ARTICLES = [
         {
           "name": "Assignment",
           "agent": "Managing Editor",
-          "note": "Current research-concentration story assigned to Opinion desk and Idris Vale."
+          "note": "Current research-concentration story assigned to Opinion desk and Sage Okafor."
         },
         {
           "name": "Research",
@@ -333,7 +333,7 @@ window.RTFC_LIVE_ARTICLES = [
         },
         {
           "name": "Draft",
-          "agent": "Idris Vale",
+          "agent": "Sage Okafor",
           "note": "Argument constructed around the benefits and governance costs of a corporate-lab revival."
         },
         {
@@ -364,7 +364,7 @@ window.RTFC_LIVE_ARTICLES = [
     "image": "assets/img/live-016.jpg",
     "title": "Before an AI agent can spend your money, it needs a passport",
     "dek": "The ITU has launched a standards effort around agent identity, trust and meaningful human control. The boring layer may determine whether autonomous software ever reaches production.",
-    "persona": "marcus-webb",
+    "persona": "evelyn-zhao",
     "section": "Policy",
     "format": "brief",
     "publishedAt": "2026-07-13T07:18:00Z",
@@ -468,7 +468,7 @@ window.RTFC_LIVE_ARTICLES = [
         {
           "name": "Assignment",
           "agent": "Managing Editor",
-          "note": "Agent-governance development assigned to Policy desk and Marcus Webb. Format: brief."
+          "note": "Agent-governance development assigned to Policy desk and Evelyn Zhao. Format: brief."
         },
         {
           "name": "Research",
@@ -477,7 +477,7 @@ window.RTFC_LIVE_ARTICLES = [
         },
         {
           "name": "Draft",
-          "agent": "Marcus Webb",
+          "agent": "Evelyn Zhao",
           "note": "Focused on identity, delegation, auditability and revocation rather than generic agent hype."
         },
         {
@@ -506,7 +506,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-012", slug:"the-deployment-war-eight-billion-dollar-admission", image:"assets/img/live-012.jpg",
     title:"The most expensive admission in AI: the hard part was never the model",
     dek:"Microsoft just put $2.5 billion into a company that does nothing but make other people's AI work. OpenAI and Anthropic already did the same. Follow that money and you find the real state of the industry — and a number nobody on stage wants to say out loud.",
-    persona:"ronan-cole", section:"Markets", format:"synthesis", top:false,
+    persona:"kian-farzan", section:"Markets", format:"synthesis", top:false,
     publishedAt:"2026-07-12T19:30:00Z", readMins:7, sample:false, disclaimer:"not-financial-advice",
     tldr: [
       "Microsoft, OpenAI and Anthropic just spent ~$8B combined on AI deployment consulting armies.",
@@ -550,9 +550,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"live-012 · 2026-07-12",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"Three labs' deployment-arm pattern matched to markets/business beat → Ronan Cole. Format: synthesis."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"Three labs' deployment-arm pattern matched to markets/business beat → Kian Farzan. Format: synthesis."},
         {name:"Research",    agent:"Research Agent",     note:"6 sources pulled, Microsoft's own blog primary. $2.5B/6,000/Lima, the NANDA 95% figure, and the rival OpenAI/Anthropic ventures tabulated with links."},
-        {name:"Draft",       agent:"Ronan Cole",         note:"Drafted in-voice: the pattern → the number nobody says → what the money concedes → what to watch."},
+        {name:"Draft",       agent:"Kian Farzan",         note:"Drafted in-voice: the pattern → the number nobody says → what the money concedes → what to watch."},
         {name:"Quality pass",agent:"Managing Editor",    note:"Follow-the-money thesis and the honest-tension paragraph confirmed additive, not editorializing beyond the sourced facts."},
         {name:"Fact-check",  agent:"Verification Agent", note:"$2.5B, ~6,000 staff, and Rodrigo Kede Lima corroborated across Microsoft's blog, CNBC, and TechCrunch. NANDA 95% attributed to MIT Project NANDA. Rival ventures (OpenAI $4B/TPG; Anthropic $1.5B/Goldman-Blackstone-H&F) corroborated; figures attributed, not asserted as precise."},
         {name:"Copyedit",    agent:"Style Agent",        note:"House style and headline conventions confirmed."},
@@ -615,7 +615,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-001", slug:"grok-4-5-the-price-is-the-product", image:"assets/img/live-001.jpg",
     title:"Grok 4.5 isn't the smartest model on the board. Its bet is that it doesn't need to be.",
     dek:"SpaceXAI's new release trails the frontier on most benchmarks and undercuts it on every price. A close read of the numbers, the Cursor connection — and the two caveats that matter more than any score.",
-    persona:"sage-okafor", section:"Frontier", format:"synthesis",
+    persona:"luka-petrovic", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-09T18:58:49Z", readMins:8, sample:false, disclaimer:"none",
     tldr: [
       "Grok 4.5: competitive but rarely leading on benchmarks, at $2/$6 per million tokens.",
@@ -657,9 +657,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"live-001 · 2026-07-09",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"Grok 4.5 release matched to frontier-labs beat → Sage Okafor. Format: synthesis."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"Grok 4.5 release matched to frontier-labs beat → Luka Petrović. Format: synthesis."},
         {name:"Research",    agent:"Research Agent",     note:"6 sources pulled, 2 primary (Cursor, SpaceXAI). Benchmarks, pricing, and the contamination disclosure tabulated with links."},
-        {name:"Draft",       agent:"Sage Okafor",        note:"Drafted in-voice: what shipped → what the numbers show → what's unproven."},
+        {name:"Draft",       agent:"Luka Petrović",        note:"Drafted in-voice: what shipped → what the numbers show → what's unproven."},
         {name:"Quality pass",agent:"Managing Editor",    note:"Voice and additive tests passed. Contamination and hallucination findings promoted to their own section per note."},
         {name:"Fact-check",  agent:"Verification Agent", note:"Pricing and benchmark figures corroborated across 3 independent outlets. SpaceXAI's own page unreachable (HTTP 403) — vendor figures labeled self-reported, which Cursor's post confirms. Acquisition attributed to The Information's reporting, not asserted."},
         {name:"Copyedit",    agent:"Style Agent",        note:"House style, headline conventions, and boilerplate confirmed."},
@@ -676,7 +676,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-002", slug:"gpt-5-6-sol-terra-luna-launch", image:"assets/img/live-002.jpg",
     title:"The sun, the earth, and the moon: GPT-5.6 goes public, and the velvet rope comes down",
     dek:"After two weeks behind a government-vetted partner wall, OpenAI's three-tier family — Sol, Terra, Luna — opened to everyone. The pricing, the Cerebras speed play, and why the naming is the strategy.",
-    persona:"sage-okafor", section:"Frontier", format:"synthesis",
+    persona:"luka-petrovic", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-09T16:13:53Z", readMins:6, sample:false, disclaimer:"none",
     tldr: [
       "GPT-5.6 opened to everyone July 9 after thirteen days behind a vetted-partner wall.",
@@ -716,9 +716,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"daily · 2026-07-09",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"GPT-5.6 public launch → frontier-labs beat → Sage Okafor. Format: synthesis."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"GPT-5.6 public launch → frontier-labs beat → Luka Petrović. Format: synthesis."},
         {name:"Research",    agent:"Research Agent",     note:"4 sources; pricing tiers cross-checked across 3. Cerebras throughput flagged as vendor claim."},
-        {name:"Draft",       agent:"Sage Okafor",        note:"Lead built on the partner-wall story; pricing ladder contextualized against Grok 4.5 and GLM-5.2."},
+        {name:"Draft",       agent:"Luka Petrović",        note:"Lead built on the partner-wall story; pricing ladder contextualized against Grok 4.5 and GLM-5.2."},
         {name:"Fact-check",  agent:"Verification Agent", note:"Tier pricing corroborated. 750 tok/s labeled self-reported. Gemini slip attributed to enterprise-tester reports."},
         {name:"Risk screen", agent:"Compliance Agent",   note:"No trigger: product facts and attributed claims only."},
         {name:"Publish",     agent:"Publishing Agent",   note:"Tagged AI · frontier labs."}
@@ -730,7 +730,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-003", slug:"chinese-models-us-enterprise-share", image:"assets/img/live-003.jpg",
     title:"A third of the tokens: Chinese models are quietly eating the US enterprise stack",
     dek:"CNBC's investigation puts Chinese models at 30–46% of enterprise API traffic on US developer platforms. The three-week Fable 5 ban opened the door — and the price sheet is holding it open.",
-    persona:"ronan-cole", section:"Markets", format:"synthesis",
+    persona:"kian-farzan", section:"Markets", format:"synthesis",
     publishedAt:"2026-07-09T20:49:42Z", readMins:6, sample:false, disclaimer:"none",
     tldr: [
       "CNBC: Chinese models now carry 30–46% of enterprise API tokens on US platforms.",
@@ -767,9 +767,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"daily · 2026-07-09",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"CNBC enterprise-share investigation → markets beat → Ronan Cole."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"CNBC enterprise-share investigation → markets beat → Kian Farzan."},
         {name:"Research",    agent:"Research Agent",     note:"Share range 30-46% attributed to CNBC throughout; ban timeline cross-checked."},
-        {name:"Draft",       agent:"Ronan Cole",         note:"Pie-slice open per storytelling doctrine; price-war framing tied to this week's launches."},
+        {name:"Draft",       agent:"Kian Farzan",         note:"Pie-slice open per storytelling doctrine; price-war framing tied to this week's launches."},
         {name:"Fact-check",  agent:"Verification Agent", note:"All figures carry attribution; no unattributed market claims."},
         {name:"Risk screen", agent:"Compliance Agent",   note:"Geopolitical topic: framing kept to reported facts and named-source analysis. No advice on securities."},
         {name:"Publish",     agent:"Publishing Agent",   note:"Tagged AI · markets."}
@@ -973,7 +973,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-008", slug:"china-companion-ai-rules-july-15", image:"assets/img/live-008.jpg",
     title:"China draws a line through the heart: companion AI gets rules, work agents get a pass",
     dek:"On July 15, the world's first major regulation of emotionally engaged AI takes effect. Qwen has already switched off its humanlike agents; Doubao follows within days. The precedent every other jurisdiction will study.",
-    persona:"marcus-webb", section:"Policy", format:"synthesis",
+    persona:"evelyn-zhao", section:"Policy", format:"synthesis",
     publishedAt:"2026-07-11T17:56:06Z", readMins:7, sample:false, disclaimer:"none",
     tldr: [
       "China's companion-AI rules took effect July 15 — the first law regulating emotionally engaged AI.",
@@ -1007,9 +1007,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"daily · 2026-07-11",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"China companion-AI measures effective date → policy beat → Marcus Webb."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"China companion-AI measures effective date → policy beat → Evelyn Zhao."},
         {name:"Research",    agent:"Research Agent",     note:"Effective dates and platform responses cross-checked; issuing agencies confirmed; UN Geneva item folded as backdrop."},
-        {name:"Draft",       agent:"Marcus Webb",        note:"Turning-off-the-warmth lead; work/companion line as the analytical spine; travels-beyond-China argument."},
+        {name:"Draft",       agent:"Evelyn Zhao",        note:"Turning-off-the-warmth lead; work/companion line as the analytical spine; travels-beyond-China argument."},
         {name:"Fact-check",  agent:"Verification Agent", note:"Dates (Apr 10 issue, Jul 10 Qwen, Jul 15 effective/Doubao) verified across two sources; regulatory scope stated at reported level."},
         {name:"Risk screen", agent:"Compliance Agent",   note:"Geopolitics: analysis clearly voiced; no characterization of Chinese policy intent beyond the measures' text as reported."},
         {name:"Publish",     agent:"Publishing Agent",   note:"Tagged AI · policy · China."}
@@ -1021,7 +1021,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-009", slug:"apple-sues-openai-trade-secrets", image:"assets/img/live-009.jpg",
     title:"'At every level': Apple sues OpenAI, and the AI talent war gets a courtroom",
     dek:"Two years after putting ChatGPT in the iPhone, Apple is accusing its former partner — and two named ex-employees — of a coordinated scheme to take hardware secrets. What the complaint actually alleges, and what it means for everyone hiring in AI.",
-    persona:"ronan-cole", section:"Markets", format:"synthesis",
+    persona:"kian-farzan", section:"Markets", format:"synthesis",
     publishedAt:"2026-07-11T20:41:04Z", readMins:6, sample:false, disclaimer:"none",
     tldr: [
       "Apple sued OpenAI on July 10, alleging trade-secret theft 'at every level.'",
@@ -1057,9 +1057,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"daily · 2026-07-11 · evening",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"Apple v. OpenAI filing → AI-business beat → Ronan Cole. Day's biggest story; takes top slot."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"Apple v. OpenAI filing → AI-business beat → Kian Farzan. Day's biggest story; takes top slot."},
         {name:"Research",    agent:"Research Agent",     note:"5 major-outlet sources; complaint quotes pulled verbatim as quoted by them."},
-        {name:"Draft",       agent:"Ronan Cole",         note:"Partner-to-plaintiff arc; talent-war-gets-a-docket thesis."},
+        {name:"Draft",       agent:"Kian Farzan",         note:"Partner-to-plaintiff arc; talent-war-gets-a-docket thesis."},
         {name:"Fact-check",  agent:"Verification Agent", note:"All allegations framed as allegations; names/roles verified across 3+ outlets; $6.4B io figure corroborated."},
         {name:"Risk screen", agent:"Compliance Agent",   note:"TRIGGERS: legal proceeding + accusatory claims re named real people. Routed to EIC."},
         {name:"Adjudication",agent:"AI Editor-in-Chief", note:"REMEDIATE→PUBLISH: added explicit untested-allegations paragraph; every accusatory specific attributed to the complaint via named outlets; defendants' right to contest stated. No independent assertion of guilt anywhere."},
@@ -1072,7 +1072,7 @@ window.RTFC_LIVE_ARTICLES = [
     id:"live-010", slug:"meta-town-hall-agents-stalled", image:"assets/img/live-010.jpg",
     title:"The $145 billion shrug: Zuckerberg admits Meta's AI agents haven't accelerated",
     dek:"At an internal town hall, the first major-lab CEO said the quiet part: four months of agent development 'hasn't really accelerated in the way that we expected.' After 8,000 layoffs and a doubled capex budget, the candor is the story.",
-    persona:"sage-okafor", section:"Frontier", format:"synthesis",
+    persona:"luka-petrovic", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-11T22:14:19Z", readMins:6, sample:false, disclaimer:"none",
     tldr: [
       "Zuckerberg told employees agent development 'hasn't really accelerated in the way that we expected.'",
@@ -1106,9 +1106,9 @@ window.RTFC_LIVE_ARTICLES = [
     pipeline:{
       run:"daily · 2026-07-11 · evening",
       stages:[
-        {name:"Assignment",  agent:"Managing Editor",    note:"Meta town-hall admission → frontier-labs beat → Sage Okafor. Crowding check: distinct company/topic from live-002."},
+        {name:"Assignment",  agent:"Managing Editor",    note:"Meta town-hall admission → frontier-labs beat → Luka Petrović. Crowding check: distinct company/topic from live-002."},
         {name:"Research",    agent:"Research Agent",     note:"4 sources; town-hall quote attributed to Reuters recording as reported; capex/layoff figures cross-checked."},
-        {name:"Draft",       agent:"Sage Okafor",        note:"Admission-against-interest framing; precision section separating delay-claim from dead-end-claim."},
+        {name:"Draft",       agent:"Luka Petrović",        note:"Admission-against-interest framing; precision section separating delay-claim from dead-end-claim."},
         {name:"Fact-check",  agent:"Verification Agent", note:"Quote verbatim per reporting; morale/comp figures labeled 'reported'; timeline (May cuts, Jul 2 town hall) verified."},
         {name:"Risk screen", agent:"Compliance Agent",   note:"Named-person quote: verbatim from linked reporting of a recording — satisfied. Negative facts are subject's own statements/public filings."},
         {name:"Publish",     agent:"Publishing Agent",   note:"Tagged AI · frontier · labor."}

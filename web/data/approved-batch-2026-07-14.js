@@ -8,7 +8,7 @@
       image: "assets/img/live-017-cover.png",
       title: "OpenAI’s GPT-5.6 lineup turns one model into a working system",
       dek: "Sol, Terra and Luna point to a product strategy built around routing deep reasoning, everyday work and lower-cost throughput through different systems.",
-      persona: "sage-okafor",
+      persona: "luka-petrovic",
       section: "Frontier",
       format: "synthesis",
       top: false,
@@ -49,7 +49,7 @@
       pipeline: { run: "owner-approved direct batch · 2026-07-14", stages: [
         { name: "Assignment", agent: "Managing Editor", note: "Owner approved the model-ecosystem angle for immediate publication." },
         { name: "Research", agent: "Research Agent", note: "Article framed as product and workflow analysis without unsupported performance claims." },
-        { name: "Draft", agent: "Sage Okafor", note: "Expanded into a full synthesis centered on routing, governance and workflow design." },
+        { name: "Draft", agent: "Luka Petrović", note: "Expanded into a full synthesis centered on routing, governance and workflow design." },
         { name: "Fact-check", agent: "Verification Agent", note: "Removed unsupported benchmark, pricing and availability claims." },
         { name: "Risk screen", agent: "Compliance Agent", note: "No medical, financial or accusatory trigger." },
         { name: "Publish", agent: "Publishing Agent", note: "Published through the corrected GitHub content path." }
@@ -119,7 +119,7 @@
       image: "assets/img/live-019-cover.png",
       title: "The AI arms race is becoming an ecosystem war",
       dek: "OpenAI, Google, Anthropic and Meta are competing across models, distribution, infrastructure, developers and enterprise trust. A benchmark lead alone is no longer enough.",
-      persona: "ronan-cole",
+      persona: "kian-farzan",
       section: "Markets",
       format: "synthesis",
       top: false,
@@ -167,7 +167,7 @@
       pipeline: { run: "owner-approved direct batch · 2026-07-14", stages: [
         { name: "Assignment", agent: "Managing Editor", note: "Owner approved a four-company competitive analysis." },
         { name: "Research", agent: "Research Agent", note: "Reviewed company positioning across products, distribution and enterprise adoption." },
-        { name: "Draft", agent: "Ronan Cole", note: "Expanded into a full markets-and-strategy synthesis without investment recommendations." },
+        { name: "Draft", agent: "Kian Farzan", note: "Expanded into a full markets-and-strategy synthesis without investment recommendations." },
         { name: "Fact-check", agent: "Verification Agent", note: "Separated company positioning from attributed factual claims." },
         { name: "Risk screen", agent: "Compliance Agent", note: "Attached the financial-information disclaimer." },
         { name: "Publish", agent: "Publishing Agent", note: "Published through the corrected GitHub content path." }

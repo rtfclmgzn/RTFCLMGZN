@@ -103,17 +103,43 @@ def test_discovery_routing_matches_section_owners():
         assert slug not in text
 
 
-def test_site_personas_js_active_lineup_and_retired_flags():
+def test_site_personas_js_active_lineup_only():
     text = (ROOT / "web/data/personas.js").read_text(encoding="utf-8")
     for slug in ACTIVE:
         assert f'key:"{slug}"' in text, slug
     for slug in RETIRED:
-        seg = text.split(f'key:"{slug}"')[1][:60]
-        assert "retired:true" in seg.replace(" ", ""), slug
+        assert slug not in text, slug
     assert "Dr. Priya" not in text
     assert "Luka Petrović" in text  # UTF-8 display name intact
     for section, owner in SECTION_OWNER.items():
         assert re.search(r'key:"%s".*?editor:"%s"' % (section, owner), text, re.S), section
+
+
+def test_no_retired_persona_anywhere_in_web():
+    """Owner-directed full reassignment (July 2026): every article, log, feed and
+    page credits the active lineup; pre-migration bylines live in git history."""
+    retired_names = {"Marcus Webb", "Ronan Cole", "Idris Vale", "Maya Serrano"}
+    for f in (ROOT / "web").rglob("*"):
+        if f.suffix not in (".js", ".xml", ".html") or not f.is_file():
+            continue
+        text = f.read_text(encoding="utf-8", errors="ignore")
+        for bad in RETIRED | retired_names:
+            assert bad not in text, f"{bad} still in {f}"
+
+
+def test_no_sage_byline_on_frontier_articles():
+    """Sage moved to Opinion; every Frontier piece is credited to Luka Petrović."""
+    data_files = ["articles.js", "live-articles.js", "approved-batch-2026-07-14.js",
+                  "newsroom-articles.js", "research.js", "guides.js"]
+    for name in data_files:
+        text = (ROOT / "web/data" / name).read_text(encoding="utf-8")
+        for m in re.finditer(r'"?slug"?\s*:\s*"([^"]+)"', text):
+            seg_end = text.find('slug', m.end())
+            seg = text[m.start():seg_end if seg_end > 0 else len(text)]
+            sec = re.search(r'"?section"?\s*:\s*"([^"]+)"', seg)
+            per = re.search(r'"?persona"?\s*:\s*"([^"]+)"', seg)
+            if sec and per and sec.group(1) == "Frontier":
+                assert per.group(1) == "luka-petrovic", (name, m.group(1), per.group(1))
 
 
 def test_portraits_exist_unique_and_mapped():

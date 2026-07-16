@@ -6,7 +6,7 @@ window.RTFC_ARTICLES = [
     id:"a1", slug:"gpt-5-6-goes-live-cybersecurity-model", image:"assets/img/a1.jpg",
     title:"GPT-5.6 is now the default ChatGPT — and OpenAI's pitch is that it's a security model.",
     dek:"Sol, Terra, and Luna went generally available July 9. The headline isn't raw intelligence — it's that OpenAI is positioning its flagship as the most capable cyber-defense model yet, and that framing is doing real strategic work.",
-    persona:"sage-okafor", section:"Frontier", format:"synthesis",
+    persona:"luka-petrovic", section:"Frontier", format:"synthesis",
     publishedAt:"2026-07-10T09:54:25Z", readMins:6, sample:false, disclaimer:"none",
     tldr: [
       "GPT-5.6 went GA July 9; Sol silently replaced ChatGPT's default model for hundreds of millions.",
@@ -44,7 +44,7 @@ window.RTFC_ARTICLES = [
     id:"a5", slug:"frontier-model-government-review-regime", image:"assets/img/a5.jpg",
     title:"The most important thing in AI right now isn't how smart a model is. It's who's allowed to ship it.",
     dek:"A June executive order created a voluntary government review for 'covered frontier models.' After Fable 5 spent 19 days offline, that framework is no longer theoretical — it's the new gate every frontier lab plans around.",
-    persona:"marcus-webb", section:"Policy", format:"synthesis",
+    persona:"evelyn-zhao", section:"Policy", format:"synthesis",
     publishedAt:"2026-07-10T08:43:40Z", readMins:7, sample:false, disclaimer:"none",
     tldr: [
       "A June 2 executive order created the first federal pre-release review for frontier AI.",
@@ -83,7 +83,7 @@ window.RTFC_ARTICLES = [
     id:"a7", slug:"meta-muse-spark-first-paid-model", image:"assets/img/a7.jpg",
     title:"Meta just started charging for a model. That's the actual news.",
     dek:"Muse Spark 1.1 shipped July 9 at $1.25 / $4.25 per million tokens — Meta's first paid model. The price is fine; the strategy shift is the story.",
-    persona:"sage-okafor", section:"Frontier", format:"brief",
+    persona:"luka-petrovic", section:"Frontier", format:"brief",
     publishedAt:"2026-07-09T22:30:40Z", readMins:2, sample:false, disclaimer:"none",
     tldr: [
       "Meta shipped Muse Spark 1.1 on July 9 at $1.25/$4.25 per million tokens.",
@@ -154,7 +154,7 @@ window.RTFC_ARTICLES = [
     id:"a2", slug:"record-510-billion-funding-half", image:"assets/img/a2.jpg",
     title:"Startups raised a record $510 billion in six months. Two AI companies took 43% of it.",
     dek:"H1 2026 beat all of 2025 combined. But strip out OpenAI and Anthropic and the picture changes — this isn't a broad boom, it's a historic concentration wearing a boom's clothing.",
-    persona:"ronan-cole", section:"Markets", format:"synthesis",
+    persona:"kian-farzan", section:"Markets", format:"synthesis",
     publishedAt:"2026-07-09T17:00:32Z", readMins:6, sample:false, disclaimer:"not-financial-advice",
     tldr: [
       "Startups raised a record $510 billion in H1 2026 — more than all of 2025.",

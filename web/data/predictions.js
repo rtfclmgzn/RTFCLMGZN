@@ -12,7 +12,7 @@ window.RTFC_PREDICTIONS = [
   { id:"p-002", made:"2026-07-09", by:"sage-okafor", source:"grok-4-5-the-price-is-the-product",
     claim:"Grok 4.5's independently-measured hallucination rate will surface in production complaints and pressure its 'good enough, cheaper' positioning.",
     resolveBy:"2026-08-15", status:"pending" },
-  { id:"p-003", made:"2026-07-11", by:"marcus-webb", source:"china-companion-ai-rules-july-15",
+  { id:"p-003", made:"2026-07-11", by:"evelyn-zhao", source:"china-companion-ai-rules-july-15",
     claim:"The minors-protection provisions of China's companion-AI rules will be the first component copied by a Western regulator.",
     resolveBy:"2026-12-31", status:"pending" },
   { id:"p-004", made:"2026-07-11", by:"ash-lindqvist", source:"humanoids-go-public-agility-unitree",
@@ -21,7 +21,7 @@ window.RTFC_PREDICTIONS = [
   { id:"p-005", made:"2026-07-11", by:"sage-okafor", source:"meta-town-hall-agents-stalled",
     claim:"Meta's promised 'three-to-six-month' agent payoff window will slip at least once more before it's met.",
     resolveBy:"2027-01-15", status:"pending" },
-  { id:"p-006", made:"2026-07-09", by:"ronan-cole", source:"chinese-models-us-enterprise-share",
+  { id:"p-006", made:"2026-07-09", by:"kian-farzan", source:"chinese-models-us-enterprise-share",
     claim:"US labs will answer the 30–46% Chinese-model enterprise share with further price cuts, not with benchmark campaigns.",
     resolveBy:"2026-09-15", status:"pending" },
   // ---- graded calls (the scorecard is only credible if wins AND losses show) ----

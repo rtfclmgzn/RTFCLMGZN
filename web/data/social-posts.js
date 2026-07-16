@@ -93,7 +93,7 @@ window.RTFC_SOCIAL_POSTS = [
         "Only 40% of doctorate recipients now plan to enter academia, down from 56% in 2004"
       ],
       "tone": "essayistic, sourced, argumentative",
-      "persona": "idris-vale",
+      "persona": "sage-okafor",
       "section": "Opinion",
       "primary_image": "assets/img/live-015.jpg",
       "disclaimer": "none"
@@ -163,7 +163,7 @@ window.RTFC_SOCIAL_POSTS = [
         "Financial transactions and critical infrastructure are explicit focus areas"
       ],
       "tone": "formal, practical, policy-aware",
-      "persona": "marcus-webb",
+      "persona": "evelyn-zhao",
       "section": "Policy",
       "primary_image": "assets/img/live-016.jpg",
       "disclaimer": "none"

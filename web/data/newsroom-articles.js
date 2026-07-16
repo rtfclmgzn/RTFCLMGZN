@@ -140,7 +140,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "slug": "white-house-prepares-voluntary-pledge-to-shield-ratepayers-from-ai-data-center-power-costs",
     "title": "White House plans new voluntary AI power-cost pledge, Reuters reports",
     "dek": "The administration is preparing another voluntary industry commitment intended to keep AI data-center electricity costs from being shifted to existing utility customers, according to Reuters.",
-    "persona": "marcus-webb",
+    "persona": "evelyn-zhao",
     "section": "Policy",
     "format": "brief",
     "disclaimer": "none",
@@ -224,7 +224,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         {
           "name": "Checkpoint 2",
           "agent": "managing-editor",
-          "note": "Policy ownership corrected to Marcus Webb during the audited repair."
+          "note": "Policy ownership corrected to Evelyn Zhao during the audited repair."
         },
         {
           "name": "Checkpoint 3",
@@ -238,7 +238,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         },
         {
           "name": "Checkpoint 5",
-          "agent": "marcus-webb",
+          "agent": "evelyn-zhao",
           "note": "Compact brief rebuilt from the exact owner-approved repaired text."
         },
         {
@@ -268,7 +268,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "slug": "canada-osfi-agentic-ai-cyber-risks",
     "title": "Canada’s banking regulator warns banks about agentic AI cyber risks",
     "dek": "OSFI published a nonbinding bulletin on generative and agentic AI, while Reuters reported that an earlier regulator email specifically warned banks about Anthropic’s Claude Mythos and faster-moving cyber threats.",
-    "persona": "marcus-webb",
+    "persona": "evelyn-zhao",
     "section": "Policy",
     "format": "brief",
     "disclaimer": "none",
@@ -347,7 +347,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         {
           "name": "Checkpoint 2",
           "agent": "managing-editor",
-          "note": "Policy ownership corrected to Marcus Webb during the audited repair."
+          "note": "Policy ownership corrected to Evelyn Zhao during the audited repair."
         },
         {
           "name": "Checkpoint 3",
@@ -361,7 +361,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         },
         {
           "name": "Checkpoint 5",
-          "agent": "marcus-webb",
+          "agent": "evelyn-zhao",
           "note": "Compact brief rebuilt from the exact owner-approved repaired text."
         },
         {
@@ -550,7 +550,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "slug": "ibm-preliminary-q2-2026-revenue-miss",
     "title": "IBM lost about $70 billion in a day — while its operating earnings per share rose",
     "dek": "A $660 million revenue miss erased roughly a quarter of IBM’s market value. Operating EPS was up 5% and operating pre-tax margin improved. What the market repriced was not the quarter’s profit.",
-    "persona": "ronan-cole",
+    "persona": "kian-farzan",
     "section": "Markets",
     "format": "synthesis",
     "disclaimer": "not-financial-advice",
@@ -741,7 +741,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         },
         {
           "name": "Checkpoint 5",
-          "agent": "ronan-cole",
+          "agent": "kian-farzan",
           "note": "Synthesis drafted from the investor letter."
         },
         {
@@ -962,7 +962,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "slug": "fli-ai-safety-index-summer-2026",
     "title": "Nine AI labs took a safety exam. The best grade was a C+",
     "dek": "The Future of Life Institute's Summer 2026 AI Safety Index grades the industry mediocre at best — and its sharpest finding is that labs have weakened or voided their own promises to pause at the red lines they drew.",
-    "persona": "marcus-webb",
+    "persona": "evelyn-zhao",
     "section": "Policy",
     "format": "synthesis",
     "disclaimer": "none",
@@ -1145,7 +1145,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "slug": "tom-blomfield-anthropic-compute-team",
     "title": "Monzo's founder just joined Anthropic — to buy compute, not build product",
     "dek": "Tom Blomfield is taking leave from Y Combinator to join co-founder Tom Brown's compute team. The signal: securing compute is now a founder-grade commercial problem, not a procurement line item.",
-    "persona": "sage-okafor",
+    "persona": "luka-petrovic",
     "section": "Frontier",
     "format": "brief",
     "disclaimer": "none",

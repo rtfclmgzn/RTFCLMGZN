@@ -259,7 +259,7 @@
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The editors</div>';
     h+='<div class="mast-grid mast-3x3">'+ACTIVE.map(function(p){
       return '<a class="mast-card" href="#/persona/'+p.key+'">'+
-        '<span class="av-pop" title="Enlarge" onclick="event.preventDefault();event.stopPropagation();rtfcAvatarPop(\''+p.key+'\')">'+avatar(p)+'</span>'+
+        '<span class="av-pop" title="Enlarge" data-persona="'+p.key+'">'+avatar(p)+'</span>'+
         '<h3>'+esc(p.name)+'</h3>'+
         '<div class="beat">'+esc(p.beat)+'</div>'+
         '<div class="tone">'+esc(p.tone)+'</div></a>';
@@ -2260,6 +2260,16 @@
     if(m && !m.hidden && !(e.target.closest && e.target.closest(".sec-wrap"))){ m.hidden=true;
       var b=document.getElementById("sec-btn"); if(b) b.setAttribute("aria-expanded","false"); }
   });
+  // Masthead avatar → lightbox. Capture phase so it wins over the card's link
+  // navigation on a real pointer click (an inline handler on a boxless span
+  // proved unreliable — this is the single source of truth for the popup).
+  document.addEventListener("click",function(e){
+    var pop=e.target.closest && e.target.closest(".av-pop");
+    if(!pop) return;
+    e.preventDefault(); e.stopPropagation();
+    var key=pop.getAttribute("data-persona");
+    if(key) window.rtfcAvatarPop(key);
+  },true);
 
   /* ---------- router ---------- */
   /* ================= LIVE TV (curated "what's live" board) ================= */

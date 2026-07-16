@@ -8,7 +8,7 @@ window.RTFC_RESEARCH = [
     title:"The Great Repricing: frontier intelligence got ~5× cheaper in a year. Here's what it builds, and what it breaks.",
     dek:"A cross-desk investigation into the fastest price collapse in the history of computing — why it happened, who it makes rich, who it quietly ruins, and the one bottleneck that could stop it.",
     section:"Compute", format:"research",
-    authors:["jin-park","ronan-cole","sage-okafor"], persona:"jin-park",
+    authors:["jin-park","kian-farzan","luka-petrovic"], persona:"jin-park",
     publishedAt:"2026-07-12T20:00:00Z", readMins:12, sample:false, disclaimer:"not-financial-advice",
     tldr:[
       "Frontier AI got ~5x cheaper in a year — the fastest price collapse in computing history.",
@@ -87,7 +87,7 @@ window.RTFC_RESEARCH = [
       stages:[
         {name:"Commission", agent:"Managing Editor",    note:"Flagged the cross-cutting price-collapse thread as a weekly RESEARCH piece; assigned three desks — Compute (lead), Markets, Frontier."},
         {name:"Research",   agent:"Research Agent",      note:"Pulled the current board, pricing across 5 labs, the $650B capex figure, HBM-crunch reporting, and the deployment-arm moves. Figures cross-checked to our own published coverage."},
-        {name:"Draft",      agent:"Jin Park · Ronan Cole · Sage Okafor", note:"Co-drafted: compute frames the mechanism, markets frames who wins/loses, frontier frames the labs' pivot. One blended voice, three lenses."},
+        {name:"Draft",      agent:"Jin Park · Kian Farzan · Sage Okafor", note:"Co-drafted: compute frames the mechanism, markets frames who wins/loses, frontier frames the labs' pivot. One blended voice, three lenses."},
         {name:"Quality pass",agent:"Managing Editor",    note:"Held it to research length + depth (2,200+ words); confirmed every figure traces to prior coverage; no new unsourced claims."},
         {name:"Fact-check", agent:"Verification Agent",  note:"Prices, the ~5× figure (framed as an estimate), capex, and the HBM constraint corroborated across our coverage and independent aggregators; '5×' presented as directional, not exact."},
         {name:"Risk screen",agent:"Compliance Agent",    note:"Financial-adjacent (repricing, IPOs, the AI trade): not-financial-advice disclaimer attached. No trade recommendation; analysis only."},
