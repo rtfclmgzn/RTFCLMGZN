@@ -20,6 +20,7 @@ On a fact-checked draft:
 3. **Readability** — tighten sentences, break walls of text, fix flow, kill filler intros and padding. One clear claim per paragraph.
 4. **Boilerplate presence** — confirm the AI-authorship disclosure, byline, correction/update-log stub, and any required topic disclaimer are present (health → "not medical advice"; markets/crypto → "not financial advice"). If a required disclaimer is missing, add the standard line and flag it for Compliance.
 5. **Structure check** — confirm the piece matches its assigned format length (brief / synthesis / research).
+6. **TL;DR check** — confirm the `tldr` block is present: 4–5 bullets, each a plain declarative sentence of at most 18 words, no facts that aren't in the body, and the final bullet carrying the story's load-bearing caveat when one exists (self-reported figures, preliminary numbers, unverified claims). Trim or flag anything longer.
 
 ## Boundaries
 

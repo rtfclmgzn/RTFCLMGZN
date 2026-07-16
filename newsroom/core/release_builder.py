@@ -197,6 +197,7 @@ class ReleaseBuilder:
             "sample": False,
             "disclaimer": story.get("disclaimer") or "none",
             "body": story["body"],
+            "tldr": story.get("tldr") or [],
             "apply": story.get("apply") or [],
             "links": story.get("links") or [],
             "sources": [

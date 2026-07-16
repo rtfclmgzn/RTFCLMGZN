@@ -144,6 +144,16 @@
             "additionalProperties": false
           }
         },
+        "tldr": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 140
+          }
+        },
         "sources": {
           "type": "array",
           "minItems": 2,
@@ -178,6 +188,7 @@
         "format",
         "disclaimer",
         "body",
+        "tldr",
         "apply",
         "links",
         "sources"
