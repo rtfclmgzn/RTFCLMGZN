@@ -9,11 +9,10 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "format": "brief",
     "disclaimer": "none",
     "tldr": [
-      "HCLTech announced plans to invest up to ₹3,500 crore — approximately $370 million — in an AI data-center business in India, with potential capacity of 50 MW.",
-      "The company presented it as the infrastructure foundation for a new full-stack AI offering combining data-center design, DevOps, AI cloud operations and software, sold to private-sector and government demand as an integrated package.",
-      "Chief executive C. Vijayakumar disclosed the plan alongside HCLTech's first-quarter results, describing ₹3,500 crore as an upper limit and 50 MW as potential scale.",
-      "The announcement does not identify customers, signed sovereign-compute contracts or operating deployments, and the public material gives no project sites, initial construction phase, deployment schedule or spending pace.",
-      "The strategic significance is that one of India's largest technology-services companies is putting substantial capital behind the physical layer of AI delivery — but execution will matter more than the headline number."
+      "HCLTech plans up to ₹3,500 crore (~$370M) for India AI data centers, 50 MW potential.",
+      "It anchors a full-stack AI offering for private and government customers.",
+      "Disclosed with Q1 results; the figure is an upper limit, not a spending schedule.",
+      "Caveat: no named customers, sites, timeline or contracts yet — execution is the story."
     ],
     "body": [
       {
@@ -146,11 +145,10 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "format": "brief",
     "disclaimer": "none",
     "tldr": [
-      "The White House is preparing to bring utilities and data-center developers together around voluntary commitments intended to prevent existing electricity customers from bearing AI-related power costs, Reuters reported on July 13.",
-      "Three people familiar with the plans told Reuters the event's timing and participant list were still unsettled — this is a developing policy effort, not a finalized government program.",
-      "The available reporting does not establish a binding tariff, an enforcement mechanism or a final timetable.",
-      "A related framework already exists: in March, Amazon, Google, Meta, Microsoft, OpenAI, Oracle and xAI signed the White House's Ratepayer Protection Pledge, committing to build, bring or buy new generation, pay for the power-delivery upgrades their data centers require, and negotiate separate rate structures with utilities and state governments.",
-      "What remains unknown is whether the new effort adds signatories, changes the March commitments or creates measurable protections beyond the existing voluntary pledge. Those details — not the event itself — will determine whether it changes who pays for AI infrastructure."
+      "The White House is preparing voluntary utility and data-center commitments on AI power costs.",
+      "Goal: keep AI electricity costs off existing ratepayers' bills (Reuters, July 13).",
+      "Seven tech giants already signed March's Ratepayer Protection Pledge.",
+      "Caveat: timing and participants unsettled — no binding tariff or enforcement mechanism established."
     ],
     "body": [
       {
@@ -275,12 +273,10 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "format": "brief",
     "disclaimer": "none",
     "tldr": [
-      "Canada's Office of the Superintendent of Financial Institutions put generative and agentic AI on the operational-risk agenda for banks and insurers with a July 1 Technology Risk Bulletin on the technology, cybersecurity and operational-resilience implications of increasingly capable AI.",
-      "The bulletin is advisory, not a new rule. OSFI says technology risk bulletins are timely supervisory communications highlighting current and emerging risks, but are not regulatory expectations.",
-      "Reuters separately reported that an April 29 OSFI email warned major financial institutions that advanced AI models could increase cyber threats and compress the time available to identify and respond to vulnerabilities.",
-      "That email reportedly referenced Anthropic's Claude Mythos by name — a model-specific warning that comes from the email obtained by Reuters, not from the public bulletin itself.",
-      "The immediate issue for institutions is response speed: powerful models may change how quickly vulnerabilities can be found and exploited, while banks still have to govern their own use of agentic systems.",
-      "OSFI has not announced a mandatory implementation standard or explained how it will assess compliance. The next meaningful signal is whether this advisory material becomes formal guidance or produces institution-specific remediation requests."
+      "Canada's OSFI put generative and agentic AI on banks' operational-risk agenda July 1.",
+      "A separate April email reportedly warned banks about Claude Mythos and faster cyber threats.",
+      "The concern is response speed: AI compresses the time between vulnerability and exploit.",
+      "Caveat: the bulletin is advisory, not a rule — watch whether it becomes formal guidance."
     ],
     "body": [
       {
@@ -453,11 +449,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "tldr": [
-      "Nebius has agreed to sell more than $1 billion of computing capacity to Reflection AI through 2029, giving the open-model developer access to Nvidia’s GB300 chips — per TechCrunch, Reuters and Bloomberg reporting, not a company filing.",
-      "It is Reflection’s second multiyear compute contract in weeks, following a SpaceX arrangement reported at roughly $150 million a month through 2029.",
-      "Reflection, founded in 2024 by two former DeepMind researchers, is valued at about $8 billion and has raised roughly $2.6 billion from backers including Nvidia, Sequoia and Lightspeed.",
-      "Chip quantities, the delivery schedule and the payment structure are not public, and Nebius had made no official announcement at publication.",
-      "The strategic signal: a two-year-old company is locking up multiyear capacity from multiple suppliers — a bet that access, not price, is the binding constraint on training frontier-scale open models."
+      "Nebius will sell Reflection AI $1B+ of compute through 2029, including Nvidia GB300s.",
+      "It's Reflection's second multiyear compute deal in weeks, after SpaceX.",
+      "Reflection: founded 2024 by ex-DeepMind researchers, ~$8B valuation, ~$2.6B raised.",
+      "The bet: access, not price, is the binding constraint on open frontier models.",
+      "Caveat: all figures come from reporting — no company filing, and terms aren't public."
     ],
     "apply": [
       {
@@ -671,11 +667,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "tldr": [
-      "IBM’s preliminary Q2 revenue of $17.2 billion missed the $17.86 billion consensus by about 3.7% — and its shares fell roughly 25%, erasing about $70 billion of market value.",
-      "The profit lines in the same disclosure improved: operating EPS rose 5% to $2.93, operating pre-tax margin widened 30 basis points, and free cash flow was $4.8 billion year to date.",
-      "CEO Arvind Krishna weighted execution over market conditions: IBM “did not adapt and move quickly enough,” and large deals failing to close on expected timelines drove the majority of the shortfall.",
-      "The weakness concentrated in the Z mainframe platform and its attached Transaction Processing software; within the same segment, distributed infrastructure grew 37% with about $500 million of backlog.",
-      "IBM described clients pulling capital spending forward into scarce hardware — a deferral story, not evidence that enterprise software demand weakened. Figures are preliminary and could change."
+      "IBM missed Q2 revenue by ~3.7% and lost ~$70 billion of market value in a day.",
+      "Profits improved in the same disclosure: operating EPS +5%, wider margins, strong cash flow.",
+      "Krishna blamed execution: big deals 'failed to close on the timelines we expected.'",
+      "The damage concentrated in Z mainframes; distributed infrastructure grew 37%.",
+      "Caveat: figures are preliminary — and deferral is not demand destruction."
     ],
     "apply": [
       {
@@ -890,11 +886,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "tldr": [
-      "1X unveiled a tendon-driven hand for its Neo humanoid: 25 degrees of freedom, up to 45N fingertip force, ±0.2 mm positioning accuracy, IP68 waterproof and food-safe.",
-      "Unusually low 5:1–15:1 gear ratios make every joint force-controlled and backdrivable, and fingertips sense force, contact location and shear — the hand can feel what it is touching.",
-      "1X says hundreds of hands have already come off a scalable production line, with capacity for 10,000 this year.",
-      "The stated goal is to remove the hardware ceiling on humanoids — which by 1X’s own framing moves the bottleneck to software: Neo ships with more capability than its AI currently knows how to use.",
-      "Nearly every figure is 1X’s own specification or demonstration; no independent teardown or third-party benchmark exists yet."
+      "1X's new Neo hand: 25 degrees of freedom, 45N fingertips, IP68 waterproof, food-safe.",
+      "Low gear ratios make every joint force-controlled — the hand can feel what it touches.",
+      "1X says hundreds are already built, with capacity for 10,000 this year.",
+      "Removing the hardware ceiling moves the bottleneck to software.",
+      "Caveat: every figure is 1X's own; no independent teardown exists yet."
     ],
     "apply": [
       {

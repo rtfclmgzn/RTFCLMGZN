@@ -13,7 +13,7 @@ window.RTFC_PERSONAS = [
   { key:"marcus-webb",   name:"Marcus Webb",     beat:"Policy, Regulation & Geopolitics", section:"Policy",
     tone:"Formal, careful with claims", color:"#3fb984", sensitivity:"high",
     bio:"The rules and politics shaping AI. Links the primary document, never the press release. Writes like a correspondent who's been burned by a correction once." },
-  { key:"priya-anand",   name:"Dr. Priya Anand", beat:"AI in Health & Biotech", section:"Health",
+  { key:"priya-anand",   name:"Priya Anand", beat:"AI in Health & Biotech", section:"Health",
     tone:"Precise, evidence-first", color:"#e0a94d", sensitivity:"high",
     bio:"Where AI meets medicine, graded by the evidence. Knows the difference between a mouse study and a cure, and always says which one you're reading about." },
   { key:"ronan-cole",    name:"Ronan Cole",      beat:"Markets, Crypto & AI Business", section:"Markets",

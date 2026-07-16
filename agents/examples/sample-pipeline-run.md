@@ -2,7 +2,7 @@
 
 > **⚠️ SYNTHETIC SYSTEM TEST — NOT FOR PUBLICATION.** Every company, number, quote, and study in this document is **fabricated** to exercise the pipeline. This file exists to prove the 17-agent system works and to show each agent's input/output. It deliberately routes a story through the *high-sensitivity* health beat so the compliance gate fires — demonstrating the safety machinery, not just the happy path. Nothing here describes real events.
 
-**Story chosen:** a (fictional) startup claims its AI designed a drug candidate that cut tumor size in an early study. This lands on **Dr. Priya Anand's** beat and should trip both Verification and the autonomous AI Editor-in-Chief. Watch it happen.
+**Story chosen:** a (fictional) startup claims its AI designed a drug candidate that cut tumor size in an early study. This lands on **Priya Anand's** beat and should trip both Verification and the autonomous AI Editor-in-Chief. Watch it happen.
 
 ---
 
@@ -40,7 +40,7 @@ research_brief:
 ```
 Note the Research Agent already flags the load-bearing number as preprint-only and warns against implying human benefit.
 
-## Stage 3 — Draft (Dr. Priya Anand)
+## Stage 3 — Draft (Priya Anand)
 
 Priya drafts in her evidence-first voice. Opening habit — establish evidentiary weight before the claim:
 
@@ -91,7 +91,7 @@ Verification doesn't kill the piece — the claims are honestly attributable —
   "HelixMind's AI-designed compound shrank tumors in mice. That's the whole claim."
 - Boilerplate check:
     ai_disclosure: present
-    byline: Dr. Priya Anand
+    byline: Priya Anand
     disclaimer: "not-medical-advice" PRESENT  (required for this beat)
 - Did NOT alter the UNVERIFIED flag or any facts.
 forward -> Compliance
@@ -130,7 +130,7 @@ disclaimer_attached: not-medical-advice
 preconditions: editor_in_chief.verdict in {publish, remediate} -> OK
 actions:
   - formatted to web template
-  - topic_section: Health;  author page: Dr. Priya Anand
+  - topic_section: Health;  author page: Priya Anand
   - metadata + ISO timestamp + preserved source links
   - correction_log: initialized
   - repurpose_signal: emitted to Podcast + Social

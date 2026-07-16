@@ -11,13 +11,11 @@ window.RTFC_RESEARCH = [
     authors:["jin-park","ronan-cole","sage-okafor"], persona:"jin-park",
     publishedAt:"2026-07-12T20:00:00Z", readMins:12, sample:false, disclaimer:"not-financial-advice",
     tldr:[
-      "In the first half of 2026 the price of frontier-grade AI fell roughly five times against where the leading edge sat twelve months earlier. A unit of top-tier machine reasoning that cost a dollar last summer costs about twenty cents today — and the curve is still pointing down.",
-      "Three forces stacked at once: competition finally reaching the top (four or five labs can credibly claim a frontier seat, and price is the only lever left once products commoditize), efficiency compounding through better training recipes and mixture-of-experts routing, and a demand side that is anything but soft.",
-      "The paradox at the heart of it: hyperscalers are spending roughly $650 billion, up about 80% year over year, precisely so they can charge you less. That is the Jevons paradox, first observed in coal — cheaper units unleash demand faster than the price falls, so total spending grows.",
-      "Who it breaks: the frontier lab whose business was selling tokens of intelligence at a premium is running up a down escalator, and the thin startup whose only product was price arbitrage just watched the wholesale price fall through its retail price. The moat was never the model; it was the margin.",
-      "Who it makes: everyone who uses AI rather than sells it. Always-on agents, per-user models and exhaustive rather than sampled analysis cross from prototype to production. Value migrates from the layer that makes the model to the layer that deploys it.",
-      "The geopolitics are folded into the price tag: the cheapest capable models are increasingly Chinese and open-weight, at roughly a fifteenth of premium pricing. The US spent two years trying to keep the frontier scarce and controlled; the counter-move was to make the near-frontier abundant and nearly free.",
-      "The one thing that could stop it sits somewhere unglamorous: high-bandwidth memory, not GPUs, is now the binding constraint on serving cheap intelligence at scale. The verdict — 2025's story was capability, 2026's is price, and price matters more because capability changes what is possible while price changes what is done."
+      "Frontier AI got ~5x cheaper in a year — the fastest price collapse in computing history.",
+      "Three causes: real competition at the top, compounding efficiency, relentless demand.",
+      "$650B of capex is a Jevons bet: cheaper intelligence means more spent, not less.",
+      "Token-premium sellers and wrapper startups break; AI users win; cheap Chinese open-weights surge.",
+      "Caveat: scarce high-bandwidth memory could stall the whole collapse."
     ],
     body:[
       {type:"p", text:"Start with the number that reorganizes everything else. In the first half of 2026, the price of frontier-grade artificial intelligence — the good stuff, the models that top the independent leaderboards — fell by roughly **five times** against where the leading edge sat twelve months earlier. Not five percent. Five times. A unit of top-tier machine reasoning that cost a dollar last summer costs something closer to twenty cents today, and the curve is still pointing down. There is no precedent for this speed in the history of computing. Moore's Law, the benchmark everyone reaches for, roughly halved the price of a transistor every two years. Intelligence is repricing that fast every few months."},

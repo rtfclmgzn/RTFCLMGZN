@@ -20,7 +20,7 @@ For each story in the news cycle:
    - Consumer AI & culture → **Nova Reyes**
    - Chips, compute & quantum → **Jin Park**
    - Policy, regulation & geopolitics → **Marcus Webb**
-   - Health & biotech → **Dr. Priya Anand**
+   - Health & biotech → **Priya Anand**
    - Markets, crypto & AI business → **Ronan Cole**
    - Robotics & hardware → **Ash Lindqvist**
 2. **Resolve overlap.** When a story spans beats (e.g. an export-control ruling on AI chips → Marcus + Jin), assign a primary author and, if warranted, a named contribution from the second persona. Never let two personas file competing pieces on the same story.
