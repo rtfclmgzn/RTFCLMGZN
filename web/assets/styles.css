@@ -110,6 +110,10 @@ nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,tr
   nav.top a{flex:none;font-size:13px;padding:7px 11px}
   .nav-sep{flex:none;margin:0 6px}
   .lang-menu{position:fixed;top:auto;left:12px;right:12px;width:auto;margin-top:8px}
+  .sec-menu{position:fixed;top:auto;left:12px;right:12px;min-width:0;width:auto;margin-top:8px;
+    grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+  .sec-wrap{flex:none}
+  .sec-btn{flex:none;font-size:13px;padding:7px 11px}
 }
 
 /* ---------- edition line ---------- */
@@ -1184,11 +1188,17 @@ footer.site .foot-cost a{color:var(--accent2)}
 .dict-cta b{font-family:var(--serif);font-size:18px;display:block;margin-bottom:4px}
 .dict-cta span span,.dict-cta>div>span{font-size:13.5px;color:var(--muted);line-height:1.5}
 .dc-go{margin-left:auto;flex:none;color:var(--accent2);font-weight:650;font-size:13.5px;white-space:nowrap}
-/* footer edition countdown */
-.foot-edition{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);text-decoration:none;margin-top:8px}
-.foot-edition b{color:var(--accent2);font-variant-numeric:tabular-nums}
-.foot-edition:hover{color:var(--ink)}
-.fe-dot{width:6px;height:6px;border-radius:6px;background:#4ade80;animation:livepulse 1.8s ease-in-out infinite}
+/* footer edition countdown — a proper chip, not a bare sentence */
+.foot-edition{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);
+  text-decoration:none;margin-top:10px;padding:7px 13px;border:1px solid var(--hairline);border-radius:99px;
+  background:color-mix(in srgb,var(--accent) 5%,transparent);max-width:100%;white-space:nowrap;
+  transition:border-color .15s,background .15s}
+.foot-edition b{color:var(--accent2);font-variant-numeric:tabular-nums;font-weight:700}
+.foot-edition:hover{color:var(--ink);border-color:color-mix(in srgb,var(--accent2) 45%,var(--hairline));
+  background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.fe-dot{flex:none;width:6px;height:6px;border-radius:6px;background:#4ade80;animation:livepulse 1.8s ease-in-out infinite}
+.fe-label,.fe-in{color:var(--muted)}
+.cd-slot{color:var(--ink);font-weight:650;overflow:hidden;text-overflow:ellipsis;max-width:180px}
 .dossier-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .dossier-card{display:flex;flex-direction:column;gap:7px;background:var(--card);border:1px solid var(--hairline);
   border-radius:14px;padding:18px 20px;color:var(--ink);text-decoration:none;transition:transform .12s,border-color .15s}
@@ -1377,6 +1387,22 @@ font[style*="vertical-align"]{background:none !important;box-shadow:none !import
 
 /* ============ THE BUZZ ============ */
 .nav-sep{width:1px;height:16px;background:var(--hairline);margin:0 2px;align-self:center}
+/* Sections dropdown in the top bar */
+.sec-wrap{position:relative;display:inline-flex}
+.sec-btn{padding:8px 13px;border-radius:99px;font-size:13.5px;color:var(--muted);border:0;background:none;
+  font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:color .12s,background .12s}
+.sec-btn:hover{color:var(--ink)}
+.sec-btn.active{color:var(--ink);background:var(--surface2)}
+.sec-caret{font-size:10px;opacity:.7}
+.sec-menu{position:absolute;top:calc(100% + 10px);left:0;z-index:60;min-width:210px;
+  background:var(--bg);border:1px solid var(--hairline);border-radius:14px;
+  box-shadow:0 26px 60px -22px rgba(0,0,0,.5);padding:8px;display:grid;gap:1px}
+.sec-menu[hidden]{display:none}
+.sec-menu a{display:flex;align-items:center;gap:10px;padding:8px 11px;border-radius:9px;
+  font-size:13.5px;color:var(--ink-soft);text-decoration:none}
+.sec-menu a:hover{background:var(--hairline);color:var(--ink)}
+.sec-menu a.on{background:var(--hairline);font-weight:700;color:var(--ink)}
+.sec-dot{width:8px;height:8px;border-radius:99px;flex:none}
 .buzz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;margin:0 0 34px}
 .buzz-card{background:var(--card);border:1px solid var(--hairline);border-radius:14px;padding:18px 20px;
   display:flex;flex-direction:column;gap:12px;transition:transform .18s,box-shadow .18s}

@@ -953,8 +953,26 @@
     if(window.speechSynthesis){
       h+='<button class="tool-btn tts-btn2" id="tts-btn" onclick="rtfcListen(\''+a.id+'\')">▶ <span>Listen · ~'+readTime(a)+' min</span><i class="tts-prog" id="tts-prog"></i></button>';
     }
+    h+='<button class="tool-btn share-btn" id="share-btn" onclick="rtfcShare(\''+a.id+'\')">⤴ <span>Share</span></button>';
     return h+'</div>';
   }
+  window.rtfcShare=function(id){
+    var a=article2(id); if(!a) return;
+    var url="https://rtfclmgzn.com/#/article/"+a.slug;
+    var btn=document.getElementById("share-btn");
+    function copied(){
+      if(!btn) return;
+      btn.innerHTML='✓ <span>Link copied</span>';
+      setTimeout(function(){ if(btn) btn.innerHTML='⤴ <span>Share</span>'; },2000);
+    }
+    if(navigator.share){
+      navigator.share({title:a.title,text:a.dek||a.title,url:url}).catch(function(){});
+    } else if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(copied,function(){ window.prompt("Copy this link:",url); });
+    } else {
+      window.prompt("Copy this link:",url);
+    }
+  };
   function costFooterHTML(a){
     var c=articleCost(a.id);
     if(!c || !(c.cost>0)) return "";
@@ -2024,8 +2042,11 @@
       glideTo(centerTarget(pgEl));
       var hint=document.getElementById("mhint"); if(hint) hint.style.opacity=0;
     }
-    window.__magTurn=function(dir){ goTo(targetIdx+dir, true); };
-    window.__magGo=function(idx){ goTo(idx, true); };
+    // Keys/buttons ride the same clean glide as the wheel — the 3D mturn-in flip used to
+    // stack a forced reflow + 440ms transform/filter animation on top of the scroll glide,
+    // which is exactly the stutter the wheel path never had.
+    window.__magTurn=function(dir){ goTo(targetIdx+dir, false); };
+    window.__magGo=function(idx){ goTo(idx, false); };
     // Wheel → page steps in real time. A slow notch moves one page; a quick spin piles up
     // distance and skims through many, all under one smooth glide. Handles line/page delta modes.
     var wheelAcc=0, PAGE_DELTA=90;
@@ -2176,24 +2197,37 @@
   };
 
   /* ---------- nav ---------- */
+  // Reader-journey bar: daily habit first, learning next, reference, then the flagship.
+  // The nine section desks live in one compact "Sections ▾" dropdown instead of nine links.
   function renderNav(active){
+    var inSection=active.indexOf("section:")===0;
+    var curSec=inSection?active.slice(8):null;
     var h='<a href="#/" class="'+(active==="home"?"active":"")+'">Home</a>';
-    h+=SECTIONS.map(function(s){
-      return '<a href="#/section/'+s.key+'" class="'+(active==="section:"+s.key?"active":"")+'">'+esc(s.label)+'</a>';
-    }).join("");
-    h+='<span class="nav-sep"></span>';
-    h+='<a href="#/resources" class="'+(active==="resources"?"active":"")+'">Resources</a>';
-    h+='<a href="#/guides" class="'+(active==="guides"?"active":"")+'">Guides</a>';
     h+='<a href="#/buzz" class="'+(active==="buzz"?"active":"")+'">The Buzz</a>';
+    h+='<a href="#/guides" class="'+(active==="guides"?"active":"")+'">Guides</a>';
     h+='<a href="#/scoreboard" class="'+(active==="scoreboard"?"active":"")+'">Scoreboard</a>';
+    h+='<span class="sec-wrap"><button class="sec-btn'+(inSection?' active':'')+'" id="sec-btn" aria-haspopup="true" aria-expanded="false">Sections <span class="sec-caret">▾</span></button>'+
+      '<div class="sec-menu" id="sec-menu" hidden>'+SECTIONS.map(function(s){
+        var col=SECTION_COLORS[s.label]||"#8b7cf7";
+        return '<a href="#/section/'+s.key+'" class="'+(curSec===s.key?"on":"")+'"><span class="sec-dot" style="background:'+col+'"></span>'+esc(s.label)+'</a>';
+      }).join("")+'</div></span>';
+    h+='<a href="#/resources" class="'+(active==="resources"?"active":"")+'">Resources</a>';
     h+='<a href="#/archive" class="'+(active==="archive"?"active":"")+'">Archive</a>';
     h+='<span class="nav-sep"></span>';
     h+='<a href="#/magazine" class="masthead-link '+(active==="magazine"?"active":"")+'">Magazine ◈</a>';
     h+='<a href="#/masthead" class="masthead-link '+(active==="masthead"?"active":"")+'">Masthead</a>';
     document.getElementById("nav").innerHTML=h;
+    var sb=document.getElementById("sec-btn"), sm=document.getElementById("sec-menu");
+    if(sb&&sm){ sb.onclick=function(e){ e.stopPropagation(); sm.hidden=!sm.hidden; sb.setAttribute("aria-expanded",String(!sm.hidden)); }; }
     var acct=document.getElementById("acct-btn");
     if(acct){ var l=libGet(); acct.textContent=l.account?(l.account.plan==="plus"?"◈":"●"):"○"; acct.title=l.account?("Account: "+l.account.email):"Create a free account"; }
   }
+  // Close the Sections menu on any click outside it (nav re-renders reset it on navigation).
+  document.addEventListener("click",function(e){
+    var m=document.getElementById("sec-menu");
+    if(m && !m.hidden && !(e.target.closest && e.target.closest(".sec-wrap"))){ m.hidden=true;
+      var b=document.getElementById("sec-btn"); if(b) b.setAttribute("aria-expanded","false"); }
+  });
 
   /* ---------- router ---------- */
   /* ================= LIVE TV (curated "what's live" board) ================= */
