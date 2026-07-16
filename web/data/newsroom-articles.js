@@ -957,5 +957,310 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-15T01:40:00Z"
+  },
+  {
+    "slug": "fli-ai-safety-index-summer-2026",
+    "title": "Nine AI labs took a safety exam. The best grade was a C+",
+    "dek": "The Future of Life Institute's Summer 2026 AI Safety Index grades the industry mediocre at best — and its sharpest finding is that labs have weakened or voided their own promises to pause at the red lines they drew.",
+    "persona": "marcus-webb",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "The Future of Life Institute graded nine AI labs on safety; the best grade was C+.",
+      "Anthropic (C+) led; OpenAI and Google DeepMind got C; xAI, DeepSeek and Mistral failed.",
+      "The sharper finding: labs have weakened or voided pledges to pause at their own redlines.",
+      "Seven independent experts scored six domains, from risk assessment to information sharing.",
+      "Caveat: grades rest on public disclosure and panel judgment, not regulatory inspection."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The Future of Life Institute published its Summer 2026 AI Safety Index in July, grading nine frontier AI companies on safety practice. Nobody passed impressively. Anthropic earned the highest overall grade at C+ (2.66 on the index's 4-point scale), followed by OpenAI at C (2.28) and Google DeepMind at C (2.01). Meta received a D+, Z.ai and Alibaba Cloud each a D−, and three companies — xAI, DeepSeek and Mistral — received failing grades.",
+        "citation_urls": [
+          "https://futureoflife.org/ai-safety-index-summer-2026/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The grades come from a seven-member independent review panel that includes Stuart Russell of UC Berkeley, David Krueger of the University of Montreal and Robert Trager of Oxford, scoring each company across six domains: risk assessment, current harms, safety frameworks, existential safety, governance and accountability, and information sharing.",
+        "citation_urls": [
+          "https://futureoflife.org/ai-safety-index-summer-2026/",
+          "https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Report_010726_2Pager.pdf"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "AI Safety Index, Summer 2026 — overall scores",
+          "unit": "score (4.0 scale)",
+          "source": "Future of Life Institute, July 2026",
+          "data": [
+            {
+              "label": "Anthropic (C+)",
+              "value": 2.66,
+              "hi": true
+            },
+            {
+              "label": "OpenAI (C)",
+              "value": 2.28
+            },
+            {
+              "label": "Google DeepMind (C)",
+              "value": 2.01
+            },
+            {
+              "label": "Meta (D+)",
+              "value": 1.32
+            },
+            {
+              "label": "Z.ai (D−)",
+              "value": 0.88
+            },
+            {
+              "label": "Alibaba Cloud (D−)",
+              "value": 0.87
+            },
+            {
+              "label": "xAI (F)",
+              "value": 0.65
+            },
+            {
+              "label": "DeepSeek (F)",
+              "value": 0.47
+            },
+            {
+              "label": "Mistral (F)",
+              "value": 0.33
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The finding under the grades",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Letter grades make headlines, but the report's sharpest finding is about promises. Several leading developers had previously published safety frameworks pledging to pause development or restrict releases on their own if systems approached defined risk thresholds. The panel found that industry leaders have, in its words, “weakened or voided pledges to pause unilaterally if redlines are approached” — a pattern it characterizes as moving the goalposts, and one it says has undermined safety frameworks across the board.",
+        "citation_urls": [
+          "https://futureoflife.org/ai-safety-index-summer-2026/",
+          "https://time.com/article/2026/07/07/ai-safety-rankings-openai-anthropic-meta/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That reframes what a C+ means. These are not grades against an abstract ideal; much of what the index measures is whether companies keep standards they set for themselves. The industry's best performer leads five of six domains — Anthropic takes a B+ in information sharing and a B in governance and accountability, while OpenAI leads risk assessment — and still averages out to a C+. The panel's implication is uncomfortable in both directions: the leaders are mediocre by their own stated standards, and the gap between the leaders and the failing tier is enormous at exactly the moment these systems are being wired into security tooling, health workflows and autonomous agents.",
+        "citation_urls": [
+          "https://futureoflife.org/ai-safety-index-summer-2026/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "An index is a lens, not an inspection. The grades rest on public documentation, company questionnaire responses and expert judgment — not on regulatory audit or internal access, so a company that discloses little can be graded harshly for opacity rather than for practice, and a polished framework can score well on paper regardless of how it is applied. The panel is transparent about its methodology, but reasonable people weight these domains differently, and no government has adopted this scale. The index's real function is comparative and longitudinal: the same panel, the same rubric, every edition — which is precisely what makes the weakened-pledge finding hard to dismiss.",
+        "citation_urls": [
+          "https://futureoflife.org/ai-safety-index-summer-2026/",
+          "https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Report_010726_2Pager.pdf"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Whether any lab publicly restores a hard capability-pause commitment; whether the next edition shows movement in the failing tier; and whether procurement rules or the US review regime begin referencing independent indices like this one."
+      },
+      {
+        "label": "How to read safety grades",
+        "text": "Check what a grade measures before quoting it. This index scores disclosure and self-set standards — a C+ from an independent panel and a pass from a regulator are different facts, and neither substitutes for the other."
+      }
+    ],
+    "links": [
+      {
+        "label": "Future of Life Institute — AI Safety Index, Summer 2026",
+        "url": "https://futureoflife.org/ai-safety-index-summer-2026/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Future of Life Institute — AI Safety Index Summer 2026 (primary)",
+        "url": "https://futureoflife.org/ai-safety-index-summer-2026/"
+      },
+      {
+        "label": "FLI — AI Safety Index executive summary, July 2026 (primary, PDF)",
+        "url": "https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Report_010726_2Pager.pdf"
+      },
+      {
+        "label": "TIME — The latest AI safety rankings are in. Nobody gets an A",
+        "url": "https://time.com/article/2026/07/07/ai-safety-rankings-openai-anthropic-meta/"
+      },
+      {
+        "label": "MIT Sloan Management Review ME — Anthropic tops 2026 AI Safety Index",
+        "url": "https://www.mitsloanme.com/article/anthropic-tops-2026-ai-safety-index-but-no-ai-firm-earns-above-a-c/"
+      }
+    ],
+    "id": "newsroom-fli-safety-index",
+    "image": "assets/img/newsroom/newsroom-fli-safety-index.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-16T05:40:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Owner tip batch of five stories. This one survived triage; verification found the tip's framing a week stale, so it was reassigned as a synthesis on the report's pledge finding rather than breaking news."
+        },
+        {
+          "name": "Claim triage",
+          "agent": "research",
+          "note": "The tip listed grades for six labs; the index covers nine. Z.ai and Alibaba Cloud grades were added from the primary source, and 'SpaceXAI' in circulating coverage was normalized to xAI per FLI's own report."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "All nine grades and numeric scores verified against futureoflife.org and the July 2026 executive-summary PDF. Panel membership and the six domains confirmed. The weakened-pledges quote taken verbatim from the report."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Reframed from letter-grade listicle to the load-bearing finding: labs weakening their own pause commitments. Methodology limits stated in a dedicated section."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction from the July 15 tip batch. Grades corrected against the primary source before release."
+      }
+    },
+    "publishedAt": "2026-07-16T05:40:00Z"
+  },
+  {
+    "slug": "tom-blomfield-anthropic-compute-team",
+    "title": "Monzo's founder just joined Anthropic — to buy compute, not build product",
+    "dek": "Tom Blomfield is taking leave from Y Combinator to join co-founder Tom Brown's compute team. The signal: securing compute is now a founder-grade commercial problem, not a procurement line item.",
+    "persona": "sage-okafor",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "tldr": [
+      "Monzo co-founder Tom Blomfield joined Anthropic's compute team under co-founder Tom Brown.",
+      "He is taking leave from Y Combinator, where he has been a group partner since 2021.",
+      "His stated reason: compute availability is 'one of the most important issues to solve.'",
+      "It extends a hiring run — OpenAI co-founder Andrej Karpathy joined Anthropic's pre-training team in May.",
+      "Caveat: Anthropic hasn't detailed his remit, and a leave of absence is not a resignation."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Tom Blomfield — co-founder and former chief executive of the UK digital bank Monzo, and before that of the payments company GoCardless — announced on July 13 that he is joining Anthropic as a member of technical staff on its compute team, working with co-founder and chief compute officer Tom Brown. He is taking a leave of absence from Y Combinator, where he has been a group partner since 2021.",
+        "citation_urls": [
+          "https://sifted.eu/articles/anthropic-monzo-founder-tom-blomfield",
+          "https://www.finextra.com/newsarticle/48080/monzo-co-founder-blomfield-joins-anthropic"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Powerful AI has the potential to improve the life of every human on earth and, as we enter the early stages of recursive self-improvement, availability of compute becomes one of the most important issues to solve.” — Tom Blomfield, announcing the move",
+        "citation_urls": [
+          "https://sifted.eu/articles/anthropic-monzo-founder-tom-blomfield",
+          "https://thenextweb.com/news/tom-blomfield-monzo-founder-anthropic-compute"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The interesting part is where he landed. Blomfield's background is consumer fintech, not infrastructure — and Anthropic put him on the compute team anyway. That is a statement about what compute has become: less a technical procurement problem than one of the most complex commercial and operational challenges in the industry, spanning power contracts, multi-year capacity commitments, chip-supply negotiations and allocation economics. Those are problems where founder-operator judgment is the scarce input.",
+        "citation_urls": [
+          "https://sifted.eu/articles/anthropic-monzo-founder-tom-blomfield",
+          "https://thenextweb.com/news/tom-blomfield-monzo-founder-anthropic-compute"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "It also extends a deliberate-looking hiring run. Andrej Karpathy — OpenAI founding member and former Tesla AI director — joined Anthropic's pre-training team on May 19 to help launch a group using Claude to accelerate pretraining research. Two months later the company adds a fintech founder to the team that buys and allocates the compute those runs consume. Read together, the pattern is a lab staffing its bottlenecks: the research frontier on one end, the physical and commercial supply of compute on the other.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
+          "https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What is not established: Anthropic has not detailed Blomfield's remit, the compute team's structure, or whether the role touches the company's reported custom-chip conversations. A leave of absence is also not a resignation — Y Combinator remains his affiliation of record. The concrete fact is narrower and still telling: a founder who built two consumer companies decided the most important place to work on AI is the part that keeps the machines fed.",
+        "citation_urls": [
+          "https://sifted.eu/articles/anthropic-monzo-founder-tom-blomfield"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Whether Anthropic formalizes what the compute team owns (power, chips, capacity deals); whether more operator-founders land in infrastructure roles across the labs; and whether YC's bench keeps thinning toward frontier labs."
+      }
+    ],
+    "links": [
+      {
+        "label": "Sifted — Anthropic recruits Monzo cofounder Tom Blomfield for AI compute team",
+        "url": "https://sifted.eu/articles/anthropic-monzo-founder-tom-blomfield"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sifted — Anthropic recruits Monzo cofounder Tom Blomfield for AI compute team",
+        "url": "https://sifted.eu/articles/anthropic-monzo-founder-tom-blomfield"
+      },
+      {
+        "label": "Finextra — Monzo co-founder Blomfield joins Anthropic",
+        "url": "https://www.finextra.com/newsarticle/48080/monzo-co-founder-blomfield-joins-anthropic"
+      },
+      {
+        "label": "The Next Web — Monzo founder Tom Blomfield joins Anthropic's compute team",
+        "url": "https://thenextweb.com/news/tom-blomfield-monzo-founder-anthropic-compute"
+      },
+      {
+        "label": "TechCrunch — OpenAI co-founder Andrej Karpathy joins Anthropic's pre-training team (May 19)",
+        "url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/"
+      }
+    ],
+    "id": "newsroom-blomfield-compute",
+    "image": "assets/img/newsroom/newsroom-blomfield-compute.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-16T05:42:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Owner tip pitched 'Karpathy joins Anthropic' as this week's biggest talent move. Verification dated that hire to May 19 — two months old — so the story was reassigned to the genuinely fresh hire and reframed around the hiring run."
+        },
+        {
+          "name": "Claim triage",
+          "agent": "research",
+          "note": "The tip also bundled a John Jumper claim that could not be verified against any primary or independent source; it was dropped rather than published."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "Role, team, reporting line and leave-of-absence status confirmed across Sifted, Finextra and TNW. Blomfield's quote taken verbatim from his announcement as carried by multiple outlets. Karpathy context confirmed via TechCrunch and CNBC, dated May 19."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Filed as a brief. The two-month-old Karpathy hire appears as context, not news. What-is-not-established paragraph covers the undefined remit."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction from the July 15 tip batch. The stale and unverifiable claims in the originating tip were declined and are recorded above."
+      }
+    },
+    "publishedAt": "2026-07-16T05:42:00Z"
   }
 ];
