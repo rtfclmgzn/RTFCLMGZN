@@ -1051,7 +1051,12 @@
       ],
       "text_space": "white wall upper-left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-asml-euv-price-tsmc",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-045-visored-humanoids-welding",
@@ -1854,7 +1859,12 @@
       ],
       "text_space": "dark walls left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-kimi-k3-open-model",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-079-megatower-over-the-rainy-city",
@@ -2073,7 +2083,12 @@
       ],
       "text_space": "upper haze",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-tsmc-q2-2026-earnings",
+          "used_at": "2026-07-16"
+        }
+      ]
     }
   ]
 }

@@ -1262,5 +1262,421 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-16T05:42:00Z"
+  },
+  {
+    "slug": "tsmc-q2-2026-record-profit-earnings",
+    "title": "TSMC's profit jumped 77% while revenue rose 36%. That gap is the whole story",
+    "dek": "Record second-quarter results: US$40.2 billion in revenue, a 67.7% gross margin, and net income up far faster than sales. The operating leverage — not the top line — is what the AI buildout is paying for.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "TSMC reported record Q2 revenue of US$40.2 billion, up 33.7% in dollars and 36% in local currency.",
+      "Net income rose 77.4% year over year — more than double the revenue growth rate.",
+      "Gross margin hit 67.7% and operating margin 60.3%, both company records.",
+      "The gap between profit and revenue growth is operating leverage: advanced-node demand at premium pricing.",
+      "Caveat: results are audited history, not guidance — the AI-demand thesis still has to keep paying the capex bill."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "TSMC reported second-quarter results on July 16 that are easiest to read through one number against another. Consolidated revenue was NT$1,270.38 billion — about US$40.2 billion — up 36.0% from a year earlier in local currency and 33.7% in dollars. Net income was NT$706.56 billion, and diluted earnings per share were NT$27.25 (US$4.31 per ADR). The revenue figure is a record; the profit figure is a bigger one.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Here is the number under the number: net income rose 77.4% year over year while revenue rose 36.0%. Profit grew more than twice as fast as sales. When earnings outrun revenue by that margin, the story is not demand — demand is the top line — it is operating leverage: the company is keeping much more of each additional dollar than it used to.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The margins are where the leverage lives",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Gross margin for the quarter was 67.7%, operating margin 60.3%, and net profit margin 55.6% — all records for the company. A foundry converting more than two-thirds of revenue into gross profit is not competing on price; it is pricing to scarcity. The advanced nodes that AI accelerators require are supply-constrained, and TSMC is close to the only place they can be made at volume. That is what a 67.7% gross margin looks like from the outside: pricing power with almost no substitute.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sequentially, the momentum held rather than faded. Revenue rose 12.0% from the first quarter and net income 23.4% — profit again outpacing sales quarter over quarter, not just against last year. It is the fifth consecutive quarter in which net income set a record. June alone brought in NT$442.68 billion, up 67.9% from a year earlier and the highest monthly revenue in the company's history — the same figure our Compute desk flagged when the June sales update landed early.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Revenue tells you the demand is real. Margins tell you who has the leverage. This quarter, both point the same direction — at the one company the AI buildout cannot route around.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This is audited history, not a forecast of where it goes. A 67.7% gross margin is extraordinary and, by definition, hard to sustain: it invites capacity from every rival that can raise the capital, and it rests on an AI-accelerator demand curve that has been asserted with enormous conviction but not yet tested through a full cycle. TSMC is also carrying rising equipment costs — its own supplier is pushing for higher tool prices (our Compute desk covers that pressure separately). The quarter proves the pricing power exists today. Whether the demand behind it justifies the industry's capital spending is the question the next several quarters, not this one, have to answer.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Read the two growth rates together",
+        "text": "Revenue up 36% is a demand signal; net income up 77% is a leverage signal. When profit outruns sales by that much, the margin line — not the top line — is where the news is."
+      },
+      {
+        "label": "Watch coupling to a single demand curve",
+        "text": "Record margins at a supply-constrained monopoly are strongest exactly when demand is scarce and hottest. That is also when they are most exposed if the AI-capex thesis slows."
+      }
+    ],
+    "links": [
+      {
+        "label": "TSMC — Second Quarter 2026 results (SEC Form 6-K)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+      }
+    ],
+    "sources": [
+      {
+        "label": "SEC — TSMC Form 6-K, Q2 2026 results with guidance (primary)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+      },
+      {
+        "label": "TechPowerUp — TSMC Reports Record Q2 2026 Earnings Results",
+        "url": "https://www.techpowerup.com/350807/tsmc-reports-record-q2-2026-earning-results"
+      },
+      {
+        "label": "SemiWiki — TSMC 2026-Q2 results discussion",
+        "url": "https://semiwiki.com/forum/threads/tsmc-2026-q2-results.25528/"
+      }
+    ],
+    "id": "newsroom-tsmc-q2-2026-earnings",
+    "image": "assets/img/newsroom/newsroom-tsmc-q2-2026-earnings.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-16T14:30:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "TSMC's full Q2 earnings landed July 16 — the follow-through to live-014's June-revenue teaser. Assigned to Markets as a synthesis on a primary filing."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "Every figure checked against TSMC's SEC Form 6-K: revenue NT$1,270.38B / US$40.2B, net income NT$706.56B, EPS NT$27.25, gross margin 67.7%, operating margin 60.3%, +36.0% revenue and +77.4% net income YoY. June NT$442.68B confirmed against the earlier release."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Framed on the profit-vs-revenue growth gap rather than the record top line. Disclaimer set to not-financial-advice; forward-looking claims kept out of the lede."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction from primary-source earnings."
+      }
+    },
+    "publishedAt": "2026-07-16T14:30:00Z"
+  },
+  {
+    "slug": "asml-euv-price-increase-tsmc-pushback",
+    "title": "The one company TSMC can't replace just told it prices are going up",
+    "dek": "ASML — the sole maker of EUV lithography machines — is sold out through 2027 and pressing TSMC for higher tool prices, with a ~10% hike on older DUV systems. TSMC is resisting. Whoever wins, the cost lands in every AI chip.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "ASML, the only maker of EUV chip machines, is discussing higher prices with TSMC after a strong quarter.",
+      "It plans roughly 10% higher prices on older DUV systems; some Chinese buyers have agreed.",
+      "ASML says its EUV tools are nearly sold out through the end of 2027.",
+      "TSMC is resisting increases on both EUV and DUV — a rare standoff between monopoly supplier and dominant buyer.",
+      "Caveat: pricing talks are reported, not confirmed terms, and any increase flows into advanced AI-chip costs over time."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "There is exactly one company on earth that makes extreme-ultraviolet lithography machines — the tools required to print the most advanced chips — and it is ASML. After reporting a strong second quarter, ASML has begun pressing its largest customer, TSMC, for higher prices, according to reporting citing The Information and Reuters. It also told some customers, including Chinese chipmakers, that it plans to charge about 10% more for its older deep-ultraviolet (DUV) systems. Some Chinese firms agreed. TSMC is resisting increases on both.",
+        "citation_urls": [
+          "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The leverage behind the ask is visible in ASML's own numbers. The company raised its 2026 sales forecast to €43–45 billion, up from prior guidance of €36–40 billion, and said its cutting-edge EUV systems are nearly sold out through the end of 2027. When a sole supplier's most advanced product is spoken for eighteen months out, the conversation about price is no longer a negotiation between equals.",
+        "citation_urls": [
+          "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A monopoly leaning on a near-monopoly",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This is an unusually pure test of pricing power, because both sides are close to irreplaceable. ASML has no competitor for EUV; TSMC has no serious rival for leading-edge foundry capacity. Normally a supplier that raises prices risks losing the account. Neither of these two can walk away from the other — TSMC cannot buy EUV anywhere else, and ASML cannot replace TSMC's volume. So the fight is not about whether the tools get bought. It is about how the surplus from the AI boom gets split between the company that makes the machines and the company that runs them.",
+        "citation_urls": [
+          "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "ASML's chief financial officer, Roger Dassen, framed the runway plainly, citing a \"pretty strong runway for potential price improvements going forward\" for its Low-NA EUV systems. Read that as a company telling investors, out loud, that it believes it has been underpricing scarcity.",
+        "citation_urls": [
+          "https://finance.yahoo.com/markets/stocks/articles/asml-eyes-price-increases-chip-165859035.html"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "When the only supplier of a tool is sold out for eighteen months, the price question stops being a negotiation and becomes an announcement.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Why it reaches your chip",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Tool prices are upstream of everything. A more expensive EUV machine raises the cost of a wafer, which raises the cost of a leading-edge die, which raises the cost of an AI accelerator, which raises the bill for the data center renting it out. None of this moves fast — equipment contracts and depreciation schedules run for years — but the direction is set. The AI industry has spent two years worrying about GPU supply and, more recently, memory. The lithography layer underneath both is where the most concentrated pricing power in the entire chain actually sits.",
+        "citation_urls": [
+          "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "These are reported discussions, not disclosed contracts. The 10% figure applies to DUV, where some buyers have reportedly agreed; the EUV increase TSMC is resisting has no confirmed number attached. TSMC has not publicly detailed its position, and neither company has published the terms. What is established is the structural fact underneath the reporting: the supplier is sold out, believes it has been underpricing, and has said so — and the one customer with the most to lose is pushing back. How that resolves sets the cost floor for advanced chips for years, whether or not the specific percentages leak.",
+        "citation_urls": [
+          "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Whether TSMC's resistance holds or a price increase is confirmed in either company's filings; whether the DUV hike sticks for non-Chinese buyers; and whether ASML's raised guidance is revised again as the 2027 EUV order book fills."
+      },
+      {
+        "label": "Follow the leverage, not the headline",
+        "text": "The AI-chip cost story is usually told at the GPU or memory layer. The most concentrated pricing power sits one step further up, at the sole EUV supplier — that is where cost floors are actually set."
+      }
+    ],
+    "links": [
+      {
+        "label": "TrendForce — ASML reportedly seeks higher tool prices as TSMC pushes back",
+        "url": "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "TrendForce — ASML reportedly seeks higher tool prices; DUV could see 10% hike",
+        "url": "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/"
+      },
+      {
+        "label": "Yahoo Finance — ASML eyes price increases on chip tools after upbeat Q2 earnings",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/asml-eyes-price-increases-chip-165859035.html"
+      },
+      {
+        "label": "Seoul Economic Daily — ASML signals price hikes, escalating tension with top client TSMC",
+        "url": "https://en.sedaily.com/international/2026/07/16/asml-signals-price-hikes-escalating-tension-with-top-client"
+      }
+    ],
+    "id": "newsroom-asml-euv-price-tsmc",
+    "image": "assets/img/newsroom/newsroom-asml-euv-price-tsmc.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-16T15:00:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "ASML's price push against TSMC broke alongside its Q2. Assigned to Compute as the supply-chain/equipment story beneath the day's TSMC earnings."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "EUV sole-supplier status, the ~10% DUV increase, some Chinese buyers agreeing, TSMC resisting, the €43–45B raised guidance, near-sold-out EUV through 2027, and the Dassen quote all checked against TrendForce and ASML Q2 coverage. Labeled throughout as reported discussions, not confirmed terms."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Framed as a monopoly-versus-near-monopoly pricing standoff. not-financial-advice set because it turns on ASML's guidance and share reaction."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction; reported figures attributed, not stated as settled."
+      }
+    },
+    "publishedAt": "2026-07-16T15:00:00Z"
+  },
+  {
+    "slug": "moonshot-kimi-k3-open-model-launch",
+    "title": "The Kimi K3 we declined to report yesterday shipped today. Here's the honest read",
+    "dek": "Moonshot released a 2.8-trillion-parameter open-weight model with a million-token context. It claims wins over Opus 4.8 and GPT-5.5 on some tasks — on its own benchmarks, with weights not fully out until July 27. That gap is the story.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Moonshot launched Kimi K3 on July 16: a ~2.8-trillion-parameter open-weight mixture-of-experts model.",
+      "It has a 1-million-token context and ships as K3 Max and a parallel K3 Swarm Max variant.",
+      "Moonshot claims wins over Claude Opus 4.8 and GPT-5.5 on some coding and agent benchmarks.",
+      "By its own account K3 still trails Anthropic's Fable 5 and OpenAI's GPT-5.6 Sol overall.",
+      "Caveat: every benchmark is self-reported, and full open weights are not promised until July 27."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "This desk declined to report Kimi K3 on July 15, when it was a launch-promo rumor with no company statement behind it. On July 16, Moonshot AI actually shipped it, and independent outlets — Bloomberg, CNBC, TechCrunch — covered the release. So it clears the bar to report now. The discipline that held it yesterday is the same discipline that should shape how you read it today: what shipped, against what baseline, measured by whom.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html",
+          "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What shipped is substantial on paper. Kimi K3 is a new-architecture mixture-of-experts model of roughly 2.8 trillion total parameters — among the largest open-weight models ever announced — with a 1-million-token context window aimed at long-horizon coding and agent workloads. It launched in two variants: K3 Max for chat and agent tasks, and K3 Swarm Max for large-scale parallel processing, first inside Kimi Code and the Kimi app.",
+        "citation_urls": [
+          "https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The claim, and the asterisks on it",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Moonshot says K3 beats Claude Opus 4.8 and GPT-5.5 on benchmarks including coding and general agents, and by its own account still trails Anthropic's Fable 5 and OpenAI's GPT-5.6 Sol on overall performance. Take the whole sentence at face value and it is already a careful, bounded claim: competitive with strong prior-generation models, behind the current frontier leaders. But every number in it is Moonshot's own. There is no independent aggregate yet — the model launched today — and until there is, 'beats Opus 4.8 on coding' is a vendor result, not a measurement.",
+        "citation_urls": [
+          "https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals",
+          "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "There is a second asterisk that matters more than the benchmarks. Moonshot has promised the full open-weight release — the downloadable parameters plus a technical report on architecture, training, and evaluations — by July 27. That means at launch, the thing that makes an open model verifiable is not yet in anyone's hands. You cannot reproduce a result on weights you cannot download. Until the release lands, K3 is an open-weight model in intention and a closed one in practice.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "A 2.8-trillion-parameter open model is a serious claim. 'Open by July 27, benchmarked by us until then' is the part a builder has to hold in mind before trusting the number.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Why it still matters",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Strip the launch-day framing and the structural signal is real: the gap between the best open-weight models and the closed frontier keeps compressing, and the compression keeps coming from Chinese labs. A model that credibly claims parity with last-generation flagship systems, at open-weight, changes the economics for anyone who would rather self-host than rent — because the moment independent testing confirms even part of the claim, the price of 'good enough' intelligence drops again. That is the same undertow our cost-collapse coverage traced: cheap, capable, downloadable models pulling the whole market's pricing down. K3 is the newest data point in it — pending the one thing that would make it a measurement instead of a claim.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "No independent benchmark score exists yet, so K3 is not ranked on our Scoreboard — it appears there as released-but-unmeasured until an independent aggregate lands. The parameter count, the architecture details, the context window, and the head-to-head wins are all Moonshot's own figures pending the July 27 technical report. And 'open weights' is not yet true in the sense that matters: no one outside Moonshot has run the model on its own parameters. The next honest checkpoint is not another benchmark chart from the lab. It is the weight release, the technical report, and the first independent evaluation — in that order.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/",
+          "https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "The July 27 open-weight release and technical report; the first independent aggregate (Artificial Analysis or equivalent) that puts a real number on K3; and whether the self-reported wins over Opus 4.8 and GPT-5.5 survive outside testing."
+      },
+      {
+        "label": "How to read a launch-day benchmark",
+        "text": "Ask whose grader produced it and whether you can reproduce it. A vendor's own score on weights you can't yet download is a claim; it becomes evidence only when an independent party measures the released model."
+      }
+    ],
+    "links": [
+      {
+        "label": "Bloomberg — Moonshot unveils Kimi K3, closing the gap with US rivals",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Bloomberg — Moonshot Unveils Kimi K3 AI Model, Narrowing Gap With US Rivals",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals"
+      },
+      {
+        "label": "CNBC — China's Moonshot AI unveils Kimi K3 model it says rivals OpenAI, Anthropic",
+        "url": "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html"
+      },
+      {
+        "label": "TechCrunch — Moonshot's Kimi 3 expected to close the gap with Anthropic's Opus 4.8",
+        "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/"
+      }
+    ],
+    "id": "newsroom-kimi-k3-open-model",
+    "image": "assets/img/newsroom/newsroom-kimi-k3-open-model.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-16T16:00:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Kimi K3 was declined July 15 as an unverifiable rumor. It shipped July 16 with Bloomberg/CNBC/TechCrunch coverage, clearing the bar. Assigned to Frontier."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "Release date, ~2.8T-parameter MoE architecture, 1M context, K3 Max and K3 Swarm Max variants, the self-reported wins over Opus 4.8 and GPT-5.5, the acknowledged gap to Fable 5 and GPT-5.6 Sol, and the July 27 open-weight/technical-report promise all confirmed across Bloomberg, CNBC and TechCrunch. Every performance figure attributed to Moonshot; no independent score exists yet."
+        },
+        {
+          "name": "Scoreboard sync",
+          "agent": "publishing",
+          "note": "K3 added to the Scoreboard as released-but-unmeasured (score null) pending an independent aggregate, per the independent-index-only rule. scannedAt refreshed."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Framed on the self-reported-benchmark and not-yet-released-weights caveats rather than the launch claims. No financial disclaimer needed."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction after independent corroboration of the launch the desk had previously declined."
+      }
+    },
+    "publishedAt": "2026-07-16T16:00:00Z"
   }
 ];

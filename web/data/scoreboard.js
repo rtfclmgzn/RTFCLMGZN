@@ -7,9 +7,9 @@
 // RULES: never substitute vendor self-reported benchmark claims for the independent index;
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "July 14, 2026",
-  scannedAt: "2026-07-14T19:08:00Z",
-  basisNote: "Strength is the current Artificial Analysis Intelligence Index for a representative high-capability reasoning mode. Prices are vendor list prices stored separately from the independent score. This snapshot was cross-checked against the live Artificial Analysis model leaderboard; SWE-bench and Terminal-Bench remain supporting coding signals rather than being blended by hand into an opaque house score.",
+  updated: "July 16, 2026",
+  scannedAt: "2026-07-16T16:00:00Z",
+  basisNote: "Strength is the current Artificial Analysis Intelligence Index for a representative high-capability reasoning mode. Prices are vendor list prices stored separately from the independent score. This snapshot was cross-checked against the live Artificial Analysis model leaderboard; SWE-bench and Terminal-Bench remain supporting coding signals rather than being blended by hand into an opaque house score. Scanned July 16 2026 on the publication of Kimi K3, which is listed as released-but-unmeasured pending an independent aggregate.",
   rows: [
     { model:"Claude Fable 5",      mode:"with fallback", lab:"Anthropic", score:60, pin:10,   pout:50, status:"released",
       note:"Current independent leader by one point. Maximum capability, but still the most expensive model in this comparison." },
@@ -38,7 +38,9 @@ window.RTFC_SCOREBOARD = {
     { model:"Gemini 3.1 Pro Preview", mode:"default",    lab:"Google",    score:46, pin:null, pout:null, status:"preview",
       note:"The current independently measured Google Pro entry. Pricing is omitted here until the Data Desk verifies the exact public API rate used by the benchmark provider." },
     { model:"DeepSeek V4 Pro",     mode:"max",           lab:"DeepSeek",  score:44, pin:null, pout:null, status:"released",
-      note:"Lower raw index than the frontier leaders, but a notable open-market value candidate once exact provider pricing is normalized." }
+      note:"Lower raw index than the frontier leaders, but a notable open-market value candidate once exact provider pricing is normalized." },
+    { model:"Kimi K3",            mode:"max",           lab:"Moonshot",  score:null, pin:null, pout:null, status:"released",
+      note:"Launched July 16 2026 as a ~2.8T-parameter open-weight MoE with a 1M context. Moonshot claims wins over Opus 4.8 and GPT-5.5 on some coding and agent tasks and concedes it trails Fable 5 and GPT-5.6 Sol overall. Unranked here until an independent aggregate scores it; full open weights are promised July 27." }
   ],
   sources: [
     { label:"Artificial Analysis — live LLM leaderboard", url:"https://artificialanalysis.ai/leaderboards/models" },
