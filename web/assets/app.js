@@ -2253,6 +2253,29 @@
     if(sb&&sm){ sb.onclick=function(e){ e.stopPropagation(); sm.hidden=!sm.hidden; sb.setAttribute("aria-expanded",String(!sm.hidden)); }; }
     var acct=document.getElementById("acct-btn");
     if(acct){ var l=libGet(); acct.textContent=l.account?(l.account.plan==="plus"?"◈":"●"):"○"; acct.title=l.account?("Account: "+l.account.email):"Create a free account"; }
+    navScrollHint();
+  }
+  // Mobile discovery nudge: the top nav scrolls horizontally, but a first-time
+  // viewer can't tell there's more past the edge. Once per session, gently peek
+  // the hidden items into view and glide back so the swipe affordance is obvious.
+  var navHintDone=false;
+  function navScrollHint(){
+    if(navHintDone) return;
+    var nav=document.getElementById("nav"); if(!nav) return;
+    if(window.innerWidth>840) return;                       // mobile widths only
+    if(nav.scrollWidth-nav.clientWidth<24) return;          // nothing hidden to reveal
+    try{ if(sessionStorage.getItem("navHint")){ navHintDone=true; return; } }catch(e){}
+    navHintDone=true;
+    try{ sessionStorage.setItem("navHint","1"); }catch(e){}
+    var reveal=Math.min(nav.scrollWidth-nav.clientWidth, Math.round(nav.clientWidth*0.6));
+    function tween(to,dur,done){
+      var start=nav.scrollLeft, d=to-start, t0=null;
+      (function step(now){ if(t0==null)t0=now; var p=Math.min(1,(now-t0)/dur);
+        var e=p<0.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;        // easeInOutCubic
+        nav.scrollLeft=start+d*e; if(p<1) requestAnimationFrame(step); else if(done) done();
+      })(performance.now());
+    }
+    setTimeout(function(){ tween(reveal,650,function(){ setTimeout(function(){ tween(0,700); },520); }); },650);
   }
   // Close the Sections menu on any click outside it (nav re-renders reset it on navigation).
   document.addEventListener("click",function(e){
