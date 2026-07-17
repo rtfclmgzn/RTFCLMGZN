@@ -2261,21 +2261,26 @@
   var navHintDone=false;
   function navScrollHint(){
     if(navHintDone) return;
-    var nav=document.getElementById("nav"); if(!nav) return;
     if(window.innerWidth>840) return;                       // mobile widths only
-    if(nav.scrollWidth-nav.clientWidth<24) return;          // nothing hidden to reveal
     try{ if(sessionStorage.getItem("navHint")){ navHintDone=true; return; } }catch(e){}
-    navHintDone=true;
-    try{ sessionStorage.setItem("navHint","1"); }catch(e){}
-    var reveal=Math.min(nav.scrollWidth-nav.clientWidth, Math.round(nav.clientWidth*0.6));
-    function tween(to,dur,done){
-      var start=nav.scrollLeft, d=to-start, t0=null;
-      (function step(now){ if(t0==null)t0=now; var p=Math.min(1,(now-t0)/dur);
-        var e=p<0.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;        // easeInOutCubic
-        nav.scrollLeft=start+d*e; if(p<1) requestAnimationFrame(step); else if(done) done();
-      })(performance.now());
-    }
-    setTimeout(function(){ tween(reveal,650,function(){ setTimeout(function(){ tween(0,700); },520); }); },650);
+    navHintDone=true;                                       // one attempt per session
+    // Measure AFTER layout + fonts settle — at render time scrollWidth still
+    // equals clientWidth, so an immediate overflow check would wrongly bail.
+    setTimeout(function(){
+      var nav=document.getElementById("nav"); if(!nav) return;
+      var max=nav.scrollWidth-nav.clientWidth;
+      if(max<24) return;                                    // nothing hidden to reveal
+      try{ sessionStorage.setItem("navHint","1"); }catch(e){}
+      var reveal=Math.min(max, Math.round(nav.clientWidth*0.6));
+      function tween(to,dur,done){
+        var start=nav.scrollLeft, d=to-start, t0=null;
+        (function step(now){ if(t0==null)t0=now; var p=Math.min(1,(now-t0)/dur);
+          var e=p<0.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;      // easeInOutCubic
+          nav.scrollLeft=start+d*e; if(p<1) requestAnimationFrame(step); else if(done) done();
+        })(performance.now());
+      }
+      tween(reveal,650,function(){ setTimeout(function(){ tween(0,700); },560); });
+    },700);
   }
   // Close the Sections menu on any click outside it (nav re-renders reset it on navigation).
   document.addEventListener("click",function(e){
