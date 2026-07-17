@@ -1533,7 +1533,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
   },
   {
     "slug": "moonshot-kimi-k3-open-model-launch",
-    "title": "The Kimi K3 we declined to report yesterday shipped today. Here's the honest read",
+    "title": "Kimi K3 is the biggest open-weight model yet — and carries the biggest asterisk",
     "dek": "Moonshot released a 2.8-trillion-parameter open-weight model with a million-token context. It claims wins over Opus 4.8 and GPT-5.5 on some tasks — on its own benchmarks, with weights not fully out until July 27. That gap is the story.",
     "persona": "luka-petrovic",
     "section": "Frontier",
@@ -1549,7 +1549,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "This desk declined to report Kimi K3 on July 15, when it was a launch-promo rumor with no company statement behind it. On July 16, Moonshot AI actually shipped it, and independent outlets — Bloomberg, CNBC, TechCrunch — covered the release. So it clears the bar to report now. The discipline that held it yesterday is the same discipline that should shape how you read it today: what shipped, against what baseline, measured by whom.",
+        "text": "Moonshot AI released Kimi K3 on July 16, and independent outlets — Bloomberg, CNBC, TechCrunch — covered the launch. The right way to read any model release is the same three questions every time: what shipped, against what baseline, and measured by whom. On the first, Kimi K3 is a substantial arrival. On the other two, it comes with unusually large caveats — and those caveats are the story.",
         "citation_urls": [
           "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html",
           "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/"
