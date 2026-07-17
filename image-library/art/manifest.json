@@ -1597,7 +1597,12 @@
       ],
       "text_space": "screens are busy — avoid center",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "primer-000",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-068-glass-encased-mainframe-cube",
@@ -1645,7 +1650,12 @@
       ],
       "text_space": "sky top half",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "primer-000",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-070-ar-glasses-in-the-marble-atrium",
@@ -1740,7 +1750,12 @@
       ],
       "text_space": "left wall gray",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "primer-000",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-074-arms-welding-fuselage-sections",
@@ -1965,7 +1980,12 @@
       ],
       "text_space": "dark upper-right",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "primer-000",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-083-blue-server-corridor",
@@ -1987,7 +2007,12 @@
       ],
       "text_space": "ceiling center",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "primer-000",
+          "used_at": "2026-07-16"
+        }
+      ]
     },
     {
       "id": "art-084-model-dashboard-benchmark-panels",

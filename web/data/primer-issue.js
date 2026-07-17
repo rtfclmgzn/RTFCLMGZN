@@ -1,16 +1,18 @@
-// RTFCLMGZN — THE PRIMER (rebuilt 2026-07-11, founder-directed, cover-to-back build).
-// The flagship free magazine: a complete ground-up introduction to AI in five acts,
-// spread-reader format (page count grows — never hardcode it in prose). Takes a reader from "what even is AI?" to
-// fluent-enough-to-have-opinions. FREE forever — this is the publication's front door.
+// RTFCLMGZN — THE PRIMER (rebuilt 2026-07-11; expanded 2026-07-16 to the deeper
+// zero-to-proficient standard). The flagship free magazine: a complete ground-up
+// introduction to AI in five acts, spread-reader format (page count grows — never
+// hardcode it in prose). Takes a reader from "what even is AI?" to genuinely fluent —
+// by the back cover you understand the tech, know the players, speak 20 terms of the
+// language, can read a benchmark, and have actually used the thing. FREE forever.
 window.RTFC_MAGAZINE_ISSUES.push({
   id:"primer", number:0, special:true, format:"spread",
   title:"The Primer",
   tagline:"From absolute zero to fluent — the complete beginner's guide to the AI age",
-  month:"2026-07", published:"2026-07-11T04:00:00Z",
+  month:"2026-07", published:"2026-07-11T04:00:00Z", updated:"2026-07-16T18:00:00Z",
   access:"free",
   pdf:"magazine/rtfclmgzn-the-primer-2026.pdf",
   cover:{ image:"assets/img/primer-cover.jpg", art_status:"generated", palette:"ink & violet" },
-  ledger:{ tokens:78000, compute_cost_usd:1.20, images:23, note:"Full Primer production: 3 cover concepts, act openers, 8 page illustrations, ad campaign art, and two full builds to reach the founder's bar. Text estimated; images metered." },
+  ledger:{ tokens:104000, compute_cost_usd:1.55, images:27, note:"Full Primer production plus the July 2026 depth expansion: 3 cover concepts, act openers, page illustrations, four library covers repurposed for the new teaching spreads, ad campaign art, and multiple full builds to reach the founder's bar. Text estimated; images metered." },
   spreads:[
 
     { kind:"cover", image:"assets/img/primer-cover.jpg",
@@ -24,7 +26,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         { k:"THE FACE-OFF", t:"GPT vs Claude vs Gemini vs Grok" },
         { k:"HANDS ON", t:"Six things to try tonight" },
         { k:"THE HONEST PAGE", t:"What it can't do (yet)" },
-        { k:"PLUS", t:"The 12 words that unlock every AI headline" }
+        { k:"PLUS", t:"The 20 words that unlock every AI headline" }
       ]},
 
     { kind:"ad", image:"assets/img/ad-helios.jpg",
@@ -33,15 +35,15 @@ window.RTFC_MAGAZINE_ISSUES.push({
       foot:"Helios Compute is a fictional brand. This premium placement is available to real sponsors in future issues — sponsors@rtfclmgzn.com" },
 
     { kind:"contents", folio:"Contents", title:"What's inside",
-      intro:"Five acts, zero prior knowledge required. By the back cover you'll understand the technology, know the players, speak the language, and have actually used the thing.",
+      intro:"Five acts, zero prior knowledge required. By the back cover you'll understand the technology, know the players, speak twenty words of the language, be able to read a benchmark, and have actually used the thing — proficient, not just aware.",
       acts:[
-        { n:"ACT I", t:"What Is This Thing?", d:"AI explained like a human — what it is, how it learns, and the surprisingly simple trick underneath", p:"5", img:"assets/img/primer-act1.jpg" },
-        { n:"ACT II", t:"The Big Bang", d:"The night everything changed, and the four-year climb that followed", p:"11", img:"assets/img/primer-part1.jpg" },
-        { n:"ACT III", t:"The Players", d:"The six labs that matter, their models, and which one is right for you", p:"16", img:"assets/img/primer-act3.jpg" },
-        { n:"ACT IV", t:"Your Move", d:"The vocabulary, the first steps, and the honest page nobody else prints", p:"22", img:"assets/img/primer-part2.jpg" },
-        { n:"ACT V", t:"Going Deeper", d:"What's coming next, and where to go from here", p:"28", img:"assets/img/primer-act5.jpg" }
+        { n:"ACT I", t:"What Is This Thing?", d:"AI explained like a human — what it is, how it learns, the next-word trick, tokens and memory, and why it makes things up", p:"5", img:"assets/img/primer-act1.jpg" },
+        { n:"ACT II", t:"The Big Bang", d:"The night everything changed, the four-year climb, and the trillion-dollar bet underneath it all", p:"13", img:"assets/img/primer-part1.jpg" },
+        { n:"ACT III", t:"The Players", d:"The labs that matter, their models head-to-head, how to read a benchmark, and which one is right for you", p:"19", img:"assets/img/primer-act3.jpg" },
+        { n:"ACT IV", t:"Your Move", d:"Twenty words of vocabulary, the one prompting skill, six things to try tonight, and the honest page nobody else prints", p:"26", img:"assets/img/primer-part2.jpg" },
+        { n:"ACT V", t:"Going Deeper", d:"What's coming next, how to use it safely, and where to go from here", p:"33", img:"assets/img/primer-act5.jpg" }
       ],
-      foot:"**How to read this:** scroll to turn pages · every act stands alone · nothing assumes prior knowledge. By the back cover, you'll be fluent." },
+      foot:"**How to read this:** scroll to turn pages · every act stands alone · nothing assumes prior knowledge. By the back cover, you'll be genuinely fluent — able to hold your own in any AI conversation." },
 
     { kind:"letter", folio:"Editor's Letter",
       title:"You're not behind. Everyone is.",
@@ -88,6 +90,16 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "Your reasonable objection: how can autocomplete-on-steroids write a legal summary? The insight the industry is built on: **to predict the next word really well, you have to understand almost everything.** Finishing 'therefore, the defendant is...' requires having followed the argument. Nobody asked the machine to understand; understanding is what it grew to get good at its one job.",
         "Real understanding, or an extraordinary imitation? Scientists still argue. For using the thing: it read almost everything, and that one skill covers writing, explaining, coding, and brainstorming. ==Not bad for a next-word guesser.==" ] },
 
+    { kind:"text", folio:"Act I · The Plumbing", layout:"splitRight",
+      title:"Tokens, context, and why it 'forgets' you",
+      image:"assets/img/primer-inference.jpg", cap:"Everything you type becomes tokens; the context window is how many it can hold.",
+      pull:"A model has no memory of you between chats unless something outside it writes one.",
+      fact:{ n:"~¾", label:"of a word is one token — the unit AI is priced and measured in." },
+      body:[
+        "Two words unlock how these things actually behave, and both sound technical until you see them. The first is ==token==. Models don't read letters or whole words — they read tokens, chunks of roughly three-quarters of a word. 'Understanding' might be one token; 'antidisestablishmentarianism' several. Every price you'll ever see is per **million tokens** (about 750,000 words), and every model's 'size limit' is counted in them. Tokens are the kilowatt-hour of this industry — the unit everything is billed and measured in.",
+        "The second is the ==context window== — the model's working memory. It's how many tokens it can hold in mind at once: your question, the documents you pasted, and everything said so far in the conversation. Modern models hold a lot — hundreds of thousands of tokens, enough for a whole book — but it is finite, and when a conversation runs past the edge, the earliest part quietly falls out of view.",
+        "Here's the part that surprises everyone: **a model has no memory of you between separate conversations.** Start a new chat and it meets you fresh, every time. When an assistant seems to 'remember' your name or preferences, a system outside the model is silently pasting that information back into the context window at the start — a note handed to someone with no long-term memory. Knowing this changes how you use it: put what matters *in the conversation*, because that window is the only thing the model can actually see." ] },
+
     { kind:"photo", image:"assets/img/primer-extra.jpg",
       kicker:"THE INVISIBLE FABRIC",
       title:"It all runs on light and math",
@@ -106,6 +118,17 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The part that surprises everyone: almost none of this is new. Neural networks were proposed in the **1950s**; the learning technique is from the 1980s. So why did 'eventually' arrive around 2022? Three ingredients finally existed at once, at scale.",
         "**Data:** humanity had typed itself into a machine-readable archive — the internet. Every book, article, and forum argument became a textbook. **Compute:** the chips that draw video-game graphics turned out to be accidentally perfect for training networks — which is why NVIDIA became one of the most valuable companies alive. **Blueprint:** in 2017, Google published the transformer — the T in GPT — a design that ==got predictably better the bigger you built it==.",
         "That last property changed everything: more data plus more computers now reliably equaled more intelligence. It became an engineering race. By 2020 the rocket was fueled — it just hadn't launched in public yet." ] },
+
+    { kind:"text", folio:"Act I · The Flaw", layout:"splitLeft",
+      title:"Why it makes things up — and why that's built in",
+      image:"assets/img/primer-neural.jpg", cap:"A next-word guesser will always produce a plausible next word — even when it has no facts to back it.",
+      pull:"It was trained to sound right, not to be right. Usually those overlap. The gap is where it burns you.",
+      fact:{ n:"Always", label:"plausible. Not always true. Learning where those two part ways is the whole skill." },
+      body:[
+        "You now know enough to understand the single most important flaw in these systems — the one every headline calls 'hallucination.' It isn't a bug someone will patch out next year. It falls straight out of how the thing works.",
+        "Remember the one job: **predict a plausible next word.** A model trained that way will *always* produce fluent, confident-sounding text, because that is literally the only thing it does. When it knows the answer, plausible and true line up and you get something useful. When it doesn't know — an obscure fact, a specific number, a citation, something that happened after its training — it doesn't stop and say 'I'm not sure.' It generates the *shape* of a right answer anyway, in the same confident voice. ==The fluency never wavers, even when the facts underneath have evaporated.==",
+        "That's why a model can invent a court case, a statistic, or a quote that never existed, complete with a plausible-looking source. It isn't lying — lying requires knowing the truth. It's doing exactly what it was built to do, in a spot where 'sounds right' and 'is right' happened to come apart.",
+        "The practical rule for the rest of your life with these tools: **the model's confidence is a property of its writing style, not its knowledge.** Never read one as evidence of the other. Act IV gives you a thirty-second habit for catching it — but the instinct starts here, on this page." ] },
 
     { kind:"ad", image:"assets/img/ad-momentum.jpg",
       brand:"MOMENTUM ROBOTICS", tag:"Gentle enough for a butterfly. Strong enough for your factory.",
@@ -154,6 +177,20 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "The boundary matters just as much. They still ==confidently make things up==. They don't truly remember you between conversations unless built to. And nobody — including their makers — can fully explain any single answer.",
         "Powerful and flawed, both at once; anyone telling you only one half is selling something. Now — let's meet the people building it." ] },
 
+    { kind:"text", folio:"Act II · The Bet", layout:"statFeature",
+      title:"The bet the whole industry is making",
+      image:"assets/img/primer-scale.jpg", cap:"More data, more compute, more money — on the wager that intelligence keeps scaling.",
+      pull:"Nobody has proven the curve keeps going. Everybody is spending as if it must.",
+      stats:[
+        { n:"$650B", label:"AI infrastructure spending by the big four cloud companies in 2026 — up ~80% in a year" },
+        { n:"~5×", label:"how much cheaper frontier-level intelligence got in roughly twelve months" },
+        { n:"1", label:"unproven assumption underneath all of it: that scaling keeps working" }
+      ],
+      body:[
+        "Here is the wager that explains the money. Since the transformer arrived, one property has held with eerie consistency: **make the model bigger, feed it more data, give it more compute — and it gets more capable, predictably.** Not occasionally. Reliably enough to plan a business around.",
+        "So the industry did. Four cloud giants are spending roughly ==$650 billion== on AI infrastructure this year alone — more than the annual budget of most countries — on the bet that the curve keeps climbing. At the same time, competition and efficiency drove the *price* of frontier intelligence down about five-fold in a year. Cheaper and more capable, at once. That combination is why AI is racing into everything.",
+        "But notice the honest word: **bet.** Nobody has proven the scaling curve continues forever, and some researchers think it's already bending. The entire boom rests on an assumption that has held so far and could, in principle, stop holding. You don't need to resolve that debate to be fluent. You just need to know it's the load-bearing question under every headline about billions of dollars — and now you do." ] },
+
     { kind:"photo", image:"assets/img/primer-hardware.jpg",
       kicker:"THE ENGINE ROOM",
       title:"This is what intelligence runs on",
@@ -193,8 +230,20 @@ window.RTFC_MAGAZINE_ISSUES.push({
         { m:"Gemini 3.5 (Google)", a:"Living inside Google's world", b:"Fast, integrated, everywhere", c:"$$$" },
         { m:"Grok 4.5 (xAI)", a:"Cheap bulk work, real-time X data", b:"Fast and blunt; double-check it", c:"$" },
         { m:"Muse Spark (Meta)", a:"Budget tasks, open heritage", b:"The new toll booth on a free road", c:"$" },
+        { m:"Kimi K3 (Moonshot, open)", a:"Self-hosting; long documents", b:"Newest open heavyweight; verify the claims", c:"$ / free" },
         { m:"DeepSeek (open)", a:"Tinkerers; running it yourself", b:"Scrappy, open, surprisingly strong", c:"$ / free" } ],
       verdict:"Beginner's pick: start with **ChatGPT** tonight — then give **Claude** two honest weeks. The next page explains why." },
+
+    { kind:"text", folio:"Act III · Reading the Board", layout:"band",
+      title:"How to read a benchmark without getting fooled",
+      image:"assets/img/primer-geopolitics.jpg", cap:"Every lab claims 'state of the art.' Learn to read the number under the claim.",
+      pull:"A score from the lab that made the model is a claim. A score from an independent tester is evidence.",
+      fact:{ n:"2", label:"questions defuse most benchmark hype: whose grader, and can anyone reproduce it?" },
+      body:[
+        "Every launch comes wrapped in a chart showing the new model on top. Fluency in AI means being able to read that chart instead of being sold by it — and it takes exactly two questions.",
+        "**First: whose grader?** A benchmark score published by the lab that built the model is a *claim*, not a measurement — the same way a company's own crash-test results wouldn't settle a car's safety rating. Independent aggregators (Artificial Analysis is the best-known) re-run the tests under fixed conditions across every model, and *those* numbers are the ones worth trusting. When a brand-new model 'beats' the leaders on day one, check whether anyone outside the lab has confirmed it. Usually they haven't yet.",
+        "**Second: held constant?** A fair comparison changes one thing — the model — and keeps the prompt, the tools, and the budget identical. A lot of marketing 'wins' quietly change several at once. And remember what a benchmark *isn't*: a high score on a coding test doesn't mean the model suits your writing, and no single number captures whether it's reliable, fast, or affordable for your actual work.",
+        "This is exactly why we keep a live ==Scoreboard== on the site — independent strength against real price, updated the day models ship, with a lab's own numbers never substituted for an independent score. When Moonshot's Kimi K3 launched this week claiming wins over models a tier above it, the Scoreboard listed it as *released but unmeasured* — because on day one, that's the honest entry. Bookmark it; it's the antidote to every launch-day chart." ] },
 
     { kind:"centerfold", image:"assets/img/primer-centerfold.jpg",
       kicker:"THE BIG PICTURE",
@@ -224,7 +273,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
       sub:"The language, the first steps, and the honest page" },
 
     { kind:"glossary", folio:"Act IV · Speak the Language",
-      title:"Twelve words that unlock every AI headline",
+      title:"Twenty words that unlock every AI headline",
       terms:[
         { t:"Model", d:"The AI itself — the trained network. GPT, Claude, Gemini, Grok: all models." },
         { t:"LLM", d:"Large Language Model — the kind that reads and writes text. The engine of the whole era." },
@@ -232,11 +281,19 @@ window.RTFC_MAGAZINE_ISSUES.push({
         { t:"Token", d:"The chunks models read and write (about three-quarters of a word). AI is priced per million of these — the kilowatt-hour of the industry." },
         { t:"Training", d:"The months-long, colossally expensive process of teaching a model from examples. Finished before you ever meet it." },
         { t:"Inference", d:"The model actually running when you use it. Training is school; inference is the job." },
+        { t:"Parameters", d:"The tunable connections inside the network — the 'weights' training adjusts. Counted in billions or trillions; more is roughly, but not always, stronger." },
         { t:"Hallucination", d:"When a model states something false with total confidence. Its most stubborn flaw — and why you verify anything that matters." },
         { t:"Context window", d:"Its working memory — how much of the conversation it can hold in mind at once." },
         { t:"Agent", d:"A model given tools and autonomy to DO things — browse, organize, execute multi-step work. The 2026 frontier." },
+        { t:"Reasoning model", d:"A model that 'thinks' step by step before answering — slower and pricier, but far better at hard logic, math, and code." },
         { t:"Multimodal", d:"Handles more than text: images, voice, video. Most frontier models now are." },
-        { t:"Open weights", d:"A model whose 'brain' is downloadable — free to run and modify yourself, like Llama or DeepSeek." },
+        { t:"System prompt", d:"Hidden instructions set before your chat begins that shape the model's role and rules. The 'personality' behind the assistant." },
+        { t:"Fine-tuning", d:"Taking a finished model and training it a little more on specialized examples, so it excels at one domain — law, medicine, a company's own voice." },
+        { t:"RAG", d:"Retrieval-Augmented Generation — giving a model your documents to read at answer-time so it cites real sources instead of relying on memory. How most business AI actually works." },
+        { t:"Benchmark", d:"A standardized test that scores models. Trust the independent ones; a lab's own score is a claim, not a measurement." },
+        { t:"Open weights", d:"A model whose 'brain' is downloadable — free to run and modify yourself, like Llama, DeepSeek, or Kimi." },
+        { t:"Guardrails", d:"The safety limits a lab builds in to stop harmful output. Imperfect, sometimes clumsy, and the subject of much of the policy fight." },
+        { t:"Frontier model", d:"The most capable models at any moment — the handful at the leading edge that everything else is measured against." },
         { t:"AGI", d:"Artificial General Intelligence — the hypothetical point where AI matches humans at most mental work. Ask five experts when, get five different decades." } ]},
 
     { kind:"list", folio:"Act IV · Hands On",
@@ -297,6 +354,17 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "Prediction is cheap; trajectory is checkable. **Agents grow up:** 2025's clumsy assistants are becoming systems that complete real multi-step work — you check results instead of doing steps. **AI gets a body:** humanoids crossed from demo to deployment this year — one fleet just finished 30,000 cars on a real assembly line. **Intelligence gets cheap:** some 2026 models charge a fifth of last year's leader prices — and when something powerful gets cheap, it becomes plumbing, woven into everything.",
         "The AGI debate — machines matching humans at most mental work — rages on, with serious experts betting anywhere from years to decades. ==You now know enough to enjoy that argument rather than fear it.==",
         "One promise from us: whatever happens next gets covered daily, honestly, with sources — one page over from this magazine." ] },
+
+    { kind:"text", folio:"Act V · Use It Safely", layout:"cornerCard", kicker:"BEFORE YOU DIVE IN",
+      title:"What not to paste, and how to stay in control",
+      image:"assets/img/primer-inaction.jpg", cap:"AI is moving into high-stakes places. A few habits keep you the one in charge.",
+      pull:"Treat a chatbot like a brilliant stranger on a park bench: helpful, but not where your secrets go.",
+      fact:{ n:"3", label:"habits cover almost everything: guard your data, verify what matters, stay the decider." },
+      body:[
+        "You're nearly fluent — so end with the practical safety that no launch video mentions. Three habits, and you're covered for almost everything.",
+        "**Guard your data.** Unless you're on a plan that explicitly says otherwise, assume what you type may be stored and could be used to improve the model. So treat a consumer chatbot like a brilliant stranger on a park bench: wonderful for advice, wrong place for passwords, medical records, client secrets, or anything you'd hate to see leak. Many providers offer a business tier or a 'don't train on my data' setting — worth finding before you paste anything sensitive.",
+        "**Verify what matters.** You learned why it hallucinates back in Act I. The habit that follows: for anything load-bearing — a number, a legal or medical claim, a citation — ask the model for its source and actually check it, or confirm it with a second model. Low-stakes brainstorming needs none of this. A decision someone acts on needs all of it.",
+        "**Stay the decider.** These tools are extraordinary at drafting, explaining, and proposing. They are not accountable for the outcome — you are. Let AI do the first ninety percent and reserve the judgment call for yourself. Used that way, it makes you faster and sharper. Used the other way — outsourcing the decision itself — is where people get burned. ==You bring the judgment; it brings the horsepower.==" ] },
 
     { kind:"quote", image:"assets/img/mg-quote-mic.jpg",
       quote:"The best time to get fluent was three years ago. The second-best time is tonight.",
