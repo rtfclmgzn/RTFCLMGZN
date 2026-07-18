@@ -16,8 +16,8 @@ from ..security.vault import CredentialVault, default_vault_path
 BUZZ_FILE = Path("web/data/buzz.js")
 USAGE_FILE = Path("web/data/usage-log-current.js")
 STATE_FILE_NAME = "buzz-next-id.json"
-RETIRE_AFTER_DAYS = 5
-MAX_ITEMS = 24
+RETIRE_AFTER_DAYS = 7
+MAX_ITEMS = 48
 
 SCHEMA: dict[str, Any] = {
     "type": "object",

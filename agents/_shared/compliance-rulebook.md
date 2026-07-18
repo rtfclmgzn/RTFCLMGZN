@@ -59,5 +59,5 @@ The Buzz page (`web/data/buzz.js`) is curation, never generation:
 - **NEVER fabricate a quote, post, or statement.** A card's `text` may only paraphrase or briefly quote something verifiably public, and its `url` must link to the original post or the published report of it. If the original can't be located, the card doesn't run.
 - Cards describe what a source *did or said* as reported — they never put words in a real person's or company's mouth. Direct quotes require an exact source.
 - `heat` is the desk's editorial judgment of feed volume, clearly ours; it implies nothing about the subject.
-- Refresh on every newsroom run: add the day's genuine signal (aim 3–6 cards/day), retire items older than ~5 days, keep the file at 12–24 items.
+- Refresh automatically every 2 hours: add genuine signal as it appears (aim 3–6 cards/day), retire items older than one week (~7 days), keep the file at up to ~48 items.
 - The defamation discipline (§5) and disclaimer rules (§2) apply to cards exactly as to articles.

@@ -4,7 +4,7 @@
      verifiably public; `url` links to the original post/announcement or the report of it.
    - `source.kind`: lab | person | news | gov  (drives the avatar color)
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
-   - Keep 12-24 items; retire anything older than ~5 days on each run. */
+   - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
   { id:"bz-021", date:"2026-07-17",
     source:{ name:"TechCrunch", handle:"TechCrunch", platform:"web", kind:"news" },
