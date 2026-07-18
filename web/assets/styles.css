@@ -321,6 +321,15 @@ nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,tr
   background:color-mix(in srgb,var(--ok) 7%,transparent);
   font-size:13px;color:var(--ink-soft)}
 .provenance .gaterow b{color:var(--ok)}
+/* mobile: the three fixed-width stage columns starve .snote into a few-character
+   sliver — stack instead: tick+name+agent on line one, the note full-width below. */
+@media(max-width:640px){
+  .provenance .head{flex-wrap:wrap;row-gap:6px;font-size:13px;line-height:1.45}
+  .pstage{flex-wrap:wrap;row-gap:4px}
+  .pstage .sname{min-width:0}
+  .pstage .sagent{min-width:0}
+  .pstage .snote{flex:1 1 100%;padding-left:26px}
+}
 
 /* distribution (social) panel */
 .distribution{margin:34px 0;border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:var(--surface)}
