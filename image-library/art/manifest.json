@@ -129,7 +129,12 @@
       ],
       "text_space": "sky band top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-sf-nudify-apps-order",
+          "used_at": "2026-07-18"
+        }
+      ]
     },
     {
       "id": "art-006-daylight-plaza-robots-among-families",
@@ -759,7 +764,12 @@
       ],
       "text_space": "left wall, dark third",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-anthropic-agentic-misalignment",
+          "used_at": "2026-07-18"
+        }
+      ]
     },
     {
       "id": "art-032-iridescent-wafer-inspection",
