@@ -818,7 +818,12 @@
       ],
       "text_space": "gray wall upper-left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-who-europe-ai-health-governance",
+          "used_at": "2026-07-17"
+        }
+      ]
     },
     {
       "id": "art-035-boardroom-over-the-server-vault",
@@ -842,7 +847,12 @@
       ],
       "text_space": "left wall dark",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-nadella-reverse-information-paradox",
+          "used_at": "2026-07-17"
+        }
+      ]
     },
     {
       "id": "art-036-wafer-on-the-fab-mezzanine",
@@ -981,7 +991,12 @@
       ],
       "text_space": "gray wall upper-left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-china-agent-authorization-rules",
+          "used_at": "2026-07-17"
+        }
+      ]
     },
     {
       "id": "art-042-substation-at-night",

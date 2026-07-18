@@ -1678,5 +1678,415 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-16T16:00:00Z"
+  },
+  {
+    "slug": "china-intelligent-agent-authorization-rules",
+    "title": "China now requires human sign-off before an AI agent can act — sorted into three tiers",
+    "dek": "Implementation Opinions on Intelligent Agents, issued jointly by three national regulators, sort every agent decision into what a user must approve, what an agent may do with standing permission, and what it can do alone. Healthcare, transport, media and public safety face mandatory filing.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "China's Implementation Opinions on Intelligent Agents sort every agent action into three authorization tiers.",
+      "Tiers: decisions a user makes alone, decisions needing user authorization, and decisions an agent takes autonomously.",
+      "Agents in healthcare, transport, media and public safety face mandatory filing, testing and recall provisions.",
+      "It is the first national policy framework written specifically for agents, separate from generative-AI rules.",
+      "Caveat: issuance and effective dates are reported inconsistently across trackers; the framework carries no disclosed penalty schedule yet."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "China's Cyberspace Administration, National Development and Reform Commission, and Ministry of Industry and Information Technology have jointly issued Implementation Opinions on the Standardized Application and Innovative Development of Intelligent Agents — the first national policy framework written specifically for AI agents rather than generative AI in general. Multiple policy trackers report the measures reaching compliance effect on July 15, 2026, the same week as China's separate rules on anthropomorphic companion AI.",
+        "citation_urls": [
+          "https://rits.shanghai.nyu.edu/ai/china-issues-first-national-policy-framework-dedicated-to-ai-agents/",
+          "https://aigovernance.com/news/chinas-agent-rules-take-effect-july-15-and-illinois-mandates-third-party-safety-audits"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The framework defines an agent as a system capable of autonomous perception, memory, decision-making, interaction and execution — a deliberately narrower category than a chatbot, built around the fact that an agent can take real-world action rather than only produce text. Its central mechanism is a three-tier authorization structure. Some decisions remain user-exclusive, requiring direct human control regardless of the agent's confidence. Others are authorized decisions, delegated to the agent through explicit user permission — a standing grant, not a one-time click. The remainder are autonomous decisions the agent may take within its defined scope, though the framework states users 'retain the right to know and the ultimate decision-making authority' even over actions they never individually approved.",
+        "citation_urls": [
+          "https://www.geopolitechs.org/p/chinas-first-policy-framework-for"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Filing, testing, recall — for the sectors where mistakes matter most",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Agents operating in 'sensitive sectors and key industries' face heavier obligations: formal filing with regulators, compliance testing, and product-recall provisions if an agent is later found unsafe. The sectors named explicitly are healthcare, transportation, media, and public security — the categories where an autonomous action, taken wrong, is hardest to undo. An organization deploying an agent in one of those sectors without a documented decision-authorization policy is, per the framework, already out of compliance.",
+        "citation_urls": [
+          "https://aigovernance.com/news/chinas-agent-rules-take-effect-july-15-and-illinois-mandates-third-party-safety-audits",
+          "https://www.geopolitechs.org/p/chinas-first-policy-framework-for"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Users retain the right to know and the ultimate decision-making authority — even over the decisions the agent is permitted to make on its own.",
+        "citation_urls": [
+          "https://www.geopolitechs.org/p/chinas-first-policy-framework-for"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A different category from the companion-AI rules",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "It would be easy to fold this into the anthropomorphic-AI measures RTFCLMGZN covered separately, since both reach compliance effect in the same week. They are not the same instrument. The companion-AI rules regulate emotionally engaged interaction — AI designed to be treated as someone. This framework regulates the opposite category: AI built to work for you, sorted by how much authority it holds when it does. Read together, China has now drawn two distinct regulatory lines through consumer-facing AI in a single week — one for AI that bonds, one for AI that acts — where most jurisdictions have drawn none.",
+        "citation_urls": [
+          "https://rits.shanghai.nyu.edu/ai/china-issues-first-national-policy-framework-dedicated-to-ai-agents/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The dating is messier than the compliance-deadline headlines suggest. One source traces the document's issuance to May 8, 2026, with no separate effective date specified in the text itself; multiple trackers instead report July 15 as when compliance obligations bite. This desk could not independently confirm the precise issuance-to-effect timeline against China's official gazette, and no source located names a specific penalty schedule or enforcement body empowered to act on a violation yet. The examples given for each authorization tier — financial transactions, government approvals, medical decisions, judicial functions — are illustrative, not an exhaustive list; how a regulator classifies a genuinely ambiguous agent action in practice is untested.",
+        "citation_urls": [
+          "https://www.geopolitechs.org/p/chinas-first-policy-framework-for",
+          "https://aigovernance.com/news/chinas-agent-rules-take-effect-july-15-and-illinois-mandates-third-party-safety-audits"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "The first publicly reported enforcement action or recall under the framework; whether foreign companies operating agents inside China must file under the same rules; and whether other jurisdictions borrow the tiered-authorization model rather than writing agent rules from scratch."
+      },
+      {
+        "label": "How to read it against the companion-AI rules",
+        "text": "Don't conflate the two July 15 measures. One governs AI designed to be related to; this one governs AI designed to act. A single company could be in scope for both, with different obligations under each."
+      }
+    ],
+    "links": [
+      {
+        "label": "NYU Shanghai — China Issues First National Policy Framework Dedicated to AI Agents",
+        "url": "https://rits.shanghai.nyu.edu/ai/china-issues-first-national-policy-framework-dedicated-to-ai-agents/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NYU Shanghai RITS — China Issues First National Policy Framework Dedicated to AI Agents",
+        "url": "https://rits.shanghai.nyu.edu/ai/china-issues-first-national-policy-framework-dedicated-to-ai-agents/"
+      },
+      {
+        "label": "Geopolitechs — China's first policy framework for AI agents",
+        "url": "https://www.geopolitechs.org/p/chinas-first-policy-framework-for"
+      },
+      {
+        "label": "AI Governance Institute — China's agent rules take effect July 15",
+        "url": "https://aigovernance.com/news/chinas-agent-rules-take-effect-july-15-and-illinois-mandates-third-party-safety-audits"
+      }
+    ],
+    "id": "newsroom-china-agent-authorization-rules",
+    "image": "assets/img/newsroom/newsroom-china-agent-authorization-rules.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-17T05:00:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Selected from an owner-reviewed shortlist of candidates across desks. Assigned to Policy as a distinct instrument from the already-published anthropomorphic-AI rules."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "Issuing bodies, three-tier structure, high-risk sector list, and the direct quote on retained user authority confirmed across NYU Shanghai and Geopolitechs. The May 8 issuance date versus the July-15-effective reporting discrepancy was surfaced rather than silently resolved; flagged in the what-is-not-established section."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "Framed on the authorization-tier mechanism and its distinction from the companion-AI rules, not folded into that earlier story."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction from an owner-approved story shortlist."
+      }
+    },
+    "publishedAt": "2026-07-17T05:00:00Z"
+  },
+  {
+    "slug": "nadella-reverse-information-paradox-warning",
+    "title": "Microsoft's CEO just warned enterprises that AI labs could become their competitors",
+    "dek": "Satya Nadella says companies pay for AI twice — once in tokens, once in the proprietary knowledge every correction teaches the model. Microsoft invests in two of the labs he's warning about.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "brief",
+    "disclaimer": "none",
+    "tldr": [
+      "Nadella warned in a July 13 blog post that AI users effectively 'pay for intelligence twice.'",
+      "His argument: prompts and corrections teach a model institutional knowledge a competitor could never buy.",
+      "He calls it fair: if labs train on the open internet freely, enterprises deserve to study models back.",
+      "Microsoft invests in OpenAI and Anthropic, the labs his own warning implicates, with no company response addressing that.",
+      "Caveat: this is one CEO's framing, not a disclosed case of a customer's data becoming a competing product."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "In a blog post published Sunday, July 13, Microsoft chief executive Satya Nadella told companies using frontier AI models that they are paying for the technology twice. \"You essentially pay for intelligence twice,\" he wrote, \"once with money, and again with something even more valuable: the proprietary knowledge you must reveal to make that intelligence useful.\"",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanism he describes is specific: models learn from user interactions, and especially from corrections — the moments a person tells a model it got something wrong. Nadella argues each of those corrections becomes distilled into institutional know-how, captured by whichever lab trained the model, describing it as knowledge \"a competitor could never buy.\" The implication is direct — the lab hosting your AI usage is, in the process, absorbing a compressed education in how your business actually runs.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The reciprocity argument",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Nadella did not stop at the warning; he drew a fairness argument from it. AI labs, he noted, built their models by scraping the open internet — everyone's writing, code, and data — without asking permission. If that is acceptable, he argued, it is hypocritical for those same labs to then restrict enterprises from studying the resulting models as closely as the models studied them. He named the dynamic himself: the \"reverse information paradox.\"",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "You essentially pay for intelligence twice: once with money, and again with something even more valuable — the proprietary knowledge you must reveal to make that intelligence useful.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The tension the post doesn't address",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The obvious question sits underneath the whole post and goes unmentioned in it: Microsoft is a major investor in OpenAI and, more recently, Anthropic — two of the labs whose customer relationships this warning implicates. Reporting on the post found no official Microsoft statement reconciling that position, and outlets covering it noted the irony without resolution. Nadella's own company also sells Copilot, an enterprise AI product built on models from the labs he is describing as risks. Whatever the merits of the underlying argument, it arrives from someone positioned on more than one side of the trade he is warning about.",
+        "citation_urls": [
+          "https://www.theregister.com/ai-and-ml/2026/07/13/microsoft-chief-turns-hostile-on-frontier-ai-labs-warns-companies-to-guard-their-ip/5270628",
+          "https://www.promarket.org/2026/07/01/satya-nadellas-ai-warning-is-a-sales-pitch/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This is an argument and a framing from one executive, not a documented case study. Nadella's post names no specific company whose proprietary knowledge became a competing product, and no lab has been shown extracting institutional knowledge from customer corrections in the way he describes. \"Reverse information paradox\" is his own coinage, not an established term with independent measurement behind it. The critical read from ProMarket — that the warning doubles as a pitch for Microsoft's own AI offerings — deserves equal weight to the warning itself.",
+        "citation_urls": [
+          "https://www.promarket.org/2026/07/01/satya-nadellas-ai-warning-is-a-sales-pitch/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Whether Microsoft changes its own Copilot or Azure AI data-use terms in a way that matches the warning; whether other enterprise-software CEOs echo the argument; and whether any company goes on record describing a lab turning its own data against it."
+      },
+      {
+        "label": "How to read a warning like this",
+        "text": "Ask who benefits from the fear. The company issuing this one also sells the alternative — models and infrastructure it controls more directly than a rival's API."
+      }
+    ],
+    "links": [
+      {
+        "label": "TechCrunch — Satya Nadella has issued a shocking warning to companies using AI",
+        "url": "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "TechCrunch — Satya Nadella has issued a shocking warning to companies using AI",
+        "url": "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/"
+      },
+      {
+        "label": "The Register — Microsoft chief turns hostile on frontier AI labs, warns companies to guard their IP",
+        "url": "https://www.theregister.com/ai-and-ml/2026/07/13/microsoft-chief-turns-hostile-on-frontier-ai-labs-warns-companies-to-guard-their-ip/5270628"
+      },
+      {
+        "label": "ProMarket — Satya Nadella's AI warning is a sales pitch",
+        "url": "https://www.promarket.org/2026/07/01/satya-nadellas-ai-warning-is-a-sales-pitch/"
+      }
+    ],
+    "id": "newsroom-nadella-reverse-information-paradox",
+    "image": "assets/img/newsroom/newsroom-nadella-reverse-information-paradox.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-17T05:15:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Selected from an owner-reviewed shortlist. Assigned to Markets as an enterprise-AI power-dynamics story rather than a financial-metrics one."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "Direct quotes on 'pay for intelligence twice' and the reverse-information-paradox framing confirmed against TechCrunch's sourcing. Microsoft's OpenAI/Anthropic investment position and the absence of an official company reconciliation confirmed via The Register. ProMarket's critical counter-read included for balance."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "disclaimer set to none — this is a strategy/power-dynamics story, not investment guidance or a financial-performance claim. The Microsoft conflict-of-interest tension foregrounded rather than left implicit."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction from an owner-approved story shortlist."
+      }
+    },
+    "publishedAt": "2026-07-17T05:15:00Z"
+  },
+  {
+    "slug": "who-europe-ai-health-governance-gap",
+    "title": "Two-thirds of European countries use AI in diagnostics. One in twelve has rules for it",
+    "dek": "A WHO conference in Lisbon drew 37 countries to confront a gap: AI diagnostic tools and patient chatbots are already live across European health systems, but a health-specific AI strategy is the exception, not the rule.",
+    "persona": "priya-anand",
+    "section": "Health",
+    "format": "brief",
+    "disclaimer": "not-medical-advice",
+    "tldr": [
+      "Only 8% of countries in the WHO European Region have a health-specific AI strategy — 1 in 12.",
+      "Nearly two-thirds of the region is already deploying AI in diagnostics; half have AI patient chatbots live.",
+      "37 countries across all six WHO regions met in Lisbon on July 15 to address the gap.",
+      "WHO's own framing: 'govern AI in health before the gaps become irreversible.'",
+      "Caveat: the deployment figures are self-reported by member states, and the statement is advisory, not binding."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The World Health Organization's European regional office convened ministers and senior officials from 37 countries in Lisbon on July 15, alongside the Aga Khan University, the Bill and Melinda Gates Foundation, the European Commission, the Wellcome Trust, and the World Bank, for a global conference on AI in health. The statement issued from that meeting names the problem in its title: \"Govern AI in health before the gaps become irreversible.\"",
+        "citation_urls": [
+          "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible",
+          "https://www.who.int/europe/news/item/15-07-2026-who-brings-37-countries-together-in-lisbon-to-get-ai-governance-right-and-make-it-work-for-every-patient"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The numbers behind that title are the story. Nearly two-thirds of countries in the WHO European Region are already deploying AI in diagnostics, and half have introduced AI-powered patient chatbots. Only 8% — roughly 1 in 12 — have a health-specific AI strategy in place to govern any of it. The technology is not waiting for the paperwork.",
+        "citation_urls": [
+          "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Deployment without a rulebook",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "\"AI in diagnostics\" and \"AI patient chatbots\" cover a range of real, already-live tools: imaging-support systems that flag findings for a radiologist to confirm, and triage or intake chatbots that talk to patients before a clinician does. None of that requires a lab breakthrough — it requires procurement, integration, and staff who trust the tool enough to use it. That is precisely why governance lags: deployment is a purchasing decision an individual hospital or ministry can make on its own, while a national AI-health strategy requires the slower work of legislation, liability rules, data protection, and clinician training standards.",
+        "citation_urls": [
+          "https://www.euronews.com/health/2026/07/16/europe-needs-to-catch-up-with-the-ai-surge-in-hospitals-who-says"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Govern AI in health before the gaps become irreversible.",
+        "citation_urls": [
+          "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Why this isn't a frontier-model story",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This is a different kind of AI-health story than the ones about a single model or a single trial. It isn't about whether any given AI tool works — many of these systems are already approved, in use, and presumably delivering value, or hospitals would not have bought them. It's about what happens administratively once a tool is live: who is liable when an AI-supported diagnosis is wrong, how patient data moves through these systems, whether clinicians are trained to override the tool rather than defer to it, and whether a chatbot triaging patients is held to the same standard as the person it replaced. Those are governance questions, and WHO's statement is that most of the region is answering them after the fact rather than before.",
+        "citation_urls": [
+          "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What is not established",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The 8% and two-thirds figures come from WHO's own member-state survey methodology — self-reported by national governments, not independently audited by WHO or a third party, so they describe what countries say about themselves rather than a verified count. The statement is a call to action from a Lisbon conference, not a binding requirement on any government, and it names no country as having caused patient harm through ungoverned deployment. What it establishes is the shape of the gap, not a case proving the gap has already hurt someone.",
+        "citation_urls": [
+          "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "Whether the Lisbon conference produces a follow-up framework, funding commitment, or model legislation; and whether WHO's next European survey shows the 8% figure moving."
+      },
+      {
+        "label": "How to read national AI-health statistics",
+        "text": "Self-reported survey data is useful for direction — whether a gap is widening or closing — and much less reliable for precision. Treat '8%' as directionally real, not as an audited count."
+      }
+    ],
+    "links": [
+      {
+        "label": "WHO Europe — Govern AI in health before the gaps become irreversible",
+        "url": "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
+      }
+    ],
+    "sources": [
+      {
+        "label": "WHO Europe — Statement: Govern AI in health before the gaps become irreversible (primary)",
+        "url": "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
+      },
+      {
+        "label": "WHO Europe — WHO brings 37 countries together in Lisbon (primary)",
+        "url": "https://www.who.int/europe/news/item/15-07-2026-who-brings-37-countries-together-in-lisbon-to-get-ai-governance-right-and-make-it-work-for-every-patient"
+      },
+      {
+        "label": "Euronews — Europe needs to catch up with the AI surge in hospitals, WHO says",
+        "url": "https://www.euronews.com/health/2026/07/16/europe-needs-to-catch-up-with-the-ai-surge-in-hospitals-who-says"
+      }
+    ],
+    "id": "newsroom-who-europe-ai-health-governance",
+    "image": "assets/img/newsroom/newsroom-who-europe-ai-health-governance.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-directed desk assignment · 2026-07-17T05:30:00Z",
+      "stages": [
+        {
+          "name": "Assignment",
+          "agent": "managing-editor",
+          "note": "Selected from an owner-reviewed shortlist. Assigned to Health as a governance-gap story distinct from any single model or trial."
+        },
+        {
+          "name": "Verification",
+          "agent": "verification",
+          "note": "8% strategy figure, two-thirds diagnostics deployment, half with patient chatbots, 37-country Lisbon attendance, and the statement's own title confirmed directly against both WHO Europe primary pages. Euronews used only for framing context, not for any figure not already in the primary source."
+        },
+        {
+          "name": "Editorial review",
+          "agent": "editor-in-chief",
+          "note": "not-medical-advice disclaimer applied per house rule for health/clinical content. Self-reported-survey caveat foregrounded in its own section rather than left implicit."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for owner-directed publication",
+        "note": "Filed at 0baak's direction from an owner-approved story shortlist."
+      }
+    },
+    "publishedAt": "2026-07-17T05:30:00Z"
   }
 ];
