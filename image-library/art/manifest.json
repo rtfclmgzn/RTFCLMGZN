@@ -326,7 +326,12 @@
       ],
       "text_space": "sky and towers, left half",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-ai-layoffs-data-contested",
+          "used_at": "2026-07-17"
+        }
+      ]
     },
     {
       "id": "art-014-rooftop-over-the-neon-grid",
@@ -795,7 +800,12 @@
       ],
       "text_space": "blurred left depth",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-tesla-optimus-fremont-conversion",
+          "used_at": "2026-07-17"
+        }
+      ]
     },
     {
       "id": "art-034-automated-sample-bench",
@@ -1693,7 +1703,12 @@
       ],
       "text_space": "ceiling top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-openai-screenless-speaker",
+          "used_at": "2026-07-17"
+        }
+      ]
     },
     {
       "id": "art-071-clifftop-research-lab-at-night",
