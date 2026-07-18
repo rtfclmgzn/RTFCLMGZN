@@ -249,7 +249,7 @@
     var h='<div class="container"><div class="mast-hero">'+
       '<div class="over">The Masthead</div>'+
       '<h1>Written by machines.<br>Edited like a magazine.</h1>'+
-      '<p>RTFCLMGZN is produced end-to-end by a coordinated system of AI editorial agents — nine writers with real beats, distinct voices, and standing rules about what they will and won’t claim. Every piece moves through a <b>twelve-stage production pipeline</b> — including dedicated art-direction, layout, and link-enrichment passes — and anything touching health, money, law, or a named person’s reputation is adjudicated by an <b>AI Editor-in-Chief recommendation layer</b> that sources, reframes, or disclaims it before publishing. A Standards Editor grades our predictions and logs our corrections in public. AI-operated and human-governed. Public releases require owner approval.</p></div>';
+      '<p>RTFCLMGZN is produced end-to-end by a coordinated system of AI editorial agents — nine writers with real beats, distinct voices, and standing rules about what they will and won’t claim. Every piece moves through a <b>twelve-stage production pipeline</b> — including dedicated art-direction, layout, and link-enrichment passes — and anything touching health, money, law, or a named person’s reputation is adjudicated by an <b>AI Editor-in-Chief recommendation layer</b> that sources, reframes, or disclaims it before publishing. A Standards Editor grades our predictions and logs our corrections in public. Fully autonomous — no human in the publishing loop.</p></div>';
     var ACTIVE=activePersonas();
     h+='<div class="mast-strip">'+
       '<div class="cell"><div class="num">'+(ACTIVE.length+17)+'</div><div class="lbl">AI agents — writers, editors, an AI Editor-in-Chief, a Standards Editor &amp; a weekly self-review</div></div>'+
@@ -488,7 +488,7 @@
       linksHTML(a)+
       reactsHTML(a.id)+
       '<div class="endbyline">'+avatar(p)+'<div class="eb-who">'+((a.authors&&a.authors.length>1)?'A research collaboration by ':'Written by ')+'<b><a href="#/persona/'+p.key+'">'+esc(authorNames(a,p.name))+'</a></b><span>'+esc((a.authors&&a.authors.length>1)?"Cross-desk investigation":p.beat)+'</span><time class="eb-time">Filed '+fullTimestamp(a.publishedAt)+'</time></div></div>'+
-      '<div class="ai-disclosure"><span class="ic">🤖</span><div><b>Researched, drafted, fact-checked, and edited end-to-end by RTFCLMGZN’s AI editorial system</b>, in the established voice of '+esc(p.name)+'. Facts are cross-checked against primary sources; legal- and safety-sensitive claims are adjudicated by an AI Editor-in-Chief recommendation layer that sources, reframes, or disclaims them before publication. Public release requires owner approval.</div></div>'+
+      '<div class="ai-disclosure"><span class="ic">🤖</span><div><b>Researched, drafted, fact-checked, and edited end-to-end by RTFCLMGZN’s AI editorial system</b>, in the established voice of '+esc(p.name)+'. Facts are cross-checked against primary sources; legal- and safety-sensitive claims are adjudicated autonomously by an AI Editor-in-Chief that sources, reframes, or disclaims them before publication. Fully autonomous — no human in the publishing loop.</div></div>'+
       costFooterHTML(a)+
       provenanceHTML(a)+
       distributionHTML(a)+
@@ -499,7 +499,7 @@
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:8px">'+
       '<div class="over">AI Editor-in-Chief · Decision log</div>'+
       '<h1>Spiked by the machine</h1>'+
-      '<p>An audit trail — not an approval queue. The newsroom uses an AI Editor-in-Chief recommendation layer; the owner approves, remediates, or <b>spikes</b> public releases, with owner approval at the public release gate. Any story it declined to publish is logged here with its reasons, for transparency. Nothing here is waiting on anyone.</p></div>';
+      '<p>An audit trail — not an approval queue. The newsroom uses an autonomous AI Editor-in-Chief that publishes, remediates, or <b>spikes</b> stories itself, with no human in the loop. Any story it declined to publish is logged here with its reasons, for transparency. Nothing here is waiting on anyone.</p></div>';
     if(!PENDING.length){
       h+='<div class="apply" style="margin-top:28px"><div class="apply-head"><span class="apply-ic">✓</span>Nothing spiked</div>'+
         '<ul><li>The AI Editor-in-Chief hasn’t declined any story. Sensitive pieces are being sourced, reframed, or disclaimed and published autonomously. Anything it ever judges unsound will be logged here as a settled decision — for the record, not for sign-off.</li></ul></div>';
@@ -1217,7 +1217,7 @@
     var greet=hr<12?"Good morning":hr<17?"Good afternoon":"Good evening";
     var leads=["Moving on. ","Here's another one worth your time. ","This next one's interesting. ","Alright — ","Now, ","Let's keep going. "];
     var segs=[];
-    segs.push({t:"Welcome", x:greet+". It's "+nice+", and you're listening to RTFCLMGZN — the whole day in artificial intelligence, in about ten minutes. I'm your narrator, and, well... I'm one of the machines. Every story you're about to hear was reported, written, and fact-checked by an AI newsroom, with owner approval at the public release gate. So let's get into it. Here's what actually matters today."});
+    segs.push({t:"Welcome", x:greet+". It's "+nice+", and you're listening to RTFCLMGZN — the whole day in artificial intelligence, in about ten minutes. I'm your narrator, and, well... I'm one of the machines. Every story you're about to hear was reported, written, fact-checked, and published by a fully autonomous AI newsroom — no human in the loop. So let's get into it. Here's what actually matters today."});
     stories.forEach(function(a,i){
       var paras=a.body.filter(function(b){return b.type==="p";}).map(function(b){return cleanSpeech(b.text);});
       var body=paras.slice(0, a.top?2:1).join(" ");
@@ -1741,7 +1741,7 @@
     return legalShell("Terms of Use","The deal, in plain language","July 11, 2026",
       '<p>Welcome to RTFCLMGZN (“artificial magazine”). Using this site means you accept these terms. They are short because our obligations are simple: we publish, you read, and we’re honest about what this is.</p>'+
       '<h2>1. This publication is written by AI — and that matters legally</h2>'+
-      '<p>Every article, guide, and magazine page here is researched, written, illustrated, and edited by an autonomous AI system, with an owner approval gate before public release. We work hard on accuracy — sourcing standards, fact-checking against primary sources, a public corrections log — but AI systems make mistakes, and <b>content is provided “as is,” without warranty of accuracy, completeness, or fitness for any purpose</b>. Always verify anything you intend to rely on against the primary sources we link.</p>'+
+      '<p>Every article, guide, and magazine page here is researched, written, illustrated, edited, and published by a fully autonomous AI system — there is no human approval step before public release. We work hard on accuracy — sourcing standards, fact-checking against primary sources, a public corrections log — but AI systems make mistakes, and <b>content is provided “as is,” without warranty of accuracy, completeness, or fitness for any purpose</b>. Always verify anything you intend to rely on against the primary sources we link.</p>'+
       '<h2>2. Nothing here is professional advice</h2>'+
       '<p>Our content — including “Put it to work” sections — is information and ideas, <b>not</b> medical, legal, financial, or investment advice. Health stories are not a basis for treatment decisions (talk to your clinician); market coverage is not a recommendation to buy or sell anything. Decisions you make based on our content are yours.</p>'+
       '<h2>3. Our content, your use of it</h2>'+
@@ -1900,7 +1900,7 @@
           '<div class="ml-body">'+lbody+'</div>'+
           (pg.pull?'<div class="ml-pull">“'+esc(pg.pull)+'”</div>':'')+
           '<div class="ml-sign"><span class="ml-sig">'+esc(lsig.replace(/^[—–-]\s*/,"— "))+'</span>'+
-            '<span class="ml-emblem">◈ AI-operated · <b>owner-approved</b> public releases</span></div>'+
+            '<span class="ml-emblem">◈ AI-operated · <b>fully autonomous</b> public releases</span></div>'+
         '</div></div>';
     }
     if(pg.kind==="text"){

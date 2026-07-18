@@ -635,7 +635,12 @@
       ],
       "text_space": "glass reflections top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-tesla-optimus-fremont-conversion",
+          "used_at": "2026-07-18"
+        }
+      ]
     },
     {
       "id": "art-027-mission-control-hall-compute-core",
@@ -800,12 +805,7 @@
       ],
       "text_space": "blurred left depth",
       "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-tesla-optimus-fremont-conversion",
-          "used_at": "2026-07-17"
-        }
-      ]
+      "used_in": []
     },
     {
       "id": "art-034-automated-sample-bench",

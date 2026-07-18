@@ -169,14 +169,18 @@ class PublicationPolicyTests(unittest.TestCase):
         self.assertEqual("owner-review", decision.decision)
         self.assertIn("topic-requires-owner-review", decision.reason_codes)
 
-    def test_first_bounded_release_requires_owner_acceptance_history(self) -> None:
+    def test_valid_preauthorization_waives_first_release_acceptance_history(self) -> None:
+        # A standing owner_preauthorization exists precisely to cover judgment-call
+        # workflow gates like "no acceptance history yet" without a live human
+        # click -- that's what "preauthorized" means. The reason code still rides
+        # along in reason_codes for the audit trail even though it no longer blocks.
         decision = PublicationPolicy(config_for("bounded_autopublish")).decide(
             story=valid_story(),
             artifacts=valid_artifacts(),
             publishes_today=0,
             owner_approved_release_count=0,
         )
-        self.assertEqual("owner-review", decision.decision)
+        self.assertEqual("auto-publish", decision.decision)
         self.assertIn(
             "autopublish-acceptance-history-insufficient", decision.reason_codes
         )

@@ -10,6 +10,21 @@ from .review_gate import classify_compliance_blockers, split_contradictions
 
 POLICY_VERSION = "bounded-publication-v1.0"
 
+# A valid, fresh owner_preauthorization stands in for a real-time human click on
+# these specific workflow/judgment-call flags -- that is the entire purpose of a
+# standing preauthorization. It does NOT waive genuine content-safety topic
+# blocks, the daily rate limit, or its own freshness check -- those remain real
+# gates regardless of preauthorization.
+_PREAUTH_WAIVABLE_OWNER_REVIEW_REASONS = frozenset(
+    {
+        "compliance-requires-owner-review",
+        "compliance-auto-publish-restriction",
+        "risk-level-requires-owner-review",
+        "section-requires-owner-review",
+        "autopublish-acceptance-history-insufficient",
+    }
+)
+
 
 @dataclass(frozen=True)
 class PolicyDecision:
@@ -328,13 +343,19 @@ class PublicationPolicy:
             "required_owner_approved_release_count": required_owner_approved,
         }
 
+        unwaived_owner_review = [
+            reason
+            for reason in owner_review
+            if reason not in _PREAUTH_WAIVABLE_OWNER_REVIEW_REASONS
+        ]
+
         if hard:
             decision = "blocked"
         elif (
             mode == "bounded_autopublish"
             and publication.get("auto_publish_enabled")
             and preauthorized
-            and not owner_review
+            and not unwaived_owner_review
         ):
             decision = "auto-publish"
         elif mode in {"draft_only", "approval_required", "bounded_autopublish"}:
@@ -343,5 +364,8 @@ class PublicationPolicy:
             decision = "blocked"
             owner_review.append("autonomy-mode-off")
 
+        # Waived reasons still ride along in the record for transparency -- an
+        # auto-published story's audit trail shows exactly which judgment-call
+        # flags the standing preauthorization covered, never hides them.
         reasons = tuple(sorted(set(hard + owner_review)))
         return PolicyDecision(decision, reasons, metrics)
