@@ -892,7 +892,7 @@
   function viewResources(){
     var DICT=window.RTFC_DICT||[];
     // build the section list first (drives both the jump-nav and the content)
-    var secs=[{id:"res-dossiers",label:"Company dossiers"},{id:"res-dict-cta",label:"The AI Dictionary"}];
+    var secs=[{id:"res-dossiers",label:"Company dossiers"},{id:"res-dict-cta",label:"The AI Dictionary"},{id:"res-wallpapers",label:"Wallpapers"}];
     RES.forEach(function(cat,i){ secs.push({id:"res-cat-"+i,label:cat.title}); });
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
@@ -915,6 +915,11 @@
       '<span>'+DICT.length+' terms that unlock any AI headline — token, agent, hallucination, and the rest — each explained like a human.</span></div>'+
       '<span class="dc-go">Open the dictionary →</span></a></section>';
 
+    // 1c) wallpapers — make-your-own from our cover art
+    h+='<section id="res-wallpapers"><a class="dict-cta" href="#/wallpapers"><div><b>Phone wallpapers</b>'+
+      '<span>Turn any of our article and magazine covers into a phone wallpaper — pick a size, the RTFCLMGZN mark goes on, download free.</span></div>'+
+      '<span class="dc-go">Make a wallpaper →</span></a></section>';
+
     // 2) the follow-list categories
     RES.forEach(function(cat,i){
       h+='<section id="res-cat-'+i+'"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>'+esc(cat.title)+'</div>'+
@@ -930,6 +935,107 @@
 
     return h+'</div></div></div>';
   }
+
+  /* ================= WALLPAPERS (client-side canvas maker) ================= */
+  var WP_SIZES = [
+    {key:"tall",   label:"Phone · tall", w:1080, h:2340},
+    {key:"hd",     label:"Phone · HD",   w:1080, h:1920},
+    {key:"iphone", label:"iPhone",       w:1179, h:2556},
+    {key:"max",    label:"iPhone Max",   w:1290, h:2796}
+  ];
+  var WP = { src:null, size:"tall", pos:"bottom" };
+  var WP_IMGCACHE = {};
+  // Source images: our own published article + magazine covers (all same-origin, so
+  // the canvas can export without tainting). Auto-updates as new pieces publish.
+  function wpImages(){
+    var seen={}, out=[];
+    function add(src,label){
+      if(!src||typeof src!=="string"||!/\.(jpe?g|png|webp)$/i.test(src)||seen[src]) return;
+      seen[src]=1; out.push({src:src,label:label||""});
+    }
+    ARTICLES.forEach(function(a){ add(a.image, a.title); });
+    MAG.forEach(function(iss){
+      if(iss.cover&&iss.cover.image) add(iss.cover.image, iss.title||"Magazine");
+      (iss.pages||[]).forEach(function(p){ add(p.image, p.cap||iss.title||""); });
+    });
+    return out;
+  }
+  function wpSize(){ for(var i=0;i<WP_SIZES.length;i++) if(WP_SIZES[i].key===WP.size) return WP_SIZES[i]; return WP_SIZES[0]; }
+  function wpControlsHTML(imgs){
+    var h='<div class="wp-cgroup"><div class="wp-clabel">Size</div><div class="wp-chips">'+
+      WP_SIZES.map(function(s){ return '<button class="wp-chip'+(WP.size===s.key?' on':'')+'" onclick="rtfcWpSize(\''+s.key+'\')">'+esc(s.label)+'<em>'+s.w+'×'+s.h+'</em></button>'; }).join("")+'</div></div>';
+    h+='<div class="wp-cgroup"><div class="wp-clabel">Logo position</div><div class="wp-chips">'+
+      ["bottom","top"].map(function(p){ return '<button class="wp-chip'+(WP.pos===p?' on':'')+'" onclick="rtfcWpPos(\''+p+'\')">'+p.charAt(0).toUpperCase()+p.slice(1)+'</button>'; }).join("")+'</div></div>';
+    h+='<div class="wp-cgroup"><div class="wp-clabel">Image · '+imgs.length+' to choose from</div><div class="wp-gallery">'+
+      imgs.map(function(im){ return '<button class="wp-thumb'+(WP.src===im.src?' on':'')+'" style="background-image:url(\''+im.src.replace(/'/g,"\\'")+'\')" title="'+esc(im.label)+'" aria-label="'+esc(im.label)+'" onclick="rtfcWpPick(\''+im.src.replace(/'/g,"\\'")+'\')"></button>'; }).join("")+'</div></div>';
+    return h;
+  }
+  function viewWallpapers(){
+    var imgs=wpImages();
+    if((!WP.src||!/\.(jpe?g|png|webp)$/i.test(WP.src))&&imgs.length) WP.src=imgs[0].src;
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · Wallpapers</div>'+
+      '<h1>Make a phone wallpaper</h1>'+
+      '<p>Turn any of our cover images into a phone wallpaper — sized for your screen, with the RTFCLMGZN mark on it. Pick an image, choose a size, download. Free, like everything here.</p></div>';
+    h+='<div class="wp-wrap">'+
+      '<div class="wp-stage"><canvas id="wp-canvas" width="1080" height="2340"></canvas>'+
+      '<button class="cta wp-dl" onclick="rtfcWpDownload()">Download wallpaper</button>'+
+      '<p class="wp-hint">On a phone: download, then set it from your Photos app. On desktop: download and AirDrop / send it to your phone.</p></div>'+
+      '<div class="wp-controls">'+wpControlsHTML(imgs)+'</div></div>';
+    setTimeout(function(){ wpDraw(); if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(wpDraw); } }, 30);
+    return h+'</div>';
+  }
+  function wpRefreshControls(){
+    var c=document.querySelector(".wp-controls"); if(c) c.innerHTML=wpControlsHTML(wpImages());
+  }
+  window.rtfcWpPick=function(src){ WP.src=src; wpRefreshControls(); wpDraw(); };
+  window.rtfcWpSize=function(k){ WP.size=k; wpRefreshControls(); wpDraw(); };
+  window.rtfcWpPos=function(p){ WP.pos=p; wpRefreshControls(); wpDraw(); };
+  function wpDraw(){
+    var cv=document.getElementById("wp-canvas"); if(!cv) return;
+    var s=wpSize(); if(cv.width!==s.w) cv.width=s.w; if(cv.height!==s.h) cv.height=s.h;
+    var ctx=cv.getContext("2d");
+    ctx.fillStyle="#0b0b12"; ctx.fillRect(0,0,s.w,s.h);
+    var im=WP.src?WP_IMGCACHE[WP.src]:null;
+    if(im&&im.complete&&im.naturalWidth){
+      var scale=Math.max(s.w/im.naturalWidth, s.h/im.naturalHeight);
+      var dw=im.naturalWidth*scale, dh=im.naturalHeight*scale;
+      ctx.drawImage(im,(s.w-dw)/2,(s.h-dh)/2,dw,dh);
+    } else if(WP.src){
+      im=new Image(); WP_IMGCACHE[WP.src]=im; im.__src=WP.src;
+      im.onload=function(){ if(WP.src===im.__src) wpDraw(); };
+      im.src=WP.src;
+    }
+    wpLogo(ctx,s);
+  }
+  function wpLogo(ctx,s){
+    var w=s.w, h=s.h, bottom=(WP.pos!=="top");
+    var gh=h*0.28;
+    var g=ctx.createLinearGradient(0, bottom?h:0, 0, bottom?h-gh:gh);
+    g.addColorStop(0,"rgba(4,4,9,0.74)"); g.addColorStop(1,"rgba(4,4,9,0)");
+    ctx.fillStyle=g; ctx.fillRect(0, bottom?h-gh:0, w, gh);
+    var cx=w/2, fs=w*0.072, capfs=w*0.023, dfs=w*0.058;
+    var wy = bottom ? h-h*0.075 : h*0.13;
+    ctx.textAlign="center"; ctx.textBaseline="alphabetic";
+    ctx.shadowColor="rgba(0,0,0,.5)"; ctx.shadowBlur=w*0.018; ctx.shadowOffsetY=w*0.003;
+    ctx.fillStyle="#8b7cf7"; ctx.font=dfs+'px "Fraunces", Georgia, serif';
+    ctx.fillText("◈", cx, wy - fs*0.98);
+    ctx.fillStyle="#ffffff"; ctx.font='600 '+fs+'px "Fraunces", Georgia, serif';
+    try{ ctx.letterSpacing=(w*0.008)+"px"; }catch(e){}
+    ctx.fillText("RTFCLMGZN", cx, wy);
+    ctx.fillStyle="rgba(255,255,255,.72)"; ctx.font='600 '+capfs+'px "Inter", system-ui, sans-serif';
+    try{ ctx.letterSpacing=(w*0.006)+"px"; }catch(e){}
+    ctx.fillText("ARTIFICIAL MAGAZINE", cx, wy + capfs*2.1);
+    try{ ctx.letterSpacing="0px"; }catch(e){}
+    ctx.shadowColor="transparent"; ctx.shadowBlur=0; ctx.shadowOffsetY=0;
+  }
+  window.rtfcWpDownload=function(){
+    var cv=document.getElementById("wp-canvas"); if(!cv) return;
+    var name="rtfclmgzn-wallpaper-"+WP.size+".png";
+    function grab(url,revoke){ var a=document.createElement("a"); a.href=url; a.download=name; document.body.appendChild(a); a.click(); setTimeout(function(){ if(revoke) URL.revokeObjectURL(url); a.remove(); },1200); }
+    if(cv.toBlob){ cv.toBlob(function(b){ if(b) grab(URL.createObjectURL(b),true); else grab(cv.toDataURL("image/png")); },"image/png"); }
+    else { grab(cv.toDataURL("image/png")); }
+  };
+
   function viewDictionary(){
     var DICT=window.RTFC_DICT||[];
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · Dictionary</div>'+
@@ -2486,6 +2592,7 @@
     else if(parts[0]==="company"){ view=viewCompany(parts[1]); active=""; }
     else if(parts[0]==="predictions"||parts[0]==="ledger"){ view=viewPredictions(); active=""; }
     else if(parts[0]==="dictionary"){ view=viewDictionary(); active=""; }
+    else if(parts[0]==="wallpapers"){ view=viewWallpapers(); active="resources"; }
     else if(parts[0]==="live"||parts[0]==="livetv"){ view=viewLiveTV(); active="live"; }
     else if(parts[0]==="events"){ view=viewEvents(); active=""; }
     else if(parts[0]==="contact"||parts[0]==="connect"){ view=viewContact(); active=""; }
