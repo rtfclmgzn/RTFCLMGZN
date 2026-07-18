@@ -7,11 +7,14 @@ from pathlib import Path
 from typing import Any
 
 from .app import find_repo_root, serve
+from .autonomy.buzz_cycle import BuzzCycleError, run_buzz_cycle
 from .autonomy.config import ConfigError, load_config, save_user_config
 from .autonomy.controller import AutonomyController, AutonomyError
 from .autonomy.scheduler import (
     SchedulerError,
+    disable_buzz_schedule,
     disable_schedule,
+    enable_buzz_schedule,
     enable_schedule,
     schedule_status,
 )
@@ -165,6 +168,16 @@ def main(argv: list[str] | None = None) -> int:
     disable = sub.add_parser("disable-schedule")
     disable.add_argument("--delete", action="store_true")
 
+    buzz = sub.add_parser("buzz-cycle")
+    buzz.add_argument("--dry-run", action="store_true")
+    buzz.add_argument("--no-push", dest="push", action="store_false", default=True)
+
+    buzz_schedule = sub.add_parser("enable-buzz-schedule")
+    buzz_schedule.add_argument("--interval", type=int, default=120)
+
+    buzz_disable = sub.add_parser("disable-buzz-schedule")
+    buzz_disable.add_argument("--delete", action="store_true")
+
     args = parser.parse_args(argv)
     try:
         repo_root = (
@@ -239,6 +252,18 @@ def main(argv: list[str] | None = None) -> int:
             config["schedule"]["enabled"] = False
             save_user_config(config)
             _json(scheduler_result)
+        elif args.command == "buzz-cycle":
+            result = run_buzz_cycle(
+                repo_root,
+                dry_run=bool(args.dry_run),
+                push=bool(args.push),
+                log=lambda message: print(message, file=sys.stderr, flush=True),
+            )
+            _json(result)
+        elif args.command == "enable-buzz-schedule":
+            _json(enable_buzz_schedule(repo_root, int(args.interval)))
+        elif args.command == "disable-buzz-schedule":
+            _json(disable_buzz_schedule(delete=bool(args.delete)))
         return 0
     except (
         NewsroomError,
@@ -247,6 +272,7 @@ def main(argv: list[str] | None = None) -> int:
         WizardError,
         SchedulerError,
         VaultError,
+        BuzzCycleError,
     ) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1

@@ -25,6 +25,13 @@ class SchedulerTests(unittest.TestCase):
         self.assertNotIn("OPENAI_API_KEY=", launcher)
         self.assertNotIn("GEMINI_API_KEY=", launcher)
 
+    def test_buzz_launcher_is_bounded_and_contains_no_credentials(self) -> None:
+        payload = Path(__file__).resolve().parents[2]
+        launcher = (payload / "RTFCLMGZN_BUZZ_TASK.bat").read_text("utf-8")
+        self.assertIn("buzz-cycle", launcher)
+        self.assertNotIn("OPENAI_API_KEY=", launcher)
+        self.assertNotIn("GEMINI_API_KEY=", launcher)
+
 
 if __name__ == "__main__":
     unittest.main()
