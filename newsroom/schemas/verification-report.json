@@ -87,12 +87,13 @@
             "type": "boolean"
           },
           "resolution": {
-            "type": "string"
+            "type": ["string", "null"]
           }
         },
         "required": [
           "description",
-          "resolved"
+          "resolved",
+          "resolution"
         ],
         "additionalProperties": false
       }
