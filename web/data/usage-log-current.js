@@ -34,7 +34,8 @@
     { id:"u-0111", ts:"2026-07-15T01:44:00Z", article_id:"newsroom-1x-neo-hand", agent:"layout-production", task_type:"image-generation", model:"gemini-3.1-flash-lite-image", description:"Generated the unique 16:9 cover for the 1X Neo hand synthesis under the founder-locked house style", input_tokens:0, output_tokens:0, images:1, measured:"metered" },
     { id:"u-0112", ts:"2026-07-18T05:46:18Z", article_id:"system", agent:"buzz-desk", task_type:"buzz-refresh", model:"gpt-5.6-luna", description:"Buzz Desk 2-hour refresh: added 5 card(s), retired 20 stale card(s)", input_tokens:42304, output_tokens:1241, measured:"metered" },
     { id:"u-0113", ts:"2026-07-18T07:49:10Z", article_id:"system", agent:"buzz-desk", task_type:"buzz-refresh", model:"gpt-5.6-luna", description:"Buzz Desk 2-hour refresh: added 3 card(s), retired 0 stale card(s)", input_tokens:47088, output_tokens:1113, measured:"metered" },
-    { id:"u-0114", ts:"2026-07-18T09:49:06Z", article_id:"system", agent:"buzz-desk", task_type:"buzz-refresh", model:"gpt-5.6-luna", description:"Buzz Desk 2-hour refresh: added 3 card(s), retired 0 stale card(s)", input_tokens:29954, output_tokens:877, measured:"metered" }
+    { id:"u-0114", ts:"2026-07-18T09:49:06Z", article_id:"system", agent:"buzz-desk", task_type:"buzz-refresh", model:"gpt-5.6-luna", description:"Buzz Desk 2-hour refresh: added 3 card(s), retired 0 stale card(s)", input_tokens:29954, output_tokens:877, measured:"metered" },
+    { id:"u-0115", ts:"2026-07-18T11:49:03Z", article_id:"system", agent:"buzz-desk", task_type:"buzz-refresh", model:"gpt-5.6-luna", description:"Buzz Desk 2-hour refresh: added 4 card(s), retired 0 stale card(s)", input_tokens:42006, output_tokens:1398, measured:"metered" }
   ];
   if(!Array.isArray(window.RTFC_USAGE_LOG)) window.RTFC_USAGE_LOG=[];
   var seen={}; window.RTFC_USAGE_LOG.forEach(function(r){seen[r.id]=1;});
