@@ -11,14 +11,26 @@
   var GUIDES = window.RTFC_GUIDES || [];
   var RES = window.RTFC_RESOURCES || [];
   var BUZZ = window.RTFC_BUZZ || [];
+  var acctPending=null; // email a magic link was just sent to; not persisted, drives the "check your email" state
 
-  /* ---------- reader library (localStorage; syncs to account at public launch) ---------- */
+  /* ---------- reader library (localStorage; account synced from the server session) ---------- */
   function libGet(){
     try{ var raw=localStorage.getItem("rtfc-lib"); if(raw) return JSON.parse(raw); }catch(e){}
     return { bookmarks:[], readLater:[], account:null };
   }
   function libSave(l){ try{ localStorage.setItem("rtfc-lib",JSON.stringify(l)); }catch(e){} }
   function inList(list,id){ return list.indexOf(id)>=0; }
+  // Boot-time check against the real session cookie. Renders instantly from cached
+  // localStorage first (route() already ran), then corrects itself here once the
+  // server responds — keeps the site working over file:// with no network at all.
+  function syncAccount(){
+    if(typeof fetch!=="function") return;
+    fetch("/api/auth/me",{credentials:"same-origin"}).then(function(r){ return r.json(); }).then(function(d){
+      var l=libGet();
+      l.account = (d && d.email) ? { email:d.email, plan:d.plan||"free", since:d.since } : null;
+      libSave(l); route();
+    }).catch(function(){});
+  }
   window.rtfcToggle=function(kind,id,ev){
     if(ev){ ev.preventDefault(); ev.stopPropagation(); }
     var l=libGet(), list=(kind==="bookmark")?l.bookmarks:l.readLater;
@@ -27,10 +39,16 @@
   };
   window.rtfcSignup=function(){
     var em=document.getElementById("acct-email"); if(!em||!em.value||em.value.indexOf("@")<1){ if(em) em.style.borderColor="var(--gate)"; return; }
-    var l=libGet(); l.account={ email:em.value, plan:"free", since:new Date().toISOString() }; libSave(l); route();
+    var email=em.value;
+    fetch("/api/auth/request-link",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email:email})})
+      .then(function(){ acctPending=email; route(); })
+      .catch(function(){ acctPending=email; route(); });
   };
   window.rtfcPlan=function(plan){ var l=libGet(); if(!l.account) return; l.account.plan=plan; libSave(l); route(); };
-  window.rtfcSignout=function(){ var l=libGet(); l.account=null; libSave(l); route(); };
+  window.rtfcSignout=function(){
+    var l=libGet(); l.account=null; libSave(l); route();
+    fetch("/api/auth/logout",{method:"POST",credentials:"same-origin"}).catch(function(){});
+  };
   /* reactions — per-article, local, honest (no fake counts; server counts arrive with backend) */
   var REACTS=[{k:"mind",e:"💡",l:"Expanded my mind"},{k:"useful",e:"🛠",l:"I'll use this"},{k:"fire",e:"🔥",l:"Great read"}];
   window.rtfcReact=function(id,k,ev){
@@ -767,11 +785,16 @@
     var l=libGet();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px"><div class="over">Account</div>';
     if(!l.account){
+      if(acctPending){
+        h+='<h1>Check your email</h1>'+
+          '<p>We sent a sign-in link to <b>'+esc(acctPending)+'</b>. It expires in 15 minutes and works once. Didn’t get it? Check spam, or <a href="#" onclick="acctPending=null;route();return false" style="color:var(--accent2)">try a different address</a>.</p></div>';
+        return h+'</div>';
+      }
       h+='<h1>Create your free account</h1>'+
         '<p>Reading is free and stays free. A free account adds three things: your library (bookmarks + read-later) becomes permanent and syncs across devices, you get the <b>daily digest email</b> — the day’s stories in one send — and you’re set up to subscribe to the magazine whenever you’re ready.</p></div>'+
         '<div class="acct-card"><label>Email</label><input id="acct-email" type="email" placeholder="you@example.com">'+
         '<button class="cta" onclick="rtfcSignup()">Create free account</button>'+
-        '<p class="protonote">Prototype: stored locally in this browser. Real accounts (and the digest itself) arrive with the public launch — this builds and tests the exact flow.</p></div>'+
+        '<p class="protonote">We’ll email you a one-time sign-in link — no password to create or remember.</p></div>'+
         timeMeterHTML();
       return h+'</div>';
     }
@@ -1720,10 +1743,10 @@
       '<div class="prose" style="font-size:15px">'+inner+'</div></div>';
   }
   function viewPrivacy(){
-    return legalShell("Privacy","How we handle your data","July 11, 2026",
+    return legalShell("Privacy","How we handle your data","July 18, 2026",
       '<p>RTFCLMGZN is built to need as little of your data as possible. This page says plainly what we collect, what we don’t, and what third parties are involved. No legalese padding — if anything here is unclear, email us.</p>'+
       '<h2>What we collect today: almost nothing</h2>'+
-      '<p>Reading this site requires no account and sends us no personal information. Bookmarks, read-later items, reactions, theme choice, and the prototype account you can create on this site are stored in <b>your browser’s local storage, on your device</b> — they never leave it and we cannot see them. We run no advertising trackers, no fingerprinting, and no third-party ad networks.</p>'+
+      '<p>Reading this site requires no account and sends us no personal information. Bookmarks, read-later items, reactions, and theme choice are stored in <b>your browser’s local storage, on your device</b> — they never leave it and we cannot see them. If you create a free account, your email address is stored server-side (on Cloudflare D1) so you can sign back in and keep your library across devices. Sign-in uses a one-time emailed link rather than a password — that link is single-use and expires in 15 minutes. Staying signed in uses one <code>HttpOnly</code> session cookie, which page scripts can’t read and which isn’t used for tracking. We run no advertising trackers, no fingerprinting, and no third-party ad networks.</p>'+
       '<h2>Hosting &amp; analytics</h2>'+
       '<p>The site is served by <b>Cloudflare</b>, which processes IP addresses transiently as any web host must (see Cloudflare’s privacy policy). If we enable analytics, we use Cloudflare Web Analytics, which is cookie-free and aggregate-only — it tells us page counts, not who you are.</p>'+
       '<h2>The language switcher &amp; other third parties</h2>'+
@@ -1733,12 +1756,12 @@
       '<h2>Cookies</h2>'+
       '<p>We set no tracking cookies. The only cookie-like storage we use is local storage for your preferences (above), and a <code>googtrans</code> cookie if — and only if — you pick a non-English language, so your choice persists.</p>'+
       '<h2>Your choices</h2>'+
-      '<p>Clearing your browser’s site data removes everything we’ve stored on your device. Unsubscribe links will handle email. For anything else — questions, deletion requests once accounts are real, or concerns — email <a href="mailto:hello@rtfclmgzn.com">hello@rtfclmgzn.com</a> and a decision-capable part of this operation (the founder — a human) will answer.</p>'+
+      '<p>Clearing your browser’s site data removes everything we’ve stored on your device. Unsubscribe links will handle email. For account deletion, questions, or concerns — email <a href="mailto:hello@rtfclmgzn.com">hello@rtfclmgzn.com</a> and a decision-capable part of this operation (the founder — a human) will answer.</p>'+
       '<h2>Changes</h2>'+
       '<p>If our practices change (for example, when real accounts and payments launch), this page changes first, with a new effective date. Material changes to the newsletter’s handling of your address will be announced in the email itself.</p>');
   }
   function viewTerms(){
-    return legalShell("Terms of Use","The deal, in plain language","July 11, 2026",
+    return legalShell("Terms of Use","The deal, in plain language","July 18, 2026",
       '<p>Welcome to RTFCLMGZN (“artificial magazine”). Using this site means you accept these terms. They are short because our obligations are simple: we publish, you read, and we’re honest about what this is.</p>'+
       '<h2>1. This publication is written by AI — and that matters legally</h2>'+
       '<p>Every article, guide, and magazine page here is researched, written, illustrated, edited, and published by a fully autonomous AI system — there is no human approval step before public release. We work hard on accuracy — sourcing standards, fact-checking against primary sources, a public corrections log — but AI systems make mistakes, and <b>content is provided “as is,” without warranty of accuracy, completeness, or fitness for any purpose</b>. Always verify anything you intend to rely on against the primary sources we link.</p>'+
@@ -1747,7 +1770,7 @@
       '<h2>3. Our content, your use of it</h2>'+
       '<p>Content on this site is © RTFCLMGZN. You’re welcome to quote brief excerpts with attribution and a link; you may not republish whole pieces, scrape the site to train models, or pass our work off as yours. The underlying facts, of course, belong to no one.</p>'+
       '<h2>4. Preview features</h2>'+
-      '<p>Accounts, “Plus,” and anything labeled preview or prototype are demonstrations: no payments are collected, no subscription exists yet, and preview data lives only in your browser. When real paid features launch, they’ll come with their own clear terms before any money changes hands.</p>'+
+      '<p>Free accounts are real: creating one stores your email so you can sign back in and keep your library across devices. “Plus” and anything else labeled preview or prototype are still demonstrations — no payments are collected and no subscription exists yet. When real paid features launch, they’ll come with their own clear terms before any money changes hands.</p>'+
       '<h2>5. Third-party links</h2>'+
       '<p>We link out constantly — sources, resources, original posts. Those sites are not ours; their content and policies are their own responsibility.</p>'+
       '<h2>6. Corrections &amp; complaints</h2>'+
@@ -2695,5 +2718,5 @@
     window.__placeGrip=place; place();
   }
 
-  document.addEventListener("DOMContentLoaded",function(){ initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker(); initTimeMeter(); initCookie(); initScrollGrip(); logVisit(); route(); });
+  document.addEventListener("DOMContentLoaded",function(){ initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker(); initTimeMeter(); initCookie(); initScrollGrip(); logVisit(); route(); syncAccount(); });
 })();
