@@ -83,6 +83,16 @@ def _safe_float(value: Any, default: float = 0.0) -> float:
     return number if math.isfinite(number) else default
 
 
+# Directories a release commit writes to. A dirty file under one of these is a real
+# conflict risk for autopublish; anything outside is unrelated and must not block it.
+_PUBLISH_SURFACE_PREFIXES = ("web/", "docs/operations/releases/")
+
+
+def _within_publish_surface(path: str) -> bool:
+    normalized = path.replace("\\", "/").lstrip("./")
+    return any(normalized.startswith(prefix) for prefix in _PUBLISH_SURFACE_PREFIXES)
+
+
 class AutonomyController:
     """Deterministic controller for discovery through bounded publication.
 
@@ -262,9 +272,22 @@ class AutonomyController:
                     "Git repository status could not be verified: "
                     + str(status.get("error") or "unknown error")
                 )
-            if status.get("dirty"):
+            # Only uncommitted changes WITHIN the publish surface (web/ and the
+            # release-record dir) are a genuine conflict risk. The Release Manager
+            # stages only its own files (`git add -- <expected>`) and aborts on any
+            # unexpected staged path, so unrelated working-tree edits -- a notes file
+            # at the repo root, in-progress code, docs -- can never leak into a
+            # release commit and must NOT silently halt the entire newsroom, which is
+            # exactly what a whole-tree cleanliness check was doing.
+            blocking = [
+                path
+                for path in status.get("dirty_paths", [])
+                if _within_publish_surface(path)
+            ]
+            if blocking:
                 raise AutonomyError(
-                    "Automatic publication requires a clean Git working tree"
+                    "Automatic publication is blocked by uncommitted changes in the "
+                    "publish surface: " + ", ".join(sorted(blocking)[:8])
                 )
             if status.get("branch") != "main":
                 raise AutonomyError("Automatic publication is restricted to the main branch")

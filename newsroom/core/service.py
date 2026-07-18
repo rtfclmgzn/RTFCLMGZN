@@ -32,6 +32,25 @@ class NewsroomError(RuntimeError):
     pass
 
 
+def _porcelain_paths(status_text: str) -> list[str]:
+    """Extract the file paths from `git status --porcelain` output.
+
+    Each line is `XY <path>` (rename lines are `XY <old> -> <new>`); git always
+    emits forward-slash paths, so callers can prefix-match them directly.
+    """
+    paths: list[str] = []
+    for line in status_text.splitlines():
+        if not line.strip():
+            continue
+        entry = line[3:] if len(line) > 3 else line.strip()
+        if " -> " in entry:
+            entry = entry.split(" -> ", 1)[1]
+        entry = entry.strip().strip('"')
+        if entry:
+            paths.append(entry)
+    return paths
+
+
 class NewsroomService:
     def __init__(self, repo_root: Path):
         self.repo_root = repo_root.resolve()
@@ -954,6 +973,7 @@ class NewsroomService:
                 "remote": remote,
                 "head": head,
                 "dirty": bool(status.strip()),
+                "dirty_paths": _porcelain_paths(status),
             }
         except NewsroomError as exc:
             return {"ok": False, "error": str(exc)}

@@ -366,5 +366,57 @@ class AutonomyControllerTests(unittest.TestCase):
             self.assertEqual("awaiting-owner-approval", real["stories"][0]["outcome"])
 
 
+class PublishSurfaceTests(unittest.TestCase):
+    def test_porcelain_paths_extracts_and_handles_renames(self) -> None:
+        from newsroom.core.service import _porcelain_paths
+
+        text = (
+            " M rtfclmgzn-todo.txt\n"
+            "?? web/data/newsroom-articles.js\n"
+            "R  old/name.txt -> web/index.html\n"
+        )
+        self.assertEqual(
+            ["rtfclmgzn-todo.txt", "web/data/newsroom-articles.js", "web/index.html"],
+            _porcelain_paths(text),
+        )
+
+    def test_only_publish_surface_paths_are_blocking(self) -> None:
+        from newsroom.autonomy.controller import _within_publish_surface
+
+        # Unrelated working-tree edits must never block autonomous publishing.
+        self.assertFalse(_within_publish_surface("rtfclmgzn-todo.txt"))
+        self.assertFalse(_within_publish_surface("docs/notes.md"))
+        self.assertFalse(_within_publish_surface("newsroom/autonomy/controller.py"))
+        # The deploy surface and release records are the real conflict risk.
+        self.assertTrue(_within_publish_surface("web/data/newsroom-articles.js"))
+        self.assertTrue(_within_publish_surface("web/index.html"))
+        self.assertTrue(_within_publish_surface("docs/operations/releases/r-1.json"))
+
+    def test_precondition_ignores_dirty_file_outside_publish_surface(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            repo = make_repo(Path(temp) / "repo")
+            service = NewsroomService(repo)
+            config = _config()
+            config["publication"]["require_clean_git_worktree"] = True
+            controller = AutonomyController(service, config=config, vault=FakeVault())
+            service.repository_status = lambda: {  # type: ignore[method-assign]
+                "ok": True,
+                "branch": "main",
+                "dirty": True,
+                "dirty_paths": ["rtfclmgzn-todo.txt"],
+            }
+            # A stray note at the repo root must not raise.
+            controller._assert_publication_preconditions()
+
+            service.repository_status = lambda: {  # type: ignore[method-assign]
+                "ok": True,
+                "branch": "main",
+                "dirty": True,
+                "dirty_paths": ["web/data/newsroom-articles.js"],
+            }
+            with self.assertRaisesRegex(Exception, "publish surface"):
+                controller._assert_publication_preconditions()
+
+
 if __name__ == "__main__":
     unittest.main()
