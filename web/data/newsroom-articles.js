@@ -1737,7 +1737,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "It would be easy to fold this into the anthropomorphic-AI measures RTFCLMGZN covered separately, since both reach compliance effect in the same week. They are not the same instrument. The companion-AI rules regulate emotionally engaged interaction — AI designed to be treated as someone. This framework regulates the opposite category: AI built to work for you, sorted by how much authority it holds when it does. Read together, China has now drawn two distinct regulatory lines through consumer-facing AI in a single week — one for AI that bonds, one for AI that acts — where most jurisdictions have drawn none.",
+        "text": "It would be easy to fold this into China's separate companion-AI rules, since both reach compliance effect in the same week. They are not the same instrument. The companion-AI rules regulate emotionally engaged interaction — AI designed to be treated as someone. This framework regulates the opposite category: AI built to work for you, sorted by how much authority it holds when it does. Read together, China has now drawn two distinct regulatory lines through consumer-facing AI in a single week — one for AI that bonds, one for AI that acts — where most jurisdictions have drawn none.",
         "citation_urls": [
           "https://rits.shanghai.nyu.edu/ai/china-issues-first-national-policy-framework-dedicated-to-ai-agents/"
         ]
@@ -1749,7 +1749,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The dating is messier than the compliance-deadline headlines suggest. One source traces the document's issuance to May 8, 2026, with no separate effective date specified in the text itself; multiple trackers instead report July 15 as when compliance obligations bite. This desk could not independently confirm the precise issuance-to-effect timeline against China's official gazette, and no source located names a specific penalty schedule or enforcement body empowered to act on a violation yet. The examples given for each authorization tier — financial transactions, government approvals, medical decisions, judicial functions — are illustrative, not an exhaustive list; how a regulator classifies a genuinely ambiguous agent action in practice is untested.",
+        "text": "The dating is messier than the compliance-deadline headlines suggest. One source traces the document's issuance to May 8, 2026, with no separate effective date specified in the text itself; multiple trackers instead report July 15 as when compliance obligations bite. The precise issuance-to-effect timeline could not be independently confirmed against China's official gazette, and no source located names a specific penalty schedule or enforcement body empowered to act on a violation yet. The examples given for each authorization tier — financial transactions, government approvals, medical decisions, judicial functions — are illustrative, not an exhaustive list; how a regulator classifies a genuinely ambiguous agent action in practice is untested.",
         "citation_urls": [
           "https://www.geopolitechs.org/p/chinas-first-policy-framework-for",
           "https://aigovernance.com/news/chinas-agent-rules-take-effect-july-15-and-illinois-mandates-third-party-safety-audits"
@@ -2005,12 +2005,12 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "h2",
-        "text": "Why this isn't a frontier-model story",
+        "text": "The governance gap, not the model",
         "citation_urls": []
       },
       {
         "type": "p",
-        "text": "This is a different kind of AI-health story than the ones about a single model or a single trial. It isn't about whether any given AI tool works — many of these systems are already approved, in use, and presumably delivering value, or hospitals would not have bought them. It's about what happens administratively once a tool is live: who is liable when an AI-supported diagnosis is wrong, how patient data moves through these systems, whether clinicians are trained to override the tool rather than defer to it, and whether a chatbot triaging patients is held to the same standard as the person it replaced. Those are governance questions, and WHO's statement is that most of the region is answering them after the fact rather than before.",
+        "text": "The open question here isn't whether any given AI tool works — many of these systems are already approved, in use, and presumably delivering value, or hospitals would not have bought them. It's about what happens administratively once a tool is live: who is liable when an AI-supported diagnosis is wrong, how patient data moves through these systems, whether clinicians are trained to override the tool rather than defer to it, and whether a chatbot triaging patients is held to the same standard as the person it replaced. Those are governance questions, and WHO's statement is that most of the region is answering them after the fact rather than before.",
         "citation_urls": [
           "https://www.who.int/europe/news/item/15-07-2026-statement---govern-ai-in-health-before-the-gaps-become-irreversible"
         ]
@@ -2275,7 +2275,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "This lands the same week Agility Robotics and Unitree both moved toward public listings — a story RTFCLMGZN covered separately. Line them up and three different wagers on where humanoid manufacturing actually gets hard come into view. Tesla is betting on vertical integration: own the factory, own the parts problem, iterate in-house. Agility is betting a public listing and outside capital gets it there faster. Unitree is betting on volume first, sophistication later, backed by Chinese state-adjacent industrial capacity. None of the three has yet proven its bet was the right one — they're running the experiment in parallel, in public, for the first time this year.",
+        "text": "This lands the same week Agility Robotics and Unitree both moved toward public listings. Line them up and three different wagers on where humanoid manufacturing actually gets hard come into view. Tesla is betting on vertical integration: own the factory, own the parts problem, iterate in-house. Agility is betting a public listing and outside capital gets it there faster. Unitree is betting on volume first, sophistication later, backed by Chinese state-adjacent industrial capacity. None of the three has yet proven its bet was the right one — they're running the experiment in parallel, in public, for the first time this year.",
         "citation_urls": [
           "https://www.teslarati.com/tesla-optimus-project-fires-up-musk-sees-production-line-progress/"
         ]
@@ -2400,7 +2400,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The form factor bet is worth naming. Where the smart-glasses wave — Even Realities and others, which RTFCLMGZN covered separately — puts the interface on your face, this puts an ambient presence in a room. It's also not a first mover: Google's Gemini-powered smart speaker for the home already shipped on June 25 at $99.99, built around Gemini 3.5 and 360-degree audio. If OpenAI's device lands in 2027 as reported, it arrives well after Google has already put a comparable product in front of consumers.",
+        "text": "The form factor bet is worth naming. Where the smart-glasses wave — Even Realities and others — puts the interface on your face, this puts an ambient presence in a room. It's also not a first mover: Google's Gemini-powered smart speaker for the home already shipped on June 25 at $99.99, built around Gemini 3.5 and 360-degree audio. If OpenAI's device lands in 2027 as reported, it arrives well after Google has already put a comparable product in front of consumers.",
         "citation_urls": [
           "https://www.forbes.com/sites/antoniopequenoiv/2026/07/14/openais-first-consumer-device-will-be-a-smart-speaker-report-says/"
         ]

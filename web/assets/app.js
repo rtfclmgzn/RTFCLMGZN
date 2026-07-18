@@ -2247,7 +2247,6 @@
     h+='<a href="#/archive" class="'+(active==="archive"?"active":"")+'">Archive</a>';
     h+='<span class="nav-sep"></span>';
     h+='<a href="#/magazine" class="masthead-link '+(active==="magazine"?"active":"")+'">Magazine ◈</a>';
-    h+='<a href="#/masthead" class="masthead-link '+(active==="masthead"?"active":"")+'">Masthead</a>';
     document.getElementById("nav").innerHTML=h;
     var sb=document.getElementById("sec-btn"), sm=document.getElementById("sec-menu");
     if(sb&&sm){ sb.onclick=function(e){ e.stopPropagation(); sm.hidden=!sm.hidden; sb.setAttribute("aria-expanded",String(!sm.hidden)); }; }
