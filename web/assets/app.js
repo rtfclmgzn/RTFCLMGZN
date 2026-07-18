@@ -1171,7 +1171,7 @@
     for(var i=0;i<all.length;i++) if(all[i].id===id) return all[i];
     return null;
   }
-  var AP={kind:null,id:null,slug:null,title:"",ownHash:"#/",segs:[],chunks:[],ci:0,seg:0,playing:false,paused:false,gen:0};
+  var AP={kind:null,id:null,slug:null,title:"",ownHash:"#/",segs:[],chunks:[],ci:0,seg:0,playing:false,paused:false,gen:0,u:null,beat:0,tries:0};
   function apVoice(){
     var vs=(window.speechSynthesis?speechSynthesis.getVoices():[])||[];
     function pick(names){ for(var i=0;i<names.length;i++){ var m=vs.filter(function(v){return v.name.toLowerCase().indexOf(names[i])>=0;})[0]; if(m) return m; } return null; }
@@ -1206,38 +1206,67 @@
     var u=new SpeechSynthesisUtterance(c.text);
     var v=apVoice(); if(v) u.voice=v;
     u.rate=0.97; u.pitch=1.06; u.volume=1;
-    u.onend=function(){ if(myGen!==AP.gen||!AP.playing) return; AP.ci++; apRender(); apSpeak(); };
-    u.onerror=function(){ if(myGen!==AP.gen||!AP.playing) return; AP.ci++; apSpeak(); };
+    // Hold a reference: Chrome has GC'd in-flight utterances, silently killing
+    // speech mid-sentence with no end/error event. AP.beat feeds the stall watchdog.
+    AP.u=u; AP.beat=Date.now();
+    u.onstart=function(){ AP.beat=Date.now(); };
+    u.onboundary=function(){ AP.beat=Date.now(); };
+    u.onend=function(){ if(myGen!==AP.gen||!AP.playing) return; AP.u=null; AP.tries=0; AP.ci++; apRender(); apSpeak(); };
+    u.onerror=function(){ if(myGen!==AP.gen||!AP.playing) return; AP.u=null; AP.tries=0; AP.ci++; apSpeak(); };
     try{ speechSynthesis.speak(u); }catch(e){}
+  }
+  // cancel() followed synchronously by speak() gets the new utterance swallowed on
+  // Chrome/Edge — always let the engine settle for a beat before speaking again.
+  function apGo(){
+    var g=AP.gen;
+    setTimeout(function(){ if(g===AP.gen && AP.playing && !AP.paused) apSpeak(); },90);
   }
   function apStart(){
     if(!window.speechSynthesis) return;
     AP.gen++; try{speechSynthesis.cancel();}catch(e){}
-    AP.playing=true; AP.paused=false; if(AP.ci>=AP.chunks.length) AP.ci=0;
-    apRender(); apSpeak();
+    AP.playing=true; AP.paused=false; AP.tries=0; if(AP.ci>=AP.chunks.length) AP.ci=0;
+    apRender(); apGo();
   }
-  function apDone(){ AP.gen++; AP.playing=false; AP.paused=false; AP.ci=0; try{speechSynthesis.cancel();}catch(e){} apRender(); }
+  function apDone(){ AP.gen++; AP.u=null; AP.playing=false; AP.paused=false; AP.ci=0; try{speechSynthesis.cancel();}catch(e){} apRender(); }
   function apSeekSeg(si){
     si=Math.max(0,Math.min(AP.segs.length-1,parseInt(si,10)||0));
     var idx=-1; for(var k=0;k<AP.chunks.length;k++){ if(AP.chunks[k].seg===si){ idx=k; break; } }
     if(idx<0) return;
     AP.gen++; AP.ci=idx; AP.seg=si; try{speechSynthesis.cancel();}catch(e){}
-    AP.playing=true; AP.paused=false; apRender(); apSpeak();
+    AP.playing=true; AP.paused=false; AP.tries=0; apRender(); apGo();
   }
   window.rtfcApStop=function(){ apDone(); };
+  // Pause is implemented as cancel + re-speak the current sentence on resume.
+  // Native pause()/resume() permanently kills the stream on Edge's online neural
+  // voices and Chrome's network voices (the exact voices apVoice() prefers) —
+  // sentence-level resume is the reliable cross-browser behavior.
   window.rtfcApToggle=function(){
     if(!window.speechSynthesis||!AP.chunks.length) return;
     if(!AP.playing && !AP.paused){ apStart(); return; }
-    if(AP.paused){ try{speechSynthesis.resume();}catch(e){} AP.paused=false; }
-    else{ try{speechSynthesis.pause();}catch(e){} AP.paused=true; }
-    apRender();
+    if(AP.paused){ AP.paused=false; AP.playing=true; apRender(); apGo(); }
+    else{ AP.gen++; AP.paused=true; try{speechSynthesis.cancel();}catch(e){} apRender(); }
   };
-  // Chrome keepalive — nudge resume so the ~15s watchdog never kills a long read
-  if(!window.__apKeep){ window.__apKeep=setInterval(function(){
-    if(AP.playing && !AP.paused && window.speechSynthesis && speechSynthesis.speaking){
-      try{ speechSynthesis.pause(); speechSynthesis.resume(); }catch(e){}
+  // Watchdog (replaces the old pause/resume "keepalive", which itself killed
+  // playback on Edge online voices — often within a second of pressing play,
+  // since its 8s timer was aligned to page load, not to the play click).
+  // Chunks are ≤170 chars, well under Chrome's ~15s network-voice cutoff, so no
+  // keepalive is needed; this only RECOVERS from a silently dead engine.
+  if(window.__apKeep){ clearInterval(window.__apKeep); }
+  window.__apKeep=setInterval(function(){
+    if(!AP.playing || AP.paused || !window.speechSynthesis) return;
+    // Chrome can flip itself into a stuck paused state on tab/audio churn.
+    if(speechSynthesis.paused){ try{speechSynthesis.resume();}catch(e){} AP.beat=Date.now(); return; }
+    var idle=Date.now()-(AP.beat||0);
+    var deadQuiet=!speechSynthesis.speaking && !speechSynthesis.pending && idle>3000;   // died without end/error
+    var deadHung=speechSynthesis.speaking && idle>20000;                                 // "speaking" but frozen
+    if(deadQuiet||deadHung){
+      AP.gen++; try{speechSynthesis.cancel();}catch(e){}
+      AP.tries=(AP.tries||0)+1;
+      if(AP.tries>=3){ AP.tries=0; AP.ci++; }        // same sentence keeps dying — skip it
+      if(AP.ci>=AP.chunks.length){ apDone(); return; }
+      AP.beat=Date.now(); apRender(); apGo();
     }
-  },8000); }
+  },2000);
   window.rtfcListen=function(id){
     if(!window.speechSynthesis) return;
     var a=article2raw(id); if(!a) return;
