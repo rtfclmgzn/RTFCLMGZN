@@ -7,8 +7,11 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
 
+from .budget import BudgetError, BudgetGuard
 from .config import load_config
 from .costing import estimate_cost_usd
+from .repository import AutonomyRepository
+from ..core.database import Database
 from ..providers.openai_responses import OpenAIResponsesProvider
 from ..providers.structured import StructuredOutputError
 from ..security.vault import CredentialVault, default_vault_path
@@ -18,6 +21,10 @@ USAGE_FILE = Path("web/data/usage-log-current.js")
 STATE_FILE_NAME = "buzz-next-id.json"
 RETIRE_AFTER_DAYS = 7
 MAX_ITEMS = 48
+# A cushion above the ~$0.09 observed real cost of a cycle -- checked against the
+# SAME shared daily/monthly ledger the main newsroom pipeline uses, so buzz can
+# never push combined spend over the owner's configured cap.
+ESTIMATED_CYCLE_COST_USD = 0.15
 
 SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -285,6 +292,16 @@ def run_buzz_cycle(
         "(YYYY-MM-DD, today or very recent)."
     )
 
+    database = Database(repo_root / "newsroom" / "data" / "newsroom.db")
+    repository = AutonomyRepository(database)
+    budget = BudgetGuard(repository, config["limits"])
+    try:
+        budget.assert_cycle_allowed(reserve_usd=ESTIMATED_CYCLE_COST_USD)
+    except BudgetError as exc:
+        log(f"Buzz cycle: skipped, shared daily/monthly budget is exhausted ({exc})")
+        return {"ok": True, "skipped": "budget_exhausted", "reason": str(exc)}
+
+    call_started_at = now.isoformat().replace("+00:00", "Z")
     try:
         response = provider.generate(
             model=model,
@@ -313,6 +330,25 @@ def run_buzz_cycle(
 
     usage = response.usage
     cost_usd = estimate_cost_usd(config, "openai", model, usage)
+
+    # Recorded into the SAME budget_ledger table the main pipeline reads daily/monthly
+    # spend from -- this is what makes the check above a genuinely shared budget rather
+    # than two systems independently believing they have the full cap to themselves.
+    repository.record_provider_call(
+        cycle_id=None,
+        story_id=None,
+        checkpoint=None,
+        agent_id="buzz-desk",
+        provider="openai",
+        model=model,
+        request_hash=str(usage.get("request_sha256") or ""),
+        response_hash=response.response_id,
+        status="succeeded",
+        usage=usage,
+        started_at=call_started_at,
+        finished_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        cost_usd=cost_usd,
+    )
 
     all_entries = kept + new_entries
     if len(all_entries) > MAX_ITEMS:
