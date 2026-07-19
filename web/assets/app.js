@@ -332,7 +332,7 @@
   // cover (rendered in viewArticle) deep-links here via rtfcJump('tldr').
   function tldrHTML(a){
     if(!a.tldr || !a.tldr.length) return "";
-    return '<aside class="tldr" id="tldr"><div class="tldr-head"><span class="tldr-ic">⚡</span>TL;DR<span class="tldr-sub">the story at a glance</span></div>'+
+    return '<aside class="tldr" id="tldr"><div class="tldr-head"><span class="tldr-ic">⚡</span>Story at a glance</div>'+
       '<ul>'+a.tldr.map(function(x){return '<li>'+fmtBody(x)+'</li>';}).join("")+'</ul></aside>';
   }
   // Action links — when a piece names a product/release/tool, give the reader the door to it.
@@ -1111,7 +1111,7 @@
   function articleToolsHTML(a){
     var h='<div class="art-tools">';
     if(a.tldr&&a.tldr.length){
-      h+='<button class="tool-btn tldr-btn" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the TL;DR summary">⚡ <span>TL;DR</span></button>';
+      h+='<button class="tool-btn tldr-btn" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the story-at-a-glance summary">⚡ <span>TL;DR</span></button>';
     }
     if(window.speechSynthesis){
       h+='<button class="tool-btn tts-btn2" id="tts-btn" onclick="rtfcListen(\''+a.id+'\')">▶ <span>Listen · ~'+readTime(a)+' min</span><i class="tts-prog" id="tts-prog"></i></button>';

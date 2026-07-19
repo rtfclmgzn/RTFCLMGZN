@@ -1059,7 +1059,7 @@ footer.site .foot-cost a{color:var(--accent2)}
   font-size:13px;font-weight:650;padding:8px 15px;border-radius:99px;cursor:pointer;
   display:inline-flex;gap:8px;align-items:center;transition:border-color .15s,transform .12s}
 .tool-btn:hover{border-color:var(--accent2);transform:translateY(-1px)}
-/* TL;DR leads the tools row as the quick-glance action — subtly accented */
+/* "At a glance" leads the tools row and jumps to the summary — subtly accented */
 .tldr-btn{border-color:color-mix(in srgb,var(--accent) 45%,var(--hairline));
   background:color-mix(in srgb,var(--accent) 10%,var(--card))}
 .tldr-btn:hover{border-color:var(--accent)}
