@@ -169,7 +169,8 @@
       "max_age_hours": 168
     },
     "require_clean_git_worktree": true,
-    "minimum_seconds_between_publishes": 300
+    "minimum_seconds_between_publishes": 300,
+    "article_score_gate_enabled": false
   },
   "distribution": {
     "generate_social_drafts": true,

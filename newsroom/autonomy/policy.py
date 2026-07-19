@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 
 from .dedupe import canonical_url, is_public_http_url
 from .review_gate import classify_compliance_blockers, split_contradictions
+from ..quality.article_score import score_article
 
 POLICY_VERSION = "bounded-publication-v1.0"
 
@@ -312,7 +313,31 @@ class PublicationPolicy:
         if owner_approved_release_count < required_owner_approved:
             owner_review.append("autopublish-acceptance-history-insufficient")
 
+        # ---- Article Score gate (handover System 2) -------------------------
+        # A deterministic 0.00-10.00 grade over the same verified artifacts. It is
+        # an ADDITIONAL floor, never a bypass: it can only ever add blockers, and
+        # the existing hard blockers above still stand on their own.
+        article_score = score_article(story=story, artifacts=list(artifacts or []))
+        # Staged rollout (Rule 13): the score is ALWAYS computed and reported so we
+        # can calibrate it against real traffic in observe-mode first. It only
+        # blocks once `publication.article_score_gate_enabled` is switched on.
+        if publication.get("article_score_gate_enabled"):
+            if article_score.hard_fails:
+                hard.append("article-score-hard-fail")
+            elif not article_score.publishable:
+                # 7.75-7.99 with strong accuracy AND sourcing is the only near-miss
+                # the handover permits, and even then a human must own the call.
+                if article_score.emergency_eligible:
+                    owner_review.append("article-score-emergency-review")
+                else:
+                    hard.append("article-score-below-threshold")
+
         metrics = {
+            "article_score": article_score.total,
+            "article_score_band": article_score.band,
+            "article_score_categories": article_score.by_name,
+            "article_score_hard_fails": list(article_score.hard_fails),
+            "article_score_evaluator": article_score.evaluator_version,
             "risk_level": risk,
             "verification_score": round(verification_score, 6),
             "reported_verification_score": reported_verification,

@@ -227,5 +227,30 @@ class PublicationPolicyTests(unittest.TestCase):
         self.assertIn("material-claim-map-empty", decision.reason_codes)
 
 
+class ArticleScoreGateTests(unittest.TestCase):
+    """The Article Score gate is a staged-rollout flag: measured always, enforced on demand."""
+
+    def test_score_is_always_reported_even_when_gate_is_off(self) -> None:
+        decision = PublicationPolicy(config_for()).decide(
+            story=valid_story(), artifacts=valid_artifacts(), publishes_today=0
+        )
+        self.assertIn("article_score", decision.metrics)
+        self.assertIsInstance(decision.metrics["article_score"], float)
+        self.assertIn("article_score_band", decision.metrics)
+        # observe mode must not add a blocker
+        self.assertNotIn("article-score-below-threshold", decision.reason_codes)
+
+    def test_enabling_the_gate_blocks_a_thin_article(self) -> None:
+        config = config_for()
+        config["publication"]["article_score_gate_enabled"] = True
+        decision = PublicationPolicy(config).decide(
+            story=valid_story(), artifacts=valid_artifacts(), publishes_today=0
+        )
+        # the minimal fixture is deliberately thin: no tldr, no takeaway, short body
+        self.assertLess(decision.metrics["article_score"], 8.00)
+        self.assertEqual("blocked", decision.decision)
+        self.assertIn("article-score-below-threshold", decision.reason_codes)
+
+
 if __name__ == "__main__":
     unittest.main()
