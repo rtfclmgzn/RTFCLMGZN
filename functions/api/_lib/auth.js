@@ -40,6 +40,22 @@ export function requestIpHash(request) {
   return ip ? sha256Hex(ip) : Promise.resolve(null);
 }
 
+// Resolves the rtfc_session cookie to a real, unexpired, unrevoked user row.
+// Shared by every endpoint that needs "who is this," not just /api/auth/me.
+export async function getSessionUser(request, env) {
+  const raw = getCookie(request, "rtfc_session");
+  if (!raw) return null;
+  const sessionHash = await sha256Hex(raw);
+  const row = await env.DB
+    .prepare(
+      `SELECT u.id AS id, u.email AS email, u.plan AS plan, u.created_at AS since
+         FROM sessions s JOIN users u ON u.id = s.user_id
+        WHERE s.id=? AND s.revoked_at IS NULL AND s.expires_at > datetime('now')`
+    )
+    .bind(sessionHash).first();
+  return row || null;
+}
+
 export function json(data, status) {
   return new Response(JSON.stringify(data), {
     status: status || 200,

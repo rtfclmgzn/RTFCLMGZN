@@ -62,3 +62,4 @@ node_modules/
 # Downloaded source pages are local runtime evidence, never repository content
 newsroom/data/source-cache/
 # <<< RTFCLMGZN BATCH NEWS ENGINE 0.3.2 local cache <<<
+.wrangler/

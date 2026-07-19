@@ -37,3 +37,31 @@ CREATE TABLE IF NOT EXISTS sessions (
   revoked_at    TEXT                           -- set on logout; NULL = active
 );
 CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id);
+
+-- Cross-device reader library (migration 0002). Mirrors the shape of the
+-- pre-existing localStorage `rtfc-lib` blob (bookmarks[], readLater[],
+-- reactions{article_id:[key,...]}) so sync is a straight union, not a remap.
+CREATE TABLE IF NOT EXISTS bookmarks (
+  user_id     TEXT NOT NULL REFERENCES users(id),
+  article_id  TEXT NOT NULL,
+  created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (user_id, article_id)
+);
+CREATE INDEX IF NOT EXISTS idx_bookmarks_user ON bookmarks(user_id);
+
+CREATE TABLE IF NOT EXISTS read_later (
+  user_id     TEXT NOT NULL REFERENCES users(id),
+  article_id  TEXT NOT NULL,
+  created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (user_id, article_id)
+);
+CREATE INDEX IF NOT EXISTS idx_read_later_user ON read_later(user_id);
+
+CREATE TABLE IF NOT EXISTS reactions (
+  user_id     TEXT NOT NULL REFERENCES users(id),
+  article_id  TEXT NOT NULL,
+  reaction    TEXT NOT NULL,               -- 'mind' | 'useful' | 'fire' -- honest, per-reader, never a fabricated public count
+  created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (user_id, article_id, reaction)
+);
+CREATE INDEX IF NOT EXISTS idx_reactions_user ON reactions(user_id);

@@ -29,6 +29,22 @@
       var l=libGet();
       l.account = (d && d.email) ? { email:d.email, plan:d.plan||"free", since:d.since } : null;
       libSave(l); route();
+      if(l.account) syncLibrary(l);
+    }).catch(function(){});
+  }
+  // Cross-device library sync: push whatever this browser has locally (add-only,
+  // never deletes another device's items), then adopt the server's unioned state
+  // as the new local truth. Runs every time we confirm a signed-in session, which
+  // is exactly "sync when they log in" -- including logging in on a second device.
+  function syncLibrary(l){
+    fetch("/api/account/library",{method:"POST",credentials:"same-origin",
+      headers:{"content-type":"application/json"},
+      body:JSON.stringify({action:"merge",bookmarks:l.bookmarks||[],readLater:l.readLater||[],reactions:l.reactions||{}})
+    }).then(function(r){ return r.ok?r.json():null; }).then(function(d){
+      if(!d) return;
+      var l2=libGet();
+      l2.bookmarks=d.bookmarks||[]; l2.readLater=d.readLater||[]; l2.reactions=d.reactions||{};
+      libSave(l2); route();
     }).catch(function(){});
   }
   window.rtfcToggle=function(kind,id,ev){
@@ -36,6 +52,12 @@
     var l=libGet(), list=(kind==="bookmark")?l.bookmarks:l.readLater;
     var i=list.indexOf(id); if(i>=0) list.splice(i,1); else list.push(id);
     libSave(l); route();
+    if(l.account){
+      fetch("/api/account/library",{method:"POST",credentials:"same-origin",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify({action:(kind==="bookmark"?"toggle_bookmark":"toggle_read_later"),article_id:id})
+      }).catch(function(){});
+    }
   };
   window.rtfcSignup=function(){
     var em=document.getElementById("acct-email"); if(!em||!em.value||em.value.indexOf("@")<1){ if(em) em.style.borderColor="var(--gate)"; return; }
@@ -57,6 +79,12 @@
     var arr=l.reactions[id]=l.reactions[id]||[];
     var i=arr.indexOf(k); if(i>=0) arr.splice(i,1); else arr.push(k);
     libSave(l); route();
+    if(l.account){
+      fetch("/api/account/library",{method:"POST",credentials:"same-origin",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify({action:"toggle_reaction",article_id:id,reaction:k})
+      }).catch(function(){});
+    }
   };
   function reactsHTML(id){
     var l=libGet(); var mine=(l.reactions||{})[id]||[];
