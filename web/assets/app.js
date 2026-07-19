@@ -292,11 +292,71 @@
     var h='<div class="container"><div style="padding-top:26px"><a class="back" href="#/masthead">← The masthead</a></div>'+
       '<div class="persona-hero">'+avatar(p)+
       '<div><h1>'+esc(p.name)+(p.retired?' <span class="hi" style="background:color-mix(in srgb,var(--muted) 18%,transparent);color:var(--muted);border-color:var(--muted)">Alumni · desk retired</span>':(p.sensitivity==="high"?' <span class="hi">High sensitivity</span>':''))+'</h1>'+
-      '<div class="beat">'+esc(p.beat)+'</div><div class="tone">Voice — '+esc(p.tone)+'</div></div></div>'+
+      '<div class="beat">'+esc(p.beat)+'</div><div class="tone">Voice — '+esc(p.tone)+'</div>'+
+      ((window.RTFC_DOSSIERS&&window.RTFC_DOSSIERS[key])?'<a class="dsr-open" href="#/editor/'+esc(key)+'" title="Open '+esc(p.name)+'’s editor dossier">ⓘ <span>Dossier</span></a>':'')+
+      '</div></div>'+
       '<p class="persona-bio">'+esc(p.bio)+'</p>'+
       '<div class="kicker">Byline archive · '+list.length+'</div>'+
       '<div class="grid">'+list.map(cardHTML).join("")+'</div></div>';
     return h;
+  }
+  // Editor dossier ("Easter egg") — a deep-dive per editor. Stats are computed LIVE from
+  // the article + prediction data, so they update automatically with every byline.
+  function editorStats(key){
+    var mine=ARTICLES.filter(function(a){return a.persona===key||(a.authors&&a.authors.indexOf(key)>=0);});
+    var fmt={brief:0,synthesis:0,research:0}, corr=0, desks={}, dates=[];
+    mine.forEach(function(a){
+      var f=trueFormat(a); if(fmt[f]!=null) fmt[f]++;
+      corr+=(a.corrections&&a.corrections.length)||0;
+      if(a.section) desks[a.section]=1;
+      if(a.publishedAt) dates.push(a.publishedAt);
+    });
+    dates.sort();
+    var preds=(window.RTFC_PREDICTIONS||[]).filter(function(p){return p.by===key;});
+    var open=preds.filter(function(p){return /pending|open/i.test(p.status||"");}).length;
+    var recent=mine.slice().sort(function(a,b){return new Date(b.publishedAt)-new Date(a.publishedAt);}).slice(0,5);
+    return {count:mine.length,fmt:fmt,corrections:corr,since:dates[0]||null,desks:Object.keys(desks),preds:preds,open:open,resolved:preds.length-open,recent:recent};
+  }
+  function viewDossier(key){
+    var p=persona(key); if(!p) return notFound();
+    var d=(window.RTFC_DOSSIERS||{})[key]; if(!d) return notFound();
+    var s=editorStats(key), col=SECTION_COLORS[p.section]||"#8b7cf7";
+    function sc(n,l){ return '<div class="dsr-stat"><b>'+n+'</b><span>'+esc(l)+'</span></div>'; }
+    function beat(l,t){ return '<div class="dsr-beat"><div class="dsr-beat-l">'+l+'</div><p>'+esc(t)+'</p></div>'; }
+    function mDay(iso){ if(!iso) return "—"; return new Date(iso).toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+    var mix=[]; if(s.fmt.synthesis)mix.push(s.fmt.synthesis+" synthesis"); if(s.fmt.brief)mix.push(s.fmt.brief+" brief"+(s.fmt.brief>1?"s":"")); if(s.fmt.research)mix.push(s.fmt.research+" research");
+    var h='<div class="container" style="max-width:840px"><div style="padding-top:26px"><a class="back" href="#/persona/'+esc(key)+'">← '+esc(p.name)+'</a></div>';
+    h+='<div class="dsr-hero" style="--dcol:'+col+'"><span class="dsr-av">'+avatar(p)+'</span>'+
+       '<div class="dsr-id"><div class="dsr-eyebrow">◈ Editor dossier</div><h1>'+esc(p.name)+'</h1>'+
+       '<div class="dsr-beat-top">'+esc(p.beat)+'</div></div></div>';
+    h+='<blockquote class="dsr-epigraph">“'+esc(d.epigraph)+'”</blockquote>';
+    h+='<div class="dsr-stats" style="--dcol:'+col+'">'+
+       sc(s.count,"byline"+(s.count!==1?"s":""))+
+       sc(mDay(s.since),"on the beat since")+
+       sc(s.corrections,"correction"+(s.corrections!==1?"s":"")+" logged")+
+       sc(s.preds.length?(s.resolved+"/"+s.preds.length):"—","forecasts resolved")+
+       '</div>';
+    if(mix.length||s.desks.length){
+      h+='<p class="dsr-mix">'+(mix.length?("The mix — "+mix.join(" · ")):"")+(s.desks.length?("  ·  desk"+(s.desks.length>1?"s":"")+": "+s.desks.join(", ")):"")+'</p>';
+    }
+    h+='<div class="dsr-bio" style="--dcol:'+col+'">'+
+       beat("The beat",d.beat)+beat("The method",d.method)+beat("The signature",d.signature)+beat("The tell",d.tell)+beat("The red line",d.redline)+
+       '</div>';
+    if(s.preds.length){
+      h+='<div class="dsr-block"><h2 class="dsr-h2">The forecast record</h2><div class="dsr-fcs">'+
+        s.preds.map(function(pr){
+          var st=(pr.status||"").toLowerCase();
+          var cls=/right|correct|hit/.test(st)?"ok":(/wrong|miss/.test(st)?"no":"open");
+          var lbl=cls==="ok"?"resolved · right":(cls==="no"?"resolved · missed":"open");
+          return '<div class="dsr-fc"><span class="dsr-fc-st '+cls+'">'+lbl+'</span><div><p class="dsr-fc-c">'+esc(pr.claim)+'</p><span class="dsr-fc-m">made '+esc(pr.made||"")+' · resolves '+esc(pr.resolveBy||"")+'</span></div></div>';
+        }).join("")+
+        '</div><p class="dsr-note"><a href="#/predictions" style="color:var(--accent2)">The full Prediction Ledger →</a></p></div>';
+    }
+    if(s.recent.length){
+      h+='<div class="dsr-block"><h2 class="dsr-h2">Selected bylines</h2><div class="grid">'+s.recent.map(cardHTML).join("")+'</div></div>';
+    }
+    h+='<div class="dsr-foot"><span class="ic">🤖</span><div><b>'+esc(p.name)+' is an AI editorial persona</b> — a consistent authorial voice the newsroom writes in, not a real person. This dossier is a character profile; the numbers above are computed live from '+esc(p.name)+'’s published work and update with every byline.</div></div>';
+    return h+'</div>';
   }
   // The closing takeaway now comes in several flavors — the frame that fits the story,
   // not a forced "put it to work" on everything. Writers set `applyType`; when unset we
@@ -2607,6 +2667,7 @@
     if(parts.length===0){ view=viewHome(); active="home"; }
     else if(parts[0]==="section"){ view=viewSection(parts[1]); active="section:"+parts[1]; }
     else if(parts[0]==="persona"){ view=viewPersona(parts[1]); active="masthead"; }
+    else if(parts[0]==="editor"){ view=viewDossier(parts[1]); active="masthead"; }
     else if(parts[0]==="masthead"){ view=viewMasthead(); active="masthead"; }
     else if(parts[0]==="review"){ view=viewReview(); active="review"; }
     else if(parts[0]==="usage"||parts[0]==="transparency"){ view=viewUsage(); active="usage"; }
