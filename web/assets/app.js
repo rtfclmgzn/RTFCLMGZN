@@ -1095,6 +1095,170 @@
     else { grab(cv.toDataURL("image/png")); }
   };
 
+  /* ============ QUALITY & PROGRESSION DESIGN PREVIEW (visual phase · #/design) ============
+     Presentational components with MOCK data only — the platform-handover Fable phase.
+     Nothing here reads or writes production account/XP state; the page is an unlinked
+     internal preview so no invented numbers ever appear on public surfaces. */
+  var QS_FAMILIES=[
+    {n:"Observer",g:"eye",c:"#5f7fd9"},{n:"Reader",g:"page",c:"#5a8ee0"},{n:"Explorer",g:"compass",c:"#54a0e6"},
+    {n:"Seeker",g:"lens",c:"#4db3ea"},{n:"Tracker",g:"trail",c:"#45c6ec"},{n:"Analyst",g:"wave",c:"#43e0ff"},
+    {n:"Curator",g:"cards",c:"#5cc8e8"},{n:"Specialist",g:"hex",c:"#6fb1e9"},{n:"Scholar",g:"prism",c:"#7f9cef"},
+    {n:"Researcher",g:"lattice",c:"#8b8af5"},{n:"Sentinel",g:"shield",c:"#8f7cf5"},{n:"Navigator",g:"starmap",c:"#9a6ff2"},
+    {n:"Vanguard",g:"chevron",c:"#a666ee"},{n:"Luminary",g:"radiant",c:"#b25fe8"},{n:"Archivist",g:"vault",c:"#bd5ade"},
+    {n:"Authority",g:"pillar",c:"#c757cf"},{n:"Oracle",g:"halo",c:"#d055bd"},{n:"Catalyst",g:"ignite",c:"#d95aa4"},
+    {n:"Paragon",g:"crystal",c:"#e0678f"},{n:"Legacy",g:"ring",c:"#e2b04d"},{n:"Ascendant",g:"core",c:"#efd08a"}
+  ];
+  function qsGlyph(g){
+    switch(g){
+      case "eye": return '<ellipse cx="48" cy="44" rx="17" ry="10.5"/><circle cx="48" cy="44" r="4.6" fill="currentColor" stroke="none"/>';
+      case "page": return '<path d="M38 30h14l8 8v26H38z"/><path d="M52 30v8h8M43 48h12M43 55h12"/>';
+      case "compass": return '<circle cx="48" cy="44" r="15"/><path d="M54 38l-4.2 9.8L40 52l4.2-9.8z" fill="currentColor" stroke="none"/>';
+      case "lens": return '<circle cx="45" cy="41" r="11.5"/><path d="M53.5 49.5L62 58"/>';
+      case "trail": return '<path d="M34 56l9-9 7 5 12-14"/><circle cx="34" cy="56" r="2.6" fill="currentColor" stroke="none"/><circle cx="43" cy="47" r="2.6" fill="currentColor" stroke="none"/><circle cx="50" cy="52" r="2.6" fill="currentColor" stroke="none"/><circle cx="62" cy="38" r="2.6" fill="currentColor" stroke="none"/>';
+      case "wave": return '<path d="M32 44h6l4-11 6 22 5-16 4 5h7"/>';
+      case "cards": return '<rect x="36" y="36" width="20" height="14" rx="2.5"/><rect x="40" y="41" width="20" height="14" rx="2.5"/><rect x="44" y="46" width="20" height="14" rx="2.5"/>';
+      case "hex": return '<path d="M48 29l13 7.5v15L48 59l-13-7.5v-15z"/><circle cx="48" cy="44" r="4" fill="currentColor" stroke="none"/>';
+      case "prism": return '<path d="M48 30L62 56H34z"/><path d="M34 49h28"/>';
+      case "lattice": return '<circle cx="38" cy="36" r="2.6" fill="currentColor" stroke="none"/><circle cx="58" cy="36" r="2.6" fill="currentColor" stroke="none"/><circle cx="48" cy="46" r="2.6" fill="currentColor" stroke="none"/><circle cx="38" cy="56" r="2.6" fill="currentColor" stroke="none"/><circle cx="58" cy="56" r="2.6" fill="currentColor" stroke="none"/><path d="M38 36l10 10 10-10M38 56l10-10 10 10"/>';
+      case "shield": return '<path d="M48 29c5 3.4 10 4.6 14 5v13c0 8-6.5 13.5-14 17-7.5-3.5-14-9-14-17V34c4-.4 9-1.6 14-5z"/>';
+      case "starmap": return '<circle cx="39" cy="38" r="2.2" fill="currentColor" stroke="none"/><circle cx="58" cy="35" r="2.2" fill="currentColor" stroke="none"/><circle cx="54" cy="53" r="2.2" fill="currentColor" stroke="none"/><circle cx="37" cy="52" r="2.2" fill="currentColor" stroke="none"/><path d="M39 38l19-3M58 35l-4 18M54 53l-17-1 2-14"/><path d="M46 43l2-3 2 3 3 .5-2.2 2 .6 3.2L48 47l-2.9 1.7.6-3.2-2.2-2z" fill="currentColor" stroke="none"/>';
+      case "chevron": return '<path d="M38 32l12 12-12 12M50 32l12 12-12 12"/>';
+      case "radiant": return '<circle cx="48" cy="44" r="6.5"/><path d="M48 27v7M48 54v7M31 44h7M58 44h7M36 32l5 5M60 32l-5 5M36 56l5-5M60 56l-5-5"/>';
+      case "vault": return '<rect x="34" y="31" width="28" height="26" rx="4"/><circle cx="48" cy="44" r="7"/><path d="M48 39.5V44l3 3"/>';
+      case "pillar": return '<path d="M38 33h20M38 55h20M41 33v22M48 33v22M55 33v22M36 29h24"/>';
+      case "halo": return '<path d="M36 33a15 8.5 0 0 1 24 0"/><ellipse cx="48" cy="47" rx="15" ry="9.5"/><circle cx="48" cy="47" r="4.2" fill="currentColor" stroke="none"/>';
+      case "ignite": return '<circle cx="48" cy="44" r="14"/><path d="M48 34c3.5 4.5 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.5 6-11z" fill="currentColor" stroke="none"/>';
+      case "crystal": return '<path d="M48 28l11 12-11 20-11-20z"/><path d="M37 40h22M48 28l-4 12 4 20M48 28l4 12-4 20"/>';
+      case "ring": return '<path d="M40.5 44a7.5 7.5 0 1 1 7.5 7.5A7.5 7.5 0 1 1 55.5 44a7.5 7.5 0 1 1-7.5-7.5A7.5 7.5 0 1 1 40.5 44z"/>';
+      case "core": return '<circle cx="48" cy="44" r="6"/><circle cx="48" cy="44" r="11.5" stroke-dasharray="3.5 4"/><circle cx="48" cy="44" r="17"/><circle cx="48" cy="44" r="2.4" fill="currentColor" stroke="none"/>';
+    }
+    return "";
+  }
+  // Parametric reader badge: one component, 21 families x 5 divisions, any size, prestige rings.
+  function qsBadgeSVG(famIdx,division,size,prestige){
+    var f=QS_FAMILIES[famIdx]||QS_FAMILIES[0]; size=size||48;
+    var pips="", x0=48-((division-1)*7)/2; // centered row of `division` pips
+    for(var i=0;i<division;i++){ pips+='<circle cx="'+(x0+i*7)+'" cy="68.5" r="2.1" fill="currentColor" stroke="none"/>'; }
+    var ring2=prestige?'<circle cx="48" cy="48" r="45.5" stroke-dasharray="2.5 5" opacity=".85"/>':"";
+    return '<svg class="qs-badge" role="img" aria-label="'+esc(f.n+" "+["I","II","III","IV","V"][division-1]+(prestige?" · prestige":""))+'" width="'+size+'" height="'+size+'" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:'+f.c+'">'+
+      '<circle cx="48" cy="48" r="41" opacity=".95"/>'+
+      '<circle cx="48" cy="48" r="35.5" opacity=".28" stroke-width="1.5"/>'+ring2+
+      '<g stroke-width="3.2">'+qsGlyph(f.g)+'</g>'+pips+'</svg>';
+  }
+  var QS_STATDEFS={ANALYSIS:"Reasoning depth, synthesis, counterarguments, causality, second-order thinking.",
+    EXPERTISE:"Beat knowledge, technical accuracy, terminology, subject-matter command.",
+    EVIDENCE:"Primary-source use, verification quality, citation coverage, uncertainty handling.",
+    VOICE:"Consistency with the persona file — rhythm, temperament, structure, distinctiveness.",
+    PRACTICALITY:"Conclusions, workflows, reader takeaways, put-it-to-work quality.",
+    VELOCITY:"Timeliness, deadline execution, efficient handoffs, avoidable revisions.",
+    DISCIPLINE:"Compliance, corrections, escalation, disclaimers, beat boundaries, judgment.",
+    ACTIVITY:"How regularly this reader shows up.",COMPLETION:"Share of opened articles read to the end.",
+    "READING TIME":"Verified active reading time.",CONSISTENCY:"Streak strength and routine."};
+  function qsStat(label,v,col){
+    return '<div class="qs-stat"><span class="qs-stat-l" title="'+esc(QS_STATDEFS[label]||"")+'">'+esc(label)+'</span>'+
+      '<span class="qs-stat-track"><span class="qs-stat-fill" style="--w:'+v+'%;--qcol:'+(col||"#7c6cf0")+'"></span></span>'+
+      '<span class="qs-stat-v">'+v+'</span></div>';
+  }
+  function qsXP(cur,next,col){
+    var pct=Math.round(cur/next*100);
+    return '<div class="qs-xp" style="--qcol:'+(col||"#7c6cf0")+'"><div class="qs-xp-meta"><b>'+cur.toLocaleString()+' / '+next.toLocaleString()+' XP</b><span>'+pct+'%</span></div>'+
+      '<div class="qs-xp-track"><span class="qs-xp-fill" style="--w:'+pct+'%"></span></div></div>';
+  }
+  // Handover-spec base profiles + signature abilities (mock rank/XP for the preview).
+  var QS_EDITORS={
+    "luka-petrovic":{s:[100,99,100,83,93,78,100],sig:"Benchmark Autopsy",rank:37,band:"Senior Specialist",xp:[18460,20070],standing:97},
+    "nova-reyes":{s:[82,87,88,100,99,96,86],sig:"Cultural Signal",rank:31,band:"Specialist",xp:[24880,26430],standing:92},
+    "jin-park":{s:[96,99,97,80,88,76,99],sig:"Bottleneck Vision",rank:36,band:"Senior Specialist",xp:[17020,19100],standing:95},
+    "evelyn-zhao":{s:[94,97,100,83,86,73,100],sig:"Scope Control",rank:35,band:"Senior Specialist",xp:[16110,18160],standing:98},
+    "priya-anand":{s:[97,99,100,85,87,69,100],sig:"Evidence Grading",rank:33,band:"Specialist",xp:[27390,28820],standing:99},
+    "kian-farzan":{s:[95,95,96,91,92,90,97],sig:"Deal Arithmetic",rank:38,band:"Senior Specialist",xp:[19940,21080],standing:96},
+    "ash-lindqvist":{s:[84,93,88,87,95,84,89],sig:"Reality-Gap Radar",rank:30,band:"Specialist",xp:[23180,25060],standing:93},
+    "sage-okafor":{s:[98,91,93,100,79,67,95],sig:"Long Horizon",rank:34,band:"Specialist",xp:[28640,30240],standing:94},
+    "samira-nasser":{s:[92,92,97,95,90,71,100],sig:"Human-Cost Lens",rank:32,band:"Specialist",xp:[25710,27300],standing:98}
+  };
+  var QS_STATLABELS=["ANALYSIS","EXPERTISE","EVIDENCE","VOICE","PRACTICALITY","VELOCITY","DISCIPLINE"];
+  function qsStandingChip(v){
+    var cls=v>=95?"s1":(v>=88?"s2":"s3"); var name=v>=95?"Exemplary":(v>=88?"Trusted":"Stable");
+    return '<span class="qs-standing '+cls+'">Standing '+v+' · '+name+'</span>';
+  }
+  function qsEditorCard(key,full){
+    var p=persona(key), m=QS_EDITORS[key]; if(!p||!m) return "";
+    var col=SECTION_COLORS[p.section]||"#7c6cf0";
+    var mine=ARTICLES.filter(function(a){return a.persona===key||(a.authors&&a.authors.indexOf(key)>=0);}).length;
+    var h='<div class="qs-ecard'+(full?' full':'')+'" style="--qcol:'+col+'">';
+    h+='<div class="qs-ehead"><span class="qs-eport" style="background-image:url(\''+(p.photo||"")+'\')"></span>'+
+       '<div><div class="qs-ename">'+esc(p.name)+'</div><div class="qs-ebeat">'+esc(p.beat)+'</div>'+
+       '<div class="qs-erank"><b>Rank '+m.rank+'</b><span>· '+esc(m.band)+'</span></div></div></div>';
+    h+=qsXP(m.xp[0],m.xp[1],col);
+    var stats=full?QS_STATLABELS:QS_STATLABELS.slice(0,3);
+    h+='<div style="margin-top:10px">'+stats.map(function(l,i){return qsStat(l,m.s[QS_STATLABELS.indexOf(l)],col);}).join("")+'</div>';
+    if(full) h+='<div class="qs-sig"><span class="qs-sig-ic">◆</span><div><div class="qs-sig-l">Signature ability</div><div class="qs-sig-n">'+esc(m.sig)+'</div></div></div>';
+    h+='<div class="qs-emeta">'+qsStandingChip(m.standing)+'<span><b>'+mine+'</b> articles</span><span>clean streak <b>'+(3+(m.rank%9))+'</b></span></div>';
+    return h+'</div>';
+  }
+  function viewDesign(){
+    var h='<div class="container qs-wrap"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Internal · Design preview</div>'+
+      '<h1>Quality &amp; progression systems</h1>'+
+      '<p>The visual language for editor performance, article scoring, and reader progression — built to the platform handover, previewed here before any of it goes live.</p>'+
+      '<span class="qs-note">⚠ Preview — all numbers on this page are mock data</span></div>';
+    // A — editor cards
+    h+='<div class="qs-sec"><h2 class="qs-h">Editor performance cards</h2><p class="qs-sub">Compact card per editor; the expanded card shows all seven stats, the signature ability, and editorial standing. Bars animate once on load and honor reduced-motion.</p>';
+    h+='<div style="max-width:430px;margin-bottom:18px">'+qsEditorCard("luka-petrovic",true)+'</div>';
+    h+='<div class="qs-egrid">'+["jin-park","evelyn-zhao","kian-farzan","nova-reyes","priya-anand","ash-lindqvist","sage-okafor","samira-nasser"].map(function(k){return qsEditorCard(k,false);}).join("")+'</div></div>';
+    // B — reader card
+    h+='<div class="qs-sec"><h2 class="qs-h">Reader profile card</h2><p class="qs-sub">Signal-rank progression for reader accounts — four stats, streaks, and the badge for the current division. Rank is earned, never bought.</p>';
+    h+='<div class="qs-rcard"><div class="qs-rhead">'+qsBadgeSVG(3,2,56)+'<div><div class="qs-rname">@NEONREADER</div><div class="qs-rrank">Rank 17 · Seeker II <span>· 3,940 / 4,080 SP</span></div></div></div>';
+    h+='<div class="qs-xp" style="--qcol:#43e0ff"><div class="qs-xp-track"><span class="qs-xp-fill" style="--w:96%"></span></div></div>';
+    h+='<div class="qs-rstats">'+qsStat("ACTIVITY",77,"#43e0ff")+qsStat("COMPLETION",86,"#43e0ff")+qsStat("READING TIME",71,"#43e0ff")+qsStat("CONSISTENCY",91,"#43e0ff")+'</div>';
+    h+='<div class="qs-rgrid"><div class="qs-rcell"><b>42</b>active days</div><div class="qs-rcell"><b>128</b>articles opened</div><div class="qs-rcell"><b>79</b>articles completed</div><div class="qs-rcell"><b>16.4</b>reading hours</div></div>';
+    h+='<span class="qs-streak">🔥 12-day streak · best 24</span></div></div>';
+    // C — badges
+    h+='<div class="qs-sec"><h2 class="qs-h">Reader badge system</h2><p class="qs-sub">Twenty-one families × five divisions from one parametric SVG component — no raster images. Division pips mark I–V; Ascendant repeats with prestige rings.</p>';
+    h+='<div class="qs-bgrid">'+QS_FAMILIES.map(function(f,i){
+      var div=(i%5)+1;
+      return '<div class="qs-bcell">'+qsBadgeSVG(i,div,52,i===20)+'<span class="qs-bname">'+esc(f.n)+'</span><span class="qs-branks">Ranks '+(i*5+1)+'–'+(i*5+5)+'</span></div>';
+    }).join("")+'</div>';
+    h+='<p class="qs-sub" style="margin:18px 0 10px">Scales cleanly at every required size:</p><div class="qs-bsizes">'+[24,32,48,96,192].map(function(s){return '<span class="qs-bsz">'+qsBadgeSVG(11,3,s)+s+'px</span>';}).join("")+'</div></div>';
+    // D — article score
+    h+='<div class="qs-sec"><h2 class="qs-h">Article Score panel</h2><p class="qs-sub">The pre-publication quality score, compact by default, expandable to the category breakdown. Distinct from reader ratings; the 8.00 publishing threshold and scoring logic arrive in the backend phase.</p>';
+    h+='<details class="qs-score"><summary><div><div class="qs-score-l">Article Score</div><div class="qs-score-n">8.63</div><div class="qs-score-band">Strong</div></div><span class="qs-score-hint">How this article was scored ▾</span></summary>';
+    h+='<div class="qs-score-body">'+qsStat("ACCURACY",92,"#8b7cf7").replace(">92<",">9.20<")+qsStat("SOURCES",88,"#8b7cf7").replace(">88<",">8.80<")+qsStat("INSIGHT",84,"#8b7cf7").replace(">84<",">8.45<")+qsStat("WRITING",85,"#8b7cf7").replace(">85<",">8.55<")+qsStat("PRODUCTION",79,"#8b7cf7").replace(">79<",">7.95<")+'</div>';
+    h+='<div class="qs-score-meta"><span><b>12</b> sources verified</span><span><b>0</b> unresolved flags</span><span><b>✓</b> Verification passed</span></div></details></div>';
+    // E — reader rating
+    h+='<div class="qs-sec"><h2 class="qs-h">Reader rating</h2><p class="qs-sub">Five stars saves and says thanks. One to four stars reveals improvement sliders — centered means no opinion, and only moved sliders would be recorded. Fully keyboard-accessible. Try it:</p>';
+    h+='<div class="qs-rate"><div class="qs-rate-h">How was this article?</div><div class="qs-stars" role="radiogroup" aria-label="Rate this article">'+
+       [1,2,3,4,5].map(function(n){return '<button class="qs-star" id="qs-star-'+n+'" role="radio" aria-checked="false" aria-label="'+n+' star'+(n>1?"s":"")+'" onclick="qsStar('+n+')">★</button>';}).join("")+'</div>'+
+       '<div class="qs-rate-lbl" id="qs-rate-lbl"></div>'+
+       '<div class="qs-sliders" id="qs-sliders"><div class="qs-rate-h">What could be better?</div>'+
+       [["Shorter","ARTICLE LENGTH","Longer"],["Easier to read","TECHNICAL DEPTH","More technical"],["More direct","BACKGROUND & CONTEXT","More context"]].map(function(s,i){
+         return '<div class="qs-slider"><div class="qs-slider-l"><span>'+esc(s[0])+'</span><b>'+esc(s[1])+'</b><span>'+esc(s[2])+'</span></div><input type="range" min="0" max="100" value="50" oninput="qsSlide()" aria-label="'+esc(s[1])+'"></div>';
+       }).join("")+
+       '<div class="qs-rate-actions"><button class="cta" id="qs-rate-submit" disabled onclick="qsRateSubmit()">Send feedback</button><button class="cta ghost" onclick="qsRateSkip()">Skip</button></div></div>'+
+       '<div class="qs-rate-done" id="qs-rate-done"></div></div></div>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin:30px 0 10px">Visual-design phase only: presentational components with mock data. XP, Signal Points, scoring gates, and account wiring are a separate backend phase and are not active anywhere on the site.</p>';
+    setTimeout(function(){ var els=document.querySelectorAll(".qs-stat-fill,.qs-xp-fill"); els.forEach(function(e){ e.classList.add("on"); }); },80);
+    return h+'</div>';
+  }
+  window.qsStar=function(n){
+    for(var i=1;i<=5;i++){ var b=document.getElementById("qs-star-"+i); if(b){ b.classList.toggle("on",i<=n); b.setAttribute("aria-checked",String(i===n)); } }
+    var lbl=document.getElementById("qs-rate-lbl"), sl=document.getElementById("qs-sliders"), done=document.getElementById("qs-rate-done");
+    lbl.textContent=["","Poor","Needs work","Decent","Good","Excellent"][n];
+    if(n===5){ sl.classList.remove("show"); done.textContent="Thanks — glad this article delivered."; done.classList.add("show"); }
+    else { done.classList.remove("show"); sl.classList.add("show"); }
+  };
+  window.qsSlide=function(){
+    var moved=Array.prototype.some.call(document.querySelectorAll("#qs-sliders input"),function(i){return i.value!=="50";});
+    var btn=document.getElementById("qs-rate-submit"); if(btn) btn.disabled=!moved;
+  };
+  window.qsRateSubmit=function(){
+    var sl=document.getElementById("qs-sliders"), done=document.getElementById("qs-rate-done");
+    sl.classList.remove("show"); done.textContent="Feedback noted — thank you."; done.classList.add("show");
+  };
+  window.qsRateSkip=function(){
+    var sl=document.getElementById("qs-sliders"), done=document.getElementById("qs-rate-done");
+    sl.classList.remove("show"); done.textContent="No problem — thanks for the rating."; done.classList.add("show");
+  };
+
   function viewDictionary(){
     var DICT=window.RTFC_DICT||[];
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · Dictionary</div>'+
@@ -2685,6 +2849,7 @@
     else if(parts[0]==="predictions"||parts[0]==="ledger"){ view=viewPredictions(); active=""; }
     else if(parts[0]==="dictionary"){ view=viewDictionary(); active=""; }
     else if(parts[0]==="wallpapers"){ view=viewWallpapers(); active="resources"; }
+    else if(parts[0]==="design"){ view=viewDesign(); active=""; }
     else if(parts[0]==="live"||parts[0]==="livetv"){ view=viewLiveTV(); active="live"; }
     else if(parts[0]==="events"){ view=viewEvents(); active=""; }
     else if(parts[0]==="contact"||parts[0]==="connect"){ view=viewContact(); active=""; }
