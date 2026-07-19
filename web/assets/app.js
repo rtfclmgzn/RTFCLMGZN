@@ -499,7 +499,6 @@
       '<div class="dateline"><span class="dl-sec" style="color:'+col+'">'+esc(a.section)+'</span> · '+when(a.publishedAt)+' · '+readTime(a)+' min read'+saveBtns(a.id,true)+'</div>'+
       articleToolsHTML(a)+
       '<div class="hero" style="'+artFill(a,true)+'">'+artGlyph(a,col)+'</div>'+
-      ((a.tldr&&a.tldr.length)?'<div class="tldr-jumpwrap"><button class="tldr-jump" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the TL;DR summary">TL;DR <span class="tj-arrow">↓</span></button></div>':'')+
       tocHTML+
       '<div class="prose">'+bodyHTML+'</div>'+ (a.steps?guideStepsHTML(a):"") + tldrHTML(a) +
       (applySeg>=0?'<div data-ra="'+applySeg+'" class="ra-wrap">'+applyHTML(a)+'</div>':applyHTML(a))+
@@ -1111,6 +1110,9 @@
   }
   function articleToolsHTML(a){
     var h='<div class="art-tools">';
+    if(a.tldr&&a.tldr.length){
+      h+='<button class="tool-btn tldr-btn" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the TL;DR summary">⚡ <span>TL;DR</span></button>';
+    }
     if(window.speechSynthesis){
       h+='<button class="tool-btn tts-btn2" id="tts-btn" onclick="rtfcListen(\''+a.id+'\')">▶ <span>Listen · ~'+readTime(a)+' min</span><i class="tts-prog" id="tts-prog"></i></button>';
     }
