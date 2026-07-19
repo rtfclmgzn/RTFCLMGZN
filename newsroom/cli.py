@@ -7,9 +7,11 @@ from pathlib import Path
 from typing import Any
 
 from .app import find_repo_root, serve
+from .autonomy.budget import BudgetError
 from .autonomy.buzz_cycle import BuzzCycleError, run_buzz_cycle
 from .autonomy.config import ConfigError, load_config, save_user_config
 from .autonomy.controller import AutonomyController, AutonomyError
+from .autonomy.image_generate import ImageGenerationError, generate_cover_image
 from .autonomy.scheduler import (
     SchedulerError,
     disable_buzz_schedule,
@@ -178,6 +180,13 @@ def main(argv: list[str] | None = None) -> int:
     buzz_disable = sub.add_parser("disable-buzz-schedule")
     buzz_disable.add_argument("--delete", action="store_true")
 
+    genimg = sub.add_parser("generate-image")
+    genimg.add_argument("--prompt", required=True, help="Scene description; house style is auto-applied.")
+    genimg.add_argument("--out", required=True, type=Path, help="Output path, e.g. web/assets/img/newsroom/<id>.jpg")
+    genimg.add_argument("--aspect", default="16:9")
+    genimg.add_argument("--raw", action="store_true", help="Skip the house style wrapper.")
+    genimg.add_argument("--section", default=None, help="Recorded in output only; no effect on generation.")
+
     args = parser.parse_args(argv)
     try:
         repo_root = (
@@ -264,6 +273,14 @@ def main(argv: list[str] | None = None) -> int:
             _json(enable_buzz_schedule(repo_root, int(args.interval)))
         elif args.command == "disable-buzz-schedule":
             _json(disable_buzz_schedule(delete=bool(args.delete)))
+        elif args.command == "generate-image":
+            out_path = args.out if args.out.is_absolute() else repo_root / args.out
+            result = generate_cover_image(
+                repo_root, prompt=args.prompt, out_path=out_path, aspect=args.aspect, raw=bool(args.raw)
+            )
+            if args.section:
+                result["section"] = args.section
+            _json(result)
         return 0
     except (
         NewsroomError,
@@ -273,6 +290,8 @@ def main(argv: list[str] | None = None) -> int:
         SchedulerError,
         VaultError,
         BuzzCycleError,
+        ImageGenerationError,
+        BudgetError,
     ) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
