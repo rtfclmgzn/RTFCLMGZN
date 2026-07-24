@@ -16,6 +16,17 @@ if exist "newsroom\runner\PAUSED" (
   exit /b 0
 )
 
+REM Catch-up guard: Cycle A/B/C are three independent Scheduled Tasks, each
+REM with "run as soon as possible after a missed start" enabled. If the PC
+REM was off through more than one trigger time, Windows fires their catch-ups
+REM back-to-back the moment it wakes -- this lock ensures only the first one
+REM actually runs a cycle; the rest see a fresh timestamp and skip.
+for /f "delims=" %%G in ('powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0newsroom\runner\run-gate.ps1" -LockFile "%LOGROOT%\last-run.marker" -CooldownMinutes 60') do set "GATE=%%G"
+if /I "%GATE%"=="SKIP" (
+  echo Skipped - a cycle already ran within the last 60 minutes ^(catch-up guard^).>>"%LOGFILE%"
+  exit /b 0
+)
+
 REM The OAuth token is stored as a Machine-scope environment variable, which a
 REM freshly-launched process tree (exactly what Task Scheduler creates) reads
 REM correctly from the registry at process start -- no bridging needed here,
