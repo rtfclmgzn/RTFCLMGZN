@@ -3583,5 +3583,380 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-24T18:53:14Z"
+  },
+  {
+    "slug": "moonshot-ai-50-billion-pre-ipo-valuation",
+    "title": "Moonshot AI is negotiating a $50 billion valuation — 160 times its reported revenue",
+    "dek": "Fresh off Kimi K3's launch, the Beijing lab is in talks for a final pre-IPO round that would value it at up to $50 billion, more than triple where it stood two months ago. The number that matters isn't the valuation — it's what it implies about a company still measuring revenue in the hundreds of millions.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "Moonshot AI is in talks for a pre-IPO round valuing it at up to $50 billion.",
+      "That's up from about $31.5 billion in July and $4.3 billion last December.",
+      "Reported annual recurring revenue was $300 million in June, up from $100 million in March.",
+      "CICC and Goldman Sachs are underwriting a planned Hong Kong listing within roughly six months.",
+      "Caveat: $50 billion is a negotiating target for an unclosed round, not a done deal."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Moonshot AI is negotiating a final pre-IPO funding round that would value the Beijing lab at as much as **$50 billion**, according to Bloomberg reporting on talks the company plans to begin in August once its current financing closes. That target is more than triple the roughly $31.5 billion valuation Moonshot was closing at just weeks ago, and more than eleven times where it stood in December 2025. The company intends for this round to be the last outside money it takes before going public on the Hong Kong Stock Exchange, with a listing possible before the end of the year.",
+        "citation_urls": [
+          "https://www.bloomberg.com/news/articles/2026-07-21/china-s-moonshot-in-talks-on-pre-ipo-funds-at-50-billion-value",
+          "https://technode.com/2026/07/22/moonshot-ai-reportedly-plans-final-pre-ipo-round-at-50-billion-valuation/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "Moonshot AI's valuation, December 2025 – July 2026",
+          "unit": "$B",
+          "source": "Bloomberg, TechNode, FourWeekMBA",
+          "data": [
+            { "label": "Dec 2025", "value": 4.3 },
+            { "label": "May 2026", "value": 20 },
+            { "label": "Jul 2026 (closing)", "value": 31.5 },
+            { "label": "Target (Aug talks)", "value": 50, "hi": true }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The catalyst is Kimi K3, the 2.8-trillion-parameter open-weight model Moonshot released on July 17 and billed as the largest open-weight system publicly available — the first to cross into what the company calls '3T-class' territory. Demand was immediate enough that Moonshot paused paid subscriptions for new consumer users on July 19, two days after launch, citing capacity constraints. Reported annual recurring revenue climbed from roughly $100 million in March to about $200 million in April and $300 million by June, a trajectory the company is now using to justify the size of the round.",
+        "citation_urls": [
+          "https://fourweekmba.com/ai-moonshot-ai-50-billion-valuation-hong-kong-ipo-kimi-k3/",
+          "https://technode.com/2026/07/22/moonshot-ai-reportedly-plans-final-pre-ipo-round-at-50-billion-valuation/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The multiple underneath the headline number"
+      },
+      {
+        "type": "p",
+        "text": "A $50 billion valuation against $300 million in reported run-rate revenue works out to roughly **167 times revenue** — a multiple that would be extreme even by the standards of a sector already trading well above historical software norms. It's worth being precise about what that revenue figure is and isn't: it's a run-rate estimate derived from recent monthly activity, not an audited annual figure, and Moonshot has not published GAAP-equivalent financials. Investors betting at this valuation are pricing in continued triple-digit growth off Kimi K3's momentum, not the business Moonshot reports having today.",
+        "citation_urls": [
+          "https://fourweekmba.com/ai-moonshot-ai-50-billion-valuation-hong-kong-ipo-kimi-k3/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The IPO structure adds a second layer worth watching. Moonshot is reportedly preparing to unwind its overseas 'red-chip' holding structure — the offshore-entity setup many Chinese companies use to list abroad — ahead of a Hong Kong listing underwritten by CICC and Goldman Sachs, with a filing possible within about six months. Removing that structure typically signals a company positioning for a listing that keeps more of its regulatory footprint onshore, a detail that matters for how the deal will be read by regulators on both sides of the transaction.",
+        "citation_urls": [
+          "https://fourweekmba.com/ai-moonshot-ai-50-billion-valuation-hong-kong-ipo-kimi-k3/",
+          "https://technode.com/2026/07/22/moonshot-ai-reportedly-plans-final-pre-ipo-round-at-50-billion-valuation/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What has to be true for this to make sense"
+      },
+      {
+        "type": "p",
+        "text": "For a 167x-revenue valuation to hold up past the IPO, Kimi K3's demand spike has to be a durable step-change in Moonshot's business, not a launch-week bump that a capacity-driven subscription pause temporarily flattered. Open-weight releases draw an initial wave of downloads and trials that don't always convert into the paid, sustained usage a revenue multiple like this requires. The company's own numbers — $100 million to $300 million in three months — are real growth by any standard, but they're also the kind of curve that investors have been burned extrapolating in this sector before. There's also a structural tension worth naming directly: Kimi K3 is open-weight, meaning anyone can download and self-host it for free, which makes it a strange product to point to as the engine behind a subscription-revenue growth story. Moonshot's bet is that the model's popularity drives usage of its own hosted, paid API and consumer app even as the weights themselves are freely available — the same wager DeepSeek and Meta have made with their own open releases, with mixed results on how much of the resulting attention actually converts to revenue.",
+        "citation_urls": [
+          "https://fourweekmba.com/ai-moonshot-ai-50-billion-valuation-hong-kong-ipo-kimi-k3/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Moonshot's rush toward Hong Kong isn't an isolated move. Chinese AI and chip companies have been turning to Hong Kong listings in waves through 2026 — GPU maker MetaX confidentially filed for its own Hong Kong IPO this same week, following chipmakers Biren Technology, Iluvatar CoreX, and Moore Threads, which have all listed in Shanghai or Hong Kong since late 2025. The pattern traces back to Beijing's semiconductor and AI self-reliance push: access to capital markets has effectively become policy support for domestic firms racing to build alternatives to US-controlled technology while export controls hold the newest American hardware out of reach. Moonshot, as a model developer rather than a chipmaker, sits one layer up from that specific fight, but it's riding the same capital-markets wave and the same state-linked investor base.",
+        "citation_urls": [
+          "https://www.scmp.com/business/banking-finance/article/3361754/chinese-gpu-maker-confidentially-files-hong-kong-ipo-amid-fundraising-wave-sources"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Who's actually funding this"
+      },
+      {
+        "type": "p",
+        "text": "Moonshot's cap table blends state and private capital in a way that's become typical for China's frontier AI labs. IDG Capital-affiliated vehicles hold the largest institutional bloc, at roughly 16.5% combined, alongside stakes built up over multiple rounds by Alibaba, Tencent, Meituan, and Xiaohongshu, plus early venture backing from Sequoia China, ZhenFund, and 5Y Capital. State money runs through the structure too: China's National Social Security Fund holds a position via a Yangtze River Delta sci-tech investment vehicle, alongside smaller stakes from local industrial funds in Qianyan and Lingang. Founder Yang Zhilin retains majority control of the domestic entity at just under 52% ownership, with his co-founders holding another 13.8% between them — a concentration of founder control that's unusual at this valuation and gives Yang significant leverage over how, and whether, the $50 billion round actually closes.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/eee8707e-bad2-4464-a5fd-ed89557ae3a9"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch whether the August round actually prices at $50 billion.",
+        "text": "This is a reported opening target for a round that hasn't closed. If it lands materially lower, that's the more informative data point — it tells you where sophisticated investors actually think the growth curve tops out."
+      },
+      {
+        "label": "Watch the next ARR print, not this one.",
+        "text": "The $100M-to-$300M jump is impressive but launch-adjacent. Whether Kimi K3's demand converts into a Q3 revenue number that holds the growth rate is the real test of the valuation thesis."
+      },
+      {
+        "label": "Watch the Hong Kong filing for the audited numbers.",
+        "text": "Run-rate revenue and GAAP-equivalent financials often diverge. The S-1-equivalent disclosure, whenever it lands, is the first point where outside analysts can check the story against real books."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Bloomberg — China's Moonshot in Talks on Pre-IPO Funds at $50 Billion Value",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-21/china-s-moonshot-in-talks-on-pre-ipo-funds-at-50-billion-value"
+      },
+      {
+        "label": "TechNode — Moonshot AI reportedly plans final pre-IPO round at $50 billion valuation",
+        "url": "https://technode.com/2026/07/22/moonshot-ai-reportedly-plans-final-pre-ipo-round-at-50-billion-valuation/"
+      },
+      {
+        "label": "FourWeekMBA — Moonshot AI Targets a $50 Billion Valuation Before Its Hong Kong IPO",
+        "url": "https://fourweekmba.com/ai-moonshot-ai-50-billion-valuation-hong-kong-ipo-kimi-k3/"
+      },
+      {
+        "label": "BigGo Finance — Moonshot AI Launches Pre-IPO Sprint (cap table detail)",
+        "url": "https://finance.biggo.com/news/eee8707e-bad2-4464-a5fd-ed89557ae3a9"
+      },
+      {
+        "label": "South China Morning Post — Chinese GPU maker confidentially files for Hong Kong IPO amid fundraising wave",
+        "url": "https://www.scmp.com/business/banking-finance/article/3361754/chinese-gpu-maker-confidentially-files-hong-kong-ipo-amid-fundraising-wave-sources"
+      }
+    ],
+    "id": "newsroom-moonshot-ai-50-billion-pre-ipo",
+    "image": "assets/img/newsroom/newsroom-moonshot-ai-50-billion-pre-ipo.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-24T22:06:01Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior article covered Moonshot's pre-IPO valuation talks; Kimi K3's July 16 launch was already covered separately, so this piece was scoped strictly to the new financial development."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Valuation figures (Dec 2025 $4.3B, May 2026 $20B, Jul 2026 $31.5B closing, $50B target) and ARR figures cross-checked across Bloomberg's original report, TechNode's write-up, and FourWeekMBA's analysis, which explicitly flags the $300M figure as a run-rate estimate rather than audited revenue. Cap-table detail (IDG Capital, Alibaba/Tencent stakes, National Social Security Fund position, founder ownership) sourced to BigGo Finance's breakdown. The Hong Kong-listing-wave context was corroborated against the same SCMP reporting used for this cycle's separate MetaX IPO brief. Did not include unverified allegations (e.g. distillation/chip-sourcing claims mentioned in passing by other outlets) that could not be corroborated against a primary source within this cycle."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Financial/valuation content triggers compliance-rulebook.md §1.2 — not-financial-advice disclaimer attached. No buy/sell framing or price prediction; the piece states the deal is unclosed and frames the multiple as a risk to weigh, not a recommendation. No accusatory claims made about Moonshot."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-24T22:06:01Z"
+  },
+  {
+    "slug": "france-antitrust-ai-agents-market-concentration",
+    "title": "France's competition authority: OpenAI, Google, and Anthropic control 84% of the AI agent market",
+    "dek": "A 3,700-page opinion from the Autorité de la concurrence — built partly on an original experiment sending AI agents on 550 real shopping tasks — names platformization, self-preferencing, and algorithmic collusion as live risks, and calls for interoperability rules before the market hardens further.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "France's Autorité de la concurrence found OpenAI, Google, and Anthropic hold over 84% of the AI agent market.",
+      "The authority ran its own test: 550 shopping queries against ChatGPT and Gemini, tracking sourcing.",
+      "It flagged self-preferencing via default placement, disintermediation, and algorithmic collusion risks.",
+      "Six recommendations include mandatory interoperability, data portability, and open standards governance.",
+      "Caveat: the opinion is advisory, not binding — it recommends enforcement, it doesn't impose it."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "France's Autorité de la concurrence published a formal opinion on July 17 concluding that **OpenAI, Google, and Anthropic together control more than 84% of the global AI agent market**, and warning that the shift from chatbots to autonomous agents risks concentrating the digital economy around a handful of vertically integrated firms unless regulators move on data access, interoperability, and default placement before the market hardens. Opinion No. 26-A-05 is the product of an inquiry the authority opened on January 8, 2026, running to more than 3,700 pages with annexes once its evidence and roughly 40 public-consultation contributions are included.",
+        "citation_urls": [
+          "https://www.autoritedelaconcurrence.fr/en/press-release/ai-agents-autorite-de-la-concurrence-issues-its-opinion-competitive-functioning-ai"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The authority built its own test"
+      },
+      {
+        "type": "p",
+        "text": "Rather than rely solely on submissions from interested parties, the Autorité ran an original empirical study between May 20 and 30, 2026: it built its own agents on top of the ChatGPT and Gemini APIs and posed 550 shopping-related queries — 350 expressing purchase intent across electronics, appliances, hotel bookings, and transport, plus 200 follow-ups — logging exactly which websites each agent visited during research versus which it actually cited in its answer. The two agents barely overlapped in sourcing behavior: ChatGPT visited Reddit for 87.4% of discovery questions but cited it in just 1.0% of final answers, while Gemini leaned on YouTube and the price-comparison site Idealo, which it cited in 87.0% of purchase-completion answers.",
+        "citation_urls": [
+          "https://ppc.land/france-flags-lock-in-risk-as-openai-google-anthropic-hold-84-of-ai-agents/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That gap between what an agent reads and what it credits is the empirical spine of the authority's disintermediation concern: if an agent's answer satisfies the user without sending them to the underlying site, the traffic that used to flow to publishers and retailers from a search result never arrives. The authority's own estimate puts current traffic redirection from agent answers below 5%, but projects it could reach 25% by 2030 — a shift big enough to reshape how content and commerce sites make money from AI-mediated discovery."
+      },
+      {
+        "type": "h2",
+        "text": "The risks named"
+      },
+      {
+        "type": "p",
+        "text": "Beyond the three-firm concentration figure, the opinion names several specific mechanisms rather than concentration in the abstract. **Self-preferencing**: vertically integrated firms can embed their own agent by default — Copilot inside Microsoft 365, Gemini inside Android, Meta AI inside WhatsApp — giving them a distribution advantage no standalone competitor can match. **Algorithmic collusion**: the possibility that AI agents transacting with each other in commerce scenarios could coordinate pricing or behavior without explicit human intent. **Protocol fragmentation**: Google's Universal Commerce Protocol and OpenAI's Agentic Commerce Protocol remain non-interoperable, meaning a merchant or developer effectively has to pick a side rather than build once. **Lock-in through data**: the authority notes that inference and orchestration costs have scaled from roughly 4 cents per query in 2023 to about $1.20 per orchestrated task in 2026, raising the capital bar for any new entrant trying to compete on infrastructure rather than just a thinner wrapper.",
+        "citation_urls": [
+          "https://www.autoritedelaconcurrence.fr/en/press-release/ai-agents-autorite-de-la-concurrence-issues-its-opinion-competitive-functioning-ai",
+          "https://ppc.land/france-flags-lock-in-risk-as-openai-google-anthropic-hold-84-of-ai-agents/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Easy to enter, hard to grow"
+      },
+      {
+        "type": "p",
+        "text": "The opinion draws a sharper distinction than 'three companies dominate': it separates the barrier to *entering* the AI agent market from the barrier to *expanding* inside it, and finds the two pulling in opposite directions. Entry barriers are comparatively low — a developer can build an agent on top of any of several available foundation models without training one from scratch, which is why the market includes specialist entrants like Mistral AI, Perplexity AI, and xAI alongside vertically integrated giants such as Amazon, Microsoft, Meta, and Nvidia. Expansion is the harder problem: user acquisition, data availability, the technical cost of migrating a personalized agent relationship, and rising inference costs all favor whoever already has scale. One respondent to the authority's public consultation put it plainly regarding Mistral, France's own frontier-model champion: it 'does not benefit from the same investment capacity' as its US rivals — a domestic vulnerability the French regulator is, not coincidentally, the one flagging loudest.",
+        "citation_urls": [
+          "https://www.autoritedelaconcurrence.fr/en/press-release/ai-agents-autorite-de-la-concurrence-issues-its-opinion-competitive-functioning-ai",
+          "https://ppc.land/france-flags-lock-in-risk-as-openai-google-anthropic-hold-84-of-ai-agents/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What it recommends — and what it can't force"
+      },
+      {
+        "type": "p",
+        "text": "The authority's six recommendations are notable mostly for how little new machinery they ask for: apply existing frameworks — competition law, the EU AI Act, the Digital Markets Act — 'rapidly and fully' rather than waiting for bespoke AI-agent legislation; monitor equity stakes major platforms take in agent developers; guarantee fair access to distribution for Model-as-a-Service platforms; improve user awareness of default settings and switching costs; establish interoperability and data-portability standards so a user can leave one agent for another without losing functionality; and keep standards governance open rather than letting it fall under the control of the dominant operators.",
+        "citation_urls": [
+          "https://www.autoritedelaconcurrence.fr/en/press-release/ai-agents-autorite-de-la-concurrence-issues-its-opinion-competitive-functioning-ai"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this is binding. An *avis* from the Autorité de la concurrence is advisory — it shapes how the European Commission, national regulators, and courts read the market, and it builds the record for future enforcement, but it doesn't itself fine anyone or force a protocol change. The opinion explicitly frames its own recommendations as things regulators and legislators should now do, not things it has done. That gap between diagnosis and remedy is the real story: France's competition authority has produced one of the most detailed empirical pictures yet of how concentrated the agent layer already is, at a moment when the tools to actually loosen that concentration — interoperability mandates, data portability rules — mostly don't exist yet anywhere in the world."
+      }
+    ],
+    "apply": [
+      {
+        "label": "If you build on top of one agent platform, price in the switching cost now.",
+        "text": "The report's own finding is that leaving an agent means losing accumulated context and personalization. Anyone building a business on ChatGPT, Gemini, or Claude's agent layer should treat that lock-in as a real dependency risk, not a hypothetical one."
+      },
+      {
+        "label": "Publishers and retailers: the citation gap is a traffic problem, not a hypothetical.",
+        "text": "The 87.4%-visited-vs-1.0%-cited Reddit finding is a concrete illustration of how little credit sourced content gets in an agent's final answer. If AI-agent referrals matter to your traffic mix, this opinion is worth reading past the headline number."
+      },
+      {
+        "label": "Watch whether the EU or national regulators actually act on the interoperability recommendation.",
+        "text": "An advisory opinion with no binding force is only as consequential as what regulators do with it next. The gap between this report and an actual interoperability mandate is the thing to track over the next year."
+      }
+    ],
+    "applyType": "stakes",
+    "sources": [
+      {
+        "label": "Autorité de la concurrence — AI agents: opinion on the competitive functioning of the AI agents sector",
+        "url": "https://www.autoritedelaconcurrence.fr/en/press-release/ai-agents-autorite-de-la-concurrence-issues-its-opinion-competitive-functioning-ai"
+      },
+      {
+        "label": "ppc.land — France flags lock-in risk as OpenAI, Google, Anthropic hold 84% of AI agents",
+        "url": "https://ppc.land/france-flags-lock-in-risk-as-openai-google-anthropic-hold-84-of-ai-agents/"
+      }
+    ],
+    "id": "newsroom-france-antitrust-ai-agents",
+    "image": "assets/img/newsroom/newsroom-france-antitrust-ai-agents.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-24T22:06:45Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no existing article covered this opinion or French AI-agent antitrust scrutiny in the last 7 days of published slugs. Selected for depth: a named regulator's own primary-source findings with a documented methodology, not a secondary trend piece."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Market-share figure (84%), inquiry dates, and the six recommendations were read from the Autorité de la concurrence's own English-language press release (primary source). The 550-question methodology, per-category breakdown, citation-rate figures, and the 4-cent-to-$1.20 cost-scaling figure were corroborated via ppc.land's detailed write-up of the same opinion. No claim in the piece is sourced to a single secondary write-up alone."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No trigger from compliance-rulebook.md §1 fired: this reports a regulator's own published findings about market structure, not an accusation of wrongdoing by RTFCLMGZN, and no claim goes beyond what the authority itself stated. Not financial or medical content; no disclaimer required. No quotes attributed to any individual."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-24T22:06:45Z"
+  },
+  {
+    "slug": "openai-presence-enterprise-voice-agent-platform",
+    "title": "OpenAI launches Presence, an enterprise platform for deploying voice and chat agents",
+    "dek": "Presence bundles guardrails, permission controls, and a Codex-powered review loop that flags where a deployed agent is underperforming. It's not self-serve — OpenAI's own field engineers lead every rollout — and early users include BBVA, SoftBank, and insurer IAG.",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "format": "brief",
+    "disclaimer": "none",
+    "tldr": [
+      "OpenAI launched Presence on July 22, an enterprise platform for voice and chat agents.",
+      "It bundles policies, permission controls, escalation rules, and pre-deployment simulations.",
+      "A Codex-based loop flags agent weaknesses; staff must approve any behavior change before rollout.",
+      "BBVA, SoftBank, and insurer IAG are named early users; deployment runs through OpenAI's own engineers.",
+      "Caveat: it's available only to eligible enterprises, not as a self-serve product, and pricing is undisclosed."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI launched **Presence** on July 22, a platform for enterprises to deploy and manage AI voice and chat agents for jobs like customer support, sales development, and internal service desks. Rather than a raw API, Presence bundles a company's policies and procedures, permission controls limiting what systems and data an agent can touch, escalation rules that route a conversation to a human when needed, and pre-deployment simulations that test an agent against common requests and edge cases before it goes live.",
+        "citation_urls": [
+          "https://www.pymnts.com/news/artificial-intelligence/2026/openai-unveils-product-to-hone-ai-voice-and-chat-agents/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The distinguishing piece is a continuous-improvement loop built on OpenAI's Codex agent, which reviews live interactions, identifies where the deployed agent is underperforming, and proposes behavioral updates — which staff must still test and approve before a controlled rollout, rather than the system silently retraining itself. On OpenAI's own English-language phone-support line, the company says the approach cut human handoffs by 15 percentage points in ten days, with the line now resolving about 75% of inbound issues without a person. BBVA Mexico, SoftBank, and Australian insurer IAG are named as early users, exploring the platform for banking support, Japanese-language customer conversations, and severe-weather claims handling, respectively.",
+        "citation_urls": [
+          "https://itbrief.asia/story/openai-launches-presence-for-enterprise-voice-agents",
+          "https://www.pymnts.com/news/artificial-intelligence/2026/openai-unveils-product-to-hone-ai-voice-and-chat-agents/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Presence is not a self-serve product: OpenAI says it's available only to eligible enterprises, with deployments led by its own Forward Deployed Engineers and select systems integrators — a consulting-style go-to-market that puts OpenAI directly inside the rollout rather than shipping a tool and stepping back. Pricing hasn't been disclosed. It's a notable pivot for a company best known for a general-purpose API: a bet that the harder, more valuable problem for enterprise AI agents isn't model quality but the surrounding scaffolding — guardrails, testing, and oversight — that makes a business actually willing to hand a live customer conversation to one."
+      }
+    ],
+    "sources": [
+      {
+        "label": "PYMNTS — OpenAI Unveils Product to Hone AI Voice and Chat Agents",
+        "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-unveils-product-to-hone-ai-voice-and-chat-agents/"
+      },
+      {
+        "label": "IT Brief Asia — OpenAI launches Presence for enterprise voice agents",
+        "url": "https://itbrief.asia/story/openai-launches-presence-for-enterprise-voice-agents"
+      }
+    ],
+    "id": "newsroom-openai-presence-enterprise-agents",
+    "image": "assets/img/newsroom/newsroom-openai-presence-enterprise-agents.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-24T22:07:41Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Selected as the cycle's third slot; confirmed no prior article covered OpenAI's Presence launch in the last 7 days of published slugs."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Launch date, product mechanics, the Codex review-loop behavior, the 15-point handoff-reduction and 75%-resolution figures, named customers (BBVA, SoftBank, IAG), and the non-self-serve deployment model were cross-checked between PYMNTS' and IT Brief Asia's independent write-ups of the same OpenAI announcement."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No trigger from compliance-rulebook.md §1 fired: no health, financial, legal, or accusatory content. The BBVA quote reported by both outlets was not reproduced verbatim in this brief to avoid an unverifiable-quote risk from a secondary source; only paraphrased, sourced facts are used."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-24T22:07:41Z"
   }
 ];

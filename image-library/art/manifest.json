@@ -312,7 +312,12 @@
       ],
       "text_space": "window glass center",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-moonshot-ai-50-billion-pre-ipo",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-013-executive-at-the-window-night-city",
@@ -1419,7 +1424,12 @@
       ],
       "text_space": "black ceiling band",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-france-antitrust-ai-agents",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-058-power-plant-engineers-walking",
