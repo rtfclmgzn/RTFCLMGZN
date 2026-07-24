@@ -61,6 +61,8 @@
   };
   window.rtfcSignup=function(){
     var em=document.getElementById("acct-email"); if(!em||!em.value||em.value.indexOf("@")<1){ if(em) em.style.borderColor="var(--gate)"; return; }
+    var btn=document.getElementById("acct-signup-btn");
+    if(btn){ if(btn.disabled) return; btn.disabled=true; btn.textContent="Sending…"; } // guards against a double-click emailing two links for the same address
     var email=em.value;
     fetch("/api/auth/request-link",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email:email})})
       .then(function(){ acctPending=email; route(); })
@@ -877,11 +879,11 @@
           '<p>We sent a sign-in link to <b>'+esc(acctPending)+'</b>. It expires in 15 minutes and works once. Didn’t get it? Check spam, or <a href="#" onclick="acctPending=null;route();return false" style="color:var(--accent2)">try a different address</a>.</p></div>';
         return h+'</div>';
       }
-      h+='<h1>Create your free account</h1>'+
-        '<p>Reading is free and stays free. A free account adds three things: your library (bookmarks + read-later) becomes permanent and syncs across devices, you get the <b>daily digest email</b> — the day’s stories in one send — and you’re set up to subscribe to the magazine whenever you’re ready.</p></div>'+
+      h+='<h1>Sign in or create your account</h1>'+
+        '<p>Reading is free and stays free. Enter your email and we’ll send a one-time link — new address or returning, same step either way. A free account adds three things: your library (bookmarks + read-later) becomes permanent and syncs across devices, you get the <b>daily digest email</b> — the day’s stories in one send — and you’re set up to subscribe to the magazine whenever you’re ready.</p></div>'+
         '<div class="acct-card"><label>Email</label><input id="acct-email" type="email" placeholder="you@example.com">'+
-        '<button class="cta" onclick="rtfcSignup()">Create free account</button>'+
-        '<p class="protonote">We’ll email you a one-time sign-in link — no password to create or remember.</p></div>'+
+        '<button class="cta" id="acct-signup-btn" onclick="rtfcSignup()">Send sign-in link</button>'+
+        '<p class="protonote">We’ll email you a one-time sign-in link — no password to create or remember. Only your most recent link works; if you have more than one of these emails, use the newest.</p></div>'+
         timeMeterHTML();
       return h+'</div>';
     }
@@ -1726,11 +1728,9 @@
   // Slot hours are REAL Eastern-time hours to match the "ET" labels, and "now" is computed in
   // Eastern too — so the countdown is internally consistent and lands on the right next drop.
   var SLOTS=[
-    {h:6,  name:"Overnight wire", et:"6:00 AM ET",  shape:"1–2 briefs · overnight + Asia"},
-    {h:8,  name:"The Flagship",   et:"8:00 AM ET",  shape:"the day's defining synthesis + supporting", star:true},
-    {h:12, name:"Midday break",   et:"12:00 PM ET", shape:"breaking-news window · 1–2 pieces"},
-    {h:16, name:"The close",      et:"4:00 PM ET",  shape:"end-of-day analysis · 1–2 pieces"},
-    {h:20, name:"Evening light",  et:"8:00 PM ET",  shape:"Buzz refresh · at most 1 brief"}
+    {h:6,  name:"Morning edition", et:"6:00 AM ET",  shape:"the day's defining synthesis + supporting", star:true},
+    {h:12, name:"Midday cycle",    et:"12:00 PM ET", shape:"synthesis + briefs · breaking-news window"},
+    {h:18, name:"Evening cycle",   et:"6:00 PM ET",  shape:"end-of-day synthesis + brief"}
   ];
   function ctNow(){
     var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",hour12:false,
@@ -1739,7 +1739,7 @@
     return {wd:o.weekday, h:parseInt(o.hour,10)%24, m:parseInt(o.minute,10), s:parseInt(o.second,10)};
   }
   function nextSlot(){
-    var n=ctNow();                        // 5 drops every day (founder: "5 a day") — no weekend cut
+    var n=ctNow();                        // 3 drops every day, 6h apart (5am/11am/5pm CT = 6/12/18 ET) — no weekend cut
     for(var i=0;i<SLOTS.length;i++){
       if(SLOTS[i].h>n.h || (SLOTS[i].h===n.h && n.m===0&&n.s===0)){
         var secs=((SLOTS[i].h-n.h)*3600)-(n.m*60)-n.s;
@@ -1905,7 +1905,7 @@
     h+='<div class="pulse-sched">'+SLOTS.map(function(sl){
       return '<div class="ps-row'+(sl.star?' star':'')+'"><b>'+sl.et+'</b><span class="ps-n">'+(sl.star?"⭐ ":"")+sl.name+'</span><span class="ps-s">'+sl.shape+'</span></div>';
     }).join("")+'</div>';
-    h+='<p style="color:var(--muted);font-size:12.5px;margin:10px 0 30px">Weekends run lighter: the Flagship and the close. A slot with nothing worth saying publishes nothing — that’s policy, not failure.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin:10px 0 30px">Weekends run lighter: the morning edition and the evening cycle. A slot with nothing worth saying publishes nothing — that’s policy, not failure.</p>';
     // recent activity
     var recent=USAGE.slice(-7).reverse();
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Last activity on the floor</div>';
@@ -2663,7 +2663,11 @@
     var sb=document.getElementById("sec-btn"), sm=document.getElementById("sec-menu");
     if(sb&&sm){ sb.onclick=function(e){ e.stopPropagation(); sm.hidden=!sm.hidden; sb.setAttribute("aria-expanded",String(!sm.hidden)); }; }
     var acct=document.getElementById("acct-btn");
-    if(acct){ var l=libGet(); acct.textContent=l.account?(l.account.plan==="plus"?"◈":"●"):"○"; acct.title=l.account?("Account: "+l.account.email):"Create a free account"; }
+    if(acct){ var l=libGet();
+      acct.classList.toggle("signed-in",!!l.account);
+      acct.classList.toggle("plan-plus",!!(l.account&&l.account.plan==="plus"));
+      acct.title=l.account?("Account: "+l.account.email):"Sign in or create a free account";
+    }
     navScrollHint();
   }
   // Mobile discovery nudge: the top nav scrolls horizontally, but a first-time

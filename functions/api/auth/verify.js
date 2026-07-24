@@ -31,7 +31,7 @@ function confirmPage(token) {
   <h1>◈ Sign in to RTFCLMGZN</h1>
   <p>For your security, confirm this sign-in with a click — this stops automated scanners from using your link before you do.</p>
   <button id="go">Finish signing in</button>
-  <p class="err" id="err">That link has expired or was already used. Request a new one from the account page.</p>
+  <p class="err" id="err">That link has expired, was already used, or a newer sign-in email replaced it. If you have more than one of these emails, use the most recent one — otherwise request a new link from the account page.</p>
 </div>
 <script>
   document.getElementById("go").addEventListener("click", function () {

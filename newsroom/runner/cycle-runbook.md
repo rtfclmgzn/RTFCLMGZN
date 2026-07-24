@@ -50,6 +50,7 @@ Follow `publishing.agent.md`'s rules exactly:
 
 ## 5. Ship it
 
+0. Before touching anything, run `git status --short`. If it already shows uncommitted changes to a file you're about to edit (most likely `web/index.html`, since the owner sometimes hand-edits the UI directly), that's someone's in-progress work sitting in the same file you need to bump the cache-buster in -- `git add` stages the whole file, not just your lines, so your commit will unavoidably include it too. That's fine (don't try to strip it out or stash it -- an unattended stash/pop can conflict and wedge the repo for the next cycle), but say so explicitly in your Step 6 report (e.g. "note: index.html had a pre-existing unrelated edit already in the working tree, included in this commit") so the owner isn't confused by a diff your summary doesn't otherwise explain.
 1. Update `web/index.html`: bump every `?b=N` cache-buster by 1 (all occurrences, same new number).
 2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html). Never `git add -A`.
 3. Run the guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.

@@ -80,9 +80,14 @@ nav.top a.masthead-link{color:var(--accent2)}
 nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent-ink)}
 .spacer{flex:1}
 .theme-btn{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;
-  width:38px;height:38px;cursor:pointer;font-size:15px;display:grid;place-items:center;transition:all .15s}
+  width:38px;height:38px;cursor:pointer;font-size:15px;display:grid;place-items:center;transition:all .15s;position:relative}
 .theme-btn:hover{color:var(--ink);border-color:var(--muted)}
 .theme-btn svg{width:17px;height:17px;display:block}
+#acct-btn .acct-dot{position:absolute;top:5px;right:5px;width:7px;height:7px;border-radius:99px;background:transparent;transition:background .15s}
+#acct-btn.signed-in{color:var(--accent2);border-color:var(--accent2)}
+#acct-btn.signed-in .acct-dot{background:var(--accent2)}
+#acct-btn.plan-plus{color:var(--accent);border-color:var(--accent)}
+#acct-btn.plan-plus .acct-dot{background:var(--accent)}
 
 /* Mid widths: 15 nav destinations can't share one row with the logo — give the nav
    its own tidy row below instead of letting wrapped rows collide with the ribbon.

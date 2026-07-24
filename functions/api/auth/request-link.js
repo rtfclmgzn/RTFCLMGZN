@@ -34,6 +34,14 @@ export async function onRequestPost(context) {
   // Rate-limited requests still return the same 200 {"ok":true} -- the response
   // shape never varies, so it can't be used to probe account existence OR limits.
   if (emailCount < MAX_PER_EMAIL && ipCount < MAX_PER_IP) {
+    // Invalidate any still-outstanding links for this address first, so there is
+    // never more than one valid link at a time -- a reader with several of these
+    // emails in their inbox can always trust "the newest one is the one that works"
+    // instead of guessing which is stale.
+    await env.DB
+      .prepare("UPDATE login_tokens SET used_at=datetime('now') WHERE email=? AND used_at IS NULL AND expires_at > datetime('now')")
+      .bind(email).run();
+
     const token = randomSecret();
     const tokenHash = await sha256Hex(token);
     await env.DB
