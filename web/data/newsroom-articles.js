@@ -3483,5 +3483,104 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-24T21:41:19Z"
+  },
+  {
+    "slug": "anthropic-claude-opus-5-launch",
+    "title": "Anthropic's new Opus 5 claims gains as large as 3x over rivals — every number is Anthropic's own",
+    "dek": "Released today as the fourth new Claude model in under two months, Opus 5 keeps pricing flat at $5/$25 per million tokens while claiming score jumps up to 3x on Anthropic's own benchmark suite, from ARC-AGI 3 to a new life-sciences evaluation.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Anthropic released Claude Opus 5 today, its fourth new model in under two months.",
+      "Pricing holds at $5 million-input/$25 million-output tokens; it's now default on Claude Max.",
+      "Anthropic's own benchmarks show up to 3x gains over rivals, including on ARC-AGI 3.",
+      "It scores best yet on Anthropic's alignment audit, though Mythos 5 still leads on two safety axes.",
+      "Caveat: every benchmark and safety figure here comes from Anthropic's own testing, not yet independently verified."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Anthropic released Claude Opus 5 on July 24, its fourth new model in under two months, following Mythos 5, Fable 5, and Sonnet 5 in June. The new model keeps pricing flat at $5 per million input tokens and $25 per million output tokens — unchanged from Opus 4.8 — and is available immediately across Claude.ai, the Claude API, Claude Code, and Claude Cowork. Opus 5 becomes the new default model on Claude Max and the strongest model available on Claude Pro. A fast mode runs at 2.5x the speed for twice the base price. The headline pitch, in Anthropic's own framing, is capability without the usual cost of getting it: the company says Opus 5 comes within striking distance of Fable 5, its flagship model, on several evaluations, at roughly half the cost per task.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/claude-opus-5",
+          "https://fortune.com/2026/07/24/anthropic-debuts-claude-opus-5-with-feature-that-lets-users-toggle-between-cost-and-capability/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Opus 5 ships with an effort-level toggle — low, medium, or high — letting a developer trade intelligence for speed and cost within the same model rather than choosing between separate model tiers. Anthropic says the model requires less back-and-forth than its predecessors, citing an ability to verify its own work and recover from errors autonomously rather than stopping to ask. The release lands one week after OpenAI's GPT-5.6, launched July 9, which made a similar pitch around economical token use — a sign both labs now see cost-per-task, not just raw capability, as the competitive axis that matters most to the business customers, scientists, law firms, and software teams they're both chasing.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/claude-opus-5",
+          "https://fortune.com/2026/07/24/anthropic-debuts-claude-opus-5-with-feature-that-lets-users-toggle-between-cost-and-capability/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The benchmark case rests entirely on Anthropic's own testing, not yet an independently replicated result. By the company's account: Opus 5 more than doubles Opus 4.8's score on Frontier-Bench v0.1 at a lower cost per task; on CursorBench 3.2, a coding-agent benchmark, it lands within 0.5 percentage points of Fable 5's peak score at half of Fable 5's cost; on ARC-AGI 3, it scores three times higher than the next-best model Anthropic tested against; on Zapier's AutomationBench, it passes roughly 1.5 times as often as the next-best model at the same price; and on OSWorld 2.0, a computer-use benchmark, it beats Fable 5's own result outright at a third of the cost. Those are striking numbers, and none of them are independently confirmed. Anthropic doesn't publish which models it tested against on each benchmark, or under what prompting conditions — the kind of detail that separates a real capability jump from a benchmark tuned to flatter the model that shipped it. Treat the magnitude of the claim, not just its direction, as provisional until a third party runs the same tests.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/claude-opus-5"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Anthropic is also positioning Opus 5 as, in its words, its most capable generally available model for scientific research, with the clearest gains in biology: the company reports Opus 5 beats Opus 4.8 on every one of its life-sciences evaluations, including a 10.2-percentage-point jump on organic-chemistry tasks and a 7.7-point gain on protein-related tasks. That capability cuts both ways. Anthropic says Opus 5 also carries stronger safety guardrails specifically around biological-research requests that could be misused, routing a wider set of blocked queries than Opus 4.8 did — an acknowledgment that a model genuinely more useful to a biologist is, by the same token, more useful to someone trying to misuse it.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/claude-opus-5"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "On Anthropic's own automated behavioral-safety audit, Opus 5 scores 2.3 — the best (lowest) score of any recent Anthropic model, which the company describes as making Opus 5 the most aligned Opus release yet and the hardest to trick into misuse. That leadership isn't universal: Anthropic says its smaller Mythos 5 model still scores better specifically on biology-research safety and on resisting offensive-cybersecurity misuse, a rare instance of a lab publishing a case where its newest flagship isn't the safest option on every axis. Opus 5 does carry tighter guardrails than Opus 4.8 on narrow cybersecurity tasks specifically. One practical change: when the API declines a request on safety grounds, it now automatically falls back to routing the request to an alternative model rather than simply returning an error — a small change aimed at developers who found blanket refusals disruptive to build around.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/claude-opus-5"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Opus 5 is the fourth Claude model Anthropic has shipped since early June, a release cadence unusually fast even by the industry's current standard — one that leaves less time than usual for outside researchers to stress-test each model's claims before the next one arrives. For a publication that tracks frontier releases against their claims rather than their press coverage, the numbers worth watching aren't the ones in Anthropic's own launch post — they're whatever independent benchmarking groups publish once they've had a few weeks with the model themselves."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Anthropic — Introducing Claude Opus 5",
+        "url": "https://www.anthropic.com/news/claude-opus-5"
+      },
+      {
+        "label": "Fortune — Anthropic debuts Claude Opus 5, with a feature that lets users toggle between cost and capability",
+        "url": "https://fortune.com/2026/07/24/anthropic-debuts-claude-opus-5-with-feature-that-lets-users-toggle-between-cost-and-capability/"
+      }
+    ],
+    "id": "newsroom-claude-opus-5-launch",
+    "image": "assets/img/newsroom/newsroom-claude-opus-5-launch.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "owner-flagged breaking story · interactive Claude session · 2026-07-24T18:53:14Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude",
+          "note": "Owner asked directly whether Opus 5 had been covered, ahead of the next scheduled cycle (5pm Central). Confirmed via live search that Anthropic released Claude Opus 5 today and that no existing article covered it."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude",
+          "note": "Pricing, availability, effort-toggle feature, all five named benchmark results, the life-sciences/biology figures, and the safety-audit score were read directly from Anthropic's own announcement (anthropic.com/news/claude-opus-5); release cadence and competitive framing corroborated against Fortune's independent report of the same launch."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude",
+          "note": "No trigger from compliance-rulebook.md §1 fired: no health/financial/legal/accusatory content, no quotes used. All benchmark and safety figures are explicitly attributed as Anthropic's own self-reported results, never stated as independently confirmed fact — the load-bearing caveat is carried in the title, the final TL;DR bullet, and the body's benchmark paragraph."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Published immediately rather than waiting for the next scheduled cycle, given this is a same-day flagship model release from one of the industry's frontier labs — exactly the kind of story this site exists to not miss."
+      }
+    },
+    "publishedAt": "2026-07-24T18:53:14Z"
   }
 ];

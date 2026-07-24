@@ -460,7 +460,12 @@
       ],
       "text_space": "dark sky upper-left",
       "brand_visible": "ANTHROPIC signage",
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-claude-opus-5-launch",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-019-ai-lab-hq-facade-at-night",
