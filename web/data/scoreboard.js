@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "July 16, 2026",
-  scannedAt: "2026-07-16T16:00:00Z",
-  basisNote: "Strength is the current Artificial Analysis Intelligence Index for a representative high-capability reasoning mode. Prices are vendor list prices stored separately from the independent score. This snapshot was cross-checked against the live Artificial Analysis model leaderboard; SWE-bench and Terminal-Bench remain supporting coding signals rather than being blended by hand into an opaque house score. Scanned July 16 2026 on the publication of Kimi K3, which is listed as released-but-unmeasured pending an independent aggregate.",
+  scannedAt: "2026-07-24T21:45:00Z",
+  basisNote: "Strength is the current Artificial Analysis Intelligence Index for a representative high-capability reasoning mode. Prices are vendor list prices stored separately from the independent score. This snapshot was cross-checked against the live Artificial Analysis model leaderboard; SWE-bench and Terminal-Bench remain supporting coding signals rather than being blended by hand into an opaque house score. Scanned July 16 2026 on the publication of Kimi K3, which is listed as released-but-unmeasured pending an independent aggregate. Re-scanned July 24 2026 alongside coverage of DeepSeek retiring its legacy API aliases in favor of V4: no change to the DeepSeek V4 Pro row — DeepSeek's own SWE-bench/MCPAtlas figures are vendor-reported, not the independent index, and this cycle's pricing research turned up conflicting secondary-source numbers rather than one verifiable vendor list price, so pin/pout stay null pending normalization.",
   rows: [
     { model:"Claude Fable 5",      mode:"with fallback", lab:"Anthropic", score:60, pin:10,   pout:50, status:"released",
       note:"Current independent leader by one point. Maximum capability, but still the most expensive model in this comparison." },

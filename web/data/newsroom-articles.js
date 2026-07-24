@@ -3163,5 +3163,325 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-24T20:03:16Z"
+  },
+  {
+    "slug": "deepseek-v4-legacy-api-cutover",
+    "title": "DeepSeek retired its old API names today, finishing the quiet handoff to V4",
+    "dek": "At 15:59 UTC on July 24, DeepSeek permanently cut off the deepseek-chat and deepseek-reasoner aliases, forcing every integration onto V4. The model behind the cutover is the largest open-weight system publicly available, MIT-licensed, and within two-tenths of a point of Claude Opus 4.6 on SWE-bench Verified.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "DeepSeek retired the deepseek-chat and deepseek-reasoner API aliases at 15:59 UTC on July 24.",
+      "Both now route permanently to DeepSeek-V4-Flash, closing out the transition from V4's April preview.",
+      "V4-Pro is a 1.6-trillion-parameter, MIT-licensed model — the largest open weights publicly available.",
+      "DeepSeek's own benchmark writeup put V4-Pro at 80.6 on SWE-bench Verified against Opus 4.6's 80.8.",
+      "Caveat: DeepSeek has not formally dated a single 'stable' release beyond the mid-July window it announced."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "DeepSeek's old API aliases stopped working today. As of 15:59 UTC on July 24, the deepseek-chat and deepseek-reasoner endpoints that developers have called for more than a year are permanently retired, and every request against them now routes to DeepSeek-V4-Flash whether the caller updated their code or not. It's a small, mechanical deadline — the kind of thing that usually lives in a changelog — but it marks the real end of DeepSeek's slow migration off V3.2 and onto V4, a model line that shipped as a preview in April and has spent the months since quietly becoming the default.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/news/news260424/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "V4 first appeared on April 24, 2026, as an open-weight preview in two sizes: V4-Pro, a 1.6-trillion-parameter mixture-of-experts model with 49 billion active parameters per token, and the lighter V4-Flash, at 284 billion total and 13 billion active. Both ship under the MIT license — no usage caps, no revenue thresholds, full commercial rights — and both default to a 1-million-token context window across DeepSeek's official services. At 1.6 trillion total parameters, V4-Pro is now the largest open-weight model publicly available, ahead of Moonshot AI's Kimi K2.6 and DeepSeek's own V3.2.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/news/news260424/",
+          "https://huggingface.co/blog/deepseekv4"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The architecture behind the efficiency claims",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The headline spec is the context window, but the more interesting engineering is what makes a 1-million-token window affordable to actually serve. V4 alternates two attention mechanisms across its layers. Compressed Sparse Attention pools key-value entries down by a factor of four using a learned, softmax-gated compression, then uses a lightweight indexer to pick only the most relevant compressed blocks for each query. Heavily Compressed Attention goes further, compressing by a factor of 128 and attending densely across the whole compressed set rather than selecting a subset. DeepSeek reports that the combination lets V4-Pro handle a 1-million-token context using only 27% of the single-token inference compute and 10% of the memory that V3.2 needed for the same job.",
+        "citation_urls": [
+          "https://huggingface.co/blog/deepseekv4"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "On capability, DeepSeek's own benchmark writeup puts V4-Pro at 80.6 on SWE-bench Verified, the standard measure of whether a model can independently resolve real GitHub issues — within two-tenths of a point of Claude Opus 4.6's 80.8 in the same evaluation. On MCPAtlas Public, a tool-use benchmark, V4-Pro scored 73.6 against Opus 4.6's 73.8, a similarly narrow gap. Those are not wins, and DeepSeek doesn't frame them as such; they're a claim of parity on agentic coding work from a model whose weights anyone can download, fine-tune, and run on their own hardware.",
+        "citation_urls": [
+          "https://huggingface.co/blog/deepseekv4"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A pricing structure built around Beijing business hours",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "When DeepSeek announced the mid-July timeline for V4's official launch on June 30, it paired the announcement with a new pricing structure that has no real precedent among the major model APIs: peak and off-peak rates, tied to the clock. API usage between 9 a.m. and noon and again from 2 p.m. to 6 p.m., Beijing time, is billed at twice the off-peak rate. It's a demand-shaping move that only makes sense if serving capacity, not model capability, is the binding constraint — the kind of pricing an electric utility runs, not a software company. For developers outside China, the practical upshot is that the same API call can cost twice as much depending on what time it lands relative to Beijing's workday.",
+        "citation_urls": [
+          "https://technode.com/2026/06/30/deepseek-to-launch-v4-in-mid-july-with-new-peak-time-api-pricing/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What the cutover actually forces, and what it doesn't",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "It's worth being precise about what today's deadline does and doesn't confirm. DeepSeek has never published a single, formal 'V4 is now stable' announcement the way a lab like Anthropic or OpenAI might frame a general-availability date; the company's own timeline runs from an April preview to a vaguer 'mid-July' target for the official release, and outside observers still describe the exact graduation date as unconfirmed. What is concrete, because it sits in DeepSeek's own API documentation with a timestamp attached, is that the old names are gone as of today and every legacy call now resolves to V4-Flash. Functionally, that is the migration completing, whatever DeepSeek chooses to call the milestone. The move lands within days of Moonshot AI's Kimi K3, another massive open-weight release out of China this month — a reminder that the current wave of frontier-scale open weights is arriving from Chinese labs on a cadence Western labs, with their closed flagships, aren't matching.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/news/news260424/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this makes V4 a strict replacement for a closed frontier model, and DeepSeek's own numbers don't claim otherwise — near-parity on two agentic benchmarks is not the same as leading the field, and independent, third-party evaluation of V4-Pro's real-world reliability is still thinner than the evaluation history behind Opus 4.6 or GPT-5.6. What the cutover changes is the baseline anyone building on open weights has to compare against. A 1.6-trillion-parameter, MIT-licensed model with a working million-token context and coding scores within a rounding error of a closed flagship, priced at a fraction of it outside Beijing's peak hours, resets what 'good enough to self-host' means. That's the quieter story underneath a deadline that, on paper, is just two API aliases going dark.",
+        "citation_urls": [
+          "https://huggingface.co/blog/deepseekv4"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Migrate any integration still calling deepseek-chat or deepseek-reasoner.",
+        "text": "Those aliases now silently route to V4-Flash rather than failing outright, which means broken assumptions about model behavior can slip through unnoticed. Update the base model name explicitly and re-test rather than relying on the redirect."
+      },
+      {
+        "label": "Benchmark V4-Flash against your current model on cost-sensitive workloads.",
+        "text": "A 284-billion-parameter model with a 1-million-token window and near-frontier coding scores is worth a real cost comparison for any high-volume task where you've been defaulting to a premium closed model out of habit."
+      },
+      {
+        "label": "If you build long-context systems, read the Compressed Sparse Attention approach.",
+        "text": "The 4x/128x compression scheme is a concrete, published technique for making million-token context affordable to serve — useful reference architecture even if you never touch DeepSeek's weights directly."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "DeepSeek API Docs — V4 Preview Release and legacy alias retirement notice",
+        "url": "https://api-docs.deepseek.com/news/news260424/"
+      },
+      {
+        "label": "Hugging Face — DeepSeek-V4: a million-token context that agents can actually use",
+        "url": "https://huggingface.co/blog/deepseekv4"
+      },
+      {
+        "label": "TechNode — DeepSeek to launch V4 in mid-July with new peak-time API pricing",
+        "url": "https://technode.com/2026/06/30/deepseek-to-launch-v4-in-mid-july-with-new-peak-time-api-pricing/"
+      }
+    ],
+    "id": "newsroom-deepseek-v4-legacy-cutover",
+    "image": "assets/img/newsroom/newsroom-deepseek-v4-legacy-cutover.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-24T21:12:40Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Selected as the cycle's first slot; confirmed no DeepSeek V4 story had run in the last 7 days of published slugs (only passing mentions of DeepSeek in an AI-safety index piece and an agentic-misalignment piece)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Model specs (parameter counts, MIT license, 1M context), the CSA/HCA architecture and efficiency figures, and the SWE-bench/MCPAtlas benchmark scores were cross-checked against DeepSeek's own API documentation and its Hugging Face model writeup as primary sources; the peak-hour pricing structure was corroborated via TechNode's report of DeepSeek's June 30 announcement. Flagged and hedged explicitly that DeepSeek has not published a formal 'stable' GA date beyond 'mid-July' — the alias-retirement deadline is the one hard, dated fact used as the story's news peg."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No trigger from compliance-rulebook.md §1 fired: no health, financial-advice, legal, accusatory, or unverifiable-central-claim issue. Benchmark comparison to Claude Opus 4.6 stated as DeepSeek's own reported figures, attributed and hedged, not adopted as RTFCLMGZN's independent measurement."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-24T21:12:40Z"
+  },
+  {
+    "slug": "metax-hong-kong-ipo-confidential-filing",
+    "title": "China's Nvidia challenger MetaX files confidentially for a Hong Kong IPO",
+    "dek": "MetaX, the Shanghai GPU maker whose STAR Market debut surged nearly 700% in December, confidentially filed for a second listing in Hong Kong on July 24, targeting an IPO by year-end with Huatai International advising. It joins a wave of Chinese chipmakers turning to Hong Kong to fund the race against export controls.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "brief",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "MetaX confidentially filed for a Hong Kong listing on July 24, targeting an IPO by year-end 2026.",
+      "Huatai International Financial Holdings is advising on the potential share sale.",
+      "MetaX's Shanghai STAR Market debut in December 2025 surged nearly 700%, reaching a $42B valuation.",
+      "The GPU maker remains unprofitable, though Q1 2026 revenue grew about 75% with narrowing losses.",
+      "Caveat: MetaX's flagship C500 chip performs at roughly 75% of Nvidia's older A100, per company figures."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "MetaX, a Shanghai-based maker of graphics processing units built to compete with Nvidia inside Chinese data centers, confidentially filed for a listing in Hong Kong on July 24, according to people familiar with the matter. The company is targeting an initial public offering by the end of 2026 and is working with Huatai International Financial Holdings on the potential share sale. A confidential filing lets a company move through the exchange's review process without publishing a draft prospectus or timeline until close to launch — an option chip and AI firms tend to use specifically to avoid tipping off competitors during a long vetting process.",
+        "citation_urls": [
+          "https://www.scmp.com/business/banking-finance/article/3361754/chinese-gpu-maker-confidentially-files-hong-kong-ipo-amid-fundraising-wave-sources",
+          "https://www.unite.ai/metax-files-confidentially-for-a-hong-kong-ipo/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The company's founding team includes former AMD executives, and its flagship C500 chip delivers roughly 75% of the performance of Nvidia's older A100 accelerator, according to MetaX's own figures — a real but incomplete answer to the export controls that have cut Chinese buyers off from Nvidia's newest hardware. The bigger obstacle isn't raw throughput so much as software: Nvidia's CUDA ecosystem represents years of tooling and developer familiarity that MetaX has to replicate from a standing start, and the company has said IPO proceeds would go toward next-generation GPU development, software-ecosystem work, supply-chain investment, and potential acquisitions.",
+        "citation_urls": [
+          "https://www.unite.ai/metax-files-confidentially-for-a-hong-kong-ipo/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A Shanghai debut that set a high bar",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "MetaX has already tested one public market this year. The company listed on Shanghai's STAR Market on December 17, 2025, after raising roughly $600 million, and its shares surged nearly 700% on the first day of trading — lifting its valuation to about $42 billion. The business behind that valuation is still small and unprofitable: 2025 revenue came in around 1.6 billion yuan against a net loss of roughly 800 million yuan, though the first quarter of 2026 showed revenue growth of about 75% year-over-year with losses narrowing. A Hong Kong listing on top of an existing Shanghai one gives MetaX access to a second, more internationally accessible pool of capital without waiting on the mainland's typically slower and more restrictive secondary-listing rules.",
+        "citation_urls": [
+          "https://www.unite.ai/metax-files-confidentially-for-a-hong-kong-ipo/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Part of a bigger financing wave",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "MetaX isn't filing in isolation. Its Hong Kong move is part of a broader surge of capital-raising among China's AI chipmakers — competitors including Biren Technology, Iluvatar CoreX, and Moore Threads have all listed in Shanghai or Hong Kong since late 2025. The pattern traces back to Beijing's semiconductor self-reliance push, which has turned access to capital markets into policy support for domestic chipmakers racing to build viable alternatives to Nvidia while US export controls hold the newest American hardware out of reach. Each of these companies is, in effect, being financed to close a gap that policy created and policy now wants closed — worth watching for whether a priced Hong Kong listing actually follows the confidential filing, and whether MetaX's next chip narrows the gap against Nvidia's current hardware rather than its predecessor.",
+        "citation_urls": [
+          "https://www.scmp.com/business/banking-finance/article/3361754/chinese-gpu-maker-confidentially-files-hong-kong-ipo-amid-fundraising-wave-sources"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "South China Morning Post — Chinese GPU maker confidentially files for Hong Kong IPO amid fundraising wave",
+        "url": "https://www.scmp.com/business/banking-finance/article/3361754/chinese-gpu-maker-confidentially-files-hong-kong-ipo-amid-fundraising-wave-sources"
+      },
+      {
+        "label": "Unite.AI — MetaX Files Confidentially for a Hong Kong IPO",
+        "url": "https://www.unite.ai/metax-files-confidentially-for-a-hong-kong-ipo/"
+      }
+    ],
+    "id": "newsroom-metax-hongkong-ipo",
+    "image": "assets/img/newsroom/newsroom-metax-hongkong-ipo.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-24T21:28:55Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Selected as the cycle's second slot after confirming no MetaX or Hong Kong chipmaker-IPO story had run in the last 7 days of published slugs."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "The July 24 confidential-filing date, Huatai as adviser, the December 2025 STAR Market debut figures (~$600M raised, ~700% first-day surge, ~$42B valuation), 2025/Q1 2026 financials, and the C500-vs-A100 performance claim were corroborated between South China Morning Post's report and Unite.AI's independent writeup of the same filing."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Markets-section piece carrying valuation and stock-performance figures: routed through compliance-rulebook.md trigger 2 (financial claims). Not-financial-advice disclaimer attached; all valuation figures stated as reported historical facts, not predictions, and no buy/sell framing appears anywhere in the piece or apply block."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-24T21:28:55Z"
+  },
+  {
+    "slug": "meta-seller-app-facebook-marketplace-ai-listings",
+    "title": "Facebook's new Seller app turns a product photo into a marketplace listing",
+    "dek": "Meta launched Seller, a standalone iOS app for Facebook Marketplace sellers: upload a photo and Meta AI fills in the title, description, price suggestion, and category. It ships with a free selfie-based verification badge, ahead of Android and web versions still in testing.",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "format": "brief",
+    "disclaimer": "none",
+    "tldr": [
+      "Meta launched Seller, a standalone app for Facebook Marketplace sellers, on July 24.",
+      "Uploading a photo lets Meta AI auto-fill the listing's title, description, price, and category.",
+      "The app bundles a unified inbox, inventory management, and performance insights in one place.",
+      "Facebook Verified, a free selfie-based ID check, adds a checkmark badge across Marketplace and Dating.",
+      "Caveat: Seller is live on iOS for US users 18 and older only; Android and web are still in testing."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Meta launched Seller on July 24, a standalone app built specifically for people who sell on Facebook Marketplace, timed to the platform's tenth anniversary. The headline feature is the listing flow: a seller uploads photos of an item and Meta AI fills in the title, description, a suggested price, and the category, with a bulk-listing option for uploading several items at once. It's a narrow but genuinely useful automation — the tedious part of resale, writing a decent listing, handed to a model instead of a person.",
+        "citation_urls": [
+          "https://about.fb.com/news/2026/07/introducing-seller-app-facebook-marketplace/",
+          "https://techcrunch.com/2026/07/24/facebook-launches-a-dedicated-marketplace-app-for-sellers-adds-a-free-verification-system/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Beyond the AI listing tool, Seller centralizes the operational side of running a Marketplace shop: a dashboard surfacing what needs attention (items to ship, buyers to respond to, listings to reprice), a unified inbox that organizes buyer messages by listing, inventory management, and performance insights covering views, clicks, and completed sales. Existing listings and message history sync in automatically, and anything created in the app still appears on Marketplace itself, where the buyers already are.",
+        "citation_urls": [
+          "https://about.fb.com/news/2026/07/introducing-seller-app-facebook-marketplace/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Meta paired the launch with Facebook Verified, a free identity check that only requires a selfie rather than a paid subscription, adding a checkmark badge visible across Marketplace, Dating, and Groups. The app is live now on the App Store for US users 18 and older, with Android and web versions still in testing. Meta says 430 million items are listed on Marketplace globally each month, across more than 1.1 billion active users — the scale that makes even a modest per-listing time savings worth building a dedicated app around.",
+        "citation_urls": [
+          "https://about.fb.com/news/2026/07/introducing-seller-app-facebook-marketplace/",
+          "https://techcrunch.com/2026/07/24/facebook-launches-a-dedicated-marketplace-app-for-sellers-adds-a-free-verification-system/"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Meta Newsroom — Introducing Seller, an App for Facebook Marketplace Sellers",
+        "url": "https://about.fb.com/news/2026/07/introducing-seller-app-facebook-marketplace/"
+      },
+      {
+        "label": "TechCrunch — Facebook launches a dedicated Marketplace app for sellers, adds a free verification system",
+        "url": "https://techcrunch.com/2026/07/24/facebook-launches-a-dedicated-marketplace-app-for-sellers-adds-a-free-verification-system/"
+      }
+    ],
+    "id": "newsroom-meta-seller-app",
+    "image": "assets/img/newsroom/newsroom-meta-seller-app.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-24T21:41:19Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Selected as the cycle's third slot; confirmed no Facebook Marketplace Seller-app story had run in the last 7 days of published slugs, and that the third-slot cap for this cycle had not been exceeded."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Launch date, the AI listing-creation feature, verification system, availability (US 18+, iOS only, Android/web in testing), and the 430M-items/1.1B-user scale figures were cross-checked between Meta's own newsroom post and TechCrunch's independent writeup of the same launch."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No trigger from compliance-rulebook.md §1 fired: consumer product launch, no health/financial/legal/accusatory content, no quotes used. No disclaimer required for a Products-section piece."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-24T21:41:19Z"
   }
 ];

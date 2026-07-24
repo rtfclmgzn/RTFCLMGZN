@@ -900,7 +900,12 @@
       ],
       "text_space": "white wall left half",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-metax-hongkong-ipo",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-037-robots-welding-car-bodies",
