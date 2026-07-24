@@ -3555,6 +3555,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "id": "newsroom-claude-opus-5-launch",
     "image": "assets/img/newsroom/newsroom-claude-opus-5-launch.jpg",
     "top": false,
+    "breaking": true,
     "sample": false,
     "corrections": [],
     "pipeline": {

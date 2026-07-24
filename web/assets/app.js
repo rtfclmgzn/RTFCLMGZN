@@ -106,6 +106,19 @@
   }
   var ARTICLES = (window.RTFC_ARTICLES || []).concat(window.RTFC_LIVE_ARTICLES || []).concat(window.RTFC_NEWSROOM_ARTICLES || []).concat(window.RTFC_RESEARCH || [])
     .slice().sort(function(a,b){ return new Date(b.publishedAt) - new Date(a.publishedAt); });
+  // A story published out-of-cycle for a genuinely major, breaking development
+  // (article.breaking===true) holds the homepage hero slot for 24h even as
+  // newer routine-cycle articles publish underneath it -- unless an even newer
+  // breaking story arrives first, which immediately takes over. After 24h with
+  // no successor, it steps down and the hero reverts to the plain newest article.
+  var BREAKING_HEADLINE_MS = 24*3600*1000;
+  function activeBreakingHeadliner(){
+    var breaking = ARTICLES.filter(function(a){ return a.breaking && a.publishedAt; });
+    if(!breaking.length) return null;
+    var latest = breaking[0]; // ARTICLES is already sorted newest-first
+    var age = Date.now() - new Date(latest.publishedAt).getTime();
+    return age>=0 && age<BREAKING_HEADLINE_MS ? latest : null;
+  }
   // Section colors/glyphs mirror the desks (each section is one editor's beat)
   var SECTION_COLORS = {Frontier:"#8b7cf7",Products:"#e0564d",Compute:"#6cb6f0",Policy:"#42c08a",Health:"#d9a94e",Markets:"#c48af0",Robotics:"#4dd0c4",Opinion:"#c98b5a",Ethics:"#7bb274",Guide:"#e8865f"};
   var FMT = {brief:"Brief",synthesis:"Synthesis",research:"Research"};
@@ -236,7 +249,7 @@
     return '<a class="feature" href="#/article/'+a.slug+'">'+
       '<div class="art" style="'+artFill(a,true)+'">'+artGlyph(a,col)+
         '<span class="beatline">'+esc(a.section)+' — '+FMT[trueFormat(a)]+'</span></div>'+
-      '<div style="margin-top:20px">'+tagsHTML(a)+'</div>'+
+      '<div style="margin-top:20px">'+(a.breaking?'<span class="pill breaking">⚡ Breaking</span>':"")+tagsHTML(a)+'</div>'+
       '<h3 style="margin-top:12px">'+esc(a.title)+'</h3>'+
       '<p class="dek">'+esc(a.dek)+'</p>'+bylineHTML(p,a.publishedAt,readTime(a),a)+'</a>';
   }
@@ -249,9 +262,11 @@
       '</span><span class="motto">AI news, written by AI, about AI</span></div>';
   }
   function viewHome(){
-    // The homepage lead is always the newest article. A stale top:true flag must
-    // never pin one image and story to this slot indefinitely.
-    var top=ARTICLES[0];
+    // The homepage lead is the newest article -- UNLESS a breaking story is
+    // still within its 24h headliner window (see activeBreakingHeadliner
+    // above), in which case it holds the slot over newer routine articles. A
+    // stale top:true flag must never pin a story here outside that mechanism.
+    var top=activeBreakingHeadliner()||ARTICLES[0];
     var rest=ARTICLES.filter(function(a){return a!==top;});
     var side=rest.slice(0,3), grid=rest.slice(3);
     var h='<div class="container">'+editionHTML();

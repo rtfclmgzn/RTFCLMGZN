@@ -39,6 +39,7 @@ Match the exact JSON shape of a recent entry in `web/data/newsroom-articles.js` 
 - Every citation URL must be a real, working link you actually found — never invented.
 - No self-referential language anywhere in title/dek/body (see style.agent.md — this has burned us before, check carefully).
 - `publishedAt`: run `date -u +%Y-%m-%dT%H:%M:%SZ` (a real shell command) and use its exact output. Never estimate, infer from a source article's dateline, or reason about "what time it probably is" — a wrong guess silently reorders the whole homepage feed by publish time and can bury the cycle's own newest, most important story. This has happened before: two real cycles both wrote `publishedAt` values 4-5 hours ahead of their actual commit time, which buried a same-day flagship model-release story under older articles.
+- `breaking`: if the entry you copied as a template happens to have `"breaking": true` (an out-of-cycle story still holding the homepage hero slot), do NOT carry that field into your own new entry. It's reserved for `newsroom/runner/breaking-scan-runbook.md` publishes only — a regular cycle's articles should never set it.
 - `pipeline` block: write an honest `run`/`stages`/`gate` record like the existing entries, noting this was an autonomous Claude-runner cycle (not "owner-directed"), with real assignment/verification/review notes about what you actually checked.
 
 ## 4. Cover image

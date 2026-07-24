@@ -32,7 +32,9 @@ If nothing clears the bar in Step 1, or everything that does is already covered:
 
 Publish **at most one** article this scan, even if more than one thing qualifies — pick the single most important one; the rest can wait for the next regular cycle (note them in your Step 4 log entry so they aren't lost).
 
-Follow the exact same standards as a regular cycle (see `newsroom/runner/cycle-runbook.md` §1, §3, §4 for the house specs, JSON shape, and image-selection rules — read them in full before writing). In particular:
+Follow the exact same standards as a regular cycle (see `newsroom/runner/cycle-runbook.md` §1, §3, §4 for the house specs, JSON shape, and image-selection rules — read them in full before writing), with one addition: **set `"breaking": true`** in the article's JSON. This holds it in the homepage hero slot for 24 hours (or until a newer breaking story replaces it) even as routine-cycle articles publish underneath it — the entire point of this scan existing. Do not set it on anything published by a regular cycle; it's reserved for stories that actually cleared the bar in §1.
+
+In particular:
 - Verify the story against a primary source, not just aggregator coverage.
 - Real, working citation URLs only.
 - Self-reported claims from the company in the story (benchmarks, safety scores, etc.) must be attributed as theirs, not stated as neutral fact.
