@@ -2842,7 +2842,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "sample": false,
     "corrections": [],
     "pipeline": {
-      "run": "autonomous Claude-runner cycle · 2026-07-24T19:41:27Z",
+      "run": "autonomous Claude-runner cycle · 2026-07-24T15:36:59Z",
       "stages": [
         {
           "name": "Research",
@@ -2865,7 +2865,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
       }
     },
-    "publishedAt": "2026-07-24T19:41:27Z"
+    "publishedAt": "2026-07-24T15:36:59Z"
   },
   {
     "slug": "openai-rogue-model-hugging-face-kill-switch-act",
@@ -3047,7 +3047,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "sample": false,
     "corrections": [],
     "pipeline": {
-      "run": "autonomous Claude-runner cycle · 2026-07-24T19:52:53Z",
+      "run": "autonomous Claude-runner cycle · 2026-07-24T15:48:25Z",
       "stages": [
         {
           "name": "Research",
@@ -3070,7 +3070,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
       }
     },
-    "publishedAt": "2026-07-24T19:52:53Z"
+    "publishedAt": "2026-07-24T15:48:25Z"
   },
   {
     "slug": "alphabet-2026-capex-guidance-raise",
@@ -3139,7 +3139,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "sample": false,
     "corrections": [],
     "pipeline": {
-      "run": "autonomous Claude-runner cycle · 2026-07-24T20:03:16Z",
+      "run": "autonomous Claude-runner cycle · 2026-07-24T15:58:48Z",
       "stages": [
         {
           "name": "Research",
@@ -3162,7 +3162,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
       }
     },
-    "publishedAt": "2026-07-24T20:03:16Z"
+    "publishedAt": "2026-07-24T15:58:48Z"
   },
   {
     "slug": "deepseek-v4-legacy-api-cutover",
@@ -3281,7 +3281,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "sample": false,
     "corrections": [],
     "pipeline": {
-      "run": "autonomous Claude-runner cycle · 2026-07-24T21:12:40Z",
+      "run": "autonomous Claude-runner cycle · 2026-07-24T16:12:31Z",
       "stages": [
         {
           "name": "Research",
@@ -3304,7 +3304,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
       }
     },
-    "publishedAt": "2026-07-24T21:12:40Z"
+    "publishedAt": "2026-07-24T16:12:31Z"
   },
   {
     "slug": "metax-hong-kong-ipo-confidential-filing",
@@ -3378,7 +3378,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "sample": false,
     "corrections": [],
     "pipeline": {
-      "run": "autonomous Claude-runner cycle · 2026-07-24T21:28:55Z",
+      "run": "autonomous Claude-runner cycle · 2026-07-24T16:28:46Z",
       "stages": [
         {
           "name": "Research",
@@ -3401,7 +3401,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
       }
     },
-    "publishedAt": "2026-07-24T21:28:55Z"
+    "publishedAt": "2026-07-24T16:28:46Z"
   },
   {
     "slug": "meta-seller-app-facebook-marketplace-ai-listings",
@@ -3459,7 +3459,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "sample": false,
     "corrections": [],
     "pipeline": {
-      "run": "autonomous Claude-runner cycle · 2026-07-24T21:41:19Z",
+      "run": "autonomous Claude-runner cycle · 2026-07-24T16:41:10Z",
       "stages": [
         {
           "name": "Research",
@@ -3482,7 +3482,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
       }
     },
-    "publishedAt": "2026-07-24T21:41:19Z"
+    "publishedAt": "2026-07-24T16:41:10Z"
   },
   {
     "slug": "anthropic-claude-opus-5-launch",

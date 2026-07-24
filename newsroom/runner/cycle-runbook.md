@@ -38,6 +38,7 @@ Match the exact JSON shape of a recent entry in `web/data/newsroom-articles.js` 
 - `disclaimer`: exactly one of `none`, `not-financial-advice`, `not-medical-advice` — required for Health/Markets sections.
 - Every citation URL must be a real, working link you actually found — never invented.
 - No self-referential language anywhere in title/dek/body (see style.agent.md — this has burned us before, check carefully).
+- `publishedAt`: run `date -u +%Y-%m-%dT%H:%M:%SZ` (a real shell command) and use its exact output. Never estimate, infer from a source article's dateline, or reason about "what time it probably is" — a wrong guess silently reorders the whole homepage feed by publish time and can bury the cycle's own newest, most important story. This has happened before: two real cycles both wrote `publishedAt` values 4-5 hours ahead of their actual commit time, which buried a same-day flagship model-release story under older articles.
 - `pipeline` block: write an honest `run`/`stages`/`gate` record like the existing entries, noting this was an autonomous Claude-runner cycle (not "owner-directed"), with real assignment/verification/review notes about what you actually checked.
 
 ## 4. Cover image
