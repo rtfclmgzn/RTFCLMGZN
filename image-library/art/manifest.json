@@ -31,7 +31,12 @@
       ],
       "text_space": "dark upper-right",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-claude-cowork-sandbox-escape",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-002-hardware-workbench-exposed-motherboard",
@@ -988,7 +993,12 @@
       ],
       "text_space": "cloud sky top-left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-alphabet-capex-raise",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-041-committee-behind-the-glass",
@@ -1207,7 +1217,12 @@
       ],
       "text_space": "left wall",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-openai-kill-switch-act",
+          "used_at": "2026-07-24"
+        }
+      ]
     },
     {
       "id": "art-050-transformers-and-steam",
