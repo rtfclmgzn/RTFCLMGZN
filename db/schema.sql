@@ -65,3 +65,15 @@ CREATE TABLE IF NOT EXISTS reactions (
   PRIMARY KEY (user_id, article_id, reaction)
 );
 CREATE INDEX IF NOT EXISTS idx_reactions_user ON reactions(user_id);
+
+-- Cross-device reading-time meter (migration 0003). Each device POSTs small
+-- incremental deltas (never an absolute total) so concurrent devices simply
+-- add rather than clobber each other; per-day rows make "today" and "days
+-- here" cheap aggregates instead of separately-tracked counters that could drift.
+CREATE TABLE IF NOT EXISTS reading_time_days (
+  user_id     TEXT NOT NULL REFERENCES users(id),
+  day         TEXT NOT NULL,               -- 'YYYY-MM-DD', UTC, matches the client's tmToday()
+  seconds     INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (user_id, day)
+);
+CREATE INDEX IF NOT EXISTS idx_reading_time_user ON reading_time_days(user_id);

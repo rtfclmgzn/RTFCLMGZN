@@ -29,7 +29,7 @@
       var l=libGet();
       l.account = (d && d.email) ? { email:d.email, plan:d.plan||"free", since:d.since } : null;
       libSave(l); route();
-      if(l.account) syncLibrary(l);
+      if(l.account){ syncLibrary(l); syncReadingTime(l); }
     }).catch(function(){});
   }
   // Cross-device library sync: push whatever this browser has locally (add-only,
@@ -884,7 +884,7 @@
         '<div class="acct-card"><label>Email</label><input id="acct-email" type="email" placeholder="you@example.com">'+
         '<button class="cta" id="acct-signup-btn" onclick="rtfcSignup()">Send sign-in link</button>'+
         '<p class="protonote">We’ll email you a one-time sign-in link — no password to create or remember. Only your most recent link works; if you have more than one of these emails, use the newest.</p></div>'+
-        timeMeterHTML();
+        timeMeterHTML(l);
       return h+'</div>';
     }
     h+='<h1>Your account</h1><p>Signed in as <b>'+esc(l.account.email)+'</b></p></div>';
@@ -895,7 +895,7 @@
         ? '<button class="cta ghost" onclick="rtfcPlan(\'free\')">Cancel Plus (prototype)</button>'
         : '<button class="cta" onclick="rtfcPlan(\'plus\')">Upgrade to Plus — magazine + back issues (prototype)</button>')+
       '<button class="cta ghost" onclick="rtfcSignout()">Sign out</button></div>';
-    h+=timeMeterHTML();
+    h+=timeMeterHTML(l);
     return h+'</div>';
   }
 
@@ -2804,11 +2804,19 @@
     window.location.href=url;
   };
 
-  /* ================= TIME-ON-SITE METER (browser-local, game-style) ================= */
+  /* ================= TIME-ON-SITE METER ================= */
+  // Signed out: purely local (d.total/d.todaySec/d.dayCount), exactly as before.
+  // Signed in: displayed numbers become the server's cross-device aggregate
+  // (d.serverTotal/serverTodaySec/serverDayCount) plus d.pendingSec -- seconds
+  // ticked on THIS device since its last successful flush, so the counter still
+  // feels live between syncs. Flushing sends a small DELTA, never an absolute
+  // total, so two devices reading at once simply add instead of one clobbering
+  // the other's count. mergedOnce guards the one-time import of a device's
+  // pre-existing local total into the server total the first time it signs in.
   function tmToday(){ return new Date().toISOString().slice(0,10); }
   function tmData(){
     var d; try{ d=JSON.parse(localStorage.getItem("rtfc-time")||"null"); }catch(e){}
-    return d||{total:0,dayCount:0,todayKey:"",todaySec:0,firstDay:""};
+    return d||{total:0,dayCount:0,todayKey:"",todaySec:0,firstDay:"",pendingSec:0,mergedOnce:false,serverTotal:0,serverTodaySec:0,serverDayCount:0,serverFirstDay:""};
   }
   function tmSave(d){ try{ localStorage.setItem("rtfc-time",JSON.stringify(d)); }catch(e){} }
   function tmRoll(d){ // start a new day if needed
@@ -2820,25 +2828,96 @@
     sec=Math.max(0,Math.round(sec)); var h=Math.floor(sec/3600), m=Math.floor((sec%3600)/60), s=sec%60;
     if(h) return h+"h "+m+"m"; if(m) return m+"m "+String(s).padStart(2,"0")+"s"; return s+"s";
   }
+  function tmDisplay(d,l){
+    if(l && l.account && d.mergedOnce){
+      return { total:(d.serverTotal||0)+(d.pendingSec||0), todaySec:(d.serverTodaySec||0)+(d.pendingSec||0), dayCount:d.serverDayCount||d.dayCount||1 };
+    }
+    return { total:d.total||0, todaySec:d.todaySec||0, dayCount:d.dayCount||1 };
+  }
+  function tmRefreshUI(){
+    var d=tmData(), disp=tmDisplay(d,libGet());
+    var lv=document.getElementById("tm-today"); if(lv) lv.textContent=fmtDur(disp.todaySec);
+    var tt=document.getElementById("tm-total"); if(tt) tt.textContent=fmtDur(disp.total);
+  }
+  // Sends whatever hasn't been flushed yet. Only clears pendingSec on a confirmed
+  // response -- if the request fails, the next attempt just includes a bigger
+  // delta (more elapsed ticks), never double-counting what already landed.
+  function tmFlush(){
+    var l=libGet(); if(!l.account) return;
+    var d=tmData(); if(!(d.pendingSec>0)) return;
+    fetch("/api/account/reading-time",{method:"POST",credentials:"same-origin",
+      headers:{"content-type":"application/json"},
+      body:JSON.stringify({day:tmToday(),deltaSeconds:Math.round(d.pendingSec)})
+    }).then(function(r){ return r.ok?r.json():null; }).then(function(resp){
+      if(!resp) return;
+      var d2=tmData();
+      d2.serverTotal=resp.total; d2.serverTodaySec=resp.todaySec; d2.serverDayCount=resp.dayCount; d2.serverFirstDay=resp.firstDay;
+      d2.pendingSec=0; d2.mergedOnce=true; tmSave(d2); tmRefreshUI();
+    }).catch(function(){});
+  }
+  // One-time historical import: the first time a device signs in, its entire
+  // pre-existing local total (which the server has never seen) is sent as one
+  // lump delta. After that, only fresh ticks flow through tmFlush().
+  function syncReadingTime(l){
+    if(!l.account) return;
+    var d=tmRoll(tmData());
+    if(d.mergedOnce){
+      fetch("/api/account/reading-time",{credentials:"same-origin"}).then(function(r){ return r.ok?r.json():null; }).then(function(resp){
+        if(!resp) return;
+        var d2=tmData();
+        d2.serverTotal=resp.total; d2.serverTodaySec=resp.todaySec; d2.serverDayCount=resp.dayCount; d2.serverFirstDay=resp.firstDay;
+        tmSave(d2); tmRefreshUI();
+      }).catch(function(){});
+      return;
+    }
+    var importAmount=Math.max(1,Math.round((d.total||0)+(d.pendingSec||0)));
+    fetch("/api/account/reading-time",{method:"POST",credentials:"same-origin",
+      headers:{"content-type":"application/json"},
+      body:JSON.stringify({day:d.firstDay||tmToday(),deltaSeconds:importAmount})
+    }).then(function(r){ return r.ok?r.json():null; }).then(function(resp){
+      if(!resp) return;
+      var d2=tmData();
+      d2.serverTotal=resp.total; d2.serverTodaySec=resp.todaySec; d2.serverDayCount=resp.dayCount; d2.serverFirstDay=resp.firstDay;
+      d2.pendingSec=0; d2.mergedOnce=true; tmSave(d2); tmRefreshUI();
+    }).catch(function(){});
+  }
+  var TM_FLUSH_EVERY_TICKS=6; // 6 * 5s = ~30s between server flushes while signed in
   function initTimeMeter(){
     var d=tmRoll(tmData()); tmSave(d);
     if(window.__tmInt) return;
+    var ticks=0;
     window.__tmInt=setInterval(function(){
       if(document.visibilityState && document.visibilityState!=="visible") return;
-      var d=tmRoll(tmData()); d.total=(d.total||0)+5; d.todaySec=(d.todaySec||0)+5; tmSave(d);
-      var lv=document.getElementById("tm-today"); if(lv) lv.textContent=fmtDur(d.todaySec);
-      var tt=document.getElementById("tm-total"); if(tt) tt.textContent=fmtDur(d.total);
+      var l=libGet();
+      var d=tmRoll(tmData()); d.total=(d.total||0)+5; d.todaySec=(d.todaySec||0)+5;
+      if(l.account) d.pendingSec=(d.pendingSec||0)+5;
+      tmSave(d); tmRefreshUI();
+      ticks++; if(ticks%TM_FLUSH_EVERY_TICKS===0) tmFlush();
     },5000);
+    // Best-effort flush when the tab is hidden/closed so a short visit still counts
+    // promptly rather than waiting for the next 30s tick that may never come.
+    document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="hidden") tmFlushBeacon(); });
+    window.addEventListener("pagehide",tmFlushBeacon);
   }
-  function timeMeterHTML(){
-    var d=tmRoll(tmData());
-    var avg=d.dayCount?d.total/d.dayCount:d.total;
-    return '<div class="tm-card"><div class="tm-h">Your reading time <span>on the browser, private to you</span></div>'+
+  // sendBeacon delivers even as the page unloads, but gives no response to read --
+  // so this optimistically zeroes pendingSec, trading perfect accuracy (rare edge
+  // case: beacon silently dropped) for never blocking/delaying navigation.
+  function tmFlushBeacon(){
+    var l=libGet(); if(!l.account || typeof navigator.sendBeacon!=="function") return;
+    var d=tmData(); if(!(d.pendingSec>0)) return;
+    var sent=navigator.sendBeacon("/api/account/reading-time", new Blob([JSON.stringify({day:tmToday(),deltaSeconds:Math.round(d.pendingSec)})],{type:"application/json"}));
+    if(sent){ d.serverTotal=(d.serverTotal||0)+d.pendingSec; d.serverTodaySec=(d.serverTodaySec||0)+d.pendingSec; d.pendingSec=0; tmSave(d); }
+  }
+  function timeMeterHTML(l){
+    var d=tmRoll(tmData()); l=l||libGet();
+    var disp=tmDisplay(d,l);
+    var avg=disp.dayCount?disp.total/disp.dayCount:disp.total;
+    return '<div class="tm-card"><div class="tm-h">Your reading time <span>'+(l&&l.account?"synced across your signed-in devices":"on this browser, private to you")+'</span></div>'+
       '<div class="tm-stats">'+
-        '<div class="tm-stat"><b id="tm-total">'+fmtDur(d.total)+'</b><span>all time</span></div>'+
-        '<div class="tm-stat"><b id="tm-today">'+fmtDur(d.todaySec)+'</b><span>today</span></div>'+
+        '<div class="tm-stat"><b id="tm-total">'+fmtDur(disp.total)+'</b><span>all time</span></div>'+
+        '<div class="tm-stat"><b id="tm-today">'+fmtDur(disp.todaySec)+'</b><span>today</span></div>'+
         '<div class="tm-stat"><b>'+fmtDur(avg)+'</b><span>daily avg</span></div>'+
-        '<div class="tm-stat"><b>'+(d.dayCount||1)+'</b><span>day'+((d.dayCount||1)===1?"":"s")+' here</span></div>'+
+        '<div class="tm-stat"><b>'+(disp.dayCount||1)+'</b><span>day'+((disp.dayCount||1)===1?"":"s")+' here</span></div>'+
       '</div></div>';
   }
 
