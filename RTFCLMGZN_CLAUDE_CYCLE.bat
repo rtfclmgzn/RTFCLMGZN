@@ -16,17 +16,6 @@ if exist "newsroom\runner\PAUSED" (
   exit /b 0
 )
 
-REM Catch-up guard: Cycle A/B/C are three independent Scheduled Tasks, each
-REM with "run as soon as possible after a missed start" enabled. If the PC
-REM was off through more than one trigger time, Windows fires their catch-ups
-REM back-to-back the moment it wakes -- this lock ensures only the first one
-REM actually runs a cycle; the rest see a fresh timestamp and skip.
-for /f "delims=" %%G in ('powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0newsroom\runner\run-gate.ps1" -LockFile "%LOGROOT%\last-run.marker" -CooldownMinutes 60') do set "GATE=%%G"
-if /I "%GATE%"=="SKIP" (
-  echo Skipped - a cycle already ran within the last 60 minutes ^(catch-up guard^).>>"%LOGFILE%"
-  exit /b 0
-)
-
 REM The OAuth token is stored as a Machine-scope environment variable, which a
 REM freshly-launched process tree (exactly what Task Scheduler creates) reads
 REM correctly from the registry at process start -- no bridging needed here,
@@ -36,6 +25,13 @@ REM Claude Desktop auto-updates and rotates its claude-code\<version> folder
 REM (e.g. 2.1.209 -> 2.1.217) without warning, so resolve the newest version
 REM folder at run time instead of hardcoding one -- a hardcoded path silently
 REM breaks the very next time Desktop updates itself.
+REM
+REM These checks run BEFORE the catch-up guard below on purpose: the guard's
+REM lock is written the moment it grants "GO", so if it ran first and THEN
+REM one of these failed, a transient failure would poison the lock and cause
+REM the run 45-60 minutes later (which might be a legitimate on-time trigger,
+REM not a catch-up) to be silently skipped too. Only write the lock once a
+REM real attempt is actually about to happen.
 set "CLAUDE_ROOT=%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude-code"
 set "CLAUDE_EXE="
 for /f "delims=" %%D in ('dir /b /ad /o-n "%CLAUDE_ROOT%" 2^>nul') do (
@@ -48,6 +44,17 @@ if not defined CLAUDE_EXE (
 if "%CLAUDE_CODE_OAUTH_TOKEN%"=="" (
   echo CLAUDE_CODE_OAUTH_TOKEN is not set in this process's environment. Aborting.>>"%LOGFILE%"
   exit /b 1
+)
+
+REM Catch-up guard: Cycle A/B/C are three independent Scheduled Tasks, each
+REM with "run as soon as possible after a missed start" enabled. If the PC
+REM was off through more than one trigger time, Windows fires their catch-ups
+REM back-to-back the moment it wakes -- this lock ensures only the first one
+REM actually runs a cycle; the rest see a fresh timestamp and skip.
+for /f "delims=" %%G in ('powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0newsroom\runner\run-gate.ps1" -LockFile "%LOGROOT%\last-run.marker" -CooldownMinutes 60') do set "GATE=%%G"
+if /I "%GATE%"=="SKIP" (
+  echo Skipped - a cycle already ran within the last 60 minutes ^(catch-up guard^).>>"%LOGFILE%"
+  exit /b 0
 )
 
 "%CLAUDE_EXE%" -p "Follow newsroom/runner/cycle-runbook.md exactly, from the current repo root. Do not ask questions; make reasonable calls yourself and report them in your final summary." --model claude-sonnet-5 --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch" >>"%LOGFILE%" 2>&1
