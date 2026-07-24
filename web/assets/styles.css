@@ -2152,14 +2152,19 @@ html.xlating::after{ content:""; position:fixed; z-index:99999; top:50%; left:50
 .wp-chip em{display:block;font-style:normal;font-size:11px;color:var(--muted);margin-top:2px}
 .wp-chip:hover{border-color:var(--accent2)}
 .wp-chip.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,var(--surface2));color:var(--ink)}
-.wp-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;max-height:520px;overflow-y:auto;padding:2px}
+.wp-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;padding:2px}
 .wp-thumb{aspect-ratio:9/16;border-radius:12px;border:2px solid var(--line);background-size:cover;background-position:center;cursor:pointer;padding:0;transition:border-color .15s,transform .15s}
 .wp-thumb:hover{transform:translateY(-2px);border-color:var(--accent2)}
 .wp-thumb.on{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 45%,transparent)}
+/* Groups (wallpaper-archive categories + "article/magazine covers") scroll together
+   as one continuous panel rather than each fighting for its own inner scrollbar. */
+.wp-cgroup:has(.wp-gsub){max-height:600px;overflow-y:auto;padding-right:6px}
+.wp-gsub{font-size:11px;font-weight:600;color:var(--accent2);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.wp-gsub:first-child{margin-top:0}
 @media(max-width:760px){
   .wp-wrap{grid-template-columns:1fr}
   .wp-stage{position:static}
-  .wp-gallery{max-height:380px}
+  .wp-cgroup:has(.wp-gsub){max-height:420px}
 }
 
 /* ================= EDITOR DOSSIER (Easter egg · #/editor/<key>) ================= */

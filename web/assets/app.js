@@ -1049,18 +1049,20 @@
   ];
   var WP = { src:null, size:"tall", pos:"bottom" };
   var WP_IMGCACHE = {};
-  // Source images: our own published article + magazine covers (all same-origin, so
-  // the canvas can export without tainting). Auto-updates as new pieces publish.
+  // Source images: our own published article + magazine covers, plus the dedicated
+  // wallpaper archive (window.RTFC_WALLPAPERS) -- all same-origin, so the canvas can
+  // export without tainting. Auto-updates as new pieces publish or new wallpapers ship.
   function wpImages(){
     var seen={}, out=[];
-    function add(src,label){
+    function add(src,label,group){
       if(!src||typeof src!=="string"||!/\.(jpe?g|png|webp)$/i.test(src)||seen[src]) return;
-      seen[src]=1; out.push({src:src,label:label||""});
+      seen[src]=1; out.push({src:src,label:label||"",group:group});
     }
-    ARTICLES.forEach(function(a){ add(a.image, a.title); });
+    (window.RTFC_WALLPAPERS||[]).forEach(function(w){ add(w.src, w.label, w.category?("Wallpaper collection · "+w.category):"Wallpaper collection"); });
+    ARTICLES.forEach(function(a){ add(a.image, a.title, "Article & magazine covers"); });
     MAG.forEach(function(iss){
-      if(iss.cover&&iss.cover.image) add(iss.cover.image, iss.title||"Magazine");
-      (iss.pages||[]).forEach(function(p){ add(p.image, p.cap||iss.title||""); });
+      if(iss.cover&&iss.cover.image) add(iss.cover.image, iss.title||"Magazine", "Article & magazine covers");
+      (iss.pages||[]).forEach(function(p){ add(p.image, p.cap||iss.title||"", "Article & magazine covers"); });
     });
     return out;
   }
@@ -1070,8 +1072,22 @@
       WP_SIZES.map(function(s){ return '<button class="wp-chip'+(WP.size===s.key?' on':'')+'" onclick="rtfcWpSize(\''+s.key+'\')">'+esc(s.label)+'<em>'+s.w+'×'+s.h+'</em></button>'; }).join("")+'</div></div>';
     h+='<div class="wp-cgroup"><div class="wp-clabel">Logo position</div><div class="wp-chips">'+
       ["bottom","top"].map(function(p){ return '<button class="wp-chip'+(WP.pos===p?' on':'')+'" onclick="rtfcWpPos(\''+p+'\')">'+p.charAt(0).toUpperCase()+p.slice(1)+'</button>'; }).join("")+'</div></div>';
-    h+='<div class="wp-cgroup"><div class="wp-clabel">Image · '+imgs.length+' to choose from</div><div class="wp-gallery">'+
-      imgs.map(function(im){ return '<button class="wp-thumb'+(WP.src===im.src?' on':'')+'" style="background-image:url(\''+im.src.replace(/'/g,"\\'")+'\')" title="'+esc(im.label)+'" aria-label="'+esc(im.label)+'" onclick="rtfcWpPick(\''+im.src.replace(/'/g,"\\'")+'\')"></button>'; }).join("")+'</div></div>';
+    // Group thumbnails under their source (the wallpaper archive's own categories,
+    // then a single bucket for article/magazine covers) instead of one long flat
+    // scroll -- the archive alone is 88 images, on top of every cover we've ever run.
+    var groups={}, order=[];
+    imgs.forEach(function(im){
+      var g=im.group||"More";
+      if(!groups[g]){ groups[g]=[]; order.push(g); }
+      groups[g].push(im);
+    });
+    h+='<div class="wp-cgroup"><div class="wp-clabel">Image · '+imgs.length+' to choose from</div>'+
+      order.map(function(g){
+        return '<div class="wp-gsub">'+esc(g)+'</div><div class="wp-gallery">'+
+          groups[g].map(function(im){ return '<button class="wp-thumb'+(WP.src===im.src?' on':'')+'" style="background-image:url(\''+im.src.replace(/'/g,"\\'")+'\')" title="'+esc(im.label)+'" aria-label="'+esc(im.label)+'" onclick="rtfcWpPick(\''+im.src.replace(/'/g,"\\'")+'\')"></button>'; }).join("")+
+        '</div>';
+      }).join("")+
+      '</div>';
     return h;
   }
   function viewWallpapers(){
