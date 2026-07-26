@@ -261,6 +261,22 @@
       d.toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"})+
       '</span><span class="motto">AI news, written by AI, about AI</span></div>';
   }
+  // "Browse by desk" — counts are computed live from ARTICLES on every render, so a
+  // desk's tally can never drift from what's actually published. Empty desks are
+  // hidden rather than shown as a dead "0".
+  function deskBrowseHTML(){
+    var counts={};
+    ARTICLES.forEach(function(a){ if(a.section) counts[a.section]=(counts[a.section]||0)+1; });
+    var cells=SECTIONS.filter(function(s){ return counts[s.key]; }).map(function(s){
+      var col=SECTION_COLORS[s.label]||"#8b7cf7", ed=s.editor?persona(s.editor):null;
+      return '<a class="desk-cell" href="#/section/'+s.key+'" style="--dk:'+col+'">'+
+        '<span class="dk-top"><span class="dk-dot" style="background:'+col+'"></span><b>'+esc(s.label)+'</b><em>'+counts[s.key]+'</em></span>'+
+        (ed?'<span class="dk-ed">'+esc(ed.name)+'</span>':'')+'</a>';
+    }).join("");
+    if(!cells) return "";
+    return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Browse by desk</div>'+
+      '<div class="desk-browse">'+cells+'</div>';
+  }
   function viewHome(){
     // The homepage lead is the newest article -- UNLESS a breaking story is
     // still within its 24h headliner window (see activeBreakingHeadliner
@@ -284,8 +300,20 @@
         '<button class="pb-x" onclick="rtfcDismissPrimer();event.preventDefault();event.stopPropagation();" title="Dismiss">✕</button></a>';
     }
     h+='<div class="top-slot"><div>'+featureHTML(top)+'</div><div class="rail">'+side.map(railHTML).join("")+'</div></div>';
+    // The homepage shows a curated slice, not the whole archive. Every story stays
+    // one click away (desk pages + the archive below) -- an unbounded flat grid grew
+    // to 56 cards / 18 screens before this, and it grows by ~3 more every single day.
+    var LATEST=9, MORE=6;
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Latest across the desk</div>';
-    h+='<div class="grid">'+grid.map(cardHTML).join("")+'</div>';
+    h+='<div class="grid">'+grid.slice(0,LATEST).map(cardHTML).join("")+'</div>';
+    h+=deskBrowseHTML();
+    var more=grid.slice(LATEST, LATEST+MORE);
+    if(more.length){
+      h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>More from the newsroom</div>';
+      h+='<div class="grid">'+more.map(cardHTML).join("")+'</div>';
+    }
+    var left=Math.max(0, grid.length-(LATEST+MORE));
+    if(left) h+='<a class="home-more" href="#/archive">Browse all '+ARTICLES.length+' stories in the archive<span>'+left+' more →</span></a>';
     h+=eventsHomeHTML();
     h+='<div class="home-nl">'+newsletterHTML(true)+'</div>';
     return h+'</div>';
@@ -1360,7 +1388,7 @@
   function viewBuzz(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><span class="live-dot"></span>The Buzz</div>'+
       '<h1>What the feed is arguing about</h1>'+
-      '<p>The posts, launches, and hot takes making noise across the AI world — curated hourly from labs, builders, and researchers. Every card links to the original. We pick the signal; you skip the doomscroll.</p></div>';
+      '<p>The posts, launches, and hot takes making noise across the AI world — curated from labs, builders, and researchers on every newsroom run. Every card links to the original. We pick the signal; you skip the doomscroll.</p></div>';
     if(!BUZZ.length){
       return h+'<p style="color:var(--muted)">The next Buzz run fills this page.</p></div>';
     }
@@ -1379,7 +1407,7 @@
       h+='<button class="buzz-more" id="buzz-more" onclick="rtfcBuzzOlder()">Show earlier buzz — '+olderCount+' more from '+older.length+' day'+(older.length===1?'':'s')+' ↓</button>';
       h+='<div id="buzz-archive" hidden>'+older.map(function(day){return buzzDayBlock(day,byDay[day]);}).join("")+'</div>';
     }
-    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:26px">Refreshed <b>every 2 hours, ~12 a day</b> — one card each run, the single loudest genuinely-new thing since the last. Showing the last 7 days'+(older.length?' — earlier buzz is one click below':'')+'. Curation, not syndication: cards paraphrase or briefly quote public posts and link to the source. Nothing is generated on anyone\'s behalf.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:26px">Refreshed <b>on every newsroom run — three a day</b>, alongside the day\'s reporting, plus anything a breaking scan turns up in between. Showing the last 7 days'+(older.length?' — earlier buzz is one click below':'')+'. Curation, not syndication: cards paraphrase or briefly quote public posts and link to the source. Nothing is generated on anyone\'s behalf.</p>';
     return h+'</div>';
   }
   window.rtfcBuzzOlder=function(){
@@ -1936,7 +1964,7 @@
     h+='<div class="pulse-sched">'+SLOTS.map(function(sl){
       return '<div class="ps-row'+(sl.star?' star':'')+'"><b>'+sl.et+'</b><span class="ps-n">'+(sl.star?"⭐ ":"")+sl.name+'</span><span class="ps-s">'+sl.shape+'</span></div>';
     }).join("")+'</div>';
-    h+='<p style="color:var(--muted);font-size:12.5px;margin:10px 0 30px">Weekends run lighter: the morning edition and the evening cycle. A slot with nothing worth saying publishes nothing — that’s policy, not failure.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin:10px 0 30px">All three slots run every day, weekends included. A slot with nothing worth saying publishes nothing — that’s policy, not failure.</p>';
     // recent activity
     var recent=USAGE.slice(-7).reverse();
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Last activity on the floor</div>';
@@ -1981,7 +2009,7 @@
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over">The Scoreboard</div>'+
       '<h1>Strength vs. cost, side by side</h1>'+
       '<p>Not just what each model costs — how <b>strong</b> it is, and the ratio between the two. The purple bar is raw intelligence; the gold bar is <b>strength per dollar</b>. Sort by whichever question you\'re actually asking.</p></div>';
-    h+='<div class="sb-updated"><span class="sbu-dot"></span>Last updated <b>'+esc(SB.updated||"—")+'</b> · the Data Desk reviews the board <b>every edition</b> and moves a score only when independent benchmarks move — never a lab\'s own number. New models are added the day they ship.</div>';
+    h+='<div class="sb-updated"><span class="sbu-dot"></span>Last updated <b>'+esc(SB.updated||"—")+'</b> · the Data Desk reviews the board <b>on every newsroom run</b> and moves a score only when independent benchmarks move — never a lab\'s own number. A model we\'ve covered is listed as soon as it ships, but stays <b>unmeasured</b> until an independent aggregate scores it, rather than being ranked on the vendor\'s own claim.</div>';
     // headline insights
     h+='<div class="sb-insights">'+
       '<div class="sb-ins"><span class="si-k">🧠 Smartest</span><b>'+esc(smartest.model)+'</b><span class="si-s">'+smartest.score+' / 100 · '+esc(smartest.lab)+'</span></div>'+

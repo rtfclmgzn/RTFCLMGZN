@@ -50,11 +50,29 @@ Follow `publishing.agent.md`'s rules exactly:
 3. If you use a library image: resize to ~1536px web JPEG into `web/assets/img/newsroom/<article-id>.jpg` (Python PIL is available), then append `{"article_id": "...", "used_at": "<today>"}` to that image's `used_in` in the manifest.
 4. If nothing fits, generate one: `python -m newsroom.cli generate-image --prompt "..." --out web/assets/img/newsroom/<article-id>.jpg --section <Section>`. This is capped by a shared budget guard and will fail cleanly if exhausted — if it fails, fall back to the best available library image even if imperfect, rather than leaving no cover.
 
+## 4b. Keep the live desks current (REQUIRED every cycle, even a no-publish one)
+
+The Buzz and Scoreboard pages are live surfaces readers judge the whole site by. They used to be maintained by a separate OpenAI-era job that no longer runs, and they silently rotted for over a week — Buzz sat 8 days stale (past its own 7-day retirement rule) and the Scoreboard was still missing Claude Opus 5 days after this newsroom published its launch story. **They are now this cycle's job.** Do both before shipping:
+
+**Buzz** (`web/data/buzz.js`) — read the file's own header rules first; they are binding (§buzz of the compliance rulebook):
+- Retire every card older than ~7 days. If that empties the file, that's correct — an empty-but-honest feed beats a stale one.
+- Add 3-6 genuinely new cards from this cycle's research. You already did the searching for the articles; the strongest signals that *didn't* become articles are exactly what Buzz is for.
+- NEVER fabricate a quote or post. Every `text` paraphrases or briefly quotes something verifiably public, and every `url` must resolve to the real post/announcement. If you can't find the primary source, drop the card.
+- Give each new card a fresh sequential `bz-NNN` id and a real `date`.
+
+**Scoreboard** (`web/data/scoreboard.js`) — read its header rules first; they are binding:
+- If this cycle covered a model launch/upgrade, that model belongs in `rows` — a launch we reported but never scored is the exact gap that made the Scoreboard look abandoned.
+- `score` is ONLY the independent Artificial Analysis Intelligence Index. Never substitute a vendor's self-reported benchmark. If no independent score exists yet, add the row with `status:"released"` and a null score plus a note saying it's unmeasured pending an independent aggregate — that's honest and still useful.
+- Update `scannedAt` to now, and **`updated` to today's human-readable date** — `updated` is what renders on the page, so leaving it stale makes a fresh scan look weeks old.
+- Record the scan in `basisNote` even when nothing moved.
+
+If you genuinely have nothing to add to one of them this cycle, still refresh its date field and say so in your Step 6 report. Never silently skip this step.
+
 ## 5. Ship it
 
 0. Before touching anything, run `git status --short`. If it already shows uncommitted changes to a file you're about to edit (most likely `web/index.html`, since the owner sometimes hand-edits the UI directly), that's someone's in-progress work sitting in the same file you need to bump the cache-buster in -- `git add` stages the whole file, not just your lines, so your commit will unavoidably include it too. That's fine (don't try to strip it out or stash it -- an unattended stash/pop can conflict and wedge the repo for the next cycle), but say so explicitly in your Step 6 report (e.g. "note: index.html had a pre-existing unrelated edit already in the working tree, included in this commit") so the owner isn't confused by a diff your summary doesn't otherwise explain.
 1. Update `web/index.html`: bump every `?b=N` cache-buster by 1 (all occurrences, same new number).
-2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html). Never `git add -A`.
+2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` from step 4b). Never `git add -A`.
 3. Run the guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.
 4. `git commit` with a real, specific message (what you published and why, not a generic "update").
 5. `git push origin main`.
@@ -62,6 +80,6 @@ Follow `publishing.agent.md`'s rules exactly:
 
 ## 6. Report
 
-Print a short summary: what you published (title, section, format, word count), what cover you used and why, the new cache-buster number, and confirmation the deploy landed. If you decided NOT to publish anything this cycle (no candidate cleared compliance, or nothing genuinely new), say so explicitly and explain why — an empty cycle is a legitimate, honest outcome, not a failure to hide.
+Print a short summary: what you published (title, section, format, word count), what cover you used and why, **what you changed on Buzz and the Scoreboard in step 4b** (cards retired/added, rows or scores touched — or an explicit "nothing to add, dates refreshed"), the new cache-buster number, and confirmation the deploy landed. If you decided NOT to publish anything this cycle (no candidate cleared compliance, or nothing genuinely new), say so explicitly and explain why — an empty cycle is a legitimate, honest outcome, not a failure to hide.
 
 Then stop. Do not start a second cycle, do not modify anything else, do not touch files outside what this runbook describes.
