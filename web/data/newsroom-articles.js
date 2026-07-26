@@ -4536,5 +4536,250 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-26T15:22:31Z"
+  },
+  {
+    "slug": "nvidia-sk-group-korea-500-billion-ai-partnership",
+    "title": "Nvidia and SK Group just signed a $500 billion bet on Korea's AI buildout",
+    "dek": "The deal bundles a 2-gigawatt Nvidia-powered data center, a long-term SK Hynix memory partnership, and a $1 billion stake in Naver — the same investment pattern critics call circular financing, now applied to an entire country.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Nvidia and SK Group unveiled a $500 billion-plus AI infrastructure partnership on July 24.",
+      "SK Telecom will build a 2-gigawatt data center on Nvidia's Vera Rubin chips, live in 2027.",
+      "SK Hynix will co-develop next-generation HBM4 memory tuned specifically for Nvidia's platforms.",
+      "Nvidia also put $1 billion into Naver, nearly quadrupling its Korean data-center capacity.",
+      "Caveat: critics call the deal's structure circular financing, the pattern already dogging Nvidia elsewhere."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Nvidia and South Korea's SK Group announced a partnership worth more than $500 billion on July 24 to build AI data centers and next-generation memory — one of the largest single AI-infrastructure commitments made public this year. The centerpiece: SK Telecom will construct a 2-gigawatt AI data center running on Nvidia's Vera Rubin chips and its DSX full-stack AI-factory architecture, with the first facility scheduled to come online in 2027. Alongside it, SK hynix and Nvidia are entering a long-term memory partnership to secure and co-develop next-generation high-bandwidth memory, including HBM4, tuned for Nvidia's training and inference platforms.",
+        "citation_urls": [
+          "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory",
+          "https://finance.yahoo.com/technology/ai/articles/nvidia-sk-group-unveil-500-235343258.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "\"By leveraging SK hynix's AI memory and SK Telecom's AI infrastructure capabilities, SK will collaborate with NVIDIA to build a world-class AI factory,\" SK Group chairman Chey Tae-won said in the companies' joint announcement. Nvidia CEO Jensen Huang framed it as a national bet: \"Together with SK Telecom and SK hynix, we are building a new generation of AI factories that will power Korea's next wave of growth.\"",
+        "citation_urls": [
+          "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What Nvidia is actually buying with $500 billion"
+      },
+      {
+        "type": "p",
+        "text": "Strip away the round number and the deal is two distinct trades. The first is compute for a customer: SK Telecom gets a 2-gigawatt AI factory — enough power draw to rank among the largest single AI campuses announced anywhere — built on Nvidia's newest Vera Rubin platform and DSX architecture, serving what Nvidia describes as enterprise, agentic AI, and physical AI workloads across the Asia-Pacific region. The second is supply security for Nvidia itself: HBM has been the industry's tightest chokepoint all year, and locking SK hynix into co-designing HBM4 specifically around Nvidia's bandwidth, power, and thermal requirements is Nvidia buying its way to the front of a queue every AI accelerator maker is standing in.",
+        "citation_urls": [
+          "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-sk-group-enter-usd500-billion-ai-partnership-plan-to-supercharge-ai-infrastructure-with-next-gen-memory-and-massive-ai-factories",
+          "https://thenextweb.com/news/nvidia-naver-sk-group-korea-ai-investment"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Vera Rubin is Nvidia's successor to Blackwell, and the memory dependency is why this deal pairs a data center with a chip-supply agreement instead of standing alone. Nvidia's own numbers for the platform: 50 petaflops of NVFP4 inference compute per GPU, up to a 10x reduction in per-token inference cost versus Blackwell, and up to 4x fewer GPUs needed to train mixture-of-experts models — gains Nvidia attributes largely to a third-generation Transformer Engine and a full-rack NVL72 configuration linking 72 Rubin GPUs and 36 Vera CPUs over 260TB/s of aggregate NVLink bandwidth. None of that throughput is reachable without memory that can keep pace, which is exactly the bottleneck HBM4 is meant to solve — and exactly why Nvidia wants SK hynix's next-generation lines designed around its own chip's requirements rather than shared generically across the industry.",
+        "citation_urls": [
+          "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The rest of the package: Naver and Brookfield"
+      },
+      {
+        "type": "p",
+        "text": "The SK Telecom facility isn't the only Korean buildout Nvidia is bankrolling. Nvidia is putting $1 billion directly into Naver, the country's dominant search and cloud company, to help expand its AI data-center capacity roughly fourfold — from 55 megawatts to 200 megawatts. Brookfield has separately agreed to a nonbinding term sheet for up to $9 billion more toward the same Naver expansion. Between SK Telecom's 2-gigawatt facility and Naver's quadrupled footprint, Nvidia is now underwriting a meaningful share of South Korea's entire near-term AI-compute expansion in a single week of announcements.",
+        "citation_urls": [
+          "https://thenextweb.com/news/nvidia-naver-sk-group-korea-ai-investment"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Why this looks like Nvidia's playbook, again"
+      },
+      {
+        "type": "p",
+        "text": "The structure here is one Nvidia has repeated with data-center operators, neoclouds, and now a sovereign partner: Nvidia puts capital into a customer, and that customer turns around and spends heavily on Nvidia chips and systems. Critics have labeled that pattern circular financing — money that never really leaves Nvidia's own ecosystem, dressed up as external investment and external demand. None of that makes the underlying compute or memory fictional; SK Telecom's data center and SK hynix's HBM4 lines will exist as physical assets regardless of how the capital was routed. But it does mean the $500 billion headline number is a combination of genuine infrastructure spend, vendor financing, and forward-looking supply contracts rather than a single check anyone is writing today — a distinction that matters for anyone trying to size the deal's real near-term economic impact versus its announced one.",
+        "citation_urls": [
+          "https://thenextweb.com/news/nvidia-naver-sk-group-korea-ai-investment"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The upside case is real too. Korea's memory industry has spent decades as a component supplier to other countries' AI buildouts rather than a hub in its own right, and Chey framed the deal explicitly against that history: the goal, in his words, is \"helping Korea transcend its role as a leading adopter of AI and become a global hub that drives AI innovation.\" Whether that ambition survives contact with a 2027 first-facility deadline, in an industry where multi-gigawatt buildouts routinely slip, is the honest open question this deal doesn't yet answer.",
+        "citation_urls": [
+          "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-sk-group-enter-usd500-billion-ai-partnership-plan-to-supercharge-ai-infrastructure-with-next-gen-memory-and-massive-ai-factories"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch the 2027 first-facility date.",
+        "text": "Gigawatt-scale data-center buildouts slip routinely. Whether SK Telecom's facility actually goes live on schedule is the concrete test of whether this is $500 billion of real capacity or $500 billion of announcement."
+      },
+      {
+        "label": "Watch how much of the capital round-trips back to Nvidia.",
+        "text": "The line between a genuine investment and circular financing is whether SK Telecom's and Naver's Nvidia purchases roughly match what Nvidia put in. That ratio, not the headline figure, is the number worth tracking."
+      },
+      {
+        "label": "Watch HBM4 allocation for everyone else.",
+        "text": "If SK hynix's next-gen memory lines are now co-designed around Nvidia's specs, competing accelerator makers sourcing from the same supplier may find themselves further back in the queue."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Nvidia Newsroom — SK Group and Nvidia expand strategic partnership",
+        "url": "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory"
+      },
+      {
+        "label": "Yahoo Finance / Reuters — Nvidia, SK Group unveil $500 billion-plus AI data centers initiative",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-sk-group-unveil-500-235343258.html"
+      },
+      {
+        "label": "Tom's Hardware — Nvidia and SK Group enter $500B AI partnership",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-sk-group-enter-usd500-billion-ai-partnership-plan-to-supercharge-ai-infrastructure-with-next-gen-memory-and-massive-ai-factories"
+      },
+      {
+        "label": "TheNextWeb — Nvidia invests $1 billion in Naver and strikes $500 billion deal with SK Group",
+        "url": "https://thenextweb.com/news/nvidia-naver-sk-group-korea-ai-investment"
+      },
+      {
+        "label": "Nvidia Newsroom — Rubin platform: six new chips, one AI supercomputer",
+        "url": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer"
+      }
+    ],
+    "id": "newsroom-nvidia-sk-korea-500b",
+    "image": "assets/img/newsroom/newsroom-nvidia-sk-korea-500b.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-26T22:07:18Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior cycle had covered the Nvidia/SK Group Korea partnership (announced July 24) in the last 7 days of published slugs; selected as this cycle's Compute-desk candidate over a thematically overlapping Anthropic/SK Hynix custom-chip story to avoid running two SK-Hynix-adjacent pieces in one cycle."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Deal size, component structure (SK Telecom 2GW facility, SK hynix HBM4 partnership, Naver/Brookfield financing) verified directly against Nvidia's own newsroom release, the primary source. Chey Tae-won and Jensen Huang quotes verified verbatim against that same release. Naver capacity figures (55MW to 200MW) and the Brookfield $9B nonbinding term sheet verified against TheNextWeb's independent reporting, cross-checked against Reuters' write-up via Yahoo Finance. The circular-financing characterization is TheNextWeb's own framing, attributed as such rather than adopted as this desk's assertion; specific analyst quotes found in earlier search results could not be traced to a single verifiable article and were deliberately excluded rather than attributed on secondhand grounds."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health, medical, legal-proceedings, or named-party-wrongdoing trigger present. Trigger 2 (financial claims) considered: deal figures are reported as announced facts sourced to the companies' own release, not stated as investment advice or a valuation prediction — disclaimer left as none since this is a Compute-desk infrastructure story, not a Markets recommendation. The circular-financing critique is presented as a sourced characterization of deal structure, not an accusation of wrongdoing against Nvidia or SK Group, so Trigger 4 does not apply."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-26T22:07:18Z"
+  },
+  {
+    "slug": "kimi-k3-redis-zero-days-self-reported-claim",
+    "title": "Kimi K3 agents reportedly found 19 Redis zero-days in 90 minutes. Only the patches are confirmed.",
+    "dek": "Redis shipped seven security releases on July 23 fixing two real vulnerability classes. The claim that Moonshot's Kimi K3 agents autonomously found 19 of them in an hour and a half traces to one researcher's own account, not to Redis or any independent party.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "tldr": [
+      "Researcher Chaofan Shou says Kimi K3 agents found 19 Redis zero-days in about 90 minutes.",
+      "A separate run reportedly built a working Redis 8.8.0 remote-code-execution exploit in 27 minutes.",
+      "Redis shipped seven patches on July 23 fixing a Streams flaw and a RedisBloom/TDigest bug.",
+      "Redis's own release notes confirm the fixes but not who found them, how, or how fast.",
+      "Caveat: no CVE, CVSS score, or independent party has validated the count or timing claims."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Chaofan Shou, a researcher affiliated with the group Bera Buddies, posted on X that agents built on Moonshot AI's Kimi K3 found 19 Redis zero-day vulnerabilities in roughly 90 minutes, and that a separate run produced a working remote-code-execution exploit against Redis 8.8.0 in 27 minutes. The claims, amplified across security-news outlets this week, are the latest entry in a pattern of AI models being credited with autonomous vulnerability discovery — this time against one of the most widely deployed pieces of infrastructure software on the internet.",
+        "citation_urls": [
+          "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+          "https://cybersecuritynews.com/redis-server-0-day-exploit/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What's independently confirmed: Redis shipped seven security releases on July 23 — versions 6.2.23, 7.2.15, 7.4.10, 8.2.8, 8.4.5, 8.6.5, and 8.8.1 — fixing two real vulnerability classes. The first is a Streams consumer-group bug: a crafted stream `RESTORE` payload can make two consumers share the same NACK, producing a use-after-free that can lead to remote code execution. The second is a set of out-of-bounds writes in the bundled RedisBloom and TDigest modules, also reachable through crafted `RESTORE` payloads. Redis's own GitHub release notes describe both fixes in that exact language, independent of anyone's claim about who found them.",
+        "citation_urls": [
+          "https://github.com/redis/redis/releases",
+          "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What isn't confirmed is everything about the discovery itself. Redis's release notes assign no CVE or CVSS score to either fix, and say nothing about who reported them or how — the standard credit section Redis usually publishes with security advisories is absent here. The 19-vulnerability count, the 90-minute and 27-minute timings, and the framing of the work as autonomous agent behavior all trace back to Shou's own account and a proof-of-concept repository the group published on GitHub, not to Redis or any third-party auditor. As of this writing, no independent researcher has reproduced the timing claims, and neither Redis nor Moonshot has issued its own statement confirming how the vulnerabilities were actually found.",
+        "citation_urls": [
+          "https://cybersecuritynews.com/redis-server-0-day-exploit/",
+          "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch for a CVE assignment.",
+        "text": "Until Redis or a CVE numbering authority formally assigns one to this round of fixes, the severity and count are Shou's own characterization, not an independently rated finding."
+      },
+      {
+        "label": "Watch for independent reproduction.",
+        "text": "The 90-minute and 27-minute timings are the actual autonomy claim here. A third party reproducing them — or failing to — is what would turn this from a self-reported anecdote into evidence."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "The Hacker News — Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say",
+        "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
+      },
+      {
+        "label": "Cybersecurity News — New Kimi K3 AI Agent Uncovers 0-Day Exploits in Redis Server",
+        "url": "https://cybersecuritynews.com/redis-server-0-day-exploit/"
+      },
+      {
+        "label": "GitHub — redis/redis releases",
+        "url": "https://github.com/redis/redis/releases"
+      }
+    ],
+    "id": "newsroom-kimi-k3-redis-zerodays",
+    "image": "assets/img/newsroom/newsroom-kimi-k3-redis-zerodays.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-26T22:08:25Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior cycle covered this story; distinct from the already-published white-house-moonshot-fable-distillation-accusation piece (a separate IP-provenance dispute) and from the moonshot-kimi-k3-open-model-launch piece (the initial July 16 launch). Selected as a fast-turnaround Frontier brief given the self-reported, unresolved nature of the central claim."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Redis's July 23 patch versions and the exact fix language (Streams shared-NACK use-after-free; RedisBloom/TDigest out-of-bounds writes) verified directly against redis/redis's own GitHub releases page, the primary source. Cross-checked against The Hacker News's and Cybersecurity News's independent write-ups, both of which explicitly flag the zero-day count, timings, and autonomy framing as self-reported and unverified by Redis or any third party."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 6 (unverifiable central claim) fires: the load-bearing numbers (19 zero-days, 90-minute and 27-minute timings, autonomous-agent framing) cannot be confirmed against a primary source independent of the researcher making the claim. Remediated by hedging throughout — attributing every disputed figure explicitly to Chaofan Shou/Bera Buddies, stating plainly what Redis's own release notes do and don't confirm, and closing on an explicit caveat rather than treating the claim as settled. No health, financial, legal, or named-party-accusation trigger present; this is a security-research capability claim, not an allegation against Redis."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-26T22:08:25Z"
   }
 ];
