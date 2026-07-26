@@ -66,13 +66,18 @@ The Buzz and Scoreboard pages are live surfaces readers judge the whole site by.
 - Update `scannedAt` to now, and **`updated` to today's human-readable date** — `updated` is what renders on the page, so leaving it stale makes a fresh scan look weeks old.
 - Record the scan in `basisNote` even when nothing moved.
 
+**RSS feed** (`web/rss.xml`) — this one is fully mechanical, no editorial judgment needed, so just do it every cycle that publishes:
+- Add an `<item>` for each article you published this cycle (title, `<link>` to `#/article/<slug>`, `<guid isPermaLink="false">rtfclmgzn-<id></guid>`, `<pubDate>` in RFC-822 form matching `publishedAt`, `<description>` = the dek).
+- Keep the file to the ~30 most recent items (drop the oldest as you add new ones) and update `<lastBuildDate>` to now.
+- This feed sat frozen for 12 days once before (missed ~30 published stories, including the Claude Opus 5 launch) because nothing was ever told to touch it — don't let that regress.
+
 If you genuinely have nothing to add to one of them this cycle, still refresh its date field and say so in your Step 6 report. Never silently skip this step.
 
 ## 5. Ship it
 
 0. Before touching anything, run `git status --short`. If it already shows uncommitted changes to a file you're about to edit (most likely `web/index.html`, since the owner sometimes hand-edits the UI directly), that's someone's in-progress work sitting in the same file you need to bump the cache-buster in -- `git add` stages the whole file, not just your lines, so your commit will unavoidably include it too. That's fine (don't try to strip it out or stash it -- an unattended stash/pop can conflict and wedge the repo for the next cycle), but say so explicitly in your Step 6 report (e.g. "note: index.html had a pre-existing unrelated edit already in the working tree, included in this commit") so the owner isn't confused by a diff your summary doesn't otherwise explain.
 1. Update `web/index.html`: bump every `?b=N` cache-buster by 1 (all occurrences, same new number).
-2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` from step 4b). Never `git add -A`.
+2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` / `web/rss.xml` from step 4b). Never `git add -A`.
 3. Run the guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.
 4. `git commit` with a real, specific message (what you published and why, not a generic "update").
 5. `git push origin main`.
@@ -80,6 +85,6 @@ If you genuinely have nothing to add to one of them this cycle, still refresh it
 
 ## 6. Report
 
-Print a short summary: what you published (title, section, format, word count), what cover you used and why, **what you changed on Buzz and the Scoreboard in step 4b** (cards retired/added, rows or scores touched — or an explicit "nothing to add, dates refreshed"), the new cache-buster number, and confirmation the deploy landed. If you decided NOT to publish anything this cycle (no candidate cleared compliance, or nothing genuinely new), say so explicitly and explain why — an empty cycle is a legitimate, honest outcome, not a failure to hide.
+Print a short summary: what you published (title, section, format, word count), what cover you used and why, **what you changed on Buzz, the Scoreboard, and the RSS feed in step 4b** (cards retired/added, rows or scores touched, items added to the feed — or an explicit "nothing to add, dates refreshed"), the new cache-buster number, and confirmation the deploy landed. If you decided NOT to publish anything this cycle (no candidate cleared compliance, or nothing genuinely new), say so explicitly and explain why — an empty cycle is a legitimate, honest outcome, not a failure to hide.
 
 Then stop. Do not start a second cycle, do not modify anything else, do not touch files outside what this runbook describes.
