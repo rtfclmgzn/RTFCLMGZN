@@ -1487,17 +1487,28 @@
     return null;
   }
   var AP={kind:null,id:null,slug:null,title:"",ownHash:"#/",segs:[],chunks:[],ci:0,seg:0,playing:false,paused:false,gen:0,u:null,beat:0,tries:0};
+  // House voice is British female, deliberately -- the previous priority list mixed
+  // UK and US names with no accent ordering, so whichever US neural voice (aria/jenny)
+  // happened to be installed won the pick() scan before libby/sonia ever got checked.
+  // British names now come first as their own pass, gated additionally by lang=en-GB
+  // so a same-named voice on a different locale can't slip through.
   function apVoice(){
     var vs=(window.speechSynthesis?speechSynthesis.getVoices():[])||[];
-    function pick(names){ for(var i=0;i<names.length;i++){ var m=vs.filter(function(v){return v.name.toLowerCase().indexOf(names[i])>=0;})[0]; if(m) return m; } return null; }
-    // 1) known top-tier natural female voices (Edge/Win · Chrome · Mac/iOS)
-    var best=pick(["aria online","jenny online","sonia online","libby online","emma online","michelle online","clara online","natasha online",
-      "google uk english female","google us english","samantha","serena","karen","moira","tessa","fiona","ava","allison","zira","susan","hazel"]);
+    function pick(list,names){ for(var i=0;i<names.length;i++){ var m=list.filter(function(v){return v.name.toLowerCase().indexOf(names[i])>=0;})[0]; if(m) return m; } return null; }
+    var gb=vs.filter(function(v){return /^en-gb/i.test(v.lang);});
+    // 1) known top-tier natural/neural British female voices (Edge/Win · Chrome · Mac/iOS)
+    var bestGB=pick(gb,["libby online","sonia online","maisie online","google uk english female","serena","kate","martha","hazel","susan"]);
+    if(bestGB) return bestGB;
+    // 2) any British voice that isn't obviously male
+    var gbF=gb.filter(function(v){return !/male|ryan online|george|thomas online|oliver|alfie|arthur online/i.test(v.name);});
+    if(gbF.length) return gbF[0];
+    // 3) no British voice installed on this device at all -- fall back to the best
+    // available natural female voice of any English accent rather than a robotic default.
+    var best=pick(vs,["aria online","jenny online","emma online","michelle online","clara online","natasha online",
+      "google us english","samantha","karen","moira","tessa","fiona","ava","allison","zira"]);
     if(best) return best;
-    // 2) any natural / online / neural english voice
     var neural=vs.filter(function(v){return /^en/i.test(v.lang)&&/natural|online|neural/i.test(v.name);});
     if(neural.length) return neural[0];
-    // 3) an english voice that isn't obviously male
     var enF=vs.filter(function(v){return /^en/i.test(v.lang)&&!/male|david|george|mark|daniel|alex|fred|rishi|ryan|guy|arthur|thomas|oliver/i.test(v.name);});
     return enF[0] || vs.filter(function(v){return /^en/i.test(v.lang);})[0] || vs[0] || null;
   }
