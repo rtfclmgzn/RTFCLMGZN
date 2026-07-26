@@ -60,7 +60,12 @@
       ],
       "text_space": "top-center dark ceiling",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-nvidia-open-weights-letter",
+          "used_at": "2026-07-26"
+        }
+      ]
     },
     {
       "id": "art-003-data-center-aisle-repair-bench",
@@ -1523,7 +1528,12 @@
       ],
       "text_space": "concrete wall left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-china-ai-export-controls",
+          "used_at": "2026-07-26"
+        }
+      ]
     },
     {
       "id": "art-062-colossal-train-factory-hall",
@@ -1696,7 +1706,12 @@
       ],
       "text_space": "dark wall left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-qwen38-max-preview",
+          "used_at": "2026-07-26"
+        }
+      ]
     },
     {
       "id": "art-069-aerial-hyperscale-campus-at-dusk",
