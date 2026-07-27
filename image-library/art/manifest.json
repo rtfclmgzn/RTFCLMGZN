@@ -1098,7 +1098,12 @@
       ],
       "text_space": "concrete wall left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-microsoft-azure-compute-rationing",
+          "used_at": "2026-07-27"
+        }
+      ]
     },
     {
       "id": "art-044-violet-tools-in-a-white-fab",
@@ -1695,7 +1700,7 @@
         "Compute",
         "Markets"
       ],
-      "text_space": "screens are busy — avoid center",
+      "text_space": "screens are busy \u2014 avoid center",
       "brand_visible": null,
       "used_in": [
         {
@@ -2049,7 +2054,7 @@
       "id": "art-081-twin-ai-chambers",
       "file": "futuristic twin AI chambers.png",
       "title": "Twin AI chambers",
-      "description": "Two glass cylinder machine-chambers — one cool blue, one warm amber — joined by a black core; tiny figures for scale.",
+      "description": "Two glass cylinder machine-chambers \u2014 one cool blue, one warm amber \u2014 joined by a black core; tiny figures for scale.",
       "subjects": [
         "twin-cores",
         "duality",
@@ -2148,7 +2153,7 @@
       "best_for_sections": [
         "Frontier"
       ],
-      "text_space": "none — text baked in",
+      "text_space": "none \u2014 text baked in",
       "brand_visible": "GPT-5.6 text baked into artwork",
       "used_in": []
     },
