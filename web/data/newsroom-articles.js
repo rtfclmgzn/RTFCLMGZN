@@ -4781,5 +4781,368 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-26T22:08:25Z"
+  },
+  {
+    "slug": "kimi-k3-open-weights-live-download",
+    "title": "Kimi K3's open weights are live on Hugging Face",
+    "dek": "Moonshot's 2.8-trillion-parameter model can now be downloaded and self-hosted, with a Modified-MIT-style license attached. The active-parameter count everyone's citing is still a community estimate, not a Moonshot-confirmed figure — and the release lands in the middle of an unresolved White House distillation accusation.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Moonshot's Kimi K3 full open weights are downloadable now from Hugging Face's moonshotai org.",
+      "Config confirms 2.8T total parameters, 896 experts (16 active + 2 shared per token), 1M-token context.",
+      "The widely cited ~50B 'active parameter' figure is a community estimate, not an official Moonshot number.",
+      "The Kimi K3 License permits commercial use free below $20M/month revenue or 100M monthly active users.",
+      "Caveat: the release doesn't resolve the White House's unproven distillation accusation against Moonshot."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Moonshot AI's Kimi K3 open weights are downloadable now. Hugging Face's listing for moonshotai/Kimi-K3 shows the repository live, with the full 2.8-trillion-parameter model available for anyone to pull and self-host — closing out a promise the company had set for July 27 that this newsroom's own automated tracking had checked repeatedly through the day without finding published, as recently as roughly an hour before this piece was filed.",
+        "citation_urls": [
+          "https://huggingface.co/moonshotai/Kimi-K3"
+        ]
+      },
+      {
+        "type": "stat",
+        "value": "2.8T",
+        "label": "Total parameters in Kimi K3 — by that count, the largest open-weight model publicly available"
+      },
+      {
+        "type": "h2",
+        "text": "What's actually in the download"
+      },
+      {
+        "type": "p",
+        "text": "The model's published configuration confirms the headline architecture: 896 routed experts with 16 selected per token plus 2 shared experts, 93 layers, a 7,168-dimension hidden size, and a context window of 1,048,576 tokens — a full million. Weights ship quantized to MXFP4 (4-bit), which is how a 2.8-trillion-parameter model compresses to a roughly 1.4-terabyte download rather than something several times larger. K3 is also natively multimodal, built around two architectural changes Moonshot calls Kimi Delta Attention and Attention Residuals — both aimed at keeping information intact as it moves through a deeper, longer-context model than K2's.",
+        "citation_urls": [
+          "https://huggingface.co/moonshotai/Kimi-K3",
+          "https://www.thesoftwarefrontier.com/p/kimi-k3-28-trillion-parameters-four"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The 'active parameters' number nobody's actually confirmed"
+      },
+      {
+        "type": "p",
+        "text": "Nearly every writeup of Kimi K3 repeats a version of the same figure: roughly 50 billion active parameters per token, derived by multiplying the per-token expert count against the model's per-expert dimensions. ==That number is a community calculation from the published routing ratio, not a figure Moonshot itself has confirmed in an official technical report==. It's a reasonable estimate — independent analyses converge on the same rough range — but readers citing '2.8T-A50B' as a vendor spec should know the 'A50B' half is outside math, not an inline Moonshot claim.",
+        "citation_urls": [
+          "https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest",
+          "https://huggingface.co/moonshotai/Kimi-K3"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A 25-cent pelican, and what it's still good for"
+      },
+      {
+        "type": "p",
+        "text": "Independent developer Simon Willison ran his standard \"draw an SVG of a pelican riding a bicycle\" test against K3 the day it was first announced. His own line on the result:"
+      },
+      {
+        "type": "quote",
+        "text": "That pelican took 95 input tokens and 16,658 output tokens (13,241 were reasoning tokens), for a total cost of 25 cents! — Simon Willison"
+      },
+      {
+        "type": "p",
+        "text": "He noted the model currently ships with only one reasoning-effort setting, \"max\" — and that the cost shows it. Willison is candid that the pelican test itself has stopped tracking real capability closely (he points to GLM-5.2 out-drawing supposedly stronger models on the same prompt), but he still runs it on every new release because it's a cheap, fast read on token cost and output validity before anyone touches the harder question of agentic tool use.",
+        "citation_urls": [
+          "https://simonwillison.net/2026/Jul/16/kimi-k3/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where K3 sits against the field"
+      },
+      {
+        "type": "p",
+        "text": "AI researcher Nathan Lambert's read, published alongside the July 16 announcement, is the more consequential framing: K3 is, in his words, the closest an open-weight model has been to the frontier since DeepSeek R1, landing #3 on the Artificial Analysis Intelligence Index — behind Claude Fable 5 and GPT-5.6 Sol, ahead of xAI's Grok 4.5, and by Lambert's own count ahead of several Western labs' latest releases, including Google DeepMind's. Lambert's headline number: the gap between the best open-weight models and the best closed ones has narrowed from a widely cited 6-to-9 months to something closer to 3-to-5. Moonshot's own claimed efficiency gain — roughly a 2.5x improvement in overall scaling efficiency over K2 — is the company's figure, not independently audited, but it's consistent with Lambert's broader point: this is systematic scaling execution, not a one-off benchmark win.",
+        "citation_urls": [
+          "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The license's real fine print"
+      },
+      {
+        "type": "p",
+        "text": "The Kimi K3 License, published alongside the weights, mirrors the structure Moonshot used for K2: broad rights to use, modify, fine-tune, and redistribute the model, with two revenue-tied conditions. A company running a Model-as-a-Service business built on K3 that clears **$20 million in aggregate revenue over any trailing 12 months** must negotiate a separate commercial agreement with Moonshot. Separately, any product built on K3 that crosses **100 million monthly active users or $20 million in monthly revenue** must display \"Kimi K3\" prominently in its interface. Below those thresholds, commercial use — including hosting, fine-tuning, and redistribution — is unrestricted.",
+        "citation_urls": [
+          "https://huggingface.co/moonshotai/Kimi-K3"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Landing in the middle of a provenance fight"
+      },
+      {
+        "type": "p",
+        "text": "The timing puts real weights into a dispute that, until now, has been argued entirely on benchmark numbers and unverified claims. The White House has accused Moonshot of distilling Anthropic's Fable models to build K3, an allegation Treasury Secretary Scott Bessent has said could trigger sanctions — one neither official has backed with public evidence, and one Moonshot has not responded to on the record. Separately, Artificial Analysis has already given K3 an independent Intelligence Index score of 57, third overall and ahead of Claude Opus 4.8. Lambert's own analysis argues the opposite of the White House's theory: he reads K3's efficiency gains as evidence of genuine architectural scaling work, not evidence that distillation explains the result — though that is one independent analyst's interpretation, not a resolution of the underlying accusation. Full published weights don't settle the dispute by themselves, but they do give outside researchers something they didn't have with the benchmark-only release: the actual architecture and parameters to inspect directly, rather than Moonshot's word for what's inside.",
+        "citation_urls": [
+          "#/article/white-house-moonshot-fable-distillation-accusation"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch for Moonshot's own technical report.",
+        "text": "A vendor-confirmed active-parameter count and training disclosure would replace the current ~50B community estimate — and would be the first real Moonshot statement addressing the distillation accusation, even indirectly."
+      },
+      {
+        "label": "Watch what independent researchers find in the weights.",
+        "text": "With the actual parameters downloadable, researchers can now examine K3's architecture directly rather than inferring from API behavior — the first concrete way anyone outside Moonshot can engage with the provenance dispute."
+      },
+      {
+        "label": "Watch self-hosted adoption and pricing.",
+        "text": "Together AI, Modal, and local-inference tools (llama.cpp, Ollama, LM Studio) all support day-one hosting. Whether self-hosted deployments meaningfully undercut Moonshot's own API pricing is the real test of what 'open weights' buys a builder here."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Hugging Face — moonshotai/Kimi-K3 model repository",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "label": "Hugging Face — Kimi K3 License",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE"
+      },
+      {
+        "label": "Latent Space (AI News) — Kimi K3 2.8T-A50B: the largest open model ever released",
+        "url": "https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest"
+      },
+      {
+        "label": "Tech Times — Kimi K3 open weights arrive",
+        "url": "https://www.techtimes.com/articles/321551/20260725/kimi-k3-open-weights-arrive-sunday-self-hosting-cuts-china-data-risk-api-never-can.htm"
+      },
+      {
+        "label": "Our coverage: the White House's distillation accusation against Moonshot",
+        "url": "#/article/white-house-moonshot-fable-distillation-accusation"
+      },
+      {
+        "label": "Our coverage: Kimi K3's July 16 launch",
+        "url": "#/article/moonshot-kimi-k3-open-model-launch"
+      }
+    ],
+    "id": "newsroom-kimi-k3-open-weights-live",
+    "image": "assets/img/newsroom/newsroom-kimi-k3-open-weights-live.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-27T16:07:38Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed via direct Hugging Face fetch that moonshotai/Kimi-K3 is live for the first time this cycle; five prior breaking-scan cycles today (last at 2026-07-27T15:02:16Z) had each independently confirmed it was still absent, so this is a genuinely new development rather than a re-report. Distinct from the already-published July 16 launch brief and the White House distillation-accusation research piece."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Architecture figures (896 experts, 16 active + 2 shared, 93 layers, 7168 hidden size, 1,048,576 context) verified directly against the model's own published config on Hugging Face, the primary source. License terms (the $20M/12-month MaaS threshold and the 100M-MAU/$20M-monthly-revenue branding clause) verified directly against the LICENSE file in the same repository. The ~50B active-parameter figure was cross-checked against multiple independent outlets (Latent Space, Tech Times, and others) that converge on the same estimate but explicitly flag it as derived rather than Moonshot-confirmed; this piece preserves that distinction rather than stating it as a vendor spec. An earlier single-source fetch had returned a conflicting '104B active parameters' figure; that number was discarded as uncorroborated after cross-checking multiple independent sources and the model's own config, which support only the ~50B community estimate."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health, financial-advice, or legal-proceedings trigger present. Trigger 4 (accusatory claims about a named party) considered for the distillation-accusation reference: handled by attributing the allegation explicitly to the White House/Treasury, noting it is unproven and undocumented, and linking to this desk's own prior piece rather than re-litigating or extending the claim here. Trigger 6 (unverifiable central claim) considered for the active-parameter figure: remediated by explicitly labeling it a community estimate rather than a Moonshot-confirmed number throughout, including in the tldr."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-27T16:07:38Z"
+  },
+  {
+    "slug": "nvidia-openai-250-billion-ohio-data-center-financing",
+    "title": "Nvidia is reportedly weighing a $250 billion guarantee for OpenAI's Ohio data center",
+    "dek": "The Wall Street Journal reports Nvidia is in talks to backstop lease and construction financing for a 10-gigawatt SoftBank-developed campus in Piketon, Ohio, with a separate $350 billion chip-financing conversation on top. Neither company has confirmed the numbers, and Reuters says it could not independently verify the report.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "brief",
+    "disclaimer": "none",
+    "tldr": [
+      "WSJ: Nvidia is in talks to guarantee about $250 billion so OpenAI can lease an Ohio data center.",
+      "The 10-gigawatt campus, developed by SoftBank's SB Energy, sits on a former uranium-enrichment site.",
+      "Nvidia is separately discussing financing up to $350 billion more for the chips going inside it.",
+      "The backstop is reportedly needed because OpenAI lacks an investment-grade credit rating on its own.",
+      "Caveat: terms aren't settled, neither company has confirmed the figures, and the deal could still collapse."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Nvidia is in talks to guarantee roughly $250 billion of financing so OpenAI can lease a 10-gigawatt data-center campus that SoftBank's SB Energy subsidiary is developing in Piketon, Ohio, on the site of a former federal uranium-enrichment plant, the Wall Street Journal reported. The guarantee would cover lease payments and construction debt for what would be OpenAI's first data-center site as a direct tenant rather than a customer of Microsoft, Amazon, or Oracle.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/nvidia-talks-back-openai-ohio-114515389.html",
+          "https://www.tomshardware.com/tech-industry/data-centers/nvidia-weighs-250-billion-guarantee-so-openai-can-lease-softbanks-10-gigawatt-ohio-campus"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Nvidia is reportedly discussing a separate, additional commitment of up to $350 billion to finance the accelerators that would go inside the campus once built — meaning the full project, land to chips, could run past $500 billion. The reported rationale for Nvidia's guarantee: OpenAI is not yet profitable and cannot secure investment-grade financing terms on its own for a project this size, so Nvidia's balance sheet does the backstopping instead. That structure would put Nvidia on the hook as a lender and guarantor to its own biggest customer, not just its chip supplier — a role reversal from its usual position in these deals.",
+        "citation_urls": [
+          "https://www.tomshardware.com/tech-industry/data-centers/nvidia-weighs-250-billion-guarantee-so-openai-can-lease-softbanks-10-gigawatt-ohio-campus"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of it is finalized. Terms haven't been settled and the arrangement could still collapse, according to the Journal's own reporting, and Reuters has said it could not immediately verify the report independently. The first phase, roughly 800 megawatts, is reportedly targeted for 2028; powering the full campus would require about 9.2 gigawatts of new natural-gas generation plus $4.2 billion of transmission work with utility AEP Ohio, partly funded by a $33.3 billion commitment Japan made under its trade agreement with the U.S. Neither Nvidia nor OpenAI has confirmed any of the figures on the record.",
+        "citation_urls": [
+          "https://www.business-standard.com/world-news/nvidia-in-talks-with-openai-to-guarantee-250-bn-financing-for-data-centre-126072700075_1.html",
+          "https://www.tomshardware.com/tech-industry/data-centers/nvidia-weighs-250-billion-guarantee-so-openai-can-lease-softbanks-10-gigawatt-ohio-campus"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch for on-record confirmation.",
+        "text": "Every figure here traces to unnamed sources cited by the Journal. Nvidia or OpenAI going on record — or a regulatory filing disclosing a guarantee obligation — is what would turn this from reported talks into a confirmed deal."
+      },
+      {
+        "label": "Watch the 2028 first-phase target.",
+        "text": "Gigawatt-scale data-center builds slip routinely; whether the 800-megawatt first phase lands on schedule is a concrete way to track whether this project is moving at the pace the financing implies."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Yahoo Finance / WSJ — Nvidia in talks to back OpenAI's Ohio data center with $250 billion",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-talks-back-openai-ohio-114515389.html"
+      },
+      {
+        "label": "Tom's Hardware — Nvidia weighs $250 billion guarantee for OpenAI's Ohio campus",
+        "url": "https://www.tomshardware.com/tech-industry/data-centers/nvidia-weighs-250-billion-guarantee-so-openai-can-lease-softbanks-10-gigawatt-ohio-campus"
+      },
+      {
+        "label": "Business Standard — Nvidia in talks with OpenAI to guarantee $250bn financing for data centre",
+        "url": "https://www.business-standard.com/world-news/nvidia-in-talks-with-openai-to-guarantee-250-bn-financing-for-data-centre-126072700075_1.html"
+      }
+    ],
+    "id": "newsroom-nvidia-openai-ohio-financing",
+    "image": "assets/img/newsroom/newsroom-nvidia-openai-ohio-financing.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-27T16:19:12Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior cycle had covered this story (first reported July 26); distinct from prior breaking-scan no-op log entries that had tracked it as an unconfirmed-talks watch item without publishing a piece. Selected as a fast-turnaround Markets brief given the report's still-unconfirmed, sourced-to-unnamed-sources nature."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Deal structure and figures cross-checked across three independent secondary outlets (Yahoo Finance/WSJ-sourced, Tom's Hardware, Business Standard), all of which attribute the core numbers to the Wall Street Journal's original reporting and explicitly note Reuters could not independently verify it. No primary Nvidia/OpenAI statement exists to check against, which is itself reported and preserved as the central caveat rather than smoothed over."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 2 (financial claims) fires: this is a financing/valuation story. Remediated by attributing every figure to WSJ's reporting via secondary outlets, explicitly stating the deal is unconfirmed and could collapse, and including no trading or investment framing of any kind — disclaimer left as none since this is deal reporting, not investment advice. Trigger 6 (unverifiable central claim) also fires and is handled the same way: hedged throughout, caveat carried into the final tldr bullet."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-27T16:19:12Z"
+  },
+  {
+    "slug": "openai-health-in-chatgpt-apple-health-medical-records",
+    "title": "OpenAI connects ChatGPT to Apple Health and medical records for US users",
+    "dek": "A new Health section lets ChatGPT read connected Apple Health data and uploaded medical records to answer questions about labs, medications, and trends, with OpenAI pledging the data won't train its models or target ads. Clinicians quoted by CBS News still warn about the accuracy and escalation risks of leaning on any chatbot for health decisions.",
+    "persona": "priya-anand",
+    "section": "Health",
+    "format": "brief",
+    "disclaimer": "not-medical-advice",
+    "tldr": [
+      "OpenAI is rolling out Health in ChatGPT to US users 18+ on Free, Go, Plus, and Pro plans.",
+      "It connects Apple Health data and uploaded medical records to compare labs and track medications.",
+      "OpenAI says connected health data and related chats aren't used to train models or target ads.",
+      "Clinicians quoted by CBS News warn chatbots can hallucinate dangerous or misleading medical guidance.",
+      "Caveat: OpenAI itself says the feature does not replace a qualified medical professional's judgment."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI has begun rolling out a new Health section inside ChatGPT to US users 18 and older on the web and iOS apps, across the Free, Go, Plus, and Pro tiers. The feature lets users connect Apple Health data and upload medical records so ChatGPT can compare lab results over time, summarize what's changed since a prior appointment, track medications, and discuss how sleep, activity, and workouts relate to a user's health history.",
+        "citation_urls": [
+          "https://www.macrumors.com/2026/07/23/chatgpt-apple-health-integration/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "OpenAI says it will ask explicit permission before using any connected medical record or Apple Health data to personalize a response, and that connected health information — along with conversations that use it — is \"not used to train OpenAI's models or target ads.\" Users can also use the Health section for general questions without connecting any personal records at all.",
+        "citation_urls": [
+          "https://www.macrumors.com/2026/07/23/chatgpt-apple-health-integration/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Clinicians quoted by CBS News were less settled on the upside. Tanzeem Choudhury, chief of health innovation at Cornell Tech, warned that \"AI can hallucinate and give misleading, inaccurate or even dangerous medical advice.\" Columbia computer science professor Vishal Misra put the data-sharing risk plainly: \"The same risks that exist sharing health data with anyone transfer here,\" adding of the chatbot's output, \"whatever it says, take it to an actual human physician. Do not act.\" Both experts noted that the burden of deciding when to escalate a concern to an actual doctor falls on the user — a harder call for elderly or cognitively impaired people than for anyone else. OpenAI's own language is consistent with that caution: the company states ChatGPT \"does not replace the care and judgment of qualified medical professionals.\"",
+        "citation_urls": [
+          "https://www.cbsnews.com/news/chatgpt-health-medical-records-advice-expert-risks/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch whether OpenAI adds active escalation prompts.",
+        "text": "Right now the burden is on the user to decide when a result warrants a real doctor. Whether OpenAI builds in active nudges toward professional care — rather than leaving escalation entirely to the reader — is the concrete signal to track."
+      },
+      {
+        "label": "Watch OpenAI's terms of service for changes.",
+        "text": "Choudhury's warning was specifically that AI companies have altered data-use terms after the fact. Anyone connecting medical records should revisit this feature's privacy terms periodically rather than assuming today's policy is permanent."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "MacRumors — ChatGPT's Apple Health integration now rolling out to US users",
+        "url": "https://www.macrumors.com/2026/07/23/chatgpt-apple-health-integration/"
+      },
+      {
+        "label": "CBS News — ChatGPT now has a space for sharing medical records. Should you?",
+        "url": "https://www.cbsnews.com/news/chatgpt-health-medical-records-advice-expert-risks/"
+      }
+    ],
+    "id": "newsroom-openai-health-chatgpt",
+    "image": "assets/img/newsroom/newsroom-openai-health-chatgpt.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-27T16:24:50Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior cycle covered OpenAI's Health-in-ChatGPT rollout. Selected as this cycle's Health-desk candidate to keep Priya Anand's beat current, since no Health piece had run in recent cycles."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Rollout scope (age, platforms, plan tiers) and OpenAI's stated data-use protections verified against MacRumors' reporting, which quotes OpenAI's own language directly. Clinician quotes (Choudhury, Misra) verified verbatim against CBS News's own reporting; neither is presented as this desk's own view. OpenAI's own official product page (openai.com/index/health-in-chatgpt/) returned an HTTP 403 to automated fetch and could not be read directly this cycle — claims are instead sourced to MacRumors' direct quotation of that page rather than asserted from an unread primary source."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 1 (health/medical claims) fires: this is a health product story. Remediated with the standard not-medical-advice disclaimer, by including clinician caution alongside the feature description rather than only OpenAI's framing, and by not stating or implying any diagnostic or treatment claim as fact anywhere in the piece. The CBS-reported cases of past chatbot health-advice harm were deliberately left unspecified rather than re-detailed here, since naming them adds no new verification to this story and risks readers over-indexing on unrelated incidents; the general caution they support is preserved instead."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-27T16:24:50Z"
   }
 ];

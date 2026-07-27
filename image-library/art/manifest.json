@@ -1218,7 +1218,12 @@
       ],
       "text_space": "cloud sky top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-nvidia-openai-ohio-financing",
+          "used_at": "2026-07-27"
+        }
+      ]
     },
     {
       "id": "art-049-boardroom-over-the-violet-server-room",
@@ -2033,7 +2038,12 @@
       ],
       "text_space": "beige monolith faces",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-kimi-k3-open-weights-live",
+          "used_at": "2026-07-27"
+        }
+      ]
     },
     {
       "id": "art-081-twin-ai-chambers",
