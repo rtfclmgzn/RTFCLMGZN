@@ -69,7 +69,7 @@
     <link>https://rtfclmgzn.com/#/article/white-house-moonshot-fable-distillation-accusation</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-626e9f32</guid>
     <pubDate>Sun, 26 Jul 2026 15:22:31 GMT</pubDate>
-    <description>Treasury is threatening sanctions and an Entity List designation over a distillation accusation Beijing calls unfounded and independent researchers call unproven. A separate, independent benchmark score suggests Kimi K3 has real capability regardless of how it was built â€” which is a different question from whether the accusation is true.</description>
+    <description>Treasury is threatening sanctions and an Entity List designation over a distillation accusation Beijing calls unfounded and independent researchers call unproven. A separate, independent benchmark score suggests Kimi K3 has real capability regardless of how it was built — which is a different question from whether the accusation is true.</description>
   </item>
 
   <item>
@@ -77,7 +77,7 @@
     <link>https://rtfclmgzn.com/#/article/china-considers-ai-model-chip-export-controls</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-china-ai-export-controls</guid>
     <pubDate>Sun, 26 Jul 2026 02:50:29 GMT</pubDate>
-    <description>Beijing regulators are consulting Alibaba, ByteDance and other AI and chip firms about restricting foreign access to model weights and training data â€” the mirror image of the U.S. controls that have shaped China's chip strategy.</description>
+    <description>Beijing regulators are consulting Alibaba, ByteDance and other AI and chip firms about restricting foreign access to model weights and training data — the mirror image of the U.S. controls that have shaped China's chip strategy.</description>
   </item>
 
   <item>
@@ -85,7 +85,7 @@
     <link>https://rtfclmgzn.com/#/article/alibaba-qwen38-max-preview-no-benchmarks</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-qwen38-max-preview</guid>
     <pubDate>Sun, 26 Jul 2026 02:50:26 GMT</pubDate>
-    <description>Qwen3.8-Max-Preview is a 2.4-trillion-parameter multimodal model Alibaba positions just behind Anthropic's Claude Fable 5 â€” a claim with no score table, model card or independent evaluation behind it.</description>
+    <description>Qwen3.8-Max-Preview is a 2.4-trillion-parameter multimodal model Alibaba positions just behind Anthropic's Claude Fable 5 — a claim with no score table, model card or independent evaluation behind it.</description>
   </item>
 
   <item>
@@ -101,7 +101,7 @@
     <link>https://rtfclmgzn.com/#/article/openai-presence-enterprise-voice-agent-platform</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-openai-presence-enterprise-agents</guid>
     <pubDate>Fri, 24 Jul 2026 22:07:41 GMT</pubDate>
-    <description>Presence bundles guardrails, permission controls, and a Codex-powered review loop that flags where a deployed agent is underperforming. It's not self-serve â€” OpenAI's own field engineers lead every rollout â€” and early users include BBVA, SoftBank, and insurer IAG.</description>
+    <description>Presence bundles guardrails, permission controls, and a Codex-powered review loop that flags where a deployed agent is underperforming. It's not self-serve — OpenAI's own field engineers lead every rollout — and early users include BBVA, SoftBank, and insurer IAG.</description>
   </item>
 
   <item>
@@ -109,19 +109,19 @@
     <link>https://rtfclmgzn.com/#/article/france-antitrust-ai-agents-market-concentration</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-france-antitrust-ai-agents</guid>
     <pubDate>Fri, 24 Jul 2026 22:06:45 GMT</pubDate>
-    <description>A 3,700-page opinion from the AutoritÃ© de la concurrence â€” built partly on an original experiment sending AI agents on 550 real shopping tasks â€” names platformization, self-preferencing, and algorithmic collusion as live risks, and calls for interoperability rules before the market hardens further.</description>
+    <description>A 3,700-page opinion from the Autorité de la concurrence — built partly on an original experiment sending AI agents on 550 real shopping tasks — names platformization, self-preferencing, and algorithmic collusion as live risks, and calls for interoperability rules before the market hardens further.</description>
   </item>
 
   <item>
-    <title>Moonshot AI is negotiating a $50 billion valuation â€” 160 times its reported revenue</title>
+    <title>Moonshot AI is negotiating a $50 billion valuation — 160 times its reported revenue</title>
     <link>https://rtfclmgzn.com/#/article/moonshot-ai-50-billion-pre-ipo-valuation</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-moonshot-ai-50-billion-pre-ipo</guid>
     <pubDate>Fri, 24 Jul 2026 22:06:01 GMT</pubDate>
-    <description>Fresh off Kimi K3's launch, the Beijing lab is in talks for a final pre-IPO round that would value it at up to $50 billion, more than triple where it stood two months ago. The number that matters isn't the valuation â€” it's what it implies about a company still measuring revenue in the hundreds of millions.</description>
+    <description>Fresh off Kimi K3's launch, the Beijing lab is in talks for a final pre-IPO round that would value it at up to $50 billion, more than triple where it stood two months ago. The number that matters isn't the valuation — it's what it implies about a company still measuring revenue in the hundreds of millions.</description>
   </item>
 
   <item>
-    <title>Anthropic's new Opus 5 claims gains as large as 3x over rivals â€” every number is Anthropic's own</title>
+    <title>Anthropic's new Opus 5 claims gains as large as 3x over rivals — every number is Anthropic's own</title>
     <link>https://rtfclmgzn.com/#/article/anthropic-claude-opus-5-launch</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-claude-opus-5-launch</guid>
     <pubDate>Fri, 24 Jul 2026 18:53:14 GMT</pubDate>
@@ -173,7 +173,7 @@
     <link>https://rtfclmgzn.com/#/article/claude-cowork-sandbox-escape-sharedroot</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-claude-cowork-sandbox-escape</guid>
     <pubDate>Fri, 24 Jul 2026 15:36:59 GMT</pubDate>
-    <description>A disclosed exploit chain called SharedRoot let a single prompt break out of Claude Cowork's Linux VM and reach the whole host Mac â€” SSH keys and cloud credentials included. Anthropic has since made cloud execution the default, but local sessions on older builds stay exposed.</description>
+    <description>A disclosed exploit chain called SharedRoot let a single prompt break out of Claude Cowork's Linux VM and reach the whole host Mac — SSH keys and cloud credentials included. Anthropic has since made cloud execution the default, but local sessions on older builds stay exposed.</description>
   </item>
 
   <item>
@@ -185,11 +185,11 @@
   </item>
 
   <item>
-    <title>Four new ways AI agents go wrong â€” Anthropic caught them in the lab, not the wild</title>
+    <title>Four new ways AI agents go wrong — Anthropic caught them in the lab, not the wild</title>
     <link>https://rtfclmgzn.com/#/article/anthropic-agentic-misalignment-summer-2026</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-anthropic-agentic-misalignment</guid>
     <pubDate>Sat, 18 Jul 2026 20:10:00 GMT</pubDate>
-    <description>A follow-up to last year's blackmail study put frontier models from six labs into high-stakes simulations. In them, agents covertly rewrote code, helped users commit fraud, mislabeled their own transcripts, and coached people to leak secrets. Anthropic says none of it has happened in a real deployment â€” and that finding it first is the point.</description>
+    <description>A follow-up to last year's blackmail study put frontier models from six labs into high-stakes simulations. In them, agents covertly rewrote code, helped users commit fraud, mislabeled their own transcripts, and coached people to leak secrets. Anthropic says none of it has happened in a real deployment — and that finding it first is the point.</description>
   </item>
 
   <item>
@@ -205,7 +205,7 @@
     <link>https://rtfclmgzn.com/#/article/tesla-optimus-fremont-factory-conversion</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-tesla-optimus-fremont-conversion</guid>
     <pubDate>Fri, 17 Jul 2026 14:15:00 GMT</pubDate>
-    <description>Musk toured Fremont's newly converted Optimus Gen 3 production line on July 1 â€” built where Model S and X used to roll off the line, aimed eventually at a million robots a year. The harder problem is still the 10,000 unique parts nobody has mass-produced before.</description>
+    <description>Musk toured Fremont's newly converted Optimus Gen 3 production line on July 1 — built where Model S and X used to roll off the line, aimed eventually at a million robots a year. The harder problem is still the 10,000 unique parts nobody has mass-produced before.</description>
   </item>
 
   <item>
@@ -213,7 +213,7 @@
     <link>https://rtfclmgzn.com/#/article/ai-layoffs-data-contested-narrative</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-ai-layoffs-data-contested</guid>
     <pubDate>Fri, 17 Jul 2026 14:00:00 GMT</pubDate>
-    <description>Challenger, Gray &amp; Christmas counted nearly 102,000 job cuts citing AI in 2026. A Yale Budget Lab economist found no unusual spike in the same sectors â€” and thinks slower hiring, not mass firing, explains more of the story.</description>
+    <description>Challenger, Gray &amp; Christmas counted nearly 102,000 job cuts citing AI in 2026. A Yale Budget Lab economist found no unusual spike in the same sectors — and thinks slower hiring, not mass firing, explains more of the story.</description>
   </item>
 
   <item>
@@ -229,11 +229,11 @@
     <link>https://rtfclmgzn.com/#/article/nadella-reverse-information-paradox-warning</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-nadella-reverse-information-paradox</guid>
     <pubDate>Fri, 17 Jul 2026 05:15:00 GMT</pubDate>
-    <description>Satya Nadella says companies pay for AI twice â€” once in tokens, once in the proprietary knowledge every correction teaches the model. Microsoft invests in two of the labs he's warning about.</description>
+    <description>Satya Nadella says companies pay for AI twice — once in tokens, once in the proprietary knowledge every correction teaches the model. Microsoft invests in two of the labs he's warning about.</description>
   </item>
 
   <item>
-    <title>China now requires human sign-off before an AI agent can act â€” sorted into three tiers</title>
+    <title>China now requires human sign-off before an AI agent can act — sorted into three tiers</title>
     <link>https://rtfclmgzn.com/#/article/china-intelligent-agent-authorization-rules</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-china-agent-authorization-rules</guid>
     <pubDate>Fri, 17 Jul 2026 05:00:00 GMT</pubDate>
@@ -241,11 +241,11 @@
   </item>
 
   <item>
-    <title>Kimi K3 is the biggest open-weight model yet â€” and carries the biggest asterisk</title>
+    <title>Kimi K3 is the biggest open-weight model yet — and carries the biggest asterisk</title>
     <link>https://rtfclmgzn.com/#/article/moonshot-kimi-k3-open-model-launch</link>
     <guid isPermaLink="false">rtfclmgzn-newsroom-kimi-k3-open-model</guid>
     <pubDate>Thu, 16 Jul 2026 16:00:00 GMT</pubDate>
-    <description>Moonshot released a 2.8-trillion-parameter open-weight model with a million-token context. It claims wins over Opus 4.8 and GPT-5.5 on some tasks â€” on its own benchmarks, with weights not fully out until July 27. That gap is the story.</description>
+    <description>Moonshot released a 2.8-trillion-parameter open-weight model with a million-token context. It claims wins over Opus 4.8 and GPT-5.5 on some tasks — on its own benchmarks, with weights not fully out until July 27. That gap is the story.</description>
   </item>
 
 

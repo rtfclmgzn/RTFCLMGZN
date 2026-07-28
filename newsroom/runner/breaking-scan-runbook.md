@@ -62,6 +62,10 @@ Append one row to `web/data/usage-log-current.js` (follow its existing array-lit
 
 This entry is what surfaces on the Pulse/Control Room page's "Last activity on the floor" — it's the owner's visibility into the scan, so make the description genuinely informative, not a generic "scanned, nothing found."
 
-**Even on a no-op, bump every `?b=N` cache-buster in `web/index.html` by 1** before committing, exactly like a regular cycle would. `usage-log-current.js` and `buzz.js` are both loaded via cache-busted script tags — without the bump, a browser that already cached the old files at the same `?b=` URL won't see the new content, which defeats the entire point of this step. Then `git add` `web/index.html`, `web/data/usage-log-current.js`, and `web/data/buzz.js` (only if §3b actually changed it), run the publish-surface guard, commit, and push, same as always.
+**Even on a no-op, bump every `?b=N` cache-buster in `web/index.html` by 1** before committing, exactly like a regular cycle would. `usage-log-current.js` and `buzz.js` are both loaded via cache-busted script tags — without the bump, a browser that already cached the old files at the same `?b=` URL won't see the new content, which defeats the entire point of this step.
+
+**Use the Edit tool, or Python opened with `encoding="utf-8"` on both read and write, for that bump. Never PowerShell (`Get-Content`/`Set-Content`/`-replace`) or any tool that doesn't explicitly declare UTF-8 on both ends.** `index.html` has em dashes and curly quotes in its `<title>`, meta tags, and visible banner — a non-UTF-8-safe read/write silently mangles all of them into mojibake across the whole file, not just the lines you touched, with no error and a normal-looking diff. This has genuinely happened before, more than once, during exactly this routine no-op bump. Sanity-check before committing: `grep -c 'â€' web/index.html` should print `0`.
+
+Then `git add` `web/index.html`, `web/data/usage-log-current.js`, and `web/data/buzz.js` (only if §3b actually changed it), run the publish-surface guard, commit, and push, same as always.
 
 Then stop. Do not start a second scan.
