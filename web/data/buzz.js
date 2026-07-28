@@ -143,5 +143,11 @@ window.RTFC_BUZZ = [
     text:"On CNN, Nadella wouldn't deny an AI bubble — he set a GDP-growth condition for avoiding one. Microsoft's own CFO has already described a compute hierarchy that serves Copilot before paying Azure customers, even as the AI backlog hit $625B in January (+110% YoY) and the stock still fell 5%.",
     why:"The clearest public hedge yet from a hyperscaler CEO, paired with the company's own numbers showing the bottleneck he says he wants to avoid.",
     heat:78, topics:["microsoft","satya nadella","ai bubble","compute"],
-    url:"https://thenextweb.com/news/nadella-microsoft-compute-crunch-azure-customers-copilot-priority" }
+    url:"https://thenextweb.com/news/nadella-microsoft-compute-crunch-azure-customers-copilot-priority" },
+  { id:"bz-063", date:"2026-07-27",
+    source:{ name:"Dario Amodei", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic published its own **position on open-weights models**, with Amodei saying the company has \"never advocated for a ban\" and that open weights without dangerous capabilities help competition. He splits from Jensen Huang's letter specifically on the claim that broad access to capabilities helps defenders over attackers on bio risk, while backing chip export limits and mandatory safety testing.",
+    why:"The direct answer to why Anthropic is still missing from Huang's open-weights letter -- agreement on much of it, a named dispute on the defender/attacker claim, not blanket opposition.",
+    heat:71, topics:["anthropic","open weights","ai policy","dario amodei"],
+    url:"https://www.anthropic.com/news/position-open-weights-models" }
 ];
