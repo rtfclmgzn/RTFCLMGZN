@@ -89,7 +89,12 @@
       ],
       "text_space": "upper-left corridor haze",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-hf-forensic-timeline-open-secure-alliance",
+          "used_at": "2026-07-29"
+        }
+      ]
     },
     {
       "id": "art-004-delivery-robot-on-a-neon-street",
@@ -817,7 +822,12 @@
       ],
       "text_space": "upper-left wall",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-cxmt-shanghai-ipo-489-billion",
+          "used_at": "2026-07-29"
+        }
+      ]
     },
     {
       "id": "art-033-humanoids-on-the-car-line",
@@ -1506,7 +1516,12 @@
       ],
       "text_space": "dark upper-left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-pacing-the-frontier-letter",
+          "used_at": "2026-07-29"
+        }
+      ]
     },
     {
       "id": "art-060-cylindrical-process-chambers",
@@ -1700,7 +1715,7 @@
         "Compute",
         "Markets"
       ],
-      "text_space": "screens are busy \u2014 avoid center",
+      "text_space": "screens are busy — avoid center",
       "brand_visible": null,
       "used_in": [
         {
@@ -2054,7 +2069,7 @@
       "id": "art-081-twin-ai-chambers",
       "file": "futuristic twin AI chambers.png",
       "title": "Twin AI chambers",
-      "description": "Two glass cylinder machine-chambers \u2014 one cool blue, one warm amber \u2014 joined by a black core; tiny figures for scale.",
+      "description": "Two glass cylinder machine-chambers — one cool blue, one warm amber — joined by a black core; tiny figures for scale.",
       "subjects": [
         "twin-cores",
         "duality",
@@ -2153,7 +2168,7 @@
       "best_for_sections": [
         "Frontier"
       ],
-      "text_space": "none \u2014 text baked in",
+      "text_space": "none — text baked in",
       "brand_visible": "GPT-5.6 text baked into artwork",
       "used_in": []
     },
