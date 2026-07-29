@@ -191,5 +191,11 @@ window.RTFC_BUZZ = [
     text:"OpenAI launched **ChatGPT for Academic Researchers**, giving free access to its frontier models (starting with GPT-5.6 Sol Pro) to 10,000 researchers this summer, scaling to 100,000 by 2027 -- part of a stated $250M+ commitment through 2027. Early access is live at institutions including the Institute for Advanced Study and ENS Paris.",
     why:"A direct, dated commitment (10,000 now, 100,000 by 2027, $250M+) rather than a vague research-access pledge -- worth watching whether the rollout actually hits those numbers.",
     heat:61, topics:["openai","research","academia","products"],
-    url:"https://openai.com/index/chatgpt-for-academic-researchers/" }
+    url:"https://openai.com/index/chatgpt-for-academic-researchers/" },
+  { id:"bz-076", date:"2026-07-29",
+    source:{ name:"Cyera", handle:"Cyera", platform:"web", kind:"lab" },
+    text:"Israeli cybersecurity unicorn Cyera signed a letter of intent to acquire fellow Israeli startup Oasis Security for about **$1 billion** (~$700M cash, rest in Cyera stock), folding in Oasis's non-human-identity and AI-agent access-management tech. Cyera CEO Yotam Segev cited a nearly **500% surge in non-human identities** inside Fortune 500 companies over six months. Second-largest security deal of 2026 after Accenture/Dragos.",
+    why:"The OpenAI-agent-breaches-Hugging-Face story just spent two weeks proving AI agents are a live attack surface -- this is the market pricing that risk, with a nine-figure acquisition built specifically to secure the identities those agents use.",
+    heat:66, topics:["cybersecurity","ai agents","acquisitions","non-human identity"],
+    url:"https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/" }
 ];
