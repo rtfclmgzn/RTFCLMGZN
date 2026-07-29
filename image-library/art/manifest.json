@@ -380,7 +380,12 @@
       ],
       "text_space": "dark sky top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-moonshot-series-f-35-billion",
+          "used_at": "2026-07-29"
+        }
+      ]
     },
     {
       "id": "art-015-monorail-between-glass-towers",
@@ -1645,7 +1650,12 @@
       ],
       "text_space": "sky upper-left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-fcc-covered-list-humanoid-robots",
+          "used_at": "2026-07-29"
+        }
+      ]
     },
     {
       "id": "art-065-ar-visor-on-the-transit-walkway",
@@ -2220,7 +2230,12 @@
       ],
       "text_space": "storm sky top half",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-amd-meta-14-billion-datacenter-deals",
+          "used_at": "2026-07-29"
+        }
+      ]
     },
     {
       "id": "art-087-vast-semiconductor-fabrication-hall",

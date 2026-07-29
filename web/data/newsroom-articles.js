@@ -5978,5 +5978,462 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-29T21:45:00Z"
+  },
+  {
+    "slug": "fcc-covered-list-bans-chinese-humanoid-robots",
+    "title": "The FCC just barred new Chinese humanoid robots from the US market. China called it protectionism.",
+    "dek": "An interagency national-security determination, not a new law, is what actually did this: the FCC's Public Safety and Homeland Security Bureau added foreign-made \"advanced robotic devices\" and power inverters to its Covered List on July 28, blocking new import authorizations. The order isn't retroactive and it isn't absolute — there's an exemption path through the Department of War — but it lands on a market where two Chinese manufacturers alone shipped a third of the world's humanoid robots last year.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "FCC's Covered List now bars new-model authorizations for foreign advanced robotic devices and power inverters.",
+      "Legal basis: the 2019 Secure Networks Act, following DoW/DHS national-security determinations issued July 27.",
+      "Existing authorized models and past purchases are unaffected; a Department of War exemption path stays open.",
+      "China's Foreign Ministry and its US embassy both called the move protectionism and threatened unspecified countermeasures.",
+      "Caveat: neither named manufacturer, Unitree or AGIBOT, has said whether it will seek the exemption."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "On July 28, the FCC's Public Safety and Homeland Security Bureau added two new equipment categories to its Covered List: foreign-produced \"advanced robotic devices\" — mobile robots including humanoids and quadrupeds — and foreign-produced power inverters, the boxes that connect solar panels, batteries and data-center gear to the grid. The practical effect is narrow but real: new device models from covered manufacturers can no longer receive the FCC equipment authorization required before many electronics may be imported, advertised or sold in the United States.",
+        "citation_urls": [
+          "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt",
+          "https://roboticsandautomationnews.com/2026/07/29/fcc-updates-covered-list-to-include-foreign-produced-advanced-robotic-devices-and-power-inverters/103658/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The instrument, not the headline",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The legal basis is the Secure and Trusted Communications Networks Act of 2019, applied through FCC rules at 47 CFR §§1.50002, 1.50003 and 2.903(a) — the same statutory tool the agency has used against Huawei and DJI equipment before. It did not act on its own initiative: the determination originated with a White House-convened interagency body that includes the Department of War (DoW) and the Department of Homeland Security (DHS), which issued formal \"National Security Determinations\" on July 27 finding that foreign-produced advanced robotic devices and power inverters pose an \"unacceptable risk\" to US national security. The FCC's addition to the Covered List the next day is the administrative step that gives that determination legal teeth.",
+        "citation_urls": [
+          "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That distinction matters because the order is narrower than \"ban\" suggests. It is not retroactive: previously authorized robot and inverter models remain legal to import, sell and use, and past purchases are untouched. It applies only to new device models seeking authorization going forward. And it isn't absolute — manufacturers can apply for **Conditional Approval** by submitting the information DoW and DHS specify in guidance; an approval exempts a specific device or class of devices from the Covered List entirely. As of publication, neither of the two manufacturers named in reporting on the order, Unitree or AGIBOT, has said whether it intends to seek that exemption.",
+        "citation_urls": [
+          "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt",
+          "https://thenextweb.com/news/fcc-covered-list-foreign-robots-inverters-china"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The stated rationale tracks the same logic the FCC has applied to networked telecom gear: a device that can phone home is a device that can be turned off, or made to leak data, by whoever controls it remotely. The interagency determination's own language on inverters warns that \"remote connectivity introduces additional vulnerabilities which compound as inverter-based resources proliferate,\" including the risk of disruption or data exfiltration. On robots, it warns that \"networked capabilities of advanced robotic systems create extensive vulnerabilities,\" citing surveillance and the possibility that a compromised unit could be remotely commandeered.",
+        "citation_urls": [
+          "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Who this actually binds",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The order names no company — Covered List actions never do; they apply to categories of equipment. But two Chinese manufacturers dominate the category it targets. [Unitree](#/company/unitree) and AGIBOT each shipped more than 5,000 humanoid robots in 2025, out of roughly 15,000 units shipped worldwide, giving China an estimated ==85% share== of the global humanoid-robot market. Their US counterparts — Tesla's Optimus program and Figure AI — shipped a few hundred units or fewer over the same period. Unitree alone is reported to hold close to a fifth of the global market on its own and has a pending public listing; a US national-security designation targeting its largest addressable growth market is not a small complication for that story, whatever it decides about seeking a DoW exemption.",
+        "citation_urls": [
+          "https://www.adn.com/nation-world/2026/07/29/us-bans-foreign-made-humanoid-robots-targeting-china-over-national-security/",
+          "https://americanbazaaronline.com/2026/07/29/fcc-announces-ban-on-foreign-humanoid-robots-targeting-china-485439/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "donut",
+          "title": "Global humanoid-robot market share, 2025",
+          "unit": "%",
+          "source": "American Bazaar / industry shipment data cited in July 29, 2026 reporting on the FCC order",
+          "data": [
+            {
+              "label": "China (Unitree, AGIBOT, other manufacturers)",
+              "value": 85,
+              "hi": true
+            },
+            {
+              "label": "Rest of world (Tesla, Figure AI, others)",
+              "value": 15
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Beijing's response, and what remains contested",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "China's government answered through two channels the same day. Foreign Ministry spokesperson Mao Ning told reporters in Beijing: \"Protectionism does not make the U.S. more competitive, and it will only hurt the interests of U.S. companies and consumers.\" Separately, the Chinese embassy in Washington urged the US to \"stop smearing Chinese companies and threatening them with sanctions\" and said Beijing would \"take all necessary measures in response to any action that causes material harm to its interests.\" The two statements are consistent rather than conflicting — a ministry briefing and an embassy statement addressing the same action through different diplomatic channels — but neither has been followed, as of publication, by a specified countermeasure.",
+        "citation_urls": [
+          "https://www.adn.com/nation-world/2026/07/29/us-bans-foreign-made-humanoid-robots-targeting-china-over-national-security/",
+          "https://americanbazaaronline.com/2026/07/29/fcc-announces-ban-on-foreign-humanoid-robots-targeting-china-485439/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What the order leaves open is which agency draws the practical line. DoW alone vets advanced robotic devices for Conditional Approval; DoW and DHS jointly vet inverters. Neither agency has publicly indicated how it will treat a request, and the FCC's own materials are silent on a timeline for a first ruling. The order also arrives alongside a separate, unrelated debate over whether ==China itself== will tighten export controls on its own AI models and chip designs — a reminder that both governments are now actively gatekeeping AI-adjacent hardware in each direction, on different legal theories, in the same month.",
+        "citation_urls": [
+          "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch for the first Conditional Approval ruling.",
+        "text": "DoW alone decides robot exemptions; whichever request it rules on first will set the practical bar every other manufacturer works toward. No timeline has been published."
+      },
+      {
+        "label": "Watch whether Unitree or AGIBOT actually files for an exemption.",
+        "text": "Neither company has said publicly whether it will seek Conditional Approval rather than simply exit new US authorizations."
+      },
+      {
+        "label": "Watch for a named Chinese countermeasure.",
+        "text": "Beijing's language on both channels has been strong but unspecific; a concrete retaliatory step (an equipment restriction, an entity designation) would change the story's shape."
+      },
+      {
+        "label": "Watch Unitree's public-listing filings for how it discloses this risk.",
+        "text": "A national-security designation targeting a company's largest addressable export market is a material disclosure question for any listing prospectus."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "FCC — DA-26-786, Covered List addition of foreign-produced power inverters and advanced robotic devices",
+        "url": "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt"
+      },
+      {
+        "label": "Robotics & Automation News — FCC updates covered list to include foreign-produced advanced robotic devices and power inverters",
+        "url": "https://roboticsandautomationnews.com/2026/07/29/fcc-updates-covered-list-to-include-foreign-produced-advanced-robotic-devices-and-power-inverters/103658/"
+      },
+      {
+        "label": "TheNextWeb — FCC bans foreign robots and inverters over China fears",
+        "url": "https://thenextweb.com/news/fcc-covered-list-foreign-robots-inverters-china"
+      },
+      {
+        "label": "Anchorage Daily News (AP) — US bans foreign-made humanoid robots, targeting China over national security",
+        "url": "https://www.adn.com/nation-world/2026/07/29/us-bans-foreign-made-humanoid-robots-targeting-china-over-national-security/"
+      },
+      {
+        "label": "American Bazaar — FCC announces ban on foreign humanoid robots, targeting China",
+        "url": "https://americanbazaaronline.com/2026/07/29/fcc-announces-ban-on-foreign-humanoid-robots-targeting-china-485439/"
+      }
+    ],
+    "id": "newsroom-fcc-covered-list-humanoid-robots",
+    "image": "assets/img/newsroom/newsroom-fcc-covered-list-humanoid-robots.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-29T22:38:14Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior article covered the FCC Covered List action -- genuinely new, same-day story (order issued July 28, most reporting published July 29). Selected over a plain wire recap because the primary FCC docket document (DA-26-786) was directly fetchable and let the piece separate the legal instrument (Covered List addition under the 2019 Secure Networks Act) from the underlying interagency national-security determination, plus reconcile two distinct Chinese government response channels."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Legal basis, effective date, exemption mechanism, and both risk-rationale quotes verified directly against the FCC's own docket text (docs.fcc.gov/public/attachments/DA-26-786A1.txt). Non-retroactivity and DoW-only-vets-robots / DoW+DHS-vets-inverters distinction confirmed against the same primary document. Market-share and shipment figures (85% China share, Unitree/AGIBOT 5,000+ each of ~15,000 global units) cross-checked between Anchorage Daily News' AP wire copy and American Bazaar's independent write-up -- both matched. Mao Ning's Foreign Ministry quote and the separate Chinese embassy statement verified as two distinct, non-contradictory channels rather than presented as if one confirmed the other."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 4 (negative/accusatory claims about named parties) considered for both the US risk rationale and China's protectionism framing. Remediated by attributing every claim to its issuing government body verbatim -- the US risk determination is quoted from the FCC's own docket, China's response is quoted from its own Foreign Ministry and embassy -- with no editorial adoption of either government's framing as this outlet's own. Unitree and AGIBOT are named only for sourced, factual shipment/market-share data, not accused of wrongdoing. Trigger 6 (unverifiable central claim) addressed by sourcing the legal mechanics entirely to the FCC's own primary document rather than secondary paraphrase. No health, financial-advice, legal-proceeding, or unverified-quote triggers apply. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-29T22:38:14Z"
+  },
+  {
+    "slug": "amd-meta-14-billion-data-center-financing-wave",
+    "title": "AMD and Meta each signed a $14 billion data-center deal this week. The $14 billion means something different each time.",
+    "dek": "Two unrelated deals landed within a day of each other: AMD leased 530 megawatts from Core Scientific with an option on roughly 2,455 MW more, and Meta handed BlackRock 80% ownership of a 1-gigawatt campus in El Paso. Both are described as $14 billion deals. One number is 15 years of contracted lease revenue for a landlord; the other is a total construction budget. Neither is a check anyone is writing today.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "AMD leased 530 MW across five Core Scientific sites, plus an option on ~2,455 MW more through 2028.",
+      "Meta and BlackRock formed an 80/20 joint venture funding a $14B, 1 GW campus in El Paso, Texas.",
+      "Both deals are reported as \"$14 billion,\" but one is lease revenue and the other is construction cost.",
+      "AMD also got a warrant for up to 30 million Core Scientific shares at $23.47 a share.",
+      "Caveat: full capacity on both deals lands in 2028 -- the power and construction aren't built yet."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The important change this week is not that two more AI companies signed big data-center deals -- that happens most weeks now. It's that AMD and Meta separately arrived at the same headline number, $14 billion, through completely different financial mechanics, on completely different timelines, for completely different reasons. Read past the headline and the two deals barely resemble each other.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "The AMD deal: a chipmaker becomes a tenant, and a shareholder",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "AMD signed 15-year leases (with three five-year renewal options) for 530 MW of data-center capacity across five Core Scientific sites: 377 MW directly to AMD in Pecos and Hunt County, Texas, and Muskogee, Oklahoma; 152 MW to an AMD-affiliated neocloud at Auburn, Alabama, and Dalton, Georgia. Delivery is staggered -- Pecos and Auburn come online in the first half of 2027, Muskogee and Dalton in the second half, Hunt County by the first half of 2028, with the full 530 MW live by the end of 2028. AMD also holds a reservation right on up to an additional **1,925 MW** at the same sites through December 28, 2028, which is where reporting's \"up to 2.5 GW\" framing comes from -- that capacity is optioned, not contracted.",
+        "citation_urls": [
+          "https://www.stocktitan.net/sec-filings/CORZ/8-k-core-scientific-inc-tx-reports-material-event-d48e9f43cce5.html",
+          "https://www.datacenterdynamics.com/en/news/core-scientific-secures-amd-as-customer-at-five-sites/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "As consideration, AMD received a warrant for up to 30 million Core Scientific shares at a $23.47 strike price, with roughly 6.5 million shares vesting immediately at signing. The $14 billion figure attached to this deal, per Core Scientific's own management presentation, is potential base contracted lease revenue over the full 15-year term -- the landlord's expected topline, not money AMD is spending upfront.",
+        "citation_urls": [
+          "https://www.stocktitan.net/sec-filings/CORZ/8-k-core-scientific-inc-tx-reports-material-event-d48e9f43cce5.html",
+          "https://www.techtimes.com/articles/321817/20260728/amd-secures-ai-data-center-capacity-core-scientific-14b-power-play.htm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The Meta deal: an 80/20 joint venture, not a lease",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Meta and BlackRock's $14 billion is a different kind of number: the total projected development cost of a 1-gigawatt AI-optimized campus in El Paso, structured as a joint venture in which BlackRock-managed funds own **80%** and Meta retains **20%**. Meta contributes roughly $2.3 billion in land and construction-in-progress assets; BlackRock puts in about $4.9 billion in cash, partly backed by $12.5 billion in debt financing raised for the project. Meta then leases capacity back from the venture under an initial four-year term with four additional four-year extension options -- a structure that can run 20 years. The campus is expected to support more than 4,000 construction jobs at peak and roughly 300 permanent staff once operating, with capacity coming online in 2028.",
+        "citation_urls": [
+          "https://www.prnewswire.com/news-releases/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso-302836040.html",
+          "https://www.forbes.com/sites/maryroeloffs/2026/07/28/blackrock-will-own-80-of-metas-massive-new-ai-data-center-in-el-paso/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "AI data-center capacity contracted this week",
+          "unit": "MW",
+          "source": "Core Scientific 8-K filing (July 28, 2026) and PRNewswire / Meta-BlackRock joint venture release (July 28, 2026)",
+          "data": [
+            {
+              "label": "AMD-Core Scientific, contracted (live by 2028)",
+              "value": 530
+            },
+            {
+              "label": "AMD-Core Scientific, with reservation option (through Dec 2028)",
+              "value": 2455,
+              "hi": true
+            },
+            {
+              "label": "Meta-BlackRock, El Paso campus (live 2028)",
+              "value": 1000
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Same $14 billion, different denominator",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Divide each headline number by what it actually buys and the two deals stop looking like variations on a theme. Meta's $14 billion is a construction budget for 1,000 MW: about **$14 million per megawatt** of build cost, financed mostly by BlackRock's balance sheet rather than Meta's. AMD's $14 billion is Core Scientific's own estimate of what it can collect in rent across 530 MW over 15 years -- worked out, at roughly $1.76 million per megawatt per year, to a landlord's revenue forecast, not a construction line item. One number describes what it costs to build the building. The other describes what the building might earn once it exists. Neither is a number AMD or Meta is writing a check for today.",
+        "citation_urls": [
+          "https://www.stocktitan.net/sec-filings/CORZ/8-k-core-scientific-inc-tx-reports-material-event-d48e9f43cce5.html",
+          "https://www.prnewswire.com/news-releases/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso-302836040.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What the two deals do share is a financing pattern that keeps recurring across this build-out: neither AMD nor Meta is fully funding or owning the facility it needs. AMD is a tenant with an equity kicker; Meta is a 20% owner leasing back its own campus from the majority holder that financed it. It's the same asset-light logic behind the [up to $250 billion guarantee Nvidia is reportedly weighing for OpenAI's Ohio data center](#/article/nvidia-openai-250-billion-ohio-data-center-financing) -- compute demand has outrun any single company's appetite to carry gigawatt-scale construction on its own balance sheet, so the infrastructure gets financed by whoever specializes in financing infrastructure, and the AI company signs a long lease instead.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "The actual constraint hasn't moved",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Neither deal changes what's actually scarce. Full delivery on both lands in 2028 -- these are power and construction timelines, not chip-availability ones. AMD is reserving capacity years before it needs to fill racks with Instinct GPUs; Meta is locking in a site and a grid interconnection years before the campus can run a single training job. The bottleneck this quarter is still power and buildable land, not silicon -- which is exactly why the deals are structured as long-dated leases and joint ventures rather than purchase orders.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch whether AMD exercises its 1,925 MW reservation option.",
+        "text": "The right expires December 28, 2028. Exercising it would be the clearest signal yet of how much capacity AMD thinks it needs beyond its already-contracted 530 MW."
+      },
+      {
+        "label": "Watch how Meta accounts for the El Paso JV on its balance sheet.",
+        "text": "Whether Meta consolidates the 20%-owned venture or uses equity-method accounting determines whether the $12.5 billion in project debt shows up as Meta's own leverage."
+      },
+      {
+        "label": "A capacity-planning number worth keeping: cost or rent per megawatt, not headline deal size.",
+        "text": "Meta's ~$14M/MW construction cost and Core Scientific's ~$1.76M/MW-year lease estimate are the two figures that actually compare across future deals -- the topline dollar amount doesn't."
+      }
+    ],
+    "applyType": "numbers",
+    "sources": [
+      {
+        "label": "StockTitan / SEC 8-K filing -- Core Scientific reports AMD data-center lease agreements",
+        "url": "https://www.stocktitan.net/sec-filings/CORZ/8-k-core-scientific-inc-tx-reports-material-event-d48e9f43cce5.html"
+      },
+      {
+        "label": "Data Center Dynamics -- Core Scientific secures AMD as customer at five sites",
+        "url": "https://www.datacenterdynamics.com/en/news/core-scientific-secures-amd-as-customer-at-five-sites/"
+      },
+      {
+        "label": "Tech Times -- AMD secures AI data center capacity from Core Scientific in $14B power play",
+        "url": "https://www.techtimes.com/articles/321817/20260728/amd-secures-ai-data-center-capacity-core-scientific-14b-power-play.htm"
+      },
+      {
+        "label": "PR Newswire -- Meta announces new strategic venture with BlackRock to develop data center in El Paso",
+        "url": "https://www.prnewswire.com/news-releases/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso-302836040.html"
+      },
+      {
+        "label": "Forbes -- BlackRock will own 80% of Meta's massive new AI data center in El Paso",
+        "url": "https://www.forbes.com/sites/maryroeloffs/2026/07/28/blackrock-will-own-80-of-metas-massive-new-ai-data-center-in-el-paso/"
+      }
+    ],
+    "id": "newsroom-amd-meta-14-billion-datacenter-deals",
+    "image": "assets/img/newsroom/newsroom-amd-meta-14-billion-datacenter-deals.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-29T22:49:31Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed neither the AMD-Core Scientific lease nor the Meta-BlackRock El Paso joint venture had prior coverage in newsroom-articles.js. Selected to run as one synthesis rather than two briefs because both deals independently priced out to the same $14B headline figure within a day of each other, giving a genuine analytical throughline (same number, different financial meaning) beyond just stacking two announcements."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "AMD-Core Scientific lease terms (377 MW direct + 152 MW neocloud = 530 MW, 15-year/three-5-year-option structure, staggered 2027-2028 delivery, 1,925 MW reservation right through Dec 28 2028, 30M-share warrant at $23.47) verified against the Core Scientific 8-K filing text and cross-checked against Data Center Dynamics' and Tech Times' independent reporting. Meta-BlackRock JV terms (80/20 ownership, $2.3B Meta contribution, $4.9B BlackRock cash, $12.5B debt financing, 1 GW, 2028 online) verified against Meta's own PR Newswire release and cross-checked against Forbes. The $14M/MW and $1.76M/MW-year figures are original calculations performed on these sourced numbers, not claims from either source -- flagged in the body as a computed comparison."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health, financial-advice, legal-proceeding, accusatory-claim, unverified-quote, or unverifiable-central-claim triggers apply -- both deals are sourced to a primary SEC filing and a primary company press release, and all figures are attributed to their issuing party rather than adopted as this outlet's own valuation claim. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-29T22:49:31Z"
+  },
+  {
+    "slug": "moonshot-ai-series-f-35-billion-close",
+    "title": "Moonshot AI closed its round at $35 billion. It's already pitching a separate one at $50 billion.",
+    "dek": "The Series F priced above target -- $3.5 billion raised at a $35 billion post-money valuation, led by the same state investment fund that backs DeepSeek -- on revenue that tripled to $300 million in annualized recurring revenue over four months. A follow-on round at a $50 billion pre-money valuation is already being pitched to new investors. That number hasn't closed.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "brief",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "Moonshot AI closed a $3.5B Series F at a $35B post-money valuation, above its original $1-2B target.",
+      "Lead investor: China's National AI Industry Investment Fund, which also backs DeepSeek.",
+      "Annualized recurring revenue tripled from $100M in March to $300M in June, over 70% from API licensing.",
+      "Moonshot is now separately pitching new investors on a follow-on round at a $50B pre-money valuation.",
+      "Caveat: the $50B figure is an active-talks ask, not a closed price like the $35B round."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Moonshot AI closed an oversubscribed Series F: **$3.5 billion** raised at a **$35 billion** post-money valuation, well above the $1-2 billion the Beijing-based lab had originally targeted. The lead investor was China's National AI Industry Investment Fund, the same state vehicle that has backed DeepSeek, giving the round a direct government-capital anchor rather than a purely private-market one.",
+        "citation_urls": [
+          "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value",
+          "https://seekingalpha.com/news/4620257-moonshot-ai-raises-35b-in-funding-round-valuation-hits-35b"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The number the round was priced against is revenue growth, not model buzz alone: Moonshot's annualized recurring revenue went from $100 million in March to $200 million in April to **$300 million in June** -- a near-tripling in roughly four months -- with API licensing accounting for more than 70% of the total, on the back of the [Kimi K3](#/article/kimi-k3-open-weights-live-download) model's release.",
+        "citation_urls": [
+          "https://www.tipranks.com/news/moonshot-ai-shatters-funding-target-hits-35-billion-on-kimi-k3-buzz",
+          "https://www.techtimes.com/articles/322091/20260729/moonshot-ai-closes-35b-round-its-open-weights-come-china-data-risk.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That $35 billion is not the number to watch next. [Moonshot](#/company/moonshot) is separately approaching new investors about a follow-on round at a **$50 billion pre-money valuation**, aiming to close a final private raise before a Hong Kong IPO it wants to complete as soon as this year. The two figures describe different things: $35 billion is what a completed, oversubscribed round actually priced at; $50 billion is an ask in talks that haven't closed. At $35 billion on $300 million of run-rate revenue, the multiple is already around 117x ARR -- a follow-on priced meaningfully higher would ask investors to extend that multiple further on the strength of continued triple-digit revenue growth, not a number any filing has yet confirmed.",
+        "citation_urls": [
+          "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch whether the $50B follow-on actually closes, and at what number.",
+        "text": "Pre-money asks in active talks and closed prices have diverged before in this cycle -- the $35B Series F itself closed above its original $1-2B target."
+      },
+      {
+        "label": "Watch Moonshot's next disclosed ARR figure.",
+        "text": "The March-to-June tripling is the growth rate the $35B valuation was priced against; a deceleration would be the clearest sign the follow-on ask is getting ahead of the business."
+      },
+      {
+        "label": "Watch for a Hong Kong IPO filing.",
+        "text": "Moonshot has said it wants to complete one \"as soon as this year\" -- a filing would be the first audited look at the revenue figures currently sourced only to reporting."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Bloomberg -- China's Moonshot AI passes funding goal to hit $35 billion value",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value"
+      },
+      {
+        "label": "Seeking Alpha -- Moonshot AI raises $3.5B in funding round, valuation hits $35B",
+        "url": "https://seekingalpha.com/news/4620257-moonshot-ai-raises-35b-in-funding-round-valuation-hits-35b"
+      },
+      {
+        "label": "TipRanks -- Moonshot AI shatters funding target, hits $35 billion on Kimi K3 buzz",
+        "url": "https://www.tipranks.com/news/moonshot-ai-shatters-funding-target-hits-35-billion-on-kimi-k3-buzz"
+      },
+      {
+        "label": "Tech Times -- Moonshot AI closes $3.5B round, but its open weights come with China data risk",
+        "url": "https://www.techtimes.com/articles/322091/20260729/moonshot-ai-closes-35b-round-its-open-weights-come-china-data-risk.htm"
+      }
+    ],
+    "id": "newsroom-moonshot-series-f-35-billion",
+    "image": "assets/img/newsroom/newsroom-moonshot-series-f-35-billion.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-29T22:55:03Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed the newsroom's prior Moonshot coverage (07-24) was about a $50B pre-IPO valuation then still in negotiation. This is a genuine new development, not a re-cover: the Series F actually closed at a different, lower figure ($35B) than that ongoing $50B ask, which itself remains open as a separate follow-on round. Kept as a brief rather than stretched to synthesis -- one clear claim (round closed, at what price, on what revenue) with real but limited supporting depth, not padded to hit a longer tier."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "$3.5B raised / $35B post-money figure, lead investor identity (National AI Industry Investment Fund), and ARR trajectory ($100M March / $200M April / $300M June, 70%+ API licensing) cross-checked across Bloomberg, Seeking Alpha, TipRanks and Tech Times -- all four agreed. The 117x ARR multiple is an original calculation on these sourced figures, flagged as such rather than presented as a reported number. The distinct, still-open $50B pre-money follow-on ask (vs. the closed $35B) verified against Bloomberg's own reporting and explicitly kept separate from the closed figure rather than conflated."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 2 (financial/valuation claims) fires -- disclaimer set to not-financial-advice; no buy/sell/hold framing used, and the ARR-multiple observation is stated as a described fact (\"the multiple is already around 117x\") rather than a recommendation. No health, legal-proceeding, accusatory-claim, or unverified-quote triggers apply. Trigger 6 considered for the follow-on $50B figure specifically -- remediated by stating plainly that it is an unclosed ask in talks, not a confirmed price, both in the body and in the apply block."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-29T22:55:03Z"
   }
 ];
