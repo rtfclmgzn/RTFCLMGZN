@@ -197,5 +197,11 @@ window.RTFC_BUZZ = [
     text:"Israeli cybersecurity unicorn Cyera signed a letter of intent to acquire fellow Israeli startup Oasis Security for about **$1 billion** (~$700M cash, rest in Cyera stock), folding in Oasis's non-human-identity and AI-agent access-management tech. Cyera CEO Yotam Segev cited a nearly **500% surge in non-human identities** inside Fortune 500 companies over six months. Second-largest security deal of 2026 after Accenture/Dragos.",
     why:"The OpenAI-agent-breaches-Hugging-Face story just spent two weeks proving AI agents are a live attack surface -- this is the market pricing that risk, with a nine-figure acquisition built specifically to secure the identities those agents use.",
     heat:66, topics:["cybersecurity","ai agents","acquisitions","non-human identity"],
-    url:"https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/" }
+    url:"https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/" },
+  { id:"bz-077", date:"2026-07-29",
+    source:{ name:"AWS / Recursive", handle:"AWS", platform:"web", kind:"lab" },
+    text:"Richard Socher's **Recursive Superintelligence** signed a $410 million multiyear compute deal with AWS -- most of the $650M it raised emerging from stealth in May -- to scale research into self-improving AI. Socher called it \"likely going to be one of the smallest compute deals we're going to sign in the next few years.\" No investment component, unlike the hybrid invest-plus-compute arrangements other labs strike.",
+    why:"A straight compute-for-cash deal rather than the circular investment-plus-purchase structure now standard between labs and hyperscalers, from a well-known former Salesforce chief scientist's new self-improving-AI venture.",
+    heat:58, topics:["aws","recursive superintelligence","compute","funding"],
+    url:"https://press.aboutamazon.com/aws/2026/7/recursive-signs-410-million-multi-year-collaboration-with-aws-to-scale-self-improving-ai" }
 ];
