@@ -22,6 +22,30 @@ def load_schema(name: str) -> dict[str, Any]:
 
 
 def validate(value: Any, schema: dict[str, Any], path: str = "$") -> None:
+    # anyOf / oneOf: the value must satisfy at least one branch. Needed because a
+    # body block is either prose (type p/h2/quote, carrying `text` and
+    # `citation_urls`) or a visual component (type chart/compare/..., carrying a
+    # nested config object and deliberately NO `text` -- see
+    # agents/_shared/visual-components.md for why the absence of `text` is
+    # load-bearing). One flat object schema cannot express that without making
+    # `text` optional for prose too, which would let an uncited paragraph through.
+    # Both keywords behave identically here: at least one branch must pass. True
+    # oneOf exclusivity is not enforced, which is safe because the branches are
+    # disjoint by their own `type` enums.
+    branches = schema.get("anyOf") or schema.get("oneOf")
+    if branches:
+        failures: list[str] = []
+        for index, branch in enumerate(branches):
+            try:
+                validate(value, branch, path)
+                break
+            except SchemaValidationError as exc:
+                failures.append(f"branch {index}: {exc}")
+        else:
+            raise SchemaValidationError(
+                f"{path} did not match any allowed shape ({'; '.join(failures)})"
+            )
+
     expected = schema.get("type")
     if expected == "object":
         if not isinstance(value, dict):

@@ -227,6 +227,28 @@ def _score_sources(evidence: dict, claim_map: dict) -> Category:
     )
 
 
+# The visual component system (agents/_shared/visual-components.md). A component
+# block is identified by its `type` and, unlike prose, deliberately carries no
+# top-level `text` -- which is exactly why it can be counted here without
+# disturbing _word_count() or the derived format tier.
+COMPONENT_TYPES = (
+    "chart", "compare", "timeline", "entity", "scorecard", "ledger",
+    "beforeafter", "spectrum", "flow", "keyfacts", "stakes", "sourcecheck", "stat",
+)
+# Components that carry data rather than framing. A synthesis owes at least one
+# of these; framing-only components don't fully discharge the requirement.
+DATA_COMPONENT_TYPES = ("chart", "compare", "ledger", "timeline", "spectrum")
+# Floors by format, mirroring the runbook's §3b table.
+COMPONENT_FLOOR = {"brief": 1, "synthesis": 2, "research": 4, "guide": 2}
+
+
+def _components(article: dict) -> list[dict]:
+    return [
+        b for b in _as_list(article.get("body"))
+        if isinstance(b, dict) and b.get("type") in COMPONENT_TYPES
+    ]
+
+
 def _score_insight(draft: dict) -> Category:
     article = draft.get("article") if isinstance(draft.get("article"), dict) else {}
     tldr = _as_list(article.get("tldr"))
@@ -245,12 +267,27 @@ def _score_insight(draft: dict) -> Category:
     limits = any(k in text for k in ("not established", "not confirm", "unverified", "remains unclear", "not yet"))
     structured = len(headings) >= 2
 
+    # Visual layer. Scored under insight rather than production because on this
+    # beat a comparison table or a scoped-numbers ledger IS the analytical work,
+    # not presentation of it: it is the specific thing a wire rewrite of the same
+    # sources cannot produce. Credit is proportional to the format's floor, and
+    # once a piece is synthesis-length it must include a data-carrying component,
+    # not just framing boxes.
+    comps = _components(article)
+    fmt = str(article.get("format") or "brief").lower()
+    floor = COMPONENT_FLOOR.get(fmt, 1)
+    has_data_comp = any(c.get("type") in DATA_COMPONENT_TYPES for c in comps)
+    visual = min(1.0, len(comps) / floor) if floor else 1.0
+    if floor >= 2 and not has_data_comp:
+        visual *= 0.5
+
     score = (
-        0.25 * (1.0 if tldr_ok else 0.4 if tldr else 0.0)
-        + 0.15 * (1.0 if caveat else 0.0)
-        + 0.25 * (1.0 if has_apply else 0.0)
-        + 0.20 * (1.0 if limits else 0.0)
-        + 0.15 * (1.0 if structured else 0.5 if headings else 0.0)
+        0.22 * (1.0 if tldr_ok else 0.4 if tldr else 0.0)
+        + 0.13 * (1.0 if caveat else 0.0)
+        + 0.22 * (1.0 if has_apply else 0.0)
+        + 0.18 * (1.0 if limits else 0.0)
+        + 0.10 * (1.0 if structured else 0.5 if headings else 0.0)
+        + 0.15 * visual
     ) * 10
     return Category(
         "insight",
@@ -263,6 +300,11 @@ def _score_insight(draft: dict) -> Category:
             "has_takeaway_block": has_apply,
             "states_limitations": limits,
             "section_headings": len(headings),
+            "visual_components": len(comps),
+            "visual_component_floor": floor,
+            "visual_component_types": sorted({str(c.get("type")) for c in comps}),
+            "has_data_component": has_data_comp,
+            "meets_visual_floor": len(comps) >= floor,
         },
     )
 

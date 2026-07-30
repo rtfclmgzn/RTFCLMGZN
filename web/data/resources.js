@@ -3,8 +3,8 @@
 // Handles/URLs are well-known as of 2026-07; verify before public launch.
 window.RTFC_RESOURCES = [
   {
-    title:"The Labs & Their Models",
-    desc:"Official accounts of the companies and models shaping the field — follow the primary sources, not just the commentary.",
+    title:"Follow the primary sources",
+    desc:"Official accounts of the companies shaping the field — go straight to the labs, not just the commentary.",
     items:[
       { name:"Anthropic / Claude", desc:"Maker of the Claude family (Fable, Opus, Sonnet, Haiku).",
         links:[{label:"Site",url:"https://www.anthropic.com"},{label:"X",url:"https://x.com/AnthropicAI"},{label:"Claude on X",url:"https://x.com/claudeai"},{label:"YouTube",url:"https://www.youtube.com/@anthropic-ai"},{label:"LinkedIn",url:"https://www.linkedin.com/company/anthropicresearch"}] },

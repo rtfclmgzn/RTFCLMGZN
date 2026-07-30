@@ -136,11 +136,31 @@
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
   function slugify(s){ return String(s).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"").slice(0,40); }
   // Magazine rich text: **bold** · ==highlight== · ++accent++ (escaped first, so it's safe)
+  /* Inline [label](url) links.
+     These were being written into article bodies by the pipeline for a long time
+     -- the cycle runbook §3a explicitly REQUIRES cross-links to company dossiers,
+     the Scoreboard and the Dictionary "using an actual inline link, not a
+     name-drop" -- but fmt() never converted them, so every one of them shipped to
+     the live site as literal markdown in the middle of a sentence. Handled here so
+     the fix lands everywhere fmt() is already used (body prose, quotes, component
+     labels, magazine pages) rather than in one call site.
+
+     Only two URL shapes are accepted: an in-app hash route (#/...) and an absolute
+     http(s) URL. Anything else -- javascript:, data:, a bare word -- is left as the
+     original literal text rather than turned into a link, because article data is
+     machine-written and a permissive URL rule here would be an injection surface.
+     Runs on already-escaped text, so &amp; in a query string stays correct. */
+  function mdLinks(s){
+    return s.replace(/\[([^\]\n]+)\]\((#\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, function(all,label,url){
+      var ext=url.charAt(0)!=="#";
+      return '<a class="inl" href="'+url+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+label+'</a>';
+    });
+  }
   function fmt(s){
-    return esc(s)
+    return mdLinks(esc(s)
       .replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')
       .replace(/==(.+?)==/g,'<mark class="mk">$1</mark>')
-      .replace(/\+\+(.+?)\+\+/g,'<span class="acc">$1</span>');
+      .replace(/\+\+(.+?)\+\+/g,'<span class="acc">$1</span>'));
   }
   function initials(name){ return name.split(" ").map(function(w){return w[0];}).join("").replace(/[^A-Za-z]/g,"").slice(0,2).toUpperCase(); }
   function hexRgba(hex,a){
@@ -277,6 +297,30 @@
     return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Browse by desk</div>'+
       '<div class="desk-browse">'+cells+'</div>';
   }
+  // "Browse by player" — readers follow companies, not desks. Counts computed
+  // live from every article/guide matching each company's coverage regex (the
+  // same matcher the dossier pages use), ordered by coverage volume so the
+  // main players float to the front automatically as the news shifts.
+  function companyBrowseHTML(){
+    var pool=ARTICLES.concat(GUIDES);
+    var ranked=COMPANIES.map(function(c){
+      var n=0;
+      pool.forEach(function(a){
+        var hay=a.title+" "+(a.dek||"");
+        if(c.re.test(hay)) n++;
+      });
+      return {c:c,n:n};
+    }).filter(function(x){ return x.n>0; })
+      .sort(function(a,b){ return b.n-a.n; })
+      .slice(0,12);
+    if(!ranked.length) return "";
+    return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Browse by player</div>'+
+      '<div class="player-browse">'+ranked.map(function(x){
+        return '<a class="player-cell" href="#/company/'+x.c.key+'" style="--bc:'+brandColor(x.c.key)+'">'+
+          brandMark(x.c.key,x.c.name)+'<b>'+esc(x.c.name)+'</b><em>'+x.n+'</em></a>';
+      }).join("")+
+      '<a class="player-cell player-all" href="#/companies"><b>All companies</b><em>→</em></a></div>';
+  }
   function viewHome(){
     // The homepage lead is the newest article -- UNLESS a breaking story is
     // still within its 24h headliner window (see activeBreakingHeadliner
@@ -306,7 +350,7 @@
     var LATEST=9, MORE=6;
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Latest across the desk</div>';
     h+='<div class="grid">'+grid.slice(0,LATEST).map(cardHTML).join("")+'</div>';
-    h+=deskBrowseHTML();
+    h+=companyBrowseHTML(); // replaced deskBrowseHTML() — readers follow companies, not desks; desks remain reachable via nav + section pages
     var more=grid.slice(LATEST, LATEST+MORE);
     if(more.length){
       h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>More from the newsroom</div>';
@@ -541,8 +585,405 @@
       function(m){ return '<span class="fig">'+m+'</span>'; });
     return s;
   }
+
+  /* ==========================================================================
+     THE ENTITY LAYER — zero-cost provenance annotation.
+
+     First mention of any registered model or lab in an article's prose gets a
+     hairline-underlined chip. Hover (or focus, for keyboard/touch) reveals who
+     makes it, who owns THEM, whether the weights are open, and its current
+     independent score if the Scoreboard has one. Nothing is generated per
+     article: this runs at render time against web/data/entities.js, so the
+     entire back catalogue carries the layer and every future article inherits
+     it for free, at zero tokens.
+
+     Design constraints that matter:
+       - FIRST MENTION ONLY, per article. Annotating every "OpenAI" in a
+         1,200-word piece is noise, not information.
+       - Runs AFTER fmt()/esc(), so it must never match inside an HTML tag or
+         nest inside an existing chip. Guarded by splitting on tags first.
+       - Silent on miss. An unregistered model renders as plain text exactly as
+         it does today, so the layer can never break a page by omission.
+       - An `org` already introduced by one of its own models does not get a
+         second chip. One provenance nudge per entity per article.
+     ========================================================================== */
+  var ENT = window.RTFC_ENTITIES || {models:[],orgs:[]};
+  function entOrg(key){
+    var o=ENT.orgs||[];
+    for(var i=0;i<o.length;i++) if(o[i].key===key) return o[i];
+    return null;
+  }
+  // Live independent score for a model, read out of the Scoreboard so there is
+  // exactly one place any number is maintained. Highest scored mode wins.
+  function entScore(name){
+    var rows=(window.RTFC_SCOREBOARD&&window.RTFC_SCOREBOARD.rows)||[], best=null;
+    for(var i=0;i<rows.length;i++){
+      if(rows[i].model===name && typeof rows[i].score==="number"){
+        if(!best || rows[i].score>best.score) best=rows[i];
+      }
+    }
+    return best;
+  }
+  var ACCESS_LABEL={ "closed":"Closed weights · API only", "open-weights":"Open weights",
+    "partial":"Partially open", "unknown":"Access unclear", "n/a":"" };
+  function entRow(k,v){ return '<span class="ent-row"><span>'+esc(k)+'</span><b>'+v+'</b></span>'; }
+  function entCardModel(m){
+    var org=entOrg(m.makerKey), sc=entScore(m.name), rows=[];
+    rows.push(entRow("Made by",esc(m.maker)));
+    if(org){
+      if(org.parent) rows.push(entRow("Owned by",esc(org.parent)));
+      // An entry seeded from general knowledge rather than a cited primary source
+      // does not get to assert its structure line across 46 published articles.
+      // Verify it, drop needsVerify, and it starts rendering.
+      if(org.structure && !org.needsVerify) rows.push(entRow("Structure",esc(org.structure)));
+      if(org.backers && !org.needsVerify) rows.push(entRow("Backed by",esc(org.backers)));
+      if(org.hq) rows.push(entRow("Based",esc(org.hq)));
+    }
+    var al=ACCESS_LABEL[m.access||"unknown"];
+    if(al) rows.push(entRow("Access",esc(al)));
+    if(sc) rows.push(entRow("Index score",sc.score+' <a href="#/scoreboard">Scoreboard&nbsp;↗</a>'));
+    var foot=(org&&org.houseNote)?'<span class="ent-house">'+esc(org.houseNote)+'</span>':'';
+    var link=org?'<a class="ent-link" href="#/company/'+esc(org.key)+'">Dossier: '+esc(org.name)+'&nbsp;↗</a>':'';
+    return '<span class="ent-card"><span class="ent-h">'+esc(m.name)+
+      (m.kind?'<i>'+esc(m.kind)+'</i>':'')+'</span>'+rows.join("")+foot+link+'</span>';
+  }
+  function entCardOrg(org){
+    var rows=[];
+    if(org.parent) rows.push(entRow("Owned by",esc(org.parent)));
+    if(org.structure && !org.needsVerify) rows.push(entRow("Structure",esc(org.structure)));
+    if(org.backers && !org.needsVerify) rows.push(entRow("Backed by",esc(org.backers)));
+    if(org.hq) rows.push(entRow("Based",esc(org.hq)));
+    var models=(ENT.models||[]).filter(function(m){ return m.makerKey===org.key; }).map(function(m){ return m.name; });
+    if(models.length) rows.push(entRow("Models",esc(models.slice(0,4).join(" · "))));
+    if(!rows.length) return "";
+    var foot=org.houseNote?'<span class="ent-house">'+esc(org.houseNote)+'</span>':'';
+    return '<span class="ent-card"><span class="ent-h">'+esc(org.name)+'<i>organization</i></span>'+
+      rows.join("")+foot+'<a class="ent-link" href="#/company/'+esc(org.key)+'">Full dossier&nbsp;↗</a></span>';
+  }
+  function entTargets(){
+    var out=[];
+    (ENT.models||[]).forEach(function(m){
+      out.push({re:m.re, key:"m:"+m.name, org:m.makerKey, model:true,
+        build:function(){ return entCardModel(m); }});
+    });
+    (ENT.orgs||[]).forEach(function(o){
+      out.push({re:new RegExp("\\b"+String(o.name).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b"),
+        key:"o:"+o.key, org:o.key, model:false, build:function(){ return entCardOrg(o); }});
+    });
+    return out;
+  }
+  var ENT_TARGETS=null;
+  // Annotate one already-escaped HTML fragment. `seen` is the per-article set.
+  function entAnnotate(html,seen){
+    if(!html || !seen || !(ENT.models||[]).length) return html;
+    if(!ENT_TARGETS) ENT_TARGETS=entTargets();
+    // Split on tags: only text nodes (even indices) are eligible, which is what
+    // keeps this from corrupting an attribute or nesting one chip inside another.
+    var parts=html.split(/(<[^>]*>)/);
+    // Anchor depth: text inside an <a> is skipped entirely. A hovercard nested in
+    // a link would be an interactive element inside an interactive element, and
+    // the writer's deliberate cross-link is better provenance than an auto-chip
+    // anyway -- so an explicit link always wins over the entity layer.
+    var aDepth=0;
+    for(var i=0;i<parts.length;i++){
+      if(i%2===1){
+        var tag=parts[i];
+        if(/^<a[\s>]/i.test(tag)) aDepth++;
+        else if(/^<\/a\s*>/i.test(tag)) aDepth=Math.max(0,aDepth-1);
+        continue;
+      }
+      if(!parts[i] || aDepth>0) continue;
+      for(var t=0;t<ENT_TARGETS.length;t++){
+        var tg=ENT_TARGETS[t];
+        if(seen[tg.key]) continue;
+        if(seen["shown:"+tg.org]) continue;
+        var mm=parts[i].match(tg.re);
+        if(!mm) continue;
+        seen[tg.key]=1;
+        var card=tg.build();
+        if(!card) continue;
+        seen["shown:"+tg.org]=1;
+        parts[i]=parts[i].replace(tg.re,
+          '<span class="ent '+(tg.model?"ent-model":"ent-org")+'" tabindex="0">'+esc(mm[0])+card+'</span>');
+      }
+    }
+    return parts.join("");
+  }
+
+  /* ==========================================================================
+     THE COMPONENT LIBRARY — structured body blocks.
+
+     Every renderer below takes a small, flat JSON block out of article.body and
+     draws it in pure CSS/SVG. No image generation, no chart library, no build
+     step, no network call. A cheap model can emit these reliably because the
+     shapes are shallow and the field names say what they mean.
+
+     ONE HARD INVARIANT: a component block must NOT carry a top-level `text`
+     field. wordCount() sums `.text` across body blocks to derive the visible
+     format tier, and rtfcListen() pushes a read-along segment for every block
+     with `.text`. A component that put its content in `.text` would silently
+     inflate a brief into a synthesis and make the audio version read table
+     cells aloud. Content lives in nested objects only. Every renderer here
+     obeys that; so must every future one.
+
+     Full menu, when to use which, and the anti-slop rules live in
+     agents/_shared/visual-components.md.
+     ========================================================================== */
+
+  // Optional per-component source line. Every component that asserts a number
+  // should carry one; the spec requires it for any figure not already cited in
+  // the surrounding prose.
+  function compSrc(s){ return s?'<div class="comp-src">Source: '+fmt(s)+'</div>':''; }
+  function compHead(kicker,title,sub){
+    if(!title && !kicker) return '';
+    return '<div class="comp-head">'+(kicker?'<span class="comp-k">'+esc(kicker)+'</span>':'')+
+      (title?'<h4>'+fmt(title)+'</h4>':'')+(sub?'<p>'+fmt(sub)+'</p>':'')+'</div>';
+  }
+
+  // COMPARE — the side-by-side. Two to four subjects, N attribute rows. Rows
+  // where the values genuinely differ get marked, so the reader's eye lands on
+  // the difference instead of having to diff the table themselves.
+  function compareHTML(c){
+    if(!c || !c.columns || !c.rows) return "";
+    var cols=c.columns, n=cols.length;
+    var head='<tr><th class="cmp-attr"></th>'+cols.map(function(col,i){
+      var sub=col.sub?'<span>'+esc(col.sub)+'</span>':'';
+      return '<th'+(col.hi?' class="is-hi"':'')+' style="--ci:'+i+'">'+esc(col.label)+sub+'</th>';
+    }).join("")+'</tr>';
+    // Which rows actually diverge — computed, not authored, so the emphasis can
+    // never disagree with the data sitting next to it.
+    var diff=c.rows.map(function(r){
+      var uniq={}; (r.values||[]).slice(0,n).forEach(function(v){ uniq[String(v).trim().toLowerCase()]=1; });
+      return Object.keys(uniq).length>1;
+    });
+    var nDiff=diff.filter(Boolean).length, nRows=c.rows.length;
+    // Highlighting is only information when it is selective. On a table built to
+    // show that two things are unalike, EVERY row differs — and marking every row
+    // tells the reader nothing. So: mark the divergences when they're the minority,
+    // mark the agreements when divergence is the norm (those are then the
+    // surprising rows), and when it's unanimous either way, drop the emphasis and
+    // let the table speak for itself.
+    var mode = c.markDifferences===false ? "none"
+             : (nDiff===nRows || nDiff===0) ? "none"
+             : nDiff>nRows/2 ? "same" : "differs";
+    var body=c.rows.map(function(r,ri){
+      var mark = mode==="differs" ? diff[ri] : mode==="same" ? !diff[ri] : false;
+      return '<tr'+(mark?' class="mark"':'')+'>'+
+        '<th class="cmp-attr">'+fmt(r.label)+(r.note?'<i>'+esc(r.note)+'</i>':'')+'</th>'+
+        (r.values||[]).slice(0,n).map(function(v,i){
+          return '<td style="--ci:'+i+'">'+fmt(String(v))+'</td>';
+        }).join("")+'</tr>';
+    }).join("");
+    var legend=(mode==="none")?'':
+      '<div class="cmp-legend"><span class="cmp-dot"></span>'+
+      (mode==="same"?'Highlighted rows are the only places these two agree'
+                    :'Highlighted rows are where these actually diverge')+'</div>';
+    return '<figure class="comp comp-compare">'+compHead(c.kicker||"Side by side",c.title,c.sub)+
+      '<div class="cmp-scroll"><table class="cmp"><thead>'+head+'</thead><tbody>'+body+'</tbody></table></div>'+
+      legend+compSrc(c.source)+'</figure>';
+  }
+
+  // TIMELINE — dated sequence. `now` marks the present, `future` items render
+  // as pending so a reader can see what has happened vs. what is still owed.
+  function timelineHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var items=c.items.map(function(it){
+      var cls=it.future?"tl-i future":(it.hi?"tl-i is-hi":"tl-i");
+      return '<li class="'+cls+'">'+
+        '<span class="tl-dot"></span>'+
+        '<span class="tl-when">'+esc(it.when||"")+'</span>'+
+        '<span class="tl-what">'+fmt(it.what||"")+
+        (it.detail?'<i>'+fmt(it.detail)+'</i>':'')+
+        (it.source?'<a class="tl-src" href="'+esc(it.source)+'" target="_blank" rel="noopener">source&nbsp;↗</a>':'')+
+        '</span></li>';
+    }).join("");
+    return '<figure class="comp comp-timeline">'+compHead(c.kicker||"How it got here",c.title,c.sub)+
+      '<ol class="tl">'+items+'</ol>'+compSrc(c.source)+'</figure>';
+  }
+
+  // ENTITY — the explicit, in-body ownership card for the story's central
+  // subject. The auto-chips handle passing mentions; this is for when the
+  // corporate structure IS the story and deserves the real estate.
+  function entityHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var cards=c.items.map(function(e){
+      var rows=[];
+      if(e.maker) rows.push(entRow("Made by",esc(e.maker)));
+      if(e.parent) rows.push(entRow("Owned by",esc(e.parent)));
+      if(e.structure) rows.push(entRow("Structure",esc(e.structure)));
+      if(e.backers) rows.push(entRow("Backed by",esc(e.backers)));
+      if(e.hq) rows.push(entRow("Based",esc(e.hq)));
+      if(e.access) rows.push(entRow("Access",esc(ACCESS_LABEL[e.access]||e.access)));
+      if(e.stake) rows.push(entRow("Stake",esc(e.stake)));
+      (e.extra||[]).forEach(function(x){ rows.push(entRow(x.label,fmt(String(x.value)))); });
+      var link=e.companyKey?'<a class="ent-link" href="#/company/'+esc(e.companyKey)+'">Dossier&nbsp;↗</a>':'';
+      return '<div class="eb-card">'+
+        '<div class="eb-name">'+esc(e.name)+(e.kind?'<i>'+esc(e.kind)+'</i>':'')+'</div>'+
+        '<div class="eb-rows">'+rows.join("")+'</div>'+
+        (e.note?'<p class="eb-note">'+fmt(e.note)+'</p>':'')+link+'</div>';
+    }).join("");
+    return '<figure class="comp comp-entity">'+compHead(c.kicker||"Who is who here",c.title,c.sub)+
+      '<div class="eb-grid'+(c.items.length===1?' one':'')+'">'+cards+'</div>'+compSrc(c.source)+'</figure>';
+  }
+
+  // SCORECARD — claim-by-claim evidence strength. This is the component that
+  // most directly earns the publication's transparency claim: it shows the
+  // reader which parts of the story are nailed down and which are inference,
+  // and names the specific fact that would settle each open one.
+  var SC_LEVELS={ confirmed:{l:"Confirmed",c:"var(--ok)",i:"●●●"},
+                  strong:{l:"Strong",c:"var(--ok)",i:"●●○"},
+                  partial:{l:"Partial",c:"var(--gold)",i:"●●○"},
+                  contested:{l:"Contested",c:"var(--gate)",i:"●○○"},
+                  unverified:{l:"Unverified",c:"var(--gate)",i:"○○○"},
+                  company:{l:"Company claim",c:"var(--gold)",i:"●○○"} };
+  function scorecardHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var rows=c.items.map(function(it){
+      var lv=SC_LEVELS[it.level]||SC_LEVELS.partial;
+      return '<div class="sc-row">'+
+        '<div class="sc-claim">'+fmt(it.claim||"")+'</div>'+
+        '<div class="sc-lv" style="--lc:'+lv.c+'"><span class="sc-pip">'+lv.i+'</span>'+esc(lv.l)+'</div>'+
+        '<div class="sc-basis">'+fmt(it.basis||"")+
+          (it.resolver?'<i><b>Would settle it:</b> '+fmt(it.resolver)+'</i>':'')+'</div>'+
+        '</div>';
+    }).join("");
+    return '<figure class="comp comp-scorecard">'+
+      compHead(c.kicker||"What is actually established",c.title,c.sub)+
+      '<div class="sc-hd"><span>Claim</span><span>Evidence</span><span>Basis</span></div>'+
+      rows+compSrc(c.source)+'</figure>';
+  }
+
+  // LEDGER — the numbers in the story, each with what it does and does NOT
+  // include. Most AI-industry number confusion is scope confusion; this makes
+  // the scope explicit instead of leaving it implied.
+  function ledgerHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var rows=c.items.map(function(it){
+      return '<div class="lg-row">'+
+        '<div class="lg-v">'+esc(it.value||"")+(it.unit?'<span>'+esc(it.unit)+'</span>':'')+'</div>'+
+        '<div class="lg-b"><b>'+fmt(it.label||"")+'</b>'+
+          (it.includes?'<span class="lg-in">Includes: '+fmt(it.includes)+'</span>':'')+
+          (it.excludes?'<span class="lg-ex">Not included: '+fmt(it.excludes)+'</span>':'')+
+          (it.note?'<i>'+fmt(it.note)+'</i>':'')+'</div></div>';
+    }).join("");
+    return '<figure class="comp comp-ledger">'+compHead(c.kicker||"The numbers, scoped",c.title,c.sub)+
+      rows+compSrc(c.source)+'</figure>';
+  }
+
+  // BEFOREAFTER — what specifically changed. Two columns, paired rows.
+  function beforeAfterHTML(c){
+    if(!c || !c.rows || !c.rows.length) return "";
+    var rows=c.rows.map(function(r){
+      return '<div class="ba-row"><span class="ba-l">'+fmt(r.label||"")+'</span>'+
+        '<span class="ba-b">'+fmt(String(r.before||"—"))+'</span>'+
+        '<span class="ba-arrow">→</span>'+
+        '<span class="ba-a">'+fmt(String(r.after||"—"))+'</span></div>';
+    }).join("");
+    return '<figure class="comp comp-ba">'+compHead(c.kicker||"What changed",c.title,c.sub)+
+      '<div class="ba-hd"><span></span><span>'+esc(c.beforeLabel||"Before")+'</span><span></span>'+
+      '<span>'+esc(c.afterLabel||"After")+'</span></div>'+rows+compSrc(c.source)+'</figure>';
+  }
+
+  // SPECTRUM — position markers on one labeled axis. Where the labs sit on
+  // open-to-closed, where prices sit against each other, and so on. Positions
+  // are 0-100 and must be derived from a real ordering, never vibes.
+  function spectrumHTML(c){
+    if(!c || !c.markers || !c.markers.length) return "";
+    var mk=c.markers.map(function(m,i){
+      var p=Math.max(0,Math.min(100,Number(m.at)||0));
+      return '<span class="sp-m'+(m.hi?" is-hi":"")+'" style="left:'+p+'%;--mi:'+i+'">'+
+        '<i class="sp-pin"></i><span class="sp-lb">'+esc(m.label)+
+        (m.value?'<b>'+esc(m.value)+'</b>':'')+'</span></span>';
+    }).join("");
+    return '<figure class="comp comp-spectrum">'+compHead(c.kicker||"Where this sits",c.title,c.sub)+
+      '<div class="sp-wrap"><div class="sp-track">'+mk+'</div>'+
+      '<div class="sp-ends"><span>'+esc(c.leftLabel||"")+'</span><span>'+esc(c.rightLabel||"")+'</span></div></div>'+
+      compSrc(c.source)+'</figure>';
+  }
+
+  // FLOW — a chain: how money, data, chips, or authority actually moves. Steps
+  // with optional per-step actor, so a reader can follow who does what to whom.
+  function flowHTML(c){
+    if(!c || !c.steps || !c.steps.length) return "";
+    var steps=c.steps.map(function(s,i){
+      return '<li class="fl-s'+(s.hi?" is-hi":"")+(s.blocked?" blocked":"")+'">'+
+        '<span class="fl-n">'+(s.blocked?"✕":String(i+1))+'</span>'+
+        '<span class="fl-b">'+(s.actor?'<span class="fl-a">'+esc(s.actor)+'</span>':'')+
+        '<b>'+fmt(s.what||"")+'</b>'+(s.detail?'<i>'+fmt(s.detail)+'</i>':'')+'</span></li>';
+    }).join("");
+    return '<figure class="comp comp-flow">'+compHead(c.kicker||"How it works",c.title,c.sub)+
+      '<ol class="fl">'+steps+'</ol>'+compSrc(c.source)+'</figure>';
+  }
+
+  // KEYFACTS — the dense box. Deliberately plain: label/value pairs a reader
+  // can scan in five seconds before deciding to read the piece.
+  function keyfactsHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var items=c.items.map(function(it){
+      return '<div class="kf-i"><span class="kf-l">'+esc(it.label)+'</span>'+
+        '<span class="kf-v">'+fmt(String(it.value))+'</span>'+
+        (it.note?'<span class="kf-n">'+fmt(it.note)+'</span>':'')+'</div>';
+    }).join("");
+    // Choose a column count that FILLS its rows. A plain auto-fit grid gave six
+    // items four columns, leaving two dead cells and stretching every cell in the
+    // first row to match the tallest wrapped value. Picking the divisor that
+    // completes the grid keeps it tidy at any item count and gives long values
+    // more horizontal room, so they wrap less.
+    var n=c.items.length;
+    var cols = n<=3 ? n : (n%3===0 ? 3 : n%2===0 ? Math.min(4,n/2) : n<=5 ? 3 : 4);
+    return '<figure class="comp comp-keyfacts">'+compHead(c.kicker||"At a glance",c.title,c.sub)+
+      '<div class="kf-grid" style="--kf-cols:'+cols+'">'+items+'</div>'+compSrc(c.source)+'</figure>';
+  }
+
+  // STAKES — who gains, who loses, who is merely exposed. Forces the piece to
+  // be specific about incidence instead of gesturing at "the industry."
+  var STAKE_TONE={ gains:{i:"▲",c:"var(--ok)",l:"Gains"}, loses:{i:"▼",c:"var(--gate)",l:"Loses"},
+                   exposed:{i:"◆",c:"var(--gold)",l:"Exposed"}, unclear:{i:"◇",c:"var(--muted)",l:"Unclear"} };
+  function stakesHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var items=c.items.map(function(it){
+      var t=STAKE_TONE[it.tone]||STAKE_TONE.unclear;
+      return '<div class="stk-i" style="--sc:'+t.c+'">'+
+        '<div class="stk-h"><span class="stk-ic">'+t.i+'</span>'+
+        '<b>'+esc(it.who)+'</b><span class="stk-t">'+esc(it.label||t.l)+'</span></div>'+
+        '<p>'+fmt(it.what||"")+'</p></div>';
+    }).join("");
+    return '<figure class="comp comp-stakes">'+compHead(c.kicker||"Who this lands on",c.title,c.sub)+
+      '<div class="stk-grid">'+items+'</div>'+compSrc(c.source)+'</figure>';
+  }
+
+  // SOURCECHECK — the reconciliation panel. When sources disagree on a number
+  // or a date, this shows the disagreement and the ruling instead of silently
+  // picking one. The runbook already requires reconciling conflicts in prose;
+  // this makes the work visible, which is the part a wire rewrite can't fake.
+  function sourcecheckHTML(c){
+    if(!c || !c.items || !c.items.length) return "";
+    var items=c.items.map(function(it){
+      var claims=(it.claims||[]).map(function(cl){
+        return '<li class="'+(cl.trusted?"trusted":"")+'">'+
+          '<span class="scc-who">'+esc(cl.who)+(cl.kind?'<i>'+esc(cl.kind)+'</i>':'')+'</span>'+
+          '<span class="scc-val">'+fmt(String(cl.says))+'</span>'+
+          (cl.url?'<a href="'+esc(cl.url)+'" target="_blank" rel="noopener">↗</a>':'')+
+          (cl.trusted?'<span class="scc-badge">used</span>':'')+'</li>';
+      }).join("");
+      return '<div class="scc-i"><div class="scc-q">'+fmt(it.question||"")+'</div>'+
+        '<ul class="scc-l">'+claims+'</ul>'+
+        (it.ruling?'<p class="scc-r"><b>Ruling:</b> '+fmt(it.ruling)+'</p>':'')+'</div>';
+    }).join("");
+    return '<figure class="comp comp-scc">'+
+      compHead(c.kicker||"Where the sources disagree",c.title,
+        c.sub||"Conflicts found while reporting this, and which figure this piece uses.")+
+      items+compSrc(c.source)+'</figure>';
+  }
+
   // inline data-viz — bar or donut, rendered from an article body block, zero cost, no images.
-  var CHART_COLORS=["#8b7cf7","#5aa8d8","#e0b64e","#7bb274","#e0564d","#c48af0","#4dd0c4","#cf9b57"];
+  // Categorical series colors come from the --s1..--s8 tokens in styles.css, which hold
+  // SEPARATE validated steps for dark and light mode (the old single hex set failed the
+  // colorblind-separation and normal-vision checks between its green and gold). The order
+  // is fixed and never cycled: a chart's Nth series is always the same hue. Because these
+  // are CSS vars they must be applied via style="", never as SVG presentation attributes
+  // (fill="var(--x)" is silently invalid in an attribute).
+  var CHART_COLORS=["var(--s1)","var(--s2)","var(--s3)","var(--s4)","var(--s5)","var(--s6)","var(--s7)","var(--s8)"];
   function chartHTML(c){
     if(!c || !c.data || !c.data.length) return "";
     var head='<figcaption class="chart-title">'+esc(c.title||"")+(c.unit?' <span>('+esc(c.unit)+')</span>':'')+'</figcaption>';
@@ -552,7 +993,7 @@
       var segs=c.data.map(function(d,i){
         var frac=(d.value||0)/total, col=d.color||CHART_COLORS[i%CHART_COLORS.length];
         var dash=C*frac, gap=C-dash, off=-C*acc/1; acc+=frac;
-        return '<circle r="42" cx="60" cy="60" fill="none" stroke="'+col+'" stroke-width="16" stroke-dasharray="'+dash+' '+gap+'" stroke-dashoffset="'+ (C*0.25 - C*(acc-frac)) +'" transform="rotate(-90 60 60)"></circle>';
+        return '<circle r="42" cx="60" cy="60" fill="none" style="stroke:'+col+'" stroke-width="16" stroke-dasharray="'+dash+' '+gap+'" stroke-dashoffset="'+ (C*0.25 - C*(acc-frac)) +'" transform="rotate(-90 60 60)"></circle>';
       }).join("");
       var legend=c.data.map(function(d,i){
         var col=d.color||CHART_COLORS[i%CHART_COLORS.length];
@@ -560,16 +1001,161 @@
       }).join("");
       return '<figure class="chart chart-pie">'+head+'<div class="pie-wrap"><svg viewBox="0 0 120 120" width="150" height="150">'+segs+'</svg><ul class="pie-legend">'+legend+'</ul></div>'+src+'</figure>';
     }
+    // LINE — a trend. Needs an ordered series; use this only for something that
+    // genuinely moves over time, never for unordered categories.
+    if(c.kind==="line"){
+      var vals=c.data.map(function(d){ return Number(d.value)||0; });
+      var lo=c.min!=null?c.min:Math.min.apply(null,vals);
+      var hi=c.max!=null?c.max:Math.max.apply(null,vals);
+      if(hi===lo) hi=lo+1;
+      var W=520,H=170,PADL=6,PADR=6,PADT=12,PADB=10;
+      var px=function(i){ return PADL+(vals.length<2?0:i*(W-PADL-PADR)/(vals.length-1)); };
+      var py=function(v){ return PADT+(H-PADT-PADB)*(1-(v-lo)/(hi-lo)); };
+      var pts=vals.map(function(v,i){ return px(i).toFixed(1)+","+py(v).toFixed(1); });
+      var area='M'+pts.join(" L")+' L'+px(vals.length-1).toFixed(1)+','+(H-PADB)+' L'+px(0).toFixed(1)+','+(H-PADB)+' Z';
+      var dots=vals.map(function(v,i){
+        var d=c.data[i];
+        return '<circle cx="'+px(i).toFixed(1)+'" cy="'+py(v).toFixed(1)+'" r="'+(d.hi?4.2:2.8)+'" '+
+          'style="fill:'+(d.hi?"var(--accent2)":"var(--accent)")+'"><title>'+esc(d.label+": "+d.value)+'</title></circle>';
+      }).join("");
+      var xl=c.data.map(function(d,i){
+        if(vals.length>7 && i%2===1 && i!==vals.length-1) return '<span></span>';
+        return '<span>'+esc(d.label)+'</span>';
+      }).join("");
+      return '<figure class="chart chart-line">'+head+
+        '<div class="ln-wrap"><div class="ln-ax"><span>'+esc(String(hi))+'</span><span>'+esc(String(lo))+'</span></div>'+
+        '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" class="ln-svg">'+
+        '<path class="ln-area" d="'+area+'" fill="url(#lnG)" opacity=".18"></path>'+
+        '<defs><linearGradient id="lnG" x1="0" y1="0" x2="0" y2="1">'+
+        '<stop offset="0%" style="stop-color:var(--accent)"/><stop offset="100%" style="stop-color:var(--accent);stop-opacity:0"/>'+
+        '</linearGradient></defs>'+
+        '<polyline points="'+pts.join(" ")+'" pathLength="1" fill="none" style="stroke:var(--accent)" stroke-width="2" '+
+        'stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>'+
+        dots+'</svg></div><div class="ln-xl">'+xl+'</div>'+src+'</figure>';
+    }
+    // STACKED — composition across a few subjects. Each datum carries `parts`.
+    if(c.kind==="stacked"){
+      var smax=c.data.reduce(function(m,d){
+        return Math.max(m,(d.parts||[]).reduce(function(n,p){ return n+(Number(p.value)||0); },0));
+      },0)||1;
+      var skeys=[];
+      c.data.forEach(function(d){ (d.parts||[]).forEach(function(p){ if(skeys.indexOf(p.label)<0) skeys.push(p.label); }); });
+      var srows=c.data.map(function(d){
+        var tot=(d.parts||[]).reduce(function(n,p){ return n+(Number(p.value)||0); },0);
+        var segs=(d.parts||[]).map(function(p){
+          var w=(Number(p.value)||0)/smax*100;
+          var ci=skeys.indexOf(p.label);
+          return '<i style="width:'+w.toFixed(2)+'%;background:'+(p.color||CHART_COLORS[ci%CHART_COLORS.length])+'">'+
+            '<span class="sk-tip">'+esc(p.label+": "+p.value)+'</span></i>';
+        }).join("");
+        return '<div class="sk-row"><span class="sk-l">'+esc(d.label)+'</span>'+
+          '<div class="sk-track">'+segs+'</div><span class="sk-t">'+esc(String(c.unit&&c.unit.charAt(0)==="$"?"$"+tot:tot))+'</span></div>';
+      }).join("");
+      var skl='<ul class="sk-legend">'+skeys.map(function(k,i){
+        return '<li><span class="pl-sw" style="background:'+CHART_COLORS[i%CHART_COLORS.length]+'"></span>'+esc(k)+'</li>';
+      }).join("")+'</ul>';
+      return '<figure class="chart chart-stacked">'+head+'<div class="sks">'+srows+'</div>'+skl+src+'</figure>';
+    }
+    // RANGE — a spread rather than a point. For "estimates run from X to Y",
+    // which is honest where a single bar would imply false precision.
+    if(c.kind==="range"){
+      var rlo=Math.min.apply(null,c.data.map(function(d){ return Number(d.low)||0; }));
+      var rhi=Math.max.apply(null,c.data.map(function(d){ return Number(d.high)||0; }));
+      if(rhi===rlo) rhi=rlo+1;
+      var rrows=c.data.map(function(d){
+        var a=((Number(d.low)||0)-rlo)/(rhi-rlo)*100, b=((Number(d.high)||0)-rlo)/(rhi-rlo)*100;
+        var pt=d.point!=null?((Number(d.point)||0)-rlo)/(rhi-rlo)*100:null;
+        return '<div class="rg-row'+(d.hi?" is-hi":"")+'"><span class="rg-l">'+esc(d.label)+'</span>'+
+          '<div class="rg-track"><i style="left:'+a.toFixed(1)+'%;width:'+Math.max(1.5,b-a).toFixed(1)+'%"></i>'+
+          (pt!=null?'<b class="rg-pt" style="left:'+pt.toFixed(1)+'%"></b>':'')+'</div>'+
+          '<span class="rg-v">'+esc(String(d.low))+'–'+esc(String(d.high))+'</span></div>';
+      }).join("");
+      return '<figure class="chart chart-range">'+head+'<div class="rgs">'+rrows+'</div>'+src+'</figure>';
+    }
+    // WAFFLE — counts as squares. Reads better than a bar for small integers
+    // ("3 of 11 signatories"), because the reader can literally count them.
+    if(c.kind==="waffle"){
+      var wtot=c.total||c.data.reduce(function(n,d){ return n+(Number(d.value)||0); },0)||1;
+      var cells=[];
+      c.data.forEach(function(d,i){
+        var col=d.color||CHART_COLORS[i%CHART_COLORS.length];
+        for(var k=0;k<(Number(d.value)||0);k++)
+          cells.push('<i style="background:'+col+'" title="'+esc(d.label)+'"></i>');
+      });
+      while(cells.length<wtot) cells.push('<i class="wf-e"></i>');
+      var wl='<ul class="sk-legend">'+c.data.map(function(d,i){
+        return '<li><span class="pl-sw" style="background:'+(d.color||CHART_COLORS[i%CHART_COLORS.length])+'"></span>'+
+          esc(d.label)+' <b>'+esc(String(d.value))+'</b></li>';
+      }).join("")+'</ul>';
+      return '<figure class="chart chart-waffle">'+head+'<div class="wf">'+cells.join("")+'</div>'+wl+src+'</figure>';
+    }
     // default: horizontal bars
     var max=c.data.reduce(function(m,d){return Math.max(m,d.value||0);},0)||1;
     var bars=c.data.map(function(d,i){
       var w=Math.max(2,Math.round((d.value||0)/max*100)), col=d.color||(d.hi?CHART_COLORS[0]:"var(--muted)");
       var vlabel=(c.unit&&c.unit.charAt(0)==="$"?"$":"")+d.value+(c.unit&&c.unit.indexOf("%")>=0?"%":"");
-      return '<div class="cbar'+(d.hi?" hi":"")+'"><span class="cb-l">'+esc(d.label)+'</span>'+
+      // A per-bar note goes on its own line under the bar, not inside the label
+      // column -- the label column is narrow and right-aligned, so a sentence in
+      // there wraps into an unreadable ragged block.
+      return '<div class="cbrow'+(d.note?" has-note":"")+'">'+
+        '<div class="cbar'+(d.hi?" is-hi":"")+'"><span class="cb-l">'+esc(d.label)+'</span>'+
         '<div class="cb-track"><i style="width:'+w+'%;background:'+(d.hi?"var(--accent)":"color-mix(in srgb,var(--accent) 55%,transparent)")+'"></i></div>'+
-        '<span class="cb-v">'+esc(vlabel)+'</span></div>';
+        '<span class="cb-v">'+esc(vlabel)+'</span></div>'+
+        (d.note?'<div class="cb-note">'+esc(d.note)+'</div>':'')+'</div>';
     }).join("");
     return '<figure class="chart chart-bar">'+head+'<div class="cbars">'+bars+'</div>'+src+'</figure>';
+  }
+  /* Component dispatch — one place every new block type gets wired in, so the
+     article view, the magazine renderer, and anything else that walks a body
+     array stay in agreement about what a block type means. Returns "" for
+     anything it does not recognize, which is what makes an unknown block type
+     degrade silently instead of throwing. */
+  function componentHTML(b){
+    switch(b.type){
+      case "chart":       return chartHTML(b.chart||b);
+      case "compare":     return compareHTML(b.compare||b);
+      case "timeline":    return timelineHTML(b.timeline||b);
+      case "entity":      return entityHTML(b.entity||b);
+      case "scorecard":   return scorecardHTML(b.scorecard||b);
+      case "ledger":      return ledgerHTML(b.ledger||b);
+      case "beforeafter": return beforeAfterHTML(b.beforeafter||b);
+      case "spectrum":    return spectrumHTML(b.spectrum||b);
+      case "flow":        return flowHTML(b.flow||b);
+      case "keyfacts":    return keyfactsHTML(b.keyfacts||b);
+      case "stakes":      return stakesHTML(b.stakes||b);
+      case "sourcecheck": return sourcecheckHTML(b.sourcecheck||b);
+      case "stat":        return '<div class="statcallout"><b>'+esc(b.value)+'</b><span>'+fmt(b.label||"")+'</span></div>';
+      default:            return "";
+    }
+  }
+  var COMPONENT_TYPES=["chart","compare","timeline","entity","scorecard","ledger",
+    "beforeafter","spectrum","flow","keyfacts","stakes","sourcecheck","stat"];
+  function isComponent(b){ return b && COMPONENT_TYPES.indexOf(b.type)>=0; }
+  /* THE EVIDENCE STRIP — derived, not written. Counts what is actually attached
+     to the article (sources, distinct domains, in-body citations, components) and
+     states it plainly under the dateline. Costs nothing per article and cannot
+     drift from reality, because it is computed from the article itself rather
+     than asserted by the writer. */
+  function evidenceStripHTML(a){
+    if(!a || !a.sources || !a.sources.length) return "";
+    var doms={}, n=0;
+    a.sources.forEach(function(s){
+      var d=String(s.url||"").replace(/^https?:\/\//,"").split("/")[0].replace(/^www\./,"");
+      if(d){ doms[d]=1; n++; }
+    });
+    var domCount=Object.keys(doms).length;
+    var cited=0;
+    (a.body||[]).forEach(function(b){ if(b.citation_urls && b.citation_urls.length) cited++; });
+    var comps=(a.body||[]).filter(isComponent).length;
+    var paras=(a.body||[]).filter(function(b){ return b.type==="p"; }).length;
+    var pct=paras?Math.round(cited/paras*100):0;
+    var bits=[];
+    bits.push('<span><b>'+n+'</b> sources</span>');
+    bits.push('<span><b>'+domCount+'</b> distinct outlets</span>');
+    if(paras) bits.push('<span><b>'+pct+'%</b> of paragraphs carry a citation</span>');
+    if(comps) bits.push('<span><b>'+comps+'</b> data element'+(comps===1?'':'s')+'</span>');
+    return '<div class="evstrip" title="Derived from this article’s own attached sources and body — not a claim, a count.">'+
+      '<span class="ev-k">Evidence</span>'+bits.join("")+'</div>';
   }
   function fullTimestamp(iso){
     var d=new Date(iso);
@@ -603,14 +1189,16 @@
     var toc=[]; var firstP=true;
     // read-along: seg 0 = title/dek, then one seg per spoken block (must mirror rtfcListen's `if(b.text)` sequence)
     var raSeg=0;
+    // Per-article first-mention set for the entity layer. Fresh per render so a
+    // reader who opens two articles gets the provenance chip in both.
+    var entSeen={};
     var bodyHTML=a.body.map(function(b){
       if(b.type==="h2"){ raSeg++; var id="s-"+slugify(b.text); toc.push({id:id,t:b.text}); return '<h2 id="'+id+'" data-ra="'+raSeg+'">'+esc(b.text)+'</h2>'; }
       if(b.type==="quote"){ raSeg++; return '<blockquote data-ra="'+raSeg+'">'+fmt(b.text)+'</blockquote>'; }
-      if(b.type==="chart") return chartHTML(b.chart||b);
-      if(b.type==="stat") return '<div class="statcallout"><b>'+esc(b.value)+'</b><span>'+fmt(b.label||"")+'</span></div>';
+      if(isComponent(b)) return componentHTML(b);
       raSeg++;
       var cls=[]; if(b===lastP) cls.push("endmark"); if(firstP){ cls.push("lead-p"); firstP=false; }
-      return '<p data-ra="'+raSeg+'"'+(cls.length?' class="'+cls.join(" ")+'"':'')+'>'+fmtBody(b.text)+'</p>';
+      return '<p data-ra="'+raSeg+'"'+(cls.length?' class="'+cls.join(" ")+'"':'')+'>'+entAnnotate(fmtBody(b.text),entSeen)+'</p>';
     }).join("");
     var applySeg=(a.apply&&a.apply.length)?(raSeg+1):-1;
     var tocHTML=(toc.length>=3)?('<nav class="toc"><span class="toc-l">In this piece</span><ol>'+
@@ -630,6 +1218,7 @@
       '<div style="margin:20px 0 6px">'+tagsHTML(a)+'</div>'+
       '<h1 data-ra="0">'+esc(a.title)+'</h1><p class="dek" data-ra="0">'+esc(a.dek)+'</p>'+
       '<div class="dateline"><span class="dl-sec" style="color:'+col+'">'+esc(a.section)+'</span> · '+when(a.publishedAt)+' · '+readTime(a)+' min read'+saveBtns(a.id,true)+'</div>'+
+      evidenceStripHTML(a)+
       articleToolsHTML(a)+
       '<div class="hero" style="'+artFill(a,true)+'">'+artGlyph(a,col)+'</div>'+
       tocHTML+
@@ -1021,10 +1610,75 @@
     var el=document.getElementById(id);
     if(el) el.scrollIntoView({behavior:"smooth",block:"start"});
   };
+  /* ---------- THE LAB DIRECTORY (Resources) ----------
+     Identity colors are decorative brand associations for the monogram tiles,
+     NOT editorial claims; anything uncertain falls back to a neutral derived
+     from the validated series tokens. Logos are deliberately NOT image files:
+     a colored monogram is copyright-clean, loads instantly, and can't 404. */
+  var BRANDS={ openai:"#10a37f", anthropic:"#d97757", google:"#4285f4", meta:"#0668e1",
+    xai:"#8d93a1", apple:"#a2aaad", nvidia:"#76b900", amd:"#ed1c24", microsoft:"#00a4ef",
+    amazon:"#ff9900", ibm:"#0f62fe", huggingface:"#ffd21e", deepseek:"#4d6bfe",
+    alibaba:"#ff6a00", baidu:"#2932e1", tencent:"#0052d9", mistral:"#ff7000",
+    samsung:"#1428a0", huawei:"#cf0a2c", databricks:"#ff3621", groq:"#f55036",
+    perplexity:"#20808d", broadcom:"#cc092f", cohere:"#ff7759" };
+  function brandColor(key){
+    if(BRANDS[key]) return BRANDS[key];
+    var n=0; for(var i=0;i<key.length;i++) n=(n*31+key.charCodeAt(i))>>>0;
+    return ["var(--s1)","var(--s3)","var(--s5)","var(--s6)","var(--s7)"][n%5];
+  }
+  function brandMark(key,name){
+    var m=String(name).replace(/[^A-Za-z0-9 ]/g,"").split(/[\s/]+/).filter(Boolean);
+    var initials=(m.length>1?m[0][0]+m[1][0]:String(name).slice(0,2)).toUpperCase();
+    return '<span class="bmark" style="--bc:'+brandColor(key)+'">'+esc(initials)+'</span>';
+  }
+  // Visual grouping only. A company missing from every group still renders
+  // under "More" — grouping must never hide coverage.
+  var DOSSIER_GROUPS=[
+    {label:"Frontier labs",       keys:["openai","anthropic","google","meta","xai","mistral","thinking-machines","inflection","reka","ai21","cohere"]},
+    {label:"China",               keys:["zai","moonshot","deepseek","alibaba","baidu","tencent","bytedance","minimax","01-ai","metax","cxmt","unitree","huawei"]},
+    {label:"Compute & hardware",  keys:["nvidia","amd","tsmc","asml","samsung","sk-hynix","broadcom","groq","cerebras","sambanova"]},
+    {label:"Platforms & products",keys:["apple","microsoft","amazon","ibm","huggingface","perplexity","databricks","character-ai","stability"]}
+  ];
+  // One lab's models, unioned from the entity registry and the Scoreboard.
+  // Scoreboard rows are matched to a company via the company's own coverage
+  // regex, the same matcher the dossier pages use — one matcher, one truth.
+  function labDirectory(){
+    var rows=(window.RTFC_SCOREBOARD&&window.RTFC_SCOREBOARD.rows)||[];
+    return COMPANIES.map(function(c){
+      var models={};
+      (ENT.models||[]).forEach(function(m){
+        if(m.makerKey===c.key) models[m.name]={name:m.name,kind:m.kind,access:m.access};
+      });
+      rows.forEach(function(r){
+        if(!c.re.test(r.lab)) return;
+        var e=models[r.model]||(models[r.model]={name:r.model});
+        if(e.score==null||(typeof r.score==="number"&&r.score>e.score)) e.score=(typeof r.score==="number")?r.score:e.score;
+        e.status=e.status||r.status;
+      });
+      var list=Object.keys(models).map(function(k){return models[k];});
+      list.sort(function(a,b){ return (b.score||0)-(a.score||0) || a.name.localeCompare(b.name); });
+      return {c:c, models:list};
+    }).filter(function(x){ return x.models.length; });
+  }
+  function labCardHTML(x){
+    var c=x.c;
+    var chips=x.models.map(function(m){
+      var bits=[];
+      if(typeof m.score==="number") bits.push('<b>'+m.score+'</b>');
+      else if(m.status) bits.push('<i>'+esc(m.status)+'</i>');
+      if(m.access==="open-weights") bits.push('<i class="lm-open">open</i>');
+      return '<span class="lm-chip" title="'+esc(m.kind||"")+'">'+esc(m.name)+(bits.length?' '+bits.join(""):'')+'</span>';
+    }).join("");
+    return '<a class="lab-card" href="#/company/'+c.key+'" style="--bc:'+brandColor(c.key)+'">'+
+      '<div class="lab-head">'+brandMark(c.key,c.name)+
+      '<div class="lab-who"><b>'+esc(c.name)+'</b><span>'+x.models.length+' model'+(x.models.length===1?'':'s')+' on record</span></div>'+
+      '<span class="lab-go">Dossier →</span></div>'+
+      '<div class="lab-models">'+chips+'</div></a>';
+  }
   function viewResources(){
     var DICT=window.RTFC_DICT||[];
     // build the section list first (drives both the jump-nav and the content)
-    var secs=[{id:"res-dossiers",label:"Company dossiers"},{id:"res-dict-cta",label:"The AI Dictionary"},{id:"res-wallpapers",label:"Wallpapers"}];
+    var secs=[{id:"res-labs",label:"The labs & their models"},{id:"res-dossiers",label:"Company dossiers"},{id:"res-dict-cta",label:"The AI Dictionary"},{id:"res-wallpapers",label:"Wallpapers"}];
     RES.forEach(function(cat,i){ secs.push({id:"res-cat-"+i,label:cat.title}); });
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
@@ -1035,12 +1689,32 @@
       secs.map(function(s){ return '<a onclick="rtfcJump(\''+s.id+'\')">'+esc(s.label)+'</a>'; }).join("")+
       '</aside><div class="res-main">';
 
-    // 1) dossiers
+    // 1) THE LAB DIRECTORY — every lab with a branded identity tile and every
+    // model the site's own registries know for it (entities.js + Scoreboard),
+    // auto-assembled so it can never claim a model the coverage doesn't back.
+    h+='<section id="res-labs"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The labs &amp; their models</div>'+
+      '<p style="color:var(--muted);font-size:14px;margin:-8px 0 16px">Who makes what. Built live from the Scoreboard and the entity registry — a model appears here the moment the newsroom covers it. Tap a lab for its full dossier.</p>'+
+      '<div class="lab-grid">'+labDirectory().map(labCardHTML).join("")+'</div></section>';
+
+    // 2) dossiers, grouped instead of the old undifferentiated chip pile
     h+='<section id="res-dossiers"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Company dossiers</div>'+
-      '<p style="color:var(--muted);font-size:14px;margin:-8px 0 16px">Everything we\'ve published about each major player, auto-assembled and always current. <a href="#/companies" style="color:var(--accent2)">All dossiers →</a></p>'+
-      '<div class="dossier-strip">'+COMPANIES.map(function(c){
-        return '<a class="ds-chip" href="#/company/'+c.key+'">'+esc(c.name)+'</a>';
-      }).join("")+'</div></section>';
+      '<p style="color:var(--muted);font-size:14px;margin:-8px 0 16px">Everything published about each player, auto-assembled and always current. <a href="#/companies" style="color:var(--accent2)">All dossiers →</a></p>'+
+      DOSSIER_GROUPS.map(function(g){
+        var members=COMPANIES.filter(function(c){ return g.keys.indexOf(c.key)>=0; });
+        if(!members.length) return "";
+        return '<div class="ds-group"><span class="ds-gl">'+esc(g.label)+'</span><div class="dossier-strip">'+
+          members.map(function(c){
+            return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>';
+          }).join("")+'</div></div>';
+      }).join("")+
+      (function(){ // anything ungrouped still shows — a new company must never vanish
+        var grouped={}; DOSSIER_GROUPS.forEach(function(g){ g.keys.forEach(function(k){ grouped[k]=1; }); });
+        var rest=COMPANIES.filter(function(c){ return !grouped[c.key]; });
+        return rest.length?'<div class="ds-group"><span class="ds-gl">More</span><div class="dossier-strip">'+
+          rest.map(function(c){ return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>'; }).join("")+
+          '</div></div>':"";
+      })()+
+      '</section>';
 
     // 1b) the dictionary — now its own page; Resources just points to it
     h+='<section id="res-dict-cta"><a class="dict-cta" href="#/dictionary"><div><b>The AI Dictionary</b>'+
@@ -1365,25 +2039,32 @@
     var d=new Date(iso+"T12:00:00");
     return d.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
   }
-  function buzzCard(b){
+  var BZ_KIND={lab:{c:"var(--s1)",l:"Lab"},person:{c:"var(--s6)",l:"Person"},
+               news:{c:"var(--s3)",l:"Press"},gov:{c:"var(--s5)",l:"Official"}};
+  function buzzCard(b,hot){
     var initial=(b.source&&b.source.name?b.source.name:"?").charAt(0);
-    var kindColor={lab:"#7c6cf0",person:"#e0b64e",news:"#5aa8d8",gov:"#7fbf7f"}[b.source&&b.source.kind]||"var(--accent)";
+    var kind=BZ_KIND[b.source&&b.source.kind]||{c:"var(--accent)",l:""};
     var heat=Math.max(4,Math.min(100,b.heat||0));
-    return '<div class="buzz-card">'+
-      '<div class="bz-head"><span class="bz-av" style="background:'+kindColor+'">'+esc(initial)+'</span>'+
-      '<span class="bz-who"><b>'+esc(b.source.name)+'</b><span>'+esc(b.source.handle||"")+(b.source.platform==="x"?" · 𝕏":"")+'</span></span>'+
-      '<span class="bz-heat" title="Buzz heat"><i style="width:'+heat+'%"></i></span></div>'+
-      '<div class="bz-text">'+fmt(b.text)+'</div>'+
+    // Buzz text runs through the entity layer too — a model named in a card
+    // gets the same provenance hovercard an article gets, per-card scope.
+    var seen={};
+    return '<div class="buzz-card'+(hot?' bz-hot':'')+'">'+
+      (hot?'<span class="bz-hotk">Loudest right now</span>':'')+
+      '<div class="bz-head"><span class="bz-av" style="background:'+kind.c+'">'+esc(initial)+'</span>'+
+      '<span class="bz-who"><b>'+esc(b.source.name)+'</b><span>'+esc(b.source.handle||"")+(b.source.platform==="x"?" · 𝕏":"")+
+      (kind.l?' · '+kind.l:'')+'</span></span>'+
+      '<span class="bz-heat" title="Buzz heat: '+heat+'/100"><i style="width:'+heat+'%"></i><em>'+heat+'</em></span></div>'+
+      '<div class="bz-text">'+entAnnotate(fmt(b.text),seen)+'</div>'+
       (b.why?'<div class="bz-why"><b>WHY IT\'S BUZZING</b> '+fmt(b.why)+'</div>':'')+
       '<div class="bz-foot">'+(b.topics||[]).map(function(t){return '<span class="bz-tag">'+esc(t)+'</span>';}).join("")+
       '<a href="'+esc(b.url)+'" target="_blank" rel="noopener">original ↗</a></div>'+
     '</div>';
   }
-  function buzzDayBlock(day,items){
+  function buzzDayBlock(day,items,isLatest){
     var sorted=items.slice().sort(function(a,b){return (b.heat||0)-(a.heat||0);});
     return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>'+esc(buzzTime(day))+
       '<span class="bz-count">'+sorted.length+'</span></div>'+
-      '<div class="buzz-grid">'+sorted.map(buzzCard).join("")+'</div>';
+      '<div class="buzz-grid">'+sorted.map(function(b,i){ return buzzCard(b, isLatest&&i===0&&(b.heat||0)>=80); }).join("")+'</div>';
   }
   function viewBuzz(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><span class="live-dot"></span>The Buzz</div>'+
@@ -1401,7 +2082,7 @@
     var older=days.filter(function(d){return d<cutStr;});
     // if the feed is young and nothing is "recent" yet, show what we have
     if(!recent.length && days.length){ recent=days.slice(0,7); older=days.slice(7); }
-    recent.forEach(function(day){ h+=buzzDayBlock(day,byDay[day]); });
+    recent.forEach(function(day,di){ h+=buzzDayBlock(day,byDay[day],di===0); });
     if(older.length){
       var olderCount=older.reduce(function(n,d){return n+byDay[d].length;},0);
       h+='<button class="buzz-more" id="buzz-more" onclick="rtfcBuzzOlder()">Show earlier buzz — '+olderCount+' more from '+older.length+' day'+(older.length===1?'':'s')+' ↓</button>';
@@ -2020,18 +2701,19 @@
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over">The Scoreboard</div>'+
       '<h1>Strength vs. cost, side by side</h1>'+
       '<p>Not just what each model costs — how <b>strong</b> it is, and the ratio between the two. The purple bar is raw intelligence; the gold bar is <b>strength per dollar</b>. Sort by whichever question you\'re actually asking.</p></div>';
-    h+='<div class="sb-updated"><span class="sbu-dot"></span>Last updated <b>'+esc(SB.updated||"—")+'</b> · the Data Desk reviews the board <b>on every newsroom run</b> and moves a score only when independent benchmarks move — never a lab\'s own number. A model we\'ve covered is listed as soon as it ships, but stays <b>unmeasured</b> until an independent aggregate scores it, rather than being ranked on the vendor\'s own claim.</div>';
+    // NOTE: .sb-updated is a flex row. ALL prose must live inside ONE element —
+    // bare text mixed with <b> tags becomes multiple anonymous flex items that
+    // lay out as broken side-by-side columns (this shipped broken for weeks).
+    h+='<div class="sb-updated"><span class="sbu-dot"></span><span class="sbu-t">Last updated <b>'+esc(SB.updated||"—")+'</b> · the Data Desk reviews the board <b>on every newsroom run</b> and moves a score only when independent benchmarks move — never a lab\'s own number. A model is listed as soon as it ships, but stays <b>unmeasured</b> until an independent aggregate scores it, rather than being ranked on the vendor\'s own claim.</span></div>';
     // headline insights
     h+='<div class="sb-insights">'+
-      '<div class="sb-ins"><span class="si-k">🧠 Smartest</span><b>'+esc(smartest.model)+'</b><span class="si-s">'+smartest.score+' / 100 · '+esc(smartest.lab)+'</span></div>'+
-      '<div class="sb-ins"><span class="si-k">💎 Best value</span><b>'+esc(bestVal.model)+'</b><span class="si-s">most strength per dollar</span></div>'+
-      '<div class="sb-ins"><span class="si-k">🏷 Cheapest</span><b>'+esc(cheapest.model)+'</b><span class="si-s">'+priceStr(cheapest,"out")+' / M out</span></div></div>';
-    // the "aha" line — smartest vs the priciest premium model
-    if(smartest && smartest.model!=="Fable 5"){
-      var fable=scored.filter(function(r){return r.model==="Fable 5";})[0];
-      if(fable && smartest.pout<fable.pout){
-        h+='<p class="sb-aha">The headline right now: <b>'+esc(smartest.model)+'</b> tops the board at <b>'+smartest.score+'</b> — and lists around <b>'+Math.round(fable.pout/smartest.pout*10)/10+'×</b> cheaper on output than '+esc(fable.model)+' ('+smartest.score+' vs '+fable.score+'). Stronger AND cheaper is a rare combination; that\'s why this launch mattered.</p>';
-      }
+      '<div class="sb-ins"><span class="si-k">Smartest</span><b>'+esc(smartest.model)+'</b><span class="si-s">'+smartest.score+' on the index · '+esc(smartest.lab)+'</span></div>'+
+      '<div class="sb-ins"><span class="si-k">Best value</span><b>'+esc(bestVal.model)+'</b><span class="si-s">'+bestVal.score+' pts at '+priceStr(bestVal,"out")+'/M out</span></div>'+
+      '<div class="sb-ins"><span class="si-k">Cheapest</span><b>'+esc(cheapest.model)+'</b><span class="si-s">'+priceStr(cheapest,"out")+' / M out · scores '+cheapest.score+'</span></div></div>';
+    // the "aha" line — the top scorer vs the priciest scored model, derived live
+    var priciest=scored.slice().sort(function(a,b){return b.pout-a.pout;})[0];
+    if(smartest && priciest && smartest!==priciest && smartest.pout<priciest.pout){
+      h+='<p class="sb-aha"><b>'+esc(smartest.model)+'</b> tops the board at <b>'+smartest.score+'</b> while listing around <b>'+(Math.round(priciest.pout/smartest.pout*10)/10)+'×</b> cheaper on output than '+esc(priciest.model)+' ('+smartest.score+' vs '+priciest.score+'). Stronger and cheaper at once is rare — that gap is the story this board exists to show.</p>';
     }
     // sort toggle
     h+='<div class="sb-sort"><span>Sort by</span>'+
@@ -2041,12 +2723,17 @@
     // the chart
     h+='<div class="sb-chart">'+list.map(function(r,i){
       var ws=Math.max(3,Math.round(r.score/maxScore*100)), wv=Math.max(3,Math.round(r._val/maxVal*100));
-      return '<div class="sb-card">'+
-        '<div class="sb-top"><span class="sb-rank">'+(i+1)+'</span><b>'+esc(r.model)+'</b> <span class="sb-lab">'+esc(r.lab)+'</span>'+
+      // value figure: index points per output-dollar, one decimal — the number the
+      // gold bar draws, shown instead of the old broken pin-if-cheap placeholder.
+      var vNum=(Math.round(r._val*10)/10).toFixed(1);
+      return '<div class="sb-card'+(i<3?' sb-podium sb-p'+(i+1):'')+'">'+
+        '<div class="sb-top"><span class="sb-rank">'+(i+1)+'</span><b>'+esc(r.model)+'</b>'+
+          (r.mode?'<span class="sb-mode">'+esc(r.mode)+'</span>':'')+
+          '<span class="sb-lab">'+esc(r.lab)+'</span>'+
           '<span class="sb-price">'+priceStr(r,"out")+'<em>/M out</em></span></div>'+
         '<div class="sb-bars">'+
           '<div class="sb-brow"><span class="sb-k">strength</span><div class="sb-track"><i class="str" style="width:'+ws+'%"></i></div><span class="sb-v">'+r.score+'</span></div>'+
-          '<div class="sb-brow"><span class="sb-k">value</span><div class="sb-track"><i class="val" style="width:'+wv+'%"></i></div><span class="sb-v">'+(r.pout<1?"$"+r.pin:"")+'</span></div>'+
+          '<div class="sb-brow"><span class="sb-k">value</span><div class="sb-track"><i class="val" style="width:'+wv+'%"></i></div><span class="sb-v" title="index points per output dollar">'+vNum+'</span></div>'+
         '</div>'+
         '<div class="sb-for">'+esc(r.note)+' <span class="sb-in">Input '+priceStr(r,"in")+'/M · output '+priceStr(r,"out")+'/M.</span></div>'+
       '</div>';
@@ -2802,14 +3489,30 @@
   }
 
   /* ================= EVENTS ("on the radar") ================= */
-  function eventSort(a,b){ return new Date(a.sort||a.when)-new Date(b.sort||b.when); }
+  // Events carry an optional `status` maintained by the scheduled scans:
+  //   "live"      — happening RIGHT NOW, verified against the official page
+  //                 during the last scan (checkedAt says when). Pulsing badge.
+  //   "soon"      — inside roughly the next 7 days.
+  //   (absent)    — scheduled/announced; the honest default.
+  // Live status is NEVER computed in the browser from the approximate `sort`
+  // date — an "Expected Sept" window is not a claim that anything is live.
+  // Only a scan that actually looked at the official page may set it.
+  function eventLive(e){ return e.status==="live"; }
+  function eventSort(a,b){
+    if(eventLive(a)!==eventLive(b)) return eventLive(a)?-1:1;
+    return new Date(a.sort||a.when)-new Date(b.sort||b.when);
+  }
   function eventCardHTML(e){
-    return '<a class="ev-card" href="'+esc(e.url)+'" target="_blank" rel="noopener">'+
-      '<div class="ev-when">'+esc(e.when)+'</div>'+
+    var live=eventLive(e);
+    var badge=live?'<span class="ev-live"><span class="live-dot"></span>LIVE NOW</span>'
+      :(e.status==="soon"?'<span class="ev-soon">Coming up</span>':'');
+    var checked=(live&&e.checkedAt)?'<span class="ev-chk">verified '+when(e.checkedAt)+'</span>':'';
+    return '<a class="ev-card'+(live?' is-live':'')+'" href="'+esc(e.liveUrl||e.url)+'" target="_blank" rel="noopener">'+
+      '<div class="ev-when">'+esc(e.when)+badge+'</div>'+
       '<div class="ev-body"><div class="ev-name">'+esc(e.name)+'</div>'+
-      '<div class="ev-meta"><span class="ev-type">'+esc(e.type)+'</span> · '+esc(e.place)+'</div>'+
+      '<div class="ev-meta"><span class="ev-type">'+esc(e.type)+'</span> · '+esc(e.place)+checked+'</div>'+
       '<div class="ev-blurb">'+esc(e.blurb)+'</div></div>'+
-      '<span class="ev-go">Official page ↗</span></a>';
+      '<span class="ev-go">'+(live?'Watch ↗':'Official page ↗')+'</span></a>';
   }
   function viewEvents(){
     var D=window.RTFC_EVENTS||{items:[]};
@@ -2826,9 +3529,12 @@
   }
   function eventsHomeHTML(){
     var D=window.RTFC_EVENTS||{items:[]};
-    var items=(D.items||[]).slice().sort(eventSort).slice(0,3);
+    // Live events always make the homepage cut, then the nearest upcoming.
+    var sorted=(D.items||[]).slice().sort(eventSort);
+    var items=sorted.slice(0, sorted.filter(eventLive).length>3?sorted.filter(eventLive).length:4);
     if(!items.length) return '';
-    return '<section class="home-events"><div class="he-head"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>On the radar</div>'+
+    var stamp=D.updated?'<span class="he-stamp">tracked · updated '+esc(D.updated)+'</span>':'';
+    return '<section class="home-events"><div class="he-head"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>On the radar'+stamp+'</div>'+
       '<span class="he-links"><a class="he-all live-link" href="#/live"><span class="live-dot"></span> Live &amp; ongoing</a><a class="he-all" href="#/events">All events →</a></span></div>'+
       '<div class="ev-list">'+items.map(eventCardHTML).join("")+'</div></section>';
   }
@@ -3044,6 +3750,7 @@
     else { view=notFound(); }
     document.getElementById("app").innerHTML=view;
     renderNav(active);
+    if(window.__motion) window.__motion(); // arm scroll-reveals/count-ups on the fresh render (no-op under reduced motion)
     var jump=(parts[0]==="article"&&parts[2])?parts[2]:null;
     if(jump){ var tgt=document.getElementById(jump); if(tgt){ tgt.scrollIntoView({behavior:"smooth",block:"start"}); return; } }
     window.scrollTo(0,0);
@@ -3093,7 +3800,128 @@
     setTimeout(function(){ if(typeof gtTrigger==="function") gtTrigger(code); },0);
     revealWhenTranslated(3000);
   }
-  window.addEventListener("hashchange",route);
+  /* ==========================================================================
+     THE MOTION SYSTEM — premium-editorial, zero dependencies.
+
+     Three pieces, all progressive enhancement:
+       1. View transitions between routes (View Transitions API — a soft
+          cross-fade/rise instead of a hard innerHTML cut; browsers without it
+          get exactly the old behavior).
+       2. Scroll-reveal: components, charts, and cards rise in as they enter
+          the viewport, once. JS ADDS the hidden state ("rv") before first
+          paint and the observer releases it ("rv-in") — so with JS disabled
+          nothing is ever hidden, and there is no flash of hidden content.
+       3. Count-up: the first number inside key figures (.fig, keyfacts,
+          ledger values, stat callouts) counts to its value on reveal, then is
+          restored to the EXACT original string so no rounding drift survives.
+
+     Hard rules:
+       - prefers-reduced-motion: reduce disables ALL of it (checked live).
+       - Only transform/opacity animate; observers unobserve after firing;
+         nothing here runs per-frame outside an active count-up.
+       - The Google-Translate prebuffer ("xlating") suppresses view
+         transitions so a hidden-then-translated page never animates twice.
+     ========================================================================== */
+  function motionOK(){
+    return !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }
+  var rvIO=null, cuIO=null;
+  // Count the first number in the element's first numeric text node up to its
+  // real value, then put the original string back verbatim.
+  function countUp(el){
+    if(!el || el.__cu) return; el.__cu=1;
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT), node=null, m=null;
+    while(w.nextNode()){
+      m=w.currentNode.nodeValue.match(/-?\d[\d,]*(?:\.\d+)?/);
+      if(m){ node=w.currentNode; break; }
+    }
+    if(!node) return;
+    var orig=node.nodeValue, numStr=m[0];
+    var target=parseFloat(numStr.replace(/,/g,""));
+    if(!isFinite(target) || Math.abs(target)<2) return;
+    var dec=(numStr.split(".")[1]||"").length, commas=numStr.indexOf(",")>=0;
+    function fmtN(v){
+      var s=v.toFixed(dec);
+      if(commas) s=s.replace(/\B(?=(\d{3})+(?!\d))/g,",");
+      return s;
+    }
+    var t0=performance.now(), dur=720;
+    function tick(now){
+      var p=Math.min(1,(now-t0)/dur); p=1-Math.pow(1-p,3); // cubic ease-out
+      node.nodeValue = p<1 ? orig.replace(numStr,fmtN(target*p)) : orig;
+      if(p<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var RV_SEL=".comp,.chart,.statcallout,.prose blockquote,.apply,.evstrip,.toc,.card,"+
+    ".mast-card,.dossier-card,.sources,.provenance,.distribution,.endbyline,.ai-disclosure,.corrections,"+
+    ".buzz-card,.ev-card,.lab-card,.sb-card,.sb-ins,.player-cell";
+  window.__motion=function(){
+    if(!motionOK() || !window.IntersectionObserver) return;
+    if(!rvIO){
+      rvIO=new IntersectionObserver(function(entries){
+        var j=0;
+        entries.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el=en.target; rvIO.unobserve(el);
+          // stagger within the batch that became visible together
+          el.style.setProperty("--rv-d",(Math.min(j++,6)*55)+"ms");
+          el.classList.add("rv-in");
+          el.querySelectorAll(".kf-v,.lg-v,.cb-v,.sk-t,.fig").forEach(countUp);
+          if(el.classList.contains("statcallout")){ var b=el.querySelector("b"); if(b) countUp(b); }
+        });
+      },{rootMargin:"0px 0px -7% 0px",threshold:0.06});
+      cuIO=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(!en.isIntersecting) return;
+          cuIO.unobserve(en.target); countUp(en.target);
+        });
+      },{threshold:0.5});
+    }
+    document.querySelectorAll(RV_SEL).forEach(function(el){
+      if(el.__rv) return; el.__rv=1;
+      el.classList.add("rv"); rvIO.observe(el); rvArmed.push(el);
+    });
+    // figures living in plain paragraphs (not inside any revealed container)
+    document.querySelectorAll(".prose p .fig").forEach(function(el){
+      if(el.__cuo) return; el.__cuo=1; cuIO.observe(el);
+    });
+  };
+  // A fast jump (keyboard End, a scrollbar drag, the glide grip) can move an
+  // element from below the viewport to above it between two frames — it never
+  // intersects, so the observer never fires and it would sit hidden until the
+  // reader happened to scroll back past it. Catch-up pass: anything armed that
+  // is now fully above the viewport reveals instantly, with no animation —
+  // scrolled-past content should simply BE there, exactly like a printed page.
+  var rvArmed=[], rvScrollT=null;
+  window.addEventListener("scroll",function(){
+    if(rvScrollT || !rvArmed.length) return;
+    rvScrollT=requestAnimationFrame(function(){
+      rvScrollT=null;
+      for(var i=rvArmed.length-1;i>=0;i--){
+        var el=rvArmed[i];
+        if(el.classList.contains("rv-in")){ rvArmed.splice(i,1); continue; }
+        if(!el.isConnected){ rvArmed.splice(i,1); continue; }
+        if(el.getBoundingClientRect().bottom<=0){
+          if(rvIO) rvIO.unobserve(el);
+          el.classList.add("rv-skip","rv-in");
+          rvArmed.splice(i,1);
+        }
+      }
+    });
+  },{passive:true});
+  function navigate(){
+    // Soft route change. Skipped when reduced motion is set, when the page is
+    // mid-translation (the xlating veil hides the swap anyway), or when the
+    // browser has no View Transitions API.
+    if(document.startViewTransition && motionOK() &&
+       !document.documentElement.classList.contains("xlating")){
+      document.startViewTransition(route);
+    } else {
+      route();
+    }
+  }
+  window.addEventListener("hashchange",navigate);
   // Clicking the RTFCLMGZN logo or "Home" while already on the home page doesn't change
   // the hash (so no hashchange/route fires) — scroll back to the top instead.
   document.addEventListener("click",function(e){
@@ -3117,12 +3945,14 @@
   function initTheme(){
     var btn=document.getElementById("theme");
     function set(t){ document.documentElement.setAttribute("data-theme",t); try{localStorage.setItem("rtfc-theme",t);}catch(e){} btn.textContent=t==="dark"?"☀":"☾"; }
+    // Dark-first: the pre-paint bootstrap in index.html already set data-theme
+    // (dark unless the reader explicitly chose light). This just syncs the
+    // button and keeps the choice persistent. OS light preference no longer
+    // overrides the default — only the reader's own toggle does.
     var saved; try{saved=localStorage.getItem("rtfc-theme");}catch(e){}
-    if(saved) set(saved);
-    else { var d=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches; btn.textContent=d?"☀":"☾"; }
+    set(saved==="light"?"light":"dark");
     btn.addEventListener("click",function(){
-      var cur=document.documentElement.getAttribute("data-theme");
-      if(!cur){ cur=(window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches)?"dark":"light"; }
+      var cur=document.documentElement.getAttribute("data-theme")||"dark";
       set(cur==="dark"?"light":"dark");
     });
   }
