@@ -224,7 +224,12 @@
       ],
       "text_space": "dark sky top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-revelio-ai-labor-market-tracker-july-2026",
+          "used_at": "2026-07-30"
+        }
+      ]
     },
     {
       "id": "art-009-night-market-with-a-humanoid-cook",
@@ -274,7 +279,12 @@
       ],
       "text_space": "sky upper-center",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-microsoft-q4-anthropic-openai-marks",
+          "used_at": "2026-07-30"
+        }
+      ]
     },
     {
       "id": "art-011-ai-lab-lobby-mission-wall",
@@ -1842,7 +1852,12 @@
       ],
       "text_space": "sky and mountains left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-openai-chatgpt-academic-researchers-program",
+          "used_at": "2026-07-30"
+        }
+      ]
     },
     {
       "id": "art-072-chip-trays-and-agv-robots",
