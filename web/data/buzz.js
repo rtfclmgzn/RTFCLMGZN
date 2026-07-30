@@ -203,5 +203,11 @@ window.RTFC_BUZZ = [
     text:"Richard Socher's **Recursive Superintelligence** signed a $410 million multiyear compute deal with AWS -- most of the $650M it raised emerging from stealth in May -- to scale research into self-improving AI. Socher called it \"likely going to be one of the smallest compute deals we're going to sign in the next few years.\" No investment component, unlike the hybrid invest-plus-compute arrangements other labs strike.",
     why:"A straight compute-for-cash deal rather than the circular investment-plus-purchase structure now standard between labs and hyperscalers, from a well-known former Salesforce chief scientist's new self-improving-AI venture.",
     heat:58, topics:["aws","recursive superintelligence","compute","funding"],
-    url:"https://press.aboutamazon.com/aws/2026/7/recursive-signs-410-million-multi-year-collaboration-with-aws-to-scale-self-improving-ai" }
+    url:"https://press.aboutamazon.com/aws/2026/7/recursive-signs-410-million-multi-year-collaboration-with-aws-to-scale-self-improving-ai" },
+  { id:"bz-078", date:"2026-07-29",
+    source:{ name:"Noma Security", handle:"Noma Labs", platform:"web", kind:"lab" },
+    text:"Noma Labs publicly disclosed **RufRoot** (CVE-2026-59726, CVSS 10.0), a flaw in **Ruflo** -- the open-source agent-orchestration platform for Claude Code and Codex (formerly Claude Flow, 60k+ GitHub stars) -- that exposed 233 tools, including shell execution and AI-memory poisoning, through an unauthenticated MCP bridge open to the network by default. Ruflo's maintainers shipped a fix within 24 hours of Noma's June 30 private report; Noma confirmed the patch blocks the exploit.",
+    why:"A maximum-severity, no-login-required flaw in one of the most widely adopted open-source Claude Code/Codex agent harnesses -- this site's own audience's tooling -- though responsibly disclosed and already patched a month before today's public writeup.",
+    heat:74, topics:["security","open source","ai agents","mcp","vulnerability"],
+    url:"https://noma.security/blog/rufroot-the-mcp-bridge-vulnerability-that-turns-agents-into-rogue-admins-cve-2026-59726/" }
 ];
