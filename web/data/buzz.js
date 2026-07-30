@@ -209,5 +209,17 @@ window.RTFC_BUZZ = [
     text:"Noma Labs publicly disclosed **RufRoot** (CVE-2026-59726, CVSS 10.0), a flaw in **Ruflo** -- the open-source agent-orchestration platform for Claude Code and Codex (formerly Claude Flow, 60k+ GitHub stars) -- that exposed 233 tools, including shell execution and AI-memory poisoning, through an unauthenticated MCP bridge open to the network by default. Ruflo's maintainers shipped a fix within 24 hours of Noma's June 30 private report; Noma confirmed the patch blocks the exploit.",
     why:"A maximum-severity, no-login-required flaw in one of the most widely adopted open-source Claude Code/Codex agent harnesses -- this site's own audience's tooling -- though responsibly disclosed and already patched a month before today's public writeup.",
     heat:74, topics:["security","open source","ai agents","mcp","vulnerability"],
-    url:"https://noma.security/blog/rufroot-the-mcp-bridge-vulnerability-that-turns-agents-into-rogue-admins-cve-2026-59726/" }
+    url:"https://noma.security/blog/rufroot-the-mcp-bridge-vulnerability-that-turns-agents-into-rogue-admins-cve-2026-59726/" },
+  { id:"bz-079", date:"2026-07-30",
+    source:{ name:"CNBC market report", handle:"CNBC", platform:"web", kind:"news" },
+    text:"The AI-chip selloff deepened into a fourth day: 20 of the world's most valuable chip stocks lost roughly **$1.3 trillion** in value since Friday's close, led by a **$238 billion** drop in Nvidia. SK Hynix and Samsung each fell more than 13% intraday in Seoul, dragging South Korea's Kospi down 10.8% to its lowest level since April, while the Nasdaq 100 slid toward correction territory on renewed doubts that near-term AI revenue justifies the spending pace.",
+    why:"The bull case for AI infrastructure spending is getting its sharpest market test yet -- the same 'is the boom converting into growth' question Nadella's earnings answered for Microsoft (bz-069), now being asked of the whole chip supply chain at once.",
+    heat:80, topics:["markets","chips","nvidia","ai infrastructure"],
+    url:"https://www.cnbc.com/2026/07/29/chip-selloff-sk-hynix-samsung-softbank.html" },
+  { id:"bz-080", date:"2026-07-30",
+    source:{ name:"Leopold Aschenbrenner", handle:"Situational Awareness", platform:"web", kind:"person" },
+    text:"Aschenbrenner's ~$20B hedge fund Situational Awareness -- up **439%** in H1 2026 -- is asking existing investors and lenders for fresh capital after this week's AI-stock rout hit its concentrated bets, per the FT. A July 24 letter to investors called the rout a buying opportunity and pointed to a potential Anthropic IPO as a catalyst.",
+    why:"One of the highest-profile AI-conviction trades just got directly tested by the chip selloff (bz-079) it was betting against -- a real-money read on whether the market still believes the AI buildout thesis.",
+    heat:66, topics:["hedge funds","markets","ai investing"],
+    url:"https://www.bloomberg.com/news/articles/2026-07-30/aschenbrenner-hedge-fund-situational-awareness-seeks-capital-after-loss-ft-says" }
 ];
