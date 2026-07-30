@@ -1866,7 +1866,12 @@
       ],
       "text_space": "white wall and ceiling left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-samsung-q2-2026-chip-profit-mobile-loss",
+          "used_at": "2026-07-30"
+        }
+      ]
     },
     {
       "id": "art-073-surgical-suite-dual-robot-arms",
@@ -2044,7 +2049,12 @@
       ],
       "text_space": "storm sky top",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-aschenbrenner-situational-awareness-capital-raise",
+          "used_at": "2026-07-30"
+        }
+      ]
     },
     {
       "id": "art-080-the-data-monolith-archive",

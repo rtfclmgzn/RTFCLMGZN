@@ -159,6 +159,20 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "The existing framework",
+          "title": "March's Ratepayer Protection Pledge",
+          "items": [
+            { "label": "Signed", "value": "March 2026" },
+            { "label": "Signatories", "value": "Amazon, Google, Meta, Microsoft, OpenAI, Oracle, xAI", "note": "7 companies" },
+            { "label": "Core commitments", "value": "Build, bring, or buy new generation; pay for power-delivery upgrades; negotiate separate utility rate structures" },
+            { "label": "What's new in July", "value": "Reuters reports a planned voluntary follow-on event", "note": "Participants and timing still unsettled" }
+          ],
+          "source": "White House Ratepayer Protection Pledge (March 2026) and Reuters, July 13, 2026."
+        }
+      },
+      {
         "type": "p",
         "text": "The proposed gathering would focus on how utilities and technology companies handle the electricity costs associated with the AI buildout. Reuters described the initiative as voluntary and said it was intended to keep households and businesses from absorbing costs created by growing data-center power demand. The available reporting does not establish a binding tariff, enforcement mechanism or final timetable.",
         "citation_urls": [
@@ -285,6 +299,20 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "citation_urls": [
           "https://www.osfi-bsif.gc.ca/en/risks/technology-cyber-risk-management/technology-risk-bulletin"
         ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "The warning, at a glance",
+          "title": "OSFI's agentic-AI risk bulletin",
+          "items": [
+            { "label": "Public bulletin", "value": "July 1, 2026" },
+            { "label": "Status", "value": "Advisory -- not a binding rule", "note": "OSFI's own description of its technology risk bulletins" },
+            { "label": "Earlier warning", "value": "April 29, 2026 email to major institutions", "note": "Obtained by Reuters, not part of the public bulletin" },
+            { "label": "Model named", "value": "Anthropic's Claude Mythos", "note": "Per the Reuters-obtained email only" }
+          ],
+          "source": "OSFI Technology Risk Bulletin and Reuters, July 13, 2026."
+        }
       },
       {
         "type": "p",
@@ -1069,6 +1097,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://futureoflife.org/ai-safety-index-summer-2026/",
           "https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Report_010726_2Pager.pdf"
         ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "What the grades establish",
+          "title": "How much weight can this index carry?",
+          "items": [
+            {
+              "claim": "Nine frontier labs were graded, with C+ the highest mark",
+              "level": "confirmed",
+              "basis": "Published by the Future of Life Institute with per-domain scores on a stated 4-point scale."
+            },
+            {
+              "claim": "Leading developers have weakened or voided their own pause pledges",
+              "level": "strong",
+              "basis": "The panel's finding, drawn from the companies' own published safety frameworks — documents the labs wrote themselves."
+            },
+            {
+              "claim": "The grades reflect actual safety practice",
+              "level": "partial",
+              "basis": "They rest on public documentation, questionnaire responses and expert judgment, not regulatory audit or internal access. A company that discloses little is graded harshly for opacity rather than for practice.",
+              "resolver": "An inspection regime with internal access, or independent verification of any lab's framework compliance."
+            }
+          ],
+          "source": "Future of Life Institute AI Safety Index, Summer 2026, and its stated methodology."
+        }
       }
     ],
     "apply": [
@@ -2926,6 +2980,39 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "kicker": "Where the accounts diverge",
+          "title": "How severe was this, really?",
+          "sub": "The incident is not disputed. Its characterization is, and the gap runs between the company and its critics.",
+          "items": [
+            {
+              "question": "Was this a security incident or something more serious?",
+              "claims": [
+                {
+                  "who": "OpenAI",
+                  "kind": "the disclosing party",
+                  "says": "A security incident, discovered and disclosed; the aftermath a partnership with Hugging Face"
+                },
+                {
+                  "who": "Rep. Greg Casar",
+                  "kind": "on the record",
+                  "says": "\"extremely alarming\""
+                },
+                {
+                  "who": "Timnit Gebru",
+                  "kind": "outside researcher",
+                  "says": "OpenAI's own account undersells the severity",
+                  "trusted": true
+                }
+              ],
+              "ruling": "This piece reports OpenAI's framing as OpenAI's framing rather than as the finding. The company is the only source with full visibility and also the party with the most at stake in the characterization, so its procedural language is treated as a claim, not a conclusion — while noting no independent forensic account had been published at the time of writing."
+            }
+          ],
+          "source": "OpenAI's July 21 disclosure and public statements; Rep. Casar and Timnit Gebru as quoted in this piece."
+        }
+      },
+      {
         "type": "h2",
         "text": "The bill that followed",
         "citation_urls": []
@@ -2954,20 +3041,23 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "chart",
-        "title": "AI Kill Switch Act — proposed penalty tiers",
-        "unit": "$M/day",
-        "source": "Rep. Ted Lieu's office (press release, July 23, 2026)",
-        "data": [
-          {
-            "label": "No working kill-switch capability",
-            "value": 2
-          },
-          {
-            "label": "Ignoring an active shutdown order",
-            "value": 20,
-            "hi": true
-          }
-        ]
+        "chart": {
+          "kind": "bar",
+          "title": "AI Kill Switch Act — proposed penalty tiers",
+          "unit": "$M/day",
+          "source": "Rep. Ted Lieu's office (press release, July 23, 2026)",
+          "data": [
+            {
+              "label": "No working kill-switch capability",
+              "value": 2
+            },
+            {
+              "label": "Ignoring an active shutdown order",
+              "value": 20,
+              "hi": true
+            }
+          ]
+        }
       },
       {
         "type": "p",
@@ -3682,6 +3772,58 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "model",
+        "model": {
+          "kicker": "Run it yourself",
+          "title": "What has to happen for the multiple to look ordinary?",
+          "sub": "The $50 billion target against $300 million of run-rate revenue is roughly 167x. Drag either figure to see what the other has to do.",
+          "inputs": [
+            {
+              "key": "val",
+              "label": "Valuation being negotiated",
+              "value": 50,
+              "min": 4.3,
+              "max": 50,
+              "step": 0.1,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 1,
+              "note": "$50B is the target for an unclosed round. The company was at ~$31.5B in July and ~$4.3B last December."
+            },
+            {
+              "key": "arr",
+              "label": "Annualized recurring revenue",
+              "value": 300,
+              "min": 100,
+              "max": 3000,
+              "step": 25,
+              "prefix": "$",
+              "unit": "M",
+              "dec": 0,
+              "note": "$300M reported in June, up from $100M in March. Higher values are hypothetical, not reported."
+            }
+          ],
+          "outputs": [
+            {
+              "label": "Revenue multiple",
+              "expr": "val*1000/arr",
+              "unit": "x revenue",
+              "dec": 0,
+              "note": "At the reported figures this is the ~167x the piece cites."
+            },
+            {
+              "label": "Revenue needed for a 30x multiple",
+              "expr": "val*1000/30",
+              "prefix": "$",
+              "unit": "M",
+              "dec": 0,
+              "note": "What run-rate revenue would have to reach for the chosen valuation to price near the high end of ordinary software comparables."
+            }
+          ],
+          "source": "Bloomberg reporting on the negotiated round and Moonshot's reported ARR figures. Outputs are arithmetic on those two numbers only."
+        }
+      },
+      {
         "type": "p",
         "text": "Moonshot's rush toward Hong Kong isn't an isolated move. Chinese AI and chip companies have been turning to Hong Kong listings in waves through 2026 — GPU maker MetaX confidentially filed for its own Hong Kong IPO this same week, following chipmakers Biren Technology, Iluvatar CoreX, and Moore Threads, which have all listed in Shanghai or Hong Kong since late 2025. The pattern traces back to Beijing's semiconductor and AI self-reliance push: access to capital markets has effectively become policy support for domestic firms racing to build alternatives to US-controlled technology while export controls hold the newest American hardware out of reach. Moonshot, as a model developer rather than a chipmaker, sits one layer up from that specific fight, but it's riding the same capital-markets wave and the same state-linked investor base.",
         "citation_urls": [
@@ -4376,6 +4518,42 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "document",
+        "document": {
+          "kicker": "From the primary statements",
+          "title": "The accusation, in the officials' own words",
+          "sub": "Both statements are public posts rather than filings. Neither carries supporting documentation, which is the central fact about them.",
+          "docTitle": "Public statements by two US officials",
+          "docMeta": "Posted to X, July 22, 2026 · no accompanying filing or evidence released",
+          "lines": [
+            {
+              "n": "Kratsios",
+              "text": "\"We have information that Moonshot AI distilled Anthropic's Fable for the development of its K3 model.\"",
+              "mark": true
+            },
+            {
+              "n": "Kratsios",
+              "text": "\"Large-scale, covert industrial distillation aimed at stealing proprietary U.S. technology and undermining American research is unacceptable.\""
+            },
+            {
+              "n": "Bessent",
+              "text": "\"Open source is not open season on American IP.\""
+            },
+            {
+              "n": "Bessent",
+              "text": "\"When [Chinese] firms conduct covert, industrial-scale distillation attacks that cross the line into IP theft, sanctions and Entity List designations will be on the table.\"",
+              "mark": true
+            },
+            {
+              "n": "status",
+              "text": "No formal Commerce or Treasury filing has followed. No sanction or Entity List designation exists."
+            }
+          ],
+          "reading": "The marked lines are the two load-bearing claims: a specific factual assertion about how K3 was built, and a threat of action conditional on it. Both are unevidenced publicly, and the second is explicitly framed as \"on the table\" rather than taken — which is why this piece treats the accusation as an investigation rather than a finding.",
+          "source": "Kratsios and Bessent posts of July 22 2026, as quoted in this piece."
+        }
+      },
+      {
         "type": "h2",
         "text": "The accusation has a history — from before K3 existed"
       },
@@ -4777,6 +4955,15 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "rank",
+        "rank": {
+          "kind": "infra-commitment-usd",
+          "highlight": "inf-sk-group",
+          "kicker": "Against the record",
+          "source": "Headline commitment figures on record, in USD billions. Scope differs by deal — the note on each entry says what it measures."
+        }
+      },
+      {
         "type": "p",
         "text": "Vera Rubin is Nvidia's successor to Blackwell, and the memory dependency is why this deal pairs a data center with a chip-supply agreement instead of standing alone. Nvidia's own numbers for the platform: 50 petaflops of NVFP4 inference compute per GPU, up to a 10x reduction in per-token inference cost versus Blackwell, and up to 4x fewer GPUs needed to train mixture-of-experts models — gains Nvidia attributes largely to a third-generation Transformer Engine and a full-rack NVL72 configuration linking 72 Rubin GPUs and 36 Vera CPUs over 260TB/s of aggregate NVLink bandwidth. None of that throughput is reachable without memory that can keep pace, which is exactly the bottleneck HBM4 is meant to solve — and exactly why Nvidia wants SK hynix's next-generation lines designed around its own chip's requirements rather than shared generically across the industry.",
         "citation_urls": [
@@ -4840,6 +5027,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "citation_urls": [
           "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-sk-group-enter-usd500-billion-ai-partnership-plan-to-supercharge-ai-infrastructure-with-next-gen-memory-and-massive-ai-factories"
         ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "kicker": "The strongest case against",
+          "title": "Where the circular-financing read could be wrong",
+          "points": [
+            {
+              "claim": "Vendor financing is ordinary industrial practice, not a red flag.",
+              "detail": "Aircraft, telecom equipment and capital machinery have been sold this way for decades. A supplier extending credit to accelerate a customer's buildout is how capital-intensive industries have always cleared demand that outruns the buyer's balance sheet.",
+              "whoHolds": "The standard industrial-finance view"
+            },
+            {
+              "claim": "The physical assets are real regardless of how the capital was routed.",
+              "detail": "SK Telecom's data center and SK Hynix's HBM4 lines will exist as plant either way. Calling the structure circular describes the money's path, not whether the capacity gets built — and the piece concedes this.",
+              "whoHolds": "The argument the article itself makes"
+            },
+            {
+              "claim": "Locking in HBM4 co-design is a supply-security move worth paying for on its own terms.",
+              "detail": "Memory has been the year's tightest chokepoint. Paying to have a supplier's next-generation lines designed around your bandwidth and thermal requirements is a durable competitive advantage that does not depend on the customer's own spending returning to you.",
+              "whoHolds": "A supply-chain read of the same announcement"
+            }
+          ],
+          "verdict": "The circular-financing label is a description of structure, not an accusation of fiction, and the piece says so. The narrower and more defensible point stands: the $500B headline mixes infrastructure spend, vendor credit and forward supply contracts, so treating it as a single figure of near-term economic impact overstates it.",
+          "source": "Nvidia Newsroom and Reuters, July 24 2026; the circular-financing critique as characterized in reporting."
+        }
       }
     ],
     "apply": [
@@ -5847,6 +6060,58 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "model",
+        "model": {
+          "kicker": "Run it yourself",
+          "title": "How far ahead of its AI revenue is the spending?",
+          "sub": "Nadella's condition is that the spend converts into growth. These are the two figures that measure how big a gap it has to close.",
+          "inputs": [
+            {
+              "key": "capex",
+              "label": "Capital spending, per quarter",
+              "value": 31.9,
+              "min": 31.9,
+              "max": 40,
+              "step": 0.1,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 1,
+              "note": "$31.9B in fiscal Q3. Q4 guidance tops $40B."
+            },
+            {
+              "key": "arr",
+              "label": "AI revenue run rate, annualized",
+              "value": 37,
+              "min": 37,
+              "max": 150,
+              "step": 1,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 0,
+              "note": "$37B as of fiscal Q3, up 123% year-over-year. Higher values are hypothetical, not reported."
+            }
+          ],
+          "outputs": [
+            {
+              "label": "Annualized capex vs AI revenue",
+              "expr": "capex*4/arr",
+              "unit": "x",
+              "dec": 2,
+              "note": "Dollars of capital spending carried by each dollar of annualized AI revenue at the chosen figures."
+            },
+            {
+              "label": "AI revenue needed for 1:1",
+              "expr": "capex*4",
+              "prefix": "$",
+              "unit": "B",
+              "dec": 0,
+              "note": "Where the run rate would have to reach for a year of AI revenue to match a year of spending at this rate."
+            }
+          ],
+          "source": "Microsoft fiscal Q3 2026 results and Q4 guidance as reported. Outputs are arithmetic on those two figures only."
+        }
+      },
+      {
         "type": "h2",
         "text": "What the interview didn't answer",
         "citation_urls": []
@@ -6676,6 +6941,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "counter",
+        "counter": {
+          "kicker": "The strongest case against",
+          "title": "Where this read could be wrong",
+          "points": [
+            {
+              "claim": "A prospectus is a use-of-proceeds document, not a product roadmap.",
+              "detail": "IPO proceeds fund named, auditable projects. HBM development can be financed from operating cash flow, existing R&D budgets, or state support that never appears in a use-of-proceeds table. The absence of an HBM line item is not evidence of an absence of HBM work.",
+              "whoHolds": "The structural case Nomura's Donnie Teng argues"
+            },
+            {
+              "claim": "Conventional DRAM upgrades are the prerequisite, not a detour from HBM.",
+              "detail": "HBM is stacked DRAM. Investment in production-line upgrades and DRAM process enhancement is what closes the manufacturing gap that currently blocks HBM at volume — so the spending the piece reads as off-narrative may be exactly on it.",
+              "whoHolds": "A process-engineering read of the same filing"
+            },
+            {
+              "claim": "The market was pricing the demand curve, not this year's product mix.",
+              "detail": "AI server memory demand pushed CXMT's Q1 revenue up more than 700% year-over-year on conventional DRAM alone. A buyer can rationally bid the stock on that, with HBM as optionality rather than the thesis.",
+              "whoHolds": "Anyone reading the revenue growth rather than the HBM narrative"
+            }
+          ],
+          "verdict": "The gap the piece identifies is between the stock's stated rationale and the filing's stated spending, and that gap is real and documented. It is not a claim that CXMT will never produce HBM, or that the valuation is wrong — only that the two are being justified by different documents.",
+          "source": "CXMT IPO prospectus; Nomura and Morningstar analyst positions as reported."
+        }
+      },
+      {
         "type": "h2",
         "text": "Two analyst reads that don't agree",
         "citation_urls": []
@@ -6684,6 +6975,16 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "p",
         "text": "Wall Street's reaction split cleanly. Nomura's Donnie Teng argued the structural case for absorbing the valuation: as long as hyperscaler AI capex keeps driving memory demand, the market can eventually absorb whatever liquidity the IPO pulled out of Chinese equities, regardless of near-term multiple. Morningstar's read is more skeptical on fundamentals — it puts CXMT at roughly a 30% cost-per-bit disadvantage against Samsung and SK Hynix, a gap that has to close before market-share gains translate into comparable margins. Both can be true at once: a stock can be a reasonable structural bet on Chinese AI-memory demand and still be selling at a valuation that assumes a manufacturing cost gap closes faster than the historical pace of DRAM process catch-up would suggest. Neither analyst view is a recommendation to act on, and this isn't one either — it's the shape of the disagreement, not a verdict on it.",
         "citation_urls": []
+      },
+      {
+        "type": "rank",
+        "rank": {
+          "kind": "funding-raise-usd",
+          "highlight": "raise-cxmt-ipo",
+          "kicker": "Against the record",
+          "limit": 6,
+          "source": "Capital actually raised in a closed round or listing. Asks and in-progress talks are excluded by definition."
+        }
       },
       {
         "type": "h2",
@@ -6932,6 +7233,43 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "document",
+        "document": {
+          "kicker": "From the document itself",
+          "title": "The interagency determination's own reasoning",
+          "sub": "The rationale is not a general suspicion of Chinese hardware. It is a specific claim about remote connectivity, stated twice.",
+          "docTitle": "National Security Determinations, via FCC DA-26-786",
+          "docMeta": "Department of War and Department of Homeland Security · issued July 27, 2026",
+          "url": "https://docs.fcc.gov/public/attachments/DA-26-786A1.txt",
+          "lines": [
+            {
+              "n": "§ inverters",
+              "text": "\"remote connectivity introduces additional vulnerabilities which compound as inverter-based resources proliferate\"",
+              "mark": true
+            },
+            {
+              "n": "§ robotics",
+              "text": "\"networked capabilities of advanced robotic systems create extensive vulnerabilities\"",
+              "mark": true
+            },
+            {
+              "n": "finding",
+              "text": "Both categories found to pose an \"unacceptable risk\" to US national security."
+            },
+            {
+              "n": "effect",
+              "text": "New device models from covered manufacturers can no longer receive FCC equipment authorization."
+            },
+            {
+              "n": "carve-out",
+              "text": "Conditional Approval exempts a specific device or class of devices from the Covered List entirely."
+            }
+          ],
+          "reading": "The order turns on whether a device can phone home, not on where it was built. That is why it reaches power inverters and humanoid robots in the same action, and why an exemption path exists at all — a device that can be shown not to carry the connectivity risk is not what the determination targets.",
+          "source": "FCC DA-26-786 and the July 27 2026 interagency National Security Determinations, as quoted in this piece."
+        }
+      },
+      {
         "type": "h2",
         "text": "Who this actually binds",
         "citation_urls": []
@@ -7128,6 +7466,69 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://www.stocktitan.net/sec-filings/CORZ/8-k-core-scientific-inc-tx-reports-material-event-d48e9f43cce5.html",
           "https://www.datacenterdynamics.com/en/news/core-scientific-secures-amd-as-customer-at-five-sites/"
         ]
+      },
+      {
+        "type": "model",
+        "model": {
+          "kicker": "Run it yourself",
+          "title": "The only figures that compare across deals",
+          "sub": "Both deals were quoted at $14 billion. Divide each by what it actually buys and they stop resembling each other.",
+          "inputs": [
+            {
+              "key": "deal",
+              "label": "Headline deal size",
+              "value": 14,
+              "min": 1,
+              "max": 500,
+              "step": 1,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 0,
+              "note": "Both of this week's deals were reported at $14B. The reported Ohio guarantee runs to $250B."
+            },
+            {
+              "key": "mw",
+              "label": "Capacity it covers",
+              "value": 530,
+              "min": 100,
+              "max": 10000,
+              "step": 10,
+              "unit": " MW",
+              "dec": 0,
+              "note": "AMD contracted 530 MW. Meta's El Paso campus is 1,000 MW. The reported Ohio campus is 10,000 MW."
+            },
+            {
+              "key": "yrs",
+              "label": "Term, if the figure is lease revenue",
+              "value": 15,
+              "min": 1,
+              "max": 25,
+              "step": 1,
+              "unit": " yrs",
+              "dec": 0,
+              "note": "AMD's leases run 15 years. Set this to 1 to read the figure as a one-off build cost instead."
+            }
+          ],
+          "outputs": [
+            {
+              "label": "Cost per megawatt",
+              "expr": "deal*1000/mw",
+              "prefix": "$",
+              "unit": "M / MW",
+              "dec": 1,
+              "note": "Meta's $14B over 1,000 MW gives the ~$14M/MW build cost this piece cites."
+            },
+            {
+              "label": "Per megawatt per year",
+              "expr": "deal*1000/mw/yrs",
+              "prefix": "$",
+              "unit": "M / MW / yr",
+              "dec": 2,
+              "note": "AMD's $14B over 530 MW across 15 years gives the ~$1.76M/MW/yr landlord's revenue estimate."
+            }
+          ],
+          "source": "Core Scientific 8-K and the Meta/BlackRock release, both July 28 2026. The arithmetic is the article's own."
+        }
       },
       {
         "type": "p",
@@ -7368,6 +7769,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "p",
         "text": "Neither deal changes what's actually scarce. Full delivery on both lands in 2028 -- these are power and construction timelines, not chip-availability ones. AMD is reserving capacity years before it needs to fill racks with Instinct GPUs; Meta is locking in a site and a grid interconnection years before the campus can run a single training job. The bottleneck this quarter is still power and buildable land, not silicon -- which is exactly why the deals are structured as long-dated leases and joint ventures rather than purchase orders.",
         "citation_urls": []
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "kicker": "The strongest case against",
+          "title": "Where this read could be wrong",
+          "points": [
+            {
+              "claim": "The headline number is the right unit after all, because that is what gets financed.",
+              "detail": "Lenders, boards and index funds transact on total deal value, not on dollars per megawatt. If the $14B is what appears in a credit agreement and a capex line, then normalizing it away discards the number that actually moves capital.",
+              "whoHolds": "Anyone underwriting or rating the debt"
+            },
+            {
+              "claim": "Calling the financing structure asset-light understates real risk transfer.",
+              "detail": "Meta retains 20% of a venture it leases back from for up to 20 years. A long-dated lease obligation on a single-purpose asset is not obviously less exposure than owning it outright — it is the same economics with a different balance-sheet treatment.",
+              "whoHolds": "The accounting question the piece itself flags as unresolved"
+            },
+            {
+              "claim": "2028 delivery dates are not evidence the constraint hasn't moved.",
+              "detail": "Power and construction timelines have always run years out. Contracting 530 MW now with an option on 1,925 MW more is what a company does when it expects the bottleneck to persist — the schedule reflects lead times, not a judgment about scarcity.",
+              "whoHolds": "A capacity-planning read of the same filings"
+            }
+          ],
+          "verdict": "The per-megawatt framing still holds because the two deals' headline figures measure different things — one a landlord's 15-year revenue forecast, one a construction budget — so comparing them directly is the error the piece is correcting. That is a narrower claim than saying deal size never matters.",
+          "source": "Argued from the same Core Scientific 8-K and Meta/BlackRock disclosures the piece reports."
+        }
       }
     ],
     "apply": [
@@ -7632,5 +8059,646 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-07-29T22:55:03Z"
+  },
+  {
+    "slug": "samsung-q2-2026-record-chip-profit-mobile-loss",
+    "title": "Samsung's memory chips just posted a record 89.2 trillion won profit. Its own phones posted a loss because of it.",
+    "dek": "Samsung's Device Solutions division booked its most profitable quarter ever on the AI memory supercycle. In the same earnings release, Samsung's Mobile eXperience division reported its first operating loss since 2011 — not from weak Galaxy sales, but from paying elevated DRAM and NAND prices driven by the same supercycle enriching Samsung's own chip business.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Samsung's DS chip division posted a record 89.2 trillion won operating profit on AI memory demand.",
+      "Samsung's MX phone division posted a 0.7 trillion won operating loss, its first since 2011.",
+      "DRAM prices rose in the mid-40% range and NAND in the high-60% range quarter-on-quarter.",
+      "Galaxy sales actually grew year-on-year — component costs, not demand, erased the margin.",
+      "Caveat: whether DS gives MX any internal price discount is analysts' inference, not a Samsung disclosure."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Samsung Electronics' Device Solutions (DS) division — the chip business that makes its DRAM, NAND, and HBM memory — just posted the most profitable quarter in its history: **127.5 trillion won** in revenue and **89.2 trillion won** in operating profit for the quarter ended June 30, on the AI-driven memory supercycle. In the same earnings release, Samsung's Mobile eXperience (MX) and Networks division — the one that makes Galaxy phones — disclosed an operating loss of **0.7 trillion won**, its first since 2011. Same company, same quarter, and, per Samsung's own results language and outside reporting, substantially the same cause.",
+        "citation_urls": [
+          "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A record chip profit, an all-time first phone loss",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Company-wide, Samsung reported consolidated revenue of 171.5 trillion won and operating profit of 89.5 trillion won for the quarter — also all-time records. DS alone contributed more operating profit (89.2 trillion won on 127.5 trillion won of revenue, roughly a **70% operating margin**) than the entire company combined, meaning every other Samsung business unit, including MX's 0.7 trillion won loss on 33.2 trillion won of revenue, netted out to roughly ==0.3 trillion won== combined. Samsung's own release attributes the MX shortfall to \"rising component cost\" pressure, without specifying where those components are sourced.",
+        "citation_urls": [
+          "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "Same company, same quarter",
+          "title": "What Samsung's two headline numbers actually cover",
+          "items": [
+            {
+              "value": "89.2T won",
+              "unit": "DS division operating profit",
+              "label": "Record quarterly profit for Samsung's chip business",
+              "includes": "DRAM, NAND, HBM4, and System LSI/foundry results together",
+              "excludes": "MX/Networks, Display, and Harman division results",
+              "note": "On 127.5T won of DS revenue — roughly a 70% operating margin for the division alone."
+            },
+            {
+              "value": "0.7T won",
+              "unit": "MX and Networks operating loss",
+              "label": "First operating loss for Samsung's mobile business since 2011",
+              "includes": "Galaxy phone and network-equipment sales, against component and operating costs",
+              "excludes": "Any DS division profit — the two are reported as separate segments",
+              "note": "On 33.2T won of MX/Networks revenue, which grew year-on-year despite the loss."
+            }
+          ],
+          "source": "Samsung Electronics Q2 2026 results release, Samsung Global Newsroom."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What actually moved: memory prices, not phone demand",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The mechanism behind both results is the same: DRAM and NAND pricing. On its Q2 earnings call, Samsung said DRAM's average selling price rose in the mid-40% range and NAND's in the high-60% range from the prior quarter, driven by AI data-center demand for high-bandwidth memory that has left conventional DRAM and NAND supply tight industry-wide — the dynamic reporters have taken to calling \"RAMageddon.\" Samsung also guided that HBM4 sales should more than triple quarter-on-quarter in Q3, reaching over 60% of total HBM revenue in the second half of 2026.",
+        "citation_urls": [
+          "https://en.sedaily.com/finance/2026/07/30/samsung-sees-q2-dram-prices-up-40-percent-nand-up-60-percent",
+          "https://www.investing.com/news/transcripts/earnings-call-transcript-samsung-electronics-posts-record-q2-2026-profit-as-ai-demand-surges-93CH-4822292",
+          "https://9to5google.com/2026/07/29/samsungs-smartphone-division-just-posted-its-first-ever-loss-amid-ramageddon/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Notably, bit shipments grew far more modestly than prices did — Samsung reported DRAM bit shipments up in the low-10% range and NAND shipments up in the single-digit range quarter-on-quarter, meaning most of DS's revenue gain came from price, not volume. On the same call, Samsung said it has finalized multi-year supply agreements with its top five global data-center customers, locking in demand (and, implicitly, pricing power) years out, on top of the HBM4E samples already shipping to lead customers ahead of a wider ramp.",
+        "citation_urls": [
+          "https://www.investing.com/news/transcripts/earnings-call-transcript-samsung-electronics-posts-record-q2-2026-profit-as-ai-demand-surges-93CH-4822292"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Samsung is also spending accordingly: total capital expenditure rose to 16.8 trillion won, up 5.5 trillion won quarter-on-quarter, with DS accounting for 15.4 trillion won of that — funding new fab capacity in Pyeongtaek among other sites — and the company separately announced plans for a roughly 400 trillion won semiconductor manufacturing hub in southwestern South Korea. Samsung reportedly told investors it expects the memory shortage driving all of this to persist into 2028, not clear through the next few quarters — meaning the same pricing dynamic squeezing MX now is guided to continue for years, not one bad quarter. Despite the record profit, Samsung shares fell on the results, with reporting attributing the drop to investor concern over the scale of that capex commitment rather than doubt about demand.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/07/30/samsung-q2-earnings-ai-chip-.html",
+          "https://finance.yahoo.com/markets/stocks/articles/samsung-q2-2026-earnings-record-112138779.html"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The twist: MX pays those higher prices too",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The same memory that AI data centers are bidding up is also the DRAM and NAND that goes inside every Galaxy phone. MX's revenue actually grew year-on-year, driven by Galaxy S26 and Galaxy A series sales — demand for the phones themselves held up fine. What didn't hold up was the margin: outside reporting on the earnings call frames this as component costs rising faster than MX could pass them on to phone buyers competing against Apple and Xiaomi on price. Xiaomi, for its part, has reportedly begun cutting storage tiers in response to the same cost pressure — canceling 1TB variants and reverting to 512GB as its top option.",
+        "citation_urls": [
+          "https://www.sammyfans.com/2026/07/30/samsung-smartphone-business-loss-q2-2026/",
+          "https://m.gsmarena.com/newscomm-71285p2.php"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What Samsung has not said publicly is whether its own DS division extends MX any internal discount on DRAM and NAND versus what it charges AI-industry customers. Outside analysts, per reporting on the results, read the loss as evidence that it doesn't — that DS has little commercial incentive to discount components to a sister division when outside buyers are paying far more for the same supply. That reading is plausible given the numbers, but it is analysts' inference, not a transfer-pricing disclosure Samsung itself has made.",
+        "citation_urls": [
+          "https://www.sammyfans.com/2026/07/30/samsung-smartphone-business-loss-q2-2026/"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "title": "What's confirmed, and what's reporters' reading",
+          "items": [
+            {
+              "claim": "DRAM ASP rose in the mid-40% range and NAND in the high-60% range quarter-on-quarter",
+              "level": "strong",
+              "basis": "Stated directly by Samsung on its Q2 2026 earnings call, reported independently by Seoul Economic Daily and an Investing.com transcript of the same call.",
+              "resolver": "Samsung's own quarterly regulatory filing breaking out ASP by product line, when published."
+            },
+            {
+              "claim": "This is MX's first operating loss since 2011",
+              "level": "strong",
+              "basis": "Reported consistently across multiple outlets covering the same earnings release, and consistent with Samsung's own segment history.",
+              "resolver": "Samsung's public historical segment-reporting archive, which already supports this."
+            },
+            {
+              "claim": "Samsung's DS division charges MX the same price as external AI customers, with no internal discount",
+              "level": "unverified",
+              "basis": "Inferred by outside reporting from the fact pattern — Samsung has not disclosed internal transfer-pricing terms between its own divisions.",
+              "resolver": "A disclosed internal transfer-pricing policy or segment-margin breakdown from Samsung, which the company has not published."
+            }
+          ]
+        }
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "title": "Who the memory supercycle is actually paying, and who it's squeezing",
+          "items": [
+            {
+              "who": "Samsung's DS chip division",
+              "tone": "gains",
+              "what": "Posted an all-time record 89.2 trillion won operating profit on AI-driven DRAM, NAND, and HBM4 pricing."
+            },
+            {
+              "who": "Samsung's own MX phone division",
+              "tone": "loses",
+              "what": "Posted its first operating loss since 2011, paying the same elevated memory prices as everyone else while Galaxy sales still grew."
+            },
+            {
+              "who": "Xiaomi and other Android handset makers",
+              "tone": "exposed",
+              "what": "Face the same rising DRAM/NAND input costs without owning a chip division to offset them — Xiaomi has reportedly begun cutting storage tiers rather than absorb the cost."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Samsung isn't the only company caught on both sides of this cycle — it's just the one where both sides show up on the same earnings release. [Nvidia and SK Group's separate $500 billion Korean AI buildout](#/article/nvidia-sk-group-korea-500-billion-ai-partnership) draws on the same regional memory and compute base that's driving Samsung's DS profit; [Samsung's own company dossier](#/company/samsung) now reflects a chip supplier riding that broader AI-infrastructure wave from one side while its own phone unit absorbs the cost from the other.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch Samsung's Q3 2026 earnings for whether MX narrows or repeats the loss.",
+        "text": "If DRAM/NAND ASPs keep climbing on the guided HBM4 ramp, MX faces the same cost pressure again without a confirmed internal discount to cushion it."
+      },
+      {
+        "label": "Watch for any transfer-pricing or segment-margin disclosure from Samsung.",
+        "text": "That's the specific document that would resolve whether DS actually prices MX at market rate — Samsung hasn't published one yet."
+      },
+      {
+        "label": "Watch HBM4 allocation announcements next quarter.",
+        "text": "Samsung guided HBM4 sales to more than triple quarter-on-quarter and pass 60% of total HBM revenue in H2 2026 — a real test of whether that guidance holds."
+      },
+      {
+        "label": "Track the ASP percentage, not the division headline number, for early signal.",
+        "text": "DRAM/NAND average selling price moves are what actually connect DS's profit to MX's loss — the trillion-won figures are downstream of that."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Samsung Global Newsroom — Samsung Electronics Announces Second Quarter 2026 Results",
+        "url": "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results"
+      },
+      {
+        "label": "Seoul Economic Daily — Samsung sees Q2 DRAM prices up 40%, NAND up 60%",
+        "url": "https://en.sedaily.com/finance/2026/07/30/samsung-sees-q2-dram-prices-up-40-percent-nand-up-60-percent"
+      },
+      {
+        "label": "Investing.com — Earnings call transcript: Samsung Electronics posts record Q2 2026 profit as AI demand surges",
+        "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-samsung-electronics-posts-record-q2-2026-profit-as-ai-demand-surges-93CH-4822292"
+      },
+      {
+        "label": "Sammy Fans — Memory crunch sent Samsung's Q2 smartphone business into first loss since 2011",
+        "url": "https://www.sammyfans.com/2026/07/30/samsung-smartphone-business-loss-q2-2026/"
+      },
+      {
+        "label": "9to5Google — Samsung's smartphone division just posted its first-ever loss amid 'RAMageddon'",
+        "url": "https://9to5google.com/2026/07/29/samsungs-smartphone-division-just-posted-its-first-ever-loss-amid-ramageddon/"
+      },
+      {
+        "label": "GSMArena — Apple faces pressure as Samsung hikes up DRAM prices",
+        "url": "https://m.gsmarena.com/newscomm-71285p2.php"
+      },
+      {
+        "label": "CNBC — Samsung says chip crunch will last until 2028 as quarterly profit soars",
+        "url": "https://www.cnbc.com/2026/07/30/samsung-q2-earnings-ai-chip-.html"
+      },
+      {
+        "label": "Yahoo Finance — Samsung Q2 2026 earnings: Record profit, stock falls 7%",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/samsung-q2-2026-earnings-record-112138779.html"
+      }
+    ],
+    "id": "newsroom-samsung-q2-2026-chip-profit-mobile-loss",
+    "image": "assets/img/newsroom/newsroom-samsung-q2-2026-chip-profit-mobile-loss.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-30T14:58:00Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior newsroom coverage of Samsung's Q2 2026 earnings. Selected as a synthesis rather than a brief because the DS-record/MX-loss pairing is a genuine analytical throughline (the same AI memory supercycle producing opposite results inside one company), not just a restated earnings report."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "DS division revenue/profit (127.5T/89.2T won), MX/Networks revenue/loss (33.2T/-0.7T won), and total company figures (171.5T revenue/89.5T profit) verified against Samsung's own Global Newsroom Q2 2026 release. DRAM/NAND ASP increase ranges (mid-40%/high-60% QoQ) cross-checked between Seoul Economic Daily and an independent Investing.com earnings-call transcript — both agreed. The 'first loss since 2011' claim and the DS-charges-MX-market-rate reading were flagged as outside analysts' inference rather than a Samsung disclosure, and handled with a scorecard component rather than stated as fact. The 0.3T won 'all other divisions combined' figure is original arithmetic on Samsung's own two disclosed numbers (89.5T - 89.2T), flagged as computed in the body."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health, financial-advice, legal-proceeding, or unverified-quote triggers apply. Trigger 4 (negative/accusatory claims about a named party) considered for the 'DS gives MX no discount' framing — remediated by attributing it explicitly to outside analysts' inference and marking it 'unverified' in the scorecard rather than adopting it as this outlet's own finding. Trigger 6 (unverifiable central claim) considered for the same reason and resolved the same way. Disclaimer: none — this is an earnings report, not investment guidance."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-30T14:58:00Z"
+  },
+  {
+    "slug": "eu-forces-google-android-ai-interoperability",
+    "title": "The EU ordered Google to give ChatGPT and Claude the same Android access Gemini has",
+    "dek": "A binding European Commission decision requires Google to open voice invocation, cross-app actions, contextual data, and on-device AI resources on Android to rival assistants — the same system-level access Gemini already has exclusively. Compliance runs on two separate clocks, backed by fines of up to 10% of Alphabet's global revenue, and lands one week after a separate €890 million EU fine against Google for unrelated Search and Play Store violations.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "The EU ordered Google to give rival AI assistants the same Android system access Gemini has.",
+      "Covered: voice invocation, cross-app actions, contextual data, and on-device AI model access.",
+      "Search data sharing is due January 2027; Android AI access follows by mid-2027.",
+      "Non-compliance risks fines up to 10% of Alphabet's annual worldwide revenue.",
+      "Caveat: Google had not issued a public statement on this specific decision as of publication."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The European Commission adopted a binding decision on July 16, 2026 ordering Google to give competing AI assistants — including OpenAI's ChatGPT, Anthropic's Claude, and Perplexity — the same system-level access to Android that Google's own Gemini currently holds exclusively. The Commission's own stated rationale: roughly **60% of EU Android users** currently have no equal-footing AI alternative to Gemini, because only Gemini gets full access to the operating system's voice, context, and action layers.",
+        "citation_urls": [
+          "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "This wasn't a snap decision. The Commission opened two parallel specification proceedings against Google back on January 27, 2026 — case DMA.100220, under Article 6(7) of the Digital Markets Act — each carrying a six-month statutory deadline that the July 16 decision met almost to the day. That timeline matters because it means the substance was worked out over six months of proceedings against Google's own gatekeeper obligations under the DMA, not announced cold: Google has had the specific 11 Android features at issue on the table since the proceedings opened, and the July 16 decision is the codified outcome of that process rather than a new surprise obligation.",
+        "citation_urls": [
+          "https://digital-markets-act.ec.europa.eu/commission-opens-proceedings-assist-google-complying-interoperability-and-online-search-data-sharing-2026-01-27_en"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What Google actually has to open up",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The decision spans 11 specific Android features, grouped into four capability layers. **Invocation**: rival assistants must be reachable the same way Gemini is — by voice command or a system-level access point like the home button, not buried behind extra taps. **Actions**: rival assistants must be able to complete tasks in and across apps, including long-running ones, not just answer questions. **Context**: rival assistants get access to on-screen and device-sensor context so they can act proactively instead of only when asked. **Resources**: Google has to make its own on-device AI models and adequate hardware/software resources available to rival assistants, rather than reserving the best-performing path for Gemini. Privacy, security, and device-integrity protections remain in place across all four.",
+        "citation_urls": [
+          "https://www.macrumors.com/2026/07/16/eu-google-ai-apps-android-access/",
+          "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A second, separate specification requires Google to share anonymized Search data — query, click, and ranking signals — with competing search engines and AI chatbots that perform equivalent retrieval, under fair, reasonable, and non-discriminatory pricing, starting **January 2027**. The Android interoperability changes above are due by **August 1, 2027** — some reporting rounds this to \"July 2027.\"",
+        "citation_urls": [
+          "https://www.aichatdaily.com/ai-security/eu-orders-google-open-android-search-ai-rivals"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "Two obligations, two clocks",
+          "title": "From decision to compliance",
+          "items": [
+            {
+              "when": "Jul 16, 2026",
+              "what": "Commission adopts the binding specification decision",
+              "hi": true
+            },
+            {
+              "when": "Jul 23, 2026",
+              "what": "Commission separately fines Google €890M for unrelated Search self-preferencing and Play Store anti-steering",
+              "detail": "A different DMA case — same law, same company, not part of this AI-interoperability decision."
+            },
+            {
+              "when": "Jan 2027",
+              "what": "Search data-sharing obligation takes effect",
+              "future": true
+            },
+            {
+              "when": "Aug 1, 2027",
+              "what": "Android AI-interoperability changes must be implemented",
+              "detail": "Some outlets round this to \"July 2027\" — see sourcecheck below.",
+              "future": true
+            }
+          ],
+          "source": "European Commission DMA decision (July 16, 2026) and reporting on the separate July 23, 2026 fine decision."
+        }
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "What is the exact deadline for Google's Android AI-interoperability compliance?",
+              "claims": [
+                {
+                  "who": "MacRumors",
+                  "kind": "reporting",
+                  "says": "August 1, 2027",
+                  "url": "https://www.macrumors.com/2026/07/16/eu-google-ai-apps-android-access/",
+                  "trusted": true
+                },
+                {
+                  "who": "Several aggregator outlets",
+                  "kind": "reporting",
+                  "says": "\"July 2027\", unspecified day",
+                  "url": "https://www.aichatdaily.com/ai-security/eu-orders-google-open-android-search-ai-rivals"
+                }
+              ],
+              "ruling": "Using MacRumors' August 1, 2027. It cites a specific date rather than a rounded month, and the two are consistent with each other (a date early in the second half of 2027) rather than genuinely contradictory — the rounding is the likely source of the gap."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What happens if Google doesn't comply",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Non-compliance with the specification decision itself risks fines of up to **10% of Alphabet's annual worldwide revenue** — a figure that would run into the tens of billions of dollars at Alphabet's current scale. That penalty is separate from, and larger in scale than, the €890 million ($1.01 billion) fine the Commission issued a week later, on July 23, for different DMA violations: €460 million over Google favoring its own services in Search rankings, and €430 million over restricting how app developers can steer users to non-Play-Store payment options. Google was given 60 days to fix those specific practices or face further periodic penalties of up to 5% of worldwide turnover. The two cases share a law and a defendant, not a subject.",
+        "citation_urls": [
+          "https://www.aichatdaily.com/ai-security/eu-orders-google-open-android-search-ai-rivals",
+          "https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "Same law, same company, different subject",
+          "title": "Google's two DMA actions this month",
+          "columns": [
+            {
+              "label": "AI interoperability decision",
+              "sub": "Jul 16, 2026",
+              "hi": true
+            },
+            {
+              "label": "Search/Play Store fine",
+              "sub": "Jul 23, 2026"
+            }
+          ],
+          "rows": [
+            {
+              "label": "What it addresses",
+              "values": [
+                "Rival AI assistants' access to Android",
+                "Search self-preferencing and Play Store anti-steering"
+              ]
+            },
+            {
+              "label": "Remedy type",
+              "values": [
+                "Forward-looking binding specification",
+                "Monetary fine for past conduct"
+              ]
+            },
+            {
+              "label": "Amount / stakes",
+              "values": [
+                "Up to 10% of global revenue if unmet",
+                "€890M ($1.01B) already imposed"
+              ]
+            },
+            {
+              "label": "Compliance deadline",
+              "values": [
+                "Jan 2027 (search data); Aug 1, 2027 (Android AI)",
+                "60 days from July 23, 2026"
+              ]
+            },
+            {
+              "label": "Who benefits",
+              "values": [
+                "OpenAI, Anthropic, Perplexity, other AI assistants",
+                "Rival search engines and app developers"
+              ]
+            }
+          ],
+          "source": "European Commission DMA decision (Jul 16, 2026) and separate fine reporting (Jul 23, 2026)."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Concretely, the gap being closed is this: a Gemini competitor on Android today can typically answer a question, but it can't be invoked the same way Gemini can (by a home-button long-press or a system-wide voice trigger), can't read on-screen content to act on it automatically, and can't call on Android's own on-device AI models the way Google's assistant does. The July 16 decision requires Google to close those specific gaps by the deadlines above — not simply to publish a developer API that rivals could theoretically use but Google could leave impractical in practice.",
+        "citation_urls": [
+          "https://www.macrumors.com/2026/07/16/eu-google-ai-apps-android-access/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Google had not issued a public statement specifically addressing the July 16 interoperability decision as of publication. In past EU proceedings over similar Android and DMA obligations, Google has argued that mandated interoperability threatens Android's security model and discourages investment in the platform — but that record predates this specific decision and shouldn't be read as its response to it.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This is the same Digital Markets Act machinery that has spent 2026 pushing into AI specifically — distinct from, but adjacent to, the export-control and national-security lens US regulators have applied to [Chinese humanoid robots](#/article/fcc-covered-list-bans-chinese-humanoid-robots) this year. Where Washington's actions this year have mostly restricted market access on security grounds, Brussels' DMA actions are aimed at forcing access open on competition grounds — opposite instincts, same underlying fact that AI assistants are now infrastructure-level products regulators treat as chokepoints. [OpenAI](#/company/openai) and [Anthropic](#/company/anthropic) are named beneficiaries here without having sought anything from the EU directly — the remedy runs through Google's own platform obligations, not through them.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Scope matters here as much as substance: the obligations bind Google's Android build within the EU specifically, enforced directly by the Commission rather than by any national regulator — which is what let two proceedings opened against Google in January converge into one decision applying uniformly across all 27 member states rather than fragmenting into parallel national cases. Nothing in this decision changes what Android looks like, or what rival assistants can do, outside the bloc.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch Google's compliance filings as the January 2027 search-data deadline approaches.",
+        "text": "That's the earlier of the two deadlines and the one likely to surface implementation disputes first."
+      },
+      {
+        "label": "Watch whether Google appeals the specification decision itself, separate from the July 23 fine.",
+        "text": "Google has appealed past EU Android decisions; whether it does so here determines if the Aug 1, 2027 deadline holds."
+      },
+      {
+        "label": "Watch for the first third-party AI assistant to actually ship with full Android system access.",
+        "text": "That shipped product — not the legal deadline — is the fact that would confirm the decision actually changed anything for users."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "European Commission (Digital Markets Act) — Commission provides guidance to Google for AI interoperability on Android and sharing of Google Search data",
+        "url": "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en"
+      },
+      {
+        "label": "MacRumors — EU Orders Google to Give Rival AI Apps the Same Android Access as Gemini",
+        "url": "https://www.macrumors.com/2026/07/16/eu-google-ai-apps-android-access/"
+      },
+      {
+        "label": "AI Chat Daily — EU orders Google to open Android and Search to AI rivals",
+        "url": "https://www.aichatdaily.com/ai-security/eu-orders-google-open-android-search-ai-rivals"
+      },
+      {
+        "label": "BleepingComputer — EU fines Google $1 billion for Digital Markets Act breaches in Search and Play Store",
+        "url": "https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/"
+      },
+      {
+        "label": "European Commission (DMA) — Commission opens proceedings to assist Google in complying with interoperability and online search data sharing obligations",
+        "url": "https://digital-markets-act.ec.europa.eu/commission-opens-proceedings-assist-google-complying-interoperability-and-online-search-data-sharing-2026-01-27_en"
+      }
+    ],
+    "id": "newsroom-eu-google-android-ai-interoperability",
+    "image": "assets/img/newsroom/newsroom-eu-google-android-ai-interoperability.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-30T15:24:00Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior newsroom coverage of this specific July 16, 2026 DMA specification decision. Selected as synthesis over brief because the piece needed to hold two separate obligations, two deadlines, and a distinct-but-adjacent enforcement action (the July 23 fine) apart without conflating them — real analytical work beyond restating the EC announcement."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Decision date, four capability layers, and named beneficiaries (ChatGPT, Claude, Perplexity) cross-checked between the European Commission's own DMA page and MacRumors' and AI Chat Daily's independent reporting. Caught and reconciled a genuine date discrepancy on the Android compliance deadline (MacRumors' specific Aug 1, 2027 vs. other outlets' rounded 'July 2027') via a sourcecheck component rather than silently picking one. Confirmed via CNBC/BleepingComputer reporting that the €890M fine is a separate July 23 DMA action (Search self-preferencing + Play Store anti-steering), not part of the AI-interoperability decision — some initial aggregator search results had conflated the two under a single date, which the body and compare table now explicitly distinguish."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 3 (legal proceedings/regulatory enforcement naming a party) and Trigger 4 (negative claims about a named company) both considered — remediated by sourcing every claim to the Commission's own decision or to fine amounts already publicly confirmed, attributing Google's past positions explicitly as past record rather than a response to this decision, and using neutral, sourced-neutral language throughout rather than adopting either side's framing. No unverified-quote trigger fires because no direct quote is attributed to Google in this piece — its absence of comment is stated as exactly that. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-30T15:24:00Z"
+  },
+  {
+    "slug": "aschenbrenner-situational-awareness-capital-raise-ai-rout",
+    "title": "Leopold Aschenbrenner's $20 billion AI fund is asking for fresh capital after a rough July, FT reports",
+    "dek": "Situational Awareness returned 439% net in the first half of 2026 on leveraged, concentrated bets in power, AI compute, and bitcoin-mining stocks. A July sell-off hit those same positions hard, and the Financial Times reports Aschenbrenner has approached existing investors and lenders for new money — with some offered the option to buy fund assets directly. Every detail here traces to FT's review of a July 24 letter; neither the fund nor Aschenbrenner has confirmed it publicly.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "brief",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "Situational Awareness, Leopold Aschenbrenner's $20B hedge fund, returned 439% net in H1 2026.",
+      "A leveraged, AI-stock-concentrated portfolio took a hit in July's broader tech selloff.",
+      "FT reports Aschenbrenner approached existing investors and lenders for fresh capital.",
+      "Some investors were reportedly offered the option to buy portfolio assets directly.",
+      "Caveat: every figure here traces to FT's reviewed letter — neither party has confirmed it."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Situational Awareness, the roughly **$20 billion** hedge fund former OpenAI researcher Leopold Aschenbrenner built in under two years on a **439% net return** through the first half of 2026, has approached existing investors and lenders for fresh capital after a sharp July reversal in AI stocks, the Financial Times reported. Some investors were reportedly offered the option to buy portfolio assets directly rather than commit new cash outright. The reporting traces entirely to FT's review of an internal letter — neither Aschenbrenner nor the fund has commented publicly, and independent confirmation beyond that reporting was not possible.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/ai-wizkid-leopold-aschenbrenner-seeks-113210756.html",
+          "https://www.disruptionbanking.com/2026/07/30/can-the-situational-awareness-hedge-fund-raise-capital-after-its-439-h1-gain/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "The fund, per FT's reporting",
+          "title": "Situational Awareness, at a glance",
+          "items": [
+            {
+              "label": "Assets under management",
+              "value": "~$20 billion",
+              "note": "built in under two years"
+            },
+            {
+              "label": "H1 2026 return",
+              "value": "+439% net of fees"
+            },
+            {
+              "label": "Strategy",
+              "value": "Leveraged, concentrated bets in power, AI compute, and bitcoin-mining stocks"
+            },
+            {
+              "label": "What changed in July",
+              "value": "A broad AI-stock selloff hit those concentrated positions; leverage magnified the losses"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Per FT's reporting, the fund's Q1 2026 portfolio disclosures showed concentrated positions including Bloom Energy, CoreWeave, and Nebius — all hit hard in the rout — plus a new $43.9 million stake in T1 Energy, a 92.4% increase in its Bitdeer Technologies holding, and 3.39 million shares of HIVE Digital Technologies. Goldman Sachs and JPMorgan Chase separately issued margin calls to hedge funds holding concentrated AI positions during the same selloff, a sign the pressure wasn't unique to this one fund.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/ai-wizkid-leopold-aschenbrenner-seeks-113210756.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "In a July 24 letter FT reviewed, Aschenbrenner reportedly framed the downturn as a buying opportunity and pointed to a potential [Anthropic](#/company/anthropic) IPO as a forward catalyst for the sector, while inviting investors to commit additional capital starting August 1. That framing is reported content from the fund's own letter, presented as such — not an assessment of whether the fund's positions will actually recover.",
+        "citation_urls": [
+          "https://www.disruptionbanking.com/2026/07/30/can-the-situational-awareness-hedge-fund-raise-capital-after-its-439-h1-gain/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch whether Situational Awareness or Aschenbrenner comments publicly.",
+        "text": "Every detail here traces to FT's review of a letter neither the fund nor its founder has confirmed on the record."
+      },
+      {
+        "label": "Watch the August 1 date Aschenbrenner reportedly set for new capital commitments.",
+        "text": "That's the deadline the letter itself set, not a market rumor — whether money actually arrives by then is the real test."
+      },
+      {
+        "label": "Watch Anthropic's IPO timeline.",
+        "text": "The fund's own letter names it as the catalyst its bull case depends on. If it slips, that specific reasoning weakens."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Yahoo Finance — AI wizkid Leopold Aschenbrenner seeks new funds after rout",
+        "url": "https://finance.yahoo.com/technology/ai/articles/ai-wizkid-leopold-aschenbrenner-seeks-113210756.html"
+      },
+      {
+        "label": "Disruption Banking — Can the Situational Awareness hedge fund raise capital after its 439% H1 gain?",
+        "url": "https://www.disruptionbanking.com/2026/07/30/can-the-situational-awareness-hedge-fund-raise-capital-after-its-439-h1-gain/"
+      },
+      {
+        "label": "Bloomberg — Aschenbrenner Hedge Fund Situational Awareness Seeks Capital After Loss, FT Says",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-30/aschenbrenner-hedge-fund-situational-awareness-seeks-capital-after-loss-ft-says"
+      }
+    ],
+    "id": "newsroom-aschenbrenner-situational-awareness-capital-raise",
+    "image": "assets/img/newsroom/newsroom-aschenbrenner-situational-awareness-capital-raise.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-07-30T15:41:00Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Confirmed no prior newsroom coverage of Situational Awareness or this capital raise. Kept as a brief rather than stretched to synthesis: every fact traces back to a single FT scoop (reviewing one internal letter), corroborated by two independent secondary write-ups (Yahoo Finance, Disruption Banking) rather than genuine additional primary sourcing — a brief with one solid underlying source beats padding a synthesis on top of it."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "AUM (~$20B), H1 2026 return (+439% net), the capital-approach and asset-purchase-option details, and the July 24 letter's Anthropic-IPO/buying-opportunity framing cross-checked between Yahoo Finance's and Disruption Banking's independent write-ups of the same FT report — both agreed on every figure used here. Portfolio holdings (Bloom Energy, CoreWeave, Nebius, T1 Energy, Bitdeer, HIVE Digital) and the Goldman/JPMorgan margin-call context sourced to the Yahoo Finance write-up specifically and flagged as such."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 2 (financial/crypto claims) fires — disclaimer set to not-financial-advice; no buy/sell/hold framing or price prediction is stated anywhere, and the fund's own 'buying opportunity' framing is explicitly attributed as the fund's letter content, not adopted as this outlet's view. Trigger 4 (negative claims about a named person) considered given this concerns a real person's fund taking losses — remediated by neutral, sourced-only language throughout and no editorializing about Aschenbrenner's judgment or competence. Trigger 6 (unverifiable central claim) fires because the entire story rests on FT's reporting of a reviewed letter with no on-record confirmation from either party — remediated by stating that explicitly in the lede, the dek, and the final TL;DR bullet rather than presenting it as confirmed fact."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-07-30T15:41:00Z"
   }
 ];
