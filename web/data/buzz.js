@@ -263,5 +263,17 @@ window.RTFC_BUZZ = [
     text:"A new \"App\" tile has surfaced in Google's Gemini Notebook (the product formerly called NotebookLM) Studio panel, alongside the still-unreleased Canvas and Lit Review options -- described as generating an interactive app from a notebook's own sources on request. Nothing is live yet and Google hasn't announced a release window.",
     why:"An unannounced UI surfacing rather than a launch -- worth tracking whether it ships, and whether it's scoped to study aids or something broader.",
     heat:44, topics:["google","gemini","products"],
-    url:"https://www.testingcatalog.com/google-is-working-on-interactive-apps-for-gemini-notebook/" }
+    url:"https://www.testingcatalog.com/google-is-working-on-interactive-apps-for-gemini-notebook/" },
+  { id:"bz-090", date:"2026-07-30",
+    source:{ name:"Nscale", handle:"Nscale", platform:"web", kind:"lab" },
+    text:"London-based AI cloud provider Nscale agreed to acquire Anyscale -- commercial steward of the open-source Ray distributed-computing framework -- for roughly $1.65 billion, moving Nscale up the stack from raw GPU capacity into the orchestration software that decides how much useful work each GPU does. Anyscale's ~200 employees join Nscale; Ray itself stays community-governed under the PyTorch Foundation.",
+    why:"Another neocloud buying its way into the software layer rather than just selling compute -- the same vertical-integration pattern now showing up across the AI infrastructure stack.",
+    heat:60, topics:["nscale","anyscale","ray","ai infrastructure","acquisitions"],
+    url:"https://techcrunch.com/2026/07/30/nscale-buys-anyscale-as-it-seeks-to-own-more-of-the-ai-compute-stack/" },
+  { id:"bz-091", date:"2026-07-29",
+    source:{ name:"Meta", handle:"Meta", platform:"web", kind:"lab" },
+    text:"Meta posted Q2 revenue of $60.8 billion (+28% YoY) but missed on EPS ($6.18 vs. $7.14 consensus) after $2.4B in legal charges and $1.18B in layoff-severance costs. It narrowed full-year 2026 capex guidance to $130-145 billion, still overwhelmingly AI-infrastructure spend, and the stock fell on the guidance and shrinking free cash flow rather than the revenue beat.",
+    why:"The same 'does AI capex convert into growth' test Microsoft passed a day earlier (bz-069) -- Meta's market didn't buy it, even with revenue ahead of estimates.",
+    heat:75, topics:["meta","earnings","capex","ai infrastructure"],
+    url:"https://www.cnbc.com/2026/07/29/meta-q2-earnings-report-2026.html" }
 ];
