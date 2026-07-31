@@ -281,5 +281,11 @@ window.RTFC_BUZZ = [
     text:"OpenAI cut prices on two of its three-week-old GPT-5.6 models: Luna's input/output rates fell 80% (to $0.20/$1.20 per million tokens), Terra's fell 20% (to $2/$12), while Sol's pricing is unchanged. OpenAI attributed the cuts to efficiency gains from GPT-5.6 optimizing its own production code.",
     why:"A frontier lab cutting prices three weeks after launch, not at a new-model announcement, is a direct read on how much cost pressure enterprise customers and cheaper Chinese models are putting on the majors.",
     heat:69, topics:["openai","gpt-5.6","pricing","competition"],
-    url:"https://www.cnbc.com/2026/07/30/open-ai-price-cut-gpt.html" }
+    url:"https://www.cnbc.com/2026/07/30/open-ai-price-cut-gpt.html" },
+  { id:"bz-098", date:"2026-07-30",
+    source:{ name:"Business Insider report", handle:"BI", platform:"web", kind:"news" },
+    text:"Amazon is reportedly winding down most of its in-house Nova models -- Premier, Omni, the Reel video model and Canvas image generator all move to 'keep the lights on' mode for existing customers, with development stopped -- redirecting resources to a Frontier Model Research group led by Pieter Abbeel (who joined via the Covariant acquisition). A new flagship model is expected at re:Invent this fall. Reported via insiders, not an Amazon announcement; Amazon says AI models remain 'one of Amazon's most important projects.'",
+    why:"Follows the AGI Lab closure and AGI-division layoffs -- the clearest sign yet that Amazon is betting on one competitive frontier model instead of a broad Nova family, even as it keeps pouring capital into Anthropic and OpenAI.",
+    heat:71, topics:["amazon","nova","frontier models","strategy"],
+    url:"https://the-decoder.com/amazon-reportedly-scales-back-its-nova-ai-models-and-bets-on-a-new-frontier-research-team/" }
 ];
