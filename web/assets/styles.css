@@ -7,9 +7,16 @@
   --bg:#0b0b12;
   --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.13), transparent 70%);
   --surface:#12121c; --surface2:#191926; --surface3:#20202f;
-  --ink:#eceaf4; --ink-soft:#c9c6d8; --muted:#8d8aa3; --faint:#615e78;
+  /* --faint was #615e78: 3.16:1 on --bg and 2.99:1 on --surface, i.e. a WCAG
+     1.4.3 failure everywhere it is used (.proto .motto .he-stamp .foot-sub
+     .foot-meta .bzm-l …). Raised to 5.28:1 on --bg / 5.00:1 on --surface,
+     the only two backgrounds it is ever painted on. */
+  --ink:#eceaf4; --ink-soft:#c9c6d8; --muted:#8d8aa3; --faint:#8481a3;
   --line:#232334; --hairline:#1d1d2c;
   --accent:#8b7cf7; --accent2:#b7a5ff; --accent-ink:#cdc2ff;
+  /* Text/icon colour for anything filled with --accent. White on the dark-mode
+     accent is only 3.32:1; near-black is 5.91:1. Flips per theme. */
+  --on-accent:#0b0b12;
   --gate:#e0564d; --ok:#42c08a; --gold:#d9a94e;
   --maxw:1140px; --measure:70ch;
   --serif:"Fraunces","Georgia","Times New Roman",serif;
@@ -21,9 +28,12 @@
   --bg:#faf9f5;
   --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.08), transparent 70%);
   --surface:#ffffff; --surface2:#f3f2ec; --surface3:#eceade;
-  --ink:#191722; --ink-soft:#3c3950; --muted:#6d6a80; --faint:#9b98ac;
+  /* light --faint was #9b98ac = 2.66:1 on --bg; now 4.60:1 on --bg / 4.85:1 on
+     --surface, still a visible step lighter than --muted. */
+  --ink:#191722; --ink-soft:#3c3950; --muted:#6d6a80; --faint:#726f86;
   --line:#e4e2d8; --hairline:#eae8de;
   --accent:#6a58e8; --accent2:#8b7cf7; --accent-ink:#5646c8;
+  --on-accent:#ffffff;
   --shadow:0 18px 45px -20px rgba(60,50,120,.18);
 }
 @media (prefers-color-scheme:light){
@@ -31,9 +41,10 @@
     --bg:#faf9f5;
     --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.08), transparent 70%);
     --surface:#ffffff; --surface2:#f3f2ec; --surface3:#eceade;
-    --ink:#191722; --ink-soft:#3c3950; --muted:#6d6a80; --faint:#9b98ac;
+    --ink:#191722; --ink-soft:#3c3950; --muted:#6d6a80; --faint:#726f86;
     --line:#e4e2d8; --hairline:#eae8de;
     --accent:#6a58e8; --accent2:#8b7cf7; --accent-ink:#5646c8;
+    --on-accent:#ffffff;
     --shadow:0 18px 45px -20px rgba(60,50,120,.18);
   }
 }
@@ -51,6 +62,34 @@ a{color:inherit;text-decoration:none}
 img{max-width:100%}
 ::selection{background:var(--accent);color:#fff}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+/* ---------- layout stability ----------
+   #app is empty in the served HTML and every view is injected by app.js. With
+   nothing reserving its box the footer painted at top:176px and then dropped
+   ~4,590px the moment the first view rendered — one 0.488 layout shift on every
+   route. Reserving a viewport of height means the footer starts below the fold,
+   so the fill-in never moves anything the reader can see. Required now that the
+   data + app scripts are deferred. */
+#app{min-height:100vh}
+
+/* ---------- accessibility utilities ---------- */
+/* Visually hidden but exposed to assistive tech. Used for form labels that have
+   only a placeholder, and for any icon-only control needing a text name. */
+.sr-only{
+  position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0;
+}
+/* Skip link — first focusable element in the document, so a keyboard reader can
+   jump the 9 header tab stops. Off-screen until focused. */
+a.skip{
+  position:absolute;left:8px;top:-60px;z-index:200;
+  padding:10px 16px;border-radius:0 0 10px 10px;
+  background:var(--accent);color:var(--on-accent);
+  font:600 13.5px/1 var(--sans);letter-spacing:.02em;text-decoration:none;
+  transition:top .12s ease;
+}
+a.skip:focus{top:0}
+a.skip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
 /* ---------- progress bar ---------- */
 #progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
@@ -79,9 +118,17 @@ nav.top a.active,nav.top .sec-btn.active{color:var(--ink);background:var(--surfa
 nav.top a.masthead-link{color:var(--accent2)}
 nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent-ink)}
 .spacer{flex:1}
+/* transition:all used to include outline-width, so the global :focus-visible
+   ring animated up from 0px — the five header controls (#search-btn, #lang-btn,
+   #theme, #acct-btn and the library link) computed outline-width:0px at the
+   moment focus landed and had no visible ring. Transition only what is meant to
+   move, and give the pill its own ring so the global rule's border-radius:4px
+   does not square off a 99px control. */
 .theme-btn{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;
-  width:38px;height:38px;cursor:pointer;font-size:15px;display:grid;place-items:center;transition:all .15s;position:relative}
+  width:38px;height:38px;cursor:pointer;font-size:15px;display:grid;place-items:center;
+  transition:color .15s,border-color .15s,background-color .15s,box-shadow .15s;position:relative}
 .theme-btn:hover{color:var(--ink);border-color:var(--muted)}
+.theme-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:99px;transition:none}
 .theme-btn svg{width:17px;height:17px;display:block}
 #acct-btn .acct-dot{position:absolute;top:5px;right:5px;width:7px;height:7px;border-radius:99px;background:transparent;transition:background .15s}
 #acct-btn.signed-in{color:var(--accent2);border-color:var(--accent2)}
@@ -136,11 +183,17 @@ nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,tr
 .tags{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
 .pill{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
   padding:3px 9px;border-radius:4px}
-.pill.section{color:#fff}
+/* Section pills take their background inline from SECTION_COLORS in app.js —
+   pastels between #42c08a and #d9a94e. White on those ran 2.16:1–3.74:1. The
+   hues are the section identity system and stay exactly as they are; the ink
+   goes near-black instead, which is >=5.24:1 on all ten section colours
+   (worst case Products #e0564d) and is theme-independent because the pill
+   background is a literal, not a token. */
+.pill.section{color:#0b0b12}
 .pill.fmt{color:var(--muted);border:1px solid var(--line);background:transparent}
 .pill.sample{border:1px dashed color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent2);background:transparent}
 .pill.live{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}
-.pill.breaking{background:#e0564d;color:#fff;margin-right:7px}
+.pill.breaking{background:#e0564d;color:#0b0b12;margin-right:7px}
 .byline{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted)}
 .byline .av{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
   font-size:10px;font-weight:800;color:#fff;flex:none;letter-spacing:.03em}
@@ -1661,7 +1714,9 @@ html.xlating #app{ opacity:0 !important; }
 .cb-txt a{ color:var(--accent2); }
 .cb-btns{ display:flex;gap:8px; }
 .cb-min,.cb-ok{ font:inherit;font-size:12.5px;font-weight:600;padding:8px 15px;border-radius:9px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink); }
-.cb-ok{ background:var(--accent);border-color:var(--accent);color:#fff; }
+/* white on --accent was 3.32:1 in dark mode; --on-accent is near-black in dark
+   (5.91:1) and white in light, where --accent is already deep enough (5.03:1). */
+.cb-ok{ background:var(--accent);border-color:var(--accent);color:var(--on-accent); }
 .cb-min:hover{ border-color:var(--accent2); }
 
 /* V14.1 · events header links (Live moved off the top of home) */
@@ -2775,6 +2830,23 @@ ul.sk-legend b{color:var(--ink);font-variant-numeric:tabular-nums}
   border-bottom:1px solid color-mix(in srgb,var(--accent) 50%,transparent);
   transition:border-color .15s,color .15s}
 .prose a.inl:hover,.comp a.inl:hover{color:var(--accent-ink);border-bottom-color:var(--accent)}
+
+/* WCAG 1.4.1 — accent-coloured links inside running article text sit at only
+   1.79:1 against the surrounding body copy (#b7a5ff on #eceaf4), far under the
+   3:1 that colour-only link identification needs. Rather than desaturate the
+   accent, give body links a non-colour affordance: a real underline. .inl is
+   excluded because its border-bottom already is one. */
+.prose p a,.prose li a,.prose blockquote a,
+.comp p a,.comp li a,.comp blockquote a{
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:.16em;
+  text-decoration-color:color-mix(in srgb,currentColor 60%,transparent);
+}
+.prose p a:hover,.prose li a:hover,.prose blockquote a:hover,
+.comp p a:hover,.comp li a:hover,.comp blockquote a:hover{text-decoration-color:currentColor}
+.prose p a.inl,.prose li a.inl,.prose blockquote a.inl,
+.comp p a.inl,.comp li a.inl,.comp blockquote a.inl{text-decoration:none}
 
 /* ============================================================================
    PREMIUM MOTION & DEPTH SYSTEM
@@ -4056,3 +4128,54 @@ a:hover>.mag-cover{transform:none}
   border-radius:3px 15px 0 0;
   background:linear-gradient(180deg,rgba(6,4,13,.42),rgba(6,4,13,0))}
 .mag-cover>*{position:relative;z-index:2}
+
+/* ================= MOBILE KIT · full screen + desktop view ==================
+   Shown from a class JS sets ONCE at boot off the input device and the physical
+   screen -- never from a max-width query. Desktop view rewrites the layout
+   viewport to 1200px, so a width query would stop matching the instant it
+   engaged, the controls would disappear, and the reader would be stranded in
+   desktop view with no way back. */
+#mobkit{ display:none; }
+html.has-mobkit #mobkit{
+  display:flex; flex-direction:column; gap:9px;
+  position:fixed; right:12px; bottom:14px; z-index:160;
+}
+.mk-btn{
+  width:44px; height:44px; border-radius:50%; padding:0; cursor:pointer;
+  display:grid; place-items:center; font:inherit;
+  color:var(--ink-soft);
+  background:color-mix(in srgb,var(--surface) 82%,transparent);
+  border:1px solid var(--line);
+  -webkit-backdrop-filter:blur(14px) saturate(1.3); backdrop-filter:blur(14px) saturate(1.3);
+  box-shadow:0 1px 0 rgba(255,255,255,.05) inset, 0 8px 22px -8px rgba(0,0,0,.55);
+  transition:color .16s, border-color .16s, background .16s, transform .16s;
+}
+.mk-btn svg{ width:19px; height:19px; display:block; }
+.mk-btn:hover{ color:var(--ink); border-color:var(--muted); }
+.mk-btn:active{ transform:scale(.94); }
+.mk-btn.on{
+  color:var(--accent-ink); border-color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 20%,var(--surface));
+}
+
+/* Stay clear of the other fixed furniture rather than sitting under it. The
+   mini-player goes full-width under 520px, and the consent bar owns the bottom
+   edge outright at z-index 1400. */
+/* These are the floor only. mkLift() measures the real heights and writes an
+   inline bottom, because both bars reflow with content -- the consent bar wraps
+   to three lines at 390px, which a fixed offset cannot anticipate. */
+body:has(#miniplayer:not([hidden])) #mobkit{ bottom:88px; }
+body:has(#cookiebar) #mobkit{ bottom:104px; }
+
+/* The magazine reader carries its own full-screen control and its own page nav.
+   A second floating stack over a magazine sheet is clutter. */
+body:has(.mreader) #mobkit{ display:none; }
+
+/* In desktop view the whole page is scaled down to fit the screen, so a 44px
+   control would render at roughly 14 physical px. Scale the kit back up and pin
+   it to the visual viewport instead of the 1200px layout box. */
+html.vp-desktop.has-mobkit #mobkit{
+  right:8px; bottom:10px; gap:12px;
+  transform:scale(2.1); transform-origin:100% 100%;
+}
+@media (prefers-reduced-motion:reduce){ .mk-btn{ transition:none; } }

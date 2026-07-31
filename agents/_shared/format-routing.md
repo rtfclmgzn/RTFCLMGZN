@@ -2,6 +2,13 @@
 
 This file is mandatory context for the Managing Editor, Research Agent, Persona Writer, Verification Agent, Style Agent, and Publishing Agent. The newsroom must choose format from the **shape of the evidence and the editorial job**, not from a desired word count.
 
+> **CANONICAL: this file is the single authority for source floors.** As of 2026-07-31 the research floor
+> was stated as three different numbers in four places — `cycle-runbook.md` §2 said 5+,
+> `format-and-image-policy.md` and the (now retired) `DAILY-RUN.md` said 7+, and this file said 8+. A floor
+> that any agent is permitted to undercut is not a floor, so all of them were set to the strictest number,
+> **8**, and every other file now points here. If a number in another document disagrees with this one,
+> **this one wins and the other document is the bug** — fix it there, do not lower it here.
+
 ## Core rule
 
 Format is a consequence of reporting depth:

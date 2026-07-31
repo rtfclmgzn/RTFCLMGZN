@@ -23,21 +23,43 @@ Loaded into every writing and editing agent as cached context. This is the share
 - Direct quotation is minimal and always attributed. Default mode is paraphrase + original analysis. Never reproduce substantial verbatim passages from another outlet.
 - Never mirror a source's structure or wording closely enough to constitute copying.
 
-## 4. Formats and lengths — THREE tiers, founder-locked 2026-07-12 (N-026)
+## 4. Formats and lengths — FOUR tiers (three length-derived, plus `guide`)
 
-Exactly three formats. Each one **is** a length band — the format is derived from the actual word count
-(`trueFormat` in app.js), never merely declared. Don't pad to a number; if a story only carries a brief's
-worth of real content, it's a brief, and that's honest.
+**Corrected 2026-07-31.** This section said "exactly three formats, founder-locked" and listed three. That
+has not been true since `guide` shipped: it is in the `format` enum in `newsroom/schemas/article-draft.json`,
+it has its own row in the `FLOOR` dict in `newsroom/quality/component_audit.py`, and `trueFormat()` in
+`app.js` returns it. The three length tiers are still founder-locked (2026-07-12, N-026); `guide` was added
+alongside them, not in place of one.
 
-| Format | Length (target / band) | Authors | Charts | Use |
-|---|---|---|---|---|
-| **Brief** | ~300 words (250–450) | 1 | none | Fast reaction to a news event, minutes-to-hours after. One fact, one why-it-matters, one link. |
-| **Synthesis** | ~1,200 words (800–1,900) | 1 | optional | Reads across several sources into one clearer account — our signature daily format. Bull + bear, honest verdict. |
-| **Research** | ~3,500 words (2,200 floor) | 2–3 | **2–3 required** | The flagship. Multi-section argument (geopolitics/history/counter-case), runs 1–2×/week. Exemplar: `rs-001`. |
-| Persona column | fits its tier above | 1 | per tier | Recurring opinion/analysis under a named persona byline — still lands in one of the three tiers by length. |
+Three of the four **are** a length band — derived from the actual word count (`trueFormat` in app.js),
+never merely declared. Don't pad to a number; if a story only carries a brief's worth of real content, it's
+a brief, and that's honest. **`guide` is the exception and is declared, not derived**: a guide's substance
+lives in `procedure` and `snippet` blocks, which `wordCount()` cannot see, so length would mislabel it.
 
-`qa_scan.py` #9 fails any "research" piece under 2,200 words or without 2–3 charts. Weight the daily mix toward
-synthesis — our signature "one deep read instead of five overlapping ones."
+| Format | Length (target / band) | Authors | Charts | Components (audited floor) | Use |
+|---|---|---|---|---|---|
+| **Brief** | ~300 words (250–450) | 1 | none — one sourced `stat` callout is the ceiling | **1** — usually `keyfacts` or `ledger` | Fast reaction to a news event, minutes-to-hours after. One fact, one why-it-matters, one link. |
+| **Synthesis** | ~1,200 words (800–1,900) | 1 | optional | **2** (3–4 typical), ≥1 data-carrying | Reads across several sources into one clearer account — our signature daily format. Bull + bear, honest verdict. |
+| **Research** | ~3,500 words (2,200 floor) | 2–3 | **2–3 required** | **4**, ≥2 of them charts, plus a `scorecard` | The flagship. Multi-section argument (geopolitics/history/counter-case), runs 1–2×/week. Exemplar: `rs-001`. |
+| **Guide** | not length-derived — shape set by the cadence table in `cycle-runbook.md` §3d | 1 | optional | **2** (`flow` and `compare` carry most guides) **plus a mandatory `procedure` block** | Hands-on instruction. The test is whether the reader can DO something afterward, not whether they understood something. |
+| Persona column | fits its tier above | 1 | per tier | per tier | Recurring opinion/analysis under a named persona byline — still lands in one of the length tiers. |
+
+**Charts and components are not the same thing, and this table used to conflate them.** The old
+"Charts: none" on Brief was read as "a brief carries no visual layer," which reads as a direct
+contradiction of `cycle-runbook.md` §3b, which requires **at least one component on every brief** and has
+since it shipped. Both rules are right and were never actually in conflict:
+
+- **A brief gets no CHART.** A chart reads as *measured*; a 300-word reaction to a single announcement
+  almost never has a real series behind it, and inventing a second data point to fill a bar is exactly the
+  fabrication `visual-components.md` bans. One sourced `stat` callout is the honest ceiling.
+- **A brief still gets one COMPONENT** — a `keyfacts` box or a `ledger`: structure over facts the piece
+  already carries. That is the floor `component_audit.py` enforces, and prose does not satisfy it.
+
+The Components column is the enforced floor from `cycle-runbook.md` §3b and the `FLOOR` dict in
+`newsroom/quality/component_audit.py`. **§3b is canonical for the visual layer; this table is a summary of
+it** — if they ever diverge again, §3b wins and this table is the one that is wrong. `qa_scan.py` #9 fails
+any "research" piece under 2,200 words or without 2–3 charts. Weight the daily mix toward synthesis — our
+signature "one deep read instead of five overlapping ones."
 
 ## 5. Mechanics
 

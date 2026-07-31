@@ -1,0 +1,94 @@
+# ============================================================================
+# RTFCLMGZN — Cloudflare Pages response headers
+#
+# Before this file existed Pages sent no security headers at all: the site was
+# framable (the account and Plus flows were clickjackable), full referrer URLs
+# — including the article path a reader was on — leaked to flagcdn.com and to
+# Google Fonts, and there was no CSP anywhere in the project.
+#
+# /* covers every asset and every route, since routing is client-side off the
+# hash and every URL is served by the same index.html.
+#
+# The headers, in order below:
+#   X-Frame-Options          clickjacking. frame-ancestors in the CSP is the
+#                            modern control; this stays for engines that still
+#                            only honour the legacy header.
+#   X-Content-Type-Options   stop MIME sniffing turning a served .js or .json
+#                            into something executable.
+#   Referrer-Policy          same-origin requests keep the full URL; anything
+#                            cross-origin (flagcdn, Google Fonts, Google
+#                            Translate, and every outbound source link in an
+#                            article) gets the bare origin, and nothing at all
+#                            on an HTTPS -> HTTP downgrade.
+#   Permissions-Policy       nothing here needs any of these. An empty
+#                            allowlist denies the feature to this document and
+#                            to every embed inside it.
+# ============================================================================
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+  Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://translate.google.com https://translate.googleapis.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://flagcdn.com https://translate.google.com https://translate.googleapis.com https://www.gstatic.com; connect-src 'self'; frame-src 'self' https://translate.google.com https://translate.googleapis.com; form-action 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests
+
+# ---------------------------------------------------------------------------
+# WHY EACH CSP SOURCE IS IN THE POLICY
+#
+#   'self'                     index.html, assets/app.js, assets/styles.css,
+#                              the 34 data/*.js files, manifest.json, rss.xml,
+#                              newsroom-map.html, assets/img/*.
+#   data:                      the inline SVG favicon (img-src) and any
+#                              base64 font fallback (font-src).
+#   fonts.googleapis.com       the Fraunces + Inter @font-face stylesheet.
+#   fonts.gstatic.com          the woff2 files that stylesheet points at.
+#   translate.google.com       translate_a/element.js, injected by initLang()
+#                              in app.js when a reader picks a language.
+#   translate.googleapis.com   that widget's runtime and its UI images.
+#   www.gstatic.com            Google Translate's static runtime and sprite
+#                              assets. Not optional: the language menu is a
+#                              shipped feature and element.js pulls from here.
+#   flagcdn.com                the flag icons in that same language menu
+#                              (flagImg() in app.js).
+#
+# No iframes are created by our code, and no <object>/<embed> exists anywhere,
+# hence object-src 'none' and a frame-src that only tolerates Google
+# Translate's own banner frame.
+#
+# connect-src is deliberately 'self': nothing in our own code does a
+# cross-origin fetch, XHR or WebSocket. If Google Translate is ever observed
+# failing with a connect-src violation, the one correct edit is to append
+# https://translate.googleapis.com there — not to loosen anything else.
+#
+# ---------------------------------------------------------------------------
+# TO REMOVE 'unsafe-inline' FROM script-src
+#
+# It is set only because the document currently cannot run without it. Exactly
+# three things have to change, and all three live outside this file:
+#
+#   1. index.html — the three inline <script> bootstraps in <head>:
+#        a. the desktop-viewport override (reads localStorage "rtfc-vp"),
+#        b. the theme bootstrap (reads localStorage "rtfc-theme"),
+#        c. the googtrans cookie sniff that adds the .xlating class.
+#      Each must move into one external, render-blocking file, or carry a
+#      per-response nonce. They cannot simply be deferred: all three must run
+#      before first paint or the page flashes the wrong theme or layout.
+#
+#   2. assets/app.js — roughly 40 inline onclick= attributes emitted by the
+#      view builders. 'unsafe-inline' in script-src is exactly what permits
+#      those, and a nonce does NOT cover event-handler attributes: they have
+#      to become addEventListener bindings, or one delegated listener on #app
+#      keyed off a data-action attribute.
+#
+#   3. index.html — the skip link's inline onclick, same rewrite as (2).
+#
+# Only once all three are done can script-src become
+#   script-src 'self' https://translate.google.com https://translate.googleapis.com https://www.gstatic.com
+# or, with nonces, 'strict-dynamic' plus a per-request nonce.
+#
+# style-src keeps 'unsafe-inline' independently of that work: app.js sets
+# style="background:<section colour>" on section pills and similar inline
+# styles throughout, and Google Translate injects its own <style> blocks.
+# Dropping it means moving those to CSS custom properties assigned via
+# element.style.setProperty, which a nonce also cannot cover.
+# ---------------------------------------------------------------------------

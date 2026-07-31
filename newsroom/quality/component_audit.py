@@ -56,20 +56,61 @@ SKIP_KEYS = {
 NUM = re.compile(r"\d[\d,]*(?:\.\d+)?")
 
 
-def _load_js_array(path: Path):
-    """Parse a `window.X = [...]` data file.
+class DataFileError(RuntimeError):
+    """A published data file could not be read. Always fatal, never skipped."""
 
-    Only strict-JSON files are audited. guides.js is hand-authored with JS
-    object-literal syntax (unquoted keys), which json cannot read -- it is
-    skipped with a notice rather than crashing the audit, because a crashing
-    audit is an audit nobody runs.
+
+# Anchored on the ASSIGNMENT (`window.X = [`), not on the first `[` in the file.
+# Same lesson ship_preflight.py's js_object() records: header comments in these
+# files contain brackets, and slicing from the first one parses the
+# DOCUMENTATION instead of the data. Last match wins so an example assignment in
+# a header cannot beat the real one.
+_ASSIGN = re.compile(r"window\.[A-Za-z_][A-Za-z_0-9]*\s*=\s*(?=\[)")
+
+
+def _load_js_array(path: Path):
+    """Parse a `window.X = [...]` data file, or die.
+
+    THIS FUNCTION MUST NEVER RETURN AN EMPTY LIST ON FAILURE.
+
+    It used to catch JSONDecodeError, print a note to stderr, and return `[]`.
+    The note was written for guides.js, which was once hand-authored JS
+    object-literal syntax (unquoted keys) that `json` could not read. guides.js
+    has since been converted to strict JSON and parses fine -- see its own
+    header -- so the exemption had no remaining legitimate user, and what was
+    left was a catastrophe switch:
+
+        a truncated or half-written data file -> JSONDecodeError -> `[]`
+        -> zero articles audited -> "No hard issues." -> exit 0 -> push.
+
+    Every downstream check (schema, the no-top-level-`text` invariant, component
+    floors, numeric provenance) iterates the returned list, so an empty list
+    passes all of them vacuously, and ship_preflight.py reads only the exit code.
+    A half-written newsroom-articles.js would have sailed through the one gate
+    whose entire job is to catch a half-written newsroom-articles.js. An audit
+    that cannot read its input has not passed; it has failed to run.
     """
     text = path.read_text("utf-8")
+    matches = list(_ASSIGN.finditer(text))
+    if not matches:
+        raise DataFileError(f"{path.name}: no `window.X = [` assignment found -- file truncated or renamed?")
+    payload = text[matches[-1].end():].rstrip().rstrip(";")
     try:
-        return json.loads(text[text.index("[") :].rstrip().rstrip(";"))
-    except (ValueError, json.JSONDecodeError):
-        print(f"  note: {path.name} is not strict JSON (JS literal syntax) -- skipped", file=sys.stderr)
-        return []
+        data = json.loads(payload)
+    except ValueError as exc:  # JSONDecodeError is a subclass
+        raise DataFileError(
+            f"{path.name}: not parseable as JSON ({exc}). "
+            "The file is truncated, mid-edit, or was written with JS object-literal "
+            "syntax. Fix the file -- the audit will not proceed on partial data."
+        ) from exc
+    if not isinstance(data, list):
+        raise DataFileError(f"{path.name}: parsed to {type(data).__name__}, expected a list")
+    if not data:
+        raise DataFileError(
+            f"{path.name}: parsed to an EMPTY list. A published data file with zero "
+            "entries is a truncation, not a clean archive."
+        )
+    return data
 
 
 def _numbers(obj, out=None):
@@ -108,11 +149,21 @@ def main() -> int:
     per_type = {_btype(b): {"anyOf": [b]} for b in branches}
     figures_src = (web / "figures.js").read_text("utf-8") if (web / "figures.js").exists() else ""
 
+    # A file that is missing is the same vacuous-pass hazard as a file that will
+    # not parse -- zero articles audited, "No hard issues.", exit 0. Both are
+    # fatal. Both of these files are in ship_preflight's REQUIRED_FILES; neither
+    # is optional.
     articles = []
-    for name in ("newsroom-articles.js", "guides.js"):
-        path = web / name
-        if path.exists():
+    try:
+        for name in ("newsroom-articles.js", "guides.js"):
+            path = web / name
+            if not path.exists():
+                raise DataFileError(f"{name}: missing from web/data -- cannot audit an archive that isn't there")
             articles += _load_js_array(path)
+    except DataFileError as exc:
+        print(f"\nAUDIT DID NOT RUN -- {exc}", file=sys.stderr)
+        print("  This is a FAILURE, not a skip. Nothing was checked.", file=sys.stderr)
+        return 1
 
     issues: list[str] = []
     warnings: list[str] = []

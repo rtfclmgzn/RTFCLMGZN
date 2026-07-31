@@ -29,9 +29,11 @@ Do not re-cover a story already published in the last 7 days unless there's a ge
 **Format targets for this run** (source-gated — never pad a thin story to hit a target; a brief with one solid source beats a padded synthesis):
 - Brief: one clear claim, 1-2 sources, ~250-450 words.
 - Synthesis: **3+ sources minimum**, at least one primary (the company/agency/filing itself, not just reporting about it), real analysis, 800-1900 words (the site's own word-count ruler relabels anything under 650 words as a Brief regardless of what you call it — see `trueFormat()` in `web/assets/app.js` if you want to check).
-- Research: **5+ sources minimum**, a real primary-source stack (not five reports of the same primary source), 2200+ words. Check whether a research piece has run in the trailing 7 days (grep `"format": *"research"` in the dates above) — if none, and a strong candidate supports the depth, elevate to research this cycle.
+- Research: **8+ independent evidence threads minimum**, at least 3 of them primary/official, normally spanning 4+ source classes; a real primary-source stack (not eight reports of the same primary source), 2200+ words. Check whether a research piece has run in the trailing 7 days (grep `"format": *"research"` in the dates above) — if none, and a strong candidate supports the depth, elevate to research this cycle.
 
-These are floors, not targets to just clear — a story that genuinely supports 6 sources on a synthesis or 8 on a research piece should use them. More real, distinct, sourced facts is the actual goal; the word count is just what tends to follow from having them.
+> **Canonical source floor: `agents/_shared/format-routing.md`.** That file is the single authority for how many sources each tier needs, and everything here restates it. This line said **5+** for research while `format-and-image-policy.md` said 7+ and `format-routing.md` said 8+ — three different floors for the same decision, so a cycle could clear its runbook and still be under the standard the router enforces. All of them now say **8+**, the strictest of the three, because the strictest was the only one that could be right: a floor that some agent is allowed to undercut is not a floor. Corrected 2026-07-31.
+
+Count **independent evidence threads, not URLs** — `format-routing.md` has the dedup rules (a company announcement plus five articles repeating it is one thread; two outlets citing the same anonymous source is one thread). These are floors, not targets to just clear — a story that genuinely supports 6 sources on a synthesis or 10 on a research piece should use them. More real, distinct, sourced facts is the actual goal; the word count is just what tends to follow from having them.
 
 Per-cycle cap: **3 articles maximum.** Stop researching once you have enough good candidates for this slot; do not keep pulling more.
 
@@ -70,6 +72,36 @@ Why this is a required step and not polish: prose is the one thing a human wire 
 | Synthesis | **2 minimum** (3–4 typical); at least one carrying data (`chart`/`compare`/`ledger`/`range`) |
 | Research | **4 minimum**, ≥2 of them charts, plus a `scorecard` |
 | Guide | **2 minimum** — `flow` and `compare` carry most guides |
+
+A brief's one component is **not** a chart. `house-style-guide.md` §4 is right that briefs get no chart —
+a 300-word reaction to one announcement has no measured series behind it — and this floor is still one
+component: a `keyfacts` box or a `ledger`, structure over facts the piece already carries. The two rules
+were never in conflict; the style guide's table used to conflate charts with components and now separates
+them. **This section is canonical for the visual layer**; that table is a summary of it.
+
+> ### ⚠ THE FLOOR IS HARD AS OF TODAY — `FLOOR_ENFORCED_FROM = "2026-07-31"`
+>
+> `newsroom/quality/component_audit.py` carries the constant `FLOOR_ENFORCED_FROM = "2026-07-31"`, and
+> **that date is now in the past.** Until it passed, an under-floor piece was logged as counted
+> *backfill debt* and the audit still exited 0. It is not soft any more:
+>
+> - **Anything with `publishedAt` on or after 2026-07-31 that misses the floor above is a HARD FAILURE.**
+>   The audit exits 1, and `ship_preflight.py` and §5.3 both refuse the push. Your cycle does not ship.
+> - There is no override, no `--force`, and no "note it in the report and move on." The fix is to add the
+>   component, or to drop the piece.
+> - This is checked **unconditionally**, including on pieces with zero components — the exact case the
+>   floor exists to catch, and the case an earlier version of the check skipped.
+>
+> Everything published *before* that date still reports as backfill debt rather than failing, so the
+> existing under-floor archive does not block every cycle from publishing. That queue is real and visible:
+> the audit names and counts it on stderr on every single run, and §3c burns it down two per cycle. The
+> number has to go down. It is the publication's visible, shrinking debt, not an amnesty — and it does not
+> extend to anything you write today.
+>
+> **Practical consequence for this cycle:** run `python -m newsroom.quality.component_audit` *before* you
+> think you are finished, not as the last step before pushing. Discovering at push time that a finished
+> article is one component short means writing a component under time pressure from evidence you may not
+> have gathered — which is exactly how a fabricated data point gets into a chart.
 
 **The menu, one line each:** `keyfacts` (the five-second box) · `ledger` (numbers with what each one excludes — the most useful component on this beat) · `compare` (side-by-side, diverging rows auto-highlighted) · `chart` (`bar`/`pie`/`line`/`stacked`/`range`/`waffle`) · `timeline` (dated, `future:true` for what's only scheduled) · `sourcecheck` (where sources disagree and which figure this piece uses) · `scorecard` (claim-by-claim evidence strength, with the document that would settle each one) · `stakes` (who gains, who loses, named specifically) · `flow` (mechanisms and money paths) · `beforeafter` (pure deltas) · `spectrum` (position on one axis) · `entity` (ownership, when structure IS the story) · `stat`.
 
@@ -200,6 +232,106 @@ this order, and mark it done here.
    generative media and deepfakes (zero mentions); who owns whom (the data is
    already sitting in `entities.js` and `companies.js`).
 
+## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
+
+### What was found (2026-07-31 audit)
+
+- **Both magazine issues carry ZERO source URLs** — not one `http` string across ~16,000 words of
+  editorial. The payloads are now at `functions/api/issue/_data/issue-001.json` and
+  `_data/primer.json`; `grep -c http functions/api/issue/_data/issue-001.json` returns 0.
+- **Issue 001 makes roughly 30 hard numeric claims**, none of them attributable from the page. Among
+  them: $510B H1 funding; $217B (≈43%) of it to OpenAI and Anthropic; a $12B Series B at a $41B
+  valuation; DeepSeek at $7.4B on a $50B+ valuation; $650B hyperscaler capex; Figure 02 at 30,000
+  vehicles and 99% accuracy.
+- **The issue's own provenance claim does not hold.** Its (now retired) file header said the copy was
+  "a re-telling of coverage the newsroom already published … never invented." Of 17 entities tested
+  against the archive, **16 appear in no published article.** Whatever that copy is, it is not a
+  re-telling of our own reporting, and the header asserted otherwise.
+- **The issue contradicts itself on its own headline number.** The Editor's Letter says "a **$500
+  billion** funding number"; the cover, the contents page, and all of Act II say **$510 billion**.
+  At most one is right.
+
+**Owner's decision: the issue stays live. It is fixed by cycle, not pulled.** This is the queue.
+
+### The two rules that govern every item below
+
+1. **Attach a real source to every numeric claim, or CUT the claim. There is no third option.**
+   Never invent, reconstruct, or infer a citation. If, after a genuine search, a number cannot be traced
+   to a primary or clearly-attributable source, **delete the number** and rewrite the sentence around
+   its absence. A cut number costs a sentence; a fabricated citation costs the publication. The
+   anti-fabrication rules in §3b apply here in full — magazine copy is not exempt because it is prose.
+2. **A number that no longer matches its source gets corrected to the source, not defended.** If the
+   audit finds $510B was actually $497B, the issue says $497B. Do not preserve a headline figure to
+   avoid re-laying a page.
+
+### The data shape
+
+Each spread carrying a factual claim gets its own array:
+
+```js
+sources:[ { label:"Crunchbase H1 2026 funding report", url:"https://…", primary:true }, … ]
+```
+
+Per **spread**, not per issue — a reader looking at the $650B capex page must be able to check *that*
+number without hunting a bibliography twelve pages away. The issue-level roll-up is derived from the
+spreads, never maintained by hand. **The renderer does not print these yet**: a spread-foot source line
+is `web/assets/app.js` work, and it ships in the same cycle as the first sourced spread. Note it
+explicitly in your Step 6 report so it is not silently deferred — sourced data nobody can see is not
+sourcing.
+
+### The queue — ONE numbered item per cycle, in this order
+
+Work the item, mark it done here in the same commit, stop. Do not batch two.
+
+1. **Act II · The Number** (spreads 17–19) — the issue's spine and its most-quoted figures: $510B H1
+   total, the $440B 2025 comparison, $217B/43% to two companies, the $12B Series B at $41B, DeepSeek
+   $7.4B at $50B+, Together $800M at $8.3B, "nearly forty" unicorns. Every one of these is a
+   *reported market aggregate* — find who reported it and on what date, and say so on the page. Resolve
+   the $500B/$510B contradiction with the Editor's Letter in this same item.
+2. **Act II · The Crunch + The Climb** (24–27) — $650B hyperscaler capex, $1.3T, $5.8B, and the 80% /
+   57% / 30% shares. Aggregate capex figures differ substantially between analysts; if two credible
+   sources disagree, keep both and say which the issue uses and why. That reconciliation is exactly the
+   value §3a asks for.
+3. **Act III · The Floor** (31–33) — Figure 02: "30,000 cars," 99% accuracy, and the 100,000 / 12,000
+   figures. These are the issue's most concrete, most falsifiable, most screenshot-able claims. Vendor
+   demo numbers must be attributed as the vendor's own, never stated as measured fact.
+4. **Act III · The Audit** (34–35) — $2.5B, $6.2B, $620M, $300M, 65,000. Health/clinical adjacency:
+   `compliance-rulebook.md` §1 mandatory-scrutiny applies, and the not-medical-advice line is required
+   if any claim is treatment-adjacent.
+5. **Act IV · The Admission** (49–51) — the $145B capex guidance, the $125–$145B range, $1.25/$4.25,
+   $30,000, "roughly 8,000 employees." Guidance figures come from an earnings call or a filing; cite
+   the filing, not the coverage of it.
+6. **Act I · The Bet + The Frontier + The Pressure** (6, 9, 10, 13) — per-token pricing ($2.50/$15,
+   $5.07, $11.80, $2.49) and the 25/35/52/54% and 46% share figures. Vendor pricing pages are primary
+   and are dated — record the date you read them, because these change without notice.
+7. **Act IV · The Courtroom** (47) and **Act II · The Supply Chain** (21) — $6.4B and $29B. Legal
+   proceedings trip mandatory scrutiny (§1): a settlement or damages figure must come from the filing
+   or the court's own record.
+8. **The front matter** (0, 2, 3) and **the closing surfaces** (36 players, 55 Prediction Ledger) —
+   cover lines, contents, Editor's Letter, and the ledger's $15 / $2.50 / 46%. These repeat numbers
+   sourced in items 1–7; the job here is to make every repeat *match* its now-sourced original exactly,
+   or cut it. No new sourcing should be needed — if a figure here has no origin in items 1–7, that is
+   the finding, and it gets cut.
+9. **The Ledger spread** (54) — $1.42 compute cost, 172,000 tokens, 38 images. These are ours and are
+   internally sourced: state the basis (metered vs estimated) on the page, exactly as
+   `usage-log.js` records it. An issue that sells cost transparency cannot be vague about its own cost.
+10. **The provenance claim itself.** Once items 1–9 are done, the issue is genuinely sourced and the
+    retired "re-telling of coverage the newsroom already published" framing can be replaced with an
+    honest, accurate statement of what it is. Do this LAST — until the sourcing exists, any new
+    provenance line is another claim we cannot back. In the same item, add the 16 unmatched entities to
+    `entities.js`/`companies.js` where they have real coverage, or accept that they do not and let the
+    corrected provenance line say so.
+11. **The Primer gets the same treatment** under §3e once 001 is closed. It is the free issue, the one
+    most people read, and it is equally unsourced.
+
+### Standing rule for every FUTURE issue (effective immediately)
+
+**No issue ships without sources per spread.** Every spread carrying a factual or numeric claim carries
+its own `sources` array in the same commit that writes the copy — not as a later pass, because a later
+pass is what produced this queue. An issue is held, not published, until it clears. The same
+anti-fabrication rules as §3b apply verbatim: never invent a value, never invent a citation, and a
+number that cannot be sourced is cut before the issue ships rather than queued for a cycle to fix.
+
 ## 4. Cover image
 
 Follow `publishing.agent.md`'s rules exactly:
@@ -242,8 +374,11 @@ If you genuinely have nothing to add to one of them this cycle, still refresh it
 2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` / `web/data/companies.js` / `web/rss.xml` from step 4b). Never `git add -A`.
 3. Run the audit: `python -m newsroom.quality.component_audit` (must exit clean), then the surface guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.
 4. `git commit` with a real, specific message (what you published and why, not a generic "update").
-5. `git push origin main`.
-6. Verify: `curl -s https://rtfclmgzn.com/ | grep -o '?b=[0-9]*'` in a short poll loop until it shows your new number (deploy takes ~30-90s).
+5. **`git pull --rebase origin main`** — REQUIRED, every cycle, after the commit and before the push. Three schedules (this cycle, the 2-hourly breaking scan, the 3-hourly pulse scan) push to the same branch, and they overlap: a long cycle is routinely still running when the next scan commits. Without this, `git push` is simply **rejected** as non-fast-forward, and an unattended agent that reads a push as "done" reports a successful ship of work that is still sitting only on this machine — where the next run's checkout or reset then quietly discards it. Nothing errors and nothing is logged; the article just never existed. Run it *after* committing, never with a dirty tree.
+   - **If the rebase reports a conflict: STOP.** Do not `--force`, do not `--force-with-lease`, do not `git rebase --skip`, do not resolve it by taking your own side wholesale. A force-push here overwrites another scan's already-published article. Run `git rebase --abort`, leave the commit sitting unpushed, and say exactly that in your Step 6 report so the owner can land it by hand. An unshipped commit is recoverable; an overwritten one is not.
+   - The usual case is a clean replay onto whatever landed while you worked, and it takes a second.
+6. `git push origin main`.
+7. Verify: `curl -s https://rtfclmgzn.com/ | grep -o '?b=[0-9]*'` in a short poll loop until it shows your new number (deploy takes ~30-90s). If the number never appears, check for a **cache-buster collision** first: a scan that landed during your rebase may have bumped `?b=` to the same number you did, in which case yours rebased on top and the live number is right but yours isn't the one showing. Re-read `web/index.html` before bumping again.
 
 ## 6. Report
 

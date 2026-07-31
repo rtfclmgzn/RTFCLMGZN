@@ -4,13 +4,19 @@ Loaded by the Managing Editor, Research, Verification, Publishing, image-selecti
 
 ## 1. Format planning uses evidence depth
 
+> **Canonical source floor: `agents/_shared/format-routing.md`.** That file is the single authority for how
+> many sources each tier needs; this table restates it. The Research row said **7+** while the router said
+> 8+ and `cycle-runbook.md` §2 said 5+ — three floors for one decision. All are now **8+**, the strictest.
+> If this table ever disagrees with `format-routing.md` again, the router wins and this table is the bug.
+> Corrected 2026-07-31.
+
 The system chooses a target tier before drafting.
 
 | Planned tier | Default evidence profile | Finished structure |
 |---|---|---|
 | Brief | 1–2 credible sources; one event or narrow fact pattern | 250–450 words; inverted pyramid; no padding |
 | Synthesis | 3–6 credible sources; multiple documents/viewpoints | 800–1,900 words; thesis, evidence, counter-case, verdict |
-| Research | 7+ credible sources; normally 3+ primary/high-value sources; multi-angle question | 2,200+ words; multiple authors where warranted; 2–3 sourced charts |
+| Research | **8+** independent evidence threads; normally 3+ primary/high-value sources across 4+ source classes; multi-angle question | 2,200+ words; multiple authors where warranted; 2–3 sourced charts |
 
 Source count is a strong default, not the only signal. Source independence, primary-source quality, disagreement, novelty, and analytical breadth matter. Overrides require an explicit recorded rationale.
 

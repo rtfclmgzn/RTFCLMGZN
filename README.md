@@ -25,13 +25,24 @@ Cloudflare Pages, **no build command**, output directory = `web`.
 
 ## The newsroom
 
-Content is produced by scheduled autonomous runs (5 slots/day — see
-`agents/_shared/publishing-cadence.md`) following `agents/DAILY-RUN.md`: research →
-persona draft → fact-check vs primary sources → compliance screen → AI Editor-in-Chief
-adjudication → publish + cover art + RSS + usage logging. Rules that keep it honest:
-derived metadata (labels computed from actual text), no-duplicate/no-crowding law
-(`_shared/content-inventory.md`), curation-never-generation for The Buzz, and the
-public cost log rendered at `/#/usage`.
+Content is produced by three scheduled autonomous runs, each with its own runbook under
+`newsroom/runner/`:
+
+| Runbook | Cadence | Job |
+|---|---|---|
+| `newsroom/runner/cycle-runbook.md` | 3×/day (05:00 / 11:00 / 17:00 Central) | The publishing cycle: research → persona draft → fact-check vs primary sources → visual-component layer → compliance screen → publish + cover art + RSS + usage logging. **Up to 3 articles, never a quota.** |
+| `newsroom/runner/breaking-scan-runbook.md` | every 2h, between cycles | One purpose: a genuinely major story never waits for the next cycle. Most runs publish nothing, and that is success. Also refreshes The Buzz. |
+| `newsroom/runner/pulse-scan-runbook.md` | every 3h, cheap model | Live-surface upkeep: Buzz, events, Scoreboard freshness, and closing open claims in the Claims Ledger. Writes no articles. |
+
+`agents/_shared/` holds the doctrine those runbooks load (house style, format routing, reader
+doctrine, the visual component spec). Rules that keep it honest: derived metadata (labels
+computed from actual text), the no-duplicate/no-crowding law, curation-never-generation for
+The Buzz, an append-only claims and corrections ledger, and the public cost log rendered at
+`/#/usage`.
+
+**`agents/DAILY-RUN.md` is retired** (moved to `agents/retired/DAILY-RUN.md`, 2026-07-31). It
+described a 5-slot, 10-stage pipeline that no longer runs. Do not follow it; the three runbooks
+above are the newsroom.
 
 ## Secrets
 

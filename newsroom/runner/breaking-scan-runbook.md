@@ -39,7 +39,7 @@ In particular:
 - Real, working citation URLs only.
 - Self-reported claims from the company in the story (benchmarks, safety scores, etc.) must be attributed as theirs, not stated as neutral fact.
 - Cover image: library-first, semantic match, check `brand_visible` in the manifest carefully — never use an image with a competing company's branding baked into it.
-- Ship it exactly like a regular cycle: bump every `?b=N` cache-buster, `git add` only touched files, run `python -m newsroom.runner.verify_publish_surface` and stop if it's non-zero, commit with a specific message noting this was an out-of-cycle breaking publish and why, push, poll-verify the deploy landed.
+- Ship it exactly like a regular cycle: bump every `?b=N` cache-buster, `git add` only touched files, run `python -m newsroom.runner.verify_publish_surface` and stop if it's non-zero, commit with a specific message noting this was an out-of-cycle breaking publish and why, then **`git pull --rebase origin main`** (see §5 — mandatory, and it matters most here: you run every 2 hours, between the regular cycles, so you are the schedule most likely to be pushing at the same moment as another one), push, poll-verify the deploy landed.
 
 ## 3b. Refresh Buzz (REQUIRED every scan — regardless of whether Step 3 published anything)
 
@@ -66,6 +66,20 @@ This entry is what surfaces on the Pulse/Control Room page's "Last activity on t
 
 **Use the Edit tool, or Python opened with `encoding="utf-8"` on both read and write, for that bump. Never PowerShell (`Get-Content`/`Set-Content`/`-replace`) or any tool that doesn't explicitly declare UTF-8 on both ends.** `index.html` has em dashes and curly quotes in its `<title>`, meta tags, and visible banner — a non-UTF-8-safe read/write silently mangles all of them into mojibake across the whole file, not just the lines you touched, with no error and a normal-looking diff. This has genuinely happened before, more than once, during exactly this routine no-op bump. Sanity-check before committing: `grep -c 'â€' web/index.html` should print `0`.
 
-Then `git add` `web/index.html`, `web/data/usage-log-current.js`, and `web/data/buzz.js` (only if §3b actually changed it), run the publish-surface guard, commit, and push, same as always.
+Then `git add` `web/index.html`, `web/data/usage-log-current.js`, and `web/data/buzz.js` (only if §3b actually changed it), run the publish-surface guard, and commit — then §5 before you push.
+
+## 5. Rebase before you push (REQUIRED — every scan, publish or no-op)
+
+After committing and before `git push origin main`, run:
+
+```
+git pull --rebase origin main
+```
+
+Three schedules push to this one branch: the three regular cycles, the 3-hourly pulse scan, and you, every 2 hours between them. Overlap is the normal case, not the edge case. Without this rebase the push is **rejected as non-fast-forward** — and that rejection is the quiet kind of failure this newsroom keeps getting bitten by. An unattended agent that treats "push" as done reports a shipped breaking story that exists only on this machine, and the next run's checkout discards it. Nothing errors, nothing is logged, and the whole reason this scan exists — *"if a huge release like Opus 5 was just released, and I go to sleep tonight without seeing an article on that, this whole site is a failure"* — fails in exactly the way it was built to prevent, while reporting success.
+
+- Run it **after** the commit, never against a dirty tree.
+- **If the rebase conflicts: `git rebase --abort` and STOP.** Do not `--force`, do not `--force-with-lease`, do not `--skip`. A force-push here overwrites a regular cycle's already-published articles or a pulse scan's appended resolutions. Leave the commit unpushed and say so plainly in your §4 log entry so the owner can land it by hand. An unshipped commit is recoverable; an overwritten one is not.
+- After the push, if the live `?b=` never shows your number, re-read `web/index.html` before bumping again — a run that landed during your rebase may have taken the same cache-buster number.
 
 Then stop. Do not start a second scan.
