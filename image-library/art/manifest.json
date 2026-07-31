@@ -467,7 +467,12 @@
       ],
       "text_space": "storm sky left",
       "brand_visible": "ANTHROPIC signage",
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-anthropic-claude-cybersecurity-incidents",
+          "used_at": "2026-07-31"
+        }
+      ]
     },
     {
       "id": "art-018-bronze-lit-lab-campus-rainy-evening",
