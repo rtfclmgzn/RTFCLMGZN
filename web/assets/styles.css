@@ -651,7 +651,12 @@ a:hover>.mag-cover{transform:translateY(-4px);border-color:var(--accent)}
 
 /* card entrance motion */
 @media (prefers-reduced-motion:no-preference){
-  .card,.primer-banner,.mag-cover{animation:rtfc-rise .45s ease both}
+  /* .card and .mag-cover were listed here with fill:both, and an animation's
+     filled value outranks the .rv class's normal declarations -- so every card
+     below the fold computed opacity:1 while the IntersectionObserver reveal
+     system sat armed and did nothing. Verified 15/15 on the home page. They
+     belong to the reveal system; only the banner keeps the blunt entry. */
+  .primer-banner{animation:rtfc-rise .45s ease both}
   @keyframes rtfc-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 }
 
@@ -728,10 +733,6 @@ a:hover>.mag-cover{transform:translateY(-4px);border-color:var(--accent)}
   padding:5.5% 8%;color:#fff;flex:none}
 .mr-fact b{font-family:var(--serif);font-size:2.5cqh;display:block;line-height:1.05}
 .mr-fact span{font-size:1.18cqh;line-height:1.42;display:block;margin-top:3%;color:rgba(255,255,255,.88)}
-@media (max-width:1px){
-  .mp-grid{display:block}
-  .mr-fig{height:180px;margin-top:10px}
-}
 /* contents page */
 .mtoc{margin-top:3%}
 .mtoc-thumb{width:9.5%;aspect-ratio:3/4;flex:none;border-radius:6px;background-size:cover;
@@ -788,12 +789,11 @@ a:hover>.mag-cover{transform:translateY(-4px);border-color:var(--accent)}
 .mhint{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);font-size:11px;
   letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:opacity .6s;pointer-events:none}
 /* portrait / mobile: vertical magazine */
-@media (max-width:1px){
-  .mtrack{display:block;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y proximity;padding:14px}
-  .mpage{width:100%;aspect-ratio:3/4.05;height:auto;margin:0 0 14px;scroll-snap-align:start}
-  .mp-body.cols{columns:1}
-  .mhint{display:none}
-}
+
+/* Removed: seven @media (max-width:1px) blocks. A viewport is never 1px wide, so
+   these were disabled mobile-magazine layouts that shipped to every reader as dead
+   parse weight and, worse, disguised the fact that the reader had no phone layout
+   at all. The real phone layout is in the PHONE READER block at the end of this file. */
 
 /* ---------- footer ---------- */
 footer.site{border-top:1px solid var(--hairline);margin-top:72px;padding:56px 0 0;
@@ -906,11 +906,6 @@ footer.site .foot-cost a{color:var(--accent2)}
 .mcov3 .cv-code{width:13%;aspect-ratio:2.6/1;background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 4px,#fff 4px 5px,transparent 5px 8px,#fff 8px 11px,transparent 11px 13px);border-radius:2px;opacity:.9}
 /* contents tighten */
 .mtoc-row{padding:2.2% 0}
-@media (max-width:1px){
-  .l-top .lt-art,.l-band .bd-art{margin:-6% -6% 4%}
-  .l-top .mp-body,.l-band .mp-body{columns:1}
-  .mcov3 .cv-lines{max-width:60%}
-}
 /* V3: back cover goes full-bleed brand page */
 .mpage.mback{background:linear-gradient(180deg,rgba(6,5,12,.88),rgba(6,5,12,.7) 50%,rgba(6,5,12,.92)),url('img/primer-cover.jpg') center/cover !important}
 
@@ -968,25 +963,6 @@ footer.site .foot-cost a{color:var(--accent2)}
   padding:1.6% 5%;font-size:1.25cqh;letter-spacing:.14em;color:#fff}
 .mb-in p{margin:0 0 1.8%}
 /* 6) PORTRAIT — composed, never stacked slabs; natural page heights kill voids AND cutoffs */
-@media (max-width:1px){
-  .mpage{aspect-ratio:auto;height:auto;min-height:60cqh}
-  .mpage.full,.mpage.mad,.mpage.mphoto,.mpage.mcov3,.mpage.l-ov,.mpage.mback{min-height:92cqh}
-  .mpage.light{padding:12% 7% 9%}
-  .mp-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px}
-  .mp-grid.rev .mp-rail{order:2}
-  .mp-rail{display:grid;grid-template-columns:44% 1fr;gap:4%;align-items:start;justify-content:start}
-  .mr-fig{grid-row:1 / span 2;aspect-ratio:3/4;min-height:0;flex:none}
-  .mr-cap{grid-column:2;text-align:left;margin:0}
-  .mr-pull{grid-column:2;margin:0}
-  .mr-fact{grid-column:1 / -1;padding:14px 18px}
-  .mpage.light .mp-body{gap:10px}
-  .l-top .lt-art{margin:-12% -7% 5%;height:34cqh}
-  .l-band .bd-art{margin:-12% -7% 4%;height:24cqh}
-  .l-band .bd-quote,.l-stats .st-strip{margin-left:-7%;margin-right:-7%}
-  .l-stats .st-strip{margin-bottom:-9%}
-  .mcov3 .cv-lines{max-width:62%;top:17%}
-  .mfolio-bot{position:static;display:flex;margin-top:14px;order:99}
-}
 /* V4.1 — density trim on structured pages (kill residual overflow, landscape) */
 @media (min-width:1px){
   .mtoc-row{padding:1.7% 3%}
@@ -1043,20 +1019,12 @@ footer.site .foot-cost a{color:var(--accent2)}
   border-radius:50%}
 .hasdeco .mp-title{padding-right:18%}
 .hasdeco .ip-kicker{padding-right:20%}
-@media (max-width:1px){
-  .mdeco{width:17%;top:6.5%}
-  .mtab{font-size:9px;top:9%}
-  .mpage.light::after{font-size:14cqh}
-}
 /* V5.1 — timeline fits its page (first real render of the kind) */
 @media (min-width:1px){
   .ip-tl{min-height:0}
   .tl-row{padding:1.2% 3%;gap:3%}
   .tl-d{font-size:1.25cqh;min-width:13%}
   .tl-t{font-size:1.4cqh;line-height:1.42}
-}
-@media (max-width:1px){
-  .tl-t{font-size:1.6cqh}
 }
 /* ============ V6 FEATURES: tools · control room · palette · scoreboard · corrections ============ */
 /* article tools row */
@@ -1727,19 +1695,6 @@ html.xlating #app{ opacity:0 !important; }
 /* ============ V16 · PORTRAIT rail text pages — kill the small-image void ============ */
 /* In portrait the rail collapsed to a tiny 44% image + gaps. Make the image a big
    full-width band and let copy flow beneath it so these pages actually fill. */
-@media (max-width:1px){
-  .mpage.light .mp-body{ justify-content:flex-start; gap:2.4%; }
-  .mp-grid{ display:flex!important; flex-direction:column!important; gap:4%!important; }
-  .mp-grid.rev{ flex-direction:column!important; }
-  .mp-rail{ display:flex!important; flex-direction:column!important; gap:2.4%; }
-  .mp-rail .mr-fig{ width:100%!important; height:auto!important; aspect-ratio:16/10!important;
-    min-height:26cqh!important; grid-row:auto!important; flex:none!important; margin:0!important; }
-  .mp-rail .mr-cap{ grid-column:auto!important; text-align:left; margin:0!important; }
-  .mp-rail .mr-pull{ grid-column:auto!important; margin:0!important; }
-  .mp-rail .mr-fact{ padding:14px 18px; }
-  /* stats page: image sits with the strip, keep body first */
-  .l-stats .st-strip{ margin-top:3%; }
-}
 
 /* ============ V17b · roll the feature look across text pages ============ */
 /* Bleed top-art to the trim edge, two-column the copy, bolder titles. */
@@ -2095,28 +2050,149 @@ html.xlating::after{ content:""; position:fixed; z-index:99999; top:50%; left:50
 @media (prefers-reduced-motion:reduce){ #sgrip .sg-bar{ transition:none; } }
 
 /* ============ V34 · reader-map heatmap + bottom disclaimer spacing ============ */
-.readermap{ margin:14px 0 8px; padding:16px; border:1px solid var(--line,#e6e1ee); border-radius:16px;
-  background:radial-gradient(120% 120% at 50% 0%, rgba(139,124,247,.09), transparent 60%), var(--surface2,rgba(20,16,32,.35)); }
-.rm-svg{ width:100%; height:auto; display:block; border-radius:10px; background:linear-gradient(180deg, rgba(10,7,20,.35), rgba(10,7,20,.1)); }
-.rm-empty{ margin-top:14px; font-size:14px; line-height:1.6; color:var(--muted,#6b6478); }
-.rm-empty b{ color:var(--ink,#1a1626); } :root[data-theme="dark"] .rm-empty b{ color:#e9e4f5; }
-.rm-total{ margin-top:12px; font-size:12.5px; color:var(--muted,#6b6478); letter-spacing:.02em; }
-.rm-top{ list-style:none; margin:14px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:8px 26px; }
-@media(max-width:600px){ .rm-top{ grid-template-columns:1fr; } }
-.rm-top li{ display:flex; align-items:center; gap:10px; font-size:14px; }
-.rm-cc{ min-width:96px; color:var(--ink,#1a1626); font-weight:600; } :root[data-theme="dark"] .rm-cc{ color:#e9e4f5; }
-.rm-bar{ flex:1; height:7px; border-radius:5px; background:rgba(139,124,247,.14); overflow:hidden; }
-.rm-bar i{ display:block; height:100%; background:linear-gradient(90deg,var(--accent,#8b7cf7),var(--accent2,#5ac8b0)); border-radius:5px; }
-.rm-top b{ color:var(--accent,#8b7cf7); min-width:64px; text-align:right; font-variant-numeric:tabular-nums; font-size:12.5px; }
-/* V35 · heat legend (glow-and-fade) */
-.rm-legend{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; margin-top:12px; font-size:12px; color:var(--muted,#6b6478); }
-.rm-legend span{ display:inline-flex; align-items:center; gap:6px; }
-.rm-lg{ width:11px; height:11px; border-radius:50%; display:inline-block; box-shadow:0 0 8px currentColor; }
-.rm-lg.hot{ background:radial-gradient(circle,#fff7e6,#ffb85c 55%,#ff5a8b); color:rgba(255,140,90,.6); }
-.rm-lg.warm{ background:radial-gradient(circle,#c9b8ff,#8b7cf7 60%,#5ac8b0); color:rgba(139,124,247,.5); }
-.rm-lg.amb{ background:#8b7cf7; opacity:.28; box-shadow:none; }
-.rm-fade{ margin-left:auto; font-style:italic; opacity:.85; }
-@media(max-width:600px){ .rm-fade{ margin-left:0; flex-basis:100%; } }
+/* ================= READER MAP · choropleth over real country geometry =========
+   Sequential ramp, one hue, five steps, validated per mode with the dataviz
+   ordinal checks (monotone lightness, adjacent dL >= 0.06, light end clears 2:1
+   on surface, single hue). Land with NO readers is NOT a step on this ramp: it
+   is the substrate, and stays recessive on purpose so the map still reads as a
+   map when the counter is empty. */
+:root{
+  --rm-land:#262636; --rm-edge:#33334a;
+  --rm1:#6f5bd6; --rm2:#8f78ee; --rm3:#ad9bff; --rm4:#cabaff; --rm5:#e8e0ff;
+  --rm-sea:rgba(10,7,20,.30);
+}
+:root[data-theme="light"]{
+  --rm-land:#e9e7f5; --rm-edge:#dcd9ec;
+  --rm1:#a494f2; --rm2:#8674e9; --rm3:#6553d8; --rm4:#452fb2; --rm5:#2a1c7d;
+  --rm-sea:rgba(120,110,170,.06);
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --rm-land:#e9e7f5; --rm-edge:#dcd9ec;
+    --rm1:#a494f2; --rm2:#8674e9; --rm3:#6553d8; --rm4:#452fb2; --rm5:#2a1c7d;
+    --rm-sea:rgba(120,110,170,.06);
+  }
+}
+
+.readermap{ margin:14px 0 8px; padding:16px; border:1px solid var(--line); border-radius:16px;
+  background:var(--surface); }
+.rm-load{ padding:38px 12px; text-align:center; color:var(--muted); font-size:14px; }
+.rm-figure{ position:relative; }
+.rm-svg{ width:100%; height:auto; display:block; border-radius:10px; background:var(--rm-sea); }
+
+path.rmc{ fill:var(--rm-land); stroke:var(--rm-edge); stroke-width:.4; vector-effect:non-scaling-stroke;
+  transition:fill .16s ease; }
+path.rmc.s1{ fill:var(--rm1); } path.rmc.s2{ fill:var(--rm2); } path.rmc.s3{ fill:var(--rm3); }
+path.rmc.s4{ fill:var(--rm4); } path.rmc.s5{ fill:var(--rm5); }
+path.rmc:hover,path.rmc:focus{ stroke:var(--ink); stroke-width:1.2; outline:none; }
+/* The visitor's own country carries a ring, not a colour: colour is spoken for
+   by magnitude, and re-using it here would make "you" look like "busiest". */
+path.rmc.rm-you{ stroke:var(--accent2); stroke-width:1.6; }
+path.rmc.rm-sel{ stroke:var(--ink); stroke-width:1.6; }
+
+.rml-t{ font:600 11px/1 var(--sans); fill:var(--ink); paint-order:stroke fill;
+  stroke:var(--surface); stroke-width:3px; stroke-linejoin:round; }
+.rml-n{ font:700 11px/1 var(--sans); fill:var(--accent2); paint-order:stroke fill;
+  stroke:var(--surface); stroke-width:3px; stroke-linejoin:round; }
+
+.rm-info{ margin-top:10px; font-size:13px; color:var(--muted); min-height:20px; }
+.rm-info b{ color:var(--ink); font-weight:600; }
+
+.rm-legend{ display:flex; flex-wrap:wrap; align-items:center; gap:7px 14px; margin-top:12px;
+  font-size:11.5px; color:var(--muted); }
+.rml-k{ letter-spacing:.16em; text-transform:uppercase; font-weight:650; font-size:10px; }
+.rm-lgi{ display:inline-flex; align-items:center; gap:6px; font-variant-numeric:tabular-nums; }
+.rm-sw{ width:13px; height:13px; border-radius:3px; display:inline-block; border:1px solid var(--rm-edge); }
+.rm-sw.s0{ background:var(--rm-land); } .rm-sw.s1{ background:var(--rm1); }
+.rm-sw.s2{ background:var(--rm2); } .rm-sw.s3{ background:var(--rm3); }
+.rm-sw.s4{ background:var(--rm4); } .rm-sw.s5{ background:var(--rm5); }
+
+/* The two panels are the table view the accessibility pass requires: every value
+   the choropleth encodes is also readable as a number here. */
+.rm-panels{ display:grid; grid-template-columns:1fr 1fr; gap:14px 30px; margin-top:18px; }
+.rm-panel{ min-width:0; }
+.rm-pt{ font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--faint);
+  font-weight:700; margin-bottom:9px; }
+.rm-top,.rm-conts{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px; }
+.rm-top li,.rm-conts li{ display:flex; align-items:center; gap:9px; font-size:13.5px; }
+.rm-cc,.rmc-n{ min-width:104px; color:var(--ink); font-weight:600; flex:none;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.rm-cc em{ font-style:normal; margin-left:6px; font-size:9.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--accent2); border:1px solid var(--accent2);
+  border-radius:3px; padding:1px 4px; vertical-align:1px; }
+.rm-bar,.rmc-bar{ flex:1; height:6px; border-radius:4px; background:color-mix(in srgb,var(--accent) 14%,transparent);
+  overflow:hidden; min-width:30px; }
+.rm-bar i,.rmc-bar i{ display:block; height:100%; background:var(--accent); border-radius:4px; }
+.rm-top b,.rm-conts b{ color:var(--ink); min-width:34px; text-align:right;
+  font-variant-numeric:tabular-nums; font-size:12.5px; }
+.rm-pct{ color:var(--faint); font-size:11.5px; min-width:34px; text-align:right;
+  font-variant-numeric:tabular-nums; }
+.rm-none{ color:var(--faint); font-size:13px; }
+.rm-cap{ margin-top:16px; padding-top:13px; border-top:1px solid var(--hairline);
+  font-size:12.5px; line-height:1.62; color:var(--muted); }
+.rm-cap b{ color:var(--ink); } .rm-cap code{ font:11.5px var(--mono); color:var(--accent2); }
+
+@media(max-width:700px){
+  .readermap{ padding:12px; }
+  .rm-panels{ grid-template-columns:1fr; gap:16px; }
+  .rm-cc,.rmc-n{ min-width:88px; }
+  .rml-t,.rml-n{ font-size:14px; }   /* the viewBox shrinks on a phone; the labels must not */
+}
+
+/* ================= THE FRONTIER · price against strength ======================
+   Two series (on the frontier / dominated), all-pairs validated in both modes.
+   Light mode WARNs on the gold's contrast against white, which obligates a
+   relief channel: every frontier point is direct-labelled, and the readout line
+   below states the numbers, so identity never rests on the fill alone. */
+.fr-wrap{ margin:22px 0 8px; padding:16px 16px 12px; border:1px solid var(--line);
+  border-radius:16px; background:var(--surface); }
+.fr-head b{ display:block; font-family:var(--serif); font-size:17px; font-weight:640; color:var(--ink); }
+.fr-head span{ display:block; margin-top:4px; font-size:13px; line-height:1.55; color:var(--muted); }
+.fr-legend{ display:flex; flex-wrap:wrap; align-items:center; gap:7px 16px; margin:12px 0 6px;
+  font-size:11.5px; color:var(--muted); }
+.fr-legend span{ display:inline-flex; align-items:center; gap:6px; }
+.fr-sw{ width:11px; height:11px; border-radius:50%; display:inline-block; }
+.fr-sw.front{ background:var(--s6); box-shadow:0 0 0 2px var(--surface); }
+.fr-sw.dom{ background:var(--s1); opacity:.75; }
+.fr-axl{ margin-left:auto; font-style:italic; opacity:.85; }
+
+.fr-plot{ overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; }
+.fr-plot::-webkit-scrollbar{ height:6px; }
+.fr-plot::-webkit-scrollbar-thumb{ background:var(--line); border-radius:6px; }
+.fr-svg{ width:100%; height:auto; display:block; }
+.fr-g{ stroke:var(--hairline); stroke-width:1; }
+.fr-ax{ font:11px var(--sans); fill:var(--faint); font-variant-numeric:tabular-nums; }
+.fr-axt{ font:10px var(--sans); fill:var(--faint); letter-spacing:.1em; text-transform:uppercase; }
+/* Steps, not a smoothed curve: between two listed models nothing exists, and a
+   diagonal would draw a product that does not ship. */
+.fr-stair{ fill:none; stroke:var(--s6); stroke-width:2; stroke-opacity:.55;
+  stroke-linejoin:round; stroke-linecap:round; }
+.fr-pt{ cursor:pointer; outline:none; }
+.fr-hit{ fill:transparent; }            /* ~30px target, so a dot is not a pinpoint */
+.fr-dot{ fill:var(--s1); opacity:.8; stroke:var(--surface); stroke-width:2; transition:opacity .15s; }
+.fr-pt.is-front .fr-dot{ fill:var(--s6); opacity:1; }
+.fr-pt:hover .fr-dot,.fr-pt:focus .fr-dot{ opacity:1; stroke:var(--ink); }
+.fr-lab{ font:600 11px/1 var(--sans); fill:var(--ink); paint-order:stroke fill;
+  stroke:var(--surface); stroke-width:3.5px; stroke-linejoin:round; pointer-events:none; }
+.fr-read{ margin-top:8px; font-size:13px; color:var(--muted); min-height:20px; }
+.fr-read b{ color:var(--ink); font-weight:600; }
+.fr-read em{ font-style:normal; color:var(--s6); font-weight:600; }
+.fr-cap{ margin:12px 0 0; padding-top:12px; border-top:1px solid var(--hairline);
+  font-size:12.5px; line-height:1.62; color:var(--muted); }
+.fr-cap b{ color:var(--ink); } .fr-cap em{ font-style:italic; }
+
+@media(max-width:760px){
+  .fr-wrap{ padding:13px 13px 10px; }
+  .fr-axl{ margin-left:0; flex-basis:100%; }
+  /* Below this the viewBox would shrink axis labels to about 5px. Scroll the
+     plot instead of shrinking it -- contained inside the card, so the page
+     itself never scrolls sideways. */
+  .fr-svg{ min-width:600px; }
+}
+@media(prefers-reduced-motion:reduce){
+  path.rmc,.fr-dot{ transition:none; }
+}
+
 /* disclaimer relocated to article foot — give it breathing room */
 .article .disclaimer{ margin:30px 0 6px; }
 
@@ -2969,3 +3045,1014 @@ html::after{
   text-transform:uppercase;color:var(--accent-ink);background:var(--bg);padding:2px 9px;
   border:1px solid color-mix(in srgb,var(--accent) 40%,var(--hairline));border-radius:99px}
 .bz-hot .bz-text{font-size:15.5px;line-height:1.6}
+
+/* ============================================================================
+   THE INTERROGATION LAYER + ACCOUNTABILITY ENGINE
+   Evidence on demand, reader-adjustable models, cross-archive ranking, the
+   strongest-case-against panel, the document viewer, and the claims ledger.
+   ========================================================================== */
+
+/* ---------- evidence on demand (per-paragraph provenance) ---------- */
+.prose p.has-ev{position:relative}
+.evmark{position:relative;display:inline-block;margin-left:5px;vertical-align:2px;cursor:help;outline:none}
+.ev-dot{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;
+  font-family:var(--sans);font-size:9px;font-weight:800;font-variant-numeric:tabular-nums;
+  color:var(--accent-ink);background:color-mix(in srgb,var(--accent) 15%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);transition:background .18s,color .18s}
+.evmark:hover .ev-dot,.evmark:focus-visible .ev-dot{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ev-pop{position:absolute;right:0;bottom:calc(100% + 10px);width:min(390px,80vw);z-index:45;display:block;
+  padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--surface);
+  box-shadow:var(--shadow);font-family:var(--sans);text-align:left;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(4px);transition:opacity .16s,transform .16s}
+.evmark:hover .ev-pop,.evmark:focus-visible .ev-pop,.evmark:focus-within .ev-pop{
+  opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.ev-h{display:block;font-size:9.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent2);padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid var(--hairline)}
+.ev-list{display:block}
+.ev-i{display:flex;gap:8px;align-items:baseline;padding:5px 0;font-size:12.5px;line-height:1.45}
+.ev-n{flex:none;width:17px;height:17px;border-radius:5px;display:grid;place-items:center;
+  font-size:9.5px;font-weight:800;color:var(--muted);background:color-mix(in srgb,var(--ink) 7%,transparent)}
+.ev-i.ev-primary .ev-n{color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent)}
+.ev-i a{flex:1;color:var(--ink-soft);border-bottom:1px solid transparent}
+.ev-i a:hover{color:var(--accent-ink);border-bottom-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.ev-i.ev-primary em{flex:none;font-style:normal;font-size:8.5px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent);
+  border-radius:99px;padding:1.5px 6px}
+.ev-f{display:block;margin-top:9px;padding-top:8px;border-top:1px solid var(--hairline);
+  font-size:10.5px;line-height:1.45;color:var(--muted)}
+@media(max-width:640px){ .ev-pop{width:min(300px,88vw)} }
+
+/* ---------- MODEL: reader-adjustable arithmetic ---------- */
+.md-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+.md-ins{display:flex;flex-direction:column;gap:16px}
+.md-in label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  font-size:12.5px;color:var(--ink-soft);margin-bottom:7px}
+.md-in label b{font-family:var(--serif);font-size:16px;font-weight:650;color:var(--accent2);
+  font-variant-numeric:tabular-nums;flex:none}
+.md-in input[type=range]{width:100%;accent-color:var(--accent);height:20px;cursor:grab}
+.md-in input[type=range]:active{cursor:grabbing}
+.md-note{display:block;font-size:11px;line-height:1.45;color:var(--muted);margin-top:5px}
+.md-outs{display:flex;flex-direction:column;gap:11px;padding:15px 16px;border-radius:12px;
+  background:color-mix(in srgb,var(--accent) 6%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 22%,var(--hairline))}
+.md-out{display:flex;flex-direction:column;gap:2px}
+.md-ol{font-size:10px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.md-out b{font-family:var(--serif);font-size:clamp(22px,3.4vw,30px);line-height:1.05;font-weight:650;
+  color:var(--ink);font-variant-numeric:tabular-nums}
+.md-out i{font-style:normal;font-size:11.5px;line-height:1.45;color:var(--muted);margin-top:3px}
+@media(max-width:720px){ .md-grid{grid-template-columns:1fr;gap:18px} }
+
+/* ---------- RANK: against the whole archive ---------- */
+.rk-standing{margin:0 0 14px;font-size:13.5px;color:var(--muted)}
+.rk-standing b{font-family:var(--serif);font-size:19px;color:var(--accent2);font-variant-numeric:tabular-nums}
+.rks{display:flex;flex-direction:column;gap:7px}
+.rk-row{display:grid;grid-template-columns:22px minmax(96px,1.25fr) 1fr auto;gap:11px;align-items:center;
+  padding:7px 9px;border-radius:9px;transition:background .2s}
+a.rk-row:hover{background:color-mix(in srgb,var(--ink) 4%,transparent)}
+.rk-n{font-size:10.5px;font-weight:800;color:var(--faint);font-variant-numeric:tabular-nums;text-align:right}
+.rk-l{font-size:12.5px;color:var(--ink-soft);line-height:1.35}
+.rk-track{height:10px;border-radius:99px;background:color-mix(in srgb,var(--ink) 6%,transparent);overflow:hidden}
+.rk-track i{display:block;height:100%;border-radius:99px;
+  background:color-mix(in srgb,var(--accent) 45%,transparent);transition:width .8s cubic-bezier(.25,1,.35,1)}
+.rk-v{font-size:12.5px;font-weight:700;color:var(--ink-soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rk-row.is-hi{background:color-mix(in srgb,var(--accent) 10%,transparent);
+  box-shadow:inset 2px 0 0 var(--accent)}
+.rk-row.is-hi .rk-l{color:var(--ink);font-weight:650}
+.rk-row.is-hi .rk-track i{background:var(--accent)}
+.rk-row.is-hi .rk-v,.rk-row.is-hi .rk-n{color:var(--ink)}
+@media(max-width:640px){
+  .rk-row{grid-template-columns:20px 1fr auto;gap:8px}
+  .rk-track{grid-column:1/-1;order:3}
+}
+
+/* ---------- COUNTER: the strongest case against ---------- */
+.comp-counter{border-color:color-mix(in srgb,var(--gate) 28%,var(--hairline));
+  background:color-mix(in srgb,var(--gate) 4%,transparent)}
+.comp-counter .comp-k{color:var(--gate)}
+.ct-p{padding:13px 0;border-bottom:1px solid var(--hairline)}
+.ct-p:first-of-type{padding-top:4px}
+.comp-counter .ct-p:last-of-type{border-bottom:none;padding-bottom:6px}
+.ct-p b{display:block;font-size:14.5px;line-height:1.45;color:var(--ink);font-weight:650}
+.ct-p p{margin:6px 0 0;font-size:13px;line-height:1.6;color:var(--ink-soft)}
+.ct-who{display:block;margin-top:7px;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted)}
+.ct-v{margin:14px 0 0;padding:12px 14px;border-radius:10px;font-size:13px;line-height:1.6;
+  background:color-mix(in srgb,var(--ink) 3.5%,transparent);color:var(--ink-soft)}
+.ct-v b{color:var(--ink)}
+
+/* ---------- DOCUMENT viewer ---------- */
+.dc-paper{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.dc-head{display:flex;align-items:center;gap:11px;padding:11px 14px;
+  background:color-mix(in srgb,var(--ink) 4%,transparent);border-bottom:1px solid var(--line)}
+.dc-ic{color:var(--muted);font-size:14px;flex:none}
+.dc-head div{flex:1;min-width:0}
+.dc-head b{display:block;font-size:12.5px;color:var(--ink);font-weight:650;line-height:1.3}
+.dc-head span{display:block;font-size:10.5px;color:var(--muted);margin-top:2px}
+.dc-go{flex:none;font-size:10.5px;font-weight:700;color:var(--accent2)}
+.dc-body{padding:6px 0;font-family:var(--mono);font-size:12.5px;line-height:1.75}
+.dc-line{display:grid;grid-template-columns:38px 1fr;gap:10px;padding:3px 14px 3px 0}
+.dc-ln{text-align:right;color:var(--faint);font-size:10.5px;user-select:none;padding-top:2px}
+.dc-t{color:var(--ink-soft);white-space:pre-wrap}
+.dc-line.is-mark{background:color-mix(in srgb,var(--gold) 13%,transparent);
+  box-shadow:inset 3px 0 0 var(--gold)}
+.dc-line.is-mark .dc-t{color:var(--ink);font-weight:600}
+.dc-line.is-mark .dc-ln{color:var(--gold);font-weight:700}
+.dc-read{margin:13px 0 0;font-size:13px;line-height:1.6;color:var(--ink-soft);
+  padding-left:11px;border-left:2px solid color-mix(in srgb,var(--gold) 55%,transparent)}
+.dc-read b{color:var(--gold)}
+@media(max-width:640px){ .dc-body{font-size:11.5px} .dc-line{grid-template-columns:28px 1fr;gap:7px} }
+
+/* ---------- "Since publication" update block on an article ---------- */
+.updates{margin:34px 0 8px;padding:20px 22px;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--ok) 30%,var(--hairline));
+  background:color-mix(in srgb,var(--ok) 4.5%,transparent);font-family:var(--sans)}
+.up-head{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ok);
+  margin-bottom:14px}
+.up-head span{display:block;margin-top:7px;font-size:12.5px;font-weight:400;letter-spacing:0;
+  text-transform:none;color:var(--muted);line-height:1.55}
+.up-row{padding:13px 0 13px 13px;border-left:2px solid var(--oc,var(--ok));margin-bottom:11px;
+  background:color-mix(in srgb,var(--ink) 2.5%,transparent);border-radius:0 9px 9px 0}
+.up-h{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-bottom:6px}
+.up-h time{font-size:11px;font-weight:650;color:var(--muted);font-variant-numeric:tabular-nums}
+.up-oc{font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--oc)}
+.up-claim{font-size:14px;line-height:1.5;color:var(--ink);font-weight:600}
+.up-note{margin:6px 0 0;font-size:13px;line-height:1.6;color:var(--ink-soft)}
+.up-src{display:inline-block;margin-top:7px;font-size:11.5px;font-weight:650;color:var(--accent2)}
+.up-all{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:var(--ok)}
+
+/* ---------- the Claims Ledger page ---------- */
+.cl-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:18px}
+.cl-st{padding:15px 17px;border:1px solid var(--hairline);border-radius:14px;background:var(--card)}
+.cl-st b{display:block;font-family:var(--serif);font-size:27px;line-height:1;color:var(--accent2);
+  font-variant-numeric:tabular-nums}
+.cl-st span{display:block;margin-top:6px;font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted)}
+.cl-list{display:flex;flex-direction:column;gap:9px;margin-top:18px}
+.cl-row{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;padding:15px 17px;border-radius:12px;
+  background:var(--card);border:1px solid var(--hairline);
+  transition:transform .3s cubic-bezier(.22,1,.32,1),border-color .25s}
+.cl-row:hover{transform:translateY(-1px);border-color:color-mix(in srgb,var(--accent) 26%,var(--hairline))}
+.cl-row.is-res{border-left:3px solid var(--oc)}
+.cl-claim{font-size:14px;line-height:1.5;color:var(--ink);font-weight:600}
+.cl-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px;margin-top:8px;font-size:11.5px;color:var(--muted)}
+.cl-kind{font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);
+  border:1px solid color-mix(in srgb,var(--gold) 35%,transparent);border-radius:99px;padding:2px 8px}
+.cl-meta a{color:var(--ink-soft);border-bottom:1px solid transparent}
+.cl-meta a:hover{color:var(--accent-ink);border-bottom-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.cl-res{display:flex;flex-direction:column;gap:5px}
+.cl-open{font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cl-oc{font-size:9.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--oc)}
+.cl-note{font-size:12.5px;line-height:1.55;color:var(--muted)}
+.cl-note b{color:var(--accent2);font-weight:650}
+.cl-res time{font-size:10.5px;color:var(--faint);font-variant-numeric:tabular-nums}
+@media(max-width:760px){ .cl-row{grid-template-columns:1fr;gap:11px} }
+
+@media(prefers-reduced-motion:no-preference){
+  /* scaleX, not width: the width is inline per-row, and a !important width
+     override here would win over .rv-in and leave every bar collapsed. */
+  .rv .rk-track i{transform:scaleX(0);transform-origin:left center}
+  .rv-in .rk-track i{transform:scaleX(1);
+    transition:transform .85s cubic-bezier(.25,1,.35,1) calc(var(--rv-d,0ms) + 150ms)}
+  .rv .up-row,.rv .ct-p{opacity:0;transform:translateY(8px)}
+  .rv-in .up-row,.rv-in .ct-p{opacity:1;transform:none;
+    transition:opacity .5s ease var(--rv-d,0ms),transform .6s cubic-bezier(.22,1,.32,1) var(--rv-d,0ms)}
+}
+@media(prefers-reduced-motion:reduce){ .ev-pop,.md-in input[type=range]{transition:none} }
+
+/* ---------- mobile: hovercards become bottom sheets ----------
+   An absolutely-positioned card anchored to an inline chip cannot avoid the
+   viewport edge on a narrow screen -- centering on the chip overflows right when
+   the chip sits late in a line, and anchoring right overflows left when it sits
+   early. On phones both popovers detach to a fixed bottom sheet instead, which
+   is edge-safe by construction and easier to hit with a thumb. */
+@media(max-width:640px){
+  .ent-card,.ev-pop{
+    position:fixed;left:12px;right:12px;bottom:14px;top:auto;width:auto;
+    transform:translateY(8px);max-height:60vh;overflow-y:auto}
+  .ent:hover .ent-card,.ent:focus-visible .ent-card,.ent:focus-within .ent-card,
+  .evmark:hover .ev-pop,.evmark:focus-visible .ev-pop,.evmark:focus-within .ev-pop{
+    transform:translateY(0)}
+  .ent-card::after{display:none} /* the little arrow points at nothing once detached */
+}
+
+/* ============================================================================
+   MOBILE DENSITY PASS
+   The complaint was that the phone view is "too zoomed in" and cluttered at the
+   same time, which sounds contradictory and is not: every type ramp on this site
+   was built with a desktop floor, and the floors are what a phone actually gets.
+   .mast-hero h1 is clamp(36px,5vw,56px) -- at 390px wide, 5vw is 19.5px, so the
+   clamp pins it to 36px, a size chosen for a 1280px canvas. Same story for the
+   18px hero paragraph, the 28px container gutters and the 42px kicker rhythm.
+   Big elements crammed into a small frame reads as clutter even though nothing
+   is technically overlapping.
+   The fix is to lower the floors and tighten INSIDE groups while keeping the gaps
+   BETWEEN groups, so more fits per screen without the page feeling packed.
+   Appended last on purpose: equal specificity, so source order decides.
+   ========================================================================== */
+@media (max-width:840px){
+  .container{ padding:0 20px; }
+}
+@media (max-width:640px){
+  body{ font-size:15px; line-height:1.6; }
+  .container{ padding:0 16px; }
+
+  /* Section rhythm: the 42px kicker margin alone was eating a fifth of a phone
+     screen every time a new section started. */
+  .kicker{ margin:26px 0 14px; font-size:10px; letter-spacing:.18em; gap:9px; }
+  .edition{ padding:16px 0 12px; }
+  .edition .date{ font-size:13.5px; }
+
+  /* Page heads. These floors are the single biggest win on a phone. */
+  .mast-hero{ padding:28px 0 12px; }
+  .mast-hero .over{ font-size:10px; letter-spacing:.2em; margin-bottom:10px; }
+  .mast-hero h1{ font-size:clamp(25px,7.4vw,34px); line-height:1.14; margin:0 0 12px; }
+  .mast-hero p{ font-size:15px; line-height:1.62; }
+
+  /* Lead story + rail */
+  .top-slot{ gap:20px; padding:20px 0 24px; }
+  .feature h3{ font-size:clamp(22px,6.4vw,30px); line-height:1.16; margin:14px 0 8px; }
+  .feature .dek{ font-size:14.5px; line-height:1.5; margin:0 0 11px; }
+  .feature .art .glyph{ font-size:150px; }
+  .rail-item{ padding:12px 2px; }
+  .rail-item h4{ font-size:15.5px; line-height:1.3; margin:7px 0 6px; }
+
+  /* Two cards per row instead of one. A 16:10 thumbnail plus a two-line
+     headline fits twice over at 390px once the type ramp is sane, which is the
+     difference between seeing two stories per screen and seeing half of one. */
+  .grid{ grid-template-columns:1fr 1fr; gap:20px 14px; }
+  .card{ gap:8px; }
+  .card h3{ font-size:15.5px; line-height:1.28; }
+  .card .dek{ font-size:12.5px; line-height:1.45;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .card .art .glyph{ font-size:84px; }
+  .byline{ font-size:11.5px; gap:7px; }
+  .byline .av{ width:21px; height:21px; font-size:8.5px; }
+  .pill{ font-size:9px; padding:2px 7px; }
+
+  /* Article body: the measure is the constraint on a phone, not the size. */
+  .prose h2{ font-size:20px; line-height:1.28; }
+  .prose p{ font-size:15px; line-height:1.68; }
+
+  /* iOS zooms the whole page when a focused input is under 16px. Everything
+     above shrinks; form controls deliberately do not. */
+  input,select,textarea{ font-size:16px; }
+}
+@media (max-width:430px){
+  /* Below this a two-up grid starts truncating headlines to nothing. */
+  .grid{ grid-template-columns:1fr; gap:18px; }
+  .card h3{ font-size:17px; }
+  .card .dek{ -webkit-line-clamp:2; }
+}
+
+/* ---------------------------------------------------------------------------
+   ABOVE-THE-FOLD RECLAIM (phones)
+   Measured, not guessed: at 390x844 the first screen was 100% furniture. The
+   status ribbon wrapped to four lines, then the masthead, then the edition line,
+   then the Briefing chip, then the Primer banner -- roughly 840px of chrome
+   before the first headline, on an 844px screen. A reader arriving on a phone
+   saw no journalism at all without scrolling.
+   Nothing is removed. The furniture is just made to behave like furniture.
+   ------------------------------------------------------------------------- */
+@media (max-width:640px){
+  .proto{ font-size:9.5px; letter-spacing:.06em; padding:5px 12px; line-height:1.45;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+  header.site .bar{ min-height:0; padding:8px 16px 0; }
+  .logo{ font-size:15px; }
+  .logo small{ font-size:6px; letter-spacing:.26em; margin-top:3px; }
+  nav.top{ padding:4px 0 7px; margin-top:2px; }
+  nav.top a,nav.top .sec-btn{ font-size:12.5px; padding:6px 9px; }
+
+  /* The motto is a nice line on a desktop and pure vertical cost on a phone,
+     where it duplicates what the masthead already says. */
+  .edition{ padding:12px 0 9px; }
+  .edition .motto{ display:none; }
+
+  /* Both promos become single-line strips instead of stacked blocks. */
+  .home-chips{ margin:8px 0 0; }
+  .brief-chip{ padding:9px 13px; gap:9px; font-size:13px; }
+  .brief-chip b{ font-size:13.5px; }
+  .brief-chip span{ font-size:11.5px; }
+  .primer-banner{ margin:10px 0 2px; padding:10px 12px; gap:12px; align-items:center; }
+  .pb-art{ width:34px; height:44px; border-radius:6px; }
+  .pb-txt b{ font-size:14px; margin-bottom:0; line-height:1.3; }
+}
+
+/* Two fixes the phone sweep turned up, both caused by desktop-era assumptions:
+   1. -webkit-line-clamp alone did not bound the ribbon's BOX, so a clipped third
+      line still reserved height and bled under the sticky header. Cap the height.
+   2. The nav rail bleeds to the edges with a -20px margin that assumed a 20px
+      gutter; the phone gutter is now 16px, so the rail started 4px off-screen and
+      the first destination read as "reboard". Match the gutter exactly. */
+@media (max-width:640px){
+  .proto{ max-height:2.9em; }
+  nav.top{ margin:2px -16px 0; padding-left:16px; padding-right:16px; }
+}
+
+/* ================= THE BUZZ · momentum, filters, coverage ====================
+   The momentum bars are a before/after pair, not two categories: "previous 7
+   days" is a reference the reader compares against, so it wears a neutral, and
+   only the current period carries the accent. Giving both a categorical hue
+   would imply they are peers and burn the identity channel on a time axis. */
+.bz-momentum{ margin:20px 0 6px; padding:16px 18px; border:1px solid var(--line);
+  border-radius:16px; background:var(--surface); }
+.bzm-head b{ display:block; font-family:var(--serif); font-size:17px; font-weight:640; color:var(--ink); }
+.bzm-head span{ display:block; margin-top:4px; font-size:12.5px; line-height:1.55; color:var(--muted); max-width:74ch; }
+.bzm-cols{ display:grid; grid-template-columns:1fr 1fr; gap:16px 30px; margin-top:14px; }
+.bzm-l{ font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--faint);
+  font-weight:700; margin-bottom:9px; }
+.bzm-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px; }
+.bzm-list li{ display:flex; align-items:center; gap:9px; font-size:13px; }
+.bzm-t{ min-width:104px; flex:none; text-align:left; background:none; border:0; padding:0; cursor:pointer;
+  font:inherit; font-weight:600; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.bzm-t:hover{ color:var(--accent2); }
+/* Two thin bars stacked in one track: the reference sits behind, the current
+   period in front, with a 2px surface gap so the fills never touch. */
+.bzm-bars{ flex:1; min-width:36px; height:14px; position:relative; }
+.bzm-bars i{ position:absolute; left:0; height:5px; border-radius:3px; }
+.bzm-prev{ top:0; background:var(--faint); opacity:.55; }
+.bzm-now{ top:7px; background:var(--accent); }
+.bzm-list b{ min-width:30px; text-align:right; font-variant-numeric:tabular-nums; font-size:12.5px; color:var(--faint); }
+.bzm-list b.up{ color:var(--ok); } .bzm-list b.down{ color:var(--muted); }
+.bzm-key{ display:flex; gap:14px; margin-top:12px; font-size:11.5px; color:var(--muted); }
+.bzm-key span{ display:inline-flex; align-items:center; gap:6px; }
+.bzm-sw{ width:14px; height:5px; border-radius:3px; display:inline-block; }
+.bzm-sw.prev{ background:var(--faint); opacity:.55; } .bzm-sw.now{ background:var(--accent); }
+
+.bz-filters{ display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin:18px 0 4px; }
+.bzf-l{ font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--faint);
+  font-weight:700; margin-right:4px; }
+.bzf{ font:inherit; font-size:12.5px; font-weight:550; cursor:pointer; color:var(--muted);
+  background:transparent; border:1px solid var(--line); border-radius:99px; padding:5px 11px;
+  display:inline-flex; align-items:center; gap:6px; transition:color .14s,border-color .14s,background .14s; }
+.bzf:hover{ color:var(--ink); border-color:var(--muted); }
+.bzf.on{ color:var(--accent-ink); border-color:var(--accent); background:color-mix(in srgb,var(--accent) 14%,transparent); }
+.bzf em{ font-style:normal; font-size:10.5px; color:var(--faint); font-variant-numeric:tabular-nums; }
+.bzf.on em{ color:var(--accent2); }
+.bz-fnote{ margin:12px 0 2px; font-size:13px; color:var(--muted); }
+.bz-fnote b{ color:var(--ink); }
+.bz-clear{ font:inherit; font-size:13px; background:none; border:0; padding:0; cursor:pointer;
+  color:var(--accent2); text-decoration:underline; text-underline-offset:2px; }
+
+.bz-cover{ display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 10px; margin-top:10px;
+  padding-top:10px; border-top:1px dashed var(--hairline); }
+.bzc-k{ font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--accent2); border:1px solid var(--accent); border-radius:4px; padding:2px 6px; flex:none; }
+.bz-cover a{ font-size:12.5px; line-height:1.4; color:var(--ink-soft); text-decoration:underline;
+  text-decoration-color:var(--line); text-underline-offset:2px; }
+.bz-cover a:hover{ color:var(--accent2); text-decoration-color:var(--accent); }
+
+@media (max-width:720px){
+  .bz-momentum{ padding:13px 14px; }
+  .bzm-cols{ grid-template-columns:1fr; gap:14px; }
+  .bzm-t{ min-width:92px; }
+  .bz-filters{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+    margin-left:-16px; margin-right:-16px; padding:0 16px 4px; }
+  .bz-filters::-webkit-scrollbar{ display:none; }
+  .bzf{ flex:none; }
+}
+
+/* The hero's aurora glow is an absolutely positioned pseudo bleeding 12% past
+   each edge. On a desktop the page gutters absorb it; on a phone it pushed the
+   document 16px wider than the viewport, which is what makes a page rock
+   sideways under a thumb. It was already within a pixel of overflowing before
+   the gutters narrowed, so this is a latent bug being closed, not a new one.
+   Pinned to the hero's own box on phones -- the 34px blur still reads as a glow
+   without any hard edge, because the gradient stops fade well inside. */
+@media (max-width:640px){
+  .mast-hero::before{ left:0; right:0; }
+}
+
+/* ================= RESOURCES · one spine, then intent =======================
+   The page now leads with the lab directory grouped the way the field splits,
+   and everything else sits under it in the order a reader wants it: learn it,
+   follow it, use it. The old "Company dossiers" chip pile is gone -- it pointed
+   at exactly the dossiers the lab cards already link to, so it was the same
+   information twice competing for the same attention. */
+.res-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin:20px 0 4px;
+  background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.rs-cell{ background:var(--surface); padding:14px 16px; }
+.rs-cell b{ display:block; font-family:var(--serif); font-size:26px; line-height:1; font-weight:640;
+  color:var(--ink); font-variant-numeric:tabular-nums; }
+.rs-cell span{ display:block; margin-top:5px; font-size:11.5px; line-height:1.4; color:var(--muted); }
+
+.res-lede{ color:var(--muted); font-size:14px; line-height:1.6; margin:-8px 0 18px; max-width:74ch; }
+.res-sub{ color:var(--muted); font-size:13px; line-height:1.55; margin:0 0 12px; max-width:74ch; }
+
+.labg{ margin:0 0 26px; }
+.labg-h{ display:flex; align-items:baseline; gap:12px; margin:0 0 12px; }
+.labg-l{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--ink-soft); }
+.labg-n{ font-size:11.5px; color:var(--faint); font-variant-numeric:tabular-nums; }
+.labg-h::after{ content:""; flex:1; height:1px; background:var(--hairline); }
+.labg-thin{ margin-top:6px; }
+
+.res-nav .rn-sub{ padding-left:14px; font-size:12.5px; opacity:.8; }
+
+.res-tiles{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.res-tile{ display:flex; flex-direction:column; gap:7px; padding:16px 17px; border:1px solid var(--line);
+  border-radius:14px; background:var(--surface); transition:border-color .16s,transform .16s; }
+.res-tile:hover{ border-color:var(--accent); transform:translateY(-2px); }
+.rt-k{ font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; color:var(--accent2); }
+.res-tile b{ font-family:var(--serif); font-size:17px; line-height:1.26; font-weight:640; color:var(--ink); }
+.rt-d{ font-size:12.5px; line-height:1.55; color:var(--muted); flex:1; }
+.rt-go{ font-size:12.5px; font-weight:650; color:var(--accent2); margin-top:2px; }
+
+@media (max-width:900px){ .res-tiles{ grid-template-columns:1fr 1fr; } }
+@media (max-width:640px){
+  .res-stats{ grid-template-columns:1fr 1fr; }
+  .rs-cell{ padding:11px 13px; } .rs-cell b{ font-size:21px; }
+  .res-tiles{ grid-template-columns:1fr; gap:11px; }
+  .res-tile{ padding:13px 14px; }
+  .labg{ margin-bottom:20px; }
+}
+
+/* ================= THE INSTRUCTION BLOCKS ===================================
+   Status colour is used here for `verify` and `if not`, which is the reserved,
+   correct use: good vs warning state. Both ship with a visible label, never
+   colour alone, so the meaning survives greyscale, CVD and forced-colors. */
+
+/* ---- procedure ---- */
+.comp.procedure{ margin:26px 0; border:1px solid var(--line); border-radius:16px;
+  background:var(--surface); overflow:hidden; }
+.pr-head{ padding:16px 18px 13px; border-bottom:1px solid var(--hairline);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 7%,transparent),transparent); }
+.pr-k{ display:block; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+  font-weight:700; color:var(--accent2); margin-bottom:6px; }
+.pr-head b{ display:block; font-family:var(--serif); font-size:19px; line-height:1.24;
+  font-weight:640; color:var(--ink); }
+.pr-sub{ display:block; margin-top:5px; font-size:13px; line-height:1.55; color:var(--muted); }
+.pr-meta{ display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:9px; }
+.pr-m{ display:inline-flex; align-items:center; gap:5px; font-size:11px; color:var(--faint);
+  letter-spacing:.04em; font-variant-numeric:tabular-nums; }
+.pr-m i{ font-style:normal; color:var(--accent2); }
+.pr-pre{ padding:12px 18px; border-bottom:1px solid var(--hairline); background:var(--surface2); }
+.pr-pk{ display:block; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase;
+  font-weight:700; color:var(--faint); margin-bottom:6px; }
+.pr-pre ul{ margin:0; padding-left:17px; }
+.pr-pre li{ font-size:13px; line-height:1.55; color:var(--ink-soft); }
+.pr-steps{ list-style:none; margin:0; padding:0; counter-reset:pr; }
+.pr-step{ display:flex; gap:13px; padding:15px 18px; border-bottom:1px solid var(--hairline);
+  transition:background .18s; }
+.pr-step:last-child{ border-bottom:0; }
+.pr-step.is-hi{ background:color-mix(in srgb,var(--accent) 5%,transparent); }
+.pr-tick{ flex:none; width:28px; height:28px; margin-top:1px; border-radius:50%;
+  border:1.5px solid var(--line); background:transparent; color:var(--muted); cursor:pointer;
+  display:grid; place-items:center; font:inherit; padding:0;
+  transition:border-color .18s,background .18s,color .18s,transform .18s; }
+.pr-tick.pr-static{ cursor:default; }
+.pr-n{ font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; }
+.procedure.is-track .pr-tick:hover{ border-color:var(--accent); color:var(--accent2); transform:scale(1.06); }
+.pr-step.is-done .pr-tick{ border-color:var(--ok); background:var(--ok); color:#08130e; }
+.pr-step.is-done .pr-n{ font-size:0; }
+.pr-step.is-done .pr-n::after{ content:"✓"; font-size:14px; }
+.pr-step.is-done .pr-body{ opacity:.55; }
+.pr-body{ min-width:0; flex:1; transition:opacity .18s; }
+.pr-do{ font-size:14.5px; line-height:1.55; color:var(--ink); font-weight:550; }
+.pr-detail{ margin-top:6px; font-size:13.5px; line-height:1.6; color:var(--ink-soft);
+  font-family:var(--mono); background:var(--surface2); border-left:2px solid var(--line);
+  padding:8px 11px; border-radius:0 6px 6px 0; }
+.pr-verify,.pr-ifnot{ margin-top:8px; font-size:13px; line-height:1.55; padding-left:11px;
+  border-left:2px solid var(--line); }
+.pr-verify{ border-left-color:var(--ok); color:var(--ink-soft); }
+.pr-ifnot{ border-left-color:var(--gate); color:var(--ink-soft); }
+.pr-vk,.pr-ik{ display:block; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; margin-bottom:2px; }
+.pr-vk{ color:var(--ok); } .pr-ik{ color:var(--gate); }
+.pr-why{ margin-top:7px; font-size:12.5px; line-height:1.55; color:var(--muted); font-style:italic; }
+.pr-est{ display:inline-block; margin-top:8px; font-size:10.5px; color:var(--faint);
+  border:1px solid var(--line); border-radius:99px; padding:2px 8px; }
+.pr-foot{ display:flex; align-items:center; gap:12px; padding:11px 18px; background:var(--surface2);
+  border-top:1px solid var(--hairline); }
+.pr-prog{ font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums; }
+.procedure.all-done .pr-prog{ color:var(--ok); font-weight:650; }
+.pr-reset{ margin-left:auto; font:inherit; font-size:12px; background:none; border:0; padding:0;
+  cursor:pointer; color:var(--accent2); text-decoration:underline; text-underline-offset:2px; }
+
+/* ---- snippet ---- */
+.comp.snippet{ margin:26px 0; border:1px solid var(--line); border-radius:14px;
+  background:var(--surface); overflow:hidden; }
+.sn-head{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding:11px 14px;
+  border-bottom:1px solid var(--hairline); background:var(--surface2); }
+.sn-k{ font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; font-weight:700; color:var(--accent2); }
+.sn-head b{ font-family:var(--serif); font-size:15px; font-weight:640; color:var(--ink); }
+.sn-lang{ font:10.5px var(--mono); color:var(--faint); border:1px solid var(--line);
+  border-radius:4px; padding:1px 6px; }
+.sn-copy{ margin-left:auto; font:inherit; font-size:12px; font-weight:600; cursor:pointer;
+  color:var(--accent-ink); background:color-mix(in srgb,var(--accent) 14%,transparent);
+  border:1px solid var(--accent); border-radius:99px; padding:4px 13px;
+  transition:background .16s,transform .16s; }
+.sn-copy:hover{ background:color-mix(in srgb,var(--accent) 26%,transparent); }
+.sn-copy:active{ transform:scale(.97); }
+.sn-body{ margin:0; padding:14px 16px; overflow-x:auto; background:var(--bg);
+  font:13px/1.72 var(--mono); color:var(--ink-soft); white-space:pre-wrap; word-break:break-word; }
+mark.sn-t{ background:color-mix(in srgb,var(--accent) 22%,transparent); color:var(--accent-ink);
+  border-radius:3px; padding:0 3px; font-weight:600; }
+.sn-fill{ padding:11px 16px; border-top:1px solid var(--hairline); }
+.sn-fk,.sn-ek{ display:block; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--faint); margin-bottom:6px; }
+.sn-fill ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; }
+.sn-fill li{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; font-size:12.5px; color:var(--muted); }
+.sn-fill code{ font:11.5px var(--mono); color:var(--accent2); }
+.sn-fill em{ font-style:italic; color:var(--faint); }
+.sn-exp{ padding:11px 16px; border-top:1px solid var(--hairline); font-size:13px;
+  line-height:1.55; color:var(--ink-soft); border-left:2px solid var(--ok); }
+.sn-ek{ color:var(--ok); }
+.sn-note{ padding:10px 16px; border-top:1px solid var(--hairline); font-size:12.5px;
+  line-height:1.55; color:var(--muted); }
+
+/* ---- decide ---- */
+.comp.decide{ margin:26px 0; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+.dc-head{ padding:15px 18px 12px; border-bottom:1px solid var(--hairline); }
+.dc-k{ display:block; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+  font-weight:700; color:var(--accent2); margin-bottom:6px; }
+.dc-head b{ display:block; font-family:var(--serif); font-size:19px; line-height:1.24;
+  font-weight:640; color:var(--ink); }
+.dc-q{ display:block; margin-top:5px; font-size:13.5px; line-height:1.55; color:var(--muted); }
+.dc-list{ list-style:none; margin:0; padding:0; }
+.dc-b{ padding:14px 18px; border-bottom:1px solid var(--hairline); }
+.dc-b:last-child{ border-bottom:0; }
+.dc-b.is-hi{ background:color-mix(in srgb,var(--accent) 5%,transparent); }
+.dc-wk,.dc-tk{ display:inline-block; min-width:38px; font-size:9.5px; letter-spacing:.16em;
+  text-transform:uppercase; font-weight:700; color:var(--faint); }
+.dc-tk{ color:var(--accent2); }
+.dc-when{ font-size:13.5px; line-height:1.55; color:var(--ink-soft); }
+.dc-then{ margin-top:5px; font-size:14.5px; line-height:1.5; }
+.dc-then b{ font-weight:600; color:var(--ink); }
+.dc-why{ margin-top:5px; padding-left:38px; font-size:12.5px; line-height:1.55; color:var(--muted); }
+.dc-warn{ margin-top:7px; margin-left:38px; padding:7px 11px; border-left:2px solid var(--gate);
+  font-size:12.5px; line-height:1.5; color:var(--ink-soft);
+  background:color-mix(in srgb,var(--gate) 8%,transparent); border-radius:0 6px 6px 0; }
+.dc-next{ margin-top:6px; padding-left:38px; font-size:12.5px; color:var(--accent2); font-weight:600; }
+
+/* ---- pitfalls ---- */
+.comp.pitfalls{ margin:26px 0; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+.pf-head{ padding:15px 18px 12px; border-bottom:1px solid var(--hairline); }
+.pf-k{ display:block; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+  font-weight:700; color:var(--gate); margin-bottom:6px; }
+.pf-head b{ display:block; font-family:var(--serif); font-size:19px; line-height:1.24;
+  font-weight:640; color:var(--ink); }
+.pf-list{ list-style:none; margin:0; padding:0; }
+.pf-i{ padding:14px 18px 14px 22px; border-bottom:1px solid var(--hairline); position:relative; }
+.pf-i:last-child{ border-bottom:0; }
+/* severity rail: a second channel on top of the label, never colour alone */
+.pf-i::before{ content:""; position:absolute; left:0; top:14px; bottom:14px; width:3px; border-radius:2px; }
+.pf-i.cost-high::before{ background:var(--gate); }
+.pf-i.cost-medium::before{ background:var(--gold); }
+.pf-i.cost-low::before{ background:var(--line); }
+.pf-m{ font-size:14.5px; line-height:1.5; font-weight:550; color:var(--ink); }
+.pf-l,.pf-f{ margin-top:6px; font-size:13px; line-height:1.55; color:var(--ink-soft); }
+.pf-lk,.pf-fk{ display:inline-block; min-width:74px; font-size:9.5px; letter-spacing:.16em;
+  text-transform:uppercase; font-weight:700; color:var(--faint); }
+.pf-fk{ color:var(--ok); }
+.pf-w{ margin-top:5px; font-size:12.5px; line-height:1.55; color:var(--muted); font-style:italic; }
+
+@media (max-width:640px){
+  .pr-step{ padding:13px 14px; gap:11px; }
+  .pr-head,.dc-head,.pf-head{ padding:13px 14px 11px; }
+  .pr-head b,.dc-head b,.pf-head b{ font-size:17px; }
+  .dc-b,.pf-i{ padding-left:16px; padding-right:14px; }
+  .pf-i{ padding-left:18px; }
+  .dc-why,.dc-warn,.dc-next{ padding-left:0; margin-left:0; }
+  .pf-lk,.pf-fk{ display:block; min-width:0; margin-bottom:2px; }
+  .sn-body{ font-size:12.5px; padding:12px 13px; }
+}
+@media (prefers-reduced-motion:reduce){
+  .pr-tick,.pr-body,.pr-step,.sn-copy{ transition:none; }
+}
+
+/* ============================================================================
+   V35 · DEPTH, SPRING & SURFACE PASS
+   Appended last on purpose: equal specificity, source order decides. Nothing
+   here is required for the page to work -- every non-baseline feature sits
+   inside @supports with the previous behaviour as the fallback, and every
+   motion sits inside prefers-reduced-motion: no-preference.
+   ========================================================================== */
+
+/* ---------- 1 · MOTION TOKENS ---------------------------------------------
+   One vocabulary instead of a cubic-bezier repeated forty times. The spring is
+   declared TWICE on purpose: the cubic-bezier line is the fallback and is
+   parsed by everyone; the linear() line only lands where linear() is supported
+   (Chrome 113+, Safari 17.2+, Firefox 112+) and simply fails to parse
+   everywhere else, leaving the bezier in place. ---------- */
+:root{
+  --ease-out:cubic-bezier(.22,1,.32,1);
+  --ease-spring:cubic-bezier(.34,1.26,.5,1);
+  --ease-press:cubic-bezier(.34,1.4,.64,1);
+  --dur-fast:.16s; --dur-mid:.34s; --dur-slow:.55s;
+}
+@supports (transition-timing-function:linear(0,1)){
+  :root{
+    --ease-spring:linear(0,.318 6.2%,.81 13.9%,1.017 19.6%,1.075 24.3%,1.031 32.5%,.995 43.1%,1);
+    --ease-press:linear(0,.6 9%,1.062 22%,.984 40%,1.005 62%,1);
+  }
+}
+
+/* ---------- 2 · THE CTA, WITH REAL STATES ---------------------------------
+   The site's only conversion control used to have exactly one piece of
+   feedback: opacity .88 on hover. It now has rest / hover / active / focus /
+   busy, all on compositor-friendly properties. ---------- */
+.cta{
+  position:relative;overflow:hidden;border-radius:11px;padding:12px 22px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 1px 0 rgba(255,255,255,.24) inset,
+             0 2px 5px -2px rgba(0,0,0,.35),
+             0 10px 24px -12px color-mix(in srgb,var(--accent) 72%,transparent);
+  transition:transform var(--dur-mid) var(--ease-spring),
+             box-shadow var(--dur-mid) var(--ease-out),
+             filter var(--dur-fast) linear;
+}
+.cta:hover{
+  opacity:1;filter:brightness(1.06) saturate(1.04);transform:translateY(-1.5px);
+  box-shadow:0 1px 0 rgba(255,255,255,.3) inset,
+             0 3px 7px -2px rgba(0,0,0,.4),
+             0 18px 36px -14px color-mix(in srgb,var(--accent) 82%,transparent);
+}
+.cta:active{transform:translateY(0) scale(.982);transition-duration:.07s;filter:brightness(.97)}
+.cta:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.cta[aria-busy="true"]{pointer-events:none;color:transparent}
+.cta[aria-busy="true"]::after{
+  content:"";position:absolute;inset:0;margin:auto;width:15px;height:15px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:ctaSpin .62s linear infinite}
+@keyframes ctaSpin{to{transform:rotate(360deg)}}
+.cta.ghost{background:transparent;box-shadow:none}
+.cta.ghost:hover{filter:none;background:color-mix(in srgb,var(--accent) 8%,transparent);box-shadow:none}
+@media (prefers-reduced-motion:reduce){
+  .cta,.cta:hover,.cta:active{transition:none;transform:none}
+  .cta[aria-busy="true"]::after{animation:none}
+}
+
+/* ---------- 3 · STICKY HEADER: A SCROLLED STATE ---------------------------
+   Colour, blur and shadow only -- never padding or height, so this can never
+   move the page and can never cost CLS. Scroll-driven, so there is no scroll
+   listener and no work on the main thread. Chrome 115+, Safari 26+, FF 144+;
+   without support the header keeps exactly the look it has today. ---------- */
+@supports (animation-timeline:scroll(root block)){
+  @media (prefers-reduced-motion:no-preference){
+    header.site{
+      animation:hdrSettle linear both;
+      animation-timeline:scroll(root block);
+      animation-range:0 140px;
+    }
+    @keyframes hdrSettle{
+      from{-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+        box-shadow:0 0 0 0 rgba(0,0,0,0);border-bottom-color:var(--hairline)}
+      to{-webkit-backdrop-filter:blur(22px) saturate(1.3);backdrop-filter:blur(22px) saturate(1.3);
+        box-shadow:0 10px 30px -22px rgba(0,0,0,.85);
+        border-bottom-color:color-mix(in srgb,var(--accent) 22%,var(--hairline))}
+    }
+  }
+}
+
+/* ---------- 4 · DESIGNED EMPTY STATES -------------------------------------
+   A publication that ships daily must never render a hole. companyBrowseHTML
+   and the On-the-radar strip used to return "" and leave a blank band, which
+   reads as breakage rather than as "nothing here yet". ---------- */
+.empty-state{
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  border:1px dashed var(--line);border-radius:16px;padding:20px 22px;margin:0 0 8px;
+  background:linear-gradient(120deg,color-mix(in srgb,var(--accent) 4%,transparent),transparent 62%);
+}
+.empty-state .es-mark{
+  flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  font-size:18px;color:var(--accent2);border:1px solid var(--hairline);background:var(--surface)}
+.empty-state>div{flex:1;min-width:220px}
+.empty-state b{display:block;font-family:var(--serif);font-size:16px;font-weight:640;color:var(--ink);letter-spacing:-.008em}
+.empty-state span{display:block;color:var(--muted);font-size:13.5px;line-height:1.55;margin-top:4px;max-width:62ch}
+.empty-state .es-go{
+  flex:none;font-size:13px;font-weight:650;color:var(--accent2);
+  border:1px solid var(--hairline);border-radius:9px;padding:9px 15px;
+  transition:border-color var(--dur-fast),color var(--dur-fast)}
+.empty-state .es-go:hover{border-color:var(--accent);color:var(--accent-ink)}
+@media (max-width:640px){
+  .empty-state{padding:16px;gap:13px}
+  .empty-state .es-go{width:100%;text-align:center}
+}
+
+/* ============================================================================
+   5 · THE MAGAZINE STOREFRONT
+   ========================================================================== */
+
+/* 5a · The shelf. auto-fit collapses the empty tracks that used to leave a
+   347px hole beside a two-issue catalogue, and :has() gives the newest issue a
+   wider track so the storefront has a lead object instead of two equal tiles.
+   Both rules self-heal as issues accrue: at three or more, auto-fit takes over
+   and the :has() branches stop matching. */
+.mag-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px 26px;margin:6px 0;align-items:stretch;
+}
+@media (min-width:861px){
+  .mag-grid:has(>.mag-cell:nth-child(2):last-child){grid-template-columns:1.22fr 1fr}
+  .mag-grid:has(>.mag-cell:only-child){grid-template-columns:minmax(0,440px)}
+}
+/* Covers stand on a shelf line: slack goes above the cover, the PDF link sits
+   on a baseline shared by every cell in the row. */
+.mag-cell{display:grid;grid-template-rows:1fr auto;row-gap:10px;perspective:1500px}
+/* Row heights are per-cell, so a cell with no PDF link let its cover hang 44px
+   lower than one that had it. Reserve the link's row in every cell of a shelf
+   that contains one, and the covers land on a single line. */
+.mag-grid:has(.mag-dl) .mag-cell{grid-template-rows:1fr minmax(35px,auto)}
+.mag-cell>.mag-link{display:block;align-self:end}
+
+/* 5b · The cover as a physical volume. .mag-cover carries overflow:hidden,
+   which flattens preserve-3d, so the rotation and the page block live on the
+   .mag-vol wrapper and the cover is a flat leaf inside it. */
+.mag-vol{
+  display:block;position:relative;transform-style:preserve-3d;
+  transition:transform var(--dur-slow) var(--ease-spring);
+}
+.mag-cover{
+  padding-left:32px;border-radius:3px 15px 15px 3px;transition:box-shadow var(--dur-slow) var(--ease-out);
+  box-shadow:0 1px 2px rgba(0,0,0,.3),
+             0 10px 22px -12px rgba(0,0,0,.55),
+             0 34px 62px -30px rgba(0,0,0,.75);
+}
+:root[data-theme="light"] .mag-cover{
+  box-shadow:0 1px 2px rgba(60,50,120,.14),
+             0 10px 22px -12px rgba(60,50,120,.24),
+             0 34px 62px -30px rgba(60,50,120,.4);
+}
+/* The spine: a folded edge, always visible, so the cover reads as an object
+   even flat and even with no cover art loaded. */
+.mag-cover::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:17px;z-index:2;pointer-events:none;
+  border-radius:3px 0 0 3px;
+  background:linear-gradient(90deg,
+    rgba(0,0,0,.5) 0%,rgba(0,0,0,.2) 22%,rgba(255,255,255,.14) 42%,
+    rgba(0,0,0,.28) 62%,rgba(0,0,0,0) 100%);
+}
+/* The page block, hinged at the right edge and folded back into Z. Invisible
+   head-on, revealed as the volume turns. */
+.mag-vol::after{
+  content:"";position:absolute;top:2.5%;bottom:2.5%;right:0;width:20px;z-index:-1;
+  transform-origin:100% 50%;transform:rotateY(-90deg);border-radius:0 2px 2px 0;
+  background:repeating-linear-gradient(90deg,#f4efe3 0 1.1px,#cfc7b5 1.1px 2px,#faf6ec 2px 3.4px);
+  box-shadow:inset -3px 0 7px rgba(0,0,0,.4);
+}
+/* The specular sweep, same grammar as .card .art::after. */
+.mc-sheen{
+  position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.13) 50%,transparent 62%);
+  transform:translateX(-150%) skewX(-7deg);transition:transform .1s;
+}
+@media (prefers-reduced-motion:no-preference){
+  /* Negative rotateY brings the RIGHT side forward, and that is the only
+     direction that reveals a page block hinged on that edge -- turn it the
+     other way and the block is occluded by the cover it belongs to. */
+  .mag-cell:hover .mag-vol,
+  .mag-cell:focus-within .mag-vol{transform:rotateY(-12deg) rotateX(1.5deg) translateZ(30px)}
+  .mag-cell:hover .mag-cover,
+  .mag-cell:focus-within .mag-cover{
+    box-shadow:0 2px 4px rgba(0,0,0,.34),
+               0 18px 34px -14px rgba(0,0,0,.6),
+               0 52px 86px -36px rgba(0,0,0,.85);
+  }
+  .mag-cell:hover .mc-sheen,
+  .mag-cell:focus-within .mc-sheen{
+    transform:translateX(150%) skewX(-7deg);
+    transition:transform .85s cubic-bezier(.4,0,.2,1);
+  }
+}
+/* The old flat hover; .mag-cover is no longer a direct child of the anchor so
+   it no longer matches, but say so explicitly rather than leave it to luck. */
+a:hover>.mag-cover{transform:none}
+.mag-cell:hover .mag-cover,.mag-cell:focus-within .mag-cover{border-color:var(--accent)}
+.mag-link:focus-visible{outline:none}
+.mag-link:focus-visible .mag-cover{outline:2px solid var(--accent);outline-offset:4px}
+.mag-dl{align-self:end}
+
+/* 5c · Cover parallax. Zero JS, zero main thread. background-position is given
+   for BOTH layers so the scrim stays pinned at 50% and only the artwork drifts
+   -- moving a single-value position would slide the scrim off its box and tile
+   a seam. Wrapped in @supports because a browser that cannot parse
+   animation-timeline would otherwise run these keyframes on the default TIME
+   timeline and visibly jump the artwork once on load. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .mag-cover.has-img{
+      animation:magPara linear both;
+      animation-timeline:view();
+      animation-range:cover 0% cover 100%;
+    }
+    @keyframes magPara{
+      from{background-position:50% 50%,50% 43%}
+      to{background-position:50% 50%,50% 57%}
+    }
+  }
+}
+
+/* 5d · The offer panel. Was one grey bar plus two faint "prototype"
+   paragraphs, so the loudest supporting copy on the storefront was an apology
+   for the product. Now: price, what is in it, what free already gets you, and
+   the caveat as one line of fine print under the button. */
+.plusbar{
+  display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:0;
+  align-items:stretch;padding:0;overflow:hidden;
+  border:1px solid color-mix(in srgb,var(--accent) 42%,var(--line));border-radius:18px;
+  background:
+    radial-gradient(120% 140% at 0% 0%,color-mix(in srgb,var(--accent) 15%,transparent),transparent 62%),
+    var(--surface);
+  box-shadow:0 24px 60px -34px color-mix(in srgb,var(--accent) 60%,transparent);
+}
+.pb-offer{padding:26px 28px;border-right:1px solid var(--hairline);display:flex;flex-direction:column}
+.pb-mark{font-family:var(--serif);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:650}
+.pb-mark b{color:var(--accent2);font-weight:800}
+.pb-price{display:flex;align-items:baseline;gap:6px;margin:10px 0 2px}
+.pb-price b{font-family:var(--serif);font-size:48px;line-height:1;font-weight:700;letter-spacing:-.02em;color:var(--ink);
+  font-variant-numeric:lining-nums tabular-nums}
+.pb-price span{color:var(--muted);font-size:15px;font-weight:600}
+.pb-per{color:var(--muted);font-size:13px;line-height:1.5;margin:0 0 18px;max-width:38ch}
+.pb-offer .cta{align-self:flex-start;font-size:15px;padding:13px 26px}
+.pb-fine{font-size:11px;line-height:1.5;color:var(--faint);margin:12px 0 0;max-width:44ch}
+.pb-cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.pb-col{padding:26px 24px}
+.pb-col+.pb-col{border-left:1px solid var(--hairline)}
+.pb-ct{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;
+  color:var(--muted);margin-bottom:12px}
+.pb-plus .pb-ct{color:var(--accent2)}
+.pb-dia{font-weight:400}
+.pb-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.pb-col li{position:relative;padding-left:18px;font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
+.pb-col li::before{content:"";position:absolute;left:0;top:.52em;width:6px;height:6px;border-radius:50%;
+  background:var(--line)}
+.pb-plus li::before{background:var(--accent)}
+.pb-plus{background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 7%,transparent),transparent 70%)}
+@media (max-width:900px){
+  .plusbar{grid-template-columns:1fr}
+  .pb-offer{border-right:none;border-bottom:1px solid var(--hairline)}
+}
+@media (max-width:560px){
+  .pb-cols{grid-template-columns:1fr}
+  .pb-col+.pb-col{border-left:none;border-top:1px solid var(--hairline)}
+  .pb-offer{padding:22px 20px}
+  .pb-col{padding:20px}
+  .pb-price b{font-size:40px}
+  .pb-offer .cta{align-self:stretch;text-align:center}
+}
+
+/* 5e · Shared-element route transition: the chosen cover becomes page one.
+   Both halves carry view-transition-name:rtfc-issue (assigned in app.js), so
+   the browser tweens the one object instead of cutting between two pages.
+   The API guard is already in navigate(); this only shapes the tween. */
+@media (prefers-reduced-motion:no-preference){
+  ::view-transition-group(rtfc-issue){animation-duration:.46s}
+  ::view-transition-old(rtfc-issue),
+  ::view-transition-new(rtfc-issue){
+    animation-duration:.46s;animation-timing-function:var(--ease-out);
+    height:100%;overflow:clip;
+  }
+  ::view-transition-old(rtfc-issue){animation-name:rtfcIssueOut}
+  ::view-transition-new(rtfc-issue){animation-name:rtfcIssueIn}
+  @keyframes rtfcIssueOut{to{opacity:0}}
+  @keyframes rtfcIssueIn{from{opacity:0}}
+}
+
+/* ============================================================================
+   6 · THE SPREAD READER
+   ========================================================================== */
+
+/* 6a · A room, and sheets that sit in it. The reader background was a flat
+   #050508 and every sheet carried a black drop shadow against it -- so the
+   shadow was invisible and the dark page kinds (cover, opener, quote, ad, back
+   cover) dissolved into the chrome with no boundary at all. */
+.mreader{
+  z-index:3100;
+  background:
+    radial-gradient(120% 86% at 50% -6%,#171128 0%,#0b0813 46%,#050409 100%),#050409;
+}
+:root[data-theme="light"] .mreader{
+  background:
+    radial-gradient(120% 86% at 50% -6%,#332c40 0%,#221d2c 48%,#151119 100%),#151119;
+}
+.mtrack .mpage{
+  border-radius:3px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.07),
+    0 2px 5px rgba(0,0,0,.55),
+    0 14px 26px -12px rgba(0,0,0,.7),
+    0 40px 78px -30px rgba(0,0,0,.92);
+}
+/* Cream sheets get a lit top edge so the paper reads as having thickness. */
+.mtrack .mpage.light{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    0 0 0 1px rgba(255,255,255,.1),
+    0 2px 5px rgba(0,0,0,.5),
+    0 14px 26px -12px rgba(0,0,0,.66),
+    0 40px 78px -30px rgba(0,0,0,.9);
+}
+
+/* 6b · Grain, at the right polarity. The global html::after grain is WHITE in
+   dark mode and paints at z-index 3000 over everything -- including the cream
+   sheets, where white noise on paper is exactly backwards. Lifting .mreader
+   above 3000 takes the reader out from under it (and, for free, out from under
+   the cookie bar at 1400, which was covering the bottom of every sheet), and
+   this layer replaces it with NEUTRAL-GREY noise in soft-light: 50% grey is a
+   no-op, above lightens, below darkens, so both the dark room and the cream
+   paper get grain that runs the correct way. */
+.mreader::after{
+  content:"";position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.42;
+  mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size:160px 160px;
+}
+
+/* 6c · Skip the sheets nobody is looking at. The Primer puts 44 pages and ~49
+   background images in the DOM at once; this lets the browser drop layout,
+   paint and raster for the ~40 that are off-screen. The box size comes from
+   height + aspect-ratio, not from content, so nothing can shift. */
+.mtrack .mpage{content-visibility:auto}
+
+/* 6d · Depth of field. The current sheet is lit and full-size; its neighbours
+   recede. Driven entirely by the scroll position of the track, so it tracks a
+   drag continuously rather than snapping at the end of one.
+   Uses the independent `scale` property, NOT transform, so it composes with
+   the existing mturnin keyframes instead of replacing them -- and .mturn-in is
+   re-declared with both animations for the same reason. */
+@supports (animation-timeline:view(inline)){
+  @media (prefers-reduced-motion:no-preference){
+    .mtrack .mpage{
+      animation:sheetFocus linear both;
+      animation-timeline:view(inline);
+      animation-range:entry 0% exit 100%;
+    }
+    .mtrack .mpage.mturn-in{
+      animation:mturnin .44s cubic-bezier(.22,.68,.2,1) both,sheetFocus linear both;
+      animation-timeline:auto,view(inline);
+      animation-range:normal,entry 0% exit 100%;
+    }
+    @keyframes sheetFocus{
+      0%{scale:.915;filter:brightness(.42) saturate(.8)}
+      22%{scale:.93;filter:brightness(.46) saturate(.84)}
+      46%{scale:1;filter:none}
+      54%{scale:1;filter:none}
+      78%{scale:.93;filter:brightness(.46) saturate(.84)}
+      100%{scale:.915;filter:brightness(.42) saturate(.8)}
+    }
+  }
+}
+
+/* 6e · Print typography. Justified runover columns with real hyphenation (the
+   code comment already claimed justified columns; nothing was setting it),
+   orphan/widow control, old-style figures in running prose and lining tabular
+   figures anywhere numbers are compared in a column. */
+.mpage.light .mp-body p,
+.mpage.light .tp-body p,
+.mpage.light .ml-body p,
+.mpage.light .tp-ro-cols p{
+  hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:7 3 3;
+  orphans:2;widows:2;
+}
+.tp-ro-cols{text-align:justify;text-justify:inter-word}
+.tp-ro-cols p:first-of-type{text-indent:0}
+.mpage.light .mp-body,
+.mpage.light .tp-body,
+.mpage.light .mp-intro{font-variant-numeric:oldstyle-nums proportional-nums}
+.mfaceoff td,.mfaceoff th,.tp-st b,.tp-fact b,.mr-fact b,.mtoc-p,.ml-n,
+.mfolio-bot,.mcov3 .cv-issue{font-variant-numeric:lining-nums tabular-nums}
+.mp-title,.tp-title,.mfold-title,.mo-title{text-wrap:balance}
+.mp-intro,.mfold-sub,.mo-sub{text-wrap:pretty}
+
+/* 6f · The phone. The sheet was filling 51% of the reading area -- 334px of
+   dead space on an 844px screen -- because the track kept 24px side gutters
+   and capped the page at 88vw. The sheet keeps its 3:4 proportion (eighteen
+   page layouts are composed against it; stretching it would break them) and
+   simply takes all the room that proportion allows. */
+@media (max-width:820px){
+  .mbar{height:46px;padding:0 12px;gap:10px}
+  .mtrack{padding:10px 8px;gap:10px}
+  .mtrack .mpage{height:min(100%,calc(97vw * 4 / 3));border-radius:2px}
+  /* The hint sat dead centre under the bottom-right control cluster. */
+  .mhint{left:14px;right:auto;transform:none;bottom:22px;font-size:10px;letter-spacing:.14em;max-width:52vw}
+  .mnav-btns{right:12px;bottom:12px;gap:6px}
+  .mnav-b{width:38px;height:38px;border-radius:10px;font-size:19px}
+}
+/* 6g · Cover-line collision. .cv-lines is positioned from the top and capped at
+   46% of the page WIDTH, so on a narrow sheet the cover lines wrap three deep
+   and ran 33px into .cv-title. .mpage already declares container-type:size, so
+   the sheet can answer for its own size: widen the measure to cut the wrapping,
+   tighten the leading, and cap the block's height so a collision is impossible
+   at any width regardless of how long an editor makes the lines. */
+@container mpage (max-width:430px){
+  .mcov3 .cv-lines{max-width:64%;top:16.5%;max-height:44%;overflow:hidden}
+  .mcov3 .cv-line{margin-bottom:3.4%}
+  .mcov3 .cv-line b{font-size:1.25cqh;letter-spacing:.16em}
+  .mcov3 .cv-line span{font-size:1.72cqh;line-height:1.14}
+  .mcov3 .cv-title{bottom:25.5%;font-size:5.2cqh}
+  .mcov3 .cv-sub{bottom:21.5%}
+}
+
+/* 5f · Cover text legibility, guaranteed. .mag-cover.has-img hard-sets a near
+   white text colour, but the cover scrim starts at rgba(5,5,10,.18) -- so on any
+   artwork with a bright top third the masthead simply vanished, in either theme.
+   A shadow costs nothing, needs no scrim change, and cannot be defeated by
+   whatever art the Issue Desk ships next month. */
+.mag-cover.has-img .mc-mast,
+.mag-cover.has-img .mc-issue,
+.mag-cover.has-img .mc-title,
+.mag-cover.has-img .mc-tag,
+.mag-cover.has-img .mc-art{text-shadow:0 1px 3px rgba(6,4,13,.55),0 2px 18px rgba(6,4,13,.5)}
+.mag-cover.has-img::after{
+  content:"";position:absolute;inset:0 0 auto;height:36%;z-index:1;pointer-events:none;
+  border-radius:3px 15px 0 0;
+  background:linear-gradient(180deg,rgba(6,4,13,.42),rgba(6,4,13,0))}
+.mag-cover>*{position:relative;z-index:2}

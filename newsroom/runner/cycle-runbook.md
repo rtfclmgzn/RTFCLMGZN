@@ -83,6 +83,16 @@ Why this is a required step and not polish: prose is the one thing a human wire 
 6. **Vary the shapes.** Check what the last few pieces used (`grep -o '"type": "[a-z]*"' web/data/newsroom-articles.js | sort | uniq -c`) and pick something different *if the evidence fits it*. Evidence fit always beats variety.
 7. **If your reporting hit conflicting figures, one component must be `sourcecheck`.** §3a already requires reconciling conflicts in prose; this makes the work visible, which is the part a wire rewrite can't fake.
 
+**Four components exist that a human desk structurally cannot match — reach for them:**
+- **`model`** — sliders over the story's own sourced numbers, outputs computed live. Use where the piece asserts a ratio or multiple; let the reader push on it instead of taking your word.
+- **`rank`** — this figure against every comparable one the archive has logged, re-sorted live from `web/data/figures.js`. **Add your story's figure to that register in the same cycle**, already normalized to the kind's unit.
+- **`counter`** — the strongest case against the piece's own conclusion, stated as strongly as its holders would put it. No human newsroom publishes this, because the incentive runs the other way; a publication that discloses it is machine-written has no such incentive, which is exactly why it is credible here. Use it wherever a serious reader would push back.
+- **`document`** — the filing itself with the load-bearing line marked, instead of a link. `text` must be VERBATIM excerpt the article already quotes; paraphrase inside a component that looks like a document is forgery.
+
+**Also required now:** if any open question in your piece could later be settled, put it in a `scorecard` item with a `resolver` naming the specific document or event that would settle it. Those become the Claims Ledger (`#/claims`) automatically, and the pulse scan closes them as they resolve. A `resolver` of "time will tell" is not a resolver.
+
+**Before you push:** `python -m newsroom.quality.component_audit` must exit clean. It checks the schema, the no-`text` invariant, per-format floors, numeric provenance, `rank` figure ids, adjacency and density across the entire archive. It catches what a diff cannot.
+
 **Cost:** each component is roughly 60–250 output tokens of flat JSON. A synthesis carrying three spends under 700 tokens on the highest-value-per-token work available. Do not escalate to a bigger model to get a component — pick one the assigned tier does well.
 
 **Also required, and nearly free:** if this cycle covered a model launch or upgrade, add the model to **`web/data/entities.js`** in the same cycle you add its Scoreboard row (`{re, name, maker, makerKey, kind, access}` — two lines). That registry is what auto-annotates the first mention of any model in *every* article, past and future, with maker → parent → open/closed → live index score, at zero tokens. A model on the Scoreboard with no entity entry renders as bare text and the reader loses the provenance. `makerKey` must be a real key in `companies.js`.
@@ -97,6 +107,98 @@ Older articles predate the visual component system. Each cycle, AFTER your new a
 2. Add components built ONLY from facts already in that article's own text and sources — the full §3b rules apply, especially: never invent a value, no top-level `text` on a component, word count and format tier must not change.
 3. Run Loop 2 (provenance check) on what you added.
 4. Note both slugs and what each gained in your report. When a candidate search finds nothing below floor, the backfill is complete — say so and drop this step.
+
+## 3d. Guides — the cadence (REQUIRED, check every cycle)
+
+Guides went nineteen days without a publication while the index page advertised
+"two to three times a week." That is now a schedule with a mechanical check, not
+an aspiration.
+
+**The cadence — two a week, minimum:**
+
+| When | Format | Shape |
+|---|---|---|
+| Mid-week (Tue/Wed) | `brief` | One narrow problem, one procedure, under ~450 body words |
+| Weekend (Sat/Sun) | `synthesis` | One real workflow end to end, ~1,200 words, at least one data-carrying component |
+| Last cycle of the month | `research` | The flagship. ~2,700 words, 2+ charts, a scorecard, a counter |
+
+**Check at the top of every cycle:**
+
+```
+python -c "import json,io,datetime;s=io.open('web/data/guides.js',encoding='utf-8').read();g=json.loads(s[s.index('['):s.rindex(']')+1]);d=max(x['publishedAt'][:10] for x in g);n=(datetime.date.today()-datetime.date.fromisoformat(d)).days;print('last guide',d,'--',n,'days ago');raise SystemExit(1 if n>4 else 0)"
+```
+
+Non-zero means a guide is overdue and this cycle writes one before it writes
+anything else. Publishing three news briefs while the guides sit five days stale
+is the failure mode this check exists to stop.
+
+**A guide is not an article with instructions in it.** `format:"guide"` is a real
+format now, with its own floor and its own hard audit rule: **a guide with no
+`procedure` block fails the audit and cannot ship.** The test is whether the
+reader can DO something afterwards that they could not do before, not whether
+they understood something.
+
+**The four instruction blocks** (full spec in `agents/_shared/visual-components.md`):
+
+- `procedure` — numbered steps the READER performs. Every step needs `verify`
+  (what they should see) and, where it can plausibly fail, `ifnot` (the recovery).
+  A step without `verify` is a claim the reader cannot check. Not `flow`, which is
+  a mechanism performed by third parties.
+- `snippet` — a copyable prompt or command. The payload is `body`, never `text`.
+  Use `{{TOKENS}}` plus a `fill` list, and always set `expects`.
+- `decide` — a router. Every `then` must be an ACTION. "Use a bigger model" fails;
+  "upload it straight into a frontier chat model" passes.
+- `pitfalls` — mistake, symptom, fix. `looks` is load-bearing: a reader who cannot
+  recognise the failure cannot apply the fix.
+
+**Anti-decoration carve-out.** The house rule that no component may be the only
+place a fact appears is correct for news and wrong for instruction: a tutorial's
+steps cannot be duplicated in prose without doubling the piece. `procedure` and
+`snippet` are exempt. The accessibility half of that rule is preserved in code
+instead — `rtfcListen` speaks procedure, decide and pitfalls blocks aloud, so a
+listener gets the instructions, not just the framing.
+
+**Sourcing is not relaxed for guides.** Two real `https://` sources minimum. A
+guide that cannot support a number cuts the number. A guide about verification
+that ships an unverifiable citation is worse than no guide.
+
+## 3e. Magazine backfill — the Primer (issue 000) work order
+
+Issue 000 is the free issue. It is the one most people will ever read and the one
+the paid issues are sold against, and it is measurably behind 001: **3,323 body
+words against 8,291**, zero multi-page features against thirteen, and **0 of 42
+spreads use `runover`** while 001 uses it 21 times. Work one item per cycle, in
+this order, and mark it done here.
+
+**Data-only, no new writing — do these first, they are pure credibility:**
+
+1. `contents.items[].p` is wrong on 4 of 5 acts. `centerfold` and `verticalfold`
+   each render as TWO pages, and the TOC does not count the fold. Correct values
+   are 5 / 14 / 21 / 30 / 36. Also "Act IV, page 20" in the closing resources
+   spread points at something that renders on page 32.
+2. `iss.ledger` exists on the Primer (104K tokens, $1.55, 27 images, 0 humans) and
+   **is never rendered anywhere**. Add a `text/statFeature` spread that prints it,
+   the way 001 does. The free issue is the one that should carry the cost-
+   transparency promise.
+3. `back.next` is a field the renderer already draws as a "NEXT ISSUE" box and
+   neither issue sets. The free issue currently ends without pointing at the paid
+   product it exists to sell.
+4. The face-off spread prints columns with no score and no real prices, one page
+   after a spread arguing that independent scores are what count. Add a Score
+   column from `scoreboard.js`.
+
+**Then, one per cycle, with new writing:**
+
+5. Convert the six strongest single pages into 2–3 page `runover` features with
+   `cont`, `crosshead` and `end`. Priority: tokens/context (currently three
+   concepts in 245 words), hallucination, prompting, what-AI-is, safety, the
+   honest-limits page. `runover` renders imageless, so this needs **no new art**.
+6. Missing topics a beginner's issue cannot omit, in order of how badly they are
+   missed: what it costs YOU (free vs paid tiers, limits, when to pay — the issue
+   contains zero consumer pricing); where to actually type (the issue contains
+   **zero product URLs**); agents (~70 words today); jobs (~40 words today);
+   generative media and deepfakes (zero mentions); who owns whom (the data is
+   already sitting in `entities.js` and `companies.js`).
 
 ## 4. Cover image
 
@@ -138,7 +240,7 @@ If you genuinely have nothing to add to one of them this cycle, still refresh it
 0. Before touching anything, run `git status --short`. If it already shows uncommitted changes to a file you're about to edit (most likely `web/index.html`, since the owner sometimes hand-edits the UI directly), that's someone's in-progress work sitting in the same file you need to bump the cache-buster in -- `git add` stages the whole file, not just your lines, so your commit will unavoidably include it too. That's fine (don't try to strip it out or stash it -- an unattended stash/pop can conflict and wedge the repo for the next cycle), but say so explicitly in your Step 6 report (e.g. "note: index.html had a pre-existing unrelated edit already in the working tree, included in this commit") so the owner isn't confused by a diff your summary doesn't otherwise explain.
 1. Update `web/index.html`: bump every `?b=N` cache-buster by 1 (all occurrences, same new number). **Use the Edit tool, or Python opened with `encoding="utf-8"` on both read and write. Never PowerShell (`Get-Content`/`Set-Content`/`-replace`) or any tool that doesn't explicitly declare UTF-8 on both ends.** This file's `<title>`, meta descriptions, and the visible banner text on every page contain em dashes and curly quotes — a non-UTF-8-safe read/write silently mangles them into mojibake (`â€"` instead of `—`) across the *entire* file, not just the lines you meant to touch. This isn't hypothetical: it has happened for real, more than once, including during a routine no-op cache-buster bump — check `git log --oneline -- web/index.html` around any commit titled just "no-op" if you want to see it. It's a silent corruption: the commit looks fine, the diff looks like a normal bump, and nothing fails — it just quietly breaks the live site's title tag and OG metadata until someone notices. Sanity-check your own change before committing: `grep -c 'â€' web/index.html` should print `0`.
 2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` / `web/data/companies.js` / `web/rss.xml` from step 4b). Never `git add -A`.
-3. Run the guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.
+3. Run the audit: `python -m newsroom.quality.component_audit` (must exit clean), then the surface guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.
 4. `git commit` with a real, specific message (what you published and why, not a generic "update").
 5. `git push origin main`.
 6. Verify: `curl -s https://rtfclmgzn.com/ | grep -o '?b=[0-9]*'` in a short poll loop until it shows your new number (deploy takes ~30-90s).

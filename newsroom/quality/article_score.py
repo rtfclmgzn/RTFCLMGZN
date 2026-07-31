@@ -77,7 +77,10 @@ BANDS = (
 )
 
 # Word-count ladder, matching the site's own founder-locked format ruler.
-FORMAT_RANGES = {"brief": (180, 650), "synthesis": (650, 2200), "research": (2200, 12000)}
+FORMAT_RANGES = {"brief": (180, 650), "synthesis": (650, 2200), "research": (2200, 12000),
+                 # A guide is measured on completeness of instruction, not on essay
+                 # length; its steps live in blocks, so its prose runs shorter.
+                 "guide": (400, 3200)}
 
 
 def _clamp(value: float, low: float = 0.0, high: float = 10.0) -> float:
@@ -234,10 +237,16 @@ def _score_sources(evidence: dict, claim_map: dict) -> Category:
 COMPONENT_TYPES = (
     "chart", "compare", "timeline", "entity", "scorecard", "ledger",
     "beforeafter", "spectrum", "flow", "keyfacts", "stakes", "sourcecheck", "stat",
+    # These four shipped in the interrogation layer and were never added here, so
+    # every piece using them scored ZERO visual credit for work that renders fine
+    # and passes the audit.
+    "model", "rank", "counter", "document",
+    # instruction blocks (guides)
+    "procedure", "snippet", "decide", "pitfalls",
 )
 # Components that carry data rather than framing. A synthesis owes at least one
 # of these; framing-only components don't fully discharge the requirement.
-DATA_COMPONENT_TYPES = ("chart", "compare", "ledger", "timeline", "spectrum")
+DATA_COMPONENT_TYPES = ("chart", "compare", "ledger", "timeline", "spectrum", "rank", "model")
 # Floors by format, mirroring the runbook's §3b table.
 COMPONENT_FLOOR = {"brief": 1, "synthesis": 2, "research": 4, "guide": 2}
 

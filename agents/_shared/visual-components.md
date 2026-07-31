@@ -227,6 +227,44 @@ The Tier 0 chips handle passing mentions. Use this block only when corporate str
 ```
 `companyKey` must be a real key in `companies.js` or the dossier link 404s.
 
+### `model` — hand the reader the arithmetic
+Sliders over the story's OWN sourced numbers, outputs computed live. Turns an asserted multiple into something the reader can push on.
+```json
+{"type":"model","model":{"title":"What has to happen for the multiple to look ordinary?",
+  "inputs":[{"key":"val","label":"Valuation","value":50,"min":4.3,"max":50,"step":0.1,"prefix":"$","unit":"B","dec":1,"note":"..."},
+            {"key":"arr","label":"ARR","value":300,"min":100,"max":3000,"step":25,"prefix":"$","unit":"M","dec":0,"note":"..."}],
+  "outputs":[{"label":"Revenue multiple","expr":"val*1000/arr","unit":"x revenue","dec":0,"note":"..."}],
+  "source":"..."}}
+```
+`expr` supports `+ - * / ( )` over input keys plus `round/abs/min/max/floor/ceil`. Evaluated by a restricted parser, never `eval` — a data file is exactly what a future cycle writes automatically.
+Rules: every **starting** `value` must be a figure the article reports. Slider ranges may extend past it into hypotheticals — say so in `note`. Only unit/time constants (1000, 12, 365…) may appear in a formula; any other bare number is a fact and must be in the text.
+Never: on a story whose numbers don't actually combine into anything. Two figures and a division is a model; two figures and no relationship is a table.
+
+### `rank` — this figure against the whole archive
+```json
+{"type":"rank","rank":{"kind":"infra-commitment-usd","highlight":"inf-sk-group","limit":8,"source":"..."}}
+```
+Reads `web/data/figures.js`, sorts live, renders "#N of M on record". Add the figure to that register in the SAME cycle, already normalized to the kind's unit.
+Rules: `highlight` must be an `id` in figures.js, and that entry's `slug` must be this article. Same-unit is not same-meaning — the register's `note` states each figure's scope, and where two entries measure different things (a 15-year revenue total vs a build cost) saying so is the point.
+Never: invent a `kind` for a single figure. A rank of one is not a rank.
+
+### `counter` — the strongest case against this piece
+```json
+{"type":"counter","counter":{"points":[{"claim":"...","detail":"...","whoHolds":"..."}],"verdict":"...","source":"..."}}
+```
+The best argument against the article's own conclusion, stated as strongly as its holders would put it. `verdict` then says why the piece still lands where it does — or concedes.
+This is the component with no human equivalent, because the obstacle is incentive rather than ability. Use it wherever a serious reader would push back.
+Rules: each `claim` must be a position someone actually holds or the evidence actually supports — not a strawman built to be knocked down. `whoHolds` names them where the article does. A `verdict` that dismisses every point means the points were too weak; find the real ones.
+Never: on a piece with no contestable read (a pure announcement brief).
+
+### `document` — show the filing, don't link it
+```json
+{"type":"document","document":{"docTitle":"...","docMeta":"...","url":"https://...",
+  "lines":[{"n":"§ 5949","text":"\"verbatim quoted text\"","mark":true}],"reading":"...","source":"..."}}
+```
+Rules: **`text` must be verbatim excerpt the article already quotes.** Never paraphrase inside this component — its whole visual grammar claims to be a document, so paraphrase there is forgery. `mark` the one or two load-bearing lines. `reading` says what those lines establish.
+Never: reconstruct a document from memory, or quote more than the article sourced.
+
 ### `stat` — the single figure
 Pre-existing, still valid. One number that carries the story, when a full `ledger` would be overkill.
 
@@ -243,7 +281,9 @@ These are the failure modes that would make the visual layer *worse* than plain 
 5. **Do not restate the TL;DR as a `keyfacts`.** Two identical lists in different fonts is padding.
 6. **No fake precision.** "About $370 million" stays approximate in the component. Never render an estimate as an exact figure because the field looks tidier.
 7. **Do not force variety.** Reaching for `spectrum` because it hasn't been used lately, on a story with no spectrum in it, is the exact failure this whole document is meant to prevent.
-8. **Empty is honest.** A story with one source and no numbers gets one `keyfacts` box and no more. Note it in the cycle report and move on.
+8. **Never stack components.** Two visual blocks back to back read as a dashboard, not an article. Keep prose between them, and never open a piece with one. If there is no non-adjacent slot for a component, the article is full — that is a real answer, not an obstacle to route around.
+9. **Components must not outnumber paragraphs.** A 240-word brief carrying four visual blocks against three paragraphs is a dashboard. The audit warns on this.
+10. **Empty is honest.** A story with one source and no numbers gets one `keyfacts` box and no more. Note it in the cycle report and move on.
 
 ---
 
@@ -261,6 +301,12 @@ The Verification Agent (and the Claude cycle, which is its own verifier) checks 
 - [ ] `entity` / `stakes`: every `companyKey` resolves in `companies.js`.
 - [ ] Word count and format tier are unchanged by the components (they will be, if the invariant held).
 - [ ] Any model named in the piece and missing from `entities.js` has been added.
+- [ ] `model`: every starting value is a reported figure; formulas contain no bare number that isn't a unit constant.
+- [ ] `rank`: the `highlight` id exists in `figures.js` and its `slug` is this article.
+- [ ] `counter`: each point is a real position, not a strawman.
+- [ ] `document`: every line is verbatim text the article quotes.
+- [ ] **No two components sit back to back** — keep prose between them, and never lead an article with one.
+- [ ] **Run `python -m newsroom.quality.component_audit`. It must exit clean.** It checks all of the above mechanically across the whole archive, plus the schema, the no-`text` invariant, per-format floors, and component-to-paragraph density.
 
 ## 6. What to report
 

@@ -49,8 +49,10 @@
           "enum": [
             "brief",
             "synthesis",
-            "research"
-          ]
+            "research",
+            "guide"
+          ],
+          "description": "`guide` is hands-on instruction: it must terminate in the reader having DONE something, not merely understood it, and therefore owes at least one procedure block. It was previously unreachable -- COMPONENT_FLOOR carried a 'guide' key that no article could ever match, so guides were silently governed by the synthesis floor."
         },
         "disclaimer": {
           "type": "string",
@@ -64,7 +66,7 @@
           "type": "array",
           "minItems": 4,
           "maxItems": 48,
-          "description": "Reading-order blocks. A block is EITHER prose (p/h2/quote, which must carry text and citation_urls) OR one visual component (chart/compare/timeline/entity/scorecard/ledger/beforeafter/spectrum/flow/keyfacts/stakes/sourcecheck/stat, which must NOT carry a top-level text field -- wordCount() sums .text to derive the published format tier and the read-along speaks every block with .text, so a component with text would inflate the tier and read table cells aloud). Component minimums per format and the anti-fabrication rules are in agents/_shared/visual-components.md.",
+          "description": "Reading-order blocks. A block is EITHER prose (p/h2/quote, which must carry text and citation_urls) OR one visual component (chart/compare/timeline/entity/scorecard/ledger/beforeafter/spectrum/flow/keyfacts/stakes/sourcecheck/stat/model/rank/counter/document, which must NOT carry a top-level text field -- wordCount() sums .text to derive the published format tier and the read-along speaks every block with .text, so a component with text would inflate the tier and read table cells aloud). Component minimums per format and the anti-fabrication rules are in agents/_shared/visual-components.md.",
           "items": {
             "anyOf": [
               {
@@ -1307,6 +1309,692 @@
                   "label"
                 ],
                 "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "model"
+                    ]
+                  },
+                  "model": {
+                    "type": "object",
+                    "properties": {
+                      "kicker": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 60
+                      },
+                      "title": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 180
+                      },
+                      "sub": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 400
+                      },
+                      "source": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 500
+                      },
+                      "inputs": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 5,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "key": {
+                              "type": "string",
+                              "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+                              "maxLength": 24
+                            },
+                            "label": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 120
+                            },
+                            "value": {
+                              "type": "number"
+                            },
+                            "min": {
+                              "type": "number"
+                            },
+                            "max": {
+                              "type": "number"
+                            },
+                            "step": {
+                              "type": "number"
+                            },
+                            "unit": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 24
+                            },
+                            "prefix": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 8
+                            },
+                            "dec": {
+                              "type": "integer"
+                            },
+                            "note": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 300
+                            }
+                          },
+                          "required": [
+                            "key",
+                            "label",
+                            "value",
+                            "min",
+                            "max"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "outputs": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 4,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "label": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 120
+                            },
+                            "expr": {
+                              "type": "string",
+                              "pattern": "^[A-Za-z0-9_+\\-*/(),.\\s]+$",
+                              "maxLength": 200
+                            },
+                            "unit": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 24
+                            },
+                            "prefix": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 8
+                            },
+                            "dec": {
+                              "type": "integer"
+                            },
+                            "note": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 300
+                            }
+                          },
+                          "required": [
+                            "label",
+                            "expr"
+                          ],
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "required": [
+                      "inputs",
+                      "outputs"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "model"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "rank"
+                    ]
+                  },
+                  "rank": {
+                    "type": "object",
+                    "properties": {
+                      "kicker": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 60
+                      },
+                      "title": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 180
+                      },
+                      "sub": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 400
+                      },
+                      "source": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 500
+                      },
+                      "kind": {
+                        "type": "string",
+                        "pattern": "^[a-z0-9-]+$",
+                        "maxLength": 40
+                      },
+                      "highlight": {
+                        "type": "string",
+                        "pattern": "^[a-z0-9-]+$",
+                        "maxLength": 60
+                      },
+                      "limit": {
+                        "type": "integer",
+                        "minimum": 3,
+                        "maximum": 30
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "highlight"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "rank"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "counter"
+                    ]
+                  },
+                  "counter": {
+                    "type": "object",
+                    "properties": {
+                      "kicker": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 60
+                      },
+                      "title": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 180
+                      },
+                      "sub": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 400
+                      },
+                      "source": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 500
+                      },
+                      "points": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 5,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "claim": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 300
+                            },
+                            "detail": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 900
+                            },
+                            "whoHolds": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 200
+                            }
+                          },
+                          "required": [
+                            "claim"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "verdict": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 900
+                      }
+                    },
+                    "required": [
+                      "points"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "counter"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "document"
+                    ]
+                  },
+                  "document": {
+                    "type": "object",
+                    "properties": {
+                      "kicker": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 60
+                      },
+                      "title": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 180
+                      },
+                      "sub": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 400
+                      },
+                      "source": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 500
+                      },
+                      "docTitle": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 180
+                      },
+                      "docMeta": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https?://"
+                      },
+                      "lines": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 14,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "n": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 24
+                            },
+                            "text": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 700
+                            },
+                            "mark": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "text"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "reading": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 900
+                      }
+                    },
+                    "required": [
+                      "lines"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "type",
+                  "document"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Numbered steps the READER performs. Distinct from `flow`, which is a mechanism performed by third parties and has no success criterion. `verify` states what the reader should see; `ifnot` is the recovery branch. A step without `verify` is a claim the reader cannot check.",
+                "required": [
+                  "type",
+                  "procedure"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "procedure"
+                  },
+                  "procedure": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "title",
+                      "steps"
+                    ],
+                    "properties": {
+                      "kicker": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "sub": {
+                        "type": "string"
+                      },
+                      "est": {
+                        "type": "string"
+                      },
+                      "level": {
+                        "enum": [
+                          "Beginner",
+                          "Intermediate",
+                          "Advanced"
+                        ]
+                      },
+                      "track": {
+                        "type": "boolean"
+                      },
+                      "key": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "prereqs": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 6,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "steps": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 12,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "do"
+                          ],
+                          "properties": {
+                            "do": {
+                              "type": "string"
+                            },
+                            "detail": {
+                              "type": "string"
+                            },
+                            "verify": {
+                              "type": "string"
+                            },
+                            "ifnot": {
+                              "type": "string"
+                            },
+                            "why": {
+                              "type": "string"
+                            },
+                            "est": {
+                              "type": "string"
+                            },
+                            "hi": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "A copyable prompt or command. The payload is `body`, deliberately NOT `text`: a top-level text field would inflate wordCount(), promote the piece's format tier, and make the audio reader speak a template aloud. Unlike `document`, whose lines must be verbatim quotes the article already carries, a snippet is authored by the writer -- it makes no provenance claim.",
+                "required": [
+                  "type",
+                  "snippet"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "snippet"
+                  },
+                  "snippet": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "body"
+                    ],
+                    "properties": {
+                      "kicker": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "lang": {
+                        "enum": [
+                          "prompt",
+                          "text",
+                          "bash",
+                          "python",
+                          "json",
+                          "yaml",
+                          "js"
+                        ]
+                      },
+                      "body": {
+                        "type": "string"
+                      },
+                      "expects": {
+                        "type": "string"
+                      },
+                      "note": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "fill": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 6,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token",
+                            "means"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "pattern": "^\\{\\{[A-Z0-9_]+\\}\\}$"
+                            },
+                            "means": {
+                              "type": "string"
+                            },
+                            "example": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "A router. Every `then` must be an ACTION, not a category: 'use a bigger model' fails, 'upload it straight into a frontier chat model' passes. Distinct from `compare`, which displays difference and terminates in a cell rather than an instruction. Branches must be mutually exclusive.",
+                "required": [
+                  "type",
+                  "decide"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "decide"
+                  },
+                  "decide": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "title",
+                      "branches"
+                    ],
+                    "properties": {
+                      "kicker": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "question": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "branches": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 5,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "when",
+                            "then"
+                          ],
+                          "properties": {
+                            "when": {
+                              "type": "string"
+                            },
+                            "then": {
+                              "type": "string"
+                            },
+                            "because": {
+                              "type": "string"
+                            },
+                            "warn": {
+                              "type": "string"
+                            },
+                            "next": {
+                              "type": "string"
+                            },
+                            "hi": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Mistake, symptom, fix. Distinct from `counter`, which states the strongest case against the article's own thesis and is an editorial-integrity device. `looks` is load-bearing: a reader who cannot recognise the failure cannot apply the fix.",
+                "required": [
+                  "type",
+                  "pitfalls"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "pitfalls"
+                  },
+                  "pitfalls": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "title",
+                      "items"
+                    ],
+                    "properties": {
+                      "kicker": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 8,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "mistake",
+                            "fix"
+                          ],
+                          "properties": {
+                            "mistake": {
+                              "type": "string"
+                            },
+                            "looks": {
+                              "type": "string"
+                            },
+                            "why": {
+                              "type": "string"
+                            },
+                            "fix": {
+                              "type": "string"
+                            },
+                            "cost": {
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             ]
           }

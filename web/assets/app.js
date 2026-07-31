@@ -121,7 +121,7 @@
   }
   // Section colors/glyphs mirror the desks (each section is one editor's beat)
   var SECTION_COLORS = {Frontier:"#8b7cf7",Products:"#e0564d",Compute:"#6cb6f0",Policy:"#42c08a",Health:"#d9a94e",Markets:"#c48af0",Robotics:"#4dd0c4",Opinion:"#c98b5a",Ethics:"#7bb274",Guide:"#e8865f"};
-  var FMT = {brief:"Brief",synthesis:"Synthesis",research:"Research"};
+  var FMT = {brief:"Brief",synthesis:"Synthesis",research:"Research",guide:"Guide"};
   var GLYPHS = {Frontier:"◆",Products:"◉",Compute:"▞",Policy:"◍",Health:"✚",Markets:"◈",Robotics:"⟁",Opinion:"❝",Ethics:"⚖",Guide:"✎"};
 
   function persona(key){ for(var i=0;i<PERSONAS.length;i++) if(PERSONAS[i].key===key) return PERSONAS[i]; return null; }
@@ -226,6 +226,10 @@
     //   Brief    ~300w   (target 250–450)  — the quick daily hit
     //   Synthesis ~1,200w (target 800–1,900) — the standard full feature
     //   Research  ~3,500w (2,200+, multi-editor, 2–3 charts) — the flagship investigation
+    // `guide` is now a real format with its own floor and its own audit rule, so
+    // it must not be re-derived from length -- a guide's instructions live in
+    // procedure blocks, which wordCount() cannot see, so length would mislabel it.
+    if(a.format==="guide" || a.section==="Guide") return "guide";
     if((a.authors&&a.authors.length>1) || (a.format==="research")) return "research";
     var w=wordCount(a);
     if(w>=2200) return "research";
@@ -313,7 +317,15 @@
     }).filter(function(x){ return x.n>0; })
       .sort(function(a,b){ return b.n-a.n; })
       .slice(0,12);
-    if(!ranked.length) return "";
+    // A publication that ships daily must never render a hole. An empty band
+    // reads as breakage; a designed empty state reads as "nothing here yet".
+    if(!ranked.length){
+      return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Browse by player</div>'+
+        '<div class="empty-state"><span class="es-mark">◈</span>'+
+        '<div><b>No company has been covered twice yet.</b>'+
+        '<span>This rail fills itself as the newsroom publishes — every player we write about lands here automatically, ranked by how often they appear.</span></div>'+
+        '<a class="es-go" href="#/companies">All companies →</a></div>';
+    }
     return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Browse by player</div>'+
       '<div class="player-browse">'+ranked.map(function(x){
         return '<a class="player-cell" href="#/company/'+x.c.key+'" style="--bc:'+brandColor(x.c.key)+'">'+
@@ -976,6 +988,378 @@
       items+compSrc(c.source)+'</figure>';
   }
 
+  /* ==========================================================================
+     THE ACCOUNTABILITY ENGINE
+
+     Every article contains claims that will be settled later. A human newsroom
+     never goes back -- not because it cannot, but because nobody is assigned to
+     and there is no reward for it. This closes that loop.
+
+     Design: open claims are DERIVED LIVE from the articles themselves, never
+     maintained by hand. Two machine-readable sources already exist in the data:
+       - scorecard items whose `level` is unsettled and which name a `resolver`
+         (the specific document or event that would settle them)
+       - `apply` items on watch-type articles (named things to watch)
+     Only RESOLUTIONS are stored, in web/data/resolutions.js, keyed to the claim.
+     So the ledger cannot drift from the archive: delete a claim from an article
+     and it leaves the ledger; a resolution with no matching claim is inert.
+
+     Integrity rule, enforced by construction: resolutions are APPEND-ONLY and
+     dated. Original article text is never rewritten -- a resolved claim adds a
+     dated update block beneath the piece. The moment history gets silently
+     edited, the transparency claim this publication rests on is gone.
+     ========================================================================== */
+  var UNSETTLED={partial:1,contested:1,unverified:1,company:1};
+  function claimKey(slug,kind,idx){ return slug+"|"+kind+"|"+idx; }
+  // Every open claim across the archive, newest article first.
+  function allClaims(){
+    var out=[];
+    ARTICLES.concat(GUIDES).forEach(function(a){
+      var sc=0;
+      (a.body||[]).forEach(function(b){
+        if(b.type!=="scorecard") return;
+        ((b.scorecard&&b.scorecard.items)||[]).forEach(function(it){
+          var i=sc++;
+          if(!UNSETTLED[it.level] || !it.resolver) return;
+          out.push({key:claimKey(a.slug,"sc",i),slug:a.slug,title:a.title,
+            publishedAt:a.publishedAt,section:a.section,kind:"claim",
+            claim:it.claim,level:it.level,basis:it.basis,resolver:it.resolver});
+        });
+      });
+      if(a.applyType==="watch"){
+        (a.apply||[]).forEach(function(x,i){
+          out.push({key:claimKey(a.slug,"w",i),slug:a.slug,title:a.title,
+            publishedAt:a.publishedAt,section:a.section,kind:"watch",
+            claim:x.label,resolver:x.text});
+        });
+      }
+    });
+    out.sort(function(x,y){ return new Date(y.publishedAt)-new Date(x.publishedAt); });
+    return out;
+  }
+  function resolutionMap(){
+    var R=(window.RTFC_RESOLUTIONS&&window.RTFC_RESOLUTIONS.items)||[], m={};
+    R.forEach(function(r){ if(r.key) m[r.key]=r; });
+    return m;
+  }
+  var RES_OUTCOME={
+    confirmed:{l:"Confirmed",c:"var(--ok)"},
+    refuted:{l:"Refuted",c:"var(--gate)"},
+    partly:{l:"Partly borne out",c:"var(--gold)"},
+    superseded:{l:"Superseded",c:"var(--muted)"},
+    expired:{l:"Never resolved",c:"var(--muted)"}
+  };
+  // Dated update block appended beneath an article whose claims have since
+  // resolved. Append-only by construction: this renders alongside the original
+  // text, it never replaces any of it.
+  function updatesHTML(a){
+    var m=resolutionMap();
+    var mine=allClaims().filter(function(c){ return c.slug===a.slug && m[c.key]; })
+      .map(function(c){ return {c:c,r:m[c.key]}; });
+    if(!mine.length) return "";
+    mine.sort(function(x,y){ return new Date(x.r.at)-new Date(y.r.at); });
+    var rows=mine.map(function(o){
+      var oc=RES_OUTCOME[o.r.outcome]||RES_OUTCOME.partly;
+      return '<div class="up-row" style="--oc:'+oc.c+'">'+
+        '<div class="up-h"><time>'+esc(fullTimestamp(o.r.at))+'</time>'+
+        '<span class="up-oc">'+esc(oc.l)+'</span></div>'+
+        '<div class="up-claim">'+fmt(o.c.claim)+'</div>'+
+        '<p class="up-note">'+fmt(o.r.note||"")+'</p>'+
+        (o.r.url?'<a class="up-src" href="'+esc(o.r.url)+'" target="_blank" rel="noopener">'+
+          esc(o.r.label||"What settled it")+' ↗</a>':'')+'</div>';
+    }).join("");
+    return '<div class="updates"><div class="up-head">Since publication'+
+      '<span>'+mine.length+' open question'+(mine.length===1?'':'s')+' from this piece '+
+      (mine.length===1?'has':'have')+' since been settled. The article above is unchanged; '+
+      'every resolution is added here, dated.</span></div>'+rows+
+      '<a class="up-all" href="#/claims">The full claims ledger →</a></div>';
+  }
+  function claimRowHTML(c,r){
+    var oc=r?(RES_OUTCOME[r.outcome]||RES_OUTCOME.partly):null;
+    return '<div class="cl-row'+(r?" is-res":"")+'"'+(oc?' style="--oc:'+oc.c+'"':'')+'>'+
+      '<div class="cl-main">'+
+        '<div class="cl-claim">'+fmt(c.claim)+'</div>'+
+        '<div class="cl-meta"><span class="cl-kind">'+(c.kind==="watch"?"Watching":esc((SC_LEVELS[c.level]||{l:"Open"}).l))+'</span>'+
+        '<a href="#/article/'+esc(c.slug)+'">'+esc(c.title)+'</a>'+
+        '<time>'+when(c.publishedAt)+'</time></div>'+
+      '</div>'+
+      '<div class="cl-res">'+(r
+        ? '<span class="cl-oc">'+esc(oc.l)+'</span><span class="cl-note">'+fmt(r.note||"")+'</span>'+
+          '<time>'+esc(fullTimestamp(r.at))+'</time>'
+        : '<span class="cl-open">Open</span><span class="cl-note"><b>Would settle it:</b> '+fmt(c.resolver||"")+'</span>')+
+      '</div></div>';
+  }
+  var CL_FILTER="open";
+  window.rtfcClaimFilter=function(k){ CL_FILTER=k; var app=document.getElementById("app"); if(app){ app.innerHTML=viewClaims(); if(window.__motion) window.__motion(); } };
+  function viewClaims(){
+    var claims=allClaims(), m=resolutionMap();
+    var resolved=claims.filter(function(c){ return m[c.key]; });
+    var open=claims.filter(function(c){ return !m[c.key]; });
+    var hit=resolved.filter(function(c){ return m[c.key].outcome==="confirmed"; }).length;
+    var miss=resolved.filter(function(c){ return m[c.key].outcome==="refuted"; }).length;
+    var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:6px">'+
+      '<div class="over">The Claims Ledger</div><h1>Every open question, tracked to its answer</h1>'+
+      '<p>Each piece this newsroom publishes names what it does <b>not</b> yet know, and the specific document or event that would settle it. '+
+      'Those open questions are collected here automatically and closed when they resolve — including the ones that resolve against '+
+      'what a company, an official, or this publication expected. Nothing above an article is ever rewritten; resolutions are added, dated.</p></div>';
+    h+='<div class="cl-stats">'+
+      '<div class="cl-st"><b>'+claims.length+'</b><span>claims logged</span></div>'+
+      '<div class="cl-st"><b>'+open.length+'</b><span>still open</span></div>'+
+      '<div class="cl-st"><b>'+resolved.length+'</b><span>resolved</span></div>'+
+      '<div class="cl-st"><b>'+hit+' / '+miss+'</b><span>borne out / refuted</span></div></div>';
+    h+='<div class="sb-sort" style="margin-top:18px"><span>Show</span>'+
+      [["open","Still open ("+open.length+")"],["resolved","Resolved ("+resolved.length+")"],["all","Everything"]]
+        .map(function(o){ return '<button class="'+(CL_FILTER===o[0]?"on":"")+'" onclick="rtfcClaimFilter(\''+o[0]+'\')">'+esc(o[1])+'</button>'; }).join("")+
+      '</div>';
+    var list=CL_FILTER==="open"?open:CL_FILTER==="resolved"?resolved:claims;
+    if(!list.length){
+      h+='<div class="apply" style="margin-top:22px"><div class="apply-head"><span class="apply-ic">◈</span>Nothing here yet</div>'+
+        '<ul><li>Claims appear as articles publish scorecards and watch items. Resolutions appear as the scans close them.</li></ul></div>';
+    } else {
+      h+='<div class="cl-list">'+list.map(function(c){ return claimRowHTML(c,m[c.key]); }).join("")+'</div>';
+    }
+    h+='<p class="sb-basis" style="margin-top:20px">Open claims are derived live from the articles themselves — every scorecard item still marked unsettled that names what would resolve it, plus every named watch item. '+
+      'Nothing on this page is maintained by hand, so it cannot drift from the archive. Resolutions are append-only and carry the source that settled them.</p>';
+    return h+'</div>';
+  }
+
+  /* ---- EVIDENCE ON DEMAND ---------------------------------------------------
+     A per-paragraph provenance marker built from the `citation_urls` the
+     pipeline has been writing all along (93% of published paragraphs carry
+     them; none was ever rendered). Matches each URL back to the article's own
+     numbered source list so the popover names the outlet instead of showing a
+     raw link, and marks primary sources distinctly from reporting. Renders
+     nothing when a paragraph has no citations -- silence is honest, a fake
+     marker is not. */
+  var PRIMARY_HINT=/(\.gov|docs\.fcc|sec\.gov|stocktitan|huggingface\.co|arxiv|nvidianews|prnewswire|anthropic\.com\/news|openai\.com|blogs\.nvidia|github\.com|pacingthefrontier|artificialanalysis)/i;
+  function srcLabelFor(url,a){
+    var srcs=(a&&a.sources)||[];
+    for(var i=0;i<srcs.length;i++) if(srcs[i].url===url) return {n:i+1,label:srcs[i].label};
+    var d=String(url).replace(/^https?:\/\//,"").split("/")[0].replace(/^www\./,"");
+    return {n:null,label:d};
+  }
+  function evidenceMarkHTML(b,a){
+    var urls=(b&&b.citation_urls)||[];
+    if(!urls.length) return "";
+    // PHRASING CONTENT ONLY. This marker lives inside a <p>, and the HTML parser
+    // auto-closes an open <p> the moment it meets flow content -- a <ul> here
+    // silently detached the entire source list from the popover. Everything
+    // below is span/a/em styled as blocks, which the parser leaves nested.
+    var items=urls.map(function(u){
+      var m=srcLabelFor(u,a), prim=PRIMARY_HINT.test(u);
+      return '<span class="ev-i'+(prim?' ev-primary':'')+'">'+
+        '<span class="ev-n">'+(m.n?m.n:'&middot;')+'</span>'+
+        '<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(m.label)+'</a>'+
+        (prim?'<em>primary</em>':'')+'</span>';
+    }).join("");
+    return '<span class="evmark" tabindex="0" role="button" aria-label="Sources for this paragraph">'+
+      '<span class="ev-dot">'+urls.length+'</span>'+
+      '<span class="ev-pop"><span class="ev-h">Backing this paragraph</span>'+
+      '<span class="ev-list">'+items+'</span>'+
+      '<span class="ev-f">Primary sources are marked. Everything here traces to them.</span></span></span>';
+  }
+
+  /* ==========================================================================
+     THE INTERROGATION LAYER — four components that let a reader test the story
+     instead of only reading it, plus the primary-document viewer.
+
+     The unifying idea: a human desk is limited by attention, memory, incentive
+     and time. Each of these does something a well-funded human newsroom could
+     do but never actually does -- normalize every figure it has ever published,
+     surface its own weakest point, hand the reader the arithmetic, or show the
+     filing instead of linking it.
+     ========================================================================== */
+
+  /* ---- MODEL: reader-adjustable arithmetic ----------------------------------
+     Sliders over the story's OWN sourced numbers, with outputs computed live.
+     Turns "the multiple is 117x" from an assertion into something the reader
+     can push on ("what if ARR only reaches 400?").
+
+     Formulas are evaluated by a hand-written recursive-descent parser over a
+     tiny grammar: numbers, input keys, + - * / ( ), unary minus, and four
+     whitelisted functions. Deliberately NOT eval() or new Function() -- article
+     data is first-party today, but a data file is exactly the kind of thing a
+     future cycle writes automatically, and an arbitrary-code path there would
+     be a standing injection hole for zero benefit. */
+  var MODEL_FNS={ round:function(x){return Math.round(x);}, abs:Math.abs,
+    min:Math.min, max:Math.max, floor:Math.floor, ceil:Math.ceil };
+  function evalExpr(src,vars){
+    var s=String(src), i=0;
+    function ws(){ while(i<s.length && /\s/.test(s[i])) i++; }
+    function expr(){
+      var v=term();
+      for(;;){ ws();
+        if(s[i]==="+"){ i++; v+=term(); }
+        else if(s[i]==="-"){ i++; v-=term(); }
+        else return v;
+      }
+    }
+    function term(){
+      var v=unary();
+      for(;;){ ws();
+        if(s[i]==="*"){ i++; v*=unary(); }
+        else if(s[i]==="/"){ i++; var d=unary(); v = d===0 ? NaN : v/d; }
+        else return v;
+      }
+    }
+    function unary(){ ws(); if(s[i]==="-"){ i++; return -unary(); } if(s[i]==="+"){ i++; return unary(); } return atom(); }
+    function atom(){
+      ws();
+      if(s[i]==="("){ i++; var v=expr(); ws(); if(s[i]===")") i++; return v; }
+      var m=/^\d+(\.\d+)?/.exec(s.slice(i));
+      if(m){ i+=m[0].length; return parseFloat(m[0]); }
+      var id=/^[A-Za-z_][A-Za-z0-9_]*/.exec(s.slice(i));
+      if(id){
+        i+=id[0].length; ws();
+        if(s[i]==="("){ // whitelisted function call
+          i++; var args=[expr()]; ws();
+          while(s[i]===","){ i++; args.push(expr()); ws(); }
+          if(s[i]===")") i++;
+          var fn=MODEL_FNS[id[0]];
+          return fn?fn.apply(null,args):NaN;
+        }
+        return (vars && id[0] in vars) ? Number(vars[id[0]]) : NaN;
+      }
+      i++; return NaN; // unparseable: NaN propagates and renders as "—"
+    }
+    var out=expr();
+    return isFinite(out)?out:NaN;
+  }
+  function fmtModelNum(v,dec){
+    if(!isFinite(v)) return "—";
+    var d=(dec==null)?(Math.abs(v)>=100?0:Math.abs(v)>=10?1:2):dec;
+    return v.toFixed(d).replace(/\B(?=(\d{3})+(?!\d))/g,",");
+  }
+  var MODEL_SEQ=0;
+  function modelHTML(c){
+    if(!c || !c.inputs || !c.inputs.length || !c.outputs || !c.outputs.length) return "";
+    var id="mdl-"+(++MODEL_SEQ);
+    var sliders=c.inputs.map(function(inp){
+      return '<div class="md-in"><label for="'+id+'-'+esc(inp.key)+'">'+fmt(inp.label)+
+        '<b id="'+id+'-v-'+esc(inp.key)+'">'+esc(inp.prefix||"")+fmtModelNum(Number(inp.value),inp.dec)+esc(inp.unit||"")+'</b></label>'+
+        '<input type="range" id="'+id+'-'+esc(inp.key)+'" data-k="'+esc(inp.key)+'" '+
+        'min="'+Number(inp.min)+'" max="'+Number(inp.max)+'" step="'+Number(inp.step||1)+'" value="'+Number(inp.value)+'" '+
+        'oninput="rtfcModel(\''+id+'\')">'+
+        (inp.note?'<span class="md-note">'+fmt(inp.note)+'</span>':'')+'</div>';
+    }).join("");
+    var outs=c.outputs.map(function(o,oi){
+      return '<div class="md-out"><span class="md-ol">'+fmt(o.label)+'</span>'+
+        '<b id="'+id+'-o-'+oi+'">—</b>'+(o.note?'<i>'+fmt(o.note)+'</i>':'')+'</div>';
+    }).join("");
+    // Config travels in a data attribute so re-renders (route changes) rebuild
+    // state from the DOM rather than from a global that could go stale.
+    var cfg=esc(JSON.stringify({inputs:c.inputs.map(function(x){return {key:x.key,unit:x.unit,prefix:x.prefix,dec:x.dec};}),
+                                outputs:c.outputs.map(function(x){return {expr:x.expr,unit:x.unit,prefix:x.prefix,dec:x.dec};})}));
+    return '<figure class="comp comp-model" id="'+id+'" data-cfg="'+cfg+'">'+
+      compHead(c.kicker||"Run it yourself",c.title,
+        c.sub||"Drag any assumption. Every starting value is a figure this piece sourced; the outputs are arithmetic on them, not a forecast.")+
+      '<div class="md-grid"><div class="md-ins">'+sliders+'</div><div class="md-outs">'+outs+'</div></div>'+
+      compSrc(c.source)+'</figure>';
+  }
+  window.rtfcModel=function(id){
+    var root=document.getElementById(id); if(!root) return;
+    var cfg; try{ cfg=JSON.parse(root.getAttribute("data-cfg")); }catch(e){ return; }
+    var vars={};
+    cfg.inputs.forEach(function(inp){
+      var el=document.getElementById(id+"-"+inp.key); if(!el) return;
+      var v=parseFloat(el.value); vars[inp.key]=v;
+      var lab=document.getElementById(id+"-v-"+inp.key);
+      if(lab) lab.textContent=(inp.prefix||"")+fmtModelNum(v,inp.dec)+(inp.unit||"");
+    });
+    cfg.outputs.forEach(function(o,oi){
+      var el=document.getElementById(id+"-o-"+oi); if(!el) return;
+      var v=evalExpr(o.expr,vars);
+      el.textContent=isFinite(v)?((o.prefix||"")+fmtModelNum(v,o.dec)+(o.unit||"")):"—";
+    });
+  };
+  // Initialise every model on the page after a render (route() calls __motion,
+  // which calls this) so outputs are never left showing the em-dash placeholder.
+  function initModels(){
+    var ms=document.querySelectorAll(".comp-model");
+    for(var i=0;i<ms.length;i++) window.rtfcModel(ms[i].id);
+  }
+
+  /* ---- RANK: this figure against every comparable one on record -------------
+     Reads web/data/figures.js, the normalized cross-archive register. A human
+     desk cannot hold 200 normalized figures in working memory; this holds all
+     of them permanently and re-ranks every time anything is added. The rank is
+     computed live, so it can never go stale or contradict the register. */
+  function figuresOfKind(kind){
+    var F=(window.RTFC_FIGURES&&window.RTFC_FIGURES.items)||[];
+    return F.filter(function(f){ return f.kind===kind; })
+            .slice().sort(function(a,b){ return b.value-a.value; });
+  }
+  function rankHTML(c){
+    if(!c || !c.kind || !c.highlight) return "";
+    var list=figuresOfKind(c.kind);
+    if(list.length<2) return "";
+    var meta=(window.RTFC_FIGURES&&window.RTFC_FIGURES.kinds&&window.RTFC_FIGURES.kinds[c.kind])||{};
+    var idx=-1;
+    for(var i=0;i<list.length;i++) if(list[i].id===c.highlight) idx=i;
+    var top=c.limit?list.slice(0,Math.max(c.limit,idx+1)):list;
+    var max=list[0].value||1;
+    var unit=meta.unit||"";
+    var rows=top.map(function(f,i){
+      var w=Math.max(2,Math.round(f.value/max*100));
+      var hi=f.id===c.highlight;
+      var href=f.slug?('#/article/'+f.slug):null;
+      var inner='<span class="rk-n">'+(i+1)+'</span><span class="rk-l">'+esc(f.label)+'</span>'+
+        '<span class="rk-track"><i style="width:'+w+'%"></i></span>'+
+        '<span class="rk-v">'+esc((meta.prefix||"")+fmtModelNum(f.value,meta.dec)+unit)+'</span>';
+      return href?('<a class="rk-row'+(hi?" is-hi":"")+'" href="'+href+'">'+inner+'</a>')
+                 :('<div class="rk-row'+(hi?" is-hi":"")+'">'+inner+'</div>');
+    }).join("");
+    var standing=(idx>=0)?('<p class="rk-standing"><b>#'+(idx+1)+'</b> of '+list.length+' '+
+      esc(meta.noun||"entries")+' on record'+(c.limit&&list.length>top.length?' (top '+top.length+' shown)':'')+'.</p>'):'';
+    return '<figure class="comp comp-rank">'+
+      compHead(c.kicker||"Against the record",c.title||meta.title,
+        c.sub||meta.sub||"Every comparable figure this publication has logged, normalized to one unit and re-ranked automatically.")+
+      standing+'<div class="rks">'+rows+'</div>'+
+      compSrc(c.source||meta.source)+'</figure>';
+  }
+
+  /* ---- COUNTER: the strongest case against this piece's own read ------------
+     A human newsroom does not publish the best argument against the story it
+     just sold; the incentive runs the other way. A publication that discloses
+     it is machine-written has no such incentive, which makes naming its own
+     weakest point both cheap and unusually credible. */
+  function counterHTML(c){
+    if(!c || !c.points || !c.points.length) return "";
+    var pts=c.points.map(function(p){
+      return '<div class="ct-p"><b>'+fmt(p.claim)+'</b>'+
+        (p.detail?'<p>'+fmt(p.detail)+'</p>':'')+
+        (p.whoHolds?'<span class="ct-who">Held by: '+fmt(p.whoHolds)+'</span>':'')+'</div>';
+    }).join("");
+    return '<figure class="comp comp-counter">'+
+      compHead(c.kicker||"The strongest case against",c.title||"Where this read could be wrong",
+        c.sub||"The best argument against this piece's own conclusion, stated as strongly as its holders would put it.")+
+      pts+
+      (c.verdict?'<p class="ct-v"><b>Why this piece still lands where it does:</b> '+fmt(c.verdict)+'</p>':'')+
+      compSrc(c.source)+'</figure>';
+  }
+
+  /* ---- DOCUMENT: show the filing, don't just link it ------------------------
+     "The prospectus has no HBM line item" is an assertion. The prospectus text
+     with the relevant line marked is proof. `lines` must be VERBATIM excerpt
+     text the article already quotes -- never paraphrase inside this component,
+     because its whole visual grammar claims to be a document. */
+  function documentHTML(c){
+    if(!c || !c.lines || !c.lines.length) return "";
+    var lines=c.lines.map(function(l,i){
+      var mark=l.mark?" is-mark":"";
+      return '<div class="dc-line'+mark+'"><span class="dc-ln">'+(l.n!=null?esc(String(l.n)):(i+1))+'</span>'+
+        '<span class="dc-t">'+fmt(l.text)+'</span></div>';
+    }).join("");
+    var head='<div class="dc-head"><span class="dc-ic">▣</span><div><b>'+esc(c.docTitle||"Source document")+'</b>'+
+      (c.docMeta?'<span>'+esc(c.docMeta)+'</span>':'')+'</div>'+
+      (c.url?'<a class="dc-go" href="'+esc(c.url)+'" target="_blank" rel="noopener">Open original ↗</a>':'')+'</div>';
+    return '<figure class="comp comp-doc">'+
+      compHead(c.kicker||"From the document itself",c.title,c.sub)+
+      '<div class="dc-paper">'+head+'<div class="dc-body">'+lines+'</div></div>'+
+      (c.reading?'<p class="dc-read"><b>What this line establishes:</b> '+fmt(c.reading)+'</p>':'')+
+      compSrc(c.source)+'</figure>';
+  }
+
   // inline data-viz — bar or donut, rendered from an article body block, zero cost, no images.
   // Categorical series colors come from the --s1..--s8 tokens in styles.css, which hold
   // SEPARATE validated steps for dark and light mode (the old single hex set failed the
@@ -1110,6 +1494,200 @@
      array stay in agreement about what a block type means. Returns "" for
      anything it does not recognize, which is what makes an unknown block type
      degrade silently instead of throwing. */
+  /* ================= THE INSTRUCTION BLOCKS ==================================
+     Four block types that exist because none of the other seventeen can express
+     instruction. The seventeen are built to REPORT: compare puts subjects against
+     attributes, flow shows a mechanism performed by third parties, counter states
+     the strongest case against the piece. All of them terminate in understanding.
+     A tutorial has to terminate in the reader having DONE something, which needs
+     three things reporting never needs: an ordinal sequence the reader executes, a
+     success criterion per step, and a recovery branch when the criterion fails.
+
+     THE INVARIANT HOLDS. Every one of these carries its payload under its own
+     nested key and never a top-level `text`, because wordCount() sums top-level
+     .text to derive the published format tier and rtfcListen() speaks it. A
+     snippet whose prompt template sat in `text` would silently promote a brief to
+     a synthesis and then read a prompt aloud to a listener.
+
+     BUT THE LISTEN PATH IS NOT OPTIONAL. The old `a.steps` field taught us this
+     the hard way: it lived outside `body`, so Listen skipped every step and a
+     guide's audio was 91 words of framing with the actual instructions missing.
+     rtfcListen and the read-along now walk procedure steps explicitly. */
+
+  function procedureHTML(d){
+    if(!d||!d.steps||!d.steps.length) return "";
+    var key=(d.key||slugify(d.title||"proc"));
+    var steps=d.steps.map(function(s,i){
+      var bits='<div class="pr-do">'+fmt(s.do||"")+'</div>';
+      if(s.detail) bits+='<div class="pr-detail">'+fmt(s.detail)+'</div>';
+      if(s.verify) bits+='<div class="pr-verify"><span class="pr-vk">You should see</span>'+fmt(s.verify)+'</div>';
+      if(s.ifnot)  bits+='<div class="pr-ifnot"><span class="pr-ik">If not</span>'+fmt(s.ifnot)+'</div>';
+      if(s.why)    bits+='<div class="pr-why">'+fmt(s.why)+'</div>';
+      var tick=d.track!==false
+        ? '<button class="pr-tick" role="checkbox" aria-checked="false" aria-label="Mark step '+(i+1)+' done" data-k="'+esc(key)+'" data-i="'+i+'"><span class="pr-n">'+(i+1)+'</span></button>'
+        : '<span class="pr-tick pr-static"><span class="pr-n">'+(i+1)+'</span></span>';
+      return '<li class="pr-step'+(s.hi?" is-hi":"")+'">'+tick+'<div class="pr-body">'+bits+
+        (s.est?'<span class="pr-est">'+esc(s.est)+'</span>':'')+'</div></li>';
+    }).join("");
+    var meta=[];
+    if(d.est)   meta.push('<span class="pr-m"><i>⏱</i>'+esc(d.est)+'</span>');
+    if(d.level) meta.push('<span class="pr-m"><i>◈</i>'+esc(d.level)+'</span>');
+    meta.push('<span class="pr-m"><i>≡</i>'+d.steps.length+' steps</span>');
+    return '<div class="comp procedure'+(d.track!==false?" is-track":"")+'" data-proc="'+esc(key)+'">'+
+      '<div class="pr-head"><span class="pr-k">'+esc(d.kicker||"Do it")+'</span>'+
+      '<b>'+esc(d.title||"")+'</b>'+
+      (d.sub?'<span class="pr-sub">'+fmt(d.sub)+'</span>':'')+
+      '<span class="pr-meta">'+meta.join("")+'</span></div>'+
+      (d.prereqs&&d.prereqs.length?'<div class="pr-pre"><span class="pr-pk">Before you start</span><ul>'+
+        d.prereqs.map(function(x){return '<li>'+fmt(x)+'</li>';}).join("")+'</ul></div>':'')+
+      '<ol class="pr-steps">'+steps+'</ol>'+
+      (d.track!==false?'<div class="pr-foot"><span class="pr-prog" data-k="'+esc(key)+'">0 of '+d.steps.length+' done</span>'+
+        '<button class="pr-reset" data-k="'+esc(key)+'">Reset</button></div>':'')+
+      (d.source?'<div class="c-src">'+fmt(d.source)+'</div>':'')+'</div>';
+  }
+
+  /* The copyable box. `body` is deliberately not called `text`: this is the one
+     block a writer is most likely to get wrong, and getting it wrong is silent. */
+  function snippetHTML(d){
+    if(!d||!d.body) return "";
+    var fills=(d.fill||[]).map(function(f){
+      return '<li><code>'+esc(f.token)+'</code><span>'+fmt(f.means||"")+'</span>'+
+        (f.example?'<em>e.g. '+esc(f.example)+'</em>':'')+'</li>';
+    }).join("");
+    // Tokens are highlighted after escaping, so a template can never inject markup.
+    var code=esc(d.body).replace(/\{\{([A-Z0-9_]+)\}\}/g,'<mark class="sn-t">{{$1}}</mark>');
+    return '<div class="comp snippet">'+
+      '<div class="sn-head"><span class="sn-k">'+esc(d.kicker||"Copy this")+'</span>'+
+      (d.title?'<b>'+esc(d.title)+'</b>':'')+
+      '<span class="sn-lang">'+esc(d.lang||"prompt")+'</span>'+
+      '<button class="sn-copy" type="button">Copy</button></div>'+
+      '<pre class="sn-body"><code>'+code+'</code></pre>'+
+      (fills?'<div class="sn-fill"><span class="sn-fk">Fill in</span><ul>'+fills+'</ul></div>':'')+
+      (d.expects?'<div class="sn-exp"><span class="sn-ek">You should get</span>'+fmt(d.expects)+'</div>':'')+
+      (d.note?'<div class="sn-note">'+fmt(d.note)+'</div>':'')+
+      (d.source?'<div class="c-src">'+fmt(d.source)+'</div>':'')+'</div>';
+  }
+
+  /* The router. Every `then` must be an action, not a category: "use a bigger
+     model" is a shrug, "upload it straight into a frontier chat model" is a
+     instruction. The audit enforces the shape; only an editor enforces that. */
+  function decideHTML(d){
+    if(!d||!d.branches||!d.branches.length) return "";
+    var rows=d.branches.map(function(b,i){
+      return '<li class="dc-b'+(b.hi?" is-hi":"")+'">'+
+        '<div class="dc-when"><span class="dc-wk">If</span>'+fmt(b.when||"")+'</div>'+
+        '<div class="dc-then"><span class="dc-tk">Then</span><b>'+fmt(b.then||"")+'</b></div>'+
+        (b.because?'<div class="dc-why">'+fmt(b.because)+'</div>':'')+
+        (b.warn?'<div class="dc-warn">'+fmt(b.warn)+'</div>':'')+
+        (b.next?'<div class="dc-next">'+fmt(b.next)+'</div>':'')+'</li>';
+    }).join("");
+    return '<div class="comp decide">'+
+      '<div class="dc-head"><span class="dc-k">'+esc(d.kicker||"Which one")+'</span>'+
+      '<b>'+esc(d.title||"")+'</b>'+
+      (d.question?'<span class="dc-q">'+fmt(d.question)+'</span>':'')+'</div>'+
+      '<ul class="dc-list">'+rows+'</ul>'+
+      (d.source?'<div class="c-src">'+fmt(d.source)+'</div>':'')+'</div>';
+  }
+
+  /* Mistake -> symptom -> fix. Distinct from `counter`, which states the strongest
+     case against the article's own thesis and is an editorial-integrity device.
+     This is troubleshooting, and the symptom column is the load-bearing one: a
+     reader who cannot recognise the failure cannot apply the fix. */
+  function pitfallsHTML(d){
+    if(!d||!d.items||!d.items.length) return "";
+    var rows=d.items.map(function(it){
+      return '<li class="pf-i cost-'+esc(it.cost||"medium")+'">'+
+        '<div class="pf-m">'+fmt(it.mistake||"")+'</div>'+
+        (it.looks?'<div class="pf-l"><span class="pf-lk">Looks like</span>'+fmt(it.looks)+'</div>':'')+
+        (it.why?'<div class="pf-w">'+fmt(it.why)+'</div>':'')+
+        '<div class="pf-f"><span class="pf-fk">Fix</span>'+fmt(it.fix||"")+'</div></li>';
+    }).join("");
+    return '<div class="comp pitfalls">'+
+      '<div class="pf-head"><span class="pf-k">'+esc(d.kicker||"What goes wrong")+'</span>'+
+      '<b>'+esc(d.title||"")+'</b></div>'+
+      '<ul class="pf-list">'+rows+'</ul>'+
+      (d.source?'<div class="c-src">'+fmt(d.source)+'</div>':'')+'</div>';
+  }
+
+  /* Progress ticks persist per procedure per article. localStorage only -- a
+     half-finished tutorial is exactly the kind of thing that should not need an
+     account, and exactly the kind of thing that should survive a closed tab. */
+  function procStore(){
+    try{ return JSON.parse(localStorage.getItem("rtfc-proc")||"{}"); }catch(e){ return {}; }
+  }
+  function procSave(o){ try{ localStorage.setItem("rtfc-proc",JSON.stringify(o)); }catch(e){} }
+  function initProcedures(){
+    document.querySelectorAll(".procedure.is-track").forEach(function(box){
+      if(box.__proc) return; box.__proc=1;
+      var key=box.getAttribute("data-proc"), st=procStore(), done=st[key]||{};
+      var ticks=box.querySelectorAll(".pr-tick"), prog=box.querySelector(".pr-prog");
+      function paint(){
+        var n=0;
+        ticks.forEach(function(t){
+          var on=!!done[t.getAttribute("data-i")];
+          t.setAttribute("aria-checked",on?"true":"false");
+          t.closest(".pr-step").classList.toggle("is-done",on);
+          if(on) n++;
+        });
+        if(prog) prog.textContent=n+" of "+ticks.length+" done"+(n===ticks.length?" ✓":"");
+        box.classList.toggle("all-done",n===ticks.length&&n>0);
+      }
+      ticks.forEach(function(t){
+        t.addEventListener("click",function(){
+          var i=t.getAttribute("data-i");
+          done[i]=!done[i]; if(!done[i]) delete done[i];
+          var all=procStore(); all[key]=done; procSave(all); paint();
+        });
+      });
+      var rs=box.querySelector(".pr-reset");
+      if(rs) rs.addEventListener("click",function(){
+        done={}; var all=procStore(); delete all[key]; procSave(all); paint();
+      });
+      paint();
+    });
+    document.querySelectorAll(".sn-copy").forEach(function(btn){
+      if(btn.__cp) return; btn.__cp=1;
+      btn.addEventListener("click",function(){
+        var pre=btn.closest(".snippet").querySelector(".sn-body code");
+        var txt=pre?pre.textContent:"";
+        function ok(){ btn.textContent="Copied ✓"; setTimeout(function(){ btn.textContent="Copy"; },1800); }
+        if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok,function(){ window.prompt("Copy:",txt); });
+        else window.prompt("Copy:",txt);
+      });
+    });
+  }
+
+  /* SPOKEN INSTRUCTION. The old `a.steps` field lived outside `body`, so Listen
+     read a guide's framing prose and silently skipped every actual instruction --
+     a 91-word audio track for a piece whose whole value was the six steps. These
+     blocks are inside `body`, so they get spoken. Anything that returns a
+     non-empty string here MUST also take a read-along segment in viewArticle, or
+     the highlight desyncs from the audio one block early and never recovers. */
+  function spokenComponent(b){
+    if(!b) return "";
+    if(b.type==="procedure"){
+      var d=b.procedure||b; if(!d.steps||!d.steps.length) return "";
+      return [(d.title||"Procedure")+"."].concat(d.steps.map(function(st,i){
+        return "Step "+(i+1)+". "+(st.do||"")+(st.verify?(" You should see: "+st.verify):"");
+      })).join(" ");
+    }
+    if(b.type==="decide"){
+      var e=b.decide||b; if(!e.branches||!e.branches.length) return "";
+      return [(e.title||"Which one")+"."].concat(e.branches.map(function(br){
+        return "If "+(br.when||"")+", then "+(br.then||"")+".";
+      })).join(" ");
+    }
+    if(b.type==="pitfalls"){
+      var f=b.pitfalls||b; if(!f.items||!f.items.length) return "";
+      return [(f.title||"What goes wrong")+"."].concat(f.items.map(function(it){
+        return (it.mistake||"")+". Fix: "+(it.fix||"");
+      })).join(" ");
+    }
+    // `snippet` is deliberately silent: reading a prompt template aloud, braces
+    // and all, is noise. Its framing lives in the paragraph beside it.
+    return "";
+  }
+
   function componentHTML(b){
     switch(b.type){
       case "chart":       return chartHTML(b.chart||b);
@@ -1124,12 +1702,23 @@
       case "keyfacts":    return keyfactsHTML(b.keyfacts||b);
       case "stakes":      return stakesHTML(b.stakes||b);
       case "sourcecheck": return sourcecheckHTML(b.sourcecheck||b);
+      case "model":       return modelHTML(b.model||b);
+      case "rank":        return rankHTML(b.rank||b);
+      case "counter":     return counterHTML(b.counter||b);
+      case "document":    return documentHTML(b.document||b);
+      case "procedure":   return procedureHTML(b.procedure||b);
+      case "snippet":     return snippetHTML(b.snippet||b);
+      case "decide":      return decideHTML(b.decide||b);
+      case "pitfalls":    return pitfallsHTML(b.pitfalls||b);
       case "stat":        return '<div class="statcallout"><b>'+esc(b.value)+'</b><span>'+fmt(b.label||"")+'</span></div>';
       default:            return "";
     }
   }
   var COMPONENT_TYPES=["chart","compare","timeline","entity","scorecard","ledger",
-    "beforeafter","spectrum","flow","keyfacts","stakes","sourcecheck","stat"];
+    "beforeafter","spectrum","flow","keyfacts","stakes","sourcecheck","stat",
+    "model","rank","counter","document",
+    // instruction blocks -- see THE INSTRUCTION BLOCKS above
+    "procedure","snippet","decide","pitfalls"];
   function isComponent(b){ return b && COMPONENT_TYPES.indexOf(b.type)>=0; }
   /* THE EVIDENCE STRIP — derived, not written. Counts what is actually attached
      to the article (sources, distinct domains, in-body citations, components) and
@@ -1195,10 +1784,24 @@
     var bodyHTML=a.body.map(function(b){
       if(b.type==="h2"){ raSeg++; var id="s-"+slugify(b.text); toc.push({id:id,t:b.text}); return '<h2 id="'+id+'" data-ra="'+raSeg+'">'+esc(b.text)+'</h2>'; }
       if(b.type==="quote"){ raSeg++; return '<blockquote data-ra="'+raSeg+'">'+fmt(b.text)+'</blockquote>'; }
-      if(isComponent(b)) return componentHTML(b);
+      if(isComponent(b)){
+        var html=componentHTML(b);
+        // Mirror rtfcListen exactly: a component that gets spoken takes a segment.
+        if(spokenComponent(b)){ raSeg++; html=html.replace(/^<div class="comp /, '<div data-ra="'+raSeg+'" class="comp '); }
+        return html;
+      }
       raSeg++;
       var cls=[]; if(b===lastP) cls.push("endmark"); if(firstP){ cls.push("lead-p"); firstP=false; }
-      return '<p data-ra="'+raSeg+'"'+(cls.length?' class="'+cls.join(" ")+'"':'')+'>'+entAnnotate(fmtBody(b.text),entSeen)+'</p>';
+      // EVIDENCE ON DEMAND: 93% of published paragraphs already carry
+      // citation_urls, and none of it was ever rendered. Surface it as a marker
+      // that opens the exact sources backing THAT paragraph. No other outlet
+      // offers per-paragraph provenance because no human writer wants their
+      // sourcing this exposed; the work is already done here, so withholding it
+      // was the only thing making it invisible.
+      var ev=evidenceMarkHTML(b,a);
+      if(ev) cls.push("has-ev");
+      return '<p data-ra="'+raSeg+'"'+(cls.length?' class="'+cls.join(" ")+'"':'')+'>'+
+        entAnnotate(fmtBody(b.text),entSeen)+ev+'</p>';
     }).join("");
     var applySeg=(a.apply&&a.apply.length)?(raSeg+1):-1;
     var tocHTML=(toc.length>=3)?('<nav class="toc"><span class="toc-l">In this piece</span><ol>'+
@@ -1224,6 +1827,7 @@
       tocHTML+
       '<div class="prose">'+bodyHTML+'</div>'+ (a.steps?guideStepsHTML(a):"") + tldrHTML(a) +
       (applySeg>=0?'<div data-ra="'+applySeg+'" class="ra-wrap">'+applyHTML(a)+'</div>':applyHTML(a))+
+      updatesHTML(a)+
       linksHTML(a)+
       reactsHTML(a.id)+
       '<div class="endbyline">'+avatar(p)+'<div class="eb-who">'+((a.authors&&a.authors.length>1)?'A research collaboration by ':'Written by ')+'<b><a href="#/persona/'+p.key+'">'+esc(authorNames(a,p.name))+'</a></b><span>'+esc((a.authors&&a.authors.length>1)?"Cross-desk investigation":p.beat)+'</span><time class="eb-time">Filed '+fullTimestamp(a.publishedAt)+'</time></div></div>'+
@@ -1389,9 +1993,21 @@
       '<div class="mc-issue">Issue '+String(iss.number).padStart(3,"0")+' · '+monthLabel(iss.month)+(iss.special?' · Special':'')+(iss.access==="free"?' · <b class="mc-free">FREE</b>':'')+'</div>'+
       '<div class="mc-title">'+esc(iss.title)+'</div>'+
       '<div class="mc-tag">'+esc(iss.tagline)+'</div>'+
-      '<div class="mc-art">🖼 cover art: '+esc(iss.cover.art_status)+'</div></div>';
+      (function(){ // Was "cover art: generated" -- an internal production status, printed
+                   // on the paywall. Replaced with the spec a buyer actually wants.
+        var n=(iss.spreads||iss.pages||[]).length;
+        return '<div class="mc-art">'+n+' page'+(n===1?'':'s')+' · '+
+          (iss.access==="free"?"Free for everyone":"Plus")+(iss.month?(' · '+esc(iss.month)):"")+'</div>';
+      })()+
+      // Specular sweep, same grammar as .card .art::after. Pure decoration, so it
+      // is aria-hidden and carries no text.
+      '<span class="mc-sheen" aria-hidden="true"></span>'+
+      '</div>';
     var href=(iss.format==="spread")?('#/read/'+iss.id):('#/issue/'+iss.id);
-    return link?('<a href="'+href+'">'+inner+'</a>'):inner;
+    // .mag-vol is the element that rotates: .mag-cover has overflow:hidden, which
+    // flattens preserve-3d, so the page-block and spine live on the wrapper.
+    var vol='<span class="mag-vol" data-iss="'+esc(iss.id)+'">'+inner+'</span>';
+    return link?('<a class="mag-link" href="'+href+'">'+vol+'</a>'):vol;
   }
   function viewMagazine(){
     var l=libGet();
@@ -1399,18 +2015,48 @@
       '<div class="over">The Magazine</div>'+
       '<h1>The month in AI,<br>understood with hindsight.</h1>'+
       '<p>Every month, the Issue Desk distills the full run of our coverage into one premium issue — the cover story with the benefit of hindsight, all seven editors’ month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist we grade in public the following month. Articles are free, forever. The magazine is for subscribers — and subscribers get every back issue too.</p></div>';
-    if(!isPlus()){
-      h+='<div class="plusbar"><div><b>RTFCLMGZN Plus</b><span>Monthly issues + special editions + the full back-issue archive. Planned pricing ~$8/mo.</span></div>'+
-        (l.account? '<button class="cta" onclick="rtfcPlan(\'plus\')">Start Plus — prototype unlock</button>'
-                  : '<a class="cta" href="#/account">Create your free account first</a>')+'</div>';
-      h+='<p class="protonote">Prototype: payments arrive with the public launch — the button simulates a Plus subscription so the full experience can be tested today.</p>';
-    }
+    // Product first, offer second. The old order put a paywall bar between the
+    // promise and the thing being sold, which pushed the covers a full screen
+    // below the fold -- a storefront where you cannot see the goods without
+    // scrolling past the price.
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Issues</div>';
-    h+='<div class="mag-grid">'+MAG.map(function(iss){
-      return '<div class="mag-cell">'+issueCoverHTML(iss,true)+
+    h+='<div class="mag-grid">'+MAG.map(function(iss,i){
+      return '<div class="mag-cell'+(i===0?' is-lead':'')+'">'+issueCoverHTML(iss,true)+
         (iss.pdf?'<a class="mag-dl" href="'+esc(iss.pdf)+'" download="'+esc(pdfName(iss))+'">⤓ Download PDF</a>':'')+'</div>';
     }).join("")+'</div>';
-    h+='<p class="protonote" style="margin-top:22px">The Primer is our free founding special — the complete beginner’s guide to AI, free forever. Issue 001, the first full monthly, arrives at the end of the first full month of live coverage.</p>';
+    if(!isPlus()){
+      // The offer panel. The old version was one grey bar plus two faint
+      // "prototype" paragraphs -- the loudest supporting copy on the page was an
+      // apology for the thing it was trying to sell. Now: what it costs, what is
+      // in it, what free already gets you, and the caveat reduced to one line of
+      // fine print under the button where fine print belongs.
+      var pages=MAG.reduce(function(n,x){ return n+((x.spreads||x.pages||[]).length); },0);
+      var perIssue=MAG.length?(8/Math.max(1,MAG.length)):8;
+      h+='<div class="plusbar">'+
+        '<div class="pb-offer">'+
+          '<div class="pb-mark">RTFCLMGZN <b>Plus</b></div>'+
+          '<div class="pb-price"><b>$8</b><span>/month</span></div>'+
+          '<div class="pb-per">'+MAG.length+' issue'+(MAG.length===1?'':'s')+' published · '+pages+' designed pages · about $'+perIssue.toFixed(2)+' an issue today, less every month</div>'+
+          (l.account? '<button class="cta" onclick="rtfcPlan(\'plus\')">Start Plus</button>'
+                    : '<a class="cta" href="#/account">Create your free account first</a>')+
+          '<p class="pb-fine">Prototype — payments arrive with the public launch. This button simulates a Plus subscription so the whole experience can be tested today.</p>'+
+        '</div>'+
+        '<div class="pb-cols">'+
+          '<div class="pb-col"><span class="pb-ct">Always free</span><ul>'+
+            '<li>Every article, every day, forever</li>'+
+            '<li>The Primer — the complete beginner’s guide, free founding special</li>'+
+            '<li>Guides, Dictionary, Scoreboard, the Buzz</li>'+
+            '<li>Sources and costs attached to everything</li>'+
+          '</ul></div>'+
+          '<div class="pb-col pb-plus"><span class="pb-ct">Plus <b class="pb-dia">◈</b></span><ul>'+
+            '<li>The monthly issue, in the spread reader</li>'+
+            '<li>Special editions as they ship</li>'+
+            '<li>The full back-issue archive</li>'+
+            '<li>Every issue as a downloadable PDF</li>'+
+          '</ul></div>'+
+        '</div>'+
+      '</div>';
+    }
     return h+'</div>';
   }
   function issuePageHTML(iss,pg){
@@ -1459,6 +2105,13 @@
     return '<div class="ipage"><h2>'+esc(pg.title||"")+'</h2></div>';
   }
   function viewIssue(id,pageIdx){
+    // Both shipped issues are format:"spread" and carry no `pages` array, so the
+    // legacy page-card reader below would throw on iss.pages.length and leave #app
+    // empty. Bookmarked and shared #/issue/... URLs are real traffic; send them to
+    // the spread reader instead of dying.
+    var _i=MAG.filter(function(x){return x.id===id;})[0];
+    if(_i && !(_i.pages && _i.pages.length)) return viewSpread(id);
+
     var iss=issueById(id); if(!iss) return notFound();
     var plus=isPlus();
     var pages=iss.pages;
@@ -1677,67 +2330,126 @@
   }
   function viewResources(){
     var DICT=window.RTFC_DICT||[];
-    // build the section list first (drives both the jump-nav and the content)
-    var secs=[{id:"res-labs",label:"The labs & their models"},{id:"res-dossiers",label:"Company dossiers"},{id:"res-dict-cta",label:"The AI Dictionary"},{id:"res-wallpapers",label:"Wallpapers"}];
-    RES.forEach(function(cat,i){ secs.push({id:"res-cat-"+i,label:cat.title}); });
+    var dir=labDirectory();
+
+    /* THE RESTRUCTURE, and why.
+       The page used to open with six sections competing on equal footing: a lab
+       grid, then a separate pile of company chips that pointed at the SAME
+       dossiers the lab cards already point at, then two promo tiles, then the
+       follow-lists. Two of those blocks were the same information twice, and
+       nothing on the page was visibly more important than anything else, which
+       is what "cluttered" actually means here -- not too much, but nothing
+       leading.
+       Now there is one spine (the labs, grouped the way the field is actually
+       grouped) and everything else sits underneath it in intent order: learn it,
+       follow it, use it. The chip pile is gone; the lab cards were always the
+       better route to the same dossiers. */
+
+    // Derived headline numbers. Nothing typed by hand, so they cannot go stale.
+    var nModels=dir.reduce(function(n,x){ return n+x.models.length; },0);
+    var nOpen=dir.reduce(function(n,x){ return n+x.models.filter(function(m){return m.access==="open-weights";}).length; },0);
+    var nScored=dir.reduce(function(n,x){ return n+x.models.filter(function(m){return typeof m.score==="number";}).length; },0);
+
+    var grouped=DOSSIER_GROUPS.map(function(g){
+      return { label:g.label, items:dir.filter(function(x){ return g.keys.indexOf(x.c.key)>=0; }) };
+    }).filter(function(g){ return g.items.length; });
+    var placed={};
+    grouped.forEach(function(g){ g.items.forEach(function(x){ placed[x.c.key]=1; }); });
+    var rest=dir.filter(function(x){ return !placed[x.c.key]; });
+    if(rest.length) grouped.push({label:"Also on record", items:rest});
+
+    // A company with a dossier but no model in either registry must not vanish
+    // just because the spine is organised around models.
+    var noModel=COMPANIES.filter(function(c){
+      return !dir.some(function(x){ return x.c.key===c.key; });
+    });
+
+    var secs=[{id:"res-labs",label:"Labs & models"}];
+    grouped.forEach(function(g,i){ secs.push({id:"res-g"+i,label:g.label,sub:true}); });
+    secs.push({id:"res-learn",label:"Learn the field"});
+    secs.push({id:"res-follow",label:"Follow the field"});
+    secs.push({id:"res-make",label:"Make something"});
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
-      '<h1>The whole toolkit, in one place</h1>'+
-      '<p>The accounts and shows worth following, living dossiers on every major player, and the dictionary that unlocks any AI headline. Jump to what you need from the menu.</p></div>';
+      '<h1>Every lab, every model, one page</h1>'+
+      '<p>Who builds what, assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Then the reading, the accounts worth following, and the tools.</p></div>';
+
+    h+='<div class="res-stats">'+
+      '<div class="rs-cell"><b>'+dir.length+'</b><span>labs with models on record</span></div>'+
+      '<div class="rs-cell"><b>'+nModels+'</b><span>models tracked</span></div>'+
+      '<div class="rs-cell"><b>'+nScored+'</b><span>independently scored</span></div>'+
+      '<div class="rs-cell"><b>'+nOpen+'</b><span>shipped open-weights</span></div>'+
+    '</div>';
 
     h+='<div class="res-layout"><aside class="res-nav"><div class="rn-title">On this page</div>'+
-      secs.map(function(s){ return '<a onclick="rtfcJump(\''+s.id+'\')">'+esc(s.label)+'</a>'; }).join("")+
+      secs.map(function(s){ return '<a class="'+(s.sub?"rn-sub":"")+'" onclick="rtfcJump(\''+s.id+'\')">'+esc(s.label)+'</a>'; }).join("")+
       '</aside><div class="res-main">';
 
-    // 1) THE LAB DIRECTORY — every lab with a branded identity tile and every
-    // model the site's own registries know for it (entities.js + Scoreboard),
-    // auto-assembled so it can never claim a model the coverage doesn't back.
+    /* ---- THE SPINE ------------------------------------------------------ */
     h+='<section id="res-labs"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The labs &amp; their models</div>'+
-      '<p style="color:var(--muted);font-size:14px;margin:-8px 0 16px">Who makes what. Built live from the Scoreboard and the entity registry — a model appears here the moment the newsroom covers it. Tap a lab for its full dossier.</p>'+
-      '<div class="lab-grid">'+labDirectory().map(labCardHTML).join("")+'</div></section>';
+      '<p class="res-lede">Grouped the way the field actually splits. Each card is a live count of what that lab has shipped that this newsroom has covered, with the independent index score where one exists. Tap any lab for its full dossier: every story, every number, every open question.</p>';
 
-    // 2) dossiers, grouped instead of the old undifferentiated chip pile
-    h+='<section id="res-dossiers"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Company dossiers</div>'+
-      '<p style="color:var(--muted);font-size:14px;margin:-8px 0 16px">Everything published about each player, auto-assembled and always current. <a href="#/companies" style="color:var(--accent2)">All dossiers →</a></p>'+
-      DOSSIER_GROUPS.map(function(g){
-        var members=COMPANIES.filter(function(c){ return g.keys.indexOf(c.key)>=0; });
-        if(!members.length) return "";
-        return '<div class="ds-group"><span class="ds-gl">'+esc(g.label)+'</span><div class="dossier-strip">'+
-          members.map(function(c){
-            return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>';
-          }).join("")+'</div></div>';
-      }).join("")+
-      (function(){ // anything ungrouped still shows — a new company must never vanish
-        var grouped={}; DOSSIER_GROUPS.forEach(function(g){ g.keys.forEach(function(k){ grouped[k]=1; }); });
-        var rest=COMPANIES.filter(function(c){ return !grouped[c.key]; });
-        return rest.length?'<div class="ds-group"><span class="ds-gl">More</span><div class="dossier-strip">'+
-          rest.map(function(c){ return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>'; }).join("")+
-          '</div></div>':"";
-      })()+
-      '</section>';
+    grouped.forEach(function(g,i){
+      var gm=g.items.reduce(function(n,x){ return n+x.models.length; },0);
+      h+='<div class="labg" id="res-g'+i+'">'+
+        '<div class="labg-h"><span class="labg-l">'+esc(g.label)+'</span>'+
+        '<span class="labg-n">'+g.items.length+' lab'+(g.items.length===1?'':'s')+' · '+gm+' model'+(gm===1?'':'s')+'</span></div>'+
+        '<div class="lab-grid">'+g.items.map(labCardHTML).join("")+'</div></div>';
+    });
 
-    // 1b) the dictionary — now its own page; Resources just points to it
-    h+='<section id="res-dict-cta"><a class="dict-cta" href="#/dictionary"><div><b>The AI Dictionary</b>'+
-      '<span>'+DICT.length+' terms that unlock any AI headline — token, agent, hallucination, and the rest — each explained like a human.</span></div>'+
-      '<span class="dc-go">Open the dictionary →</span></a></section>';
+    if(noModel.length){
+      h+='<div class="labg labg-thin"><div class="labg-h"><span class="labg-l">Covered, no model of their own</span>'+
+        '<span class="labg-n">'+noModel.length+'</span></div>'+
+        '<div class="dossier-strip">'+noModel.map(function(c){
+          return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>';
+        }).join("")+'</div></div>';
+    }
+    h+='</section>';
 
-    // 1c) wallpapers — make-your-own from our cover art
-    h+='<section id="res-wallpapers"><a class="dict-cta" href="#/wallpapers"><div><b>Phone wallpapers</b>'+
-      '<span>Turn any of our article and magazine covers into a phone wallpaper — pick a size, the RTFCLMGZN mark goes on, download free.</span></div>'+
-      '<span class="dc-go">Make a wallpaper →</span></a></section>';
+    /* ---- LEARN ---------------------------------------------------------- */
+    h+='<section id="res-learn"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Learn the field</div>'+
+      '<div class="res-tiles">'+
+      '<a class="res-tile" href="#/dictionary"><span class="rt-k">Dictionary</span><b>'+DICT.length+' terms that unlock any AI headline</b>'+
+        '<span class="rt-d">Token, agent, hallucination, mixture-of-experts, and the rest, each explained the way a person would explain it.</span>'+
+        '<span class="rt-go">Open the dictionary →</span></a>'+
+      '<a class="res-tile" href="#/read/primer"><span class="rt-k">Primer</span><b>Start from zero</b>'+
+        '<span class="rt-d">The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.</span>'+
+        '<span class="rt-go">Read The Primer →</span></a>'+
+      '<a class="res-tile" href="#/guides"><span class="rt-k">Guides</span><b>Practical, tested walk-throughs</b>'+
+        '<span class="rt-d">How to pick a model for a job, what the pricing actually means, and where the sharp edges are.</span>'+
+        '<span class="rt-go">Browse the guides →</span></a>'+
+      '</div></section>';
 
-    // 2) the follow-list categories
+    /* ---- FOLLOW --------------------------------------------------------- */
+    h+='<section id="res-follow"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Follow the field</div>'+
+      '<p class="res-lede">Primary sources first. These are the accounts and feeds the newsroom itself watches, so you can check our work against the same material.</p>';
     RES.forEach(function(cat,i){
-      h+='<section id="res-cat-'+i+'"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>'+esc(cat.title)+'</div>'+
-        '<p style="color:var(--muted);font-size:14px;margin:-8px 0 16px">'+esc(cat.desc)+'</p>'+
+      h+='<div class="labg"><div class="labg-h"><span class="labg-l">'+esc(cat.title)+'</span>'+
+        '<span class="labg-n">'+cat.items.length+'</span></div>'+
+        '<p class="res-sub">'+esc(cat.desc)+'</p>'+
         '<div class="res-grid">'+cat.items.map(function(it){
           return '<div class="res-card"><b>'+esc(it.name)+'</b><span>'+esc(it.desc)+'</span>'+
             '<div class="res-links">'+it.links.map(function(l){
               var ext=/^https?:/.test(l.url);
               return '<a href="'+esc(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
             }).join("")+'</div></div>';
-        }).join("")+'</div></section>';
+        }).join("")+'</div></div>';
     });
+    h+='</section>';
+
+    /* ---- MAKE ----------------------------------------------------------- */
+    h+='<section id="res-make"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Make something</div>'+
+      '<div class="res-tiles">'+
+      '<a class="res-tile" href="#/wallpapers"><span class="rt-k">Wallpapers</span><b>Turn any cover into a phone wallpaper</b>'+
+        '<span class="rt-d">Every article and magazine cover we have run, sized for your phone, with the mark applied. Free, no account.</span>'+
+        '<span class="rt-go">Make a wallpaper →</span></a>'+
+      '<a class="res-tile" href="#/claims"><span class="rt-k">Ledger</span><b>Everything we said we did not know</b>'+
+        '<span class="rt-d">Open questions from every story, with the exact document that would settle each one, and what happened when it arrived.</span>'+
+        '<span class="rt-go">Open the claims ledger →</span></a>'+
+      '<a class="res-tile" href="#/scoreboard"><span class="rt-k">Scoreboard</span><b>Strength against price, with the frontier drawn</b>'+
+        '<span class="rt-d">Which models are worth their listing, and which are beaten on capability and cost at the same time.</span>'+
+        '<span class="rt-go">Open the Scoreboard →</span></a>'+
+      '</div></section>';
 
     return h+'</div></div></div>';
   }
@@ -2058,6 +2770,13 @@
       (b.why?'<div class="bz-why"><b>WHY IT\'S BUZZING</b> '+fmt(b.why)+'</div>':'')+
       '<div class="bz-foot">'+(b.topics||[]).map(function(t){return '<span class="bz-tag">'+esc(t)+'</span>';}).join("")+
       '<a href="'+esc(b.url)+'" target="_blank" rel="noopener">original ↗</a></div>'+
+      // Only ever an EXACT source-url match: this is the newsroom saying it read
+      // and cited this exact post, not a guess that the subjects look similar.
+      (function(){
+        var cov=bzCoverage(b); if(!cov.length) return "";
+        return '<div class="bz-cover"><span class="bzc-k">We cited this</span>'+
+          cov.map(function(a){ return '<a href="#/article/'+esc(a.slug)+'">'+esc(a.title)+'</a>'; }).join("")+'</div>';
+      })()+
     '</div>';
   }
   function buzzDayBlock(day,items,isLatest){
@@ -2066,6 +2785,100 @@
       '<span class="bz-count">'+sorted.length+'</span></div>'+
       '<div class="buzz-grid">'+sorted.map(function(b,i){ return buzzCard(b, isLatest&&i===0&&(b.heat||0)>=80); }).join("")+'</div>';
   }
+  /* ---------- BUZZ INTELLIGENCE · all of it derived, none of it inferred ------
+     Three additions, and the constraint on every one of them was the same: the
+     feed may only assert things the data can actually support.
+
+     1. COVERAGE. A buzz card is linked to an article only on an EXACT normalised
+        URL match against that article's own source list. That is not a guess
+        about topical similarity, it is the newsroom saying "I read this exact
+        post and cited it". The inverse is never claimed: an unmatched card is
+        shown plainly, never labelled "not covered", because a story can be
+        covered from a different primary source.
+
+     2. MOMENTUM. Card volume per topic, last 7 days against the 7 before, from
+        the dates already on every card. It says what the feed is doing, which is
+        a real fact about the feed. It does NOT claim to measure the world.
+
+     3. FILTER. The topic list is the curated `topics` field, not keyword
+        matching, so a chip means what the desk meant by it. */
+
+  function bzNormUrl(u){
+    return String(u||"").replace(/^https?:\/\/(www\.)?/,"").replace(/[#?].*$/,"").replace(/\/+$/,"").toLowerCase();
+  }
+  var BZ_COVER=null;
+  function bzCoverageIndex(){
+    if(BZ_COVER) return BZ_COVER;
+    BZ_COVER={};
+    ARTICLES.concat(GUIDES).forEach(function(a){
+      (a.sources||[]).forEach(function(s){
+        var k=bzNormUrl(s&&s.url); if(!k) return;
+        (BZ_COVER[k]=BZ_COVER[k]||[]).push(a);
+      });
+    });
+    return BZ_COVER;
+  }
+  function bzCoverage(b){
+    var hits=bzCoverageIndex()[bzNormUrl(b.url)]||[];
+    // Newest first, and never more than two links out of one card.
+    return hits.slice().sort(function(x,y){ return new Date(y.publishedAt)-new Date(x.publishedAt); }).slice(0,2);
+  }
+
+  var BZ_FILTER="";                      // "" = everything
+  function bzDays(n){ var d=new Date(); d.setDate(d.getDate()-n); return d.toISOString().slice(0,10); }
+  function bzTopicStats(){
+    var w1=bzDays(7), w2=bzDays(14), now={}, prev={}, all={};
+    BUZZ.forEach(function(b){
+      (b.topics||[]).forEach(function(t){
+        all[t]=(all[t]||0)+1;
+        if(b.date>=w1) now[t]=(now[t]||0)+1;
+        else if(b.date>=w2) prev[t]=(prev[t]||0)+1;
+      });
+    });
+    return Object.keys(all).map(function(t){
+      return { t:t, all:all[t], now:now[t]||0, prev:prev[t]||0, d:(now[t]||0)-(prev[t]||0) };
+    }).sort(function(a,b){ return b.now-a.now || b.all-a.all; });
+  }
+
+  function buzzMomentumHTML(stats){
+    var moving=stats.filter(function(s){ return s.now>0 || s.prev>0; });
+    if(moving.length<3) return "";
+    var up=moving.filter(function(s){return s.d>0;}).sort(function(a,b){return b.d-a.d||b.now-a.now;}).slice(0,5);
+    var down=moving.filter(function(s){return s.d<0;}).sort(function(a,b){return a.d-b.d||b.prev-a.prev;}).slice(0,5);
+    var mx=Math.max.apply(null,moving.map(function(s){return Math.max(s.now,s.prev);}).concat([1]));
+    function row(s){
+      return '<li><button class="bzm-t" onclick="rtfcBuzzFilter(\''+esc(s.t).replace(/'/g,"\\'")+'\')">'+esc(s.t)+'</button>'+
+        '<span class="bzm-bars"><i class="bzm-prev" style="width:'+Math.round(s.prev/mx*100)+'%"></i>'+
+        '<i class="bzm-now" style="width:'+Math.round(s.now/mx*100)+'%"></i></span>'+
+        '<b class="'+(s.d>0?"up":(s.d<0?"down":""))+'">'+(s.d>0?"+":"")+s.d+'</b></li>';
+    }
+    if(!up.length && !down.length) return "";
+    return '<div class="bz-momentum">'+
+      '<div class="bzm-head"><b>What the feed is doing</b>'+
+        '<span>Cards per topic, last 7 days against the 7 before. This measures our feed, not the world, and it is computed from the cards themselves rather than asserted.</span></div>'+
+      '<div class="bzm-cols">'+
+        (up.length?'<div class="bzm-col"><div class="bzm-l">Heating up</div><ol class="bzm-list">'+up.map(row).join("")+'</ol></div>':'')+
+        (down.length?'<div class="bzm-col"><div class="bzm-l">Cooling off</div><ol class="bzm-list">'+down.map(row).join("")+'</ol></div>':'')+
+      '</div>'+
+      '<div class="bzm-key"><span><i class="bzm-sw prev"></i>previous 7 days</span><span><i class="bzm-sw now"></i>last 7 days</span></div>'+
+    '</div>';
+  }
+
+  function buzzFilterHTML(stats){
+    var top=stats.filter(function(s){return s.all>=2;}).slice(0,14);
+    if(top.length<4) return "";
+    return '<div class="bz-filters"><span class="bzf-l">Filter</span>'+
+      '<button class="bzf'+(BZ_FILTER?"":" on")+'" onclick="rtfcBuzzFilter(\'\')">Everything<em>'+BUZZ.length+'</em></button>'+
+      top.map(function(s){
+        return '<button class="bzf'+(BZ_FILTER===s.t?" on":"")+'" onclick="rtfcBuzzFilter(\''+esc(s.t).replace(/'/g,"\\'")+'\')">'+esc(s.t)+'<em>'+s.all+'</em></button>';
+      }).join("")+'</div>';
+  }
+  window.rtfcBuzzFilter=function(t){
+    BZ_FILTER=(BZ_FILTER===t)?"":t;
+    var app=document.getElementById("app");
+    if(app){ app.innerHTML=viewBuzz(); if(window.__motion) window.__motion(); window.scrollTo({top:0,behavior:"smooth"}); }
+  };
+
   function viewBuzz(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><span class="live-dot"></span>The Buzz</div>'+
       '<h1>What the feed is arguing about</h1>'+
@@ -2073,8 +2886,19 @@
     if(!BUZZ.length){
       return h+'<p style="color:var(--muted)">The next Buzz run fills this page.</p></div>';
     }
+    var stats=bzTopicStats();
+    h+=buzzMomentumHTML(stats);
+    h+=buzzFilterHTML(stats);
+    var FEED=BZ_FILTER
+      ? BUZZ.filter(function(b){ return (b.topics||[]).indexOf(BZ_FILTER)>=0; })
+      : BUZZ;
+    if(BZ_FILTER){
+      h+='<div class="bz-fnote">Showing <b>'+FEED.length+'</b> card'+(FEED.length===1?'':'s')+' tagged <b>'+esc(BZ_FILTER)+'</b>. '+
+         '<button class="bz-clear" onclick="rtfcBuzzFilter(\'\')">Clear filter</button></div>';
+      if(!FEED.length) return h+'<p style="color:var(--muted)">Nothing under that tag yet.</p></div>';
+    }
     var byDay={};
-    BUZZ.forEach(function(b){ (byDay[b.date]=byDay[b.date]||[]).push(b); });
+    FEED.forEach(function(b){ (byDay[b.date]=byDay[b.date]||[]).push(b); });
     var days=Object.keys(byDay).sort().reverse();
     var cut=new Date(); cut.setDate(cut.getDate()-7);
     var cutStr=cut.toISOString().slice(0,10);
@@ -2279,7 +3103,11 @@
     var a=article2raw(id); if(!a) return;
     if(AP.kind==="article" && AP.id===id && (AP.playing||AP.paused)){ window.rtfcApToggle(); return; }
     var segs=[{t:a.title, text:cleanSpeech(a.title+". "+a.dek)}];
-    a.body.forEach(function(b){ if(b.text) segs.push({t:null, text:cleanSpeech(b.text)}); });
+    a.body.forEach(function(b){
+      if(b.text){ segs.push({t:null, text:cleanSpeech(b.text)}); return; }
+      var sp=spokenComponent(b);            // instruction blocks carry no top-level text
+      if(sp) segs.push({t:null, text:cleanSpeech(sp)});
+    });
     if(a.apply&&a.apply.length){ segs.push({t:null, text:cleanSpeech(applyLabel(a)+". "+a.apply.map(function(x){return x.label+" "+x.text;}).join(" "))}); }
     apLoad("article", id, a.slug, a.title, "#/article/"+a.slug, segs);
     apStart();
@@ -2520,88 +3348,234 @@
     if(d<86400) return Math.round(d/3600)+"h ago";
     return Math.round(d/86400)+"d ago";
   }
-  /* ---------- READER MAP · privacy-first visitor heatmap ----------
-     Country-level only, cookieless: on Cloudflare Pages we read the edge's own
-     /cdn-cgi/trace (no third party, no tracking cookie) and tally visits per country
-     in localStorage. NEVER fabricated — an empty map is the honest state until we're live. */
-  var GEO=[["US",39,-98],["CA",56,-106],["MX",23,-102],["BR",-14,-51],["AR",-38,-63],["GB",54,-2],["IE",53,-8],
-    ["FR",46,2],["DE",51,10],["ES",40,-4],["IT",42,12],["NL",52,5],["SE",62,15],["NO",61,8],["FI",64,26],["DK",56,9],
-    ["PL",52,19],["CZ",49,15],["AT",47,14],["CH",47,8],["BE",50,4],["PT",39,-8],["GR",39,22],["RO",46,25],["HU",47,19],
-    ["RU",61,105],["UA",49,31],["TR",39,35],["IL",31,34],["AE",24,54],["SA",24,45],["EG",26,30],["NG",9,8],["ZA",-30,25],
-    ["KE",0,38],["IN",22,79],["CN",35,104],["JP",36,138],["KR",36,128],["ID",-2,118],["SG",1,104],["PH",13,122],
-    ["VN",16,108],["TH",15,101],["PK",30,70],["BD",24,90],["AU",-25,134],["NZ",-41,174],["CO",4,-73],["CL",-35,-71],["MY",4,102],["TW",24,121]];
-  var GEO_NAME={US:"United States",CA:"Canada",MX:"Mexico",BR:"Brazil",AR:"Argentina",GB:"United Kingdom",IE:"Ireland",FR:"France",DE:"Germany",ES:"Spain",IT:"Italy",NL:"Netherlands",SE:"Sweden",NO:"Norway",FI:"Finland",DK:"Denmark",PL:"Poland",CZ:"Czechia",AT:"Austria",CH:"Switzerland",BE:"Belgium",PT:"Portugal",GR:"Greece",RO:"Romania",HU:"Hungary",RU:"Russia",UA:"Ukraine",TR:"Türkiye",IL:"Israel",AE:"UAE",SA:"Saudi Arabia",EG:"Egypt",NG:"Nigeria",ZA:"South Africa",KE:"Kenya",IN:"India",CN:"China",JP:"Japan",KR:"South Korea",ID:"Indonesia",SG:"Singapore",PH:"Philippines",VN:"Vietnam",TH:"Thailand",PK:"Pakistan",BD:"Bangladesh",AU:"Australia",NZ:"New Zealand",CO:"Colombia",CL:"Chile",MY:"Malaysia",TW:"Taiwan"};
-  // Heat model: a visit makes its country flare to full brightness, then fade to zero over 30 days,
-  // so the map always shows WHERE WE'VE BEEN READ MOST RECENTLY. Every country carries a faint
-  // ambient glow so the whole world stays lit at rest. Real counts are never fabricated.
-  var GEO_MS30 = 30*864e5;              // 30-day fade window in ms
-  var GEO_AMBIENT = 0.14;              // resting glow every country always shows
-  function geoStore(){
+  /* ---------- READER MAP · a real map, with real worldwide numbers ----------
+
+     WHAT THIS REPLACED, AND WHY. The previous version drew latitude/longitude dots
+     on an empty graticule -- no coastlines, no borders, nothing that read as a map --
+     and, worse, it counted visits in the VISITOR'S OWN localStorage. That made it
+     structurally incapable of showing what its own heading claimed: every reader saw
+     exactly one lit country, their own, under the words "where the world reads from".
+
+     Now the count lives once, server-side, in the D1 database that already backs
+     accounts (functions/api/geo.js). The edge reports the country; a daily-rotating
+     one-way fingerprint stops a reload from counting twice; nothing but a country
+     code, a date and an integer is ever stored.
+
+     The honest-fallback rule still governs. If /api/geo is missing or D1 is not
+     bound, we do NOT silently draw the old lie -- the map switches to a state that
+     says, in the caption, that it is showing this browser only. A map that overstates
+     its own reach is worse than no map on a publication whose whole argument is that
+     you can check everything.
+
+     Geometry is Natural Earth country polygons in web/data/worldmap.js, loaded lazily
+     because 48KB has no business on the other thirty routes. */
+
+  var RM = { phase:"idle", geo:null, data:null, mode:"", you:"", err:"", sel:"" };
+  var RM_WINDOW = 30;   // the recency window the API aggregates over, in days
+
+  // Match the cache-buster the page was served with, so a deploy can never leave a
+  // stale worldmap.js pinned in cache against a fresh app.js.
+  function rmCacheBust(){
+    var s=document.querySelector('script[src*="assets/app.js"]');
+    var m=s&&/\?(b=\d+)/.exec(s.getAttribute("src")||"");
+    return m?("?"+m[1]):"";
+  }
+  function rmGeometry(cb){
+    if(window.RTFC_WORLDMAP){ cb(window.RTFC_WORLDMAP); return; }
+    if(RM.phase==="geo"){ setTimeout(function(){ rmGeometry(cb); },120); return; }
+    RM.phase="geo";
+    var el=document.createElement("script");
+    el.src="data/worldmap.js"+rmCacheBust();
+    el.onload=function(){ RM.phase="idle"; cb(window.RTFC_WORLDMAP||null); };
+    el.onerror=function(){ RM.phase="idle"; cb(null); };
+    document.head.appendChild(el);
+  }
+
+  /* Local tally. This is now ONLY the fallback for when the API is unavailable, and
+     it is labelled as such wherever it is used. It is never merged into the global
+     numbers -- mixing "the world" with "this browser" is exactly the confusion the
+     rewrite exists to end. */
+  function geoLocal(){
     var raw; try{ raw=JSON.parse(localStorage.getItem("rtfc-geo")||"{}"); }catch(e){ return {}; }
     var g={};
     for(var k in raw){ if(!raw.hasOwnProperty(k)) continue;
       var v=raw[k];
-      if(typeof v==="number"){ g[k]={n:v,last:0}; }                     // legacy count → no recency
-      else if(v && typeof v==="object"){ g[k]={n:v.n||0,last:v.last||0}; }
+      if(typeof v==="number") g[k]={n:v,r:v,last:""};
+      else if(v&&typeof v==="object") g[k]={n:v.n||0,r:v.n||0,last:v.last?new Date(v.last).toISOString().slice(0,10):""};
     }
     return g;
   }
-  function geoHeat(rec){                 // recency heat 0..1: 1 on a fresh hit, 0 at 30 days
-    if(!rec || !rec.last) return 0;
-    var f = 1 - (Date.now()-rec.last)/GEO_MS30;
-    return f<=0 ? 0 : Math.sqrt(f);      // sqrt keeps a country lit most of the window, then drops off
+  function geoLocalBump(cc){
+    try{
+      var raw=JSON.parse(localStorage.getItem("rtfc-geo")||"{}"), prev=raw[cc];
+      var n=(typeof prev==="number"?prev:(prev&&prev.n)||0)+1;
+      raw[cc]={n:n,last:Date.now()};
+      localStorage.setItem("rtfc-geo",JSON.stringify(raw));
+    }catch(e){}
   }
-  function geoAgo(ms){
-    if(!ms) return "—";
-    var s=(Date.now()-ms)/1000;
-    if(s<90) return "just now";
-    if(s<3600) return Math.round(s/60)+"m ago";
-    if(s<86400) return Math.round(s/3600)+"h ago";
-    return Math.round(s/86400)+"d ago";
-  }
+
+  /* Called once at boot. POSTs at most once per browser session (the session guard
+     is the client half of the dedup; the server half is the fingerprint). */
   function logVisit(){
-    try{ if(sessionStorage.getItem("rtfc-geo-hit")) return; }catch(e){}
     if(!window.fetch) return;
+    var done=false;
+    try{ done=!!sessionStorage.getItem("rtfc-geo-hit"); }catch(e){}
+    if(done) return;
+    try{ sessionStorage.setItem("rtfc-geo-hit","1"); }catch(e){}
+    fetch("/api/geo",{method:"POST",headers:{"content-type":"application/json"},body:"{}"})
+      .then(function(r){ return r.ok?r.json():null; })
+      .then(function(j){
+        if(j&&j.ok){ RM.data=j; RM.mode="live"; RM.you=j.you||""; if(document.getElementById("rm-wrap")) rmPaint(); return; }
+        rmLocalTrace();                      // API not configured -- keep the honest local tally alive
+      })
+      .catch(function(){ rmLocalTrace(); });
+  }
+  // Fallback path only: ask Cloudflare's own edge trace for this visitor's country
+  // (no third party, no cookie) so the local-only map still knows where it is.
+  function rmLocalTrace(){
     fetch("/cdn-cgi/trace").then(function(r){ return r.ok?r.text():""; }).then(function(t){
       var m=/(?:^|\n)loc=([A-Z]{2})/.exec(t||""); if(!m) return;
-      var cc=m[1], g=geoStore(), prev=g[cc]||{n:0};
-      g[cc]={ n:(prev.n||0)+1, last:Date.now() };   // flare this country to full heat
-      try{ localStorage.setItem("rtfc-geo",JSON.stringify(g)); sessionStorage.setItem("rtfc-geo-hit","1"); }catch(e){}
+      RM.you=m[1]; geoLocalBump(m[1]);
+      if(document.getElementById("rm-wrap")) rmPaint();
     }).catch(function(){});
   }
+
+  function rmLoad(cb){
+    fetch("/api/geo").then(function(r){ return r.ok?r.json():null; }).then(function(j){
+      if(j&&j.ok){ RM.data=j; RM.mode="live"; }
+      else { RM.mode="local"; }
+      cb();
+    }).catch(function(){ RM.mode="local"; cb(); });
+  }
+
+  /* Five-step sequential ramp, one hue, validated against both surfaces with the
+     dataviz ordinal checks (monotone lightness, adjacent dL >= 0.06, light end
+     clears 2:1 on surface, single hue). Land with NO readers is not a step on this
+     ramp -- it is the substrate, and stays deliberately recessive. */
+  function rmStep(n,max){
+    if(!(n>0)) return 0;
+    if(max<=1) return 5;
+    var f=Math.log(1+n)/Math.log(1+max);
+    return Math.max(1,Math.min(5,Math.ceil(f*5)));
+  }
+  function rmCountries(){
+    if(RM.mode==="live" && RM.data && RM.data.countries) return RM.data.countries;
+    return geoLocal();
+  }
+
   function readerMapHTML(){
-    var g=geoStore(), W=1000, H=500, ccs=Object.keys(g);
-    var total=ccs.reduce(function(n,k){return n+(g[k].n||0);},0);
-    var litNow=ccs.filter(function(k){return geoHeat(g[k])>0;});
-    function px(lon){ return ((lon+180)/360)*W; }
-    function py(lat){ return ((90-lat)/180)*H; }
-    var grat=""; for(var la=-60;la<=60;la+=30){ grat+='<line x1="0" y1="'+py(la).toFixed(0)+'" x2="'+W+'" y2="'+py(la).toFixed(0)+'" stroke="#8b7cf7" stroke-width="1" opacity="'+(la===0?0.18:0.08)+'"/>'; }
-    for(var lo=-120;lo<=120;lo+=60){ grat+='<line x1="'+px(lo).toFixed(0)+'" y1="0" x2="'+px(lo).toFixed(0)+'" y2="'+H+'" stroke="#8b7cf7" stroke-width="1" opacity="0.07"/>'; }
-    // every country always lit (ambient); recent activity flares hot and fades over 30 days
-    var dots=GEO.map(function(c){
-      var cc=c[0], rec=g[cc], heat=geoHeat(rec), D=Math.max(GEO_AMBIENT,heat);
-      var x=px(c[2]).toFixed(0), y=py(c[1]).toFixed(0);
-      var r=(3+D*13).toFixed(1), op=(0.16+D*0.8).toFixed(2);
-      var hot=heat>0.62;
-      var fill = hot ? "url(#rmhot)" : (heat>0 ? "url(#rmglow)" : "#8b7cf7");
-      var halo='<circle cx="'+x+'" cy="'+y+'" r="'+(r*2.2).toFixed(1)+'" fill="'+(hot?"#ffcf9a":"#8b7cf7")+'" opacity="'+(0.05+D*0.14).toFixed(2)+'"/>';
-      var pulse = heat>0.8 ? '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="none" stroke="#ffe6c2" stroke-width="1.4" opacity="0.7"><animate attributeName="r" values="'+r+';'+(r*3).toFixed(1)+'" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.65;0" dur="2.6s" repeatCount="indefinite"/></circle>' : '';
-      var ttl = rec && rec.n ? esc(GEO_NAME[cc]||cc)+' · '+rec.n+' visit'+(rec.n===1?"":"s")+(heat>0?' · '+geoAgo(rec.last):' · cooled') : esc(GEO_NAME[cc]||cc)+' · quiet';
-      return '<g>'+halo+pulse+'<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'" opacity="'+op+'"><title>'+ttl+'</title></circle></g>';
-    }).join("");
-    var hotList=litNow.sort(function(a,b){return geoHeat(g[b])-geoHeat(g[a]);}).slice(0,6).map(function(cc){
-      var h=geoHeat(g[cc]);
-      return '<li><span class="rm-cc">'+esc(GEO_NAME[cc]||cc)+'</span><span class="rm-bar"><i style="width:'+Math.round(h*100)+'%"></i></span><b>'+geoAgo(g[cc].last)+'</b></li>';
-    }).join("");
-    var legend='<div class="rm-legend"><span><i class="rm-lg hot"></i>just active</span><span><i class="rm-lg warm"></i>cooling</span><span><i class="rm-lg amb"></i>quiet · always lit</span><span class="rm-fade">a visit glows bright, then fades over 30 days</span></div>';
-    var body = total
-      ? ('<ol class="rm-top">'+hotList+'</ol><div class="rm-total">'+total+' visit'+(total===1?"":"s")+' · '+litNow.length+' countr'+(litNow.length===1?"y":"ies")+' hot now · recency-weighted, country-level, cookieless</div>'+legend)
-      : ('<div class="rm-empty">The world glows softly even at rest. Once RTFCLMGZN is public, each visit <b>flares bright the instant it lands and fades over the next 30 days</b> — so the map always shows where we\'ve been read most recently. Country-level only, no tracking cookies, nothing fabricated.</div>'+legend);
+    // Shell only. Real numbers arrive from /api/geo and the geometry is fetched
+    // lazily, so the first paint must stand on its own rather than flash an empty
+    // map -- initReaderMap() fills #rm-wrap in place.
     return '<div class="kicker" style="margin-top:34px"><span class="dotc" style="background:var(--accent)"></span>Reader map · where the world reads from</div>'+
-      '<div class="readermap"><svg viewBox="0 0 '+W+' '+H+'" class="rm-svg" preserveAspectRatio="xMidYMid meet">'+
-      '<defs><radialGradient id="rmglow"><stop offset="0%" stop-color="#c9b8ff"/><stop offset="60%" stop-color="#8b7cf7"/><stop offset="100%" stop-color="#5ac8b0"/></radialGradient>'+
-      '<radialGradient id="rmhot"><stop offset="0%" stop-color="#fff7e6"/><stop offset="45%" stop-color="#ffb85c"/><stop offset="100%" stop-color="#ff5a8b"/></radialGradient></defs>'+
-      grat+dots+'</svg>'+body+'</div>';
+      '<div class="readermap" id="rm-wrap"><div class="rm-load">Loading the map…</div></div>';
+  }
+
+  function rmPaint(){
+    var wrap=document.getElementById("rm-wrap"); if(!wrap) return;
+    var W=window.RTFC_WORLDMAP;
+    if(!W){ wrap.innerHTML='<div class="rm-load">The map geometry didn’t load. Everything else on this page is unaffected.</div>'; return; }
+
+    var C=rmCountries(), live=(RM.mode==="live");
+    var codes=Object.keys(C).filter(function(k){ return (C[k].n||0)>0; });
+    var total=codes.reduce(function(n,k){ return n+(C[k].n||0); },0);
+    var recent=codes.reduce(function(n,k){ return n+(C[k].r||0); },0);
+    var maxN=codes.reduce(function(m,k){ return Math.max(m,C[k].n||0); },0);
+
+    // ---- the map itself -------------------------------------------------
+    var paths=[], meta=W.meta;
+    for(var cc in W.paths){ if(!W.paths.hasOwnProperty(cc)) continue;
+      var m=meta[cc]||{}, rec=C[cc], n=rec?(rec.n||0):0, s=rmStep(n,maxN);
+      var cls="rmc s"+s+(cc===RM.you?" rm-you":"")+(cc===RM.sel?" rm-sel":"");
+      var lbl=(m.n||cc)+(n?(" · "+n+" visit"+(n===1?"":"s")):" · no visits recorded");
+      paths.push('<path class="'+cls+'" d="'+W.paths[cc]+'" data-cc="'+cc+'" tabindex="'+(n?"0":"-1")+'" role="img" aria-label="'+esc(lbl)+'"><title>'+esc(lbl)+'</title></path>');
+    }
+    // Direct labels on the top three, so identity never rests on colour alone.
+    var top=codes.slice().sort(function(a,b){ return (C[b].n||0)-(C[a].n||0); });
+    var labels=top.slice(0,3).map(function(cc){
+      var m=meta[cc]; if(!m) return "";
+      return '<g class="rml"><text x="'+m.x+'" y="'+m.y+'" class="rml-t">'+esc(m.n)+'</text>'+
+             '<text x="'+m.x+'" y="'+(m.y+11)+'" class="rml-n">'+(C[cc].n||0)+'</text></g>';
+    }).join("");
+
+    var svg='<svg class="rm-svg" viewBox="0 0 '+W.w+' '+W.h+'" preserveAspectRatio="xMidYMid meet" role="group" aria-label="World map of visits by country">'+
+      paths.join("")+labels+'</svg>';
+
+    // ---- continent rollup: the regional read the old version had no way to give --
+    var byCont={};
+    codes.forEach(function(cc){
+      var m=meta[cc]; if(!m) return;
+      byCont[m.c]=(byCont[m.c]||0)+(C[cc].n||0);
+    });
+    var contRows=Object.keys(byCont).sort(function(a,b){ return byCont[b]-byCont[a]; }).map(function(k){
+      var pct=total?Math.round(byCont[k]/total*100):0;
+      return '<li><span class="rmc-n">'+esc(k)+'</span><span class="rmc-bar"><i style="width:'+pct+'%"></i></span><b>'+pct+'%</b></li>';
+    }).join("");
+
+    var topRows=top.slice(0,8).map(function(cc){
+      var m=meta[cc]||{}, n=C[cc].n||0, pct=total?Math.round(n/total*100):0;
+      return '<li'+(cc===RM.you?' class="is-you"':'')+'><span class="rm-cc">'+esc(m.n||cc)+(cc===RM.you?'<em>you</em>':'')+'</span>'+
+        '<span class="rm-bar"><i style="width:'+(maxN?Math.round(n/maxN*100):0)+'%"></i></span><b>'+n+'</b><span class="rm-pct">'+pct+'%</span></li>';
+    }).join("");
+
+    // ---- legend, keyed to actual visit counts rather than abstract "heat" -------
+    var legend='<div class="rm-legend"><span class="rml-k">visits</span>'+
+      [1,2,3,4,5].map(function(s){
+        var lo=Math.max(1,Math.round(Math.pow(1+maxN,(s-1)/5)-1)+(s>1?1:0));
+        var hi=Math.round(Math.pow(1+maxN,s/5)-1);
+        return '<span class="rm-lgi"><i class="rm-sw s'+s+'"></i>'+(maxN?(hi<=lo?String(lo):lo+"–"+hi):"—")+'</span>';
+      }).join("")+
+      '<span class="rm-lgi"><i class="rm-sw s0"></i>none yet</span></div>';
+
+    // ---- the caption. This is the part that must never overstate. --------------
+    var cap;
+    if(live && total){
+      cap='<b>'+total+' visit'+(total===1?"":"s")+'</b> from <b>'+codes.length+' countr'+(codes.length===1?"y":"ies")+'</b>'+
+          (recent?(' · '+recent+' in the last '+RM_WINDOW+' days'):'')+
+          (RM.data&&RM.data.firstDay?(' · counting since '+esc(RM.data.firstDay)):'')+
+          '. Counted once per visitor per day at Cloudflare’s edge. Country code, date, and a running total is the entire record: no IP is stored, no cookie is set, and a signed-in reader looks identical to an anonymous one.';
+    } else if(live){
+      cap='No visits recorded yet. The counter is live and every country above is drawn from real geography — it fills in as people arrive, and nothing here is seeded or simulated.';
+    } else {
+      cap='<b>Showing this browser only.</b> The worldwide counter (<code>/api/geo</code>) isn’t reachable right now, so rather than draw a global map from one machine’s history, the map is telling you exactly what it can see. Country-level, stored on your device, never sent anywhere.';
+    }
+
+    wrap.innerHTML=
+      '<div class="rm-figure">'+svg+'<div class="rm-info" id="rm-info" aria-live="polite">'+
+        (RM.you&&meta[RM.you]?('Reading from <b>'+esc(meta[RM.you].n)+'</b>'):'Hover or tap a country')+
+      '</div></div>'+
+      legend+
+      '<div class="rm-panels">'+
+        '<div class="rm-panel"><div class="rm-pt">Most-read countries</div><ol class="rm-top">'+(topRows||'<li class="rm-none">Nothing recorded yet</li>')+'</ol></div>'+
+        '<div class="rm-panel"><div class="rm-pt">By continent</div><ol class="rm-conts">'+(contRows||'<li class="rm-none">Nothing recorded yet</li>')+'</ol></div>'+
+      '</div>'+
+      '<div class="rm-cap">'+cap+'</div>';
+
+    // Hover/focus/tap all drive the same one-line readout: no floating tooltip to
+    // mis-position on a phone, and it works from the keyboard.
+    var info=document.getElementById("rm-info");
+    function say(cc){
+      var m=meta[cc]; if(!m||!info) return;
+      var n=(C[cc]&&C[cc].n)||0;
+      info.innerHTML='<b>'+esc(m.n)+'</b> · '+esc(m.c)+' · '+(n?(n+' visit'+(n===1?"":"s")):'no visits recorded');
+    }
+    wrap.querySelectorAll("path.rmc").forEach(function(p){
+      p.addEventListener("mouseenter",function(){ say(p.getAttribute("data-cc")); });
+      p.addEventListener("focus",function(){ say(p.getAttribute("data-cc")); });
+      p.addEventListener("click",function(){ RM.sel=p.getAttribute("data-cc"); say(RM.sel);
+        wrap.querySelectorAll("path.rm-sel").forEach(function(o){ o.classList.remove("rm-sel"); });
+        p.classList.add("rm-sel"); });
+    });
+  }
+
+  function initReaderMap(){
+    var wrap=document.getElementById("rm-wrap"); if(!wrap) return;
+    if(wrap.getAttribute("data-init")==="1"){ rmPaint(); return; }
+    wrap.setAttribute("data-init","1");
+    rmGeometry(function(){
+      if(RM.data){ rmPaint(); return; }              // POST already answered at boot
+      rmLoad(function(){ rmPaint(); });
+    });
   }
   function viewPulse(){
     var now=new Date();
@@ -2681,6 +3655,135 @@
   /* ---------- THE SCOREBOARD ---------- */
   var SB_SORT="score";
   window.rtfcSbSort=function(k){ SB_SORT=k; var app=document.getElementById("app"); if(app) app.innerHTML=viewScoreboard(); };
+  /* ---------- THE FRONTIER · price against strength, with the Pareto boundary ----
+     The bar pairs above answer "which is strongest" and "which is best value" one
+     model at a time. They cannot answer the question a buyer actually has, which is
+     positional: given what I'm willing to spend, what is the most capable thing I
+     can get, and what am I giving up by going cheaper?
+
+     A scatter with the efficient frontier drawn answers that in one look. A model is
+     ON the frontier when nothing else on the board is BOTH at least as strong AND at
+     least as cheap. Everything below the staircase is dominated: there is a listed
+     model that beats it on price and on score at the same time, which is a hard
+     verdict the bar chart can state about no one.
+
+     Zero tokens. Every number is already in scoreboard.js; the geometry is derived
+     at render, so the chart cannot go stale relative to the board beneath it. */
+
+  function frontierSet(rows){
+    // Pareto-optimal for (max score, min output price). O(n^2) over ~15 rows.
+    return rows.filter(function(r){
+      return !rows.some(function(o){
+        if(o===r) return false;
+        var noWorse = o.score>=r.score && o.pout<=r.pout;
+        var better  = o.score>r.score || o.pout<r.pout;
+        return noWorse && better;
+      });
+    }).sort(function(a,b){ return a.pout-b.pout; });
+  }
+
+  function frontierHTML(scored){
+    if(scored.length<4) return "";                    // below this a scatter says nothing a list doesn't
+    var W=720,H=390,ML=52,MR=18,MT=16,MB=52;
+    var pw=W-ML-MR, ph=H-MT-MB;
+
+    var prices=scored.map(function(r){return r.pout;}), sc=scored.map(function(r){return r.score;});
+    var xlo=Math.min.apply(null,prices)*0.72, xhi=Math.max.apply(null,prices)*1.42;
+    var ylo=Math.floor((Math.min.apply(null,sc)-3)/2)*2, yhi=Math.ceil((Math.max.apply(null,sc)+3)/2)*2;
+    var lx0=Math.log(xlo), lx1=Math.log(xhi);
+    function X(p){ return ML + (Math.log(p)-lx0)/(lx1-lx0)*pw; }
+    function Y(s){ return MT + (1-(s-ylo)/(yhi-ylo))*ph; }
+
+    var front=frontierSet(scored), onFront={};
+    front.forEach(function(r){ onFront[r.model+"|"+(r.mode||"")]=1; });
+    function isFront(r){ return !!onFront[r.model+"|"+(r.mode||"")]; }
+
+    // ---- axes. Log x, so the ticks are the round numbers a price list uses. ----
+    var xt=[0.5,1,2,3,5,10,20,30,50,100,200].filter(function(v){ return v>=xlo && v<=xhi; });
+    if(xt.length<3) xt=[xlo,Math.sqrt(xlo*xhi),xhi];
+    var grid=xt.map(function(v){
+      return '<line class="fr-g" x1="'+X(v).toFixed(1)+'" y1="'+MT+'" x2="'+X(v).toFixed(1)+'" y2="'+(MT+ph)+'"/>'+
+             '<text class="fr-ax" x="'+X(v).toFixed(1)+'" y="'+(MT+ph+20)+'" text-anchor="middle">$'+v+'</text>';
+    }).join("");
+    var yt=[]; for(var s=ylo;s<=yhi;s+=Math.max(2,Math.round((yhi-ylo)/5/2)*2)) yt.push(s);
+    grid+=yt.map(function(v){
+      return '<line class="fr-g" x1="'+ML+'" y1="'+Y(v).toFixed(1)+'" x2="'+(ML+pw)+'" y2="'+Y(v).toFixed(1)+'"/>'+
+             '<text class="fr-ax" x="'+(ML-9)+'" y="'+(Y(v)+4).toFixed(1)+'" text-anchor="end">'+v+'</text>';
+    }).join("");
+
+    // ---- the frontier staircase. Steps, not a smoothed line: between two listed
+    // models nothing exists, and a diagonal would imply something does. ---------
+    var stair="";
+    if(front.length>1){
+      var d="M"+X(front[0].pout).toFixed(1)+","+Y(front[0].score).toFixed(1);
+      for(var i=1;i<front.length;i++){
+        d+="H"+X(front[i].pout).toFixed(1)+"V"+Y(front[i].score).toFixed(1);
+      }
+      stair='<path class="fr-stair" d="'+d+'"/>';
+    }
+
+    // ---- marks. Dominated points first so the frontier always sits on top. ----
+    function dot(r,front){
+      var x=X(r.pout).toFixed(1), y=Y(r.score).toFixed(1);
+      var lab=r.model+(r.mode?(" · "+r.mode):"");
+      return '<g class="fr-pt'+(front?" is-front":"")+'" data-lab="'+esc(lab)+'" data-lab2="'+esc(r.lab)+'" data-p="'+r.pout+'" data-s="'+r.score+'" tabindex="0" role="img" aria-label="'+esc(lab+", "+r.score+" points, $"+r.pout+" per million output tokens")+'">'+
+        '<circle class="fr-hit" cx="'+x+'" cy="'+y+'" r="15"/>'+
+        '<circle class="fr-dot" cx="'+x+'" cy="'+y+'" r="'+(front?7:5.5)+'"/>'+
+        '<title>'+esc(lab+" — "+r.score+" pts at $"+r.pout+"/M out")+'</title></g>';
+    }
+    var marks=scored.filter(function(r){return !isFront(r);}).map(function(r){return dot(r,false);}).join("")+
+              front.map(function(r){return dot(r,true);}).join("");
+
+    // ---- direct labels on the frontier only. This is also the relief channel the
+    // palette validator requires for the gold in light mode. Alternate above/below
+    // so two adjacent frontier points can't stack their text. ------------------
+    var labels=front.map(function(r,i){
+      var x=X(r.pout), y=Y(r.score), up=(i%2===0);
+      var ty=up?(y-14):(y+22);
+      var anchor = x>ML+pw-90 ? "end" : (x<ML+70 ? "start" : "middle");
+      var dx = anchor==="end" ? -2 : (anchor==="start" ? 2 : 0);
+      return '<text class="fr-lab" x="'+(x+dx).toFixed(1)+'" y="'+ty.toFixed(1)+'" text-anchor="'+anchor+'">'+esc(r.model)+'</text>';
+    }).join("");
+
+    var dominated=scored.length-front.length;
+    var cheapestFront=front[0], strongestFront=front[front.length-1];
+
+    return '<div class="fr-wrap">'+
+      '<div class="fr-head"><div><b>The efficient frontier</b><span>Nothing on this board is both cheaper and stronger than a model on the staircase. Everything under it is beaten on both counts at once.</span></div></div>'+
+      '<div class="fr-legend"><span><i class="fr-sw front"></i>on the frontier · '+front.length+'</span>'+
+        '<span><i class="fr-sw dom"></i>beaten on price <em>and</em> strength · '+dominated+'</span>'+
+        '<span class="fr-axl">↑ stronger · → more expensive per million output tokens</span></div>'+
+      '<div class="fr-plot"><svg viewBox="0 0 '+W+' '+H+'" class="fr-svg" role="group" aria-label="Independent index score against output price, log scale, with the efficient frontier">'+
+        grid+stair+marks+labels+
+        '<text class="fr-axt" x="'+(ML+pw/2)+'" y="'+(H-8)+'" text-anchor="middle">output price · $ per million tokens · log scale</text>'+
+        '<text class="fr-axt" transform="translate(13,'+(MT+ph/2)+') rotate(-90)" text-anchor="middle">independent index score</text>'+
+      '</svg></div>'+
+      '<div class="fr-read" id="fr-read" aria-live="polite">Hover or tap a point for its numbers.</div>'+
+      '<p class="fr-cap"><b>'+front.length+' of '+scored.length+'</b> scored models sit on the frontier'+
+        (cheapestFront&&strongestFront&&cheapestFront!==strongestFront
+          ? (', from '+esc(cheapestFront.model)+' at '+priceStr(cheapestFront,"out")+'/M ('+cheapestFront.score+' pts) up to '+esc(strongestFront.model)+' at '+priceStr(strongestFront,"out")+'/M ('+strongestFront.score+' pts)')
+          : '')+
+        '. The other '+dominated+' are dominated: for each one there is a model on this board that costs less <em>and</em> scores higher, so paying for it buys nothing the board can measure. '+
+        'Prices are list output prices; a model can still earn its place on latency, context length, or a licence the index does not score.</p>'+
+    '</div>';
+  }
+
+  function initFrontier(){
+    var read=document.getElementById("fr-read"); if(!read) return;
+    if(read.getAttribute("data-init")==="1") return;
+    read.setAttribute("data-init","1");
+    document.querySelectorAll(".fr-pt").forEach(function(g){
+      function say(){
+        read.innerHTML='<b>'+esc(g.getAttribute("data-lab"))+'</b> · '+esc(g.getAttribute("data-lab2"))+
+          ' · <b>'+g.getAttribute("data-s")+'</b> pts at <b>$'+g.getAttribute("data-p")+'</b>/M out'+
+          (g.classList.contains("is-front")?' · <em>on the frontier</em>':' · beaten on both counts');
+      }
+      g.addEventListener("mouseenter",say);
+      g.addEventListener("focus",say);
+      g.addEventListener("click",say);
+    });
+  }
+
   function priceStr(r,which){ var p=which==="in"?r.pin:r.pout; return (r.est?"~$":"$")+p; }
   function viewScoreboard(){
     var SB=window.RTFC_SCOREBOARD||{updated:"",rows:[]};
@@ -2715,6 +3818,8 @@
     if(smartest && priciest && smartest!==priciest && smartest.pout<priciest.pout){
       h+='<p class="sb-aha"><b>'+esc(smartest.model)+'</b> tops the board at <b>'+smartest.score+'</b> while listing around <b>'+(Math.round(priciest.pout/smartest.pout*10)/10)+'×</b> cheaper on output than '+esc(priciest.model)+' ('+smartest.score+' vs '+priciest.score+'). Stronger and cheaper at once is rare — that gap is the story this board exists to show.</p>';
     }
+    // the frontier scatter -- the positional read the bars cannot give
+    h+=frontierHTML(scored);
     // sort toggle
     h+='<div class="sb-sort"><span>Sort by</span>'+
       ['score:Smartest','value:Best value','cost:Cheapest'].map(function(o){var k=o.split(":")[0];
@@ -2824,7 +3929,7 @@
       items.push({t:a.title, k:(a.section==="Guide"?"Guide":a.section), href:"#/article/"+a.slug, s:(a.title+" "+a.section+" "+(a.dek||"")).toLowerCase()});
     });
     [["The Daily Briefing (listen)","Audio","#/briefing"],["Company dossiers","Dossiers","#/companies"],["The AI Dictionary","Learn","#/dictionary"],
-     ["The Prediction Ledger","Trust","#/predictions"],
+     ["The Prediction Ledger","Trust","#/predictions"],["The Claims Ledger","Trust","#/claims"],
      ["The Control Room","Live","#/pulse"],["The Scoreboard","Models","#/scoreboard"],["The Buzz","Signal","#/buzz"],
      ["The Primer (free magazine)","Magazine","#/read/primer"],["All magazine issues","Magazine","#/magazine"],
      ["Guides","Section","#/guides"],["Resources","Section","#/resources"],["Archive","Section","#/archive"],
@@ -2895,6 +4000,9 @@
       '<p>Reading this site requires no account and sends us no personal information. Bookmarks, read-later items, reactions, and theme choice are stored in <b>your browser’s local storage, on your device</b> — they never leave it and we cannot see them. If you create a free account, your email address is stored server-side (on Cloudflare D1) so you can sign back in and keep your library across devices. Sign-in uses a one-time emailed link rather than a password — that link is single-use and expires in 15 minutes. Staying signed in uses one <code>HttpOnly</code> session cookie, which page scripts can’t read and which isn’t used for tracking. We run no advertising trackers, no fingerprinting, and no third-party ad networks.</p>'+
       '<h2>Hosting &amp; analytics</h2>'+
       '<p>The site is served by <b>Cloudflare</b>, which processes IP addresses transiently as any web host must (see Cloudflare’s privacy policy). If we enable analytics, we use Cloudflare Web Analytics, which is cookie-free and aggregate-only — it tells us page counts, not who you are.</p>'+
+      '<h2>The reader map</h2>'+
+      '<p>The Control Room shows a world map of visits by country. Here is exactly what that costs you. When a page loads, Cloudflare’s edge tells us which country the request came from — no third-party geolocation service is contacted — and we add <b>one</b> to a counter for that country and that date. An ISO country code, a date and an integer is the whole record. No IP address is stored, no cookie is set, and a signed-in reader is indistinguishable from an anonymous one.</p>'+
+      '<p>To stop one person reloading from inflating the count, we hold a one-way fingerprint for <b>two days</b> and then delete it: <code>sha256(date + salt + IP + user agent)</code>, truncated. It cannot be reversed into an address, and because the date is inside the hash it changes at every midnight UTC, so it cannot follow anyone from one day to the next. If the counter is ever unreachable, the map says so and shows your own browser’s history instead of pretending to know more than it does.</p>'+
       '<h2>The language switcher &amp; other third parties</h2>'+
       '<p>If you choose a language from the globe menu, the page loads <b>Google Translate</b>, and Google’s privacy policy applies to that translation traffic; choosing English again stops it. Flag icons load from flagcdn.com (a standard image CDN). Fonts load from Google Fonts. External links throughout the site (sources, resources, Buzz originals) go to sites we don’t control.</p>'+
       '<h2>The newsletter (when it launches)</h2>'+
@@ -3430,6 +4538,7 @@
   // Mobile discovery nudge: the top nav scrolls horizontally, but a first-time
   // viewer can't tell there's more past the edge. Once per session, gently peek
   // the hidden items into view and glide back so the swipe affordance is obvious.
+  var navHintUntil=0;   // set by the nav swipe hint; alignNavRail yields until then
   var navHintDone=false;
   function navScrollHint(){
     if(navHintDone) return;
@@ -3451,6 +4560,7 @@
           nav.scrollLeft=start+d*e; if(p<1) requestAnimationFrame(step); else if(done) done();
         })(performance.now());
       }
+      navHintUntil=Date.now()+650+560+700+120;   // the rail belongs to the hint until this passes
       tween(reveal,650,function(){ setTimeout(function(){ tween(0,700); },560); });
     },700);
   }
@@ -3532,8 +4642,15 @@
     // Live events always make the homepage cut, then the nearest upcoming.
     var sorted=(D.items||[]).slice().sort(eventSort);
     var items=sorted.slice(0, sorted.filter(eventLive).length>3?sorted.filter(eventLive).length:4);
-    if(!items.length) return '';
     var stamp=D.updated?'<span class="he-stamp">tracked · updated '+esc(D.updated)+'</span>':'';
+    if(!items.length){
+      return '<section class="home-events"><div class="he-head"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>On the radar'+stamp+'</div>'+
+        '<span class="he-links"><a class="he-all" href="#/events">All events →</a></span></div>'+
+        '<div class="empty-state"><span class="es-mark">◷</span>'+
+        '<div><b>Nothing scheduled in the next window.</b>'+
+        '<span>Keynotes, model launches, hearings and earnings calls appear here as the events desk confirms them.</span></div>'+
+        '<a class="es-go" href="#/live">Live &amp; ongoing →</a></div></section>';
+    }
     return '<section class="home-events"><div class="he-head"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>On the radar'+stamp+'</div>'+
       '<span class="he-links"><a class="he-all live-link" href="#/live"><span class="live-dot"></span> Live &amp; ongoing</a><a class="he-all" href="#/events">All events →</a></span></div>'+
       '<div class="ev-list">'+items.map(eventCardHTML).join("")+'</div></section>';
@@ -3729,6 +4846,7 @@
     else if(parts[0]==="terms"){ view=viewTerms(); active=""; }
     else if(parts[0]==="pulse"||parts[0]==="control-room"){ view=viewPulse(); active="pulse"; }
     else if(parts[0]==="scoreboard"){ view=viewScoreboard(); active="scoreboard"; }
+    else if(parts[0]==="claims"||parts[0]==="ledger-claims"){ view=viewClaims(); active="claims"; }
     else if(parts[0]==="corrections"){ view=viewCorrections(); active=""; }
     else if(parts[0]==="briefing"){ view=viewBriefing(); active=""; }
     else if(parts[0]==="companies"){ view=viewCompanies(); active=""; }
@@ -3750,6 +4868,9 @@
     else { view=notFound(); }
     document.getElementById("app").innerHTML=view;
     renderNav(active);
+    // Name the incoming half of the cover↔magazine morph. Runs inside the
+    // view-transition callback, so the new snapshot picks the name up.
+    vtPair(parts);
     if(window.__motion) window.__motion(); // arm scroll-reveals/count-ups on the fresh render (no-op under reduced motion)
     var jump=(parts[0]==="article"&&parts[2])?parts[2]:null;
     if(jump){ var tgt=document.getElementById(jump); if(tgt){ tgt.scrollIntoView({behavior:"smooth",block:"start"}); return; } }
@@ -3853,10 +4974,49 @@
     }
     requestAnimationFrame(tick);
   }
-  var RV_SEL=".comp,.chart,.statcallout,.prose blockquote,.apply,.evstrip,.toc,.card,"+
-    ".mast-card,.dossier-card,.sources,.provenance,.distribution,.endbyline,.ai-disclosure,.corrections,"+
-    ".buzz-card,.ev-card,.lab-card,.sb-card,.sb-ins,.player-cell";
+  /* What reveals, and what deliberately does NOT.
+     Motion belongs on the objects a reader browses -- cards, covers, charts,
+     components. It does not belong on the surfaces that carry the publication's
+     trust claims. A sources list, a provenance block, a corrections log, the
+     evidence strip, the AI disclosure and the claims ledger are the pages that
+     say "here is exactly how we know this". Animating them reads as marketing,
+     which is precisely the accusation this publication exists to refute -- so
+     they were removed from this list and now render instantly, always.
+     .buzz-card is out for a different reason: the Buzz feed arrives async, and
+     animating late arrivals is jitter and layout shift, not polish. */
+  var RV_SEL=".comp,.chart,.statcallout,.prose blockquote,.apply,.toc,.card,.mag-cell,"+
+    ".mast-card,.dossier-card,.distribution,.endbyline,"+
+    ".ev-card,.lab-card,.sb-card,.sb-ins,.player-cell,.updates";
+  /* The phone nav is a horizontally scrollable rail of 15 destinations. On load
+     it was sitting at scrollLeft ~206, so the first thing a phone reader saw was
+     the word "Home" already cut in half -- it reads as a broken layout rather
+     than as something you can swipe. Whatever nudges it (Chrome will scroll a
+     container to reveal a descendant for several reasons), the fix is the same:
+     after every render, put the rail where it belongs. Active destination in
+     view, and if it already fits from the left, hard against the left edge. */
+  function alignNavRail(){
+    var nav=document.querySelector("nav.top"); if(!nav) return;
+    requestAnimationFrame(function(){
+      if(Date.now()<navHintUntil) return;      // the swipe hint is mid-tween; do not fight it
+      if(nav.scrollWidth<=nav.clientWidth+1) return;
+      var on=nav.querySelector(".active"); if(!on) return;
+      var pad=16;
+      var left=on.offsetLeft-nav.offsetLeft, right=left+on.offsetWidth;
+      // Only ever move the rail when the active destination is actually out of
+      // view. Never snap it to 0 just because it drifted -- that would undo the
+      // reader's own swipe on every navigation.
+      if(left<nav.scrollLeft+pad) nav.scrollLeft=Math.max(0,left-pad);
+      else if(right>nav.scrollLeft+nav.clientWidth-pad) nav.scrollLeft=right-nav.clientWidth+pad;
+    });
+  }
   window.__motion=function(){
+    initModels(); // model outputs must be live even under reduced motion
+    // Route-specific initialisers. Each no-ops unless its own container is on the
+    // page, so this stays one hook instead of a growing switch on the route name.
+    initReaderMap();
+    initFrontier();
+    initProcedures();
+    alignNavRail();
     if(!motionOK() || !window.IntersectionObserver) return;
     if(!rvIO){
       rvIO=new IntersectionObserver(function(entries){
@@ -3910,14 +5070,80 @@
       }
     });
   },{passive:true});
+  /* ---------- SHARED-ELEMENT ROUTE TRANSITION: cover → magazine ----------
+     Clicking an issue cover on the storefront should not cut to the reader --
+     the cover the reader just chose should physically become page one. Both
+     sides get the SAME view-transition-name, so the browser tweens the one
+     between the outgoing and incoming snapshots.
+
+     Rules that make this safe:
+       - Exactly one element may carry a given name in a snapshot. Two aborts
+         the whole transition, so vtClaim() always releases the previous holder
+         before naming a new one, and vtRelease() runs on `finished`.
+       - The name is set on the OUTGOING cover during the click (before the
+         hashchange), and on the INCOMING first .mpage inside route()'s own
+         synchronous work via wireReader -- which is the view-transition
+         callback, so the new snapshot sees it.
+       - vtIssue also drives the reverse trip: leaving the reader tags the
+         matching cover on the storefront so the magazine shrinks back to it.
+       - Everything is behind the existing startViewTransition + motionOK
+         guards, so no-support and reduced-motion get today's hard cut. */
+  var VT_ISSUE="rtfc-issue", vtHolder=null, vtIssue=null;
+  function vtRelease(){
+    if(vtHolder){ try{ vtHolder.style.viewTransitionName=""; }catch(e){} vtHolder=null; }
+  }
+  function vtClaim(el){
+    if(!el) return;
+    vtRelease();
+    try{ el.style.viewTransitionName=VT_ISSUE; vtHolder=el; }catch(e){}
+  }
+  function vtOK(){
+    return !!document.startViewTransition && motionOK() &&
+           !document.documentElement.classList.contains("xlating");
+  }
+  // Storefront → reader. Capture phase so the name lands before the hashchange.
+  document.addEventListener("click",function(e){
+    var a=e.target&&e.target.closest?e.target.closest(".mag-cell a.mag-link"):null;
+    if(!a||!vtOK()) return;
+    var vol=a.querySelector(".mag-vol");
+    if(!vol) return;
+    vtIssue=vol.getAttribute("data-iss")||null;
+    vtClaim(vol);
+  },true);
+  // Reader → storefront. Tag the sheet we are leaving from; route() re-tags the
+  // matching cover once the storefront has rendered.
+  document.addEventListener("click",function(e){
+    var a=e.target&&e.target.closest?e.target.closest(".mexit"):null;
+    if(!a||!vtOK()) return;
+    var sheet=document.querySelector("#mtrack .mpage");
+    if(sheet) vtClaim(sheet);
+  },true);
+  // Called from route(), inside the view-transition callback, once #app holds
+  // the fresh render. Whichever side of the trip we are on, name the twin.
+  function vtPair(parts){
+    if(!vtHolder && !vtIssue) return;
+    if(parts[0]==="read"){
+      var sheet=document.querySelector("#mtrack .mpage");
+      if(sheet){ vtIssue=parts[1]||vtIssue; vtClaim(sheet); return; }
+    }
+    if(parts[0]==="magazine" && vtIssue){
+      var vol=document.querySelector('.mag-vol[data-iss="'+(window.CSS&&CSS.escape?CSS.escape(vtIssue):vtIssue)+'"]');
+      if(vol){ vtClaim(vol); return; }
+    }
+    // Nothing to pair with on this route -- drop the name rather than leave a
+    // stale one that would collide on the next navigation.
+    vtRelease(); vtIssue=null;
+  }
   function navigate(){
     // Soft route change. Skipped when reduced motion is set, when the page is
     // mid-translation (the xlating veil hides the swap anyway), or when the
     // browser has no View Transitions API.
-    if(document.startViewTransition && motionOK() &&
-       !document.documentElement.classList.contains("xlating")){
-      document.startViewTransition(route);
+    if(vtOK()){
+      var t=document.startViewTransition(route);
+      if(t&&t.finished&&t.finished.then) t.finished.then(vtRelease,vtRelease);
+      else vtRelease();
     } else {
+      vtRelease(); vtIssue=null;
       route();
     }
   }
