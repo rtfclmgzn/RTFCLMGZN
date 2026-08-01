@@ -914,5 +914,274 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g4",
+    "slug": "self-host-or-api-how-to-decide",
+    "image": "assets/img/g4.jpg",
+    "title": "Self-host or API: how to actually decide which way to run an AI model",
+    "dek": "Every big open-weight release reopens the same argument — run it yourself or rent it through an API? A six-step decision that outlasts any single model launch, built around the one factor that overrides cost every time.",
+    "persona": "jin-park",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-01T10:07:20Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Self-hosting only saves money above a usage threshold that's easy to miscalculate.",
+      "Data control, not cost, is the factor that should override every other consideration.",
+      "Size hardware off the model's own published requirement, never a rule of thumb.",
+      "Start on the API; move to self-hosting only once real volume makes the math clear.",
+      "Caveat: hardware and API prices both move constantly — recheck before committing capital."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Every time a serious open-weight model ships, the same argument breaks out underneath it: should you run this yourself, or just pay per token through an API? DeepSeek's own release notes this week for V4-Flash-0731 quietly settle half of that argument for anyone who reads the fine print — they publish exactly what self-hosting the model would take, in hardware terms, right next to the API price. Most releases don't hand you both numbers side by side like that, which is exactly why the decision usually gets made on vibes instead of arithmetic. It doesn't have to.",
+        "citation_urls": ["https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"]
+      },
+      {
+        "type": "h2",
+        "text": "Name the constraint before you compare prices",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Cost is what everyone wants to compare first, and it's the wrong place to start. One constraint overrides the entire cost conversation, and checking it first saves you from running a spreadsheet you didn't need. Everything else genuinely is a cost-and-convenience tradeoff — this one isn't.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH WAY",
+          "title": "Self-host or API: name the shape of the job",
+          "question": "Take the first branch that fits — they're in the order you should check them.",
+          "branches": [
+            {
+              "when": "Your data is genuinely private, regulated, or belongs to someone who hasn't agreed to send it through a third party.",
+              "then": "Self-host, full stop. No other branch matters once this is true.",
+              "because": "This overrides cost and convenience every time — sending regulated data through someone else's API is a decision you can't take back.",
+              "hi": true
+            },
+            {
+              "when": "You're testing, prototyping, or your volume is low and unpredictable.",
+              "then": "Stay on the API. Pay per token and revisit once volume is real.",
+              "because": "Hardware sits idle between requests exactly when you can least afford idle capital — the API's whole value is that someone else absorbs that idle time."
+            },
+            {
+              "when": "Your volume is high, steady, and predictable.",
+              "then": "Run the actual numbers: your monthly token spend against the hardware's amortized cost.",
+              "because": "This is the one branch where self-hosting can genuinely be cheaper — but only if usage is high enough to keep the hardware busy, not merely large in absolute terms."
+            },
+            {
+              "when": "You need to fine-tune or otherwise modify the model's own weights.",
+              "then": "Self-host. Most APIs don't expose the underlying weights for direct fine-tuning.",
+              "because": "You can't customize what you don't control, and API-side fine-tuning options are typically narrower than what the open weights allow."
+            },
+            {
+              "when": "Latency is the deciding constraint — sub-100ms, no tolerance for a network hop.",
+              "then": "Self-host on hardware physically close to where the request originates.",
+              "because": "An API call crosses the open internet at least once each way; a local model doesn't have to.",
+              "warn": "Self-hosting for latency still requires the hardware to actually outperform the API's serving stack, which is often more optimized than a first self-hosted deployment."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The branch worth dwelling on is the third one, because it's the only one where the answer genuinely depends on arithmetic rather than a hard rule. \"High, steady, predictable\" is doing three separate jobs in that sentence, and dropping any one of them breaks the logic. High matters because hardware has to clear a usage floor before it's cheaper than paying per token — a GPU node sitting mostly idle is a worse deal than the API, not a better one. Steady matters because self-hosted capacity is sized for a load level, and traffic that spikes well above your provisioned hardware either falls over or forces you back to an API for overflow anyway, at which point you're paying for both. Predictable matters because the whole comparison in step five assumes you can forecast next month's volume well enough to size against it; a business whose AI usage swings 5x month to month is optimizing for the wrong variable if it's optimizing for per-token cost at all.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "The number nobody runs",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "If you land on the \"run the numbers\" branch, here's what an actual comparison looks like using this week's release as the worked example — not because the exact figures transfer to every model, but because the shape of the comparison does. DeepSeek-V4-Flash-0731's API runs $0.14 per million input tokens and $0.28 per million output tokens. Self-hosting the same model takes roughly 110GB of memory at 3-bit quantization, or one 4×GB300 node at full precision, by DeepSeek's own published spec.",
+        "citation_urls": ["https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "WORKED EXAMPLE",
+          "title": "DeepSeek-V4-Flash-0731: API vs. self-host, what each side actually costs",
+          "items": [
+            {
+              "value": "$0.14 / $0.28",
+              "unit": "per million tokens, in / out",
+              "label": "API pricing (DeepSeek's published rate)",
+              "includes": "Compute, uptime, scaling, and model maintenance, bundled into the per-token price",
+              "excludes": "Any guarantee about where your data is processed or retained",
+              "note": "Cache-hit input tokens run $0.0028/M, a 98% discount on unchanged prompt content."
+            },
+            {
+              "value": "~110GB RAM (3-bit)",
+              "unit": "or one 4×GB300 node (full precision)",
+              "label": "Self-hosting requirement (DeepSeek's own published spec)",
+              "includes": "Full control over the weights, no per-token fee, and no data leaving your infrastructure",
+              "excludes": "Hardware acquisition or cloud-rental cost — DeepSeek doesn't publish a dollar figure for this, and it varies by provider and by whether you buy or rent",
+              "note": "The unpriced side of this ledger is exactly why step 4 of the procedure below exists: no guide can give you a real hardware number, only your own quote can."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Notice what that ledger deliberately doesn't do: it doesn't convert the hardware requirement into a dollar figure, because DeepSeek doesn't publish one and neither should anyone writing about it secondhand. Cloud GPU rental rates and outright hardware purchase prices both move constantly and vary by provider, region, and whether you're buying spot or reserved capacity. The honest version of this comparison has one priced side and one side you have to price yourself — which is the entire reason step four of the procedure below exists as a separate step instead of a number this guide hands you.",
+        "citation_urls": ["https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks"]
+      },
+      {
+        "type": "h2",
+        "text": "The six-step decision",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Decide, with real numbers instead of vibes",
+          "sub": "Twenty minutes with your own usage data beats an hour of guessing.",
+          "est": "20 min",
+          "level": "Intermediate",
+          "track": true,
+          "prereqs": [
+            "Access to your API provider's usage dashboard, or a realistic estimate of monthly token volume.",
+            "The candidate model's own published hardware requirement — not a third-party rule of thumb."
+          ],
+          "steps": [
+            {
+              "do": "Total your actual monthly token usage.",
+              "detail": "Pull it from your provider's billing dashboard rather than estimating. If you don't have production traffic yet, you don't have the data this decision needs.",
+              "verify": "You have one number: total input and output tokens over a real month, not a guess.",
+              "ifnot": "If there's no real usage yet, you're pre-revenue on this decision too. Default to the API and revisit once you have a month of data."
+            },
+            {
+              "do": "Apply the private-data override.",
+              "detail": "Check whether the data involved is genuinely private, regulated, or belongs to someone who hasn't agreed to a third party processing it.",
+              "verify": "You can answer yes or no in one sentence, without hedging.",
+              "ifnot": "If you're not sure, treat it as yes. The cost of over-protecting data is smaller than the cost of the alternative."
+            },
+            {
+              "do": "Get the model's own published hardware requirement.",
+              "hi": true,
+              "detail": "Read the model card or release notes directly. Don't use a generic 'X GB per billion parameters' rule of thumb — quantization, architecture, and context length all change the real number.",
+              "why": "A rule of thumb sized DeepSeek-V4-Flash-0731 would badly miscount it: the model card's own 110GB figure already assumes 3-bit quantization, not full precision.",
+              "verify": "You have a specific spec — RAM or GPU count and type — sourced from the model publisher, not a blog's estimate.",
+              "ifnot": "If the publisher hasn't stated one, treat that absence itself as a signal: an unpublished hardware spec usually means self-hosting hasn't been made easy on purpose."
+            },
+            {
+              "do": "Get a real hardware quote for that spec.",
+              "detail": "Price actual cloud rental or purchase costs for the exact configuration step three named — not a rounded-off approximation.",
+              "verify": "You have a dollar figure from an actual vendor quote or published cloud rate card, dated to today.",
+              "ifnot": "If you can only find rough ranges, use the high end. Underestimating hardware cost is the single most common way this comparison goes wrong."
+            },
+            {
+              "do": "Multiply your token usage by the API price and compare to the hardware's amortized monthly cost.",
+              "detail": "Divide the hardware quote by its realistic useful life in months to get a monthly figure, then set it beside your monthly API bill at current usage.",
+              "verify": "You have two comparable monthly numbers, not a one-time cost sitting next to a recurring one.",
+              "ifnot": "If you're comparing a purchase price directly to a monthly API bill, you've made the single most common version of this mistake. Amortize first."
+            },
+            {
+              "do": "Pilot before committing capital.",
+              "detail": "Run real production traffic against both paths for two weeks before buying hardware or signing a reserved-capacity contract.",
+              "est": "2 weeks",
+              "verify": "You have two weeks of side-by-side data on cost, latency, and reliability, not a projection.",
+              "ifnot": "If you skip the pilot and go straight to hardware, you're betting the whole decision on step four's quote being accurate under real load — which it often isn't."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Step five is where most of these comparisons quietly fall apart, and it's worth dwelling on why. A hardware purchase is a one-time number; an API bill is a recurring one. Setting them side by side without converting the hardware cost into a monthly, amortized figure makes self-hosting look artificially cheap — you're comparing a single upfront payment to only one month of the alternative. Amortize over the hardware's realistic useful life, usually two to four years for GPU infrastructure before it's meaningfully behind the frontier, and the comparison becomes honest.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Five ways this decision gets made badly",
+          "items": [
+            {
+              "mistake": "Sizing hardware off a generic rule of thumb instead of the model's own spec.",
+              "looks": "A server that's either badly underpowered or wastefully oversized for the model you're actually running.",
+              "why": "Quantization, architecture, and context length all change the real requirement — a rule of thumb ignores all three.",
+              "fix": "Read the model card's own published hardware requirement before pricing anything.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Comparing a one-time hardware price to a monthly API bill.",
+              "looks": "Self-hosting looking dramatically cheaper than it actually is over a real time horizon.",
+              "why": "A purchase price and a recurring bill aren't the same kind of number until one of them is converted.",
+              "fix": "Amortize the hardware cost over its realistic useful life before comparing.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Overriding the private-data check because self-hosting looks expensive.",
+              "looks": "Regulated or sensitive data sent to a third-party API to save money on infrastructure.",
+              "why": "The private-data branch exists precisely because it's the decision people are most tempted to skip under budget pressure.",
+              "fix": "Check it first, before you've seen a single price, so cost never gets the chance to override it.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating the decision as permanent.",
+              "looks": "Infrastructure sized for a model that's since been superseded by one with a very different hardware requirement.",
+              "why": "Post-training upgrades and new releases change the requirement side of the equation without warning — this week's DeepSeek release changed nothing about the hardware spec, but the next one might.",
+              "fix": "Re-run the six steps whenever you'd consider switching models, not just once at the start.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Forgetting who keeps the self-hosted stack running.",
+              "looks": "A cost comparison that looks like self-hosting wins, followed by an unplanned ops burden nobody budgeted for.",
+              "why": "The API's price already bundles maintenance, scaling, and uptime. Self-hosting unbundles it back onto you, and that labor has a real cost even when it's not on an invoice.",
+              "fix": "Price the ongoing maintenance time explicitly, not just the hardware.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "One more wrinkle worth naming: this decision isn't really a one-time fork, because the model landscape underneath it keeps moving. [Matching a job to a model tier](#/article/which-ai-for-which-job) assumes you're choosing between API-hosted options; open weights add a genuine fourth branch to that framework, not just a cheaper version of the same choice. A team that self-hosts locks in a specific model's capability level until it re-runs this procedure, while a team on an API rides each vendor's improvements automatically — DeepSeek's own V4-Flash retraining this week is exactly the kind of free upgrade an API user gets for nothing and a self-hosting team has to redeploy for manually. That's a real cost of self-hosting that step four's hardware quote doesn't capture, and it belongs in the decision alongside the dollar figures.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Two honest limits before you run this yourself. First, the worked example above uses one model's numbers from one week — API prices and hardware costs both move, sometimes sharply, so re-check the actual figures rather than reusing these. Second, this framework assumes you can get a real hardware quote and real usage data; if either one is a guess, the output of step five is a guess too, dressed up as arithmetic. The six steps don't remove uncertainty from the decision. They make sure the uncertainty that's left is the kind you chose, rather than the kind you didn't notice.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Pull your actual monthly token usage before deciding anything.",
+        "text": "Open your API provider's billing dashboard today. Every other step in this guide depends on this number being real, not estimated."
+      },
+      {
+        "label": "Run the private-data override test first, every time.",
+        "text": "Before you look at a single price, answer whether the data involved is genuinely private, regulated, or someone else's. Let that answer stand even if the cost math later argues the other way."
+      },
+      {
+        "label": "Get a dated, real hardware quote — not a rule of thumb.",
+        "text": "If you're seriously considering self-hosting, price the model's own published hardware requirement from an actual vendor or cloud rate card this week, not a rounded estimate from memory."
+      },
+      {
+        "label": "Pilot both paths for two weeks before buying anything.",
+        "text": "Run real traffic against the API and, if feasible, a small self-hosted test before committing to hardware or a reserved-capacity contract. A quote is a guess until it's tested under load."
+      }
+    ],
+    "sources": [
+      {
+        "label": "DeepSeek-V4-Flash-0731 — official Hugging Face model card (self-hosting hardware spec)",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+      },
+      {
+        "label": "Digital Applied — DeepSeek V4-Flash-0731: official release, agent benchmarks (pricing and deployment detail)",
+        "url": "https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks"
+      }
+    ],
+    "corrections": []
   }
 ];

@@ -719,7 +719,7 @@ a:hover>.mag-cover{transform:translateY(-4px);border-color:var(--accent)}
 .res-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;
   display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
 .res-card:hover{border-color:var(--accent)}
-.res-card>b{font-family:var(--serif);font-size:17px}
+
 .res-card>span{color:var(--muted);font-size:13px;line-height:1.5}
 .res-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .res-links a{font-size:12px;font-weight:650;color:var(--accent2);border:1px solid var(--line);
@@ -1796,6 +1796,10 @@ html.xlating #app{ opacity:0 !important; }
 .tp .tp-fact{ background:linear-gradient(135deg,var(--accent),var(--accent2)); border-radius:12px; padding:3% 4.5%; color:#fff; }
 .tp .tp-fact b{ font-family:var(--serif,Georgia,serif); font-size:2.8cqh; display:block; line-height:1; }
 .tp .tp-fact span{ font-size:1.02cqh; display:block; margin-top:2%; opacity:.92; line-height:1.34; }
+.tp .tp-src{ font-size:.85cqh; line-height:1.5; color:rgba(23,18,32,.62); margin-top:2.4%; padding-top:1.6%; border-top:1px solid rgba(23,18,32,.14); }
+.tp.tp-full .tp-src,.tp.tp-corner .tp-src{ color:rgba(255,255,255,.72); border-top-color:rgba(255,255,255,.22); }
+.tp .tp-src a{ color:inherit; text-decoration:underline; text-underline-offset:2px; }
+.tp .tp-src em{ opacity:.75; font-style:normal; }
 
 /* POSTER (layout:top) — big image up top, title on the art, copy + fact below */
 .tp-poster{ display:flex; flex-direction:column; }
@@ -3045,12 +3049,31 @@ html::after{
   .sb-card{padding:13px 14px}
 }
 
-/* ---------- LAB DIRECTORY (Resources) ---------- */
+/* ---------- LAB DIRECTORY (Resources) ----------
+   Real logo, self-hosted (web/assets/logos/<key>.<ext>) on a white chip -- white
+   so a company's actual colors/dark strokes stay legible over BOTH themes, since
+   the site is dark-default but not dark-only. .no-logo (missing file, or the
+   <img> onerror firing at runtime) renders an empty brand-tinted dashed chip --
+   deliberately NOT the old colored-initials monogram, so a gap always reads as
+   "not sourced yet", never as a quietly-degraded design choice. */
 .bmark{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;flex:none;
-  font-size:11px;font-weight:800;letter-spacing:.02em;color:#fff;
-  background:linear-gradient(135deg,var(--bc),color-mix(in srgb,var(--bc) 65%,#000));
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 6px -2px color-mix(in srgb,var(--bc) 60%,transparent)}
-.ds-chip .bmark{width:20px;height:20px;border-radius:6px;font-size:9px;margin-right:7px;vertical-align:-5px}
+  background:#fff;border:1px solid color-mix(in srgb,var(--bc) 30%,var(--hairline));
+  box-shadow:0 2px 6px -3px color-mix(in srgb,var(--bc) 45%,transparent);overflow:hidden}
+.bmark img{width:76%;height:76%;object-fit:contain;display:block}
+.bmark.no-logo{background:color-mix(in srgb,var(--bc) 12%,var(--surface));
+  border-style:dashed;border-color:color-mix(in srgb,var(--bc) 40%,var(--hairline))}
+.bmark-hero{width:60px;height:60px;border-radius:16px}
+.ds-chip .bmark{width:20px;height:20px;border-radius:6px;margin-right:7px;vertical-align:-5px}
+.dc-head,.dsr-co-head,.rc-head{display:flex;align-items:center;gap:11px}
+.dsr-co-head{margin-bottom:6px}
+.dsr-co-head h1{margin:0}
+.dc-head{margin-bottom:2px}
+.rc-head{margin-bottom:1px}
+.rc-head>b{font-family:var(--serif);font-size:17px}
+.rglyph{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;flex:none;
+  font-size:13px;color:var(--accent2);background:color-mix(in srgb,var(--accent2) 12%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent2) 28%,var(--hairline))}
+.rt-ic{font-size:15px;color:var(--accent2)}
 .lab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:8px}
 .lab-card{display:block;padding:16px 17px;border:1px solid var(--hairline);border-radius:14px;background:var(--card);
   transition:transform .35s cubic-bezier(.22,1,.32,1),border-color .3s,box-shadow .35s;position:relative;overflow:hidden}

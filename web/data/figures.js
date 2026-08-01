@@ -24,7 +24,7 @@
 //     `slug` must be a real published article.
 // ============================================================================
 window.RTFC_FIGURES = {
-  updated: "2026-07-30",
+  updated: "2026-08-01",
 
   // Per-kind display metadata. `unit` is the normalized unit every value in
   // that kind must already be expressed in.
@@ -100,6 +100,9 @@ window.RTFC_FIGURES = {
     { id:"raise-moonshot-f", kind:"funding-raise-usd", value:3.5,
       label:"Moonshot AI, Series F", slug:"moonshot-ai-series-f-35-billion-close",
       note:"Oversubscribed, above an original $1-2B target. Led by China's National AI Industry Investment Fund." },
+    { id:"raise-ssi-nvidia", kind:"funding-raise-usd", value:5.0,
+      label:"Safe Superintelligence, Nvidia strategic investment", slug:"nvidia-safe-superintelligence-5-billion-investment",
+      note:"Cash plus, per Bloomberg's reporting, an equivalent value in Vera Rubin compute-capacity commitments. Not a repriced equity round — SSI's post-money valuation is reported unchanged at $32B." },
 
     // ---- valuations (USD B) ----
     { id:"val-cxmt", kind:"valuation-usd", value:489,

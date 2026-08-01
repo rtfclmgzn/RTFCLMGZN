@@ -2547,10 +2547,26 @@
     var n=0; for(var i=0;i<key.length;i++) n=(n*31+key.charCodeAt(i))>>>0;
     return ["var(--s1)","var(--s3)","var(--s5)","var(--s6)","var(--s7)"][n%5];
   }
-  function brandMark(key,name){
-    var m=String(name).replace(/[^A-Za-z0-9 ]/g,"").split(/[\s/]+/).filter(Boolean);
-    var initials=(m.length>1?m[0][0]+m[1][0]:String(name).slice(0,2)).toUpperCase();
-    return '<span class="bmark" style="--bc:'+brandColor(key)+'">'+esc(initials)+'</span>';
+  // Real, self-hosted company logos live in web/assets/logos/<key>.<ext> -- checked
+  // into the repo, never hotlinked, so nothing here depends on a third party's URL
+  // staying up. LOGO_EXT is the exact set on disk today. A key with no entry has no
+  // logo yet; brandMark()'s <img> onerror (belt-and-braces against a file going
+  // missing) and the missing-key branch both fall back to a plain neutral mark --
+  // never colored initials, which is the monogram system this replaced.
+  var LOGO_EXT = {"01-ai":"svg","ai21":"svg","alibaba":"svg","amazon":"svg","amd":"svg",
+    "anthropic":"svg","apple":"svg","baidu":"svg","broadcom":"svg","bytedance":"svg",
+    "cerebras":"svg","character-ai":"svg","cohere":"png","databricks":"svg","deepseek":"svg",
+    "google":"svg","groq":"svg","huawei":"svg","huggingface":"svg","ibm":"svg","inflection":"svg",
+    "meta":"svg","metax":"png","microsoft":"svg","minimax":"png","mistral":"svg","moonshot":"png",
+    "nvidia":"svg","openai":"svg","perplexity":"svg","reka":"svg","sambanova":"svg","samsung":"svg",
+    "sk-hynix":"svg","stability":"svg","tencent":"svg","tsmc":"svg","xai":"svg","zai":"svg"};
+  function brandMark(key,name,extraCls){
+    var cls="bmark"+(extraCls?" "+extraCls:"");
+    var ext=LOGO_EXT[key];
+    if(!ext) return '<span class="'+cls+' no-logo" style="--bc:'+brandColor(key)+'" title="'+esc(name)+'" aria-label="'+esc(name)+' (logo not sourced yet)"></span>';
+    return '<span class="'+cls+'" style="--bc:'+brandColor(key)+'">'+
+      '<img src="assets/logos/'+key+'.'+ext+'" alt="'+esc(name)+' logo" loading="lazy" '+
+      'onerror="this.parentNode.classList.add(\'no-logo\');this.remove()"></span>';
   }
   // Visual grouping only. A company missing from every group still renders
   // under "More" — grouping must never hide coverage.
@@ -2677,13 +2693,13 @@
     /* ---- LEARN ---------------------------------------------------------- */
     h+='<section id="res-learn"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Learn the field</div>'+
       '<div class="res-tiles">'+
-      '<a class="res-tile" href="#/dictionary"><span class="rt-k">Dictionary</span><b>'+DICT.length+' terms that unlock any AI headline</b>'+
+      '<a class="res-tile" href="#/dictionary"><span class="rt-ic">✎</span><span class="rt-k">Dictionary</span><b>'+DICT.length+' terms that unlock any AI headline</b>'+
         '<span class="rt-d">Token, agent, hallucination, mixture-of-experts, and the rest, each explained the way a person would explain it.</span>'+
         '<span class="rt-go">Open the dictionary →</span></a>'+
-      '<a class="res-tile" href="#/read/primer"><span class="rt-k">Primer</span><b>Start from zero</b>'+
+      '<a class="res-tile" href="#/read/primer"><span class="rt-ic">◈</span><span class="rt-k">Primer</span><b>Start from zero</b>'+
         '<span class="rt-d">The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.</span>'+
         '<span class="rt-go">Read The Primer →</span></a>'+
-      '<a class="res-tile" href="#/guides"><span class="rt-k">Guides</span><b>Practical, tested walk-throughs</b>'+
+      '<a class="res-tile" href="#/guides"><span class="rt-ic">▶</span><span class="rt-k">Guides</span><b>Practical, tested walk-throughs</b>'+
         '<span class="rt-d">How to pick a model for a job, what the pricing actually means, and where the sharp edges are.</span>'+
         '<span class="rt-go">Browse the guides →</span></a>'+
       '</div></section>';
@@ -2696,7 +2712,9 @@
         '<span class="labg-n">'+cat.items.length+'</span></div>'+
         '<p class="res-sub">'+esc(cat.desc)+'</p>'+
         '<div class="res-grid">'+cat.items.map(function(it){
-          return '<div class="res-card"><b>'+esc(it.name)+'</b><span>'+esc(it.desc)+'</span>'+
+          var head=it.key?('<div class="rc-head">'+brandMark(it.key,it.name)+'<b>'+esc(it.name)+'</b></div>')
+                          :('<div class="rc-head"><span class="rglyph">'+esc(it.icon||"●")+'</span><b>'+esc(it.name)+'</b></div>');
+          return '<div class="res-card"'+(it.key?' style="--bc:'+brandColor(it.key)+'"':'')+'>'+head+'<span>'+esc(it.desc)+'</span>'+
             '<div class="res-links">'+it.links.map(function(l){
               var ext=/^https?:/.test(l.url);
               return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
@@ -2708,13 +2726,13 @@
     /* ---- MAKE ----------------------------------------------------------- */
     h+='<section id="res-make"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Make something</div>'+
       '<div class="res-tiles">'+
-      '<a class="res-tile" href="#/wallpapers"><span class="rt-k">Wallpapers</span><b>Turn any cover into a phone wallpaper</b>'+
+      '<a class="res-tile" href="#/wallpapers"><span class="rt-ic">◫</span><span class="rt-k">Wallpapers</span><b>Turn any cover into a phone wallpaper</b>'+
         '<span class="rt-d">Every article and magazine cover we have run, sized for your phone, with the mark applied. Free, no account.</span>'+
         '<span class="rt-go">Make a wallpaper →</span></a>'+
-      '<a class="res-tile" href="#/claims"><span class="rt-k">Ledger</span><b>Everything we said we did not know</b>'+
+      '<a class="res-tile" href="#/claims"><span class="rt-ic">◍</span><span class="rt-k">Ledger</span><b>Everything we said we did not know</b>'+
         '<span class="rt-d">Open questions from every story, with the exact document that would settle each one, and what happened when it arrived.</span>'+
         '<span class="rt-go">Open the claims ledger →</span></a>'+
-      '<a class="res-tile" href="#/scoreboard"><span class="rt-k">Scoreboard</span><b>Strength against price, with the frontier drawn</b>'+
+      '<a class="res-tile" href="#/scoreboard"><span class="rt-ic">▤</span><span class="rt-k">Scoreboard</span><b>Strength against price, with the frontier drawn</b>'+
         '<span class="rt-d">Which models are worth their listing, and which are beaten on capability and cost at the same time.</span>'+
         '<span class="rt-go">Open the Scoreboard →</span></a>'+
       '</div></section>';
@@ -3547,7 +3565,9 @@
       '<p>Living dossiers on the players that matter — every story, every Buzz card, every Scoreboard entry we\'ve published about each, auto-assembled from our own coverage and always current.</p></div>';
     h+='<div class="dossier-grid">'+COMPANIES.map(function(c){
       var m=companyMatches(c);
-      return '<a class="dossier-card" href="#/company/'+c.key+'"><b>'+esc(c.name)+'</b><span>'+esc(c.desc)+'</span>'+
+      return '<a class="dossier-card" href="#/company/'+c.key+'" style="--bc:'+brandColor(c.key)+'">'+
+        '<div class="dc-head">'+brandMark(c.key,c.name)+'<b>'+esc(c.name)+'</b></div>'+
+        '<span>'+esc(c.desc)+'</span>'+
         '<div class="dc-counts">'+m.articles.length+' '+(m.articles.length===1?'story':'stories')+' · '+
           m.buzz.length+' buzz · '+m.score.length+' '+(m.score.length===1?'model':'models')+'</div></a>';
     }).join("")+'</div>';
@@ -3558,7 +3578,8 @@
     var m=companyMatches(c);
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px">'+
       '<div class="over"><a href="#/companies" style="color:var(--accent2)">Dossiers</a> · '+esc(c.name)+'</div>'+
-      '<h1>'+esc(c.name)+'</h1><p>'+esc(c.desc)+'</p></div>';
+      '<div class="dsr-co-head">'+brandMark(c.key,c.name,'bmark-hero')+'<h1>'+esc(c.name)+'</h1></div>'+
+      '<p>'+esc(c.desc)+'</p></div>';
     if(m.score.length){
       h+='<div class="kicker"><span class="dotc" style="background:'+(SECTION_COLORS.Compute||"#6cb6f0")+'"></span>On the Scoreboard</div>'+
         '<div class="utable-wrap"><table class="utable scoreb"><tr><th>Model</th><th>$/M in</th><th>$/M out</th><th>Note</th><th>Status</th></tr>'+
@@ -4414,38 +4435,46 @@
     var fact=pg.fact?'<div class="tp-fact"><b>'+esc(pg.fact.n)+'</b><span>'+esc(pg.fact.label)+'</span></div>':'';
     var cap=pg.cap?'<div class="tp-cap">'+esc(pg.cap)+'</div>':'';
     var T=esc(pg.title);
+    // Per-spread source line (Issue 001 sourcing work order, agents/production
+    // cycle-runbook.md §3f): a spread carrying sourced numeric claims lists them
+    // here so a reader can check the figure without hunting a bibliography pages
+    // away. Rendered only when the spread data actually carries pg.sources.
+    var srcFoot=(pg.sources&&pg.sources.length)?('<div class="tp-src">Sources: '+
+      pg.sources.map(function(s){return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+'</a>'+(s.primary?' <em>(primary)</em>':'');}).join(' · ')+
+      '</div>'):'';
+    function close(html){ return srcFoot?html.replace(/<\/div>$/,srcFoot+'</div>'):html; }
 
     if(lay==="fullBleed"){ // whole-page photo, title + copy over a dark scrim
-      return '<div class="mpage tp tp-full" style="background-image:linear-gradient(180deg,rgba(6,4,13,.1),rgba(6,4,13,.32) 32%,rgba(6,4,13,.86) 60%,rgba(6,4,13,.97)),url(\''+img+'\')">'+folio+
+      return close('<div class="mpage tp tp-full" style="background-image:linear-gradient(180deg,rgba(6,4,13,.1),rgba(6,4,13,.32) 32%,rgba(6,4,13,.86) 60%,rgba(6,4,13,.97)),url(\''+img+'\')">'+folio+
         '<div class="tp-fullcap">'+kick+'<h2 class="tp-title tp-onart tp-onart-lg">'+T+'</h2>'+
-          '<div class="tp-body tp-lite">'+plain+'</div></div></div>';
+          '<div class="tp-body tp-lite">'+plain+'</div></div></div>');
     }
     if(lay==="splitLeft"||lay==="splitRight"){ // floor-to-ceiling image column + text column
       var im='<div class="tp-img" style="background-image:url(\''+img+'\')">'+cap+'</div>';
       var col='<div class="tp-col"><div class="tp-coltop">'+kick+'<h2 class="tp-title">'+T+'</h2><div class="tp-body">'+body+'</div></div>'+pull+fact+'</div>';
-      return '<div class="mpage light tp tp-split'+(lay==="splitRight"?" tp-rev":"")+'">'+folio+
-        (lay==="splitRight"? col+im : im+col)+'</div>';
+      return close('<div class="mpage light tp tp-split'+(lay==="splitRight"?" tp-rev":"")+'">'+folio+
+        (lay==="splitRight"? col+im : im+col)+'</div>');
     }
     if(lay==="statFeature"){ // title, copy+image mid, giant number row across the foot
       var row=(pg.stats||[]).map(function(s){return '<div class="tp-st"><b>'+esc(s.n)+'</b><span>'+esc(s.label)+'</span></div>';}).join("");
-      return '<div class="mpage light tp tp-data">'+folio+'<h2 class="tp-title tp-title-lg">'+T+'</h2>'+
+      return close('<div class="mpage light tp tp-data">'+folio+'<h2 class="tp-title tp-title-lg">'+T+'</h2>'+
         '<div class="tp-datamid"><div class="tp-body">'+body+pull+'</div><div class="tp-dimg" style="background-image:url(\''+img+'\')"></div></div>'+
-        '<div class="tp-stats">'+row+'</div></div>';
+        '<div class="tp-stats">'+row+'</div></div>');
     }
     if(lay==="quoteLead"){ // a huge pull-quote leads, image band, then the copy
-      return '<div class="mpage light tp tp-ql">'+folio+
+      return close('<div class="mpage light tp tp-ql">'+folio+
         '<div class="tp-ql-q">'+kick+'<span class="tp-ql-mark">“</span><span class="tp-ql-t">'+esc(pg.pull||pg.title)+'</span></div>'+
         '<div class="tp-ql-img" style="background-image:url(\''+img+'\')"></div>'+
-        '<div class="tp-ql-body"><h2 class="tp-ql-title">'+T+'</h2><div class="tp-body">'+body+'</div></div></div>';
+        '<div class="tp-ql-body"><h2 class="tp-ql-title">'+T+'</h2><div class="tp-body">'+body+'</div></div></div>');
     }
     if(lay==="cornerCard"){ // whole-page photo, copy in a solid card in the corner
-      return '<div class="mpage tp tp-corner" style="background-image:linear-gradient(120deg,rgba(6,4,13,.68),rgba(6,4,13,.1) 58%),url(\''+img+'\')">'+folio+
-        '<div class="tp-card">'+kick+'<h2 class="tp-title tp-cardtitle">'+T+'</h2><div class="tp-body">'+body+'</div></div></div>';
+      return close('<div class="mpage tp tp-corner" style="background-image:linear-gradient(120deg,rgba(6,4,13,.68),rgba(6,4,13,.1) 58%),url(\''+img+'\')">'+folio+
+        '<div class="tp-card">'+kick+'<h2 class="tp-title tp-cardtitle">'+T+'</h2><div class="tp-body">'+body+'</div></div></div>');
     }
     if(lay==="bottomImage"){ // copy up top, full-bleed image across the foot
-      return '<div class="mpage light tp tp-bottom">'+folio+
+      return close('<div class="mpage light tp tp-bottom">'+folio+
         '<div class="tp-bt-text">'+kick+'<h2 class="tp-title tp-title-lg">'+T+'</h2><div class="tp-body">'+body+'</div>'+pull+'</div>'+
-        '<div class="tp-bt-img" style="background-image:url(\''+img+'\')">'+cap+'</div></div>';
+        '<div class="tp-bt-img" style="background-image:url(\''+img+'\')">'+cap+'</div></div>');
     }
     if(lay==="runover"||lay==="runoverAlt"){ // continuation sheets — ONE article flowing across pages.
       // No fresh headline: a "continued" rule, an optional crosshead, then two justified
@@ -4460,14 +4489,14 @@
         roFlow+='<p>'+fmtBody(t)+(pg.end&&last?' <span class="tp-ro-end">◈</span>':'')+'</p>';
         if(pg.pull && i===roMid-1) roFlow+='<div class="tp-ro-pull">“'+esc(pg.pull)+'”</div>';
       });
-      return '<div class="mpage light tp tp-runover'+(lay==="runoverAlt"?' tp-ro-alt':'')+'">'+folio+roHead+roX+
-        '<div class="tp-ro-cols">'+roFlow+'</div>'+roSpot+fact+'</div>';
+      return close('<div class="mpage light tp tp-runover'+(lay==="runoverAlt"?' tp-ro-alt':'')+'">'+folio+roHead+roX+
+        '<div class="tp-ro-cols">'+roFlow+'</div>'+roSpot+fact+'</div>');
     }
     // posterTop (default) — big image up top, title dropped on the art, copy + fact below
-    return '<div class="mpage light tp tp-poster">'+folio+
+    return close('<div class="mpage light tp tp-poster">'+folio+
       '<div class="tp-hero" style="background-image:linear-gradient(184deg,rgba(8,5,16,.04) 32%,rgba(8,5,16,.5) 76%,rgba(8,5,16,.86)),url(\''+img+'\')">'+
         '<div class="tp-herocap">'+kick+'<h2 class="tp-title tp-onart">'+T+'</h2></div></div>'+
-      '<div class="tp-main"><div class="tp-body">'+body+'</div>'+fact+'</div></div>';
+      '<div class="tp-main"><div class="tp-body">'+body+'</div>'+fact+'</div></div>');
   }
   function spreadPage(pg,iss,idx,total){
     var folio='<div class="mfolio-top">RTFCLMGZN · '+esc(iss.title.toUpperCase())+'</div>'+
