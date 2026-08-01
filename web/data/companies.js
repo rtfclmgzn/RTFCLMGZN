@@ -6,7 +6,7 @@
 // Order is display order (roughly by prominence). Keep `desc` to one crisp sentence.
 window.RTFC_COMPANIES = [
   { key:"openai",   name:"OpenAI",           re:/openai|chatgpt|gpt[- ]?5|\bsol\b|\bterra\b|\bluna\b|sam altman/i, desc:"The lab behind ChatGPT and the GPT-5.6 family (Sol · Terra · Luna) — and, lately, a hardware company and a courtroom defendant." },
-  { key:"anthropic",name:"Anthropic",        re:/anthropic|claude|fable 5|opus 4/i, desc:"Maker of the Claude family — Fable 5 and Opus 4.8 — and, in full disclosure, of the models that power this newsroom." },
+  { key:"anthropic",name:"Anthropic",        re:/anthropic|claude|fable 5|opus 4|opus 5/i, desc:"Maker of the Claude family — Fable 5 the most capable, Opus 5 the flagship default since its July 24 launch — and, in full disclosure, of the models that power this newsroom." },
   { key:"google",   name:"Google / DeepMind",re:/google|deepmind|gemini/i, desc:"The Gemini lab: massive distribution, the 3.5 generation rolling out — Flash shipped, Pro delayed." },
   { key:"meta",     name:"Meta",             re:/\bmeta\b|zuckerberg|muse spark|llama/i, desc:"The $145B capex bet: Muse Spark models, an agents program its CEO says hasn't accelerated as expected, and 8,000 fewer employees." },
   { key:"xai",      name:"xAI / SpaceXAI",   re:/\bxai\b|spacexai|grok|musk/i, desc:"Grok's home. The price-disruptor play: fourth-place intelligence at first-place cost, co-trained with Cursor." },
