@@ -354,4 +354,10 @@ window.RTFC_BUZZ = [
     why:"A concrete labor-market data point behind the 'pilots don't reach production' problem (echoed in Cognizant's own EMEA push, bz-103) -- the bottleneck is people who can translate models into deployed workflows, not model capability itself.",
     heat:57, topics:["talent","enterprise ai","labor market","forward-deployed engineers"],
     url:"https://techcrunch.com/2026/07/30/forward-deployed-engineers-are-the-ai-industrys-latest-talent-obsession/" },
+  { id:"bz-112", date:"2026-07-30",
+    source:{ name:"TechCrunch", handle:"TechCrunch", platform:"web", kind:"news" },
+    text:"Synthetic-user startup Simile raised a **$200 million** Series B led by Greenoaks (with Index, Hanabi, Bain Capital Ventures, A*, Factory, Definition and CVS Health Ventures) at a **$2 billion** valuation -- just five months after a $100 million Series A. Simile builds agentic 'digital twin' simulations of real consumers so companies can test products and messaging before shipping to actual people.",
+    why:"A 20x valuation jump in five months for a company that simulates humans rather than serving them -- a sharp bet that synthetic-user testing becomes standard product-development infrastructure.",
+    heat:61, topics:["funding","synthetic users","simile","enterprise ai"],
+    url:"https://techcrunch.com/2026/07/30/synthetic-user-startup-simile-raises-200m-at-2b-valuation-5-months-after-100m-series-a/" },
 ];
