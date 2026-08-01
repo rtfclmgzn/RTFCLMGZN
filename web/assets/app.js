@@ -11,12 +11,13 @@
   var GUIDES = window.RTFC_GUIDES || [];
   var RES = window.RTFC_RESOURCES || [];
   var BUZZ = window.RTFC_BUZZ || [];
+  var GRID = window.RTFC_GRID || {facilities:[]};
   var acctPending=null; // email a magic link was just sent to; not persisted, drives the "check your email" state
 
   /* ---------- reader library (localStorage; account synced from the server session) ---------- */
   function libGet(){
     try{ var raw=localStorage.getItem("rtfc-lib"); if(raw) return JSON.parse(raw); }catch(e){}
-    return { bookmarks:[], readLater:[], account:null };
+    return { bookmarks:[], readLater:[], read:[], account:null };
   }
   function libSave(l){ try{ localStorage.setItem("rtfc-lib",JSON.stringify(l)); }catch(e){} }
   function inList(list,id){ return list.indexOf(id)>=0; }
@@ -68,13 +69,15 @@
   }
   window.rtfcToggle=function(kind,id,ev){
     if(ev){ ev.preventDefault(); ev.stopPropagation(); }
-    var l=libGet(), list=(kind==="bookmark")?l.bookmarks:l.readLater;
+    var l=libGet();
+    var list = kind==="bookmark" ? l.bookmarks : kind==="later" ? l.readLater : (l.read=l.read||[]);
     var i=list.indexOf(id); if(i>=0) list.splice(i,1); else list.push(id);
     libSave(l); route();
     if(l.account){
+      var act = kind==="bookmark"?"toggle_bookmark":kind==="later"?"toggle_read_later":"toggle_read";
       fetch("/api/account/library",{method:"POST",credentials:"same-origin",
         headers:{"content-type":"application/json"},
-        body:JSON.stringify({action:(kind==="bookmark"?"toggle_bookmark":"toggle_read_later"),article_id:id})
+        body:JSON.stringify({action:act,article_id:id})
       }).catch(function(){});
     }
   };
@@ -131,10 +134,11 @@
   window.rtfcDismissPrimer=function(){ try{localStorage.setItem("rtfc-primer-seen","1");}catch(e){} route(); };
   function saveBtns(id,small){
     var l=libGet();
-    var b=inList(l.bookmarks,id), r=inList(l.readLater,id);
+    var b=inList(l.bookmarks,id), r=inList(l.readLater,id), rd=inList(l.read||[],id);
     return '<span class="savebtns'+(small?' sm':'')+'">'+
       '<button class="sv'+(b?' on':'')+'" title="'+(b?'Bookmarked':'Bookmark')+'" onclick="rtfcToggle(\'bookmark\',\''+id+'\',event)">'+(b?'♥':'♡')+'</button>'+
-      '<button class="sv'+(r?' on':'')+'" title="'+(r?'In read-later':'Read later')+'" onclick="rtfcToggle(\'later\',\''+id+'\',event)">'+(r?'◷':'○')+'</button></span>';
+      '<button class="sv'+(r?' on':'')+'" title="'+(r?'In read-later':'Read later')+'" onclick="rtfcToggle(\'later\',\''+id+'\',event)">'+(r?'◷':'○')+'</button>'+
+      '<button class="sv'+(rd?' on':'')+'" title="'+(rd?'Marked as read':'Mark as read')+'" onclick="rtfcToggle(\'read\',\''+id+'\',event)">'+(rd?'✓':'◯')+'</button></span>';
   }
   var ARTICLES = (window.RTFC_ARTICLES || []).concat(window.RTFC_LIVE_ARTICLES || []).concat(window.RTFC_NEWSROOM_ARTICLES || []).concat(window.RTFC_RESEARCH || [])
     .slice().sort(function(a,b){ return new Date(b.publishedAt) - new Date(a.publishedAt); });
@@ -350,7 +354,7 @@
     return '<a class="feature" href="#/article/'+a.slug+'">'+
       '<div class="art" style="'+artFill(a,true)+'">'+artGlyph(a,col)+
         '<span class="beatline">'+esc(a.section)+' — '+FMT[trueFormat(a)]+'</span></div>'+
-      '<div style="margin-top:20px">'+(a.breaking?'<span class="pill breaking">⚡ Breaking</span>':"")+tagsHTML(a)+'</div>'+
+      '<div style="margin-top:20px">'+(a.breaking?'<span class="pill breaking">Breaking</span>':"")+tagsHTML(a)+'</div>'+
       '<h3 style="margin-top:12px">'+esc(a.title)+'</h3>'+
       '<p class="dek">'+esc(a.dek)+'</p>'+bylineHTML(p,a.publishedAt,readTime(a),a)+'</a>';
   }
@@ -2481,7 +2485,7 @@
       // shipped as a spread since the format was retired in July 2026, so this block
       // could not render for any issue that has ever existed. Dropped.
       var iss=null; for(var i=0;i<MAG.length;i++) if(MAG[i].month===ym && !MAG[i].special) iss=MAG[i];
-      var h='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>'+monthLabel(ym)+' · '+byMonth[ym].length+' stories</div>';
+      var h='<div class="arch-month"><h2>'+monthLabel(ym)+'</h2><span class="cnt">'+byMonth[ym].length+(byMonth[ym].length===1?' story':' stories')+'</span></div>';
       h+='<div class="grid">'+byMonth[ym].map(cardHTML).join("")+'</div>';
       if(iss) h+='<a class="arch-issue" href="'+issueHref(iss)+'"><span>◈</span><div><b>'+monthLabel(ym)+' in one issue — “'+esc(iss.title)+'”</b>'+
         '<span>The month distilled: cover story, all seven columns, Scoreboard, Compendium, Watchlist. For subscribers.</span></div><span class="arch-go">Read →</span></a>';
@@ -2593,9 +2597,28 @@
         e.status=e.status||r.status;
       });
       var list=Object.keys(models).map(function(k){return models[k];});
-      list.sort(function(a,b){ return (b.score||0)-(a.score||0) || a.name.localeCompare(b.name); });
+      // Same fix as companyMatches() below: score:null must not sort as if it
+      // scored zero, or a freshly-shipped, not-yet-measured model reads as the
+      // company's worst rather than its newest.
+      list.sort(function(a,b){
+        var an=typeof a.score==="number", bn=typeof b.score==="number";
+        if(an!==bn) return an?1:-1;
+        if(an) return (b.score-a.score) || a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name);
+      });
       return {c:c, models:list};
     }).filter(function(x){ return x.models.length; });
+  }
+  // Resources used to list "Follow the primary sources" (site/X/YouTube/etc.) as
+  // its own separate card grid, repeating the same ~10 labs the directory above
+  // already shows -- same company, two cards, no new information. followLinks()
+  // pulls that company's links (if any) so labCardHTML can splice them onto the
+  // ONE card that company already has, instead of printing a second one.
+  function followLinks(key){
+    var cat=RES[0];
+    if(!cat) return null;
+    for(var i=0;i<cat.items.length;i++) if(cat.items[i].key===key) return cat.items[i].links;
+    return null;
   }
   function labCardHTML(x){
     var c=x.c;
@@ -2606,11 +2629,20 @@
       if(m.access==="open-weights") bits.push('<i class="lm-open">open</i>');
       return '<span class="lm-chip" title="'+esc(m.kind||"")+'">'+esc(m.name)+(bits.length?' '+bits.join(""):'')+'</span>';
     }).join("");
-    return '<a class="lab-card" href="#/company/'+c.key+'" style="--bc:'+brandColor(c.key)+'">'+
-      '<div class="lab-head">'+brandMark(c.key,c.name)+
+    var flinks=followLinks(c.key);
+    // The card can no longer be one giant <a> once it may contain other <a>s
+    // (nested anchors are invalid HTML and break click targeting) -- the dossier
+    // link now wraps just the head; follow-links sit below as their own row,
+    // same div-plus-anchors shape the old res-card used.
+    var follow=flinks?('<div class="lab-follow">'+flinks.map(function(l){
+        var ext=/^https?:/.test(l.url);
+        return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
+      }).join("")+'</div>'):'';
+    return '<div class="lab-card" style="--bc:'+brandColor(c.key)+'">'+
+      '<a class="lab-head" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+
       '<div class="lab-who"><b>'+esc(c.name)+'</b><span>'+x.models.length+' model'+(x.models.length===1?'':'s')+' on record</span></div>'+
-      '<span class="lab-go">Dossier →</span></div>'+
-      '<div class="lab-models">'+chips+'</div></a>';
+      '<span class="lab-go">Dossier →</span></a>'+
+      '<div class="lab-models">'+chips+'</div>'+follow+'</div>';
   }
   function viewResources(){
     var DICT=window.RTFC_DICT||[];
@@ -2648,7 +2680,8 @@
       return !dir.some(function(x){ return x.c.key===c.key; });
     });
 
-    var secs=[{id:"res-labs",label:"Labs & models"}];
+    var gridN=(GRID.facilities||[]).length, gridNewN=gdNewIds().length;
+    var secs=[{id:"res-grid",label:"The Grid"},{id:"res-labs",label:"Labs & models"}];
     grouped.forEach(function(g,i){ secs.push({id:"res-g"+i,label:g.label,sub:true}); });
     secs.push({id:"res-learn",label:"Learn the field"});
     secs.push({id:"res-follow",label:"Follow the field"});
@@ -2656,7 +2689,7 @@
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
       '<h1>Every lab, every model, one page</h1>'+
-      '<p>Who builds what, assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Then the reading, the accounts worth following, and the tools.</p></div>';
+      '<p>Who builds what, assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Then the reading, the accounts worth following, the physical layer underneath all of it, and the tools.</p></div>';
 
     h+='<div class="res-stats">'+
       '<div class="rs-cell"><b>'+dir.length+'</b><span>labs with models on record</span></div>'+
@@ -2668,6 +2701,15 @@
     h+='<div class="res-layout"><aside class="res-nav"><div class="rn-title">On this page</div>'+
       secs.map(function(s){ return '<a class="'+(s.sub?"rn-sub":"")+'" onclick="rtfcJump(\''+s.id+'\')">'+esc(s.label)+'</a>'; }).join("")+
       '</aside><div class="res-main">';
+
+    /* ---- THE GRID (promo) ------------------------------------------------ */
+    h+='<section id="res-grid"><a class="grid-promo" href="#/grid">'+
+      '<div class="gp-copy"><span class="gp-kicker">'+(gridNewN?('<b>'+gridNewN+' new</b> · '):'')+'Mapped and updated daily</span>'+
+      '<h2>The Grid — every datacenter running these models</h2>'+
+      '<p>Who operates each site, who the primary tenant is when that\'s a different company, and how sure we are of the details. Reconfirmed once a day with the Morning edition; a new facility shows up here the same day it\'s confirmed.</p>'+
+      '<span class="gp-go">Open The Grid →</span></div>'+
+      '<div class="gp-stats"><div><b>'+gridN+'</b><span>facilities</span></div><div><b>'+(GRID.facilities||[]).filter(function(f){return f.status==="operating";}).length+'</b><span>operating</span></div></div>'+
+      '</a></section>';
 
     /* ---- THE SPINE ------------------------------------------------------ */
     h+='<section id="res-labs"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The labs &amp; their models</div>'+
@@ -2682,7 +2724,7 @@
     });
 
     if(noModel.length){
-      h+='<div class="labg labg-thin"><div class="labg-h"><span class="labg-l">Covered, no model of their own</span>'+
+      h+='<div class="labg labg-thin"><div class="labg-h"><span class="labg-l">Tracked, no model shipped</span>'+
         '<span class="labg-n">'+noModel.length+'</span></div>'+
         '<div class="dossier-strip">'+noModel.map(function(c){
           return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>';
@@ -2699,6 +2741,9 @@
       '<a class="res-tile" href="#/read/primer"><span class="rt-ic">◈</span><span class="rt-k">Primer</span><b>Start from zero</b>'+
         '<span class="rt-d">The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.</span>'+
         '<span class="rt-go">Read The Primer →</span></a>'+
+      '<a class="res-tile" href="#/read/how-models-are-made"><span class="rt-ic">⌬</span><span class="rt-k">Deep Dive</span><b>How The Models Are Made</b>'+
+        '<span class="rt-d">Pretraining to reasoning models, the space-race economics behind it, every lab\'s strategy compared, and an honest ledger of what\'s proven vs. contested.</span>'+
+        '<span class="rt-go">Read the issue →</span></a>'+
       '<a class="res-tile" href="#/guides"><span class="rt-ic">▶</span><span class="rt-k">Guides</span><b>Practical, tested walk-throughs</b>'+
         '<span class="rt-d">How to pick a model for a job, what the pricing actually means, and where the sharp edges are.</span>'+
         '<span class="rt-go">Browse the guides →</span></a>'+
@@ -2706,8 +2751,9 @@
 
     /* ---- FOLLOW --------------------------------------------------------- */
     h+='<section id="res-follow"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Follow the field</div>'+
-      '<p class="res-lede">Primary sources first. These are the accounts and feeds the newsroom itself watches, so you can check our work against the same material.</p>';
+      '<p class="res-lede">Primary sources first. These are the accounts and feeds the newsroom itself watches, so you can check our work against the same material. The labs\' own site/X/YouTube links now live on their cards above — this is everything else worth following.</p>';
     RES.forEach(function(cat,i){
+      if(i===0) return; // "Follow the primary sources" -- now merged onto each lab card in #res-labs, see followLinks()
       h+='<div class="labg"><div class="labg-h"><span class="labg-l">'+esc(cat.title)+'</span>'+
         '<span class="labg-n">'+cat.items.length+'</span></div>'+
         '<p class="res-sub">'+esc(cat.desc)+'</p>'+
@@ -3071,6 +3117,35 @@
       '<span class="bz-count">'+sorted.length+'</span></div>'+
       '<div class="buzz-grid">'+sorted.map(function(b,i){ return buzzCard(b, isLatest&&i===0&&(b.heat||0)>=80); }).join("")+'</div>';
   }
+  // Solitaire stack for every day OTHER than the newest one: a single clickable
+  // peek row (the day, the card count, and the avatar+name of that day's loudest
+  // card) with the full buzz-grid sitting underneath, collapsed until clicked.
+  // Same day-grouping and same heat sort buzzDayBlock already used for the top
+  // day -- this only changes how an OLDER day is presented on screen, not how
+  // the data itself is grouped or sorted. State lives in BZ_OPEN so a reader
+  // can open several days at once and they stay open across a filter change.
+  var BZ_OPEN={};
+  function buzzDayStack(day,items){
+    var sorted=items.slice().sort(function(a,b){return (b.heat||0)-(a.heat||0);});
+    var top=sorted[0];
+    var kind=BZ_KIND[top.source&&top.source.kind]||{c:"var(--accent)",l:""};
+    var initial=(top.source&&top.source.name?top.source.name:"?").charAt(0);
+    var open=!!BZ_OPEN[day];
+    return '<div class="bz-daystack'+(open?' open':'')+'" id="bzday-'+esc(day)+'">'+
+      '<button class="bzs-peek" onclick="rtfcBuzzDay(\''+esc(day)+'\')" aria-expanded="'+(open?'true':'false')+'">'+
+        '<span class="bz-av" style="background:'+safeColor(kind.c)+'">'+esc(initial)+'</span>'+
+        '<span class="bzs-meta"><b>'+esc(buzzTime(day))+'</b>'+
+          '<span>'+sorted.length+' card'+(sorted.length===1?'':'s')+' · loudest: '+esc(top.source.name)+'</span></span>'+
+        '<span class="bzs-chev" aria-hidden="true">⌄</span>'+
+      '</button>'+
+      '<div class="buzz-grid bzs-full">'+sorted.map(function(b){ return buzzCard(b,false); }).join("")+'</div>'+
+    '</div>';
+  }
+  window.rtfcBuzzDay=function(day){
+    BZ_OPEN[day]=!BZ_OPEN[day];
+    var el=document.getElementById("bzday-"+day);
+    if(el){ el.classList.toggle("open",BZ_OPEN[day]); var b=el.querySelector(".bzs-peek"); if(b) b.setAttribute("aria-expanded",BZ_OPEN[day]?"true":"false"); }
+  };
   /* ---------- BUZZ INTELLIGENCE · all of it derived, none of it inferred ------
      Three additions, and the constraint on every one of them was the same: the
      feed may only assert things the data can actually support.
@@ -3186,25 +3261,16 @@
     var byDay={};
     FEED.forEach(function(b){ (byDay[b.date]=byDay[b.date]||[]).push(b); });
     var days=Object.keys(byDay).sort().reverse();
-    var cut=new Date(); cut.setDate(cut.getDate()-7);
-    var cutStr=cut.toISOString().slice(0,10);
-    var recent=days.filter(function(d){return d>=cutStr;});
-    var older=days.filter(function(d){return d<cutStr;});
-    // if the feed is young and nothing is "recent" yet, show what we have
-    if(!recent.length && days.length){ recent=days.slice(0,7); older=days.slice(7); }
-    recent.forEach(function(day,di){ h+=buzzDayBlock(day,byDay[day],di===0); });
-    if(older.length){
-      var olderCount=older.reduce(function(n,d){return n+byDay[d].length;},0);
-      h+='<button class="buzz-more" id="buzz-more" onclick="rtfcBuzzOlder()">Show earlier buzz — '+olderCount+' more from '+older.length+' day'+(older.length===1?'':'s')+' ↓</button>';
-      h+='<div id="buzz-archive" hidden>'+older.map(function(day){return buzzDayBlock(day,byDay[day]);}).join("")+'</div>';
-    }
-    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:26px">Refreshed <b>on every newsroom run — three a day</b>, alongside the day\'s reporting, plus anything a breaking scan turns up in between. Showing the last 7 days'+(older.length?' — earlier buzz is one click below':'')+'. Curation, not syndication: cards paraphrase or briefly quote public posts and link to the source. Nothing is generated on anyone\'s behalf.</p>';
+    // Only the newest day with any buzz renders open, full-grid, same as before.
+    // Every earlier day -- not just anything past a 7-day cutoff -- collapses
+    // into a solitaire-style peek stack: one line until it's clicked open, so
+    // scrolling back through weeks of buzz costs a screenful, not a scrollbar.
+    days.forEach(function(day,di){
+      h += di===0 ? buzzDayBlock(day,byDay[day],true) : buzzDayStack(day,byDay[day]);
+    });
+    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:26px">Refreshed <b>on every newsroom run — three a day</b>, alongside the day\'s reporting, plus anything a breaking scan turns up in between. Today\'s cards show in full; every earlier day collapses to one line — click it to open. Curation, not syndication: cards paraphrase or briefly quote public posts and link to the source. Nothing is generated on anyone\'s behalf.</p>';
     return h+'</div>';
   }
-  window.rtfcBuzzOlder=function(){
-    var a=document.getElementById("buzz-archive"), b=document.getElementById("buzz-more");
-    if(a){ a.hidden=false; } if(b){ b.style.display="none"; }
-  };
 
   /* ---------- article tools: cost transparency + listen ---------- */
   function articleCost(id){
@@ -3552,11 +3618,28 @@
   function companyByKey(k){ for(var i=0;i<COMPANIES.length;i++) if(COMPANIES[i].key===k) return COMPANIES[i]; return null; }
   function companyMatches(c){
     function txt(a){ return a.title+" "+(a.dek||"")+" "+a.body.map(function(b){return b.text||"";}).join(" "); }
+    // Scoreboard rows are stored in the order the Data Desk appended them, not by
+    // relevance -- a brand-new, not-yet-independently-scored release (score:null,
+    // almost always the newest thing that lab shipped, e.g. Claude Opus 5 on
+    // launch day) could sit BELOW older, already-scored models purely because it
+    // was added to the file later. A company's own dossier is asking "what do
+    // they currently have", so newest-first among the unscored, then strongest-
+    // first among the scored -- the opposite priority to the cross-company
+    // Scoreboard (viewScoreboard), which puts unscored last because its job is
+    // ranking, not currency, and says so explicitly in its own section header.
+    var scoreRows=(window.RTFC_SCOREBOARD&&window.RTFC_SCOREBOARD.rows||[]).filter(function(r){ return c.re.test(r.lab+" "+r.model); });
+    scoreRows=scoreRows.slice().reverse();
+    scoreRows.sort(function(a,b){
+      var an=typeof a.score==="number", bn=typeof b.score==="number";
+      if(an!==bn) return an?1:-1;
+      if(an) return b.score-a.score;
+      return 0;
+    });
     return {
       articles: ARTICLES.concat(GUIDES).filter(function(a){ return c.re.test(txt(a)); })
         .sort(function(a,b){ return new Date(b.publishedAt)-new Date(a.publishedAt); }),
       buzz: BUZZ.filter(function(b){ return c.re.test(b.source.name+" "+b.text+" "+(b.why||"")); }),
-      score: (window.RTFC_SCOREBOARD&&window.RTFC_SCOREBOARD.rows||[]).filter(function(r){ return c.re.test(r.lab+" "+r.model); })
+      score: scoreRows
     };
   }
   function viewCompanies(){
@@ -3888,6 +3971,216 @@
       rmLoad(function(){ rmPaint(); });
     });
   }
+
+  /* ---------- THE GRID · a world map of who runs the physical machines ----------
+
+     Every other page here is about the models. This one is about the buildings:
+     the datacenters actually training and serving them, who operates each one,
+     and -- because "operator" and "the company whose name is on the model" are
+     often two different companies (see Project Rainier below) -- who the primary
+     tenant is when that's known and different from the operator.
+
+     Same honesty discipline as the Reader Map above: a pin is a city, not a street
+     address; construction `status` (operating/building/announced) is tracked
+     separately from `confidence` in the reported details (confirmed/reported/
+     early); and where the data desk doesn't have a specific site, the card says so
+     instead of guessing at a precise dot (see mistral-france in web/data/grid.js).
+
+     Geometry is the SAME lazily-loaded web/data/worldmap.js the Reader Map uses --
+     rmGeometry() is shared rather than duplicated, so there is exactly one loader
+     and one in-flight guard (RM.phase) for that 48KB file regardless of which
+     feature asks for it first. */
+
+  function geoToXY(lat,lng,W){
+    W = W || window.RTFC_WORLDMAP || {w:1000,h:391.7};
+    return { x:(lng+180)/360*W.w, y:(84-lat)/141*(W.h||391.7) };
+  }
+  var GD = { sel:null };
+  var GD_STATUS = { operating:{label:"Operating", v:"--ok"}, building:{label:"Under construction", v:"--gold"}, announced:{label:"Announced", v:"--accent2"} };
+  var GD_CONF = { confirmed:"Confirmed by multiple sources", reported:"Publicly reported, not independently re-verified by this newsroom", early:"Early/provisional — treat the specifics as unconfirmed" };
+
+  function gdSeenGet(){
+    try{ return JSON.parse(localStorage.getItem("rtfc-grid-seen")||"null"); }catch(e){ return null; }
+  }
+  function gdSeenSave(ids){
+    try{ localStorage.setItem("rtfc-grid-seen", JSON.stringify({ids:ids, at:Date.now()})); }catch(e){}
+  }
+  // A first-ever visit has nothing to compare against, so it seeds the baseline
+  // silently (see gdMarkAllSeen) rather than announcing all 25 facilities as
+  // "new" -- only a site confirmed AFTER a reader's first visit should ever
+  // read as new to them.
+  function gdNewIds(){
+    var all=(GRID.facilities||[]).map(function(f){return f.id;});
+    var seen=gdSeenGet();
+    if(!seen) return [];
+    var have={}; (seen.ids||[]).forEach(function(id){ have[id]=1; });
+    return all.filter(function(id){ return !have[id]; });
+  }
+  function gdMarkAllSeen(){
+    gdSeenSave((GRID.facilities||[]).map(function(f){return f.id;}));
+  }
+
+  // Personal alert channel -- same honestly-labelled prototype pattern as
+  // rtfcNewsletter()/newsletterHTML(): a real opt-in, stored in this browser only,
+  // said plainly rather than implied.
+  window.rtfcGridAlert=function(){
+    var el=document.getElementById("gd-email"); var v=(el&&el.value||"").trim();
+    var box=document.getElementById("gd-msg");
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ if(box){box.textContent="Enter a valid email.";box.className="nl-msg err";} return; }
+    try{ var subs=JSON.parse(localStorage.getItem("rtfc-grid-alerts")||"[]"); if(subs.indexOf(v)<0){subs.push(v);localStorage.setItem("rtfc-grid-alerts",JSON.stringify(subs));} }catch(e){}
+    if(box){ box.textContent="You’re on the list — one email the moment a new facility is confirmed, nothing else. (Prototype: stored in this browser; the real send goes live with the public site.)"; box.className="nl-msg ok"; }
+    if(el) el.value="";
+  };
+  function gdAlertHTML(){
+    return '<div class="nl-card compact gd-alert"><div class="nl-copy"><b>Get a personal alert</b><span>One email when the data desk confirms a new facility. No digest, no schedule — just that.</span></div>'+
+      '<div class="nl-form"><input id="gd-email" type="email" placeholder="you@example.com" autocomplete="email">'+
+      '<button class="cta" onclick="rtfcGridAlert()">Alert me</button></div>'+
+      '<p class="nl-msg" id="gd-msg"></p></div>';
+  }
+
+  function gridHTML(){
+    // Shell only, same pattern as readerMapHTML(): geometry loads lazily and
+    // initGrid() fills #grid-wrap in place once it arrives.
+    return '<div class="gridmap" id="grid-wrap"><div class="rm-load">Loading the map…</div></div>';
+  }
+
+  function gdFacility(id){
+    var m=(GRID.facilities||[]).filter(function(f){ return f.id===id; });
+    return m[0]||null;
+  }
+
+  function gdDetailHTML(f){
+    if(!f) return '<div class="gd-empty">Hover or tap a pin — or a row in the list below — for the full picture.</div>';
+    var st=GD_STATUS[f.status]||{label:f.status,v:"--muted"};
+    var op=f.operatorKey ? ('<a href="#/company/'+f.operatorKey+'">'+esc(f.operatorLabel||f.operatorKey)+'</a>') : esc(f.operatorLabel||"Unnamed operator");
+    var tenant=f.tenantKey ? ('<div class="gd-tenant">Primary tenant: <a href="#/company/'+f.tenantKey+'">'+esc(f.tenantLabel||f.tenantKey)+'</a></div>')
+      : (f.tenantLabel ? '<div class="gd-tenant">'+esc(f.tenantLabel)+'</div>' : '');
+    var flinks=f.operatorKey?followLinks(f.operatorKey):null;
+    var follow=flinks?('<div class="lab-follow">'+flinks.map(function(l){
+        var ext=/^https?:/.test(l.url);
+        return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
+      }).join("")+'</div>'):'';
+    return '<div class="gd-card">'+
+      '<div class="gd-card-top"><span class="gd-dot" style="background:var('+st.v+')"></span><span class="gd-st">'+esc(st.label)+'</span>'+
+      '<span class="gd-conf" title="'+esc(GD_CONF[f.confidence]||"")+'">'+esc(f.confidence)+'</span></div>'+
+      '<h3>'+esc(f.name)+'</h3>'+
+      '<div class="gd-place">'+esc(f.place)+'</div>'+
+      '<div class="gd-op">'+op+'</div>'+tenant+
+      (f.scale?('<p class="gd-scale">'+esc(f.scale)+'</p>'):'')+
+      '<p class="gd-blurb">'+esc(f.blurb)+'</p>'+follow+
+      '<div class="gd-added">Data desk last confirmed this row '+when(f.addedAt)+'</div>'+
+      '</div>';
+  }
+
+  function gdListHTML(){
+    var facilities=(GRID.facilities||[]).slice();
+    var byRegion={};
+    facilities.forEach(function(f){ (byRegion[f.region]=byRegion[f.region]||[]).push(f); });
+    var newSet={}; gdNewIds().forEach(function(id){ newSet[id]=1; });
+    var order=["North America","Europe","Middle East","Asia-Pacific"].filter(function(r){return byRegion[r];});
+    Object.keys(byRegion).forEach(function(r){ if(order.indexOf(r)<0) order.push(r); });
+    return '<div class="gd-panels">'+order.map(function(region){
+      var rows=byRegion[region].slice().sort(function(a,b){ return a.name.localeCompare(b.name); });
+      return '<div class="gd-region"><div class="gd-region-h">'+esc(region)+'<span>'+rows.length+'</span></div>'+
+        rows.map(function(f){
+          var st=GD_STATUS[f.status]||{v:"--muted"};
+          return '<div class="gd-row'+(f.id===GD.sel?" gd-sel":"")+(newSet[f.id]?" gd-new":"")+'" data-id="'+f.id+'" tabindex="0">'+
+            '<span class="gd-row-dot" style="background:var('+st.v+')"></span>'+
+            '<span class="gd-row-name">'+esc(f.name)+(newSet[f.id]?'<em>new</em>':'')+'</span>'+
+            '<span class="gd-row-place">'+esc(f.place)+'</span></div>';
+        }).join("")+
+      '</div>';
+    }).join("")+'</div>';
+  }
+
+  function gdPaint(){
+    var wrap=document.getElementById("grid-wrap"); if(!wrap) return;
+    var W=window.RTFC_WORLDMAP;
+    if(!W){ wrap.innerHTML='<div class="rm-load">The map geometry didn’t load. The list below still has everything.</div>'+gdListHTML(); return; }
+
+    var facilities=GRID.facilities||[];
+    var paths=[];
+    for(var cc in W.paths){ if(!W.paths.hasOwnProperty(cc)) continue;
+      paths.push('<path class="gdc" d="'+W.paths[cc]+'"></path>');
+    }
+    var pins=facilities.map(function(f){
+      var p=geoToXY(f.lat,f.lng,W), st=GD_STATUS[f.status]||{v:"--muted"};
+      var cls="gd-pin"+(f.id===GD.sel?" gd-sel":"");
+      return '<circle class="'+cls+'" cx="'+p.x.toFixed(2)+'" cy="'+p.y.toFixed(2)+'" r="'+(f.id===GD.sel?"6.5":"4.5")+'" '+
+        'style="fill:var('+st.v+')" data-id="'+f.id+'" tabindex="0" role="img" aria-label="'+esc(f.name+" — "+f.place)+'"><title>'+esc(f.name+" — "+f.place)+'</title></circle>';
+    }).join("");
+    var svg='<svg class="gd-svg" viewBox="0 0 '+W.w+' '+W.h+'" preserveAspectRatio="xMidYMid meet" role="group" aria-label="World map of AI datacenters">'+
+      paths.join("")+pins+'</svg>';
+
+    var legend='<div class="rm-legend gd-legend">'+
+      Object.keys(GD_STATUS).map(function(k){ return '<span class="rm-lgi"><i class="gd-sw" style="background:var('+GD_STATUS[k].v+')"></i>'+esc(GD_STATUS[k].label)+'</span>'; }).join("")+
+      '</div>';
+
+    wrap.innerHTML=
+      '<div class="rm-figure gd-figure">'+svg+'</div>'+
+      legend+
+      '<div id="gd-detail">'+gdDetailHTML(gdFacility(GD.sel))+'</div>'+
+      gdListHTML();
+
+    function select(id){
+      GD.sel=id;
+      wrap.querySelectorAll(".gd-pin").forEach(function(c){
+        var on=c.getAttribute("data-id")===id;
+        c.classList.toggle("gd-sel",on);
+        c.setAttribute("r", on?"6.5":"4.5");
+      });
+      wrap.querySelectorAll(".gd-row").forEach(function(r){ r.classList.toggle("gd-sel", r.getAttribute("data-id")===id); });
+      var det=document.getElementById("gd-detail"); if(det) det.innerHTML=gdDetailHTML(gdFacility(id));
+    }
+    function detScroll(){
+      var det=document.getElementById("gd-detail");
+      if(det && window.innerWidth<860) det.scrollIntoView({behavior:"smooth",block:"nearest"});
+    }
+    wrap.querySelectorAll(".gd-pin").forEach(function(c){
+      c.addEventListener("mouseenter",function(){ select(c.getAttribute("data-id")); });
+      c.addEventListener("focus",function(){ select(c.getAttribute("data-id")); });
+      c.addEventListener("click",function(){ select(c.getAttribute("data-id")); detScroll(); });
+    });
+    wrap.querySelectorAll(".gd-row").forEach(function(r){
+      r.addEventListener("click",function(){ select(r.getAttribute("data-id")); detScroll(); });
+      r.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); select(r.getAttribute("data-id")); detScroll(); } });
+    });
+  }
+
+  function initGrid(){
+    var wrap=document.getElementById("grid-wrap"); if(!wrap) return;
+    if(wrap.getAttribute("data-init")==="1"){ return; }
+    wrap.setAttribute("data-init","1");
+    rmGeometry(function(){ gdPaint(); gdMarkAllSeen(); });
+  }
+
+  function viewGrid(){
+    var facilities=GRID.facilities||[];
+    var nOperating=facilities.filter(function(f){return f.status==="operating";}).length;
+    var nCountries={}; facilities.forEach(function(f){ nCountries[f.place.split(", ").pop()]=1; });
+    var nCompanies={}; facilities.forEach(function(f){ if(f.operatorKey) nCompanies[f.operatorKey]=1; });
+    var newIds=gdNewIds();
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources · The Grid</div>'+
+      '<h1>Every datacenter running these models, mapped</h1>'+
+      '<p>The physical layer underneath every headline on this site: who operates each site, who the primary tenant is when that differs from the operator, and how sure we are of the details. '+esc(GRID.cadence||"")+'</p></div>';
+
+    if(newIds.length){
+      h+='<div class="gd-newbar"><b>'+newIds.length+' facilit'+(newIds.length===1?"y":"ies")+' new since your last visit.</b> They\'re marked in the list below.</div>';
+    }
+
+    h+='<div class="res-stats">'+
+      '<div class="rs-cell"><b>'+facilities.length+'</b><span>facilities tracked</span></div>'+
+      '<div class="rs-cell"><b>'+nOperating+'</b><span>confirmed operating</span></div>'+
+      '<div class="rs-cell"><b>'+Object.keys(nCountries).length+'</b><span>countries</span></div>'+
+      '<div class="rs-cell"><b>'+Object.keys(nCompanies).length+'</b><span>companies with a dossier here</span></div>'+
+    '</div>';
+
+    h+=gridHTML();
+    h+='<div style="margin-top:22px">'+gdAlertHTML()+'</div>';
+    h+='<p class="rm-cap gd-method">'+esc(GRID.methodology||"")+' Updated '+esc(GRID.updated||"")+'. Something wrong or missing? <a href="#/contact" style="color:var(--accent2)">Tell the newsroom</a>.</p>';
+    return h+'</div>';
+  }
+
   function viewPulse(){
     var now=new Date();
     var todayRecs=USAGE.filter(function(r){return sameDay(r.ts,now);});
@@ -5035,7 +5328,8 @@
         return '<a href="#/section/'+s.key+'" class="'+(on?"on":"")+'"'+(on?' aria-current="page"':'')+
           '><span class="sec-dot" style="background:'+escAttr(col)+'"></span>'+esc(s.label)+'</a>';
       }).join("")+'</div></span>';
-    h+=navLink("#/resources","resources","Resources");
+    var gridNewN=gdNewIds().length;
+    h+=navLink("#/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
     h+=navLink("#/archive","archive","Archive");
     h+='<span class="nav-sep"></span>';
     h+=navLink("#/magazine","magazine","Magazine ◈","masthead-link");
@@ -5612,6 +5906,7 @@
     else if(parts[0]==="usage"||parts[0]==="transparency"){ view=viewUsage(); active="usage"; }
     else if(parts[0]==="guides"){ view=viewGuides(); active="guides"; }
     else if(parts[0]==="resources"){ view=viewResources(); active="resources"; }
+    else if(parts[0]==="grid"){ view=viewGrid(); active="resources"; }
     else if(parts[0]==="buzz"){ view=viewBuzz(); active="buzz"; }
     else if(parts[0]==="privacy"){ view=viewPrivacy(); active=""; }
     else if(parts[0]==="terms"){ view=viewTerms(); active=""; }
@@ -5797,6 +6092,7 @@
     // Route-specific initialisers. Each no-ops unless its own container is on the
     // page, so this stays one hook instead of a growing switch on the route name.
     initReaderMap();
+    initGrid();
     initFrontier();
     initProcedures();
     alignNavRail();

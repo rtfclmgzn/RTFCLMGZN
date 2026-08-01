@@ -78,28 +78,28 @@
           "n": "ACT II",
           "t": "The Big Bang",
           "d": "The night everything changed, the four-year climb, and the trillion-dollar bet underneath it all",
-          "p": "13",
+          "p": "14",
           "img": "assets/img/primer-part1.jpg"
         },
         {
           "n": "ACT III",
           "t": "The Players",
           "d": "The labs that matter, their models head-to-head, how to read a benchmark, and which one is right for you",
-          "p": "19",
+          "p": "21",
           "img": "assets/img/primer-act3.jpg"
         },
         {
           "n": "ACT IV",
           "t": "Your Move",
           "d": "Twenty words of vocabulary, the one prompting skill, six things to try tonight, and the honest page nobody else prints",
-          "p": "26",
+          "p": "30",
           "img": "assets/img/primer-part2.jpg"
         },
         {
           "n": "ACT V",
           "t": "Going Deeper",
           "d": "What's coming next, how to use it safely, and where to go from here",
-          "p": "33",
+          "p": "36",
           "img": "assets/img/primer-act5.jpg"
         }
       ],
@@ -812,7 +812,7 @@
         },
         {
           "t": "Try the Six Things",
-          "d": "Act IV, page 20. Tonight. Reading about swimming only goes so far."
+          "d": "Act IV, page 32. Tonight. Reading about swimming only goes so far."
         },
         {
           "t": "One podcast for the commute",

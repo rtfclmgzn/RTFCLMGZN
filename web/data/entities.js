@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-07-30",
+  updated: "2026-08-01",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -107,12 +107,34 @@ window.RTFC_ENTITIES = {
       kind:"model family", access:"open-weights" },
     { re:/\bERNIE\b/i, name:"ERNIE", maker:"Baidu", makerKey:"baidu",
       kind:"model family", access:"partial" },
+    { re:/\bERNIE 5\.1\b/i, name:"ERNIE 5.1", maker:"Baidu", makerKey:"baidu",
+      kind:"efficiency-focused frontier model", access:"partial" },
+    { re:/\bHunyuan Hy3\b/i, name:"Hunyuan Hy3", maker:"Tencent", makerKey:"tencent",
+      kind:"open-weights model", access:"open-weights" },
+    { re:/\bDoubao(?: 2\.1 Pro)?\b/i, name:"Doubao 2.1 Pro", maker:"ByteDance", makerKey:"bytedance",
+      kind:"frontier model", access:"unknown" },
 
     // --- Europe ---
     { re:/\bLe Chat\b/i, name:"Le Chat", maker:"Mistral AI", makerKey:"mistral",
       kind:"assistant product", access:"closed" },
     { re:/\bMistral Large\b/i, name:"Mistral Large", maker:"Mistral AI", makerKey:"mistral",
       kind:"frontier model", access:"partial" },
+
+    // --- Enterprise & other labs (named in coverage, not yet in the Scoreboard) ---
+    { re:/\bIBM Granite\b|\bGranite\b/i, name:"IBM Granite", maker:"IBM", makerKey:"ibm",
+      kind:"open enterprise model family", access:"open-weights" },
+    { re:/\bCommand A\+\b/i, name:"Command A+", maker:"Cohere", makerKey:"cohere",
+      kind:"enterprise model", access:"open-weights" },
+    { re:/\bJamba Reasoning 3B\b/i, name:"Jamba Reasoning 3B", maker:"AI21 Labs", makerKey:"ai21",
+      kind:"on-device reasoning model", access:"unknown" },
+    { re:/\bJamba\b/i, name:"Jamba", maker:"AI21 Labs", makerKey:"ai21",
+      kind:"hybrid Mamba-Transformer model family", access:"unknown" },
+    { re:/\bPi Journeys\b/i, name:"Pi Journeys", maker:"Inflection AI", makerKey:"inflection",
+      kind:"consumer assistant product", access:"closed" },
+    { re:/\bReka Edge\b/i, name:"Reka Edge", maker:"Reka AI", makerKey:"reka",
+      kind:"vision-language model", access:"unknown" },
+    { re:/\bInkling\b/i, name:"Inkling", maker:"Thinking Machines Lab", makerKey:"thinking-machines",
+      kind:"open-weight multimodal model", access:"open-weights" },
 
     // --- Previous generations (still referenced in coverage and comparisons) ---
     { re:/\bGPT-4o\b/i, name:"GPT-4o", maker:"OpenAI", makerKey:"openai",
