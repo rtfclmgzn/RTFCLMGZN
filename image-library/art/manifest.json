@@ -716,7 +716,9 @@
       ],
       "text_space": "dark wall upper-left",
       "brand_visible": "GEMINI signage",
-      "used_in": []
+      "used_in": [
+        { "article_id": "newsroom-google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop", "used_at": "2026-08-07" }
+      ]
     },
     {
       "id": "art-028-industrial-compute-plant-at-dusk",

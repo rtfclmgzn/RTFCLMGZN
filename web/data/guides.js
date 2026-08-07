@@ -1183,5 +1183,198 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g5",
+    "slug": "audit-your-ci-for-the-claude-code-gemini-cli-codex-rce",
+    "image": "assets/img/g5.jpg",
+    "title": "Audit your CI for the Claude Code, Gemini CLI, and Codex GitHub-issue RCE",
+    "dek": "Black Hat researchers showed one untrusted GitHub issue could hijack any of three AI coding agents in CI. All three vendors already shipped fixes — this is the checklist for confirming your own pipeline is actually running them.",
+    "persona": "luka-petrovic",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-07T16:04:49Z",
+    "readMins": 4,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "One GitHub issue could hijack Claude Code, Gemini CLI, or Codex in CI, Black Hat researchers showed.",
+      "All three vendors shipped fixes before the findings went public — confirm you're actually on them.",
+      "Fixed releases: Claude Code 2.1.163+, Gemini CLI 0.39.1+ / run-gemini-cli 0.1.22+, Codex's fix is a workflow change.",
+      "Check whether any workflow feeds raw issue or pull-request text straight into a command line.",
+      "Caveat: GitHub's own advisory ties CVE-2026-54316 to only one stage of the chain, not the whole exploit."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "At Black Hat USA on August 5, researchers from Novee Security showed that a single GitHub issue — opened by an outside account with zero write access to the repository — was enough to reach remote code execution against three different AI coding agents running in CI: Anthropic's Claude Code, Google's Gemini CLI, and OpenAI's Codex. All three vendors had already shipped fixes before the findings went public, which is the good news and the reason this is a checklist rather than an emergency. The bad news is that 'a patch exists' and 'my pipeline is running it' are two different facts, and the gap between them is exactly what a prompt-injection payload sitting in a public issue is built to exploit. [Full findings, vendor by vendor.](#/article/black-hat-2026-github-issue-claude-code-gemini-cli-codex-rce)",
+        "citation_urls": [
+          "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Which of the three do you actually run?"
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH TOOL",
+          "title": "Match your CI setup to its fix",
+          "question": "Take the branch matching what's actually wired into your pipeline — check all that apply.",
+          "branches": [
+            {
+              "when": "Claude Code Action runs against GitHub issues or pull requests.",
+              "then": "Confirm the pinned version is 2.1.163 or later.",
+              "because": "Earlier builds let a crafted git flag hidden inside an issue-triggered command reach the runner unread by the tool's own 23 built-in validation checks."
+            },
+            {
+              "when": "Gemini CLI or run-gemini-cli runs non-interactively in a pipeline.",
+              "then": "Confirm you're on Gemini CLI 0.39.1+ / run-gemini-cli 0.1.22+, and that the new non-interactive trust confirmation actually blocks the run rather than being bypassed by an existing flag or config.",
+              "because": "Google rated the underlying flaw the maximum CVSS 10.0 — an allowlist marked \"restricted\" was never enforced at runtime, letting a malicious .gemini/ directory reach code execution the moment CI ran the tool against untrusted code.",
+              "hi": true
+            },
+            {
+              "when": "Codex runs more than one pass inside a single CI job sharing one checkout.",
+              "then": "Split the passes into isolated jobs, matching OpenAI's own fix, and treat AGENTS.md as untrusted input regardless of version.",
+              "because": "This wasn't a single patchable bug — OpenAI closed it by changing the workflow itself, so there's no version number to check against."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Version numbers only close the vendors' own patched entry points. The pattern underneath all three — an agent treating something inside the repository it's working on as an instruction rather than as data — is a configuration problem you carry, not one a version bump resolves for you.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Audit your own CI, not just the vendor changelog",
+          "sub": "Ten minutes per pipeline, and the only thing you need is read access to your own workflow files.",
+          "est": "10 min",
+          "level": "Intermediate",
+          "track": true,
+          "prereqs": [
+            "Read access to your repository's CI workflow files.",
+            "The ability to check which version of each tool a workflow actually pulls, not just what's in your notes."
+          ],
+          "steps": [
+            {
+              "do": "Find every workflow that invokes one of the three tools.",
+              "detail": "Search your CI configs for claude-code, gemini-cli / run-gemini-cli, and codex.",
+              "verify": "You have a complete list of workflows that touch one of the three, not just the ones you remembered.",
+              "ifnot": "If your CI spans multiple repositories, repeat the search in each — a fix applied in one repo's workflow doesn't apply to a copy pasted into another."
+            },
+            {
+              "do": "Print the actual pinned version each workflow runs.",
+              "detail": "Check the action tag, the package version, or the container image digest — not the version you last remember installing.",
+              "verify": "You have a real version string for every workflow on your list.",
+              "ifnot": "If a workflow pulls 'latest' with no pin, that's a separate finding: you can't audit a version you don't control, and you should pin one."
+            },
+            {
+              "do": "Compare each version against the fixed release named above.",
+              "hi": true,
+              "detail": "Claude Code 2.1.163+, Gemini CLI 0.39.1+ / run-gemini-cli 0.1.22+. Codex has no version gate — its fix is the workspace-isolation change.",
+              "verify": "Every workflow is on or above its tool's fixed version, or Codex's passes are already isolated.",
+              "ifnot": "Upgrade before doing anything else on this list. Nothing else here substitutes for actually being on the patched release."
+            },
+            {
+              "do": "Check whether the workflow feeds raw issue or pull-request text into a command line.",
+              "detail": "The Claude Code chain specifically exploited a crafted git flag reaching a shell command unvalidated. Look for any step that interpolates issue or PR content directly into a bash invocation.",
+              "verify": "Untrusted text is passed as a parameter, escaped, or handled by the tool's own validated interface — never string-concatenated into a shell command.",
+              "ifnot": "If you find raw interpolation, treat it as its own vulnerability independent of whether the specific vendor bug was patched, and fix it the same way: never build a shell command from unvalidated input."
+            },
+            {
+              "do": "Re-run the workflow against a test issue after patching.",
+              "detail": "Open a throwaway issue with an obviously adversarial title or body and confirm the agent handles it as inert text, not as an instruction.",
+              "verify": "The test run completes with no unexpected command execution and no secrets touched.",
+              "ifnot": "If the agent still reacts to content inside the test issue as if it were a command, the patch didn't close the gap in your specific configuration — file it with the vendor rather than assuming the changelog covers your setup."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running the five steps once closes the vendors' disclosed gap. The ways this audit quietly fails anyway are the same four every time.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this audit gets called done when it isn't",
+          "items": [
+            {
+              "mistake": "Assuming Codex needs no action because it has no CVE number.",
+              "looks": "Every other tool gets a version-bump ticket; Codex gets skipped because there's nothing to bump.",
+              "why": "OpenAI's fix was a workflow change in its own repository, not a package release — there is no version string that tells you whether your own Codex jobs still share one checkout.",
+              "fix": "Check your own CI job definitions directly: are two Codex passes still writing to and reading from the same AGENTS.md in one job?",
+              "cost": "high"
+            },
+            {
+              "mistake": "Bumping Gemini CLI's version but leaving a flag or config that bypasses the new trust confirmation.",
+              "looks": "The changelog says fixed; the pipeline still runs the tool non-interactively without ever pausing on untrusted input.",
+              "why": "The version bump ships the capability to require trust confirmation — it doesn't force every existing config to actually invoke it.",
+              "fix": "Confirm the trust-confirmation step is present in your workflow logs on a real run, not just in the release notes.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Trusting a container image built before the patch and never rebuilt.",
+              "looks": "The workflow file references the right version tag, but the cached image underneath is weeks stale.",
+              "why": "A version pin in a YAML file describes intent, not what's actually installed in a layer that hasn't been rebuilt.",
+              "fix": "Force a rebuild and check the installed version inside the running container, not just the file that names it.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Treating CVE-2026-54316 as covering the whole disclosed chain.",
+              "looks": "A patch-tracking ticket closed because 'the CVE is fixed.'",
+              "why": "GitHub's own advisory record ties that CVE specifically to the Hugging Face data-exfiltration stage, published weeks before the Black Hat talk — not the initial git-flag validator bypass Novee presented on stage.",
+              "fix": "Confirm your Claude Code version against 2.1.163, the release that closed the full chain Novee disclosed, rather than against the CVE number alone.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Two DEF CON follow-on talks — Aug 7 and Aug 9 — may add detail beyond what Black Hat covered, and any of the three vendors could revise guidance as a result. Treat this as a snapshot: re-check version numbers against each vendor's own advisory page before signing off an audit, not against this guide months from now.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Grep your CI configs today, not on the next sprint.",
+        "text": "Search every repository's workflow files for claude-code, gemini-cli, run-gemini-cli, and codex before doing anything else on this list."
+      },
+      {
+        "label": "Verify the running version, not the pinned one.",
+        "text": "A version pin in a workflow file is intent. Check what's actually installed in the container or runner that executes it."
+      },
+      {
+        "label": "Test with an adversarial issue before calling it closed.",
+        "text": "Open a throwaway issue with an obviously adversarial body and confirm the agent treats it as inert text, not instructions."
+      }
+    ],
+    "sources": [
+      {
+        "label": "GitHub Security Advisory GHSA-fg94-h982-f3mm — Anthropic's own advisory record for the Claude Code exfiltration stage",
+        "url": "https://github.com/anthropics/claude-code/security/advisories"
+      },
+      {
+        "label": "Novee Security — update to Gemini CLI and run-gemini-cli trust model",
+        "url": "https://novee.security/vulnerabilities/update-to-gemini-cli-and-run-gemini-cli-trust-model/"
+      },
+      {
+        "label": "cybersecuritynews.com — critical flaws in AI coding agents (Claude Code, Gemini CLI, Codex chains)",
+        "url": "https://cybersecuritynews.com/critical-flaws-in-ai-coding-agents/"
+      },
+      {
+        "label": "eSecurityPlanet — Black Hat 2026: critical flaws found in Anthropic, Google, and OpenAI coding agents",
+        "url": "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+      }
+    ],
+    "corrections": []
   }
 ];
