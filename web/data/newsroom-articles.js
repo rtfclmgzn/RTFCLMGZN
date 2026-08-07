@@ -12380,6 +12380,10 @@ window.RTFC_NEWSROOM_ARTICLES = [
       {
         "label": "Yahoo Finance — Google stock drops amid DeepMind leadership shake-up",
         "url": "https://finance.yahoo.com/technology/article/google-stock-drops-amid-deepmind-leadership-shake-up-170219204.html"
+      },
+      {
+        "label": "Neon River — Koray Kavukcuoglu, Top 30 EMEA CTOs 2025 (career background)",
+        "url": "https://www.neonriver.com/koray-kavukcuoglu-2025/"
       }
     ],
     "id": "newsroom-google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop",
