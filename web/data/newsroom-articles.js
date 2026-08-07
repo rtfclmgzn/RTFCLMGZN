@@ -11906,5 +11906,269 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-01T22:01:13Z"
+  },
+  {
+    "slug": "black-hat-2026-github-issue-claude-code-gemini-cli-codex-rce",
+    "title": "One GitHub issue, opened by an outsider with zero access, could hijack Claude Code, Gemini CLI, or Codex, researchers showed at Black Hat",
+    "dek": "Novee Security's Black Hat USA talk found that a single untrusted GitHub issue could trigger remote code execution against Anthropic's Claude Code, Google's Gemini CLI, and OpenAI's Codex inside their default CI integrations. All three vendors had already shipped fixes by the time the talk went public, and Google rated its own flaw the maximum CVSS 10.0. Coverage of the Claude Code finding converges on one CVE number for what looks like a multi-stage chain — this piece separates what Anthropic's own advisory record attributes to that number from what the talk itself described.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "breaking": true,
+    "tldr": [
+      "Novee researchers showed a single untrusted GitHub issue could compromise Claude Code, Gemini CLI, and Codex.",
+      "All three vendors had already shipped fixes; this was responsible disclosure, not an active exploit.",
+      "Google rated its Gemini CLI flaw a maximum CVSS 10.0 and changed its non-interactive trust model.",
+      "OpenAI's Codex bug let a poisoned AGENTS.md file carry attacker instructions between workflow stages.",
+      "Caveat: outlets disagree on what CVE-2026-54316 covers; GitHub's own advisory ties it to one stage only."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "At Black Hat USA on August 5, researchers from the AI-security firm Novee showed that a single GitHub issue — opened by an outside account with no write access to the repository — was enough to trigger remote code execution against three different vendors' AI coding agents: [Anthropic's](#/company/anthropic) Claude Code, [Google's](#/company/google) Gemini CLI, and [OpenAI's](#/company/openai) Codex. Presenter Elad Meged's talk, \"Trusted Enough to Run: Breaking AI Agents in Official Workflows,\" argued the common failure wasn't in any of the underlying models — it was in the software wrapped around them: the permission logic, tool routing, sandboxing, and shared workspaces that decide what an agent is allowed to touch once it starts reading a repository's own issues and pull requests.",
+        "citation_urls": [
+          "https://www.globenewswire.com/news-release/2026/07/28/3334295/0/en/Novee-Researchers-to-Present-Four-Sessions-across-Black-Hat-USA-and-DEF-CON-Uncovering-Vulnerabilities-in-Anthropic-OpenAI-and-Google.html",
+          "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "All three vendors had already patched by the time the findings went public — this is disclosed, fixed vulnerability research, not an ongoing exploit. Novee, founded by Ido Geffen, Gon Chalamish, and Omer Ninburg and backed by $51.5 million from investors including YL Ventures and Canaan Partners, framed the pattern across all three as a trust-handoff problem. \"These sessions show that some of the most serious security failures emerge before expected safeguards take effect, or inside components organizations already trust,\" CEO Ido Geffen said in the company's pre-conference announcement.",
+        "citation_urls": [
+          "https://www.globenewswire.com/news-release/2026/07/28/3334295/0/en/Novee-Researchers-to-Present-Four-Sessions-across-Black-Hat-USA-and-DEF-CON-Uncovering-Vulnerabilities-in-Anthropic-OpenAI-and-Google.html"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "The disclosure",
+          "title": "The Black Hat findings, in short",
+          "items": [
+            { "label": "Presenter / firm", "value": "Elad Meged, Novee Security" },
+            { "label": "Venue", "value": "Black Hat USA, Aug 5 2026", "note": "two related DEF CON 34 sessions follow on Aug 7 and Aug 9" },
+            { "label": "Vendors affected", "value": "Three", "note": "Anthropic Claude Code, Google Gemini CLI, OpenAI Codex" },
+            { "label": "Entry point", "value": "One GitHub issue", "note": "opened by an account with zero repository privileges" },
+            { "label": "Status", "value": "All three patched", "note": "disclosed and fixed before or at the talk" }
+          ],
+          "source": "Novee Security press release, July 28 2026; eSecurityPlanet Black Hat coverage, Aug 6 2026."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "How one GitHub issue reached three different vendors' runners"
+      },
+      {
+        "type": "p",
+        "text": "In Anthropic's case, the chain started with Claude Code Action, the GitHub Actions integration that lets the agent respond to issues and pull requests automatically. Claude Code's command validator strips single-quoted text before running its 23 built-in security checks — correct behavior for how bash actually parses quotes, but it meant a payload hidden inside the value of a git flag, specifically a crafted `git push --receive-pack` option, reached the runner without ever being inspected. A prompt-injection payload planted in a GitHub issue could steer the agent into constructing that command itself, achieving code execution on the Actions runner and exposing workflow secrets including the repository's `GITHUB_TOKEN` and its `ANTHROPIC_API_KEY`.",
+        "citation_urls": [
+          "https://cybersecuritynews.com/critical-flaws-in-ai-coding-agents/",
+          "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Anthropic shipped fixes as Novee kept finding follow-on bypasses: one used the Unix `tac` command to read files back out through GitHub Actions' own logs, and a third abused a pre-approved `huggingface.co` hostname inside Claude Code's WebFetch tool as a covert channel, leaking a stolen API key one character at a time through Hugging Face's public download counter. That last stage is the one documented in Anthropic's own GitHub security advisory, GHSA-fg94-h982-f3mm, published June 13 — five weeks before the Black Hat talk — rated 9.1 under NVD's CVSS v3.1 scoring, and fixed in Claude Code 2.1.163.",
+        "citation_urls": [
+          "https://cybersecuritynews.com/critical-flaws-in-ai-coding-agents/",
+          "https://github.com/anthropics/claude-code/security/advisories"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "Three vendors, three chains",
+          "title": "What broke, and how each vendor closed it",
+          "columns": [
+            { "label": "Claude Code", "sub": "Anthropic" },
+            { "label": "Gemini CLI", "sub": "Google", "hi": true },
+            { "label": "Codex", "sub": "OpenAI" }
+          ],
+          "rows": [
+            {
+              "label": "Entry point",
+              "values": [
+                "Prompt injection via a GitHub issue, through Claude Code Action",
+                "A crafted .gemini/ directory or env file reached by a CI pipeline",
+                "A poisoned AGENTS.md file written by an earlier agent pass"
+              ]
+            },
+            {
+              "label": "What actually broke",
+              "values": [
+                "Command validator's quote-stripping let a git flag payload through 23 checks unread",
+                "A shell-command allowlist marked \"restricted\" was never enforced at runtime",
+                "Two Codex passes shared one workspace with no isolation between them"
+              ]
+            },
+            {
+              "label": "Severity as rated",
+              "values": [
+                "CVSS 9.1 (NVD v3.1), tied to the HuggingFace-exfiltration stage specifically",
+                "CVSS 10.0, the maximum possible score",
+                "Not CVE-numbered; treated by OpenAI as a workflow-level fix"
+              ]
+            },
+            {
+              "label": "Fix",
+              "values": [
+                "Claude Code 2.1.163+, after multiple patches across the disclosure",
+                "Gemini CLI 0.39.1+ / run-gemini-cli 0.1.22+, plus a breaking trust-model change",
+                "Passes split into isolated jobs in OpenAI's own repository, within three days"
+              ]
+            }
+          ],
+          "source": "Novee Security Black Hat USA disclosure, Aug 5 2026; GitHub Security Advisory GHSA-fg94-h982-f3mm; cybersecuritynews.com and The Hacker News reporting."
+        }
+      },
+      {
+        "type": "p",
+        "text": "This is not Claude Code's only disclosed flaw this year. Anthropic's own GitHub advisory list already carried seven high- or moderate-severity security advisories for the tool before this one, going back to February — a git-worktree sandbox escape published in June, a trust-dialog bypass via a repo-controlled settings file in March, another via git-worktree spoofing in April. Several follow the same broad shape as the Black Hat finding: a guardrail meant to treat a repository's own contents as untrusted gets defeated by something inside that repository. Reading the advisory list as a set, rather than one disclosure at a time, is what shows that pattern; no single write-up states it.",
+        "citation_urls": [
+          "https://github.com/anthropics/claude-code/security/advisories"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Gemini CLI's maximum-severity rating"
+      },
+      {
+        "type": "p",
+        "text": "Google rated its own flaw the maximum possible CVSS 10.0. Novee's own writeup, published April 23 when the fix was still new, describes two compounding problems: Gemini CLI's automatic folder-trust behavior meant a pull request carrying a malicious `.gemini/` directory could reach remote code execution the moment a CI pipeline ran the tool against untrusted code, and a shell-command allowlist Google's own tooling marked \"restricted\" was never actually enforced at runtime. Google's fix — shipped as Gemini CLI 0.39.1 and run-gemini-cli 0.1.22 — was, in Novee's account, \"a breaking change to its trust model for non-interactive execution environments\": CI and other headless runs of Gemini CLI now require an explicit trust confirmation they didn't require before.",
+        "citation_urls": [
+          "https://novee.security/vulnerabilities/update-to-gemini-cli-and-run-gemini-cli-trust-model/",
+          "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Codex's shared-workspace problem"
+      },
+      {
+        "type": "p",
+        "text": "OpenAI's Codex issue was structural rather than a single exploitable bug in a validator. The company's own openai/codex repository ran two Codex passes inside one CI job sharing a single checkout. The first pass could write to `AGENTS.md`, the instruction file the second pass loads and treats as trusted — so an attacker able to influence the first pass's output could plant instructions the second pass would then follow as its own. OpenAI didn't ship a version bump for it; it fixed its own workflow by separating the two passes into isolated jobs within three days of the finding, and now documents `AGENTS.md` as an untrusted input surface.",
+        "citation_urls": [
+          "https://cybersecuritynews.com/critical-flaws-in-ai-coding-agents/",
+          "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What CVE-2026-54316 actually covers"
+      },
+      {
+        "type": "p",
+        "text": "Coverage of the Claude Code finding converges on one CVE number, but not on what it covers — and that's worth being precise about, because the sources disagree with each other, not just with the framing on stage."
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "What vulnerability does CVE-2026-54316 formally cover?",
+              "claims": [
+                {
+                  "who": "GitHub Security Advisory GHSA-fg94-h982-f3mm (Anthropic's own advisory record)",
+                  "kind": "primary",
+                  "says": "Out-of-band exfiltration via a pre-approved Hugging Face domain in WebFetch — the exfiltration stage alone, published June 13, CVSS 9.1 under NVD's v3.1 scoring.",
+                  "url": "https://github.com/anthropics/claude-code/security/advisories",
+                  "trusted": true
+                },
+                {
+                  "who": "The Hacker News and cybersecuritynews.com's Black Hat coverage",
+                  "kind": "reporting",
+                  "says": "CVE-2026-54316 covers the whole disclosed chain, starting with the git push --receive-pack validator bypass that achieved the initial remote code execution.",
+                  "url": "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
+                }
+              ],
+              "ruling": "Trusting GitHub's own advisory record for what the CVE number formally denotes: the Hugging Face exfiltration stage, disclosed and fixed weeks before Black Hat. The initial RCE stage Novee presented on Aug 5 — the git-flag validator bypass — does not appear to carry its own separate CVE in Anthropic's public advisory list as of this writing; the Black Hat coverage may simply be attaching the one CVE number that exists to the entire chain Anthropic patched."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Whichever label applies to which stage, the practical fact is the same across all three vendors: a researcher, using nothing but the ability to open a public GitHub issue, could turn a coding agent's own automation against the repository it was supposed to help maintain. None of the three companies disputes that framing — each shipped a fix, and none has disclosed evidence that the techniques were used against a real target before Novee reported them."
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch for two more Novee sessions this week.",
+        "text": "DEF CON 34 talks on Aug 7 (\"The Sandbox Is a Suggestion\") and Aug 9 (\"No Prompt Required: Pre-Task RCE in Gemini CLI\") may add detail beyond the Aug 5 Black Hat talk."
+      },
+      {
+        "label": "If any of these three tools run in your CI, check the version pin.",
+        "text": "Fixes ship in Claude Code 2.1.163+ and Gemini CLI 0.39.1+ / run-gemini-cli 0.1.22+; Codex's fix is a workflow change in OpenAI's own repository, not a package version bump."
+      },
+      {
+        "label": "Watch whether GitHub assigns a separate CVE to the initial RCE stage.",
+        "text": "GitHub's own advisory currently ties CVE-2026-54316 only to the Hugging Face exfiltration stage; a second CVE for the git-flag validator bypass would resolve the discrepancy this piece flags."
+      },
+      {
+        "label": "Review any workflow that runs an AI coding agent against public issues or fork pull requests.",
+        "text": "All three disclosed chains started with attacker-controlled content reaching an agent that had write access to a shared checkout."
+      }
+    ],
+    "applyType": "work",
+    "sources": [
+      {
+        "label": "Novee — Researchers to Present Four Sessions across Black Hat USA and DEF CON",
+        "url": "https://www.globenewswire.com/news-release/2026/07/28/3334295/0/en/Novee-Researchers-to-Present-Four-Sessions-across-Black-Hat-USA-and-DEF-CON-Uncovering-Vulnerabilities-in-Anthropic-OpenAI-and-Google.html"
+      },
+      {
+        "label": "Novee — Update to Gemini CLI and run-gemini-cli Trust Model",
+        "url": "https://novee.security/vulnerabilities/update-to-gemini-cli-and-run-gemini-cli-trust-model/"
+      },
+      {
+        "label": "GitHub — Security advisories, anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code/security/advisories"
+      },
+      {
+        "label": "GitLab Advisory Database — CVE-2026-54316 (@anthropic-ai/claude-code)",
+        "url": "https://advisories.gitlab.com/npm/@anthropic-ai/claude-code/CVE-2026-54316/"
+      },
+      {
+        "label": "The Hacker News — Claude Code and Gemini CLI Flaws Let a GitHub Issue Reach CI Workflow Secrets",
+        "url": "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
+      },
+      {
+        "label": "eSecurityPlanet — Black Hat 2026: Critical Flaws Found in Anthropic, Google, and OpenAI Coding Agents",
+        "url": "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+      },
+      {
+        "label": "cybersecuritynews.com — Critical Flaws in Anthropic, Google, and OpenAI's Coding Agents Enable RCE and Supply Chain Attacks",
+        "url": "https://cybersecuritynews.com/critical-flaws-in-ai-coding-agents/"
+      }
+    ],
+    "id": "newsroom-novee-ai-coding-agent-github-issue-rce",
+    "image": "assets/img/newsroom/newsroom-novee-ai-coding-agent-github-issue-rce.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner breaking-scan · 2026-08-07T09:17:25Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via a breaking-scan checkpoint's search window (Black Hat USA, Aug 5 2026). Confirmed no prior cycle had covered it: grep of slug/title/publishedAt against web/data/newsroom-articles.js found no matching entry, and this is distinct from the already-published 'anthropic-claude-models-breach-three-organizations' (Anthropic's own models breaching real companies during its cybersecurity-eval sandbox testing, a misconfiguration issue) and 'claude-cowork-sandbox-escape-sharedroot' (a single-vendor Claude Cowork VM-escape chain) -- this is a different vulnerability class: external researchers (Novee) finding prompt-injection-to-RCE flaws in three separate vendors' coding-agent CI harnesses. Cleared the breaking bar under runbook §1 as a major security-incident disclosure spanning three widely-used AI systems at once. Elevated to synthesis given seven independent, materially distinct sources across four source classes (Novee's own press release and technical blog as primary/finder sources, GitHub's own security-advisory record and the GitLab advisory database as filing/official and dataset classes, plus three independent security-trade outlets), and genuine reconciliation work (the CVE-2026-54316 scope discrepancy)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Verified directly against primary sources before drafting, per the runbook's explicit requirement: fetched Novee's own GlobeNewswire press release and its own Gemini CLI vulnerability writeup (novee.security) directly; fetched GitHub's own security-advisories list for anthropics/claude-code directly and confirmed GHSA-fg94-h982-f3mm's title, date, and severity; fetched the GitLab Advisory Database's CVE-2026-54316 record directly. Also fetched Anthropic's public CVD dashboard (red.anthropic.com/2026/cvd/) directly, which returned an aggregate snapshot of its bug-bounty program but no entry specific to this incident, so it is not cited as a source for any claim in this piece. Found and resolved a genuine discrepancy: GitHub's own advisory ties CVE-2026-54316 specifically to the Hugging Face WebFetch exfiltration stage (published June 13, ahead of Black Hat), while Black Hat-focused secondary coverage (The Hacker News, cybersecuritynews.com, eSecurityPlanet, and a search-indexed hackread.com summary not independently fetched -- it returned HTTP 403 to direct WebFetch, so no claim in this article relies on it or cites it) describes the same CVE number as covering the entire chain including the earlier git push --receive-pack RCE stage. Resolved per the anti-fabrication rule: trusted the primary GitHub advisory for what the CVE formally denotes, stated the secondary framing honestly as reporting rather than silently picking one, and built a dedicated sourcecheck component rather than forcing a single number onto both claims. Did not add any of the three vendors' security-response text as neutral fact -- CVSS self-ratings and 'breaking change to trust model' framing are attributed to the vendor or to Novee throughout. No new companies.js entries needed: anthropic, google, and openai are all already in the directory. No entities.js addition: this is a security-tooling disclosure, not a model launch or upgrade, so no Scoreboard-relevant fact applies."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 4 (negative/accusatory claims about named companies) considered for describing three vendors' own product security failures. Remediated by sourcing every technical claim to Novee's own disclosure, the vendors' own advisory/fix records, or independently reported facts, and by explicitly attributing self-rated severity scores (Google's CVSS 10.0, the NVD 9.1) and self-described fixes to the party making the claim rather than stating them as neutral fact. Trigger 6 (unverifiable central claim) addressed via the dedicated sourcecheck component making explicit which CVE-scope claim is attributable to which source, rather than asserting one silently. Trigger 5 (verbatim quotes attributed to a real person) satisfied: the only quotes used (Novee CEO Ido Geffen's press-release line; Novee's own 'breaking change to its trust model' phrase) are verbatim from linked primary sources. No health, financial-advice, or legal-proceeding triggers apply. Disclaimer: none. One-per-scan cap (runbook §3) observed -- no other candidate this window cleared the same bar; the DeepMind leadership reshuffle/Discovery Loop startup news and the Meta Muse Spark eval-breach follow-up were both considered and deferred to the next regular cycle as noted in the Step 4 log entry, and unsubstantiated 'Grok 4.6 launch' claims from low-tier aggregators were rejected as uncorroborated."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); breaking-scan publish, one per scan cap (runbook §3), no other candidate this window cleared the same bar."
+      }
+    },
+    "publishedAt": "2026-08-07T09:17:25Z"
   }
 ];
