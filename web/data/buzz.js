@@ -144,4 +144,10 @@ window.RTFC_BUZZ = [
     why:"A concrete, named, tenfold cost-reduction case study -- rarer than another routing-startup funding round -- landing right as the labs whose margins this kind of routing erodes (Anthropic among them) are themselves investors in it.",
     heat:57, topics:["sapiom","funding","ai agents","inference cost","model routing"],
     url:"https://thenextweb.com/news/sapiom-35m-series-a-ai-agent-cost-routing" },
+  { id:"bz-150", date:"2026-08-06",
+    source:{ name:"AMD", handle:"AMD", platform:"web", kind:"lab" },
+    text:"AMD announced a definitive agreement to acquire Taalas, a three-year-old startup that etches AI model weights directly into silicon for inference, saying the deal strengthens its AI roadmap with what it called differentiated inference technology. Terms weren't disclosed; Taalas had raised $219M in venture funding since its 2023 founding, and the deal is expected to close in Q4 2026.",
+    why:"A major chipmaker buying its way into hardwired-weights inference silicon -- a narrower, more speculative bet than Nvidia or Anthropic's GPU-cluster deals, and AMD didn't say what it paid.",
+    heat:54, topics:["amd","taalas","chips","inference","acquisitions"],
+    url:"https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html" },
 ];
