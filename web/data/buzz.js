@@ -162,4 +162,10 @@ window.RTFC_BUZZ = [
     why:"A quantum-computing pure play posting real, growing commercial revenue rather than just qubit-count milestones -- and vertically integrating into onshore chip manufacturing via SkyWater the same quarter, a different kind of buildout than the compute story dominating this beat.",
     heat:50, topics:["ionq","quantum computing","earnings","skywater","compute"],
     url:"https://investors.ionq.com/news/news-details/2026/IonQ-Announces-Record-Second-Quarter-2026-Revenues-Growing-287-YoY/default.aspx" },
+  { id:"bz-158", date:"2026-08-10",
+    source:{ name:"Meta", handle:"Meta AI Research", platform:"web", kind:"lab" },
+    text:"Meta released Muse Glimmer, a 30-billion-parameter open-weight agent model optimized for local deployment on single consumer GPUs (20GB+VRAM). The model supports multimodal inputs, up to 131K context with a 2B vision encoder, and is trained on synthetic agent scenarios using reinforcement learning. Meta's internal MCP Atlas benchmarks score it at 75.5.",
+    why:"A 30B open-weight agent model released the same week as the OpenAI Astra safety pause and the Hugging Face autonomous breach -- a concrete, deployable open alternative to closed API agents arriving at an inflection point in agentic AI credibility.",
+    heat:72, topics:["meta","muse glimmer","agent models","open source","local deployment"],
+    url:"https://ai.meta.com/blog/meta-releases-muse-glimmer-open-weight-agent-model/" },
 ];
