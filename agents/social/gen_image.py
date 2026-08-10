@@ -47,6 +47,14 @@ def styled(prompt):
     return prompt.rstrip(" .") + ". " + HOUSE_STYLE + " " + STYLE_NEGATIVE
 
 def load_key():
+    # Env first, so this runs unchanged on a CI runner where .secrets.json does not
+    # exist (and must not exist — it is gitignored for good reason). Locally the file
+    # still wins by simply being the only source present.
+    env_key = os.environ.get("GEMINI_API_KEY")
+    if env_key:
+        return env_key.strip()
+    if not os.path.exists(SECRETS):
+        sys.exit("No Gemini key: set GEMINI_API_KEY, or create agents/social/.secrets.json")
     with open(SECRETS, "r", encoding="utf-8") as f:
         data = json.load(f)
     key = (data.get("gemini") or {}).get("api_key")

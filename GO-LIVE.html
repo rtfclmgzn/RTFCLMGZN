@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RTFCLMGZN — Go Live Checklist</title>
+<style>
+:root{--bg:#0f0c14;--card:#181322;--line:#2a2337;--ink:#ece7f5;--dim:#9a90b0;
+ --violet:#8b7cf7;--violet2:#c48af0;--gold:#e0a940;--green:#4ec98a;--red:#e0685a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.6 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif;padding:28px 16px 80px}
+.wrap{max-width:760px;margin:0 auto}
+h1{font-size:30px;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--dim);margin:0 0 8px}
+.time{display:inline-block;background:#241c33;border:1px solid var(--line);color:var(--violet2);
+ border-radius:999px;padding:4px 12px;font-size:13px;margin-bottom:26px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 16px;overflow:hidden}
+.head{display:flex;gap:14px;align-items:flex-start;padding:18px 20px}
+.n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--violet);color:#120e1c;
+ display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px}
+.n.you{background:var(--gold)}
+.n.done{background:var(--green)}
+.ht{font-size:19px;font-weight:700;margin:3px 0 2px}
+.hw{color:var(--dim);font-size:14px}
+.body{padding:0 20px 20px 68px}
+ol,ul{margin:10px 0;padding-left:20px}li{margin:7px 0}
+code{background:#241c33;border:1px solid var(--line);border-radius:5px;padding:2px 7px;
+ font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--violet2)}
+pre{background:#120e1c;border:1px solid var(--line);border-radius:10px;padding:14px 16px;
+ overflow-x:auto;margin:12px 0}
+pre code{background:none;border:none;padding:0;color:#cfc5e6;font-size:13px}
+.tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+ padding:3px 9px;border-radius:999px;font-weight:700;margin-left:auto;flex:0 0 auto}
+.tag.you{background:rgba(224,169,64,.16);color:var(--gold);border:1px solid rgba(224,169,64,.4)}
+.tag.bat{background:rgba(139,124,247,.16);color:var(--violet2);border:1px solid rgba(139,124,247,.4)}
+.note{border-left:3px solid var(--violet);background:rgba(139,124,247,.07);
+ padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:14.5px}
+.warn{border-left-color:var(--gold);background:rgba(224,169,64,.08)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.07em}
+.env{font:13px/1.9 ui-monospace,Menlo,Consolas,monospace}
+.env b{color:var(--violet2);font-weight:600}
+.vgrid{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.v{font-size:12px;padding:4px 8px}
+.big{background:linear-gradient(135deg,#2a1f45,#1d1730);border:1px solid var(--violet);
+ border-radius:12px;padding:18px 20px;margin:14px 0;text-align:center}
+.big .lbl{color:var(--dim);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.big .code{display:block;font:700 26px/1.4 ui-monospace,Menlo,Consolas,monospace;
+ color:var(--gold);letter-spacing:.04em;margin-top:4px}
+details{margin:10px 0}summary{cursor:pointer;color:var(--violet2);font-size:14.5px}
+.done-box{background:rgba(78,201,138,.08);border:1px solid rgba(78,201,138,.35);
+ border-radius:14px;padding:20px 24px;margin-top:26px}
+.done-box h2{margin:0 0 8px;font-size:20px;color:var(--green)}
+@media(max-width:560px){.body{padding-left:20px}}
+</style></head><body><div class="wrap">
+
+<h1>Going live with Plus</h1>
+<p class="sub">Four steps. Two of them are just double-clicking a file.</p>
+<span class="time">≈ 30 minutes, most of it in Stripe</span>
+
+<div class="step"><div class="head"><div class="n you">1</div><div>
+<div class="ht">Set up Stripe</div><div class="hw">Only you can do this — it's your bank account</div>
+</div><span class="tag you">You, in a browser</span></div><div class="body">
+<ol>
+<li>Sign up at <b>dashboard.stripe.com</b> and finish activation (bank details, business info).</li>
+<li><b>Product catalogue → Add product</b>. Call it <code>RTFCLMGZN Plus</code>. Add <b>three prices</b>:
+<table>
+<tr><th>Price</th><th>Type</th></tr>
+<tr><td>$4.00 USD</td><td>Recurring — monthly</td></tr>
+<tr><td>$30.00 USD</td><td>Recurring — yearly</td></tr>
+<tr><td>$90.00 USD</td><td><b>One-time</b> (not recurring)</td></tr>
+</table>
+Copy each price ID — they look like <code>price_1AbC…</code></li>
+<li><b>Developers → API keys</b> → copy the <b>Secret key</b> (<code>sk_…</code>)</li>
+<li><b>Developers → Webhooks → Add endpoint</b><br>
+URL: <code>https://rtfclmgzn.com/api/billing/webhook</code><br>
+Tick these 5 events:
+<pre><code>checkout.session.completed
+customer.subscription.created
+customer.subscription.updated
+customer.subscription.deleted
+invoice.payment_failed</code></pre>
+Copy the <b>Signing secret</b> (<code>whsec_…</code>)</li>
+<li><b>Settings → Billing → Customer portal</b> → turn it on, allow cancellation + card updates.</li>
+</ol>
+<div class="note">Start in <b>Test mode</b> (toggle, top right) if you want to try it first. Test card: <code>4242 4242 4242 4242</code>, any future expiry, any CVC.</div>
+</div></div>
+
+<div class="step"><div class="head"><div class="n you">2</div><div>
+<div class="ht">Paste 5 secrets into Cloudflare</div><div class="hw">Pages project → Settings → Environment variables</div>
+</div><span class="tag you">You, in a browser</span></div><div class="body">
+<p>Add each as <b>Encrypted</b>, for <b>both</b> Production and Preview:</p>
+<pre class="env"><b>STRIPE_SECRET_KEY</b>        sk_…
+<b>STRIPE_WEBHOOK_SECRET</b>    whsec_…
+<b>STRIPE_PRICE_MONTHLY</b>     price_…   ($4)
+<b>STRIPE_PRICE_ANNUAL</b>      price_…   ($30)
+<b>STRIPE_PRICE_LIFETIME</b>    price_…   ($90)</pre>
+<div class="note">Until these exist the site shows the prices with the buttons greyed out and says checkout isn't live. Nothing breaks — it just doesn't sell yet.</div>
+</div></div>
+
+<div class="step"><div class="head"><div class="n">3</div><div>
+<div class="ht">Double-click <code>SETUP_BILLING.bat</code></div><div class="hw">Creates the tables and loads all 57 of your codes</div>
+</div><span class="tag bat">One double-click</span></div><div class="body">
+<p>In <code>D:\BUSINESS\RTFCLMGZN</code>. It takes a few seconds.</p>
+<details><summary>Needs wrangler — if it complains</summary>
+<pre><code>npm install -g wrangler
+wrangler login</code></pre></details>
+<div class="note warn">You'll see <b>“duplicate column name”</b> in step 1 of that script. That's expected. Ignore it.</div>
+</div></div>
+
+<div class="step"><div class="head"><div class="n">4</div><div>
+<div class="ht">Double-click <code>RTFCLMGZN_PUBLISH.bat</code></div><div class="hw">Pushes everything live</div>
+</div><span class="tag bat">One double-click</span></div><div class="body">
+<p>Cloudflare rebuilds in a couple of minutes. Then the magazine, the payment system and the codes are all live.</p>
+</div></div>
+
+<div class="done-box">
+<h2>Then unlock your own account</h2>
+<p>Go to <b>rtfclmgzn.com → Account</b>, sign in with your email, and enter:</p>
+<div class="big"><span class="lbl">Your personal code — lifetime Plus</span><span class="code">RTFC-FOUNDER</span></div>
+<p style="color:var(--dim);font-size:14px;margin:0">Works once, on your account only. No card, no checkout.</p>
+</div>
+
+<h2 style="margin:34px 0 6px;font-size:21px">Your codes to give away</h2>
+<p class="sub" style="margin-bottom:14px">Already loaded by step 3. Each works once, for one person. Full list in <code>agents\billing\starter_vouchers.csv</code>.</p>
+
+<div class="step"><div class="body" style="padding:18px 20px">
+<p><b style="color:var(--gold)">Lifetime</b> — 10 codes, for family and close friends</p>
+<div class="vgrid"><code class="v">RTFC-5BH7-ANRC-MW7C</code><code class="v">RTFC-VG3M-N55U-VBEJ</code><code class="v">RTFC-RTMT-CAZU-6XM2</code><code class="v">RTFC-KSQK-QZZX-HK4T</code><code class="v">RTFC-KY5G-GRCB-3DK4</code><code class="v">RTFC-EMU9-B7PT-HC8E</code><code class="v">RTFC-BVCB-5JQ3-SWX5</code><code class="v">RTFC-GKBZ-SMSD-22BV</code><code class="v">RTFC-MHAD-43JU-MY34</code><code class="v">RTFC-Y5Y8-M5HV-62DN</code></div>
+<p style="margin-top:18px"><b style="color:var(--violet2)">12 months free</b> — 15 codes</p>
+<div class="vgrid"><code class="v">RTFC-NVYG-UPKW-B5ZC</code><code class="v">RTFC-BQ8N-WRVT-NWH9</code><code class="v">RTFC-YAJD-858Z-GFP3</code><code class="v">RTFC-8WYA-Y7VB-5E47</code><code class="v">RTFC-JS85-ZAPE-H5VG</code><code class="v">RTFC-YTJB-4KCE-GSDA</code><code class="v">RTFC-UHS8-WVE3-EDVQ</code><code class="v">RTFC-B2MT-J32H-SWPQ</code><code class="v">RTFC-CT4Q-J5MF-PW7Z</code><code class="v">RTFC-74BN-CK54-FB4T</code><code class="v">RTFC-QFGW-KRCW-QZD5</code><code class="v">RTFC-PB7H-RDG5-G937</code><code class="v">RTFC-24E9-4BTN-2CHK</code><code class="v">RTFC-6XN9-JYGS-37GM</code><code class="v">RTFC-XT6M-4MX8-HSA9</code></div>
+<p style="margin-top:18px"><b style="color:var(--violet2)">6 months free</b> — 15 codes</p>
+<div class="vgrid"><code class="v">RTFC-GDTX-NVF6-6RJC</code><code class="v">RTFC-E5FW-Y8U9-2VN4</code><code class="v">RTFC-VR73-XKZM-84KZ</code><code class="v">RTFC-QFYR-TDFX-WJUC</code><code class="v">RTFC-473D-UBWZ-QDDF</code><code class="v">RTFC-JH39-9FQS-UGGK</code><code class="v">RTFC-5EVT-YBPS-9PK2</code><code class="v">RTFC-AWE4-23PQ-9E7X</code><code class="v">RTFC-PT96-FK6A-8JGR</code><code class="v">RTFC-97ZC-SDR2-S3HF</code><code class="v">RTFC-UYVU-8EVC-7HST</code><code class="v">RTFC-X5Z9-7E8K-XP9C</code><code class="v">RTFC-AP5R-5V4G-GPPK</code><code class="v">RTFC-NCDN-FCCP-4MKK</code><code class="v">RTFC-77WA-QAXS-ZWE5</code></div>
+<p style="margin-top:18px"><b style="color:var(--violet2)">3 months free</b> — 15 codes</p>
+<div class="vgrid"><code class="v">RTFC-YSP8-AY9U-YFBM</code><code class="v">RTFC-7XWG-JPCH-WRUS</code><code class="v">RTFC-5G42-UVGA-9T8S</code><code class="v">RTFC-FETP-MYPE-YQ44</code><code class="v">RTFC-KXY4-PJV4-JJFD</code><code class="v">RTFC-AJDS-V9PZ-8B52</code><code class="v">RTFC-7VXC-VB92-W7AV</code><code class="v">RTFC-E4KC-A9ZU-2QY9</code><code class="v">RTFC-GDQP-PTBZ-8BMB</code><code class="v">RTFC-W7GM-JPDQ-5PZZ</code><code class="v">RTFC-TF88-HA75-4X48</code><code class="v">RTFC-67VW-5XAN-JR6E</code><code class="v">RTFC-362J-5M3A-MR9Z</code><code class="v">RTFC-VSMM-FM4E-KX25</code><code class="v">RTFC-87BG-ZVRR-XK2U</code></div>
+<p style="margin-top:18px"><b style="color:var(--green)">RTFC-LAUNCH90</b> — 3 months free, <b>unlimited uses</b>. For marketing: put it in a post and anyone can use it. Turn it off any time with:</p>
+<pre><code>UPDATE vouchers SET active=0 WHERE batch='launch';</code></pre>
+</div></div>
+
+<details style="margin-top:18px"><summary>Want more codes later, or a % discount?</summary>
+<div class="step"><div class="body" style="padding:16px 20px">
+<pre><code>python agents/billing/mint_vouchers.py free-months 3 --count 50
+python agents/billing/mint_vouchers.py lifetime --count 5 --note "press"</code></pre>
+<p style="font-size:14.5px">It writes a <code>.csv</code> of codes and a <code>.sql</code>, and prints the one command to apply them. Nothing is live until you run that command.</p>
+<p style="font-size:14.5px"><b>% off codes are different</b> — they only work at checkout, so make the coupon in Stripe first (Product catalogue → Coupons), then pass its ID with <code>--coupon</code>.</p>
+</div></div></details>
+
+<div class="note warn" style="margin-top:26px">
+<b>Before you market it:</b> your Terms page still says no payments are collected, and there's no refund policy. Worth writing one line — a 14-day no-questions refund is the normal thing — before you take money from strangers.
+</div>
+
+</div></body></html>

@@ -37,7 +37,11 @@
       return r.json();
     }).then(function(d){
       var l=libGet();
-      l.account = (d && d.email) ? { email:d.email, plan:d.plan||"free", since:d.since } : null;
+      // entitlement is the server's description of WHAT the plan is (stripe or
+      // voucher, monthly or yearly or lifetime, when it renews or ends). It is
+      // cached alongside the plan for painting only -- isPlus() still gates on
+      // ACCOUNT_VERIFIED, and nothing in this file ever writes it locally.
+      l.account = (d && d.email) ? { email:d.email, plan:d.plan||"free", since:d.since, entitlement:d.entitlement||null } : null;
       ACCOUNT_VERIFIED=true;
       libSave(l); route();
       if(l.account){ syncLibrary(l); syncReadingTime(l); }
@@ -90,20 +94,319 @@
       .then(function(){ acctPending=email; route(); })
       .catch(function(){ acctPending=email; route(); });
   };
-  /* PROTOTYPE plan switch. It used to write l.account.plan straight into localStorage,
-     which meant `rtfcPlan("plus")` in any console was a free subscription. It asks the
-     server now and adopts whatever the server says via syncAccount(); if the server has
-     no plan endpoint yet, nothing changes and the reader is told why. */
-  window.rtfcPlan=function(plan){
-    var l=libGet(); if(!l.account) return;
-    if(typeof fetch!=="function"){ gtToast("Plan changes need a connection to the newsroom."); return; }
-    fetch("/api/account/plan",{method:"POST",credentials:"same-origin",
-      headers:{"content-type":"application/json"},body:JSON.stringify({plan:plan})
-    }).then(function(r){ return r.ok?r.json():null; }).then(function(d){
-      if(d && d.ok){ syncAccount(); return; }
-      gtToast("Plus isn’t switchable yet — payments arrive with the public launch.");
-    }).catch(function(){ gtToast("Couldn’t reach the newsroom to change your plan. Try again in a moment."); });
+  /* ============================ PLUS BILLING ============================
+     The server owns entitlement (see isPlus() and the note above it). Nothing
+     in this section ever writes l.account.plan: it opens Stripe checkout, opens
+     the Stripe billing portal, or redeems a code — and then asks syncAccount()
+     what actually changed. The only thing it does keep locally is a discount
+     code the reader typed, which is a UI convenience and unlocks nothing.
+
+     This replaced the old prototype plan switch, which POSTed to
+     /api/account/plan — an endpoint that does not exist — so its only visible
+     behaviour was a toast saying Plus wasn't switchable.
+     ===================================================================== */
+
+  /* /api/billing/config, fetched once per load. It answers two things the client
+     cannot know: whether checkout is live at all (Stripe keys configured on the
+     server) and how many founding places are left. Prices are mirrored here so
+     the pricing block can paint before the answer lands — same fixed numbers the
+     server charges; if the two ever disagree, the server's win on the next paint. */
+  var BILLING_PRICES={monthly:{amount:400},annual:{amount:3000},lifetime:{amount:9000}};
+  var BILLING=null, BILLING_REQ=false;
+  function billingLoad(){
+    if(BILLING || BILLING_REQ) return;
+    BILLING_REQ=true;
+    if(typeof fetch!=="function"){ BILLING={enabled:false,known:false}; return; }
+    fetch("/api/billing/config",{credentials:"same-origin"}).then(function(r){
+      if(!r.ok) throw new Error("billing/config "+r.status);
+      return r.json();
+    }).then(function(d){
+      BILLING = (d && d.ok)
+        ? { known:true, enabled:!!d.enabled, prices:d.prices||BILLING_PRICES,
+            cap:d.lifetime_cap, sold:d.lifetime_sold, remaining:d.lifetime_remaining }
+        : { known:false, enabled:false };
+      route();
+    }).catch(function(){ BILLING={known:false,enabled:false}; route(); });
+  }
+  // Renderers call this; the first call starts the fetch and the response re-routes.
+  function billingState(){
+    billingLoad();
+    var b=BILLING||{known:false,enabled:false};
+    return { known:!!b.known, enabled:!!b.enabled, prices:b.prices||BILLING_PRICES,
+             cap:(typeof b.cap==="number")?b.cap:100,
+             remaining:(typeof b.remaining==="number")?b.remaining:null };
+  }
+  function billAmt(st,plan){
+    var p=(st.prices&&st.prices[plan])||BILLING_PRICES[plan]||{amount:0};
+    return Number(p.amount)||0;
+  }
+  // 3000 → "$30", 250 → "$2.50". Whole dollars never carry ".00".
+  function billMoney(cents){
+    var v=(Number(cents)||0)/100;
+    return "$"+(v%1===0 ? String(v) : v.toFixed(2));
+  }
+  // "12 March 2027" — the way a renewal date reads in a sentence.
+  function billDate(iso){
+    if(!iso) return "";
+    var d=new Date(iso);
+    if(isNaN(d.getTime())) return "";
+    return d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+  }
+  // A discount code the reader redeemed that turned out to be a discount rather
+  // than access: remembered so the next checkout call carries it. Lives in the
+  // same rtfc-lib object as the rest of the reader's state.
+  function billingCode(){ var l=libGet(); return (l.billing && l.billing.code) || ""; }
+  window.rtfcClearCode=function(){
+    var l=libGet(); if(l.billing){ delete l.billing.code; libSave(l); }
+    route();
   };
+
+  /* Checkout. One session at a time: CHECKOUT_BUSY survives the re-render that a
+     failed attempt triggers, and every buy button is disabled for the duration, so
+     a double-click cannot open two Stripe sessions against one reader. */
+  var CHECKOUT_BUSY=false;
+  window.rtfcCheckout=function(plan,ev){
+    if(ev){ ev.preventDefault(); ev.stopPropagation(); }
+    var l=libGet();
+    if(!l.account){ location.hash="#/account"; return; }
+    if(CHECKOUT_BUSY) return;
+    if(typeof fetch!=="function"){ gtToast("Checkout needs a connection to the newsroom."); return; }
+    CHECKOUT_BUSY=true;
+    var btns=document.querySelectorAll(".pp-buy");
+    [].forEach.call(btns,function(b){
+      b.disabled=true;
+      if(b.getAttribute("data-plan")===plan) b.textContent="Taking you to checkout…";
+    });
+    var body={plan:plan};
+    var code=billingCode(); if(code) body.code=code;
+    fetch("/api/billing/checkout",{method:"POST",credentials:"same-origin",
+      headers:{"content-type":"application/json"},body:JSON.stringify(body)
+    }).then(function(r){ return r.json().catch(function(){ return null; }); }).then(function(d){
+      // Success navigates away, so the buttons stay disabled on purpose — the page
+      // is about to be replaced by Stripe.
+      if(d && d.ok && d.url){ window.location.href=d.url; return; }
+      CHECKOUT_BUSY=false;
+      gtToast((d && d.message) || "Checkout couldn’t be opened just now. Nothing was charged.");
+      route();
+    }).catch(function(){
+      CHECKOUT_BUSY=false;
+      gtToast("Couldn’t reach the newsroom to open checkout. Nothing was charged.");
+      route();
+    });
+  };
+
+  /* The Stripe billing portal — card, invoices, cancel, resume. Only ever offered
+     when entitlement.source === "stripe": a voucher or comped reader has no Stripe
+     customer behind them, so the portal would 404 on a button that promised to work. */
+  window.rtfcPortal=function(ev){
+    if(ev){ ev.preventDefault(); ev.stopPropagation(); }
+    if(typeof fetch!=="function"){ gtToast("Managing your billing needs a connection to the newsroom."); return; }
+    var btn=document.getElementById("acct-portal-btn");
+    if(btn){ if(btn.disabled) return; btn.disabled=true; btn.textContent="Opening billing…"; }
+    fetch("/api/billing/portal",{method:"POST",credentials:"same-origin",
+      headers:{"content-type":"application/json"},body:"{}"
+    }).then(function(r){ return r.json().catch(function(){ return null; }); }).then(function(d){
+      if(d && d.ok && d.url){ window.location.href=d.url; return; }
+      gtToast((d && d.message) || "Couldn’t open the billing portal just now. Your subscription is untouched.");
+      route();
+    }).catch(function(){
+      gtToast("Couldn’t reach the newsroom to open the billing portal. Your subscription is untouched.");
+      route();
+    });
+  };
+
+  /* Code redemption. Uppercased and trimmed before it leaves the browser, so codes
+     are case-insensitive to the reader. A code that GRANTS access re-syncs from the
+     server (never a local plan write); a code that is only a DISCOUNT is remembered
+     and shown as applied on the pricing block until checkout or until it's removed. */
+  window.rtfcRedeem=function(){
+    var inp=document.getElementById("acct-code"); if(!inp) return;
+    var code=String(inp.value||"").trim().toUpperCase();
+    if(!code){ inp.style.borderColor="var(--gate)"; inp.focus(); return; }
+    if(typeof fetch!=="function"){ gtToast("Redeeming a code needs a connection to the newsroom."); return; }
+    var btn=document.getElementById("acct-code-btn");
+    if(btn){ if(btn.disabled) return; btn.disabled=true; btn.textContent="Checking…"; }
+    fetch("/api/billing/redeem",{method:"POST",credentials:"same-origin",
+      headers:{"content-type":"application/json"},body:JSON.stringify({code:code})
+    }).then(function(r){ return r.json().catch(function(){ return null; }); }).then(function(d){
+      if(d && d.ok){
+        if(d.checkout_hint){
+          var l=libGet(); l.billing=l.billing||{}; l.billing.code=code; libSave(l);
+          gtToast(d.message || ("Code "+code+" is a discount — pick a plan and it comes off at checkout."));
+          route(); return;
+        }
+        gtToast(d.message || "Code accepted — your Plus is on.");
+        syncAccount();          // the server decides what this code actually granted
+        return;
+      }
+      gtToast((d && d.message) || "That code didn’t work. Check it and try again.");
+      route();
+    }).catch(function(){
+      gtToast("Couldn’t reach the newsroom to check that code. Try again in a moment.");
+      route();
+    });
+  };
+
+  /* ---- the pricing block: one definition, three homes ----
+     The account page, the magazine storefront (.plusbar) and the locked-issue
+     upsell all render this. Annual is the headline and the recommended tier;
+     Founding Lifetime only appears while places remain, and disappears for good
+     when they don't. opts:
+       dek     – show the "what you get" line above the tiers (default on)
+       compact – tighter tiles, no dek: for the issue upsell inside .ip-lock  */
+  function plusPricingHTML(opts){
+    opts=opts||{};
+    var l=libGet(), st=billingState(), code=billingCode();
+    var mo=billAmt(st,"monthly"), yr=billAmt(st,"annual"), life=billAmt(st,"lifetime");
+    var perMonth=billMoney(Math.round(yr/12));
+    var saves=billMoney(Math.max(0,mo*12-yr));
+    var compact=!!opts.compact;
+
+    // One button rule for all three tiers: no account → send them to make one;
+    // config not answered yet → say so rather than offer a button that will fail;
+    // checkout not live → the price stands, the button doesn't pretend.
+    function buy(plan,label){
+      if(!l.account) return '<a class="cta pp-buy" href="#/account">Create a free account first</a>';
+      if(!st.known)  return '<button class="cta pp-buy" disabled>Checking with the newsroom…</button>';
+      if(!st.enabled) return '<button class="cta pp-buy" disabled>'+esc(label)+'</button>';
+      return '<button class="cta pp-buy" data-plan="'+escAttr(plan)+'" onclick="rtfcCheckout(\''+escAttr(plan)+'\',event)">'+esc(label)+'</button>';
+    }
+
+    // ── VOUCHER-ONLY MODE ───────────────────────────────────────────────────────
+    // Checkout isn't configured. Rather than paint three price tiles with dead
+    // buttons — which reads as a broken site, not an unfinished one — say plainly
+    // that Plus is invite-only for now and put the code box front and centre. The
+    // price is still announced, because pre-announcing it is useful and honest.
+    if(st.known && !st.enabled){
+      var vh='<div class="plusplans pp-invite'+(compact?' pp-compact':'')+'">';
+      vh+='<div class="pp-head"><div class="pp-mark">RTFCLMGZN <b>Plus</b></div>'+
+        '<p class="pp-dek">Plus is <b>invite-only</b> while we finish setting up subscriptions. '+
+        'If you have a code, it works right now — no card, nothing to pay.</p></div>';
+      vh+='<div class="pp-soon">Subscriptions open soon at <b>'+billMoney(yr)+'/year</b>'+
+        ' or '+billMoney(mo)+'/month. Articles stay free, forever.</div>';
+      if(!l.account){
+        vh+='<a class="cta pp-buy" href="#/account">Create a free account to use a code</a>';
+      }
+      vh+='</div>';
+      return vh;
+    }
+
+    var h='<div class="plusplans'+(compact?' pp-compact':'')+'">';
+    if(!compact && opts.dek!==false){
+      h+='<div class="pp-head"><div class="pp-mark">RTFCLMGZN <b>Plus</b></div>'+
+        '<p class="pp-dek">The monthly issue in the spread reader, every special edition, the full back-issue archive, and every issue as a PDF. Articles stay free, forever.</p></div>';
+    }
+    h+='<div class="pp-tiers">';
+    // Annual first, and the only tier carrying .is-rec — it is the default offer.
+    h+='<div class="pp-tier is-rec"><span class="pp-rec">Best value</span>'+
+        '<div class="pp-name">Annual</div>'+
+        '<div class="pp-amt"><b>'+billMoney(yr)+'</b><span>/year</span></div>'+
+        '<div class="pp-sub">'+perMonth+'/month, billed yearly · save '+saves+'</div>'+
+        buy("annual","Get Plus — "+billMoney(yr)+"/year")+
+      '</div>';
+    h+='<div class="pp-tier"><div class="pp-name">Monthly</div>'+
+        '<div class="pp-amt"><b>'+billMoney(mo)+'</b><span>/month</span></div>'+
+        '<div class="pp-sub">Cancel any time, from your account page.</div>'+
+        buy("monthly","Get Plus — "+billMoney(mo)+"/month")+
+      '</div>';
+    // Founding Lifetime is capped, so it is only drawn once the server has told us
+    // places remain. No count, no tile — and when they run out it is gone entirely.
+    if(st.known && typeof st.remaining==="number" && st.remaining>0){
+      h+='<div class="pp-tier pp-life"><span class="pp-rec pp-recl">Founding</span>'+
+          '<div class="pp-name">Lifetime</div>'+
+          '<div class="pp-amt"><b>'+billMoney(life)+'</b><span>once</span></div>'+
+          '<div class="pp-sub">Every issue, for as long as the magazine runs. '+st.remaining+' of the first '+st.cap+' places left.</div>'+
+          buy("lifetime","Become a founding member — "+billMoney(life))+
+        '</div>';
+    }
+    h+='</div>';
+    if(code){
+      h+='<div class="pp-applied">Code <b>'+esc(code)+'</b> applies at checkout. '+
+        '<button class="pp-clear" onclick="rtfcClearCode()">Remove</button></div>';
+    }
+    // Fine print, and only the fine print that is currently true.
+    if(!st.known){
+      h+='<p class="pb-fine pp-fine">Checking with the newsroom whether checkout is open. Prices above are final either way.</p>';
+    } else if(!st.enabled){
+      h+='<p class="pb-fine pp-fine">Checkout isn’t live yet — the newsroom hasn’t finished connecting its payment processor, so these buttons are off rather than broken. Prototype — payments arrive with the public launch. The prices above are the real ones.</p>';
+    } else {
+      h+='<p class="pb-fine pp-fine">Secure checkout by Stripe. Cancel any time; the magazine keeps running either way.</p>';
+    }
+    return h+'</div>';
+  }
+
+  /* ---- what a Plus reader actually has ----
+     Reads the server's entitlement and says it in a sentence. Falls back to a bare
+     "Plus" when the server hasn't described it (older session, comped by hand). */
+  function plusStatusLine(ent){
+    if(!ent) return "Plus";
+    var when=billDate(ent.expires_at);
+    if(ent.interval==="lifetime"){
+      return "Plus · lifetime"+(ent.source==="stripe"?" (founding member)":ent.source==="voucher"?" (voucher)":"");
+    }
+    if(ent.source==="voucher" || ent.source==="comp"){
+      var word=(ent.source==="comp")?"on the house":"voucher";
+      return when ? ("Plus · free until "+when+" ("+word+")") : ("Plus · "+word);
+    }
+    if(ent.cancel_at_period_end) return when ? ("Plus · ends "+when) : "Plus · ending at the end of this period";
+    if(ent.status==="canceled") return when ? ("Plus · ended "+when) : "Plus · ended";
+    var billed = ent.interval==="year" ? "billed yearly" : ent.interval==="month" ? "billed monthly" : "";
+    if(billed && when) return "Plus · "+billed+", renews "+when;
+    if(billed) return "Plus · "+billed;
+    return when ? ("Plus · renews "+when) : "Plus";
+  }
+
+  /* ---- coming back from Stripe ----
+     Checkout returns the reader to #/account?checkout=success (or ?checkout=cancel).
+     route() splits the hash on "/", so the query has to come off the PATH first or
+     parts[0] is "account?checkout=success" and a paying reader lands on a 404. The
+     parameter is read from the hash query and from location.search (a redirect can
+     put it either side of the #), then stripped from the URL so a refresh cannot
+     re-fire the toast. */
+  function queryParam(query,key){
+    var pairs=String(query||"").replace(/^[?&]+/,"").split("&");
+    for(var i=0;i<pairs.length;i++){
+      if(!pairs[i]) continue;
+      var eq=pairs[i].indexOf("=");
+      var k=eq<0?pairs[i]:pairs[i].slice(0,eq);
+      try{ k=decodeURIComponent(k.replace(/\+/g," ")); }catch(e){}
+      if(k!==key) continue;
+      var v=eq<0?"":pairs[i].slice(eq+1);
+      try{ v=decodeURIComponent(v.replace(/\+/g," ")); }catch(e2){}
+      return v;
+    }
+    return null;
+  }
+  function stripQueryParam(query,key){
+    return String(query||"").replace(/^[?&]+/,"").split("&").filter(function(p){
+      if(!p) return false;
+      var eq=p.indexOf("="), k=eq<0?p:p.slice(0,eq);
+      try{ k=decodeURIComponent(k.replace(/\+/g," ")); }catch(e){}
+      return k!==key;
+    }).join("&");
+  }
+  var CHECKOUT_RETURN_DONE=false;
+  function handleCheckoutReturn(path,hashQuery){
+    if(CHECKOUT_RETURN_DONE) return;
+    var v=queryParam(hashQuery,"checkout");
+    if(v===null) v=queryParam(location.search,"checkout");
+    if(v===null) return;
+    // Once per load, even if the URL cannot be rewritten (no history API): the
+    // toast and the re-sync must not re-fire on every subsequent navigation.
+    CHECKOUT_RETURN_DONE=true;
+    // Rewrite the URL first, so nothing below can loop and a refresh is inert.
+    var hq=stripQueryParam(hashQuery,"checkout");
+    var sq=stripQueryParam(location.search,"checkout");
+    var clean=location.pathname+(sq?("?"+sq):"")+"#"+path+(hq?("?"+hq):"");
+    if(window.history && history.replaceState){ try{ history.replaceState(null,"",clean); }catch(e){} }
+    if(v==="success"){
+      gtToast("Payment received — welcome to Plus. Opening your account…");
+      syncAccount();            // the server, not the redirect, is what turns Plus on
+    } else if(v==="cancel"){
+      gtToast("Checkout cancelled — nothing was charged. The offer stays where it is.");
+    }
+  }
+
   window.rtfcSignout=function(){
     var l=libGet(); l.account=null; libSave(l); route();
     fetch("/api/auth/logout",{method:"POST",credentials:"same-origin"}).catch(function(){});
@@ -2274,11 +2577,10 @@
     return link?('<a class="mag-link" href="'+href+'">'+vol+'</a>'):vol;
   }
   function viewMagazine(){
-    var l=libGet();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:10px">'+
       '<div class="over">The Magazine</div>'+
       '<h1>The month in AI,<br>understood with hindsight.</h1>'+
-      '<p>Every month, the Issue Desk distills the full run of our coverage into one premium issue — the cover story with the benefit of hindsight, every editor’s month-in-review column, the Scoreboard, the applied-takeaways Compendium, and a Watchlist we grade in public the following month. Articles are free, forever. The magazine is for subscribers — and subscribers get every back issue too.</p></div>';
+      '<p>Every month, the Issue Desk distills the full run of our coverage into one premium issue — the cover story with the benefit of hindsight, all seven editors’ month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist we grade in public the following month. Articles are free, forever. The magazine is for subscribers — and subscribers get every back issue too.</p></div>';
     // Product first, offer second. The old order put a paywall bar between the
     // promise and the thing being sold, which pushed the covers a full screen
     // below the fold -- a storefront where you cannot see the goods without
@@ -2291,19 +2593,20 @@
     if(!isPlus()){
       // The offer panel. The old version was one grey bar plus two faint
       // "prototype" paragraphs -- the loudest supporting copy on the page was an
-      // apology for the thing it was trying to sell. Now: what it costs, what is
-      // in it, what free already gets you, and the caveat reduced to one line of
-      // fine print under the button where fine print belongs.
+      // apology for the thing it was trying to sell. Now: the three real plans,
+      // what is in it, what free already gets you, and the caveat reduced to one
+      // line of fine print under the buttons where fine print belongs.
       var pages=MAG.reduce(function(n,x){ return n+issuePageCount(x); },0);
-      var perIssue=MAG.length?(8/Math.max(1,MAG.length)):8;
-      h+='<div class="plusbar">'+
+      // Cost-per-issue is quoted against the ANNUAL price, because annual is the
+      // offer being recommended — and it is derived from the same numbers the
+      // pricing block prints, so the two can never quote different money.
+      var yearly=billAmt(billingState(),"annual")/100;
+      var perIssue=yearly/Math.max(1,MAG.length);
+      h+='<div class="plusbar has-plans">'+
         '<div class="pb-offer">'+
           '<div class="pb-mark">RTFCLMGZN <b>Plus</b></div>'+
-          '<div class="pb-price"><b>$8</b><span>/month</span></div>'+
-          '<div class="pb-per">'+MAG.length+' issue'+(MAG.length===1?'':'s')+' published · '+pages+' designed pages · about $'+perIssue.toFixed(2)+' an issue today, less every month</div>'+
-          (l.account? '<button class="cta" onclick="rtfcPlan(\'plus\')">Start Plus</button>'
-                    : '<a class="cta" href="#/account">Create your free account first</a>')+
-          '<p class="pb-fine">Prototype — payments arrive with the public launch. This button simulates a Plus subscription so the whole experience can be tested today.</p>'+
+          '<div class="pb-per">'+MAG.length+' issue'+(MAG.length===1?'':'s')+' published · '+pages+' designed pages · about $'+perIssue.toFixed(2)+' an issue on the annual plan today, less every month</div>'+
+          plusPricingHTML({dek:false})+
         '</div>'+
         '<div class="pb-cols">'+
           '<div class="pb-col"><span class="pb-ct">Always free</span><ul>'+
@@ -2392,12 +2695,9 @@
     h+='<div class="issue-top"><a class="back" href="#/magazine">← All issues</a>'+
        '<span class="issue-pos" aria-live="polite">Issue '+String(iss.number).padStart(3,"0")+' · page '+(n+1)+' / '+pages.length+'</span></div>';
     if(locked){
-      var l=libGet();
       h+='<div class="ipage ip-lock"><div class="lock-ic">◈</div><h2 class="ip-title">This page is for subscribers</h2>'+
         '<p>The cover and contents are free to browse. The full issue — the cover story, all seven columns, the Scoreboard, Compendium, Watchlist, and Ledger — is part of <b>RTFCLMGZN Plus</b>, along with every back issue.</p>'+
-        (l.account? '<button class="cta" onclick="rtfcPlan(\'plus\')">Start Plus — prototype unlock</button>'
-                  : '<a class="cta" href="#/account">Create a free account to begin</a>')+
-        '<p class="protonote" style="margin-top:14px">Prototype: payments arrive at public launch; the button simulates Plus so the flow can be tested.</p></div>';
+        plusPricingHTML({compact:true})+'</div>';
     } else {
       h+=issuePageHTML(iss,pg);
     }
@@ -2442,13 +2742,46 @@
       return h+'</div>';
     }
     h+='<h1>Your account</h1><p>Signed in as <b>'+esc(l.account.email)+'</b></p></div>';
-    h+='<div class="acct-card"><div class="acct-row"><span>Plan</span><b>'+(isPlus()?"RTFCLMGZN Plus ◈":"Free")+'</b></div>'+
+    var plus=isPlus();
+    var ent=(plus && l.account.entitlement) ? l.account.entitlement : null;
+    var viaStripe=!!(ent && ent.source==="stripe");
+    // The plan row says what the reader actually has, in the words their receipt
+    // would use — not a generic "Plus". plusStatusLine() reads the server's
+    // entitlement; if the server didn't describe one, it degrades to "Plus".
+    h+='<div class="acct-card">'+
+      '<div class="acct-row"><span>Plan</span><b>'+(plus?(esc(plusStatusLine(ent))+' ◈'):'Free')+'</b></div>'+
       '<div class="acct-row"><span>Daily digest</span><b>Enrolled (launches with the public site)</b></div>'+
-      '<div class="acct-row"><span>Library</span><b><a href="#/library" style="color:var(--accent2)">'+libGet().bookmarks.length+' bookmarks · '+libGet().readLater.length+' read-later</a></b></div>'+
-      (isPlus()
-        ? '<button class="cta ghost" onclick="rtfcPlan(\'free\')">Cancel Plus (prototype)</button>'
-        : '<button class="cta" onclick="rtfcPlan(\'plus\')">Upgrade to Plus — magazine + back issues (prototype)</button>')+
-      '<button class="cta ghost" onclick="rtfcSignout()">Sign out</button></div>';
+      '<div class="acct-row"><span>Library</span><b><a href="#/library" style="color:var(--accent2)">'+l.bookmarks.length+' bookmarks · '+l.readLater.length+' read-later</a></b></div>';
+    if(plus && ent && ent.cancel_at_period_end){
+      var endsOn=billDate(ent.expires_at);
+      h+='<p class="acct-note">Your Plus '+(endsOn?('ends '+esc(endsOn)):'ends at the end of this billing period')+'. Every issue stays open to you until then'+
+        (viaStripe?', and resuming puts it back on the same card.':'.')+'</p>'+
+        (viaStripe?'<button class="cta" id="acct-portal-btn" onclick="rtfcPortal(event)">Resume Plus</button>':'');
+    }
+    // The Stripe portal only exists for readers Stripe has a customer for. A voucher
+    // or comped reader would get a 404 from a button that promised to work, so they
+    // never see it.
+    if(plus && viaStripe && !(ent && ent.cancel_at_period_end)){
+      h+='<button class="cta ghost" id="acct-portal-btn" onclick="rtfcPortal(event)">Manage billing</button>';
+    }
+    h+='<button class="cta ghost" onclick="rtfcSignout()">Sign out</button></div>';
+
+    if(!plus){
+      h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Go Plus</div>'+
+        plusPricingHTML({});
+    } else if(ent && ent.source!=="stripe" && ent.interval!=="lifetime" && ent.expires_at){
+      // A voucher runs out. Say so once, here, where they can do something about it.
+      h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>After '+esc(billDate(ent.expires_at))+'</div>'+
+        '<p style="color:var(--muted);font-size:14px;max-width:60ch;margin:0 0 4px">Nothing renews on its own — when the voucher runs out you go back to Free, and every article is still there. Pick a plan whenever you want to carry on with the magazine.</p>'+
+        plusPricingHTML({dek:false});
+    }
+
+    // The code box stays available to Plus readers too: gift codes, press passes and
+    // founding codes all arrive after somebody already has an account.
+    h+='<div class="acct-card"><label for="acct-code">Have a code?</label>'+
+      '<input id="acct-code" type="text" placeholder="e.g. FOUNDING100" autocomplete="off" autocapitalize="characters" spellcheck="false">'+
+      '<button class="cta ghost" id="acct-code-btn" onclick="rtfcRedeem()">Redeem</button>'+
+      '<p class="protonote">Founding codes, gift codes and press passes all go in here. Capitals don’t matter — we tidy it up for you.</p></div>';
     h+=timeMeterHTML(l);
     return h+'</div>';
   }
@@ -4703,7 +5036,13 @@
       '<h2>3. Our content, your use of it</h2>'+
       '<p>Content on this site is © RTFCLMGZN. You’re welcome to quote brief excerpts with attribution and a link; you may not republish whole pieces, scrape the site to train models, or pass our work off as yours. The underlying facts, of course, belong to no one.</p>'+
       '<h2>4. Preview features</h2>'+
-      '<p>Free accounts are real: creating one stores your email so you can sign back in and keep your library across devices. “Plus” and anything else labeled preview or prototype are still demonstrations — no payments are collected and no subscription exists yet. When real paid features launch, they’ll come with their own clear terms before any money changes hands.</p>'+
+      // This clause states a fact about the money, so it has to follow the money:
+      // once checkout is live, "no payments are collected" is simply untrue.
+      '<p>Free accounts are real: creating one stores your email so you can sign back in and keep your library across devices. '+
+      (billingState().enabled
+        ? 'RTFCLMGZN Plus is a real paid subscription: payments are taken by Stripe, who handle the card details — we never see them. Monthly and annual plans renew until you cancel, which you can do at any time from your account page; a founding lifetime purchase is a single payment and does not renew. Anything else labeled preview or prototype is still a demonstration.'
+        : '“Plus” and anything else labeled preview or prototype are still demonstrations — no payments are collected and no subscription exists yet. When real paid features launch, they’ll come with their own clear terms before any money changes hands.')+
+      '</p>'+
       '<h2>5. Third-party links</h2>'+
       '<p>We link out constantly — sources, resources, original posts. Those sites are not ours; their content and policies are their own responsibility.</p>'+
       '<h2>6. Corrections &amp; complaints</h2>'+
@@ -5018,15 +5357,13 @@
       '<p aria-live="polite">Fetching '+(n?(n+' designed page'+(n===1?'':'s')):'the issue')+' from the newsroom.</p>');
   }
   function issueUpsellHTML(iss){
-    var l=libGet(), n=issuePageCount(iss);
+    var n=issuePageCount(iss);
     return issueShell(iss,'<div class="lock-ic">◈</div>'+
       '<h2 class="ip-title">“'+esc(iss.title||"This issue")+'” is part of Plus</h2>'+
       '<p>'+(iss.tagline?esc(iss.tagline)+' — ':'')+
       (n?('all '+n+' designed pages, '):'')+
       'plus every back issue and every issue as a PDF. Articles stay free, forever; The Primer is free too.</p>'+
-      (l.account? '<button class="cta" onclick="rtfcPlan(\'plus\')">Start Plus — $8/month</button>'
-                : '<a class="cta" href="#/account">Create a free account to begin</a>')+
-      '<p class="protonote" style="margin-top:14px">Prototype: payments arrive at public launch.</p>');
+      plusPricingHTML({compact:true}));
   }
   function issueErrorHTML(iss){
     return issueShell(iss,'<div class="lock-ic">◈</div>'+
@@ -5894,8 +6231,16 @@
   }
 
   function route(){
-    var hash=location.hash.replace(/^#/,"")||"/";
+    var raw=location.hash.replace(/^#/,"")||"/";
+    // A hash can carry its own query string — Stripe sends readers back to
+    // #/account?checkout=success. Split it off the path BEFORE the path is split
+    // on "/", or parts[0] is "account?checkout=success", matches nothing, and a
+    // reader who just paid lands on the 404 page.
+    var qi=raw.indexOf("?");
+    var hash=(qi>=0?raw.slice(0,qi):raw)||"/";
+    var hashQuery=qi>=0?raw.slice(qi+1):"";
     var parts=hash.split("/").filter(Boolean);
+    handleCheckoutReturn(hash,hashQuery);
     var view, active="home";
     if(parts.length===0){ view=viewHome(); active="home"; }
     else if(parts[0]==="section"){ view=viewSection(parts[1]); active="section:"+parts[1]; }

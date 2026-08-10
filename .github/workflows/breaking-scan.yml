@@ -1,0 +1,50 @@
+name: Breaking Scan
+
+# Was: Windows Scheduled Task "RTFCLMGZN Claude Breaking Scan".
+# Hourly, at :15 — offset from the pulse scan so the two never start together.
+# Most runs are no-ops by design; the runbook logs those too, so a quiet hour is
+# visible in the ledger rather than indistinguishable from a failed run.
+#
+# MODEL: haiku, deliberately. Hourly means ~720 runs a month, which made this the
+# single largest consumer of the subscription — more than the newsroom cycle and the
+# magazine pipeline put together. Nearly all of those runs find nothing and only need
+# to read headlines and decide "no". The tradeoff, stated plainly: on the rare hour
+# something does clear the bar, haiku writes the breaking piece instead of sonnet.
+# That is accepted — running out of allowance and having every scan fail is worse
+# than a thinner first draft on a story the next newsroom cycle revisits anyway.
+# If you ever want sonnet back here, move the cron to every 2 hours: "15 */2 * * *".
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: breaking-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+      - uses: astral-sh/setup-uv@v5
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # If the Claude GitHub App is not installed on this repo, uncomment the next
+          # line. The action defaults to authenticating as the app; GITHUB_TOKEN is the
+          # documented alternative and GitHub provides it to every run automatically.
+          # Safe here because nothing in this repo is triggered by push.
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Follow newsroom/runner/breaking-scan-runbook.md exactly, from the repository
+            root. You are running unattended. Log a no-op row if nothing clears the bar —
+            an empty scan still has to be visible in the ledger.
+          claude_args: |
+            --model claude-haiku-4-5
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"

@@ -4377,3 +4377,118 @@ html.vp-desktop.has-mobkit #mobkit{
 .mpage.tp-split.tp-rev      > .tp-src{ left:6%;  }    /* text left   → image right */
 /* give the column room so the pinned footer never lands on top of the fact box */
 .mpage.tp-split .tp-col{ padding-bottom:7.5cqh; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PLUS BILLING — the pricing block, the plan tiles, the code box
+   ------------------------------------------------------------------------
+   One block (plusPricingHTML() in app.js) renders in three places, so it has
+   to survive three very different containers:
+     · the account page          — on --bg, full width, alongside .acct-card
+     · the magazine storefront   — inside .plusbar > .pb-offer, on --surface
+     · the locked-issue upsell   — inside .ipage.ip-lock, centred, .pp-compact
+   Nothing here introduces a colour: --accent / --accent2 / --surface* / --line
+   only, so it follows the theme switch and the light-mode overrides for free.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* The storefront .plusbar is a two-column grid (offer | comparison). The tiles
+   need the full width, so the plans variant stacks it — border-right becomes a
+   border-bottom, exactly as the existing ≤900px breakpoint already does. */
+.plusbar.has-plans{ grid-template-columns:1fr; }
+.plusbar.has-plans .pb-offer{ border-right:none; border-bottom:1px solid var(--hairline); }
+.plusbar.has-plans .pb-per{ max-width:60ch; margin-bottom:14px; }
+
+.plusplans{ margin:14px 0 0; }
+.pp-head{ margin-bottom:14px; }
+.pp-mark{ font-family:var(--serif);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);font-weight:650; }
+.pp-mark b{ color:var(--accent2);font-weight:800; }
+.pp-dek{ color:var(--muted);font-size:13.5px;line-height:1.6;margin:8px 0 0;max-width:64ch; }
+
+/* Three tiles that stay side by side while they fit and wrap in whole tiles
+   after that — no half-column of price left dangling at 700px. */
+.pp-tiers{ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;align-items:stretch; }
+.pp-tier{
+  position:relative;display:flex;flex-direction:column;gap:6px;
+  border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;
+  background:var(--surface2);
+}
+/* Annual: the default offer, and the only tile that says so. */
+.pp-tier.is-rec{
+  border-color:color-mix(in srgb,var(--accent) 62%,var(--line));
+  background:
+    linear-gradient(180deg,color-mix(in srgb,var(--accent) 13%,transparent),transparent 68%),
+    var(--surface2);
+  box-shadow:0 18px 44px -30px color-mix(in srgb,var(--accent) 75%,transparent);
+}
+.pp-rec{
+  position:absolute;top:-9px;left:18px;
+  font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;
+  color:var(--on-accent);background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:99px;padding:3px 10px;line-height:1.5;
+}
+.pp-recl{ background:none;border:1px solid color-mix(in srgb,var(--gold) 65%,var(--line));
+  color:var(--gold);background-color:var(--surface); }
+.pp-name{ font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--muted); }
+.pp-amt{ display:flex;align-items:baseline;gap:6px;margin:2px 0 0; }
+.pp-amt b{ font-family:var(--serif);font-size:38px;line-height:1;font-weight:700;letter-spacing:-.02em;
+  color:var(--ink);font-variant-numeric:lining-nums tabular-nums; }
+.pp-amt span{ color:var(--muted);font-size:14px;font-weight:600; }
+.pp-tier.is-rec .pp-amt b{ font-size:44px; }
+.pp-sub{ color:var(--muted);font-size:12.5px;line-height:1.5;min-height:2.6em; }
+/* The button sits on the floor of every tile, so three tiles of unequal copy
+   still line their CTAs up. */
+.pp-tier .cta{ margin-top:auto;width:100%;font-size:14px;padding:12px 16px;align-self:stretch; }
+.pp-tier .cta.pp-buy[disabled]{ opacity:.42;cursor:not-allowed;filter:saturate(.5); }
+.pp-tier .cta.pp-buy[disabled]:hover{ opacity:.42; }
+
+/* An applied discount code — visible, and removable in one click. */
+.pp-applied{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 0;
+  border:1px dashed color-mix(in srgb,var(--accent2) 55%,var(--line));border-radius:10px;
+  padding:9px 14px;font-size:13px;color:var(--ink-soft);
+  background:color-mix(in srgb,var(--accent2) 8%,transparent);
+}
+.pp-applied b{ color:var(--accent2);font-weight:700;letter-spacing:.06em; }
+.pp-clear{ margin-left:auto;border:1px solid var(--line);background:transparent;color:var(--muted);
+  border-radius:8px;padding:4px 10px;font:inherit;font-size:12px;font-weight:650;cursor:pointer;
+  transition:color .15s,border-color .15s; }
+.pp-clear:hover{ color:var(--ink);border-color:var(--muted); }
+.pp-fine{ max-width:72ch; }
+
+/* Compact: the locked-issue upsell, inside a centred .ip-lock column. */
+.pp-compact{ width:100%;max-width:660px;margin:6px auto 0;text-align:left; }
+.pp-compact .pp-tiers{ grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px; }
+.pp-compact .pp-tier{ padding:18px 16px 16px; }
+.pp-compact .pp-amt b{ font-size:32px; }
+.pp-compact .pp-tier.is-rec .pp-amt b{ font-size:36px; }
+.pp-compact .pp-fine{ text-align:center;max-width:none; }
+
+/* Account page: the plan row now carries a whole sentence ("Plus · billed
+   yearly, renews 12 March 2027"), which must wrap right, not overflow left. */
+.acct-row b{ text-align:right;font-weight:650; }
+.acct-note{ font-size:13px;line-height:1.6;color:var(--ink-soft);margin:4px 0 0;
+  border-left:2px solid color-mix(in srgb,var(--accent) 60%,var(--line));padding-left:12px; }
+.acct-card input[autocapitalize="characters"]{ letter-spacing:.08em;text-transform:uppercase; }
+.acct-card input[autocapitalize="characters"]::placeholder{ letter-spacing:.02em;text-transform:none; }
+
+@media (max-width:560px){
+  .pp-tiers{ grid-template-columns:1fr; }
+  .pp-amt b{ font-size:34px; }
+  .pp-tier.is-rec .pp-amt b{ font-size:38px; }
+  .pp-sub{ min-height:0; }
+  .acct-row{ flex-wrap:wrap;gap:2px; }
+  .acct-row b{ text-align:left; }
+}
+
+/* ── PLUS: voucher-only mode ──────────────────────────────────────────────────
+   Shown when /api/billing/config reports enabled:false — i.e. Stripe isn't set up
+   yet. Three price tiles with dead buttons look broken; this looks deliberate. */
+.plusplans.pp-invite{ text-align:center; }
+.plusplans.pp-invite .pp-dek{ max-width:52ch; margin:6px auto 0; }
+.pp-soon{
+  margin:16px auto 0; max-width:46ch; padding:11px 16px;
+  border:1px dashed var(--line); border-radius:10px;
+  color:var(--muted); font-size:14px; line-height:1.55;
+}
+.pp-soon b{ color:var(--accent2); }
+.plusplans.pp-invite .pp-buy{ margin-top:16px; display:inline-block; }

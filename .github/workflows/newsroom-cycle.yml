@@ -1,0 +1,47 @@
+name: Newsroom Cycle
+
+# Three cycles a day: 05:00, 11:00 and 17:00 US Central.
+#
+# Cron is UTC and has NO daylight saving, so these are set for CDT (UTC-5), which is
+# what Central is right now. From early November to March, Central goes to UTC-6 and
+# these land an hour EARLY (04:00 / 10:00 / 16:00 local). If that matters, shift each
+# hour +1 for the winter. Nothing breaks either way — the runbook is idempotent.
+on:
+  schedule:
+    - cron: "0 10 * * *"    # 05:00 Central
+    - cron: "0 16 * * *"    # 11:00 Central
+    - cron: "0 22 * * *"    # 17:00 Central
+  workflow_dispatch:          # lets you run it by hand from the Actions tab
+
+concurrency:
+  group: newsroom-cycle       # never two cycles at once
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write         # the runbook commits and pushes articles
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }        # full history: the runbook rebases before pushing
+
+      - uses: astral-sh/setup-uv@v5
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # If the Claude GitHub App is not installed on this repo, uncomment the next
+          # line. The action defaults to authenticating as the app; GITHUB_TOKEN is the
+          # documented alternative and GitHub provides it to every run automatically.
+          # Safe here because nothing in this repo is triggered by push.
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Follow newsroom/runner/cycle-runbook.md exactly, from the repository root.
+            You are running unattended. Do not ask questions; make reasonable calls and
+            record them in the usage log the runbook tells you to write.
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"

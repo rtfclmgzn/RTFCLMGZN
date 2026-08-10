@@ -1,0 +1,125 @@
+name: Magazine Pipeline
+
+# The four-phase monthly build. Replaces the Windows Scheduled Tasks
+# "RTFCLMGZN Magazine Gather 1/2/3", "... Curate", "... Build", "... Verify".
+#
+# One workflow, several crons. GitHub does not tell a job which cron fired it, so the
+# phase is derived from the UTC day of month. That also means a manual run picks the
+# right phase automatically, and you can override it with the dropdown.
+#
+# 06:00 UTC. Build gets 12:00 because it is the long one (it generates every image).
+on:
+  schedule:
+    - cron: "0 6 25 * *"     # gather, pass 1
+    - cron: "0 6 26 * *"     # gather, pass 2
+    - cron: "0 6 27 * *"     # gather, pass 3
+    - cron: "0 6 28 * *"     # curate
+    - cron: "0 12 29 * *"    # build + art
+    - cron: "0 6 30 * *"     # verify
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "Which phase to run"
+        required: true
+        default: auto
+        type: choice
+        options: [auto, gather, curate, build, verify]
+
+concurrency:
+  group: magazine-pipeline
+  cancel-in-progress: false
+
+jobs:
+  phase:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180        # build generates ~60 images; give it room
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Work out which phase this is
+        id: p
+        run: |
+          set -euo pipefail
+          CHOICE="${{ github.event.inputs.phase || 'auto' }}"
+          DAY=$(date -u +%-d)
+          if [ "$CHOICE" != "auto" ] && [ -n "$CHOICE" ]; then
+            PHASE="$CHOICE"
+          else
+            case "$DAY" in
+              25|26|27) PHASE=gather ;;
+              28)       PHASE=curate ;;
+              29)       PHASE=build  ;;
+              30|31)    PHASE=verify ;;
+              # Short months: February ends on the 28th or 29th, so build and verify
+              # would never fire. Days 1-2 fall back to finishing the previous month —
+              # pipeline_state.py resolves the cycle month for exactly this case.
+              1|2)      PHASE=verify ;;
+              *)        PHASE=none   ;;
+            esac
+          fi
+          echo "phase=$PHASE" >> "$GITHUB_OUTPUT"
+          echo "Day $DAY (UTC) -> phase: $PHASE"
+
+      - name: Pick the model for this phase
+        id: m
+        run: |
+          set -euo pipefail
+          case "${{ steps.p.outputs.phase }}" in
+            # Gathering is reading and scoring — sonnet handles it and runs three times.
+            gather) MODEL=claude-sonnet-5 ;;
+            # Curation IS the product (curation-editor.agent.md), and it decides the whole
+            # issue. Build writes 80 pages of prose. Both earn opus; both run once a month.
+            curate) MODEL=claude-opus-4-8 ;;
+            build)  MODEL=claude-opus-4-8 ;;
+            # Verify is measurement and mechanical fixes against a checklist.
+            verify) MODEL=claude-sonnet-5 ;;
+            *)      MODEL=claude-sonnet-5 ;;
+          esac
+          echo "model=$MODEL" >> "$GITHUB_OUTPUT"
+          echo "phase ${{ steps.p.outputs.phase }} -> $MODEL"
+
+      - name: Nothing scheduled for today
+        if: steps.p.outputs.phase == 'none'
+        run: echo "No phase maps to this day. Exiting cleanly."
+
+      - uses: anthropics/claude-code-action@v1
+        if: steps.p.outputs.phase != 'none'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # If the Claude GitHub App is not installed on this repo, uncomment the next
+          # line. The action defaults to authenticating as the app; GITHUB_TOKEN is the
+          # documented alternative and GitHub provides it to every run automatically.
+          # Safe here because nothing in this repo is triggered by push.
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Follow newsroom/runner/magazine-pipeline.md exactly, from the repository root.
+            The phase you are running is: ${{ steps.p.outputs.phase }}
+
+            You are running unattended on a CI runner, not the owner's PC. Read the phase's
+            own section and do only that phase. State survives between phases in
+            newsroom/runner/magazine-state/<YYYY-MM>.json — load it first and save it before
+            you finish, or the next phase has no idea what you did.
+
+            Never publish and never merge to main. The pipeline stops at a draft for review.
+          claude_args: |
+            --model ${{ steps.m.outputs.model }}
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
+
+      - name: Upload the draft for review
+        if: steps.p.outputs.phase == 'verify' || steps.p.outputs.phase == 'build'
+        uses: actions/upload-artifact@v4
+        with:
+          name: magazine-${{ steps.p.outputs.phase }}-${{ github.run_number }}
+          path: |
+            newsroom/releases/
+            newsroom/runner/magazine-state/
+          if-no-files-found: ignore
+          retention-days: 30

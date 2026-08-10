@@ -1,0 +1,66 @@
+name: Resources Refresh
+
+# The Resources page is a lab/model/tooling directory, so it goes stale silently —
+# a model gets superseded, a price changes, a product is renamed, and nothing breaks
+# loudly enough to notice. Weekly, on Sunday, something checks it against reality.
+#
+# 07:00 UTC Sunday = 02:00 Central. Deliberately outside the cycle hours so it never
+# competes with a publishing run for the same files.
+on:
+  schedule:
+    - cron: "0 7 * * 0"
+  workflow_dispatch:
+
+concurrency:
+  group: resources-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+
+      - uses: astral-sh/setup-uv@v5
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # If the Claude GitHub App is not installed on this repo, uncomment the next
+          # line. The action defaults to authenticating as the app; GITHUB_TOKEN is the
+          # documented alternative and GitHub provides it to every run automatically.
+          # Safe here because nothing in this repo is triggered by push.
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Refresh the Resources directory. You are running unattended; do not ask
+            questions.
+
+            1. Read web/data/resources.js and web/data/companies.js to see what the
+               directory currently claims — labs, flagship models, tools, prices, links.
+            2. Verify the claims that go stale: which model is each lab's current
+               flagship, current published pricing, product names, and whether every
+               link still resolves. Use WebSearch and WebFetch. Prefer each company's
+               own pages over coverage about them.
+            3. Update only what is genuinely wrong or outdated. Do not rewrite entries
+               that are still correct, and do not pad the directory with new entries
+               just to show activity — a diff of nothing is a perfectly good result.
+            4. Anything you cannot verify from a real source stays as it is. Never
+               replace a sourced fact with a guess, and never invent a price or a
+               model name to fill a gap.
+            5. Bump the ?b=N cache-buster on every asset tag in web/index.html if you
+               changed any file under web/ — the edge serves the old file otherwise
+               and the update silently does nothing.
+            6. Append one row to web/data/usage-log-current.js in the existing format
+               (agent:"resources-desk", task_type:"site") saying what changed, or that
+               nothing did.
+            7. Commit and push to main: git pull --rebase origin main first, because
+               the hourly scans push to this branch too. On a conflict, stop and leave
+               it for a human — never force-push.
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
