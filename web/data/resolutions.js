@@ -44,17 +44,11 @@ window.RTFC_RESOLUTIONS = {
   updated: "2026-07-30",
   note: "Resolutions are append-only and dated. Articles are never rewritten; every resolution renders beneath the original piece and on the Claims Ledger.",
   items: [
-    // Seeded empty on purpose. The first entries are written by the pulse scan
-    // once one of the archive's open resolvers actually resolves. An empty
-    // ledger that says "62 open, 0 resolved" is honest; a pre-filled one would
-    // not be.
-    //
-    // Shape, for the scan to copy:
-    // { key:"kimi-k3-open-weights-live-download|sc|1",
-    //   at:"2026-08-04T13:20:00Z",
-    //   outcome:"confirmed",
-    //   note:"Moonshot's technical report states the active-parameter count directly, matching the community estimate.",
-    //   label:"Moonshot technical report",
-    //   url:"https://..." }
+    { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
+      at:"2026-08-10T02:15:00Z",
+      outcome:"confirmed",
+      note:"Azure growth held well above 40% threshold at 43% YoY; FY2027 capex guidance increased to $255-260B (35% increase over 2026), and Amy Hood confirmed continued internal-first allocation with external capacity still rationed.",
+      label:"Microsoft Q4 FY2026 earnings call",
+      url:"https://seekingalpha.com/article/4927337-microsoft-corporation-msft-q4-2026-earnings-call-transcript" }
   ]
 };
