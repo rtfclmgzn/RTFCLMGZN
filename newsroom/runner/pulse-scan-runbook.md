@@ -55,6 +55,17 @@ One WebSearch for the Artificial Analysis leaderboard / major model-launch news 
 ## 4. Ship
 1. `git status --short` — you should only see the data files above (`buzz.js`, `events.js`, `livetv.js`, `scoreboard.js`, `resolutions.js`). If anything else is modified, do NOT stage it; note it in the report.
 2. Bump every `?b=N` in `web/index.html` by 1 (all occurrences, same number; UTF-8-safe tools ONLY — see the cycle runbook's warnings; `grep -c 'â€' web/index.html` must print 0).
+2b. **Append your row to the ledger** — REQUIRED every scan, including one that changes nothing.
+Append one row to `web/data/usage-log-current.js`, matching an existing row's fields exactly (it is a
+JS array literal, not JSON): a fresh sequential `u-NNNN` id, a real UTC `ts`, `agent:"pulse-scan"`,
+`task_type:"no-op"` or `"maintenance"`, `article_id:"system"`, a one-sentence `description` naming
+cards retired/added, claims checked and closed, and whether the scoreboard was flagged, plus
+`measured:"estimated"`. Add the file to the `git add` in step 3.
+
+An unchanged-but-checked feed is a legitimate outcome, but it has to be *visible* as one. Without
+this row, a scan that ran and found nothing and a scan that never ran look identical on the Ledger
+page — which is exactly how a dead auth token went unnoticed for three days.
+
 3. `git add` only: the data files you touched + `web/index.html`.
 3b. If you appended to `resolutions.js`, run `python -m newsroom.quality.component_audit` — it must exit clean before you push.
 4. `python -m newsroom.runner.verify_publish_surface` — non-zero: STOP, do not push.

@@ -199,3 +199,66 @@ corrupted. Nothing errors; the file just quietly changes.
 tools, never with PowerShell `Get-Content`/`Set-Content`. The pipeline runbook states it in §0.6 as a
 standing rule for every phase, and every tool in `agents/magazine/` reads and writes with an explicit
 `encoding="utf-8"`.
+
+---
+
+## 10. A revoked OAuth token stopped the entire newsroom, silently
+
+**Symptom.** No August magazine. The Buzz feed frozen at 7 August. Every Windows Scheduled Task
+reporting completion. Nothing in the repo since the 7th, and no error anywhere a human would look.
+
+**Root cause.** `CLAUDE_CODE_OAUTH_TOKEN` had been revoked. Every run reached the API, got
+`401 OAuth access token has been revoked`, and exited. The batch files logged to
+`%LOCALAPPDATA%\RTFCLMGZN\logs`, which nobody reads when there is no reason to suspect a problem,
+and Task Scheduler happily records a completed run for a process that exits non-zero. On GitHub
+Actions the same failure produced only `is_error:true` — the action hides model output by default,
+so even the CI log did not name the cause until `show_full_output: true` was set.
+
+**Enforced check.** Failure has to be visible without being looked for. Two rules: the first thing to
+check when the newsroom goes quiet is the **Actions tab**, not the code — a red run is the signal the
+PC never gave; and when a run fails with `is_error:true` and nothing else, add `show_full_output: true`
+to that one workflow, re-run, read the real error, then take it back out (it prints model output into a
+public log). Tokens from `claude setup-token` last about a year and are revoked by a password change
+or a sign-out-everywhere, so treat "everything stopped at once, on a date" as an auth question first.
+
+---
+
+## 11. D1 rolls back a whole .sql file on the first error, so the migration could never succeed
+
+**Symptom.** `RTFC-FOUNDER` reported "fully claimed" while the account stayed on `free`. Re-running
+the migration printed `duplicate column name: stripe_customer_id` and, per its own header comment,
+was believed to have applied the rest.
+
+**Root cause.** Two compounding mistakes. `db/002_billing.sql` opened with three `ALTER TABLE` lines;
+`users.stripe_customer_id` already existed in the original auth schema, so the third always failed —
+and D1 aborts the entire file on first error **and rolls it back**, so `plan_source` and
+`plan_expires_at` were never added and never could be. The file's header claimed the opposite. The
+downstream effect was worse than a missing column: `redeem` incremented `redeemed_count` and wrote a
+`voucher_redemptions` row, then failed writing the plan, so the code was spent and the reader got
+nothing. SQLite has no `ADD COLUMN IF NOT EXISTS`, so this was not recoverable by re-running.
+
+**Enforced check.** `ALTER TABLE` statements are run **one per `--command`**, never batched in a
+`--file`, so one failing cannot roll back the others — `SETUP_BILLING.bat` step 1 does this, and
+`db/002_billing.sql` now carries the commands instead of the statements. Files passed with `--file`
+contain only idempotent `CREATE ... IF NOT EXISTS` (`db/002b_billing_tables.sql`). Every migration ends
+with a verification query — `PRAGMA table_info(users)` — because "the command printed an error I was
+told to ignore" and "the migration applied" are not the same claim. Any grant that burns a
+single-use credit must not be trusted to have worked because the credit was consumed.
+
+---
+
+## 12. A batch file calling another batch file ends the parent
+
+**Symptom.** `SETUP_BILLING.bat` printed step 1 and stopped. No error, no step 2, no exit message.
+Same file also once produced `'tlocal' is not recognized as an internal or external command`.
+
+**Root cause.** Two separate Windows traps in one file. On Windows `wrangler` is `wrangler.CMD`, a
+batch file — and cmd running a batch file **without `call`** transfers control and never returns, so
+the parent script simply ends wherever the first `wrangler` line was. Separately, the file had been
+written with LF line endings, which cmd reads as garbage mid-token.
+
+**Enforced check.** Every invocation of an external command that might be a `.cmd`/`.bat` shim
+(`wrangler`, `npm`, `npx`, `gh`) is written as `call <cmd>` inside a batch file. Every `.bat` in this
+repo is written with CRLF — `.gitattributes` marks `*.bat` as `text eol=crlf`, and files generated
+outside git must be written with `newline="\r\n"` explicitly. A batch file that ends early with no
+error message is this bug until proven otherwise.
