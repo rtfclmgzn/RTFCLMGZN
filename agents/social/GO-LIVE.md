@@ -1,59 +1,75 @@
 # RTFCLMGZN — Social Pipeline: Go-Live Guide
 
-The social pipeline (Agent A → Agent B) is built and runs in **DRY-RUN by default**: it generates real platform-native copy, hashtags, and image prompts, and stages them as `status:"ready"` post records in `web/data/social-posts.js` — but it does **not** post to any account or spend any money until you provision the credentials below. This is deliberate: nothing hits your real audience or your wallet without your explicit setup.
+**Updated 2026-08-10.** The pipeline is now: Agent A (export) → Agent B (stage copy) → `post_social.py` (deterministic dispatcher, actually posts). It runs in **DRY-RUN by default**: real platform-native copy is staged as `status:"ready"` records in `web/data/social-posts.js`, and nothing posts until a platform's credentials exist in `agents/social/.secrets.json`. You go live one platform at a time by filling in that platform's section (schema: `secrets.template.json`; the real file stays git-ignored — never commit it).
 
-> All model IDs, API versions, and pricing below shift over time — **verify current details at setup time**, don't trust these as permanently accurate.
+> API versions, prices, and limits below shift — **verify current details at setup time.**
 
-## What you need to provision
-
-Put credentials in `agents/social/.secrets.json` (git-ignored via `agents/social/.gitignore` — never commit it). Schema:
-
-```json
-{
-  "gemini": { "api_key": null },
-  "meta":   { "page_access_token": null, "page_id": null, "instagram_business_id": null },
-  "x":      { "api_key": null, "api_secret": null, "access_token": null, "access_token_secret": null }
-}
+Test any time with:
 ```
+py -3 agents\social\post_social.py            # dry-run: shows what WOULD post
+py -3 agents\social\post_social.py --live --platforms bluesky   # go live per platform
+```
+Or run `RTFCLMGZN_SOCIAL_DISPATCH.bat` (same thing, logged to %LOCALAPPDATA%\RTFCLMGZN\logs\social.log).
 
-Fill in a section as its credentials become available; leave the rest `null`. The agents check each section — a `null` field means that platform stays dry-run.
+## Platform status & what you need to provision
 
-**Status as of 2026-07-10:**
-- `gemini.api_key` — ✅ filled, images can generate live.
-- `meta` — ⏸ **paused by founder decision.** Facebook Page created; Business Suite / Graph API app / tokens not started. Revisit when founder resumes.
-- `x` — 🔄 **in progress, blocked on account restriction.** Founder's X account has a restriction until end of month (or pending appeal). Developer portal application may also be delayed/flagged because of this — not a setup error if so. Resume once restriction clears or appeal succeeds.
+### 1. Bluesky — easiest, start here (~5 min)
+1. Create the account (suggest `rtfclmgzn.bsky.social`).
+2. Settings → App Passwords → create one (never your main password).
+3. Fill `bluesky.identifier` (the handle) and `bluesky.app_password`.
+No approval process, no cost. This is the "prove the whole pipe works end-to-end" platform.
 
-### 1. Images — Google Gemini (Nano Banana)
-- **Key:** a Google AI Studio / Gemini API key.
-- **Model:** `gemini-2.5-flash-image` (verify current id).
-- **Cost:** pay-as-you-go, ~$0.039/image standard (~$0.0195 batch). No subscription. This is the only *hard* per-use cost in the pipeline.
-- Enables: real image generation. Without it, Agent B stages the image *prompt* only.
+### 2. Reddit — own subreddit only (~15 min)
+1. Create r/RTFCLMGZN from your Reddit account (any account ≥30 days old with minimal karma can create a sub — verify current requirements).
+2. https://www.reddit.com/prefs/apps → create app → type **script**. Copy client id (under the app name) + secret.
+3. Fill `reddit.client_id`, `client_secret`, `username`, `password`, and set `user_agent` to include your username.
+The dispatcher auto-submits each article's headline as a link post to your own sub — nothing else. **Policy line we hold:** no automated posting to public subreddits; that is the textbook account + domain-ban pattern. Crosspost by hand when a story genuinely fits a community.
 
-### 2. Facebook + Instagram — Meta Graph API
-- **Setup:** a Meta developer app + a Facebook Page + an Instagram Business/Creator account linked to that Page.
-- **Tokens:** a long-lived Page access token with `pages_manage_posts`, `pages_read_engagement`, and (for IG) `instagram_content_publish`.
-- **Note:** IG image posts require the image to be hosted at a public URL first (Graph API pulls it from a URL, not a direct upload) — plan a place to host generated images (your CDN/site).
-- Verify the current Graph API version at setup.
+### 3. Meta — Facebook Page + Instagram (~45 min, was paused by founder)
+Status July: Page created; app/tokens not started. To finish:
+1. developers.facebook.com → Create App (Business type).
+2. Link the RTFCLMGZN Facebook Page; convert/link an Instagram **Business/Creator** account to that Page.
+3. Graph API Explorer (or Business settings) → generate a **long-lived Page access token** with `pages_manage_posts`, `pages_read_engagement`, `instagram_content_publish`. Posting to your **own** Page/IG with your own app does not require public App Review — verify the current permission names.
+4. Fill `meta.page_access_token`, `meta.page_id`, `meta.instagram_business_id` (the IG account's numeric id, from `me/accounts?fields=instagram_business_account`).
+Note: IG image posts pull the image from a public URL — the dispatcher uses the article's live cover art on rtfclmgzn.com automatically.
 
-### 3. X (Twitter) — X API
-- **Setup:** an X developer account + app with OAuth 1.0a or OAuth 2.0 user-context credentials (API key/secret + access token/secret).
-- **Access tier:** posting requires at least the tier that permits write/media — verify the current tier and its posting limits (they change and can affect how many posts/day are allowed).
+### 4. Threads — rides the same Meta developer account (~20 min)
+1. In the same Meta app (or a dedicated one), add the **Threads API** use case.
+2. Authorize your Threads profile → get a long-lived Threads access token (`threads_basic`, `threads_content_publish`).
+3. Fill `threads.access_token` (leave `user_id: "me"`).
+Free, rate-limited (~250 posts/day — far above our volume).
 
-## Flipping to live
+### 5. X — works, but it now costs money (decide, then ~30 min)
+X removed the free API tier for new developers (early 2026). Posting is **pay-per-use**: ~$0.015 per post, **~$0.20 if the post body contains a link**. Our dispatcher therefore posts the hook WITHOUT a link and puts the article URL in an immediate reply (reply link avoids the body-link surcharge per current reporting — verify at developer.x.com).
+1. Confirm the account restriction from July is cleared.
+2. developer.x.com → project + app → OAuth 1.0a user-context keys (api key/secret + access token/secret with Read/Write).
+3. Buy a small credit pack; at ~2 calls per article (hook + reply), 5 articles/day ≈ **$4.50/month**, second-wave posts add ~$2/month.
+4. Fill the four `x.*` fields.
+If you'd rather not pay, leave `x` null — everything else still runs.
 
-Once `.secrets.json` has a platform's credentials, Agent B posts to that platform on the next run and sets `status:"posted"` with the returned `post_url`. Platforms without credentials stay `status:"ready"`. You can go live one platform at a time.
+### 6. TikTok — deferred (decision 2026-08-10)
+Two hard gates: content must be video, and an unaudited app can only post **private/self-only** (invisible to the public) until TikTok approves an app audit. Revisit when a video pipeline exists. Until then TikTok gets nothing automated; the pipeline stages nothing for it.
 
-## Cost expectation (with P0 tracking on)
+### 7. Images — Google Gemini (Nano Banana)
+`gemini.api_key` — ✅ already filled. Default is to **reuse the article's cover art** (already live, $0); bespoke social images are the exception, ~$0.034–0.039/image.
 
-Per article distributed to all three platforms:
-- Copy generation (Sonnet, ~3 short posts): a few thousand tokens, cents.
-- Images (Gemini): 1–3 images × ~$0.039 = ~$0.04–0.12.
-- Posting calls: ~free.
+## How it runs automatically
 
-So distribution adds roughly **$0.05–0.15 per article** on top of the ~$0.17 writing cost — and every cent of it shows up on `/usage`, tagged to the article, so you'll see the true "article + 3 posts" number.
+- The publishing cycle (cycle-runbook §4c/§5b) stages copy **before** ship and runs the dispatcher **after** the deploy is verified live, so every link and image URL already resolves.
+- Dedupe is a ledger **outside the repo** (`%LOCALAPPDATA%\RTFCLMGZN\social-ledger.json`) — a git reset can never cause a double post.
+- Guards: articles older than 3 days never post (no backlog floods); max 12 posts per run; 3 attempts then `failed`; per-platform enable by credentials.
+- Every article link carries `utm_source=<platform>&utm_medium=social&utm_campaign=autopost` (query before the `#` — required by the hash router) so /usage-style traffic honesty is possible later.
+
+## Cost expectation per article (all platforms live)
+
+- Copy generation (Sonnet, ~5 short posts): cents.
+- Images: $0 by default (cover art reuse).
+- Posting: free everywhere except X (~$0.03/article with link-in-reply; ~$0.045 with a second wave).
+- Total distribution adds roughly **$0.05–0.10 per article**, and X is the only part that isn't $0.
 
 ## Safety
 
-- The agents never post content the compliance gate hasn't cleared (they source only from Agent A's export of a *published* article).
-- Health/financial posts carry the article's disclaimer.
+- Agents never post; only the dispatcher does, and only from records downstream of the compliance gate.
 - Dry-run is the default and the safe state; live posting is opt-in per platform.
+- Health/financial posts carry the article's disclaimer.
+- Known limitation: article links currently preview with the site-level OG card (hash routing means crawlers don't see per-article meta). A Cloudflare Pages Function serving per-article `/share/<slug>` OG pages is the fix — worth doing once posts are flowing.

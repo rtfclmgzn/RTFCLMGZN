@@ -23,6 +23,8 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: astral-sh/setup-uv@v5
       - uses: anthropics/claude-code-action@v1
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # If the Claude GitHub App is not installed on this repo, uncomment the next

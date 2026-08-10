@@ -334,11 +334,15 @@ number that cannot be sourced is cut before the issue ships rather than queued f
 
 ## 4. Cover image
 
-Follow `publishing.agent.md`'s rules exactly:
-1. Check `image-library/art/manifest.json` for a semantically-fitting, unused-within-90-days image (read each candidate's `description`, not just tags — the mismatch this rule exists to prevent is a real incident: robots-as-workers art was used for a story about robots-as-product).
-2. Check `web/data/image-usage.js`'s registry logic conceptually — no image (library or generated) on a second article/magazine within 90 days.
-3. If you use a library image: resize to ~1536px web JPEG into `web/assets/img/newsroom/<article-id>.jpg` (Python PIL is available), then append `{"article_id": "...", "used_at": "<today>"}` to that image's `used_in` in the manifest.
-4. If nothing fits, generate one: `python -m newsroom.cli generate-image --prompt "..." --out web/assets/img/newsroom/<article-id>.jpg --section <Section>`. This is capped by a shared budget guard and will fail cleanly if exhausted — if it fails, fall back to the best available library image even if imperfect, rather than leaving no cover.
+Follow `publishing.agent.md`'s rules — now enforced mechanically. The cover gate in §5 step 3 refuses to ship an imageless article or a 90-day reuse (this is not hypothetical: the first night of Actions-hosted cycles, 2026-08-10, shipped a breaking article with no cover and reused library art — the gate exists so that class of failure is structurally impossible). Do it right here:
+
+1. **Library-first, via the tool — never by hand.** Run
+   `python3 newsroom/runner/verify_covers.py pick --article-id <id> --section <Section> --subjects "<3-6 comma-separated keywords from the story>"`
+   (dry-run). Read the top pick's `description` and judge the SEMANTIC fit yourself — the score is keyword-based, and the mismatch this judgment exists to prevent is a real incident (robots-as-workers art on a robots-as-product story). Wrong fit → re-run with `--exclude <that id>` or go to step 2. Right fit → re-run the same command **with `--apply`**: it resizes into `web/assets/img/newsroom/<article-id>.jpg`, appends the `used_in` record to the manifest, and prints the exact `image` value for the article JSON. Never hand-resize or hand-edit the manifest — the tool does both precisely so the record can't be forgotten.
+2. If `pick` reports `NO_CLEAN_CANDIDATE` or nothing fits semantically: generate — `python -m newsroom.cli generate-image --prompt "..." --out web/assets/img/newsroom/<article-id>.jpg --section <Section>`. (Budget-guarded, and on the Actions runner it needs the `GEMINI_API_KEY` secret — if generation fails, name the reason in your §6 report.)
+3. If BOTH fail (no clean fit AND generation down): `pick --article-id <id> --section <Section> --apply --allow-lru-exception`. That is the only sanctioned bend of the 90-day rule — it takes the least-recently-used image, records `"exception": true` in the manifest, and you flag it in your §6 report. **A blank cover is never an option; the gate will block the push.**
+4. `git add` the new jpg AND `image-library/art/manifest.json` (both are in the allowed publish surface).
+5. If `from PIL import Image` fails on this runner, run `python3 -m pip install pillow` first — the tools degrade without it, but resize quality and near-duplicate detection are worth the ten seconds.
 
 ## 4b. Keep the live desks current (REQUIRED every cycle, even a no-publish one)
 
@@ -367,6 +371,21 @@ The Buzz and Scoreboard pages are live surfaces readers judge the whole site by.
 
 If you genuinely have nothing to add to one of them this cycle, still refresh its date field and say so in your Step 6 report. Never silently skip this step.
 
+## 4c. Social staging (REQUIRED for every article published this cycle)
+
+For each article you are publishing this cycle, run the two social agents BEFORE shipping, so the staged records ride the same commit:
+
+1. **Agent A — export** (`agents/social/article-export.agent.md`, Haiku-tier work): append the structured `export` object for the article to `web/data/social-posts.js`.
+2. **Agent B — copy** (`agents/social/social-posting.agent.md`, Sonnet-tier): stage platform-native posts as `status:"ready"` records — X hook (**no URL in the copy**, `link_in_reply:true` + `reply_copy`), Instagram, Facebook, Threads, Bluesky; for feature/research pieces also a second-wave X + Threads post with `not_before` ~5h out. Reddit needs no copy — the dispatcher synthesizes the link post itself.
+3. Log both generation steps into the ledger row you append in §5 step 1b (`task_type:"social"`).
+4. Include `web/data/social-posts.js` in the §5 step 2 `git add`.
+
+Do NOT post anything in this section, and do not call any platform API yourself — posting happens in §5b, after the deploy is verified, so article links and image URLs already resolve. A no-publish cycle skips this section entirely.
+
+## 4d. Cover-health sweep (REQUIRED every cycle, even a no-publish one)
+
+Run `python3 newsroom/runner/verify_covers.py check`. If it prints FAILures, a previous run shipped a bad cover (imageless, dangling path, or a 90-day reuse — the 2026-08-10 incident class). Repair them THIS cycle, before §5: assign each failing article a correct cover per §4 (pick or generate), update the article's `image` field if the path changed, and include every touched file in this cycle's commit. Re-run the check until clean. WARNings (old violations, recorded LRU exceptions) go in your §6 report but don't block. This is how a bad cover self-heals within one cycle instead of waiting for a human to notice it on the homepage.
+
 ## 5. Ship it
 
 0. Before touching anything, run `git status --short`. If it already shows uncommitted changes to a file you're about to edit (most likely `web/index.html`, since the owner sometimes hand-edits the UI directly), that's someone's in-progress work sitting in the same file you need to bump the cache-buster in -- `git add` stages the whole file, not just your lines, so your commit will unavoidably include it too. That's fine (don't try to strip it out or stash it -- an unattended stash/pop can conflict and wedge the repo for the next cycle), but say so explicitly in your Step 6 report (e.g. "note: index.html had a pre-existing unrelated edit already in the working tree, included in this commit") so the owner isn't confused by a diff your summary doesn't otherwise explain.
@@ -387,8 +406,8 @@ If you genuinely have nothing to add to one of them this cycle, still refresh it
     a spend log that understated its spend and pointed the reader at the wrong job. Skipping this
     step puts that back.
 
-2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` / `web/data/companies.js` / `web/rss.xml` from step 4b). Never `git add -A`.
-3. Run the audit: `python -m newsroom.quality.component_audit` (must exit clean), then the surface guard: `python -m newsroom.runner.verify_publish_surface`. If it exits non-zero, STOP — do not push. Unstage whatever it flagged and reconsider; do not override this check.
+2. `git add` **only** the files you actually touched (new/changed article data, cover image, manifest, index.html, plus `web/data/buzz.js` / `web/data/scoreboard.js` / `web/data/companies.js` / `web/rss.xml` from step 4b, plus `web/data/social-posts.js` from step 4c — including the dispatcher's status updates from a previous cycle's §5b if they're sitting in the working tree). Never `git add -A`.
+3. Run the audits, all three, in order: `python -m newsroom.quality.component_audit` (must exit clean), then the cover gate: `python3 newsroom/runner/verify_covers.py check` (must exit clean — a FAIL means fix the cover NOW per §4; never dodge the gate by unstaging the article and shipping it coverless later), then the surface guard: `python -m newsroom.runner.verify_publish_surface`. If any exits non-zero, STOP — do not push. Fix or unstage what it flagged; do not override these checks.
 4. `git commit` with a real, specific message (what you published and why, not a generic "update").
 5. **`git pull --rebase origin main`** — REQUIRED, every cycle, after the commit and before the push. Three schedules (this cycle, the 2-hourly breaking scan, the 3-hourly pulse scan) push to the same branch, and they overlap: a long cycle is routinely still running when the next scan commits. Without this, `git push` is simply **rejected** as non-fast-forward, and an unattended agent that reads a push as "done" reports a successful ship of work that is still sitting only on this machine — where the next run's checkout or reset then quietly discards it. Nothing errors and nothing is logged; the article just never existed. Run it *after* committing, never with a dirty tree.
    - **If the rebase reports a conflict: STOP.** Do not `--force`, do not `--force-with-lease`, do not `git rebase --skip`, do not resolve it by taking your own side wholesale. A force-push here overwrites another scan's already-published article. Run `git rebase --abort`, leave the commit sitting unpushed, and say exactly that in your Step 6 report so the owner can land it by hand. An unshipped commit is recoverable; an overwritten one is not.
@@ -396,8 +415,17 @@ If you genuinely have nothing to add to one of them this cycle, still refresh it
 6. `git push origin main`.
 7. Verify: `curl -s https://rtfclmgzn.com/ | grep -o '?b=[0-9]*'` in a short poll loop until it shows your new number (deploy takes ~30-90s). If the number never appears, check for a **cache-buster collision** first: a scan that landed during your rebase may have bumped `?b=` to the same number you did, in which case yours rebased on top and the live number is right but yours isn't the one showing. Re-read `web/index.html` before bumping again.
 
+## 5b. Social dispatch (runs AFTER the deploy is verified live)
+
+Only after §5 step 7 confirms the new build is serving:
+
+1. From the repo root run: `py -3 agents\social\post_social.py --live`. It posts every `status:"ready"` record whose platform has credentials in `agents/social/.secrets.json`, writes back `status:"posted"` + `post_url`, and prints a `SOCIAL_DISPATCH_SUMMARY` line. Platforms without credentials are skipped — that is the expected dry-run state, not an error (see `agents/social/GO-LIVE.md`).
+2. Do NOT commit or push in this section. The status updates to `web/data/social-posts.js` stay in the working tree and ride the next cycle's §5 commit (step 2 covers this). They are inert metadata; the dedupe ledger at `%LOCALAPPDATA%\RTFCLMGZN\social-ledger.json` — outside the repo on purpose — is what prevents double-posting, so a lost status update can never cause a repost.
+3. Fold the `SOCIAL_DISPATCH_SUMMARY` into your §6 report, and carry any estimated X API spend into the next cycle's ledger row (the dispatcher pays per-use on X; everything else is free).
+4. If the dispatcher reports failures, report them and move on — it retries each record up to 3 attempts across cycles on its own. Never hand-post via an API call yourself.
+
 ## 6. Report
 
-Print a short summary: what you published (title, section, format, word count, source count), **confirm the §3a bar for each piece** (whether it has an `apply` block and why that type fits, any cross-links to companies/scoreboard/dictionary, any source conflicts you had to reconcile), **confirm the §3b bar for each piece** — name every component you used and the specific reader question each one answers, plus any you considered and rejected and why, plus any `entities.js` additions. "Added a chart" is not a report; "added a `ledger` because both deals were quoted at $14B and neither figure covers the same thing" is. What cover you used and why, **what you changed on Buzz, the Scoreboard, the company directory, and the RSS feed in step 4b** (cards retired/added, rows or scores touched, companies added, items added to the feed — or an explicit "nothing to add, dates refreshed"), the new cache-buster number, and confirmation the deploy landed. If you decided NOT to publish anything this cycle (no candidate cleared compliance, or nothing genuinely new), say so explicitly and explain why — an empty cycle is a legitimate, honest outcome, not a failure to hide.
+Print a short summary: what you published (title, section, format, word count, source count), **confirm the §3a bar for each piece** (whether it has an `apply` block and why that type fits, any cross-links to companies/scoreboard/dictionary, any source conflicts you had to reconcile), **confirm the §3b bar for each piece** — name every component you used and the specific reader question each one answers, plus any you considered and rejected and why, plus any `entities.js` additions. "Added a chart" is not a report; "added a `ledger` because both deals were quoted at $14B and neither figure covers the same thing" is. What cover you used and why, **what you changed on Buzz, the Scoreboard, the company directory, and the RSS feed in step 4b** (cards retired/added, rows or scores touched, companies added, items added to the feed — or an explicit "nothing to add, dates refreshed"), the new cache-buster number, confirmation the deploy landed, **and what §5b dispatched** (per-platform posted/failed counts from `SOCIAL_DISPATCH_SUMMARY`, links to the live posts, estimated X spend — or an explicit "social: still dry-run, no credentials configured"). If you decided NOT to publish anything this cycle (no candidate cleared compliance, or nothing genuinely new), say so explicitly and explain why — an empty cycle is a legitimate, honest outcome, not a failure to hide.
 
 Then stop. Do not start a second cycle, do not modify anything else, do not touch files outside what this runbook describes.

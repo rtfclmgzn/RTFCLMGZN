@@ -31,6 +31,11 @@ jobs:
       - uses: astral-sh/setup-uv@v5
 
       - uses: anthropics/claude-code-action@v1
+        env:
+          # Without this, image generation is impossible on the runner and every
+          # article draws from the finite library — which is how the 2026-08-10
+          # no-cover / reused-cover incident happened. Set the repo secret.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # If the Claude GitHub App is not installed on this repo, uncomment the next
@@ -45,3 +50,9 @@ jobs:
           claude_args: |
             --model claude-sonnet-5
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
+
+      - name: Cover gate audit (goes red if a bad cover reached main)
+        if: always()
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 newsroom/runner/verify_covers.py check
