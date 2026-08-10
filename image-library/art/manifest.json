@@ -307,7 +307,12 @@
       ],
       "text_space": "concrete wall right",
       "brand_visible": "ANTHROPIC signage",
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-anthropic-claude-code-auto-mode-default-august-14",
+          "used_at": "2026-08-10"
+        }
+      ]
     },
     {
       "id": "art-012-ai-lab-office-with-kinetic-sculpture",
@@ -421,7 +426,10 @@
       "text_space": "screen wall left",
       "brand_visible": null,
       "used_in": [
-        { "article_id": "newsroom-alibaba-qwen38-max-launch-benchmarks-arena", "used_at": "2026-08-10" }
+        {
+          "article_id": "newsroom-alibaba-qwen38-max-launch-benchmarks-arena",
+          "used_at": "2026-08-10"
+        }
       ]
     },
     {
@@ -447,7 +455,10 @@
       "text_space": "sky upper-left",
       "brand_visible": null,
       "used_in": [
-        { "article_id": "self-host-or-api-how-to-decide", "used_at": "2026-08-01" }
+        {
+          "article_id": "self-host-or-api-how-to-decide",
+          "used_at": "2026-08-01"
+        }
       ]
     },
     {
@@ -551,7 +562,10 @@
       "text_space": "sky upper-left",
       "brand_visible": "OPENAI signage",
       "used_in": [
-        { "article_id": "newsroom-openai-astra-ten-open-math-problems", "used_at": "2026-08-10" }
+        {
+          "article_id": "newsroom-openai-astra-ten-open-math-problems",
+          "used_at": "2026-08-10"
+        }
       ]
     },
     {
@@ -575,7 +589,12 @@
       ],
       "text_space": "storm sky upper-left",
       "brand_visible": "xAI signage",
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-xai-grok-4-6-missed-target-date",
+          "used_at": "2026-08-10"
+        }
+      ]
     },
     {
       "id": "art-022-monolith-plaza-mission-signage",
@@ -721,7 +740,10 @@
       "text_space": "dark wall upper-left",
       "brand_visible": "GEMINI signage",
       "used_in": [
-        { "article_id": "newsroom-google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop", "used_at": "2026-08-07" }
+        {
+          "article_id": "newsroom-google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop",
+          "used_at": "2026-08-07"
+        }
       ]
     },
     {
@@ -1324,7 +1346,10 @@
       "text_space": "black sky top-left",
       "brand_visible": null,
       "used_in": [
-        { "article_id": "newsroom-nvidia-safe-superintelligence-5-billion-investment", "used_at": "2026-08-01" }
+        {
+          "article_id": "newsroom-nvidia-safe-superintelligence-5-billion-investment",
+          "used_at": "2026-08-01"
+        }
       ]
     },
     {
@@ -2031,7 +2056,10 @@
       "text_space": "storm sky top half",
       "brand_visible": null,
       "used_in": [
-        { "article_id": "newsroom-deepseek-v4-flash-0731-beats-own-flagship", "used_at": "2026-08-01" }
+        {
+          "article_id": "newsroom-deepseek-v4-flash-0731-beats-own-flagship",
+          "used_at": "2026-08-01"
+        }
       ]
     },
     {
@@ -2227,7 +2255,12 @@
       ],
       "text_space": "none — text baked in",
       "brand_visible": "GPT-5.6 text baked into artwork",
-      "used_in": []
+      "used_in": [
+        {
+          "article_id": "newsroom-uk-aisi-agent-deception-cyber-testing-incident",
+          "used_at": "2026-08-10"
+        }
+      ]
     },
     {
       "id": "art-085-inside-a-liquid-cooled-computer",

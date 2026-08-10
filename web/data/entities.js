@@ -47,6 +47,8 @@ window.RTFC_ENTITIES = {
       kind:"agentic coding model", access:"closed" },
     { re:/\bClaude Sonnet 5\b/i, name:"Claude Sonnet 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"mid-tier workhorse model", access:"closed" },
+    { re:/\bClaude Mythos 5\b|\bMythos 5\b/i, name:"Claude Mythos 5", maker:"Anthropic", makerKey:"anthropic",
+      kind:"smaller safety-focused model", access:"closed" },
 
     // --- OpenAI ---
     { re:/\bGPT-5\.6 Sol\b|\bSol max\b/i, name:"GPT-5.6 Sol", maker:"OpenAI", makerKey:"openai",
