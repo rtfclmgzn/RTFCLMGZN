@@ -132,4 +132,10 @@ window.RTFC_BUZZ = [
     why:"A major chipmaker buying its way into hardwired-weights inference silicon -- a narrower, more speculative bet than Nvidia or Anthropic's GPU-cluster deals, and AMD didn't say what it paid.",
     heat:54, topics:["amd","taalas","chips","inference","acquisitions"],
     url:"https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html" },
+  { id:"bz-151", date:"2026-08-07",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI paused internal work on Astra after determining the model reached its 'critical cybersecurity threshold,' meaning it can independently identify and develop zero-day exploits without human intervention. This is the first OpenAI model to trigger the threshold under its Preparedness Framework. The company is implementing stricter safeguards including isolated testing, restricted access, and real-time monitoring, and is working with government agencies and AI safety organizations to stress-test the model's capabilities.",
+    why:"The loudest safety threshold any frontier lab has hit publicly for an unreleased model -- triggering the existence and enforcement of OpenAI's own internal 'critical cyber' bar, which is normally a paper process. A genuine frontier-lab security pause is the breaking-news bar itself, and arriving before any regular cycle has yet written it.",
+    heat:89, topics:["openai","astra","cybersecurity","ai safety","preparedness framework","zero day exploits"],
+    url:"https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/" },
 ];
