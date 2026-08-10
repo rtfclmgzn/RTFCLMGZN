@@ -99,4 +99,5 @@
   if(!Array.isArray(window.RTFC_USAGE_LOG)) window.RTFC_USAGE_LOG=[];
   var seen={}; window.RTFC_USAGE_LOG.forEach(function(r){seen[r.id]=1;});
   rows.forEach(function(r){if(!seen[r.id]) window.RTFC_USAGE_LOG.push(r);});
-})();
+})(),
+    { id:"u-0173", ts:"2026-08-10T10:48:00Z", article_id:"system", agent:"pulse-scan", task_type:"maintenance", description:"Scanned last 3 hours for Buzz candidates: nothing loud enough to add. Updated scoreboard with Artificial Analysis intelligence index moves (Opus 5 to 63, Fable 5 to 62, Kimi K3 to 60, Qwen3.8-Max first measurement at 58). Resolved one open claim (microsoft-nadella-ai-bubble-compute-rationing|w|0) from July 29 earnings call confirmation. Bumped cache-buster from 316 to 317.", measured:"estimated" };
