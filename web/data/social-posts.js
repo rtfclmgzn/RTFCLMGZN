@@ -265,4 +265,277 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
+,
+{
+  "article_id": "newsroom-darpa-venom-f16-ai-controlled-flight",
+  "ts": "2026-08-10T20:58:00Z",
+  "export": {
+    "article_id": "newsroom-darpa-venom-f16-ai-controlled-flight",
+    "url": "/#/article/darpa-venom-f16-ai-controlled-flight",
+    "headline": "An AI agent flew a US Air Force F-16 in real flight tests, with a pilot ready to take back control at a switch",
+    "hook": "An AI agent flew a real US Air Force F-16 fighter jet in July, with a human safety pilot able to reclaim control at any moment via one switch.",
+    "key_facts": [
+      "DARPA and the Air Force disclosed the flight July 16 at Eglin Air Force Base",
+      "VENOM converts standard F-16s, not a one-off testbed like the earlier X-62A VISTA jet",
+      "DARPA hasn't disclosed flight counts or durations beyond the one announcement"
+    ],
+    "tone": "measured, skeptical of overclaiming",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "primary_image": "assets/img/newsroom/newsroom-darpa-venom-f16-ai-controlled-flight.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "An AI agent flew a real US Air Force F-16 in July. A safety pilot could reclaim control at any moment with one switch. DARPA says it's the first time a standard fighter jet -- not a one-off testbed -- has flown this way.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#DARPA"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T01:54:42Z",
+      "copy": "What DARPA hasn't said about its AI-flown F-16 test: no flight count, no flight-hour total, no maneuver detail beyond \"basic flight control.\" \"An AI flew an F-16\" is confirmed. \"Ready for combat\" is not a claim DARPA has made.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "An AI just flew a real US Air Force fighter jet.\n\nDARPA and the Air Force disclosed a VENOM-modified F-16 flew under AI control in July at Eglin Air Force Base -- with a human safety pilot able to take back control instantly via one switch.\n\nWhat's different this time: VENOM converts standard operational F-16s, not a single purpose-built research jet. Full story at the link in bio.",
+      "hashtags": [
+        "#AI",
+        "#ArtificialIntelligence",
+        "#DARPA",
+        "#F16",
+        "#Aviation",
+        "#Robotics",
+        "#Defense",
+        "#TechNews"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "An AI agent flew a real US Air Force F-16 fighter jet in July -- with a human pilot in the cockpit the whole time, able to take back control instantly at a dedicated switch.\n\nDARPA's VENOM program is a real step up from earlier tests: it converts standard operational F-16s rather than relying on a single specially built research jet. What DARPA hasn't published is a flight count or a flight-hour total -- so \"an AI flew an F-16\" is confirmed, but \"ready for combat\" isn't a claim anyone has made yet.\n\nFull story:",
+      "hashtags": [
+        "#AI",
+        "#Defense"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "An AI agent flew a real US Air Force F-16 in July. A safety pilot stayed in the cockpit the whole time, able to reclaim control at one switch. DARPA's VENOM program converts standard fighter jets -- not a single one-off research aircraft like the earlier X-62A VISTA. Real milestone, still a supervised one.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "An AI flew a real US Air Force F-16 in July. Safety pilot could reclaim control at one switch, the whole flight. DARPA's VENOM converts standard fighters, not a one-off testbed.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-meta-muse-code-contributor-tier-pricing",
+  "ts": "2026-08-10T20:58:00Z",
+  "export": {
+    "article_id": "newsroom-meta-muse-code-contributor-tier-pricing",
+    "url": "/#/article/meta-muse-code-contributor-tier-pricing",
+    "headline": "Meta's new coding agent is up to 20x cheaper if you let it train on your code",
+    "hook": "Meta's new Muse Code coding agent costs up to 20x less on its Contributor tier -- in exchange for prompts and completions Meta may use to train its next model.",
+    "key_facts": [
+      "Contributor: $0.10/M input, $0.20/M output vs Standard's $1.25/$4.25",
+      "Contributor data may train Meta's models; Standard data never does, per Meta's own page",
+      "Once code trains a model there's no extraction procedure -- researchers say that makes erasure requests effectively unsatisfiable"
+    ],
+    "tone": "practical, two-sided",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "primary_image": "assets/img/newsroom/newsroom-meta-muse-code-contributor-tier-pricing.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Meta's new Muse Code coding agent is up to 20x cheaper on its \"Contributor\" tier. The catch: Meta may use your prompts and completions to train its next model on that tier -- and once code trains a model, there's no getting it back out.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Meta"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T01:54:44Z",
+      "copy": "The real question with Meta's discount coding tier isn't whether the trade is fair to you -- it's whether you have the authority to make it on your employer's or client's code. Explicit disclosure to a user isn't the same as consent from whoever actually owns the repo.",
+      "reply_copy": "Full analysis:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Meta's new coding agent is up to 20x cheaper -- if you let it train on your code.\n\nMuse Code's \"Contributor\" tier runs $0.10/M input tokens vs $1.25 on Standard. The trade: Meta may use your prompts and completions to improve its models. Once code trains a model, there's no procedure to pull it back out.\n\nFor a hobby project? Maybe a fair trade. For your employer's codebase? Probably not yours to trade. Full story at the link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Meta",
+        "#Coding",
+        "#SoftwareEngineering",
+        "#TechNews",
+        "#DataPrivacy",
+        "#ArtificialIntelligence",
+        "#Developers"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Would you let an AI company train on your code to save money?\n\nMeta's new Muse Code coding agent has two pricing tiers on the exact same model. Standard costs $1.25/$4.25 per million tokens. Contributor costs $0.10/$0.20 -- more than 12x cheaper -- but Meta says it may use your prompts and completions to improve its products.\n\nThe part worth knowing: once code is absorbed into a model's training, there's no procedure to extract it back out, which privacy researchers say makes a GDPR-style erasure request effectively unsatisfiable.\n\nOur read: a genuinely fair trade for a hobby project, and very likely a compliance problem for anyone else's code. Full breakdown:",
+      "hashtags": [
+        "#AI",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Meta's new Muse Code coding agent: 20x cheaper if you let it train on your prompts and completions. Standard tier never trains on your data; Contributor tier might. Once code trains a model there's no pulling it back out. Fine for your own side project. Not your call to make on someone else's code.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Meta's new coding agent is up to 20x cheaper on its \"Contributor\" tier -- the catch is Meta may train on your prompts and completions, with no way to undo it once that happens.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-ai-data-center-electricity-ratepayer-fight-2026",
+  "ts": "2026-08-10T20:58:00Z",
+  "export": {
+    "article_id": "newsroom-ai-data-center-electricity-ratepayer-fight-2026",
+    "url": "/#/article/ai-data-center-electricity-ratepayer-fight-2026",
+    "headline": "Congress, five states, and the White House all moved on AI data-center power costs this summer. The numbers they're citing don't measure the same thing.",
+    "hook": "A House bill cleared committee 52-0, New York's governor sidestepped her own legislature, and a senator's viral 267% electricity-bill stat turned out to measure something else entirely.",
+    "key_facts": [
+      "H.R. 9340 (Ratepayer Protection Act) advanced 52-0 in the House on July 21 -- no Senate companion yet",
+      "NY's governor signed a narrower 50-MW executive order instead of the legislature's unsigned 20-MW moratorium bill",
+      "Sen. Warren's 267% figure measured wholesale prices, not bills; PolitiFact rated it Mostly False"
+    ],
+    "tone": "analytical, numbers-first, skeptical of headline figures",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/newsroom-ai-data-center-electricity-ratepayer-fight-2026.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "A House bill on AI data-center power costs just cleared committee 52-0. New York's governor sidestepped her own legislature with an executive order. And a US senator's viral \"267% electricity bill\" stat actually measured wholesale prices, not bills.",
+      "reply_copy": "The full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#EnergyPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T01:54:46Z",
+      "copy": "Texas's ERCOT is tracking 410 GW of large-load interconnection requests -- about 87% of it data centers. That queue alone is nearly triple the state's current generating capacity. The rule the state writes to handle it may matter more than anything Congress does.",
+      "reply_copy": "Read the full piece:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Everyone agrees AI data centers are raising electricity bills. Nobody agrees on by how much.\n\nA House bill cleared committee 52-0. New York's governor signed an executive order instead of her own legislature's bill. Ohio's rates are up 175% since 2005. A US senator's viral 267% stat turned out to measure wholesale prices, not bills -- and got rated Mostly False.\n\nFive real numbers, five different things. Full breakdown at the link in bio.",
+      "hashtags": [
+        "#AI",
+        "#EnergyPolicy",
+        "#DataCenters",
+        "#Electricity",
+        "#Policy",
+        "#TechNews",
+        "#ClimateAndEnergy"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "This summer, Congress, five states, and the White House all moved on the same problem: AI data centers are visibly raising electricity bills. What's missing is a single number anyone agrees on for how big the problem actually is.\n\nA bipartisan House bill cleared committee 52-0 on July 21 -- but has no Senate companion. New York's governor sidestepped her own legislature's moratorium bill with a narrower executive order. And a widely repeated \"267% increase\" statistic from a US senator turned out to measure wholesale electricity prices, not what actually lands on a residential bill -- PolitiFact rated it Mostly False.\n\nWe reconciled five real, differently-scoped numbers and mapped where every state and federal effort actually stands. Full story:",
+      "hashtags": [
+        "#AI",
+        "#EnergyPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "AI data centers are raising electricity bills -- but the numbers being cited don't measure the same thing. A House bill cleared committee 52-0. NY's governor sidestepped her own legislature. A senator's viral 267% stat was actually wholesale prices, not bills, and got rated Mostly False. We reconciled five real figures against what each one actually covers.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "A House bill on data-center power costs cleared committee 52-0. NY's governor sidestepped her own legislature. A senator's viral 267% stat was actually wholesale prices, not bills. Five real numbers, none measuring the same thing.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
