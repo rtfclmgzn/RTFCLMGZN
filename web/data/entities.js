@@ -83,6 +83,8 @@ window.RTFC_ENTITIES = {
       kind:"frontier model", access:"partial" },
     { re:/\bMuse Spark\b/i, name:"Muse Spark", maker:"Meta", makerKey:"meta",
       kind:"model family", access:"partial" },
+    { re:/\bMuse Glimmer\b/i, name:"Muse Glimmer", maker:"Meta", makerKey:"meta",
+      kind:"open-weights agent model", access:"open-weights" },
     { re:/\bLlama\b/i, name:"Llama", maker:"Meta", makerKey:"meta",
       kind:"open-weights model family", access:"open-weights" },
 
