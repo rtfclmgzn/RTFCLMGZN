@@ -49,6 +49,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Azure growth held well above 40% threshold at 43% YoY; FY2027 capex guidance increased to $255-260B (35% increase over 2026), and Amy Hood confirmed continued internal-first allocation with external capacity still rationed.",
       label:"Microsoft Q4 FY2026 earnings call",
-      url:"https://seekingalpha.com/article/4927337-microsoft-corporation-msft-q4-2026-earnings-call-transcript" }
+      url:"https://seekingalpha.com/article/4927337-microsoft-corporation-msft-q4-2026-earnings-call-transcript" },
+    { key:"white-house-moonshot-fable-distillation-accusation|w|1",
+      at:"2026-08-10T02:35:00Z",
+      outcome:"confirmed",
+      note:"Moonshot AI released full Kimi K3 open-weight model (2.8 trillion parameters, 1M context) on July 26-27, 2026 on Hugging Face, enabling independent technical analysis of K3's training data and architecture.",
+      label:"Kimi K3 open weights release",
+      url:"https://www.kimi.com/blog/kimi-k3" }
   ]
 };
