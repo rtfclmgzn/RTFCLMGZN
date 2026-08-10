@@ -2444,21 +2444,78 @@
   function statCard(label,recs,note){
     var s=sumRecs(recs);
     var perArt=s.articleCount?(s.cost/s.articleCount):0;
+    /* A window with no records is not "$0.00 spent". It is "nothing was logged".
+       Printing a zero there reads as a measurement, and for three days in August it
+       read as a very cheap newsroom rather than a newsroom that had stopped. */
+    if(!s.count){
+      return '<div class="ucard"><div class="ulabel">'+label+'</div>'+
+        '<div class="ucost" style="color:var(--muted)">&mdash;</div>'+
+        '<div class="usub">nothing logged</div></div>';
+    }
+    /* Tasks ran, but none of them carried a token count. Monitoring scans are the usual
+       case: they are text-only, cost effectively nothing, and log "estimated" with no
+       figures. Printing $0.00 for that is worse than useless, because it looks like a
+       measured zero rather than an unmeasured one. */
+    if(!s.tokens && !s.cost){
+      return '<div class="ucard"><div class="ulabel">'+label+'</div>'+
+        '<div class="ucost" style="color:var(--muted)">&mdash;</div>'+
+        '<div class="usub">'+s.count+' task'+(s.count===1?'':'s')+' logged, none metered</div>'+
+        '<div class="unote">monitoring scans carry no token figures</div></div>';
+    }
     return '<div class="ucard"><div class="ulabel">'+label+'</div>'+
       '<div class="ucost">'+money(s.cost)+'</div>'+
-      '<div class="usub">'+num(s.tokens)+' tokens · '+s.articleCount+(s.articleCount===1?' article':' articles')+'</div>'+
-      (note?'<div class="unote">'+note+'</div>':(s.articleCount?'<div class="unote">avg '+money(perArt)+'/article</div>':''))+'</div>';
+      '<div class="usub">'+num(s.tokens)+' tokens · '+s.count+' task'+(s.count===1?'':'s')+'</div>'+
+      (note?'<div class="unote">'+note+'</div>':(s.articleCount?'<div class="unote">'+s.articleCount+(s.articleCount===1?' article':' articles')+' · avg '+money(perArt)+'</div>':''))+'</div>';
   }
   function barRow(label,val,max,detail){
     var pct=max>0?Math.max(2,Math.round(val/max*100)):0;
     return '<div class="ubar"><div class="ubar-l">'+label+'</div><div class="ubar-t"><div class="ubar-f" style="width:'+pct+'%"></div></div><div class="ubar-v">'+detail+'</div></div>';
   }
+  /* PROVIDER + TASK GROUPING (added 2026-08-10) ----------------------------------
+     The page used to show 11 raw model ids and 27 raw task_type strings, which is a
+     dump of internal vocabulary rather than an answer to "where does the money go".
+     Two groupings fix that, and one exclusion:
+
+       provider  - the reader (and the owner) wants Claude vs image generation, not a
+                   model-by-model list. Both are still available underneath.
+       taskGroup - 27 task_type strings collapse to six buckets a human can hold.
+       RETIRED   - an early one-off trial on a third-party API. It is not how this
+                   publication runs, and leaving it in the model chart made the chart
+                   about a thing that happened once. It is excluded from every figure
+                   on this page AND its size is printed, because silently dropping
+                   spend from a cost page is the exact failure this page exists to
+                   avoid. Exclude loudly or not at all. */
+  function provider(m){
+    m=String(m||"");
+    if(m.indexOf("claude")===0) return "claude";
+    if(m.indexOf("gemini")===0) return "image";
+    return "retired";
+  }
+  var PROVIDER_LABEL={claude:"Claude — all writing, research and editing",
+                      image:"Gemini — illustration and covers",
+                      retired:"Third-party API (one-off, retired)"};
+  var TASK_GROUPS=[
+    ["Writing & editing",       ["writing","copyedit","curation","assignment","publishing","publish","social","style"]],
+    ["Research & verification", ["research","factcheck","verification","discovery","adjudication","compliance","quality","policy","benchmark-scan"]],
+    ["Illustration",            ["image","image-generation","image-policy","image-remediation","image-rendering","image-recovery"]],
+    ["Magazine production",     ["magazine"]],
+    ["Site upkeep",             ["site","buzz-refresh","observability"]],
+    ["Monitoring (scans)",      ["no-op"]]
+  ];
+  function taskGroup(t){
+    t=String(t||"");
+    for(var i=0;i<TASK_GROUPS.length;i++) if(TASK_GROUPS[i][1].indexOf(t)>=0) return TASK_GROUPS[i][0];
+    return "Other";
+  }
   function viewUsage(){
     var now=new Date();
-    var today=USAGE.filter(function(r){return sameDay(r.ts,now);});
-    var d7=USAGE.filter(function(r){return withinDays(r.ts,now,7);});
-    var d30=USAGE.filter(function(r){return withinDays(r.ts,now,30);});
-    var all=USAGE.slice();
+    var RETIRED=USAGE.filter(function(r){return provider(r.model)==="retired";});
+    var LIVE=USAGE.filter(function(r){return provider(r.model)!=="retired";});
+    var retiredS=sumRecs(RETIRED);
+    var today=LIVE.filter(function(r){return sameDay(r.ts,now);});
+    var d7=LIVE.filter(function(r){return withinDays(r.ts,now,7);});
+    var d30=LIVE.filter(function(r){return withinDays(r.ts,now,30);});
+    var all=LIVE.slice();
     var allS=sumRecs(all);
     var estShare=all.length?Math.round(allS.estimated/all.length*100):0;
 
@@ -2474,26 +2531,104 @@
       statCard("Last 30 days",d30)+
       statCard("All-time",all)+'</div>';
 
+    /* ---- COVERAGE ----------------------------------------------------------
+       Added 2026-08-10. A cost page that only ever shows a total is unfalsifiable:
+       a newsroom that stopped running and a newsroom that ran and spent nothing
+       render identically. Between 2026-08-07 and 2026-08-10 the OAuth token was
+       revoked, every job failed on its first API call, and this page went on
+       displaying the same all-time figure as though nothing had changed. So the
+       page now states, above the fold, when it last heard from anything -- and
+       says plainly when that was too long ago. Silence is a finding; print it. */
+    var newestTs=all.reduce(function(m,r){ return (!m||new Date(r.ts)>new Date(m))?r.ts:m; },null);
+    var staleH=newestTs?(now-new Date(newestTs))/3600000:1e9;
+    h+='<div class="ucover" style="margin:18px 0 4px;padding:14px 16px;border:1px solid '+
+      (staleH>24?'var(--bad,#c0392b)':'var(--line)')+';border-radius:12px;background:var(--surface2)">';
+    if(!newestTs){
+      h+='<b>Nothing has ever been logged.</b> This page has no data to show.';
+    } else {
+      h+='<div style="display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline">'+
+         '<b>Last logged activity</b><span>'+relTime(newestTs)+'</span>'+
+         '<span style="color:var(--muted)">'+esc(String(newestTs).replace("T"," ").replace("Z"," UTC"))+'</span></div>';
+      if(staleH>24){
+        h+='<p style="margin:8px 0 0;color:var(--bad,#c0392b)"><b>This log is '+
+           Math.round(staleH/24)+' days stale.</b> The newsroom runs several times a day and every '+
+           'run is required to log a row, including a run that changes nothing. A gap this long means '+
+           'the jobs are failing or are not reporting — the figures below are a floor, not a total.</p>';
+      }
+    }
+    h+='</div>';
+
+
     // cost per article headline
     var perArt=allS.articleCount?allS.cost/allS.articleCount:0;
     h+='<div class="uhero-metric"><div><span class="big">'+money(perArt)+'</span><span class="cap">average compute cost per article (end-to-end, all pipeline stages)</span></div>'+
        '<div><span class="big">'+num(Math.round(allS.articleCount?allS.tokens/allS.articleCount:0))+'</span><span class="cap">average tokens per article</span></div></div>';
 
-    // by model
+    // WHERE THE MONEY GOES — provider first, model detail second
+    var byProv=groupBy(all,function(r){return provider(r.model);});
+    var provRows=["claude","image"].filter(function(k){return byProv[k];})
+      .map(function(k){return {k:k,s:sumRecs(byProv[k])};});
+    var maxProv=provRows.reduce(function(m,r){return Math.max(m,r.s.cost);},0);
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Where the money goes</div><div class="ubars">';
+    h+=provRows.map(function(r){
+      var det=r.k==="image" ? (money(r.s.cost)+' · '+r.s.count+' image task'+(r.s.count===1?'':'s'))
+                            : (money(r.s.cost)+' · '+num(r.s.tokens)+' tok');
+      return barRow(PROVIDER_LABEL[r.k],r.s.cost,maxProv,det);
+    }).join("");
+    h+='</div>';
+    if(retiredS.count){
+      h+='<p class="small" style="margin:-2px 0 16px;color:var(--muted);font-size:13.5px">'+
+         'Excluded from every figure on this page: '+retiredS.count+' task'+(retiredS.count===1?'':'s')+
+         ' worth '+money(retiredS.cost)+' run once on a third-party API in July, while the newsroom was '+
+         'being built. It is not how the publication runs. It is named here rather than deleted, because '+
+         'quietly dropping spend from a cost page is the failure this page exists to prevent.</p>';
+    }
+
+    // by model (within the two live providers)
     var byModel=groupBy(all,function(r){return r.model;});
     var modelRows=Object.keys(byModel).map(function(k){return {k:k,s:sumRecs(byModel[k])};}).sort(function(a,b){return b.s.cost-a.s.cost;});
     var maxModel=modelRows.reduce(function(m,r){return Math.max(m,r.s.cost);},0);
-    h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Cost by model</div><div class="ubars">';
-    h+=modelRows.map(function(r){ var lbl=(modelCfg(r.k)&&modelCfg(r.k).label)||r.k; return barRow(lbl,r.s.cost,maxModel,money(r.s.cost)+' · '+num(r.s.tokens)+' tok'); }).join("");
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The same total, by model</div><div class="ubars">';
+    h+=modelRows.map(function(r){
+      var cfg=modelCfg(r.k), lbl=(cfg&&cfg.label)||r.k;
+      /* An image model has no tokens. Printing "0 tok" beside it reads as a bug or a
+         zero-cost model; it is neither, it is the wrong unit. */
+      var det=(cfg&&cfg.per_image) ? (money(r.s.cost)+' · '+r.s.count+' image task'+(r.s.count===1?'':'s'))
+                                   : (money(r.s.cost)+' · '+num(r.s.tokens)+' tok');
+      return barRow(lbl,r.s.cost,maxModel,det);
+    }).join("");
     h+='</div>';
 
-    // by task type
-    var byTask=groupBy(all,function(r){return r.task_type;});
+    // by kind of work — 27 internal task_type strings collapsed to six readable buckets
+    var byTask=groupBy(all,function(r){return taskGroup(r.task_type);});
     var taskRows=Object.keys(byTask).map(function(k){return {k:k,s:sumRecs(byTask[k])};}).sort(function(a,b){return b.s.cost-a.s.cost;});
     var maxTask=taskRows.reduce(function(m,r){return Math.max(m,r.s.cost);},0);
-    h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Cost by task type</div><div class="ubars">';
-    h+=taskRows.map(function(r){ return barRow(r.k,r.s.cost,maxTask,money(r.s.cost)); }).join("");
+    h+='<div class="kicker"><span class="dotc" style="background:var(--ok)"></span>By kind of work</div><div class="ubars">';
+    h+=taskRows.map(function(r){
+      return barRow(r.k,r.s.cost,maxTask,money(r.s.cost)+' · '+r.s.count+' task'+(r.s.count===1?'':'s'));
+    }).join("");
     h+='</div>';
+
+    /* ---- BY AGENT ----------------------------------------------------------
+       This section is the reason the gap above was invisible for so long. Until
+       2026-08-10 the breaking scan was the ONLY job whose runbook told it to log,
+       so 53 of 90 rows came from the cheapest, mostly-no-op job while the thrice-
+       daily cycle that writes the articles -- by far the largest spend -- appeared
+       nowhere. Cost by model and by task type both hid that, because they slice the
+       rows that exist rather than showing which jobs are reporting at all. Breaking
+       the same total down by agent makes an under-reporting job obvious on sight. */
+    var byAgent=groupBy(all,function(r){return r.agent||"unattributed";});
+    var agentRows=Object.keys(byAgent).map(function(k){return {k:k,s:sumRecs(byAgent[k]),n:byAgent[k].length};})
+                        .sort(function(a,b){return b.n-a.n;});
+    var maxAgentN=agentRows.reduce(function(m,r){return Math.max(m,r.n);},0);
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Who reported it</div><div class="ubars">';
+    h+=agentRows.map(function(r){
+      return barRow(r.k, r.n, maxAgentN, r.n+' run'+(r.n===1?'':'s')+' · '+money(r.s.cost));
+    }).join("");
+    h+='</div><p style="margin:-2px 0 18px;color:var(--muted);font-size:14px">'+
+       'Rows, not dollars — this bar measures how much each job has told us, which is not the same as '+
+       'how much each job costs. A job you know runs often but that sits near the bottom here is '+
+       'under-reporting, and every figure on this page is short by whatever it did not say.</p>';
 
     // per-article rollup table
     var byArt=groupBy(all.filter(function(r){return r.article_id&&r.article_id!=="system";}),function(r){return r.article_id;});
@@ -2506,6 +2641,12 @@
         '<td>'+r.s.count+'</td><td>'+num(r.s.tokens)+'</td><td>'+money(r.s.cost)+'</td></tr>';
     }).join("")||'<tr><td colspan="4" style="color:var(--muted)">No article tasks logged yet.</td></tr>';
     h+='</tbody></table></div>';
+    var covered=artRows.length, published=ARTICLES.length;
+    h+='<p class="small" style="margin:8px 0 18px;color:var(--muted);font-size:13.5px">'+
+       '<b style="color:var(--ink)">'+covered+' of '+published+' published articles</b> have a cost record. '+
+       'The gap is not spend that vanished: it is work done before per-article logging existed, or by a '+
+       'job whose runbook did not tell it to log. Both are fixed going forward, and neither can be '+
+       'reconstructed, because the token counts were never written down.</p>';
 
     // export + methodology
     h+='<div class="uexport"><button onclick="window.rtfcExport(\'csv\')">Export CSV</button>'+
@@ -2513,8 +2654,10 @@
     h+='<div class="umethod"><h4>How these numbers are produced</h4><ul>'+
       '<li><b>Zero measurement overhead.</b> Token counts come from each task’s own record; the dashboard math above is plain arithmetic in your browser — no AI model is ever called to compute or summarize these figures.</li>'+
       '<li><b>Metered vs. estimated.</b> '+(100-estShare)+'% of logged tasks are metered (exact token counts); '+estShare+'% are estimated (e.g. the retrofitted first article, produced before tracking existed). Estimated records are marked in the log.</li>'+
+      '<li><b>An empty day is not a cheap day.</b> Where a period shows a dash instead of a figure, nothing was logged in it. That is a statement about the record, not about the spending, and the banner at the top of this page says how long it has been true.</li>'+
       '<li><b>API-equivalent, not a subscription bill.</b> On a Claude Pro/Max subscription you pay a flat fee against usage limits, not per token. These dollar figures show what the work would cost at pay-as-you-go API rates — a stable yardstick, and the exact number for comparing pay-as-you-go against a subscription.</li>'+
       '<li><b>Rates.</b> From <code>cost-config.js</code>, last verified '+(COST.last_verified||'—')+'. Sonnet is on introductory pricing through 2026-08-31 (rises ~50% after).</li>'+
+      '<li><b>A known gap, not corrected retroactively.</b> Until 2026-08-10, only the hourly breaking scan was instructed to log. The three-times-daily newsroom cycle and the pulse scan wrote nothing, so every total on this page covering work before that date <b>understates the real spend</b>, and the split by task and model is weighted toward the cheapest job. The missing token counts were never recorded anywhere, so they cannot be recovered — and inventing them to make this page look complete would be a worse failure than the gap. Both runbooks now require a row every run, including a run that changes nothing.</li>'+
       '</ul></div>';
     return h+'</div>';
   }

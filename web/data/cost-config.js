@@ -8,7 +8,7 @@
 //   those sessions are marked estimated and priced here only as an API-equivalent yardstick.
 window.RTFC_COST_CONFIG = {
   currency: "USD",
-  last_verified: "2026-07-14",
+  last_verified: "2026-08-10",
   unit: "per_million_tokens",
   discounts: {
     batch: 0.5,
@@ -50,6 +50,11 @@ window.RTFC_COST_CONFIG = {
       label: "Claude Haiku 4.5",
       input: 1, output: 5,
       note: "High-volume/low-stakes: style, compliance flagging, publishing, tagging, social copy."
+    },
+    "claude-opus-5": {
+      label: "Claude Opus 5",
+      input: 5, output: 25,
+      note: "Magazine curation and build. Added 2026-08-10: rows using this id were previously priced at zero because the model had no entry here, which silently understated the magazine's cost. A model id with no entry costs nothing, which is the quietest way a cost page can lie."
     },
     "claude-fable-5": {
       label: "Claude Fable 5",
