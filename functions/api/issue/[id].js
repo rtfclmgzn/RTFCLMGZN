@@ -32,13 +32,15 @@
 
 import { getSessionUser } from "../_lib/auth.js";
 import issue001 from "./_data/issue-001.json";
+import issue002 from "./_data/issue-002.json";
 import primer from "./_data/primer.json";
 
 // The whole catalogue. `access` is read off the payload itself rather than kept
 // in a second list here, so an issue cannot be free in one place and paid in
 // another -- the issue object is the single source of truth for its own price.
 const ISSUES = {
-  "issue-001": issue001,
+  "issue-001": issue001,   // "The First Half" — July 2026
+  "issue-002": issue002,   // "The Reckoning" — August 2026
   primer: primer,
 };
 

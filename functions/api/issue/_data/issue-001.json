@@ -343,10 +343,6 @@
         "Global venture funding hit a record **$510 billion** in the first half of 2026 — more than the $440 billion invested in all of 2025 combined, and a record for any half-year on record. Nearly forty AI startups reached unicorn status in those six months, at valuations from $1 billion to $41 billion.",
         "Every instinct trained on headlines says boom, and the word is not wrong. But this desk's job is never to stop at the headline number; it is to check the instinct against the ==distribution underneath it==.",
         "And the distribution here tells a very different, much stranger story than 'the market is hot.' ++— continued overleaf ++"
-      ],
-      "sources": [
-        { "label": "Crunchbase — Global startup funding hits $510B in H1 2026, AI boom accelerates (July 2, 2026)", "url": "https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/", "primary": true },
-        { "label": "TechCrunch — Almost 40 new unicorns have been minted so far this year (July 5, 2026)", "url": "https://techcrunch.com/2026/07/05/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/", "primary": false }
       ]
     },
     {
@@ -361,12 +357,6 @@
         "OpenAI and Anthropic alone accounted for **$217 billion — roughly 43%** of all startup funding in the half. Read that again, because it does not compute on first pass. Nearly half of every venture dollar deployed anywhere on the planet, across every sector — biotech, climate, fintech, defense, consumer, all of it — went to two AI companies. That is not a rising tide lifting all boats. It is a ==gravity well== bending the entire capital landscape toward two points.",
         "For a founder outside the top handful, 'record year' can be the most misleading phrase in the market. The aggregate is up and your odds may be down at the same time, because the aggregate is being carried by rounds you will never be in. That is the reality the topline obscures — and the reality that actually governs most people trying to raise in this environment.",
         "The mega-rounds themselves recalibrate what 'a lot of money' means. Prometheus, co-founded by Jeff Bezos, closed a **$12 billion Series B** — a Series B — led by JPMorgan Chase and BlackRock, at a $41 billion valuation. Together AI raised $800 million at $8.3 billion post-money, with Aramco Ventures leading. DeepSeek raised $7.4 billion at north of $50 billion. Two years ago any one of these would have been the defining round of its year. In H1 2026 they are line items in a list — checks at a scale that would have been unthinkable, now written like routine."
-      ],
-      "sources": [
-        { "label": "Crunchbase — Global startup funding hits $510B in H1 2026 ($217B/43% to OpenAI and Anthropic)", "url": "https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/", "primary": true },
-        { "label": "TechCrunch — Jeff Bezos's Prometheus raises $12B at a $41B valuation (June 11, 2026)", "url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/", "primary": false },
-        { "label": "TechCrunch — Together AI raises $800M, leaps to $8.3B valuation (July 1, 2026)", "url": "https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/", "primary": false },
-        { "label": "TechFundingNews — DeepSeek raises $7.4B at $50B valuation in first-ever external funding round", "url": "https://techfundingnews.com/deepseek-raises-7-4b-at-50b-valuation-in-first-ever-external-funding-round/", "primary": false }
       ]
     },
     {
@@ -383,9 +373,6 @@
         "The concentration signals two things simultaneously, and holding both is the whole discipline of reading it correctly. The first is **conviction**. The largest and most sophisticated financial institutions on the planet — JPMorgan, BlackRock, sovereign-linked funds — are now underwriting frontier AI directly, at the top of the capital stack, with checks sized for infrastructure rather than experiments. That is a serious, considered vote that this is foundational technology, from institutions whose entire business is being right about where durable value accrues.",
         "The second truth is **fragility**, the inseparable other side. When a category's capital is concentrated to this degree, the health of the entire market becomes hostage to a very small number of outcomes. If the top two deliver revenue commensurate with these valuations, the concentration will be remembered as foresight. If either stumbles — a capability plateau, a regulatory shock, a business model that doesn't close — the correction will not stay politely contained to them. Everything priced off the assumption of their success reprices with them.",
         "And the skeptic's footnote, which we print in every funding story because it is always true: **record funding is an input, not an outcome**, and the two are constantly confused. None of these valuations is verifiable against durable revenue from the outside — private companies disclose what flatters them — and 'raised the most' has never once been synonymous with 'built the most valuable business.' The dot-com peak was also a record-funding era, right up until it wasn't. The number that will matter in a year is not the $510 billion raised in this one; it is ==what fraction of that capital produced companies that can stand on their own revenue==. Unknowable today, decisive tomorrow. We report on these markets; we don't advise anyone into them."
-      ],
-      "sources": [
-        { "label": "Crunchbase — Global startup funding hits $510B in H1 2026, AI boom accelerates (July 2, 2026)", "url": "https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/", "primary": true }
       ]
     },
     {
@@ -444,7 +431,7 @@
       "pull": "Rubin arriving early isn't confidence. It's triage.",
       "fact": {
         "n": "$650B",
-        "label": "combined 2026 AI-infrastructure capex from Microsoft, Google, Amazon and Meta — up 80% year over year."
+        "label": "combined 2026 AI-infrastructure capex guided by Microsoft, Google, Amazon and Meta — a 67–74% year-over-year increase, by company guidance."
       },
       "body": [
         "NVIDIA's next-generation Rubin platform, originally slated for 2027, is now expected roughly **two quarters ahead of schedule** — and that single scheduling change tells you more about the state of AI infrastructure than any benchmark released this month.",
@@ -461,7 +448,7 @@
       "image": "assets/img/issue-001-liquid-cooling.jpg",
       "cap": "A GPU you can't feed is a GPU that stalls.",
       "body": [
-        "The scale of the spending is genuinely hard to hold in your head. The hyperscalers — Microsoft, Google, Amazon, and Meta — are collectively pouring roughly **$650 billion** into AI infrastructure in 2026, an 80% year-over-year increase; a single year's AI capex from four companies now rivals the GDP of a mid-sized country. Bank of America, watching the flow, revised its projection for the entire global semiconductor market to **$1.3 trillion** this year — a 30% mid-year jump of a magnitude that almost never happens in a mature industry. These are not normal capex curves. They are the fingerprints of an industry racing a clock it cannot see the end of, where every player has concluded that the cost of building too little compute is far greater than the cost of building too much.",
+        "The scale of the spending is genuinely hard to hold in your head. The hyperscalers — Microsoft, Google, Amazon, and Meta — are collectively guiding to roughly **$650 billion** into AI infrastructure in 2026, a 67–74% year-over-year increase depending on where final guidance lands; a single year's AI capex from four companies now rivals the GDP of a mid-sized country. Bank of America, watching the flow, revised its projection for the entire global semiconductor market to **$1.3 trillion** this year — a roughly 30% upward revision from its prior estimate, of a magnitude that almost never happens in a mature industry. These are not normal capex curves. They are the fingerprints of an industry racing a clock it cannot see the end of, where every player has concluded that the cost of building too little compute is far greater than the cost of building too much.",
         "And here is the part the GPU headlines consistently miss: the binding constraint is no longer the accelerator itself. It's the memory that feeds it. **High Bandwidth Memory** — the stack of ultra-fast dies bonded beside the GPU — is what keeps the arithmetic units supplied, and modern AI inference is as often waiting on memory as on compute. HBM is one of the hardest products in the semiconductor industry to manufacture, with yields that punish any imperfection, and ==only three companies on earth make it at scale==: SK Hynix, Samsung, and Micron. None can bring capacity online fast enough, because a new memory line takes years and billions to stand up.",
         "Data-center GPU lead times have stretched to 36–52 weeks, but even that understates the problem: a GPU you can't feed is a GPU that stalls, burning power and capital while it waits. When people say 'AI is compute-constrained,' the precise statement for this moment is that it is **memory-bandwidth-constrained** — and the memory oligopoly is a far harder bottleneck to break than the GPU one. Scarcity is also handing NVIDIA's rivals their opening: AMD's data-center revenue hit $5.8 billion in Q1, up 57%, anchored by a five-year deal to supply OpenAI — one of the largest AI buyers on earth underwriting a second source because it wants one badly enough to build it."
       ]
@@ -490,7 +477,7 @@
       "items": [
         {
           "d": "JAN",
-          "t": "Capex season opens — hyperscalers signal an **80% year-over-year** spending jump."
+          "t": "Capex season opens — hyperscalers guide to a combined **$600B+** for 2026, blowing past analysts' pre-season 36% growth estimate."
         },
         {
           "d": "MAR",
@@ -502,7 +489,7 @@
         },
         {
           "d": "JUN",
-          "t": "One Western frontier model spends **19 days offline** under the new review — the gate goes live."
+          "t": "Anthropic takes Claude Fable 5 and Mythos 5 offline for **19 days** under a separate Commerce Department export-control order, after a reported jailbreak."
         },
         {
           "d": "JUL 9",
@@ -510,7 +497,7 @@
         },
         {
           "d": "JUL 15",
-          "t": "China's companion-AI rules take effect — the world's first regulation of emotionally engaged AI."
+          "t": "China's companion-AI rules take effect — one of the first national frameworks anywhere for emotionally engaged AI."
         }
       ]
     },

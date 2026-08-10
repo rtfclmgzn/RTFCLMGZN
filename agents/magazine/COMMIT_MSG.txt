@@ -1,0 +1,32 @@
+Magazine: August release — Issue 002, expanded Primer, and the monthly pipeline
+
+Issue 002 "The Reckoning" (80pp): July with hindsight across four acts — the
+agent-security cluster, the memory squeeze, the labour data, and the August
+look-ahead. Issue 001's open predictions graded in public; two were wrong.
+
+The Primer absorbs "How The Models Are Made" as Acts IV and V (63pp) and is the
+single free flagship again. models-issue.js is retired.
+
+SECURITY: web/data/issue-001.js still held all 59 spreads of the paid issue, and
+web/ is served as static assets, so it was fetchable directly by anyone. Deleted.
+
+Renderer fix: featureText()'s close() appended the sources footer as the last
+child of the page element, so on splitLeft/splitRight — a flex row — it became a
+third column and crushed the text column from 333px to 67px. Any split page
+carrying sources overflowed regardless of copy length. Issue 001 p25 shipped with
+this defect; the styles.css V-FIX repairs both issues.
+
+Standard: page range corrected to 40-80 to match the enforced gate, copy budgets
+replaced with values measured off Issue 001, section 14 renderer traps added, and
+Law 11 (no source lines on magazine pages) added and enforced.
+
+qa_scan.py now scans functions/api/issue/_data/*.json, which nothing had scanned
+since paid issues moved there, and no longer fires on metadata stubs or on
+article prose about other people's agents.
+
+New tooling: fold_chop.py (gatefold halves), gen_issue_art.py (batch art),
+devserver.py (the dev server the QA gate referenced but that never existed),
+audit_reader.py (the real-reader audit), and a four-phase monthly pipeline that
+begins gathering on the 25th and stops for review before anything publishes.
+
+Art: 67 images generated through the house Nano Banana pipeline, $2.28 metered.

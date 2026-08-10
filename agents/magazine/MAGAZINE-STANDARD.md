@@ -5,7 +5,7 @@
 
 ---
 
-## 1. The Ten Laws
+## 1. The Laws
 
 1. **No voids.** Every page must measure ≥ 90% content fill (audit procedure in §6). Empty cream space is a defect.
 2. **No cutoffs.** No text may overflow or clip at a page's bottom. `scrollHeight > clientHeight` on any `.mpage` = build failure.
@@ -13,10 +13,11 @@
 4. **Every text page carries art.** Spot illustration, full-bleed background, or photo — generated per-page from that page's actual idea, per the cinematic scene-brief doctrine (editorial-notes N-003).
 5. **Ads are part of the magazine.** 4–6 ad pages per issue at real positions (§4). A magazine without ads isn't a magazine.
 6. **The cover is a real cover** (§2): masthead ON the art, coverlines, flash badge, issue bar, barcode. Never just art + a title.
-7. **Page count: 30–40.** The Primer set 33. Under 30 feels thin; over 40 bloats production.
+7. **Page count: 40–80 for a numbered issue.** This is the number `qa_scan.py` actually enforces (check #8, N-020: `if pages < 40` → THIN ISSUE, "expand stories, don't cap"). The Primer, a free evergreen field guide, set 33 and is exempt. **This line previously read "30–40" and contradicted the gate for a month** — Issue 002 was first built to 40pp against this stale text and had to be rebuilt to 80. If you change the range, change `qa_scan.py` in the same commit or the next issue gets built to the wrong one.
 8. **Pacing rhythm:** never more than two consecutive "heavy" reading pages; break with an ad, a photo spread, an opener, or a quote page.
 9. **Fixed pages, magazine ratio.** 3:4 pages, horizontal wheel-scroll on desktop, vertical on portrait. All type in `clamp(...vh)` units so pages compose identically at any size.
 10. **Ship only after the audit passes** (§6). "Looks fine" is not a check. Numbers are.
+11. **NO SOURCE LINES ON MAGAZINE PAGES** (founder, 2026-08-10). A magazine page carries reporting, not a bibliography. Never put a `sources` array on a spread — the renderer will draw a grey link footer across the page and it reads like a web article, which is the exact opposite of the brief. The sourcing still has to be real and it still has to be checkable; it lives in the **dated public archive**, which is where a reader who wants the receipt is pointed. Issue 002 was built with 152 source links across 52 pages and every one was stripped before it shipped. Do not add them back, and do not write copy that promises the reader a citation on the page.
 
 ## 2. Cover anatomy (kind:"cover" + coverlines[])
 
@@ -72,7 +73,28 @@ Required fields and their rendered anatomy:
 
 ## 5b. Copy budgets & the never-again laws (added after the founder's final pass)
 
-- **Copy is cut to fit the layout, never the reverse.** Hard budgets: rail layouts (right/left) 130–170 words · art-top 170–220 · overlay 110–150 · band 130–170 · stats 120–150. If it doesn't fit, trim prose — real magazines edit to the page.
+- **Copy is cut to fit the layout, never the reverse.** These budgets are **measured off Issue 001**,
+  which renders with zero cutoffs at these lengths — they are not estimates, and guessing at them is how
+  Issue 002 shipped 16 overflowing pages into its first audit. Body word counts:
+
+  | layout | budget | ceiling |
+  |---|---|---|
+  | `posterTop` | 110–150 | 155 |
+  | `splitLeft` / `splitRight` | 125–140 | 145 |
+  | `quoteLead` | 125–140 | 145 |
+  | `statFeature` | 125–145 | 150 |
+  | `bottomImage` | 105–120 | 125 |
+  | `cornerCard` | 100–115 | 120 |
+  | `fullBleed` | 95–105 | 110 |
+  | `overlay` | 110–130 | 135 |
+  | `runover` / `runoverAlt` | 240–320 | **330** |
+  | `letter` | 165–185 | 190 |
+
+  Continuation sheets are two-column and hold roughly twice a lead page. **When a lead page runs long,
+  move the excess into its runover rather than deleting reporting** — that is what the runover is for.
+- **Structured pages have item ceilings too, and portrait is the binding case:** a `list` page holds
+  **9 items** (10 overflows in portrait), a `faceoff` holds **6 rows** with the verdict strip. Both
+  measured, both narrower than the counts that fit in landscape.
 - **Title clearance:** ≥ 50px between the running head and the page title (page top padding 9.5%).
 - **Rich text everywhere it teaches:** `**bold**`, `==highlight==`, `++accent++` in body copy (renderer `fmt()`); every text page should carry at least one bold or highlight — plain-gray walls of text are a defect.
 - **Portrait is a first-class composition, not a fallback:** pages take natural height (min 60svh; full-bleed kinds 92svh) so voids/cutoffs are structurally impossible; art rails compose as a 44%-figure grid with caption/pull beside, fact box full-width — never stacked full-width slabs.
@@ -108,6 +130,19 @@ Rule: if a new structured kind is added, add it to the `DECO` map and give its b
 All `<script>`/`<link>` asset tags in `index.html` carry `?b=N`. **Bump N on every release** — browsers (and Cloudflare's edge) cache aggressively; a stale `app.js` next to fresh data files produces impossible-looking bugs. A "fix that changed nothing" usually means the old file is still cached: bump `b=` first, re-test second.
 
 ## 6. The audit (mandatory before showing the founder)
+
+**Run it against the REAL reader, not a mock-up.** Serve `web/` and open `#/read/<issue>`; for a Plus
+issue, stub `GET /api/issue/<id>` to return `{ok:true,issue:{...}}` so the pages actually load. A
+hand-rolled preview renderer measures nothing — it has different CSS and will report a clean page that
+the site paints broken. If a headless browser is available, drive that; a script that renders the issue
+through the shipped `app.js` and reports fill/cutoff per page in all three window sizes lives in the
+runbook's Step 3.
+
+**Always audit Issue 001 alongside as a control.** If the current issue and 001 both show a defect, it is
+in the renderer or the stylesheet; if only the current issue shows it, it is in the copy. That one
+comparison is what separates "my page is too long" from "the CSS is broken", and it is how the `.tp-src`
+flex bug below was found instead of being papered over by cutting good reporting.
+
 
 Run in the browser on `#/read/<issue>` after a cache-busted reload:
 ```js
@@ -204,4 +239,37 @@ marquee visual moments. **Every issue (Primer included) ships exactly one of eac
 - Verticalfold (9:16): a single continuous scene that reads **top → bottom** (or bottom → top) with a real progression (e.g. a keynote stage up top → hard foundations at the base; or a figure at the base → a summit above).
 - **Every prompt MUST end with:** *"One single continuous asymmetric cinematic scene, clearly NOT symmetrical, NOT mirrored, no repeated or duplicated halves."* Then the house style suffix. `gen_image.py "<prompt>" <out.jpg> "16:9"` (centerfold) / `"9:16"` (verticalfold). Files: `<issue>-centerfold.jpg`, `<issue>-verticalfold.jpg`. **Always eyeball the result** — if the left/right (or top/bottom) halves look like reflections of each other, regenerate.
 
+**THE CHOP STEP IS NOT OPTIONAL — the reader never loads the base image.** `spreadPageV3()` builds a
+gatefold from two PRE-CUT halves, `<name>-1.jpg` and `<name>-2.jpg`; it never references `<name>.jpg`.
+Generate the joined art, then run:
+
+    uv run --with pillow python agents/magazine/fold_chop.py web/assets/img/<name>.jpg center     # centerfold
+    uv run --with pillow python agents/magazine/fold_chop.py web/assets/img/<name>.jpg vertical   # verticalfold
+
+Skip it and both fold pages render as broken images. Note the ratio arithmetic: two 3:4 pages side by
+side are exactly **3:2**, so a centerfold splits with no crop — generate it at 3:2, not 16:9 (this doc
+said 16:9 in one place and 3:2 in another; 3:2 is the one that is geometrically correct). Stacked, two
+3:4 pages are **3:8**, which no generator offers, so a verticalfold is generated at 9:16 and the chopper
+centre-crops the WIDTH down to 3:8 — deliberately, so the whole top-to-bottom progression survives.
+
 `qa_scan.py` enforces the count: **exactly one `centerfold` and one `verticalfold` per spread issue**, each with a real `image`, `title`, and `cap`.
+
+## 14. RENDERER TRAPS (things the data cannot fix)
+
+- **`sources` must never appear on a spread at all (Law 11).** The note below is kept because the bug
+  is real and would bite any future page kind that appends a child to a flex row — but the first-order
+  rule is simply that no spread carries `sources`.
+- **`.tp-src` on a split page was a flex item (fixed 2026-08-10).** `featureText()`'s `close()` appends the
+  sources footer as the LAST CHILD of the page element. On `splitLeft`/`splitRight` that element is
+  `display:flex; flex-direction:row`, so the footer became a third column and crushed the text column from
+  ~333px to ~67px — the copy then ran ~2,600px past the page. It presented exactly like a copy-length
+  problem and was not: **any** split page carrying `sources` overflowed no matter how short the body was.
+  Issue 001 p25 shipped with this defect. The fix is the `V-FIX` block at the foot of `styles.css`, which
+  pins `.tp-src` out of the row. If you ever add a new flex-row page kind, check what `close()` appends to it.
+- **`statFeature` needs a `stats` array of 3.** Without it the giant number row at the foot renders empty
+  and the page reads as a void. The renderer does not supply a fallback.
+- **`runover` / `runoverAlt` must NOT carry a `title`.** They are continuation sheets; the renderer draws a
+  "continued" rule from `cont` and an optional `crosshead`. A title on a runover means the feature was
+  built wrong.
+- **`photo` and `resources` take `body` as a STRING**, every other kind takes an array. The renderer calls
+  `esc()` on the string ones and `.map()` on the arrays; get it backwards and the page throws.

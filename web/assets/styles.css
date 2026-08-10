@@ -4358,3 +4358,22 @@ html.vp-desktop.has-mobkit #mobkit{
   transform:scale(2.1); transform-origin:100% 100%;
 }
 @media (prefers-reduced-motion:reduce){ .mk-btn{ transition:none; } }
+
+/* ── V-FIX: sources footer must not become a flex item on split pages ──────────
+   featureText()'s close() appends <div class="tp-src"> as the LAST CHILD of the
+   page element. On splitLeft/splitRight the page is `display:flex; flex-direction:row`,
+   so the sources block silently became a THIRD column in that row and crushed the
+   text column from ~333px to ~67px — the copy then ran ~2,600px past the page.
+   It looked like a copy-length problem and was not: any split page carrying
+   `sources` overflowed regardless of how short the body was. (Issue 001 p25 has
+   this defect too — it was the only split page there that carried sources.)
+   Take it out of the row and pin it across the foot of the text column. */
+.mpage.tp-split{ position:relative; }
+.mpage.tp-split > .tp-src{
+  position:absolute; bottom:3.6cqh; width:52%; margin:0; padding-top:1.2cqh;
+  z-index:3; background:transparent;
+}
+.mpage.tp-split:not(.tp-rev) > .tp-src{ right:6%; }   /* image left  → text column right */
+.mpage.tp-split.tp-rev      > .tp-src{ left:6%;  }    /* text left   → image right */
+/* give the column room so the pinned footer never lands on top of the fact box */
+.mpage.tp-split .tp-col{ padding-bottom:7.5cqh; }

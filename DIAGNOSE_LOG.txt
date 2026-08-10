@@ -1,0 +1,192 @@
+RTFCLMGZN DIAGNOSE
+==================
+
+
+============================================================
+ ENVIRONMENT
+============================================================
+--- where python ---
+C:\Users\nafiu\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe
+C:\Users\nafiu\AppData\Local\Programs\Python\Python312\python.exe
+C:\Users\nafiu\AppData\Local\Microsoft\WindowsApps\python.exe
+errorlevel=0
+--- python --version ---
+Python 3.11.15
+errorlevel=0
+--- where py ---
+C:\Users\nafiu\AppData\Local\Programs\Python\Launcher\py.exe
+--- where git ---
+C:\Program Files\Git\cmd\git.exe
+--- where curl ---
+C:\Windows\System32\curl.exe
+--- cwd ---
+D:\BUSINESS\RTFCLMGZN
+
+============================================================
+ FREE DISK (SHIP_ALL requires more than 400 MB)
+============================================================
+free MB 1421328
+total MB 2861570
+errorlevel=0
+
+============================================================
+ GIT
+============================================================
+main
+f36a6fc Breaking-scan: no-op, 23:02 UTC checkpoint; Buzz +2 (Nscale/Anyscale acquisition, Meta Q2 earnings)
+6dcc127 Publish 3: Microsoft's Anthropic/OpenAI investment marks, Revelio AI labor tracker, OpenAI academic researcher access
+4b82948 Breaking-scan: no-op, 21:00 UTC checkpoint; Buzz +1/-2 (chip-rout reversal on Microsoft/Lam earnings)
+1c5f6f1 Publish 3: Samsung Q2 chip-profit/mobile-loss split, EU forces Google Android AI interop, Aschenbrenner fund capital raise
+df31c43 Breaking-scan: no-op, 14:42 UTC checkpoint; Buzz +2 (AI chip-stock rout, Aschenbrenner fund capital call)
+98cad1c Site-wide upgrade: components on 18 articles, redesigned Scoreboard + Resources, dark-default, browse-by-company, live radar, Buzz upgrade, and the loop-based agent doctrine
+--- remotes ---
+origin	https://github.com/rtfclmgzn/RTFCLMGZN.git (fetch)
+origin	https://github.com/rtfclmgzn/RTFCLMGZN.git (push)
+--- working tree ---
+ M agents/_shared/visual-components.md
+ D logos/hf_20260709_035322_3bab4461-5b89-4756-98b7-d44f1f5aafbc.png
+ D logos/hf_20260709_035322_e4f5278a-c95c-4a9d-a629-f7e2fb09d0f9.png
+ D "logos/hf_20260709_035339_f9584d8f-c0c8-4a96-aa6a-28b2e40fcd8d (1).png"
+ D logos/hf_20260709_035339_f9584d8f-c0c8-4a96-aa6a-28b2e40fcd8d.png
+ D logos/hf_20260709_035423_1746dffd-06ce-4765-a361-b1412e1c74fb.png
+ D logos/hf_20260709_035423_6933c76a-2a59-44aa-9a9b-46b7ab740b11.png
+ D logos/hf_20260709_035423_846280f6-e045-4560-94df-77f5f3cc1d7f.png
+ D logos/hf_20260709_035423_de923508-f1e6-468e-984f-b8331b599240.png
+ D logos/hf_20260709_035444_37ff4b77-1839-4f65-a897-50781c58f205.png
+ D logos/hf_20260709_035444_a4a4c352-0cb7-496d-a0ce-9943f63c4113.png
+ D logos/hf_20260709_040004_82eb0588-15b0-40db-a45c-c9d3f3b5a387.png
+ D logos/hf_20260709_040014_00ff90bc-d263-4284-981f-d77777d755d6.png
+ D logos/hf_20260709_040014_3731c50d-1a8e-45b2-99e2-c266a37b773d.png
+ D logos/hf_20260709_040014_45dd16ae-c334-45d5-94f7-b5c1095e0877.png
+ D logos/hf_20260709_040014_ceeaaa06-c79c-454a-b12f-9d15f13e6826.png
+ D logos/hf_20260709_040027_e672c7cf-b57e-4a66-a5e8-17510e4f0c47.png
+ M newsroom/quality/article_score.py
+ M newsroom/runner/cycle-runbook.md
+ M newsroom/runner/pulse-scan-runbook.md
+ M newsroom/schemas/article-draft.json
+ M rtfclmgzn-todo.txt
+ M web/assets/app.js
+ M web/assets/styles.css
+ M web/data/guides.js
+?? DIAGNOSE.bat
+?? DIAGNOSE_LOG.txt
+?? IDEA.md
+?? PUSH_NOW.bat
+?? RTFCLMGZN_Master_Platform_Implementation_Handover_FINAL.md
+?? SHIP_ALL.bat
+?? SHIP_ALL_MSG.txt
+?? SHIP_REST.bat
+?? SHIP_VISUAL_SYSTEM.bat
+?? SHIP_VISUAL_SYSTEM_MSG.txt
+?? functions/api/geo.js
+?? image-library/logos/
+?? image-library/wallpaper/
+?? important/
+?? newsroom/quality/component_audit.py
+?? web/data/figures.js
+?? web/data/resolutions.js
+?? web/data/worldmap.js
+--- ahead/behind origin/main ---
+0	0
+
+============================================================
+ FILES ON DISK
+============================================================
+   353002 web/assets/app.js
+   272939 web/assets/styles.css
+    11348 web/index.html
+    57364 web/data/guides.js
+    48756 web/data/worldmap.js
+     7616 web/data/figures.js
+     3414 web/data/resolutions.js
+     7472 functions/api/geo.js
+    10373 newsroom/quality/component_audit.py
+    75187 newsroom/schemas/article-draft.json
+
+============================================================
+ CACHE-BUSTER IN index.html
+============================================================
+b values found: ['252']
+
+============================================================
+ PRE-FLIGHT 1 - article-draft.json
+============================================================
+OK valid JSON
+errorlevel=0
+
+============================================================
+ PRE-FLIGHT 2 - python files parse
+============================================================
+OK parse clean
+errorlevel=0
+
+============================================================
+ PRE-FLIGHT 3 - UTF-8 mojibake
+============================================================
+OK clean
+errorlevel=0
+
+============================================================
+ PRE-FLIGHT 4 - new files present
+============================================================
+OK all present
+errorlevel=0
+
+============================================================
+ PRE-FLIGHT 5 - worldmap.js
+============================================================
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\nafiu\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nafiu\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nafiu\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+errorlevel=1
+
+============================================================
+ PRE-FLIGHT 6 - guides.js
+============================================================
+OK 3 guides, all carry a procedure
+errorlevel=0
+
+============================================================
+ PRE-FLIGHT 7 - component invariant
+============================================================
+OK none carry top-level text
+errorlevel=0
+
+============================================================
+ PRE-FLIGHT 8 - component_audit
+============================================================
+
+BACKFILL DEBT: 24 piece(s) published before 2026-07-31 sit below their component floor.
+  DEBT  ibm-preliminary-q2-2026-revenue-miss: 0 component(s), floor for synthesis is 2
+  DEBT  1x-neo-hand-dexterity-hardware-ceiling: 0 component(s), floor for synthesis is 2
+  DEBT  tom-blomfield-anthropic-compute-team: 0 component(s), floor for brief is 1
+  DEBT  tsmc-q2-2026-record-profit-earnings: 0 component(s), floor for synthesis is 2
+  DEBT  asml-euv-price-increase-tsmc-pushback: 0 component(s), floor for synthesis is 2
+  DEBT  moonshot-kimi-k3-open-model-launch: 0 component(s), floor for synthesis is 2
+  DEBT  china-intelligent-agent-authorization-rules: 0 component(s), floor for synthesis is 2
+  DEBT  nadella-reverse-information-paradox-warning: 0 component(s), floor for brief is 1
+  DEBT  ...and 16 more
+  WARN  samsung-q2-2026-record-chip-profit-mobile-loss: scorecard + stakes stacked with no prose between
+  WARN  eu-forces-google-android-ai-interoperability: timeline + sourcecheck stacked with no prose between
+31/55 articles carry components; 90 component blocks
+No hard issues. 2 warning(s) 24 backfill debt.
+errorlevel=0
+
+============================================================
+ LIVE SITE
+============================================================
+index.html      http_code=200
+data/worldmap.js http_code=404
+data/figures.js  http_code=404
+api/geo          http_code=404
+
+DONE.

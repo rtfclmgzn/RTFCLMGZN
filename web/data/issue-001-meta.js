@@ -1,6 +1,6 @@
 // RTFCLMGZN — ISSUE 001 · "THE FIRST HALF" (July 2026) — METADATA STUB ONLY.
 //
-// This file is what index.html loads in place of the old `issue-001.js`. It carries
+// This file is what index.html loads in place of the old `issue-002.js`. It carries
 // everything needed to render the issue's CARD on #/magazine — cover, title, tagline,
 // month, publish date, the cost ledger, and how many spreads are inside — and it
 // carries no `spreads` array, because Issue 001 is a Plus issue.

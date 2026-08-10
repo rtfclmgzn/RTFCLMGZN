@@ -1,0 +1,78 @@
+Add the interrogation layer: claims ledger, per-paragraph evidence, reader-run models, cross-archive ranking, counter-arguments, and document viewers
+
+Six additions, chosen on one rule: a human desk is limited by attention, memory,
+incentive and time; this system is limited by judgment. Everything below does
+something a well-funded newsroom could do and never actually does.
+
+1. THE ACCOUNTABILITY ENGINE (#/claims)
+Every article names what it does not yet know and the specific document that
+would settle it. Those were already machine-readable (scorecard `resolver`
+fields and watch items) and were going nowhere. Now:
+- Open claims are DERIVED LIVE from the articles, never maintained by hand, so
+  the ledger cannot drift from the archive. 63 open claims on day one.
+- Only resolutions are stored (web/data/resolutions.js), keyed to the claim.
+- A resolved claim renders a dated update block BENEATH the unchanged article.
+  Append-only by construction: articles are never rewritten, resolutions are
+  never amended. A correcting entry is appended instead.
+- The pulse scan closes up to 3 claims per run, and only against a source that
+  shows the thing the resolver named. A resolver's deadline passing with no
+  answer is logged as "expired" -- a real finding, not a gap.
+
+2. EVIDENCE ON DEMAND
+93% of published paragraphs carried citation_urls and none of it was rendered.
+Each paragraph now gets a marker opening the exact sources backing it, matched
+to the article's numbered source list, with primary sources badged. Found and
+fixed a real HTML bug doing it: the popover's <ul> inside a <p> made the parser
+auto-close the paragraph and discard the list -- the layer is phrasing-only now,
+which also repaired paragraph structure on every article (23 fragments -> 13
+real paragraphs on one piece).
+
+3. MODEL -- reader-adjustable arithmetic
+Sliders over the story's own sourced numbers, outputs computed live. "The
+multiple is 167x" becomes something the reader can push on. Formulas run through
+a hand-written recursive-descent parser over a tiny grammar, never eval() or new
+Function() -- a data file is exactly what a future cycle writes automatically,
+and arbitrary-code evaluation there would be a standing injection hole.
+
+4. RANK -- this figure against the whole archive
+web/data/figures.js normalizes every comparable number the newsroom has
+published to one unit per kind. The component sorts live and renders "#N of M on
+record", so the claim can never go stale. Same-unit is not same-meaning, so each
+entry carries a scope note: a 15-year lease-revenue total and a construction
+budget are both "USD billions" and are not the same thing.
+
+5. COUNTER -- the strongest case against the piece's own read
+Stated as strongly as its holders would put it, then a verdict on why the piece
+still lands where it does. No human newsroom publishes this because the
+incentive runs the other way. A publication that discloses it is machine-written
+has no such incentive, which is exactly what makes it credible.
+
+6. DOCUMENT -- show the filing, don't link it
+The FCC order and the two officials' posts rendered as marked-up document
+excerpts. `text` must be verbatim quotes the article already carries: paraphrase
+inside a component whose visual grammar claims to be a document is forgery.
+
+ENFORCEMENT -- newsroom/quality/component_audit.py
+A new archive-wide audit, now a required gate in both runbooks. On its first run
+it caught: a silently dropped insert, a legacy chart block in a shape the schema
+rejects, four component pairs stacked with no prose between them, and one brief
+carrying more visual blocks than paragraphs. None of those are visible in a diff.
+It checks schema, the no-`text` invariant, numeric provenance against the
+article's own text, rank figure ids, verbatim document quotes, per-format floors,
+adjacency and density.
+
+Acting on its findings, three components were REMOVED rather than shipped: a
+model on a 240-word brief (4 visual blocks against 3 paragraphs is a dashboard),
+a counter whose article's scorecard already covered the same ground, and a rank
+on a piece already at its density ceiling. The anti-decoration rule applies to
+new features too.
+
+Also: three older articles brought up to their format floor (a scorecard, a
+sourcecheck, a model), the one legacy flat chart block normalized, mobile
+hovercards converted to edge-safe bottom sheets, and the Claims Ledger added to
+the footer and command palette.
+
+Verified: 59 routes clean in dark and light with zero JS errors; reduced-motion
+and mobile sweeps clean with zero horizontal overflow; audit exits clean; every
+component number traces to its article's text; word counts and format tiers
+unchanged across every edited piece.

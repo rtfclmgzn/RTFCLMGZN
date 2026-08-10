@@ -1,5 +1,12 @@
 rtfclmgzn to do list (total site overhaul):
 
+
+(do!) todo list's first item is about what I just shipped. "tldr sections need to be more simplified (still too long)" — you wrote that while I was building them, and you're right that they're long: 5–7 bullets, full sentences, some running 40+ words. I deliberately kept the caveats in, which is what made them long. Worth deciding whether they should be shorter bullets (same count, ~12–15 words each, scannable) or fewer bullets (3–4, only the headline facts) — the tradeoff is that aggressive trimming will drop the "this is a company claim" hedges, which cuts against the newsroom's whole standard. My instinct: shorter phrasing, keep one caveat bullet. Since this touches all 37 plus the agent retraining, I'd rather get your call than guess twice.
+
+(do!) The five story pitches — my read from last turn stands and nothing's published: run FLI Safety Index (reframed on the abandoned safety pledges) and Blomfield/Anthropic compute (Karpathy is 2 months old — May 19). Hold Gemini 3.5 (unverifiable leak; it reportedly launches July 17, so it's real news in two days). South Korea only with corrected math — the pitch's "$550B for data centers" is 550 trillion won ≈ $356B. TSMC is already published as live-014; the Anthropic–Samsung half needs the unverified $1.25B/month figure sourced or cut.
+
+(do!) Heads-up on a merge conflict: the background task you started ("remove dead preview-cover script tags") is running in an isolated worktree branched from before these commits, and it also edits index.html and bumps ?b=. When it lands it'll conflict with b=175. Trivial to resolve — just take b=176 — but don't let it silently revert the cache-buster.
+
 - (do!) tldr sections need to be more simplified (still too long)
 
 - (do!) articles need a "share" button to easily share article link 
@@ -9,7 +16,7 @@ rtfclmgzn to do list (total site overhaul):
 
 - (do!/ask?) from top bar, remove: frontier, products, compute, policy, health, markets, robotics, ethics sections. make it: optimize the ordering of the remainder (?) suggest the best before proceeding. 
 
-- (do!) masthead page; update icons for each editor to have their "avatar photos" (photos located in D:\BUSINESS\RTFCLMGZN\image-library\personas). make sure to update sitewide; all articles, anywhere their name/icon shows up, masthead page, etc (make the avatar thumbnail icon a bit bigger on their individual persona pages, like on rtfclmgzn.com/#/persona/[persona_name] pages). also (on masthead page), when someone clicks the avatar icon, i want a very aesthetic and cool pop-up closeup of the photo which will enlarge the photo by a nice reasonable amount, which will have an X and also will close out if clicked outside of the photo window.
+- (do!) masthead page; update icons for each editor to have their "avatar photos" (photos located in D:\BUSINESS\RTFCLMGZN\image-library\personas). make sure to update sitewide; all articles, anywhere their name/icon shows up, masthead page, etc (make the avatar thumbnail icon a bit bigger on their individual persona pages, like on rtfclmgzn.com/#/persona/[persona_name] pages). also (on masthead page), when someone clicks the avatar icon, i want a very aesthetic and cool pop-up closeup of the photo which will enlarge the photo by a nice reasonable amount, which will have an X and also will close out if clicked outside of the photo window. also, remove "dr." tag from Priya Anands name; she's a fictional AI character, not a real doctor. update this also sitewide. 
 
 - (do!) use D:\BUSINESS\RTFCLMGZN\image-library\art; scan each photo and create relevant metadata with relevant information like all information regarding each photo, push to github, allow agents and the whole system to be able to use the library for aticle posts and for the magazine (try to pull from this library half the time, to add more variation and save some nano banana api money), using the rule; no photo (whether it's in this folder or gemini created) can reouccur on a magazine or article a second time within 3 months after initial usage
 
@@ -18,3 +25,10 @@ rtfclmgzn to do list (total site overhaul):
 - (do!) magazine navigation needs some work; when using mouse wheel, animation from page to page is buttery smooth and glides. but using arrow keys and the left/right arrow buttons, it is very stuttery and visually uncomfortable. 
 
 - (ask?) what else can we do to make this website even more better and remarkably unbelievable/valuable to those who are lucky to discover it?
+
+
+
+///
+
+
+(do!) - articles TLDR sections do not appropriately match the article lengths. some articles tldr are way too long in comparison to the size of the article. smaller articles need way more simplified ones, particularly "brief" format articles. even the longer ones should not have too many points and be too long. (ask?) - what else can we do on the article pages to make them even better?

@@ -2278,7 +2278,7 @@
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:10px">'+
       '<div class="over">The Magazine</div>'+
       '<h1>The month in AI,<br>understood with hindsight.</h1>'+
-      '<p>Every month, the Issue Desk distills the full run of our coverage into one premium issue — the cover story with the benefit of hindsight, all seven editors’ month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist we grade in public the following month. Articles are free, forever. The magazine is for subscribers — and subscribers get every back issue too.</p></div>';
+      '<p>Every month, the Issue Desk distills the full run of our coverage into one premium issue — the cover story with the benefit of hindsight, every editor’s month-in-review column, the Scoreboard, the applied-takeaways Compendium, and a Watchlist we grade in public the following month. Articles are free, forever. The magazine is for subscribers — and subscribers get every back issue too.</p></div>';
     // Product first, offer second. The old order put a paywall bar between the
     // promise and the thing being sold, which pushed the covers a full screen
     // below the fold -- a storefront where you cannot see the goods without

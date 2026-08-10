@@ -1,0 +1,58 @@
+
+=== Where we are ===
+main
+  HEAD: ce1f8c1 Breaking-scan: no-op, 17:00 UTC checkpoint; Hugging Face/OpenAI rogue-agent story and SpaceX/xAI, Meta/Manus deals are all stale reruns not new events; Buzz floor held at 14 combined Jul31-Aug1 cards, no new cards needed
+
+
+BACKFILL DEBT: 20 piece(s) published before 2026-07-31 sit below their component floor.
+  DEBT  asml-euv-price-increase-tsmc-pushback: 0 component(s), floor for synthesis is 2
+  DEBT  moonshot-kimi-k3-open-model-launch: 0 component(s), floor for synthesis is 2
+  DEBT  china-intelligent-agent-authorization-rules: 0 component(s), floor for synthesis is 2
+  DEBT  nadella-reverse-information-paradox-warning: 0 component(s), floor for brief is 1
+  DEBT  who-europe-ai-health-governance-gap: 0 component(s), floor for brief is 1
+  DEBT  ai-layoffs-data-contested-narrative: 0 component(s), floor for synthesis is 2
+  DEBT  tesla-optimus-fremont-factory-conversion: 0 component(s), floor for brief is 1
+  DEBT  openai-screenless-speaker-device-report: 0 component(s), floor for brief is 1
+  DEBT  ...and 12 more
+  WARN  samsung-q2-2026-record-chip-profit-mobile-loss: scorecard + stakes stacked with no prose between
+  WARN  eu-forces-google-android-ai-interoperability: timeline + sourcecheck stacked with no prose between
+=== Pre-flight ===
+  ok   free disk           1,417,480 MB free
+  ok   article-draft.json  valid JSON, 22 body branches, formats brief/synthesis/research/guide
+  ok   python files        parse clean
+  ok   UTF-8               clean
+  ok   files present       all 10 present
+  ok   index.html scripts  34 local script tag(s), all resolve
+  ok   worldmap.js         173 countries, viewBox 1000x391.7
+  ok   guides.js           4 guides, every one carries a procedure
+  ok   component blocks    57 articles, no component carries top-level text
+  ok   surface freshness   newest article 2h/36h, newest buzz card 0h/24h, scoreboard scan 2h/18h
+41/61 articles carry components; 115 component blocks
+No hard issues. 2 warning(s) 20 backfill debt.
+  ok   component audit
+
+=== Cache-buster ===
+  ok   index.html          b=300 -> b=301
+
+Pre-flight passed.
+
+=== Staging ===
+ functions/api/issue/_data/issue-001.json |  15 +-
+ functions/api/issue/_data/primer.json    |  10 +-
+ web/assets/app.js                        | 366 ++++++++++++++++++++++++++++---
+ web/assets/styles.css                    | 162 +++++++++++++-
+ web/data/entities.js                     |  24 +-
+ web/index.html                           |  68 +++---
+ 6 files changed, 567 insertions(+), 78 deletions(-)
+
+=== Committing ===
+[main 7da0e04] Draw a real reader map, add the price/strength frontier, restructure Resources, and fix the phone at the type-ramp level
+ 6 files changed, 567 insertions(+), 78 deletions(-)
+
+=== Pushing to origin/main ===
+fatal: unable to access 'https://github.com/rtfclmgzn/RTFCLMGZN.git/': Recv failure: Connection was reset
+
+PUSH REJECTED -- a scheduled cycle almost certainly pushed while this ran.
+The commit is safe locally. Run these two lines and you are done:
+    git pull --rebase origin main
+    git push origin main

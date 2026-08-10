@@ -1,0 +1,205 @@
+Draw a real reader map, add the price/strength frontier, restructure Resources, and fix the phone at the type-ramp level
+
+Also ships the interrogation layer (claims ledger, per-paragraph evidence, model,
+rank, counter, document), which was written to disk but never committed -- the
+scheduled cycle that ran afterwards published the ARTICLES using those component
+types against a renderer that did not know them yet. This commit closes that.
+
+1. THE READER MAP WAS NOT A MAP, AND THE NUMBER WAS NOT REAL
+It drew latitude/longitude dots on an empty graticule: no coastlines, no borders,
+nothing that reads as a map. Worse, it tallied visits in the VISITOR'S OWN
+localStorage, so every reader saw exactly one lit country -- their own -- under a
+heading that said "where the world reads from". It was structurally incapable of
+showing what it claimed.
+- web/data/worldmap.js: Natural Earth 1:110m country polygons, simplified and
+  projected equirectangular, 173 countries keyed by ISO alpha-2 so the geometry
+  joins straight to Cloudflare's own country codes. Lazy-loaded by the Control
+  Room only; 48KB has no business on the other thirty routes.
+- functions/api/geo.js: the count now lives once, server-side, in the D1 database
+  that already backs accounts. No new binding to configure. Stored: a country
+  code, a date, an integer. Dedup is a one-way fingerprint held two days and then
+  deleted, with the date inside the hash so it rotates at every UTC midnight. No
+  IP is stored, no cookie is set.
+- The honest-fallback rule holds: if the endpoint is unreachable the map does NOT
+  quietly redraw the old lie, it says in its own caption that it is showing this
+  browser only.
+- Continent rollup and a most-read table, so the regional read the old version
+  could not give is now the first thing you see, and every value the choropleth
+  encodes is also readable as a number.
+- Sequential ramp validated per mode against the dataviz ordinal checks. Land
+  with no readers is deliberately NOT a step on that ramp -- it is substrate.
+- Privacy page updated to describe all of the above, including the fingerprint.
+
+2. THE SCOREBOARD GETS THE CHART ITS DATA WAS ALWAYS ASKING FOR
+Bars answer "which is strongest" one model at a time. They cannot answer the
+positional question, which is the one a buyer actually has. A log-price against
+score scatter with the Pareto staircase drawn says it in one look: five of
+thirteen scored models are on the frontier, and the other eight are dominated --
+for each, a model on this board is cheaper AND stronger at the same time. Drawn
+as steps, not a curve: between two listed models nothing exists, and a diagonal
+would imply a product that does not ship. Zero tokens; entirely derived, so it
+cannot go stale relative to the board beneath it.
+
+3. THE BUZZ LEARNS THREE THINGS, NONE OF THEM INFERRED
+- Coverage: a card links to an article only on an EXACT normalised URL match
+  against that article's own source list. Not topical similarity -- the newsroom
+  saying it read and cited this exact post. The inverse is never claimed; an
+  unmatched card is shown plainly, never labelled "not covered".
+- Momentum: cards per topic, last 7 days against the 7 before, from the dates
+  already on every card. It says what the FEED is doing, and says so explicitly,
+  rather than pretending to measure the world.
+- Filter by the curated topic field, so a chip means what the desk meant.
+
+4. RESOURCES: ONE SPINE, THEN INTENT
+Six sections competed on equal footing, and two of them pointed at the same
+dossiers -- which is what "cluttered" actually meant here: not too much, but
+nothing leading. Now the lab directory is the spine, grouped the way the field
+splits, with a derived headline strip (labs, models tracked, independently
+scored, shipped open-weights). Everything else sits underneath in reader order:
+learn it, follow it, use it. The duplicate chip pile is gone; companies with a
+dossier but no model of their own still appear, so nothing vanishes.
+
+5. THE PHONE WAS SHOWING A DESKTOP AT DESKTOP SIZE
+The report was "too zoomed in" and "cluttered" at once, which is not a
+contradiction. Every type ramp had a desktop FLOOR, and the floor is what a phone
+got: .mast-hero h1 is clamp(36px,5vw,56px), so at 390px the clamp pinned it to
+36px -- a size chosen for a 1280px canvas. Same for the 18px hero paragraph, 28px
+gutters and 42px kicker rhythm. Measured at 390x844, the first screen was 100%
+furniture: ribbon, masthead, edition line, Briefing chip and Primer banner came
+to roughly 840px before the first headline, on an 844px screen.
+Lowered the floors, tightened inside groups while keeping the gaps between them,
+capped the ribbon, dropped the duplicate motto, and made both promos single-line
+strips. Home page scroll length 12126px -> 9969px, and the lead headline now
+starts at 558px. Form controls deliberately stay at 16px so iOS does not zoom the
+page on focus.
+
+FIXED ALONG THE WAY
+- The hero's aurora pseudo-element bleeds 12% past each edge and was pushing the
+  document 16px wider than a phone viewport. It was already within a pixel of
+  overflowing before the gutters narrowed, so this was a latent bug, not a new
+  one. Pinned to the hero's own box on phones.
+- The nav rail could strand the active destination off-screen on deep routes.
+  It now scrolls the active item into view, and only when it is actually out of
+  view, so it never undoes a reader's own swipe -- and it yields entirely while
+  the existing one-per-session swipe hint is mid-tween.
+
+VERIFIED
+18 routes across desktop dark, desktop light and 390px dark: no JS errors, no
+horizontal overflow, no empty views. Reader map checked in live, empty and
+API-unreachable states. Frontier and momentum palettes run through the dataviz
+validator in both modes rather than eyeballed.
+
+===============================================================================
+SECOND BATCH, SAME COMMIT: guides become a real format
+===============================================================================
+
+`guide` was dead code. COMPONENT_FLOOR carried a "guide" key that no article
+could ever match, because the schema's format enum was brief|synthesis|research
+only. And component_audit.py tried to parse guides.js as JSON, hit JS literal
+syntax, silently skipped the entire file, and exited clean. Guides had never
+been checked by anything, by any path, since they were written.
+
+FOUR INSTRUCTION BLOCKS
+None of the seventeen existing components can express instruction. They are all
+built to REPORT and they terminate in understanding. A tutorial has to terminate
+in the reader having DONE something, which needs three things reporting never
+needs: an ordinal sequence the reader executes, a success criterion per step,
+and a recovery branch when the criterion fails.
+- procedure: numbered steps the READER performs, each with `verify` (what they
+  should see) and `ifnot` (the recovery). Tickable, persisted to localStorage.
+  Distinct from `flow`, which is a mechanism performed by third parties.
+- snippet: a copyable prompt or command. Payload is `body`, deliberately never
+  `text` -- a top-level text field would inflate wordCount(), promote the
+  piece's format tier, and make the audio reader speak a template aloud.
+- decide: a router where every `then` must be an ACTION, not a category.
+- pitfalls: mistake, symptom, fix. Distinct from `counter`, which is an
+  editorial-integrity device about the article's own thesis.
+
+THE LISTEN PATH IS NOT OPTIONAL. The old top-level `steps` field lived outside
+`body`, so wordCount, readTime, the format pill, the schema and rtfcListen were
+all blind to it: a guide whose entire value was six steps rendered a "Brief"
+pill at 91 words and read its framing aloud with the instructions missing.
+spokenComponent() now speaks procedure, decide and pitfalls, and the read-along
+takes a matching segment so the highlight cannot desync from the audio.
+
+THE THREE GUIDES, REBUILT
+91 -> 452 words, 654 -> 1,215, 634 -> 1,272. Components 0/0/0 -> 3/5/5. All
+three are format:"guide" now, all carry a procedure, and guides.js is strict
+JSON so it can be audited at all. Two claims were CUT rather than sourced: an
+uncited price comparison, replaced with real Scoreboard figures, and a court
+case now marked as reported with an explicit line saying we link nothing
+because we have not opened a primary document. A guide about catching
+fabricated citations shipping its own uncheckable citation was the worst thing
+in the set.
+
+BUGS FOUND AND FIXED
+- #/issue/<id> white-screened on every bookmarked issue URL: viewIssue read
+  iss.pages.length and both issues are spread-format with no pages array.
+- Card scroll-reveal was dead site-wide: a fill:both animation outranked the
+  .rv system, so 15 of 15 cards below the fold sat at opacity:1 with the
+  IntersectionObserver armed and doing nothing.
+- The storefront printed "cover art: generated", an internal production status,
+  on the paywall.
+- article_score.py never knew about model/rank/counter/document, so every piece
+  using them scored zero visual credit for work that renders and audits fine.
+- The floor check sat inside `if comps:`, so a piece with ZERO components
+  skipped the check entirely -- the exact case the floor exists to catch.
+
+BACKFILL DEBT, NAMED RATHER THAN FORGIVEN
+Fixing that last one surfaced 28 pre-existing articles below floor. As a hard
+failure it would have stopped every scheduled cycle from publishing. Anything
+published from 2026-07-31 fails hard; older pieces are printed as a counted
+debt list on every single run, so the number has to go down. The cycle's SS3c
+already burns it off two per run and it is at 24 as of this commit.
+
+MAGAZINE, READER, MOTION
+Storefront: the empty third grid column is gone and the newest issue leads;
+covers are physical objects with a spine, page block and a 3D hover on spring
+easing; the cover morphs into page one via a shared-element view transition;
+the paywall is an offer panel instead of a grey bar with two apology
+paragraphs under it. Reader: real sheet edge and vignette, scroll-driven
+depth-of-field on neighbouring sheets, off-screen page virtualisation, print
+typography (hyphenation, justified runovers, old-style figures) and the film
+grain polarity inverted over the cream sheets. Site: spring easing tokens,
+sticky-header scrolled state, a real .cta, seven dead @media (max-width:1px)
+blocks deleted, designed empty states.
+
+CADENCE, SO THIS DOES NOT DECAY AGAIN
+Guides went nineteen days without a publication while the index advertised
+"two to three times a week". The cycle runbook now carries the schedule as a
+mechanical check that fails the cycle if the newest guide is more than four
+days old: brief mid-week, synthesis at the weekend, research at month end. It
+also carries a numbered work order for issue 000, which is 3,323 body words
+against 001's 8,291, with four data-only credibility fixes at the top.
+
+SHIPPING ITSELF
+ship_preflight.py exists because three shipping attempts died inside cmd.exe
+before python ever ran: an unpaired % stripped from a format string, and then
+`!=` eaten by delayed expansion. Neither is visible in the source. No inline
+python remains in any .bat.
+
+MOBILE KIT AND HEADER ORDER
+Two floating controls, bottom right, on touch devices only: full screen, and a
+desktop-view toggle. A page cannot reach the browser's own "Request desktop
+site" setting, so the toggle rewrites the viewport meta to width=1200, which is
+what that setting does underneath -- every desktop breakpoint matches and the
+reader can pinch to zoom. It persists, and it is restored inline before first
+paint so the page never lays out mobile and then jumps.
+
+The obvious implementation is a max-width media query, and it is a trap: the
+instant desktop view engages the layout viewport becomes 1200px, the query
+stops matching, the buttons vanish, and the reader is stranded with no way
+back. Visibility is decided once at boot from the input device and the physical
+screen, neither of which the override can change.
+
+Full screen is not rendered at all where the API is absent (iOS Safari, which
+only implements it for <video>) rather than rendered and dead. The kit hides
+inside the magazine reader, which has its own full-screen control.
+
+Two bugs found building it: the consent bar wraps to three lines at 390px and
+was covering the buttons and eating every tap, so the clearance is measured
+rather than guessed; and the first version of that measurement used
+offsetParent as a visibility test, which is null for every position:fixed
+element -- that is, for both bars it was written to measure.
+
+Header: the account button is now right-most, with the theme toggle to its left.

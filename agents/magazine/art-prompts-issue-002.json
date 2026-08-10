@@ -1,0 +1,287 @@
+[
+ {
+  "file": "i2-cover.jpg",
+  "ratio": "3:4",
+  "prompt": "A hangar-scale dark hall holding four identical glass isolation booths in a row, each one big enough to walk into. The nearest booth's door hangs open a hand's width and a hard blade of light escapes across the polished floor toward the camera, while the three behind it sit sealed and dim. A lone technician stands in silhouette at the far end, small against the room, facing the open one. The only light comes from the strip fixtures inside the booths, so the ceiling and the whole upper part of the room fall away unlit, leaving a large dark empty area across the top of the frame."
+ },
+ {
+  "file": "i2-cover-b.jpg",
+  "ratio": "3:4",
+  "prompt": "An extreme close view of a stack of memory dies clamped in a steel press on a black bench, the layers squeezed so hard that a hairline fracture runs up through the stack and a thin seam of light forces its way out of it. Behind the press, out of focus, a whole rack of identical stacks waits in shadow. A single low raking lamp from the right picks out the machined edges and the fracture and leaves everything above the press unlit, holding a large dark empty area across the top of the frame."
+ },
+ {
+  "file": "i2-cover-c.jpg",
+  "ratio": "3:4",
+  "prompt": "A high wide view at dusk of a data-centre campus laid out across a flat plain, long low halls and transformer yards in rows, with a fault line cracked open through the middle of the site and light rising out of the fissure. Transmission towers march away toward the horizon on the right; the near ground is dark ploughed earth. The last band of daylight sits low behind the buildings, so the sky above is empty and unlit, leaving a large dark empty area across the top of the frame."
+ },
+ {
+  "file": "i2-letter.jpg",
+  "ratio": "3:4",
+  "prompt": "An open-plan office at two in the morning, every desk empty, thirty laptop screens still open and lit, their glow the only light in the room. One person stands in silhouette in the doorway at the near edge of the frame, hand still on the light switch, watching machines work with nobody at them. Long reflections stretch across the desk surfaces toward a far wall of dark windows."
+ },
+ {
+  "file": "i2-a1-open.jpg",
+  "ratio": "3:4",
+  "prompt": "Four transparent cubes the size of shipping containers hang in a black void at slightly different heights and angles, each holding a dense knot of machinery suspended inside it. One cube is cracked clean through and a thin trail of light spills out of the fracture into the emptiness between them. That spill is the only light source, so the other three cubes are read purely as edges and reflections against nothing."
+ },
+ {
+  "file": "i2-a1-sandbox.jpg",
+  "ratio": "3:4",
+  "prompt": "A tight macro view of a machined aluminium access hatch on a matte enclosure, one bolt removed and lying beside its empty hole, the hatch lifted a couple of millimetres so a narrow blade of light escapes along the whole length of the seam. Through that gap the interior is enormous and out of focus, cable looms and boards receding much further back than the small hatch suggests. All the light is internal, raking along the machined lip and leaving the surrounding panel almost black."
+ },
+ {
+  "file": "i2-a1-exploitgym.jpg",
+  "ratio": "3:4",
+  "prompt": "A sealed test chamber inside a large research facility, its heavy interlock door standing wide open onto a service tunnel that runs away into the distance, cable trays and pipework converging toward a lit doorway far down it. The chamber in the foreground is small, white, clinical and completely empty; the tunnel beyond is long, industrial and dim. Light spills forward from the far end of the tunnel back into the chamber, reversing the direction anything was ever meant to travel."
+ },
+ {
+  "file": "i2-a1-timeline.jpg",
+  "ratio": "3:4",
+  "prompt": "A single braided ribbon made of tens of thousands of tiny bright points stretches across a black plane from the lower left to the upper right, knotted and dense in some stretches and thinned almost to nothing in others. Five larger nodes sit unevenly along its length where the braid gathers and changes direction, the last flaring brightest before the ribbon stops dead. The ribbon is self-lit and throws a faint sheen onto the surface it hangs above; nothing else in the frame is illuminated."
+ },
+ {
+  "file": "i2-a1-mirror.jpg",
+  "ratio": "3:4",
+  "prompt": "A narrow aisle between two towering walls of identical storage drawers runs the length of a cold archive room to a vanishing point. A technician in silhouette has pulled one drawer out at chest height and it glows from inside; far down the aisle two more drawers stand open and lit at different heights. Those three openings are the only light in the room, and everything else is closed, matte and unmarked."
+ },
+ {
+  "file": "i2-a1-report-card.jpg",
+  "ratio": "3:4",
+  "prompt": "Nine plain concrete monoliths stand in a shallow arc on an open plain at last light, all the same width but each finished to a different height, the tallest still well short of the height the row was clearly built for. A small group of figures stands in silhouette at the near end, dwarfed, looking along the line. The remaining daylight sits low behind the stones, so their near faces are dark and the ground between them is pale."
+ },
+ {
+  "file": "i2-a1-misalignment.jpg",
+  "ratio": "3:4",
+  "prompt": "A sealed glass vitrine on a laboratory bench holds a miniature office interior complete with model desks, corridors and doorways, lit from within by tiny fixtures. Two gloved hands rest on the bench either side of it, one holding a probe just above the glass, not yet touching. The room around the bench is dark, and the only light in the frame comes out of the little building inside the case."
+ },
+ {
+  "file": "i2-a1-blackhat.jpg",
+  "ratio": "3:4",
+  "prompt": "A conference stage in a blacked-out hall, one speaker standing in silhouette at a lectern against an enormous blank illuminated screen. On a table at the front of the stage sit three open laptops of different makes, all turned toward the audience, all showing the same featureless glow. The audience is a field of dark heads and shoulders across the foreground, lit only by the screen behind the speaker."
+ },
+ {
+  "file": "i2-a1-hill.jpg",
+  "ratio": "3:4",
+  "prompt": "A neoclassical government building at dusk seen across a wide empty forecourt, its colonnade in shadow and a single upper window lit. In the immediate foreground, out of focus, a heavy industrial disconnect lever sits in its housing on a post, still in the closed position, its handle worn bright by use. The last daylight is behind the building, so the columns read as black shapes while the lever catches one hard edge of light."
+ },
+ {
+  "file": "i2-a2-open.jpg",
+  "ratio": "3:4",
+  "prompt": "A stack of thick dark plates held under a hydraulic press in a black void, the plates bowed slightly at their centres where the pressure is greatest, a bright line of light forced sideways out of every compressed seam. Below the stack the press bed is scarred; above it the ram disappears upward out of frame. All the light comes from between the plates, so the machine around them is read only as silhouette and reflection."
+ },
+ {
+  "file": "i2-a2-asml-euv.jpg",
+  "ratio": "3:4",
+  "prompt": "The inside of a lithography tool with its service panel removed: a large curved mirror mounted in a precision cradle, ringed by vacuum plumbing and bolt patterns, its surface so flat it reflects the machinery opposite it. A tiny brilliant point of plasma sits at the focus and throws one hard beam across the chamber. Everything outside that beam is black machined metal, and the blurred rim of the open hatch frames the near edge of the shot."
+ },
+ {
+  "file": "i2-a2-tsmc-margin.jpg",
+  "ratio": "3:4",
+  "prompt": "A vast fabrication plant at dusk seen from across still water, the building itself a low dark slab with one line of lit windows, and its reflection in the water noticeably brighter and taller than the building casting it. Reeds and a service road run along the near bank in shadow. The sky behind the plant holds the last of the light, so the structure reads as a hard black horizontal and the water carries all the brightness."
+ },
+ {
+  "file": "i2-a2-wafer-cost.jpg",
+  "ratio": "3:4",
+  "prompt": "A finished silicon wafer lying flat on black glass and filling most of the frame, its die grid splitting one raking light into fine iridescent bands that sweep across the surface. A gloved fingertip enters at the edge of the frame, stopping just short of the wafer's rim. The single narrow light source comes in low from the left, so the wafer sits in its own pool of colour and the rest of the bench is unlit."
+ },
+ {
+  "file": "i2-a2-cxmt-debut.jpg",
+  "ratio": "3:4",
+  "prompt": "A stock-exchange floor packed with people, shot from a balcony above, every figure in silhouette and turned toward one wall of enormous blank display panels whose light washes over the crowd. Paper confetti still hangs in the air near the ceiling. The panel wall is the only light source, so the floor below is a mass of dark shapes and no face is distinguishable."
+ },
+ {
+  "file": "i2-a2-samsung-split.jpg",
+  "ratio": "3:4",
+  "prompt": "One long corporate building at night, a single continuous structure whose left half blazes with light from every window while its right half stands completely dark, the join running straight down the middle of the facade. A near-empty car park stretches toward the camera with two vehicles left in it. Every shadow on the ground is thrown by the lit half, so they all fall hard in one direction."
+ },
+ {
+  "file": "i2-a2-photo-fab-floor.jpg",
+  "ratio": "3:4",
+  "prompt": "A cleanroom bay shot close in: one process tool with its load port open, a cassette of wafers half inserted, and a single gowned operator reflected in the tool's polished panel as they reach toward it. The overhead lighting is flat and shadowless and bounces off every white surface. Behind the operator the bay narrows into a row of identical tools already going soft with distance."
+ },
+ {
+  "file": "i2-a2-amazon-capex.jpg",
+  "ratio": "3:4",
+  "prompt": "A data hall of enormous length shot straight down the cold aisle, rack after rack running to a vanishing point far beyond what the eye expects. The nearest cabinet door stands open, showing memory boards packed inside it far more densely than anything else in the row. Light comes only from the indicator strips inside the racks, so the floor and the ceiling plenum vanish into black."
+ },
+ {
+  "file": "i2-a2-apple-margin.jpg",
+  "ratio": "3:4",
+  "prompt": "A corporate briefing room with a shallow film of water lying across the entire floor, reflecting the ceiling lights back up onto the walls. One executive stands in silhouette at a lectern facing rows of empty chairs whose legs are already standing in the water. The room's own downlights are the only source, doubled by the flooded floor, while the doorway at the back stays dark."
+ },
+ {
+  "file": "i2-a2-alphabet-capex.jpg",
+  "ratio": "3:4",
+  "prompt": "A data-centre construction site at dusk: poured concrete slabs and rebar cages stretching to the horizon, three tower cranes standing over them, a line of parked earthmovers along the near edge. Work lights on masts throw hard pools onto the churned mud while the sky behind has gone almost dark. The poured foundation is many times larger than the one finished building visible at the back of the site."
+ },
+ {
+  "file": "i2-a2-nvidia-sk.jpg",
+  "ratio": "3:4",
+  "prompt": "Two dark monolithic structures stand apart in a black void, joined by a single thick ribbon of light that leaves one, curves out and around, and re-enters the other before looping back again, forming a closed circuit with no beginning. The ribbon is brightest where it returns into the structure it came from. Nothing else is lit, and the monoliths are visible only where the loop passes close to their faces."
+ },
+ {
+  "file": "i2-a2-ohio-piketon.jpg",
+  "ratio": "3:4",
+  "prompt": "An enormous decommissioned enrichment plant on flat farmland at dusk, a windowless concrete building the better part of a mile long with grass grown up around its loading docks and a rusting rail spur curving away through the foreground. Fresh survey stakes and a new gravel road cut across the field toward it. The sky holds its last light behind the building and a single security lamp burns at the near corner."
+ },
+ {
+  "file": "i2-a2-ssi-vera-rubin.jpg",
+  "ratio": "3:4",
+  "prompt": "A large accelerator module still sealed inside its anti-static bag lies alone on a bare workbench in an otherwise empty laboratory, its heatsink fins and connector edges showing through the taut film. Nothing else is on the bench and nothing is set up around it. One overhead lamp lights the bag from directly above, catching the sheen of the plastic and leaving the rest of the room dark."
+ },
+ {
+  "file": "i2-a2-moonshot-round.jpg",
+  "ratio": "3:4",
+  "prompt": "A high floor of a city office at night: one glass-walled meeting room still lit inside an otherwise dark open-plan floor, four figures in silhouette standing around a table inside it. Beyond the window wall the city runs to the horizon in dense towers and haze. The lit room is the only interior source and throws long reflections across the empty desks in the foreground."
+ },
+ {
+  "file": "i2-a2-kimi-multiple.jpg",
+  "ratio": "3:4",
+  "prompt": "An immense luminous block hangs in a black void, and from its surface an endless stream of smaller identical copies peels away and drifts outward in every direction, thinning as they travel. The original stays whole no matter how many leave it. The block is the only light source, and the departing copies dim as they go until they disappear into the dark."
+ },
+ {
+  "file": "i2-a2-nadella-gdp.jpg",
+  "ratio": "3:4",
+  "prompt": "A television studio seen from behind the camera rig: one figure seated in silhouette in an interview chair under a single hard key light, a blank curved backdrop behind them, the rest of the studio black. A camera operator's shoulder and the barrel of a lens fill the near foreground, out of focus. The key light is the only illumination and it carves the seated figure's outline out of the dark."
+ },
+ {
+  "file": "i2-a2-ibm-day.jpg",
+  "ratio": "3:4",
+  "prompt": "A long modernist corporate slab building seen across an empty plaza at dusk, a heavy storm front stacked up behind it and already dark, the plaza fountain switched off and still. Only one wing of the building has its lights on; every other window is black. The last daylight comes in under the cloud from the side and rakes across wet paving in the foreground."
+ },
+ {
+  "file": "i2-centerfold.jpg",
+  "ratio": "3:2",
+  "prompt": "One unbroken factory-length interior that runs from left to right: at the far left a towering lithography machine stands with its access panel open and a technician in silhouette dwarfed beside it; the floor then narrows into a conveyor of wafers passing under inspection optics; right of centre the scale drops to a single finished die held in a robotic tweezer above a tray of stacked memory modules; and at the far right the room opens out into a deep data hall whose aisles recede toward a bright far wall. The light starts cold and hard at the left end and grows warmer and hazier toward the right, pulling the eye along the line. Ceiling height, machinery, crowding and colour temperature differ completely from one end of the room to the other. One single continuous asymmetric cinematic scene, clearly NOT symmetrical, NOT mirrored, no repeated or duplicated halves."
+ },
+ {
+  "file": "i2-a3-open.jpg",
+  "ratio": "3:4",
+  "prompt": "An open-plan office floor at first light, several hundred desks in perfect rows, chairs pushed in, everything switched off. At the very far end one desk is occupied and lit by its own screen, the figure there reduced to a small dark shape. Grey dawn comes through a window wall on the left, so the near rows are flat and colourless and that far desk holds the only warm point in the room."
+ },
+ {
+  "file": "i2-a3-layoff-count.jpg",
+  "ratio": "3:4",
+  "prompt": "Two clouds of fine bright particles hang side by side in a black void, one visibly denser and wider than the other, overlapping slightly in the middle where the two populations mix and neither can be told from the other. A thin dark gap separates their cores. The particles are self-lit, so the surrounding space is completely empty and the only structure in the frame is the difference in density."
+ },
+ {
+  "file": "i2-a3-revelio-tracker.jpg",
+  "ratio": "3:4",
+  "prompt": "A precision measuring instrument clamped over a slowly moving strip on a black bench, its probe just touching the surface and a fine stylus tracing one continuous line as the strip travels. Behind it, out of focus, an enormous roll of the same strip waits to be fed through. A single lamp low on the right lights the polished probe and the moving strip and leaves the bench and the room dark."
+ },
+ {
+  "file": "i2-a3-junior-ladder.jpg",
+  "ratio": "3:4",
+  "prompt": "A tall steel maintenance ladder bolted to the side of a dark industrial silo runs up out of the top of the frame, but its lowest half-dozen rungs have been cut away and removed, leaving empty bolt holes and a clean gap of bare metal well above head height. A single figure stands at the base in silhouette, looking up. A security lamp high on the silo lights the upper ladder brightly and leaves the missing section in shadow."
+ },
+ {
+  "file": "i2-a3-neo-hand.jpg",
+  "ratio": "3:4",
+  "prompt": "An extreme close view of a tendon-driven robotic hand holding a thin-walled drinking glass, the compliant fingertips flattening slightly against the surface and the tendon cables visible through the open back of the hand. The glass has begun to tilt and the fingers have already tightened on it. One hard light from the side picks out the cables and the wet rim of the glass; the workshop behind is unlit."
+ },
+ {
+  "file": "i2-a3-fremont-line.jpg",
+  "ratio": "3:4",
+  "prompt": "A converted car factory floor with its old overhead conveyor still bolted to the roof and now hanging empty above a new assembly line, where partly built humanoid frames stand in a row on fixtures, each at a different stage. Robot arms lean in over the nearest station. High clerestory windows throw shafts of daylight down through the roof structure onto the line, and the far end of the building disappears into shadow."
+ },
+ {
+  "file": "i2-a3-covered-list.jpg",
+  "ratio": "3:4",
+  "prompt": "A container terminal at night, a wall of stacked containers running away to the right, a customs barrier lowered across the exit lane in the foreground with one lamp above it. On the near side of the barrier a quadruped machine stands motionless on the wet tarmac, waiting. That lamp is the only light, throwing a hard circle around the barrier and leaving the container stacks as a dark mass behind it."
+ },
+ {
+  "file": "i2-a3-photo-entry-floor.jpg",
+  "ratio": "3:4",
+  "prompt": "A junior bullpen of small identical desks packed tightly together on a windowless floor, monitors dark, chairs left at odd angles. One young person sits alone at the desk nearest the aisle, in silhouette, the whole rest of the room empty behind them. A single bank of ceiling lights is on above that one desk and the rest of the ceiling stays unlit."
+ },
+ {
+  "file": "i2-a3-lisbon-gap.jpg",
+  "ratio": "3:4",
+  "prompt": "A hillside city at dusk seen from above, tiled rooftops stepping down toward a wide river, and among them one large modern hospital block whose windows are all lit while the streets below are still dark. Two figures stand on a terrace in the near foreground in silhouette, looking down at it. The last daylight is out over the river, leaving the roofs in shadow and the hospital as the only bright structure in the city."
+ },
+ {
+  "file": "i2-a3-nadella-paradox.jpg",
+  "ratio": "3:4",
+  "prompt": "A heavy vault set in darkness with its door standing open, a broad ribbon of light flowing out through the doorway and away into the black, and the same ribbon returning through a second opening higher up, narrower and far brighter, as though what left has come back compressed. The vault interior is the source of both. Nothing else in the frame is lit; the walls register only where the two ribbons brush past them."
+ },
+ {
+  "file": "i2-a4-open.jpg",
+  "ratio": "3:4",
+  "prompt": "A straight road running away across an empty plain at first light toward a distant industrial facility on the horizon, with five concrete marker posts set at uneven intervals along the verge, the nearest one large in the foreground. Low mist lies in the fields on both sides. The sun is still below the horizon behind the facility, so the posts are dark shapes and the road surface holds the only brightness in the frame."
+ },
+ {
+  "file": "i2-a4-deepmind.jpg",
+  "ratio": "3:4",
+  "prompt": "A glass-walled corner office high above a city at night, a long meeting table inside with the chair at its head pushed back and empty. One figure stands at the window with their back to the room, in silhouette against the streets below. The office itself is unlit, and everything visible in it comes from the towers and traffic outside the glass."
+ },
+ {
+  "file": "i2-a4-discovery-loop.jpg",
+  "ratio": "3:4",
+  "prompt": "Hundreds of thin parallel light-tracks run away from the camera through a black void, all starting together at the near edge of the frame and then branching, some dying out, a few thickening and pulling far ahead of the rest. Each branch point flares briefly as it splits. The tracks are the only light, and they lift slightly as they recede so the field reads as a widening fan rather than a flat grid."
+ },
+ {
+  "file": "i2-a4-copilot-merge.jpg",
+  "ratio": "3:4",
+  "prompt": "A tight macro view of four heavy cables of different gauges and jackets converging into one machined connector body on a black surface, their last few centimetres twisted together before they enter it. The connector's pins are visible in the open end facing the camera. One hard light from above and behind picks out the braid and the machined shoulder and leaves the surface underneath black."
+ },
+ {
+  "file": "i2-a4-agent365.jpg",
+  "ratio": "3:4",
+  "prompt": "A control room seen from the back: three tiered rows of operator consoles stepping down toward an enormous curved wall of blank glowing panels, every operator in silhouette against it. The nearest console in the foreground is unoccupied, its chair turned away. The panel wall is the only light in the room and it flattens everyone in front of it into dark outlines."
+ },
+ {
+  "file": "i2-a4-photo-calendar.jpg",
+  "ratio": "3:4",
+  "prompt": "A wall of small square pigeonhole bays fills the entire frame in a dark room, every bay empty and unlit except two, set well apart from one another, which glow from inside. A person's shadow falls across the lower left corner of the wall. Those two lit bays are the only light source and the grid falls away into darkness toward the edges of the frame."
+ },
+ {
+  "file": "i2-a4-price-cliff.jpg",
+  "ratio": "3:4",
+  "prompt": "A two-lane road runs straight across a headland at dusk and stops dead at a sheer cliff edge, the sea far below and the far side of the gap nowhere in view. A line of heavy trucks is strung out along the road heading toward the edge, headlights on, the nearest one large in the foreground. The last daylight sits low over the water, so the road surface is pale and everything standing on it is a silhouette."
+ },
+ {
+  "file": "i2-a4-tokenizer.jpg",
+  "ratio": "3:4",
+  "prompt": "A macro view of a glass funnel on a black bench with a fine stream of tiny identical beads pouring through it, and the heap already collected underneath far larger than the small measuring cup standing beside it. An empty scoop rests at the edge of the frame. A single low light from the right catches every bead in the falling stream and leaves the rest of the bench dark."
+ },
+ {
+  "file": "i2-a4-regulatory-wall.jpg",
+  "ratio": "3:4",
+  "prompt": "Four separate concrete barrier walls stand at different angles on an open plain at dusk, each one solid and well built and none of them meeting another, with wide gaps of open ground between them. A single vehicle track winds between the walls in the foreground, completely unobstructed. Low light from the horizon rakes across the plain and throws four long shadows in four different directions."
+ },
+ {
+  "file": "i2-a4-android-eu.jpg",
+  "ratio": "3:4",
+  "prompt": "An exploded macro view of a phone-sized device suspended in mid-air with its four layers separated and floating apart, glass over display over board over battery, each held a few centimetres from the next against a black background. A single port at the base of the stack still has a machined cover bolted over it. Hard light from the upper left edges every layer and passes cleanly through the gaps between them."
+ },
+ {
+  "file": "i2-a4-france-84.jpg",
+  "ratio": "3:4",
+  "prompt": "A dense three-dimensional web of thin light-paths fills a black void, thousands of them threading between hundreds of dim nodes, nearly all of them faint. Three paths burn far brighter than the rest and run all the way through the tangle to a single node at the front of the frame. The web is self-lit, so relative brightness is the only thing distinguishing one path from another."
+ },
+ {
+  "file": "i2-a4-opus5.jpg",
+  "ratio": "3:4",
+  "prompt": "Five identical glass blocks stand on individual plinths in a dark exhibition hall, each lit from beneath so it glows on its own pedestal. Behind the row a long judging table faces them, every chair empty and pushed back. The plinth lights are the only source in the hall, so the blocks float in the black and the empty table behind them is barely visible."
+ },
+ {
+  "file": "i2-a4-kimi-k3.jpg",
+  "ratio": "3:4",
+  "prompt": "A close view of a stack of bare storage drives on a black surface, casings open and platters exposed, with one drive lifted clear of the stack and held at an angle so its platter catches the light. Behind them, out of focus, a shipping pallet loaded with many more of the same. One hard light from the left; everything past the pallet is dark."
+ },
+ {
+  "file": "i2-a4-open-weights-letter.jpg",
+  "ratio": "3:4",
+  "prompt": "A very long dark boardroom table running away from the camera with fifty chairs pulled in tight along both sides and every place set identically. Two places near the far end have their chairs pushed back and turned away, leaving two visible gaps in an otherwise unbroken line. A single row of pendant lamps above the table lights the polished surface and leaves the walls and ceiling black."
+ },
+ {
+  "file": "i2-verticalfold.jpg",
+  "ratio": "9:16",
+  "prompt": "One unbroken vertical view read from top to bottom: at the top a sealed glass containment box sits on a bench with its lid lifted a finger's width, light spilling out of the gap and running down the wall below it; in the middle that light falls across a long examination hall of empty desks with dark screens, one desk lit and the rest fading into shade; at the bottom the floor gives way to a machine room where cable trays, tool racks and half-open server cabinets carry the same light into the equipment the whole building is built with. The space widens and turns more industrial the further down it goes, and the only light source stays at the very top so everything beneath is lit by what leaked out of it. One single continuous asymmetric cinematic scene, clearly NOT symmetrical, NOT mirrored, no repeated or duplicated halves."
+ },
+ {
+  "file": "i2-ledger.jpg",
+  "ratio": "3:4",
+  "prompt": "A precision beam balance on a black bench with its glass draft shield slid open, a single tiny weight sitting on one pan and the knife-edge beam settled level. The machined base fills the lower third of the frame; behind it the laboratory is empty and dark. One lamp low and to the left picks out the pan, the weight and the edge of the glass, and nothing else in the room is lit."
+ }
+]
