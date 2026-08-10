@@ -420,7 +420,9 @@
       ],
       "text_space": "screen wall left",
       "brand_visible": null,
-      "used_in": []
+      "used_in": [
+        { "article_id": "newsroom-alibaba-qwen38-max-launch-benchmarks-arena", "used_at": "2026-08-10" }
+      ]
     },
     {
       "id": "art-016-rooftop-edge-compute-pod",
@@ -548,7 +550,9 @@
       ],
       "text_space": "sky upper-left",
       "brand_visible": "OPENAI signage",
-      "used_in": []
+      "used_in": [
+        { "article_id": "newsroom-openai-astra-ten-open-math-problems", "used_at": "2026-08-10" }
+      ]
     },
     {
       "id": "art-021-black-monolith-tower-under-storm",
