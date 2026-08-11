@@ -24,7 +24,7 @@
 //     `slug` must be a real published article.
 // ============================================================================
 window.RTFC_FIGURES = {
-  updated: "2026-08-01",
+  updated: "2026-08-11",
 
   // Per-kind display metadata. `unit` is the normalized unit every value in
   // that kind must already be expressed in.
@@ -103,6 +103,9 @@ window.RTFC_FIGURES = {
     { id:"raise-ssi-nvidia", kind:"funding-raise-usd", value:5.0,
       label:"Safe Superintelligence, Nvidia strategic investment", slug:"nvidia-safe-superintelligence-5-billion-investment",
       note:"Cash plus, per Bloomberg's reporting, an equivalent value in Vera Rubin compute-capacity commitments. Not a repriced equity round — SSI's post-money valuation is reported unchanged at $32B." },
+    { id:"raise-firmus-blackstone", kind:"funding-raise-usd", value:2.0,
+      label:"Firmus, strategic equity round", slug:"firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+      note:"Fully subscribed equity only. A separate $10B Blackstone-led debt facility from February 2026 is excluded — different instrument, not additive to this figure." },
 
     // ---- valuations (USD B) ----
     { id:"val-cxmt", kind:"valuation-usd", value:489,
@@ -110,6 +113,9 @@ window.RTFC_FIGURES = {
       note:"Roughly 3.31 trillion yuan at the open, briefly mainland China's most valuable listed company." },
     { id:"val-moonshot", kind:"valuation-usd", value:35,
       label:"Moonshot AI, post-money (Series F)", slug:"moonshot-ai-series-f-35-billion-close",
-      note:"A closed price. A separate $50B pre-money figure is an ask in active talks and is deliberately not listed here." }
+      note:"A closed price. A separate $50B pre-money figure is an ask in active talks and is deliberately not listed here." },
+    { id:"val-firmus", kind:"valuation-usd", value:10.5,
+      label:"Firmus, post-money (Aug 2026 round)", slug:"firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+      note:"Up from $5.5B in April 2026 and roughly $1.4B a year earlier. A private round price, not a public market valuation." }
   ]
 };

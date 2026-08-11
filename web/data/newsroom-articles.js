@@ -3648,6 +3648,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "flow",
+        "flow": {
+          "kicker": "THE SIX-STEP CHAIN",
+          "title": "SharedRoot, step by step",
+          "steps": [
+            { "actor": "Agent", "what": "Creates its own Linux user namespace, gaining root privileges and networking capabilities inside it" },
+            { "actor": "Agent", "what": "Configures a traffic-control rule over netlink" },
+            { "actor": "Kernel", "what": "Auto-loads the rarely used act_pedit module in response", "hi": true },
+            { "actor": "act_pedit bug (CVE-2026-46331)", "what": "Corrupts memory that should be read-only, poisoning a root-owned binary in the page cache" },
+            { "actor": "Cowork's root daemon", "what": "Re-executes the poisoned binary with real root privileges on the host side" },
+            { "actor": "Agent", "what": "Reads and writes the entire mounted host filesystem — SSH keys, cloud credentials included", "blocked": true }
+          ]
+        }
+      },
+      {
         "type": "p",
         "text": "Accomplish AI's writeup traces the failure to four separate design decisions, each defensible on its own, that combined into an escape route: unprivileged user namespaces were allowed at all; the sandbox's default-allow filtering let a session call unshare, clone3, and open raw AF_NETLINK sockets; the kernel was left to auto-load unused modules like act_pedit on demand instead of blocking them; and, most consequentially, the entire host filesystem was shared read-write rather than scoped to the folder a user actually connected.",
         "citation_urls": [
@@ -3666,6 +3681,24 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
           "https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/"
         ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "SCOPED",
+          "title": "What the ~500,000-user estimate is, and isn't",
+          "items": [
+            {
+              "value": "~500,000",
+              "unit": "macOS users",
+              "label": "Accomplish AI's exposure estimate",
+              "includes": "Users the firm believes were running local Cowork sessions before Anthropic's fix reached them",
+              "excludes": "Independent confirmation from Anthropic, which has not verified the figure; users already on cloud-default execution, which this chain doesn't reach",
+              "note": "Anthropic classified the underlying disclosure as \"informative,\" not a standalone critical bug."
+            }
+          ],
+          "source": "Accomplish AI's disclosure, as reported by The Hacker News, July 23 2026."
+        }
       },
       {
         "type": "h2",
@@ -3734,6 +3767,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "Checked against compliance-rulebook.md trigger 4 (negative/accusatory claim about a named company). Reported Anthropic's own stated classification and mitigation directly rather than editorializing about negligence, and named the estimated-user figure as Accomplish AI's reported scope, not a confirmed one."
+        },
+        {
+          "name": "Archive backfill (§3c)",
+          "agent": "claude-runner",
+          "note": "2026-08-11: added two components (flow, ledger) to bring this synthesis up to the §3b floor (2 minimum, one data-carrying). The flow block structures the six-step SharedRoot escape chain the article's own prose already describes step by step; the ledger scopes the ~500,000-user estimate the article already attributes to Accomplish AI, unconfirmed by Anthropic. Every value traces to text and sources already in this article; no new research performed, no new source added. Word count, format tier, and publishedAt unchanged."
         }
       ],
       "gate": {
@@ -4016,6 +4054,20 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "Q2 2026, IN SHORT",
+          "title": "The beat and the guidance raise",
+          "items": [
+            { "label": "2026 capex guidance", "value": "$195-205B", "note": "up from $180-190B" },
+            { "label": "Total revenue", "value": "$119.8B", "note": "vs. ~$117B forecast" },
+            { "label": "Google Cloud revenue", "value": "$24.8B", "note": "+82% YoY, vs. 64% forecast" },
+            { "label": "Free cash flow", "value": "-$5.9B", "note": "first negative quarter" },
+            { "label": "Stock reaction", "value": "down 3-5%", "note": "after-hours, despite the beat" }
+          ]
+        }
+      },
+      {
         "type": "p",
         "text": "The market's reaction ran the other way. Alphabet shares fell roughly 3% to 5% in after-hours trading once the new capex figure landed, even with the revenue and cloud beats already on the table. It was also the company's first quarter of negative free cash flow, at -$5.9 billion, as capital spending on data centers and AI infrastructure outran the cash coming in.",
         "citation_urls": [
@@ -4074,6 +4126,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "Markets-section piece: not-financial-advice disclaimer attached per compliance-rulebook.md §2. No trading recommendation made; the closing paragraph frames the capacity signal as something to watch, not something to act on financially."
+        },
+        {
+          "name": "Archive backfill (§3c)",
+          "agent": "claude-runner",
+          "note": "2026-08-11: added one component (keyfacts) to bring this brief up to the §3b floor (1 minimum). Every figure in the box — the capex range, revenue, cloud revenue and growth, free cash flow, and the stock reaction — already appears in this article's own body text. No new research performed, no new source added. Word count, format tier, and publishedAt unchanged."
         }
       ],
       "gate": {
@@ -15349,5 +15406,550 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-10T20:54:46Z"
+  },
+  {
+    "slug": "openai-daybreak-gpt-5-6-cyber-launch",
+    "title": "OpenAI’s new cybersecurity model answers 95% of hacking requests its public model refuses. Getting access needs ID verification and, from September, a hardware key.",
+    "dek": "GPT-5.6-Cyber, released through a gated program called Daybreak, has already found a live Chrome vulnerability and flaws in a mobile OS. It shipped three days after Astra — a separate OpenAI model family — hit the company's own “critical” cybersecurity threshold and was paused, the first time that specific safeguard has tripped.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "OpenAI released GPT-5.6-Cyber on August 10, gated behind a program called Daybreak.",
+      "It completes 95% of advanced hacking requests OpenAI's public model refuses at 1.5%.",
+      "It has already found a live Chrome flaw (CVE-2026-15903) and mobile-OS vulnerabilities.",
+      "It ships three days after a related model, Astra, was paused for tripping a stricter, 'critical' threshold.",
+      "Caveat: the 95%/1.5% gap is OpenAI's own benchmark — no independent lab has replicated it."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[OpenAI](#/company/openai) released GPT-5.6-Cyber on August 10, a version of GPT-5.6 Sol trained specifically to do the offensive-security work the public model is built to refuse — finding zero-day vulnerabilities and building working exploit chains against real software. On the company's own Advanced Cybersecurity Completion Rate benchmark, GPT-5.6-Cyber completes 95.0% of those requests. GPT-5.6 Sol, under its standard public safeguards, completes 1.5%. The prior generation, GPT-5.5-Cyber, launched June 22 and managed 57.3% on the same test — this is the second such model OpenAI has shipped in under two months, each one narrowing the gap between what a defender can ask for and what the model will do.",
+        "citation_urls": [
+          "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The gap isn't an accident — it's the product. Access to that capability now runs entirely through **Daybreak**, OpenAI's gated cybersecurity program, expanded the same day into two tiers. Daybreak Blue gives vetted defenders GPT-5.6 Sol with its system-level cyber guardrails removed, for malware analysis, vulnerability detection and incident response — the everyday work of a security team, just unblocked. On the same benchmark, Blue-tier access completes 2.0% of advanced requests, barely above the public model's 1.5% — evidence that most of the gap to GPT-5.6-Cyber's 95.0% is purpose-built capability, not just a removed guardrail. Daybreak Red gates GPT-5.6-Cyber itself behind stricter vetting, reserved for exploit validation and vulnerability research rather than routine defense. Both require identity verification, account-security checks, usage monitoring and a legal attestation of authorized use; individual accounts must add a hardware security key starting September 1, 2026, and organizations apply through a separate, heavier-weight track.",
+        "citation_urls": [
+          "https://sqmagazine.co.uk/openai-gpt-5-6-cyber-daybreak-defenders/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THE NUMBERS BEHIND THE GATE",
+          "title": "Advanced Cybersecurity Completion Rate, by access tier",
+          "columns": [
+            {
+              "label": "GPT-5.6 Sol",
+              "sub": "public, standard safeguards"
+            },
+            {
+              "label": "Daybreak Blue",
+              "sub": "vetted defenders, guardrails removed"
+            },
+            {
+              "label": "GPT-5.5-Cyber",
+              "sub": "prior generation, launched June 22"
+            },
+            {
+              "label": "GPT-5.6-Cyber",
+              "sub": "Daybreak Red only",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Completion rate on advanced cyber requests",
+              "values": [
+                "1.5%",
+                "2.0%",
+                "57.3%",
+                "95.0%"
+              ]
+            },
+            {
+              "label": "Primary use case",
+              "values": [
+                "General assistant, standard refusals",
+                "Malware analysis, incident response",
+                "Exploit-chain research (prior gen)",
+                "Zero-day discovery, exploit validation"
+              ]
+            }
+          ],
+          "source": "OpenAI's own benchmark, as reported by Unite.AI and sqmagazine, August 10 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The capability isn't hypothetical. OpenAI says GPT-5.6-Cyber has already identified two previously unknown vulnerabilities in Chrome's V8 engine — one assigned **CVE-2026-15903**, an out-of-bounds read/write flaw serious enough to allow arbitrary code execution inside the browser sandbox — plus five vulnerabilities in a popular mobile operating system, including privilege-escalation chains, and flaws OpenAI describes as critical in a widely used database. Google has since shipped a fix for the Chrome flaw. The CVE itself is independently listed in third-party vulnerability-tracking databases, with its own technical detail separate from OpenAI's announcement; that GPT-5.6-Cyber specifically is what found it is OpenAI's own account, not something Google's advisory or the database entry attributes to any tool.",
+        "citation_urls": [
+          "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+          "https://radar.offseq.com/threat/cve-2026-15903-out-of-bounds-read-and-write-in-google-chrome-1111916e7e8242ab"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Three days after “critical”"
+      },
+      {
+        "type": "p",
+        "text": "The timing sits next to a separate disclosure. On August 7, OpenAI said it had paused internal work on parts of Astra — an unrelated model family built for extended multi-agent reasoning, not a cybersecurity product — after the system reached what OpenAI calls a “critical cybersecurity threshold” under its Preparedness Framework: the ability to independently identify and carry out cyberattacks against well-defended, real-world systems, not a benchmark result. It was the first OpenAI model to trip that specific bar, and the company added isolated testing, restricted access and outside stress-testing around the affected capabilities.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "GPT-5.6-Cyber is a different model family and, by OpenAI's own rating, a lower capability tier: **High**, not Critical, on the same Preparedness Framework scale. High means a model can remove existing bottlenecks to scaling cyber operations or automate discovery of operationally relevant vulnerabilities against reasonably hardened targets; Critical means it can do that against hardened real-world systems independently, with no human in the loop. OpenAI has not said the Astra pause and the GPT-5.6-Cyber launch are connected, and this piece found no evidence they share a checkpoint. What's verifiable is the calendar: a capability pause at the top of the scale, then a deliberate, access-gated release three days later at the tier just below it.",
+        "citation_urls": [
+          "https://sqmagazine.co.uk/openai-gpt-5-6-cyber-daybreak-defenders/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "EIGHT DAYS, ONE FRAMEWORK",
+          "items": [
+            {
+              "when": "Aug 7, 2026",
+              "what": "OpenAI discloses Astra tripped the Preparedness Framework's Critical cybersecurity threshold; pauses affected internal work.",
+              "hi": true
+            },
+            {
+              "when": "Aug 10, 2026",
+              "what": "OpenAI releases GPT-5.6-Cyber (rated High) through the new Daybreak Red tier."
+            },
+            {
+              "when": "Sep 1, 2026",
+              "what": "Hardware security keys become mandatory on individual Daybreak accounts.",
+              "future": true,
+              "detail": "Announced alongside the Aug 10 release; not yet in effect."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The Preparedness Framework is OpenAI's own internal gate, not a regulatory one — no US or EU rule currently requires a lab to test for or disclose a cybersecurity capability threshold before release. That makes this week's sequence a voluntary test case for whether a lab will actually act on its own framework rather than just publish one: pausing Astra's affected capabilities cost OpenAI a public admission of an internal safety trigger; shipping GPT-5.6-Cyber a few days later, gated rather than withheld, is the same framework producing a different verdict for a lower-rated capability. Both outcomes rest on OpenAI's own scoring, evaluated by OpenAI, against a rubric OpenAI wrote.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What's checked, and what's OpenAI's word"
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "WHAT THE CLAIMS ARE WORTH",
+          "title": "Reading the release against what's independently checkable",
+          "items": [
+            {
+              "claim": "CVE-2026-15903 is a real, exploitable Chrome V8 vulnerability.",
+              "level": "confirmed",
+              "basis": "Independently listed in third-party vulnerability-tracking databases with its own technical detail, separate from OpenAI's announcement."
+            },
+            {
+              "claim": "GPT-5.6-Cyber specifically is what found CVE-2026-15903 and the mobile-OS flaws.",
+              "level": "company",
+              "basis": "Stated only in OpenAI's own release; no security researcher outside OpenAI has confirmed the discovery attribution.",
+              "resolver": "Google's or the mobile OS vendor's own advisory, if either credits OpenAI or the model by name."
+            },
+            {
+              "claim": "GPT-5.6-Cyber completes 95.0% of advanced cybersecurity requests, versus 1.5% for the public model.",
+              "level": "company",
+              "basis": "OpenAI's own internal benchmark methodology and results; not published in a form a third party can independently re-run.",
+              "resolver": "An independent lab or academic group replicating the benchmark, or a comparable third-party red-team evaluation."
+            },
+            {
+              "claim": "GPT-5.6-Cyber and GPT-5.6 Sol are rated High, not Critical, on the Preparedness Framework.",
+              "level": "company",
+              "basis": "OpenAI's own internal capability assessment; the underlying test transcripts are not public.",
+              "resolver": "The outside stress-testing OpenAI says is already underway on the separate, paused Astra capabilities, if its methodology or findings are published."
+            }
+          ],
+          "source": "OpenAI's own release, cross-read against The Decoder, Unite.AI and sqmagazine, August 10 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The Daybreak Cyber Partner Program — which includes Accenture, CrowdStrike, Cisco, IBM and Palo Alto Networks — lets those firms embed Daybreak-gated models into their own commercial security products. SpecterOps chief technology officer Jared Atkinson, an early tester, said the model \"has completed work in under a day that earlier models had not resolved after weeks.\" OpenAI also ran a five-day \"Patch the Planet\" sprint in which more than 30 open-source projects used Daybreak access to find and fix vulnerabilities in their own code — the defensive case the program is named for. OpenAI has not published the substantive criteria by which a Daybreak Red application is approved or denied, beyond the identity and legal-attestation requirements above, and has not described a mechanism for an organization to learn whether a partner-embedded, Daybreak-derived model was used against its own systems.",
+        "citation_urls": [
+          "https://sqmagazine.co.uk/openai-gpt-5-6-cyber-daybreak-defenders/",
+          "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The case for skepticism"
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "kicker": "THE STRONGEST OBJECTIONS",
+          "points": [
+            {
+              "claim": "The headline capability gap is a company-graded benchmark, not an independent one.",
+              "detail": "The 95% vs. 1.5% completion-rate figures come entirely from OpenAI's own internal testing. No outside lab has published a replication of the benchmark or its methodology.",
+              "whoHolds": "Security-industry reviewers of the release, per sqmagazine's reporting"
+            },
+            {
+              "claim": "The vetting bar for the most powerful tier is undisclosed.",
+              "detail": "OpenAI has named the mechanics of access — identity verification, legal attestation, hardware keys from September — but not the substantive criteria by which a Daybreak Red application is approved or denied.",
+              "whoHolds": "Security-industry reviewers of the release, per sqmagazine's reporting"
+            },
+            {
+              "claim": "There's no disclosed way for a targeted organization to learn a Daybreak-derived model was used against its systems.",
+              "detail": "Partner firms can embed Daybreak-gated models into commercial products sold to third parties, with no published notification mechanism if that access touches a customer's environment without their knowledge.",
+              "whoHolds": "Security-industry reviewers of the release, per sqmagazine's reporting"
+            }
+          ],
+          "verdict": "None of this disputes that CVE-2026-15903 is real — that part checks out independent of OpenAI's word. What's unverified is the layer OpenAI is actually selling: that the gate around a model rated High for offensive cyber capability is tight enough to keep the access asymmetric in defenders' favor. On the released evidence, that's still OpenAI's own claim.",
+          "source": "sqmagazine, August 10 2026; OffSeq CVE Radar."
+        }
+      },
+      {
+        "type": "p",
+        "text": "OpenAI frames the release as a race against a narrowing window — giving vetted defenders frontier capability before it reaches attackers by other means. The Astra pause, five days earlier, is the company's own evidence that the same framework can also say no. Whether Daybreak's access controls hold up is not yet independently tested; whether the underlying framework does, now has one real data point.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch the September 1 hardware-key deadline.",
+        "text": "OpenAI has said individual Daybreak accounts must add a hardware security key by then. Whether it actually enforces the cutoff, or slips it, is the first real test of the program's stated access discipline."
+      },
+      {
+        "label": "Watch for independent replication of the 95%/1.5% benchmark.",
+        "text": "No outside lab has re-run OpenAI's Advanced Cybersecurity Completion Rate test. A published third-party replication — or a refusal by OpenAI to allow one — would settle whether the gap is real or self-serving."
+      },
+      {
+        "label": "Watch whether Google's Chrome advisory credits GPT-5.6-Cyber by name.",
+        "text": "Vendor security advisories routinely credit the researcher or tool that found a flaw. If Google's own CVE-2026-15903 writeup names OpenAI or the model, that's independent confirmation the attribution checks out."
+      },
+      {
+        "label": "Watch what the Astra stress-testing publishes.",
+        "text": "OpenAI says outside safety organizations and government agencies are testing the paused Astra capabilities. Any published methodology or finding would be the first external look at how the Preparedness Framework's Critical threshold actually gets evaluated."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "OpenAI — “Expanding Daybreak as the Cyber Defense Window Narrows”",
+        "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+        "primary": true
+      },
+      {
+        "label": "The Decoder — OpenAI launches GPT-5.6-Cyber to help defenders find vulnerabilities before attackers do",
+        "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+      },
+      {
+        "label": "Unite.AI — OpenAI Expands Daybreak With Two Tiers and a New Cybersecurity Model",
+        "url": "https://www.unite.ai/openai-expands-daybreak-with-two-tiers-and-a-new-cybersecurity-model/"
+      },
+      {
+        "label": "sqmagazine — OpenAI Lifts GPT-5.6 Cyber Guardrails Days After Astra Halt",
+        "url": "https://sqmagazine.co.uk/openai-gpt-5-6-cyber-daybreak-defenders/"
+      },
+      {
+        "label": "OffSeq Threat Radar — CVE-2026-15903, out-of-bounds read and write in Google Chrome",
+        "url": "https://radar.offseq.com/threat/cve-2026-15903-out-of-bounds-read-and-write-in-google-chrome-1111916e7e8242ab"
+      },
+      {
+        "label": "TechCrunch — OpenAI says it slowed Astra model development over security concerns",
+        "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/"
+      }
+    ],
+    "id": "newsroom-openai-daybreak-gpt-5-6-cyber-launch",
+    "image": "assets/img/newsroom/newsroom-openai-daybreak-gpt-5-6-cyber-launch.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-11T00:07:19Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced via general AI-news research sweep for 2026-08-10/11. Confirmed no prior article or Buzz card covers Daybreak, GPT-5.6-Cyber or Firmus: grep of slug/title/text against web/data/newsroom-articles.js and buzz.js found no match. Four independent, materially distinct source threads used beyond OpenAI's own account: The Decoder (direct fetch), Unite.AI (direct fetch), sqmagazine (direct fetch, the only outlet reporting the unresolved-access-control concerns used in the counter block), and OffSeq's independent CVE database entry for CVE-2026-15903 (corroborates the vulnerability's existence separate from OpenAI's attribution claim). TechCrunch's Aug 7 Astra report was already verified in this cycle's earlier openai-astra-ten-open-math-problems piece and re-used here for the cross-link, not re-fetched."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Attempted direct fetch of openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/ (403, bot-blocked) and cnbc.com's coverage (403). Confirmed the URL is real via two independent web searches returning it as an exact title match, and used it as the primary source link without quoting content only visible on that page — every fact used was corroborated via The Decoder, Unite.AI and sqmagazine, all fetched directly. The Jared Atkinson/SpecterOps quote and the benchmark numbers appear consistently across all three directly-fetched outlets. Did not use the claim that OpenAI's own agents were separately investigated over a Hugging Face breach (mentioned in one aggregated source only) — single-sourced and tangential, cut rather than risk an under-sourced accusatory claim about a named company (compliance trigger 4)."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the compare component's initial draft implied GPT-5.6-Cyber's discovery of CVE-2026-15903 was independently confirmed; revised the scorecard to split 'the CVE is real' (confirmed) from 'GPT-5.6-Cyber found it' (company, OpenAI's own account) as two separate items rather than one blended claim. Also revised the Astra paragraph to explicitly state no evidence was found that the two model families share a checkpoint, after the first draft's phrasing read as implying a link the sourcing doesn't support. No self-referential language found on re-read."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 6 (unverifiable central claim) applies to the 95%/1.5% benchmark and the vulnerability-discovery attribution: both are OpenAI's own account, not independently replicated. Addressed by attributing both plainly to OpenAI throughout, scoring them 'company' level in the scorecard with named resolvers, and building a dedicated counter block naming the specific unverified layers rather than presenting the release at face value. No health, financial-advice, legal-proceeding, or named-party-accusation triggers apply — the piece describes OpenAI's own disclosed capability tier and access program, not an allegation against it. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-08-11T00:07:19Z"
+  },
+  {
+    "slug": "firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+    "title": "A former Bitcoin miner just raised $2 billion to build AI data centers in Australia. Its valuation has doubled twice in a year.",
+    "dek": "Firmus, backed by Nvidia, Coatue, Blackstone and Jane Street, closed a fully subscribed $2 billion round at a post-money valuation above $10.5 billion — up from $5.5 billion in April and roughly $1.4 billion a year ago. The equity raise is separate from a $10 billion debt facility the company also carries, and from the A$73.3 billion it says its full build-out will eventually cost.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "Firmus raised $2B in equity, valuing the AI data-center firm above $10.5B.",
+      "That's roughly double its $5.5B valuation from April, in its fourth round in a year.",
+      "The $2B is separate from a $10B debt facility and A$73.3B total build-out plan.",
+      "Investors include Nvidia and Coatue (follow-on) plus new money from Blackstone and Jane Street.",
+      "Caveat: the post-money figure is a private valuation set by this round, not a market price."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Firmus](#/company/firmus), an Australian AI-infrastructure company that started as a Bitcoin miner, said August 6 it had closed a fully subscribed **$2 billion** strategic equity round, pushing its post-money valuation above **$10.5 billion**. The round drew follow-on money from existing backers [Nvidia](#/company/nvidia) and Coatue Management, plus new participation from funds managed by Blackstone Tactical Opportunities and other Blackstone vehicles, and from trading firm Jane Street. Firmus frames the raise as fuel for **Project Southgate**, its plan to build AI-dedicated data centers — what the industry calls \"AI factories\" — across Australia and, eventually, the wider Asia-Pacific region.",
+        "citation_urls": [
+          "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The valuation has now roughly doubled twice inside twelve months: from about $1.4 billion a year ago, past $5.5 billion in April, to above $10.5 billion this month. Total new equity raised across that stretch tops $3 billion, spread across four separate rounds rather than one steadily climbing number — a $330 million Nvidia-backed raise in September 2025, a $100 million round in early 2026, $505 million in April, and now $2 billion in August. Nvidia has been a repeat participant since the first of those rounds, not a new entrant chasing a hot deal — its stake has compounded through every re-pricing since Firmus was still primarily a crypto-mining operation.",
+        "citation_urls": [
+          "https://www.startupdaily.net/topic/funding/ai-data-centre-startup-firmus-just-raised-another-2-85-billion-at-a-whopping-15b-valuation/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kicker": "FOUR ROUNDS, ONE YEAR",
+          "title": "Firmus equity raised per round, Sept 2025–Aug 2026",
+          "kind": "bar",
+          "unit": "$M",
+          "data": [
+            {
+              "label": "Sep 2025",
+              "value": 330,
+              "note": "Nvidia-backed"
+            },
+            {
+              "label": "Early 2026",
+              "value": 100
+            },
+            {
+              "label": "Apr 2026",
+              "value": 505,
+              "note": "valued company at $5.5B"
+            },
+            {
+              "label": "Aug 2026",
+              "value": 2000,
+              "hi": true,
+              "note": "valued company at $10.5B+"
+            }
+          ],
+          "source": "Firmus's own announcements, as compiled by Startup Daily, August 7 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The money is earmarked for **Project Southgate**, Firmus's AI-factory build-out across Australia, and for early groundwork on a separate expansion into Indonesia and the wider Asia-Pacific region. Co-CEO Oliver Curtis said the round \"allows us to move on multiple fronts at once. We're scaling across Australia while fast-tracking capacity to expand into wider Asia-Pacific region.\" Project Southgate's own target, as previously reported, is 1.6 gigawatts of AI compute across five Australian sites by 2028; its first phase, in Melbourne, is 150 megawatts built around 18,500 Nvidia GB300 GPUs. Firmus puts the full build-out's total projected cost through 2028 at A$73.3 billion — an Australian-dollar figure this week's US-dollar raise and the earlier debt facility only partly fund. The pattern is now familiar across the industry: a chip supplier taking an equity stake in the company that buys its hardware, so the same dollars that fund Project Southgate's build-out flow back toward Nvidia GPU orders. AMD's investment in Anthropic and Nvidia's own stake in OpenAI's compute partners follow the same shape — the chipmaker-funds-its-customer pattern this publication has tracked spreading well beyond any single deal.",
+        "citation_urls": [
+          "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+          "https://www.forbes.com/sites/jonmarkman/2026/08/09/former-bitcoin-miner-firmus-became-a-105b-ai-infrastructure-company/",
+          "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What the headline numbers don't share"
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "SCOPED",
+          "title": "Three different Firmus numbers, three different pools of money",
+          "items": [
+            {
+              "value": "$2B",
+              "unit": "equity, Aug 2026",
+              "label": "This week's round",
+              "includes": "New primary equity capital, fully subscribed, setting the $10.5B+ post-money valuation",
+              "excludes": "Any debt, and any of Firmus's prior three equity rounds",
+              "note": "Follow-on from Nvidia and Coatue; new money from Blackstone and Jane Street."
+            },
+            {
+              "value": "$10B",
+              "unit": "debt facility, Feb 2026",
+              "label": "A separate financing line",
+              "includes": "Debt led by Blackstone Tactical Opportunities and Blackstone Credit & Insurance, closed six months before this round",
+              "excludes": "Equity, and any claim on ownership of Firmus",
+              "note": "Reported as evidence AI data centers are becoming a “financeable asset class,” comparable to toll roads."
+            },
+            {
+              "value": "A$73.3B",
+              "unit": "total projected cost through 2028",
+              "label": "The full Project Southgate build-out",
+              "includes": "Firmus's own projection for construction and equipment across all five Australian sites",
+              "excludes": "Confirmed funding — this is a target cost, not capital already raised or committed",
+              "note": "In Australian dollars, not the US-dollar figures above; Firmus has not disclosed how much of it this week's round or the debt facility actually cover."
+            }
+          ],
+          "source": "Firmus's own announcement and Forbes (Jon Markman), August 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The debt facility is the more telling of the two non-equity numbers. Led by Blackstone's own credit arms rather than a bank syndicate, it was reported at the time as evidence that AI data centers are becoming a \"financeable asset class\" in their own right — the kind of long-duration, contracted-revenue infrastructure that lenders treat like a toll road or a power plant, rather than the kind of speculative capex that only equity investors will touch. That framing is doing real work for Firmus: it's what lets a company that was mining Bitcoin two years ago borrow $10 billion against data centers that, in Project Southgate's case, are still mostly under construction.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/jonmarkman/2026/08/09/former-bitcoin-miner-firmus-became-a-105b-ai-infrastructure-company/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That scoping matters because at least one outlet's headline conflated the currencies: reporting the round as \"$2.85 billion at a $15 billion valuation\" is the same transaction in Australian dollars, not a different or larger one — Firmus's own release and every US outlet that covered the close use the $2 billion / $10.5 billion figures in US dollars. Both numbers are accurate; they're just denominated differently, and a reader skimming headlines from both currencies could easily conclude Firmus raised two separate rounds in one week. It's a small thing on its own, but it's a preview of a recurring problem in this beat: as more AI-infrastructure deals get struck by companies headquartered outside the US, headline dollar figures will keep arriving in mixed currencies, and a reader comparing this raise against a US-dollar-denominated one elsewhere has to check the denomination before comparing the size.",
+        "citation_urls": [
+          "https://www.startupdaily.net/topic/funding/ai-data-centre-startup-firmus-just-raised-another-2-85-billion-at-a-whopping-15b-valuation/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Firmus describes the round as \"fully subscribed,\" meaning the $2 billion is committed and closed capital, not an in-progress raise or a target the company is still marketing to investors. That distinction matters when comparing it against other AI-infrastructure numbers in circulation this year, several of which describe asks in active talks rather than closed checks — a gap this publication's own funding register only counts on the closed side.",
+        "citation_urls": [
+          "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+        ]
+      },
+      {
+        "type": "rank",
+        "rank": {
+          "kind": "funding-raise-usd",
+          "highlight": "raise-firmus-blackstone",
+          "limit": 6,
+          "source": "web/data/figures.js, normalized to closed USD raises."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Who's actually carrying the risk"
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "kicker": "THE CASE FOR CAUTION",
+          "points": [
+            {
+              "claim": "Suppliers get paid upfront; operators carry the leverage.",
+              "detail": "Equipment makers like Nvidia are paid in cash when hardware ships. Firmus, as the operator, carries a decade of utilization risk and refinancing risk on money it borrowed and raised against future demand that doesn't yet exist at the scale being built.",
+              "whoHolds": "Forbes' Jon Markman, citing the structure of the February debt facility"
+            },
+            {
+              "claim": "A private valuation set by one round isn't a market price.",
+              "detail": "The $10.5 billion figure comes from what this specific set of investors agreed to pay for new shares, not from a public market clearing price. Three separate, differently priced rounds in one year is a company still being actively re-priced, not a settled valuation.",
+              "whoHolds": "Standard venture-valuation caveat, applicable to any single-round post-money figure"
+            },
+            {
+              "claim": "Nvidia is both an investor and Firmus's main equipment supplier.",
+              "detail": "Nvidia's follow-on equity stake sits alongside its commercial interest in Firmus buying more Nvidia hardware for Project Southgate, which is not necessarily a conflict but is a relationship that gives Nvidia's participation less value as independent validation of Firmus's business case than a purely financial investor's would carry.",
+              "whoHolds": "Structural observation from the deal's own disclosed terms"
+            }
+          ],
+          "verdict": "None of this means the $2 billion isn't real money or that Project Southgate isn't being built — the Melbourne phase's GPU count and megawatt figures are concrete, not aspirational. What's unproven is the demand side: whether 1.6 gigawatts of AI compute in Australia and Indonesia finds paying customers fast enough to service $10 billion in debt and justify a valuation that has doubled twice since last September.",
+          "source": "Forbes (Jon Markman), August 9 2026; deal terms as disclosed in Firmus's own release."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Firmus's pivot mirrors a pattern playing out across the industry: infrastructure that once monetized idle power through Bitcoin mining is being repointed at AI compute, where the same land, power contracts and cooling capacity now command a premium tied to GPU scarcity rather than hash rate. Other former or hybrid miners — including several now pitching themselves as \"neoclouds\" — have made similar pivots over the past year as mining margins compressed and AI compute demand priced power capacity far above what crypto mining alone could justify. The bet embedded in a $10.5 billion valuation is that this repricing holds for the years it takes Project Southgate to actually fill five sites with paying tenants — not just for the round that just closed, and not just for as long as GPU scarcity itself lasts.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch whether Firmus names any AI-compute customers.",
+        "text": "Neither this round's announcement nor prior coverage names a single confirmed tenant or offtake agreement for Project Southgate's capacity. A named customer contract would be the first demand-side confirmation behind the valuation."
+      },
+      {
+        "label": "Watch the debt-to-equity mix as Project Southgate scales.",
+        "text": "The $10B debt facility plus this week's $2B equity round funds only part of the projected A$73.3B build. How the remaining gap gets financed — more equity, more debt, or project-level financing per site — will show whether lenders keep treating AI factories as a low-risk 'financeable asset class.'"
+      },
+      {
+        "label": "Watch for Firmus's IPO timing.",
+        "text": "Firmus has previously floated an ASX listing. A filed prospectus would make the company's financials, customer contracts and debt terms public for the first time, replacing this round's privately negotiated valuation with real market scrutiny."
+      },
+      {
+        "label": "Watch the Indonesia expansion for a second, differently-regulated build.",
+        "text": "Indonesia development is described as early-stage. Power costs, land approval timelines and grid capacity differ substantially from Australia's — the next real test of whether Firmus's model travels."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "Firmus — “Firmus Announces Fully Subscribed USD$2 Billion Strategic Equity Investment”",
+        "url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+        "primary": true
+      },
+      {
+        "label": "Forbes (Jon Markman) — Former Bitcoin Miner Firmus Became A $10.5B AI Infrastructure Company",
+        "url": "https://www.forbes.com/sites/jonmarkman/2026/08/09/former-bitcoin-miner-firmus-became-a-105b-ai-infrastructure-company/"
+      },
+      {
+        "label": "Startup Daily — AI data centre startup Firmus just raised another $2.85 billion at a whopping $15B valuation",
+        "url": "https://www.startupdaily.net/topic/funding/ai-data-centre-startup-firmus-just-raised-another-2-85-billion-at-a-whopping-15b-valuation/"
+      },
+      {
+        "label": "TechStartups — Nvidia-backed Firmus raises $2 billion at $10.5 billion valuation to build AI factories across Asia-Pacific",
+        "url": "https://techstartups.com/2026/08/07/nvidia-backed-firmus-raises-2-billion-at-10-5-billion-valuation-to-build-ai-factories-across-asia-pacific/"
+      },
+      {
+        "label": "Data Center Dynamics — Aussie AI cloud company Firmus raises $2bn via equity sale",
+        "url": "https://www.datacenterdynamics.com/en/news/aussie-ai-cloud-company-firmus-raises-2bn-via-equity-sale/"
+      }
+    ],
+    "id": "newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+    "image": "assets/img/newsroom/newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-11T00:07:24Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced via general AI-funding research sweep. Confirmed no prior article or Buzz card covers Firmus: grep of slug/title/text against newsroom-articles.js and buzz.js found no match. Five independent, materially distinct source threads used: Firmus's own press release (primary/company), Forbes' independent reporting (including the debt-facility and risk-asymmetry framing not in Firmus's own release), Startup Daily's AUD-denominated coverage (used to surface and then resolve the currency-conflation issue addressed in prose), TechStartups and Data Center Dynamics (independent corroboration of the USD figures and investor list). GuruFocus, VentureBurn, Blockonomi and CryptoRank were read but not cited as sources since they repeat the same primary release without adding independent reporting, per format-routing.md's dedup rule."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Fetched firmus.co's own newsroom release directly and confirmed the $2B figure, $10.5B+ valuation, investor list, Oliver Curtis quote, and Indonesia mention verbatim. Fetched Forbes directly and confirmed the $10B Blackstone debt facility (a separate financing event, not double-counted with the equity round), the 1.6GW/five-site/Melbourne-150MW/18,500-GPU figures, the A$73.3B total projection, and the risk-asymmetry framing attributed to that piece. Fetched Startup Daily directly to resolve the apparent $2.85B/$15B discrepancy: confirmed it is the same transaction reported in AUD, not a second round, and wrote that reconciliation into the body rather than silently picking one currency. Added 'firmus' to companies.js (new entry, genuine multi-source coverage) and two entries to figures.js (funding-raise-usd, valuation-usd) in this same cycle to support the rank component."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft's ledger conflated the $10B debt facility with the $2B equity round under one 'total capital' framing, which overstates what this week's round alone represents. Revised the ledger into three explicitly separate line items (equity round / debt facility / total projected cost) with distinct includes/excludes, and added the sourcecheck-style currency paragraph after noticing the AUD/USD headline mismatch during the second source read — initially almost went unaddressed as a formatting quirk rather than a real point of reader confusion. No self-referential language found on re-read."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 2 (financial/valuation claims stated as fact) applies directly: this is a funding-round and valuation story. Addressed with the not-financial-advice disclaimer, by attributing the $10.5B figure explicitly as a private post-money valuation from this specific round rather than an objective market price, and by including a dedicated counter block naming the demand-side and conflict-of-interest uncertainties a reader would need before treating the valuation as settled. No health, legal-proceeding, or named-party-accusation triggers apply — the risk-asymmetry point is a structural/financial observation attributed to Forbes' own reporting, not an accusation of wrongdoing against Firmus or Nvidia."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-08-11T00:07:24Z"
   }
 ];

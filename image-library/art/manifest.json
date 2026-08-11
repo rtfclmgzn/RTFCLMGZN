@@ -1557,7 +1557,12 @@
    ],
    "text_space": "dark left half",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+     "used_at": "2026-08-11"
+    }
+   ]
   },
   {
    "id": "art-059-monumental-ops-console",

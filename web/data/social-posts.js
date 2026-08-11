@@ -537,5 +537,185 @@ window.RTFC_SOCIAL_POSTS = [
       "post_url": null
     }
   ]
+},
+{
+  "article_id": "newsroom-openai-daybreak-gpt-5-6-cyber-launch",
+  "ts": "2026-08-11T00:22:14Z",
+  "export": {
+    "article_id": "newsroom-openai-daybreak-gpt-5-6-cyber-launch",
+    "url": "/#/article/openai-daybreak-gpt-5-6-cyber-launch",
+    "headline": "OpenAI’s new cybersecurity model answers 95% of hacking requests its public model refuses. Getting access needs ID verification and, from September, a hardware key.",
+    "hook": "OpenAI released a hacking-capable AI model, GPT-5.6-Cyber, gated behind ID checks and a hardware-key requirement -- three days after a related model got paused for tripping the company's own 'critical' cybersecurity threshold.",
+    "key_facts": [
+      "GPT-5.6-Cyber completes 95% of advanced hacking requests vs. 1.5% for the public model",
+      "It already found a real Chrome vulnerability (CVE-2026-15903) and mobile-OS flaws",
+      "No independent lab has replicated OpenAI's own benchmark numbers"
+    ],
+    "tone": "measured, skeptical of self-reported claims",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/newsroom-openai-daybreak-gpt-5-6-cyber-launch.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "OpenAI just released a model built to find real zero-days -- it answers 95% of advanced hacking requests its public model refuses at 1.5%. Access needs ID verification and, from September, a hardware key. It shipped 3 days after a related model got paused for going too far.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Cybersecurity"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T05:07:19Z",
+      "copy": "The 95% vs. 1.5% completion-rate gap behind OpenAI's new cybersecurity model? That's OpenAI's own internal benchmark. No independent lab has replicated it. The Chrome vulnerability it found is real and independently verifiable -- the benchmark that says how capable the model is, isn't.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "OpenAI just shipped a model built to hack.\n\nGPT-5.6-Cyber answers 95% of advanced hacking requests its public model refuses at 1.5%. It's already found a real Chrome vulnerability and mobile-OS flaws. Access requires ID verification, a legal declaration, and -- from September -- a hardware security key.\n\nThe twist: it launched three days after a related OpenAI model got paused for tripping the company's own 'critical' cybersecurity threshold. Full story at the link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Cybersecurity",
+        "#OpenAI",
+        "#Hacking",
+        "#TechNews",
+        "#AIsafety",
+        "#InfoSec"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "OpenAI released a model built specifically to do the offensive-security work its public model is designed to refuse -- finding zero-day vulnerabilities and building exploit chains.\n\nGPT-5.6-Cyber completes 95% of advanced hacking requests; the public model manages 1.5%. It's already found a real Chrome vulnerability (now patched) and flaws in a popular mobile OS. Getting access requires identity verification, a legal attestation, and -- starting September 1 -- a mandatory hardware security key.\n\nThe release lands three days after OpenAI disclosed a separate, related model had been paused after tripping the company's own 'critical' cybersecurity threshold -- the first time that specific safeguard has triggered. We checked what's independently verifiable versus what's still just OpenAI's word. Full story:",
+      "hashtags": [
+        "#AI",
+        "#Cybersecurity"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "OpenAI's new GPT-5.6-Cyber answers 95% of advanced hacking requests vs. 1.5% for the public model -- and it's already found a real Chrome vulnerability. Access needs ID checks and, from September, a hardware key. It shipped 3 days after a related model got paused for tripping OpenAI's own 'critical' cyber threshold. We checked what's independently verifiable vs. just OpenAI's word.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "OpenAI's new hacking-capable model answers 95% of advanced requests vs 1.5% for the public one. It shipped 3 days after a related model got paused for tripping OpenAI's own 'critical' cyber threshold. The 95% figure is OpenAI's own benchmark -- unreplicated.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+  "ts": "2026-08-11T00:22:14Z",
+  "export": {
+    "article_id": "newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+    "url": "/#/article/firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+    "headline": "A former Bitcoin miner just raised $2 billion to build AI data centers in Australia. Its valuation has doubled twice in a year.",
+    "hook": "Firmus, an Australian company that started as a Bitcoin miner, closed a $2 billion round backed by Nvidia and Blackstone -- its valuation has now roughly doubled twice in twelve months, to above $10.5 billion.",
+    "key_facts": [
+      "The $2B equity round is separate from a $10B debt facility and an A$73.3B total build-out plan",
+      "Valuation went from ~$1.4B a year ago, to $5.5B in April, to $10.5B+ now",
+      "Nvidia is both an investor in Firmus and its main hardware supplier"
+    ],
+    "tone": "skeptical, numbers-first, arithmetic-focused",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise.jpg",
+    "disclaimer": "not-financial-advice"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "A company that was mining Bitcoin two years ago just raised $2B to build AI data centers in Australia -- valuing it above $10.5B. That's roughly double its April valuation, and double THAT valuation from a year ago. Nvidia is both an investor and its main supplier.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Funding"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T05:07:24Z",
+      "copy": "Firmus's $2B raise this week is separate from its $10B debt facility, which is separate from the A$73.3B it says its full AI-factory build-out will eventually cost. Three different pools of money, three different headline numbers -- and at least one outlet already conflated USD and AUD reporting them.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "From Bitcoin miner to $10.5 billion AI infrastructure company -- in under two years.\n\nFirmus just closed a $2 billion equity round backed by Nvidia, Coatue, Blackstone and Jane Street. Its valuation has now roughly doubled twice in twelve months. The money funds AI data centers across Australia, with Indonesia next.\n\nBut the $2B is just one of three numbers in this story -- there's also a separate $10B debt facility, and an A$73.3B total build-out plan. We scoped what each one actually covers. Full story at the link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Funding",
+        "#DataCenters",
+        "#Nvidia",
+        "#Australia",
+        "#TechNews",
+        "#VentureCapital"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Firmus, an Australian AI-infrastructure company that started out as a Bitcoin miner, closed a fully subscribed $2 billion equity round this week -- pushing its valuation above $10.5 billion. That's roughly double its April valuation, which was itself roughly double where the company stood a year ago.\n\nThe round drew follow-on money from Nvidia and Coatue, plus new backing from Blackstone and Jane Street. It funds Project Southgate, Firmus's AI-data-center build-out across Australia, with Indonesia next.\n\nHere's the part headlines miss: the $2B equity round, a separate $10B debt facility, and an A$73.3 billion total projected build-out cost are three different numbers describing three different things -- and at least one outlet's headline conflated USD and AUD figures for the same round. We scoped out what each number actually covers, and who's really carrying the risk if AI-compute demand doesn't show up on schedule. Full story:",
+      "hashtags": [
+        "#AI",
+        "#Markets"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "A former Bitcoin miner just raised $2B to build AI data centers in Australia, valuing it above $10.5B -- roughly double its April valuation, itself roughly double a year ago. That's separate from a $10B debt facility and an A$73.3B total build-out plan. Nvidia is both an investor and Firmus's main hardware supplier. We scoped out what each number actually covers.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Former Bitcoin miner Firmus raised $2B, valuation now $10.5B+ -- doubled twice in a year. Separate from a $10B debt facility and an A$73.3B build-out plan. Nvidia is both investor and main supplier. Three numbers, three different things.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
 }
 ];

@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-08-01",
+  updated: "2026-08-11",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -57,6 +57,8 @@ window.RTFC_ENTITIES = {
       kind:"daily-driver model", access:"closed" },
     { re:/\bGPT-5\.6 Luna\b/i, name:"GPT-5.6 Luna", maker:"OpenAI", makerKey:"openai",
       kind:"budget high-volume model", access:"closed" },
+    { re:/\bGPT-5\.6-Cyber\b/i, name:"GPT-5.6-Cyber", maker:"OpenAI", makerKey:"openai",
+      kind:"gated offensive-security research model", access:"closed" },
     { re:/\bGPT-5\.6\b/i, name:"GPT-5.6", maker:"OpenAI", makerKey:"openai",
       kind:"frontier model family", access:"closed" },
     { re:/\bGPT-5\.5\b/i, name:"GPT-5.5", maker:"OpenAI", makerKey:"openai",
