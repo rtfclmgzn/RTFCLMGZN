@@ -718,4 +718,272 @@ window.RTFC_SOCIAL_POSTS = [
     }
   ]
 }
+,
+{
+  "article_id": "newsroom-anthropic-macquarie-gic-theseus-infrastructure",
+  "ts": "2026-08-11T12:55:00Z",
+  "export": {
+    "article_id": "newsroom-anthropic-macquarie-gic-theseus-infrastructure",
+    "url": "/#/article/anthropic-macquarie-gic-theseus-infrastructure",
+    "headline": "Anthropic's next data centers will be owned by Macquarie and GIC, not Anthropic",
+    "hook": "Anthropic just signed up as anchor tenant on a fleet of data centers it won't own -- Macquarie and GIC are building and owning them instead, and the announcement names no dollar figure at all.",
+    "key_facts": [
+      "Theseus Infrastructure is jointly owned by Macquarie Asset Management and GIC; Anthropic leases capacity as anchor tenant",
+      "No dollar figure, capacity number, or completion date was disclosed in the announcement",
+      "Anthropic separately pledged in February to cover any consumer electricity-price increases tied to its data centers"
+    ],
+    "tone": "technical, detail-obsessed, reads the spec sheet",
+    "persona": "jin-park",
+    "section": "Compute",
+    "primary_image": "assets/img/newsroom/newsroom-anthropic-macquarie-gic-theseus-infrastructure.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Anthropic just got a fleet of new data centers. It won't own a single one of them. Macquarie and GIC are building and owning them instead, leasing the capacity back -- and the announcement names no dollar figure, no megawatts, no date.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#DataCenters"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T17:40:00Z",
+      "copy": "Meta moved $279B of data-center leases off its balance sheet. Google guarantees $44B of rent on buildings it'll never own. Anthropic took a $35B loan to lease chips instead of buying them. Theseus is the same trick, applied to whole data centers now.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Anthropic's newest data centers will belong to someone else.\n\nMacquarie Asset Management and Singapore's GIC are forming Theseus Infrastructure to build and own AI data centers, with Anthropic signing on as anchor tenant under long-term leases.\n\nWhat's missing from the announcement is the story: no dollar figure, no megawatt count, no completion date, and no executive quoted by name. We laid out what's actually known versus what's still just a structure. Full story at the link in bio.",
+      "hashtags": [
+        "#AI",
+        "#DataCenters",
+        "#Anthropic",
+        "#Infrastructure",
+        "#TechNews",
+        "#Compute"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Anthropic, Macquarie Asset Management and Singapore's GIC announced Theseus Infrastructure this week -- a new company that will build and own AI data centers, with Anthropic leasing the finished capacity as anchor tenant rather than building or owning anything itself.\n\nWhat the joint announcement doesn't say is the more interesting part: no total dollar figure, no site count, no capacity target in megawatts or gigawatts, and no completion date. No individual executive is quoted by name.\n\nWe looked at what this deal structure actually is -- and it matches a pattern showing up across the industry this year: Meta has moved roughly $279 billion of leases off its balance sheet, Google guarantees some $44 billion of rent on buildings it will never own, and Anthropic itself already took on a $35 billion loan to lease chips rather than buy them. Full story:",
+      "hashtags": [
+        "#AI",
+        "#Infrastructure"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Anthropic's next data centers will be owned by Macquarie and GIC, not Anthropic. It signs on as anchor tenant under long-term leases while they build and own the buildings. The announcement names no dollar figure, no megawatts, no date -- and it's the same capex-to-opex trick Meta and Google have both used this year, just applied to Anthropic now.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Anthropic's next data centers: owned by Macquarie and GIC, not Anthropic. It leases the capacity as anchor tenant. No dollar figure, no MW, no date disclosed. Same off-balance-sheet trick Meta ($279B) and Google ($44B) have run this year.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-agibot-overtakes-unitree-h1-2026-shipments",
+  "ts": "2026-08-11T12:55:00Z",
+  "export": {
+    "article_id": "newsroom-agibot-overtakes-unitree-h1-2026-shipments",
+    "url": "/#/article/agibot-overtakes-unitree-h1-2026-shipments",
+    "headline": "AgiBot passed Unitree as the world's top humanoid-robot vendor in the first half of 2026",
+    "hook": "AgiBot just took the humanoid-robot shipment lead from Unitree -- the same week Unitree prices a $904M Shanghai IPO built on the ranking it just lost.",
+    "key_facts": [
+      "AgiBot shipped ~8,400 humanoid robots in H1 2026 (44% share) vs. Unitree's ~5,900 (31%)",
+      "Chinese manufacturers combined hold 97% of global humanoid-robot shipments",
+      "Unitree is pricing a Shanghai IPO at 150.8 yuan/share, targeting about $904 million, the same week its shipment lead disappeared"
+    ],
+    "tone": "curious, hands-on, watches the demo-vs-shipping gap",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "primary_image": "assets/img/newsroom/newsroom-agibot-overtakes-unitree-h1-2026-shipments.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "AgiBot just passed Unitree as the world's #1 humanoid-robot maker by shipments -- 8,400 units to 5,900 in H1 2026. Same week, Unitree is pricing a $904M Shanghai IPO built on the ranking it just lost.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T17:45:00Z",
+      "copy": "Forbes' pushback on the AgiBot/Unitree numbers: Western humanoid makers aren't behind on tech, they're deliberately not scaling until reliability is proven. Shipment share and technology lead aren't the same claim -- we laid out both sides.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "The humanoid-robot leaderboard just flipped.\n\nAgiBot shipped roughly 8,400 humanoid robots in the first half of 2026 -- passing Unitree's 5,900 -- for a 44% global share. Chinese manufacturers combined now hold 97% of all humanoid-robot shipments worldwide.\n\nThe timing is the story: Unitree is pricing a Shanghai IPO at 150.8 yuan a share, targeting about $904 million, in the same window it lost the shipment lead it built its pitch on. Full story at the link in bio.",
+      "hashtags": [
+        "#Robotics",
+        "#Humanoid",
+        "#AgiBot",
+        "#Unitree",
+        "#China",
+        "#TechNews"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Shanghai-based AgiBot shipped roughly 8,400 humanoid robots in the first half of 2026, overtaking Hangzhou-based Unitree's approximately 5,900 units -- a 44% to 31% global-share flip, per research firm Smart Analytics Global.\n\nThe timing is notable: Unitree is pricing a Shanghai Star Market IPO at 150.8 yuan a share, targeting roughly $904 million, in the very window its shipment lead disappeared. Chinese manufacturers combined now hold 97% of global humanoid-robot shipments.\n\nNot everyone reads the shipment numbers as decisive -- Forbes' own analysis argues shipment volume measures manufacturing scale, not technology quality, and that Western makers are deliberately holding back until reliability is proven at scale. We laid out both the numbers and the pushback. Full story:",
+      "hashtags": [
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "AgiBot passed Unitree as the world's top humanoid-robot vendor in H1 2026 -- 8,400 units to 5,900. Same week, Unitree prices a $904M Shanghai IPO built on the shipment lead it just lost. Forbes argues shipment share overstates the win; we laid out both reads.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Humanoid-robot leaderboard flip: AgiBot 8,400 units (44%) passed Unitree's 5,900 (31%) in H1 2026. Unitree's pricing a $904M Shanghai IPO the same week. Chinese makers hold 97% of global shipments combined.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-intel-20-billion-stock-offering-ai-buildout",
+  "ts": "2026-08-11T12:55:00Z",
+  "export": {
+    "article_id": "newsroom-intel-20-billion-stock-offering-ai-buildout",
+    "url": "/#/article/intel-20-billion-stock-offering-ai-buildout",
+    "headline": "Intel priced a $20 billion stock sale to fund AI chips, up from the $15 billion it announced hours earlier",
+    "hook": "Intel filed for a $15B stock sale and upsized it to $20B the same day -- a raise that nets almost exactly what Intel says it'll spend on capex this entire year.",
+    "key_facts": [
+      "Intel's offering was upsized from $15B to $20B the same day, priced at $95/share, netting ~$19.7B",
+      "Intel raised 2026 capex guidance to about $20B in July, up from $18B",
+      "Shares fell about 4% on the announcement, after a ~175% year-to-date run"
+    ],
+    "tone": "brisk, arithmetic-skeptic",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/newsroom-intel-20-billion-stock-offering-ai-buildout.jpg",
+    "disclaimer": "not-financial-advice"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Intel filed for a $15B stock offering Monday morning. By Monday afternoon it was $20B at $95/share. Net proceeds: ~$19.7B -- almost exactly what Intel says it'll spend on capex this entire year, from one equity sale.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Intel",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-11T17:50:00Z",
+      "copy": "The arithmetic on Intel's raise: $19.7B net proceeds against $20B in 2026 capex guidance is ~98% coverage from one stock sale. That's not a treasury top-up -- that's a bet sized to change who's funding Intel's AI buildout.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Markets"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Intel filed to raise $15 billion Monday morning. By that afternoon, it was $20 billion, priced at $95 a share.\n\nNet proceeds of about $19.7 billion come close to covering Intel's entire 2026 capex guidance in one sale. Shares fell about 4% on the dilution -- after a stock that's already up roughly 175% this year.\n\nWe broke down the three different $20B-ish numbers in this story, and why none of them are the same figure. Full story at the link in bio. Not financial advice.",
+      "hashtags": [
+        "#Intel",
+        "#Markets",
+        "#AI",
+        "#Semiconductors",
+        "#Stocks",
+        "#TechNews"
+      ],
+      "image": {
+        "prompt": null,
+        "status": "none",
+        "cost_usd": 0
+      },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Intel filed a $15 billion underwritten stock offering the morning of August 10 -- and upsized it to $20 billion the same day, pricing at $95 a share for expected net proceeds of about $19.7 billion.\n\nThe number is worth sitting with: Intel raised its 2026 capital-expenditure guidance to about $20 billion in July. This single equity sale nets close to that entire figure. Shares fell roughly 4% on the announcement, a standard dilution reaction, even with the stock up about 175% for the year.\n\nWe scoped out the three separate $20B-ish numbers in this story -- the capex guidance, the original ask, and the actual raise -- because they're not the same figure even though the headlines make them sound like it. Full story (not financial advice):",
+      "hashtags": [
+        "#Intel",
+        "#Markets"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Intel filed for a $15B stock sale, upsized to $20B the same day at $95/share. Net proceeds ~$19.7B come close to covering Intel's entire 2026 capex guidance from one sale. Shares dipped ~4% on the dilution. Not financial advice.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Intel: filed $15B stock offering, upsized to $20B same day at $95/share. ~$19.7B net proceeds vs. $20B 2026 capex guidance -- one sale covers nearly the whole year. Shares -4% on the news. Not financial advice.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
