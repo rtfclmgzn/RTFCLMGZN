@@ -55,6 +55,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Moonshot AI released full Kimi K3 open-weight model (2.8 trillion parameters, 1M context) on July 26-27, 2026 on Hugging Face, enabling independent technical analysis of K3's training data and architecture.",
       label:"Kimi K3 open weights release",
-      url:"https://www.kimi.com/blog/kimi-k3" }
+      url:"https://www.kimi.com/blog/kimi-k3" },
+    { key:"moonshot-kimi-k3-open-model-launch|w|0",
+      at:"2026-08-11T14:30:00Z",
+      outcome:"confirmed",
+      note:"Moonshot released Kimi K3 open weights on July 26-27, 2026 (2.8T parameters, 1M context, 50B active per token) on Hugging Face with 47-page technical report. Artificial Analysis published independent Intelligence Index benchmark placing K3 at #3-4, comparable to Opus 4.8 and GPT-5.5.",
+      label:"Kimi K3 technical report & Artificial Analysis evaluation",
+      url:"https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5" }
   ]
 };
