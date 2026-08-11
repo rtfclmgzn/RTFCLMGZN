@@ -41,7 +41,7 @@
 //                real finding and worth logging, not a gap)
 // ============================================================================
 window.RTFC_RESOLUTIONS = {
-  updated: "2026-07-30",
+  updated: "2026-08-11",
   note: "Resolutions are append-only and dated. Articles are never rewritten; every resolution renders beneath the original piece and on the Claims Ledger.",
   items: [
     { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
@@ -61,6 +61,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Moonshot released Kimi K3 open weights on July 26-27, 2026 (2.8T parameters, 1M context, 50B active per token) on Hugging Face with 47-page technical report. Artificial Analysis published independent Intelligence Index benchmark placing K3 at #3-4, comparable to Opus 4.8 and GPT-5.5.",
       label:"Kimi K3 technical report & Artificial Analysis evaluation",
-      url:"https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5" }
+      url:"https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5" },
+    { key:"moonshot-ai-50-billion-pre-ipo-valuation|w|0",
+      at:"2026-08-11T03:45:00Z",
+      outcome:"refuted",
+      note:"Moonshot AI closed its August pre-IPO financing round at $35 billion valuation, not $50 billion. The round raised $3.5 billion at the lower valuation in late July 2026.",
+      label:"Moonshot AI Series C funding close (July 2026)",
+      url:"https://finance.yahoo.com/technology/ai/articles/moonshot-ai-seeks-50-billion-180829999.html" }
   ]
 };
