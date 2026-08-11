@@ -216,4 +216,10 @@ window.RTFC_BUZZ = [
     why:"Folding reasoning effort into a single slider, rather than a separate model pick, is OpenAI treating 'how hard should this think' as a user-facing dial rather than a backend routing decision -- and the 68% figure is OpenAI's own internal eval, not independently measured.",
     heat:54, topics:["openai","chatgpt","gpt-5.6 sol","product update"],
     url:"https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" },
+  { id:"bz-172", date:"2026-08-10",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic, Macquarie Asset Management, and Singapore's GIC sovereign wealth fund announced Theseus Infrastructure, a strategic partnership to develop and operate dedicated US data-center facilities where Anthropic will serve as anchor tenant under long-term leases. Macquarie and GIC will own majority equity and fund the facilities; Anthropic committed to paying 100% of grid-upgrade costs and covering any consumer electricity price increases tied to its data-center demand -- an unprecedented commitment among frontier labs.",
+    why:"The first frontier lab to explicitly build data-center infrastructure outside direct hyperscaler control, bankrolled by two major asset managers rather than cloud giants, signals a structural shift in who owns the physical layer of AI buildout. The grid-cost guarantee is also novel -- frontier labs absorbing infrastructure externalities, not externalizing them.",
+    heat:68, topics:["anthropic","infrastructure","data centers","theseus","macquarie","gic"],
+    url:"https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html" },
 ];
