@@ -282,10 +282,4 @@ window.RTFC_BUZZ = [
     why:"A quantum-computing pure play posting its fifth consecutive quarter of record results and folding in its own chip foundry -- one of the clearer signals yet that quantum revenue, not just funding rounds, is starting to show up on an income statement.",
     heat:48, topics:["ionq","quantum","earnings","skywater"],
     url:"https://quantumcomputingreport.com/ionq-reports-record-q2-2026-financial-results-revenue-soars-287-to-80-1m-full-year-guidance-raised-to-290m/" },
-  { id:"bz-183", date:"2026-08-04",
-    source:{ name:"Cloudflare", handle:"Cloudflare", platform:"web", kind:"lab" },
-    text:"Cloudflare began rolling out programmable stablecoin wallets built for AI agents, letting an agent autonomously pay for APIs, data, and inference services using the x402 protocol instead of a traditional account or API key. Owners set spending controls -- allowances, approved-merchant lists, maximum transaction size -- and can currently claim a wallet handle, with funding and payment live shortly after.",
-    why:"Infrastructure for agent-to-agent and agent-to-service micropayments, from a company that sits in front of a large share of the web's traffic -- a concrete step toward AI agents transacting without a human approving each purchase.",
-    heat:52, topics:["cloudflare","stablecoins","ai agents","payments","x402"],
-    url:"https://www.theblock.co/post/410629/cloudflare-kicks-off-stablecoin-wallet-rollout-ai-agents-pay-apis-online-content" },
 ];
