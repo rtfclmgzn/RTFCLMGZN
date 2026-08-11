@@ -4217,14 +4217,43 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "kicker": "TWO SIZES, ONE PREVIEW",
           "title": "V4-Pro vs. V4-Flash, as shipped April 24",
           "columns": [
-            {"label": "V4-Pro", "hi": true},
-            {"label": "V4-Flash"}
+            {
+              "label": "V4-Pro",
+              "hi": true
+            },
+            {
+              "label": "V4-Flash"
+            }
           ],
           "rows": [
-            {"label": "Total parameters", "values": ["1.6 trillion", "284 billion"]},
-            {"label": "Active parameters per token", "values": ["49 billion", "13 billion"]},
-            {"label": "Context window", "values": ["1 million tokens", "1 million tokens"]},
-            {"label": "License", "values": ["MIT", "MIT"]}
+            {
+              "label": "Total parameters",
+              "values": [
+                "1.6 trillion",
+                "284 billion"
+              ]
+            },
+            {
+              "label": "Active parameters per token",
+              "values": [
+                "49 billion",
+                "13 billion"
+              ]
+            },
+            {
+              "label": "Context window",
+              "values": [
+                "1 million tokens",
+                "1 million tokens"
+              ]
+            },
+            {
+              "label": "License",
+              "values": [
+                "MIT",
+                "MIT"
+              ]
+            }
           ],
           "source": "DeepSeek's own API documentation and Hugging Face model writeup, April 24 2026."
         }
@@ -4256,10 +4285,24 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "kind": "bar",
           "unit": "score",
           "data": [
-            {"label": "SWE-bench Verified — V4-Pro", "value": 80.6},
-            {"label": "SWE-bench Verified — Opus 4.6", "value": 80.8, "hi": true},
-            {"label": "MCPAtlas Public — V4-Pro", "value": 73.6},
-            {"label": "MCPAtlas Public — Opus 4.6", "value": 73.8, "hi": true}
+            {
+              "label": "SWE-bench Verified — V4-Pro",
+              "value": 80.6
+            },
+            {
+              "label": "SWE-bench Verified — Opus 4.6",
+              "value": 80.8,
+              "hi": true
+            },
+            {
+              "label": "MCPAtlas Public — V4-Pro",
+              "value": 73.6
+            },
+            {
+              "label": "MCPAtlas Public — Opus 4.6",
+              "value": 73.8,
+              "hi": true
+            }
           ],
           "source": "DeepSeek's own benchmark writeup, via Hugging Face, April 24 2026."
         }
@@ -4385,10 +4428,24 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "keyfacts": {
           "title": "MetaX's Hong Kong filing, in short",
           "items": [
-            {"label": "Filed", "value": "July 24, 2026", "note": "confidentially"},
-            {"label": "Target", "value": "IPO by year-end 2026"},
-            {"label": "Adviser", "value": "Huatai International Financial Holdings"},
-            {"label": "Prior listing", "value": "Shanghai STAR Market, Dec 17 2025", "note": "shares surged ~700% on debut, reaching a ~$42B valuation"}
+            {
+              "label": "Filed",
+              "value": "July 24, 2026",
+              "note": "confidentially"
+            },
+            {
+              "label": "Target",
+              "value": "IPO by year-end 2026"
+            },
+            {
+              "label": "Adviser",
+              "value": "Huatai International Financial Holdings"
+            },
+            {
+              "label": "Prior listing",
+              "value": "Shanghai STAR Market, Dec 17 2025",
+              "note": "shares surged ~700% on debut, reaching a ~$42B valuation"
+            }
           ]
         }
       },
@@ -4497,6 +4554,20 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "SELLER, IN SHORT",
+          "title": "What the app actually does",
+          "items": [
+            {"label": "Launched", "value": "July 24, 2026"},
+            {"label": "What the AI fills in", "value": "Title, description, price, category — from a photo"},
+            {"label": "Verification", "value": "Free selfie-based ID check", "note": "badge shows across Marketplace, Dating, Groups"},
+            {"label": "Availability", "value": "iOS only, US users 18+", "note": "Android and web still in testing"},
+            {"label": "Scale", "value": "430M items/month across 1.1B active users"}
+          ]
+        }
+      },
+      {
         "type": "p",
         "text": "Meta paired the launch with Facebook Verified, a free identity check that only requires a selfie rather than a paid subscription, adding a checkmark badge visible across Marketplace, Dating, and Groups. The app is live now on the App Store for US users 18 and older, with Android and web versions still in testing. Meta says 430 million items are listed on Marketplace globally each month, across more than 1.1 billion active users — the scale that makes even a modest per-listing time savings worth building a dedicated app around.",
         "citation_urls": [
@@ -4537,6 +4608,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "No trigger from compliance-rulebook.md §1 fired: consumer product launch, no health/financial/legal/accusatory content, no quotes used. No disclaimer required for a Products-section piece."
+        },
+        {
+          "name": "Archive backfill (§3c)",
+          "agent": "claude-runner",
+          "note": "Added a keyfacts component (launch date, AI listing fields, verification, availability, scale) as the piece's one required component for a brief below the visual-component floor. Every value traces to text already in the article's own body -- no new facts introduced. Loop 2 provenance check: all five items walked against the existing prose and confirmed present verbatim or as a direct restatement of a stated figure; word count and format tier unchanged, no top-level text field on the component."
         }
       ],
       "gate": {
@@ -4586,6 +4662,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "FIVE CLAIMS, FIVE DIFFERENT YARDSTICKS",
+          "title": "What each Opus 5 benchmark number actually compares",
+          "items": [
+            {"value": "2x+", "unit": "Frontier-Bench v0.1", "label": "Score vs. Opus 4.8, at lower cost per task", "includes": "Anthropic's own frontier-capability benchmark suite", "excludes": "An exact multiple — Anthropic says only \"more than doubles\"", "note": "Also excludes which other labs' models, if any, were run on the same suite."},
+            {"value": "0.5pp", "unit": "CursorBench 3.2", "label": "Gap to Fable 5's peak score, at half Fable 5's cost", "includes": "A coding-agent benchmark, Opus 5 vs. Anthropic's own flagship", "excludes": "Any rival lab's model on the same benchmark"},
+            {"value": "3x", "unit": "ARC-AGI 3", "label": "Score vs. the next-best model Anthropic tested", "includes": "Anthropic's own test run", "excludes": "Which model was \"next-best,\" and its own score"},
+            {"value": "1.5x", "unit": "Zapier AutomationBench", "label": "Pass rate vs. next-best model, at the same price", "includes": "Task-completion pass rate on Zapier's benchmark", "excludes": "Which model is being compared against"},
+            {"value": "1/3", "unit": "OSWorld 2.0", "label": "Cost to beat Fable 5's own result outright", "includes": "A computer-use benchmark", "excludes": "The absolute scores either model achieved"}
+          ],
+          "source": "Anthropic's own Opus 5 launch announcement — no figure here is independently confirmed."
+        }
+      },
+      {
         "type": "p",
         "text": "Anthropic is also positioning Opus 5 as, in its words, its most capable generally available model for scientific research, with the clearest gains in biology: the company reports Opus 5 beats Opus 4.8 on every one of its life-sciences evaluations, including a 10.2-percentage-point jump on organic-chemistry tasks and a 7.7-point gain on protein-related tasks. That capability cuts both ways. Anthropic says Opus 5 also carries stronger safety guardrails specifically around biological-research requests that could be misused, routing a wider set of blocked queries than Opus 4.8 did — an acknowledgment that a model genuinely more useful to a biologist is, by the same token, more useful to someone trying to misuse it.",
         "citation_urls": [
@@ -4598,6 +4689,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "citation_urls": [
           "https://www.anthropic.com/news/claude-opus-5"
         ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "WHAT'S ESTABLISHED, WHAT'S ANTHROPIC'S WORD",
+          "items": [
+            {
+              "claim": "Opus 5 beats rivals by up to 3x on select benchmarks, including ARC-AGI 3 and AutomationBench.",
+              "level": "company",
+              "basis": "Anthropic's own published results; comparison models and prompting conditions not disclosed.",
+              "resolver": "Independent benchmarking once outside groups have had time with the model."
+            },
+            {
+              "claim": "Opus 5 scores 2.3 on Anthropic's behavioral-safety audit, its best Opus score yet.",
+              "level": "company",
+              "basis": "Anthropic's own automated audit; scoring methodology not independently reviewed here.",
+              "resolver": "A third-party safety evaluation, or Anthropic's own methodology paper if one is published."
+            },
+            {
+              "claim": "Mythos 5 still beats Opus 5 on two safety axes: biology-research and offensive-cybersecurity misuse resistance.",
+              "level": "company",
+              "basis": "Disclosed by Anthropic in the same release — notable because it runs against the launching company's own promotional interest.",
+              "resolver": "An independent audit of Mythos 5 against Opus 5 on the same two axes."
+            }
+          ]
+        }
       },
       {
         "type": "p",
@@ -4637,6 +4754,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude",
           "note": "No trigger from compliance-rulebook.md §1 fired: no health/financial/legal/accusatory content, no quotes used. All benchmark and safety figures are explicitly attributed as Anthropic's own self-reported results, never stated as independently confirmed fact — the load-bearing caveat is carried in the title, the final TL;DR bullet, and the body's benchmark paragraph."
+        },
+        {
+          "name": "Archive backfill (§3c)",
+          "agent": "claude-runner",
+          "note": "Added two components to bring this synthesis up to its two-component floor: a ledger breaking out the five benchmark claims by what each one actually compares (already the article's own point about heterogeneous yardsticks, made structurally visible), and a scorecard marking all three headline claim clusters 'company' level, consistent with the piece's existing self-reported-not-independently-verified framing. Loop 2 provenance check: every ledger and scorecard value walked against the existing body text and confirmed present (the '2x+' ledger entry restates Anthropic's own 'more than doubles' language as a floor, not a new figure). No new facts introduced; word count and format tier unchanged; neither component carries a top-level text field."
         }
       ],
       "gate": {
@@ -16728,5 +16850,464 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-11T12:50:00Z"
+  },
+  {
+    "slug": "deephealth-fda-clearance-ai-breast-ultrasound",
+    "title": "The FDA cleared an AI tool that flags breast-cancer lesions on ultrasound. The accuracy numbers behind it aren't published yet.",
+    "dek": "DeepHealth's SMART-B software won 510(k) clearance on July 28, automating lesion detection and BI-RADS-style characterization on breast ultrasound. RadNet, DeepHealth's parent, cites a company-run study of 16 radiologists showing an 8-point sensitivity gain and a 37% cut in read time — figures that haven't yet appeared in a peer-reviewed journal.",
+    "persona": "priya-anand",
+    "section": "Health",
+    "format": "synthesis",
+    "disclaimer": "not-medical-advice",
+    "tldr": [
+      "The FDA cleared DeepHealth's AI breast-ultrasound tool, SMART-B, on July 28 under 510(k) K260303.",
+      "It automates lesion detection and BI-RADS-style characterization; radiologists keep final sign-off.",
+      "RadNet's own 16-radiologist study reports 98%+ localization accuracy and an 8-point sensitivity gain.",
+      "RadNet plans network-wide rollout across 400+ centers, covering up to 700,000 studies a year.",
+      "Caveat: the validation study is company-run and not yet published in a peer-reviewed journal."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The [FDA](https://api.fda.gov/device/510k.json?search=applicant:%22See-Mode%22) cleared a new AI tool for reading breast ultrasounds on July 28: 510(k) K260303, granted to See-Mode Technologies for the See-Mode Augmented Reporting Tool, Breast — sold in the US as DeepHealth Breast Ultrasound. DeepHealth is a subsidiary of RadNet, the outpatient imaging chain, which acquired See-Mode's Australian parent company as part of its push into AI-assisted radiology. The software automates detection and characterization of suspicious lesions on breast ultrasound images — shape, orientation, margin, echo pattern, and posterior features, described using terminology aligned with the American College of Radiology's BI-RADS system — and drafts a structured report. The radiologist reviewing the scan retains final sign-off; the software does not issue a diagnosis on its own.",
+        "citation_urls": [
+          "https://www.globenewswire.com/news-release/2026/07/30/3336456/0/en/deephealth-receives-fda-clearance-for-ai-powered-breast-ultrasound.html",
+          "https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15831375/deephealth-lands-fda-nod-for-breast-ultrasound-ai-software"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "THE CLEARANCE, IN SHORT",
+          "title": "What K260303 covers",
+          "items": [
+            {
+              "label": "Cleared",
+              "value": "July 28, 2026",
+              "note": "FDA 510(k) K260303"
+            },
+            {
+              "label": "Device",
+              "value": "SMART-B (DeepHealth Breast Ultrasound)"
+            },
+            {
+              "label": "Maker",
+              "value": "See-Mode Technologies, a DeepHealth (RadNet) company"
+            },
+            {
+              "label": "Pathway",
+              "value": "510(k) substantial equivalence",
+              "note": "not a full premarket approval"
+            },
+            {
+              "label": "Who reads the scan",
+              "value": "A radiologist — the tool drafts, it doesn't sign off"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "A 510(k) clearance is a narrower regulatory bar than it can sound like. It means the FDA agrees the device is *substantially equivalent* to an already-cleared device of the same type — in this case, See-Mode's own prior clearances — not that the agency independently verified the specific accuracy numbers RadNet is now publicizing. Those numbers come from RadNet's own multi-reader, multi-case study: 16 US board-certified radiologists reading the same case set with and without the software, which RadNet reports produced greater than 98% lesion-localization accuracy, an 8-percentage-point improvement in cancer-detection sensitivity, and a 37% reduction in radiologist interpretation time. As of this writing, that study has not appeared in a peer-reviewed journal — the figures are RadNet's own characterization of its own trial, not yet independently checked by outside reviewers.",
+        "citation_urls": [
+          "https://www.healthcaredive.com/news/deephealth-gets-fda-nod-for-ai-tool-that-reads-ultrasounds-creates-reports/827093/",
+          "https://www.medicaldevice-network.com/news/fda-510k-deephealth-ai-breast-ultrasound/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Breast ultrasound itself is already a common supplemental exam — used alongside mammography for patients with dense breast tissue, where mammograms alone are known to miss more findings, and for following up on something a mammogram flagged. Reading ultrasound images has historically been more subjective than reading a mammogram, since the sonographer's positioning and the radiologist's real-time interpretation both shape what gets reported, which is precisely the kind of variability an automated first-pass characterization tool is aimed at reducing. That context is why a clearance like this one matters beyond its own numbers: it's not introducing AI into a new corner of medicine so much as targeting the specific step in an already-common exam where human interpretation varies most.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The billing code RadNet is counting on is also worth reading carefully. Category III CPT codes, the type covering quantitative ultrasound tissue characterization here, are temporary tracking codes for emerging technology — they let a service be billed and studied, but they don't carry the same payment guarantee as an established Category I code, and individual insurers decide separately whether and how much to pay against them. RadNet's 700,000-study estimate is a ceiling on studies that could qualify, not a confirmed reimbursement figure from any specific payer.",
+        "citation_urls": [
+          "https://www.globenewswire.com/news-release/2026/07/30/3336456/0/en/deephealth-receives-fda-clearance-for-ai-powered-breast-ultrasound.html"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Not RadNet's first anatomy"
+      },
+      {
+        "type": "p",
+        "text": "SMART-B is the third device in a pattern, not a one-off. See-Mode's FDA record shows the same augmented-reporting approach applied to a new body part roughly every two years: a vascular-ultrasound tool in 2020, a thyroid-ultrasound tool in 2024, and now breast ultrasound in 2026. Separately, DeepHealth's own mammography-AI line — Saige-Dx and Saige-Density, acquired from an earlier startup — has been through several of its own clearances and updates over the same stretch. RadNet is assembling a portfolio that covers more of the imaging a single outpatient network runs, one modality at a time, rather than betting on a single flagship product.",
+        "citation_urls": [
+          "https://api.fda.gov/device/510k.json?search=applicant:%22See-Mode%22",
+          "https://api.fda.gov/device/510k.json?search=applicant:%22DeepHealth%22"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "SEE-MODE'S FDA RECORD, BY ANATOMY",
+          "items": [
+            {
+              "when": "Sep 2020",
+              "what": "AVA (Augmented Vascular Analysis) cleared — K201369.",
+              "source": "https://api.fda.gov/device/510k.json?search=applicant:%22See-Mode%22"
+            },
+            {
+              "when": "Sep 2024",
+              "what": "SMART-T, the thyroid version, cleared — K240697.",
+              "source": "https://api.fda.gov/device/510k.json?search=applicant:%22See-Mode%22"
+            },
+            {
+              "when": "Jul 28, 2026",
+              "what": "SMART-B, the breast version, cleared — K260303.",
+              "hi": true,
+              "source": "https://api.fda.gov/device/510k.json?search=applicant:%22See-Mode%22"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The rollout plan is where the clearance turns into a business decision rather than just a regulatory milestone. RadNet intends to deploy DeepHealth Breast Ultrasound across its network of more than 400 outpatient imaging centers by the end of 2026, and estimates more than 700,000 annual breast-ultrasound studies could qualify for reimbursement under an existing Category III CPT code covering quantitative ultrasound tissue characterization. That reimbursement pathway matters as much as the clearance itself: a cleared device with no billing code attached to its output is a much harder sell to a radiology practice than one that fits an existing payment mechanism.",
+        "citation_urls": [
+          "https://www.globenewswire.com/news-release/2026/07/30/3336456/0/en/deephealth-receives-fda-clearance-for-ai-powered-breast-ultrasound.html"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "WHAT'S ESTABLISHED, WHAT'S RADNET'S WORD",
+          "items": [
+            {
+              "claim": "The FDA cleared SMART-B as substantially equivalent to prior See-Mode devices.",
+              "level": "confirmed",
+              "basis": "Public FDA 510(k) database record, K260303, decision dated July 28, 2026.",
+              "resolver": "Already resolved — this is a matter of public regulatory record."
+            },
+            {
+              "claim": "SMART-B achieves >98% lesion-localization accuracy and an 8-point sensitivity gain.",
+              "level": "company",
+              "basis": "RadNet's own multi-reader, multi-case study of 16 radiologists; not yet published in a peer-reviewed journal.",
+              "resolver": "Peer-reviewed publication of the full MRMC study, or the FDA's public 510(k) summary decision document for K260303."
+            },
+            {
+              "claim": "The tool will cut radiologist interpretation time by 37% in real-world use.",
+              "level": "company",
+              "basis": "Same internal study, measured in a controlled reading exercise rather than live clinical workflow.",
+              "resolver": "Post-deployment workflow data from RadNet's own centers once the rollout is underway."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "SMART-B arrives alongside a broader wave of FDA activity in AI-assisted imaging this year — Aidoc and Cognita have each received FDA breakthrough-device designations for tools that read chest X-rays and draft reports, a status that fast-tracks FDA review but is not itself a clearance. The pattern across all of these tools is consistent: automate the parts of a radiologist's report that are structured and repetitive, leave the actual call to a licensed physician, and let the reimbursement code do the work of making adoption an economic decision rather than a purely clinical one. Whether the specific accuracy gains RadNet is citing hold up once independent researchers can review the underlying study is the open question the clearance itself doesn't answer.",
+        "citation_urls": [
+          "https://www.healthcaredive.com/news/deephealth-gets-fda-nod-for-ai-tool-that-reads-ultrasounds-creates-reports/827093/"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch for peer-reviewed publication of the MRMC study.",
+        "text": "That's the resolver for the 8-point sensitivity claim and the 37% time-reduction figure — until then, both are RadNet's own characterization."
+      },
+      {
+        "label": "Watch RadNet's year-end deployment numbers.",
+        "text": "The company's own target is network-wide rollout across 400+ centers by the end of 2026 — a concrete, checkable milestone."
+      },
+      {
+        "label": "Patients getting a breast ultrasound at a RadNet center can ask directly whether AI-assisted reporting was used.",
+        "text": "The clearance requires a radiologist to retain final sign-off, which is a fact worth confirming in your own read, not just taking on trust."
+      },
+      {
+        "label": "Watch whether CMS or private payers publish specific coverage guidance for the CPT code RadNet is citing.",
+        "text": "Existing-code reimbursement is RadNet's own reading of an existing billing category, not a guarantee every payer reimburses it the same way."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "FDA openFDA 510(k) database — See-Mode Technologies clearance records",
+        "url": "https://api.fda.gov/device/510k.json?search=applicant:%22See-Mode%22",
+        "primary": true
+      },
+      {
+        "label": "FDA openFDA 510(k) database — DeepHealth, Inc. clearance records",
+        "url": "https://api.fda.gov/device/510k.json?search=applicant:%22DeepHealth%22",
+        "primary": true
+      },
+      {
+        "label": "GlobeNewswire — \"DeepHealth Receives FDA Clearance for AI-Powered Breast Ultrasound\"",
+        "url": "https://www.globenewswire.com/news-release/2026/07/30/3336456/0/en/deephealth-receives-fda-clearance-for-ai-powered-breast-ultrasound.html"
+      },
+      {
+        "label": "Healthcare Dive — \"DeepHealth gets FDA nod for AI tool that reads ultrasounds, creates reports\"",
+        "url": "https://www.healthcaredive.com/news/deephealth-gets-fda-nod-for-ai-tool-that-reads-ultrasounds-creates-reports/827093/"
+      },
+      {
+        "label": "AuntMinnie — \"DeepHealth lands FDA nod for breast ultrasound AI software\"",
+        "url": "https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15831375/deephealth-lands-fda-nod-for-breast-ultrasound-ai-software"
+      },
+      {
+        "label": "Medical Device Network — \"FDA grants 510k clearance for DeepHealth's AI breast ultrasound technology\"",
+        "url": "https://www.medicaldevice-network.com/news/fda-510k-deephealth-ai-breast-ultrasound/"
+      }
+    ],
+    "id": "newsroom-deephealth-fda-clearance-ai-breast-ultrasound",
+    "image": "assets/img/newsroom/newsroom-deephealth-fda-clearance-ai-breast-ultrasound.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-11T20:14:55Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced via a health-beat sweep for FDA activity not yet covered; grep of newsroom-articles.js confirmed no prior DeepHealth/See-Mode/breast-ultrasound coverage. The specific 510(k) number and device name (K260303, SMART-B) were not directly confirmed by any single fetched news article -- several returned only 'not specified in the article' -- so they were verified independently against the FDA's own openFDA API by searching applicant:See-Mode, which returned the k_number, device_name, applicant, and decision_date directly from the government database. That query and its DeepHealth-applicant counterpart are cited as the two primary sources; five independent secondary threads (GlobeNewswire's company release, Healthcare Dive, AuntMinnie, Medical Device Network, and the Aidoc/Cognita breakthrough-designation context) round out the source set."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Cross-checked the >98% localization accuracy, 8-point sensitivity gain, and 37% interpretation-time reduction across three independently fetched outlets (Healthcare Dive, AuntMinnie, Medical Device Network) -- all three report the same figures, consistent with a single company-supplied press kit rather than independent verification, which is exactly why the scorecard marks them 'company' level rather than 'confirmed.' The Aidoc/Cognita comparison was checked to confirm 'breakthrough device designation' is the accurate FDA status term for those tools, distinct from a 510(k) clearance, so the article does not conflate the two."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft's lede led with the accuracy figures before establishing they were unpublished and company-run, which read as endorsing the numbers before the caveat landed. Revised the title, dek, and lede to state the unpublished-data caveat up front rather than as a late qualifier. No self-referential language found on re-read."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 1 (health/medical claims) applies directly -- this is a cancer-detection diagnostic-adjacent tool. Remediated with the not-medical-advice disclaimer, by stating plainly that a radiologist retains final sign-off and the software does not diagnose, and by marking the company's own clinical-performance claims as 'company' level in the scorecard rather than presenting them as established fact. No legal-proceeding, financial, or accusatory-claim triggers apply. Disclaimer: not-medical-advice."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-08-11T20:14:55Z"
+  },
+  {
+    "slug": "openai-apple-trade-secrets-motion-to-dismiss",
+    "title": "OpenAI asks a judge to throw out Apple's trade-secrets lawsuit, calling it \"rotten to its core\"",
+    "dek": "Apple's July complaint accuses two named ex-Apple hires, now at OpenAI's hardware unit, of taking confidential files and supplier information. OpenAI's August 5 motion to dismiss says the claims describe no protectable secret and calls the more than 400 Apple alumni now on its payroll ordinary industry hiring, not a scheme. A judge hears the motion October 1.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Apple sued OpenAI, io Products, and two named ex-Apple employees for trade-secret theft on July 10.",
+      "OpenAI's August 5 motion calls the complaint \"rotten to its core\" and cites no described trade secret.",
+      "Apple alleges Chang Liu downloaded confidential files and Tang Yew Tan emailed himself supplier data.",
+      "Apple's complaint separately counts more than 400 of its former employees now working at OpenAI.",
+      "Caveat: a motion to dismiss tests the complaint's legal sufficiency, not whether Apple's factual allegations are true."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[OpenAI](#/company/openai) filed a 31-page motion on August 5 asking a federal judge to throw out [Apple](#/company/apple)'s trade-secret lawsuit before it reaches discovery, arguing the complaint \"is — to borrow its own phrase — 'rotten to its core.'\" The case, *Apple Inc. v. Liu*, was filed July 10 in the U.S. District Court for the Northern District of California and names four defendants: OpenAI Foundation, OpenAI Group PBC, OpenAI's hardware subsidiary io Products, and two individuals — Chang Liu and Tang Yew Tan, both former Apple hardware engineers now working on OpenAI's own hardware push.",
+        "citation_urls": [
+          "https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/",
+          "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What Apple's complaint alleges"
+      },
+      {
+        "type": "p",
+        "text": "Apple's suit centers on two named individuals rather than the company as a whole. Chang Liu spent eight years at Apple as a senior systems electrical engineer working on sensitive product-development programs before leaving in January 2026 to join OpenAI; Apple alleges he accessed confidential hardware files after discovering an authentication bug in an internal system, downloaded them, and instructed another employee on how to copy similar material. Tang Yew Tan, Apple's former chief hardware officer and now OpenAI's, is separately alleged to have emailed himself internal supplier information before he left, and to have asked job candidates in interviews to bring Apple parts or documentation with them.",
+        "citation_urls": [
+          "https://www.pymnts.com/legal/2026/openai-seeks-dismissal-apple-trade-secrets-lawsuit/",
+          "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THE DISPUTE, SIDE BY SIDE",
+          "title": "Apple's complaint vs. OpenAI's motion to dismiss",
+          "columns": [
+            {
+              "label": "Apple's complaint",
+              "sub": "filed July 10"
+            },
+            {
+              "label": "OpenAI's motion",
+              "sub": "filed August 5",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Chang Liu's file access",
+              "values": [
+                "Downloaded confidential hardware files after finding an authentication bug; instructed a colleague on copying similar files",
+                "Conduct was benign and lawful; Apple's own systems and policies made the access foreseeable, not evidence of theft"
+              ]
+            },
+            {
+              "label": "Tang Yew Tan's emails",
+              "values": [
+                "Emailed himself internal supplier information before departing; asked interview candidates to bring Apple hardware",
+                "Standard recruiting and personal-file practices, not a coordinated extraction scheme"
+              ]
+            },
+            {
+              "label": "The trade secrets themselves",
+              "values": [
+                "Confidential hardware, supplier, and product-development information",
+                "Not described with the specificity trade-secret law requires — the motion says Apple never identifies what, exactly, was taken"
+              ]
+            },
+            {
+              "label": "OpenAI's broader hiring",
+              "values": [
+                "More than 400 former Apple employees now work at OpenAI, framed as part of the alleged pattern",
+                "Ordinary industry recruiting; OpenAI says it \"has no use, need or desire for Apple's trade secrets\""
+              ]
+            }
+          ],
+          "source": "Apple Inc. v. Liu, No. 5:26-cv-07078 (N.D. Cal.), complaint and OpenAI's motion to dismiss, as reported by PYMNTS and Claims Journal."
+        }
+      },
+      {
+        "type": "p",
+        "text": "OpenAI's motion leans hard on that last point: it says Apple's complaint uses the word \"fail\" — describing what Apple's own suit fails to do — nearly 50 times across its filing, and argues \"Apple cannot transform the foreseeable consequences of its own systems and policies into evidence of theft.\" On the broader hiring pattern, the motion frames Apple's more-than-400-alumni count not as evidence of a scheme but as a symptom of a company Apple itself has struggled to keep pace with: OpenAI says it is \"building something entirely new and different from anything at Apple,\" and has no reason to want Apple's designs.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/openai-moves-dismiss-apple-trade-124250130.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The legal bar OpenAI is pointing at is specific. To win a trade-secret claim under the federal Defend Trade Secrets Act, Apple has to show three things: that the information was actually secret, that Apple took reasonable steps to keep it that way, and that a defendant acquired or used it improperly. OpenAI's motion attacks the first element directly — it argues Apple's complaint describes categories of information (\"supplier data,\" \"confidential hardware files\") rather than the specific, identifiable secrets the statute requires, which is a common and often effective way to get a trade-secret case thrown out before discovery ever starts. Whether Apple's complaint clears that bar is now squarely the judge's call, not something either company's public statements can settle.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Why two hardware engineers, specifically"
+      },
+      {
+        "type": "p",
+        "text": "The lawsuit reads as much as a fight over Apple's talent pipeline as over any single document. Liu and Tan aren't Apple's only high-profile departures to [OpenAI](#/company/openai)'s hardware side — Jony Ive, Apple's former chief design officer, now works on the same product push through the io acquisition, though Apple's complaint does not name him as a defendant. Apple's own public response has stayed narrow and measured rather than escalating the rhetoric: the company said only that \"protecting their work and intellectual property is something we take very seriously,\" and that it would \"defend our teams' hard work.\" That restraint is notable next to OpenAI's much more combative filing, and it leaves the two sides currently arguing past each other — one describing ordinary hiring, the other describing an extraction scheme — rather than disputing the same set of facts.",
+        "citation_urls": [
+          "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The underlying tension is bigger than either named engineer. OpenAI's push into physical hardware through io Products depends on exactly the kind of design and manufacturing expertise Apple has spent decades concentrating in-house, and Apple is watching a competitor recruit directly against that advantage while it works to catch up on its own AI roadmap. Framed that way, the lawsuit reads as Apple trying to use trade-secret law to slow a talent drain it can't otherwise stop, and OpenAI's motion reads as an attempt to keep that fight out of a courtroom where discovery could expose exactly how io Products' hardware plans took shape. Neither company has said either of those things directly — both are litigating around narrower, individual conduct — but it is the strategic backdrop the specific allegations sit inside.",
+        "citation_urls": []
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "SIX MONTHS, TWO FILINGS",
+          "items": [
+            {
+              "when": "Jan 2026",
+              "what": "Chang Liu leaves Apple after eight years to join OpenAI.",
+              "source": "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+            },
+            {
+              "when": "Jul 10, 2026",
+              "what": "Apple files Apple Inc. v. Liu in the Northern District of California, naming Liu, Tan, OpenAI Foundation, OpenAI Group PBC, and io Products.",
+              "hi": true,
+              "source": "https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/"
+            },
+            {
+              "when": "Aug 5, 2026",
+              "what": "OpenAI files a 31-page motion to dismiss, calling the complaint \"rotten to its core.\"",
+              "hi": true,
+              "source": "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+            },
+            {
+              "when": "Oct 1, 2026",
+              "what": "Hearing on the motion to dismiss, San Jose courthouse.",
+              "future": true,
+              "source": "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "A motion to dismiss is a narrower legal move than it can sound like from the outside. It asks the judge to rule that Apple's complaint fails as a matter of law — that even if every factual allegation in it were true, it still wouldn't add up to a legally recognized trade-secret claim — not to weigh whether the underlying facts happened. If the judge denies the motion, the case moves into discovery, where both sides can compel documents and depositions and the actual authentication-bug access, the emailed supplier list, and the interview-room requests would get tested against evidence rather than argued from the complaint and the motion alone. If the judge grants it, at least in part, Apple would likely get a chance to refile with more specific allegations before the case is fully closed out.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch the October 1 hearing.",
+        "text": "A denial sends the case into discovery, where the authentication-bug access and the supplier emails get tested against actual evidence rather than argued from filings alone."
+      },
+      {
+        "label": "Watch Apple's opposition brief.",
+        "text": "Due later in August — whether it adds specifics beyond what's already in the complaint will show if Apple has more than the allegations already public."
+      },
+      {
+        "label": "Watch io Products' first shipping hardware.",
+        "text": "A real device lets outside observers compare what OpenAI actually built against what Apple says Liu and Tan took — the clearest test of either side's framing."
+      },
+      {
+        "label": "Watch whether more named-individual suits follow.",
+        "text": "With over 400 ex-Apple employees now at OpenAI, this is the first individual-conduct case tied to that hiring wave, not obviously the last."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "CourtListener — Apple Inc. v. Liu, No. 5:26-cv-07078 (N.D. Cal.) docket",
+        "url": "https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/",
+        "primary": true
+      },
+      {
+        "label": "Claims Journal (AP) — \"OpenAI Asks Judge to Toss Apple's Trade Secrets Lawsuit\"",
+        "url": "https://www.claimsjournal.com/news/national/2026/08/07/339348.htm"
+      },
+      {
+        "label": "PYMNTS — \"OpenAI Seeks Dismissal of Apple Trade Secrets Lawsuit\"",
+        "url": "https://www.pymnts.com/legal/2026/openai-seeks-dismissal-apple-trade-secrets-lawsuit/"
+      },
+      {
+        "label": "Yahoo Finance — \"OpenAI moves to dismiss Apple trade secrets lawsuit\"",
+        "url": "https://finance.yahoo.com/technology/ai/articles/openai-moves-dismiss-apple-trade-124250130.html"
+      }
+    ],
+    "id": "newsroom-openai-apple-trade-secrets-motion-to-dismiss",
+    "image": "assets/img/newsroom/newsroom-openai-apple-trade-secrets-motion-to-dismiss.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-11T20:14:57Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced via a general AI-industry sweep for stories not yet on the site; confirmed via grep of slug/title text against newsroom-articles.js that no prior article covers this motion, though the io Products device brief (openai-screenless-speaker-device-report) had already referenced the underlying lawsuit in passing. Four independent, materially distinct threads used: the CourtListener docket (primary court record), Claims Journal's AP-wire report, PYMNTS' independent reporting, and Yahoo Finance's Bloomberg-sourced coverage. A fifth candidate detail -- a specific PACER internal docket id surfaced by one fetch -- was cross-checked against the CourtListener search result and found to be the same case under its gov.uscourts.cand.474095 internal identifier, not a conflicting case, so both numbers are consistent rather than in dispute."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Every quote (\"rotten to its core,\" \"fail\" ~50 times, \"cannot transform the foreseeable consequences,\" \"building something entirely new and different from anything at Apple,\" Apple's \"protecting their work\" statement) confirmed verbatim against at least one fetched source before use. The exact response-due date for Apple's opposition brief was reported inconsistently across sources (Aug 17 vs Aug 19) and was deliberately left out of the article rather than guessed; only the consistently corroborated October 1 hearing date is stated as a specific date."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft stated the case as though OpenAI's framing and Apple's framing were being adjudicated by this article; revised the closing paragraph to state plainly what a motion to dismiss does and does not decide, so the piece doesn't imply a verdict neither side has yet gotten. No self-referential language found on re-read. No conflicting numeric claims requiring a sourcecheck component -- the docket-id discrepancy was a labeling question, not a factual dispute between sources."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 3 (legal proceedings) and Trigger 4 (accusatory claims about named real people/companies -- Liu, Tan, Apple, OpenAI) both apply directly. Remediated by reporting every allegation as an allegation attributed to the complaint or the motion, never as established fact; by giving both sides' framing roughly equal space; and by sourcing every quote to a linked, fetched primary or wire source. Trigger 5 (verbatim quotes) satisfied -- all quotes confirmed verbatim against fetched text. No health or financial-advice triggers apply. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-08-11T20:14:57Z"
   }
 ];

@@ -985,5 +985,204 @@ window.RTFC_SOCIAL_POSTS = [
       "post_url": null
     }
   ]
+},
+{
+  "article_id": "newsroom-deephealth-fda-clearance-ai-breast-ultrasound",
+  "ts": "2026-08-11T20:15:41Z",
+  "export": {
+    "article_id": "newsroom-deephealth-fda-clearance-ai-breast-ultrasound",
+    "url": "/#/article/deephealth-fda-clearance-ai-breast-ultrasound",
+    "headline": "The FDA cleared an AI tool that flags breast-cancer lesions on ultrasound. The accuracy numbers behind it aren't published yet.",
+    "hook": "The FDA cleared DeepHealth's AI breast-ultrasound tool on July 28 -- but the 98% accuracy and 8-point sensitivity gain RadNet is citing come from its own unpublished study, not an outside review.",
+    "key_facts": [
+      "FDA 510(k) K260303 cleared DeepHealth's SMART-B breast-ultrasound AI on July 28",
+      "RadNet's own 16-radiologist study reports >98% lesion-localization accuracy and an 8-point sensitivity gain",
+      "RadNet plans to deploy across 400+ imaging centers, covering up to 700,000 studies a year"
+    ],
+    "tone": "precise, evidence-first",
+    "persona": "priya-anand",
+    "section": "Health",
+    "primary_image": "assets/img/newsroom/newsroom-deephealth-fda-clearance-ai-breast-ultrasound.jpg",
+    "disclaimer": "not-medical-advice"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "FDA cleared an AI tool that reads breast ultrasounds and flags cancer lesions on July 28. The 98% accuracy and 8-point sensitivity gain being cited? RadNet's own study, not yet peer-reviewed.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": ["#AIHealth", "#FDA"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-12T01:15:41Z",
+      "copy": "A 510(k) clearance means the FDA found this device \"substantially equivalent\" to prior ones -- not that it independently verified the accuracy numbers the company is now publicizing. Worth knowing before the headline percentage sticks.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": ["#AI", "#Radiology"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "The FDA cleared an AI tool on July 28 that reads breast ultrasounds, flags suspicious lesions, and drafts the report -- a radiologist still signs off.\n\nThe company behind it says its own study found 98%+ accuracy and an 8-point jump in cancer-detection sensitivity. That study hasn't been peer-reviewed yet.\n\nWe broke down what's FDA-confirmed versus what's still just the company's word. Full story at the link in bio. Not medical advice.",
+      "hashtags": ["#AIHealth", "#FDA", "#Radiology", "#BreastCancer", "#HealthTech", "#AI"],
+      "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "The FDA cleared DeepHealth's AI breast-ultrasound tool on July 28 -- it automates lesion detection and drafts a report, with a radiologist keeping final sign-off.\n\nDeepHealth's parent, RadNet, cites its own 16-radiologist study: more than 98% lesion-localization accuracy, an 8-point sensitivity gain, and a 37% cut in interpretation time. That study hasn't appeared in a peer-reviewed journal yet -- worth knowing before taking the percentages as independently confirmed.\n\nWe laid out what's regulatory fact versus what's still just the company's own account. Full story (not medical advice):",
+      "hashtags": ["#AIHealth", "#FDA"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "FDA cleared an AI breast-ultrasound tool July 28. The 98% accuracy and 8-point sensitivity gain being cited are from the company's own unpublished study, not an outside review. Radiologist still signs off. Not medical advice.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "FDA cleared DeepHealth's AI breast-ultrasound tool July 28 (510k K260303). The >98% accuracy / 8pt sensitivity numbers are RadNet's own unpublished study, not independently verified. Not medical advice.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-openai-apple-trade-secrets-motion-to-dismiss",
+  "ts": "2026-08-11T20:15:41Z",
+  "export": {
+    "article_id": "newsroom-openai-apple-trade-secrets-motion-to-dismiss",
+    "url": "/#/article/openai-apple-trade-secrets-motion-to-dismiss",
+    "headline": "OpenAI asks a judge to throw out Apple's trade-secrets lawsuit, calling it \"rotten to its core\"",
+    "hook": "OpenAI's motion to dismiss Apple's trade-secrets suit says Apple never identifies an actual secret -- just two ex-Apple hires doing standard industry recruiting. A judge hears it October 1.",
+    "key_facts": [
+      "Apple sued OpenAI, io Products, and two named ex-Apple engineers on July 10",
+      "OpenAI's Aug 5 motion calls the complaint \"rotten to its core,\" says the word \"fail\" appears ~50 times in Apple's own filing",
+      "Apple's complaint separately counts more than 400 of its former employees now at OpenAI"
+    ],
+    "tone": "composed, legally precise",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/newsroom-openai-apple-trade-secrets-motion-to-dismiss.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "OpenAI's motion to dismiss Apple's trade-secrets suit calls it \"rotten to its core\" -- and points out Apple's own complaint uses the word \"fail\" nearly 50 times. A judge hears the motion October 1.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": ["#OpenAI", "#Apple"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-08-12T01:15:41Z",
+      "copy": "Apple's complaint counts more than 400 of its former employees now working at OpenAI. OpenAI's motion says that's just what happens when Apple loses the talent war -- not evidence of a scheme.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": ["#AI", "#TechLaw"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Apple sued OpenAI in July, alleging two ex-Apple hardware engineers took confidential files and supplier info on their way out.\n\nOpenAI's August 5 motion to dismiss calls the complaint \"rotten to its core\" and says Apple never actually identifies a protectable trade secret.\n\nA judge hears the motion October 1. We laid out both sides' claims next to each other. Full story at the link in bio.",
+      "hashtags": ["#OpenAI", "#Apple", "#TechNews", "#AI", "#Lawsuit"],
+      "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Apple sued OpenAI, its hardware unit io Products, and two named ex-Apple engineers in July, alleging trade-secret theft -- confidential files, supplier data, and interview-room requests for Apple hardware.\n\nOpenAI's August 5 motion to dismiss fires back hard, calling the complaint \"rotten to its core\" and arguing Apple never identifies a specific, protectable secret -- just ordinary industry recruiting, dressed up as a scheme.\n\nA judge hears the motion October 1. We put Apple's claims and OpenAI's rebuttal side by side. Full story:",
+      "hashtags": ["#OpenAI", "#Apple"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "OpenAI's motion to dismiss Apple's trade-secrets suit calls it \"rotten to its core,\" says Apple never names an actual secret. Apple's complaint counts 400+ ex-Apple staff now at OpenAI. Judge hears it Oct 1.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "OpenAI moves to dismiss Apple's trade-secrets suit, calling it \"rotten to its core.\" Apple alleges two named ex-engineers took files/supplier data; OpenAI says no secret is actually described. Hearing Oct 1.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "g6",
+  "ts": "2026-08-11T20:15:41Z",
+  "export": {
+    "article_id": "g6",
+    "url": "/#/article/keep-claude-code-asking-before-it-acts",
+    "headline": "Keep Claude Code asking before it acts, before auto mode becomes the default on August 14",
+    "hook": "Claude Code switches to auto-approval by default on August 14. Here's the exact setting to get a human checkpoint back -- on everything, or just on pushes.",
+    "key_facts": [
+      "Auto mode becomes default for new Claude Code sessions on Pro, Max, and Team plans August 14",
+      "Shift+Tab in the CLI (or the desktop mode dropdown) switches modes any time",
+      "A permissions.ask rule in settings.json checkpoints pushes and PRs while keeping auto mode elsewhere"
+    ],
+    "tone": "austere, technically exacting",
+    "persona": "luka-petrovic",
+    "section": "Guide",
+    "primary_image": "assets/img/g6.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Claude Code's auto mode becomes the default August 14 -- no more approval prompts before every action. If you want a checkpoint back on pushes specifically, one settings.json rule does it. Guide:",
+      "reply_copy": "Full guide:",
+      "link_in_reply": true,
+      "hashtags": ["#ClaudeCode", "#AI"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Claude Code stops asking for approval before every action on August 14 -- a classifier runs on its own instead.\n\nWant a human checkpoint back? One line in your settings file checkpoints pushes and PRs while keeping auto mode everywhere else.\n\nExact steps, exact settings, at the link in bio.",
+      "hashtags": ["#ClaudeCode", "#AI", "#DevTools", "#Coding"],
+      "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Starting August 14, Claude Code's auto mode becomes the default for new sessions on Pro, Max, and Team plans -- it stops asking before every file edit, command, or push.\n\nIf you want a human checkpoint back, on everything or just on pushes, we wrote up the exact settings.json rules that do it, sourced straight from Anthropic's own configuration docs.\n\nGuide:",
+      "hashtags": ["#ClaudeCode", "#AI"],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Claude Code's auto mode becomes the default August 14. Want a checkpoint back on pushes specifically? One permissions.ask rule in settings.json does it. Full steps in the guide.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Claude Code auto-approves by default from Aug 14. One settings.json rule (permissions.ask) gets you a checkpoint back on pushes/PRs while keeping auto mode elsewhere. Guide has the exact JSON.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
 }
 ];

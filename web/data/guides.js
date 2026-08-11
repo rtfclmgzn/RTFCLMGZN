@@ -939,7 +939,9 @@ window.RTFC_GUIDES = [
       {
         "type": "p",
         "text": "Every time a serious open-weight model ships, the same argument breaks out underneath it: should you run this yourself, or just pay per token through an API? DeepSeek's own release notes this week for V4-Flash-0731 quietly settle half of that argument for anyone who reads the fine print — they publish exactly what self-hosting the model would take, in hardware terms, right next to the API price. Most releases don't hand you both numbers side by side like that, which is exactly why the decision usually gets made on vibes instead of arithmetic. It doesn't have to.",
-        "citation_urls": ["https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"]
+        "citation_urls": [
+          "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+        ]
       },
       {
         "type": "h2",
@@ -1001,7 +1003,9 @@ window.RTFC_GUIDES = [
       {
         "type": "p",
         "text": "If you land on the \"run the numbers\" branch, here's what an actual comparison looks like using this week's release as the worked example — not because the exact figures transfer to every model, but because the shape of the comparison does. DeepSeek-V4-Flash-0731's API runs $0.14 per million input tokens and $0.28 per million output tokens. Self-hosting the same model takes roughly 110GB of memory at 3-bit quantization, or one 4×GB300 node at full precision, by DeepSeek's own published spec.",
-        "citation_urls": ["https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"]
+        "citation_urls": [
+          "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+        ]
       },
       {
         "type": "ledger",
@@ -1031,7 +1035,9 @@ window.RTFC_GUIDES = [
       {
         "type": "p",
         "text": "Notice what that ledger deliberately doesn't do: it doesn't convert the hardware requirement into a dollar figure, because DeepSeek doesn't publish one and neither should anyone writing about it secondhand. Cloud GPU rental rates and outright hardware purchase prices both move constantly and vary by provider, region, and whether you're buying spot or reserved capacity. The honest version of this comparison has one priced side and one side you have to price yourself — which is the entire reason step four of the procedure below exists as a separate step instead of a number this guide hands you.",
-        "citation_urls": ["https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks"]
+        "citation_urls": [
+          "https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks"
+        ]
       },
       {
         "type": "h2",
@@ -1373,6 +1379,140 @@ window.RTFC_GUIDES = [
       {
         "label": "eSecurityPlanet — Black Hat 2026: critical flaws found in Anthropic, Google, and OpenAI coding agents",
         "url": "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g6",
+    "slug": "keep-claude-code-asking-before-it-acts",
+    "image": "assets/img/g6.jpg",
+    "title": "Keep Claude Code asking before it acts, before auto mode becomes the default on August 14",
+    "dek": "Anthropic is switching new Claude Code sessions on Pro, Max, and Team plans from step-by-step approval to a classifier that runs on its own. If you want a human checkpoint back — on everything, or just on pushes — here's exactly which setting does it.",
+    "persona": "luka-petrovic",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-11T20:14:59Z",
+    "readMins": 3,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Claude Code's auto mode becomes the default for new sessions on Pro, Max, and Team plans August 14.",
+      "Press Shift+Tab in the CLI, or use the desktop app's mode dropdown, to switch modes any time.",
+      "To keep auto mode but checkpoint pushes only, add a permissions.ask rule to your settings file.",
+      "Caveat: a default you already set yourself is preserved — this guide is for everyone else."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Starting August 14, new Claude Code sessions on Pro, Max, and Team plans stop asking before every file edit, command, or push, and start running on their own — a classifier reviews each action instead and only interrupts you when it judges something irreversible, destructive, or aimed outside your own environment. If you already picked a manual-approval default yourself, Anthropic says it stays put; you'll get a one-time notification with the option to switch, not an override. Everyone else gets moved automatically. What follows is exactly which settings control this, sourced from Anthropic's own configuration reference rather than guessed at from the announcement.",
+        "citation_urls": [
+          "https://claude.com/blog/auto-mode-default-in-claude-code",
+          "https://code.claude.com/docs/en/auto-mode-config"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Set the permission boundary you actually want",
+          "sub": "Five minutes, done once, applies to every session after.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "Claude Code installed and already in use on a Pro, Max, or Team plan.",
+            "Access to your own settings file, or your org's managed settings if you're an admin."
+          ],
+          "steps": [
+            {
+              "do": "Decide if you want manual approval back entirely, or auto mode kept with specific checkpoints.",
+              "detail": "Full manual is the simplest choice and costs nothing but the prompts you'll see again. Keeping auto mode with checkpoints is the choice if you mostly trust it but want a human eye on specific actions like pushes.",
+              "verify": "You can state your choice in one sentence before touching a setting.",
+              "ifnot": "If you can't decide, default to full manual for now — you can loosen it once you've watched auto mode work for a few sessions."
+            },
+            {
+              "do": "For full manual: press Shift+Tab in the CLI, or use the mode dropdown in the desktop app.",
+              "detail": "This switches your permission mode immediately for the current and future sessions.",
+              "verify": "Your next file edit or command prompts for approval again, the way it did before August 14.",
+              "ifnot": "If nothing changes, you may already be on a manual default from a prior session — Claude Code doesn't override a default you set yourself."
+            },
+            {
+              "do": "For auto mode plus a checkpoint on pushes: add a permissions.ask rule to your settings file.",
+              "detail": "In ~/.claude/settings.json (or managed settings for a whole org), add: {\"permissions\":{\"ask\":[\"Bash(git push *)\",\"Bash(gh pr create *)\"]}}. Content-scoped ask rules are evaluated before the classifier and always force a prompt.",
+              "verify": "Your next git push or gh pr create stops for approval even though other actions keep running automatically.",
+              "ifnot": "If it still runs without prompting, check the rule went into permissions.ask and not autoMode.allow — those have opposite effects."
+            },
+            {
+              "do": "Tell the classifier what counts as internal, so it stops flagging routine work.",
+              "detail": "Add your source-control org and key internal services to autoMode.environment in ~/.claude/settings.json, keeping the literal string \"$defaults\" in the array so you extend the built-in rules instead of replacing them.",
+              "verify": "Run claude auto-mode config and confirm your entries appear in the effective environment list.",
+              "ifnot": "Entries missing? Confirm they're not sitting in .claude/settings.local.json — the classifier stopped reading that file as of Claude Code v2.1.207."
+            },
+            {
+              "do": "Check what the classifier has already blocked.",
+              "detail": "Open /permissions and look at the Recently denied tab.",
+              "verify": "Each denial shows the action it stopped. Press r on one you actually meant to allow, to let Claude retry it.",
+              "ifnot": "Nothing listed means either you're not on auto mode yet, or nothing has tripped the classifier so far."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Steps 3 and 4 above are the two settings most people actually want: one keeps a human in the loop on the action with the widest blast radius, the other stops the classifier from flagging your own team's routine work. Both live in the same file, so it's one edit, not two.",
+        "citation_urls": []
+      },
+      {
+        "type": "snippet",
+        "snippet": {
+          "kicker": "COPY THIS",
+          "title": "A settings.json that checkpoints pushes and trusts your own org",
+          "lang": "json",
+          "body": "{\n  \"permissions\": {\n    \"ask\": [\"Bash(git push *)\", \"Bash(gh pr create *)\"]\n  },\n  \"autoMode\": {\n    \"environment\": [\"$defaults\", \"Source control: {{SOURCE_CONTROL_ORG}}\"]\n  }\n}",
+          "fill": [
+            {
+              "token": "{{SOURCE_CONTROL_ORG}}",
+              "means": "your GitHub, GitLab, or Bitbucket org or host",
+              "example": "github.com/my-org"
+            }
+          ],
+          "expects": "Your next push or PR creation stops for approval; everything else Claude proposes inside your named org keeps running without a prompt.",
+          "note": "Save this in ~/.claude/settings.json for yourself, or distribute it through managed settings for a whole team. Run claude auto-mode config afterward to confirm it took effect."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is a verdict on whether auto mode itself is safe enough — independent researchers have said they want more confirmation of Anthropic's own numbers before trusting the classifier at scale. This guide only covers the mechanical question: which setting does what, so you're choosing your own boundary deliberately on August 14 instead of discovering it by watching what Claude Code does next.",
+        "citation_urls": [
+          "https://claude.com/blog/auto-mode-default-in-claude-code"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Set your boundary before August 14, not after.",
+        "text": "The switch happens on new sessions automatically — deciding in advance beats discovering your new default mid-task."
+      },
+      {
+        "label": "Start with permissions.ask on pushes if you're unsure.",
+        "text": "It's the narrowest checkpoint that still catches the highest-stakes action — everything ships except what leaves your machine."
+      },
+      {
+        "label": "Run claude auto-mode config after any change.",
+        "text": "It prints your effective rules, not just what you think you set — the fastest way to catch a typo'd JSON key."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Claude Code documentation — \"Configure auto mode\"",
+        "url": "https://code.claude.com/docs/en/auto-mode-config",
+        "primary": true
+      },
+      {
+        "label": "Anthropic — \"Auto mode becomes the default in Claude Code\"",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+        "primary": true
       }
     ],
     "corrections": []
