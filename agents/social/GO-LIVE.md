@@ -53,6 +53,16 @@ Two hard gates: content must be video, and an unaudited app can only post **priv
 ### 7. Images — Google Gemini (Nano Banana)
 `gemini.api_key` — ✅ already filled. Default is to **reuse the article's cover art** (already live, $0); bespoke social images are the exception, ~$0.034–0.039/image.
 
+## Going live on the Actions runner (one extra step)
+
+`.secrets.json` is git-ignored, so the GitHub Actions cycles can't see it. The
+dispatcher therefore also reads env var `RTFC_SOCIAL_SECRETS` (the entire
+.secrets.json content as one JSON string), and newsroom-cycle.yml passes it in.
+Once your local file works: GitHub repo → Settings → Secrets and variables →
+Actions → **New repository secret** → name `RTFC_SOCIAL_SECRETS`, value = the
+full text of your filled-in `.secrets.json`. Update the secret whenever you add
+a platform. No secret = Actions dispatch stays dry-run (safe default).
+
 ## How it runs automatically
 
 - The publishing cycle (cycle-runbook §4c/§5b) stages copy **before** ship and runs the dispatcher **after** the deploy is verified live, so every link and image URL already resolves.

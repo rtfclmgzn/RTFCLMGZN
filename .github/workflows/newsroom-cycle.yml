@@ -36,6 +36,10 @@ jobs:
           # article draws from the finite library — which is how the 2026-08-10
           # no-cover / reused-cover incident happened. Set the repo secret.
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Social dispatch credentials (§5b): the whole agents/social/.secrets.json
+          # content as one secret. Absent -> the dispatcher stays in per-platform
+          # dry-run, which is the safe default.
+          RTFC_SOCIAL_SECRETS: ${{ secrets.RTFC_SOCIAL_SECRETS }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # If the Claude GitHub App is not installed on this repo, uncomment the next

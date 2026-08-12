@@ -164,10 +164,20 @@ def save_social_file(path: str, prefix: str, data: list) -> None:
 # ---------------------------------------------------------------------------
 
 def load_secrets() -> dict:
-    if not os.path.exists(SECRETS_PATH):
-        return {}
-    with open(SECRETS_PATH, "r", encoding="utf-8") as fh:
-        return json.load(fh)
+    """Local file first (the PC); RTFC_SOCIAL_SECRETS env JSON on CI runners,
+    where .secrets.json is git-ignored and therefore absent by design."""
+    if os.path.exists(SECRETS_PATH):
+        with open(SECRETS_PATH, "r", encoding="utf-8") as fh:
+            return json.load(fh)
+    blob = os.environ.get("RTFC_SOCIAL_SECRETS", "").strip()
+    if blob:
+        try:
+            value = json.loads(blob)
+            if isinstance(value, dict):
+                return value
+        except json.JSONDecodeError:
+            print("WARN: RTFC_SOCIAL_SECRETS is set but is not valid JSON — ignoring")
+    return {}
 
 
 def section_ready(secrets: dict, name: str, required: tuple[str, ...]) -> bool:
