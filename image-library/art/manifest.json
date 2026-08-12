@@ -254,7 +254,12 @@
    ],
    "text_space": "holo-map center-top",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-byd-xiao-di-humanoid-robot-debut",
+     "used_at": "2026-08-12"
+    }
+   ]
   },
   {
    "id": "art-010-walkway-over-the-rainy-megacity",

@@ -24,7 +24,7 @@
 //     `slug` must be a real published article.
 // ============================================================================
 window.RTFC_FIGURES = {
-  updated: "2026-08-11",
+  updated: "2026-08-12",
 
   // Per-kind display metadata. `unit` is the normalized unit every value in
   // that kind must already be expressed in.
@@ -80,6 +80,9 @@ window.RTFC_FIGURES = {
     { id:"inf-sk-group", kind:"infra-commitment-usd", value:500,
       label:"Nvidia / SK Group, Korea", slug:"nvidia-sk-group-korea-500-billion-ai-partnership",
       note:"A combination of infrastructure spend, vendor financing and forward supply contracts — not a single payment." },
+    { id:"inf-nvidia-wallstreet", kind:"infra-commitment-usd", value:500,
+      label:"Nvidia / six Wall Street firms, financing alliance", slug:"nvidia-wall-street-500-billion-financing-alliance",
+      note:"A non-binding MOU target for third-party debt-financing capacity, not infrastructure spend or a signed loan — a different instrument from the SK Group figure above despite the identical headline number." },
     { id:"inf-ohio-chips", kind:"infra-commitment-usd", value:350,
       label:"Nvidia chip financing for the Ohio campus (reported)", slug:"nvidia-openai-250-billion-ohio-data-center-financing",
       note:"A separate, additional commitment up to this figure to finance the accelerators. Reported, not confirmed." },
