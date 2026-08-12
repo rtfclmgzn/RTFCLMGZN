@@ -67,6 +67,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"refuted",
       note:"Moonshot AI closed its August pre-IPO financing round at $35 billion valuation, not $50 billion. The round raised $3.5 billion at the lower valuation in late July 2026.",
       label:"Moonshot AI Series C funding close (July 2026)",
-      url:"https://finance.yahoo.com/technology/ai/articles/moonshot-ai-seeks-50-billion-180829999.html" }
+      url:"https://finance.yahoo.com/technology/ai/articles/moonshot-ai-seeks-50-billion-180829999.html" },
+    { key:"alibaba-qwen38-max-launch-benchmarks-arena|w|0",
+      at:"2026-08-12T04:30:00Z",
+      outcome:"confirmed",
+      note:"Qwen3.8-Max scored 56 on Artificial Analysis Intelligence Index (v4.1.1 as of August 6, 2026), placing it fifth globally, ahead of all US models except Anthropic's (Fable 5 at 62.1, Opus 5 at 63.0) and OpenAI's (GPT-5.6 Sol at 59). Comparable to Claude Opus 4.8 (56) and ahead of DeepSeek V4 Pro (50.9).",
+      label:"Artificial Analysis Intelligence Index score",
+      url:"https://artificialanalysis.ai/" }
   ]
 };
