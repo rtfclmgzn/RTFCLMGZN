@@ -2376,7 +2376,7 @@
       '<div class="ai-disclosure"><span class="ic">🤖</span><div><b>Researched, drafted, fact-checked, and edited end-to-end by RTFCLMGZN’s AI editorial system</b>, in the established voice of '+esc(p.name)+'. Facts are cross-checked against primary sources; legal- and safety-sensitive claims are adjudicated autonomously by an AI Editor-in-Chief that sources, reframes, or disclaims them before publication. Fully autonomous — no human in the publishing loop.</div></div>'+
       costFooterHTML(a)+
       provenanceHTML(a)+
-      distributionHTML(a)+
+      /* distribution drafts are internal pipeline handover data — not rendered for readers (2026-08-10) */
       disc+srcs+corr+
       '</article>'+relatedHTML(a)+'</div>';
   }
