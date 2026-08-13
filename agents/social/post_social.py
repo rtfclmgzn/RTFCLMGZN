@@ -57,6 +57,107 @@ X_COST_PER_LINK_POST = 0.20      # link in post BODY; avoided via link_in_reply
 
 PLATFORMS = ("x", "facebook", "instagram", "threads", "bluesky", "reddit")
 
+# --- live narration: everything important prints immediately AND lands in
+# --- social_dispatch_log.txt next to the repo root (black-window fix,
+# --- 2026-08-13: a silent 4-minute cooldown looked like a hang).
+_LOG_FH = None
+
+
+def say(msg: str = "") -> None:
+    line = f"[{datetime.now().strftime('%H:%M:%S')}] {msg}" if msg else ""
+    print(line, flush=True)
+    if _LOG_FH:
+        try:
+            _LOG_FH.write(line + "\n")
+            _LOG_FH.flush()
+        except OSError:
+            pass
+
+
+def sleep_loudly(platform: str, wait: float) -> None:
+    say(f"{platform}: anti-burst cooldown - waiting {int(wait)}s before this post"
+        f" (window is NOT stuck)")
+    remaining = wait
+    while remaining > 0:
+        chunk = min(30.0, remaining)
+        time.sleep(chunk)
+        remaining -= chunk
+        if remaining > 15:
+            say(f"{platform}: ...{int(remaining)}s of cooldown left")
+
+
+# ---------------------------------------------------------------------------
+# Hashtags — per-platform floors/caps enforced at dispatch time (2026-08-13).
+# The staging agent picks editorial tags; this tops up with the article's own
+# entity tags (companies/models ride the news wave — the practical form of
+# "trending") plus an evergreen pool, and clamps to platform best practice:
+# X 2 (more tanks engagement), IG 6-8, FB 2, Threads 1 (single topic tag),
+# Bluesky 3.
+# ---------------------------------------------------------------------------
+
+TAG_TARGETS = {"x": 2, "facebook": 2, "instagram": 8, "threads": 1, "bluesky": 3}
+EVERGREEN_TAGS = {
+    "x": ["#AI", "#AINews"],
+    "facebook": ["#AI", "#TechNews"],
+    "instagram": ["#AI", "#ArtificialIntelligence", "#AINews", "#TechNews",
+                  "#MachineLearning", "#Innovation", "#Technology", "#FutureTech"],
+    "threads": ["#AI"],
+    "bluesky": ["#AI", "#AINews", "#TechNews"],
+}
+_TAG_STOPWORDS = {"#the", "#and", "#for", "#with", "#from", "#this", "#that",
+                  "#says", "#after", "#into", "#over", "#more", "#full"}
+
+
+def _entity_tags(export: dict) -> list:
+    names = []
+    ents = export.get("entities")
+    if isinstance(ents, list):
+        names = [str(e) for e in ents if isinstance(e, str) and e.strip()]
+    if not names:
+        head = str(export.get("headline") or "")
+        names = re.findall(r"\b[A-Z][A-Za-z0-9]+(?:[ -][A-Z][A-Za-z0-9]+)?\b", head)
+    tags = []
+    for name in names[:6]:
+        tag = "#" + re.sub(r"[^A-Za-z0-9]", "", name)
+        if 3 <= len(tag) <= 25 and tag.lower() not in _TAG_STOPWORDS:
+            tags.append(tag)
+    return tags
+
+
+def enrich_hashtags(platform: str, post: dict, export: dict) -> dict:
+    """Return a copy of the record with hashtags topped up to the platform
+    target: agent's editorial tags first, then entity tags, then evergreen."""
+    target = TAG_TARGETS.get(platform)
+    if not target:
+        return post
+    seen, tags = set(), []
+
+    def push(candidate):
+        c = str(candidate or "").strip()
+        if not c:
+            return
+        if not c.startswith("#"):
+            c = "#" + re.sub(r"[^A-Za-z0-9]", "", c)
+        if len(c) < 3 or c.lower() in seen:
+            return
+        seen.add(c.lower())
+        tags.append(c)
+
+    for t in (post.get("hashtags") or []):
+        if isinstance(t, str):
+            push(t)
+    for t in _entity_tags(export):
+        if len(tags) >= target:
+            break
+        push(t)
+    for t in EVERGREEN_TAGS.get(platform, []):
+        if len(tags) >= target:
+            break
+        push(t)
+    enriched = dict(post)
+    enriched["hashtags"] = tags[:target]
+    return enriched
+
 
 def utc_now() -> datetime:
     return datetime.now(timezone.utc)
@@ -176,7 +277,7 @@ def load_secrets() -> dict:
             if isinstance(value, dict):
                 return value
         except json.JSONDecodeError:
-            print("WARN: RTFC_SOCIAL_SECRETS is set but is not valid JSON — ignoring")
+            print("WARN: RTFC_SOCIAL_SECRETS is set but is not valid JSON - ignoring")
     return {}
 
 
@@ -423,7 +524,11 @@ def post_instagram(secrets: dict, post: dict, url: str, image_url: str | None) -
 def post_threads(secrets: dict, post: dict, url: str) -> dict:
     creds = secrets["threads"]
     user = creds.get("user_id") or "me"
-    text = clip(f"{str(post.get('copy') or '').strip()}\n\n{url}", 500)
+    body = str(post.get("copy") or "").strip()
+    tags = [t for t in (post.get("hashtags") or []) if isinstance(t, str)][:1]
+    if tags and tags[0].lower() not in body.lower():
+        body = f"{body}\n\n{tags[0]}"
+    text = clip(f"{body}\n\n{url}", 500)
     base = "https://graph.threads.net/v1.0"
     container = http_request(
         "POST", f"{base}/{user}/threads",
@@ -466,20 +571,39 @@ def post_bluesky(secrets: dict, post: dict, url: str, image_url: str | None = No
     handle = session.get("handle") or creds["identifier"]
     if not jwt or not did:
         raise HttpError("Bluesky session did not return accessJwt/did")
-    body_text = clip(str(post.get("copy") or "").strip(), 300 - len(url) - 2)
+    tags = [t for t in (post.get("hashtags") or []) if isinstance(t, str)][:3]
+    tag_block = " ".join(tags)
+    reserve = (len(tag_block) + 2 if tag_block else 0)
+    body_text = clip(str(post.get("copy") or "").strip(),
+                     300 - len(url) - 2 - reserve)
     text = f"{body_text}\n\n{url}" if body_text else url
+    if tag_block:
+        text = f"{text}\n{tag_block}"
     if len(text) > 300:
         text = clip(text, 300)
     prefix_bytes = len(text[: text.rfind(url)].encode("utf-8"))
+    facets = [{
+        "index": {"byteStart": prefix_bytes,
+                  "byteEnd": prefix_bytes + len(url.encode("utf-8"))},
+        "features": [{"$type": "app.bsky.richtext.facet#link", "uri": url}],
+    }]
+    # Hashtags need explicit tag facets via the API or they render as dead text.
+    for tag in tags:
+        at = text.rfind(tag)
+        if at < 0:
+            continue
+        start = len(text[:at].encode("utf-8"))
+        facets.append({
+            "index": {"byteStart": start,
+                      "byteEnd": start + len(tag.encode("utf-8"))},
+            "features": [{"$type": "app.bsky.richtext.facet#tag",
+                          "tag": tag.lstrip("#")}],
+        })
     record = {
         "$type": "app.bsky.feed.post",
         "text": text,
         "createdAt": iso(utc_now()),
-        "facets": [{
-            "index": {"byteStart": prefix_bytes,
-                      "byteEnd": prefix_bytes + len(url.encode("utf-8"))},
-            "features": [{"$type": "app.bsky.richtext.facet#link", "uri": url}],
-        }],
+        "facets": facets,
         "langs": ["en"],
     }
     # Attach a proper link card (external embed) with the ARTICLE'S cover as
@@ -568,10 +692,17 @@ ADAPTER_REQUIREMENTS = {
 # ---------------------------------------------------------------------------
 
 def dispatch(args: argparse.Namespace) -> int:
+    global _LOG_FH
     repo = os.path.abspath(args.repo)
     social_path = os.path.join(repo, "web", "data", "social-posts.js")
     if not os.path.exists(social_path):
         raise SystemExit(f"Not found: {social_path}")
+    try:
+        _LOG_FH = open(os.path.join(repo, "social_dispatch_log.txt"), "a",
+                       encoding="utf-8")
+        _LOG_FH.write("\n" + "=" * 60 + "\n")
+    except OSError:
+        _LOG_FH = None
     secrets = load_secrets()
     site_base = ((secrets.get("site") or {}).get("base_url")
                  or "https://rtfclmgzn.com")
@@ -584,6 +715,18 @@ def dispatch(args: argparse.Namespace) -> int:
     for platform in PLATFORMS:
         section, required = ADAPTER_REQUIREMENTS[platform]
         enabled[platform] = platform in wanted and section_ready(secrets, section, required)
+
+    say("=" * 58)
+    say(f"RTFCLMGZN SOCIAL DISPATCH - {'LIVE' if args.live else 'DRY-RUN (nothing posts)'}")
+    say(f"platforms ready: {', '.join(sorted(p for p, ok in enabled.items() if ok)) or 'NONE'}")
+    off = sorted(p for p in wanted if p in PLATFORMS and not enabled.get(p))
+    if off:
+        say(f"not linked / not selected-ready: {', '.join(off)}")
+    say(f"caps: {args.platform_cap}/platform/run, {args.limit} total; "
+        f"cooldown {int(args.platform_spacing)}s between same-platform posts")
+    say("full log: social_dispatch_log.txt (safe to close this window "
+        "AFTER the DONE line)")
+    say("=" * 58)
 
     # Platforms that have EVER posted (per the ledger). A platform with no
     # history is being activated for the first time: post ONLY its single
@@ -681,26 +824,31 @@ def dispatch(args: argparse.Namespace) -> int:
             if prev_ts is not None:
                 wait = args.platform_spacing - (time.time() - prev_ts)
                 if wait > 0:
-                    time.sleep(min(wait, 300))
+                    sleep_loudly(platform, min(wait, 300))
+            say(f"{platform}: posting: "
+                f"\"{str(export.get('headline') or '')[:70]}\"")
+            wire_post = enrich_hashtags(platform, post, export)
             try:
                 if platform == "x":
-                    result = post_x(secrets, post, url)
+                    result = post_x(secrets, wire_post, url)
                 elif platform == "facebook":
-                    result = post_facebook(secrets, post, url)
+                    result = post_facebook(secrets, wire_post, url)
                 elif platform == "instagram":
-                    result = post_instagram(secrets, post, url, image_url)
+                    result = post_instagram(secrets, wire_post, url, image_url)
                 elif platform == "threads":
-                    result = post_threads(secrets, post, url)
+                    result = post_threads(secrets, wire_post, url)
                 elif platform == "bluesky":
-                    result = post_bluesky(secrets, post, url, image_url,
+                    result = post_bluesky(secrets, wire_post, url, image_url,
                                           title=str(export.get("headline") or ""),
                                           desc=str(export.get("hook") or ""))
                 else:
-                    result = post_reddit(secrets, post, url)
+                    result = post_reddit(secrets, wire_post, url)
             except Skip as exc:
+                say(f"{platform}: skipped - {exc}")
                 skipped.append((key, str(exc)))
                 continue
             except (HttpError, KeyError) as exc:
+                say(f"{platform}: FAILED - {str(exc)[:180]}")
                 attempts = int(post.get("attempts") or 0) + 1
                 post["attempts"] = attempts
                 post["last_error"] = str(exc)[:500]
@@ -710,6 +858,7 @@ def dispatch(args: argparse.Namespace) -> int:
                 changed = True
                 budget -= 1
                 continue
+            say(f"{platform}: LIVE OK  {result.get('post_url') or result.get('remote_id') or ''}")
             post["status"] = "posted"
             post["post_url"] = result.get("post_url")
             post["remote_id"] = result.get("remote_id")
@@ -735,16 +884,20 @@ def dispatch(args: argparse.Namespace) -> int:
         "ledger": ledger_path,
         "platforms_enabled": sorted(k for k, v in enabled.items() if v),
     }
-    print("SOCIAL_DISPATCH_SUMMARY " + json.dumps(summary))
+    say("")
+    say("SOCIAL_DISPATCH_SUMMARY " + json.dumps(summary))
     for key, url in posted:
-        print(f"  POSTED  {key}  {url or ''}")
+        say(f"  POSTED  {key}  {url or ''}")
     for key, url in planned:
-        print(f"  WOULD-POST  {key}  ->  {url}")
+        say(f"  WOULD-POST  {key}  ->  {url}")
     for key, err in failed:
-        print(f"  FAILED  {key}  {err}")
+        say(f"  FAILED  {key}  {err}")
     if args.verbose:
         for key, reason in skipped:
-            print(f"  skip  {key}  ({reason})")
+            say(f"  skip  {key}  ({reason})")
+    say("")
+    say(f"DONE - posted {len(posted)}, failed {len(failed)}, "
+        f"skipped {len(skipped)}. Safe to close this window.")
     return 1 if failed and not posted else 0
 
 

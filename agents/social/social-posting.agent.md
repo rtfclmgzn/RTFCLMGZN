@@ -66,3 +66,22 @@ Log EVERY generation step to the usage ledger, tagged to the source `article_id`
 - Keep A's export intact — regenerating copy is allowed only if the copy itself was the problem.
 - Health/financial posts carry the article's disclaimer and stay conservative in framing.
 - Never stage a post for an article older than 3 days (the dispatcher enforces this too).
+
+## Hashtags (updated 2026-08-13)
+
+Stage per-platform hashtag lists on every record; the dispatcher enforces
+floors/caps and will top you up, but agent-chosen tags always ride first, so
+choose well:
+
+- **Mix**: 1-2 tags for the article's named entities (company, model, product —
+  `#Nvidia`, `#KimiK3`) + 1 topical tag for the story's beat (`#AISafety`,
+  `#Chips`) + platform evergreens are auto-added if you stop there. Entity tags
+  are the "trending" lever: when a story is hot, its entity tag is what people
+  search and follow.
+- **Counts by platform** (dispatcher clamps to these): X **2** (more kills
+  reach), Instagram **6-8**, Facebook **2**, Threads **1** (single topic tag),
+  Bluesky **3**.
+- Never use engagement-bait tags unrelated to the story (`#fyp`, `#viral`,
+  `#follow4follow`) — they read as spam on news accounts and hurt distribution.
+- Copy stays clean: tags belong in the `hashtags` array, never inline in `copy`
+  (X body links cost 13x, and inline tags break the copy's clip limits).

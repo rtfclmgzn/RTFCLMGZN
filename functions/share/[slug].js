@@ -10,6 +10,13 @@
 //   https://rtfclmgzn.com/share/<slug>?utm_source=...
 // Redirect target keeps the query string:
 //   /?utm_source=...#/article/<slug>
+//
+// 2026-08-13 lesson: the redirect must be JS-ONLY. The first version also had
+// <meta http-equiv=refresh> and a canonical pointing at the SPA root; Facebook
+// treats both as "the real page is over there", follows them to index.html,
+// and unfurls the generic purple-tree card. Crawlers don't run JS, so a JS
+// redirect hides the hop from them while humans never notice. Do not re-add
+// a meta refresh or an off-page canonical here.
 
 const DATA_FILES = [
   "/data/newsroom-articles.js", // strict JSON body — parsed properly
@@ -124,8 +131,7 @@ export async function onRequestGet(context) {
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${esc(image)}">
-<meta http-equiv="refresh" content="0;url=${esc(target)}">
-<link rel="canonical" href="${esc(target)}">
+<link rel="canonical" href="${esc(origin + "/share/" + slug)}">
 <script>location.replace(${JSON.stringify(target)});</script>
 </head><body>
 <p>Taking you to the article… <a href="${esc(target)}">${esc(title)}</a></p>
