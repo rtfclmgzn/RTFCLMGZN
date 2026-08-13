@@ -745,8 +745,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112206217396947",
+        "remote_id": "1238977099292018_122112206217396947",
+        "posted_at": "2026-08-13T22:10:25Z"
       },
       {
         "platform": "threads",
@@ -757,8 +759,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "Former Bitcoin miner Firmus raised $2B, valuation now $10.5B+ -- doubled twice in a year. Separate from a $10B debt facility and an A$73.3B build-out plan. Nvidia is both investor and main supplier. Three numbers, three different things.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msynwjpg732y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msynwjpg732y",
+        "posted_at": "2026-08-13T22:10:32Z"
       }
     ]
   },
@@ -834,8 +838,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Infrastructure"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112206589396947",
+        "remote_id": "1238977099292018_122112206589396947",
+        "posted_at": "2026-08-13T22:14:31Z"
       },
       {
         "platform": "threads",
@@ -846,8 +852,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "Anthropic's next data centers: owned by Macquarie and GIC, not Anthropic. It leases the capacity as anchor tenant. No dollar figure, no MW, no date disclosed. Same off-balance-sheet trick Meta ($279B) and Google ($44B) have run this year.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msyo5ttrvp26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msyo5ttrvp26",
+        "posted_at": "2026-08-13T22:14:38Z"
       }
     ]
   },
@@ -1809,8 +1817,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Compute"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088026489514295663",
+        "remote_id": "2088026489514295663",
+        "posted_at": "2026-08-13T22:14:43Z"
       },
       {
         "platform": "instagram",
@@ -1828,10 +1838,11 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Db_yZIrkVNl/",
         "attempts": 1,
-        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/17841437848762452/media: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"ABB_sUZ5XLl0u5bskhVjo3K\"}}"
+        "remote_id": "17906814648466752",
+        "posted_at": "2026-08-13T22:15:02Z"
       },
       {
         "platform": "facebook",
@@ -1848,18 +1859,21 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "threads",
         "copy": "Anthropic is reportedly in talks to buy Israeli startup Decart for ~$6B -- its largest deal yet, about 50% above the $4B valuation Decart's investors set in May. The reported target is Decart's chip-efficiency software, not its video tools. Comes 5 weeks after Anthropic's own $965B IPO filing. Nothing signed yet.",
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Db_ybVzAeaX",
         "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AWmAPodbNprdspx4Xqblczn\"}}"
+        "remote_id": "18610930507047057",
+        "posted_at": "2026-08-13T22:15:19Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-08-13T21:54:12Z",
         "copy": "Decart's Oasis product generates interactive \"world models\" for training robots -- the same category behind Google DeepMind's Genie line. Anthropic has no public robotics program, which is part of why reporting points at the efficiency layer, not the world model, as the actual target.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Db_y6IcgVVQ",
+        "remote_id": "18110806331085617",
+        "posted_at": "2026-08-13T22:19:29Z"
       },
       {
         "platform": "bluesky",
@@ -1917,8 +1931,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088027710497173522",
+        "remote_id": "2088027710497173522",
+        "posted_at": "2026-08-13T22:19:34Z"
       },
       {
         "platform": "instagram",
@@ -1936,10 +1952,11 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Db_y8sXjWn7/",
         "attempts": 1,
-        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/17841437848762452/media: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AVq9cEYdDwj_zsg2Pu7-xJY\"}}"
+        "remote_id": "17894200725663106",
+        "posted_at": "2026-08-13T22:19:51Z"
       },
       {
         "platform": "facebook",
