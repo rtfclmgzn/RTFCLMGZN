@@ -2497,11 +2497,18 @@
     var disc="";
     if(a.disclaimer==="not-medical-advice") disc='<div class="disclaimer med"><b>This is not medical advice.</b>For information only. Consult a qualified professional. Diagnostic or treatment-adjacent claims are adjudicated by the AI Editor-in-Chief recommendation layer before publication.</div>';
     if(a.disclaimer==="not-financial-advice") disc='<div class="disclaimer fin"><b>This is not financial or investment advice.</b>For information only. RTFCLMGZN does not make trading recommendations.</div>';
-    var srcs='<div class="sources"><h4>Sources</h4><ol>'+a.sources.map(function(s){
+    /* Both of these were unguarded and crashed the whole article route on
+       2026-08-13, when the breaking-scan published the first article ever to
+       carry no `corrections` array — TypeError on .length, and the reader got
+       the "This page didn't render" screen for a perfectly good story. Every
+       OTHER site in this file already read these as (a.corrections||[]); these
+       two just predated that habit. An article store field can be absent in a
+       record written by any future agent; the renderer never gets to assume. */
+    var srcs='<div class="sources"><h4>Sources</h4><ol>'+(a.sources||[]).map(function(s){
       var ext=s.url && s.url!=="#";
       return '<li><a href="'+safeHref(s.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(s.label)+'</a>'+(ext?' ↗':'')+'</li>';}).join("")+'</ol></div>';
     var corr='<div class="corrections"><h4>Corrections &amp; updates</h4>'+
-      (a.corrections.length? a.corrections.map(function(c){
+      ((a.corrections||[]).length? a.corrections.map(function(c){
         return '<div class="cx"><time>'+new Date(c.at).toLocaleString(undefined,{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})+'</time>'+esc(c.text)+'</div>';
       }).join("") : '<div class="cx none">No corrections. This piece is unchanged since publication.</div>')+'</div>';
     return '<div class="container"><article class="article">'+
