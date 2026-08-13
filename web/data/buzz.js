@@ -319,4 +319,10 @@ window.RTFC_BUZZ = [
     why:"Giving away the orchestration tooling that sits on top of a model while making the tokens that tooling consumes more expensive is a specific, checkable bet about where DeepSeek thinks its margin actually is.",
     heat:41, topics:["deepseek","open source","agent framework","developer tools"],
     url:"https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source/" },
+  { id:"bz-214", date:"2026-08-13",
+    source:{ name:"Bloomberg", handle:"Bloomberg", platform:"web", kind:"news" },
+    text:"Anthropic is in talks to acquire Decart AI for approximately $6 billion, according to Bloomberg, in what would be the Claude maker's largest known acquisition. Decart specializes in AI infrastructure optimization (training and inference efficiency, cost reduction via chip utilization), advanced world models, and real-time video generation technology. The company was valued at nearly $4 billion in a May 2026 funding round led by Radical Ventures, with backing from Nvidia, Atreides Management, and others. The deal has not been finalized and talks could still fall through, per Bloomberg's reporting.",
+    why:"A $6 billion-in-talks acquisition of an infrastructure-optimization startup suggests Anthropic is betting heavily on cost-per-inference improvements and video capabilities—but unfinalized talks mean this could evaporate, same bar that held back Stripe/OpenRouter and Nvidia/OpenAI financing deals in prior scans.",
+    heat:68, topics:["anthropic","decart ai","acquisition","infrastructure","ai optimization"],
+    url:"https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion" },
 ];
