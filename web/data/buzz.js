@@ -240,4 +240,10 @@ window.RTFC_BUZZ = [
     why:"A frontier lab shipping the EU AI Act's own transparency requirement globally rather than EU-only, with the company itself naming the detection method's real limits rather than overselling it.",
     heat:53, topics:["anthropic","claude","watermarking","c2pa","eu ai act","transparency"],
     url:"https://cybersecuritynews.com/anthropic-adds-invisible-watermarks/" },
+  { id:"bz-201", date:"2026-08-12",
+    source:{ name:"Lovable", handle:"Lovable", platform:"web", kind:"news" },
+    text:"Swedish AI coding startup Lovable completed a $400 million Series C funding round led by Menlo Ventures and the EU-backed Scaleup Europe Fund, bringing the company's valuation to $13.3 billion—double its $6.6 billion valuation from December 2025. Annual recurring revenue has nearly tripled from $200 million and is tracking toward $600 million by end of August. The platform lets users build software by describing requirements in natural language and handles multi-stage development, debugging, and validation autonomously.",
+    why:"An AI coding startup doubling its valuation in 8 months and tripling ARR in the same window, attracting capital from major VCs and a sovereign wealth fund—a concrete read on whether AI-assisted software development is translating to commercial traction or funding hype.",
+    heat:58, topics:["lovable","ai coding","funding","startup","series c"],
+    url:"https://www.bloomberg.com/news/articles/2026-08-12/ai-coding-startup-lovable-raises-400-million-at-13-3-billion-valuation" },
 ];
