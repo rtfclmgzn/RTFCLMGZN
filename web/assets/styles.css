@@ -4492,3 +4492,26 @@ html.vp-desktop.has-mobkit #mobkit{
 }
 .pp-soon b{ color:var(--accent2); }
 .plusplans.pp-invite .pp-buy{ margin-top:16px; display:inline-block; }
+
+/* ===== boot splash (2026-08-13) ===== */
+#boot-splash{position:fixed;inset:0;z-index:2147483000;background:#05050c;display:flex;align-items:center;justify-content:center;animation:bsOut .5s cubic-bezier(.6,0,.8,1) 1.45s forwards;pointer-events:none}
+#boot-splash .bs-core{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+#boot-splash .bs-core::before{content:"";position:absolute;top:50%;left:50%;width:340px;height:340px;transform:translate(-50%,-58%);border-radius:50%;background:radial-gradient(circle,rgba(124,84,255,.42),rgba(124,84,255,.10) 55%,transparent 72%);animation:bsGlow 1.5s ease-out both;filter:blur(2px)}
+#boot-splash img{position:relative;border-radius:26px;animation:bsSpin .9s cubic-bezier(.18,.85,.22,1) both;box-shadow:0 0 60px rgba(124,84,255,.35)}
+#boot-splash .bs-word{position:relative;font-weight:800;font-size:30px;letter-spacing:.06em;color:#fff;animation:bsRise .7s cubic-bezier(.2,.8,.2,1) .28s both}
+#boot-splash .bs-word em{font-style:normal;color:#8b7cf7}
+#boot-splash .bs-sub{position:relative;font-size:11px;letter-spacing:.42em;color:#9a93c9;animation:bsRise .7s cubic-bezier(.2,.8,.2,1) .42s both}
+@keyframes bsSpin{from{transform:scale(.5) rotate(-50deg);opacity:0}60%{opacity:1}to{transform:scale(1) rotate(0);opacity:1}}
+@keyframes bsRise{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes bsGlow{from{opacity:0;transform:translate(-50%,-58%) scale(.6)}45%{opacity:1}to{opacity:.75;transform:translate(-50%,-58%) scale(1)}}
+@keyframes bsOut{from{opacity:1}to{opacity:0;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){#boot-splash{display:none}}
+
+/* ===== overflow / scrollbar-jitter guard (2026-08-13) ===== */
+html,body{overflow-x:hidden}
+@supports (overflow-x:clip){html,body{overflow-x:clip}}
+html{scrollbar-gutter:stable}
+
+/* ===== parent company footer line ===== */
+.fparent{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a8a9c;margin-top:7px}
+.fparent b{color:#a89bf5;font-weight:700}
