@@ -71,12 +71,72 @@
       libSave(l2); route();
     }).catch(function(){});
   }
+  /* Reader-state labels in one place so the initial render (saveBtns) and the
+     in-place repaint (rtfcPaintState) can never drift apart.
+     [on-title, off-title, on-glyph, off-glyph] */
+  var SV_LABELS={
+    bookmark:["Bookmarked","Bookmark","♥","♡"],
+    later:["In read-later","Read later","◷","○"],
+    read:["Marked as read","Mark as read","✓","◯"]
+  };
+  function svState(l,kind,id){
+    return kind==="bookmark" ? inList(l.bookmarks,id)
+         : kind==="later"    ? inList(l.readLater,id)
+         :                     inList(l.read||[],id);
+  }
+  /* Repaint every control bound to this article's state, in place.
+     THIS IS THE SCROLL-JUMP FIX. A state toggle is an interaction, not a
+     navigation, so it must never call route() — route() ends in
+     window.scrollTo(0,0) and throws the reader back to the top of the page. */
+  function rtfcPaintState(kind,id){
+    var l=libGet(), on=svState(l,kind,id), lb=SV_LABELS[kind]||SV_LABELS.read;
+    var nodes=document.querySelectorAll('button[data-rtfc-act="'+kind+'"]');
+    for(var i=0;i<nodes.length;i++){
+      var b=nodes[i];
+      if(b.getAttribute("data-rtfc-id")!==id) continue;
+      if(on) b.classList.add("on"); else b.classList.remove("on");
+      b.setAttribute("aria-pressed", on?"true":"false");
+      b.setAttribute("title", on?lb[0]:lb[1]);
+      b.setAttribute("aria-label", on?lb[0]:lb[1]);
+      b.innerHTML = on?lb[2]:lb[3];
+    }
+    rtfcPaintStats();
+  }
+  /* Reader counters (Articles completed, saved, read-later) update live off the
+     same click. Counts are list lengths — unique article ids — never click
+     tallies, so toggling back off decrements correctly. */
+  function rtfcPaintStats(){
+    var l=libGet();
+    var counts={
+      completed:(l.read||[]).length,
+      bookmarks:(l.bookmarks||[]).length,
+      later:(l.readLater||[]).length
+    };
+    var nodes=document.querySelectorAll("[data-rtfc-stat]");
+    for(var i=0;i<nodes.length;i++){
+      var k=nodes[i].getAttribute("data-rtfc-stat");
+      if(counts[k]!==undefined) nodes[i].textContent=String(counts[k]);
+    }
+  }
   window.rtfcToggle=function(kind,id,ev){
     if(ev){ ev.preventDefault(); ev.stopPropagation(); }
     var l=libGet();
     var list = kind==="bookmark" ? l.bookmarks : kind==="later" ? l.readLater : (l.read=l.read||[]);
     var i=list.indexOf(id); if(i>=0) list.splice(i,1); else list.push(id);
-    libSave(l); route();
+    libSave(l);
+    rtfcPaintState(kind,id);
+    /* The Library route lists articles BY this state, so its content genuinely
+       changes when an item is removed. Re-render only that view and restore the
+       scroll position synchronously — the spec's documented fallback, used here
+       because a purely local repaint cannot remove a row from a filtered list. */
+    if((location.hash||"").indexOf("#/library")===0){
+      var y=window.scrollY, app=document.getElementById("app");
+      if(app){
+        app.innerHTML=viewLibrary();
+        if(window.__motion) window.__motion();
+        window.scrollTo(0,y);
+      }
+    }
     if(l.account){
       var act = kind==="bookmark"?"toggle_bookmark":kind==="later"?"toggle_read_later":"toggle_read";
       fetch("/api/account/library",{method:"POST",credentials:"same-origin",
@@ -294,7 +354,7 @@
     var h='<div class="plusplans'+(compact?' pp-compact':'')+'">';
     if(!compact && opts.dek!==false){
       h+='<div class="pp-head"><div class="pp-mark">RTFCLMGZN <b>Plus</b></div>'+
-        '<p class="pp-dek">The monthly issue in the spread reader, every special edition, the full back-issue archive, and every issue as a PDF. Articles stay free, forever.</p></div>';
+        '<p class="pp-dek">The monthly issue in the spread reader, every special edition, and the full back-issue archive. Articles stay free, forever.</p></div>';
     }
     h+='<div class="pp-tiers">';
     // Annual first, and the only tier carrying .is-rec — it is the default offer.
@@ -435,13 +495,23 @@
       }).join("")+'</div>';
   }
   window.rtfcDismissPrimer=function(){ try{localStorage.setItem("rtfc-primer-seen","1");}catch(e){} route(); };
+  /* One reader-state control. type="button" so it can never submit or behave
+     like a link; data-* so rtfcPaintState can find and repaint it without a
+     re-render; aria-pressed so assistive tech gets the toggle state. */
+  function svBtn(kind,id,on){
+    var lb=SV_LABELS[kind]||SV_LABELS.read, t=on?lb[0]:lb[1];
+    return '<button type="button" class="sv'+(on?' on':'')+'"'+
+      ' data-rtfc-act="'+kind+'" data-rtfc-id="'+id+'"'+
+      ' aria-pressed="'+(on?'true':'false')+'"'+
+      ' title="'+t+'" aria-label="'+t+'"'+
+      ' onclick="rtfcToggle(\''+kind+'\',\''+id+'\',event)">'+(on?lb[2]:lb[3])+'</button>';
+  }
   function saveBtns(id,small){
     var l=libGet();
-    var b=inList(l.bookmarks,id), r=inList(l.readLater,id), rd=inList(l.read||[],id);
     return '<span class="savebtns'+(small?' sm':'')+'">'+
-      '<button class="sv'+(b?' on':'')+'" title="'+(b?'Bookmarked':'Bookmark')+'" onclick="rtfcToggle(\'bookmark\',\''+id+'\',event)">'+(b?'♥':'♡')+'</button>'+
-      '<button class="sv'+(r?' on':'')+'" title="'+(r?'In read-later':'Read later')+'" onclick="rtfcToggle(\'later\',\''+id+'\',event)">'+(r?'◷':'○')+'</button>'+
-      '<button class="sv'+(rd?' on':'')+'" title="'+(rd?'Marked as read':'Mark as read')+'" onclick="rtfcToggle(\'read\',\''+id+'\',event)">'+(rd?'✓':'◯')+'</button></span>';
+      svBtn("bookmark",id,svState(l,"bookmark",id))+
+      svBtn("later",id,svState(l,"later",id))+
+      svBtn("read",id,svState(l,"read",id))+'</span>';
   }
   var ARTICLES = (window.RTFC_ARTICLES || []).concat(window.RTFC_LIVE_ARTICLES || []).concat(window.RTFC_NEWSROOM_ARTICLES || []).concat(window.RTFC_RESEARCH || [])
     .slice().sort(function(a,b){ return new Date(b.publishedAt) - new Date(a.publishedAt); });
@@ -652,6 +722,45 @@
     return '<a class="rail-item" href="#/article/'+a.slug+'">'+tagsHTML(a)+
       '<h4>'+esc(a.title)+'</h4>'+bylineHTML(p,a.publishedAt,null,a)+'</a>';
   }
+  /* ---------- story-card variants (spec §14) ----------
+     One overloaded card repeated fifteen times is what made the homepage read as
+     a tiled grid instead of an edited page. These are the deliberate variants;
+     which one a story gets is an editorial decision made in viewHome, NOT a
+     function of whether art happens to exist. */
+
+  /* Wide feature — big art beside the text on desktop, art-on-top on mobile.
+     Used to open a section of the page and break the column rhythm. */
+  function cardWideHTML(a){
+    var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
+    return '<a class="card card-wide" href="#/article/'+a.slug+'">'+
+      '<div class="art" style="'+artFill(a,true)+'">'+artGlyph(a,col)+saveBtns(a.id,true)+'</div>'+
+      '<div class="cw-body">'+(a.breaking?'<span class="pill breaking">Breaking</span>':"")+tagsHTML(a)+
+      '<h3>'+esc(a.title)+'</h3><p class="dek">'+esc(a.dek)+'</p>'+
+      bylineHTML(p,a.publishedAt,readTime(a),a)+'</div></a>';
+  }
+  /* Thumbnail row — small crop beside the headline. The workhorse for density:
+     roughly three of these occupy the space one full-bleed card used to. */
+  function cardThumbHTML(a){
+    var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
+    return '<a class="card-thumb" href="#/article/'+a.slug+'">'+
+      '<div class="ct-art" style="'+artFill(a)+'">'+artGlyph(a,col)+'</div>'+
+      '<div class="ct-body">'+tagsHTML(a)+'<h4>'+esc(a.title)+'</h4>'+
+      bylineHTML(p,a.publishedAt,null,a)+'</div>'+saveBtns(a.id,true)+'</a>';
+  }
+  /* Brief — no art at all. A run of these reads like a wire strip and gives the
+     imagery elsewhere on the page its value back (spec §17). */
+  function briefRowHTML(a){
+    var col=SECTION_COLORS[a.section]||"#8b7cf7";
+    return '<a class="brief-row" href="#/article/'+a.slug+'">'+
+      '<span class="br-sec" style="color:'+escAttr(col)+'">'+esc(a.section)+'</span>'+
+      '<span class="br-h">'+esc(a.title)+'</span>'+
+      '<span class="br-meta">'+esc(relTime(a.publishedAt))+'</span></a>';
+  }
+  /* A titled module. Keeps the page's section rhythm consistent without another
+     copy of the kicker markup at every call site. */
+  function hpModule(label,dotVar,inner){
+    return '<div class="kicker"><span class="dotc" style="background:var('+dotVar+')"></span>'+label+'</div>'+inner;
+  }
   function featureHTML(a){
     var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
     return '<a class="feature" href="#/article/'+a.slug+'">'+
@@ -735,16 +844,48 @@
     // The homepage shows a curated slice, not the whole archive. Every story stays
     // one click away (desk pages + the archive below) -- an unbounded flat grid grew
     // to 56 cards / 18 screens before this, and it grows by ~3 more every single day.
-    var LATEST=9, MORE=6;
-    h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Latest across the desk</div>';
-    h+='<div class="grid">'+grid.slice(0,LATEST).map(cardHTML).join("")+'</div>';
-    h+=companyBrowseHTML(); // replaced deskBrowseHTML() — readers follow companies, not desks; desks remain reachable via nav + section pages
-    var more=grid.slice(LATEST, LATEST+MORE);
-    if(more.length){
-      h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>More from the newsroom</div>';
-      h+='<div class="grid">'+more.map(cardHTML).join("")+'</div>';
+    /* ---- editorial module rhythm (spec §12.4) ----
+       Previously: two flat grids of nine and six identical cards, i.e. fifteen
+       repetitions of image/tags/headline/dek/byline. The page must feel curated,
+       not tiled — so the same stories are dealt into deliberately different
+       shapes. Every slice is bounded and degrades cleanly when the newsroom has
+       published fewer stories than a full page wants. */
+    var LATEST=9, MORE=6, TOTAL=LATEST+MORE;
+    var q=grid.slice(0,TOTAL), qi=0;
+    function take(n){ var s=q.slice(qi,qi+n); qi+=s.length; return s; }
+
+    // 1 — a wide opener plus two dense rows beside it
+    /* The wide variant is withdrawn: it fought the base .card rules
+       (display:flex + .art aspect-ratio/position) and overlapped its own
+       headline between roughly 1000-1250px. The opener uses the standard card
+       beside the thumbnail rail instead — same rhythm, no new geometry. */
+    var openWide=take(1), openThumbs=take(2);
+    if(openWide.length){
+      h+=hpModule("Latest across the desk","--accent",
+        '<div class="hp-open">'+openWide.map(cardHTML).join("")+
+        (openThumbs.length?'<div class="thumb-list">'+openThumbs.map(cardThumbHTML).join("")+'</div>':'')+'</div>');
     }
-    var left=Math.max(0, grid.length-(LATEST+MORE));
+    // 2 — a standard three, the only place the equal-column card still appears
+    var trio=take(3);
+    if(trio.length) h+='<div class="grid grid-3">'+trio.map(cardHTML).join("")+'</div>';
+
+    // 3 — a text-only wire strip: no art, maximum scan speed
+    var briefs=take(5);
+    if(briefs.length>=3){
+      h+=hpModule("In brief","--gold",'<div class="brief-strip">'+briefs.map(briefRowHTML).join("")+'</div>');
+    } else { qi-=briefs.length; }
+
+    h+=companyBrowseHTML(); // readers follow companies, not desks; desks stay reachable via nav + section pages
+
+    // 4 — a second visual beat, then compact rows to close the page out
+    var lateWide=take(1), lateThumbs=take(4);
+    if(lateWide.length||lateThumbs.length){
+      h+=hpModule("More from the newsroom","--accent2",
+        (lateWide.length?'<div class="hp-open">'+lateWide.map(cardHTML).join("")+
+          (lateThumbs.length?'<div class="thumb-list">'+lateThumbs.map(cardThumbHTML).join("")+'</div>':'')+'</div>'
+         :'<div class="thumb-list thumb-2col">'+lateThumbs.map(cardThumbHTML).join("")+'</div>'));
+    }
+    var left=Math.max(0, grid.length-TOTAL);
     if(left) h+='<a class="home-more" href="#/archive">Browse all '+ARTICLES.length+' stories in the archive<span>'+left+' more →</span></a>';
     h+=eventsHomeHTML();
     h+='<div class="home-nl">'+newsletterHTML(true)+'</div>';
@@ -895,8 +1036,13 @@
   // TL;DR — the story's main points as bullets at the end of the piece, so the gist
   // is scannable at a glance. Schema: a.tldr = ["point", ...]. A jump chip under the
   // cover (rendered in viewArticle) deep-links here via rtfcJump('tldr').
+  /* Guides must NOT end with a news-style recap (spec §27). A guide already ends
+     with its final step / what-to-do-next, so repeating the gist underneath reads
+     as filler and undoes the sense of completion. News formats keep it. */
+  function isGuideArticle(a){ return !!a && (a.format==="guide" || a.section==="Guide"); }
   function tldrHTML(a){
     if(!a.tldr || !a.tldr.length) return "";
+    if(isGuideArticle(a)) return "";
     return '<aside class="tldr" id="tldr"><div class="tldr-head"><span class="tldr-ic">⚡</span>Story at a glance</div>'+
       '<ul>'+a.tldr.map(function(x){return '<li>'+fmtBody(x)+'</li>';}).join("")+'</ul></aside>';
   }
@@ -2507,10 +2653,18 @@
     for(var i=0;i<TASK_GROUPS.length;i++) if(TASK_GROUPS[i][1].indexOf(t)>=0) return TASK_GROUPS[i][0];
     return "Other";
   }
+  /* ---- single source of truth for cost figures ----
+     The ledger deliberately excludes third-party "retired" provider rows and
+     says so in print. Any other surface that quotes a newsroom cost MUST use
+     the same basis, or the Control Room and the ledger disagree and the link
+     between them ("full ledger") becomes a lie. This bug shipped once: Pulse
+     summed raw USAGE while /usage summed live-only. Use these, not USAGE. */
+  function liveUsage(){ return USAGE.filter(function(r){ return provider(r.model)!=="retired"; }); }
+  function retiredUsage(){ return USAGE.filter(function(r){ return provider(r.model)==="retired"; }); }
   function viewUsage(){
     var now=new Date();
-    var RETIRED=USAGE.filter(function(r){return provider(r.model)==="retired";});
-    var LIVE=USAGE.filter(function(r){return provider(r.model)!=="retired";});
+    var RETIRED=retiredUsage();
+    var LIVE=liveUsage();
     var retiredS=sumRecs(RETIRED);
     var today=LIVE.filter(function(r){return sameDay(r.ts,now);});
     var d7=LIVE.filter(function(r){return withinDays(r.ts,now,7);});
@@ -2730,8 +2884,10 @@
     // scrolling past the price.
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Issues</div>';
     h+='<div class="mag-grid">'+MAG.map(function(iss,i){
-      return '<div class="mag-cell'+(i===0?' is-lead':'')+'">'+issueCoverHTML(iss,true)+
-        (iss.pdf?'<a class="mag-dl" href="'+safeHref(iss.pdf)+'" download="'+esc(pdfName(iss))+'">⤓ Download PDF</a>':'')+'</div>';
+      // Public Download PDF removed (spec §23): the PDF does not represent the
+      // designed issue, so it is no longer offered as a reading format. The files
+      // and pdfName()/iss.pdf stay for archival and newsroom workflows.
+      return '<div class="mag-cell'+(i===0?' is-lead':'')+'">'+issueCoverHTML(iss,true)+'</div>';
     }).join("")+'</div>';
     if(!isPlus()){
       // The offer panel. The old version was one grey bar plus two faint
@@ -2762,7 +2918,7 @@
             '<li>The monthly issue, in the spread reader</li>'+
             '<li>Special editions as they ship</li>'+
             '<li>The full back-issue archive</li>'+
-            '<li>Every issue as a downloadable PDF</li>'+
+            '<li>Every issue in the designed spread reader</li>'+
           '</ul></div>'+
         '</div>'+
       '</div>';
@@ -2857,6 +3013,77 @@
     return list.length? '<div class="grid">'+list.map(cardHTML).join("")+'</div>'
       : '<p style="color:var(--muted);font-size:14px">Nothing here yet — tap the ♡ or ○ on any article.</p>';
   }
+  /* ---------- Settings → Appearance ----------
+     A real preview tile per appearance rather than a colour dot: each swatch is
+     painted with that skin's own tokens by setting data-theme ON the tile, so
+     what the reader sees is the actual palette, not an approximation of it.
+     Tiles are radios (role=radio + aria-checked) because picking an appearance
+     is a single choice, and they are keyboard operable. */
+  /* One row in the appearance dropdown: colour swatch, name, one-line note.
+     The swatch is painted from the skin's own accent so the list is scannable
+     by colour before you read a single label. */
+  function appearanceRow(t){
+    var id=t[0], label=t[1], canvas=t[2], note=t[3], sw=t[4];
+    var on=(currentTheme()===id);
+    return '<button type="button" class="ap-row'+(on?' on':'')+'" role="option" aria-selected="'+(on?'true':'false')+'"'+
+      ' data-theme-id="'+id+'" onclick="rtfcPickTheme(\''+id+'\')">'+
+      '<span class="ap-sw" data-theme="'+id+'" aria-hidden="true"><i style="background:'+escAttr(sw)+'"></i></span>'+
+      '<span class="ap-rtext"><span class="ap-name">'+esc(label)+'</span>'+
+      '<span class="ap-note">'+esc(note)+'</span></span>'+
+      '<span class="ap-canvas">'+esc(canvas)+'</span>'+
+      '<span class="ap-check" aria-hidden="true">✓</span></button>';
+  }
+  /* The closed control: current appearance, its swatch, and a caret. */
+  function appearancePicker(){
+    var cur=themeEntry(currentTheme());
+    return '<div class="ap-picker" id="ap-picker">'+
+      '<button type="button" class="ap-toggle" id="ap-toggle" aria-haspopup="listbox" aria-expanded="false"'+
+      ' onclick="rtfcToggleThemeMenu(event)">'+
+        '<span class="ap-sw" aria-hidden="true"><i style="background:'+escAttr(cur[4])+'"></i></span>'+
+        '<span class="ap-cur"><b id="ap-cur-name">'+esc(cur[1])+'</b>'+
+        '<span id="ap-cur-note">'+esc(cur[3])+'</span></span>'+
+        '<span class="ap-caret" aria-hidden="true">▾</span></button>'+
+      '<div class="ap-menu" id="appearance-grid" role="listbox" aria-label="Appearance" hidden>'+
+        THEMES.map(appearanceRow).join("")+'</div></div>';
+  }
+  window.rtfcToggleThemeMenu=function(ev){
+    if(ev){ ev.preventDefault(); ev.stopPropagation(); }
+    var m=document.getElementById("appearance-grid"), t=document.getElementById("ap-toggle");
+    if(!m||!t) return;
+    var open=m.hasAttribute("hidden");
+    if(open){ m.removeAttribute("hidden"); } else { m.setAttribute("hidden",""); }
+    t.setAttribute("aria-expanded", open?"true":"false");
+  };
+  window.rtfcPickTheme=function(id){
+    window.rtfcSetTheme(id);
+    var m=document.getElementById("appearance-grid"), t=document.getElementById("ap-toggle");
+    if(m) m.setAttribute("hidden","");
+    if(t){ t.setAttribute("aria-expanded","false"); t.focus(); }
+  };
+  // click-away closes the menu
+  document.addEventListener("click",function(e){
+    var p=document.getElementById("ap-picker");
+    if(p && !p.contains(e.target)){
+      var m=document.getElementById("appearance-grid"), t=document.getElementById("ap-toggle");
+      if(m&&!m.hasAttribute("hidden")){ m.setAttribute("hidden",""); if(t) t.setAttribute("aria-expanded","false"); }
+    }
+  });
+  function viewSettings(){
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Settings</div>'+
+      '<h1>Reader preferences</h1>'+
+      '<p>Appearance, language and reading options. Choices are saved in this browser and applied before the next page paints, so the publication never flashes the wrong skin.</p></div>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Appearance</div>';
+    h+=appearancePicker();
+    h+='<p class="ap-foot">Eighteen appearances. Body text meets WCAG AAA contrast on every one; secondary text meets AA. '+
+       'The header ☀/☾ button flips between Dark and Light — pick anything else here.</p>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--ok)"></span>Motion</div>';
+    h+='<p class="ap-foot">RTFCLMGZN follows your system “reduce motion” setting. With it on, the startup mark does not spin, '+
+       'scroll animations are disabled, and transitions are shortened.</p>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--gold)"></span>Language</div>';
+    h+='<p class="ap-foot">Use the globe in the header to read RTFCLMGZN in 40 languages. The magazine ships in English — '+
+       'designed pages do not reflow safely through machine translation.</p>';
+    return h+'</div>';
+  }
   function viewLibrary(){
     var l=libGet();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Your library</div>'+
@@ -2867,6 +3094,17 @@
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>◷ Read later · '+l.readLater.length+'</div>'+cardsByIds(l.readLater);
     return h+'</div>';
   }
+  /* Settings lives under the profile, not in the primary nav — appearance and
+     reading preferences are personal-account territory, and the nav is for
+     journalism. Rendered on the Account page for signed-out readers too, since
+     appearance is not gated behind an account. */
+  function accountSettingsLinkHTML(){
+    var e=themeEntry(currentTheme());
+    return '<a class="acct-settings" href="#/settings">'+
+      '<span class="ap-sw" aria-hidden="true"><i style="background:'+escAttr(e[4])+'"></i></span>'+
+      '<span class="as-txt"><b>Settings</b><span>Appearance · '+esc(e[1])+' · language · motion</span></span>'+
+      '<span class="as-go" aria-hidden="true">→</span></a>';
+  }
   function viewAccount(){
     var l=libGet();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px"><div class="over">Account</div>';
@@ -2874,7 +3112,7 @@
       if(acctPending){
         h+='<h1>Check your email</h1>'+
           '<p>We sent a sign-in link to <b>'+esc(acctPending)+'</b>. It expires in 15 minutes and works once. Didn’t get it? Check spam, or <a href="#" onclick="acctPending=null;route();return false" style="color:var(--accent2)">try a different address</a>.</p></div>';
-        return h+'</div>';
+        return h+accountSettingsLinkHTML()+'</div>';
       }
       h+='<h1>Sign in or create your account</h1>'+
         '<p>Reading is free and stays free. Enter your email and we’ll send a one-time link — new address or returning, same step either way. A free account adds three things: your library (bookmarks + read-later) becomes permanent and syncs across devices, you get the <b>daily digest email</b> — the day’s stories in one send — and you’re set up to subscribe to the magazine whenever you’re ready.</p></div>'+
@@ -2882,7 +3120,7 @@
         '<button class="cta" id="acct-signup-btn" onclick="rtfcSignup()">Send sign-in link</button>'+
         '<p class="protonote">We’ll email you a one-time sign-in link — no password to create or remember. Only your most recent link works; if you have more than one of these emails, use the newest.</p></div>'+
         timeMeterHTML(l);
-      return h+'</div>';
+      return h+accountSettingsLinkHTML()+'</div>';
     }
     h+='<h1>Your account</h1><p>Signed in as <b>'+esc(l.account.email)+'</b></p></div>';
     var plus=isPlus();
@@ -2926,7 +3164,7 @@
       '<button class="cta ghost" id="acct-code-btn" onclick="rtfcRedeem()">Redeem</button>'+
       '<p class="protonote">Founding codes, gift codes and press passes all go in here. Capitals don’t matter — we tidy it up for you.</p></div>';
     h+=timeMeterHTML(l);
-    return h+'</div>';
+    return h+accountSettingsLinkHTML()+'</div>';
   }
 
   /* ================= ARCHIVE + SEARCH ================= */
@@ -3756,7 +3994,8 @@
   }
   function articleToolsHTML(a){
     var h='<div class="art-tools">';
-    if(a.tldr&&a.tldr.length){
+    // No recap on guides, so no jump chip pointing at one that isn't rendered.
+    if(a.tldr&&a.tldr.length&&!isGuideArticle(a)){
       h+='<button class="tool-btn tldr-btn" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the story-at-a-glance summary">⚡ <span>TL;DR</span></button>';
     }
     if(window.speechSynthesis){
@@ -4660,7 +4899,8 @@
   function viewPulse(){
     var now=new Date();
     var todayRecs=USAGE.filter(function(r){return sameDay(r.ts,now);});
-    var allS=sumRecs(USAGE), dayS=sumRecs(todayRecs);
+    // live-only, matching /usage exactly — see liveUsage() above
+    var allS=sumRecs(liveUsage()), dayS=sumRecs(todayRecs);
     var todayArts=ARTICLES.filter(function(a){return sameDay(a.publishedAt,now);});
     var ns=nextSlot();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px">'+
@@ -5543,7 +5783,8 @@
       '<a class="mexit" href="#/magazine">✕ <span>Close</span></a>'+
       '<span class="mtitle">'+esc(iss.title)+'</span>'+
       '<input type="range" class="mscrub" id="mscrub" min="1" max="'+total+'" value="'+(wanted+1)+'" step="1" aria-label="Jump to page" title="Drag to flip through pages">'+
-      (iss.pdf?'<a class="mdl" href="'+safeHref(iss.pdf)+'" download="'+esc(pdfName(iss))+'" title="Download this issue as a PDF">⤓ <span>PDF</span></a>':'')+
+      /* Public PDF download removed from reader chrome (spec §23) — the designed
+         reader is the canonical experience. Archival PDFs are untouched. */
       '<span class="mcount" id="mcount" aria-live="polite" aria-atomic="true">'+(wanted+1)+' / '+total+'</span></div>'+
       '<div class="mtrack" id="mtrack" tabindex="0" role="region" aria-label="'+escAttr(iss.title||"Magazine")+' — page filmstrip; use the arrow keys to turn pages">'+
       iss.spreads.map(function(pg,i){ return spreadPageV3(pg,iss,i,total); }).join("")+
@@ -6225,6 +6466,7 @@
   }
   // Static routes: [title, description]. Titles are suffixed with the masthead.
   var ROUTE_HEADS={
+    settings:["Settings","Choose from nine appearances, set your language, and see how RTFCLMGZN handles motion and reading preferences. Everything is stored in your own browser."],
     magazine:["The Magazine","Every month, the Issue Desk distils the full run of our coverage into one designed issue — the cover story with hindsight, the editors’ month-in-review columns, the Scoreboard, the Compendium and a Watchlist we grade in public."],
     guides:["Guides","Hands-on, plain-English guides to actually using AI. No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
@@ -6416,6 +6658,7 @@
     else if(parts[0]==="magazine"){ view=viewMagazine(); active="magazine"; }
     else if(parts[0]==="issue"){ view=viewIssue(parts[1],parts[2]); active="magazine"; }
     else if(parts[0]==="library"){ view=viewLibrary(); active="library"; }
+    else if(parts[0]==="settings"){ view=viewSettings(); active="settings"; }
     else if(parts[0]==="account"){ view=viewAccount(); active="account"; }
     else if(parts[0]==="archive"){ view=viewArchive(); active="archive"; }
     else if(parts[0]==="article"){ view=viewArticle(parts[1]); active=""; }
@@ -6767,18 +7010,110 @@
   window.addEventListener("scroll",onScroll,{passive:true});
 
   /* ---------- theme ---------- */
+  /* ---------- appearances ----------
+     Nine skins. Each entry is [id, label, canvas, one-line description]; canvas
+     is what the swatch/preview needs to know and which glyph variant the skin
+     uses. The palettes themselves live entirely in styles.css as semantic
+     tokens — nothing here hard-codes a colour, so adding a tenth appearance is
+     a CSS block plus one line in this list. */
+  var THEMES=[
+    ["dark","Dark","dark","The default publication canvas.","#8b7cf7"],
+    ["midnight","Midnight","dark","Cooler, deeper blue-black.","#6f8cf8"],
+    ["graphite","Graphite","dark","Neutral grey, low colour temperature.","#a89bf0"],
+    ["noir","Noir","dark","True black, maximum contrast.","#b9a8ff"],
+    ["oxide","Oxide","dark","Warm dark with a copper signature.","#e08a5a"],
+    ["light","Light","light","The default light canvas.","#6a58e8"],
+    ["paper","Paper","light","Warm off-white, print-like.","#6a58e8"],
+    ["sepia","Sepia","light","Parchment tone for long reading.","#9a5b1f"],
+    ["slate","Slate","light","Cool grey-blue, high clarity.","#3f66c4"],
+    ["forest","Forest","dark","Deep green, low glare.","#3fbf7f"],
+    ["crimson","Crimson","dark","Dark red, high drama.","#e8536b"],
+    ["ocean","Ocean","dark","Teal depth, cool light.","#31b6d9"],
+    ["amethyst","Amethyst","dark","Saturated violet canvas.","#c06ff0"],
+    ["cobalt","Cobalt","dark","Electric blue on near-navy.","#4d7cff"],
+    ["ember","Ember","dark","Warm orange over charcoal.","#ff8a3d"],
+    ["sand","Sand","light","Desert light, warm paper.","#c08a3e"],
+    ["rose","Rose","light","Soft pink light canvas.","#e0518a"],
+    ["mint","Mint","light","Pale green, fresh and calm.","#2fae83"]
+  ];
+  function themeEntry(id){ for(var i=0;i<THEMES.length;i++){ if(THEMES[i][0]===id) return THEMES[i]; } return THEMES[0]; }
+  function themeIds(){ return THEMES.map(function(t){return t[0];}); }
+  function validTheme(t){ return themeIds().indexOf(t)>=0 ? t : "dark"; }
+  function currentTheme(){ return validTheme(document.documentElement.getAttribute("data-theme")||"dark"); }
+  function themeCanvas(id){ for(var i=0;i<THEMES.length;i++){ if(THEMES[i][0]===id) return THEMES[i][2]; } return "dark"; }
+  /* Single writer for the appearance. Persists to the same rtfc-theme key the
+     pre-paint bootstrap in index.html reads, which is what prevents a flash of
+     the wrong skin on the next load. */
+  window.rtfcSetTheme=function(t){
+    t=validTheme(t);
+    document.documentElement.setAttribute("data-theme",t);
+    try{ localStorage.setItem("rtfc-theme",t); }catch(e){}
+    var btn=document.getElementById("theme");
+    if(btn) btn.textContent = themeCanvas(t)==="dark" ? "☀" : "☾";
+    // keep the browser UI colour in step with the canvas
+    try{
+      var m=document.querySelector('meta[name="theme-color"]');
+      if(m) m.setAttribute("content",getComputedStyle(document.documentElement).getPropertyValue("--bg").trim()||"#0b0b12");
+    }catch(e){}
+    // repaint any open Appearance panel so the selected tile follows
+    var g=document.getElementById("appearance-grid");
+    if(g){
+      [].forEach.call(g.querySelectorAll("[data-theme-id]"),function(el){
+        var on=el.getAttribute("data-theme-id")===t;
+        el.classList.toggle("on",on);
+        el.setAttribute("aria-selected",on?"true":"false");
+      });
+      var e=themeEntry(t);
+      var n=document.getElementById("ap-cur-name"), no=document.getElementById("ap-cur-note");
+      var sw=document.querySelector("#ap-toggle .ap-sw i");
+      if(n) n.textContent=e[1];
+      if(no) no.textContent=e[3];
+      if(sw) sw.style.background=e[4];
+    }
+    return t;
+  };
+  /* ---------- pointer glow ----------
+     A soft light in the active appearance's accent that trails the cursor. It
+     lerps toward the pointer on rAF rather than snapping, so it reads as a lamp
+     rather than a jitter, and it only paints transforms. Skipped entirely on
+     touch devices and under reduced motion — both checked before anything is
+     appended to the DOM, so there is no idle element or listener either way. */
+  function initPointerGlow(){
+    try{
+      if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+      if(window.matchMedia("(hover:none),(pointer:coarse)").matches) return;
+    }catch(e){ return; }
+    var el=document.createElement("div"); el.id="rtfc-cursor"; document.body.appendChild(el);
+    var tx=innerWidth/2, ty=innerHeight/2, cx=tx, cy=ty, on=false, raf=0;
+    function step(){
+      cx+=(tx-cx)*0.14; cy+=(ty-cy)*0.14;
+      el.style.transform="translate3d("+cx.toFixed(1)+"px,"+cy.toFixed(1)+"px,0)";
+      raf=requestAnimationFrame(step);
+    }
+    document.addEventListener("pointermove",function(e){
+      if(e.pointerType==="touch") return;
+      tx=e.clientX; ty=e.clientY;
+      if(!on){ on=true; el.classList.add("on"); if(!raf) raf=requestAnimationFrame(step); }
+    },{passive:true});
+    document.addEventListener("pointerleave",function(){ on=false; el.classList.remove("on"); });
+    // stop burning frames when the tab is not visible
+    document.addEventListener("visibilitychange",function(){
+      if(document.hidden){ cancelAnimationFrame(raf); raf=0; }
+      else if(on && !raf){ raf=requestAnimationFrame(step); }
+    });
+  }
   function initTheme(){
     var btn=document.getElementById("theme");
-    function set(t){ document.documentElement.setAttribute("data-theme",t); try{localStorage.setItem("rtfc-theme",t);}catch(e){} btn.textContent=t==="dark"?"☀":"☾"; }
-    // Dark-first: the pre-paint bootstrap in index.html already set data-theme
-    // (dark unless the reader explicitly chose light). This just syncs the
-    // button and keeps the choice persistent. OS light preference no longer
-    // overrides the default — only the reader's own toggle does.
     var saved; try{saved=localStorage.getItem("rtfc-theme");}catch(e){}
-    set(saved==="light"?"light":"dark");
+    // The bootstrap already painted this pre-paint; this just re-asserts it
+    // through the single writer so the button glyph and meta colour agree.
+    window.rtfcSetTheme(saved||document.documentElement.getAttribute("data-theme")||"dark");
+    if(!btn) return;
+    /* The header control stays a fast light/dark flip — the full nine-skin
+       picker lives in Settings → Appearance. Flipping from any dark skin goes
+       to Light and vice versa, so the button never feels like it does nothing. */
     btn.addEventListener("click",function(){
-      var cur=document.documentElement.getAttribute("data-theme")||"dark";
-      set(cur==="dark"?"light":"dark");
+      window.rtfcSetTheme(themeCanvas(currentTheme())==="dark" ? "light" : "dark");
     });
   }
 
@@ -6918,5 +7253,17 @@
     window.__placeGrip=place; place();
   }
 
-  document.addEventListener("DOMContentLoaded",function(){ initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker(); initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); logVisit(); route(); syncAccount(); });
+  document.addEventListener("DOMContentLoaded",function(){
+    initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker();
+    initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); initPointerGlow(); logVisit();
+    route();
+    syncAccount();
+    /* Stop the splash on the REAL ready signal, not a timer: route() has now
+       rendered the initial view, so two frames later it has actually painted.
+       The inline fail-safe in index.html still fires if boot throws before we
+       ever get here, so an error can never leave the reader stuck. */
+    if(window.__bootReady){
+      requestAnimationFrame(function(){ requestAnimationFrame(window.__bootReady); });
+    }
+  });
 })();

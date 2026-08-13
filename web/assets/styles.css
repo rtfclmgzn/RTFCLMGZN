@@ -18,13 +18,16 @@
      accent is only 3.32:1; near-black is 5.91:1. Flips per theme. */
   --on-accent:#0b0b12;
   --gate:#e0564d; --ok:#42c08a; --gold:#d9a94e;
-  --maxw:1140px; --measure:70ch;
+  --maxw:1240px; --measure:70ch;
   --serif:"Fraunces","Georgia","Times New Roman",serif;
   --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --mono:"SF Mono","Cascadia Code",Consolas,monospace;
   --shadow:0 18px 50px -18px rgba(0,0,0,.55);
+  /* Brand mark. Light canvases override this with the ink variant —
+     same alpha mask, only the white blade pixels recoloured. */
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
 }
-:root[data-theme="light"]{
+[data-theme="light"]{
   --bg:#faf9f5;
   --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.08), transparent 70%);
   --surface:#ffffff; --surface2:#f3f2ec; --surface3:#eceade;
@@ -35,9 +38,98 @@
   --accent:#6a58e8; --accent2:#8b7cf7; --accent-ink:#5646c8;
   --on-accent:#ffffff;
   --shadow:0 18px 45px -20px rgba(60,50,120,.18);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
 }
+
+/* ============================================================
+   APPEARANCES — seven additional skins (nine total with dark/light)
+   Every skin redefines the SAME semantic tokens the components already
+   consume, so no component decides light-vs-dark for itself and the same
+   markup works across all nine. Contrast for ink/muted/faint/accent pairs is
+   verified against WCAG (body text AAA, secondary text AA) — see the build
+   note in the commit; do not hand-tweak a value without re-checking it.
+   --rtfc-glyph swaps the brand mark to the ink variant on light canvases.
+   ============================================================ */
+[data-theme="midnight"]{ /* Midnight — dark canvas */
+  --bg:#080b18;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(90,120,255,.14), transparent 70%);
+  --surface:#0e1326; --surface2:#141b33; --surface3:#1b2440;
+  --ink:#e8ecfa; --ink-soft:#c2c9e4; --muted:#8b93b4; --faint:#868ead;
+  --line:#1e2740; --hairline:#182036;
+  --accent:#6f8cf8; --accent2:#9db2ff; --accent-ink:#b9c7ff;
+  --on-accent:#080b18;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="graphite"]{ /* Graphite — dark canvas */
+  --bg:#141414;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(150,140,220,.10), transparent 70%);
+  --surface:#1c1c1c; --surface2:#242424; --surface3:#2e2e2e;
+  --ink:#ededed; --ink-soft:#c9c9c9; --muted:#909090; --faint:#8b8b8b;
+  --line:#2b2b2b; --hairline:#232323;
+  --accent:#a89bf0; --accent2:#c4b9ff; --accent-ink:#cfc6ff;
+  --on-accent:#141414;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="noir"]{ /* Noir — dark canvas */
+  --bg:#000000;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(160,140,255,.09), transparent 70%);
+  --surface:#0a0a0a; --surface2:#121212; --surface3:#1a1a1a;
+  --ink:#f7f7f7; --ink-soft:#d4d4d4; --muted:#949494; --faint:#8f8f8f;
+  --line:#242424; --hairline:#191919;
+  --accent:#b9a8ff; --accent2:#d3c7ff; --accent-ink:#ddd4ff;
+  --on-accent:#000000;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.75);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="oxide"]{ /* Oxide — dark canvas */
+  --bg:#121011;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(220,130,80,.11), transparent 70%);
+  --surface:#1a1717; --surface2:#221d1c; --surface3:#2c2523;
+  --ink:#f0eae6; --ink-soft:#d0c5be; --muted:#9c8f88; --faint:#978a83;
+  --line:#2e2624; --hairline:#241e1d;
+  --accent:#e08a5a; --accent2:#f0a878; --accent-ink:#f2b28a;
+  --on-accent:#121011;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="paper"]{ /* Paper — light canvas */
+  --bg:#f7f3ea;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.07), transparent 70%);
+  --surface:#fffdf7; --surface2:#f1ece0; --surface3:#e8e2d3;
+  --ink:#1c1a16; --ink-soft:#413d34; --muted:#6b6559; --faint:#6f6a5e;
+  --line:#e0d9c9; --hairline:#e8e2d5;
+  --accent:#6a58e8; --accent2:#8b7cf7; --accent-ink:#5343c0;
+  --on-accent:#ffffff;
+  --shadow:0 18px 45px -20px rgba(90,75,40,.18);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+[data-theme="sepia"]{ /* Sepia — light canvas */
+  --bg:#f4e9d8;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(160,110,40,.09), transparent 70%);
+  --surface:#fdf6e9; --surface2:#eee0cb; --surface3:#e4d4ba;
+  --ink:#2a1f14; --ink-soft:#4d3d2b; --muted:#75604a; --faint:#79644e;
+  --line:#dfcfb4; --hairline:#e7dac3;
+  --accent:#9a5b1f; --accent2:#b8763a; --accent-ink:#834c17;
+  --on-accent:#ffffff;
+  --shadow:0 18px 45px -20px rgba(110,80,30,.20);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+[data-theme="slate"]{ /* Slate — light canvas */
+  --bg:#eef1f5;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(60,100,200,.08), transparent 70%);
+  --surface:#ffffff; --surface2:#e4e9f0; --surface3:#d8dfe9;
+  --ink:#151a22; --ink-soft:#374050; --muted:#5f6a7d; --faint:#636e82;
+  --line:#d5dce6; --hairline:#e1e7ef;
+  --accent:#3f66c4; --accent2:#5b83e0; --accent-ink:#33529e;
+  --on-accent:#ffffff;
+  --shadow:0 18px 45px -20px rgba(40,60,110,.16);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+
 @media (prefers-color-scheme:light){
-  :root:not([data-theme="dark"]){
+  :root:not([data-theme]){
     --bg:#faf9f5;
     --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.08), transparent 70%);
     --surface:#ffffff; --surface2:#f3f2ec; --surface3:#eceade;
@@ -106,7 +198,12 @@ header.site{position:sticky;top:0;z-index:50;
   backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
 .bar{display:flex;align-items:center;gap:26px;height:auto;min-height:70px;flex-wrap:wrap;row-gap:0}
 .logo{font-family:var(--serif);font-weight:700;letter-spacing:.1em;font-size:22px;line-height:1;
-  color:var(--ink)}
+  color:var(--ink);display:inline-flex;align-items:center;gap:11px}
+/* Official transparent glyph beside the wordmark — the two behave as one Home
+   link. Derived from the official mark: no baked tile, no border, no recolour
+   beyond the light-appearance ink variant declared with --rtfc-glyph. */
+.logo-glyph{flex:none;width:26px;height:26px;background:var(--rtfc-glyph) center/contain no-repeat}
+.logo-type{display:block}
 .logo em{font-style:normal;color:var(--accent2)}
 .logo small{display:block;font-family:var(--sans);font-size:8.5px;letter-spacing:.42em;
   color:var(--muted);font-weight:600;margin-top:4px}
@@ -2116,13 +2213,13 @@ html.xlating::after{ content:""; position:fixed; z-index:99999; top:50%; left:50
 .gl-label{ font-weight:650; color:var(--ink,#1a1626); }
 .gl-note{ color:var(--muted,#6b6478); font-size:13px; flex:1; }
 .gl-arrow{ margin-left:auto; color:var(--accent,#8b7cf7); font-weight:700; }
-:root[data-theme="dark"] .gl-label{ color:#ece8f6; }
+[data-theme="dark"] .gl-label{ color:#ece8f6; }
 
 /* ============ V31 · scoreboard last-updated line ============ */
 .sb-updated{ display:flex; align-items:center; gap:9px; margin:14px 0 4px; padding:11px 15px; border-radius:11px;
   background:rgba(108,182,240,.08); border:1px solid rgba(108,182,240,.18); font-size:13.5px; color:var(--muted,#6b6478); }
 .sb-updated b{ color:var(--ink,#1a1626); font-weight:650; }
-:root[data-theme="dark"] .sb-updated b{ color:#e9edf5; }
+[data-theme="dark"] .sb-updated b{ color:#e9edf5; }
 .sbu-dot{ width:8px; height:8px; border-radius:50%; background:#4ad07a; box-shadow:0 0 0 4px rgba(74,208,122,.16); flex:none; }
 
 /* ============ V32 · GUIDES as step-by-step (distinct from articles) ============ */
@@ -2138,11 +2235,11 @@ html.xlating::after{ content:""; position:fixed; z-index:99999; top:50%; left:50
   font:700 19px/38px Fraunces,Georgia,serif; text-align:center; box-shadow:0 4px 14px rgba(139,124,247,.35); }
 .gs-body{ flex:1; min-width:0; }
 .gs-do{ font-family:Fraunces,Georgia,serif; font-size:20px; font-weight:600; line-height:1.25; color:var(--ink,#1a1626); margin-bottom:6px; }
-:root[data-theme="dark"] .gs-do{ color:#ece8f6; }
+[data-theme="dark"] .gs-do{ color:#ece8f6; }
 .gs-detail{ font-size:15.5px; line-height:1.62; color:var(--body,#39323f); }
-:root[data-theme="dark"] .gs-detail{ color:#c7c0d4; }
+[data-theme="dark"] .gs-detail{ color:#c7c0d4; }
 .gs-ex{ margin-top:10px; padding:11px 14px 12px; border-radius:10px; background:rgba(20,18,28,.05); border-left:3px solid var(--accent2,#5ac8b0); font-size:14.5px; line-height:1.5; font-style:italic; color:var(--body,#39323f); }
-:root[data-theme="dark"] .gs-ex{ background:rgba(255,255,255,.05); color:#cfc8db; }
+[data-theme="dark"] .gs-ex{ background:rgba(255,255,255,.05); color:#cfc8db; }
 .gs-ex-k, .gs-tip-k{ display:block; font-style:normal; font-weight:700; font-size:11px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; color:var(--accent2,#5ac8b0); }
 .gs-tip{ margin-top:10px; padding:10px 14px; border-radius:10px; background:rgba(139,124,247,.08); font-size:14px; line-height:1.5; }
 .gs-tip-k{ color:var(--accent,#8b7cf7); }
@@ -2172,7 +2269,7 @@ html.xlating::after{ content:""; position:fixed; z-index:99999; top:50%; left:50
   --rm1:#6f5bd6; --rm2:#8f78ee; --rm3:#ad9bff; --rm4:#cabaff; --rm5:#e8e0ff;
   --rm-sea:rgba(10,7,20,.30);
 }
-:root[data-theme="light"]{
+[data-theme="light"]{
   --rm-land:#e9e7f5; --rm-edge:#dcd9ec;
   --rm1:#a494f2; --rm2:#8674e9; --rm3:#6553d8; --rm4:#452fb2; --rm5:#2a1c7d;
   --rm-sea:rgba(120,110,170,.06);
@@ -3017,7 +3114,7 @@ ul.sk-legend b{color:var(--ink);font-variant-numeric:tabular-nums}
   --s1:#8b7cf7; --s2:#e66767; --s3:#3987e5; --s4:#d95926;
   --s5:#199e70; --s6:#c98500; --s7:#d55181; --s8:#008300;
 }
-:root[data-theme="light"]{
+[data-theme="light"]{
   --s1:#6a58e8; --s2:#e34948; --s3:#2a78d6; --s4:#eb6834;
   --s5:#1baf7a; --s6:#eda100; --s7:#e87ba4; --s8:#008300;
 }
@@ -3041,7 +3138,7 @@ html::after{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.06 0.06 0.06 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size:160px 160px;
 }
-:root[data-theme="light"]::after,
+[data-theme="light"]::after,
 :root:not([data-theme="dark"])::after{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.07 0.07 0.07 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -3090,7 +3187,7 @@ html::after{
     radial-gradient(430px 210px at 16% 32%, color-mix(in srgb,var(--accent) 17%,transparent), transparent 70%),
     radial-gradient(390px 230px at 80% 18%, color-mix(in srgb,var(--s3) 11%,transparent), transparent 72%),
     radial-gradient(300px 190px at 55% 78%, color-mix(in srgb,var(--s2) 7%,transparent), transparent 70%)}
-:root[data-theme="light"] .mast-hero::before{opacity:.55}
+[data-theme="light"] .mast-hero::before{opacity:.55}
 
 @media (prefers-reduced-motion: no-preference){
   .mast-hero::before{animation:rtfcAurora 17s ease-in-out infinite alternate}
@@ -4017,7 +4114,7 @@ mark.sn-t{ background:color-mix(in srgb,var(--accent) 22%,transparent); color:va
              0 10px 22px -12px rgba(0,0,0,.55),
              0 34px 62px -30px rgba(0,0,0,.75);
 }
-:root[data-theme="light"] .mag-cover{
+[data-theme="light"] .mag-cover{
   box-shadow:0 1px 2px rgba(60,50,120,.14),
              0 10px 22px -12px rgba(60,50,120,.24),
              0 34px 62px -30px rgba(60,50,120,.4);
@@ -4170,7 +4267,7 @@ a:hover>.mag-cover{transform:none}
   background:
     radial-gradient(120% 86% at 50% -6%,#171128 0%,#0b0813 46%,#050409 100%),#050409;
 }
-:root[data-theme="light"] .mreader{
+[data-theme="light"] .mreader{
   background:
     radial-gradient(120% 86% at 50% -6%,#332c40 0%,#221d2c 48%,#151119 100%),#151119;
 }
@@ -4494,18 +4591,26 @@ html.vp-desktop.has-mobkit #mobkit{
 .plusplans.pp-invite .pp-buy{ margin-top:16px; display:inline-block; }
 
 /* ===== boot splash (2026-08-13) ===== */
-#boot-splash{position:fixed;inset:0;z-index:2147483000;background:#05050c;display:flex;align-items:center;justify-content:center;animation:bsOut .5s cubic-bezier(.6,0,.8,1) 1.45s forwards;pointer-events:none}
-#boot-splash .bs-core{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
-#boot-splash .bs-core::before{content:"";position:absolute;top:50%;left:50%;width:340px;height:340px;transform:translate(-50%,-58%);border-radius:50%;background:radial-gradient(circle,rgba(124,84,255,.42),rgba(124,84,255,.10) 55%,transparent 72%);animation:bsGlow 1.5s ease-out both;filter:blur(2px)}
-#boot-splash img{position:relative;border-radius:26px;animation:bsSpin .9s cubic-bezier(.18,.85,.22,1) both;box-shadow:0 0 60px rgba(124,84,255,.35)}
-#boot-splash .bs-word{position:relative;font-weight:800;font-size:30px;letter-spacing:.06em;color:#fff;animation:bsRise .7s cubic-bezier(.2,.8,.2,1) .28s both}
-#boot-splash .bs-word em{font-style:normal;color:#8b7cf7}
-#boot-splash .bs-sub{position:relative;font-size:11px;letter-spacing:.42em;color:#9a93c9;animation:bsRise .7s cubic-bezier(.2,.8,.2,1) .42s both}
-@keyframes bsSpin{from{transform:scale(.5) rotate(-50deg);opacity:0}60%{opacity:1}to{transform:scale(1) rotate(0);opacity:1}}
-@keyframes bsRise{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
-@keyframes bsGlow{from{opacity:0;transform:translate(-50%,-58%) scale(.6)}45%{opacity:1}to{opacity:.75;transform:translate(-50%,-58%) scale(1)}}
-@keyframes bsOut{from{opacity:1}to{opacity:0;visibility:hidden}}
-@media (prefers-reduced-motion:reduce){#boot-splash{display:none}}
+/* ---- Startup splash: official glyph only, fast spin, hard stop ----
+   The glyph floats directly on the active appearance's canvas (var(--bg)); no
+   tile, frame, wordmark or progress meter. bsSpinFast is a short linear loop so
+   it reads as genuinely fast rather than a cinematic ease. .stopped kills the
+   animation outright, which snaps the mark upright — the intended hard
+   mechanical stop — and .out fades the layer away. transform/opacity only, so
+   it stays on the compositor and cannot shift layout. */
+#boot-splash{position:fixed;inset:0;z-index:2147483000;background:var(--bg);
+  display:flex;align-items:center;justify-content:center;pointer-events:none;
+  opacity:1;transition:opacity .2s linear}
+#boot-splash .bs-glyph{width:104px;height:104px;background:var(--rtfc-glyph) center/contain no-repeat;
+  animation:bsSpinFast .16s linear infinite;will-change:transform}
+#boot-splash.stopped .bs-glyph{animation:none;transform:rotate(0deg)}
+#boot-splash.out{opacity:0}
+@keyframes bsSpinFast{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* Reduced motion: no rotation at all. The upright mark is shown and dismissed
+   as soon as the app is ready, with only the short opacity fade. */
+@media (prefers-reduced-motion:reduce){
+  #boot-splash .bs-glyph{animation:none;transform:none}
+}
 
 /* ===== overflow / scrollbar-jitter guard (2026-08-13) ===== */
 html,body{overflow-x:hidden}
@@ -4515,3 +4620,279 @@ html{scrollbar-gutter:stable}
 /* ===== parent company footer line ===== */
 .fparent{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a8a9c;margin-top:7px}
 .fparent b{color:#a89bf5;font-weight:700}
+
+
+@media (max-width:760px){ .logo-glyph{width:22px;height:22px} }
+
+/* ===== Settings → Appearance (swatch dropdown) =====
+   A vertical list behind a dropdown rather than a wall of tiles: eighteen
+   appearances is too many to show at once, and a colour swatch is faster to
+   scan than a miniature. Each swatch is painted from that skin's own accent. */
+.ap-picker{position:relative;max-width:460px;margin:6px 0 18px}
+.ap-toggle{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;cursor:pointer;
+  font:inherit;color:var(--ink);text-align:left;transition:border-color .15s ease}
+.ap-toggle:hover{border-color:var(--accent)}
+.ap-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ap-cur{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
+.ap-cur b{font-size:15px;font-weight:700}
+.ap-cur span{font-size:12.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ap-caret{color:var(--muted);font-size:12px}
+/* the swatch: a ring in the skin's canvas with a dot of its accent */
+.ap-sw{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  background:var(--bg);border:1px solid var(--line)}
+.ap-sw i{display:block;width:13px;height:13px;border-radius:50%}
+.ap-menu{position:absolute;z-index:60;top:calc(100% + 6px);left:0;right:0;max-height:340px;overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:5px}
+.ap-menu[hidden]{display:none}
+.ap-row{display:flex;align-items:center;gap:11px;width:100%;padding:9px 10px;border:0;border-radius:9px;
+  background:transparent;cursor:pointer;font:inherit;color:var(--ink);text-align:left}
+.ap-row:hover{background:var(--surface2)}
+.ap-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.ap-row.on{background:var(--surface2)}
+.ap-rtext{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
+.ap-name{font-size:14px;font-weight:650}
+.ap-note{font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ap-canvas{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);flex:none}
+.ap-check{flex:none;width:18px;text-align:center;color:var(--accent);font-weight:800;opacity:0}
+.ap-row.on .ap-check{opacity:1}
+.ap-foot{color:var(--muted);font-size:13.5px;line-height:1.6;max-width:70ch;margin:2px 0 22px}
+/* Settings entry on the Account page */
+.acct-settings{display:flex;align-items:center;gap:12px;padding:13px 15px;margin:18px 0 4px;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none;
+  transition:border-color .15s ease}
+.acct-settings:hover{border-color:var(--accent)}
+.as-txt{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
+.as-txt b{font-size:15px;color:var(--ink)}
+.as-txt span{font-size:12.5px;color:var(--muted)}
+.as-go{color:var(--muted)}
+@media (prefers-reduced-motion:reduce){ .ap-toggle,.acct-settings{transition:none} }
+
+/* ===== Homepage editorial modules (spec §12.4, §13, §14) =====
+   The point of these is rhythm: a wide opener, a dense rail, one standard trio,
+   a text-only wire strip. Nothing here is a new visual language — it is the
+   existing card vocabulary dealt into different shapes so the page reads as
+   edited rather than tiled. */
+.hp-open{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:22px;align-items:start;margin:6px 0 26px}
+.grid-3{margin-bottom:26px}
+
+/* Wide feature — art beside the text on desktop. */
+.card-wide{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:0;overflow:hidden;align-items:stretch}
+/* aspect-ratio:auto is load-bearing. The base .art rule sets aspect-ratio:16/10;
+   combined with height:100% the browser derives WIDTH from height and the image
+   overflows its grid column straight over the headline. Height drives, ratio off. */
+.card-wide .art{margin:0;width:100%;min-width:0;height:100%;min-height:236px;
+  aspect-ratio:auto;border-radius:0;background-size:cover;background-position:center}
+.card-wide>*{min-width:0}
+.card-wide .cw-body{padding:18px 20px 18px 22px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.card-wide .cw-body h3{margin:9px 0 0;font-size:clamp(21px,1.55vw,27px);line-height:1.2}
+.card-wide .cw-body .dek{margin:8px 0 0}
+
+/* Thumbnail rows — the density workhorse. */
+.thumb-list{display:flex;flex-direction:column;gap:2px}
+.thumb-list.thumb-2col{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px}
+.card-thumb{position:relative;display:grid;grid-template-columns:118px minmax(0,1fr);gap:13px;
+  align-items:start;padding:13px 2px;border-bottom:1px solid var(--hairline);
+  color:inherit;text-decoration:none;transition:background .15s ease}
+.card-thumb:last-child{border-bottom:0}
+.card-thumb:hover{background:var(--surface)}
+.card-thumb .ct-art{position:relative;aspect-ratio:4/3;border-radius:9px;overflow:hidden;background-size:cover;background-position:center}
+.card-thumb .ct-body{min-width:0}
+.card-thumb h4{margin:6px 0 0;font-size:16px;line-height:1.32;font-weight:650;color:var(--ink)}
+.card-thumb .savebtns{position:absolute;right:2px;bottom:11px;opacity:0;transition:opacity .15s ease}
+.card-thumb:hover .savebtns,.card-thumb:focus-within .savebtns{opacity:1}
+
+/* Wire strip — deliberately art-free. */
+.brief-strip{border-top:1px solid var(--line);margin:4px 0 26px}
+.brief-row{display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:16px;align-items:baseline;
+  padding:13px 4px;border-bottom:1px solid var(--hairline);text-decoration:none;transition:background .15s ease}
+.brief-row:hover{background:var(--surface)}
+.brief-row .br-sec{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.brief-row .br-h{font-size:16.5px;line-height:1.34;font-weight:600;color:var(--ink)}
+.brief-row .br-meta{font-size:12.5px;color:var(--faint);white-space:nowrap}
+
+@media (max-width:900px){
+  .hp-open{grid-template-columns:1fr;gap:8px}
+  .card-wide{grid-template-columns:1fr}
+  .card-wide .art{min-height:0;aspect-ratio:16/9}
+  .card-wide .cw-body{padding:14px 14px 16px}
+  .thumb-list.thumb-2col{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  /* Mobile density: thumbnails, not a column of full-bleed cinema. */
+  .card-thumb{grid-template-columns:104px minmax(0,1fr);gap:11px;padding:11px 0}
+  .card-thumb h4{font-size:15.5px;margin-top:5px}
+  .brief-row{grid-template-columns:1fr auto;gap:4px 10px;padding:11px 0}
+  .brief-row .br-sec{grid-column:1;font-size:10px}
+  .brief-row .br-meta{grid-column:2;grid-row:1}
+  .brief-row .br-h{grid-column:1/-1;font-size:15.5px}
+}
+/* Touch widths have no hover, so the save row must always be visible — and an
+   absolutely-positioned row anchored to the card's bottom edge lands on top of
+   the NEXT card's tag pills once the headline wraps to four or five lines.
+   Verified failing at 360/390/414/480/560 (buttons over "Brief" pill and over
+   the following h4). Below 640 the row rejoins the flow as a right-aligned
+   grid item under the byline, so it can never collide with anything. */
+@media (max-width:640px){
+  .card-thumb .savebtns{
+    position:static;opacity:1;grid-column:2;grid-row:2;
+    display:flex;gap:8px;justify-content:flex-end;margin-top:7px;
+  }
+}
+
+/* spec §8 — let the page breathe on large monitors without stretching prose.
+   Body copy keeps its own measure; only grids/imagery use the extra width. */
+@media (min-width:1440px){ :root{ --maxw:1320px; } }
+
+/* ===== Colour-forward appearances (nine more; eighteen total) =====
+   These are not tints of dark/light — each is its own canvas hue. Same
+   semantic tokens, same components; contrast verified per skin. ===== */
+[data-theme="forest"]{ /* Forest */
+  --bg:#08150f;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(60,200,130,.12), transparent 70%);
+  --surface:#0e2018; --surface2:#132a20; --surface3:#1a382b;
+  --ink:#e6f5ec; --ink-soft:#c0dccd; --muted:#84a894; --faint:#80a390;
+  --line:#1c3a2b; --hairline:#152a20;
+  --accent:#3fbf7f; --accent2:#6fd9a2; --accent-ink:#7fe0ae;
+  --on-accent:#08150f;
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="crimson"]{ /* Crimson */
+  --bg:#170a0d;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(230,80,105,.12), transparent 70%);
+  --surface:#221115; --surface2:#2c161b; --surface3:#3a1d24;
+  --ink:#f7e8eb; --ink-soft:#dcc3c9; --muted:#b0888f; --faint:#ac848c;
+  --line:#3a2027; --hairline:#2a161b;
+  --accent:#e8536b; --accent2:#f4808f; --accent-ink:#f78e9c;
+  --on-accent:#170a0d;
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="ocean"]{ /* Ocean */
+  --bg:#061419;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(50,180,215,.12), transparent 70%);
+  --surface:#0b2028; --surface2:#0f2a34; --surface3:#153845;
+  --ink:#e2f3f8; --ink-soft:#bcd9e2; --muted:#7fa5b1; --faint:#7ba1ad;
+  --line:#173846; --hairline:#112a34;
+  --accent:#31b6d9; --accent2:#66cfea; --accent-ink:#78d7ef;
+  --on-accent:#061419;
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="amethyst"]{ /* Amethyst */
+  --bg:#140a1c;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(190,110,240,.13), transparent 70%);
+  --surface:#1e1029; --surface2:#271534; --surface3:#331c44;
+  --ink:#f3e9fa; --ink-soft:#d7c4e4; --muted:#a487b5; --faint:#a083b2;
+  --line:#331f42; --hairline:#241531;
+  --accent:#c06ff0; --accent2:#d497f7; --accent-ink:#dba4f8;
+  --on-accent:#140a1c;
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="cobalt"]{ /* Cobalt */
+  --bg:#070d1f;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(70,120,255,.14), transparent 70%);
+  --surface:#0d152e; --surface2:#111c3b; --surface3:#17264e;
+  --ink:#e6ecfb; --ink-soft:#c0cbe8; --muted:#8593bb; --faint:#8290b8;
+  --line:#17274c; --hairline:#101b38;
+  --accent:#4d7cff; --accent2:#80a2ff; --accent-ink:#8fadff;
+  --on-accent:#070d1f;
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="ember"]{ /* Ember */
+  --bg:#170e07;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(255,140,60,.12), transparent 70%);
+  --surface:#22160c; --surface2:#2c1d10; --surface3:#3a2716;
+  --ink:#faeee3; --ink-soft:#e0cbb6; --muted:#b39179; --faint:#af8d75;
+  --line:#3a2817; --hairline:#291c10;
+  --accent:#ff8a3d; --accent2:#ffa96e; --accent-ink:#ffb37c;
+  --on-accent:#170e07;
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+[data-theme="sand"]{ /* Sand */
+  --bg:#f6efe2;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(190,140,60,.10), transparent 70%);
+  --surface:#fffaf0; --surface2:#efe5d3; --surface3:#e4d7bf;
+  --ink:#241c10; --ink-soft:#473a26; --muted:#6f5f45; --faint:#736349;
+  --line:#e0d2b8; --hairline:#e9dec9;
+  --accent:#8a5a12; --accent2:#a8752a; --accent-ink:#774d0e;
+  --on-accent:#ffffff;
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+[data-theme="rose"]{ /* Rose */
+  --bg:#fdeef3;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(220,80,140,.10), transparent 70%);
+  --surface:#fffafc; --surface2:#f7e0e9; --surface3:#f0cfdc;
+  --ink:#2a1119; --ink-soft:#4d2833; --muted:#7d5461; --faint:#815866;
+  --line:#eed3de; --hairline:#f5e2ea;
+  --accent:#b8265f; --accent2:#d4497e; --accent-ink:#9f1f52;
+  --on-accent:#ffffff;
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+[data-theme="mint"]{ /* Mint */
+  --bg:#ecf7f1;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(40,170,125,.10), transparent 70%);
+  --surface:#fbfffd; --surface2:#dcefe5; --surface3:#c9e4d6;
+  --ink:#0f2119; --ink-soft:#2b4438; --muted:#4f6d5f; --faint:#537163;
+  --line:#d3e8dd; --hairline:#e2f0e9;
+  --accent:#12795a; --accent2:#1f9b75; --accent-ink:#0f6b50;
+  --on-accent:#ffffff;
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+
+/* ===== Splash eye-candy: velocity ring, motes =====
+   The ring reads as rotational energy: wide and bright while the mark is
+   spinning flat out, then it collapses onto the glyph's own edge at the hard
+   stop and fades with it. Colour is the violet from inside the logo itself
+   (#6018f0), not an arbitrary neon. Everything is transform/opacity only. */
+#boot-splash .bs-ring{
+  position:absolute;top:50%;left:50%;width:104px;height:104px;margin:-52px 0 0 -52px;
+  border-radius:50%;pointer-events:none;
+  box-shadow:0 0 34px 10px rgba(96,24,240,.42), inset 0 0 20px 2px rgba(96,24,240,.30);
+  border:1px solid rgba(150,110,255,.55);
+  transform:scale(1.62);opacity:.95;
+  animation:bsRingBreathe .42s ease-in-out infinite alternate;
+  will-change:transform,opacity}
+#boot-splash .bs-ring2{
+  box-shadow:0 0 58px 18px rgba(96,24,240,.22);border-color:rgba(150,110,255,.20);
+  transform:scale(2.15);animation-duration:.62s;opacity:.7}
+@keyframes bsRingBreathe{from{transform:scale(1.52)}to{transform:scale(1.78)}}
+/* hard stop: the ring snaps down onto the mark's edge, then leaves with it */
+#boot-splash.stopped .bs-ring{
+  animation:none;transform:scale(1.06);opacity:.85;
+  transition:transform .18s cubic-bezier(.2,.9,.25,1),opacity .3s ease}
+#boot-splash.stopped .bs-ring2{transform:scale(1.16);opacity:0}
+#boot-splash.out .bs-ring{opacity:0}
+
+/* Motes: a few slow drifting particles so the canvas is not dead space. */
+#boot-splash .bs-motes{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+#boot-splash .bs-motes i{position:absolute;width:3px;height:3px;border-radius:50%;
+  background:rgba(150,110,255,.9);box-shadow:0 0 10px 2px rgba(96,24,240,.55);
+  animation:bsDrift linear infinite;will-change:transform,opacity}
+#boot-splash .bs-motes i:nth-child(1){left:18%;top:72%;animation-duration:5.5s}
+#boot-splash .bs-motes i:nth-child(2){left:34%;top:88%;animation-duration:7s;animation-delay:-2s}
+#boot-splash .bs-motes i:nth-child(3){left:58%;top:80%;animation-duration:6.2s;animation-delay:-4s}
+#boot-splash .bs-motes i:nth-child(4){left:74%;top:92%;animation-duration:8s;animation-delay:-1s}
+#boot-splash .bs-motes i:nth-child(5){left:46%;top:96%;animation-duration:6.8s;animation-delay:-3s}
+#boot-splash .bs-motes i:nth-child(6){left:86%;top:76%;animation-duration:7.6s;animation-delay:-5s}
+@keyframes bsDrift{
+  0%{transform:translateY(0) scale(.7);opacity:0}
+  12%{opacity:.85}
+  85%{opacity:.5}
+  100%{transform:translateY(-60vh) scale(1.15);opacity:0}}
+
+/* ===== Pointer glow =====
+   A soft accent-coloured light that follows the cursor. Pointer-events:none so
+   it can never intercept a click; hidden entirely on touch (no cursor to track)
+   and under reduced motion. */
+#rtfc-cursor{position:fixed;top:0;left:0;width:340px;height:340px;margin:-170px 0 0 -170px;
+  border-radius:50%;pointer-events:none;z-index:5;opacity:0;
+  background:radial-gradient(circle,color-mix(in srgb,var(--accent) 26%,transparent),transparent 62%);
+  transition:opacity .35s ease;will-change:transform}
+#rtfc-cursor.on{opacity:.75}
+@media (hover:none),(pointer:coarse){ #rtfc-cursor{display:none} }
+
+@media (prefers-reduced-motion:reduce){
+  #boot-splash .bs-ring{animation:none;transform:scale(1.06)}
+  #boot-splash .bs-ring2{display:none}
+  #boot-splash .bs-motes{display:none}
+  #rtfc-cursor{display:none}
+}
