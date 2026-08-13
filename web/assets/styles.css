@@ -640,6 +640,34 @@ nav.top a.masthead-link.active{background:color-mix(in srgb,var(--accent) 16%,tr
   border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:6px}
 .uhero-metric .big{font-family:var(--serif);font-size:34px;font-weight:650;letter-spacing:-.015em}
 .uhero-metric .cap{font-size:13px;color:var(--muted);line-height:1.4}
+/* Provider breakdown — Anthropic / OpenAI / Google, one card each. Three equal
+   columns on desktop; they stack rather than shrink below 900 so the model list
+   inside never has to ellipsis. */
+.prov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px}
+.prov-card{border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;background:var(--surface2);
+  display:flex;flex-direction:column;min-width:0}
+.prov-card[data-idle]{opacity:.62}
+.pc-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.pc-dot{width:9px;height:9px;border-radius:50%;flex:none}
+.pc-vendor{font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+.pc-name{font-size:14px;font-weight:750;color:var(--ink)}
+.pc-cost{font-size:27px;font-weight:750;line-height:1.05;font-variant-numeric:tabular-nums;color:var(--ink)}
+.pc-cost.muted{color:var(--muted);font-size:22px}
+.pc-share{height:5px;border-radius:3px;background:color-mix(in srgb,var(--ink) 10%,transparent);
+  margin:10px 0 6px;overflow:hidden}
+.pc-share i{display:block;height:100%;border-radius:3px}
+.pc-share-l{font-size:11.5px;color:var(--muted)}
+.pc-role{font-size:12.5px;line-height:1.5;color:var(--muted);margin:11px 0 13px}
+.pc-facts{display:flex;gap:16px;flex-wrap:wrap;padding:11px 0;border-top:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);margin-bottom:11px}
+.pc-facts div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pc-facts b{font-size:14.5px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink)}
+.pc-facts span{font-size:10.5px;color:var(--faint);white-space:nowrap}
+.pc-models{display:flex;flex-direction:column;gap:5px;margin-top:auto}
+.pc-m{display:flex;justify-content:space-between;gap:10px;font-size:12px}
+.pc-ml{color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pc-mv{color:var(--ink);font-variant-numeric:tabular-nums;flex:none}
+@media (max-width:900px){ .prov-grid{grid-template-columns:1fr} }
 .ubars{display:flex;flex-direction:column;gap:10px;margin-bottom:8px}
 .ubar{display:grid;grid-template-columns:180px 1fr 160px;gap:14px;align-items:center}
 @media (max-width:640px){.ubar{grid-template-columns:110px 1fr;grid-template-areas:"l t" "v v"}.ubar-v{grid-area:v;text-align:left}}
@@ -1255,6 +1283,27 @@ footer.site .foot-cost a{color:var(--accent2)}
 .ps-row b{min-width:88px;font-variant-numeric:tabular-nums;color:var(--accent2)}
 .ps-n{font-weight:700;min-width:130px}
 .ps-s{color:var(--muted);font-size:12.5px}
+/* Measured publishing cadence — replaces the old fixed-slot table. The clock is
+   a 24-column bar chart of the hours stories actually landed in, so it recomputes
+   from ARTICLES on every render and cannot drift from the record. */
+.sched-real{border:1px solid var(--hairline);border-radius:14px;padding:18px 18px 12px}
+.sr-facts{display:flex;flex-wrap:wrap;gap:12px 34px;margin-bottom:20px}
+.sr-fact{display:flex;flex-direction:column;gap:3px;min-width:0}
+.sr-n{font-size:21px;font-weight:750;color:var(--accent2);font-variant-numeric:tabular-nums;line-height:1.1}
+.sr-l{font-size:11.5px;color:var(--muted);letter-spacing:.02em}
+.sr-clock{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;align-items:end;height:104px}
+.sr-bar{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;min-width:0}
+.sr-bar i{display:block;border-radius:3px 3px 0 0;
+  background:linear-gradient(180deg,var(--accent),color-mix(in srgb,var(--accent) 45%,transparent))}
+.sr-bar.empty i{background:color-mix(in srgb,var(--ink) 12%,transparent)}
+.sr-bar span{display:block;margin-top:6px;height:13px;font-size:10px;color:var(--faint);
+  text-align:left;white-space:nowrap;overflow:visible}
+@media (max-width:640px){
+  .sr-clock{gap:2px;height:88px}
+  .sr-bar span{font-size:9px}
+  .sr-facts{gap:10px 22px}
+  .sr-n{font-size:18px}
+}
 .pulse-log{display:flex;flex-direction:column;gap:2px;margin-bottom:36px}
 .pl-row{display:flex;gap:12px;align-items:baseline;padding:10px 14px;border-radius:9px;font-size:12.5px}
 .pl-row:nth-child(odd){background:color-mix(in srgb,var(--ink) 3%,transparent)}

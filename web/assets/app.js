@@ -2622,24 +2622,52 @@
      dump of internal vocabulary rather than an answer to "where does the money go".
      Two groupings fix that, and one exclusion:
 
-       provider  - the reader (and the owner) wants Claude vs image generation, not a
+       provider  - the reader (and the owner) wants Claude vs OpenAI vs Google, not a
                    model-by-model list. Both are still available underneath.
        taskGroup - 27 task_type strings collapse to six buckets a human can hold.
-       RETIRED   - an early one-off trial on a third-party API. It is not how this
-                   publication runs, and leaving it in the model chart made the chart
-                   about a thing that happened once. It is excluded from every figure
-                   on this page AND its size is printed, because silently dropping
-                   spend from a cost page is the exact failure this page exists to
-                   avoid. Exclude loudly or not at all. */
+       UNPRICED  - a model id with no entry in cost-config.js. It is excluded from
+                   every figure on this page AND its size is printed, because
+                   silently dropping spend from a cost page is the exact failure
+                   this page exists to avoid. Exclude loudly or not at all.
+
+     CORRECTED 2026-08-13. provider() used to return only "claude", "image" and
+     "retired", and it mapped every OpenAI id — gpt-5.6-sol, -terra, -luna and
+     openai-web-search — into "retired". "Retired" meant "an early one-off trial,
+     not how this publication runs", and rows in it were excluded from every
+     figure on the page and from the Control Room's headline cost.
+
+     That was false. cost-config.js describes gpt-5.6-terra as the "Newsroom Core
+     compose/review model for brief and synthesis lanes" and gpt-5.6-luna as the
+     "discovery and structured-fast lane", both "billed per token via the OpenAI
+     API, not a subscription" — live production lanes, priced, running. 24 rows
+     and roughly $1.90 of real spend were being hidden from a page whose only job
+     is to not hide spend, understating the all-time figure by about 16%.
+
+     So provider() now names the three real providers and the exclusion is
+     narrowed to what it should always have been: model ids cost-config.js has no
+     rate for. Those genuinely cannot be costed, and they are still printed. */
   function provider(m){
     m=String(m||"");
     if(m.indexOf("claude")===0) return "claude";
-    if(m.indexOf("gemini")===0) return "image";
-    return "retired";
+    if(m.indexOf("gpt")===0 || m.indexOf("openai")===0) return "openai";
+    if(m.indexOf("gemini")===0 || m.indexOf("google")===0) return "google";
+    return "unpriced";
   }
-  var PROVIDER_LABEL={claude:"Claude — all writing, research and editing",
-                      image:"Gemini — illustration and covers",
-                      retired:"Third-party API (one-off, retired)"};
+  var PROVIDER_LABEL={claude:"Anthropic · Claude",
+                      openai:"OpenAI · GPT",
+                      google:"Google · Gemini",
+                      unpriced:"Unpriced model id"};
+  /* Ordered deliberately: this is the order the three cards render in, and it is
+     the order of spend today. `role` is what the newsroom actually uses each one
+     for, read off the lanes in cost-config.js — not marketing copy. */
+  var PROVIDERS=[
+    {k:"claude", name:"Claude", vendor:"Anthropic", tone:"var(--accent)",
+     role:"Writing, editing, research, verification and adjudication — the editorial spine."},
+    {k:"openai", name:"GPT", vendor:"OpenAI", tone:"var(--ok,#2ea36b)",
+     role:"Newsroom Core compose and review lanes, discovery, and web search calls."},
+    {k:"google", name:"Gemini", vendor:"Google", tone:"var(--accent2)",
+     role:"Illustration and cover art. Billed per image, so it carries no token count."}
+  ];
   var TASK_GROUPS=[
     ["Writing & editing",       ["writing","copyedit","curation","assignment","publishing","publish","social","style"]],
     ["Research & verification", ["research","factcheck","verification","discovery","adjudication","compliance","quality","policy","benchmark-scan"]],
@@ -2659,8 +2687,8 @@
      the same basis, or the Control Room and the ledger disagree and the link
      between them ("full ledger") becomes a lie. This bug shipped once: Pulse
      summed raw USAGE while /usage summed live-only. Use these, not USAGE. */
-  function liveUsage(){ return USAGE.filter(function(r){ return provider(r.model)!=="retired"; }); }
-  function retiredUsage(){ return USAGE.filter(function(r){ return provider(r.model)==="retired"; }); }
+  function liveUsage(){ return USAGE.filter(function(r){ return provider(r.model)!=="unpriced"; }); }
+  function retiredUsage(){ return USAGE.filter(function(r){ return provider(r.model)==="unpriced"; }); }
   function viewUsage(){
     var now=new Date();
     var RETIRED=retiredUsage();
@@ -2718,24 +2746,69 @@
     h+='<div class="uhero-metric"><div><span class="big">'+money(perArt)+'</span><span class="cap">average compute cost per article (end-to-end, all pipeline stages)</span></div>'+
        '<div><span class="big">'+num(Math.round(allS.articleCount?allS.tokens/allS.articleCount:0))+'</span><span class="cap">average tokens per article</span></div></div>';
 
-    // WHERE THE MONEY GOES — provider first, model detail second
+    /* THE THREE PROVIDERS — the question an owner actually asks first is not
+       "which model" but "which vendor am I paying, and for what". Three cards,
+       one per provider, each carrying its own share of the total, what it is
+       used for, and the models underneath it. Everything recomputes from the
+       ledger, so a new model id appearing in a provider shows up here with no
+       edit to this code. */
     var byProv=groupBy(all,function(r){return provider(r.model);});
-    var provRows=["claude","image"].filter(function(k){return byProv[k];})
-      .map(function(k){return {k:k,s:sumRecs(byProv[k])};});
-    var maxProv=provRows.reduce(function(m,r){return Math.max(m,r.s.cost);},0);
+    var provStats=PROVIDERS.map(function(p){
+      var recs=byProv[p.k]||[];
+      return {p:p, recs:recs, s:sumRecs(recs)};
+    });
+    var provTotal=provStats.reduce(function(m,r){return m+r.s.cost;},0)||1;
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Who gets paid, and for what</div>';
+    h+='<div class="prov-grid">';
+    h+=provStats.map(function(r){
+      var share=r.s.cost/provTotal*100;
+      // Models inside this provider, dearest first — the detail behind the headline.
+      var byM=groupBy(r.recs,function(x){return x.model;});
+      var mRows=Object.keys(byM).map(function(k){return {k:k,s:sumRecs(byM[k])};})
+        .sort(function(a,b){return b.s.cost-a.s.cost;});
+      var c='<div class="prov-card"'+(r.s.count?'':' data-idle="1"')+'>'+
+        '<div class="pc-top"><span class="pc-dot" style="background:'+r.p.tone+'"></span>'+
+        '<span class="pc-vendor">'+r.p.vendor+'</span><span class="pc-name">'+r.p.name+'</span></div>';
+      if(!r.s.count){
+        c+='<div class="pc-cost muted">&mdash;</div><div class="pc-share-l">nothing logged against this provider</div>';
+        return c+'<p class="pc-role">'+r.p.role+'</p></div>';
+      }
+      c+='<div class="pc-cost">'+money(r.s.cost)+'</div>'+
+        '<div class="pc-share"><i style="width:'+Math.max(2,Math.round(share))+'%;background:'+r.p.tone+'"></i></div>'+
+        '<div class="pc-share-l">'+share.toFixed(1)+'% of all compute spend</div>'+
+        '<p class="pc-role">'+r.p.role+'</p>'+
+        '<div class="pc-facts">'+
+          '<div><b>'+r.s.count+'</b><span>task'+(r.s.count===1?'':'s')+'</span></div>'+
+          (r.s.tokens?'<div><b>'+num(r.s.tokens)+'</b><span>tokens</span></div>'
+                     :'<div><b>&mdash;</b><span>billed per image</span></div>')+
+          '<div><b>'+(r.s.articleCount||0)+'</b><span>article'+(r.s.articleCount===1?'':'s')+' touched</span></div>'+
+        '</div>'+
+        '<div class="pc-models">'+mRows.map(function(m){
+          var cfg=modelCfg(m.k), lbl=(cfg&&cfg.label)||m.k;
+          return '<div class="pc-m"><span class="pc-ml">'+esc(lbl)+'</span><span class="pc-mv">'+money(m.s.cost)+'</span></div>';
+        }).join("")+'</div>';
+      return c+'</div>';
+    }).join("");
+    h+='</div>';
+    h+='<p class="small" style="margin:2px 0 22px;color:var(--muted);font-size:13px">'+
+       'Shares are of metered compute only — the three columns above add to '+money(provTotal)+'. '+
+       'Rates come from <code>cost-config.js</code>, last verified '+esc(((window.RTFC_COST_CONFIG||{}).last_verified)||"—")+'.</p>';
+
+    // the same three, as one comparison bar
+    var maxProv=provStats.reduce(function(m,r){return Math.max(m,r.s.cost);},0);
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Where the money goes</div><div class="ubars">';
-    h+=provRows.map(function(r){
-      var det=r.k==="image" ? (money(r.s.cost)+' · '+r.s.count+' image task'+(r.s.count===1?'':'s'))
-                            : (money(r.s.cost)+' · '+num(r.s.tokens)+' tok');
-      return barRow(PROVIDER_LABEL[r.k],r.s.cost,maxProv,det);
+    h+=provStats.filter(function(r){return r.s.count;}).sort(function(a,b){return b.s.cost-a.s.cost;}).map(function(r){
+      var det=r.s.tokens ? (money(r.s.cost)+' · '+num(r.s.tokens)+' tok')
+                         : (money(r.s.cost)+' · '+r.s.count+' image task'+(r.s.count===1?'':'s'));
+      return barRow(PROVIDER_LABEL[r.p.k],r.s.cost,maxProv,det);
     }).join("");
     h+='</div>';
     if(retiredS.count){
       h+='<p class="small" style="margin:-2px 0 16px;color:var(--muted);font-size:13.5px">'+
          'Excluded from every figure on this page: '+retiredS.count+' task'+(retiredS.count===1?'':'s')+
-         ' worth '+money(retiredS.cost)+' run once on a third-party API in July, while the newsroom was '+
-         'being built. It is not how the publication runs. It is named here rather than deleted, because '+
-         'quietly dropping spend from a cost page is the failure this page exists to prevent.</p>';
+         ' logged against a model id that <code>cost-config.js</code> has no rate for, so they cannot be '+
+         'priced rather than being cheap. They are named here rather than deleted, because quietly dropping '+
+         'spend from a cost page is the failure this page exists to prevent.</p>';
     }
 
     // by model (within the two live providers)
@@ -4401,35 +4474,69 @@
     el.innerHTML='Run to date on <b>'+money(s.cost)+'</b> of compute — <a href="#/usage">every penny public →</a>';
   }
 
-  /* ---------- THE CONTROL ROOM (newsroom pulse) ---------- */
-  // Slot hours are REAL Eastern-time hours to match the "ET" labels, and "now" is computed in
-  // Eastern too — so the countdown is internally consistent and lands on the right next drop.
-  var SLOTS=[
-    {h:6,  name:"Morning edition", et:"6:00 AM ET",  shape:"the day's defining synthesis + supporting", star:true},
-    {h:12, name:"Midday cycle",    et:"12:00 PM ET", shape:"synthesis + briefs · breaking-news window"},
-    {h:18, name:"Evening cycle",   et:"6:00 PM ET",  shape:"end-of-day synthesis + brief"}
-  ];
-  function ctNow(){
-    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",hour12:false,
-      weekday:"short",hour:"numeric",minute:"numeric",second:"numeric"}).formatToParts(new Date());
-    var o={}; p.forEach(function(x){o[x.type]=x.value;});
-    return {wd:o.weekday, h:parseInt(o.hour,10)%24, m:parseInt(o.minute,10), s:parseInt(o.second,10)};
-  }
-  function nextSlot(){
-    var n=ctNow();                        // 3 drops every day, 6h apart (5am/11am/5pm CT = 6/12/18 ET) — no weekend cut
-    for(var i=0;i<SLOTS.length;i++){
-      if(SLOTS[i].h>n.h || (SLOTS[i].h===n.h && n.m===0&&n.s===0)){
-        var secs=((SLOTS[i].h-n.h)*3600)-(n.m*60)-n.s;
-        return {slot:SLOTS[i], secs:secs, tomorrow:false, local:slotLocal(secs)};
-      }
+  /* ---------- THE CONTROL ROOM (newsroom pulse) ----------
+
+     This page used to advertise three fixed daily editions at 6:00 AM, 12:00 PM
+     and 6:00 PM ET, and counted down to the next of those wall-clock hours.
+     That was never how the newsroom runs and the published record says so: over
+     a recent three-week window only about 44% of stories landed in those three
+     hours, and the rest were spread across twelve other hours of the day.
+
+     What actually runs it is a Windows Task Scheduler MINUTE task
+     (newsroom/autonomy/scheduler.py, `schtasks /SC MINUTE /MO <interval>`) firing
+     on a rolling interval — `schedule.interval_minutes` in
+     newsroom/config/autonomy.default.json, 240 by default. A rolling interval has
+     no wall-clock anchor: it drifts with every reboot, every skipped cycle, and
+     every cycle that finds nothing worth publishing. So there is no honest way to
+     name a fixed hour, and a publication whose whole claim is transparency should
+     not invent one.
+
+     What follows is derived from the real record instead: the cadence is stated as
+     an interval, the countdown runs from the newsroom's own last publish, and the
+     schedule section shows the hours it has genuinely published in rather than the
+     hours we wish it kept. Every number below recomputes from ARTICLES, so this
+     cannot drift away from what actually shipped. ---------- */
+
+  // Mirrors schedule.interval_minutes in newsroom/config/autonomy.default.json.
+  // If that config changes, change this with it — it is the one number here that
+  // is asserted rather than measured.
+  var CYCLE_MIN=240;
+
+  function lastPublishMs(){
+    for(var i=0;i<ARTICLES.length;i++){            // ARTICLES is newest-first
+      var t=new Date(ARTICLES[i].publishedAt).getTime();
+      if(t && !isNaN(t)) return t;
     }
-    var first=SLOTS[0];
-    var secs=((24-n.h)*3600)-(n.m*60)-n.s + first.h*3600;
-    return {slot:first, secs:secs, tomorrow:true, local:slotLocal(secs)};
+    return 0;
   }
-  // The next drop's time in the VIEWER's own timezone (from seconds-until-slot).
-  function slotLocal(secs){
-    return new Date(Date.now()+secs*1000).toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"});
+  /* The next cycle is the last real publish plus the interval. When a cycle runs
+     and publishes nothing — which is policy, not failure — the countdown passes
+     zero and holds at "due now" rather than lying about a fresh target. */
+  function nextSlot(){
+    var last=lastPublishMs();
+    if(!last) return {secs:0, last:0, due:0, overdue:true, local:""};
+    var due=last+CYCLE_MIN*60000;
+    var secs=Math.round((due-Date.now())/1000);
+    return {
+      secs:Math.max(0,secs), last:last, due:due, overdue:secs<=0,
+      local:new Date(due).toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"})
+    };
+  }
+  /* The hours the newsroom has actually published in, in the reader's own
+     timezone, over the trailing window. This is the honest replacement for the
+     fixed-slot table: it is measured, not promised. */
+  function publishHours(days){
+    var cut=Date.now()-days*86400000, buckets=new Array(24), total=0;
+    for(var i=0;i<24;i++) buckets[i]=0;
+    for(var j=0;j<ARTICLES.length;j++){
+      var d=new Date(ARTICLES[j].publishedAt), t=d.getTime();
+      if(!t || isNaN(t) || t<cut) continue;
+      buckets[d.getHours()]++; total++;
+    }
+    return {buckets:buckets, total:total, days:days};
+  }
+  function hourLabel(h){
+    return (h%12===0?12:h%12)+(h<12?"am":"pm");
   }
   function fmtCountdown(secs){
     var h=Math.floor(secs/3600), m=Math.floor((secs%3600)/60), s=secs%60;
@@ -4908,10 +5015,12 @@
       '<h1>Watch the newsroom run itself</h1>'+
       '<p>This publication has no staff to photograph — but it has something no newsroom has ever shown you: its entire operation, live. The schedule it keeps, the agents on shift, and the running bill, computed from the same public ledger as everything else here.</p></div>';
     // countdown
-    h+='<div class="pulse-next edition-cd"><div><div class="pn-k">NEXT EDITION'+(ns.tomorrow?" · TOMORROW":"")+'</div>'+
-      '<div class="pn-slot cd-slot">'+(ns.slot.star?"⭐ ":"")+ns.slot.name+'</div>'+
-      '<div class="pn-sub">'+ns.slot.et+' · <b>'+ns.local+' your time</b> · '+ns.slot.shape+'</div></div>'+
-      '<div class="pn-count cd-time">'+fmtCountdown(ns.secs)+'</div></div>';
+    h+='<div class="pulse-next edition-cd"><div><div class="pn-k">NEXT CYCLE</div>'+
+      '<div class="pn-slot cd-slot">'+(ns.overdue?"Due now":"Around "+ns.local+" your time")+'</div>'+
+      '<div class="pn-sub">The newsroom wakes on a rolling '+(CYCLE_MIN/60)+'-hour interval, not a fixed hour · '+
+      (ns.last?'last story landed '+relTime(ns.last):'no publish on record')+
+      ' · a cycle with nothing worth saying publishes nothing</div></div>'+
+      '<div class="pn-count cd-time">'+(ns.overdue?"due now":fmtCountdown(ns.secs))+'</div></div>';
     // today + all-time strip
     h+='<div class="mast-strip" style="margin:18px 0 26px">'+
       '<div class="cell"><div class="num">'+todayArts.length+'</div><div class="lbl">stories published today</div></div>'+
@@ -4946,11 +5055,23 @@
       agentNode("Operations","founding desk","t-biz")+'</div>';
     h+='</div>';
     // schedule
-    h+='<div class="kicker" style="margin-top:30px"><span class="dotc" style="background:var(--accent2)"></span>The daily schedule (all times ET)</div>';
-    h+='<div class="pulse-sched">'+SLOTS.map(function(sl){
-      return '<div class="ps-row'+(sl.star?' star':'')+'"><b>'+sl.et+'</b><span class="ps-n">'+(sl.star?"⭐ ":"")+sl.name+'</span><span class="ps-s">'+sl.shape+'</span></div>';
-    }).join("")+'</div>';
-    h+='<p style="color:var(--muted);font-size:12.5px;margin:10px 0 30px">All three slots run every day, weekends included. A slot with nothing worth saying publishes nothing — that’s policy, not failure.</p>';
+    h+='<div class="kicker" style="margin-top:30px"><span class="dotc" style="background:var(--accent2)"></span>When it actually publishes</div>';
+    var ph=publishHours(21), phMax=Math.max.apply(null,ph.buckets)||1;
+    h+='<div class="sched-real">'+
+      '<div class="sr-facts">'+
+        '<div class="sr-fact"><span class="sr-n">every '+(CYCLE_MIN/60)+'h</span><span class="sr-l">configured interval</span></div>'+
+        '<div class="sr-fact"><span class="sr-n">'+ph.total+'</span><span class="sr-l">stories in the last '+ph.days+' days</span></div>'+
+        '<div class="sr-fact"><span class="sr-n">'+(ph.total?(ph.total/ph.days).toFixed(1):"0")+'</span><span class="sr-l">per day, measured</span></div>'+
+      '</div>';
+    h+='<div class="sr-clock" role="img" aria-label="Distribution of publishing times across the 24-hour day, measured over the last '+ph.days+' days">';
+    for(var hh=0;hh<24;hh++){
+      var v=ph.buckets[hh], pct=Math.round(v/phMax*100);
+      h+='<div class="sr-bar'+(v?"":" empty")+'" title="'+hourLabel(hh)+' — '+v+' '+(v===1?"story":"stories")+'">'+
+         '<i style="height:'+Math.max(v?8:2,pct)+'%"></i>'+
+         '<span>'+(hh%6===0?hourLabel(hh):"")+'</span></div>';
+    }
+    h+='</div></div>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin:10px 0 30px">Times are your own. The newsroom runs on a rolling '+(CYCLE_MIN/60)+'-hour timer rather than fixed edition hours, so the pattern above drifts — it is measured from what actually published, not a schedule we promise to keep. A cycle with nothing worth saying publishes nothing; that is policy, not failure.</p>';
     // recent activity
     var recent=USAGE.slice(-7).reverse();
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Last activity on the floor</div>';
@@ -4963,7 +5084,7 @@
   // one ticker drives every countdown on the page (.edition-cd) — Control Room + footer
   function tickEdition(){
     var els=document.querySelectorAll(".edition-cd"); if(!els.length) return;
-    var ns=nextSlot(), txt=ns.secs<=0?"publishing…":fmtCountdown(ns.secs), nm=(ns.slot.star?"⭐ ":"")+ns.slot.name;
+    var ns=nextSlot(), txt=ns.overdue?"due now":fmtCountdown(ns.secs), nm=ns.overdue?"Due now":("~"+ns.local);
     for(var i=0;i<els.length;i++){
       var t=els[i].querySelector(".cd-time"); if(t) t.textContent=txt; else els[i].textContent=txt;
       var s=els[i].querySelector(".cd-slot"); if(s) s.textContent=nm;

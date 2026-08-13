@@ -28,6 +28,7 @@ written to .newb for the .bat to read). 1 = a check failed; nothing was modified
 from __future__ import annotations
 
 import ast
+import hashlib
 import io
 import json
 import re
@@ -53,11 +54,16 @@ OK, BAD = "  ok   ", "  FAIL "
 # published its launch story, and both were found by a human noticing, not by
 # any check. Staleness is the one defect that gets worse on its own.
 #
-# 36h -- newest article `publishedAt`. Three publishing cycles run daily
-#        (05:00/11:00/17:00 Central, ~6h apart) and a legitimately empty cycle is
-#        allowed by the runbook, so a day with no story is possible and honest.
-#        A day and a half with none is not: it means the runner is wedged, the
-#        kill switch is on, or pushes are being rejected and nobody noticed.
+# 36h -- newest article `publishedAt`. The runner is a Windows Task Scheduler
+#        MINUTE task on a rolling interval (schedule.interval_minutes, 240 by
+#        default), NOT three fixed daily editions -- this comment claimed
+#        05:00/11:00/17:00 Central until 2026-08-13, and the site's Control Room
+#        claimed the same three hours, but the published record shows stories
+#        landing across fifteen different hours of the day. A legitimately empty
+#        cycle is allowed by the runbook, so a day with no story is possible and
+#        honest. A day and a half with none is not: at a 4h interval that is nine
+#        consecutive silent cycles, which means the runner is wedged, the kill
+#        switch is on, or pushes are being rejected and nobody noticed.
 ARTICLE_MAX_AGE_H = 36
 # 24h -- newest `buzz.js` card. The breaking scan runs every 2h and is required
 #        to refresh Buzz on EVERY run, targeting 9+ fresh posts a day. A full
@@ -335,18 +341,90 @@ def c_audit():
     return None
 
 
+BUSTER_RE = re.compile(r"\?b=([0-9a-z]+)")
+
+
 def bump() -> str:
-    """Bump every ?b=N in index.html by one. Read and written with newline=''
-    so line endings survive the round trip untouched."""
+    """Stamp every ?b= in index.html with a hash of what index.html actually loads.
+
+    THIS USED TO BE A COUNTER, AND THE COUNTER SHIPPED A BUILD TO NOBODY.
+
+    The old version incremented ?b=N by one on every run. That is correct only if
+    this script is the sole thing that ever changes a busted file. It is not. On
+    2026-08-13 a scheduled cycle ran, bumped 385 -> 387 against the then-current
+    app.js, and published. A separate commit an hour later replaced app.js and
+    styles.css with a large overhaul but did not run the ship path, so those new
+    files went to the edge under the SAME ?b=387 URL that every browser and every
+    edge node had already cached. The server had the new bundle. Not one reader
+    could get it. The site looked completely unchanged, and nothing anywhere
+    reported an error, because from HTTP's point of view nothing was wrong.
+
+    A counter encodes "how many times did we ship", which is not the question.
+    The question is "is this byte-for-byte what the reader already has", and only
+    the content can answer that. So the stamp is now a short digest over the
+    bytes of every local file index.html references, plus index.html itself.
+
+    Consequences worth knowing:
+      - Any commit that changes app.js, styles.css or any data/*.js changes the
+        stamp, whoever makes it and whether or not they ran the ship path.
+      - A run that changes nothing produces the SAME stamp, so readers keep their
+        warm cache instead of re-downloading ~800KB for no reason. The counter
+        busted every cache on every run whether anything changed or not.
+      - The stamp is hex, not decimal. Nothing parses it as a number; it is only
+        ever compared for equality by a cache.
+
+    Read and written with newline='' so line endings survive untouched.
+    """
     p = ROOT / "web/index.html"
     s = io.open(p, encoding="utf-8", newline="").read()
-    found = sorted(set(re.findall(r"\?b=(\d+)", s)))
-    if len(found) != 1:
-        raise RuntimeError(f"cache-buster numbers disagree: {found}")
-    new = str(int(found[0]) + 1)
-    io.open(p, "w", encoding="utf-8", newline="").write(re.sub(r"\?b=\d+", "?b=" + new, s))
+    old = sorted(set(BUSTER_RE.findall(s)))
+    if len(old) != 1:
+        raise RuntimeError(f"cache-buster values disagree, refusing to stamp: {old}")
+
+    web = ROOT / "web"
+    # Every local asset the page references, in the page's own order, deduped.
+    # Sorting would hide a reordering of the load sequence, which app.js depends
+    # on, so the order is part of what gets hashed.
+    refs, seen = [], set()
+    for src in SCRIPT_SRC.findall(s) + re.findall(
+        r"<link\b[^>]*\bhref\s*=\s*[\"']([^\"']+)[\"']", s, re.I
+    ):
+        if re.match(r"^(?:[a-z][a-z0-9+.-]*:)?//", src, re.I) or src.startswith("data:"):
+            continue
+        rel = src.split("?", 1)[0].split("#", 1)[0].lstrip("/")
+        if rel and rel not in seen:
+            seen.add(rel)
+            refs.append(rel)
+
+    digest = hashlib.sha256()
+    # index.html's own markup counts: a copy change with no asset change still
+    # needs the HTML re-fetched, and the HTML is what carries the stamp.
+    digest.update(BUSTER_RE.sub("?b=", s).encode("utf-8"))
+    # A referenced file that does not exist is a 404, and c_scripts already fails
+    # the run for a missing <script src>. It is NOT worth failing here for a
+    # missing icon or feed: this script gates the autonomous publishing path, and
+    # blocking the news over a cosmetic 404 is a worse outcome than the 404. The
+    # missing path still goes into the digest by name, so a file appearing or
+    # disappearing changes the stamp; only its bytes are unavailable to hash, and
+    # a file nobody can fetch is a file nobody has cached.
+    missing = []
+    for rel in refs:
+        f = web / rel
+        digest.update(rel.encode("utf-8"))
+        if f.is_file():
+            digest.update(f.read_bytes())
+        else:
+            missing.append(rel)
+            digest.update(b"\x00MISSING")
+
+    new = digest.hexdigest()[:10]
+    note = f" [{len(missing)} referenced file(s) missing: {', '.join(missing)}]" if missing else ""
+    if new == old[0]:
+        io.open(ROOT / ".newb", "w").write(new)
+        return f"b={new} unchanged - no asset bytes differ, readers keep their cache{note}"
+    io.open(p, "w", encoding="utf-8", newline="").write(BUSTER_RE.sub("?b=" + new, s))
     io.open(ROOT / ".newb", "w").write(new)
-    return f"b={found[0]} -> b={new}"
+    return f"b={old[0]} -> b={new} ({len(refs)} assets hashed){note}"
 
 
 def main() -> int:
