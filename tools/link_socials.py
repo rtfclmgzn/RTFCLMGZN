@@ -146,6 +146,31 @@ def link_reddit():
 
 def link_meta():
     say("\n--- FACEBOOK + INSTAGRAM (Meta) ---")
+    # Shortcut: if Facebook is already linked, the saved Page token can simply
+    # be ASKED for its Instagram — no new user token, no popups. This exists
+    # because Meta's token popup kept minting page-less tokens (2026-08-13).
+    existing = (load_secrets().get("meta") or {})
+    if (existing.get("page_access_token") and existing.get("page_id")
+            and not existing.get("instagram_business_id")):
+        say("  Facebook is already linked — asking your Page which Instagram it owns ...")
+        try:
+            info = http_request(
+                "GET",
+                "https://graph.facebook.com/v25.0/"
+                + urllib.parse.quote(str(existing["page_id"]))
+                + "?fields=instagram_business_account,name&access_token="
+                + urllib.parse.quote(existing["page_access_token"]))
+            ig = (info.get("instagram_business_account") or {}).get("id")
+            if ig:
+                save_section("meta", {"instagram_business_id": ig})
+                say(f"  WORKS. Page '{info.get('name')}' owns Instagram id {mask(ig)} — saved.")
+                offer_test("instagram")
+                return
+            say("  The Page says no Instagram is linked to it yet. Link them "
+                "(Page settings > Linked accounts) and re-run this option. "
+                "Falling back to the token flow in case you want it anyway.")
+        except HttpError as exc:
+            say(f"  (Page query failed: {str(exc)[:160]} — falling back to token flow.)")
     handoff_path = os.path.join(SOCIAL_DIR, ".meta_handoff.json")
     handoff = {}
     if os.path.exists(handoff_path):
@@ -154,6 +179,53 @@ def link_meta():
                 handoff = json.load(fh)
         except (OSError, json.JSONDecodeError):
             handoff = {}
+    if handoff.get("any_token"):
+        # Token of unknown flavor (captured from the Explorer's Page-token
+        # picker). Exchange it long-lived, then ask it who it is: a PAGE
+        # token identifies as the Page itself and can be saved directly —
+        # completely bypassing the broken me/accounts listing.
+        say("  Found the captured token — checking what Facebook says it is ...")
+        base = "https://graph.facebook.com/v25.0"
+        token = handoff["any_token"]
+        try:
+            up = http_request("GET", f"{base}/oauth/access_token?"
+                              + urllib.parse.urlencode({
+                                  "grant_type": "fb_exchange_token",
+                                  "client_id": handoff["app_id"],
+                                  "client_secret": handoff["app_secret"],
+                                  "fb_exchange_token": token}))
+            token = up.get("access_token") or token
+        except HttpError as exc:
+            say(f"  (long-lived exchange failed: {str(exc)[:120]} — trying as-is)")
+        try:
+            who = http_request("GET", f"{base}/me?"
+                               + urllib.parse.urlencode({"fields": "id,name",
+                                                         "access_token": token}))
+            ident, name = str(who.get("id") or ""), who.get("name")
+            probe = http_request("GET", f"{base}/{ident}?"
+                                 + urllib.parse.urlencode({
+                                     "fields": "instagram_business_account,name",
+                                     "access_token": token}))
+            ig = (probe.get("instagram_business_account") or {}).get("id")
+            section = {"page_access_token": token, "page_id": ident,
+                       "graph_version": "v25.0"}
+            if ig:
+                section["instagram_business_id"] = ig
+                say(f"  It's the Page token for '{name}' — Instagram found too. Saving both.")
+            else:
+                say(f"  It's the Page token for '{name}' — no Instagram attached "
+                    "to the Page yet; Facebook saved, add IG later.")
+            save_section("meta", section)
+            try:
+                os.remove(handoff_path)
+            except OSError:
+                pass
+            offer_test("instagram" if ig else "facebook")
+            return
+        except HttpError as exc:
+            say(f"  Not usable as a Page token ({str(exc)[:120]}) — "
+                "falling back to the user-token flow.")
+            handoff["short_token"] = handoff.get("short_token") or handoff["any_token"]
     if handoff.get("app_id") and handoff.get("short_token"):
         say("  Found the values Claude captured for you — no pasting needed.")
         app_id = handoff["app_id"]
@@ -176,12 +248,13 @@ def link_meta():
                                       "client_id": app_id,
                                       "client_secret": app_secret,
                                       "fb_exchange_token": short_token}))
-        user_token = exchanged.get("access_token")
-        if not user_token:
-            raise HttpError(json.dumps(exchanged)[:200])
-    except HttpError as exc:
-        say(f"  DID NOT WORK at the exchange step — Meta said: {exc}\n  Nothing saved.")
-        return
+        user_token = exchanged.get("access_token") or short_token
+    except HttpError:
+        # System-user tokens don't need (or support) the exchange — they're
+        # already long-lived. Use the token exactly as captured.
+        say("  (exchange not applicable — using the token as-is; normal for "
+            "system-user tokens)")
+        user_token = short_token
     say("  Step 2/3: finding your Pages ...")
     try:
         pages = http_request(
@@ -239,12 +312,25 @@ def link_meta():
 
 def link_threads():
     say("\n--- THREADS ---")
-    say("You need a Threads access token from your Meta app's 'Threads API' use")
-    say("case (the PDF shows the clicks). Long-lived is best; short works too if")
-    say("you also paste the Threads App Secret so I can upgrade it.")
-    token = ask("Threads access token")
-    secret = ask("Threads App Secret (press Enter to skip if your token is already long-lived)",
-                 allow_empty=True)
+    handoff_path = os.path.join(SOCIAL_DIR, ".threads_handoff.json")
+    handoff = {}
+    if os.path.exists(handoff_path):
+        try:
+            with open(handoff_path, encoding="utf-8") as fh:
+                handoff = json.load(fh)
+        except (OSError, json.JSONDecodeError):
+            handoff = {}
+    if handoff.get("access_token"):
+        say("  Found the values Claude captured for you — no pasting needed.")
+        token = handoff["access_token"]
+        secret = handoff.get("app_secret", "")
+    else:
+        say("You need a Threads access token from your Meta app's 'Threads API' use")
+        say("case (the PDF shows the clicks). Long-lived is best; short works too if")
+        say("you also paste the Threads App Secret so I can upgrade it.")
+        token = ask("Threads access token")
+        secret = ask("Threads App Secret (press Enter to skip if your token is already long-lived)",
+                     allow_empty=True)
     base = "https://graph.threads.net"
     if secret:
         say("  Upgrading to a long-lived token ...")
@@ -266,21 +352,40 @@ def link_threads():
         return
     say(f"  WORKS. Posting as @{me.get('username')}.")
     save_section("threads", {"access_token": token, "user_id": me.get("id") or "me"})
+    if handoff:
+        try:
+            os.remove(handoff_path)
+            say("  (one-time handoff file cleaned up)")
+        except OSError:
+            pass
     offer_test("threads")
 
 
 def link_x():
     say("\n--- X (TWITTER) ---")
-    say("You need 4 values from developer.x.com > your project > your app >")
-    say("'Keys and tokens': API Key + Secret, and Access Token + Secret")
-    say("(the access token must say Read and Write). Reminder: X posting is")
-    say("pay-per-use now — you need credits on the account for real posts.")
-    creds = {
-        "api_key": ask("API Key"),
-        "api_secret": ask("API Key Secret"),
-        "access_token": ask("Access Token"),
-        "access_token_secret": ask("Access Token Secret"),
-    }
+    handoff_path = os.path.join(SOCIAL_DIR, ".x_handoff.json")
+    handoff = {}
+    if os.path.exists(handoff_path):
+        try:
+            with open(handoff_path, encoding="utf-8") as fh:
+                handoff = json.load(fh)
+        except (OSError, json.JSONDecodeError):
+            handoff = {}
+    needed = ("api_key", "api_secret", "access_token", "access_token_secret")
+    if all(handoff.get(k) for k in needed):
+        say("  Found the values Claude captured for you — no pasting needed.")
+        creds = {k: handoff[k] for k in needed}
+    else:
+        say("You need 4 values from console.x.com > Apps > your app >")
+        say("'Keys & Tokens': API Key + Secret, and Access Token + Secret")
+        say("(the access token must say Read and Write). Reminder: X posting is")
+        say("pay-per-use now — you need credits on the account for real posts.")
+        creds = {
+            "api_key": ask("API Key"),
+            "api_secret": ask("API Key Secret"),
+            "access_token": ask("Access Token"),
+            "access_token_secret": ask("Access Token Secret"),
+        }
     say("  Checking with X (one tiny read call) ...")
     url = "https://api.x.com/2/users/me"
     try:
@@ -292,6 +397,12 @@ def link_x():
         return
     say(f"  WORKS. Posting as @{handle}.")
     save_section("x", creds)
+    if handoff:
+        try:
+            os.remove(handoff_path)
+            say("  (one-time handoff file cleaned up)")
+        except OSError:
+            pass
     offer_test("x")
 
 

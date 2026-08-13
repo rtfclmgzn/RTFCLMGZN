@@ -6,7 +6,7 @@
 //
 // status: "ready" (staged, dry-run) | "posted" (live) | "failed"
 // image.status: "none" | "ready" (prompt only) | "generated"
-window.RTFC_SOCIAL_POSTS = [
+window.RTFC_SOCIAL_POSTS =[
   {
     "article_id": "live-014",
     "ts": "2026-07-13T08:10:00Z",
@@ -1740,8 +1740,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#startups"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112103677396947",
+        "remote_id": "1238977099292018_122112103677396947",
+        "posted_at": "2026-08-13T11:25:23Z"
       },
       {
         "platform": "threads",
@@ -1754,8 +1756,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Cognition (Devin) is reportedly in talks to raise 1B+ at a $40B+ valuation, up from $26B three months ago. Bloomberg says revenue run rate nearly doubled since May, to ~$1B. Still unconfirmed -- no investor named yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msxjv43gha2v",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msxjv43gha2v",
+        "posted_at": "2026-08-13T11:25:30Z"
       }
     ]
   },
@@ -1789,8 +1793,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2087984517143236633",
+        "remote_id": "2087984517143236633",
+        "posted_at": "2026-08-13T19:27:56Z"
       },
       {
         "platform": "x",
@@ -1823,7 +1829,9 @@ window.RTFC_SOCIAL_POSTS = [
           "cost_usd": 0
         },
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/17841437848762452/media: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"ABB_sUZ5XLl0u5bskhVjo3K\"}}"
       },
       {
         "platform": "facebook",
@@ -1833,13 +1841,17 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/1238977099292018/feed: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"A_Gq4MTrFT8B1OhpOl5hl8N\"}}"
       },
       {
         "platform": "threads",
         "copy": "Anthropic is reportedly in talks to buy Israeli startup Decart for ~$6B -- its largest deal yet, about 50% above the $4B valuation Decart's investors set in May. The reported target is Decart's chip-efficiency software, not its video tools. Comes 5 weeks after Anthropic's own $965B IPO filing. Nothing signed yet.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AWmAPodbNprdspx4Xqblczn\"}}"
       },
       {
         "platform": "threads",
@@ -1852,8 +1864,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Anthropic reportedly in talks to buy Decart (Israeli AI infra startup) for ~$6B -- its largest deal yet, ~50% above the $4B valuation set in May. Comes 5 weeks after Anthropic's own $965B IPO filing. Nothing signed.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msyetynldi2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msyetynldi2s",
+        "posted_at": "2026-08-13T19:28:04Z"
       }
     ]
   },
@@ -1887,8 +1901,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2087985526330565106",
+        "remote_id": "2087985526330565106",
+        "posted_at": "2026-08-13T19:31:57Z"
       },
       {
         "platform": "x",
@@ -1921,7 +1937,9 @@ window.RTFC_SOCIAL_POSTS = [
           "cost_usd": 0
         },
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/17841437848762452/media: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AVq9cEYdDwj_zsg2Pu7-xJY\"}}"
       },
       {
         "platform": "facebook",
@@ -1931,13 +1949,17 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/1238977099292018/feed: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AA_NX2YlNYfPbm36QRS66q8\"}}"
       },
       {
         "platform": "threads",
         "copy": "OpenAI-backed Thrive Holdings raised $2B+ at a $12B valuation to buy traditional accounting and IT firms and install AI inside them. OpenAI's own stake isn't cash -- it's embedded engineers and API access, the same non-cash structure Bloomberg and TechCrunch call a 'circular deal.' Thrive disputes the framing.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AM133foph9xLYb0bYFJXCki\"}}"
       },
       {
         "platform": "threads",
@@ -1950,8 +1972,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "OpenAI-backed Thrive Holdings raised $2B+ at a $12B valuation to buy traditional firms and add AI. OpenAI's Dec 2025 stake wasn't cash -- embedded staff + API access instead. Bloomberg/TechCrunch call it a 'circular deal'; Thrive disagrees.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msyf37dk2g26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msyf37dk2g26",
+        "posted_at": "2026-08-13T19:32:06Z"
       }
     ]
   }
