@@ -354,7 +354,7 @@
     var h='<div class="plusplans'+(compact?' pp-compact':'')+'">';
     if(!compact && opts.dek!==false){
       h+='<div class="pp-head"><div class="pp-mark">RTFCLMGZN <b>Plus</b></div>'+
-        '<p class="pp-dek">The monthly issue in the spread reader, every special edition, the full back-issue archive, and every issue as a PDF. Articles stay free, forever.</p></div>';
+        '<p class="pp-dek">The monthly issue in the spread reader, every special edition, and the full back-issue archive. Articles stay free, forever.</p></div>';
     }
     h+='<div class="pp-tiers">';
     // Annual first, and the only tier carrying .is-rec — it is the default offer.
@@ -722,6 +722,45 @@
     return '<a class="rail-item" href="#/article/'+a.slug+'">'+tagsHTML(a)+
       '<h4>'+esc(a.title)+'</h4>'+bylineHTML(p,a.publishedAt,null,a)+'</a>';
   }
+  /* ---------- story-card variants (spec §14) ----------
+     One overloaded card repeated fifteen times is what made the homepage read as
+     a tiled grid instead of an edited page. These are the deliberate variants;
+     which one a story gets is an editorial decision made in viewHome, NOT a
+     function of whether art happens to exist. */
+
+  /* Wide feature — big art beside the text on desktop, art-on-top on mobile.
+     Used to open a section of the page and break the column rhythm. */
+  function cardWideHTML(a){
+    var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
+    return '<a class="card card-wide" href="#/article/'+a.slug+'">'+
+      '<div class="art" style="'+artFill(a,true)+'">'+artGlyph(a,col)+saveBtns(a.id,true)+'</div>'+
+      '<div class="cw-body">'+(a.breaking?'<span class="pill breaking">Breaking</span>':"")+tagsHTML(a)+
+      '<h3>'+esc(a.title)+'</h3><p class="dek">'+esc(a.dek)+'</p>'+
+      bylineHTML(p,a.publishedAt,readTime(a),a)+'</div></a>';
+  }
+  /* Thumbnail row — small crop beside the headline. The workhorse for density:
+     roughly three of these occupy the space one full-bleed card used to. */
+  function cardThumbHTML(a){
+    var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
+    return '<a class="card-thumb" href="#/article/'+a.slug+'">'+
+      '<div class="ct-art" style="'+artFill(a)+'">'+artGlyph(a,col)+'</div>'+
+      '<div class="ct-body">'+tagsHTML(a)+'<h4>'+esc(a.title)+'</h4>'+
+      bylineHTML(p,a.publishedAt,null,a)+'</div>'+saveBtns(a.id,true)+'</a>';
+  }
+  /* Brief — no art at all. A run of these reads like a wire strip and gives the
+     imagery elsewhere on the page its value back (spec §17). */
+  function briefRowHTML(a){
+    var col=SECTION_COLORS[a.section]||"#8b7cf7";
+    return '<a class="brief-row" href="#/article/'+a.slug+'">'+
+      '<span class="br-sec" style="color:'+escAttr(col)+'">'+esc(a.section)+'</span>'+
+      '<span class="br-h">'+esc(a.title)+'</span>'+
+      '<span class="br-meta">'+esc(relTime(a.publishedAt))+'</span></a>';
+  }
+  /* A titled module. Keeps the page's section rhythm consistent without another
+     copy of the kicker markup at every call site. */
+  function hpModule(label,dotVar,inner){
+    return '<div class="kicker"><span class="dotc" style="background:var('+dotVar+')"></span>'+label+'</div>'+inner;
+  }
   function featureHTML(a){
     var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
     return '<a class="feature" href="#/article/'+a.slug+'">'+
@@ -805,16 +844,44 @@
     // The homepage shows a curated slice, not the whole archive. Every story stays
     // one click away (desk pages + the archive below) -- an unbounded flat grid grew
     // to 56 cards / 18 screens before this, and it grows by ~3 more every single day.
-    var LATEST=9, MORE=6;
-    h+='<div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Latest across the desk</div>';
-    h+='<div class="grid">'+grid.slice(0,LATEST).map(cardHTML).join("")+'</div>';
-    h+=companyBrowseHTML(); // replaced deskBrowseHTML() — readers follow companies, not desks; desks remain reachable via nav + section pages
-    var more=grid.slice(LATEST, LATEST+MORE);
-    if(more.length){
-      h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>More from the newsroom</div>';
-      h+='<div class="grid">'+more.map(cardHTML).join("")+'</div>';
+    /* ---- editorial module rhythm (spec §12.4) ----
+       Previously: two flat grids of nine and six identical cards, i.e. fifteen
+       repetitions of image/tags/headline/dek/byline. The page must feel curated,
+       not tiled — so the same stories are dealt into deliberately different
+       shapes. Every slice is bounded and degrades cleanly when the newsroom has
+       published fewer stories than a full page wants. */
+    var LATEST=9, MORE=6, TOTAL=LATEST+MORE;
+    var q=grid.slice(0,TOTAL), qi=0;
+    function take(n){ var s=q.slice(qi,qi+n); qi+=s.length; return s; }
+
+    // 1 — a wide opener plus two dense rows beside it
+    var openWide=take(1), openThumbs=take(2);
+    if(openWide.length){
+      h+=hpModule("Latest across the desk","--accent",
+        '<div class="hp-open">'+openWide.map(cardWideHTML).join("")+
+        (openThumbs.length?'<div class="thumb-list">'+openThumbs.map(cardThumbHTML).join("")+'</div>':'')+'</div>');
     }
-    var left=Math.max(0, grid.length-(LATEST+MORE));
+    // 2 — a standard three, the only place the equal-column card still appears
+    var trio=take(3);
+    if(trio.length) h+='<div class="grid grid-3">'+trio.map(cardHTML).join("")+'</div>';
+
+    // 3 — a text-only wire strip: no art, maximum scan speed
+    var briefs=take(5);
+    if(briefs.length>=3){
+      h+=hpModule("In brief","--gold",'<div class="brief-strip">'+briefs.map(briefRowHTML).join("")+'</div>');
+    } else { qi-=briefs.length; }
+
+    h+=companyBrowseHTML(); // readers follow companies, not desks; desks stay reachable via nav + section pages
+
+    // 4 — a second visual beat, then compact rows to close the page out
+    var lateWide=take(1), lateThumbs=take(4);
+    if(lateWide.length||lateThumbs.length){
+      h+=hpModule("More from the newsroom","--accent2",
+        (lateWide.length?'<div class="hp-open">'+lateWide.map(cardWideHTML).join("")+
+          (lateThumbs.length?'<div class="thumb-list">'+lateThumbs.map(cardThumbHTML).join("")+'</div>':'')+'</div>'
+         :'<div class="thumb-list thumb-2col">'+lateThumbs.map(cardThumbHTML).join("")+'</div>'));
+    }
+    var left=Math.max(0, grid.length-TOTAL);
     if(left) h+='<a class="home-more" href="#/archive">Browse all '+ARTICLES.length+' stories in the archive<span>'+left+' more →</span></a>';
     h+=eventsHomeHTML();
     h+='<div class="home-nl">'+newsletterHTML(true)+'</div>';
@@ -2582,10 +2649,18 @@
     for(var i=0;i<TASK_GROUPS.length;i++) if(TASK_GROUPS[i][1].indexOf(t)>=0) return TASK_GROUPS[i][0];
     return "Other";
   }
+  /* ---- single source of truth for cost figures ----
+     The ledger deliberately excludes third-party "retired" provider rows and
+     says so in print. Any other surface that quotes a newsroom cost MUST use
+     the same basis, or the Control Room and the ledger disagree and the link
+     between them ("full ledger") becomes a lie. This bug shipped once: Pulse
+     summed raw USAGE while /usage summed live-only. Use these, not USAGE. */
+  function liveUsage(){ return USAGE.filter(function(r){ return provider(r.model)!=="retired"; }); }
+  function retiredUsage(){ return USAGE.filter(function(r){ return provider(r.model)==="retired"; }); }
   function viewUsage(){
     var now=new Date();
-    var RETIRED=USAGE.filter(function(r){return provider(r.model)==="retired";});
-    var LIVE=USAGE.filter(function(r){return provider(r.model)!=="retired";});
+    var RETIRED=retiredUsage();
+    var LIVE=liveUsage();
     var retiredS=sumRecs(RETIRED);
     var today=LIVE.filter(function(r){return sameDay(r.ts,now);});
     var d7=LIVE.filter(function(r){return withinDays(r.ts,now,7);});
@@ -2839,7 +2914,7 @@
             '<li>The monthly issue, in the spread reader</li>'+
             '<li>Special editions as they ship</li>'+
             '<li>The full back-issue archive</li>'+
-            '<li>Every issue as a downloadable PDF</li>'+
+            '<li>Every issue in the designed spread reader</li>'+
           '</ul></div>'+
         '</div>'+
       '</div>';
@@ -2940,29 +3015,62 @@
      what the reader sees is the actual palette, not an approximation of it.
      Tiles are radios (role=radio + aria-checked) because picking an appearance
      is a single choice, and they are keyboard operable. */
-  function appearanceTile(t){
-    var id=t[0], label=t[1], canvas=t[2], note=t[3];
+  /* One row in the appearance dropdown: colour swatch, name, one-line note.
+     The swatch is painted from the skin's own accent so the list is scannable
+     by colour before you read a single label. */
+  function appearanceRow(t){
+    var id=t[0], label=t[1], canvas=t[2], note=t[3], sw=t[4];
     var on=(currentTheme()===id);
-    return '<button type="button" class="ap-tile'+(on?' on':'')+'" role="radio" aria-checked="'+(on?'true':'false')+'"'+
-      ' data-theme-id="'+id+'" onclick="rtfcSetTheme(\''+id+'\')" aria-label="'+escAttr(label+' appearance — '+note)+'">'+
-      '<span class="ap-prev" data-theme="'+id+'" aria-hidden="true">'+
-        '<span class="ap-prev-bar"><i class="ap-prev-glyph"></i><i class="ap-prev-rule"></i></span>'+
-        '<span class="ap-prev-head"></span>'+
-        '<span class="ap-prev-line"></span><span class="ap-prev-line short"></span>'+
-        '<span class="ap-prev-accent"></span>'+
-      '</span>'+
-      '<span class="ap-meta"><span class="ap-name">'+esc(label)+'</span>'+
+    return '<button type="button" class="ap-row'+(on?' on':'')+'" role="option" aria-selected="'+(on?'true':'false')+'"'+
+      ' data-theme-id="'+id+'" onclick="rtfcPickTheme(\''+id+'\')">'+
+      '<span class="ap-sw" data-theme="'+id+'" aria-hidden="true"><i style="background:'+escAttr(sw)+'"></i></span>'+
+      '<span class="ap-rtext"><span class="ap-name">'+esc(label)+'</span>'+
       '<span class="ap-note">'+esc(note)+'</span></span>'+
+      '<span class="ap-canvas">'+esc(canvas)+'</span>'+
       '<span class="ap-check" aria-hidden="true">✓</span></button>';
   }
+  /* The closed control: current appearance, its swatch, and a caret. */
+  function appearancePicker(){
+    var cur=themeEntry(currentTheme());
+    return '<div class="ap-picker" id="ap-picker">'+
+      '<button type="button" class="ap-toggle" id="ap-toggle" aria-haspopup="listbox" aria-expanded="false"'+
+      ' onclick="rtfcToggleThemeMenu(event)">'+
+        '<span class="ap-sw" aria-hidden="true"><i style="background:'+escAttr(cur[4])+'"></i></span>'+
+        '<span class="ap-cur"><b id="ap-cur-name">'+esc(cur[1])+'</b>'+
+        '<span id="ap-cur-note">'+esc(cur[3])+'</span></span>'+
+        '<span class="ap-caret" aria-hidden="true">▾</span></button>'+
+      '<div class="ap-menu" id="appearance-grid" role="listbox" aria-label="Appearance" hidden>'+
+        THEMES.map(appearanceRow).join("")+'</div></div>';
+  }
+  window.rtfcToggleThemeMenu=function(ev){
+    if(ev){ ev.preventDefault(); ev.stopPropagation(); }
+    var m=document.getElementById("appearance-grid"), t=document.getElementById("ap-toggle");
+    if(!m||!t) return;
+    var open=m.hasAttribute("hidden");
+    if(open){ m.removeAttribute("hidden"); } else { m.setAttribute("hidden",""); }
+    t.setAttribute("aria-expanded", open?"true":"false");
+  };
+  window.rtfcPickTheme=function(id){
+    window.rtfcSetTheme(id);
+    var m=document.getElementById("appearance-grid"), t=document.getElementById("ap-toggle");
+    if(m) m.setAttribute("hidden","");
+    if(t){ t.setAttribute("aria-expanded","false"); t.focus(); }
+  };
+  // click-away closes the menu
+  document.addEventListener("click",function(e){
+    var p=document.getElementById("ap-picker");
+    if(p && !p.contains(e.target)){
+      var m=document.getElementById("appearance-grid"), t=document.getElementById("ap-toggle");
+      if(m&&!m.hasAttribute("hidden")){ m.setAttribute("hidden",""); if(t) t.setAttribute("aria-expanded","false"); }
+    }
+  });
   function viewSettings(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Settings</div>'+
       '<h1>Reader preferences</h1>'+
       '<p>Appearance, language and reading options. Choices are saved in this browser and applied before the next page paints, so the publication never flashes the wrong skin.</p></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Appearance</div>';
-    h+='<div class="ap-grid" id="appearance-grid" role="radiogroup" aria-label="Appearance">'+
-        THEMES.map(appearanceTile).join("")+'</div>';
-    h+='<p class="ap-foot">Nine appearances. Body text meets WCAG AAA contrast on every one; secondary text meets AA. '+
+    h+=appearancePicker();
+    h+='<p class="ap-foot">Eighteen appearances. Body text meets WCAG AAA contrast on every one; secondary text meets AA. '+
        'The header ☀/☾ button flips between Dark and Light — pick anything else here.</p>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--ok)"></span>Motion</div>';
     h+='<p class="ap-foot">RTFCLMGZN follows your system “reduce motion” setting. With it on, the startup mark does not spin, '+
@@ -2982,6 +3090,17 @@
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>◷ Read later · '+l.readLater.length+'</div>'+cardsByIds(l.readLater);
     return h+'</div>';
   }
+  /* Settings lives under the profile, not in the primary nav — appearance and
+     reading preferences are personal-account territory, and the nav is for
+     journalism. Rendered on the Account page for signed-out readers too, since
+     appearance is not gated behind an account. */
+  function accountSettingsLinkHTML(){
+    var e=themeEntry(currentTheme());
+    return '<a class="acct-settings" href="#/settings">'+
+      '<span class="ap-sw" aria-hidden="true"><i style="background:'+escAttr(e[4])+'"></i></span>'+
+      '<span class="as-txt"><b>Settings</b><span>Appearance · '+esc(e[1])+' · language · motion</span></span>'+
+      '<span class="as-go" aria-hidden="true">→</span></a>';
+  }
   function viewAccount(){
     var l=libGet();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px"><div class="over">Account</div>';
@@ -2989,7 +3108,7 @@
       if(acctPending){
         h+='<h1>Check your email</h1>'+
           '<p>We sent a sign-in link to <b>'+esc(acctPending)+'</b>. It expires in 15 minutes and works once. Didn’t get it? Check spam, or <a href="#" onclick="acctPending=null;route();return false" style="color:var(--accent2)">try a different address</a>.</p></div>';
-        return h+'</div>';
+        return h+accountSettingsLinkHTML()+'</div>';
       }
       h+='<h1>Sign in or create your account</h1>'+
         '<p>Reading is free and stays free. Enter your email and we’ll send a one-time link — new address or returning, same step either way. A free account adds three things: your library (bookmarks + read-later) becomes permanent and syncs across devices, you get the <b>daily digest email</b> — the day’s stories in one send — and you’re set up to subscribe to the magazine whenever you’re ready.</p></div>'+
@@ -2997,7 +3116,7 @@
         '<button class="cta" id="acct-signup-btn" onclick="rtfcSignup()">Send sign-in link</button>'+
         '<p class="protonote">We’ll email you a one-time sign-in link — no password to create or remember. Only your most recent link works; if you have more than one of these emails, use the newest.</p></div>'+
         timeMeterHTML(l);
-      return h+'</div>';
+      return h+accountSettingsLinkHTML()+'</div>';
     }
     h+='<h1>Your account</h1><p>Signed in as <b>'+esc(l.account.email)+'</b></p></div>';
     var plus=isPlus();
@@ -3041,7 +3160,7 @@
       '<button class="cta ghost" id="acct-code-btn" onclick="rtfcRedeem()">Redeem</button>'+
       '<p class="protonote">Founding codes, gift codes and press passes all go in here. Capitals don’t matter — we tidy it up for you.</p></div>';
     h+=timeMeterHTML(l);
-    return h+'</div>';
+    return h+accountSettingsLinkHTML()+'</div>';
   }
 
   /* ================= ARCHIVE + SEARCH ================= */
@@ -4776,7 +4895,8 @@
   function viewPulse(){
     var now=new Date();
     var todayRecs=USAGE.filter(function(r){return sameDay(r.ts,now);});
-    var allS=sumRecs(USAGE), dayS=sumRecs(todayRecs);
+    // live-only, matching /usage exactly — see liveUsage() above
+    var allS=sumRecs(liveUsage()), dayS=sumRecs(todayRecs);
     var todayArts=ARTICLES.filter(function(a){return sameDay(a.publishedAt,now);});
     var ns=nextSlot();
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px">'+
@@ -5928,7 +6048,6 @@
     var gridNewN=gdNewIds().length;
     h+=navLink("#/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
     h+=navLink("#/archive","archive","Archive");
-    h+=navLink("#/settings","settings","Settings");
     h+='<span class="nav-sep"></span>';
     h+=navLink("#/magazine","magazine","Magazine ◈","masthead-link");
     var navEl=document.getElementById("nav");
@@ -6343,6 +6462,7 @@
   }
   // Static routes: [title, description]. Titles are suffixed with the masthead.
   var ROUTE_HEADS={
+    settings:["Settings","Choose from nine appearances, set your language, and see how RTFCLMGZN handles motion and reading preferences. Everything is stored in your own browser."],
     magazine:["The Magazine","Every month, the Issue Desk distils the full run of our coverage into one designed issue — the cover story with hindsight, the editors’ month-in-review columns, the Scoreboard, the Compendium and a Watchlist we grade in public."],
     guides:["Guides","Hands-on, plain-English guides to actually using AI. No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
@@ -6893,16 +7013,26 @@
      tokens — nothing here hard-codes a colour, so adding a tenth appearance is
      a CSS block plus one line in this list. */
   var THEMES=[
-    ["dark","Dark","dark","The default publication canvas."],
-    ["midnight","Midnight","dark","Cooler, deeper blue-black."],
-    ["graphite","Graphite","dark","Neutral grey, low colour temperature."],
-    ["noir","Noir","dark","True black, maximum contrast."],
-    ["oxide","Oxide","dark","Warm dark with a copper signature."],
-    ["light","Light","light","The default light canvas."],
-    ["paper","Paper","light","Warm off-white, print-like."],
-    ["sepia","Sepia","light","Parchment tone for long reading."],
-    ["slate","Slate","light","Cool grey-blue, high clarity."]
+    ["dark","Dark","dark","The default publication canvas.","#8b7cf7"],
+    ["midnight","Midnight","dark","Cooler, deeper blue-black.","#6f8cf8"],
+    ["graphite","Graphite","dark","Neutral grey, low colour temperature.","#a89bf0"],
+    ["noir","Noir","dark","True black, maximum contrast.","#b9a8ff"],
+    ["oxide","Oxide","dark","Warm dark with a copper signature.","#e08a5a"],
+    ["light","Light","light","The default light canvas.","#6a58e8"],
+    ["paper","Paper","light","Warm off-white, print-like.","#6a58e8"],
+    ["sepia","Sepia","light","Parchment tone for long reading.","#9a5b1f"],
+    ["slate","Slate","light","Cool grey-blue, high clarity.","#3f66c4"],
+    ["forest","Forest","dark","Deep green, low glare.","#3fbf7f"],
+    ["crimson","Crimson","dark","Dark red, high drama.","#e8536b"],
+    ["ocean","Ocean","dark","Teal depth, cool light.","#31b6d9"],
+    ["amethyst","Amethyst","dark","Saturated violet canvas.","#c06ff0"],
+    ["cobalt","Cobalt","dark","Electric blue on near-navy.","#4d7cff"],
+    ["ember","Ember","dark","Warm orange over charcoal.","#ff8a3d"],
+    ["sand","Sand","light","Desert light, warm paper.","#c08a3e"],
+    ["rose","Rose","light","Soft pink light canvas.","#e0518a"],
+    ["mint","Mint","light","Pale green, fresh and calm.","#2fae83"]
   ];
+  function themeEntry(id){ for(var i=0;i<THEMES.length;i++){ if(THEMES[i][0]===id) return THEMES[i]; } return THEMES[0]; }
   function themeIds(){ return THEMES.map(function(t){return t[0];}); }
   function validTheme(t){ return themeIds().indexOf(t)>=0 ? t : "dark"; }
   function currentTheme(){ return validTheme(document.documentElement.getAttribute("data-theme")||"dark"); }
@@ -6927,11 +7057,47 @@
       [].forEach.call(g.querySelectorAll("[data-theme-id]"),function(el){
         var on=el.getAttribute("data-theme-id")===t;
         el.classList.toggle("on",on);
-        el.setAttribute("aria-checked",on?"true":"false");
+        el.setAttribute("aria-selected",on?"true":"false");
       });
+      var e=themeEntry(t);
+      var n=document.getElementById("ap-cur-name"), no=document.getElementById("ap-cur-note");
+      var sw=document.querySelector("#ap-toggle .ap-sw i");
+      if(n) n.textContent=e[1];
+      if(no) no.textContent=e[3];
+      if(sw) sw.style.background=e[4];
     }
     return t;
   };
+  /* ---------- pointer glow ----------
+     A soft light in the active appearance's accent that trails the cursor. It
+     lerps toward the pointer on rAF rather than snapping, so it reads as a lamp
+     rather than a jitter, and it only paints transforms. Skipped entirely on
+     touch devices and under reduced motion — both checked before anything is
+     appended to the DOM, so there is no idle element or listener either way. */
+  function initPointerGlow(){
+    try{
+      if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+      if(window.matchMedia("(hover:none),(pointer:coarse)").matches) return;
+    }catch(e){ return; }
+    var el=document.createElement("div"); el.id="rtfc-cursor"; document.body.appendChild(el);
+    var tx=innerWidth/2, ty=innerHeight/2, cx=tx, cy=ty, on=false, raf=0;
+    function step(){
+      cx+=(tx-cx)*0.14; cy+=(ty-cy)*0.14;
+      el.style.transform="translate3d("+cx.toFixed(1)+"px,"+cy.toFixed(1)+"px,0)";
+      raf=requestAnimationFrame(step);
+    }
+    document.addEventListener("pointermove",function(e){
+      if(e.pointerType==="touch") return;
+      tx=e.clientX; ty=e.clientY;
+      if(!on){ on=true; el.classList.add("on"); if(!raf) raf=requestAnimationFrame(step); }
+    },{passive:true});
+    document.addEventListener("pointerleave",function(){ on=false; el.classList.remove("on"); });
+    // stop burning frames when the tab is not visible
+    document.addEventListener("visibilitychange",function(){
+      if(document.hidden){ cancelAnimationFrame(raf); raf=0; }
+      else if(on && !raf){ raf=requestAnimationFrame(step); }
+    });
+  }
   function initTheme(){
     var btn=document.getElementById("theme");
     var saved; try{saved=localStorage.getItem("rtfc-theme");}catch(e){}
@@ -7085,7 +7251,7 @@
 
   document.addEventListener("DOMContentLoaded",function(){
     initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker();
-    initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); logVisit();
+    initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); initPointerGlow(); logVisit();
     route();
     syncAccount();
     /* Stop the splash on the REAL ready signal, not a timer: route() has now
