@@ -158,7 +158,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     ],
     "id": "newsroom-deepseek-v4pro-ga-081326",
-    "image": null,
+    "image": "assets/img/newsroom/newsroom-deepseek-v4pro-ga-081326.jpg",
     "pipeline": {
       "run": "breaking-scan-2026-08-13T19:17:58Z",
       "stages": [

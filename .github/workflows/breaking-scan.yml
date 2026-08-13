@@ -53,8 +53,26 @@ jobs:
             --model claude-haiku-4-5
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
 
-      - name: Cover gate audit (goes red if a bad cover reached main)
+      # SELF-HEALING cover gate (2026-08-13). The old step only AUDITED — it went
+      # red after the agent had already pushed, which is how the DeepSeek V4-Pro
+      # article shipped with "image": null and the homepage hero rendered blank.
+      # Now any coverless article gets a deterministic branded cover synthesized,
+      # wired into the store, committed and pushed — so the longest a reader can
+      # ever see a blank cover is one scan interval. verify_covers still runs
+      # last as the alarm for anything the healer cannot fix.
+      - name: Cover gate — self-heal, then audit
         if: always()
         run: |
           python3 -m pip install --quiet pillow
+          python3 newsroom/runner/ensure_covers.py --fix
+          git config user.name "rtfclmgzn-pipeline"
+          git config user.email "rtfclmgzn@gmail.com"
+          git add web/assets/img/newsroom web/data/newsroom-articles.js
+          if git diff --cached --quiet; then
+            echo "covers already complete - nothing to heal"
+          else
+            git commit -m "covers: self-heal - synthesized branded covers for coverless articles"
+            git pull --rebase origin main || { git rebase --abort; echo "rebase race - heal rides the next run"; }
+            git push origin main || echo "push race - heal rides the next run"
+          fi
           python3 newsroom/runner/verify_covers.py check
