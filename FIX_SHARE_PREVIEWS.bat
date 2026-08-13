@@ -1,23 +1,29 @@
 @echo off
 setlocal
-title RTFCLMGZN - fix Facebook link previews
+title RTFCLMGZN - fix Facebook link previews (v2)
 cd /d "%~dp0"
-echo Shipping the share-page fix: Facebook's crawler was following a
-echo hidden redirect to the homepage and grabbing the generic purple
-echo tree instead of the article cover. Also ships the new narrated
-echo dispatcher + hashtag engine.
-echo.
-git add "functions/share/[slug].js" agents\social\post_social.py agents\social\social-posting.agent.md RTFCLMGZN_SOCIAL_DISPATCH.bat FIX_SHARE_PREVIEWS.bat
-git commit -m "share pages: JS-only redirect (FB was unfurling the homepage card); dispatcher: narrated output, log file, per-platform hashtag engine"
+echo [1/5] Committing the share-page fix + dispatch status updates...
+git add -A "functions/share/[slug].js" web\data\social-posts.js agents\social\post_social.py agents\social\social-posting.agent.md RTFCLMGZN_SOCIAL_DISPATCH.bat FIX_SHARE_PREVIEWS.bat
+git commit -m "share pages: JS-only redirect (FB was unfurling the homepage card); dispatcher: narrated output + hashtag engine; social: dispatch statuses"
+echo [2/5] Stashing anything else so the pull can never refuse...
+git stash push -u -m pre-fix-leftovers
+echo [3/5] Pulling latest...
 git pull --rebase origin main
 if errorlevel 1 (
-  echo.
-  echo A cycle pushed at the same moment - run this .bat once more.
+  echo PULL FAILED - tell Claude, nothing was lost. Your stash: pre-fix-leftovers
+  git rebase --abort >nul 2>nul
   pause
   exit /b 1
 )
+echo [4/5] Pushing (sign in as rtfclmgzn if a window appears)...
 git push origin main
+if errorlevel 1 (
+  echo PUSH FAILED - read the lines above and tell Claude what they say.
+  pause
+  exit /b 1
+)
+echo [5/5] Restoring your stashed leftovers...
+git stash pop
 echo.
-echo If a sign-in window appeared: pick rtfclmgzn, NOT cognivorlabs.
-echo Cloudflare redeploys in about 2 minutes - Claude takes it from there.
+echo SUCCESS - Cloudflare redeploys in about 2 minutes. Tell Claude "pushed".
 pause
