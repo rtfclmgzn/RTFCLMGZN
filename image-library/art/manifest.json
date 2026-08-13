@@ -1285,7 +1285,12 @@
    ],
    "text_space": "sky left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-decart-6-billion-acquisition-talks",
+     "used_at": "2026-08-13"
+    }
+   ]
   },
   {
    "id": "art-048-switchyard-under-construction",
@@ -1520,7 +1525,12 @@
    ],
    "text_space": "sky left half",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
+     "used_at": "2026-08-13"
+    }
+   ]
   },
   {
    "id": "art-057-executive-review-of-the-test-lab",

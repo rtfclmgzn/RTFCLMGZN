@@ -1758,5 +1758,201 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-decart-6-billion-acquisition-talks",
+    "ts": "2026-08-13T17:10:00Z",
+    "export": {
+      "article_id": "newsroom-anthropic-decart-6-billion-acquisition-talks",
+      "url": "/#/article/anthropic-decart-6-billion-acquisition-talks",
+      "headline": "Anthropic is reportedly in talks to buy Israeli startup Decart for $6 billion, its largest deal yet",
+      "hook": "Anthropic is reportedly negotiating its largest-ever acquisition -- a ~$6B buy of an Israeli infrastructure-efficiency startup -- five weeks after filing confidentially to go public at a $965B valuation.",
+      "key_facts": [
+        "Anthropic is in talks to buy Decart for ~$6B, about 50% above the ~$4B valuation its investors set in May",
+        "Decart's DOS software squeezes more inference throughput out of Nvidia GPUs, AWS Trainium and Google TPUs",
+        "The talks land 5 weeks after Anthropic's confidential S-1 filing and a $65B Series H at a $965B valuation"
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-decart-6-billion-acquisition-talks.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic is reportedly in talks to buy Israeli AI startup Decart for ~$6B -- its largest deal yet. That's ~50% above the $4B valuation Decart set in May. Comes 5 weeks after Anthropic's own confidential S-1 filing at a $965B valuation.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-13T21:54:12Z",
+        "copy": "The reported target isn't Decart's video tools -- it's DOS, the layer that squeezes more throughput out of GPUs, TPUs and Trainium chips Anthropic already owns. Capacity, not content, is what's reportedly on the table.",
+        "reply_copy": "Story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Compute"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic is reportedly in talks to buy Israeli startup Decart for about $6 billion -- its largest deal yet.\n\nThat's roughly 50% above the ~$4B valuation Decart's investors set just three months ago. Decart's software squeezes more usable throughput out of existing GPUs, TPUs and Trainium chips -- exactly the kind of capacity crunch Anthropic has been racing to solve.\n\nThe talks surface five weeks after Anthropic confidentially filed to go public at a $965 billion valuation. Nothing is signed yet.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic",
+          "#Decart",
+          "#Acquisition",
+          "#StartupNews",
+          "#AIInfrastructure"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic is reportedly in early talks to acquire Decart AI, an Israeli infrastructure-efficiency and video-generation startup, for roughly $6 billion -- what would be Anthropic's largest acquisition to date, Bloomberg reported.\n\nThe price would sit about 50% above the near-$4 billion valuation Decart's investors set in a May 2026 round. Anthropic's reported interest is in Decart's DOS software, which raises inference throughput across Nvidia GPUs, AWS Trainium and Google TPUs -- not the company's consumer-facing video tools.\n\nThe talks land five weeks after Anthropic confidentially filed a draft S-1 with the SEC, days after closing a $65 billion funding round at a $965 billion valuation. Nothing is signed, and Bloomberg's sources caution the deal could still fall through.\n\nFull story:",
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic is reportedly in talks to buy Israeli startup Decart for ~$6B -- its largest deal yet, about 50% above the $4B valuation Decart's investors set in May. The reported target is Decart's chip-efficiency software, not its video tools. Comes 5 weeks after Anthropic's own $965B IPO filing. Nothing signed yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-13T21:54:12Z",
+        "copy": "Decart's Oasis product generates interactive \"world models\" for training robots -- the same category behind Google DeepMind's Genie line. Anthropic has no public robotics program, which is part of why reporting points at the efficiency layer, not the world model, as the actual target.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic reportedly in talks to buy Decart (Israeli AI infra startup) for ~$6B -- its largest deal yet, ~50% above the $4B valuation set in May. Comes 5 weeks after Anthropic's own $965B IPO filing. Nothing signed.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
+    "ts": "2026-08-13T17:12:00Z",
+    "export": {
+      "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
+      "url": "/#/article/thrive-holdings-2-billion-raise-openai-circular-deal",
+      "headline": "OpenAI-backed Thrive Holdings raised $2 billion to buy traditional businesses and rewire them with AI",
+      "hook": "OpenAI doesn't own its stake in Thrive Holdings for cash -- it traded embedded staff and API access instead. The AI-powered roll-up buying up accounting and IT firms just raised $2B at a $12B valuation.",
+      "key_facts": [
+        "Thrive Holdings raised $2B+ at a $12B valuation from SoftBank, D1 Capital and Altimeter",
+        "OpenAI's Dec 2025 stake was non-cash -- embedded engineers and platform access, not a check",
+        "Bloomberg and TechCrunch flagged the structure as part of OpenAI's broader pattern of 'circular deals'"
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-thrive-holdings-2-billion-raise-openai-circular-deal.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI-backed Thrive Holdings just raised $2B+ at a $12B valuation to buy up accounting and IT firms and rewire them with AI. OpenAI's own stake isn't cash -- it's embedded engineers and API access, the same structure critics call a 'circular deal.'",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-13T22:02:38Z",
+        "copy": "Bloomberg has now mapped $800B+ in similar 'circular' arrangements across OpenAI, Nvidia, Microsoft, Oracle and AMD. Thrive's $2B raise is one small node in a much bigger pattern of equity, compute and services swapped for commitments instead of cash.",
+        "reply_copy": "Story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Thrive Holdings -- a Josh Kushner-founded roll-up that buys traditional businesses and installs AI inside them -- just raised $2 billion at a $12 billion valuation.\n\nSoftBank, D1 Capital and Altimeter led the round. But OpenAI's own stake, struck back in December, isn't cash -- it's embedded engineers and platform access traded for equity.\n\nBloomberg and TechCrunch flagged that structure as part of OpenAI's broader pattern of 'circular deals.' Thrive says it's just meeting real demand.\n\nWe dug into both sides -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Startups",
+          "#VentureCapital",
+          "#Enterprise",
+          "#PrivateEquity"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Thrive Holdings, a Josh Kushner-founded roll-up that buys traditional businesses and installs AI inside them, raised more than $2 billion at a $12 billion valuation, TechCrunch reported -- with SoftBank, D1 Capital Partners and Altimeter Capital leading.\n\nThe company is backed by OpenAI, which took an ownership stake in December 2025 -- not for cash, but by embedding its own engineers inside Thrive's portfolio companies. That structure is exactly what drew scrutiny the first time: Bloomberg and TechCrunch both described it as part of OpenAI's growing pattern of 'circular deals,' where financing, compute or engineering time change hands in place of cash.\n\nA Thrive spokesperson pushed back, calling it a response to real, unmet demand rather than manufactured demand. We laid out the strongest case on both sides.\n\nFull story:",
+        "hashtags": [
+          "#AI",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI-backed Thrive Holdings raised $2B+ at a $12B valuation to buy traditional accounting and IT firms and install AI inside them. OpenAI's own stake isn't cash -- it's embedded engineers and API access, the same non-cash structure Bloomberg and TechCrunch call a 'circular deal.' Thrive disputes the framing.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-13T22:02:38Z",
+        "copy": "Thrive's own reported numbers: TaxAI processed 7,000+ returns at 98% accuracy; Shield cut IT help-desk resolution time 36x. Real, or the vendor's own unaudited word? Right now those figures come from the company benefiting from the story.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI-backed Thrive Holdings raised $2B+ at a $12B valuation to buy traditional firms and add AI. OpenAI's Dec 2025 stake wasn't cash -- embedded staff + API access instead. Bloomberg/TechCrunch call it a 'circular deal'; Thrive disagrees.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
