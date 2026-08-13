@@ -368,8 +368,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Defense"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112130329396947",
+        "remote_id": "1238977099292018_122112130329396947",
+        "posted_at": "2026-08-13T13:57:03Z"
       },
       {
         "platform": "threads",
@@ -380,8 +382,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "An AI flew a real US Air Force F-16 in July. Safety pilot could reclaim control at one switch, the whole flight. DARPA's VENOM converts standard fighters, not a one-off testbed.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msxsecnkxr26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msxsecnkxr26",
+        "posted_at": "2026-08-13T13:57:10Z"
       }
     ]
   },
@@ -459,8 +463,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112132459396947",
+        "remote_id": "1238977099292018_122112132459396947",
+        "posted_at": "2026-08-13T14:01:10Z"
       },
       {
         "platform": "threads",
@@ -471,8 +477,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Meta's new coding agent is up to 20x cheaper on its \"Contributor\" tier -- the catch is Meta may train on your prompts and completions, with no way to undo it once that happens.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msxslnx6b726",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msxslnx6b726",
+        "posted_at": "2026-08-13T14:01:17Z"
       }
     ]
   },
