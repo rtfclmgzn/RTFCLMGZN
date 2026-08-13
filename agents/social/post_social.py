@@ -491,11 +491,28 @@ def post_instagram(secrets: dict, post: dict, url: str, image_url: str | None) -
         caption = f"{caption}\n\n{' '.join(tags)}"
     caption = clip(f"{caption}\n\n{url}", 2200)
     base = _graph_base(secrets)
-    container = http_request(
-        "POST", f"{base}/{meta['instagram_business_id']}/media",
-        data=form({"image_url": image_url, "caption": caption,
-                   "access_token": meta["page_access_token"]}),
-    )
+    # Portrait first (2026-08-13): feed covers are 16:9, but IG rewards 4:5.
+    # Cycles stage a portrait crop next to each cover as <name>-ig.<ext>; try
+    # that URL first and fall back to the wide cover if it isn't there yet.
+    candidates = []
+    stem, dot, ext = image_url.rpartition(".")
+    if dot and len(ext) <= 5:
+        candidates.append(f"{stem}-ig.{ext}")
+    candidates.append(image_url)
+    container, last_exc = None, None
+    for candidate in candidates:
+        try:
+            container = http_request(
+                "POST", f"{base}/{meta['instagram_business_id']}/media",
+                data=form({"image_url": candidate, "caption": caption,
+                           "access_token": meta["page_access_token"]}),
+            )
+            break
+        except HttpError as exc:
+            last_exc = exc
+            continue
+    if container is None:
+        raise last_exc or HttpError("Instagram container was not created")
     creation_id = str(container.get("id") or "")
     if not creation_id:
         raise HttpError("Instagram container was not created")
@@ -862,7 +879,7 @@ def dispatch(args: argparse.Namespace) -> int:
             post["status"] = "posted"
             post["post_url"] = result.get("post_url")
             post["remote_id"] = result.get("remote_id")
-            post["posted_at"] = iso(now)
+            post["posted_at"] = iso(utc_now())
             post.pop("last_error", None)
             ledger["posted"][key] = {"ts": iso(now), "post_url": result.get("post_url")}
             spend += float(result.get("cost_usd") or 0.0)

@@ -85,3 +85,13 @@ choose well:
   `#follow4follow`) — they read as spam on news accounts and hurt distribution.
 - Copy stays clean: tags belong in the `hashtags` array, never inline in `copy`
   (X body links cost 13x, and inline tags break the copy's clip limits).
+
+## Instagram images: portrait (added 2026-08-13, 6am demand)
+
+For every article you stage an Instagram record for, also render a **4:5
+portrait crop** (1080x1350) of the article cover and save it next to the cover
+as `web/assets/img/newsroom/<article-id>-ig.jpg` (same name + `-ig` suffix).
+Center-crop on the cover's focal subject; never letterbox or stretch. The
+dispatcher tries the `-ig` URL first and silently falls back to the wide cover
+while portraits don't exist yet, so shipping this is enough to flip IG posts
+to portrait — no dispatcher change needed.

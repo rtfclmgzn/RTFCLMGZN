@@ -1338,8 +1338,8 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#AISafety"
         ],
-        "status": "posted",
-        "post_url": "https://www.facebook.com/1238977099292018_122112095787396947",
+        "status": "deleted_cleanup",
+        "post_url": null,
         "remote_id": "1238977099292018_122112095787396947",
         "posted_at": "2026-08-13T10:40:37Z"
       },
@@ -1438,8 +1438,8 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Markets"
         ],
-        "status": "posted",
-        "post_url": "https://www.facebook.com/1238977099292018_122112096867396947",
+        "status": "deleted_cleanup",
+        "post_url": null,
         "remote_id": "1238977099292018_122112096867396947",
         "posted_at": "2026-08-13T10:40:37Z"
       },

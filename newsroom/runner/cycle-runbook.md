@@ -377,8 +377,9 @@ For each article you are publishing this cycle, run the two social agents BEFORE
 
 1. **Agent A — export** (`agents/social/article-export.agent.md`, Haiku-tier work): append the structured `export` object for the article to `web/data/social-posts.js`.
 2. **Agent B — copy** (`agents/social/social-posting.agent.md`, Sonnet-tier): stage platform-native posts as `status:"ready"` records — X hook (**no URL in the copy**, `link_in_reply:true` + `reply_copy`), Instagram, Facebook, Threads, Bluesky; for feature/research pieces also a second-wave X + Threads post with `not_before` ~5h out. Reddit needs no copy — the dispatcher synthesizes the link post itself.
-3. Log both generation steps into the ledger row you append in §5 step 1b (`task_type:"social"`).
-4. Include `web/data/social-posts.js` in the §5 step 2 `git add`.
+3. **Portrait crop** (added 2026-08-13): render a 4:5 center crop (1080x1350) of the article cover to `web/assets/img/newsroom/<article-id>-ig.jpg` (PIL: load cover, crop the widest 4:5 box around the visual center, resize, save JPEG quality 88). The share function serves it to Facebook/Instagram/Threads crawlers and the dispatcher prefers it for IG uploads; both fall back to the wide cover if it is missing, so never block a publish on this — but never skip it silently either: log it in the cycle report if you couldn't produce one.
+4. Log the generation steps into the ledger row you append in §5 step 1b (`task_type:"social"`).
+5. Include `web/data/social-posts.js` **and the `-ig.jpg` crops** in the §5 step 2 `git add`.
 
 Do NOT post anything in this section, and do not call any platform API yourself — posting happens in §5b, after the deploy is verified, so article links and image URLs already resolve. A no-publish cycle skips this section entirely.
 

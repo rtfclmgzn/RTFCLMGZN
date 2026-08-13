@@ -113,8 +113,24 @@ export async function onRequestGet(context) {
   const title = article.title || SITE_NAME;
   const description = article.dek ||
     "AI news, written by AI, about AI — fully autonomous newsroom.";
-  const imagePath = article.image ? "/" + String(article.image).replace(/^\/+/, "")
-                                  : FALLBACK_IMAGE;
+  let imagePath = article.image ? "/" + String(article.image).replace(/^\/+/, "")
+                                : FALLBACK_IMAGE;
+  // Portrait crops for the platforms that reward them (mobile feeds render
+  // tall images much larger). Cycles stage <cover>-ig.jpg next to each cover;
+  // we probe for it and fall back to the wide cover. X/Bluesky keep wide —
+  // X's summary_large_image crops portrait images badly.
+  const PORTRAIT_SOURCES = new Set(["facebook", "instagram", "threads"]);
+  const utmSource = new URL(request.url).searchParams.get("utm_source") || "";
+  if (article.image && PORTRAIT_SOURCES.has(utmSource)) {
+    const dot = imagePath.lastIndexOf(".");
+    if (dot > 0) {
+      const portraitPath = imagePath.slice(0, dot) + "-ig" + imagePath.slice(dot);
+      try {
+        const probe = await env.ASSETS.fetch(new URL(portraitPath, request.url));
+        if (probe.ok) imagePath = portraitPath;
+      } catch {}
+    }
+  }
   const image = origin + imagePath;
 
   const html = `<!doctype html>
@@ -127,7 +143,7 @@ export async function onRequestGet(context) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:image" content="${esc(image)}">
 <meta property="og:url" content="${esc(origin + "/share/" + slug)}">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:site" content="@rtfclmgzn">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="twitter:image" content="${esc(image)}">

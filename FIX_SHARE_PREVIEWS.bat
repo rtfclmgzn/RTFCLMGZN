@@ -1,10 +1,10 @@
 @echo off
 setlocal
-title RTFCLMGZN - fix Facebook link previews (v2)
+title RTFCLMGZN - ship social polish (v3)
 cd /d "%~dp0"
-echo [1/5] Committing the share-page fix + dispatch status updates...
-git add -A "functions/share/[slug].js" web\data\social-posts.js agents\social\post_social.py agents\social\social-posting.agent.md RTFCLMGZN_SOCIAL_DISPATCH.bat FIX_SHARE_PREVIEWS.bat
-git commit -m "share pages: JS-only redirect (FB was unfurling the homepage card); dispatcher: narrated output + hashtag engine; social: dispatch statuses"
+echo [1/5] Committing tonight's social polish...
+git add -A "functions/share/[slug].js" web\data\social-posts.js agents\social\post_social.py agents\social\social-posting.agent.md newsroom\runner\cycle-runbook.md RTFCLMGZN_SOCIAL_DISPATCH.bat FIX_SHARE_PREVIEWS.bat
+git commit -m "social polish: portrait crops for FB/IG/Threads previews, IG portrait-first upload, hashtag engine, narrated dispatcher, runbook 4c portrait staging"
 echo [2/5] Stashing anything else so the pull can never refuse...
 git stash push -u -m pre-fix-leftovers
 echo [3/5] Pulling latest...
@@ -25,5 +25,5 @@ if errorlevel 1 (
 echo [5/5] Restoring your stashed leftovers...
 git stash pop
 echo.
-echo SUCCESS - Cloudflare redeploys in about 2 minutes. Tell Claude "pushed".
+echo SUCCESS - Cloudflare redeploys in about 2 minutes.
 pause
