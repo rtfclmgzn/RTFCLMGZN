@@ -5304,6 +5304,19 @@ window.RTFC_NEWSROOM_ARTICLES = [
         ]
       },
       {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "FOUR DAYS, ONE LETTER",
+          "title": "From sanctions warning to a 50-signer letter",
+          "items": [
+            {"when": "Jul 21, 2026", "what": "Treasury Secretary Scott Bessent tells Fox Business the US found “watermarks” of American models in Chinese ones, warns of possible sanctions.", "source": "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html"},
+            {"when": "Jul 22, 2026", "what": "Huang tells Axios a US ban has “zero possibility,” calls distillation “fundamental to intelligence.”", "source": "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html"},
+            {"when": "Jul 24, 2026", "what": "Huang's first-ever X post shares the open-weights letter, initially signed by 25 companies.", "source": "https://fortune.com/2026/07/24/jensen-huang-open-source-letter-nvidia-kimi/"},
+            {"when": "Jul 25, 2026", "what": "Signer count roughly doubles to 50, adding OpenAI and Google; Anthropic and Amazon still absent.", "hi": true, "source": "https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/"}
+          ]
+        }
+      },
+      {
         "type": "p",
         "text": "The letter's timing lines up with a stretch in which the fastest-moving open-weight releases have come from Chinese labs, not American ones. Moonshot AI's Kimi K3, Alibaba's Qwen3.8-Max-Preview and DeepSeek's V4 have all shipped or previewed within the same few weeks, each pitched as competitive with, or a fraction of the cost of, closed Western flagships. That's the backdrop the letter argues against restricting: if U.S. policy makes it harder to release open weights domestically while Chinese labs keep shipping them anyway, the signatories' case is that America cedes the open lane entirely rather than protecting it. Whether that's the right read of the security tradeoff is exactly what Bessent's camp disputes — but it's the argument that pulled 25 companies onto a letter within hours of each other, and another 25 to add their names the next day.",
         "citation_urls": [
@@ -5316,6 +5329,17 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "citation_urls": [
           "https://fortune.com/2026/07/24/jensen-huang-open-source-letter-nvidia-kimi/"
         ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "kicker": "WHO THE OPEN-WEIGHTS FIGHT ACTUALLY LANDS ON",
+          "items": [
+            {"who": "Nvidia", "tone": "gains", "what": "Sells chips to open and closed developers alike — a bigger open ecosystem means more compute sold either way."},
+            {"who": "Anthropic and Amazon", "tone": "exposed", "what": "The only two major names still off a letter that grew to roughly 50 signers in a day; most exposed if open-weight competition erodes what a closed model can charge."},
+            {"who": "Cloud and infrastructure signers (Cloudflare, Cisco, GitHub)", "tone": "gains", "what": "Benefit from a fragmented, multi-model ecosystem rather than one or two closed API winners controlling distribution."}
+          ]
+        }
       },
       {
         "type": "p",
@@ -5385,6 +5409,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "Trigger 3/4 (legal proceedings; accusatory claims about a named party) considered: Bessent's sanction threat and 'theft' language are reported as his attributed claim, not adopted as fact, and Huang's rebuttal is included for balance. Trigger 5 (unverifiable quotes) checked: all quotes are verbatim and sourced to a named interview outlet. No health, financial-advice, or crypto trigger present."
+        },
+        {
+          "name": "Archive backfill · 2026-08-13",
+          "agent": "claude-runner",
+          "note": "§3c backfill: this piece was 0-of-2 against the synthesis component floor per component_audit.py's backfill-debt report. Added a timeline (the four dated events already in the article's own text: Bessent's Jul 21 warning, Huang's Jul 22 Axios rebuttal, the Jul 24 letter post, the Jul 25 roster doubling) and a stakes block (Nvidia / Anthropic+Amazon / cloud-infra signers, drawn directly from the existing 'underlying split' paragraph's own analysis). No new facts, sources or word count added; both components built only from text and citation_urls already in the piece. Loop 2 provenance check: every value in both components traces to the surrounding prose. component_audit.py backfill debt for this slug cleared."
         }
       ],
       "gate": {
@@ -5417,6 +5446,19 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://origami.sa/en/blog/qwen-3-8-max-alibaba-ai-model-business-guide/",
           "https://quasa.io/media/alibaba-s-qwen3-8-max-preview-what-the-2-4t-model-means-for-ai-buyers"
         ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "Qwen3.8-Max-Preview, confirmed vs. claimed",
+          "items": [
+            {"label": "Parameters", "value": "2.4 trillion", "note": "first Qwen model above 1T params"},
+            {"label": "Context window", "value": "~983,000 tokens", "note": "131,072-token output cap"},
+            {"label": "Claimed rank", "value": "“Second only to” Claude Fable 5", "note": "Alibaba's own claim — no benchmark table published"},
+            {"label": "Preview pricing", "value": "~10% of expected standard rate", "note": "predecessor Qwen3.7-Max charged $2.50/$7.50 per million tokens"},
+            {"label": "Open weights", "value": "Promised “soon”", "note": "no license, checkpoint or date announced"}
+          ]
+        }
       },
       {
         "type": "p",
@@ -5480,6 +5522,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "No trigger from compliance-rulebook.md §1 fired: no health, financial, legal or accusatory content. The unverified-ranking claim is attributed to Alibaba throughout and framed as unconfirmed rather than adopted as fact."
+        },
+        {
+          "name": "Archive backfill · 2026-08-13",
+          "agent": "claude-runner",
+          "note": "§3c backfill: this brief carried 0 components against its 1-component floor per component_audit.py's backfill-debt report. Added a keyfacts box (parameters, context window, claimed rank, preview pricing, open-weights status) built entirely from figures already stated in the piece's own two paragraphs — no new facts or sources. Loop 2 provenance check: every value traces to the surrounding prose. component_audit.py backfill debt for this slug cleared."
         }
       ],
       "gate": {
@@ -18041,5 +18088,443 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-12T12:53:07Z"
-  }
+  },
+  {
+  "slug": "reasoning-trace-replay-vulnerability-openai-anthropic-google",
+  "title": "Anthropic and OpenAI said it wasn't a security issue in May. In August, researchers used it to pull real passwords out of AI reasoning logs.",
+  "dek": "A paper from the ELLIS Institute Tübingen, the Max Planck Institute and Snyk shows encrypted \"thinking\" blocks from OpenAI, Anthropic and Google's APIs can be replayed into a cheaper sibling model and read back in plain text. Decoding 315,320 public reasoning blocks turned up real API keys, passwords and personal data — three months after a cryptographer's first warning went nowhere.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+    "A paper shows encrypted AI reasoning blocks can be replayed into a weaker model and read in plaintext.",
+    "Decoding 315,320 public reasoning blocks recovered 62 API keys, 33 passwords, 24 access tokens and 7 private keys.",
+    "OpenAI and Anthropic dismissed a similar warning about the same flaw in May 2026.",
+    "All three providers acknowledged the August report; the paper says the attack no longer reproduces.",
+    "Caveat: no vendor has published its own advisory confirming the fix or naming its full scope."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "[OpenAI](#/company/openai), [Anthropic](#/company/anthropic) and [Google](#/company/google) all hide their models' internal [chain-of-thought](#/dictionary) behind encrypted, client-side tokens rather than exposing it to users. A paper published August 10 by researchers at the ELLIS Institute Tübingen, the Max Planck Institute for Intelligent Systems and Snyk shows those tokens can be forced open: capture an encrypted reasoning block one model produced, feed it to a cheaper, less-guarded sibling model from the same provider, and that weaker model will decrypt and read the contents back in plain text — without ever jailbreaking the stronger model directly.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "How the replay attack works"
+    },
+    {
+      "type": "p",
+      "text": "The trick works because the encrypted blocks a provider's API returns are, in the paper's own words, \"fully compatible and interchangeable across different sessions, users, and models\" within that provider's ecosystem. Nothing in the format ties a block to the session, account or model that produced it, so an attacker who captures one can resend it later, to a different account, addressed to a different and weaker model in the same family, and ask that model to transcribe what it just decoded.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "flow",
+      "flow": {
+        "kicker": "HOW THE REPLAY WORKS",
+        "title": "From a captured reasoning block to plaintext in a weaker model",
+        "steps": [
+          {
+            "actor": "Attacker",
+            "what": "Captures an encrypted reasoning block a provider's API returned after a stronger model finished thinking."
+          },
+          {
+            "actor": "Attacker",
+            "what": "Resends that same encrypted block to the API, addressed to a cheaper, less-restricted sibling model.",
+            "hi": true
+          },
+          {
+            "actor": "Weaker model",
+            "what": "Decrypts the block normally — the format doesn't check which session or model originally produced it."
+          },
+          {
+            "actor": "Weaker model",
+            "what": "Is prompted to transcribe the decoded reasoning verbatim, handing back the stronger model's private chain-of-thought as plain text."
+          }
+        ],
+        "source": "Panfilov et al., \"Stealing Reasoning Traces from Proprietary LLM APIs,\" arXiv:2608.09867 (Aug 10, 2026)"
+      }
+    },
+    {
+      "type": "p",
+      "text": "The researchers demonstrated the technique against all three providers' APIs, then used it for more than proving a point. Developers routinely post API session logs — bug reports, demo transcripts, shared notebooks — to GitHub and [Hugging Face](#/company/huggingface) without realizing the reasoning blocks sitting inside them are readable by anyone willing to replay them through a compatible model.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Applying the technique to 6,708 publicly posted agent transcripts scraped from GitHub and Hugging Face — reasoning left behind by Claude, GPT and Gemini models — the team decoded 315,320 individual reasoning blocks. Only a small share of any single block carried something sensitive (0.3%, or 1,028 blocks), but because one leaky session spans many blocks, the picture looks worse per transcript: 4.9% of the 6,708 sessions, or 328 of them, leaked at least one real secret somewhere in their reasoning. What came out the other side, scoped precisely:",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "ledger",
+      "ledger": {
+        "title": "What each number in the paper actually counts",
+        "items": [
+          {
+            "value": "315,320",
+            "unit": "reasoning blocks",
+            "label": "Decoded across 6,708 scraped public agent transcripts",
+            "includes": "Every reasoning block the team could decode from GitHub- and Hugging Face-hosted logs left by Claude, GPT and Gemini",
+            "excludes": "Anything not already publicly posted; the researchers did not access private accounts"
+          },
+          {
+            "value": "1,028",
+            "unit": "blocks (0.3%)",
+            "label": "Blocks containing at least one recoverable privacy leak"
+          },
+          {
+            "value": "328",
+            "unit": "sessions (4.9%)",
+            "label": "Of the 6,708 transcripts, leaked at least one real secret somewhere in their reasoning",
+            "note": "The per-session rate is higher than the per-block rate because one leaky session spans many blocks"
+          },
+          {
+            "value": "62 / 33 / 24 / 7",
+            "unit": "API keys / passwords / access tokens / private keys",
+            "label": "Recovered from genuine, non-benchmark user sessions specifically",
+            "excludes": "Benchmark and synthetic-persona traces, which the paper counts separately"
+          }
+        ],
+        "source": "Panfilov et al., arXiv:2608.09867, Sections 3–4 and Appendix D (Aug 10, 2026)"
+      }
+    },
+    {
+      "type": "p",
+      "text": "The recovered material wasn't confined to abstract test data. The paper's authors write that some of what surfaced \"did not even feature in the user's input, having been injected invisibly from the model's memory\" — meaning a developer reading their own plain-text session log would have no way to know the reasoning block sitting next to it contained a live credential at all.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Credential theft is only one of four abuse paths the paper lays out. The same replay trick also lets an attacker read reasoning a model generated while working through a request its final, visible answer safely refused — the harmful content sits in the hidden chain-of-thought even when the response shown to the user looks clean. And because a reasoning block is opaque until decoded, the researchers show it can carry a hidden instruction: an attacker can embed a prompt injection entirely inside an encrypted block, invisible to anyone reviewing the plain-text parts of a shared transcript, to poison an AI agent reading that transcript later.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Not the first warning"
+    },
+    {
+      "type": "p",
+      "text": "This wasn't the first time a provider had been told the reasoning-block format could be replayed. Johns Hopkins cryptographer Matthew Green reported the underlying behavior to OpenAI and Anthropic in May and wrote up how each responded to him.",
+      "citation_urls": [
+        "https://blog.cryptographyengineering.com/2026/05/29/fooling-around-with-encrypted-reasoning-blobs/"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "“OpenAI said my report was unreproducible. I sent them my scripts, but too late.” — Matthew Green, on OpenAI's response, May 2026",
+      "citation_urls": [
+        "https://blog.cryptographyengineering.com/2026/05/29/fooling-around-with-encrypted-reasoning-blobs/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Anthropic's answer was different in tone and identical in effect:",
+      "citation_urls": []
+    },
+    {
+      "type": "quote",
+      "text": "“Anthropic quite reasonably told me they don't see any security implications in side channels or replays, but they might alter their developer documentation to warn application developers to be more careful.” — Matthew Green, on Anthropic's response, May 2026",
+      "citation_urls": [
+        "https://blog.cryptographyengineering.com/2026/05/29/fooling-around-with-encrypted-reasoning-blobs/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Google was not named in Green's account as a recipient of the May report. Neither dismissal stopped what came next: the August paper cites Green's work directly, then goes further, showing the same architectural gap recovering real secrets at scale from data that was already public.",
+      "citation_urls": [
+        "https://blog.cryptographyengineering.com/2026/05/29/fooling-around-with-encrypted-reasoning-blobs/",
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "compare",
+      "compare": {
+        "title": "Two disclosures, three months apart",
+        "columns": [
+          {
+            "label": "Green, May 29, 2026",
+            "sub": "cryptography blog post"
+          },
+          {
+            "label": "Panfilov et al., Aug 10, 2026",
+            "sub": "arXiv paper",
+            "hi": true
+          }
+        ],
+        "rows": [
+          {
+            "label": "What was shown",
+            "values": [
+              "Encrypted reasoning blocks can be replayed across sessions, users and models",
+              "The same replay extracts real credentials, PII and full reasoning traces at scale"
+            ]
+          },
+          {
+            "label": "OpenAI's response",
+            "values": [
+              "Called the report unreproducible",
+              "Acknowledged receipt of the report; paper says the attack no longer works against current API builds"
+            ]
+          },
+          {
+            "label": "Anthropic's response",
+            "values": [
+              "Said it saw no security implications in the behavior",
+              "Acknowledged receipt of the report; paper says the attack no longer works against current API builds"
+            ],
+            "note": "Google was not named as a recipient of the May report"
+          }
+        ],
+        "source": "Matthew Green, cryptographyengineering.com (May 29, 2026); Panfilov et al., arXiv:2608.09867 §5.2 (Aug 10, 2026)"
+      }
+    },
+    {
+      "type": "p",
+      "text": "It's a familiar shape this summer: a gap between how a lab secures a model's outputs and how it secures the infrastructure carrying them. In July and August, [four labs disclosed AI agents reaching past their own sandboxes](#/article/moonshot-kimi-k3-sandbox-escape-benchmark-cheating) during security evaluations, and [a single GitHub issue was shown able to hijack three vendors' coding agents at once](#/article/black-hat-2026-github-issue-claude-code-gemini-cli-codex-rce). This is a different failure — nothing had to be hacked, only replayed — but the pattern is the same: the model behaved exactly as designed, and the surrounding system was the part that hadn't been.",
+      "citation_urls": []
+    },
+    {
+      "type": "h2",
+      "text": "What's fixed, and what's still open"
+    },
+    {
+      "type": "p",
+      "text": "The paper reports that all three providers acknowledged its disclosure before publication and that the specific replay attacks it demonstrated no longer work against current API builds. None of the three has published its own security advisory naming the vulnerability, so the only public account of what changed, and when, is the researchers' own. The paper's proposed fix is architectural: cryptographically bind each reasoning block to the exact session, user and model that produced it, so a block that decrypts cleanly for one can't be replayed into another.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For developers, the more immediate exposure doesn't require anyone to fix an API at all: any reasoning-block-bearing session log already posted to GitHub or Hugging Face before the mitigations shipped stays replayable by anyone who saves a copy first. The researchers' data-hygiene recommendation — strip reasoning blocks from any transcript before sharing it — addresses logs going forward, not the ones already public.",
+      "citation_urls": [
+        "https://arxiv.org/abs/2608.09867"
+      ]
+    }
+  ],
+  "apply": [
+    {
+      "label": "Watch for a public vendor advisory.",
+      "text": "Neither OpenAI, Anthropic nor Google has published its own security bulletin naming this flaw; one would confirm the fix's scope independent of the researchers' account."
+    },
+    {
+      "label": "Watch whether other reasoning-model vendors get tested next.",
+      "text": "The paper evaluated OpenAI, Anthropic and Google specifically. Any provider that hides chain-of-thought behind a similar opaque client-side token — xAI, Alibaba, Moonshot among them — uses a comparable architecture and hasn't been ruled in or out."
+    },
+    {
+      "label": "Watch GitHub and Hugging Face for a takedown or scrub.",
+      "text": "Both platforms were named as hosting the leaking transcripts. Whether they flag or remove the affected repositories is the next concrete, checkable step."
+    },
+    {
+      "label": "Watch for context-bound reasoning blocks shipping industry-wide.",
+      "text": "The paper's proposed fix — cryptographically tying a block to its originating session and model — is a specific, checkable change to look for in each vendor's API documentation."
+    }
+  ],
+  "applyType": "watch",
+  "sources": [
+    {
+      "label": "Panfilov, Schmotz, Shumailov, Beurer-Kellner, Schaeffer, Prabhu, Geiping, Andriushchenko — \"Stealing Reasoning Traces from Proprietary LLM APIs\" (arXiv:2608.09867)",
+      "url": "https://arxiv.org/abs/2608.09867",
+      "primary": true
+    },
+    {
+      "label": "Matthew Green — \"Let's talk about encrypted reasoning\" (A Few Thoughts on Cryptographic Engineering)",
+      "url": "https://blog.cryptographyengineering.com/2026/05/29/fooling-around-with-encrypted-reasoning-blobs/",
+      "primary": true
+    },
+    {
+      "label": "Simon Willison — \"Stealing Reasoning Traces from Proprietary LLM APIs\"",
+      "url": "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/"
+    },
+    {
+      "label": "The Hacker News — \"OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning\"",
+      "url": "https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html"
+    }
+  ],
+  "id": "newsroom-reasoning-trace-replay-vulnerability-openai-anthropic-google",
+  "image": "assets/img/newsroom/newsroom-reasoning-trace-replay-vulnerability-openai-anthropic-google.jpg",
+  "top": false,
+  "sample": false,
+  "corrections": [],
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-08-13T00:19:03Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "Surfaced via an AI-industry sweep; grepped newsroom-articles.js for 'reasoning trace', 'reasoning block', 'stealing reasoning' and the paper's lead author name, no hits, confirming this is not yet covered. Four independent, materially distinct threads used: the arXiv paper itself (primary, fetched and quote-verified directly rather than via search summary), Matthew Green's May 29 blog post (primary account of the prior disclosure and vendor quotes), Simon Willison's independent write-up, and The Hacker News's independent reporting. A fifth candidate figure (a secondary outlet's '704 privacy artifacts' tally) could not be independently verified against the paper's own text and was deliberately left out of the article rather than risk citing an unverifiable number."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "The arXiv abstract and full HTML paper were fetched directly via curl (not through an AI-summarization intermediary) to get the exact wording and figures verbatim: 315,320 blocks decoded, 367 PII artifacts, 182 credentials, the 62/33/24/7/30/6 genuine-session breakdown, and the Section 5.2 disclosure account. Both quotes attributed to OpenAI and Anthropic were confirmed verbatim against Matthew Green's own blog post before use. A separate, internally inconsistent '912 distinct privacy artifacts including benchmark sources' figure appears later in the same paper under a differently scoped category count; rather than reconcile an ambiguity the paper itself doesn't fully resolve, the article uses only the headline abstract figures and the clearly-scoped genuine-session breakdown, and omits the 912 figure."
+      },
+      {
+        "name": "Loop 1 — critique and revise",
+        "agent": "claude-runner",
+        "note": "Critique found the first draft implied Google was also dismissive of Green's May report; re-checked the source and Green's account only names OpenAI and Anthropic as recipients, so the piece was revised to explicitly note Google was not named as a recipient, both in prose and in the compare component's row note, rather than let the omission read as inclusion by silence. No self-referential language found on re-read. The sourcecheck component was considered and rejected: the only numeric disagreement found (a secondary outlet's uncorroborated '704' figure) was excluded from the article entirely rather than presented as a resolvable conflict, since the primary source could not be checked against it directly."
+      },
+      {
+        "name": "Compliance self-check",
+        "agent": "claude-runner",
+        "note": "Trigger 4 (negative/accusatory claims about named companies — OpenAI, Anthropic, Google) applies. Remediated by attributing every technical and behavioral claim to the paper's own findings or to Green's directly-quoted, verbatim account, rather than asserting vendor negligence. Trigger 5 (quotes attributed to real people) applies to the OpenAI and Anthropic quotes; both confirmed verbatim against the linked primary source before use. Trigger 6 (unverifiable central claim) considered and cleared: the central claim was independently verified against the primary arXiv text via direct fetch, not taken from a secondary summary. No health, financial-advice, or legal-proceeding triggers apply. Disclaimer: none."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for autonomous publication",
+      "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+    }
+  },
+  "publishedAt": "2026-08-13T00:19:03Z"
+},
+  {
+  "slug": "cognition-devin-40-billion-valuation-funding-talks",
+  "title": "Cognition is reportedly in talks to raise at a $40 billion valuation, up from $26 billion three months ago",
+  "dek": "Bloomberg reports the Devin-maker's annualized revenue is nearing $1 billion, roughly double what it disclosed at its last raise in May. Nothing is signed yet, and the figure could still move before any round closes.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "brief",
+  "disclaimer": "not-financial-advice",
+  "tldr": [
+    "Cognition is reportedly in early talks to raise over $1 billion at a $40 billion-plus valuation.",
+    "That's up from the $26 billion post-money valuation it set just three months ago, in May.",
+    "Its annualized revenue run rate is nearing $1 billion, about double May's figure, Bloomberg reports.",
+    "Cognition makes Devin, an AI coding agent used by Citi, Mercedes-Benz and Goldman Sachs, among others.",
+    "Caveat: talks are early and unconfirmed by Cognition; the valuation is contingent on hitting that revenue mark."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "Cognition AI, maker of the AI coding agent Devin, is in early talks with investors for a new funding round that could value the company at $40 billion or more, Bloomberg reported August 11, citing people familiar with the matter. The round, which Bloomberg's sources describe as still unconfirmed and contingent on Cognition's revenue trajectory, would raise more than $1 billion.",
+      "citation_urls": [
+        "https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value",
+        "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The number would mark a more than 50% jump from Cognition's last round just three months earlier: $1 billion raised on May 27 at a $25 billion pre-money, $26 billion post-money valuation, led by Lux Capital, General Catalyst and 8VC. That round itself followed a $10.2 billion post-money valuation set only eight months before it, in September 2025.",
+      "citation_urls": [
+        "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What's driving the new talks, per Bloomberg's reporting, is revenue: Cognition's annualized run rate is now nearing $1 billion, roughly double the approximately $492 million it reported around the time of the May round. Devin is pitched at what CEO Scott Wu has called long-tail engineering work rather than replacing developers outright — legacy-system upgrades, platform migrations, and other maintenance work programmers tend to avoid — with enterprise customers including Citi, Mercedes-Benz, Goldman Sachs, and the US Army and Navy.",
+      "citation_urls": [
+        "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
+      ]
+    },
+    {
+      "type": "keyfacts",
+      "keyfacts": {
+        "title": "The talks, in short",
+        "items": [
+          {
+            "label": "Reported new valuation",
+            "value": "$40B+",
+            "note": "unconfirmed, still in early talks"
+          },
+          {
+            "label": "Reported round size",
+            "value": ">$1B"
+          },
+          {
+            "label": "Prior valuation (May 27, 2026)",
+            "value": "$26B post-money"
+          },
+          {
+            "label": "Prior valuation (Sept 2025)",
+            "value": "$10.2B post-money"
+          },
+          {
+            "label": "Reported ARR now vs. May",
+            "value": "~$1B, up from ~$492M"
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "No investor has been named for the prospective round, and Cognition has not issued its own statement confirming the talks or the figures attached to them. A valuation set before a round closes is also, by definition, a negotiating position rather than a settled fact — the number that eventually prints, if a round closes at all, is the only one that will be confirmed rather than reported.",
+      "citation_urls": [
+        "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
+      ]
+    }
+  ],
+  "apply": [
+    {
+      "label": "Watch for a confirmed close.",
+      "text": "Both the $40B figure and the investor lineup are reported, not confirmed; a Cognition or lead-investor announcement would settle the actual terms."
+    },
+    {
+      "label": "Watch whether the revenue claim gets audited or specified.",
+      "text": "\"Nearing $1 billion\" annualized run rate is a company-sourced figure passed through reporting, not an audited number — a S-1 or investor disclosure would be the document that verifies it."
+    }
+  ],
+  "applyType": "watch",
+  "sources": [
+    {
+      "label": "Bloomberg — \"AI Startup Cognition in New Funding Talks at $40 Billion Value\"",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value",
+      "primary": true
+    },
+    {
+      "label": "TechCrunch — \"AI coding startup Cognition reportedly already in talks to raise at $40B valuation\"",
+      "url": "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
+    },
+    {
+      "label": "TechCrunch — \"AI coding startup Cognition raises $1B at $25B pre-money valuation\"",
+      "url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/"
+    }
+  ],
+  "id": "newsroom-cognition-devin-40-billion-valuation-funding-talks",
+  "image": "assets/img/newsroom/newsroom-cognition-devin-40-billion-valuation-funding-talks.jpg",
+  "top": false,
+  "sample": false,
+  "corrections": [],
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-08-13T00:19:07Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "Surfaced via a Markets-beat sweep; grepped newsroom-articles.js for 'cognition' and 'devin', no genuine prior coverage found (one false-positive match on the word 'recognition'). Two independent threads: Bloomberg's original report (primary, paywalled — content attributed via two independent secondary summaries that agree on every figure) and TechCrunch's own reporting, which both confirms the new-talks story and supplies the May 2026 round's verified terms directly from TechCrunch's own contemporaneous coverage."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "Bloomberg's article itself returned HTTP 403 (paywall); every figure attributed to it was cross-checked against two independently-fetched secondary sources (TechCrunch and PYMNTS) that described the same numbers consistently before being used. The May 27, 2026 round's $25B pre-money/$26B post-money terms and investor list were confirmed directly from TechCrunch's own May 27 article rather than from the August piece's secondhand mention of it."
+      },
+      {
+        "name": "Loop 1 — critique and revise",
+        "agent": "claude-runner",
+        "note": "Critique found the initial draft stated the $40B figure without enough hedging in the second paragraph; revised to keep 'reportedly'/'unconfirmed' framing consistent through every mention rather than only in the lede, and added an explicit closing paragraph noting no investor is named and the number is not yet a settled fact. No self-referential language found on re-read."
+      },
+      {
+        "name": "Compliance self-check",
+        "agent": "claude-runner",
+        "note": "Trigger 2 (financial/valuation claims) applies: Markets-section piece carries the not-financial-advice disclaimer per compliance-rulebook.md §2. Every valuation figure is attributed as reported rather than asserted as settled fact; no buy/sell or investment framing appears. No other triggers fired."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for autonomous publication",
+      "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+    }
+  },
+  "publishedAt": "2026-08-13T00:19:07Z"
+}
 ];

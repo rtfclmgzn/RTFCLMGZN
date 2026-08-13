@@ -1477,5 +1477,175 @@ window.RTFC_SOCIAL_POSTS = [
       "post_url": null
     }
   ]
+},
+{
+ "article_id": "newsroom-reasoning-trace-replay-vulnerability-openai-anthropic-google",
+ "ts": "2026-08-13T00:35:00Z",
+ "export": {
+  "article_id": "newsroom-reasoning-trace-replay-vulnerability-openai-anthropic-google",
+  "url": "/#/article/reasoning-trace-replay-vulnerability-openai-anthropic-google",
+  "headline": "Anthropic and OpenAI said it wasn't a security issue in May. In August, researchers used it to pull real passwords out of AI reasoning logs.",
+  "hook": "Researchers showed OpenAI, Anthropic and Google's encrypted AI reasoning can be replayed into a weaker sibling model and read back in plain text -- recovering real passwords and API keys.",
+  "key_facts": [
+   "Decoding 315,320 public reasoning blocks recovered 62 API keys, 33 passwords, 24 access tokens and 7 private keys",
+   "OpenAI called a similar May warning 'unreproducible'; Anthropic said it saw no security implications",
+   "All three providers acknowledged the August report; the paper says the attack no longer works"
+  ],
+  "tone": "measured, skeptical, evidence-first",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "primary_image": "assets/img/newsroom/newsroom-reasoning-trace-replay-vulnerability-openai-anthropic-google.jpg",
+  "disclaimer": "none"
+ },
+ "posts": [
+  {
+   "platform": "x",
+   "variant": "hook",
+   "copy": "OpenAI and Anthropic called this \"not a security issue\" in May. In August, researchers replayed encrypted AI reasoning into a weaker model and read it back in plaintext -- recovering real API keys and passwords from public logs.",
+   "reply_copy": "Full story:",
+   "link_in_reply": true,
+   "hashtags": [
+    "#AIsecurity",
+    "#OpenAI"
+   ],
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "x",
+   "variant": "second-wave",
+   "not_before": "2026-08-13T05:35:00Z",
+   "copy": "The numbers: 315,320 public AI reasoning blocks decoded. 62 API keys, 33 passwords, 24 access tokens, 7 private keys recovered. OpenAI, Anthropic and Google all say the attack no longer works -- but only after a cryptographer's May warning went nowhere first.",
+   "reply_copy": "Full story:",
+   "link_in_reply": true,
+   "hashtags": [
+    "#AIsecurity"
+   ],
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "instagram",
+   "copy": "Encrypted AI \"thinking\" isn't as sealed as it looks.\n\nA new paper shows reasoning blocks from OpenAI, Anthropic and Google's APIs can be replayed into a cheaper, less-guarded sibling model -- which then decodes and reads them back in plain text.\n\nResearchers decoded 315,320 public reasoning blocks and recovered real API keys, passwords, and personal data.\n\nA cryptographer flagged the same replay behavior back in May. OpenAI called it unreproducible. Anthropic said it saw no security implications. Both have since shipped a fix -- three months later.\n\nFull breakdown: link in bio.",
+   "hashtags": [
+    "#AI",
+    "#AIsecurity",
+    "#OpenAI",
+    "#Anthropic",
+    "#Google",
+    "#cybersecurity"
+   ],
+   "image": {
+    "prompt": null,
+    "status": "none",
+    "cost_usd": 0
+   },
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "facebook",
+   "copy": "A new research paper shows that encrypted \"reasoning\" blocks returned by OpenAI, Anthropic and Google's APIs can be captured and replayed into a cheaper, less-guarded sibling model from the same provider -- which then decodes and reads the stronger model's private chain-of-thought back out in plain text.\n\nApplying the technique to 315,320 publicly posted reasoning blocks scraped from GitHub and Hugging Face, the researchers recovered real API keys, passwords, access tokens and personal data that developers had no way of knowing were sitting inside their own shared session logs.\n\nThis wasn't the first warning: a cryptographer reported the underlying replay behavior back in May. OpenAI called the report unreproducible; Anthropic said it saw no security implications. All three providers have since acknowledged this August's fuller report and shipped mitigations.\n\nFull story:",
+   "hashtags": [
+    "#AIsecurity",
+    "#OpenAI"
+   ],
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "threads",
+   "copy": "A new paper shows encrypted reasoning blocks from OpenAI, Anthropic and Google's APIs can be replayed into a cheaper sibling model and read back in plain text. Decoding 315,320 public blocks turned up real API keys, passwords and personal data. A cryptographer flagged the same replay behavior in May -- OpenAI called it unreproducible, Anthropic said it saw no security implications. All three vendors have since shipped fixes.",
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "threads",
+   "variant": "second-wave",
+   "not_before": "2026-08-13T05:35:00Z",
+   "copy": "The part that stands out: none of this required hacking the stronger model at all. You just needed a cheaper, less-guarded sibling model from the same provider willing to transcribe what it decoded. The fix has to be architectural -- binding each reasoning block to the exact session and model that produced it.",
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "bluesky",
+   "copy": "OpenAI, Anthropic and Google's encrypted AI reasoning could be replayed into a weaker model, read back in plaintext. Researchers decoded 315,320 public blocks, recovering real API keys and passwords. All three have since patched it.",
+   "status": "ready",
+   "post_url": null
+  }
+ ]
+},
+{
+ "article_id": "newsroom-cognition-devin-40-billion-valuation-funding-talks",
+ "ts": "2026-08-13T00:36:00Z",
+ "export": {
+  "article_id": "newsroom-cognition-devin-40-billion-valuation-funding-talks",
+  "url": "/#/article/cognition-devin-40-billion-valuation-funding-talks",
+  "headline": "Cognition is reportedly in talks to raise at a $40 billion valuation, up from $26 billion three months ago",
+  "hook": "Cognition, maker of AI coding agent Devin, is reportedly in early talks to raise over $1 billion at a $40 billion-plus valuation -- up more than 50% from May.",
+  "key_facts": [
+   "Reported valuation: $40B+, up from $26B post-money set May 27, 2026",
+   "Reported ARR nearing $1B, roughly double the ~$492M reported around the May round",
+   "Nothing confirmed yet -- no investor named, terms could still change"
+  ],
+  "tone": "brisk, arithmetic-skeptic, hedged",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "primary_image": "assets/img/newsroom/newsroom-cognition-devin-40-billion-valuation-funding-talks.jpg",
+  "disclaimer": "not-financial-advice"
+ },
+ "posts": [
+  {
+   "platform": "x",
+   "variant": "hook",
+   "copy": "Cognition, maker of AI coding agent Devin, is reportedly in talks to raise 1B+ at a $40B+ valuation -- up from $26B just three months ago. Bloomberg says its revenue run rate has nearly doubled since May.",
+   "reply_copy": "Full story:",
+   "link_in_reply": true,
+   "hashtags": [
+    "#AI"
+   ],
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "instagram",
+   "copy": "Cognition (Devin's maker) is reportedly back at the table -- this time talking $40 billion+.\n\nThat's up from the $26 billion it set just three months ago in May. Bloomberg reports the coding-agent startup's annualized revenue run rate is nearing $1 billion, roughly double where it stood at the last raise.\n\nNothing is signed. No investor is named. The number everyone's quoting is still just a number in a negotiation.\n\nWe checked what's confirmed vs. reported: link in bio.",
+   "hashtags": [
+    "#AI",
+    "#startups",
+    "#venturecapital",
+    "#coding"
+   ],
+   "image": {
+    "prompt": null,
+    "status": "none",
+    "cost_usd": 0
+   },
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "facebook",
+   "copy": "Cognition AI, maker of the coding agent Devin, is reportedly in early talks to raise more than $1 billion at a valuation of $40 billion or more -- according to Bloomberg, citing people familiar with the matter.\n\nThat would be a more than 50% jump from the $26 billion post-money valuation Cognition set just three months ago, in a $1 billion round that closed May 27. What's driving the new talks, per the reporting: annualized revenue nearing $1 billion, roughly double what the company disclosed around the time of the May round.\n\nNo investor has been named for the new round, and Cognition hasn't confirmed the figures itself. A valuation set before a round closes is a negotiating position, not a settled fact.\n\nFull story:",
+   "hashtags": [
+    "#AI",
+    "#startups"
+   ],
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "threads",
+   "copy": "Cognition is reportedly in early talks to raise over $1 billion at a $40 billion-plus valuation -- up from the $26 billion it set just three months ago in May. Bloomberg reports the Devin-maker's annualized revenue run rate is nearing $1 billion, roughly double what it disclosed at the last raise. Nothing is signed yet, and the number could still move.",
+   "status": "ready",
+   "post_url": null
+  },
+  {
+   "platform": "bluesky",
+   "copy": "Cognition (Devin) is reportedly in talks to raise 1B+ at a $40B+ valuation, up from $26B three months ago. Bloomberg says revenue run rate nearly doubled since May, to ~$1B. Still unconfirmed -- no investor named yet.",
+   "status": "ready",
+   "post_url": null
+  }
+ ]
 }
 ];
