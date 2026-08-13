@@ -288,4 +288,10 @@ window.RTFC_BUZZ = [
     why:"A structural, dollars-and-cents explanation of why hospitals actually adopt a given AI device -- reimbursement incentives, not just clinical evidence -- from the outlet that covers health-system economics closest.",
     heat:44, topics:["healthcare ai","medicare","reimbursement","fda","hospitals"],
     url:"https://www.statnews.com/2026/08/13/how-medicare-cms-pays-ntap-for-new-ai-medical-devices/" },
+  { id:"bz-209", date:"2026-08-13",
+    source:{ name:"DeepSeek", handle:"DeepSeek", platform:"web", kind:"lab" },
+    text:"DeepSeek rolled out V4 Pro 0813 to production, ending nearly four months in preview. The model showed major benchmark jumps: DeepSWE from 12.8 to 62.7 (agentic coding), CyberGym from 52.7 to 83.3 (cybersecurity), Terminal Bench 2.1 from 72.1 to 87.9. Performance is now near Fable 5 territory on coding tasks at roughly 1/60th the price. The 1.6-trillion-parameter open-weight system shipped quietly at 11pm Beijing time with no launch event.",
+    why:"A major open-weight model moving from preview to production with benchmark improvements approaching frontier-lab territory in coding and reasoning while pricing itself at roughly 1/60th of Fable 5 -- a test of whether commodity-priced frontier-tier performance changes the competitive calculus.",
+    heat:74, topics:["deepseek","v4 pro","model launch","open weights","benchmark"],
+    url:"https://www.gmicloud.ai/en/blog/deepseek-v4-pro-steps-out-of-preview-the-0813-build-is-live" },
 ];
