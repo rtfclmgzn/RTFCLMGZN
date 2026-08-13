@@ -119,7 +119,12 @@
    ],
    "text_space": "sky upper-center",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-chatgpt-outage-aug13-2026",
+     "used_at": "2026-08-13"
+    }
+   ]
   },
   {
    "id": "art-005-dusk-crosswalk-with-holographic-signal",

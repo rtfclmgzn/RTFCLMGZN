@@ -18526,5 +18526,160 @@ window.RTFC_NEWSROOM_ARTICLES = [
     }
   },
   "publishedAt": "2026-08-13T00:19:07Z"
-}
+},
+  {
+    "slug": "chatgpt-global-infrastructure-outage-august-13-2026",
+    "title": "ChatGPT goes down globally; OpenAI reports backend infrastructure failures",
+    "dek": "Millions of ChatGPT users across India, the US, Europe, Japan, and Australia experienced widespread outages for hours on August 13, with OpenAI's engineering team investigating backend infrastructure failures affecting web, mobile, API, and voice features.",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "format": "brief",
+    "disclaimer": "none",
+    "breaking": true,
+    "tldr": [
+      "ChatGPT went down globally at 11:59 AM IST (06:30 UTC) Aug 13 affecting millions.",
+      "Outage hit web, mobile (all tiers), API, voice, and multimodal features simultaneously.",
+      "Users hit 'Application Error' and 'Error in message stream'; conversation histories failed to load.",
+      "OpenAI acknowledged elevated error rates and reported backend infrastructure failures under investigation.",
+      "Caveat: company has not disclosed root cause, timeline for full recovery, or estimated user impact."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "ChatGPT went offline for millions of users across India, the United States, Europe, Japan, and Australia on August 13, 2026. The outage began around 11:59 AM Indian Standard Time (approximately 06:30 UTC) and affected ChatGPT's web interface, mobile apps across all subscription tiers, API endpoints, voice features, and multimodal capabilities. OpenAI acknowledged the incident on its status dashboard, reporting elevated error rates and indicating that backend infrastructure failures were under investigation.",
+        "citation_urls": [
+          "https://status.openai.com/",
+          "https://www.sundayguardianlive.com/india/chatgpt-outage-today-is-chatgpt-down-today-thousands-of-users-report-errors-connectivity-issues-stalled-prompts-across-india-multiple-regions-check-open-ai-chatgpt-downdetector-status-260244/",
+          "https://www.downdetector.com/status/openai/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "The outage, by the numbers",
+          "title": "Global ChatGPT infrastructure failure",
+          "items": [
+            {
+              "label": "Onset",
+              "value": "11:59 AM IST, Aug 13, 2026"
+            },
+            {
+              "label": "Geographic scope",
+              "value": "India (Delhi, Mumbai, Bengaluru, Chennai, Kolkata), US, Europe, Japan, Australia"
+            },
+            {
+              "label": "Features affected",
+              "value": "Web, mobile (all tiers), API, voice, multimodal"
+            },
+            {
+              "label": "Error messages",
+              "value": "'Application Error,' 'Error in message stream,' failed history load, endless loops"
+            },
+            {
+              "label": "OpenAI's disclosure",
+              "value": "Backend infrastructure failures; elevated error rates confirmed"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Users reported consistent error patterns across platforms. Web users encountered 'Application Error' messages when attempting to load conversations or send prompts. Mobile users saw 'Error in message stream' notifications and were unable to retrieve conversation history. Some users faced endless loading loops, particularly when uploading files or using voice features. Enterprise API customers reported failed requests and timeouts. The synchronized nature of the failures—hitting all platforms and geographies at the same moment—pointed to a shared infrastructure issue rather than regional or platform-specific problems.",
+        "citation_urls": [
+          "https://www.downdetector.com/status/openai/",
+          "https://en.dailypakistan.com.pk/13-Aug-2026/chatgpt-down-again-whats-behind-the-outage-this-time",
+          "https://gulfnews.com/amp/story/technology%2Fmedia%2Fchatgpt-down-global-outage-affects-millions-1.500021576"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "OpenAI's engineering teams began investigating the backend failures immediately. The company posted updates to its status page but initially provided no root-cause analysis, estimated recovery time, or quantification of affected users and transactions. For enterprise customers relying on ChatGPT API for production workloads, the outage carried immediate financial and operational consequences. Consumer users who depend on ChatGPT for daily work—writing, coding, research, customer support—experienced a sudden service interruption with no publicly disclosed timeline for restoration.",
+        "citation_urls": [
+          "https://status.openai.com/",
+          "https://www.sundayguardianlive.com/india/chatgpt-outage-today-is-chatgpt-down-today-thousands-of-users-report-errors-connectivity-issues-stalled-prompts-across-india-multiple-regions-check-open-ai-chatgpt-downdetector-status-260244/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The outage underscores the concentration of AI-powered productivity on a single vendor and the vulnerability of the infrastructure supporting it. For the millions of users who have integrated ChatGPT into workflows—whether in education, customer service, software development, or content creation—an extended outage breaks continuity and forces manual workarounds. The incident raises questions about redundancy, failover architecture, and whether OpenAI's backend can handle the scale of concurrent traffic it now carries.",
+        "citation_urls": [
+          "https://www.downdetector.com/status/openai/",
+          "https://gulfnews.com/amp/story/technology%2Fmedia%2Fchatgpt-down-global-outage-affects-millions-1.500021576"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "What to watch",
+        "text": "OpenAI's public statement on the root cause, whether API SLAs were breached triggering customer compensation, recovery timeline confirmation, engineering post-mortem details, and whether the incident prompts enterprise customers to diversify their LLM dependencies."
+      }
+    ],
+    "links": [
+      {
+        "label": "OpenAI status page",
+        "url": "https://status.openai.com/"
+      },
+      {
+        "label": "Downdetector — OpenAI outage tracking",
+        "url": "https://www.downdetector.com/status/openai/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI — Status dashboard",
+        "url": "https://status.openai.com/"
+      },
+      {
+        "label": "Sunday Guardian Live — ChatGPT global outage",
+        "url": "https://www.sundayguardianlive.com/india/chatgpt-outage-today-is-chatgpt-down-today-thousands-of-users-report-errors-connectivity-issues-stalled-prompts-across-india-multiple-regions-check-open-ai-chatgpt-downdetector-status-260244/"
+      },
+      {
+        "label": "Daily Pakistan — ChatGPT down",
+        "url": "https://en.dailypakistan.com.pk/13-Aug-2026/chatgpt-down-again-whats-behind-the-outage-this-time"
+      },
+      {
+        "label": "Gulf News — ChatGPT outage",
+        "url": "https://gulfnews.com/amp/story/technology%2Fmedia%2Fchatgpt-down-global-outage-affects-millions-1.500021576"
+      },
+      {
+        "label": "Downdetector — Real-time outage tracking",
+        "url": "https://www.downdetector.com/status/openai/"
+      }
+    ],
+    "id": "newsroom-chatgpt-outage-aug13-2026",
+    "image": "assets/img/newsroom/newsroom-chatgpt-outage-aug13-2026.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "breaking-scan · 2026-08-13T10:25:26Z",
+      "stages": [
+        {
+          "name": "Discovery",
+          "agent": "breaking-scan",
+          "note": "ChatGPT global infrastructure outage detected via WebSearch; verified against primary sources (OpenAI status page, Downdetector). Qualified as major infrastructure event per breaking-scan-runbook §1: frontier-lab service disruption with industry-wide implications."
+        },
+        {
+          "name": "Verification",
+          "agent": "breaking-scan",
+          "note": "Confirmed global scope via Downdetector spike analysis; cross-checked OpenAI status page acknowledgment; verified error patterns across platforms (web, mobile API, voice) via multiple independent news outlets."
+        },
+        {
+          "name": "Coverage",
+          "agent": "nova-reyes",
+          "note": "Products section; user-experience focus on error messages and workflow impact rather than technical jargon. Keyfacts component summarizes geographic scope and affected features. Apply block outlines post-incident questions (root cause, SLA breaches, customer response)."
+        },
+        {
+          "name": "Gate",
+          "agent": "breaking-scan",
+          "note": "Breaking publish approval; cover image selected and applied; all sources verified as working URLs; no self-referential language; breaking=true set per breaking-scan-runbook §3."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for breaking out-of-cycle publication",
+        "note": "Qualifies as major frontier-lab infrastructure event; urgent for readers dependent on ChatGPT in production workflows."
+      }
+    },
+    "publishedAt": "2026-08-13T10:25:26Z"
+  }
 ];

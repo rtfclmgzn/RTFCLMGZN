@@ -246,4 +246,10 @@ window.RTFC_BUZZ = [
     why:"An AI coding startup doubling its valuation in 8 months and tripling ARR in the same window, attracting capital from major VCs and a sovereign wealth fund—a concrete read on whether AI-assisted software development is translating to commercial traction or funding hype.",
     heat:58, topics:["lovable","ai coding","funding","startup","series c"],
     url:"https://www.bloomberg.com/news/articles/2026-08-12/ai-coding-startup-lovable-raises-400-million-at-13-3-billion-valuation" },
+  { id:"bz-202", date:"2026-08-13",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"ChatGPT experienced a global infrastructure outage on August 13, starting around 11:59 AM IST (06:30 UTC), affecting millions of users across India, the US, Europe, Japan, and Australia. The outage hit web, mobile (all tiers), API endpoints, voice, and multimodal features simultaneously, with users encountering 'Application Error,' 'Error in message stream' notifications, failed conversation history loads, and endless loading loops. OpenAI acknowledged elevated error rates on its status dashboard and reported backend infrastructure failures under investigation. Enterprise API customers experienced failed requests; no timeline for full recovery has been disclosed.",
+    why:"A major frontier-lab service disruption affecting millions of production users and enterprise API customers globally—the kind of infrastructure-at-scale incident that surfaces questions about redundancy and multi-tenant architecture in AI platform services.",
+    heat:87, topics:["openai","chatgpt","outage","infrastructure","service disruption"],
+    url:"https://status.openai.com/" },
 ];
