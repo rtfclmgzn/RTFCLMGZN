@@ -755,6 +755,14 @@ def dispatch(args: argparse.Namespace) -> int:
         parts = _key.split("|")
         if len(parts) >= 2:
             platform_history.add(parts[1])
+    # CI runners are ephemeral: their ledger starts empty every run, but the
+    # store itself records what has posted. Without this, the first-activation
+    # guard would re-trigger on every CI run and wrongly retire staged records.
+    for _entry in entries:
+        for _post in (_entry.get("posts") or []):
+            if (_post.get("status") in ("posted", "deleted_cleanup")
+                    and str(_post.get("platform")) in PLATFORMS):
+                platform_history.add(str(_post.get("platform")))
 
     now = utc_now()
     cutoff = now - timedelta(days=args.max_age_days)
