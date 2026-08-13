@@ -127,7 +127,13 @@ async function handle(env, event) {
 
     const item = (obj.items && obj.items.data && obj.items.data[0]) || {};
     const price = item.price || {};
-    const periodEnd = obj.current_period_end ? new Date(obj.current_period_end * 1000).toISOString() : null;
+    // current_period_end/start live on the SUBSCRIPTION ITEM as of API version
+    // 2025-03-31.basil onward, not on the subscription object itself (confirmed empirically
+    // 2026-08-13 against 2026-07-29.dahlia: obj.current_period_end is undefined,
+    // item.current_period_end is the real value). Fall back to obj.* in case a future
+    // API version moves it back or an event ever arrives shaped the old way.
+    const rawPeriodEnd = item.current_period_end || obj.current_period_end;
+    const periodEnd = rawPeriodEnd ? new Date(rawPeriodEnd * 1000).toISOString() : null;
 
     await env.DB.prepare(
       `INSERT INTO subscriptions (id, user_id, status, interval, price_id, current_period_end, cancel_at_period_end, updated_at)
