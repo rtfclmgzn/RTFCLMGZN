@@ -1995,5 +1995,105 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-13T19:32:06Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-deepseek-v4-pro-0813-price-increase",
+    "ts": "2026-08-13T22:37:34Z",
+    "export": {
+      "article_id": "newsroom-deepseek-v4-pro-0813-price-increase",
+      "url": "/#/article/deepseek-v4-pro-0813-price-increase",
+      "headline": "DeepSeek's flagged price increase lands: cache-hit tokens cost up to 12 times more from August 16",
+      "hook": "DeepSeek's V4 Pro 0813 warned of a coming price hike without saying how much -- the rate card is out, and the cheapest tokens are getting up to 12 times more expensive.",
+      "key_facts": [
+        "Cache-hit input tokens rise from $0.003625 to as much as $0.044 per million at peak hours from Aug 16",
+        "Artificial Analysis independently scored the release for the first time: 53, up from 44",
+        "The score still trails Opus 5 (63), Fable 5 (62), GPT-5.6 Sol and Grok 4.6 (61 each)"
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-deepseek-v4-pro-0813-price-increase.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "DeepSeek said a price hike was coming without saying how much. Now there's a number: cache-hit tokens cost up to 12x more from Aug 16. Also landed today: Artificial Analysis's first independent score for V4 Pro 0813 -- 53, up from 44, still trailing Opus 5 and Fable 5.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#DeepSeek",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T03:37:34Z",
+        "copy": "The cache-hit tier DeepSeek is raising 12x isn't random -- it's the rate agentic coding tools lean on hardest, the ones that resend a big, mostly-unchanged context window on every turn. Cache-miss and output pricing rise far less.",
+        "reply_copy": "Story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#DeepSeek",
+          "#AIagents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "DeepSeek's flagged price hike has a number now.\n\nV4 Pro 0813 left preview this week with a vague warning that API prices would rise \"significantly.\" The rate card is out: cache-hit input tokens cost up to 12x more at peak hours starting August 16.\n\nAlso new -- Artificial Analysis's first independent benchmark score for the release: 53, up from 44, though it still trails Claude Opus 5, Fable 5, GPT-5.6 Sol and Grok 4.6. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#DeepSeek",
+          "#AI",
+          "#MachineLearning",
+          "#APIpricing",
+          "#OpenSource",
+          "#TechNews",
+          "#AIagents",
+          "#LLM"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "DeepSeek's V4 Pro 0813 left preview this week with a vague warning that its API prices would rise \"significantly\" -- without saying by how much. The actual rate card is out now, and it's steep on the cheapest tier: cache-hit input tokens rise from $0.003625 to as much as $0.044 per million tokens at peak hours starting August 16, up to 12 times the current rate. Cache-miss input and output pricing rise far less.\n\nThe same release also picked up its first independent benchmark score: Artificial Analysis now puts V4 Pro 0813 at 53 on its Intelligence Index, up from 44 -- real progress, though it still trails Claude Opus 5, Claude Fable 5, GPT-5.6 Sol and Grok 4.6, all in the 60s.\n\nWe broke down what's actually rising, by how much, and why the cache-hit tier is the one agentic coding tools should model most carefully before switching.\n\nFull story:",
+        "hashtags": [
+          "#DeepSeek",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "DeepSeek's V4 Pro 0813 left preview with a vague warning: prices are going up \"significantly.\" The actual rate card is out now -- cache-hit input tokens rise up to 12x at peak hours from Aug 16. Cache-miss and output pricing rise far less. Also new: Artificial Analysis's first independent score for the release, 53, up from 44 -- still ten points behind Claude Opus 5.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T03:37:34Z",
+        "copy": "The number to actually model before switching to DeepSeek V4 Pro isn't the sticker price -- it's the cache-hit rate. Agent tools that resend a big repeated context window are the ones whose bill moves most on Aug 16, when that tier gets up to 12x more expensive.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "DeepSeek's flagged price hike has a number now: cache-hit tokens up to 12x more from Aug 16. Also new -- an independent score for V4 Pro 0813: 53, up from 44, still trailing Opus 5 and Fable 5.",
+        "hashtags": [
+          "#DeepSeek",
+          "#AI",
+          "#LLM"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

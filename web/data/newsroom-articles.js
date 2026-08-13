@@ -57,7 +57,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
             },
             {
               "label": "Context window",
-              "value": "1 million tokens (input); up to 384K output"
+              "value": "1 million tokens (input); up to 384,000 output"
             },
             {
               "label": "Availability",
@@ -77,6 +77,31 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://artificialanalysis.ai/models/deepseek-v4-pro",
           "https://www.unite.ai/deepseek-ships-v4-pro-as-its-flagship-model-leaves-preview/"
         ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kicker": "DEEPSEEK'S OWN AGENT BENCHMARKS",
+          "title": "V4-Pro's three released agent-task scores",
+          "kind": "bar",
+          "unit": "score",
+          "source": "DeepSeek-reported benchmark results as cited above; these are agent-task evaluations, not the independent Artificial Analysis Intelligence Index.",
+          "data": [
+            {
+              "label": "Terminal Bench 2.1",
+              "value": 87.9,
+              "hi": true
+            },
+            {
+              "label": "DeepSWE",
+              "value": 62.7
+            },
+            {
+              "label": "NL2Repo",
+              "value": 61.5
+            }
+          ]
+        }
       },
       {
         "type": "p",
@@ -19529,5 +19554,246 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-13T17:02:38Z"
+  },
+  {
+    "slug": "deepseek-v4-pro-0813-price-increase",
+    "title": "DeepSeek's flagged price increase lands: cache-hit tokens cost up to 12 times more from August 16",
+    "dek": "Thursday's V4 Pro 0813 launch warned of a coming “significant” increase without saying how much. DeepSeek's own pricing docs now show the number, and Artificial Analysis has independently scored the release for the first time.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "DeepSeek's V4 Pro 0813 build left preview August 13 with a vague warning of a coming price rise.",
+      "DeepSeek's pricing docs show the number: cache-hit input tokens cost up to 12 times more from August 16.",
+      "Artificial Analysis independently scored the release for the first time: 53 on its Intelligence Index, up from 44.",
+      "Still trails Opus 5, Fable 5, GPT-5.6 Sol, Grok 4.6, and Kimi K3, all in the 60s.",
+      "Caveat: the 12x figure applies only to the cache-hit tier — other pricing rises far less."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[DeepSeek's](#/company/deepseek) V4 Pro 0813 build [left preview earlier August 13](#/article/deepseek-v4-pro-general-availability), moving from four months of testing to full production across the API, app and web. That earlier release carried a warning that API pricing would rise “significantly” without saying by how much. Two things have settled since: DeepSeek's own pricing documentation now shows the actual rate card, and Artificial Analysis has published the first independent benchmark score for the release.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/quick_start/pricing",
+          "https://artificialanalysis.ai/models/deepseek-v4-pro"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The independent number DeepSeek's own benchmarks didn't include"
+      },
+      {
+        "type": "p",
+        "text": "DeepSeek's own release benchmarks measure agent-specific tasks against the model's prior build, not a general-capability index produced by an outside party. Artificial Analysis's Intelligence Index — the aggregate this newsroom's [Scoreboard](#/scoreboard) tracks — now puts V4 Pro 0813 at 53, up from the 44 last recorded for the model. Independent reporting from the-decoder corroborates both the score and DeepSeek's own reported gains on agentic coding tests: Terminal-Bench 2.1 rising from 72.1 to 87.9 and DeepSWE from 12.8 to 62.7 versus the April preview.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/models/deepseek-v4-pro",
+          "https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kicker": "ARTIFICIAL ANALYSIS INTELLIGENCE INDEX",
+          "title": "Where V4 Pro 0813's first independent score lands",
+          "kind": "bar",
+          "unit": "index score",
+          "source": "Artificial Analysis live model leaderboard, read August 13, 2026.",
+          "data": [
+            {
+              "label": "Claude Opus 5",
+              "value": 63
+            },
+            {
+              "label": "Claude Fable 5",
+              "value": 62
+            },
+            {
+              "label": "GPT-5.6 Sol",
+              "value": 61
+            },
+            {
+              "label": "Grok 4.6",
+              "value": 61
+            },
+            {
+              "label": "Kimi K3",
+              "value": 60
+            },
+            {
+              "label": "DeepSeek V4 Pro",
+              "value": 53,
+              "hi": true,
+              "note": "up from 44"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Ten points closes real ground but doesn't close the gap: V4 Pro still sits ten points behind the current independent leader, Claude Opus 5, and seven behind the closest of the 60-plus cluster, Kimi K3. DeepSeek also released Deepseek Harness v0.1, an MIT-licensed agent framework built on a plugin system it calls Cordis, as a developer preview — giving away orchestration tooling in the same week it raises the price of the tokens that tooling consumes.",
+        "citation_urls": [
+          "https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What the flagged increase actually is"
+      },
+      {
+        "type": "p",
+        "text": "Effective 16:00 UTC on August 16, DeepSeek is replacing V4 Pro's flat rate with peak and off-peak billing tied to Chinese business hours — peak from 01:00–04:00 and 06:00–10:00 UTC, off-peak the rest of the day. Read directly from DeepSeek's API documentation: cache-hit input rises from $0.003625 per million tokens to $0.022 off-peak or $0.044 at peak; cache-miss input rises from $0.435 to $0.66 off-peak or $1.32 at peak; output rises from $0.87 to $1.98 off-peak or $3.96 at peak. Every tier rises, and none rises by the same multiple — which is what makes a single “price increase” headline number misleading without the breakdown below.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/quick_start/pricing",
+          "https://qz.com/deepseek-api-price-increase-v4-peak-off-peak-081326"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "PER 1 MILLION TOKENS, EFFECTIVE AUG 16",
+          "title": "What each DeepSeek V4 Pro rate is actually rising by",
+          "items": [
+            {
+              "value": "$0.003625 → $0.022 / $0.044",
+              "unit": "Input, cache hit",
+              "label": "Off-peak / peak rate",
+              "note": "6.1× off-peak, 12.1× peak — the tier behind the “up to 1,100%” headline, and the one agent workloads reusing context lean on hardest."
+            },
+            {
+              "value": "$0.435 → $0.66 / $1.32",
+              "unit": "Input, cache miss",
+              "label": "Off-peak / peak rate",
+              "note": "1.5× off-peak, 3.0× peak."
+            },
+            {
+              "value": "$0.87 → $1.98 / $3.96",
+              "unit": "Output",
+              "label": "Off-peak / peak rate",
+              "note": "2.3× off-peak, 4.5× peak."
+            }
+          ],
+          "source": "DeepSeek API pricing documentation, read August 13, 2026 — rates confirmed current as of that read; DeepSeek can revise them again without notice."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The cache-hit tier is the one to watch. It's the cheapest rate DeepSeek offers, built for requests that reuse a previously-seen prompt prefix — exactly the pattern in agentic coding tools that resend a large, mostly-unchanged context window on every turn. Coding agents that keep a large system prompt or a whole repository's context resident across many turns — the exact shape of tools built on V4 Pro's Codex-compatible interface — are also the ones with the highest ratio of cache hits to total tokens, which is what makes this specific tier, and not the sticker price most coverage leads with, the one worth modeling before switching. the-Decoder's analysis frames the change as partially undoing DeepSeek's own May price cut, with cache-hit costs at peak hours now landing above where they sat before that cut.",
+        "citation_urls": [
+          "https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Still cheap by frontier standards — just less of an outlier"
+      },
+      {
+        "type": "p",
+        "text": "Even at the new peak rate, V4 Pro's list price stays well under the top of the market: $1.32 in / $3.96 out per million tokens at peak, against Claude Opus 5 and GPT-5.6 Sol's published $5 in / $25 out. The gap that made DeepSeek's pricing a story in the first place — a large fraction of frontier capability at a fraction of frontier cost — narrows with this change but doesn't close. What's changed is the shape of the trade: a developer choosing V4 Pro today is paying more to reuse context than they were a week ago, even if the sticker price relative to Anthropic or OpenAI still favors DeepSeek.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/quick_start/pricing"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "This is DeepSeek's second capability-and-pricing move inside three weeks. [V4 Flash's own retrained 0731 build](#/article/deepseek-v4-flash-0731-beats-own-flagship) graduated July 31 at a 10-point independent score gain to 50 — tied with Google's Gemini 3.5 Flash — while keeping its $0.14/$0.28 list price unchanged. DeepSeek's own agentic-benchmark claims that Flash now beats the larger Pro model on several coding tests are self-reported and unverified against an independent source, so they're noted here without being adopted as fact. Read together, the pattern is a company pushing capability gains through its cheaper model while extracting more revenue from the flagship's heaviest users — the opposite of the flat, uniform price cuts DeepSeek built its reputation on in 2025.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Neither the preview-to-GA move nor this price change has a dedicated changelog or announcement post from DeepSeek as of this writing — the model card, API documentation, and pricing pages are the only primary account of what changed and why. That's consistent with how the company shipped V4 Flash's retrained update on July 31, and it means the reasoning behind bundling a capability upgrade with a steep price change in the same week is inferred from the timing, not stated by DeepSeek itself.",
+        "citation_urls": [
+          "https://api-docs.deepseek.com/quick_start/pricing"
+        ]
+      }
+    ],
+    "apply": [
+      {
+        "label": "Watch 16:00 UTC on August 16.",
+        "text": "That's when peak/off-peak billing takes effect — the first real signal of how the cache-hit increase actually lands on agentic workloads that lean on repeated context."
+      },
+      {
+        "label": "Re-cost a cache-heavy agent pipeline before switching to V4 Pro.",
+        "text": "Model it at the new $0.044 peak / $0.022 off-peak cache-hit rate, not the $0.003625 rate that expires August 16."
+      },
+      {
+        "label": "Watch for a DeepSeek changelog or model card update.",
+        "text": "No dedicated announcement exists yet for either the GA move or the price change — only docs and pricing pages. A formal writeup would be the first place to check the specs and rationale reported here against DeepSeek's own account."
+      },
+      {
+        "label": "Watch whether Artificial Analysis revisits cost-per-intelligence-point once the new rate is live.",
+        "text": "The capability score doesn't move with price, but V4 Pro's value ranking against Kimi K3 and Gemini 3.5 Flash will, once real invoices reflect the peak rate."
+      }
+    ],
+    "applyType": "watch",
+    "sources": [
+      {
+        "label": "DeepSeek API — Pricing documentation",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing",
+        "primary": true
+      },
+      {
+        "label": "Artificial Analysis — DeepSeek V4 Pro model page",
+        "url": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+        "primary": true
+      },
+      {
+        "label": "Artificial Analysis — live LLM leaderboard",
+        "url": "https://artificialanalysis.ai/leaderboards/models",
+        "primary": true
+      },
+      {
+        "label": "the-decoder — “Deepseek ships improved V4 Pro, open-sources its agent software, and raises API prices”",
+        "url": "https://the-decoder.com/deepseek-launches-an-improved-v4-pro-model-raises-api-prices-and-makes-its-agent-software-open-source/"
+      },
+      {
+        "label": "Qz — “DeepSeek is raising AI developer access prices by up to 1,100% starting Sunday”",
+        "url": "https://qz.com/deepseek-api-price-increase-v4-peak-off-peak-081326"
+      },
+      {
+        "label": "Fortune — “DeepSeek increases prices for AI services by multiple times”",
+        "url": "https://fortune.com/2026/08/13/deepseek-increases-prices-for-ai-services-by-multiple-times/"
+      }
+    ],
+    "id": "newsroom-deepseek-v4-pro-0813-price-increase",
+    "image": "assets/img/newsroom/newsroom-deepseek-v4-pro-0813-price-increase.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-13T22:37:34Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced via an AI-industry model-release sweep. The initial slug grep of newsroom-articles.js (tail of the last ~90 slug/title/publishedAt lines) missed a same-day breaking-scan article (deepseek-v4-pro-general-availability, published 2026-08-13T19:19:15Z, ~3 hours before this cycle) covering the same V4 Pro 0813 GA event -- caught only once the component audit's full-archive scan surfaced that article's own pre-existing hard failures. Rather than publish a duplicate, this piece was rebuilt around the two things that article left open: it had no independent Artificial Analysis score at all, and only a vague 'significant increase' warning with no rate card. Both are now in hand and are what this piece actually reports; the GA event itself is cross-linked, not re-narrated. Five independent threads used: DeepSeek's own API pricing documentation (primary), Artificial Analysis's model page and live leaderboard (primary, independent benchmark org), and three secondary reports (the-decoder, Qz, Fortune) that corroborated the release and price details."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Benchmark deltas (Terminal-Bench, DeepSWE) and model specs cross-checked between the-decoder's reporting and Artificial Analysis's model page. Current and post-Aug-16 pricing fetched directly from DeepSeek's own API documentation rather than taken from secondary summaries; peak/off-peak multiples in the ledger were computed directly from those two fetched rate sets. The AA Intelligence Index comparison chart's six scores were confirmed directly against the live Artificial Analysis leaderboard the same session, including correcting this newsroom's own Scoreboard entries for GPT-5.6 Sol max (59→61) and Grok 4.6 (unmeasured→61, resolving a flag the 2026-08-13T18:00:00Z pulse scan had already raised) alongside this article's DeepSeek update. Also fixed, on discovery via the pre-push component audit: the same-day GA article's keyfacts/prose number-format mismatch (384K vs 384,000) and its missing second, data-carrying component -- both pre-existing defects unrelated to this piece, fixed because the audit gates the whole archive, not just new work."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft's ledger folded off-peak and peak rates into a single value field without labeling which was which, which risked a reader misreading a peak-only multiple as the flat new rate; revised to show both explicitly per row with the multiple stated in `note`. Confirmed no self-referential language, every citation URL real and fetched, and the apply block names concrete dates/actions (Aug 16 effective time, exact rates to re-cost against) rather than generic 'time will tell' framing."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger applies: no health claim, no investment/trading framing (vendor API list pricing is not a valuation or trading claim), no legal proceeding, no accusatory claim about a named party, no unattributed quote, and the load-bearing claims (score, pricing) are confirmed against primary sources rather than resting on a single secondary account. Disclaimer: none."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Cleared for publish: format matches evidence depth (five threads, three primary sources, synthesis-band word count), both components trace to sourced/computed figures with arithmetic stated in `source`/`note`, apply block gives named dates and actions."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle."
+      }
+    },
+    "publishedAt": "2026-08-13T22:37:34Z"
   }
 ];
