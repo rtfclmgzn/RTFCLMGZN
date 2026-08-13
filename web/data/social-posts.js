@@ -557,8 +557,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#EnergyPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112154563396947",
+        "remote_id": "1238977099292018_122112154563396947",
+        "posted_at": "2026-08-13T16:24:43Z"
       },
       {
         "platform": "threads",
@@ -569,8 +571,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "A House bill on data-center power costs cleared committee 52-0. NY's governor sidestepped her own legislature. A senator's viral 267% stat was actually wholesale prices, not bills. Five real numbers, none measuring the same thing.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msy2mcjsy52y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msy2mcjsy52y",
+        "posted_at": "2026-08-13T16:24:48Z"
       }
     ]
   },
@@ -647,8 +651,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112155271396947",
+        "remote_id": "1238977099292018_122112155271396947",
+        "posted_at": "2026-08-13T16:28:51Z"
       },
       {
         "platform": "threads",
@@ -659,8 +665,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "OpenAI's new hacking-capable model answers 95% of advanced requests vs 1.5% for the public one. It shipped 3 days after a related model got paused for tripping OpenAI's own 'critical' cyber threshold. The 95% figure is OpenAI's own benchmark -- unreplicated.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msy2tplaic26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msy2tplaic26",
+        "posted_at": "2026-08-13T16:28:57Z"
       }
     ]
   },
