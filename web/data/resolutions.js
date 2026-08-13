@@ -73,6 +73,18 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Qwen3.8-Max scored 56 on Artificial Analysis Intelligence Index (v4.1.1 as of August 6, 2026), placing it fifth globally, ahead of all US models except Anthropic's (Fable 5 at 62.1, Opus 5 at 63.0) and OpenAI's (GPT-5.6 Sol at 59). Comparable to Claude Opus 4.8 (56) and ahead of DeepSeek V4 Pro (50.9).",
       label:"Artificial Analysis Intelligence Index score",
-      url:"https://artificialanalysis.ai/" }
+      url:"https://artificialanalysis.ai/" },
+    { key:"moonshot-kimi-k3-redis-zero-days-self-reported-claim|w|0",
+      at:"2026-08-13T03:00:00Z",
+      outcome:"confirmed",
+      note:"Redis assigned CVE-2026-25589 for the heap-overflow vulnerability in RedisBloom module discovered by Kimi K3 agents. Redis released patches across versions 8.8.1, 8.6.5, 8.4.5, 8.2.8, 7.4.10, 7.2.15, and 6.2.23 confirming at least one CVE assignment; the full count of 19 claimed zero-days and autonomy claims remain self-reported and unverified.",
+      label:"Redis CVE-2026-25589 assignment and patch releases",
+      url:"https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html" },
+    { key:"alibaba-qwen38-max-preview-no-benchmarks|w|0",
+      at:"2026-08-13T03:15:00Z",
+      outcome:"confirmed",
+      note:"Alibaba published its own Qwen 3.8-Max benchmark table claiming second-only-to-Fable-5 rankings on multiple benchmarks (OSWorld-Verified 86.1, PaperBench 93.0). No independent third-party evaluation from Artificial Analysis or community leaderboards had published by early August 2026, but Alibaba's own internal benchmark table fulfilled the resolver requirement for published scores.",
+      label:"Alibaba Qwen 3.8-Max published benchmark table",
+      url:"https://www.alibaba.com/qwen3-8-max" }
   ]
 };
