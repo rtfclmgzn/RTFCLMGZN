@@ -89,7 +89,11 @@ def main():
     # 1. commit OUR delivered files first, so no stash can ever swallow them
     for path in (".github/workflows/newsroom-cycle.yml",
                  "agents/social/post_social.py", "agents/social/GO-LIVE.md",
-                 "tools/social_polish.py", "SHIP_SOCIAL_SETUP.bat"):
+                 "tools/social_polish.py", "SHIP_SOCIAL_SETUP.bat",
+                 "functions/share",                 # per-article OG share pages
+                 "tools/link_socials.py", "LINK_SOCIALS.bat",
+                 "tools/undo_fb_burst.py", "UNDO_FB_BURST.bat",
+                 "tools/ship_fix.py", "FIX_COVERS_AND_SHIP.bat"):
         run(["git", "add", path], ok_codes=(0, 128))
     code, _ = run(["git", "diff", "--cached", "--quiet"], ok_codes=(0, 1))
     if code == 1:

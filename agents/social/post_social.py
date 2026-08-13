@@ -254,19 +254,32 @@ def form(data: dict) -> bytes:
 # ---------------------------------------------------------------------------
 
 def article_url(base_url: str, export_url: str, platform: str) -> str:
+    """Share link for social posts.
+
+    Uses /share/<slug> (a Cloudflare Pages Function serving per-article OG
+    tags, then redirecting into the SPA) so link previews show THE ARTICLE'S
+    cover and title — not the site-level card. Crawlers can't see past the
+    hash router, which is why every platform showed the same generic image
+    before 2026-08-13. Falls back to the hash URL if no slug is found.
+    """
     base = base_url.rstrip("/")
     path = str(export_url or "")
+    query = urllib.parse.urlencode({
+        "utm_source": platform, "utm_medium": "social", "utm_campaign": "autopost",
+    })
+    marker = "#/article/"
+    pos = path.find(marker)
+    if pos >= 0:
+        slug = path[pos + len(marker):].split("?")[0].split("#")[0].strip("/")
+        if slug:
+            return f"{base}/share/{urllib.parse.quote(slug)}?{query}"
     if path.startswith("http"):
-        # strip to hash part if it is already our site
         hash_pos = path.find("#")
         path = path[hash_pos:] if hash_pos >= 0 else ""
     if path.startswith("/#"):
         path = path[1:]
     if not path.startswith("#"):
         path = "#" + path.lstrip("/")
-    query = urllib.parse.urlencode({
-        "utm_source": platform, "utm_medium": "social", "utm_campaign": "autopost",
-    })
     return f"{base}/?{query}{path}"
 
 
@@ -439,7 +452,8 @@ def post_threads(secrets: dict, post: dict, url: str) -> dict:
     return {"remote_id": media_id, "post_url": post_url, "cost_usd": 0.0}
 
 
-def post_bluesky(secrets: dict, post: dict, url: str) -> dict:
+def post_bluesky(secrets: dict, post: dict, url: str, image_url: str | None = None,
+                 title: str = "", desc: str = "") -> dict:
     creds = secrets["bluesky"]
     pds = (creds.get("pds") or "https://bsky.social").rstrip("/")
     session = http_request(
@@ -468,6 +482,33 @@ def post_bluesky(secrets: dict, post: dict, url: str) -> dict:
         }],
         "langs": ["en"],
     }
+    # Attach a proper link card (external embed) with the ARTICLE'S cover as
+    # the thumbnail — without this, clients show no card (or a generic one).
+    if image_url:
+        try:
+            req = urllib.request.Request(image_url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                img_bytes = resp.read()
+                content_type = resp.headers.get("Content-Type") or "image/jpeg"
+            if 0 < len(img_bytes) <= 900_000:
+                blob_resp = http_request(
+                    "POST", f"{pds}/xrpc/com.atproto.repo.uploadBlob",
+                    data=img_bytes,
+                    headers={"Content-Type": content_type,
+                             "Authorization": f"Bearer {jwt}"})
+                blob = blob_resp.get("blob")
+                if blob:
+                    record["embed"] = {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                            "uri": url,
+                            "title": clip(title or "RTFCLMGZN", 250),
+                            "description": clip(desc, 280),
+                            "thumb": blob,
+                        },
+                    }
+        except (HttpError, OSError):
+            pass  # card is cosmetic; the post itself must still go out
     value = http_request(
         "POST", f"{pds}/xrpc/com.atproto.repo.createRecord",
         data=json.dumps({"repo": did, "collection": "app.bsky.feed.post",
@@ -544,12 +585,40 @@ def dispatch(args: argparse.Namespace) -> int:
         section, required = ADAPTER_REQUIREMENTS[platform]
         enabled[platform] = platform in wanted and section_ready(secrets, section, required)
 
+    # Platforms that have EVER posted (per the ledger). A platform with no
+    # history is being activated for the first time: post ONLY its single
+    # newest ready record and retire the rest of the staged backlog, so a
+    # fresh account never gets a burst of catch-up posts (learned the hard
+    # way on 2026-08-13, when Facebook activation fired 3 days of backlog).
+    platform_history = set()
+    for _key in ledger["posted"]:
+        parts = _key.split("|")
+        if len(parts) >= 2:
+            platform_history.add(parts[1])
+
     now = utc_now()
     cutoff = now - timedelta(days=args.max_age_days)
     posted, skipped, failed, planned = [], [], [], []
     spend = 0.0
     changed = False
     budget = args.limit
+    per_platform_count: dict[str, int] = {}
+    last_platform_post: dict[str, float] = {}
+
+    # Pre-pass for first-activation platforms: find the single newest ready
+    # record per such platform; everything older gets retired below.
+    first_keep: dict[str, tuple] = {}
+    for entry in entries:
+        entry_dt = parse_iso(str(entry.get("ts") or "")) or now
+        if entry_dt < cutoff:
+            continue
+        for idx, post in enumerate(entry.get("posts") or []):
+            platform = str(post.get("platform") or "")
+            if (post.get("status") == "ready" and platform in PLATFORMS
+                    and enabled.get(platform) and platform not in platform_history):
+                key = f"{entry.get('article_id')}|{platform}|{post.get('variant') or idx}"
+                if platform not in first_keep or entry_dt > first_keep[platform][0]:
+                    first_keep[platform] = (entry_dt, key)
 
     for entry in entries:
         export = entry.get("export") or {}
@@ -577,6 +646,14 @@ def dispatch(args: argparse.Namespace) -> int:
                 reason = "platform not selected"
             elif not enabled[platform]:
                 reason = "credentials not configured"
+            elif (platform not in platform_history
+                  and key != (first_keep.get(platform) or (None, None))[1]):
+                reason = "first-activation: only the newest posts; backlog retired"
+                if args.live:
+                    post["status"] = "skipped_backlog"
+                    changed = True
+            elif per_platform_count.get(platform, 0) >= args.platform_cap:
+                reason = f"per-platform cap ({args.platform_cap}/run) reached"
             else:
                 not_before = parse_iso(str(post.get("not_before") or ""))
                 if not_before and not_before > now:
@@ -595,8 +672,16 @@ def dispatch(args: argparse.Namespace) -> int:
                     site_base.rstrip("/") + "/" + primary.lstrip("/"))
             if not args.live:
                 planned.append((key, url))
+                per_platform_count[platform] = per_platform_count.get(platform, 0) + 1
                 budget -= 1
                 continue
+            per_platform_count[platform] = per_platform_count.get(platform, 0) + 1
+            # Cooldown: never hit the same platform twice in quick succession.
+            prev_ts = last_platform_post.get(platform)
+            if prev_ts is not None:
+                wait = args.platform_spacing - (time.time() - prev_ts)
+                if wait > 0:
+                    time.sleep(min(wait, 300))
             try:
                 if platform == "x":
                     result = post_x(secrets, post, url)
@@ -607,7 +692,9 @@ def dispatch(args: argparse.Namespace) -> int:
                 elif platform == "threads":
                     result = post_threads(secrets, post, url)
                 elif platform == "bluesky":
-                    result = post_bluesky(secrets, post, url)
+                    result = post_bluesky(secrets, post, url, image_url,
+                                          title=str(export.get("headline") or ""),
+                                          desc=str(export.get("hook") or ""))
                 else:
                     result = post_reddit(secrets, post, url)
             except Skip as exc:
@@ -633,6 +720,7 @@ def dispatch(args: argparse.Namespace) -> int:
             posted.append((key, result.get("post_url")))
             changed = True
             budget -= 1
+            last_platform_post[platform] = time.time()
             save_ledger(ledger_path, ledger)  # persist immediately: crash-safe dedupe
             time.sleep(args.pause)
 
@@ -666,9 +754,13 @@ def main() -> None:
     parser.add_argument("--repo", default=DEFAULT_REPO)
     parser.add_argument("--platforms", default="", help="csv subset, e.g. bluesky,threads")
     parser.add_argument("--limit", type=int, default=12, help="max posts per run")
+    parser.add_argument("--platform-cap", type=int, default=2,
+                        help="max posts per platform per run")
+    parser.add_argument("--platform-spacing", type=float, default=240.0,
+                        help="min seconds between two posts to the SAME platform")
     parser.add_argument("--max-age-days", type=int, default=3)
     parser.add_argument("--max-attempts", type=int, default=3)
-    parser.add_argument("--pause", type=float, default=2.0, help="seconds between posts")
+    parser.add_argument("--pause", type=float, default=5.0, help="seconds between posts")
     parser.add_argument("--ledger", default="")
     parser.add_argument("--verbose", action="store_true")
     sys.exit(dispatch(parser.parse_args()))
