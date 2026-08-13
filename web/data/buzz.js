@@ -354,4 +354,10 @@ window.RTFC_BUZZ = [
     why:"Unlimited access to a frontier-adjacent model for free users, on a product OpenAI says a billion people use weekly -- a real shift in what the free tier of the world's largest chatbot actually offers.",
     heat:56, topics:["openai","chatgpt","gpt-5.6","product"],
     url:"https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" },
+  { id:"bz-196", date:"2026-08-11",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI announced GPT-5.6-Cyber, a cybersecurity-focused model trained for authorized vulnerability research and penetration testing. Built on GPT-5.6-Sol with lower refusal constraints for risky dual-use security tasks, the model achieved 95.0% completion on OpenAI's Advanced Cybersecurity Completion Rate evaluation and independently discovered two previously unknown Chrome V8 vulnerabilities. Access restricted to vetted customers including Accenture, IBM, CrowdStrike and Cloudflare via Daybreak Red with identity verification and approved-use restrictions.",
+    why:"A frontier lab releasing a purpose-built security model that outperforms baseline models on specialized hacking tasks by 60x+ margin and has already found real Chrome zero-days -- arriving the day after Astra's safety pause, a concrete test of whether the safety concern changes shipping decisions.",
+    heat:74, topics:["openai","gpt-5-6-cyber","cybersecurity","model release","zero day vulnerabilities"],
+    url:"https://www.securityweek.com/openai-unveils-new-cybersecurity-model-gpt-5-6-cyber/" },
 ];
