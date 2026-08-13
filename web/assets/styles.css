@@ -36,8 +36,96 @@
   --on-accent:#ffffff;
   --shadow:0 18px 45px -20px rgba(60,50,120,.18);
 }
+
+/* ============================================================
+   APPEARANCES — seven additional skins (nine total with dark/light)
+   Every skin redefines the SAME semantic tokens the components already
+   consume, so no component decides light-vs-dark for itself and the same
+   markup works across all nine. Contrast for ink/muted/faint/accent pairs is
+   verified against WCAG (body text AAA, secondary text AA) — see the build
+   note in the commit; do not hand-tweak a value without re-checking it.
+   --rtfc-glyph swaps the brand mark to the ink variant on light canvases.
+   ============================================================ */
+:root[data-theme="midnight"]{ /* Midnight — dark canvas */
+  --bg:#080b18;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(90,120,255,.14), transparent 70%);
+  --surface:#0e1326; --surface2:#141b33; --surface3:#1b2440;
+  --ink:#e8ecfa; --ink-soft:#c2c9e4; --muted:#8b93b4; --faint:#868ead;
+  --line:#1e2740; --hairline:#182036;
+  --accent:#6f8cf8; --accent2:#9db2ff; --accent-ink:#b9c7ff;
+  --on-accent:#080b18;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+:root[data-theme="graphite"]{ /* Graphite — dark canvas */
+  --bg:#141414;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(150,140,220,.10), transparent 70%);
+  --surface:#1c1c1c; --surface2:#242424; --surface3:#2e2e2e;
+  --ink:#ededed; --ink-soft:#c9c9c9; --muted:#909090; --faint:#8b8b8b;
+  --line:#2b2b2b; --hairline:#232323;
+  --accent:#a89bf0; --accent2:#c4b9ff; --accent-ink:#cfc6ff;
+  --on-accent:#141414;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+:root[data-theme="noir"]{ /* Noir — dark canvas */
+  --bg:#000000;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(160,140,255,.09), transparent 70%);
+  --surface:#0a0a0a; --surface2:#121212; --surface3:#1a1a1a;
+  --ink:#f7f7f7; --ink-soft:#d4d4d4; --muted:#949494; --faint:#8f8f8f;
+  --line:#242424; --hairline:#191919;
+  --accent:#b9a8ff; --accent2:#d3c7ff; --accent-ink:#ddd4ff;
+  --on-accent:#000000;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.75);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+:root[data-theme="oxide"]{ /* Oxide — dark canvas */
+  --bg:#121011;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(220,130,80,.11), transparent 70%);
+  --surface:#1a1717; --surface2:#221d1c; --surface3:#2c2523;
+  --ink:#f0eae6; --ink-soft:#d0c5be; --muted:#9c8f88; --faint:#978a83;
+  --line:#2e2624; --hairline:#241e1d;
+  --accent:#e08a5a; --accent2:#f0a878; --accent-ink:#f2b28a;
+  --on-accent:#121011;
+  --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+:root[data-theme="paper"]{ /* Paper — light canvas */
+  --bg:#f7f3ea;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.07), transparent 70%);
+  --surface:#fffdf7; --surface2:#f1ece0; --surface3:#e8e2d3;
+  --ink:#1c1a16; --ink-soft:#413d34; --muted:#6b6559; --faint:#6f6a5e;
+  --line:#e0d9c9; --hairline:#e8e2d5;
+  --accent:#6a58e8; --accent2:#8b7cf7; --accent-ink:#5343c0;
+  --on-accent:#ffffff;
+  --shadow:0 18px 45px -20px rgba(90,75,40,.18);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+:root[data-theme="sepia"]{ /* Sepia — light canvas */
+  --bg:#f4e9d8;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(160,110,40,.09), transparent 70%);
+  --surface:#fdf6e9; --surface2:#eee0cb; --surface3:#e4d4ba;
+  --ink:#2a1f14; --ink-soft:#4d3d2b; --muted:#75604a; --faint:#79644e;
+  --line:#dfcfb4; --hairline:#e7dac3;
+  --accent:#9a5b1f; --accent2:#b8763a; --accent-ink:#834c17;
+  --on-accent:#ffffff;
+  --shadow:0 18px 45px -20px rgba(110,80,30,.20);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+:root[data-theme="slate"]{ /* Slate — light canvas */
+  --bg:#eef1f5;
+  --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(60,100,200,.08), transparent 70%);
+  --surface:#ffffff; --surface2:#e4e9f0; --surface3:#d8dfe9;
+  --ink:#151a22; --ink-soft:#374050; --muted:#5f6a7d; --faint:#636e82;
+  --line:#d5dce6; --hairline:#e1e7ef;
+  --accent:#3f66c4; --accent2:#5b83e0; --accent-ink:#33529e;
+  --on-accent:#ffffff;
+  --shadow:0 18px 45px -20px rgba(40,60,110,.16);
+  --rtfc-glyph:url("brand/rtfc-glyph-ink-256.png");
+}
+
 @media (prefers-color-scheme:light){
-  :root:not([data-theme="dark"]){
+  :root:not([data-theme]){
     --bg:#faf9f5;
     --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(124,108,240,.08), transparent 70%);
     --surface:#ffffff; --surface2:#f3f2ec; --surface3:#eceade;
@@ -106,7 +194,12 @@ header.site{position:sticky;top:0;z-index:50;
   backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
 .bar{display:flex;align-items:center;gap:26px;height:auto;min-height:70px;flex-wrap:wrap;row-gap:0}
 .logo{font-family:var(--serif);font-weight:700;letter-spacing:.1em;font-size:22px;line-height:1;
-  color:var(--ink)}
+  color:var(--ink);display:inline-flex;align-items:center;gap:11px}
+/* Official transparent glyph beside the wordmark — the two behave as one Home
+   link. Derived from the official mark: no baked tile, no border, no recolour
+   beyond the light-appearance ink variant declared with --rtfc-glyph. */
+.logo-glyph{flex:none;width:26px;height:26px;background:var(--rtfc-glyph) center/contain no-repeat}
+.logo-type{display:block}
 .logo em{font-style:normal;color:var(--accent2)}
 .logo small{display:block;font-family:var(--sans);font-size:8.5px;letter-spacing:.42em;
   color:var(--muted);font-weight:600;margin-top:4px}
@@ -4494,18 +4587,26 @@ html.vp-desktop.has-mobkit #mobkit{
 .plusplans.pp-invite .pp-buy{ margin-top:16px; display:inline-block; }
 
 /* ===== boot splash (2026-08-13) ===== */
-#boot-splash{position:fixed;inset:0;z-index:2147483000;background:#05050c;display:flex;align-items:center;justify-content:center;animation:bsOut .5s cubic-bezier(.6,0,.8,1) 1.45s forwards;pointer-events:none}
-#boot-splash .bs-core{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
-#boot-splash .bs-core::before{content:"";position:absolute;top:50%;left:50%;width:340px;height:340px;transform:translate(-50%,-58%);border-radius:50%;background:radial-gradient(circle,rgba(124,84,255,.42),rgba(124,84,255,.10) 55%,transparent 72%);animation:bsGlow 1.5s ease-out both;filter:blur(2px)}
-#boot-splash img{position:relative;border-radius:26px;animation:bsSpin .9s cubic-bezier(.18,.85,.22,1) both;box-shadow:0 0 60px rgba(124,84,255,.35)}
-#boot-splash .bs-word{position:relative;font-weight:800;font-size:30px;letter-spacing:.06em;color:#fff;animation:bsRise .7s cubic-bezier(.2,.8,.2,1) .28s both}
-#boot-splash .bs-word em{font-style:normal;color:#8b7cf7}
-#boot-splash .bs-sub{position:relative;font-size:11px;letter-spacing:.42em;color:#9a93c9;animation:bsRise .7s cubic-bezier(.2,.8,.2,1) .42s both}
-@keyframes bsSpin{from{transform:scale(.5) rotate(-50deg);opacity:0}60%{opacity:1}to{transform:scale(1) rotate(0);opacity:1}}
-@keyframes bsRise{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
-@keyframes bsGlow{from{opacity:0;transform:translate(-50%,-58%) scale(.6)}45%{opacity:1}to{opacity:.75;transform:translate(-50%,-58%) scale(1)}}
-@keyframes bsOut{from{opacity:1}to{opacity:0;visibility:hidden}}
-@media (prefers-reduced-motion:reduce){#boot-splash{display:none}}
+/* ---- Startup splash: official glyph only, fast spin, hard stop ----
+   The glyph floats directly on the active appearance's canvas (var(--bg)); no
+   tile, frame, wordmark or progress meter. bsSpinFast is a short linear loop so
+   it reads as genuinely fast rather than a cinematic ease. .stopped kills the
+   animation outright, which snaps the mark upright — the intended hard
+   mechanical stop — and .out fades the layer away. transform/opacity only, so
+   it stays on the compositor and cannot shift layout. */
+#boot-splash{position:fixed;inset:0;z-index:2147483000;background:var(--bg);
+  display:flex;align-items:center;justify-content:center;pointer-events:none;
+  opacity:1;transition:opacity .2s linear}
+#boot-splash .bs-glyph{width:104px;height:104px;background:var(--rtfc-glyph) center/contain no-repeat;
+  animation:bsSpinFast .16s linear infinite;will-change:transform}
+#boot-splash.stopped .bs-glyph{animation:none;transform:rotate(0deg)}
+#boot-splash.out{opacity:0}
+@keyframes bsSpinFast{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* Reduced motion: no rotation at all. The upright mark is shown and dismissed
+   as soon as the app is ready, with only the short opacity fade. */
+@media (prefers-reduced-motion:reduce){
+  #boot-splash .bs-glyph{animation:none;transform:none}
+}
 
 /* ===== overflow / scrollbar-jitter guard (2026-08-13) ===== */
 html,body{overflow-x:hidden}
@@ -4515,3 +4616,45 @@ html{scrollbar-gutter:stable}
 /* ===== parent company footer line ===== */
 .fparent{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a8a9c;margin-top:7px}
 .fparent b{color:#a89bf5;font-weight:700}
+
+
+/* ===== Brand glyph token (derived transparent official mark) =====
+   Dark appearances use the white-blade master; light appearances use the ink
+   variant, which is the SAME alpha mask with only the desaturated blade pixels
+   recoloured — the violet edge accents and centre diamond are untouched. */
+:root{--rtfc-glyph:url("brand/rtfc-glyph-256.png")}
+[data-theme="light"]{--rtfc-glyph:url("brand/rtfc-glyph-ink-256.png")}
+@media (max-width:760px){ .logo-glyph{width:22px;height:22px} }
+
+/* ===== Settings → Appearance =====
+   Each tile paints itself with the appearance it offers by carrying that
+   skin's data-theme, so the preview is the real palette rather than a guess.
+   Tiles are radios; the whole grid is one radiogroup. */
+.ap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px;margin:6px 0 20px}
+.ap-tile{position:relative;display:flex;flex-direction:column;gap:10px;padding:10px 10px 12px;
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;cursor:pointer;
+  text-align:left;font:inherit;color:var(--ink);transition:border-color .16s ease,transform .16s ease}
+.ap-tile:hover{border-color:var(--accent);transform:translateY(-2px)}
+.ap-tile:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ap-tile.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+/* the miniature publication */
+.ap-prev{display:block;border-radius:9px;overflow:hidden;padding:9px;background:var(--bg);
+  border:1px solid var(--hairline);min-height:96px}
+.ap-prev-bar{display:flex;align-items:center;gap:6px;margin-bottom:9px}
+.ap-prev-glyph{width:13px;height:13px;flex:none;background:var(--rtfc-glyph) center/contain no-repeat}
+.ap-prev-rule{flex:1;height:4px;border-radius:2px;background:var(--ink);opacity:.85}
+.ap-prev-head{display:block;height:9px;width:82%;border-radius:3px;background:var(--ink);margin-bottom:7px}
+.ap-prev-line{display:block;height:5px;width:100%;border-radius:3px;background:var(--muted);opacity:.62;margin-bottom:5px}
+.ap-prev-line.short{width:64%}
+.ap-prev-accent{display:block;height:6px;width:38%;border-radius:3px;background:var(--accent);margin-top:8px}
+.ap-meta{display:flex;flex-direction:column;gap:2px;padding:0 2px}
+.ap-name{font-weight:700;font-size:14px;letter-spacing:.01em}
+.ap-note{font-size:12px;color:var(--muted);line-height:1.35}
+.ap-check{position:absolute;top:16px;right:16px;width:20px;height:20px;border-radius:50%;
+  display:grid;place-items:center;font-size:12px;font-weight:800;
+  background:var(--accent);color:var(--on-accent);opacity:0;transform:scale(.6);
+  transition:opacity .16s ease,transform .16s ease}
+.ap-tile.on .ap-check{opacity:1;transform:scale(1)}
+.ap-foot{color:var(--muted);font-size:13.5px;line-height:1.6;max-width:70ch;margin:2px 0 22px}
+@media (max-width:520px){ .ap-grid{grid-template-columns:1fr 1fr;gap:10px} .ap-note{display:none} }
+@media (prefers-reduced-motion:reduce){ .ap-tile,.ap-check{transition:none} .ap-tile:hover{transform:none} }

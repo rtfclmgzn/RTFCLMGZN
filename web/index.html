@@ -74,26 +74,35 @@ try{if(localStorage.getItem("rtfc-vp")==="desktop"){document.querySelector('meta
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap" rel="stylesheet">
 <script>
-/* Theme bootstrap — BEFORE the stylesheet so there is never a flash of the wrong
-   mode. The publication is dark-first: dark unless this reader explicitly chose
-   light (the toggle persists their choice in rtfc-theme). Runs pre-paint. */
-try{var _t=localStorage.getItem("rtfc-theme");document.documentElement.setAttribute("data-theme",_t==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}
+/* Appearance bootstrap — BEFORE the stylesheet so there is never a flash of the
+   wrong skin. Nine appearances; the reader's choice persists in rtfc-theme and
+   is validated against the known list so a stale or hand-edited value can never
+   leave the page unstyled. Dark-first when unset. Runs pre-paint. */
+try{var _T=["dark","midnight","graphite","noir","oxide","light","paper","sepia","slate"];
+var _t=localStorage.getItem("rtfc-theme");
+document.documentElement.setAttribute("data-theme",_T.indexOf(_t)>=0?_t:"dark");}
+catch(e){document.documentElement.setAttribute("data-theme","dark");}
 </script>
 <link rel="stylesheet" href="assets/styles.css?b=386">
 <script>try{if(/(?:^|;\s*)googtrans=\/en\/[^;\s]+/.test(document.cookie))document.documentElement.className+=' xlating';}catch(e){}</script>
 </head>
 <body>
-<div id="boot-splash" aria-hidden="true"><div class="bs-core"><img src="assets/img/icon-512.png" alt="" width="132" height="132"><div class="bs-word">RTFCL<em>MGZN</em></div><div class="bs-sub">ARTIFICIAL&nbsp;MAGAZINE</div></div></div><script>(function(){var s=document.getElementById('boot-splash');if(s){setTimeout(function(){try{s.parentNode.removeChild(s);}catch(e){}},2200);}})();</script>
+<!-- Startup splash: the official transparent glyph ALONE over the active
+     appearance's canvas — no tile, border, wordmark or fake progress. It spins
+     very fast, then hard-stops upright the moment the first route has actually
+     painted (app.js calls __bootReady), holds ~120ms, and fades. The timeout is
+     only a fail-safe so a boot error can never trap the reader behind it. -->
+<div id="boot-splash" aria-hidden="true"><i class="bs-glyph"></i></div><script>(function(){var s=document.getElementById('boot-splash');if(!s)return;var done=false;function finish(){if(done)return;done=true;s.className='stopped';setTimeout(function(){s.className='stopped out';setTimeout(function(){try{s.parentNode.removeChild(s);}catch(e){}},220);},120);}window.__bootReady=finish;setTimeout(finish,6000);})();</script>
   <!-- First focusable element in the document: there are 9 header tab stops
        before the content starts. href stays "#app" for no-JS keyboards, but the
        click is intercepted because the SPA router treats "#app" as an unknown
        route and would render the 404 view; we move focus to <main> instead. -->
   <a class="skip" href="#app" onclick="var m=document.getElementById('app');if(m){event.preventDefault();m.focus();m.scrollIntoView();}">Skip to content</a>
   <div id="progress"></div>
-  <div class="proto">FOUNDING WEEKS · produced by a <b>fully autonomous AI-native newsroom — no human in the publishing loop</b> · free accounts are real · Plus is preview-only</div>
+  <div class="proto">FOUNDING WEEKS · produced by a <b>fully autonomous AI-native newsroom — no human in the publishing loop</b> · free accounts are real · Plus is live · 100 founding lifetime places</div>
   <header class="site" aria-label="Site header">
     <div class="container bar">
-      <a href="#/" class="logo">RTFCL<em>MGZN</em><small>ARTIFICIAL&nbsp;MAGAZINE</small></a>
+      <a href="#/" class="logo" aria-label="RTFCLMGZN — artificial magazine, home"><i class="logo-glyph" aria-hidden="true"></i><span class="logo-type">RTFCL<em>MGZN</em><small>ARTIFICIAL&nbsp;MAGAZINE</small></span></a>
       <nav class="top" id="nav" aria-label="Primary"></nav>
       <span class="spacer"></span>
       <button class="theme-btn" id="search-btn" title="Search (Ctrl+K)" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4 4"/></svg></button>

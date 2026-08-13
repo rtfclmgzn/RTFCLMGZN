@@ -71,12 +71,72 @@
       libSave(l2); route();
     }).catch(function(){});
   }
+  /* Reader-state labels in one place so the initial render (saveBtns) and the
+     in-place repaint (rtfcPaintState) can never drift apart.
+     [on-title, off-title, on-glyph, off-glyph] */
+  var SV_LABELS={
+    bookmark:["Bookmarked","Bookmark","♥","♡"],
+    later:["In read-later","Read later","◷","○"],
+    read:["Marked as read","Mark as read","✓","◯"]
+  };
+  function svState(l,kind,id){
+    return kind==="bookmark" ? inList(l.bookmarks,id)
+         : kind==="later"    ? inList(l.readLater,id)
+         :                     inList(l.read||[],id);
+  }
+  /* Repaint every control bound to this article's state, in place.
+     THIS IS THE SCROLL-JUMP FIX. A state toggle is an interaction, not a
+     navigation, so it must never call route() — route() ends in
+     window.scrollTo(0,0) and throws the reader back to the top of the page. */
+  function rtfcPaintState(kind,id){
+    var l=libGet(), on=svState(l,kind,id), lb=SV_LABELS[kind]||SV_LABELS.read;
+    var nodes=document.querySelectorAll('button[data-rtfc-act="'+kind+'"]');
+    for(var i=0;i<nodes.length;i++){
+      var b=nodes[i];
+      if(b.getAttribute("data-rtfc-id")!==id) continue;
+      if(on) b.classList.add("on"); else b.classList.remove("on");
+      b.setAttribute("aria-pressed", on?"true":"false");
+      b.setAttribute("title", on?lb[0]:lb[1]);
+      b.setAttribute("aria-label", on?lb[0]:lb[1]);
+      b.innerHTML = on?lb[2]:lb[3];
+    }
+    rtfcPaintStats();
+  }
+  /* Reader counters (Articles completed, saved, read-later) update live off the
+     same click. Counts are list lengths — unique article ids — never click
+     tallies, so toggling back off decrements correctly. */
+  function rtfcPaintStats(){
+    var l=libGet();
+    var counts={
+      completed:(l.read||[]).length,
+      bookmarks:(l.bookmarks||[]).length,
+      later:(l.readLater||[]).length
+    };
+    var nodes=document.querySelectorAll("[data-rtfc-stat]");
+    for(var i=0;i<nodes.length;i++){
+      var k=nodes[i].getAttribute("data-rtfc-stat");
+      if(counts[k]!==undefined) nodes[i].textContent=String(counts[k]);
+    }
+  }
   window.rtfcToggle=function(kind,id,ev){
     if(ev){ ev.preventDefault(); ev.stopPropagation(); }
     var l=libGet();
     var list = kind==="bookmark" ? l.bookmarks : kind==="later" ? l.readLater : (l.read=l.read||[]);
     var i=list.indexOf(id); if(i>=0) list.splice(i,1); else list.push(id);
-    libSave(l); route();
+    libSave(l);
+    rtfcPaintState(kind,id);
+    /* The Library route lists articles BY this state, so its content genuinely
+       changes when an item is removed. Re-render only that view and restore the
+       scroll position synchronously — the spec's documented fallback, used here
+       because a purely local repaint cannot remove a row from a filtered list. */
+    if((location.hash||"").indexOf("#/library")===0){
+      var y=window.scrollY, app=document.getElementById("app");
+      if(app){
+        app.innerHTML=viewLibrary();
+        if(window.__motion) window.__motion();
+        window.scrollTo(0,y);
+      }
+    }
     if(l.account){
       var act = kind==="bookmark"?"toggle_bookmark":kind==="later"?"toggle_read_later":"toggle_read";
       fetch("/api/account/library",{method:"POST",credentials:"same-origin",
@@ -435,13 +495,23 @@
       }).join("")+'</div>';
   }
   window.rtfcDismissPrimer=function(){ try{localStorage.setItem("rtfc-primer-seen","1");}catch(e){} route(); };
+  /* One reader-state control. type="button" so it can never submit or behave
+     like a link; data-* so rtfcPaintState can find and repaint it without a
+     re-render; aria-pressed so assistive tech gets the toggle state. */
+  function svBtn(kind,id,on){
+    var lb=SV_LABELS[kind]||SV_LABELS.read, t=on?lb[0]:lb[1];
+    return '<button type="button" class="sv'+(on?' on':'')+'"'+
+      ' data-rtfc-act="'+kind+'" data-rtfc-id="'+id+'"'+
+      ' aria-pressed="'+(on?'true':'false')+'"'+
+      ' title="'+t+'" aria-label="'+t+'"'+
+      ' onclick="rtfcToggle(\''+kind+'\',\''+id+'\',event)">'+(on?lb[2]:lb[3])+'</button>';
+  }
   function saveBtns(id,small){
     var l=libGet();
-    var b=inList(l.bookmarks,id), r=inList(l.readLater,id), rd=inList(l.read||[],id);
     return '<span class="savebtns'+(small?' sm':'')+'">'+
-      '<button class="sv'+(b?' on':'')+'" title="'+(b?'Bookmarked':'Bookmark')+'" onclick="rtfcToggle(\'bookmark\',\''+id+'\',event)">'+(b?'♥':'♡')+'</button>'+
-      '<button class="sv'+(r?' on':'')+'" title="'+(r?'In read-later':'Read later')+'" onclick="rtfcToggle(\'later\',\''+id+'\',event)">'+(r?'◷':'○')+'</button>'+
-      '<button class="sv'+(rd?' on':'')+'" title="'+(rd?'Marked as read':'Mark as read')+'" onclick="rtfcToggle(\'read\',\''+id+'\',event)">'+(rd?'✓':'◯')+'</button></span>';
+      svBtn("bookmark",id,svState(l,"bookmark",id))+
+      svBtn("later",id,svState(l,"later",id))+
+      svBtn("read",id,svState(l,"read",id))+'</span>';
   }
   var ARTICLES = (window.RTFC_ARTICLES || []).concat(window.RTFC_LIVE_ARTICLES || []).concat(window.RTFC_NEWSROOM_ARTICLES || []).concat(window.RTFC_RESEARCH || [])
     .slice().sort(function(a,b){ return new Date(b.publishedAt) - new Date(a.publishedAt); });
@@ -895,8 +965,13 @@
   // TL;DR — the story's main points as bullets at the end of the piece, so the gist
   // is scannable at a glance. Schema: a.tldr = ["point", ...]. A jump chip under the
   // cover (rendered in viewArticle) deep-links here via rtfcJump('tldr').
+  /* Guides must NOT end with a news-style recap (spec §27). A guide already ends
+     with its final step / what-to-do-next, so repeating the gist underneath reads
+     as filler and undoes the sense of completion. News formats keep it. */
+  function isGuideArticle(a){ return !!a && (a.format==="guide" || a.section==="Guide"); }
   function tldrHTML(a){
     if(!a.tldr || !a.tldr.length) return "";
+    if(isGuideArticle(a)) return "";
     return '<aside class="tldr" id="tldr"><div class="tldr-head"><span class="tldr-ic">⚡</span>Story at a glance</div>'+
       '<ul>'+a.tldr.map(function(x){return '<li>'+fmtBody(x)+'</li>';}).join("")+'</ul></aside>';
   }
@@ -2730,8 +2805,10 @@
     // scrolling past the price.
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Issues</div>';
     h+='<div class="mag-grid">'+MAG.map(function(iss,i){
-      return '<div class="mag-cell'+(i===0?' is-lead':'')+'">'+issueCoverHTML(iss,true)+
-        (iss.pdf?'<a class="mag-dl" href="'+safeHref(iss.pdf)+'" download="'+esc(pdfName(iss))+'">⤓ Download PDF</a>':'')+'</div>';
+      // Public Download PDF removed (spec §23): the PDF does not represent the
+      // designed issue, so it is no longer offered as a reading format. The files
+      // and pdfName()/iss.pdf stay for archival and newsroom workflows.
+      return '<div class="mag-cell'+(i===0?' is-lead':'')+'">'+issueCoverHTML(iss,true)+'</div>';
     }).join("")+'</div>';
     if(!isPlus()){
       // The offer panel. The old version was one grey bar plus two faint
@@ -2856,6 +2933,44 @@
     var list=ids.map(function(id){return article2(id);}).filter(Boolean);
     return list.length? '<div class="grid">'+list.map(cardHTML).join("")+'</div>'
       : '<p style="color:var(--muted);font-size:14px">Nothing here yet — tap the ♡ or ○ on any article.</p>';
+  }
+  /* ---------- Settings → Appearance ----------
+     A real preview tile per appearance rather than a colour dot: each swatch is
+     painted with that skin's own tokens by setting data-theme ON the tile, so
+     what the reader sees is the actual palette, not an approximation of it.
+     Tiles are radios (role=radio + aria-checked) because picking an appearance
+     is a single choice, and they are keyboard operable. */
+  function appearanceTile(t){
+    var id=t[0], label=t[1], canvas=t[2], note=t[3];
+    var on=(currentTheme()===id);
+    return '<button type="button" class="ap-tile'+(on?' on':'')+'" role="radio" aria-checked="'+(on?'true':'false')+'"'+
+      ' data-theme-id="'+id+'" onclick="rtfcSetTheme(\''+id+'\')" aria-label="'+escAttr(label+' appearance — '+note)+'">'+
+      '<span class="ap-prev" data-theme="'+id+'" aria-hidden="true">'+
+        '<span class="ap-prev-bar"><i class="ap-prev-glyph"></i><i class="ap-prev-rule"></i></span>'+
+        '<span class="ap-prev-head"></span>'+
+        '<span class="ap-prev-line"></span><span class="ap-prev-line short"></span>'+
+        '<span class="ap-prev-accent"></span>'+
+      '</span>'+
+      '<span class="ap-meta"><span class="ap-name">'+esc(label)+'</span>'+
+      '<span class="ap-note">'+esc(note)+'</span></span>'+
+      '<span class="ap-check" aria-hidden="true">✓</span></button>';
+  }
+  function viewSettings(){
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Settings</div>'+
+      '<h1>Reader preferences</h1>'+
+      '<p>Appearance, language and reading options. Choices are saved in this browser and applied before the next page paints, so the publication never flashes the wrong skin.</p></div>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Appearance</div>';
+    h+='<div class="ap-grid" id="appearance-grid" role="radiogroup" aria-label="Appearance">'+
+        THEMES.map(appearanceTile).join("")+'</div>';
+    h+='<p class="ap-foot">Nine appearances. Body text meets WCAG AAA contrast on every one; secondary text meets AA. '+
+       'The header ☀/☾ button flips between Dark and Light — pick anything else here.</p>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--ok)"></span>Motion</div>';
+    h+='<p class="ap-foot">RTFCLMGZN follows your system “reduce motion” setting. With it on, the startup mark does not spin, '+
+       'scroll animations are disabled, and transitions are shortened.</p>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--gold)"></span>Language</div>';
+    h+='<p class="ap-foot">Use the globe in the header to read RTFCLMGZN in 40 languages. The magazine ships in English — '+
+       'designed pages do not reflow safely through machine translation.</p>';
+    return h+'</div>';
   }
   function viewLibrary(){
     var l=libGet();
@@ -3756,7 +3871,8 @@
   }
   function articleToolsHTML(a){
     var h='<div class="art-tools">';
-    if(a.tldr&&a.tldr.length){
+    // No recap on guides, so no jump chip pointing at one that isn't rendered.
+    if(a.tldr&&a.tldr.length&&!isGuideArticle(a)){
       h+='<button class="tool-btn tldr-btn" onclick="rtfcJump(\'tldr\')" aria-label="Jump to the story-at-a-glance summary">⚡ <span>TL;DR</span></button>';
     }
     if(window.speechSynthesis){
@@ -5543,7 +5659,8 @@
       '<a class="mexit" href="#/magazine">✕ <span>Close</span></a>'+
       '<span class="mtitle">'+esc(iss.title)+'</span>'+
       '<input type="range" class="mscrub" id="mscrub" min="1" max="'+total+'" value="'+(wanted+1)+'" step="1" aria-label="Jump to page" title="Drag to flip through pages">'+
-      (iss.pdf?'<a class="mdl" href="'+safeHref(iss.pdf)+'" download="'+esc(pdfName(iss))+'" title="Download this issue as a PDF">⤓ <span>PDF</span></a>':'')+
+      /* Public PDF download removed from reader chrome (spec §23) — the designed
+         reader is the canonical experience. Archival PDFs are untouched. */
       '<span class="mcount" id="mcount" aria-live="polite" aria-atomic="true">'+(wanted+1)+' / '+total+'</span></div>'+
       '<div class="mtrack" id="mtrack" tabindex="0" role="region" aria-label="'+escAttr(iss.title||"Magazine")+' — page filmstrip; use the arrow keys to turn pages">'+
       iss.spreads.map(function(pg,i){ return spreadPageV3(pg,iss,i,total); }).join("")+
@@ -5811,6 +5928,7 @@
     var gridNewN=gdNewIds().length;
     h+=navLink("#/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
     h+=navLink("#/archive","archive","Archive");
+    h+=navLink("#/settings","settings","Settings");
     h+='<span class="nav-sep"></span>';
     h+=navLink("#/magazine","magazine","Magazine ◈","masthead-link");
     var navEl=document.getElementById("nav");
@@ -6416,6 +6534,7 @@
     else if(parts[0]==="magazine"){ view=viewMagazine(); active="magazine"; }
     else if(parts[0]==="issue"){ view=viewIssue(parts[1],parts[2]); active="magazine"; }
     else if(parts[0]==="library"){ view=viewLibrary(); active="library"; }
+    else if(parts[0]==="settings"){ view=viewSettings(); active="settings"; }
     else if(parts[0]==="account"){ view=viewAccount(); active="account"; }
     else if(parts[0]==="archive"){ view=viewArchive(); active="archive"; }
     else if(parts[0]==="article"){ view=viewArticle(parts[1]); active=""; }
@@ -6767,18 +6886,64 @@
   window.addEventListener("scroll",onScroll,{passive:true});
 
   /* ---------- theme ---------- */
+  /* ---------- appearances ----------
+     Nine skins. Each entry is [id, label, canvas, one-line description]; canvas
+     is what the swatch/preview needs to know and which glyph variant the skin
+     uses. The palettes themselves live entirely in styles.css as semantic
+     tokens — nothing here hard-codes a colour, so adding a tenth appearance is
+     a CSS block plus one line in this list. */
+  var THEMES=[
+    ["dark","Dark","dark","The default publication canvas."],
+    ["midnight","Midnight","dark","Cooler, deeper blue-black."],
+    ["graphite","Graphite","dark","Neutral grey, low colour temperature."],
+    ["noir","Noir","dark","True black, maximum contrast."],
+    ["oxide","Oxide","dark","Warm dark with a copper signature."],
+    ["light","Light","light","The default light canvas."],
+    ["paper","Paper","light","Warm off-white, print-like."],
+    ["sepia","Sepia","light","Parchment tone for long reading."],
+    ["slate","Slate","light","Cool grey-blue, high clarity."]
+  ];
+  function themeIds(){ return THEMES.map(function(t){return t[0];}); }
+  function validTheme(t){ return themeIds().indexOf(t)>=0 ? t : "dark"; }
+  function currentTheme(){ return validTheme(document.documentElement.getAttribute("data-theme")||"dark"); }
+  function themeCanvas(id){ for(var i=0;i<THEMES.length;i++){ if(THEMES[i][0]===id) return THEMES[i][2]; } return "dark"; }
+  /* Single writer for the appearance. Persists to the same rtfc-theme key the
+     pre-paint bootstrap in index.html reads, which is what prevents a flash of
+     the wrong skin on the next load. */
+  window.rtfcSetTheme=function(t){
+    t=validTheme(t);
+    document.documentElement.setAttribute("data-theme",t);
+    try{ localStorage.setItem("rtfc-theme",t); }catch(e){}
+    var btn=document.getElementById("theme");
+    if(btn) btn.textContent = themeCanvas(t)==="dark" ? "☀" : "☾";
+    // keep the browser UI colour in step with the canvas
+    try{
+      var m=document.querySelector('meta[name="theme-color"]');
+      if(m) m.setAttribute("content",getComputedStyle(document.documentElement).getPropertyValue("--bg").trim()||"#0b0b12");
+    }catch(e){}
+    // repaint any open Appearance panel so the selected tile follows
+    var g=document.getElementById("appearance-grid");
+    if(g){
+      [].forEach.call(g.querySelectorAll("[data-theme-id]"),function(el){
+        var on=el.getAttribute("data-theme-id")===t;
+        el.classList.toggle("on",on);
+        el.setAttribute("aria-checked",on?"true":"false");
+      });
+    }
+    return t;
+  };
   function initTheme(){
     var btn=document.getElementById("theme");
-    function set(t){ document.documentElement.setAttribute("data-theme",t); try{localStorage.setItem("rtfc-theme",t);}catch(e){} btn.textContent=t==="dark"?"☀":"☾"; }
-    // Dark-first: the pre-paint bootstrap in index.html already set data-theme
-    // (dark unless the reader explicitly chose light). This just syncs the
-    // button and keeps the choice persistent. OS light preference no longer
-    // overrides the default — only the reader's own toggle does.
     var saved; try{saved=localStorage.getItem("rtfc-theme");}catch(e){}
-    set(saved==="light"?"light":"dark");
+    // The bootstrap already painted this pre-paint; this just re-asserts it
+    // through the single writer so the button glyph and meta colour agree.
+    window.rtfcSetTheme(saved||document.documentElement.getAttribute("data-theme")||"dark");
+    if(!btn) return;
+    /* The header control stays a fast light/dark flip — the full nine-skin
+       picker lives in Settings → Appearance. Flipping from any dark skin goes
+       to Light and vice versa, so the button never feels like it does nothing. */
     btn.addEventListener("click",function(){
-      var cur=document.documentElement.getAttribute("data-theme")||"dark";
-      set(cur==="dark"?"light":"dark");
+      window.rtfcSetTheme(themeCanvas(currentTheme())==="dark" ? "light" : "dark");
     });
   }
 
@@ -6918,5 +7083,17 @@
     window.__placeGrip=place; place();
   }
 
-  document.addEventListener("DOMContentLoaded",function(){ initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker(); initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); logVisit(); route(); syncAccount(); });
+  document.addEventListener("DOMContentLoaded",function(){
+    initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker();
+    initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); logVisit();
+    route();
+    syncAccount();
+    /* Stop the splash on the REAL ready signal, not a timer: route() has now
+       rendered the initial view, so two frames later it has actually painted.
+       The inline fail-safe in index.html still fires if boot throws before we
+       ever get here, so an error can never leave the reader stuck. */
+    if(window.__bootReady){
+      requestAnimationFrame(function(){ requestAnimationFrame(window.__bootReady); });
+    }
+  });
 })();
