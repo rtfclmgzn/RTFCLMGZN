@@ -855,10 +855,14 @@
     function take(n){ var s=q.slice(qi,qi+n); qi+=s.length; return s; }
 
     // 1 — a wide opener plus two dense rows beside it
+    /* The wide variant is withdrawn: it fought the base .card rules
+       (display:flex + .art aspect-ratio/position) and overlapped its own
+       headline between roughly 1000-1250px. The opener uses the standard card
+       beside the thumbnail rail instead — same rhythm, no new geometry. */
     var openWide=take(1), openThumbs=take(2);
     if(openWide.length){
       h+=hpModule("Latest across the desk","--accent",
-        '<div class="hp-open">'+openWide.map(cardWideHTML).join("")+
+        '<div class="hp-open">'+openWide.map(cardHTML).join("")+
         (openThumbs.length?'<div class="thumb-list">'+openThumbs.map(cardThumbHTML).join("")+'</div>':'')+'</div>');
     }
     // 2 — a standard three, the only place the equal-column card still appears
@@ -877,7 +881,7 @@
     var lateWide=take(1), lateThumbs=take(4);
     if(lateWide.length||lateThumbs.length){
       h+=hpModule("More from the newsroom","--accent2",
-        (lateWide.length?'<div class="hp-open">'+lateWide.map(cardWideHTML).join("")+
+        (lateWide.length?'<div class="hp-open">'+lateWide.map(cardHTML).join("")+
           (lateThumbs.length?'<div class="thumb-list">'+lateThumbs.map(cardThumbHTML).join("")+'</div>':'')+'</div>'
          :'<div class="thumb-list thumb-2col">'+lateThumbs.map(cardThumbHTML).join("")+'</div>'));
     }
