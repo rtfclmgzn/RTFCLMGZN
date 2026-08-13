@@ -4722,11 +4722,22 @@ html{scrollbar-gutter:stable}
   /* Mobile density: thumbnails, not a column of full-bleed cinema. */
   .card-thumb{grid-template-columns:104px minmax(0,1fr);gap:11px;padding:11px 0}
   .card-thumb h4{font-size:15.5px;margin-top:5px}
-  .card-thumb .savebtns{opacity:1}
   .brief-row{grid-template-columns:1fr auto;gap:4px 10px;padding:11px 0}
   .brief-row .br-sec{grid-column:1;font-size:10px}
   .brief-row .br-meta{grid-column:2;grid-row:1}
   .brief-row .br-h{grid-column:1/-1;font-size:15.5px}
+}
+/* Touch widths have no hover, so the save row must always be visible — and an
+   absolutely-positioned row anchored to the card's bottom edge lands on top of
+   the NEXT card's tag pills once the headline wraps to four or five lines.
+   Verified failing at 360/390/414/480/560 (buttons over "Brief" pill and over
+   the following h4). Below 640 the row rejoins the flow as a right-aligned
+   grid item under the byline, so it can never collide with anything. */
+@media (max-width:640px){
+  .card-thumb .savebtns{
+    position:static;opacity:1;grid-column:2;grid-row:2;
+    display:flex;gap:8px;justify-content:flex-end;margin-top:7px;
+  }
 }
 
 /* spec §8 — let the page breathe on large monitors without stretching prose.
