@@ -166,3 +166,6 @@
   var seen={}; window.RTFC_USAGE_LOG.forEach(function(r){seen[r.id]=1;});
   rows.forEach(function(r){if(!seen[r.id]) window.RTFC_USAGE_LOG.push(r);});
 })();
+    { id:"u-0234", ts:"2026-08-13T18:00:00Z", agent:"pulse-scan", task_type:"maintenance", article_id:"system", description:"Pulse scan: added 2 new buzz cards (Anthropic Q2 profitability $10.9B revenue, OpenAI S-1 filing expected within days), checked and resolved 1 claim (Anthropic/Amazon didn't sign NVIDIA open weights letter), no buzz cards retired (7-day window clear), no scoreboard changes", measured:"estimated" },
+  ];
+})();

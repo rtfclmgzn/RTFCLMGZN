@@ -85,6 +85,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Alibaba published its own Qwen 3.8-Max benchmark table claiming second-only-to-Fable-5 rankings on multiple benchmarks (OSWorld-Verified 86.1, PaperBench 93.0). No independent third-party evaluation from Artificial Analysis or community leaderboards had published by early August 2026, but Alibaba's own internal benchmark table fulfilled the resolver requirement for published scores.",
       label:"Alibaba Qwen 3.8-Max published benchmark table",
-      url:"https://www.alibaba.com/qwen3-8-max" }
+      url:"https://www.alibaba.com/qwen3-8-max" },
+    { key:"nvidia-huang-open-weights-policy-letter|w|1",
+      at:"2026-08-13T18:00:00Z",
+      outcome:"refuted",
+      note:"Anthropic published its own July 27 statement on open-weights models without signing NVIDIA's letter; Amazon remained absent from signatories. NVIDIA's letter reached ~50 signatories by late July with OpenAI and Google aboard, but neither Anthropic nor Amazon joined despite their market position and investment relationship.",
+      label:"Anthropic statement on open weights; Amazon and Anthropic non-participation in NVIDIA letter",
+      url:"https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/" }
   ]
 };
