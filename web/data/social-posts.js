@@ -2454,8 +2454,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Databricks",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088347147746119736",
+        "remote_id": "2088347147746119736",
+        "posted_at": "2026-08-14T19:28:54Z"
       },
       {
         "platform": "x",
@@ -2555,7 +2557,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#China"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
