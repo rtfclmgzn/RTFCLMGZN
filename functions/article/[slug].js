@@ -138,10 +138,13 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g,
 
 // mirrors the SPA's fmt(): **bold**, ==mark==, ++accent==, [label](url)
 function fmt(s) {
+  // Mirror of the client fmt() in web/assets/app.js — the marker vocabulary
+  // must stay identical in both renderers (see the comment there).
   return esc(s)
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
     .replace(/==(.+?)==/g, "<mark>$1</mark>")
     .replace(/\+\+(.+?)\+\+/g, "<em>$1</em>")
+    .replace(/__([^_]+?)__/g, "<u>$1</u>")
     .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" rel="noopener">$1</a>');
 }
 

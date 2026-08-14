@@ -615,11 +615,20 @@
       return '<a class="inl" href="'+safeUrl(url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+label+'</a>';
     });
   }
+  /* Inline marker vocabulary (the writers' palette — cycle-runbook §3c):
+       **bold**       load-bearing facts and numbers
+       ==highlight==  the one sentence to remember; tinted by the desk color
+       ++accent++     accent-colored emphasis, names and turns of phrase
+       __underline__  terms of art and definitions, hand-underlined style
+     Renderers must stay in lockstep: this fmt(), the SSR fmt() in
+     functions/article/[slug].js, and cleanSpeech() (which strips markers
+     before text-to-speech). Add a marker in all three or not at all. */
   function fmt(s){
     return mdLinks(esc(s)
       .replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')
       .replace(/==(.+?)==/g,'<mark class="mk">$1</mark>')
-      .replace(/\+\+(.+?)\+\+/g,'<span class="acc">$1</span>'));
+      .replace(/\+\+(.+?)\+\+/g,'<span class="acc">$1</span>')
+      .replace(/__([^_]+?)__/g,'<u class="ul">$1</u>'));
   }
   function initials(name){ return name.split(" ").map(function(w){return w[0];}).join("").replace(/[^A-Za-z]/g,"").slice(0,2).toUpperCase(); }
   function hexRgba(hex,a){
@@ -812,6 +821,75 @@
       }).join("")+
       '<a class="player-cell player-all" href="#/companies"><b>All companies</b><em>→</em></a></div>';
   }
+  /* ============== THE WIRE (homepage right-rail live stack) ==============
+     The hero is taller than its three rail stories, and the leftover column
+     used to be dead black. Now it carries a self-rotating stack of the site's
+     own live surfaces — countdown, hottest Buzz post, Scoreboard leaders, an
+     open prediction, the running bill, the newest datacenter. Every slide is
+     derived from data that the newsroom itself updates several times a day,
+     so the box is different almost every visit — and the countdown ticks
+     live because the slide reuses .edition-cd, the same hook the footer's
+     ticker already updates every second. Fails soft: any missing store just
+     drops its slide, and the whole box only renders with 2+ slides. */
+  function homeWireSlides(){
+    var slides=[];
+    var ns=nextSlot();
+    slides.push({k:"Next edition",cls:"edition-cd",body:'<b class="cd-time">'+(ns.overdue?"due now":fmtCountdown(ns.secs))+'</b><span class="wr-sub cd-slot">'+(ns.overdue?"Due now":"around "+ns.local+" your time")+'</span>',href:"#/pulse"});
+    var bz=BUZZ[0];
+    if(bz) slides.push({k:"Hottest on the wire",body:'<span class="wr-txt">'+esc(String(bz.text||"").slice(0,150))+(String(bz.text||"").length>150?"…":"")+'</span><span class="wr-sub">— '+esc((bz.source&&bz.source.name)||"the feed")+'</span>',href:"#/buzz"});
+    var SBW=window.RTFC_SCOREBOARD||{rows:[]};
+    var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;});
+    if(sc.length) slides.push({k:"Scoreboard · smartest",body:'<b class="wr-big">'+esc(sc[0].model)+'</b><span class="wr-sub">'+sc[0].score+' on the independent index · '+esc(sc[0].lab)+'</span>',href:"#/scoreboard"});
+    var preds=(window.RTFC_PREDICTIONS||[]).filter(function(p){return p.status==="pending";})
+      .sort(function(a,b){return new Date(a.resolveBy)-new Date(b.resolveBy);});
+    if(preds.length){
+      var pd=Math.max(0,Math.ceil((new Date(preds[0].resolveBy)-new Date())/86400000));
+      slides.push({k:"Open prediction",body:'<span class="wr-txt">“'+esc(String(preds[0].claim||"").slice(0,130))+'”</span><span class="wr-sub">graded in public · resolves in '+pd+'d</span>',href:"#/predictions"});
+    }
+    var us=sumRecs(liveUsage());
+    slides.push({k:"The running bill",body:'<b class="wr-big">'+money(us.cost)+'</b><span class="wr-sub">total compute, run to date — every penny public</span>',href:"#/usage"});
+    var gf=(GRID.facilities||[]).slice().sort(function(a,b){return String(b.addedAt||"").localeCompare(String(a.addedAt||""));})[0];
+    if(gf) slides.push({k:"Newest on The Grid",body:'<b class="wr-big">'+esc(gf.name)+'</b><span class="wr-sub">'+esc(gf.place)+' · '+esc(gf.status)+'</span>',href:"#/grid"});
+    return slides;
+  }
+  function homeWireHTML(){
+    var slides=homeWireSlides();
+    if(slides.length<2) return "";
+    return '<div class="wire-card" id="home-wire"><div class="wr-head"><span class="live-dot"></span>THE WIRE<span class="wr-count"><b id="wr-cur">1</b>/'+slides.length+'</span></div>'+
+      slides.map(function(s,i){
+        return '<a class="wr-slide'+(i===0?" on":"")+(s.cls?" "+s.cls:"")+'" href="'+s.href+'"><span class="wr-k">'+s.k+'</span>'+s.body+'</a>';
+      }).join("")+
+      '<div class="wr-dots">'+slides.map(function(s,i){return '<i class="'+(i===0?"on":"")+'"></i>';}).join("")+'</div></div>';
+  }
+  function miniSbHTML(){
+    var SBW=window.RTFC_SCOREBOARD||{rows:[]};
+    var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;}).slice(0,5);
+    if(sc.length<3) return "";
+    var mx=sc[0].score||1;
+    return '<a class="mini-sb" href="#/scoreboard"><div class="msb-h">▤ SCOREBOARD · TOP 5</div>'+
+      sc.map(function(r,i){
+        return '<div class="msb-row"><span class="msb-r">'+(i+1)+'</span><span class="msb-m">'+esc(r.model)+'</span>'+
+          '<span class="msb-track"><i style="width:'+Math.round(r.score/mx*100)+'%"></i></span><b>'+r.score+'</b></div>';
+      }).join("")+'<span class="msb-go">Full board →</span></a>';
+  }
+  // Rotator: self-cleaning (stops the moment the wire leaves the DOM), pauses
+  // while the tab is hidden, and re-arms idempotently on every route render.
+  function wireTick(){
+    var w=document.getElementById("home-wire");
+    if(!w){ clearInterval(window.__wireT); window.__wireT=null; return; }
+    if(document.hidden||w.matches(":hover")) return;
+    var slides=w.querySelectorAll(".wr-slide"), dots=w.querySelectorAll(".wr-dots i");
+    if(slides.length<2) return;
+    var cur=0; for(var i=0;i<slides.length;i++) if(slides[i].classList.contains("on")) cur=i;
+    var nx=(cur+1)%slides.length;
+    slides[cur].classList.remove("on"); dots[cur].classList.remove("on");
+    slides[nx].classList.add("on"); dots[nx].classList.add("on");
+    var c=document.getElementById("wr-cur"); if(c) c.textContent=String(nx+1);
+  }
+  window.__wireArm=function(){
+    if(document.getElementById("home-wire") && !window.__wireT) window.__wireT=setInterval(wireTick,5000);
+  };
+
   function viewHome(){
     // The homepage lead is the newest article -- UNLESS a breaking story is
     // still within its 24h headliner window (see activeBreakingHeadliner
@@ -845,7 +923,7 @@
       h+='<div class="home-nl">'+newsletterHTML(true)+'</div>';
       return h+'</div>';
     }
-    h+='<div class="top-slot"><div>'+featureHTML(top)+'</div><div class="rail" role="region" aria-label="More stories">'+side.map(railHTML).join("")+'</div></div>';
+    h+='<div class="top-slot"><div>'+featureHTML(top)+'</div><div class="rail" role="region" aria-label="More stories">'+side.map(railHTML).join("")+homeWireHTML()+miniSbHTML()+'</div></div>';
     // The homepage shows a curated slice, not the whole archive. Every story stays
     // one click away (desk pages + the archive below) -- an unbounded flat grid grew
     // to 56 cards / 18 screens before this, and it grows by ~3 more every single day.
@@ -2516,7 +2594,11 @@
       ((a.corrections||[]).length? a.corrections.map(function(c){
         return '<div class="cx"><time>'+new Date(c.at).toLocaleString(undefined,{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})+'</time>'+esc(c.text)+'</div>';
       }).join("") : '<div class="cx none">No corrections. This piece is unchanged since publication.</div>')+'</div>';
-    return '<div class="container"><article class="article">'+
+    /* --sec carries the desk color into the prose so highlights, underlines,
+       drop caps and blockquote bars are THEME-BASED per section — a Health
+       story reads in Health's tint, a Markets story in Markets'. Pure CSS
+       downstream of this one variable. */
+    return '<div class="container"><article class="article" style="--sec:'+col+'">'+
       '<a class="back" href="#/">← Home</a>'+
       '<div style="margin:20px 0 6px">'+tagsHTML(a)+'</div>'+
       '<h1 data-ra="0">'+esc(a.title)+'</h1><p class="dek" data-ra="0">'+esc(a.dek)+'</p>'+
@@ -2717,6 +2799,16 @@
       '<div class="over">Operating transparency</div>'+
       '<h1>What it costs to run this newsroom</h1>'+
       '<p>Every task our AI staff performs logs its token usage here. The dollar figures are <b>API-equivalent compute cost</b> — what the same work would cost on pay-as-you-go API rates — shown in the open. Not a marketing number; just what the machine costs to run.</p></div>';
+
+    /* THE ONE NUMBER, first and huge. The footer of every page quotes "run to
+       date" — this hero IS that number, computed from the identical basis
+       (sumRecs over liveUsage()), stated as such in print. Before this, the
+       page led with four window cards; on a quiet week the eye landed on
+       "Today —" or a small 30-day figure, the reader compared THAT against the
+       footer's all-time number, and the two "didn't match". Same ledger, two
+       different questions — now the page answers the footer's question first. */
+    h+='<div class="uhero-total"><div class="ut-num">'+money(allS.cost)+'</div>'+
+      '<div class="ut-cap"><b>Total compute, run to date</b> — the exact number the site footer quotes, from the same ledger and the same basis. The cards below slice this by time window; on a quiet week the short windows are small or empty while this total stands.</div></div>';
 
     // stat row
     h+='<div class="ustats">'+
@@ -4267,7 +4359,7 @@
     return t;
   }
   function cleanSpeech(t){
-    var s=String(t).replace(/\*\*|==|\+\+/g,"");
+    var s=String(t).replace(/\*\*|==|\+\+|__/g,"");
     s=speechNormalize(s);
     return s.replace(/\s*·\s*/g,", ").replace(/—/g,", ").replace(/\s+/g," ").trim();
   }
@@ -5030,12 +5122,23 @@
         var ext=/^https?:/.test(l.url);
         return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
       }).join("")+'</div>'):'';
+    /* Structured spec chips — power / accelerators / operating-since / reported
+       investment. OPTIONAL fields: they render only when the data desk has a
+       sourced figure to put in them (grid.js honesty rules apply — a chip with
+       an invented number is worse than no chip). The weekly evolution run is
+       tasked with backfilling these from primary sources, facility by facility. */
+    var SPEC_DEFS=[["power","⚡","critical power"],["chips","▦","accelerators"],["since","◷","operating since"],["capex","◈","reported investment"]];
+    var chips=SPEC_DEFS.map(function(sp){
+      var v=f[sp[0]];
+      return v?('<span class="gd-spec"><i>'+sp[1]+'</i><em>'+esc(sp[2])+'</em><b>'+esc(v)+'</b></span>'):"";
+    }).join("");
     return '<div class="gd-card">'+
       '<div class="gd-card-top"><span class="gd-dot" style="background:var('+st.v+')"></span><span class="gd-st">'+esc(st.label)+'</span>'+
       '<span class="gd-conf" title="'+esc(GD_CONF[f.confidence]||"")+'">'+esc(f.confidence)+'</span></div>'+
       '<h3>'+esc(f.name)+'</h3>'+
       '<div class="gd-place">'+esc(f.place)+'</div>'+
       '<div class="gd-op">'+op+'</div>'+tenant+
+      (chips?('<div class="gd-specs">'+chips+'</div>'):'')+
       (f.scale?('<p class="gd-scale">'+esc(f.scale)+'</p>'):'')+
       '<p class="gd-blurb">'+esc(f.blurb)+'</p>'+follow+
       '<div class="gd-added">Data desk last confirmed this row '+when(f.addedAt)+'</div>'+
@@ -5054,7 +5157,7 @@
       return '<div class="gd-region"><div class="gd-region-h">'+esc(region)+'<span>'+rows.length+'</span></div>'+
         rows.map(function(f){
           var st=GD_STATUS[f.status]||{v:"--muted"};
-          return '<div class="gd-row'+(f.id===GD.sel?" gd-sel":"")+(newSet[f.id]?" gd-new":"")+'" data-id="'+f.id+'" tabindex="0">'+
+          return '<div class="gd-row'+(f.id===GD.sel?" gd-sel":"")+(newSet[f.id]?" gd-new":"")+'" data-id="'+f.id+'" data-st="'+esc(f.status)+'" tabindex="0">'+
             '<span class="gd-row-dot" style="background:var('+st.v+')"></span>'+
             '<span class="gd-row-name">'+esc(f.name)+(newSet[f.id]?'<em>new</em>':'')+'</span>'+
             '<span class="gd-row-place">'+esc(f.place)+'</span></div>';
@@ -5077,27 +5180,138 @@
       var p=geoToXY(f.lat,f.lng,W), st=GD_STATUS[f.status]||{v:"--muted"};
       var cls="gd-pin"+(f.id===GD.sel?" gd-sel":"");
       return '<circle class="'+cls+'" cx="'+p.x.toFixed(2)+'" cy="'+p.y.toFixed(2)+'" r="'+(f.id===GD.sel?"6.5":"4.5")+'" '+
-        'style="fill:var('+st.v+')" data-id="'+f.id+'" tabindex="0" role="img" aria-label="'+esc(f.name+" — "+f.place)+'"><title>'+esc(f.name+" — "+f.place)+'</title></circle>';
+        'style="fill:var('+st.v+')" data-id="'+f.id+'" data-st="'+esc(f.status)+'" tabindex="0" role="img" aria-label="'+esc(f.name+" — "+f.place)+'"><title>'+esc(f.name+" — "+f.place)+'</title></circle>';
     }).join("");
     var svg='<svg class="gd-svg" viewBox="0 0 '+W.w+' '+W.h+'" preserveAspectRatio="xMidYMid meet" role="group" aria-label="World map of AI datacenters">'+
       paths.join("")+pins+'</svg>';
 
+    /* Legend doubles as a STATUS FILTER — tap "operating" to see only live
+       sites. Filtering hides pins and list rows in place (no repaint, so the
+       zoom state survives); tapping the active filter clears it. */
     var legend='<div class="rm-legend gd-legend">'+
-      Object.keys(GD_STATUS).map(function(k){ return '<span class="rm-lgi"><i class="gd-sw" style="background:var('+GD_STATUS[k].v+')"></i>'+esc(GD_STATUS[k].label)+'</span>'; }).join("")+
-      '</div>';
+      Object.keys(GD_STATUS).map(function(k){
+        var n=facilities.filter(function(f){return f.status===k;}).length;
+        return '<button class="rm-lgi gd-lg'+(GD.filter===k?" on":"")+'" data-st="'+k+'"><i class="gd-sw" style="background:var('+GD_STATUS[k].v+')"></i>'+esc(GD_STATUS[k].label)+'<em>'+n+'</em></button>';
+      }).join("")+
+      '<span class="gd-lg-hint">tap a status to filter · scroll or pinch the map to zoom</span></div>';
 
     wrap.innerHTML=
-      '<div class="rm-figure gd-figure">'+svg+'</div>'+
+      '<div class="gd-split"><div class="rm-figure gd-figure">'+svg+
+        '<div class="gd-zoom" role="group" aria-label="Map zoom">'+
+          '<button data-z="in" title="Zoom in" aria-label="Zoom in">+</button>'+
+          '<button data-z="out" title="Zoom out" aria-label="Zoom out">−</button>'+
+          '<button data-z="reset" title="Reset view" aria-label="Reset view">⟲</button></div></div>'+
+      '<div id="gd-detail">'+gdDetailHTML(gdFacility(GD.sel))+'</div></div>'+
       legend+
-      '<div id="gd-detail">'+gdDetailHTML(gdFacility(GD.sel))+'</div>'+
       gdListHTML();
+
+    /* ---------------- zoom & pan (added 2026-08-14) ----------------
+       viewBox arithmetic, no transforms: wheel zooms around the cursor,
+       drag pans, two pointers pinch, the buttons cover touch devices where
+       the browser owns pinch. Pin radii divide by sqrt(zoom) so dots stay
+       dots instead of growing into blobs. State lives in GD.vb so a filter
+       tap (which repaints nothing) and a select don't reset the view. */
+    var svgEl=wrap.querySelector(".gd-svg");
+    var vb=GD.vb&&GD.vb.w?{x:GD.vb.x,y:GD.vb.y,w:GD.vb.w,h:GD.vb.h}:{x:0,y:0,w:W.w,h:W.h};
+    function applyVB(){
+      GD.vb={x:vb.x,y:vb.y,w:vb.w,h:vb.h};
+      svgEl.setAttribute("viewBox",vb.x.toFixed(1)+" "+vb.y.toFixed(1)+" "+vb.w.toFixed(1)+" "+vb.h.toFixed(1));
+      var k=Math.sqrt(W.w/vb.w);
+      wrap.querySelectorAll(".gd-pin").forEach(function(c){
+        c.setAttribute("r",((c.classList.contains("gd-sel")?6.5:4.5)/k).toFixed(2));
+        c.setAttribute("stroke-width",(1.2/k).toFixed(2));
+      });
+    }
+    function clampVB(){
+      vb.w=Math.max(W.w/9,Math.min(W.w,vb.w)); vb.h=vb.w*(W.h/W.w);
+      vb.x=Math.max(0,Math.min(W.w-vb.w,vb.x)); vb.y=Math.max(0,Math.min(W.h-vb.h,vb.y));
+    }
+    function zoomAt(f,cx,cy){
+      var nw=vb.w/f;
+      vb.x=cx-(cx-vb.x)*(nw/vb.w); vb.y=cy-(cy-vb.y)*(nw/vb.w);
+      vb.w=nw; clampVB(); applyVB();
+    }
+    function evtVB(cX,cY){
+      var r=svgEl.getBoundingClientRect();
+      return {x:vb.x+(cX-r.left)/r.width*vb.w, y:vb.y+(cY-r.top)/r.height*vb.h};
+    }
+    svgEl.addEventListener("wheel",function(e){
+      e.preventDefault();
+      var p=evtVB(e.clientX,e.clientY);
+      zoomAt(e.deltaY<0?1.3:1/1.3,p.x,p.y);
+    },{passive:false});
+    var ptrs={}, panStart=null, pinchD=0;
+    function ptrCount(){ var n=0,k; for(k in ptrs) if(ptrs.hasOwnProperty(k)) n++; return n; }
+    svgEl.addEventListener("pointerdown",function(e){
+      ptrs[e.pointerId]={x:e.clientX,y:e.clientY};
+      if(ptrCount()===1) panStart={x:e.clientX,y:e.clientY,vx:vb.x,vy:vb.y};
+      else { panStart=null;
+        var ks=[],k; for(k in ptrs) ks.push(ptrs[k]);
+        pinchD=Math.sqrt(Math.pow(ks[0].x-ks[1].x,2)+Math.pow(ks[0].y-ks[1].y,2));
+      }
+    });
+    svgEl.addEventListener("pointermove",function(e){
+      if(!ptrs[e.pointerId]) return;
+      ptrs[e.pointerId]={x:e.clientX,y:e.clientY};
+      var n=ptrCount();
+      if(n===1&&panStart&&vb.w<W.w-0.5){
+        var r=svgEl.getBoundingClientRect();
+        vb.x=panStart.vx-(e.clientX-panStart.x)/r.width*vb.w;
+        vb.y=panStart.vy-(e.clientY-panStart.y)/r.height*vb.h;
+        clampVB(); applyVB();
+      } else if(n===2){
+        var ks=[],k; for(k in ptrs) ks.push(ptrs[k]);
+        var d=Math.sqrt(Math.pow(ks[0].x-ks[1].x,2)+Math.pow(ks[0].y-ks[1].y,2));
+        if(pinchD>0&&Math.abs(d-pinchD)>3){
+          var p=evtVB((ks[0].x+ks[1].x)/2,(ks[0].y+ks[1].y)/2);
+          zoomAt(d/pinchD,p.x,p.y); pinchD=d;
+        }
+      }
+    });
+    ["pointerup","pointercancel"].forEach(function(evn){
+      svgEl.addEventListener(evn,function(e){
+        delete ptrs[e.pointerId];
+        if(!ptrCount()){ panStart=null; pinchD=0; }
+      });
+    });
+    wrap.querySelectorAll(".gd-zoom button").forEach(function(b){
+      b.addEventListener("click",function(){
+        var z=b.getAttribute("data-z");
+        if(z==="reset"){ vb={x:0,y:0,w:W.w,h:W.h}; applyVB(); }
+        else zoomAt(z==="in"?1.5:1/1.5, vb.x+vb.w/2, vb.y+vb.h/2);
+      });
+    });
+    applyVB();
+
+    /* ---------------- status filter ---------------- */
+    function applyFilter(){
+      var f=GD.filter;
+      wrap.querySelectorAll(".gd-pin").forEach(function(c){
+        c.style.display=(!f||c.getAttribute("data-st")===f)?"":"none";
+      });
+      wrap.querySelectorAll(".gd-row").forEach(function(r){
+        r.style.display=(!f||r.getAttribute("data-st")===f)?"":"none";
+      });
+      wrap.querySelectorAll(".gd-lg").forEach(function(b){
+        b.classList.toggle("on",b.getAttribute("data-st")===f);
+      });
+    }
+    wrap.querySelectorAll(".gd-lg").forEach(function(b){
+      b.addEventListener("click",function(){
+        var st=b.getAttribute("data-st");
+        GD.filter=(GD.filter===st)?null:st;
+        applyFilter();
+      });
+    });
+    if(GD.filter) applyFilter();
 
     function select(id){
       GD.sel=id;
+      var k=Math.sqrt(W.w/vb.w);
       wrap.querySelectorAll(".gd-pin").forEach(function(c){
         var on=c.getAttribute("data-id")===id;
         c.classList.toggle("gd-sel",on);
-        c.setAttribute("r", on?"6.5":"4.5");
+        c.setAttribute("r",((on?6.5:4.5)/k).toFixed(2));
       });
       wrap.querySelectorAll(".gd-row").forEach(function(r){ r.classList.toggle("gd-sel", r.getAttribute("data-id")===id); });
       var det=document.getElementById("gd-detail"); if(det) det.innerHTML=gdDetailHTML(gdFacility(id));
@@ -5455,7 +5669,21 @@
           return '<div class="sb-up-row"><div><b>'+esc(r.model)+'</b> <span class="sb-lab">'+esc(r.lab)+'</span> <span class="sb-status s-'+r.status+'">'+esc(r.status)+'</span></div><span>'+esc(r.note)+'</span></div>';
         }).join("")+'</div>';
     }
-    h+='<p class="sb-basis">'+esc(SB.basisNote||"")+' Prices marked ~ are estimates where a lab hasn\'t published an exact figure.</p>';
+    /* THE SCAN LOG, folded (2026-08-14). basisNote is the board's full audit
+       trail — every review including the ones that changed nothing — and it had
+       grown to a 17,000-character wall of running prose printed in full under
+       the chart. The trail is the board's credibility, so it stays complete and
+       public; it just stops being a wall. Split into dated entries on the scan
+       markers, newest first, inside a native <details> — collapsed by default,
+       zero JS, and the open/closed state costs nothing on re-render. */
+    var scanEntries=String(SB.basisNote||"").split(/(?=Re-scanned |Pulse scan |Scanned )/g)
+      .map(function(x){return x.trim();}).filter(Boolean);
+    h+='<details class="sb-log"><summary><span class="sbl-t">The scan log</span>'+
+      '<span class="sbl-n">'+scanEntries.length+' recorded reviews — including every scan that changed nothing</span>'+
+      '<span class="sbl-caret">▾</span></summary><div class="sbl-body">'+
+      scanEntries.map(function(x){ return '<p>'+esc(x)+'</p>'; }).join("")+
+      '<p class="sbl-foot">Prices marked ~ are estimates where a lab hasn\'t published an exact figure.</p>'+
+      '</div></details>';
     h+='<p style="color:var(--muted);font-size:13px;margin-top:12px">Not sure which tier you need? Read the guide: <a href="#/article/which-ai-for-which-job" style="color:var(--accent2)">Right tool, right job →</a></p>';
     if(SB.sources&&SB.sources.length) h+='<div class="sources" style="margin-top:16px"><h4>How we score · sourced from independent benchmarks &amp; our coverage</h4><ol>'+SB.sources.map(function(s){return '<li><a href="'+safeHref(s.url)+'" target="_blank" rel="noopener">'+esc(s.label)+'</a></li>';}).join("")+'</ol></div>';
     return h+'</div>';
@@ -6950,6 +7178,7 @@
     wireReader();
     if(typeof apRender==="function") apRender();
     if(window.__tickEdition) window.__tickEdition();
+    if(window.__wireArm) window.__wireArm();
     if(window.__placeGrip) setTimeout(window.__placeGrip,60);
     // translation pre-buffer: if a non-English language is active, hide the fresh
     // (English) #app render and reveal it ONLY once Google Translate has actually
@@ -7396,45 +7625,75 @@
          prompt and lights up immediately.
        - Same reduced-motion respect, same visibility pause, same element and
          CSS pipeline as the pointer glow — one glow system, two input sources. */
+  /* TILT GLOW v2 (2026-08-14). v1 shipped and the owner saw NOTHING on his
+     phone — three compounding causes, each fixed here:
+       1. The glow only appeared while actively tilting past a 1.2° threshold
+          and faded 2.2s later. Hold the phone normally and the page looked
+          identical to before. v2 adds an AMBIENT mode: whenever the sensor
+          is quiet, the glow drifts on its own slow orbit at low opacity —
+          the page visibly breathes even in a still hand, and if the device
+          has no usable gyro at all (or iOS permission is declined), ambient
+          IS the effect. Nothing depends on the sensor anymore; the sensor
+          just makes it interactive.
+       2. It was too subtle when it did fire (250px blob at .65 over a dark
+          canvas). The CSS side now ships a bigger two-tone glow and higher
+          driven opacity.
+       3. Nothing ever told the reader the feature exists. A one-time
+          "✦ tilt your phone" pill shows on the first session where real
+          orientation data arrives, then never again (rtfc-tilt-hint). */
   function initTiltGlow(){
     try{
       if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
       if(!window.matchMedia("(hover:none),(pointer:coarse)").matches) return;
-      if(!("DeviceOrientationEvent" in window)) return;
     }catch(e){ return; }
-    var el=document.createElement("div"); el.id="rtfc-cursor"; el.className="tilt";
+    var el=document.createElement("div"); el.id="rtfc-cursor"; el.className="tilt amb";
     document.body.appendChild(el);
     document.documentElement.classList.add("tilt-glow");
     var baseB=null, baseG=null, tx=innerWidth/2, ty=innerHeight/2, cx=tx, cy=ty,
-        on=false, raf=0, idleT=0;
-    var RANGE=18;                 // degrees of tilt that reach the screen edge
-    function step(){
-      cx+=(tx-cx)*0.10; cy+=(ty-cy)*0.10;
+        raf=0, lastDrive=0, hinted=false;
+    var RANGE=16;                 // degrees of tilt that reach the screen edge
+    function step(ts){
+      var driven=(Date.now()-lastDrive)<2600;
+      if(!driven){
+        // ambient orbit: slow Lissajous around the viewport, always alive
+        var t=(ts||0)/1000;
+        tx=innerWidth /2 + Math.sin(t*0.23)*innerWidth *0.34;
+        ty=innerHeight/2 + Math.sin(t*0.171+1.3)*innerHeight*0.30;
+      }
+      el.classList.toggle("on",driven);
+      el.classList.toggle("amb",!driven);
+      cx+=(tx-cx)*(driven?0.11:0.02); cy+=(ty-cy)*(driven?0.11:0.02);
       el.style.transform="translate3d("+cx.toFixed(1)+"px,"+cy.toFixed(1)+"px,0)";
       raf=requestAnimationFrame(step);
+    }
+    function showHint(){
+      if(hinted) return; hinted=true;
+      try{ if(localStorage.getItem("rtfc-tilt-hint")) return; localStorage.setItem("rtfc-tilt-hint","1"); }catch(e){}
+      var hp=document.createElement("div"); hp.className="tilt-hint";
+      hp.innerHTML='✦ <b>Tilt your phone</b> — the light follows';
+      document.body.appendChild(hp);
+      setTimeout(function(){ hp.classList.add("out"); },3600);
+      setTimeout(function(){ try{hp.remove();}catch(e){} },4400);
     }
     function onTilt(e){
       var b=e.beta, g=e.gamma;
       if(b==null||g==null) return;
-      if(baseB===null){ baseB=b; baseG=g; }
+      if(baseB===null){ baseB=b; baseG=g; showHint(); }
       // the resting pose learns slowly; the glow answers what's LEFT
       baseB+=(b-baseB)*0.02; baseG+=(g-baseG)*0.02;
       var db=Math.max(-RANGE,Math.min(RANGE,b-baseB));
       var dg=Math.max(-RANGE,Math.min(RANGE,g-baseG));
-      tx=innerWidth/2 + (dg/RANGE)*(innerWidth*0.45);
-      ty=innerHeight/2 + (db/RANGE)*(innerHeight*0.45);
-      var moving=Math.abs(db)>1.2||Math.abs(dg)>1.2;
-      if(moving){
-        if(!on){ on=true; el.classList.add("on"); }
-        if(!raf) raf=requestAnimationFrame(step);
-        clearTimeout(idleT);
-        idleT=setTimeout(function(){ on=false; el.classList.remove("on"); },2200);
+      if(Math.abs(db)>0.8||Math.abs(dg)>0.8){
+        tx=innerWidth/2 + (dg/RANGE)*(innerWidth*0.46);
+        ty=innerHeight/2 + (db/RANGE)*(innerHeight*0.46);
+        lastDrive=Date.now();
       }
     }
-    function arm(){ window.addEventListener("deviceorientation",onTilt,{passive:true}); }
-    var needsAsk = typeof DeviceOrientationEvent.requestPermission==="function";
-    if(!needsAsk){ arm(); }
-    else{
+    function arm(){ try{ window.addEventListener("deviceorientation",onTilt,{passive:true}); }catch(e){} }
+    var hasDO=("DeviceOrientationEvent" in window);
+    var needsAsk=hasDO && typeof DeviceOrientationEvent.requestPermission==="function";
+    if(hasDO && !needsAsk){ arm(); }
+    else if(needsAsk){
       var asked=false;
       document.addEventListener("touchstart",function ask(){
         if(asked) return; asked=true;
@@ -7444,9 +7703,11 @@
           .catch(function(){});
       },{passive:true});
     }
+    // ambient runs regardless of sensor availability — start immediately
+    raf=requestAnimationFrame(step);
     document.addEventListener("visibilitychange",function(){
       if(document.hidden){ cancelAnimationFrame(raf); raf=0; }
-      else if(on && !raf){ raf=requestAnimationFrame(step); }
+      else if(!raf){ raf=requestAnimationFrame(step); }
     });
   }
   function initTheme(){

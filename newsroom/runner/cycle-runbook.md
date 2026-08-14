@@ -131,6 +131,29 @@ them. **This section is canonical for the visual layer**; that table is a summar
 
 Because that layer exists, **stop spending prose on it.** You no longer need "Moonshot AI's Kimi K3" on every mention — the chip carries maker and parent. Write the sentence that says something instead.
 
+### 3b+. The ink layer — rich inline formatting (REQUIRED on every article, effective 2026-08-14)
+
+The renderers support an inline marker vocabulary that most articles were shipping without, so body text rendered as flat gray prose. The owner's standing instruction: articles must be **fun and aesthetic to read and easier to follow** — theme-based highlights, underlines, accents. The markers are styled by the reader's theme and the article's own desk color; you write plain text markers and the site does the rest. `cleanSpeech()` strips them all before text-to-speech, so they cost audio nothing.
+
+The vocabulary (all four render on the site AND on the SSR `/article/` pages — kept in lockstep in `web/assets/app.js` fmt() and `functions/article/[slug].js` fmt()):
+
+| Marker | Renders as | Use for |
+|---|---|---|
+| `**bold**` | bold ink | load-bearing claims; the clause a fact-checker would check first |
+| `==highlight==` | desk-color highlighter stroke | the one-to-three sentences a skimmer must not miss |
+| `++accent++` | desk-color ink, semibold | names, coinages, turns of phrase that carry voice |
+| `__underline__` | hand-drawn desk-color underline | terms of art at first use; definitions |
+
+Dosage, per article — this is seasoning, not paint:
+- **2–5 highlights** (`==`) per piece; never a whole paragraph, never two sentences in a row.
+- **4–10 bolds** in body prose (bare figures ($, %, ×) are auto-styled already — bold the *claims*, not just the numbers).
+- **1–4 underlines**, on first-use terms a general reader might not know (pair naturally with words that are in the Dictionary).
+- Accents sparingly — a persona's signature phrase, a product name at the moment of reveal.
+- Never nest markers. Never put markers in `title`, `dek`, or `tldr` — those surfaces stay clean.
+- The lead paragraph gets a typographic drop cap automatically; write it a strong opening sentence worthy of one.
+
+**One-time catch-up (delete this paragraph in the cycle that completes it):** articles published in the trailing 48 hours shipped before this rule. For each of them that has no `==` and no `__` anywhere in its body prose, apply the dosage above to its existing body text — emphasis ONLY, wording unchanged, in the same store-edit discipline as any other correction-free touch (no `publishedAt` change, no pipeline rewrite; append a one-line note to the pipeline record: "ink layer applied 2026-08-14"). Do at most 4 per cycle until none qualify.
+
 ### 3c. Archive backfill (2 articles per cycle, REQUIRED until the archive is done)
 
 Older articles predate the visual component system. Each cycle, AFTER your new articles are done, upgrade **exactly two** published articles to the §3b floor:

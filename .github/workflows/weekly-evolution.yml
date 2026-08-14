@@ -1,0 +1,65 @@
+name: Weekly Evolution
+
+# The living-system pass: Scoreboard freshness, dossier promotion after enough
+# mentions, Grid spec enrichment, Dictionary growth, ink-layer adoption, ledger
+# integrity, self-improvement notes. One run a week — Monday 09:00 UTC, offset
+# from every other schedule in this repo (cycles run at :30-ish intervals, the
+# breaking scan at :15, social dispatch at :30 every 3h).
+#
+# MODEL: sonnet. This run edits reference surfaces (scores, dossiers, the Grid)
+# where a wrong "fact" is worse than a missed one — haiku is not trusted with
+# that judgment, and once a week costs what one daily cycle costs.
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-evolution
+  cancel-in-progress: false
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+      - uses: astral-sh/setup-uv@v5
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Follow newsroom/runner/evolution-runbook.md exactly, from the repository
+            root. You are running unattended. Reference surfaces never carry invented
+            facts: a blank field is always acceptable, a plausible guess never is.
+            Whatever happens, the run must end with its own ledger row and a dated
+            basisNote scan entry — the record that the system checked itself IS the
+            product.
+          claude_args: |
+            --model claude-sonnet-4-5
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
+
+      # Same self-heal tail as every other scheduled job: if the run left any
+      # coverless article or a stale sitemap behind, fix it here rather than
+      # letting it ride to the next cycle.
+      - name: Housekeeping — self-heal, then audit
+        if: always()
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 newsroom/runner/ensure_covers.py --fix
+          python3 newsroom/runner/gen_sitemap.py
+          git config user.name "rtfclmgzn-pipeline"
+          git config user.email "rtfclmgzn@gmail.com"
+          git add web/assets/img/newsroom web/data/newsroom-articles.js web/sitemap.xml web/rss.xml
+          if git diff --cached --quiet; then
+            echo "nothing to heal"
+          else
+            git commit -m "evolution: housekeeping self-heal"
+            git pull --rebase origin main || { git rebase --abort; echo "rebase race - heal rides the next run"; }
+            git push origin main || echo "push race - heal rides the next run"
+          fi
+          python3 newsroom/runner/verify_covers.py check
