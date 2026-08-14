@@ -4937,7 +4937,15 @@ html{scrollbar-gutter:stable}
   background:radial-gradient(circle,color-mix(in srgb,var(--accent) 26%,transparent),transparent 62%);
   transition:opacity .35s ease;will-change:transform}
 #rtfc-cursor.on{opacity:.75}
-@media (hover:none),(pointer:coarse){ #rtfc-cursor{display:none} }
+/* Touch devices hide the POINTER glow, but the TILT glow (same element, .tilt,
+   armed only when the gyro path engages) is allowed through — slightly smaller
+   and softer, since phone screens are close to the face. */
+@media (hover:none),(pointer:coarse){
+  #rtfc-cursor{display:none}
+  .tilt-glow #rtfc-cursor.tilt{display:block;width:250px;height:250px;margin:-125px 0 0 -125px;
+    background:radial-gradient(circle,color-mix(in srgb,var(--accent) 21%,transparent),transparent 62%)}
+  .tilt-glow #rtfc-cursor.tilt.on{opacity:.65}
+}
 
 @media (prefers-reduced-motion:reduce){
   #boot-splash .bs-ring{animation:none;transform:scale(1.06)}

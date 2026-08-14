@@ -7230,6 +7230,79 @@
       else if(on && !raf){ raf=requestAnimationFrame(step); }
     });
   }
+
+  /* ---------- tilt glow: the pointer glow's sibling for touch devices ----------
+     Phones and tablets have no cursor, so the glow follows the DEVICE instead:
+     tilt the phone and the light slides across the page. Details that make it
+     feel right rather than gimmicky:
+
+       - BASELINE, not absolute angles. People read at ~40° of forward tilt, and
+         nobody holds a tablet level. A slow exponential average learns whatever
+         pose the reader settles into, and the glow answers the DELTA from that
+         pose — so it works lying down, standing, or with the phone flat on a
+         table. The baseline drifts back under the glow within a few seconds of
+         holding still, which also makes the light gently fade home.
+       - iOS requires a user-gesture permission prompt for motion sensors
+         (DeviceOrientationEvent.requestPermission, iOS 13+). We piggyback the
+         FIRST tap anywhere: one native prompt, answered once, remembered by the
+         OS. Denied (or dismissed) → we never ask again this session and the
+         page simply has no glow, which is a fine outcome. Android needs no
+         prompt and lights up immediately.
+       - Same reduced-motion respect, same visibility pause, same element and
+         CSS pipeline as the pointer glow — one glow system, two input sources. */
+  function initTiltGlow(){
+    try{
+      if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+      if(!window.matchMedia("(hover:none),(pointer:coarse)").matches) return;
+      if(!("DeviceOrientationEvent" in window)) return;
+    }catch(e){ return; }
+    var el=document.createElement("div"); el.id="rtfc-cursor"; el.className="tilt";
+    document.body.appendChild(el);
+    document.documentElement.classList.add("tilt-glow");
+    var baseB=null, baseG=null, tx=innerWidth/2, ty=innerHeight/2, cx=tx, cy=ty,
+        on=false, raf=0, idleT=0;
+    var RANGE=18;                 // degrees of tilt that reach the screen edge
+    function step(){
+      cx+=(tx-cx)*0.10; cy+=(ty-cy)*0.10;
+      el.style.transform="translate3d("+cx.toFixed(1)+"px,"+cy.toFixed(1)+"px,0)";
+      raf=requestAnimationFrame(step);
+    }
+    function onTilt(e){
+      var b=e.beta, g=e.gamma;
+      if(b==null||g==null) return;
+      if(baseB===null){ baseB=b; baseG=g; }
+      // the resting pose learns slowly; the glow answers what's LEFT
+      baseB+=(b-baseB)*0.02; baseG+=(g-baseG)*0.02;
+      var db=Math.max(-RANGE,Math.min(RANGE,b-baseB));
+      var dg=Math.max(-RANGE,Math.min(RANGE,g-baseG));
+      tx=innerWidth/2 + (dg/RANGE)*(innerWidth*0.45);
+      ty=innerHeight/2 + (db/RANGE)*(innerHeight*0.45);
+      var moving=Math.abs(db)>1.2||Math.abs(dg)>1.2;
+      if(moving){
+        if(!on){ on=true; el.classList.add("on"); }
+        if(!raf) raf=requestAnimationFrame(step);
+        clearTimeout(idleT);
+        idleT=setTimeout(function(){ on=false; el.classList.remove("on"); },2200);
+      }
+    }
+    function arm(){ window.addEventListener("deviceorientation",onTilt,{passive:true}); }
+    var needsAsk = typeof DeviceOrientationEvent.requestPermission==="function";
+    if(!needsAsk){ arm(); }
+    else{
+      var asked=false;
+      document.addEventListener("touchstart",function ask(){
+        if(asked) return; asked=true;
+        document.removeEventListener("touchstart",ask);
+        DeviceOrientationEvent.requestPermission()
+          .then(function(state){ if(state==="granted") arm(); })
+          .catch(function(){});
+      },{passive:true});
+    }
+    document.addEventListener("visibilitychange",function(){
+      if(document.hidden){ cancelAnimationFrame(raf); raf=0; }
+      else if(on && !raf){ raf=requestAnimationFrame(step); }
+    });
+  }
   function initTheme(){
     var btn=document.getElementById("theme");
     var saved; try{saved=localStorage.getItem("rtfc-theme");}catch(e){}
@@ -7383,7 +7456,7 @@
 
   document.addEventListener("DOMContentLoaded",function(){
     initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker();
-    initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); initPointerGlow(); logVisit();
+    initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); initPointerGlow(); initTiltGlow(); logVisit();
     route();
     syncAccount();
     /* Stop the splash on the REAL ready signal, not a timer: route() has now
