@@ -2119,5 +2119,161 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-14T03:07:29Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-manus-returns-independent-meta-acquisition-unwind",
+    "ts": "2026-08-14T11:04:06Z",
+    "export": {
+      "article_id": "newsroom-manus-returns-independent-meta-acquisition-unwind",
+      "url": "/#/article/manus-returns-independent-meta-acquisition-unwind",
+      "headline": "Beijing forced Meta to unwind its $2 billion Manus deal. The AI agent startup says it's independent again.",
+      "hook": "China's NDRC didn't just block one Meta deal -- it set a precedent that a Singapore relocation doesn't shield Chinese-origin AI tech from Beijing's reach.",
+      "key_facts": [
+        "Manus says it's independent again as of Aug 11, eight months after Meta's ~$2B deal closed",
+        "China's NDRC ordered the deal withdrawn in April over investment and export-control rules",
+        "Tencent is reportedly in talks to become Manus's largest shareholder instead"
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-manus-returns-independent-meta-acquisition-unwind.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "China's NDRC didn't just block one $2B Meta deal -- it set a precedent: relocating to Singapore doesn't shield Chinese-origin AI tech from Beijing. Manus is independent again. Tencent may be its next owner.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Manus", "#ChinaTech"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T16:04:06Z",
+        "copy": "Two different pools of money keep getting collapsed in Manus coverage: the $2B Meta paid (now unwound) and the ~$1B founders reportedly explored raising to buy the company back. Not the same number.",
+        "reply_copy": "Story:",
+        "link_in_reply": true,
+        "hashtags": ["#Manus", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Beijing just set a precedent for every AI startup that tried the \"move to Singapore\" playbook.\n\nMeta closed its ~$2B purchase of Manus in December 2025. China's NDRC ordered it unwound in April -- citing investment and export-control rules, and stating plainly that offshore incorporation doesn't shield tech and talent that originated in China.\n\nManus says it's independent again as of August 11. Tencent is reportedly negotiating to become its largest shareholder instead. Full breakdown at the link in bio.",
+        "hashtags": ["#Manus", "#Meta", "#China", "#AIregulation", "#TechNews", "#Geopolitics", "#Tencent", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "China's economic planners just forced Meta to unwind a deal it closed eight months ago -- and the reasoning matters more than the reversal itself.\n\nMeta bought AI-agent startup Manus for roughly $2 billion in December 2025. In April, China's NDRC ordered the deal withdrawn, citing investment and export-control rules -- and stating plainly that relocating a holding company to Singapore doesn't put Chinese-origin technology and talent outside its reach.\n\nManus told users on August 11 it's independent again. Tencent is reportedly in talks to become its largest shareholder. We break down the timeline, the two different pools of money getting confused in the coverage, and what this means for the next startup trying the same offshore playbook.\n\nFull story:",
+        "hashtags": ["#Manus", "#AIregulation"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "China's NDRC forced Meta to unwind its ~$2B Manus deal -- and made the reasoning explicit: a Singapore relocation doesn't shield Chinese-origin tech from Beijing. Manus says it's independent again. Tencent may be next in line as owner.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T16:04:06Z",
+        "copy": "The real story in the Manus/Meta unwind isn't the $2B reversal -- it's that China's NDRC said out loud what everyone suspected: a Singapore relocation doesn't put Chinese-origin AI tech and talent outside its regulatory reach. That's a precedent, not just one company's bad luck.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Beijing didn't just block a $2B Meta deal. It set a precedent: moving your holding company to Singapore doesn't hide Chinese-origin AI tech from Chinese regulators. Manus is independent again -- Tencent may be its next owner.",
+        "hashtags": ["#Manus", "#AI", "#China"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-gemini-app-billion-users-growth-acceleration",
+    "ts": "2026-08-14T11:05:41Z",
+    "export": {
+      "article_id": "newsroom-gemini-app-billion-users-growth-acceleration",
+      "url": "/#/article/gemini-app-billion-users-growth-acceleration",
+      "headline": "Gemini crossed 1 billion monthly users. Four disclosures in a row show the growth rate speeding up, not just compounding.",
+      "hook": "Gemini just crossed 1 billion monthly users -- and the math on Google's own four disclosures shows the growth rate roughly doubled in the most recent 20 days.",
+      "key_facts": [
+        "Gemini hit 1B monthly active users Aug 11, per Google's own announcement",
+        "Four disclosed counts (650M to 1B) show the daily growth rate accelerating, not just compounding",
+        "63% of users now talk to Gemini by voice; it generates 150M+ images a day"
+      ],
+      "tone": "energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-gemini-app-billion-users-growth-acceleration.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Gemini hit 1 billion monthly users Aug 11. We did the math on Google's own four disclosures -- the growth rate roughly DOUBLED in the last 20 days vs. the stretch before it. That's acceleration, not just compounding.",
+        "reply_copy": "The chart:",
+        "link_in_reply": true,
+        "hashtags": ["#Gemini", "#Google"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T16:05:41Z",
+        "copy": "Google's Gemini milestone post names a user count but not a paying-subscriber count -- unlike some of its past billion-user ad-product announcements. Reach and revenue aren't the same story.",
+        "reply_copy": "Full piece:",
+        "link_in_reply": true,
+        "hashtags": ["#Gemini", "#Google"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "1 billion monthly Gemini users. Google's calling it the fastest-growing product in company history -- and the math backs it up.\n\nFour disclosed user counts since October: 650M -> 750M -> 950M -> 1B. We ran the day-by-day math and the pace roughly doubled in the most recent 20-day stretch vs. the one before it.\n\n63% of users now talk to Gemini instead of typing. It generates 150M+ images a day. Full breakdown -- including what Google didn't disclose -- at the link in bio.",
+        "hashtags": ["#Gemini", "#Google", "#AI", "#TechNews", "#GoogleAI", "#Assistant", "#MachineLearning", "#Growth"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google says Gemini just crossed 1 billion monthly active users -- its 14th product ever to hit that mark, and, per Google, its fastest-growing. But the more interesting story is in the math.\n\nGoogle has now disclosed Gemini's user count four times in ten months: 650 million in October, 750 million in February, 950 million in July, and 1 billion this month. Reading those four numbers against their dates shows something Google didn't say out loud -- the daily growth rate roughly doubled in the most recent 20-day stretch compared to the one before it.\n\nWe also dug into what Google's announcement left out: no paying-subscriber count alongside the user milestone. Full breakdown:",
+        "hashtags": ["#Gemini", "#Google"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini crossed 1 billion monthly users. We read Google's four disclosed counts against their dates and found the growth rate roughly doubled in the last 20 days vs. the stretch before -- an acceleration Google's own post never actually says.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T16:05:41Z",
+        "copy": "The Gemini 1B-user news landed the same week Demis Hassabis stepped back from running DeepMind day to day. A growth curve bending upward, changing hands operationally -- worth watching whose roadmap gets credit for what happens next.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Gemini hit 1B monthly users. The math on Google's own four disclosures shows the growth rate roughly doubled in the most recent 20 days vs. the stretch before it -- real acceleration, not just a big round number.",
+        "hashtags": ["#Gemini", "#Google", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
