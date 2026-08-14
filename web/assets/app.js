@@ -615,16 +615,25 @@
       return '<a class="inl" href="'+safeUrl(url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+label+'</a>';
     });
   }
-  /* Inline marker vocabulary (the writers' palette — cycle-runbook §3c):
-       **bold**       load-bearing facts and numbers
-       ==highlight==  the one sentence to remember; tinted by the desk color
-       ++accent++     accent-colored emphasis, names and turns of phrase
-       __underline__  terms of art and definitions, hand-underlined style
+  /* Inline marker vocabulary (the writers' palette — cycle-runbook §3b+):
+       **bold**            load-bearing facts and numbers
+       ==highlight==       the one sentence to remember; tinted by the desk color
+       ++accent++          accent-colored emphasis, names and turns of phrase
+       __underline__       terms of art and definitions, hand-underlined style
+       {{note: text}}      a margin note — an aside in its own smaller serif voice,
+                           floated into the margin on wide screens, an inset card
+                           on phones. For context riffs and "worth knowing" asides.
+       %%figure|caption%%  a big-number callout: the figure huge in serif, the
+                           caption small under it. For the ONE number that IS the
+                           story. (Block-level presence inside a paragraph is
+                           intentional; browsers render inline-block fine here.)
      Renderers must stay in lockstep: this fmt(), the SSR fmt() in
      functions/article/[slug].js, and cleanSpeech() (which strips markers
      before text-to-speech). Add a marker in all three or not at all. */
   function fmt(s){
     return mdLinks(esc(s)
+      .replace(/\{\{note:\s*(.+?)\}\}/g,'<span class="mnote"><i>※</i>$1</span>')
+      .replace(/%%\s*(.+?)\s*\|\s*(.+?)\s*%%/g,'<span class="bignum"><b>$1</b><i>$2</i></span>')
       .replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')
       .replace(/==(.+?)==/g,'<mark class="mk">$1</mark>')
       .replace(/\+\+(.+?)\+\+/g,'<span class="acc">$1</span>')
@@ -1184,14 +1193,23 @@
   function provenanceHTML(a){
     if(!a.pipeline) return "";
     var pl=a.pipeline;
-    var h='<div class="provenance"><div class="head">⚙ Pipeline provenance · run '+esc(pl.run)+
+    /* EVERY field below is guarded. On 2026-08-14 a newsroom cycle wrote three
+       articles whose pipeline block had run+stages but NO gate — pl.gate.decision
+       threw, and the whole article route died ("This page didn't render") on the
+       three newest stories on the site. Same lesson as the corrections crash of
+       2026-08-13, now applied to this function permanently: a store field written
+       by an autonomous agent can be absent, and the renderer never assumes. The
+       gate row simply doesn't render when the record has no gate. */
+    var h='<div class="provenance"><div class="head">⚙ Pipeline provenance · run '+esc(pl.run||"")+
       '<span class="pill live livepill">Live</span></div><div class="stages">';
-    h+=pl.stages.map(function(s){
+    h+=(pl.stages||[]).map(function(s){
       return '<div class="pstage"><span class="tick'+(s.hold?' gatehold':'')+'">'+(s.hold?'⛔':'✓')+'</span>'+
-        '<span class="sname">'+esc(s.name)+'</span><span class="sagent">'+esc(s.agent)+'</span>'+
-        '<span class="snote">'+esc(s.note)+'</span></div>';
+        '<span class="sname">'+esc(s.name||"")+'</span><span class="sagent">'+esc(s.agent||"")+'</span>'+
+        '<span class="snote">'+esc(s.note||"")+'</span></div>';
     }).join("");
-    h+='</div><div class="gaterow"><b>'+esc(pl.gate.decision)+'</b> — '+esc(pl.gate.note)+'</div></div>';
+    h+='</div>'+
+      (pl.gate?('<div class="gaterow"><b>'+esc(pl.gate.decision||"")+'</b>'+(pl.gate.note?' — '+esc(pl.gate.note):'')+'</div>'):'')+
+      '</div>';
     return h;
   }
   // richer body text: fmt() + tasteful auto-emphasis of the figures that carry a story
@@ -1762,6 +1780,14 @@
     return {n:null,label:d};
   }
   function evidenceMarkHTML(b,a){
+    /* RETIRED BY THE OWNER, 2026-08-14: "remove the numbered icons on the foot
+       of every sentence when there is a source — that's annoying and not
+       needed." The per-paragraph circled numbers are gone; the per-paragraph
+       citation_urls stay in the store, the evidence strip up top stays, and the
+       full Sources list at the bottom stays. If this ever comes back, it comes
+       back as an opt-in reading preference, not a default. The body below is
+       kept (dead) so reinstating is a one-line change. */
+    return "";
     var urls=(b&&b.citation_urls)||[];
     if(!urls.length) return "";
     // PHRASING CONTENT ONLY. This marker lives inside a <p>, and the HTML parser
@@ -4359,7 +4385,9 @@
     return t;
   }
   function cleanSpeech(t){
-    var s=String(t).replace(/\*\*|==|\+\+|__/g,"");
+    var s=String(t).replace(/\{\{note:\s*/g,"").replace(/\}\}/g,"")
+      .replace(/%%\s*(.+?)\s*\|\s*(.+?)\s*%%/g,"$1, $2,")
+      .replace(/\*\*|==|\+\+|__/g,"");
     s=speechNormalize(s);
     return s.replace(/\s*·\s*/g,", ").replace(/—/g,", ").replace(/\s+/g," ").trim();
   }

@@ -56,7 +56,7 @@ The owner's explicit standing instruction: this is an AI writing at AI-scale, on
 - **Give prior developments on the same subject their context**, phrased about the event itself, never about "our coverage" of it (the self-referential-language ban applies here too — "China's separate companion-AI rules," not "the rules we covered before"). A reader landing on this one piece cold should understand how it fits the larger thread without having to have read everything that came before.
 - `publishedAt`: run `date -u +%Y-%m-%dT%H:%M:%SZ` (a real shell command) and use its exact output. Never estimate, infer from a source article's dateline, or reason about "what time it probably is" — a wrong guess silently reorders the whole homepage feed by publish time and can bury the cycle's own newest, most important story. This has happened before: two real cycles both wrote `publishedAt` values 4-5 hours ahead of their actual commit time, which buried a same-day flagship model-release story under older articles.
 - `breaking`: if the entry you copied as a template happens to have `"breaking": true` (an out-of-cycle story still holding the homepage hero slot), do NOT carry that field into your own new entry. It's reserved for `newsroom/runner/breaking-scan-runbook.md` publishes only — a regular cycle's articles should never set it.
-- `pipeline` block: write an honest `run`/`stages`/`gate` record like the existing entries, noting this was an autonomous Claude-runner cycle (not "owner-directed"), with real assignment/verification/review notes about what you actually checked.
+- `pipeline` block: write an honest `run`/`stages`/`gate` record like the existing entries, noting this was an autonomous Claude-runner cycle (not "owner-directed"), with real assignment/verification/review notes about what you actually checked. **The `gate` object is part of the record, not optional** — the 2026-08-14 morning cycle shipped three articles with run+stages and no gate, and until the renderer learned to survive it, that omission blanked the article page for every one of them. Copy the full shape of a recent entry, gate included.
 
 ### 3b. The visual layer (REQUIRED — read `agents/_shared/visual-components.md` in full before drafting)
 
@@ -143,14 +143,21 @@ The vocabulary (all four render on the site AND on the SSR `/article/` pages —
 | `==highlight==` | desk-color highlighter stroke | the one-to-three sentences a skimmer must not miss |
 | `++accent++` | desk-color ink, semibold | names, coinages, turns of phrase that carry voice |
 | `__underline__` | hand-drawn desk-color underline | terms of art at first use; definitions |
+| `{{note: text}}` | margin note — smaller serif italic aside, floated to the margin on wide screens | context riffs, "worth knowing", the aside you'd whisper while the reader reads |
+| `%%figure\|caption%%` | big-number callout — the figure huge in serif with a small caption under it | the ONE number that IS the story (never decoration) |
+| body block `{type:"quote"}` | full magazine pull quote — oversized italic serif, giant desk-color quote glyph, pulled wide | the sentence of the piece; a real quotation or your sharpest original line |
 
 Dosage, per article — this is seasoning, not paint:
 - **2–5 highlights** (`==`) per piece; never a whole paragraph, never two sentences in a row.
 - **4–10 bolds** in body prose (bare figures ($, %, ×) are auto-styled already — bold the *claims*, not just the numbers).
 - **1–4 underlines**, on first-use terms a general reader might not know (pair naturally with words that are in the Dictionary).
 - Accents sparingly — a persona's signature phrase, a product name at the moment of reveal.
+- **1–2 pull quotes** (`{type:"quote"}` body blocks) on every synthesis and research piece; a brief earns one only when a line truly deserves the size. A pull quote can excerpt the piece's own best sentence — that is the classic magazine move, not a repetition.
+- **0–2 margin notes** (`{{note:}}`) on synthesis and research; none on briefs. A margin note must add something the main text doesn't say — never restate.
+- **At most 1 big-number callout** (`%%…|…%%`), and only when a single figure genuinely carries the story. Most pieces have none; that's correct.
 - Never nest markers. Never put markers in `title`, `dek`, or `tldr` — those surfaces stay clean.
-- The lead paragraph gets a typographic drop cap automatically; write it a strong opening sentence worthy of one.
+- The lead paragraph gets a typographic drop cap and a small-caps opening line automatically; write it a strong opening sentence worthy of both.
+- Per-paragraph numbered evidence dots were retired 2026-08-14 by the owner — do not reintroduce anything like them. `citation_urls` still belong on every paragraph (they feed the evidence strip and the audit trail), they just don't render as footnote marks anymore.
 
 **One-time catch-up (delete this paragraph in the cycle that completes it):** articles published in the trailing 48 hours shipped before this rule. For each of them that has no `==` and no `__` anywhere in its body prose, apply the dosage above to its existing body text — emphasis ONLY, wording unchanged, in the same store-edit discipline as any other correction-free touch (no `publishedAt` change, no pipeline rewrite; append a one-line note to the pipeline record: "ink layer applied 2026-08-14"). Do at most 4 per cycle until none qualify.
 

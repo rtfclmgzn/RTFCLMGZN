@@ -141,6 +141,8 @@ function fmt(s) {
   // Mirror of the client fmt() in web/assets/app.js — the marker vocabulary
   // must stay identical in both renderers (see the comment there).
   return esc(s)
+    .replace(/\{\{note:\s*(.+?)\}\}/g, "<em>($1)</em>")
+    .replace(/%%\s*(.+?)\s*\|\s*(.+?)\s*%%/g, "<strong>$1</strong> ($2)")
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
     .replace(/==(.+?)==/g, "<mark>$1</mark>")
     .replace(/\+\+(.+?)\+\+/g, "<em>$1</em>")
