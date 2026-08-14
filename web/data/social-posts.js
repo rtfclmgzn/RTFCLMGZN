@@ -2323,5 +2323,283 @@ window.RTFC_SOCIAL_POSTS =[
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-astra-critical-cyber-capability-pause",
+    "ts": "2026-08-14T16:50:57Z",
+    "export": {
+      "article_id": "newsroom-openai-astra-critical-cyber-capability-pause",
+      "url": "/#/article/openai-astra-critical-cyber-capability-pause",
+      "headline": "OpenAI paused parts of its unreleased Astra model after tests couldn't rule out 'Critical' cyberattack capability — the top tier of its own safety framework, triggered for the first time",
+      "hook": "OpenAI paused parts of its next model, Astra, after preliminary tests couldn't rule out the highest cyberattack-capability tier in its own safety framework — a first, by the company's own account.",
+      "key_facts": [
+        "OpenAI's Preparedness Framework 'Critical' tier means independently chaining zero-day exploits against hardened real-world systems without human help",
+        "It's OpenAI's second cyber disclosure in 3 weeks: on July 21, two of its models autonomously breached Hugging Face inside a deliberately weakened test environment",
+        "OpenAI says it's engaging government agencies and AI safety organizations to test Astra further — no names or timeline given yet"
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-openai-astra-critical-cyber-capability-pause.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI paused parts of its next model, Astra, after tests couldn't rule out the highest cyberattack-capability tier in its own safety framework -- the first time any OpenAI model has triggered it, by the company's own account.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T21:50:57Z",
+        "copy": "This is OpenAI's 2nd cyber disclosure in 3 weeks. On July 21, two of its models autonomously chained 8-9 zero-days to breach Hugging Face -- inside a test env where OpenAI had deliberately dialed back their safeguards.",
+        "reply_copy": "The timeline:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI just paused parts of its next model.\n\nAstra's preliminary testing came back strong enough that OpenAI \"cannot rule out\" it has reached Critical cyber capability -- the top tier of its own safety framework, and a first.\n\nThis is the SECOND cyber disclosure from OpenAI in three weeks. In July, two of its models autonomously chained zero-day exploits to breach Hugging Face -- inside a test environment where safeguards were deliberately turned down.\n\nWhat's confirmed, what's still just OpenAI's word, and what would actually settle it -- full breakdown at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#Astra",
+          "#AISafety",
+          "#Cybersecurity",
+          "#AI",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#HuggingFace"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI says it has paused parts of internal work on Astra, its next major model, after preliminary testing found cyber performance strong enough that the company \"cannot rule out\" the model has reached Critical capability -- the top tier of its own Preparedness Framework, triggered for the first time.\n\nIt's the second cyber disclosure from OpenAI in three weeks: on July 21, two of its models autonomously chained eight to nine zero-day exploits to breach Hugging Face's systems, inside a test environment where OpenAI had deliberately dialed back safeguards.\n\nNothing about Astra's classification is independently verified -- it's OpenAI's own preliminary read, and the company says it's engaging outside government agencies and safety organizations to check it. We break down what's established versus what's still just OpenAI's word.\n\nFull story:",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI says it paused parts of its next model, Astra, because preliminary tests can't rule out the top \"Critical\" tier of its own cyber-capability framework. Nothing here is independently verified yet -- it's OpenAI grading its own model against its own bar.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T21:50:57Z",
+        "copy": "Astra's cyber pause follows a separate July incident: two OpenAI models autonomously chained zero-day exploits to breach Hugging Face inside a deliberately weakened test environment. Same underlying capability, showing up twice in three weeks.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI paused parts of its Astra model after tests couldn't rule out \"Critical\" cyberattack capability -- the top tier of its own safety framework, triggered for the first time. Nobody outside OpenAI has checked the claim yet.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-databricks-5-billion-raise-190-billion-valuation",
+    "ts": "2026-08-14T16:52:42Z",
+    "export": {
+      "article_id": "newsroom-databricks-5-billion-raise-190-billion-valuation",
+      "url": "/#/article/databricks-5-billion-raise-190-billion-valuation",
+      "headline": "Databricks closed a $5 billion round at a $190 billion valuation — $2 billion above the number attached to the same round when it opened in July",
+      "hook": "Databricks closed a $5B round at a $190B valuation -- $2B above the number attached to the SAME round when it opened in July. We built the full valuation ladder: 4 jumps in 20 months.",
+      "key_facts": [
+        "Databricks' valuation moved $62B (Dec 2024) → $100B → $134B (Feb 2026) → $190B (Aug 13, 2026)",
+        "Revenue run-rate hit $7B, up more than 80% year-over-year, Databricks says",
+        "CEO Ali Ghodsi calls the company 'IPO-ready' but has ruled out a 2026 listing"
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-databricks-5-billion-raise-190-billion-valuation.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Databricks closed a $5B round at a $190B valuation -- $2B above the number attached when the SAME round opened in July. We built a valuation ladder: 4 jumps in 20 months, and what each number actually covers.",
+        "reply_copy": "The ladder:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Databricks",
+          "#AIFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T21:52:42Z",
+        "copy": "Databricks' $190B valuation prices it at ~27x its own disclosed $7B revenue run-rate. Four valuation jumps in 20 months, zero audited public financials, and the same institutional investors keep re-upping at each higher price.",
+        "reply_copy": "The math:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Databricks",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "$5 billion. $190 billion valuation. Zero public financials.\n\nDatabricks just closed its second $5B raise of the year -- up from $134B in February, and $2B above the number attached when this SAME round opened in July.\n\nThat prices Databricks at roughly 27x its own disclosed $7B revenue run-rate. Four valuation jumps in 20 months, and the company has ruled out an IPO for 2026 -- meaning none of the growth numbers behind this price are audited, public disclosure.\n\nWe built the full valuation ladder and the bear case nobody else is making. Link in bio.",
+        "hashtags": [
+          "#Databricks",
+          "#AI",
+          "#VentureCapital",
+          "#Funding",
+          "#TechNews",
+          "#Startups",
+          "#DataAndAI",
+          "#Valuation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Databricks closed a $5 billion funding round on Aug. 13 at a $190 billion valuation -- up from $134 billion in February, and $2 billion above the $188 billion figure attached to the same round when it opened in mid-July (same transaction, two different moments, not a conflicting number).\n\nCoatue led the round, joined by Blackstone, MGX, T. Rowe Price, and new backer Sixth Street Growth. Databricks says its revenue run-rate just crossed $7 billion, up more than 80% year-over-year.\n\nWe built the full valuation ladder back to December 2024's $62 billion round, ran the numbers on what a 27x revenue multiple actually implies, and laid out the strongest case against the bull story -- including the fact that none of this is backed by audited public financials, because Databricks has repeatedly ruled out a 2026 IPO.\n\nFull story:",
+        "hashtags": [
+          "#Databricks",
+          "#AIFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Databricks closed its new round at $190B -- up from the $188B figure attached when the same round opened in July. Not two competing numbers, same transaction at two different moments. We built the full valuation ladder back to Dec 2024's $62B, and what each figure actually covers.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-14T21:52:42Z",
+        "copy": "$190B valuation on a $7B revenue run-rate is a ~27x multiple. Four Databricks valuation jumps in 20 months, and the company has ruled out a 2026 IPO -- meaning none of the underlying growth numbers are audited public disclosure yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Databricks closed a $5B round at $190B -- $2B above the number when the SAME round opened in July. We built the full valuation ladder: 4 jumps in 20 months, zero public financials to check any of it against.",
+        "hashtags": [
+          "#Databricks",
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-apple-china-ai-model-alibaba-approval",
+    "ts": "2026-08-14T16:54:16Z",
+    "export": {
+      "article_id": "newsroom-apple-china-ai-model-alibaba-approval",
+      "url": "/#/article/apple-china-ai-model-alibaba-approval",
+      "headline": "Apple built its own AI model for China with Alibaba's help — reportedly the first foreign company Beijing has approved to offer a proprietary AI model there",
+      "hook": "Apple reportedly trained its own AI model for China with Alibaba's help -- becoming the first foreign company Beijing has approved to offer a proprietary AI model there.",
+      "key_facts": [
+        "Reuters: Apple trained a China-specific LLM with Alibaba's help, reportedly the first foreign company China has approved for this",
+        "Alibaba's Qwen becomes a separate option inside Siri and Writing Tools, not a replacement",
+        "Follows a mid-July regulator approval and an Aug 8 support-guide leak; no on-record confirmation yet"
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-apple-china-ai-model-alibaba-approval.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Apple reportedly trained its own AI model for China with Alibaba's help -- becoming the first foreign company Beijing has approved to offer a proprietary AI model there. Alibaba's Qwen becomes a separate option inside Siri.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Apple",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Apple just became the first foreign company approved by Beijing to offer its OWN proprietary AI model in China.\n\nReuters reports Apple trained a China-specific LLM with help from rival Alibaba -- while Alibaba's Qwen becomes a separate option inside Siri and Writing Tools. A \"dual-track strategy,\" not a single bet.\n\nIt follows a mid-July regulatory approval and a briefly-leaked support guide on Aug. 8. Neither company has confirmed on the record, and no rollout date yet. Full story at the link in bio.",
+        "hashtags": [
+          "#Apple",
+          "#Alibaba",
+          "#China",
+          "#AI",
+          "#Siri",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#Qwen"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Apple trained its own large language model built specifically for China, with help from Alibaba, Reuters reports -- making Apple the first foreign company Chinese regulators have approved to offer a proprietary AI model in the country.\n\nAlibaba's Qwen will also be available as a separate option inside Siri and Writing Tools for users in mainland China -- a \"dual-track strategy\" rather than a single bet on either model.\n\nIt follows a mid-July regulatory approval and an Aug. 8 support-guide leak that briefly confirmed the Qwen integration before Apple pulled the page. No on-record confirmation from Apple or Alibaba yet, and no rollout date.\n\nFull story:",
+        "hashtags": [
+          "#Apple",
+          "#Alibaba"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Apple reportedly trained its own AI model for China with Alibaba's help -- the first foreign company Beijing has approved to offer a proprietary AI model there. Alibaba's Qwen becomes a separate option inside Siri, not a replacement. Neither company has confirmed on the record yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Apple reportedly trained its own AI model for China with Alibaba's help -- first foreign company Beijing has approved for a proprietary AI model. Alibaba's Qwen becomes a separate Siri option. Unconfirmed on the record so far.",
+        "hashtags": [
+          "#Apple",
+          "#China",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
