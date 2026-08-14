@@ -63,11 +63,16 @@
   function syncLibrary(l){
     fetch("/api/account/library",{method:"POST",credentials:"same-origin",
       headers:{"content-type":"application/json"},
-      body:JSON.stringify({action:"merge",bookmarks:l.bookmarks||[],readLater:l.readLater||[],reactions:l.reactions||{}})
+      body:JSON.stringify({action:"merge",bookmarks:l.bookmarks||[],readLater:l.readLater||[],read:l.read||[],reactions:l.reactions||{}})
     }).then(function(r){ return r.ok?r.json():null; }).then(function(d){
       if(!d) return;
       var l2=libGet();
-      l2.bookmarks=d.bookmarks||[]; l2.readLater=d.readLater||[]; l2.reactions=d.reactions||{};
+      /* read[] rides along since the day the Mark-as-read button "wouldn't stick":
+         it toggled fine locally but the merge body never carried it, so the next
+         login adopted a server copy that had no read list — wiping it. The server
+         stores it as reactions rows with the '_read' sentinel; here it's a plain
+         id list like the other two. */
+      l2.bookmarks=d.bookmarks||[]; l2.readLater=d.readLater||[]; l2.read=d.read||[]; l2.reactions=d.reactions||{};
       libSave(l2); route();
     }).catch(function(){});
   }
@@ -3463,6 +3468,14 @@
     var grouped=DOSSIER_GROUPS.map(function(g){
       return { label:g.label, items:dir.filter(function(x){ return g.keys.indexOf(x.c.key)>=0; }) };
     }).filter(function(g){ return g.items.length; });
+    /* ORDER FIX (2026-08-14, "the labs are not in order"). Within a group the
+       cards used to render in COMPANIES-array order — i.e. the order someone
+       once typed the registry in, which read as random. Now: most models on
+       record first, name as the tiebreak, so OpenAI/Anthropic/Google lead the
+       frontier group because they've shipped the most, not by editorial fiat. */
+    grouped.forEach(function(g){ g.items.sort(function(a,b){
+      return (b.models.length-a.models.length) || a.c.name.localeCompare(b.c.name);
+    }); });
     var placed={};
     grouped.forEach(function(g){ g.items.forEach(function(x){ placed[x.c.key]=1; }); });
     var rest=dir.filter(function(x){ return !placed[x.c.key]; });
@@ -3475,15 +3488,26 @@
     });
 
     var gridN=(GRID.facilities||[]).length, gridNewN=gdNewIds().length;
+    var EXT=window.RTFC_EXTENSIONS||[];
+    var extN=EXT.reduce(function(n,c){ return n+(c.items||[]).length; },0);
+    /* THE LEFT NAV IS THE TABLE OF CONTENTS, so it must list EVERY section on
+       the page — the 2026-08-14 restructure exists because Podcasts and the
+       Dictionary rendered on the page while the nav pretended they didn't. If
+       you add a section below, add it here in the same commit or the page is
+       lying about itself again. */
     var secs=[{id:"res-grid",label:"The Grid"},{id:"res-labs",label:"Labs & models"}];
     grouped.forEach(function(g,i){ secs.push({id:"res-g"+i,label:g.label,sub:true}); });
-    secs.push({id:"res-learn",label:"Learn the field"});
-    secs.push({id:"res-follow",label:"Follow the field"});
+    secs.push({id:"res-ext",label:"AI Extensions"});
+    secs.push({id:"res-guides",label:"Guides"});
+    secs.push({id:"res-dict",label:"The Dictionary"});
+    secs.push({id:"res-learn",label:"Start from zero"});
+    secs.push({id:"res-pods",label:"Podcasts"});
+    secs.push({id:"res-news",label:"From this newsroom"});
     secs.push({id:"res-make",label:"Make something"});
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
       '<h1>Every lab, every model, one page</h1>'+
-      '<p>Who builds what, assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Then the reading, the accounts worth following, the physical layer underneath all of it, and the tools.</p></div>';
+      '<p>Who builds what, assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Then the extensions encyclopedia, the guides, the dictionary, the podcasts worth your commute, and the tools — every section listed in the page nav on the left.</p></div>';
 
     h+='<div class="res-stats">'+
       '<div class="rs-cell"><b>'+dir.length+'</b><span>labs with models on record</span></div>'+
@@ -3526,31 +3550,10 @@
     }
     h+='</section>';
 
-    /* ---- LEARN ---------------------------------------------------------- */
-    h+='<section id="res-learn"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Learn the field</div>'+
-      '<div class="res-tiles">'+
-      '<a class="res-tile" href="#/dictionary"><span class="rt-ic">✎</span><span class="rt-k">Dictionary</span><b>'+DICT.length+' terms that unlock any AI headline</b>'+
-        '<span class="rt-d">Token, agent, hallucination, mixture-of-experts, and the rest, each explained the way a person would explain it.</span>'+
-        '<span class="rt-go">Open the dictionary →</span></a>'+
-      '<a class="res-tile" href="#/read/primer"><span class="rt-ic">◈</span><span class="rt-k">Primer</span><b>Start from zero</b>'+
-        '<span class="rt-d">The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.</span>'+
-        '<span class="rt-go">Read The Primer →</span></a>'+
-      '<a class="res-tile" href="#/read/how-models-are-made"><span class="rt-ic">⌬</span><span class="rt-k">Deep Dive</span><b>How The Models Are Made</b>'+
-        '<span class="rt-d">Pretraining to reasoning models, the space-race economics behind it, every lab\'s strategy compared, and an honest ledger of what\'s proven vs. contested.</span>'+
-        '<span class="rt-go">Read the issue →</span></a>'+
-      '<a class="res-tile" href="#/guides"><span class="rt-ic">▶</span><span class="rt-k">Guides</span><b>Practical, tested walk-throughs</b>'+
-        '<span class="rt-d">How to pick a model for a job, what the pricing actually means, and where the sharp edges are.</span>'+
-        '<span class="rt-go">Browse the guides →</span></a>'+
-      '</div></section>';
-
-    /* ---- FOLLOW --------------------------------------------------------- */
-    h+='<section id="res-follow"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Follow the field</div>'+
-      '<p class="res-lede">Primary sources first. These are the accounts and feeds the newsroom itself watches, so you can check our work against the same material. The labs\' own site/X/YouTube links now live on their cards above — this is everything else worth following.</p>';
-    RES.forEach(function(cat,i){
-      if(i===0) return; // "Follow the primary sources" -- now merged onto each lab card in #res-labs, see followLinks()
-      h+='<div class="labg"><div class="labg-h"><span class="labg-l">'+esc(cat.title)+'</span>'+
-        '<span class="labg-n">'+cat.items.length+'</span></div>'+
-        '<p class="res-sub">'+esc(cat.desc)+'</p>'+
+    /* Shared renderer for the curated-directory categories (podcasts, newsroom
+       feeds). One renderer, two sections — they must never drift apart. */
+    function resCatHTML(cat){
+      return '<p class="res-sub">'+esc(cat.desc)+'</p>'+
         '<div class="res-grid">'+cat.items.map(function(it){
           var head=it.key?('<div class="rc-head">'+brandMark(it.key,it.name)+'<b>'+esc(it.name)+'</b></div>')
                           :('<div class="rc-head"><span class="rglyph">'+esc(it.icon||"●")+'</span><b>'+esc(it.name)+'</b></div>');
@@ -3559,8 +3562,61 @@
               var ext=/^https?:/.test(l.url);
               return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
             }).join("")+'</div></div>';
-        }).join("")+'</div></div>';
+        }).join("")+'</div>';
+    }
+    // RES[0] ("Follow the primary sources") stays merged onto the lab cards via
+    // followLinks(). Podcasts get their own section (they were rendered but
+    // absent from the page nav — the exact complaint that forced this
+    // restructure); every remaining category lands in "From this newsroom".
+    var podCats=[], newsCats=[];
+    RES.forEach(function(cat,i){
+      if(i===0) return;
+      if(/podcast/i.test(cat.title||"")) podCats.push(cat); else newsCats.push(cat);
     });
+
+    /* ---- AI EXTENSIONS (promo) ------------------------------------------ */
+    h+='<section id="res-ext"><a class="grid-promo" href="#/extensions">'+
+      '<div class="gp-copy"><span class="gp-kicker">New · the connector encyclopedia</span>'+
+      '<h2>AI Extensions — every API, skill and connector in one place</h2>'+
+      '<p>The plugboard of the AI world: frontier model APIs, MCP servers, agent frameworks, coding agents, voice and video APIs, vector stores, local runtimes. Categorized, searchable, primary sources only.</p>'+
+      '<span class="gp-go">Open AI Extensions →</span></div>'+
+      '<div class="gp-stats"><div><b>'+extN+'</b><span>entries</span></div><div><b>'+EXT.length+'</b><span>categories</span></div></div>'+
+      '</a></section>';
+
+    /* ---- GUIDES (its own front door now that it left the top bar) -------- */
+    h+='<section id="res-guides"><div class="kicker"><span class="dotc" style="background:'+(SECTION_COLORS.Guide||"var(--accent)")+'"></span>Guides · '+GUIDES.length+'</div>'+
+      '<p class="res-lede">Hands-on, plain-English guides to actually using AI — no hype, no jargon walls; every guide ends with something you can do tonight. They live here now: this page is their front door.</p>'+
+      (GUIDES.length?('<div class="grid">'+GUIDES.map(cardHTML).join("")+'</div>'):'<p style="color:var(--muted)">First guides arrive with the daily pipeline.</p>')+
+      '<p class="res-sub" style="margin-top:10px"><a href="#/guides">All guides on one page →</a></p></section>';
+
+    /* ---- DICTIONARY ------------------------------------------------------ */
+    var dictSample=DICT.slice(0,10);
+    h+='<section id="res-dict"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>The AI Dictionary · '+DICT.length+' terms</div>'+
+      '<p class="res-lede">The words behind the headlines, each explained the way a person would explain it. Read one story with this open and the jargon wall comes down.</p>'+
+      '<div class="dossier-strip">'+dictSample.map(function(t){
+        return '<a class="ds-chip" href="#/dictionary">'+esc(t.term)+'</a>';
+      }).join("")+'<a class="ds-chip" href="#/dictionary" style="color:var(--accent2)">+ '+Math.max(0,DICT.length-dictSample.length)+' more →</a></div></section>';
+
+    /* ---- LEARN (start from zero) ---------------------------------------- */
+    h+='<section id="res-learn"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Start from zero</div>'+
+      '<div class="res-tiles">'+
+      '<a class="res-tile" href="#/read/primer"><span class="rt-ic">◈</span><span class="rt-k">Primer</span><b>Start from zero</b>'+
+        '<span class="rt-d">The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.</span>'+
+        '<span class="rt-go">Read The Primer →</span></a>'+
+      '<a class="res-tile" href="#/read/how-models-are-made"><span class="rt-ic">⌬</span><span class="rt-k">Deep Dive</span><b>How The Models Are Made</b>'+
+        '<span class="rt-d">Pretraining to reasoning models, the space-race economics behind it, every lab\'s strategy compared, and an honest ledger of what\'s proven vs. contested.</span>'+
+        '<span class="rt-go">Read the issue →</span></a>'+
+      '</div></section>';
+
+    /* ---- PODCASTS -------------------------------------------------------- */
+    h+='<section id="res-pods"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Podcasts</div>';
+    podCats.forEach(function(cat){ h+=resCatHTML(cat); });
+    if(!podCats.length) h+='<p style="color:var(--muted)">Nothing listed yet.</p>';
+    h+='</section>';
+
+    /* ---- FROM THIS NEWSROOM ---------------------------------------------- */
+    h+='<section id="res-news"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>From this newsroom</div>';
+    newsCats.forEach(function(cat){ h+=resCatHTML(cat); });
     h+='</section>';
 
     /* ---- MAKE ----------------------------------------------------------- */
@@ -3579,6 +3635,87 @@
 
     return h+'</div></div></div>';
   }
+
+  /* ================= AI EXTENSIONS (the connector encyclopedia) =================
+     #/extensions — every API, skill, connector, MCP server hub, framework and
+     runtime the coverage keeps meeting, from web/data/extensions.js. The view is
+     dumb on purpose: all facts live in the data file, this only lays them out
+     and filters them. Search is client-side hide/show — no re-render, so it
+     costs nothing and keeps scroll position. */
+  var EXT_KINDS={api:"API",mcp:"MCP server",skill:"Skill",connector:"Connector",
+    framework:"Framework",agent:"Agent",runtime:"Runtime",tool:"Tool",
+    registry:"Registry",platform:"Platform",standard:"Open standard"};
+  function viewExtensions(){
+    var EXT=window.RTFC_EXTENSIONS||[];
+    var total=EXT.reduce(function(n,c){ return n+(c.items||[]).length; },0);
+    var nOpen=0, nOfficial=0;
+    EXT.forEach(function(c){ (c.items||[]).forEach(function(it){
+      var tg=it.tags||[];
+      if(tg.indexOf("open-source")>=0) nOpen++;
+      if(tg.indexOf("official")>=0) nOfficial++;
+    }); });
+
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · AI Extensions</div>'+
+      '<h1>AI Extensions</h1>'+
+      '<p>The plugboard of the AI world: every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing, in one categorized, searchable encyclopedia. Primary sources only — every link is the maker\'s own site. We don\'t print pricing, because in this industry a printed price is a future lie; the link is the truth.</p></div>';
+
+    h+='<div class="res-stats">'+
+      '<div class="rs-cell"><b>'+total+'</b><span>entries</span></div>'+
+      '<div class="rs-cell"><b>'+EXT.length+'</b><span>categories</span></div>'+
+      '<div class="rs-cell"><b>'+nOpen+'</b><span>open-source</span></div>'+
+      '<div class="rs-cell"><b>'+nOfficial+'</b><span>vendor-official</span></div>'+
+    '</div>';
+
+    h+='<div class="ext-search"><input id="ext-q" type="search" placeholder="Search '+total+' entries — try &quot;mcp&quot;, &quot;voice&quot;, &quot;open-source&quot;…" '+
+      'autocomplete="off" spellcheck="false" oninput="rtfcExtFilter(this.value)" aria-label="Search the extensions encyclopedia">'+
+      '<span id="ext-count">'+total+' entries</span></div>';
+
+    h+='<div class="res-layout"><aside class="res-nav"><div class="rn-title">Categories</div>'+
+      EXT.map(function(c){ return '<a onclick="rtfcJump(\'ext-'+escAttr(c.id)+'\')">'+esc(c.cat)+'<em class="rn-n">'+(c.items||[]).length+'</em></a>'; }).join("")+
+      '</aside><div class="res-main">';
+
+    EXT.forEach(function(c){
+      h+='<section class="ext-sec" id="ext-'+escAttr(c.id)+'">'+
+        '<div class="labg-h"><span class="labg-l"><span class="xs-ic">'+esc(c.icon||"⬡")+'</span>'+esc(c.cat)+'</span>'+
+        '<span class="labg-n">'+(c.items||[]).length+'</span></div>'+
+        '<p class="res-sub">'+esc(c.desc||"")+'</p>'+
+        '<div class="ext-grid">'+(c.items||[]).map(function(it){
+          var kind=EXT_KINDS[it.kind]||it.kind||"";
+          var hay=(it.name+" "+(it.by||"")+" "+kind+" "+(it.desc||"")+" "+((it.tags||[]).join(" "))+" "+c.cat).toLowerCase();
+          var dom=String(it.url||"").replace(/^https?:\/\//,"").replace(/^www\./,"").split("/")[0];
+          return '<div class="ext-card" data-ext="'+escAttr(hay)+'">'+
+            '<div class="xc-top"><b>'+esc(it.name)+'</b><span class="xc-kind xk-'+escAttr(it.kind||"tool")+'">'+esc(kind)+'</span></div>'+
+            '<span class="xc-by">'+esc(it.by||"")+'</span>'+
+            '<p class="xc-desc">'+esc(it.desc||"")+'</p>'+
+            '<div class="xc-foot"><a href="'+safeHref(it.url)+'" target="_blank" rel="noopener">'+esc(dom)+' ↗</a>'+
+            (it.tags&&it.tags.length?('<span class="xc-tags">'+it.tags.map(function(t){ return '<i>'+esc(t)+'</i>'; }).join("")+'</span>'):'')+
+            '</div></div>';
+        }).join("")+'</div></section>';
+    });
+
+    h+='<p style="color:var(--muted);font-size:12.5px;margin:26px 0">Links point at primary sources and were last re-verified when a story touched them. Something dead or missing? <a href="#/contact">Tell the newsroom</a> — a stale directory entry gets treated like a correction, not a shrug.</p>';
+    return h+'</div></div></div>';
+  }
+  // Hide/show, never re-render: filtering 150 cards through innerHTML would
+  // re-run motion hooks and lose scroll. A section with zero visible cards
+  // hides whole, so a search for "voice" doesn't leave 15 empty headings.
+  window.rtfcExtFilter=function(q){
+    q=String(q||"").toLowerCase().replace(/\s+/g," ").trim();
+    var cards=document.querySelectorAll(".ext-card"), shown=0, i;
+    for(i=0;i<cards.length;i++){
+      var hit=!q||(cards[i].getAttribute("data-ext")||"").indexOf(q)>=0;
+      cards[i].style.display=hit?"":"none";
+      if(hit) shown++;
+    }
+    var secs=document.querySelectorAll(".ext-sec");
+    for(i=0;i<secs.length;i++){
+      var vis=false, cs=secs[i].querySelectorAll(".ext-card");
+      for(var j=0;j<cs.length;j++) if(cs[j].style.display!=="none"){ vis=true; break; }
+      secs[i].style.display=vis?"":"none";
+    }
+    var el=document.getElementById("ext-count");
+    if(el) el.textContent=q?(shown+" match"+(shown===1?"":"es")):(cards.length+" entries");
+  };
 
   /* ================= WALLPAPERS (client-side canvas maker) ================= */
   var WP_SIZES = [
@@ -4477,7 +4614,11 @@
   /* ---------- footer live cost ticker ---------- */
   function initCostTicker(){
     var el=document.getElementById("foot-cost"); if(!el) return;
-    var s=sumRecs(USAGE);
+    /* liveUsage(), NOT raw USAGE — the "single source of truth" note above
+       liveUsage() exists because this exact bug shipped once between Pulse and
+       /usage: two surfaces, two bases, two different "total cost". The footer
+       links straight to the ledger, so it must quote the ledger's own number. */
+    var s=sumRecs(liveUsage());
     el.innerHTML='Run to date on <b>'+money(s.cost)+'</b> of compute — <a href="#/usage">every penny public →</a>';
   }
 
@@ -5397,7 +5538,7 @@
      ["The Prediction Ledger","Trust","#/predictions"],["The Claims Ledger","Trust","#/claims"],
      ["The Control Room","Live","#/pulse"],["The Scoreboard","Models","#/scoreboard"],["The Buzz","Signal","#/buzz"],
      ["The Primer (free magazine)","Magazine","#/read/primer"],["All magazine issues","Magazine","#/magazine"],
-     ["Guides","Section","#/guides"],["Resources","Section","#/resources"],["Archive","Section","#/archive"],
+     ["Guides","Section","#/guides"],["Resources","Section","#/resources"],["AI Extensions (APIs, skills, connectors)","Learn","#/extensions"],["Archive","Section","#/archive"],
      ["Live & ongoing (AI streams)","Watch","#/live"],["AI events on the radar","Events","#/events"],["Contact the newsroom","Contact","#/contact"],
      ["The Masthead","About","#/masthead"],["Cost transparency","Ledger","#/usage"],["Corrections log","Trust","#/corrections"],
      ["EIC decision log","Trust","#/review"],["Privacy","Legal","#/privacy"],["Terms","Legal","#/terms"]
@@ -6166,10 +6307,11 @@
       var on=(active===key);
       return '<a href="'+href+'" class="'+(cls?cls+" ":"")+(on?"active":"")+'"'+(on?' aria-current="page"':'')+'>'+label+'</a>';
     }
+    /* Bar order is the publisher's spec, verbatim: Home · Sections · The Buzz ·
+       Scoreboard · Resources · Archive · Magazine. Guides came OFF the bar on
+       purpose — the route still exists, the footer still links it, and the
+       Resources page now owns its front door. Don't re-add it here. */
     var h=navLink("#/","home","Home");
-    h+=navLink("#/buzz","buzz","The Buzz");
-    h+=navLink("#/guides","guides","Guides");
-    h+=navLink("#/scoreboard","scoreboard","Scoreboard");
     h+='<span class="sec-wrap"><button class="sec-btn'+(inSection?' active':'')+'" id="sec-btn" aria-haspopup="true" aria-expanded="false">Sections <span class="sec-caret">▾</span></button>'+
       '<div class="sec-menu" id="sec-menu" hidden>'+SECTIONS.map(function(s){
         var col=SECTION_COLORS[s.label]||"#8b7cf7";
@@ -6177,6 +6319,8 @@
         return '<a href="#/section/'+s.key+'" class="'+(on?"on":"")+'"'+(on?' aria-current="page"':'')+
           '><span class="sec-dot" style="background:'+escAttr(col)+'"></span>'+esc(s.label)+'</a>';
       }).join("")+'</div></span>';
+    h+=navLink("#/buzz","buzz","The Buzz");
+    h+=navLink("#/scoreboard","scoreboard","Scoreboard");
     var gridNewN=gdNewIds().length;
     h+=navLink("#/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
     h+=navLink("#/archive","archive","Archive");
@@ -6598,6 +6742,7 @@
     magazine:["The Magazine","Every month, the Issue Desk distils the full run of our coverage into one designed issue — the cover story with hindsight, the editors’ month-in-review columns, the Scoreboard, the Compendium and a Watchlist we grade in public."],
     guides:["Guides","Hands-on, plain-English guides to actually using AI. No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
+    extensions:["AI Extensions","Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — one categorized, searchable encyclopedia, primary sources only."],
     buzz:["The Buzz","What the AI world is actually saying right now: the loudest posts, ranked by heat, with why each one is buzzing and which of our stories cited it."],
     scoreboard:["The Scoreboard","Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move — never on a lab’s own number."],
     claims:["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
@@ -6764,6 +6909,7 @@
     else if(parts[0]==="usage"||parts[0]==="transparency"){ view=viewUsage(); active="usage"; }
     else if(parts[0]==="guides"){ view=viewGuides(); active="guides"; }
     else if(parts[0]==="resources"){ view=viewResources(); active="resources"; }
+    else if(parts[0]==="extensions"){ view=viewExtensions(); active="resources"; }
     else if(parts[0]==="grid"){ view=viewGrid(); active="resources"; }
     else if(parts[0]==="buzz"){ view=viewBuzz(); active="buzz"; }
     else if(parts[0]==="privacy"){ view=viewPrivacy(); active=""; }

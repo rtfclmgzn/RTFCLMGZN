@@ -15,13 +15,21 @@ async function loadLibrary(env, userId) {
     env.DB.prepare("SELECT article_id FROM read_later WHERE user_id=? ORDER BY created_at").bind(userId).all(),
     env.DB.prepare("SELECT article_id, reaction FROM reactions WHERE user_id=?").bind(userId).all(),
   ]);
+  // "Marked as read" is stored in the reactions table under the sentinel key
+  // "_read" — deliberately, so read-state got cross-device sync WITHOUT a D1
+  // schema migration (added 2026-08-14; until then the read list lived only in
+  // localStorage, which Safari purges after 7 days of not visiting, which is
+  // exactly the "my read marks vanished" report that prompted this).
   const reactions = {};
+  const read = [];
   for (const row of reacts.results || []) {
+    if (row.reaction === "_read") { read.push(row.article_id); continue; }
     (reactions[row.article_id] = reactions[row.article_id] || []).push(row.reaction);
   }
   return {
     bookmarks: (bookmarks.results || []).map((r) => r.article_id),
     readLater: (readLater.results || []).map((r) => r.article_id),
+    read,
     reactions,
   };
 }
@@ -40,11 +48,16 @@ async function mergeLibrary(env, userId, incoming) {
       statements.push(env.DB.prepare("INSERT OR IGNORE INTO read_later (user_id, article_id) VALUES (?,?)").bind(userId, articleId));
     }
   }
+  for (const articleId of Array.isArray(incoming.read) ? incoming.read : []) {
+    if (typeof articleId === "string" && articleId) {
+      statements.push(env.DB.prepare("INSERT OR IGNORE INTO reactions (user_id, article_id, reaction) VALUES (?,?,'_read')").bind(userId, articleId));
+    }
+  }
   const reactionsIn = incoming.reactions && typeof incoming.reactions === "object" ? incoming.reactions : {};
   for (const articleId of Object.keys(reactionsIn)) {
     const keys = Array.isArray(reactionsIn[articleId]) ? reactionsIn[articleId] : [];
     for (const reaction of keys) {
-      if (typeof reaction === "string" && reaction) {
+      if (typeof reaction === "string" && reaction && reaction !== "_read") {
         statements.push(
           env.DB.prepare("INSERT OR IGNORE INTO reactions (user_id, article_id, reaction) VALUES (?,?,?)").bind(userId, articleId, reaction)
         );
@@ -80,6 +93,22 @@ export async function onRequestPost(context) {
     let active = true;
     if (!del.meta || del.meta.changes === 0) {
       await env.DB.prepare(`INSERT OR IGNORE INTO ${table} (user_id, article_id) VALUES (?,?)`).bind(user.id, articleId).run();
+    } else {
+      active = false;
+    }
+    return json({ ok: true, active });
+  }
+
+  if (action === "toggle_read") {
+    if (!articleId) return json({ error: "bad_request" }, 400);
+    const del = await env.DB
+      .prepare("DELETE FROM reactions WHERE user_id=? AND article_id=? AND reaction='_read'")
+      .bind(user.id, articleId).run();
+    let active = true;
+    if (!del.meta || del.meta.changes === 0) {
+      await env.DB
+        .prepare("INSERT OR IGNORE INTO reactions (user_id, article_id, reaction) VALUES (?,?,'_read')")
+        .bind(user.id, articleId).run();
     } else {
       active = false;
     }

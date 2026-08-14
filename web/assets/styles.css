@@ -3862,6 +3862,50 @@ a.rk-row:hover{background:color-mix(in srgb,var(--ink) 4%,transparent)}
   .labg{ margin-bottom:20px; }
 }
 
+/* ================= AI EXTENSIONS (#/extensions) =============================
+   The connector encyclopedia. Same visual family as the Resources spine —
+   surface cards on hairlines, serif names — plus a kind-chip system so a
+   reader can tell an API from an MCP server from a framework at a glance
+   without reading a word. Chip colors ride color-mix over --kc so all
+   eighteen appearances keep them legible for free. */
+.ext-search{ display:flex; align-items:center; gap:14px; margin:18px 0 6px; }
+.ext-search input{ flex:1; min-width:0; background:var(--surface); border:1px solid var(--line);
+  border-radius:12px; padding:12px 16px; font:inherit; font-size:14px; color:var(--ink); outline:none;
+  transition:border-color .16s; }
+.ext-search input:focus{ border-color:var(--accent); }
+.ext-search input::placeholder{ color:var(--faint); }
+#ext-count{ flex:none; font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums; }
+.res-nav .rn-n{ margin-left:6px; color:var(--faint); font-size:10.5px; font-variant-numeric:tabular-nums; font-style:normal; }
+.xs-ic{ margin-right:8px; color:var(--accent2); }
+.ext-sec{ margin:0 0 30px; }
+.ext-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:12px; }
+.ext-card{ display:flex; flex-direction:column; gap:6px; padding:14px 15px; border:1px solid var(--line);
+  border-radius:12px; background:var(--surface); transition:border-color .16s,transform .16s; }
+.ext-card:hover{ border-color:var(--accent); transform:translateY(-2px); }
+.xc-top{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+.xc-top b{ font-family:var(--serif); font-size:15.5px; line-height:1.25; font-weight:640; color:var(--ink); }
+.xc-kind{ flex:none; font-size:9px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+  padding:3px 8px; border-radius:99px; color:var(--kc,var(--accent2));
+  background:color-mix(in srgb,var(--kc,var(--accent2)) 13%,transparent);
+  border:1px solid color-mix(in srgb,var(--kc,var(--accent2)) 32%,transparent); white-space:nowrap; }
+.xk-api{ --kc:#6cb6f0; } .xk-mcp{ --kc:#8b7cf7; } .xk-skill{ --kc:#f0b46c; }
+.xk-connector{ --kc:#6cd8d0; } .xk-framework{ --kc:#7dd8a8; } .xk-agent{ --kc:#e888b0; }
+.xk-runtime{ --kc:#6cd8d0; } .xk-tool{ --kc:#c8b6f0; } .xk-registry{ --kc:#f0d86c; }
+.xk-platform{ --kc:#9ab0f0; } .xk-standard{ --kc:#8b7cf7; }
+.xc-by{ font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); font-weight:650; }
+.xc-desc{ font-size:12.5px; line-height:1.55; color:var(--muted); margin:0; flex:1; }
+.xc-foot{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:2px; }
+.xc-foot > a{ font-size:12px; font-weight:650; color:var(--accent2); text-decoration:none; }
+.xc-foot > a:hover{ text-decoration:underline; }
+.xc-tags{ display:flex; gap:5px; flex-wrap:wrap; justify-content:flex-end; }
+.xc-tags i{ font-style:normal; font-size:9.5px; color:var(--faint); border:1px solid var(--hairline);
+  border-radius:99px; padding:2px 7px; white-space:nowrap; }
+@media (max-width:640px){
+  .ext-grid{ grid-template-columns:1fr; gap:10px; }
+  .ext-search{ flex-direction:column; align-items:stretch; gap:8px; }
+  #ext-count{ text-align:right; }
+}
+
 /* ================= THE INSTRUCTION BLOCKS ===================================
    Status colour is used here for `verify` and `if not`, which is the reserved,
    correct use: good vs warning state. Both ship with a visible label, never
