@@ -187,3 +187,4 @@
   var seen={}; window.RTFC_USAGE_LOG.forEach(function(r){seen[r.id]=1;});
   rows.forEach(function(r){if(!seen[r.id]) window.RTFC_USAGE_LOG.push(r);});
 })();
+    { id:"u-0258", ts:"2026-08-14T11:09:43Z", article_id:"system", agent:"breaking-scan", task_type:"no-op", description:"Scanned for frontier model releases, security incidents, regulatory actions, and major infrastructure/business news from the last ~3h (08:10-11:10 UTC Aug 14); found no new breaking stories — the most recent frontier release (DeepSeek V4-Pro GA announcement and Aug 13 price increase) was already published as breaking on Aug 13, and no new frontier labs, incidents, regulations, or major deals appeared in the window. Buzz: searched last 2h for genuinely loud signals, none found; maintained 13 cards in last 24h (1 today + 12 yesterday, above 9-card floor), no cards retired or added.", measured:"estimated" },
