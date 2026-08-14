@@ -1213,8 +1213,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "OpenAI moves to dismiss Apple's trade-secrets suit, calling it \"rotten to its core.\" Apple alleges two named ex-engineers took files/supplier data; OpenAI says no secret is actually described. Hearing Oct 1.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mszoplmn6m2b",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mszoplmn6m2b",
+        "posted_at": "2026-08-14T07:57:13Z"
       }
     ]
   },
