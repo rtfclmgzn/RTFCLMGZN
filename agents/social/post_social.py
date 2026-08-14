@@ -296,6 +296,40 @@ def default_ledger_path() -> str:
     return os.path.join(root, "social-ledger.json")
 
 
+def parse_daily_caps(spec: str) -> dict:
+    """'x=6,instagram=1' -> {'x': 6, 'instagram': 1}. Bad pieces are ignored."""
+    caps = {}
+    for piece in str(spec or "").split(","):
+        if "=" not in piece:
+            continue
+        name, _, val = piece.partition("=")
+        try:
+            caps[name.strip().lower()] = max(0, int(val))
+        except ValueError:
+            continue
+    return caps
+
+
+def posted_today_by_platform(entries: list, now) -> dict:
+    """How many posts each platform already made today (UTC), read from the
+    STORE's posted_at stamps — not the ledger. The ledger is per-machine and
+    starts empty on every CI runner, so it cannot carry a daily count across
+    the day's runs; the store is committed back after each dispatch and can.
+    (A commit that loses a push race undercounts by one run, which at worst
+    overshoots a cap by one post — accepted.)"""
+    counts: dict[str, int] = {}
+    today = now.date()
+    for entry in entries or []:
+        for post in entry.get("posts") or []:
+            if post.get("status") != "posted":
+                continue
+            ts = parse_iso(str(post.get("posted_at") or ""))
+            if ts and ts.date() == today:
+                key = str(post.get("platform") or "")
+                counts[key] = counts.get(key, 0) + 1
+    return counts
+
+
 def load_ledger(path: str) -> dict:
     if os.path.exists(path):
         try:
@@ -739,8 +773,11 @@ def dispatch(args: argparse.Namespace) -> int:
     off = sorted(p for p in wanted if p in PLATFORMS and not enabled.get(p))
     if off:
         say(f"not linked / not selected-ready: {', '.join(off)}")
+    daily_caps = parse_daily_caps(args.daily_caps)
     say(f"caps: {args.platform_cap}/platform/run, {args.limit} total; "
         f"cooldown {int(args.platform_spacing)}s between same-platform posts")
+    say("daily spread: " + ", ".join(f"{k}={v}/day" for k, v in sorted(daily_caps.items()))
+        + " (unlisted platforms uncapped)")
     say("full log: social_dispatch_log.txt (safe to close this window "
         "AFTER the DONE line)")
     say("=" * 58)
@@ -766,6 +803,10 @@ def dispatch(args: argparse.Namespace) -> int:
 
     now = utc_now()
     cutoff = now - timedelta(days=args.max_age_days)
+    today_counts = posted_today_by_platform(entries, now)
+    if any(today_counts.values()):
+        say("already posted today: " + ", ".join(
+            f"{k}={v}" for k, v in sorted(today_counts.items())))
     posted, skipped, failed, planned = [], [], [], []
     spend = 0.0
     changed = False
@@ -788,7 +829,10 @@ def dispatch(args: argparse.Namespace) -> int:
                 if platform not in first_keep or entry_dt > first_keep[platform][0]:
                     first_keep[platform] = (entry_dt, key)
 
-    for entry in entries:
+    # Newest-first: when a daily cap allows only one or two posts, they should
+    # be the freshest stories, not whatever sits earliest in the file. Older
+    # ready posts still go out on later runs until they age out at max-age.
+    for entry in sorted(entries, key=lambda e: str(e.get("ts") or ""), reverse=True):
         export = entry.get("export") or {}
         entry_ts = parse_iso(str(entry.get("ts") or "")) or now
         fresh = entry_ts >= cutoff
@@ -822,6 +866,16 @@ def dispatch(args: argparse.Namespace) -> int:
                     changed = True
             elif per_platform_count.get(platform, 0) >= args.platform_cap:
                 reason = f"per-platform cap ({args.platform_cap}/run) reached"
+            elif (platform in daily_caps
+                  and today_counts.get(platform, 0) + per_platform_count.get(platform, 0)
+                      >= daily_caps[platform]):
+                # The per-platform SPREAD: X and Bluesky tolerate news-brand
+                # frequency; Threads buries link-heavy repetition; Facebook
+                # pages fade past ~2/day; a new Instagram account should post
+                # its single best story, not four. Combined with newest-first
+                # ordering below, the capped platforms get the freshest story
+                # of the day and skip the rest by design.
+                reason = f"daily cap ({daily_caps[platform]}/day) reached"
             else:
                 not_before = parse_iso(str(post.get("not_before") or ""))
                 if not_before and not_before > now:
@@ -934,6 +988,10 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=12, help="max posts per run")
     parser.add_argument("--platform-cap", type=int, default=2,
                         help="max posts per platform per run")
+    parser.add_argument("--daily-caps",
+                        default="x=6,bluesky=5,threads=3,facebook=2,instagram=1,reddit=2",
+                        help="max posts per platform per UTC day, csv of platform=N; "
+                             "a platform not listed is uncapped")
     parser.add_argument("--platform-spacing", type=float, default=240.0,
                         help="min seconds between two posts to the SAME platform")
     parser.add_argument("--max-age-days", type=int, default=3)
