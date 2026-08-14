@@ -1,162 +1,27 @@
-// RTFCLMGZN — per-article share pages for social link previews.
+// RTFCLMGZN — legacy share-link redirect.
 //
-// Why this exists: the site is a hash-routed SPA, so crawlers (Facebook,
-// Bluesky, Threads, X, Slack...) can never see past "/#/" and every article
-// link used to unfurl with the SAME site-level card (the purple-tree og.jpg —
-// the 2026-08-13 incident). This function serves real per-article OG tags to
-// crawlers, then instantly redirects humans into the SPA article.
+// HISTORY. This function used to serve per-article OG tags and then JS-redirect
+// humans into the hash-routed SPA, because crawlers could not see past "/#/"
+// (the 2026-08-13 purple-tree-unfurl incident — see git history for the full
+// write-up, including why the redirect had to be JS-only back then).
 //
-// URL shape produced by the social dispatcher:
-//   https://rtfclmgzn.com/share/<slug>?utm_source=...
-// Redirect target keeps the query string:
-//   /?utm_source=...#/article/<slug>
+// As of 2026-08-14 every article has a REAL server-rendered page at
+// /article/<slug> (functions/article/[slug].js) carrying full per-article OG
+// tags, JSON-LD, and the complete readable text. That page is strictly better
+// for both crawlers and humans than an OG shim, so this route is now a plain
+// 301 onto it. The old caution about redirects no longer applies: the target
+// has its OWN correct OG tags, so a crawler following the redirect lands on
+// exactly what we want it to index.
 //
-// 2026-08-13 lesson: the redirect must be JS-ONLY. The first version also had
-// <meta http-equiv=refresh> and a canonical pointing at the SPA root; Facebook
-// treats both as "the real page is over there", follows them to index.html,
-// and unfurls the generic purple-tree card. Crawlers don't run JS, so a JS
-// redirect hides the hop from them while humans never notice. Do not re-add
-// a meta refresh or an off-page canonical here.
+// Kept (rather than deleted) because every social post dispatched before
+// 2026-08-14 links to /share/<slug> — those links must keep working forever.
+// The query string (utm_* attribution) is preserved through the redirect.
 
-const DATA_FILES = [
-  "/data/newsroom-articles.js", // strict JSON body — parsed properly
-  "/data/live-articles.js",     // legacy JS literal — best-effort fallback
-  "/data/articles.js",
-];
-
-const SITE_NAME = "RTFCLMGZN — artificial magazine";
-const FALLBACK_IMAGE = "/assets/img/og.jpg";
-
-function unescapeJson(raw) {
-  try {
-    return JSON.parse('"' + raw + '"');
-  } catch {
-    return raw;
-  }
-}
-
-function findField(windowText, field) {
-  const re = new RegExp('["\']?' + field + '["\']?\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"');
-  const m = windowText.match(re);
-  return m ? unescapeJson(m[1]) : "";
-}
-
-function arrayBody(text) {
-  const eq = text.indexOf("=");
-  const start = text.indexOf("[", eq);
-  const end = text.lastIndexOf("]");
-  if (start < 0 || end <= start) return null;
-  return text.slice(start, end + 1);
-}
-
-function lookupInText(text, slug) {
-  const body = arrayBody(text);
-  if (!body) return null;
-  // Preferred: the current data file is strict JSON — exact extraction.
-  try {
-    const data = JSON.parse(body);
-    for (const entry of data) {
-      if (entry && entry.slug === slug) {
-        return { title: entry.title || "", dek: entry.dek || "",
-                 image: entry.image || "" };
-      }
-    }
-    return null; // parsed fine, slug simply not in this file
-  } catch {
-    // Legacy JS-literal file: entry-bounded window heuristic. The window is
-    // cut at the NEXT entry's slug so we can never steal a neighbour's image.
-    for (const pattern of ['"slug": "' + slug + '"', '"slug":"' + slug + '"']) {
-      const idx = body.indexOf(pattern);
-      if (idx < 0) continue;
-      const nextSlug = body.indexOf('"slug"', idx + pattern.length);
-      const back = Math.max(0, idx - 8000);
-      const fwd = nextSlug > 0 ? Math.min(nextSlug, idx + 8000) : idx + 8000;
-      const win = body.slice(back, fwd);
-      return {
-        title: findField(win, "title"),
-        dek: findField(win, "dek"),
-        image: findField(win, "image"),
-      };
-    }
-    return null;
-  }
-}
-
-async function lookupArticle(slug, request, env) {
-  for (const file of DATA_FILES) {
-    try {
-      const resp = await env.ASSETS.fetch(new URL(file, request.url));
-      if (!resp.ok) continue;
-      const found = lookupInText(await resp.text(), slug);
-      if (found) return found;
-    } catch {
-      continue;
-    }
-  }
-  return null;
-}
-
-function esc(value) {
-  return String(value || "")
-    .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
-
-export async function onRequestGet(context) {
-  const { request, env, params } = context;
-  const slug = String(params.slug || "").slice(0, 200);
-  const origin = new URL(request.url).origin;
-  const query = new URL(request.url).search; // keeps utm_* intact
-  const target = origin + "/" + query + "#/article/" + slug;
-
-  const article = (await lookupArticle(slug, request, env)) || {};
-  const title = article.title || SITE_NAME;
-  const description = article.dek ||
-    "AI news, written by AI, about AI — fully autonomous newsroom.";
-  let imagePath = article.image ? "/" + String(article.image).replace(/^\/+/, "")
-                                : FALLBACK_IMAGE;
-  // Portrait crops for the platforms that reward them (mobile feeds render
-  // tall images much larger). Cycles stage <cover>-ig.jpg next to each cover;
-  // we probe for it and fall back to the wide cover. X/Bluesky keep wide —
-  // X's summary_large_image crops portrait images badly.
-  const PORTRAIT_SOURCES = new Set(["facebook", "instagram", "threads"]);
-  const utmSource = new URL(request.url).searchParams.get("utm_source") || "";
-  if (article.image && PORTRAIT_SOURCES.has(utmSource)) {
-    const dot = imagePath.lastIndexOf(".");
-    if (dot > 0) {
-      const portraitPath = imagePath.slice(0, dot) + "-ig" + imagePath.slice(dot);
-      try {
-        const probe = await env.ASSETS.fetch(new URL(portraitPath, request.url));
-        if (probe.ok) imagePath = portraitPath;
-      } catch {}
-    }
-  }
-  const image = origin + imagePath;
-
-  const html = `<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8">
-<title>${esc(title)}</title>
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="${esc(SITE_NAME)}">
-<meta property="og:title" content="${esc(title)}">
-<meta property="og:description" content="${esc(description)}">
-<meta property="og:image" content="${esc(image)}">
-<meta property="og:url" content="${esc(origin + "/share/" + slug)}">
-<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:site" content="@rtfclmgzn">
-<meta name="twitter:title" content="${esc(title)}">
-<meta name="twitter:description" content="${esc(description)}">
-<meta name="twitter:image" content="${esc(image)}">
-<link rel="canonical" href="${esc(origin + "/share/" + slug)}">
-<script>location.replace(${JSON.stringify(target)});</script>
-</head><body>
-<p>Taking you to the article… <a href="${esc(target)}">${esc(title)}</a></p>
-</body></html>`;
-
-  return new Response(html, {
-    headers: {
-      "content-type": "text/html; charset=utf-8",
-      "cache-control": "public, max-age=600",
-    },
-  });
+export async function onRequest({ request, params }) {
+  const url = new URL(request.url);
+  const slug = encodeURIComponent(String(params.slug || ""));
+  return Response.redirect(
+    `${url.origin}/article/${slug}${url.search}`,
+    301,
+  );
 }

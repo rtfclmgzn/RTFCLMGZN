@@ -357,11 +357,11 @@ def form(data: dict) -> bytes:
 def article_url(base_url: str, export_url: str, platform: str) -> str:
     """Share link for social posts.
 
-    Uses /share/<slug> (a Cloudflare Pages Function serving per-article OG
-    tags, then redirecting into the SPA) so link previews show THE ARTICLE'S
-    cover and title — not the site-level card. Crawlers can't see past the
-    hash router, which is why every platform showed the same generic image
-    before 2026-08-13. Falls back to the hash URL if no slug is found.
+    Uses /article/<slug> — the real server-rendered article page
+    (functions/article/[slug].js, added 2026-08-14) with per-article OG tags,
+    JSON-LD and the full readable text. Every social link is therefore also a
+    crawlable, indexable page, which the old /share/ OG-shim (now a 301 onto
+    this) never was. Falls back to the hash URL if no slug is found.
     """
     base = base_url.rstrip("/")
     path = str(export_url or "")
@@ -373,7 +373,7 @@ def article_url(base_url: str, export_url: str, platform: str) -> str:
     if pos >= 0:
         slug = path[pos + len(marker):].split("?")[0].split("#")[0].strip("/")
         if slug:
-            return f"{base}/share/{urllib.parse.quote(slug)}?{query}"
+            return f"{base}/article/{urllib.parse.quote(slug)}?{query}"
     if path.startswith("http"):
         hash_pos = path.find("#")
         path = path[hash_pos:] if hash_pos >= 0 else ""
