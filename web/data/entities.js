@@ -67,6 +67,8 @@ window.RTFC_ENTITIES = {
       kind:"consumer assistant product", access:"closed" },
 
     // --- Google ---
+    { re:/\bGemini 3\.7 Flash\b/i, name:"Gemini 3.7 Flash", maker:"Google DeepMind", makerKey:"google",
+      kind:"fast low-cost model", access:"closed" },
     { re:/\bGemini 3\.5 Flash\b/i, name:"Gemini 3.5 Flash", maker:"Google DeepMind", makerKey:"google",
       kind:"fast low-cost model", access:"closed" },
     { re:/\bGemini 3\.1 Pro(?: Preview)?\b/i, name:"Gemini 3.1 Pro", maker:"Google DeepMind", makerKey:"google",

@@ -18783,7 +18783,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "Cognition AI, maker of the AI coding agent Devin, is in early talks with investors for a new funding round that could value the company at $40 billion or more, Bloomberg reported August 11, citing people familiar with the matter. The round, which Bloomberg's sources describe as still unconfirmed and contingent on Cognition's revenue trajectory, would raise more than $1 billion.",
+        "text": "Cognition AI, maker of the AI coding agent Devin, is in early talks with investors for a new funding round that ==could value the company at $40 billion or more==, Bloomberg reported August 11, citing people familiar with the matter. The round, which Bloomberg's sources describe as still unconfirmed and contingent on Cognition's revenue trajectory, **would raise more than $1 billion**.",
         "citation_urls": [
           "https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value",
           "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
@@ -18791,14 +18791,14 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The number would mark a more than 50% jump from Cognition's last round just three months earlier: $1 billion raised on May 27 at a $25 billion pre-money, $26 billion post-money valuation, led by Lux Capital, General Catalyst and 8VC. That round itself followed a $10.2 billion post-money valuation set only eight months before it, in September 2025.",
+        "text": "The number would mark **a more than 50% jump** from Cognition's last round just three months earlier: $1 billion raised on May 27 at a $25 billion pre-money, $26 billion __post-money valuation__, led by Lux Capital, General Catalyst and 8VC. That round itself followed a $10.2 billion post-money valuation set only eight months before it, in September 2025.",
         "citation_urls": [
           "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/"
         ]
       },
       {
         "type": "p",
-        "text": "What's driving the new talks, per Bloomberg's reporting, is revenue: Cognition's annualized run rate is now nearing $1 billion, roughly double the approximately $492 million it reported around the time of the May round. Devin is pitched at what CEO Scott Wu has called long-tail engineering work rather than replacing developers outright — legacy-system upgrades, platform migrations, and other maintenance work programmers tend to avoid — with enterprise customers including Citi, Mercedes-Benz, Goldman Sachs, and the US Army and Navy.",
+        "text": "What's driving the new talks, per Bloomberg's reporting, is revenue: Cognition's __annualized run rate__ is now nearing $1 billion, **roughly double the approximately $492 million** it reported around the time of the May round. Devin is pitched at what CEO Scott Wu has called ++long-tail engineering work++ rather than replacing developers outright — legacy-system upgrades, platform migrations, and other maintenance work programmers tend to avoid — with enterprise customers including Citi, Mercedes-Benz, Goldman Sachs, and the US Army and Navy.",
         "citation_urls": [
           "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
         ]
@@ -18834,7 +18834,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "No investor has been named for the prospective round, and Cognition has not issued its own statement confirming the talks or the figures attached to them. A valuation set before a round closes is also, by definition, a negotiating position rather than a settled fact — the number that eventually prints, if a round closes at all, is the only one that will be confirmed rather than reported.",
+        "text": "No investor has been named for the prospective round, and Cognition has not issued its own statement confirming the talks or the figures attached to them. A valuation set before a round closes is also, by definition, a negotiating position rather than a settled fact — ==the number that eventually prints, if a round closes at all, is the only one that will be confirmed rather than reported.==",
         "citation_urls": [
           "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/"
         ]
@@ -18893,6 +18893,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "Trigger 2 (financial/valuation claims) applies: Markets-section piece carries the not-financial-advice disclaimer per compliance-rulebook.md §2. Every valuation figure is attributed as reported rather than asserted as settled fact; no buy/sell or investment framing appears. No other triggers fired."
+        },
+        {
+          "name": "Ink-layer catch-up",
+          "agent": "claude-runner",
+          "note": "ink layer applied 2026-08-14: added highlight/bold/underline/accent markers to existing body prose per §3b+; no wording changed, no publishedAt change."
         }
       ],
       "gate": {
@@ -18921,7 +18926,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "ChatGPT went offline for millions of users across India, the United States, Europe, Japan, and Australia on August 13, 2026. The outage began around 11:59 AM Indian Standard Time (approximately 06:30 UTC) and affected ChatGPT's web interface, mobile apps across all subscription tiers, API endpoints, voice features, and multimodal capabilities. OpenAI acknowledged the incident on its status dashboard, reporting elevated error rates and indicating that backend infrastructure failures were under investigation.",
+        "text": "==ChatGPT went offline for millions of users across India, the United States, Europe, Japan, and Australia on August 13, 2026.== The outage began around 11:59 AM Indian Standard Time (approximately 06:30 UTC) and affected ChatGPT's web interface, mobile apps across all subscription tiers, API endpoints, voice features, and multimodal capabilities. OpenAI acknowledged the incident on its status dashboard, reporting elevated error rates and indicating that **backend infrastructure failures** were under investigation.",
         "citation_urls": [
           "https://status.openai.com/",
           "https://www.sundayguardianlive.com/india/chatgpt-outage-today-is-chatgpt-down-today-thousands-of-users-report-errors-connectivity-issues-stalled-prompts-across-india-multiple-regions-check-open-ai-chatgpt-downdetector-status-260244/",
@@ -18959,7 +18964,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Users reported consistent error patterns across platforms. Web users encountered 'Application Error' messages when attempting to load conversations or send prompts. Mobile users saw 'Error in message stream' notifications and were unable to retrieve conversation history. Some users faced endless loading loops, particularly when uploading files or using voice features. Enterprise API customers reported failed requests and timeouts. The synchronized nature of the failures—hitting all platforms and geographies at the same moment—pointed to a shared infrastructure issue rather than regional or platform-specific problems.",
+        "text": "Users reported consistent error patterns across platforms. Web users encountered 'Application Error' messages when attempting to load conversations or send prompts. Mobile users saw 'Error in message stream' notifications and were unable to retrieve conversation history. Some users faced endless loading loops, particularly when uploading files or using voice features. Enterprise API customers reported failed requests and timeouts. The **synchronized nature of the failures**—hitting all platforms and geographies at the same moment—pointed to a shared infrastructure issue rather than regional or platform-specific problems.",
         "citation_urls": [
           "https://www.downdetector.com/status/openai/",
           "https://en.dailypakistan.com.pk/13-Aug-2026/chatgpt-down-again-whats-behind-the-outage-this-time",
@@ -18968,7 +18973,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "OpenAI's engineering teams began investigating the backend failures immediately. The company posted updates to its status page but initially provided no root-cause analysis, estimated recovery time, or quantification of affected users and transactions. For enterprise customers relying on ChatGPT API for production workloads, the outage carried immediate financial and operational consequences. Consumer users who depend on ChatGPT for daily work—writing, coding, research, customer support—experienced a sudden service interruption with no publicly disclosed timeline for restoration.",
+        "text": "OpenAI's engineering teams began investigating the backend failures immediately. ==The company posted updates to its status page but initially provided no root-cause analysis, estimated recovery time, or quantification of affected users and transactions.== For enterprise customers relying on ChatGPT API for production workloads, the outage carried immediate financial and operational consequences. Consumer users who depend on ChatGPT for daily work—writing, coding, research, customer support—experienced a sudden service interruption with no publicly disclosed timeline for restoration.",
         "citation_urls": [
           "https://status.openai.com/",
           "https://www.sundayguardianlive.com/india/chatgpt-outage-today-is-chatgpt-down-today-thousands-of-users-report-errors-connectivity-issues-stalled-prompts-across-india-multiple-regions-check-open-ai-chatgpt-downdetector-status-260244/"
@@ -18976,7 +18981,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The outage underscores the concentration of AI-powered productivity on a single vendor and the vulnerability of the infrastructure supporting it. For the millions of users who have integrated ChatGPT into workflows—whether in education, customer service, software development, or content creation—an extended outage breaks continuity and forces manual workarounds. The incident raises questions about redundancy, failover architecture, and whether OpenAI's backend can handle the scale of concurrent traffic it now carries.",
+        "text": "The outage underscores the **concentration of AI-powered productivity on a single vendor** and the vulnerability of the infrastructure supporting it. For the millions of users who have integrated ChatGPT into workflows—whether in education, customer service, software development, or content creation—an extended outage breaks continuity and forces manual workarounds. The incident raises questions about redundancy, __failover architecture__, and whether OpenAI's backend can handle the scale of concurrent traffic it now carries.",
         "citation_urls": [
           "https://www.downdetector.com/status/openai/",
           "https://gulfnews.com/amp/story/technology%2Fmedia%2Fchatgpt-down-global-outage-affects-millions-1.500021576"
@@ -19048,6 +19053,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Gate",
           "agent": "breaking-scan",
           "note": "Breaking publish approval; cover image selected and applied; all sources verified as working URLs; no self-referential language; breaking=true set per breaking-scan-runbook §3."
+        },
+        {
+          "name": "Ink-layer catch-up",
+          "agent": "claude-runner",
+          "note": "ink layer applied 2026-08-14: added highlight/bold/underline markers to existing body prose per §3b+; no wording changed, no publishedAt change."
         }
       ],
       "gate": {
@@ -19075,7 +19085,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "[Anthropic](#/company/anthropic) is in early talks to acquire Decart AI, an Israeli startup building chip-efficiency and real-time video-generation software, for roughly $6 billion, Bloomberg reported August 13, citing people familiar with the matter. If it closes, it would be Anthropic's largest acquisition to date. Nothing is signed yet, and Bloomberg's sources caution the talks could still fall apart before a deal is reached.",
+        "text": "[Anthropic](#/company/anthropic) is in early talks to acquire Decart AI, an Israeli startup building chip-efficiency and real-time video-generation software, for roughly $6 billion, Bloomberg reported August 13, citing people familiar with the matter. If it closes, **it would be Anthropic's largest acquisition to date**. ==Nothing is signed yet, and Bloomberg's sources caution the talks could still fall apart before a deal is reached.==",
         "citation_urls": [
           "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
           "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/"
@@ -19083,7 +19093,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Decart is three years old. Dean and Orian Leitersdorf and Moshe Shalev, engineers who met in Israel's Unit 8200 military-intelligence corps, founded it in 2023 and emerged from stealth in late 2024 with what the company says was profitability within three months of launch. Its stack has three parts: DOS, an optimization layer that raises inference throughput across Nvidia GPUs, AWS Trainium and Google TPUs; Lucy, a real-time video-editing model used for virtual try-on and live advertising; and Oasis, a world-generation model aimed at training and testing robots and self-driving systems. Decart says DOS runs full-HD video inference at up to 100 frames per second and pushes agentic inference to roughly 1,600 tokens per second, against what it puts at a roughly 200-token-per-second industry baseline — a company-reported figure, not one this newsroom has independently verified.",
+        "text": "Decart is three years old. Dean and Orian Leitersdorf and Moshe Shalev, engineers who met in Israel's Unit 8200 military-intelligence corps, founded it in 2023 and emerged from stealth in late 2024 with what the company says was profitability within three months of launch. Its stack has three parts: DOS, an optimization layer that raises inference throughput across Nvidia GPUs, AWS Trainium and Google TPUs; Lucy, a real-time video-editing model used for virtual try-on and live advertising; and Oasis, a __world-generation model__ aimed at training and testing robots and self-driving systems. Decart says DOS **runs full-HD video inference at up to 100 frames per second** and pushes agentic inference to roughly 1,600 tokens per second, against what it puts at a roughly 200-token-per-second industry baseline — a company-reported figure, not one this newsroom has independently verified.",
         "citation_urls": [
           "https://decart.ai/",
           "https://decart.ai/research"
@@ -19091,7 +19101,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The company closed a $300 million round in May 2026, led by Radical Ventures with Nvidia, Adobe Ventures and Toyota Ventures participating, at a valuation nearly $4 billion — up from $3.1 billion the previous August. A $6 billion acquisition price would sit about 50% above that May mark, though the comparison is apples to a slightly different fruit: a venture round values minority shares traded among existing and new investors, while an acquisition price is what a single buyer would pay for the whole company.",
+        "text": "The company closed a $300 million round in May 2026, led by Radical Ventures with Nvidia, Adobe Ventures and Toyota Ventures participating, at a valuation nearly $4 billion — up from $3.1 billion the previous August. A $6 billion acquisition price would sit **about 50% above that May mark**, though the comparison is apples to a slightly different fruit: a venture round values minority shares traded among existing and new investors, while an acquisition price is what a single buyer would pay for the whole company.",
         "citation_urls": [
           "https://radical.vc/the-world-model-infrastructure-layer/",
           "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion"
@@ -19131,21 +19141,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Oasis, Decart's least-discussed product in this week's coverage, is worth a beat on its own: a \"world model\" that generates interactive, physically-consistent environments in real time, aimed at training and testing robots and self-driving systems without the cost of running them in the physical world first. World models are the same category behind Google DeepMind's Genie line and a growing slice of robotics-lab research spending industry-wide — the pitch is that simulated environments are cheaper and safer to fail in than warehouses and roads. Anthropic has no public robotics or embodied-AI program today, which is part of why Bloomberg's sourcing points at DOS, the efficiency layer, as the actual target rather than Oasis or Lucy.",
+        "text": "Oasis, Decart's least-discussed product in this week's coverage, is worth a beat on its own: a \"world model\" that generates interactive, physically-consistent environments in real time, aimed at training and testing robots and self-driving systems without the cost of running them in the physical world first. __World models__ are the same category behind Google DeepMind's ++Genie++ line and a growing slice of robotics-lab research spending industry-wide — the pitch is that simulated environments are cheaper and safer to fail in than warehouses and roads. Anthropic has no public robotics or embodied-AI program today, which is part of why Bloomberg's sourcing points at DOS, the efficiency layer, as the actual target rather than Oasis or Lucy.",
         "citation_urls": [
           "https://decart.ai/research"
         ]
       },
       {
         "type": "p",
-        "text": "The strategic logic, per Bloomberg's sourcing, is about capacity rather than Decart's consumer-facing video tools: Anthropic wants DOS folded into its own inference stack to help its existing infrastructure absorb more demand as adoption keeps outrunning the compute it can bring online. Decart CEO Dean Leitersdorf has been blunt about the pace driving deals like this across the industry: “This market is moving so fast. We get to reinvent every different aspect of the economy in the next 18 to 24 months.”",
+        "text": "The strategic logic, per Bloomberg's sourcing, is **about capacity rather than Decart's consumer-facing video tools**: Anthropic wants DOS folded into its own inference stack to help its existing infrastructure absorb more demand as adoption keeps outrunning the compute it can bring online. Decart CEO Dean Leitersdorf has been blunt about the pace driving deals like this across the industry: “This market is moving so fast. We get to reinvent every different aspect of the economy in the next 18 to 24 months.”",
         "citation_urls": [
           "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/"
         ]
       },
       {
         "type": "p",
-        "text": "That capacity crunch is also the throughline connecting this deal to Anthropic's own recent moves. In May 2026, Anthropic closed a $65 billion Series H at a $965 billion post-money valuation — up from the $183 billion its Series F set eight months earlier — with CFO Krishna Rao saying the round would help the company “serve the historic demand we are experiencing.” Days later, Anthropic confidentially submitted a draft S-1 to the SEC, a step toward an IPO the company has said depends on market conditions and carries no committed timeline. And the same week this newsroom covered [Theseus Infrastructure](#/article/anthropic-macquarie-gic-theseus-infrastructure), the data-center venture Anthropic is building with Macquarie and Singapore's GIC rather than owning outright — a company buying compute capacity from every direction it can reach, of which an efficiency-software acquisition would be one more.",
+        "text": "That capacity crunch is also the throughline connecting this deal to Anthropic's own recent moves. In May 2026, Anthropic closed a $65 billion Series H at a $965 billion post-money valuation — ==up from the $183 billion its Series F set eight months earlier== — with CFO Krishna Rao saying the round would help the company “serve the historic demand we are experiencing.” Days later, Anthropic confidentially submitted a draft S-1 to the SEC, a step toward an IPO the company has said depends on market conditions and carries no committed timeline. And the same week this newsroom covered [Theseus Infrastructure](#/article/anthropic-macquarie-gic-theseus-infrastructure), the data-center venture Anthropic is building with Macquarie and Singapore's GIC rather than owning outright — a company buying compute capacity from every direction it can reach, of which an efficiency-software acquisition would be one more.",
         "citation_urls": [
           "https://www.anthropic.com/news/series-h",
           "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
@@ -19201,7 +19211,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Anthropic isn't the only frontier lab in this position. OpenAI confidentially filed its own draft S-1 in June 2026, and both companies are now racing toward public markets while still spending at acquisition scale — a $6 billion purchase is a large line item for a private company to absorb five weeks after its last funding round closed, even one that just raised $65 billion. Set against other 2026 deals this newsroom has tracked, like [Cohere's pending purchase of Aleph Alpha](#/company/cohere) or [Groq's chip-architecture license to Nvidia](#/company/groq), a $6 billion efficiency-software acquisition is large but not unusual for a year in which compute-adjacent M&A has become routine at the top of the industry."
+        "text": "Anthropic isn't the only frontier lab in this position. OpenAI confidentially filed its own draft S-1 in June 2026, and **both companies are now racing toward public markets while still spending at acquisition scale** — a $6 billion purchase is a large line item for a private company to absorb five weeks after its last funding round closed, even one that just raised $65 billion. Set against other 2026 deals this newsroom has tracked, like [Cohere's pending purchase of Aleph Alpha](#/company/cohere) or [Groq's chip-architecture license to Nvidia](#/company/groq), a $6 billion efficiency-software acquisition is large but not unusual for a year in which compute-adjacent M&A has become routine at the top of the industry."
       },
       {
         "type": "stakes",
@@ -19233,7 +19243,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Nothing here is Decart's or Anthropic's own account of the talks — neither company has confirmed the reported price or that a deal is imminent, and the entire acquisition thread rests on sourcing Bloomberg attributes to people familiar with the matter rather than an on-record statement. The two things that are confirmed, in both companies' own words, are what put Anthropic in a position to spend $6 billion in the first place (the Series H) and what it's spending toward next (the S-1) — the acquisition talks are the reported bridge between them."
+        "text": "==Nothing here is Decart's or Anthropic's own account of the talks — neither company has confirmed the reported price or that a deal is imminent==, and the entire acquisition thread rests on sourcing Bloomberg attributes to people familiar with the matter rather than an on-record statement. The two things that are confirmed, in both companies' own words, are what put Anthropic in a position to spend $6 billion in the first place (the Series H) and what it's spending toward next (the S-1) — the acquisition talks are the reported bridge between them."
       }
     ],
     "apply": [
@@ -19332,6 +19342,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Gate",
           "agent": "claude-runner",
           "note": "Cleared for publish: format matches evidence depth (five threads, four primary sources, synthesis-band word count), components trace to sourced facts, apply block names concrete forward-looking checkpoints."
+        },
+        {
+          "name": "Ink-layer catch-up",
+          "agent": "claude-runner",
+          "note": "ink layer applied 2026-08-14: added highlight/bold/underline/accent markers to existing body prose per §3b+; no wording changed, no publishedAt change."
         }
       ],
       "gate": {
@@ -19359,21 +19374,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "Thrive Holdings, a Josh Kushner-founded roll-up that buys traditional businesses and installs AI inside them, raised more than $2 billion at a $12 billion valuation, TechCrunch reported August 12. SoftBank, D1 Capital Partners and Altimeter Capital led the round. The company is backed by [OpenAI](#/company/openai), which took an ownership stake in December 2025 — not for cash, but in exchange for embedding its own engineers inside Thrive's portfolio companies.",
+        "text": "Thrive Holdings, a Josh Kushner-founded __roll-up__ that buys traditional businesses and installs AI inside them, raised more than $2 billion at a $12 billion valuation, TechCrunch reported August 12. SoftBank, D1 Capital Partners and Altimeter Capital led the round. The company is backed by [OpenAI](#/company/openai), which took an ownership stake in December 2025 — **not for cash, but in exchange for embedding its own engineers** inside Thrive's portfolio companies.",
         "citation_urls": [
           "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
         ]
       },
       {
         "type": "p",
-        "text": "Thrive Holdings is a spinout of Thrive Capital, one of OpenAI's largest outside investors, set up in 2025 to run a private-equity-style playbook: acquire operating businesses in workflow-heavy, rules-driven sectors, then apply AI to cut costs and speed up the work. It started with accounting — its Current platform now spans more than 50 firms and 2,000-plus professionals — and IT services, where its Shield platform covers roughly 20 companies. More than 70 businesses now sit across Thrive's platforms, and the new capital funds expansion into a third vertical covering physical-asset-heavy sectors: data centers, manufacturing, healthcare, power, water and transportation, according to founding member Anuj Mehndiratta.",
+        "text": "Thrive Holdings is a spinout of Thrive Capital, one of OpenAI's largest outside investors, set up in 2025 to run a private-equity-style playbook: acquire operating businesses in workflow-heavy, rules-driven sectors, then apply AI to cut costs and speed up the work. It started with accounting — its Current platform now spans more than 50 firms and 2,000-plus professionals — and IT services, where its Shield platform covers roughly 20 companies. **More than 70 businesses now sit across Thrive's platforms**, and the new capital funds expansion into a third vertical covering physical-asset-heavy sectors: data centers, manufacturing, healthcare, power, water and transportation, according to founding member Anuj Mehndiratta.",
         "citation_urls": [
           "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
         ]
       },
       {
         "type": "p",
-        "text": "The choice of accounting and IT as starting points wasn't incidental. Both are high-volume, rules-driven, workflow-heavy functions — the same category OpenAI has targeted for enterprise deployment generally, on the logic that a task with a clear correct answer and a repeatable structure is where a language model's error rate matters least and its speed gain matters most. Physical-asset sectors like manufacturing and power are a harder next step: the failure modes are less forgiving, and the workflows are less standardized across companies than double-entry bookkeeping or IT ticketing. Thrive's own materials frame the physical-assets vertical as still being defined rather than already operating."
+        "text": "The choice of accounting and IT as starting points wasn't incidental. Both are high-volume, rules-driven, workflow-heavy functions — the same category OpenAI has targeted for enterprise deployment generally, on the logic that ==a task with a clear correct answer and a repeatable structure is where a language model's error rate matters least and its speed gain matters most==. Physical-asset sectors like manufacturing and power are a harder next step: the failure modes are less forgiving, and the workflows are less standardized across companies than double-entry bookkeeping or IT ticketing. Thrive's own materials frame the physical-assets vertical as still being defined rather than already operating."
       },
       {
         "type": "ledger",
@@ -19415,7 +19430,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Thrive's own reported adoption numbers, per TechCrunch: TaxAI, deployed across Current's accounting firms, has processed more than 7,000 tax returns at 98% accuracy while cutting preparation time by more than 30%. On Shield's IT platform, AI tools have cut help-desk resolution time 36-fold, and the number of custom AI agents running across the platform doubled in a single month. Those figures come from Thrive and are not independently audited — they describe internal operating metrics a private company chose to disclose to a reporter, not numbers verified by a third party."
+        "text": "Thrive's own reported adoption numbers, per TechCrunch: TaxAI, deployed across Current's accounting firms, has **processed more than 7,000 tax returns at 98% accuracy** while cutting preparation time by more than 30%. On Shield's IT platform, AI tools have cut help-desk resolution time 36-fold, and the number of custom AI agents running across the platform doubled in a single month. ==Those figures come from Thrive and are not independently audited== — they describe internal operating metrics a private company chose to disclose to a reporter, not numbers verified by a third party."
       },
       {
         "type": "flow",
@@ -19446,7 +19461,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "That structure is exactly what drew scrutiny the first time. When OpenAI's stake was announced in December, Bloomberg and TechCrunch both described it as part of a growing pattern of what analysts call OpenAI's \"circular deals\" — arrangements where financing, compute access, or engineering time change hands in place of cash, in ways critics say make it hard to separate genuine enterprise demand for AI from demand OpenAI itself is manufacturing by supplying both sides of the transaction. A Thrive Holdings spokesperson pushed back on that framing at the time, telling reporters the deal was \"responding to an unmet need in the market\" rather than creating one.",
+        "text": "That structure is exactly what drew scrutiny the first time. When OpenAI's stake was announced in December, Bloomberg and TechCrunch both described it as part of a growing pattern of what analysts call OpenAI's __\"circular deals\"__ — arrangements where financing, compute access, or engineering time change hands in place of cash, in ways critics say make it hard to separate genuine enterprise demand for AI from demand OpenAI itself is manufacturing by supplying both sides of the transaction. A Thrive Holdings spokesperson pushed back on that framing at the time, telling reporters the deal was \"responding to an unmet need in the market\" rather than creating one.",
         "citation_urls": [
           "https://techcrunch.com/2025/12/01/openais-investment-into-thrive-holdings-is-its-latest-circular-deal/",
           "https://finance.yahoo.com/news/openai-takes-stake-thrive-holdings-150041276.html"
@@ -19454,7 +19469,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Thrive isn't an isolated case of this pattern — it's one node in a much larger one. Bloomberg's own reporting has mapped more than $800 billion in similar arrangements across OpenAI, Nvidia, Microsoft, Oracle, AMD and others: Nvidia has committed up to $100 billion to help finance OpenAI's data-center buildout in exchange for OpenAI committing to buy and deploy Nvidia chips at those same facilities; Oracle's five-year, roughly $300 billion cloud-compute deal with OpenAI now has GPUs running at its Abilene, Texas campus; and OpenAI took up to a 10% stake in AMD in exchange for committing to buy AMD's chips. Each of those deals, like Thrive's, swaps some mix of equity, compute or services for a commitment rather than a straightforward cash sale — the same mechanism this smaller, enterprise-services-focused deal repeats at a fraction of the size.",
+        "text": "Thrive isn't an isolated case of this pattern — it's one node in a much larger one. Bloomberg's own reporting has mapped **more than $800 billion in similar arrangements** across OpenAI, Nvidia, Microsoft, Oracle, AMD and others: Nvidia has committed up to $100 billion to help finance OpenAI's data-center buildout in exchange for OpenAI committing to buy and deploy Nvidia chips at those same facilities; Oracle's five-year, roughly $300 billion cloud-compute deal with OpenAI now has GPUs running at its Abilene, Texas campus; and OpenAI took up to a 10% stake in AMD in exchange for committing to buy AMD's chips. Each of those deals, like Thrive's, swaps some mix of equity, compute or services for a commitment rather than a straightforward cash sale — the same mechanism this smaller, enterprise-services-focused deal repeats at a fraction of the size.",
         "citation_urls": [
           "https://www.bloomberg.com/graphics/2026-ai-circular-deals/",
           "https://techcrunch.com/2025/12/01/openais-investment-into-thrive-holdings-is-its-latest-circular-deal/"
@@ -19483,7 +19498,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "What's still missing from the public record: no party has disclosed what OpenAI's December stake is actually worth at Thrive's new $12 billion valuation, since it was never priced in dollars to begin with. Thrive hasn't said whether this round diluted that stake or whether OpenAI's agreement includes anti-dilution terms. And the physical-assets vertical Mehndiratta described — spanning data centers, manufacturing, healthcare, power, water and transportation — has no named first acquisition yet, so which of those sectors actually gets Thrive's playbook first remains an open question rather than a plan."
+        "text": "What's still missing from the public record: ==no party has disclosed what OpenAI's December stake is actually worth at Thrive's new $12 billion valuation==, since it was never priced in dollars to begin with. Thrive hasn't said whether this round diluted that stake or whether OpenAI's agreement includes anti-dilution terms. And the physical-assets vertical Mehndiratta described — spanning data centers, manufacturing, healthcare, power, water and transportation — has no named first acquisition yet, so which of those sectors actually gets Thrive's playbook first remains an open question rather than a plan."
       }
     ],
     "apply": [
@@ -19566,6 +19581,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Gate",
           "agent": "claude-runner",
           "note": "Cleared for publish: format matches evidence depth (four threads, two primary sources, synthesis-band word count), components trace to sourced facts, apply block names concrete forward-looking checkpoints."
+        },
+        {
+          "name": "Ink-layer catch-up",
+          "agent": "claude-runner",
+          "note": "ink layer applied 2026-08-14: added highlight/bold/underline markers to existing body prose per §3b+; no wording changed, no publishedAt change."
         }
       ],
       "gate": {
@@ -20929,5 +20949,528 @@ window.RTFC_NEWSROOM_ARTICLES = [
       ]
     },
     "publishedAt": "2026-08-14T16:54:16Z"
+  },
+  {
+    "slug": "anthropic-claude-invisible-watermark-global-rollout",
+    "title": "Anthropic starts watermarking everything Claude writes — invisibly, worldwide, with no opt-out",
+    "dek": "The mark is built to survive copy-paste and traces back to the EU AI Act's transparency code, but it flags anything Claude has touched, not just what it authored — and the writers objecting loudest say they only used it to proofread.",
+    "persona": "samira-nasser",
+    "section": "Ethics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Anthropic now weaves an invisible, machine-readable watermark into text generated by Claude models released since Aug. 2.",
+      "Generated image and code files instead get signed C2PA provenance metadata, a separate mechanism.",
+      "The policy runs worldwide with no opt-out, tied directly to the EU AI Act's Article 50 code.",
+      "Writers who used Claude only to proofread or translate say the mark wrongly credits it with authorship.",
+      "Caveat: Anthropic's documentation says a detected mark is a signal, not proof, and may not survive heavy editing."
+    ],
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether OpenAI ships the text watermark it has already built.",
+        "text": "Forbes reports OpenAI has held its own version back over false-positive risk and fear of pushing users to competitors — Anthropic's move puts pressure on that calculus."
+      },
+      {
+        "label": "Watch what happens to older Claude models.",
+        "text": "Anthropic's own documentation guarantees marking only for models launched on or after Aug. 2, 2026, and describes earlier models as “in transition” — without a stated completion date."
+      },
+      {
+        "label": "Watch for the first documented false-positive dispute.",
+        "text": "Anthropic says a detected mark shows content was processed by Claude, not that Claude authored it — proofreading or translating human writing can trigger the same signal as generating it from scratch."
+      },
+      {
+        "label": "Watch whether the C2PA file metadata proves harder to strip than the text watermark.",
+        "text": "Cryptographically signed provenance data on images and code files is a different, generally more tamper-evident mechanism than an invisible pattern woven into prose."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Every reply Claude writes now carries an invisible signature. [Anthropic](#/company/anthropic) said this month that models it has released since Aug. 2, 2026 embed a **machine-readable watermark directly into generated text**, while generated image and code files instead get separate, cryptographically signed provenance metadata. The rollout is global — not limited to the European market that prompted it — and there is **no setting to turn it off**.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+          "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The trigger is regulatory. Anthropic has signed the EU AI Act's ++Article 50(2) Code of Practice++ on transparency of AI-generated content, and its own help documentation is explicit that ==marking will apply to output from supported models wherever Claude is offered, worldwide== — a global rollout built to satisfy one jurisdiction's rule rather than a market-by-market toggle. The file-level mechanism uses the __C2PA__ standard {{note: Coalition for Content Provenance and Authenticity — the same signing standard camera makers and news wires use to certify a photo hasn't been altered.}}, applied to supported image formats and to Claude Code's generated files. For text, Anthropic describes the mechanism plainly in its own words: it “will travel with the text when it's copied and pasted elsewhere, and may persist through some editing.”",
+        "citation_urls": [
+          "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+          "https://www.euronews.com/next/2026/08/11/eu-compliance-delivered-globally-anthropic-to-watermark-claudes-output-worldwide"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mark isn't confined to the chat window. TechCrunch's reporting on Anthropic's rollout lists the surfaces covered: the **Claude Platform API**, Claude.ai itself, **Claude Code**, Claude Cowork, and Claude Tag — meaning code a developer generates through the API, not just prose typed into a browser, now carries the same signal. That matters for a different audience than the one objecting on social media: a company shipping software built with Claude Code inherits a provenance mark on its own codebase whether or not it discloses AI assistance anywhere else. Anthropic's documentation says support for models released before Aug. 2 will be extended over time, without naming a completion date — so which of a developer's existing projects carry the mark and which don't currently depends on which model version wrote which file.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+          "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "THE ROLLOUT, IN SHORT",
+          "title": "What's watermarked, and how",
+          "items": [
+            {
+              "label": "Text",
+              "value": "Invisible pattern woven into the output",
+              "note": "Anthropic's own description; not a visible mark"
+            },
+            {
+              "label": "Images / code files",
+              "value": "Signed C2PA provenance metadata",
+              "note": "a separate mechanism from the text watermark"
+            },
+            {
+              "label": "Coverage",
+              "value": "Models released on or after Aug. 2, 2026",
+              "note": "older models are described as “in transition”"
+            },
+            {
+              "label": "Geography",
+              "value": "Worldwide",
+              "note": "not limited to the EU market that prompted it"
+            },
+            {
+              "label": "Opt-out",
+              "value": "None"
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Why writers are pushing back"
+      },
+      {
+        "type": "p",
+        "text": "The objection isn't to disclosure in principle — it's to what the mark actually certifies. Anthropic's documentation says a detected watermark shows content was **processed by Claude**, not that Claude wrote it from nothing; running a human-written paragraph through Claude to proofread, format, or translate it can trigger the identical signal as generating the whole thing from a blank prompt. Writers who use Claude as an editing tool rather than an author say that distinction gets lost the moment a mark shows up at all.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/maryroeloffs/2026/08/11/claude-will-put-invisible-watermarks-on-ai-text-and-images-and-the-internet-isnt-happy/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“I had ditched Grammarly for Claude for proofreading because it does a better job. But now the stuff I've written will be watermarked that Claude did the work. This is ridiculous.” — Erick Erickson, radio host and blogger, quoted by Forbes",
+        "citation_urls": [
+          "https://www.forbes.com/sites/maryroeloffs/2026/08/11/claude-will-put-invisible-watermarks-on-ai-text-and-images-and-the-internet-isnt-happy/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THREE LABS, THREE POSITIONS",
+          "title": "Who's actually shipping AI-content watermarking",
+          "columns": [
+            {
+              "label": "Anthropic",
+              "sub": "Claude",
+              "hi": true
+            },
+            {
+              "label": "Google",
+              "sub": "Gemini / SynthID"
+            },
+            {
+              "label": "OpenAI",
+              "sub": "GPT"
+            }
+          ],
+          "rows": [
+            {
+              "label": "Text watermarking",
+              "values": [
+                "Live, global, Aug. 2026",
+                "Expanding from images to text/audio/video",
+                "Built, not deployed"
+              ]
+            },
+            {
+              "label": "Image/file watermarking",
+              "values": [
+                "C2PA metadata, live",
+                "Live since 2023 (SynthID)",
+                "Not detailed"
+              ]
+            },
+            {
+              "label": "User opt-out",
+              "values": [
+                "None",
+                "Not disclosed",
+                "N/A — undeployed"
+              ]
+            },
+            {
+              "label": "Stated reason for current position",
+              "values": [
+                "EU AI Act Article 50 compliance",
+                "Not stated in reporting used",
+                "False-positive risk and user-migration concerns, per Forbes"
+              ],
+              "note": "the one real strategic split among the three"
+            }
+          ],
+          "source": "Anthropic support documentation; Forbes reporting on Google's SynthID history and OpenAI's undeployed watermark"
+        }
+      },
+      {
+        "type": "p",
+        "text": "Google has the longest track record here — it has watermarked AI-generated images with SynthID since 2023 and has been expanding the approach toward text, audio, and video. OpenAI, by contrast, has reportedly built its own text-watermarking technology and chosen not to release it, weighing the risk of false positives and the possibility that flagged users simply switch to a competitor that doesn't mark its output. Anthropic's move removes that competitive shelter for a lab still holding back: once one major lab watermarks by default, the reputational cost of *not* marking gets harder to justify on \"the market won't accept it\" grounds alone. It also weakens the migration argument itself: the fear that marked users would leave for an unmarked competitor is a harder case to make once a rival of comparable scale has already tested that exact theory in public and shipped anyway.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/maryroeloffs/2026/08/11/claude-will-put-invisible-watermarks-on-ai-text-and-images-and-the-internet-isnt-happy/"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "A mark that fires on light editing, not just full generation, will misidentify human-directed work as AI-authored.",
+              "detail": "Anthropic's own documentation concedes the mark signals processing, not authorship — the exact ambiguity Erickson's complaint turns on.",
+              "whoHolds": "Writers and editors who use Claude for proofreading, translation, or formatting rather than drafting"
+            },
+            {
+              "claim": "Mandatory, opt-out-free marking assumes detection will always be used fairly, but disclosure of AI involvement can itself be used to discredit otherwise-accurate work.",
+              "detail": "No enforcement or dispute-resolution mechanism has been reported alongside the rollout.",
+              "whoHolds": "Users objecting publicly since the announcement, per Forbes' reporting"
+            }
+          ],
+          "verdict": "Both objections land on the same real gap: Anthropic has shipped a technical signal without shipping a stated policy for what a detected mark should be taken to mean in a dispute. That doesn't make the disclosure itself wrong — the EU AI Act's transparency mandate is the kind of rule this newsroom's own AI-authorship disclosure exists to satisfy — but it does mean the mark currently carries more certainty in public perception than Anthropic's own documentation claims for it.",
+          "source": "Anthropic support documentation; Forbes reporting on user reaction"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The underlying dispute is older than the watermark itself: **who gets credit for a piece of writing when a human directs it and an AI produces it?** Reaction threads since the announcement split on exactly that question — one framing, paraphrased from the public reaction Forbes cataloged, holds that the person supplying instructions, context, and repeated revisions is still the author and Claude is a tool; the opposing view holds that whoever generated the actual words did the actual work, full stop. Anthropic's mark doesn't resolve that argument. It just makes the underlying fact — that Claude touched the text somewhere in the process — checkable for the first time, which is precisely why both sides are arguing about it now instead of before.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/maryroeloffs/2026/08/11/claude-will-put-invisible-watermarks-on-ai-text-and-images-and-the-internet-isnt-happy/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this is unique to Anthropic's own products: this newsroom carries the same kind of AI-authorship disclosure, for the same underlying reason — the EU AI Act's transparency mandate treats \"who or what produced this\" as information a reader is owed, not an optional courtesy. What's new is that Claude now enforces the disclosure at the token level instead of leaving it to a byline. Whether that becomes the industry default depends less on Anthropic than on whether OpenAI decides the false-positive risk it has been weighing is now smaller than the risk of being the one major lab that still doesn't mark its output at all.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "Anthropic Help Center — “How Claude marks AI-generated content”",
+        "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+        "primary": true
+      },
+      {
+        "label": "TechCrunch — “Anthropic says it will watermark text generated by its AI models”",
+        "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/"
+      },
+      {
+        "label": "Forbes — “Claude Will Put Invisible Watermarks On AI Text And Images—And The Internet Isn't Happy”",
+        "url": "https://www.forbes.com/sites/maryroeloffs/2026/08/11/claude-will-put-invisible-watermarks-on-ai-text-and-images-and-the-internet-isnt-happy/"
+      },
+      {
+        "label": "Forbes — “Claude Will Now Leave A Watermark On Everything It Writes: What Does That Mean?”",
+        "url": "https://www.forbes.com/sites/anishasircar/2026/08/13/claude-will-now-leave-a-watermark-on-everything-it-writes-what-does-that-mean/"
+      },
+      {
+        "label": "Euronews — “EU compliance, delivered globally: Anthropic to watermark Claude's output worldwide”",
+        "url": "https://www.euronews.com/next/2026/08/11/eu-compliance-delivered-globally-anthropic-to-watermark-claudes-output-worldwide"
+      }
+    ],
+    "id": "newsroom-anthropic-claude-invisible-watermark-global-rollout",
+    "image": "assets/img/newsroom/newsroom-anthropic-claude-invisible-watermark-global-rollout.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-14T22:21:43Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced during this cycle's news sweep; not previously covered. Five independent sources: Anthropic's own support documentation (primary), TechCrunch's initial report, two separate Forbes pieces (an explainer and a reaction/backlash piece by a different byline), and Euronews' EU-regulation framing. Cleared for synthesis on source count and the presence of a primary document."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Core mechanism claims (watermark behavior, C2PA use, Aug. 2 cutoff, no opt-out, worldwide scope) checked directly against Anthropic's own support article rather than secondary paraphrase. The Erickson quote is reproduced exactly as Forbes printed it, attributed to Forbes rather than presented as this newsroom's own interview. Google SynthID and OpenAI's undeployed watermark are both attributed to Forbes' reporting, not independently confirmed against Google or OpenAI statements."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found one issue: an early draft implied OpenAI's reasoning for not shipping its watermark was confirmed by OpenAI directly. Revised to attribute that claim explicitly to Forbes' reporting, since no OpenAI statement was located. No self-referential language found elsewhere; all citation URLs resolve to the actual reporting used."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger applies: no health or financial-advice content, no legal proceeding, no accusatory claim about a named party (Erickson's quoted objection is his own stated view, sourced and linked, not a claim this newsroom makes about him or anyone else), and the one quote from a named person is reproduced verbatim from a linked source."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle. Synthesis floor cleared: 5 sources (1 primary), 3 components (keyfacts, compare, counter) plus a pull quote, apply block present."
+      }
+    },
+    "publishedAt": "2026-08-14T22:21:43Z"
+  },
+  {
+    "slug": "google-gemini-3-7-flash-launch-benchmarks-pricing",
+    "title": "Google ships Gemini 3.7 Flash, its third new Flash model in three months, with a 4-point independent score jump",
+    "dek": "Artificial Analysis scored the high-reasoning variant at 56 on its Intelligence Index — one point behind the field's leaders — while Google cut the price in half through the end of the year and pointed the model squarely at coding and agent workloads.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "tldr": [
+      "Google released Gemini 3.7 Flash on Aug. 13 — its third new Flash-tier model in roughly three months.",
+      "Artificial Analysis independently scored the high-reasoning variant at 56, four points above Gemini 3.6 Flash.",
+      "Introductory pricing is $0.75 / $3.75 per million tokens, half the standard rate that starts Jan. 1, 2027.",
+      "Google's own benchmarks show the largest gains on coding and business-workflow agent tasks, not general knowledge.",
+      "Caveat: the coding and workflow numbers are Google's own; independent scoring covers only the Intelligence Index."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Re-run your own eval before migrating off Gemini 3.6 Flash.",
+        "text": "A 4-point Intelligence Index gain and cheaper list pricing are real, but Google's largest claimed deltas — AutomationBench, GDP.pdf — are the company's own numbers, not independently reproduced yet."
+      },
+      {
+        "label": "Lock in the introductory rate while it lasts.",
+        "text": "$0.75/$3.75 per million tokens holds only through Dec. 31, 2026; standard pricing doubles to $1.50/$7.50 on Jan. 1, 2027."
+      },
+      {
+        "label": "Watch whether Artificial Analysis scores the medium and low reasoning tiers against same-price rivals.",
+        "text": "Only the high-effort variant's score (56) has been directly compared to GPT-5.6 Terra and Muse Spark 1.2 (both 57) so far."
+      },
+      {
+        "label": "Watch GPT-5.6 Terra's and Muse Spark 1.2's next move.",
+        "text": "Gemini 3.7 Flash (high) now sits one Intelligence Index point behind both, at a lower list price than either has published."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Google](#/company/google) shipped **Gemini 3.7 Flash** on Aug. 13, the company's third new Flash-tier model in roughly three months and, per Google's own framing, its \"most intelligent workhorse model yet for coding and agents.\" [Artificial Analysis](#/scoreboard), the independent benchmarking group this newsroom's Scoreboard relies on, scored the high-reasoning-effort variant at **56 on its Intelligence Index** — four points above Gemini 3.6 Flash and enough to land the model on what the firm calls the ==Intelligence-vs-Time Pareto frontier==, meaning nothing scoring higher finishes tasks faster.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+          "https://artificialanalysis.ai/models/gemini-3-7-flash"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "%%56|Artificial Analysis Intelligence Index score, Gemini 3.7 Flash (high)%% That score places the model just behind the two current leaders in its class, __GPT-5.6 Terra__ (max) and Muse Spark 1.2 (xhigh), both at 57 — a one-point gap Google is closing with price rather than a bigger jump in reasoning score. Introductory pricing runs **$0.75 per million input tokens and $3.75 per million output tokens**, half the standard rate, through Dec. 31, 2026; list price then doubles to $1.50/$7.50 on Jan. 1, 2027. Artificial Analysis separately measured output speed at roughly 340 tokens per second, against a same-tier median of 74.8 — the basis for its second claim, that discounted Gemini 3.7 Flash also sits on the Intelligence-vs-Cost frontier.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier",
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "THE RELEASE, IN SHORT",
+          "title": "Gemini 3.7 Flash",
+          "items": [
+            {
+              "label": "Shipped",
+              "value": "Aug. 13, 2026"
+            },
+            {
+              "label": "Independent score",
+              "value": "56 (high effort)",
+              "note": "Artificial Analysis Intelligence Index; 53 medium, 51 low"
+            },
+            {
+              "label": "Intro price",
+              "value": "$0.75 / $3.75 per 1M tokens",
+              "note": "through Dec. 31, 2026"
+            },
+            {
+              "label": "Standard price",
+              "value": "$1.50 / $7.50 per 1M tokens",
+              "note": "from Jan. 1, 2027"
+            },
+            {
+              "label": "Positioning",
+              "value": "Coding and agent workloads, per Google"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Availability is broad from day one: the model is live in **Google AI Studio** and the Gemini API, inside Android Studio and Google Antigravity for developers, on the Gemini Enterprise Agent Platform, and in Gemini Spark for Google AI Pro and Ultra subscribers across more than 160 countries. That's a wider simultaneous rollout than a typical preview-first launch, and it matches the positioning: Google is not framing 3.7 Flash as an experiment to be validated slowly, but as the default coding/agent tier it wants developers on immediately, price included.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "[Google](#/company/google) ships Gemini 3.7 Flash in three reasoning-effort tiers rather than one — low, medium, and high — each independently scored by Artificial Analysis at 51, 53, and 56 respectively, all sharing the same list price. That's a different trade than most labs offer at this tier: instead of a single fixed model, a developer picks how much reasoning effort (and therefore latency) a given task actually needs, without paying a separate per-tier price for the privilege. A high-volume, low-complexity workload can run at \"low\" and still land close to the field's median score for comparably priced models; a harder task can call \"high\" and get the full four-point gain over Gemini 3.6 Flash.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/models/gemini-3-7-flash",
+          "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where Google says the gains actually are"
+      },
+      {
+        "type": "p",
+        "text": "Google's own release numbers show the jump concentrated in coding and business-agent tasks rather than general knowledge. On **FrontierCode 1.1**, a coding benchmark, the model moved from 34.4% to 43.6%; on **DeepSWE v1.1**, an agentic software-engineering test, from 49.0% to 65.3%. AutomationBench, which grades multi-step business-workflow completion, nearly doubled from 17.0% to 30.4%. Document comprehension (GDP.pdf) rose from 22.0% to 34.0%, and the model's WebDev Arena Elo — a head-to-head ranking of generated web apps — moved from 1538 to 1588. Those are Google's figures, not independently reproduced numbers — Artificial Analysis's own agent benchmarks show a smaller, though still real, gain: 60% on AA-AnalystAgent and 62.7% on AutomationBench-AA.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+          "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "GOOGLE'S OWN BENCHMARK NUMBERS",
+          "title": "Gemini 3.6 Flash vs. 3.7 Flash, by task",
+          "columns": [
+            {
+              "label": "Gemini 3.6 Flash"
+            },
+            {
+              "label": "Gemini 3.7 Flash",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "FrontierCode 1.1 Main (coding)",
+              "values": [
+                "34.4%",
+                "43.6%"
+              ]
+            },
+            {
+              "label": "DeepSWE v1.1 (agentic engineering)",
+              "values": [
+                "49.0%",
+                "65.3%"
+              ]
+            },
+            {
+              "label": "AutomationBench (business workflows)",
+              "values": [
+                "17.0%",
+                "30.4%"
+              ]
+            },
+            {
+              "label": "GDP.pdf (document comprehension)",
+              "values": [
+                "22.0%",
+                "34.0%"
+              ]
+            },
+            {
+              "label": "WebDev Arena (Elo)",
+              "values": [
+                "1538",
+                "1588"
+              ]
+            }
+          ],
+          "source": "Google's Gemini 3.7 Flash launch post — Google's own benchmark numbers, not independently reproduced"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The pattern is consistent across every metric Google published: **the widest gains are all on agentic and coding tasks**, the exact workloads Google's own positioning names. General-knowledge and reasoning gains, the kind the independent Intelligence Index aggregates across coding, reasoning, and knowledge evaluations together, moved by a comparatively modest four points. Read together, the two sets of numbers tell a consistent story rather than a conflicting one: a model tuned hardest for the coding-agent workload it's priced to win, with a smaller, but independently confirmed, gain in general capability.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "kicker": "WHO THIS LANDS ON",
+          "items": [
+            {
+              "who": "Developers building coding agents on Gemini 3.6 Flash",
+              "tone": "gains",
+              "what": "A same-tier model with a measured capability gain, at half the list price through year-end."
+            },
+            {
+              "who": "OpenAI's GPT-5.6 Terra and Meta's Muse Spark 1.2",
+              "tone": "exposed",
+              "what": "Both still score one Intelligence Index point above Gemini 3.7 Flash (high), but neither has matched its introductory price."
+            },
+            {
+              "who": "Teams relying on Google's AutomationBench and GDP.pdf figures alone",
+              "tone": "unclear",
+              "what": "Those gains are Google's own benchmarks; only the Intelligence Index score and the AA-run agent benchmarks are independently measured so far."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Artificial Analysis frames Gemini 3.7 Flash (high) as sitting on two frontiers at once — intelligence-vs-time and, with the discounted rate applied, intelligence-vs-cost — meaning no model both scores higher and costs less per task. That's a stronger claim than a plain benchmark win: it says Google isn't just catching up on the Intelligence Index, it's catching up while also being cheap and fast enough that a buyer doesn't have to trade one for the others. The one-point gap to GPT-5.6 Terra and Muse Spark 1.2 is real, but it now has to be weighed against a list price roughly a third of what a max-effort frontier model typically commands — the kind of trade a cost-sensitive coding-agent deployment is built to make.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "This is the third Gemini Flash release in roughly three months, following 3.5 Flash and 3.6 Flash earlier in the cycle — a cadence Artificial Analysis itself flagged when it published the score. Google is not the only lab iterating this fast at the low-cost tier, but the pattern of shipping a new Flash model roughly monthly, each time with a fresh independent score rather than a vendor claim standing alone, is now distinct enough to be its own story: at this pace, the number that matters for a buyer isn't just where a given model lands, but how quickly its replacement arrives.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google — “Introducing Gemini 3.7 Flash”",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "primary": true
+      },
+      {
+        "label": "Artificial Analysis — Gemini 3.7 Flash (high) model page",
+        "url": "https://artificialanalysis.ai/models/gemini-3-7-flash",
+        "primary": true
+      },
+      {
+        "label": "Artificial Analysis — “Gemini 3.7 Flash: On the Intelligence vs. Time per Task Pareto frontier”",
+        "url": "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier"
+      },
+      {
+        "label": "officechai — “Google Releases Gemini 3.7 Flash, Competes With GPT 5.6 Terra & Muse Spark 1.2 On Benchmarks”",
+        "url": "https://officechai.com/ai/gemini-3-7-flash-benchmarks/"
+      }
+    ],
+    "id": "newsroom-google-gemini-3-7-flash-launch-benchmarks-pricing",
+    "image": "assets/img/newsroom/newsroom-google-gemini-3-7-flash-launch-benchmarks-pricing.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-14T22:21:43Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced during this cycle's news sweep as a model release distinct from yesterday's Gemini app 1B-user story (that covered the consumer app; this covers a new model SKU). Four sources: Google's own launch post and Artificial Analysis's model page (both primary), Artificial Analysis's own analysis article, and one secondary aggregator. Cleared for synthesis on source count, one independent primary score, and real analysis of what Google's numbers do and don't establish."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Independent Intelligence Index score (56/53/51), pricing, and speed figures checked directly against Artificial Analysis's own model page and article, not secondary paraphrase. Google's FrontierCode/DeepSWE/AutomationBench/GDP.pdf/WebDev Arena numbers are labeled throughout as Google's own benchmark claims, not independently reproduced, since only the Intelligence Index and the AA-run agent benchmarks (AA-AnalystAgent, AutomationBench-AA) carry independent confirmation."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the compare component's benchmark table risked reading as independently verified. Revised: added an explicit prose sentence and a component `source` note stating the table is Google's own numbers, not AA-reproduced. No self-referential language found; all citation URLs resolve to the reporting used."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger applies: no health, financial-advice, legal, or accusatory content; no quote from a named person requiring verbatim sourcing; the central claims (score, pricing, benchmark deltas) are each attributed to the primary source that reported them."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle. Synthesis floor cleared: 4 sources (2 primary), 3 components (keyfacts, compare, stakes) plus a big-number callout, apply block present. Scoreboard row and entities.js entry added same cycle."
+      }
+    },
+    "publishedAt": "2026-08-14T22:21:43Z"
   }
 ];

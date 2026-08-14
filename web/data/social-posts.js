@@ -2607,5 +2607,205 @@ window.RTFC_SOCIAL_POSTS =[
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-claude-invisible-watermark-global-rollout",
+    "ts": "2026-08-14T22:21:43Z",
+    "export": {
+      "article_id": "newsroom-anthropic-claude-invisible-watermark-global-rollout",
+      "url": "/#/article/anthropic-claude-invisible-watermark-global-rollout",
+      "headline": "Anthropic starts watermarking everything Claude writes — invisibly, worldwide, with no opt-out",
+      "hook": "Anthropic now weaves an invisible watermark into everything Claude writes, worldwide, no opt-out -- and writers who used it only to proofread say the mark wrongly credits it with authorship.",
+      "key_facts": [
+        "Models released since Aug. 2 embed a machine-readable watermark in text; images/code get separate signed C2PA metadata",
+        "Driven by the EU AI Act's Article 50 code, but applied worldwide -- not just in Europe",
+        "A detected mark shows content was processed by Claude, not necessarily authored by it, Anthropic's own docs say"
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-claude-invisible-watermark-global-rollout.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic now weaves an invisible watermark into everything Claude writes -- worldwide, no opt-out. Writers who used it only to proofread say the mark wrongly credits Claude with authorship.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AIEthics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-15T03:21:43Z",
+        "copy": "\"I had ditched Grammarly for Claude for proofreading... now the stuff I've written will be watermarked that Claude did the work.\" The backlash to Anthropic's new watermark, explained.",
+        "reply_copy": "More:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AIEthics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic just started watermarking EVERYTHING Claude writes.\n\nInvisible. Worldwide. No opt-out.\n\nThe mark is tied to the EU AI Act's transparency rules -- but it fires whether Claude drafted something from scratch or just proofread a sentence you wrote yourself. That's exactly what has writers pushing back.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude",
+          "#AIEthics",
+          "#AI",
+          "#EUAIAct",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#AIWatermark"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic says every Claude model released since Aug. 2 now embeds an invisible, machine-readable watermark into the text it generates -- worldwide, with no way to turn it off. Image and code files get a separate signed provenance standard instead.\n\nThe trigger is regulatory: Anthropic signed the EU AI Act's Article 50 transparency code. But the mark fires whenever Claude touches text, not just when it writes from scratch -- so a writer who used Claude only to proofread or translate can end up flagged the same as someone who generated a whole draft. That distinction is exactly what's driving the pushback since the announcement.\n\nFull story:",
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic now watermarks everything Claude writes -- invisibly, worldwide, no opt-out. The catch: a detected mark means Claude processed the text, not that it authored it. Writers using Claude just to proofread are the ones objecting loudest.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-15T03:21:43Z",
+        "copy": "Google's watermarked AI images since 2023. OpenAI built a text watermark and chose not to ship it, fearing false positives. Anthropic just shipped anyway -- and that changes the calculus for everyone still holding back.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic now watermarks everything Claude writes -- invisible, worldwide, no opt-out. The mark shows Claude touched the text, not that it wrote it -- writers who just used it to proofread are pushing back hardest.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#AIEthics"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-gemini-3-7-flash-launch-benchmarks-pricing",
+    "ts": "2026-08-14T22:21:43Z",
+    "export": {
+      "article_id": "newsroom-google-gemini-3-7-flash-launch-benchmarks-pricing",
+      "url": "/#/article/google-gemini-3-7-flash-launch-benchmarks-pricing",
+      "headline": "Google ships Gemini 3.7 Flash, its third new Flash model in three months, with a 4-point independent score jump",
+      "hook": "Google's Gemini 3.7 Flash just scored 56 on the independent Intelligence Index -- 4 points above its predecessor -- at half the price through year-end.",
+      "key_facts": [
+        "Artificial Analysis independently scored Gemini 3.7 Flash (high) at 56, four points above Gemini 3.6 Flash",
+        "Introductory pricing is $0.75/$3.75 per million tokens, half the standard rate, through Dec. 31, 2026",
+        "It's Google's third new Flash-tier model in roughly three months"
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-google-gemini-3-7-flash-launch-benchmarks-pricing.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google's Gemini 3.7 Flash just scored 56 on the independent Intelligence Index -- 4 points above its predecessor, one point behind the field's leaders -- at half the standard price through year-end.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-15T03:21:43Z",
+        "copy": "Google's third new Gemini Flash model in three months just landed. The biggest gains: coding and agent benchmarks, not general knowledge. Here's what Google's own numbers do (and don't) prove.",
+        "reply_copy": "More:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google just shipped Gemini 3.7 Flash -- its THIRD new Flash model in three months.\n\nIndependently scored 56 on the Artificial Analysis Intelligence Index (up 4 points), at half the standard price through the end of the year.\n\nThe biggest gains are all in coding and agent tasks -- exactly where Google is pricing it to win.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Gemini",
+          "#Google",
+          "#AI",
+          "#GoogleAI",
+          "#MachineLearning",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#Coding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google released Gemini 3.7 Flash on Aug. 13 -- its third new Flash-tier model in roughly three months. Artificial Analysis, the independent benchmarking group, scored the high-reasoning variant at 56 on its Intelligence Index, four points above Gemini 3.6 Flash and just one point behind the field's current leaders.\n\nGoogle is also cutting the price in half through the end of the year: $0.75/$3.75 per million tokens, versus $1.50/$7.50 starting Jan. 1, 2027. The biggest capability gains, by Google's own numbers, are concentrated in coding and business-agent tasks -- exactly the workloads the pricing is aimed at.\n\nFull story:",
+        "hashtags": [
+          "#Gemini",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini 3.7 Flash just landed: independently scored 56 on the Intelligence Index (+4 vs. 3.6 Flash), half price through year-end. Google's third new Flash model in three months -- the gains are concentrated in coding and agent tasks.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-15T03:21:43Z",
+        "copy": "Google's own benchmark numbers for Gemini 3.7 Flash show the widest gains are all agentic/coding -- AutomationBench nearly doubled. Independent scoring so far only covers the Intelligence Index itself. Worth knowing before you switch.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Gemini 3.7 Flash: independently scored 56 on the Intelligence Index (+4), half price through year-end, one point behind the field's leaders. Google's third new Flash model in three months.",
+        "hashtags": [
+          "#Gemini",
+          "#Google",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
