@@ -1683,8 +1683,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "OpenAI, Anthropic and Google's encrypted AI reasoning could be replayed into a weaker model, read back in plaintext. Researchers decoded 315,320 public blocks, recovering real API keys and passwords. All three have since patched it.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msz6r4npe427",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msz6r4npe427",
+        "posted_at": "2026-08-14T03:11:44Z"
       }
     ]
   },
@@ -1965,18 +1967,20 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112244251396947",
         "attempts": 1,
-        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/1238977099292018/feed: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AA_NX2YlNYfPbm36QRS66q8\"}}"
+        "remote_id": "1238977099292018_122112244251396947",
+        "posted_at": "2026-08-14T03:11:08Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI-backed Thrive Holdings raised $2B+ at a $12B valuation to buy traditional accounting and IT firms and install AI inside them. OpenAI's own stake isn't cash -- it's embedded engineers and API access, the same non-cash structure Bloomberg and TechCrunch call a 'circular deal.' Thrive disputes the framing.",
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcAUVYcjte4",
         "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AM133foph9xLYb0bYFJXCki\"}}"
+        "remote_id": "18185472592398399",
+        "posted_at": "2026-08-14T03:11:38Z"
       },
       {
         "platform": "threads",
@@ -2026,8 +2030,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#DeepSeek",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088099926529949938",
+        "remote_id": "2088099926529949938",
+        "posted_at": "2026-08-14T03:06:32Z"
       },
       {
         "platform": "x",
@@ -2056,8 +2062,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AIagents",
           "#LLM"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcATyhxIO_G/",
+        "remote_id": "18109061165020166",
+        "posted_at": "2026-08-14T03:06:51Z"
       },
       {
         "platform": "facebook",
@@ -2066,14 +2074,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#DeepSeek",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112243729396947",
+        "remote_id": "1238977099292018_122112243729396947",
+        "posted_at": "2026-08-14T03:07:03Z"
       },
       {
         "platform": "threads",
         "copy": "DeepSeek's V4 Pro 0813 left preview with a vague warning: prices are going up \"significantly.\" The actual rate card is out now -- cache-hit input tokens rise up to 12x at peak hours from Aug 16. Cache-miss and output pricing rise far less. Also new: Artificial Analysis's first independent score for the release, 53, up from 44 -- still ten points behind Claude Opus 5.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcAT2IlDhUX",
+        "remote_id": "17952082392243838",
+        "posted_at": "2026-08-14T03:07:24Z"
       },
       {
         "platform": "threads",
@@ -2091,8 +2103,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#LLM"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3msz6jjjfhx2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3msz6jjjfhx2u",
+        "posted_at": "2026-08-14T03:07:29Z"
       }
     ]
   }
