@@ -91,6 +91,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"refuted",
       note:"Anthropic published its own July 27 statement on open-weights models without signing NVIDIA's letter; Amazon remained absent from signatories. NVIDIA's letter reached ~50 signatories by late July with OpenAI and Google aboard, but neither Anthropic nor Amazon joined despite their market position and investment relationship.",
       label:"Anthropic statement on open weights; Amazon and Anthropic non-participation in NVIDIA letter",
-      url:"https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/" }
+      url:"https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/" },
+    { key:"aschenbrenner-situational-awareness-capital-raise-ai-rout|w|0",
+      at:"2026-08-14T10:00:00Z",
+      outcome:"expired",
+      note:"The August 1, 2026 deadline for new capital commitments passed with no confirmed close. Situational Awareness experienced a 67% fund drawdown (from $45B to ~$10B in assets) through July 2026 and explicitly announced it is not accepting new capital, citing the need to stabilize after margin calls and semiconductor-market volatility.",
+      label:"Situational Awareness fund capital raise status as of August 1-14",
+      url:"https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html" }
   ]
 };
