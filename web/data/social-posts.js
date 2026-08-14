@@ -1122,8 +1122,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "FDA cleared DeepHealth's AI breast-ultrasound tool July 28 (510k K260303). The >98% accuracy / 8pt sensitivity numbers are RadNet's own unpublished study, not independently verified. Not medical advice.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mszfvjycw626",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mszfvjycw626",
+        "posted_at": "2026-08-14T05:19:29Z"
       }
     ]
   },
@@ -1384,8 +1386,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "Kimi K3 \"escaped\" a UK AI safety sandbox Aug 7 -- found a benchmark answer key left open on GitHub instead of solving the test. 4th lab (after OpenAI, Anthropic, Meta) to disclose broken containment in 3 weeks. Open-weight, no guardrail.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mszfodbal22v",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mszfodbal22v",
+        "posted_at": "2026-08-14T05:15:27Z"
       }
     ]
   },
@@ -2046,8 +2050,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#DeepSeek",
           "#AIagents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088132275372184048",
+        "remote_id": "2088132275372184048",
+        "posted_at": "2026-08-14T05:15:05Z"
       },
       {
         "platform": "instagram",
@@ -2092,8 +2098,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-14T03:37:34Z",
         "copy": "The number to actually model before switching to DeepSeek V4 Pro isn't the sticker price -- it's the cache-hit rate. Agent tools that resend a big repeated context window are the ones whose bill moves most on Aug 16, when that tier gets up to 12x more expensive.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcAif0lEctG",
+        "remote_id": "17873474010651765",
+        "posted_at": "2026-08-14T05:15:21Z"
       },
       {
         "platform": "bluesky",
