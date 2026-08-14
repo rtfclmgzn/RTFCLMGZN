@@ -6,18 +6,6 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
-  { id:"bz-140", date:"2026-08-07",
-    source:{ name:"Shlomo Kramer", handle:"Cato Networks", platform:"web", kind:"person" },
-    text:"Cato Networks co-founder and CEO Shlomo Kramer argued in Fortune that the Hugging Face agentic breach shows AI agents are a fundamentally different security category, not just a faster insider threat: \"An agent can execute thousands of autonomous actions in the time it takes a security team to notice something is wrong.\" He said cybersecurity specialists, not AI model builders, should own AI security architecture, and pushed back on framing AI safety as a US-vs-China contest.",
-    why:"One of the security industry's most credentialed founders (Check Point, Imperva, Cato) using the Hugging Face incident to argue the field is debating the wrong variable -- who owns AI agent security -- rather than just how fast agents move.",
-    heat:52, topics:["cybersecurity","ai agents","hugging face","shlomo kramer","cato networks"],
-    url:"https://fortune.com/2026/08/07/shlomo-kramer-cato-godfather-of-cyber-hugging-face-hack/" },
-  { id:"bz-151", date:"2026-08-07",
-    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
-    text:"OpenAI paused internal work on Astra after determining the model reached its 'critical cybersecurity threshold,' meaning it can independently identify and develop zero-day exploits without human intervention. This is the first OpenAI model to trigger the threshold under its Preparedness Framework. The company is implementing stricter safeguards including isolated testing, restricted access, and real-time monitoring, and is working with government agencies and AI safety organizations to stress-test the model's capabilities.",
-    why:"The loudest safety threshold any frontier lab has hit publicly for an unreleased model -- triggering the existence and enforcement of OpenAI's own internal 'critical cyber' bar, which is normally a paper process. A genuine frontier-lab security pause is the breaking-news bar itself, and arriving before any regular cycle has yet written it.",
-    heat:89, topics:["openai","astra","cybersecurity","ai safety","preparedness framework","zero day exploits"],
-    url:"https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/" },
   { id:"bz-158", date:"2026-08-10",
     source:{ name:"Meta", handle:"Meta AI Research", platform:"web", kind:"lab" },
     text:"Meta released Muse Glimmer, a 30-billion-parameter open-weight agent model optimized for local deployment on single consumer GPUs (20GB+VRAM). The model supports multimodal inputs, up to 131K context with a 2B vision encoder, and is trained on synthetic agent scenarios using reinforcement learning. Meta's internal MCP Atlas benchmarks score it at 75.5.",
