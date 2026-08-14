@@ -6971,6 +6971,11 @@
     guides:["Guides","Hands-on, plain-English guides to actually using AI. No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
     extensions:["AI Extensions","Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — one categorized, searchable encyclopedia, primary sources only."],
+    /* grid was the ONE rendered route missing from this table, so the page shipped
+       for weeks with a "Page not found" <title> over perfectly good content —
+       caught 2026-08-14 during live verification. If you add a route to route(),
+       add its head here in the same commit. */
+    grid:["The Grid","Every datacenter running these models, mapped: who operates each site, who the primary tenant is, and how sure we are of the details — reconfirmed daily."],
     buzz:["The Buzz","What the AI world is actually saying right now: the loudest posts, ranked by heat, with why each one is buzzing and which of our stories cited it."],
     scoreboard:["The Scoreboard","Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move — never on a lab’s own number."],
     claims:["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
