@@ -2842,5 +2842,159 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-15T02:01:51Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-q2-2026-profit-spacex-discount-timing",
+    "export": {
+      "article_id": "newsroom-anthropic-q2-2026-profit-spacex-discount-timing",
+      "url": "/#/article/anthropic-q2-2026-profit-spacex-discount-timing",
+      "headline": "Anthropic says preliminary Q2 results beat its own $559 million profit forecast — the same two months a $45 billion compute deal was running at a discount",
+      "hook": "Anthropic's preliminary Q2 revenue beat its own May forecast -- but the two months that proved it also carried a discounted SpaceX compute rate.",
+      "key_facts": [
+        "Preliminary Q2 2026 revenue reportedly topped $11.5B, above Anthropic's own $10.9B May forecast",
+        "SpaceX's IPO filing shows the $45B Anthropic compute deal ramped in at a discount during May-June",
+        "A March court declaration and a separate $19B run-rate claim don't obviously reconcile"
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-q2-2026-profit-spacex-discount-timing.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic says preliminary Q2 revenue topped $11.5B, beating its own $10.9B forecast. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount -- during the exact same two months.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-16T03:37:39Z",
+        "copy": "A CFO's sworn court declaration says Anthropic's revenue was \"exceeding $5 billion to date.\" A separate company claim puts the run-rate at $19 billion. Neither figure is defined clearly enough to say if they agree.",
+        "reply_copy": "More:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic says preliminary Q2 2026 revenue topped $11.5 BILLION -- beating its own $10.9B forecast from May, with a first-ever operating profit.\n\nBut here's the wrinkle: SpaceX's own IPO filing shows the $45 billion compute deal behind much of that capacity was running at a DISCOUNT during exactly those two months.\n\nNone of this makes the profit fake. It just means the timing deserves a closer look.\n\nFull breakdown at the link in bio.",
+        "hashtags": ["#Anthropic", "#AI", "#ArtificialIntelligence", "#TechNews", "#Startups", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic's preliminary Q2 2026 results reportedly beat its own May forecast: revenue above $11.5 billion, against a projected $10.9 billion, with a first-ever positive operating profit.\n\nBut SpaceX's own IPO filing shows the $45 billion compute deal underneath much of that capacity ramped in at a discounted rate during May and June -- the same two months behind the profit claim. A discounted onboarding period is standard in big compute contracts, and Anthropic's real efficiency gains predate the SpaceX ramp. Still, it's a coincidence neither company has quantified.\n\nFull story:",
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's preliminary Q2 revenue reportedly beat its own $10.9B forecast, landing above $11.5B with a first-ever profit. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount during those same two months. Doesn't make it fake -- but it's a coincidence worth knowing about.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-16T03:37:39Z",
+        "copy": "The part of this story that's hardest to resolve: Anthropic's CFO told a federal court revenue was \"exceeding $5 billion to date\" in March. Separately, the company has cited a $19B run-rate around the same time. Neither is defined precisely enough to say if they actually agree.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic's preliminary Q2 revenue beat its own $10.9B forecast, landing above $11.5B. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount -- during those same two months.",
+        "hashtags": ["#Anthropic", "#AI", "#Markets"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-meta-zuckerberg-ai-manifesto-bosworth-contradiction",
+    "export": {
+      "article_id": "newsroom-meta-zuckerberg-ai-manifesto-bosworth-contradiction",
+      "url": "/#/article/meta-zuckerberg-ai-manifesto-bosworth-contradiction",
+      "headline": "Zuckerberg's AI manifesto promises AI will free up your time. Two days later, his own CTO told employees not to expect any of it back.",
+      "hook": "Zuckerberg's AI manifesto says personal AI will free up your time. Two days later, his own CTO told staff not to expect any of it back.",
+      "key_facts": [
+        "Zuckerberg's Aug. 10 essay argues AI's real risk is concentrated control, backed by a $1B community fund",
+        "Meta CTO Andrew Bosworth told staff he puts AI-driven time savings into more work, not less",
+        "Critics note Meta's history with open standards like ActivityPub complicates its openness pitch"
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-meta-zuckerberg-ai-manifesto-bosworth-contradiction.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Zuckerberg's new AI manifesto says personal AI will free up your time. Two days later, his own CTO told staff not to expect any of it back: \"I get an extra hour. I put it into that.\"",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Meta", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-16T03:41:08Z",
+        "copy": "A critic's case: Zuckerberg is right that concentrated AI power is dangerous -- but Meta's own history with open standards like ActivityPub makes the company an unreliable messenger for delivering the outcome it's promising.",
+        "reply_copy": "More:",
+        "link_in_reply": true,
+        "hashtags": ["#Meta", "#AIEthics"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Zuckerberg's new AI manifesto, \"The Future Is for Everyone,\" argues AI's real danger is concentrated power -- backed by a $1 billion community fund and new board oversight.\n\nTwo days later, Meta's own CTO gave employees a very different answer when asked if AI productivity gains meant more time off:\n\n\"I get an extra hour. You know what I do with it? I put it into that.\"\n\nSame company. Same week. Two different answers about who AI is actually for.\n\nFull story at the link in bio.",
+        "hashtags": ["#Meta", "#AI", "#ArtificialIntelligence", "#TechNews", "#AIEthics", "#FutureOfWork"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Mark Zuckerberg published a roughly 6,500-word essay on Aug. 10 arguing that AI's central danger is concentrated control, not capability -- backed by a $1 billion community fund and new board-level safety oversight.\n\nTwo days later, Meta CTO Andrew Bosworth gave a different answer when an employee asked whether AI-driven productivity gains would mean more time off: he put his own extra hour into more work, not less.\n\nThe manifesto's concentration-of-power argument may still be right. But it didn't anticipate the company's own CTO answering a different question first.\n\nFull story:",
+        "hashtags": ["#Meta", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Zuckerberg's new AI manifesto says personal AI will free up time for what you enjoy. Two days later, Meta's own CTO told staff he puts his AI-driven time savings into more work, not less. Same company, same week, two different answers about who benefits.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-16T03:41:08Z",
+        "copy": "A critic's read: Meta pushed the open ActivityPub standard behind Threads while it needed the credibility, then let it slide once Threads had scale. Same pattern now applies to the AI-openness argument in Zuckerberg's manifesto -- even critics say the argument itself is sound.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Zuckerberg's AI manifesto says personal AI frees up your time. Two days later, Meta's own CTO told staff he puts his AI time savings into more work, not less. Same company, same week, different answers.",
+        "hashtags": ["#Meta", "#AI", "#AIEthics"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
