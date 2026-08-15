@@ -2474,8 +2474,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Databricks",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088564926025453941",
+        "remote_id": "2088564926025453941",
+        "posted_at": "2026-08-15T09:54:17Z"
       },
       {
         "platform": "instagram",
@@ -2562,10 +2564,11 @@ window.RTFC_SOCIAL_POSTS =[
           "#Apple",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088563916607516923",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2088563916607516923",
+        "posted_at": "2026-08-15T09:50:16Z"
       },
       {
         "platform": "instagram",
