@@ -114,6 +114,30 @@ def main() -> int:
             errs: list[str] = []
             page.on("pageerror", lambda e: errs.append(str(e)[:220]))
 
+            # A DATA FILE THAT FAILS TO LOAD IS INVISIBLE TO pageerror.
+            #
+            # `pageerror` fires for uncaught exceptions in running code. A
+            # classic <script> whose SOURCE does not parse is reported as a
+            # console error instead, and the page carries on with that file's
+            # global simply undefined. That is exactly how usage-log-current.js
+            # broke /usage for weeks: one missing comma, no exception, the page
+            # rendered "fine" with nothing in it.
+            #
+            # So watch the console and the network too, and keep them for the
+            # failure message. A check that says "page is empty (0 chars)" tells
+            # you nothing you can act on; one that says "console: SyntaxError in
+            # magazine-issues.js" is the whole diagnosis.
+            conerr: list[str] = []
+            netfail: list[str] = []
+            page.on("console", lambda m: conerr.append(m.text[:200])
+                    if m.type == "error" else None)
+            page.on("requestfailed", lambda r: netfail.append(
+                "%s %s" % (r.url.split("/")[-1][:60], r.failure or "")))
+            page.on("response", lambda r: netfail.append(
+                "%s -> HTTP %d" % (r.url.split("/")[-1][:60], r.status))
+                if r.status >= 400 and ("/data/" in r.url or "/assets/" in r.url)
+                else None)
+
             PROBE = """() => {
                 const app = document.getElementById('app') || {};
                 const h = document.querySelector('#app h1');
@@ -139,7 +163,7 @@ def main() -> int:
                 empty still fails, ~6s later, which costs nothing because it
                 only happens when something is genuinely broken.
                 """
-                errs.clear()
+                errs.clear(); conerr.clear(); netfail.clear()
                 page.goto(url, wait_until="load", timeout=45000)
                 page.wait_for_timeout(settle)
                 state = page.evaluate(PROBE)
@@ -149,8 +173,30 @@ def main() -> int:
                     waited += 250
                     state = page.evaluate(PROBE)
                 if state["len"] < 300:
-                    fails.append("%s — still empty after %dms (%d chars)"
-                                 % (label, waited, state["len"]))
+                    why = page.evaluate(
+                        """() => {
+                            const g = Object.keys(window).filter(k => k.startsWith('RTFC_'));
+                            const missing = ['RTFC_ARTICLES','RTFC_MAGAZINE_ISSUES',
+                                'RTFC_PERSONAS','RTFC_SCOREBOARD','RTFC_BUZZ','RTFC_GUIDES']
+                                .filter(k => window[k] === undefined);
+                            return {hasApp: !!document.getElementById('app'),
+                                    title: document.title,
+                                    globals: g.length, missing: missing};
+                        }"""
+                    )
+                    detail = "globals=%d" % why["globals"]
+                    if not why["hasApp"]:
+                        detail += "; NO #app element — the shell itself did not load"
+                    if why["missing"]:
+                        detail += "; UNDEFINED globals: %s (their data file did not "
+                        detail += "parse or did not load)"
+                        detail = detail % ", ".join(why["missing"])
+                    if conerr:
+                        detail += "; console: %s" % conerr[0]
+                    if netfail:
+                        detail += "; network: %s" % netfail[0]
+                    fails.append("%s — still empty after %dms (%d chars) [%s]"
+                                 % (label, waited, state["len"], detail))
                 if errs:
                     fails.append("%s — JS error: %s" % (label, errs[0]))
                 if state["crashed"]:
