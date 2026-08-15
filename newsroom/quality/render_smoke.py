@@ -90,10 +90,36 @@ class SPAHandler(http.server.SimpleHTTPRequestHandler):
         pass
 
 
+class _Server(socketserver.ThreadingTCPServer):
+    """THE TEST SERVER MUST BE THREADED, AND THIS IS NOT A DETAIL.
+
+    WHY (2026-08-15). Site Guard failed on ~9 of 12 runs with
+    "route /magazine — page is empty (0 chars)", and /magazine renders
+    perfectly for every real reader. The diagnosis, once the check was made to
+    explain itself: `NO #app element — the shell itself did not load;
+    globals=0`. The page the browser received was not index.html at all.
+
+    The cause was here. A plain TCPServer handles ONE connection at a time with
+    a backlog of five. index.html loads ~45 data scripts, and /magazine pulls
+    the largest set of them; Chromium opens those in parallel, the queue
+    overflows, and connections get refused. Which request loses the race is
+    timing-dependent — which is exactly why the same commit passed at 07:56 and
+    failed at 07:36, and why it never reproduced on a faster machine.
+
+    So the render check was reporting a defect in its own harness as a defect in
+    the site, intermittently, for long enough that the guard was red more often
+    than green. A flaky check is worse than a missing one: it trains you to
+    ignore the thing that is supposed to tell you the truth.
+    """
+
+    daemon_threads = True
+    allow_reuse_address = True
+    request_queue_size = 128
+
+
 def serve():
     handler = partial(SPAHandler, directory=str(WEB))
-    socketserver.TCPServer.allow_reuse_address = True
-    httpd = socketserver.TCPServer(("127.0.0.1", PORT), handler)
+    httpd = _Server(("127.0.0.1", PORT), handler)
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
     return httpd
 
