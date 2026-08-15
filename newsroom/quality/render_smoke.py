@@ -81,7 +81,22 @@ class SPAHandler(http.server.SimpleHTTPRequestHandler):
         p = Path(real)
         if p.is_dir():
             idx = p / "index.html"
-            return str(idx) if idx.is_file() else real
+            if idx.is_file():
+                return str(idx)
+            # A DIRECTORY THAT IS NOT A SITE PAGE MUST NOT SHADOW THE ROUTE.
+            #
+            # web/magazine/ exists on disk — it holds one PDF, the Primer
+            # download. The route /magazine is an app page. Serving the
+            # directory here meant the browser got a file listing instead of
+            # index.html, so #app never existed and every RTFC_ global was
+            # undefined. Site Guard read that as "the magazine page is empty"
+            # and failed 10 runs in a row while the live page was perfect.
+            #
+            # Cloudflare 404s a bare directory, which lets functions/[[path]].js
+            # answer with the shell. This mirrors that. The harness must model
+            # production, not its own convenient version of it — a check that
+            # disagrees with the runtime reports failures nobody can reproduce.
+            return str(WEB / "index.html")
         if not p.is_file() and "." not in p.name:
             return str(WEB / "index.html")
         return real
