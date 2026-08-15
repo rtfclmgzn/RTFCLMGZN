@@ -43,11 +43,18 @@ jobs:
         run: |
           git config user.name "rtfclmgzn-pipeline"
           git config user.email "rtfclmgzn@gmail.com"
+          # STAGE EVERYTHING TRACKED, THEN THE NEW PATHS.
+          # A narrow `git add` list leaves other modified files dirty, and
+          # `git pull --rebase` REFUSES to run at all when the tree is dirty:
+          # "cannot pull with rebase: You have unstaged changes" -> exit 128 ->
+          # the run goes red after all the work is already done. site_guard.py::
+          # check_workflow_staging fails the build if this line goes missing.
+          git add -u
           git add web/data/social-posts.js
           if git diff --cached --quiet; then
             echo "no status changes to commit"
             exit 0
           fi
           git commit -m "social: dispatch status updates"
-          git pull --rebase origin main || { git rebase --abort; echo "rebase race - statuses ride the next run"; exit 0; }
+          git pull --rebase origin main || { git rebase --abort || true; echo "rebase race - statuses ride the next run"; exit 0; }
           git push origin main || echo "push race - statuses ride the next run"

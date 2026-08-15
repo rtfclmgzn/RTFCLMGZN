@@ -1044,6 +1044,50 @@ def check_engine_config():
              % (total, domain, len(counts)))
 
 
+def check_workflow_staging():
+    """Any workflow that commits and rebases must stage the WHOLE tree first.
+
+    WHY (2026-08-15, twice in one day). `git pull --rebase` refuses to run at
+    all when a tracked file is modified and unstaged: "cannot pull with rebase:
+    You have unstaged changes", exit 128. A workflow that stages a hand-written
+    list of paths and then rebases is therefore one stray modified file away
+    from failing — and it fails at the END, after the agent has already spent
+    thirty minutes writing the articles.
+
+    It killed 2 of the last 8 Newsroom Cycles and, in the same shape, all three
+    push attempts of the owner's ship script the same morning. The fix is one
+    line, `git add -u`, and the reason this is a CHECK and not just a fix is
+    that there were FIVE copies of the pattern and only one got fixed the first
+    time. That is the failure shape this whole repo keeps repeating: a real fix
+    applied to one instance while its siblings sit untouched.
+    """
+    wf = ROOT / ".github" / "workflows"
+    staged = ROOT / "workflow_updates"
+    files = []
+    for d in (wf, staged):
+        if d.is_dir():
+            files += sorted(d.glob("*.yml")) + sorted(d.glob("*.yaml"))
+    if not expect("check_workflow_staging", len(files), 3, "workflow files"):
+        return
+    for f in files:
+        text = io.open(f, encoding="utf-8", errors="replace").read()
+        # Only SHELL matters. Several workflows also describe git steps in prose
+        # inside an agent prompt ("7. Commit and push: git pull --rebase first"),
+        # and flagging those is how a check earns a reputation for crying wolf.
+        # A real command starts its line; prose mentions it mid-sentence.
+        if not re.search(r"^\s*git pull --rebase", text, re.M):
+            continue
+        if not re.search(r"^\s*git add -u\s*$", text, re.M):
+            err("workflow", "%s rebases but never runs `git add -u`. One stray "
+                "modified file makes `git pull --rebase` exit 128 and fails the "
+                "run after all the work is done." % f.name)
+        if re.search(r"git rebase --abort;", text):
+            err("workflow", "%s runs `git rebase --abort;` without `|| true`. "
+                "When the pull died before starting a rebase there is nothing "
+                "to abort, so the cleanup itself errors and fails the step it "
+                "was meant to rescue." % f.name)
+
+
 # --------------------------------------------------------------------------
 def run(label, fn, *args, **kwargs):
     """Run one check. If it throws, that becomes a FINDING, not the end of the run.
@@ -1160,6 +1204,7 @@ def main() -> int:
     run("check_renderer_parity", check_renderer_parity)
     run("check_ssr_store_parity", check_ssr_store_parity)
     run("check_engine_config", check_engine_config)
+    run("check_workflow_staging", check_workflow_staging)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
@@ -1196,7 +1241,7 @@ def main() -> int:
                 # gets switched off.
                 code_fams = ("route-titles", "scripts", "cache-buster", "renderers",
                              "hash-links", "routing", "paid-content", "ssr-parity",
-                             "check-crash", "check-blind", "engine")
+                             "check-crash", "check-blind", "engine", "workflow")
                 blocking = [e for e in ERRORS if e.strip().startswith(code_fams)]
                 if not blocking:
                     say("\nGUARD: no CODE-side errors — ship allowed. The data "

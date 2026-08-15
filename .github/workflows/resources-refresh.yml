@@ -55,9 +55,13 @@ jobs:
             5. Bump the ?b=N cache-buster on every asset tag in web/index.html if you
                changed any file under web/ — the edge serves the old file otherwise
                and the update silently does nothing.
-            6. Append one row to web/data/usage-log-current.js in the existing format
-               (agent:"resources-desk", task_type:"site") saying what changed, or that
-               nothing did.
+            6. Log the run. DO NOT hand-write the row - run the logger, which
+               computes the next id and stamps the real time. Hand-writing this
+               row has already produced a duplicate id that silently lost three
+               runs, and a missing comma that stopped the browser loading the
+               whole ledger file:
+                 python3 newsroom/runner/log_usage.py --agent "resources-desk" \
+                   --task-type "site" --description "<what changed, or that nothing did>"
             7. Commit and push to main: git pull --rebase origin main first, because
                the hourly scans push to this branch too. On a conflict, stop and leave
                it for a human — never force-push.
