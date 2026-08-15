@@ -1400,6 +1400,92 @@ def check_live_check_parity():
 SSR_TAKEN_CLASSES = ("comp", "dek", "byline", "big", "kick", "sect", "cover")
 
 
+def check_workflow_source_parity():
+    """`workflow_updates/` is the SOURCE. `.github/workflows/` is a copy.
+
+    WHY (2026-08-15). SHIP2.bat line 71 is
+    `copy /Y workflow_updates\\*.yml .github\\workflows\\`, unconditionally, on
+    every ship. So editing a file in `.github/workflows/` is not a change — it is
+    a change with a countdown on it, silently reverted by the next push, and the
+    ship log says nothing because the copy succeeded. Anyone reading the repo
+    afterwards sees the OLD workflow and no evidence an edit ever happened.
+
+    This check only runs where both directories exist, which is the owner's
+    machine. `workflow_updates/` is gitignored, so in CI there is nothing to
+    compare and nothing to warn about — the trap it guards can only be sprung
+    locally, because that is the only place SHIP2 runs.
+    """
+    src = ROOT / "workflow_updates"
+    dst = ROOT / ".github" / "workflows"
+    if not src.is_dir() or not dst.is_dir():
+        return                      # CI: workflow_updates is not in the repo
+    staged = sorted(src.glob("*.yml")) + sorted(src.glob("*.yaml"))
+    if not staged:
+        return
+    for f in staged:
+        live = dst / f.name
+        if not live.is_file():
+            err("workflow", "workflow_updates/%s has no counterpart in "
+                ".github/workflows/. The next ship will create it — make sure "
+                "that is what you meant." % f.name)
+            continue
+        a = io.open(f, encoding="utf-8", errors="replace").read()
+        b = io.open(live, encoding="utf-8", errors="replace").read()
+        if a.replace("\r\n", "\n") != b.replace("\r\n", "\n"):
+            err("workflow", "%s differs between workflow_updates/ (the source "
+                "SHIP2 copies FROM) and .github/workflows/ (the copy). Whichever "
+                "one you edited, the workflow_updates version is the one that "
+                "will be live after the next ship." % f.name)
+
+
+def check_desk_routing():
+    """The cycle workflow points an agent at a runbook. That file must exist.
+
+    WHY (2026-08-15). The 16:00 UTC cycle now runs the reference desk instead of
+    the news desk, chosen by a shell step from the UTC hour. Three things have to
+    stay in agreement: the workflow's REFERENCE_DESK_UTC_HOUR, a cron that
+    actually fires at that hour, and the two runbook files on disk.
+
+    Break any one of them and there is no error anywhere. A renamed runbook sends
+    a Sonnet agent with write access at a path that does not exist, and it will
+    not stop — it will improvise for up to sixty minutes and commit whatever it
+    decides the job was. That is the most expensive failure this repo can
+    produce, and it is silent. An hour with no matching cron is quieter still:
+    the reference desk simply never runs and the news cycle covers for it, so the
+    only symptom is that the strategy nobody can see stopped happening.
+    """
+    wf = ROOT / ".github" / "workflows" / "newsroom-cycle.yml"
+    if not wf.is_file():
+        err("check-blind", "newsroom-cycle.yml is missing — cannot verify desk routing")
+        return
+    text = io.open(wf, encoding="utf-8", errors="replace").read()
+
+    books = re.findall(r'BOOK="(newsroom/runner/[a-z-]+\.md)"', text)
+    if not expect("check_desk_routing", len(books), 2, "runbook paths in the cycle workflow"):
+        return
+    for b in books:
+        if not (ROOT / b).is_file():
+            err("workflow", "newsroom-cycle.yml sends the agent at `%s`, which does "
+                "not exist. The run does not fail — a model with write access "
+                "improvises for up to an hour and commits the result." % b)
+
+    m = re.search(r'REFERENCE_DESK_UTC_HOUR:\s*"?(\d+)"?', text)
+    if not m:
+        err("workflow", "newsroom-cycle.yml has no REFERENCE_DESK_UTC_HOUR. The "
+            "desk split is off and every cycle files news.")
+        return
+    hour = int(m.group(1))
+    hours = set()
+    for cron in re.findall(r'cron:\s*"([^"]+)"', text):
+        parts = cron.split()
+        if len(parts) == 5 and parts[1].isdigit():
+            hours.add(int(parts[1]))
+    if hours and hour not in hours:
+        err("workflow", "REFERENCE_DESK_UTC_HOUR is %d but no cron fires at that "
+            "hour (crons fire at %s UTC). The reference desk never runs, and "
+            "nothing anywhere says so." % (hour, sorted(hours)))
+
+
 def check_ssr_shell_markers():
     """The article function edits index.html. They must agree on where.
 
@@ -1679,6 +1765,8 @@ def main() -> int:
     run("check_workflow_contexts", check_workflow_contexts)
     run("check_live_check_parity", check_live_check_parity)
     run("check_ssr_shell_markers", check_ssr_shell_markers)
+    run("check_desk_routing", check_desk_routing)
+    run("check_workflow_source_parity", check_workflow_source_parity)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 

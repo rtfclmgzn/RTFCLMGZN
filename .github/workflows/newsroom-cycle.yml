@@ -6,12 +6,40 @@ name: Newsroom Cycle
 # what Central is right now. From early November to March, Central goes to UTC-6 and
 # these land an hour EARLY (04:00 / 10:00 / 16:00 local). If that matters, shift each
 # hour +1 for the winter. Nothing breaks either way — the runbook is idempotent.
+#
+# TWO DESKS, ONE WORKFLOW (2026-08-15). The 16:00 UTC cycle runs the REFERENCE
+# desk instead of the news desk. Same schedule, same cost, different job.
+#
+# Why: in the 30 days to 2026-08-15 this site served 470 page views across 127
+# articles. Part of that was broken plumbing (fragment routes, then a CDN
+# redirect loop, then a stripped shared-link page — all fixed now). The part that
+# is NOT fixed by plumbing is that we file against TechCrunch, Quartz and Decrypt
+# on stories that are dead by morning. A search for the exact headline of our own
+# Astra piece returns all three of them and not us. Volume does not fix that
+# arithmetic; a narrower beat might. So one cycle a day now writes the durable,
+# answer-shaped pages a small site can actually own, and the other two keep the
+# news. Reverting is a one-line change to REFERENCE_DESK_UTC_HOUR below.
+#
+# A manual run picks the desk from the CURRENT hour, so `workflow_dispatch` at
+# 16:xx UTC gets the reference desk. Force either one with the `desk` input.
 on:
   schedule:
-    - cron: "0 10 * * *"    # 05:00 Central
-    - cron: "0 16 * * *"    # 11:00 Central
-    - cron: "0 22 * * *"    # 17:00 Central
+    - cron: "0 10 * * *"    # 05:00 Central - news
+    - cron: "0 16 * * *"    # 11:00 Central - REFERENCE DESK
+    - cron: "0 22 * * *"    # 17:00 Central - news
   workflow_dispatch:          # lets you run it by hand from the Actions tab
+    inputs:
+      desk:
+        description: "Which desk to run"
+        required: false
+        default: auto
+        type: choice
+        options: [auto, news, reference]
+
+env:
+  # The single knob. Set to a value no cron fires at (or change the desk input
+  # default) to turn the reference desk off entirely.
+  REFERENCE_DESK_UTC_HOUR: "16"
 
 concurrency:
   group: newsroom-cycle       # never two cycles at once
@@ -44,6 +72,35 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
 
+      # WHICH DESK IS THIS. Derived from the UTC hour, exactly like the magazine
+      # pipeline derives its phase from the day of month, and for the same
+      # reason: GitHub does not tell a job which of several crons fired it.
+      - name: Work out which desk this cycle is
+        id: desk
+        run: |
+          set -euo pipefail
+          CHOICE="${{ github.event.inputs.desk || 'auto' }}"
+          HOUR=$(date -u +%-H)
+          if [ "$CHOICE" != "auto" ] && [ -n "$CHOICE" ]; then
+            DESK="$CHOICE"
+          elif [ "$HOUR" = "${REFERENCE_DESK_UTC_HOUR}" ]; then
+            DESK="reference"
+          else
+            DESK="news"
+          fi
+          if [ "$DESK" = "reference" ]; then
+            BOOK="newsroom/runner/reference-desk-runbook.md"
+          else
+            BOOK="newsroom/runner/cycle-runbook.md"
+          fi
+          # Fail loudly rather than sending the agent at a file that is not there.
+          # A missing runbook would otherwise become "agent improvises for 30
+          # minutes", which is the most expensive possible failure mode here.
+          test -f "$BOOK" || { echo "::error::runbook $BOOK does not exist"; exit 1; }
+          echo "desk=$DESK"     >> "$GITHUB_OUTPUT"
+          echo "runbook=$BOOK"  >> "$GITHUB_OUTPUT"
+          echo "::notice::desk=$DESK (hour ${HOUR} UTC, reference hour ${REFERENCE_DESK_UTC_HOUR}) runbook=$BOOK"
+
       - uses: anthropics/claude-code-action@v1
         env:
           # Without this, image generation is impossible on the runner and every
@@ -62,7 +119,9 @@ jobs:
           # Safe here because nothing in this repo is triggered by push.
           # github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: |
-            Follow newsroom/runner/cycle-runbook.md exactly, from the repository root.
+            Follow ${{ steps.desk.outputs.runbook }} exactly, from the repository root.
+            This is the ${{ steps.desk.outputs.desk }} desk. Read that runbook and only
+            that runbook for what to produce; it tells you when to consult the other one.
             You are running unattended. Do not ask questions; make reasonable calls and
             record them in the usage log the runbook tells you to write.
           claude_args: |
