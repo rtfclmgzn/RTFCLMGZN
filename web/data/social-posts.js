@@ -2639,7 +2639,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#AIEthics"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -2668,8 +2670,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#ArtificialIntelligence",
           "#AIWatermark"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcCwlRcm11w/",
+        "remote_id": "18089754656638463",
+        "posted_at": "2026-08-15T01:56:58Z"
       },
       {
         "platform": "facebook",
@@ -2678,14 +2682,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112519183396947",
+        "remote_id": "1238977099292018_122112519183396947",
+        "posted_at": "2026-08-15T01:57:16Z"
       },
       {
         "platform": "threads",
         "copy": "Anthropic now watermarks everything Claude writes -- invisibly, worldwide, no opt-out. The catch: a detected mark means Claude processed the text, not that it authored it. Writers using Claude just to proofread are the ones objecting loudest.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcCwp5pjc9J",
+        "remote_id": "18191708590391792",
+        "posted_at": "2026-08-15T01:57:29Z"
       },
       {
         "platform": "threads",
@@ -2703,8 +2711,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#AIEthics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt3l3h5mdz2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt3l3h5mdz2y",
+        "posted_at": "2026-08-15T01:57:36Z"
       }
     ]
   },
@@ -2738,8 +2748,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Gemini",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088444988464013575",
+        "remote_id": "2088444988464013575",
+        "posted_at": "2026-08-15T01:57:41Z"
       },
       {
         "platform": "x",
@@ -2778,14 +2790,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Gemini",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112519651396947",
+        "remote_id": "1238977099292018_122112519651396947",
+        "posted_at": "2026-08-15T02:01:28Z"
       },
       {
         "platform": "threads",
         "copy": "Gemini 3.7 Flash just landed: independently scored 56 on the Intelligence Index (+4 vs. 3.6 Flash), half price through year-end. Google's third new Flash model in three months -- the gains are concentrated in coding and agent tasks.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcCxIkDjXS2",
+        "remote_id": "18194585485379325",
+        "posted_at": "2026-08-15T02:01:45Z"
       },
       {
         "platform": "threads",
@@ -2803,8 +2819,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Google",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt3ld2ulh22s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt3ld2ulh22s",
+        "posted_at": "2026-08-15T02:01:51Z"
       }
     ]
   }
