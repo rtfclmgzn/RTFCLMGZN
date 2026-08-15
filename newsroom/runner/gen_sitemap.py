@@ -40,8 +40,40 @@ STORES = [
     WEB / "data" / "research.js",
 ]
 
+# EVERY PAGE, NOT JUST ARTICLES (2026-08-14). Until the router moved off hash
+# fragments, these pages had no URL a crawler could fetch, so listing them in a
+# sitemap would have been meaningless. They have real URLs now (see
+# web/_redirects), so they belong here — a sitemap that names three URLs for a
+# site with forty pages is a sitemap that hides thirty-seven of them.
+# Keep in sync with _redirects and ROUTE_HEADS; site_guard.py checks all three.
 STATIC = [  # (path, changefreq, priority)
     ("/", "hourly", "1.0"),
+    ("/buzz", "hourly", "0.8"),
+    ("/archive", "daily", "0.8"),
+    ("/magazine", "weekly", "0.9"),
+    ("/resources", "weekly", "0.8"),
+    ("/labs", "weekly", "0.7"),
+    ("/extensions", "weekly", "0.7"),
+    ("/prompts", "weekly", "0.7"),
+    ("/scoreboard", "daily", "0.8"),
+    ("/dictionary", "weekly", "0.7"),
+    ("/guides", "weekly", "0.7"),
+    ("/grid", "daily", "0.7"),
+    ("/podcasts", "monthly", "0.5"),
+    ("/companies", "daily", "0.6"),
+    ("/pulse", "hourly", "0.6"),
+    ("/usage", "daily", "0.6"),
+    ("/masthead", "monthly", "0.6"),
+    ("/predictions", "weekly", "0.5"),
+    ("/claims", "weekly", "0.5"),
+    ("/corrections", "weekly", "0.5"),
+    ("/review", "weekly", "0.4"),
+    ("/live", "weekly", "0.4"),
+    ("/events", "weekly", "0.4"),
+    ("/wallpapers", "monthly", "0.4"),
+    ("/contact", "monthly", "0.3"),
+    ("/privacy", "yearly", "0.2"),
+    ("/terms", "yearly", "0.2"),
     ("/rss.xml", "hourly", "0.8"),
     ("/newsroom-map.html", "monthly", "0.3"),
 ]

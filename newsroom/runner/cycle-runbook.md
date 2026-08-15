@@ -1,5 +1,11 @@
 # RTFCLMGZN Claude Cycle Runbook
 
+
+> **READ `newsroom/OPERATING_LAW.md` FIRST — before this runbook, before any work.**
+> It is short, it is absolute, and it exists because rules that live only in a
+> conversation are gone the moment a run ends. Everything below assumes you have
+> read it. If anything here contradicts the Operating Law, the Law wins and you
+> report the contradiction.
 You are running unattended, headless, on the owner's Claude subscription (no API billing — do not call any paid API for text; images use the capped `generate-image` CLI only when the art library has no fit). You are one newsroom cycle. Follow this runbook exactly, then stop.
 
 **Repo root:** `D:\BUSINESS\RTFCLMGZN` — you are already running with this as your working directory.
@@ -7,6 +13,19 @@ You are running unattended, headless, on the owner's Claude subscription (no API
 ## 0. Kill switch
 
 If `newsroom/runner/PAUSED` exists, print `PAUSED — exiting without doing anything` and stop immediately. Do nothing else.
+
+## 0b. The guard comes first (REQUIRED, before you write anything)
+
+Run `python3 newsroom/quality/site_guard.py` and read the output.
+
+This exists because on 2026-08-14 three articles shipped with a pipeline record missing its `gate` block, an unguarded read killed the whole article route, and readers got "This page didn't render" on the three newest stories on the site. The owner's response was the correct one: *what are all these agents for if nothing checks?* The answer is that checking is no longer anyone's good intention — it is this file, and it runs whether or not you remember.
+
+- If the guard reports **ERRORS caused by a record you are about to touch**, fix the record, not the guard.
+- If the guard reports errors you did not cause, note them in your report; `site-guard.yml` repairs the deterministic ones automatically after every push.
+- **Never edit `newsroom/quality/*` to make a check pass.** A check that fails is telling you the truth about the store. If a check is genuinely wrong, say so in your report and leave it failing for the owner — a silenced guard is worse than no guard, because it reads as safety.
+- Before you finish, run it again along with `python3 newsroom/quality/render_smoke.py` if Playwright is available. Both must be clean on anything you wrote.
+
+Every field you omit from a record is a field some renderer may read. The renderers now contain their own blast radius (one bad block degrades to a placeholder instead of killing the page), and the smoke test renders a deliberately minimal record every run to keep it that way — but containment is the floor, not the standard. Write complete records.
 
 ## 1. House standards (read before writing anything)
 

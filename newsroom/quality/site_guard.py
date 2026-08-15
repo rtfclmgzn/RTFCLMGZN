@@ -1,0 +1,685 @@
+#!/usr/bin/env python3
+"""SITE GUARD — the standing check on everything the publication ships.
+
+WHY (2026-08-14, owner escalation: "what do we have 37 agents for if they
+don't check").
+
+Three failures in two days had the same shape. An autonomous agent wrote a
+store record that was fine by its own lights; a renderer read a field that
+record happened not to carry; a whole page died in front of readers. Each time
+the response was to guard that one field. That is not a system — that is
+patching the last bullet hole.
+
+This file is the system. It runs on EVERY push (site-guard.yml), before every
+manual ship (SHIP2.bat), and hourly, and it checks the things nobody thought
+to ask about:
+
+  · every data store against its real contract (types, enums, ranges, ids)
+  · every cross-surface promise: routes vs page titles, globals vs script
+    tags, script tags vs files on disk, articles vs sitemap, images vs disk
+  · both renderers against each other, so the SPA and the SSR pages can never
+    drift apart on markup vocabulary
+  · the ledger against honesty: unmetered rows counted and reported, never
+    silently averaged into a total
+  · the cache-buster, so a deploy can never be invisible again
+
+ERRORS fail the run (exit 1). WARNINGS are printed and pass, because a guard
+that cries wolf gets switched off, and a switched-off guard is the thing we
+are replacing.
+
+Deterministic, no network, no LLM, runs in under a second.
+"""
+
+from __future__ import annotations
+
+import io
+import re
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+# WINDOWS CONSOLE (2026-08-14). The owner ran this on a stock Windows Python
+# whose console encoding is cp1252, and the guard died mid-report on the "✗"
+# in its own output — a check that crashes while reporting is worse than no
+# check, because it blocks the ship AND hides the findings it already had.
+# Force UTF-8 where the runtime allows it, and fall back to ASCII marks where
+# it doesn't. A guard must be the most robust thing in the repo.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    MARK_ERR, MARK_WARN, MARK_NOTE, MARK_OK = "✗", "!", "·", "✓"
+except Exception:                                    # very old/odd runtimes
+    MARK_ERR, MARK_WARN, MARK_NOTE, MARK_OK = "X", "!", "-", "OK"
+
+
+def say(s: str) -> None:
+    """Print that cannot fail on any console, ever."""
+    try:
+        print(s)
+    except UnicodeEncodeError:
+        enc = (getattr(sys.stdout, "encoding", None) or "ascii")
+        print(s.encode(enc, "replace").decode(enc, "replace"))
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent.parent
+sys.path.insert(0, str(HERE))
+from jsstore import read_store, read_appended_rows  # noqa: E402
+
+WEB = ROOT / "web"
+DATA = WEB / "data"
+APP = WEB / "assets" / "app.js"
+INDEX = WEB / "index.html"
+SSR = ROOT / "functions" / "article" / "[slug].js"
+
+ERRORS: list[str] = []
+WARNS: list[str] = []
+NOTES: list[str] = []
+# Asset and sitemap checks need the FULL repo. CI always has it; a partial
+# working copy does not, and a guard that screams about files it was never
+# given teaches people to ignore guards. --skip-assets turns those off.
+CHECK_ASSETS = True
+
+
+def err(where: str, msg: str) -> None:
+    ERRORS.append("%-22s %s" % (where, msg))
+
+
+def warn(where: str, msg: str) -> None:
+    WARNS.append("%-22s %s" % (where, msg))
+
+
+def note(msg: str) -> None:
+    NOTES.append(msg)
+
+
+def now() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def parse_ts(v):
+    if not isinstance(v, str):
+        return None
+    try:
+        return datetime.fromisoformat(v.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+# --------------------------------------------------------------------------
+# 1. ARTICLES — the store that has broken pages three times
+# --------------------------------------------------------------------------
+ARTICLE_STORES = [
+    ("RTFC_ARTICLES", DATA / "articles.js"),
+    ("RTFC_LIVE_ARTICLES", DATA / "live-articles.js"),
+    ("RTFC_NEWSROOM_ARTICLES", DATA / "newsroom-articles.js"),
+    ("RTFC_RESEARCH", DATA / "research.js"),
+    ("RTFC_GUIDES", DATA / "guides.js"),
+]
+REQUIRED_ARTICLE = ["id", "slug", "title", "dek", "persona", "section", "body"]
+DISCLAIMERS = {"none", "not-financial-advice", "not-medical-advice"}
+
+
+def load_articles():
+    out = []
+    for var, path in ARTICLE_STORES:
+        data = read_store(path, var)
+        if data is None:
+            if path.is_file():
+                err("articles", "%s: could not parse %s" % (path.name, var))
+            continue
+        if not isinstance(data, list):
+            err("articles", "%s: %s is not an array" % (path.name, var))
+            continue
+        for a in data:
+            if isinstance(a, dict):
+                a["__store"] = path.name
+                out.append(a)
+    return out
+
+
+def check_articles(arts, personas, sections):
+    seen_slug, seen_id = {}, {}
+    pkeys = {p.get("key") for p in personas if isinstance(p, dict)}
+    skeys = {s.get("key") for s in sections if isinstance(s, dict)}
+    horizon = now() + timedelta(hours=2)
+    for a in arts:
+        who = "%s/%s" % (a.get("__store", "?"), a.get("slug") or a.get("id") or "?")
+        for f in REQUIRED_ARTICLE:
+            if not a.get(f):
+                err("article-fields", "%s: missing required field '%s'" % (who, f))
+        slug, aid = a.get("slug"), a.get("id")
+        if slug:
+            if slug in seen_slug:
+                err("article-dupes", "duplicate slug '%s' (%s and %s)"
+                    % (slug, seen_slug[slug], who))
+            seen_slug[slug] = who
+            if not re.fullmatch(r"[a-z0-9][a-z0-9\-]*", str(slug)):
+                err("article-slug", "%s: slug is not url-safe lowercase" % who)
+        if aid:
+            if aid in seen_id:
+                err("article-dupes", "duplicate id '%s' (%s and %s)"
+                    % (aid, seen_id[aid], who))
+            seen_id[aid] = who
+        if a.get("persona") and pkeys and a["persona"] not in pkeys:
+            err("article-persona", "%s: persona '%s' is not in personas.js"
+                % (who, a["persona"]))
+        if a.get("section") and skeys and a["section"] not in skeys:
+            warn("article-section", "%s: section '%s' is not a known desk"
+                 % (who, a["section"]))
+        d = a.get("disclaimer")
+        if d is not None and d not in DISCLAIMERS:
+            err("article-disclaimer", "%s: disclaimer '%s' not one of %s"
+                % (who, d, sorted(DISCLAIMERS)))
+        ts = parse_ts(a.get("publishedAt"))
+        if a.get("publishedAt") and ts is None:
+            err("article-date", "%s: publishedAt is unparseable" % who)
+        elif ts and ts > horizon:
+            err("article-date", "%s: publishedAt is in the FUTURE (%s) — this "
+                "reorders the homepage and buries live stories"
+                % (who, a["publishedAt"]))
+        body = a.get("body")
+        if isinstance(body, list):
+            for i, b in enumerate(body):
+                if not isinstance(b, dict) or not b.get("type"):
+                    err("article-body", "%s: body[%d] has no type" % (who, i))
+                elif b["type"] in ("h2", "quote", "p") and not b.get("text"):
+                    err("article-body", "%s: body[%d] type=%s has no text"
+                        % (who, i, b["type"]))
+        elif body is not None:
+            err("article-body", "%s: body is not an array" % who)
+        for i, s in enumerate(a.get("sources") or []):
+            if not isinstance(s, dict) or not s.get("label"):
+                err("article-sources", "%s: sources[%d] has no label" % (who, i))
+            u = (s or {}).get("url") or ""
+            # "#/scoreboard" is a legitimate source: our own reference surface.
+            if u and u != "#" and not u.startswith(("http://", "https://", "#/", "/")):
+                err("article-sources", "%s: sources[%d] url is neither an "
+                    "absolute link nor an internal route: %s" % (who, i, u[:60]))
+        img = a.get("image")
+        if img and isinstance(img, str) and not img.startswith(("http", "data:")):
+            if CHECK_ASSETS and not (WEB / img.lstrip("/")).is_file():
+                err("article-image", "%s: cover file missing on disk: %s" % (who, img))
+        elif not img:
+            err("article-image", "%s: no cover image (the cover gate should have "
+                "healed this before publish)" % who)
+        pl = a.get("pipeline")
+        if isinstance(pl, dict) and not pl.get("gate"):
+            warn("article-pipeline", "%s: pipeline record has no gate block "
+                 "(renderer survives it; the record is still incomplete)" % who)
+    return seen_slug
+
+
+# --------------------------------------------------------------------------
+# 2. REFERENCE SURFACES
+# --------------------------------------------------------------------------
+def check_scoreboard(entities):
+    sb = read_store(DATA / "scoreboard.js", "RTFC_SCOREBOARD")
+    if not isinstance(sb, dict):
+        err("scoreboard", "could not parse RTFC_SCOREBOARD")
+        return
+    ent_names = " ".join(str(e.get("name", "")) for e in (entities or [])
+                         if isinstance(e, dict)).lower()
+    if not sb.get("basisNote"):
+        err("scoreboard", "basisNote is empty — the scan log IS the credibility")
+    for r in sb.get("rows") or []:
+        m = r.get("model", "?")
+        if not r.get("lab"):
+            err("scoreboard", "%s: no lab" % m)
+        if r.get("status") not in ("released", "preview", "announced", "retired"):
+            warn("scoreboard", "%s: unusual status '%s'" % (m, r.get("status")))
+        sc = r.get("score")
+        if sc is not None and not (isinstance(sc, (int, float)) and 0 <= sc <= 100):
+            err("scoreboard", "%s: score '%s' is not 0-100 or null" % (m, sc))
+        for k in ("pin", "pout"):
+            v = r.get(k)
+            if v is not None and not (isinstance(v, (int, float)) and v >= 0):
+                err("scoreboard", "%s: %s '%s' is not a positive number or null"
+                    % (m, k, v))
+        if sc is not None and ent_names and str(m).lower() not in ent_names:
+            warn("scoreboard", "%s: scored but has no entities.js entry, so its "
+                 "first mention in articles renders as bare text" % m)
+
+
+def check_grid():
+    g = read_store(DATA / "grid.js", "RTFC_GRID")
+    if not isinstance(g, dict):
+        err("grid", "could not parse RTFC_GRID")
+        return
+    ids = set()
+    for f in g.get("facilities") or []:
+        n = f.get("name", "?")
+        if f.get("id") in ids:
+            err("grid", "duplicate facility id '%s'" % f.get("id"))
+        ids.add(f.get("id"))
+        for k, lo, hi in (("lat", -90, 90), ("lng", -180, 180)):
+            v = f.get(k)
+            if not isinstance(v, (int, float)) or not (lo <= v <= hi):
+                err("grid", "%s: %s '%s' out of range" % (n, k, v))
+        if f.get("status") not in ("operating", "building", "announced"):
+            err("grid", "%s: status '%s' is not a known state" % (n, f.get("status")))
+        if f.get("confidence") not in ("confirmed", "reported", "early"):
+            err("grid", "%s: confidence '%s' is not a known level"
+                % (n, f.get("confidence")))
+
+
+def check_extensions():
+    ext = read_store(DATA / "extensions.js", "RTFC_EXTENSIONS")
+    if ext is None:
+        err("extensions", "could not parse RTFC_EXTENSIONS")
+        return
+    app = io.open(APP, encoding="utf-8").read()
+    m = re.search(r"var EXT_KINDS=\{(.*?)\};", app, re.S)
+    kinds = set(re.findall(r"([a-z]+)\s*:", m.group(1))) if m else set()
+    seen = set()
+    for c in ext:
+        if not c.get("id") or not c.get("cat"):
+            err("extensions", "a category has no id/cat")
+        if c.get("id") in seen:
+            err("extensions", "duplicate category id '%s'" % c.get("id"))
+        seen.add(c.get("id"))
+        for it in c.get("items") or []:
+            nm = it.get("name", "?")
+            if not str(it.get("url", "")).startswith("https://"):
+                err("extensions", "%s: url is not https" % nm)
+            if kinds and it.get("kind") not in kinds:
+                err("extensions", "%s: kind '%s' has no chip style in app.js "
+                    "(EXT_KINDS)" % (nm, it.get("kind")))
+
+
+HOLE_RE = re.compile(r",[ \t]*(?:\r?\n[ \t]*)*,")
+
+
+def check_array_holes(fix: bool = False):
+    """A stray comma between two records makes a SPARSE array. forEach skips the
+    hole, so the site looks fine and one record's worth of nothing sits in a
+    live store indefinitely. Found in the ledger on 2026-08-14, written by an
+    agent append. Cheap to detect, so it is now never allowed to sit again."""
+    for p in sorted(DATA.glob("*.js")):
+        text = io.open(p, encoding="utf-8", newline="").read()
+        # only look inside the data body, and never inside a string: the cheap
+        # proxy is a comma-comma pair separated solely by whitespace/newlines
+        if not HOLE_RE.search(text):
+            continue
+        if fix:
+            new = HOLE_RE.sub(",", text)
+            io.open(p, "w", encoding="utf-8", newline="").write(new)
+            note("repaired array hole(s) in %s" % p.name)
+        else:
+            err("store-syntax", "%s: stray comma creates a sparse-array hole — "
+                "run site_guard.py --fix" % p.name)
+
+
+def repair_ledger_ids(fix: bool) -> None:
+    """Duplicate row ids are SILENT DATA LOSS.
+
+    usage-log-current.js ends with `rows.forEach(... if(!seen[r.id]) push)` —
+    a dedup that keeps the first row and drops every later one wearing the same
+    id. On 2026-08-14 four separate pulse-scan runs had all written `u-0128`,
+    so three real runs existed in the file and did not exist on the site. It
+    renders as nothing; nothing is exactly what you look for and never find.
+
+    Agents picked ids by copying a nearby row. log_usage.py now computes
+    max+1 deterministically, and this renumbers whatever the old habit left
+    behind — keeping the earliest row's id and giving each later collision a
+    fresh one, so no row is rewritten out of existence.
+    """
+    p = DATA / "usage-log-current.js"
+    if not p.is_file():
+        return
+    text = io.open(p, encoding="utf-8", newline="").read()
+    ids = re.findall(r'id:"(u-\d+)"', text)
+    dupes = {i for i in ids if ids.count(i) > 1}
+    if not dupes:
+        return
+    if not fix:
+        for d in sorted(dupes):
+            err("ledger", "row id '%s' is used %d times — the store's own dedup "
+                "drops all but the first, so %d logged runs are invisible on the "
+                "site. Run site_guard.py --fix" % (d, ids.count(d), ids.count(d) - 1))
+        return
+    nxt = max(int(i.split("-")[1]) for i in ids) + 1
+    seen: set[str] = set()
+    out, pos = [], 0
+    for m in re.finditer(r'id:"(u-\d+)"', text):
+        rid = m.group(1)
+        out.append(text[pos:m.start()])
+        if rid in seen:
+            new = "u-%04d" % nxt
+            nxt += 1
+            out.append('id:"%s"' % new)
+            note("ledger: renumbered a duplicate %s -> %s" % (rid, new))
+        else:
+            seen.add(rid)
+            out.append(m.group(0))
+        pos = m.end()
+    out.append(text[pos:])
+    io.open(p, "w", encoding="utf-8", newline="").write("".join(out))
+
+
+def check_ledger():
+    base = read_store(DATA / "usage-log.js", "RTFC_USAGE_LOG") or []
+    cur = read_appended_rows(DATA / "usage-log-current.js") or []
+    rows = list(base) + list(cur)
+    if not rows:
+        err("ledger", "no usage rows at all")
+        return
+    cost_cfg = read_store(DATA / "cost-config.js", "RTFC_COST_CONFIG") or {}
+    priced = set((cost_cfg.get("models") or {}).keys())
+    ids, newest, unmetered = set(), None, 0
+    for r in rows:
+        rid = r.get("id")
+        if rid in ids:
+            err("ledger", "duplicate row id '%s'" % rid)
+        ids.add(rid)
+        ts = parse_ts(r.get("ts"))
+        if ts is None:
+            err("ledger", "%s: unparseable ts" % rid)
+            continue
+        if ts > now() + timedelta(hours=2):
+            err("ledger", "%s: ts is in the future" % rid)
+        newest = ts if (newest is None or ts > newest) else newest
+        tin, tout = r.get("input_tokens") or 0, r.get("output_tokens") or 0
+        if tin < 0 or tout < 0:
+            err("ledger", "%s: negative token count" % rid)
+        if (tin or tout) and r.get("model") and r["model"] not in priced:
+            err("ledger", "%s: model '%s' has tokens but no price in "
+                "cost-config.js, so its cost silently reads as $0"
+                % (rid, r["model"]))
+        if not (tin or tout or r.get("images")):
+            unmetered += 1
+    share = unmetered * 100 // max(1, len(rows))
+    note("ledger: %d rows, %d unmetered (%d%%), newest %s"
+         % (len(rows), unmetered, share, newest.isoformat() if newest else "?"))
+    if newest and (now() - newest) > timedelta(hours=24):
+        err("ledger", "newest row is %d hours old — the scheduled jobs are not "
+            "logging, and the public cost figure is frozen"
+            % int((now() - newest).total_seconds() // 3600))
+    if share > 60:
+        warn("ledger", "%d%% of rows carry no token figures. The site must show "
+             "these as unmetered (it does) — but the fix is log_usage.py running "
+             "in every workflow, not a nicer label." % share)
+
+
+# --------------------------------------------------------------------------
+# 3. CROSS-SURFACE — the promises no single file can keep alone
+# --------------------------------------------------------------------------
+def check_no_hash_links():
+    """NEVER AGAIN (2026-08-14, owner).
+
+    Everything after a "#" is invisible to a search engine: the crawler fetches
+    one URL no matter how many pages the app renders behind fragments. The site
+    ran that way for months, earning zero organic traffic on 100+ articles;
+    /article/<slug> fixed the articles and left every other page behind.
+
+    Every page now has a real path, and this check is what keeps it that way.
+    A `href="#/..."` anywhere in the shipped site or in the SSR renderer fails
+    the build. Bare in-page anchors (`href="#tldr"`) are fine and untouched —
+    it is specifically the "#/" route shape that is banned.
+    """
+    targets = [APP, INDEX, SSR] + sorted((ROOT / "functions").rglob("*.js"))
+    seen = set()
+    for p in targets:
+        if not p.is_file() or p in seen:
+            continue
+        seen.add(p)
+        text = io.open(p, encoding="utf-8", errors="replace").read()
+        # strip comments so the historical explanations of the bug don't trip it
+        stripped = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+        stripped = re.sub(r"^\s*(//|\*|#).*$", "", stripped, flags=re.M)
+        hits = re.findall(r'href\s*=\s*["\'`]#/[^"\'`]*', stripped)
+        hits += re.findall(r'["\'`]https?://[^"\'`]*/#/[^"\'`]*', stripped)
+        for h in sorted(set(hits))[:6]:
+            err("hash-links", "%s: hash route link `%s` — every page must be a "
+                "real crawlable URL" % (p.name, h[:70]))
+
+
+def check_route_plumbing():
+    """A route is only real if three things agree: the router renders it, the
+    head table titles it, and the server hands index.html to a cold request for
+    it. Two out of three is a page that 404s on refresh or shows up in Google
+    titled 'Page not found'."""
+    app = io.open(APP, encoding="utf-8").read()
+    routes = set(re.findall(r'parts\[0\]==="([a-z\-]+)"', app))
+    red = WEB / "_redirects"
+    if not red.is_file():
+        err("routing", "_redirects is missing — every deep link 404s on refresh")
+        return
+    rules = io.open(red, encoding="utf-8").read()
+    served = set(re.findall(r"^/([a-z\-]+)\s+/index\.html\s+200", rules, re.M))
+    served |= set(re.findall(r"^/([a-z\-]+)/\*\s+/index\.html\s+200", rules, re.M))
+    # article/share are Functions, not rewrites; home needs no rule
+    handled_elsewhere = {"article", "share"}
+    for r in sorted(routes - served - handled_elsewhere):
+        err("routing", "route '/%s' renders in the app but _redirects has no "
+            "rule for it — a cold visit or a refresh 404s" % r)
+
+
+def tracked_files():
+    """Paths git actually tracks. The question this guard asks is not "does this
+    file exist on disk" but "is it published in the repository" — a local
+    backup that git ignores is nobody's business, while a tracked file in a
+    public repo is on the internet. Falls back to a disk walk if git is
+    unavailable, which errs toward noisy rather than silent."""
+    try:
+        import subprocess
+        out = subprocess.run(["git", "ls-files"], cwd=str(ROOT), capture_output=True,
+                             text=True, timeout=20)
+        if out.returncode == 0:
+            return {ROOT / line.strip() for line in out.stdout.splitlines() if line.strip()}
+    except Exception:
+        pass
+    return None
+
+
+def check_no_paid_content_in_repo():
+    """PAID CONTENT NEVER LIVES IN A PUBLIC REPO (2026-08-14).
+
+    The magazine paywall was correct in the browser and correct on the server,
+    and the issue JSON was still readable by anyone, because this repository is
+    public and the payload was committed to it. The gate held; the file was
+    simply also published at raw.githubusercontent.com. 119KB of a Plus issue,
+    free to whoever thought to look.
+
+    Paid payloads now live in the RTFC_ISSUES KV namespace, which exists only
+    inside the Cloudflare account. This check makes the old mistake impossible
+    to repeat: any TRACKED json that declares itself paid fails the build.
+    """
+    tracked = tracked_files()
+    for p in sorted(ROOT.rglob("*.json")):
+        if "/node_modules/" in str(p).replace("\\", "/"):
+            continue
+        if tracked is not None and p not in tracked:
+            continue                      # untracked/ignored: not published
+        try:
+            text = io.open(p, encoding="utf-8", errors="replace").read(4000)
+        except OSError:
+            continue
+        if '"access"' in text and '"plus"' in text:
+            err("paid-content", "%s declares access:plus and is TRACKED in this "
+                "PUBLIC repo, so that payload is published. Paid content belongs "
+                "in the ISSUES KV namespace, never in git."
+                % p.relative_to(ROOT))
+
+
+def check_routes_have_titles():
+    """Every route branch must have a <title>. This exact gap shipped the Grid
+    page for weeks under 'Page not found' — invisible to us, visible to Google."""
+    app = io.open(APP, encoding="utf-8").read()
+    routes = set(re.findall(r'parts\[0\]==="([a-z\-]+)"', app))
+    m = re.search(r"var ROUTE_HEADS=\{(.*?)\n  \};", app, re.S)
+    heads = set(re.findall(r'^\s*"?([a-z\-]+)"?\s*:\s*\[', m.group(1), re.M)) if m else set()
+    # These build their <title> from the record they render, not the table.
+    dynamic = {"article", "section", "persona", "editor", "company", "read", "issue"}
+    for r in sorted(routes - heads - dynamic):
+        err("route-titles", "route '#/%s' renders a page but has no ROUTE_HEADS "
+            "entry — its tab title and search snippet say 'Page not found'" % r)
+
+
+def check_scripts_and_globals():
+    idx = io.open(INDEX, encoding="utf-8").read()
+    app = io.open(APP, encoding="utf-8").read()
+    # Root-relative OR relative: index.html moved to /data/... when every page
+    # got a real URL, and this regex silently matched nothing for one commit —
+    # a check that quietly stops checking is the worst failure mode there is.
+    srcs = re.findall(r'<script defer src="/?(data/[^"?]+)', idx)
+    for s in srcs:
+        if not (WEB / s).is_file():
+            err("scripts", "index.html loads %s which does not exist" % s)
+    loaded_globals = set()
+    for s in srcs:
+        p = WEB / s
+        if p.is_file():
+            loaded_globals |= set(re.findall(r"window\.(RTFC_[A-Z_0-9]+)",
+                                             io.open(p, encoding="utf-8").read()))
+    # Globals the app reads but nothing in index.html defines. RTFC_WORLDMAP is
+    # deliberately lazy-loaded by the map code; everything else must be shipped.
+    lazy = {"RTFC_WORLDMAP"}
+    for g in sorted(set(re.findall(r"window\.(RTFC_[A-Z_0-9]+)", app)) - loaded_globals - lazy):
+        warn("scripts", "app.js reads window.%s but no data file in index.html "
+             "defines it — anything drawn from it renders empty" % g)
+
+
+def check_cache_buster():
+    idx = io.open(INDEX, encoding="utf-8").read()
+    tokens = set(re.findall(r"\?b=([0-9a-z]+)", idx))
+    if len(tokens) > 1:
+        err("cache-buster", "index.html carries %d different ?b= stamps %s — a "
+            "partial restamp ships some assets stale" % (len(tokens), sorted(tokens)))
+
+
+# The writers' inline vocabulary, named once. A marker listed here must be
+# implemented by BOTH renderers or the same article reads differently depending
+# on whether the reader arrived via the app or a shared /article/ link.
+MARKERS = [
+    (r"\*\*", "**bold**"),
+    ("==", "==highlight=="),
+    (r"\+\+", "++accent++"),
+    ("__", "__underline__"),
+    (r"\{\{note:", "{{note: margin note}}"),
+    ("%%", "%%figure|caption%%"),
+]
+
+
+def check_renderer_parity():
+    app = io.open(APP, encoding="utf-8").read()
+    ssr = io.open(SSR, encoding="utf-8").read() if SSR.is_file() else ""
+    if not ssr:
+        warn("renderers", "SSR article renderer not found")
+        return
+
+    def fmt_body(src):
+        m = re.search(r"function fmt\(s\)\s*\{(.*?)\n\s*\}", src, re.S)
+        return m.group(1) if m else ""
+
+    a, s = fmt_body(app), fmt_body(ssr)
+    if not a or not s:
+        warn("renderers", "could not isolate one of the fmt() bodies")
+        return
+    for pat, label in MARKERS:
+        in_app, in_ssr = pat in a, pat in s
+        if in_app and not in_ssr:
+            err("renderers", "%s renders in the app but NOT on shared "
+                "/article/ pages" % label)
+        if in_ssr and not in_app:
+            err("renderers", "%s renders on /article/ pages but NOT in the app"
+                % label)
+    # speech must strip every marker, or the audio reads punctuation aloud
+    m = re.search(r"function cleanSpeech\(t\)\s*\{(.*?)\n  \}", app, re.S)
+    speech = m.group(1) if m else ""
+    if speech:
+        for pat, label in MARKERS:
+            if pat not in speech:
+                warn("renderers", "cleanSpeech() does not strip %s — the "
+                     "Listen feature will speak the marker" % label)
+
+
+def check_sitemap_and_rss(slugs):
+    if not CHECK_ASSETS:
+        return
+    sm = WEB / "sitemap.xml"
+    if not sm.is_file():
+        err("sitemap", "sitemap.xml missing")
+    else:
+        text = io.open(sm, encoding="utf-8").read()
+        missing = [s for s in slugs if ("/article/%s<" % s) not in text
+                   and ("/article/%s" % s) not in text]
+        if missing:
+            err("sitemap", "%d published articles are absent from sitemap.xml "
+                "(first: %s) — invisible to search" % (len(missing), missing[0]))
+    rss = WEB / "rss.xml"
+    if rss.is_file():
+        text = io.open(rss, encoding="utf-8").read()
+        n = text.count("/#/article/")
+        if n:
+            err("rss", "%d feed links still point at #/ fragments instead of "
+                "real /article/ URLs" % n)
+
+
+# --------------------------------------------------------------------------
+def main() -> int:
+    global CHECK_ASSETS
+    fix = "--fix" in sys.argv
+    CHECK_ASSETS = "--skip-assets" not in sys.argv
+    check_array_holes(fix)
+    repair_ledger_ids(fix)
+    personas = read_store(DATA / "personas.js", "RTFC_PERSONAS") or []
+    sections = read_store(DATA / "personas.js", "RTFC_SECTIONS") or []
+    entities = read_store(DATA / "entities.js", "RTFC_ENTITIES") or []
+    if isinstance(entities, dict):
+        entities = entities.get("models") or []
+
+    arts = load_articles()
+    slugs = check_articles(arts, personas, sections)
+    check_scoreboard(entities)
+    check_grid()
+    check_extensions()
+    check_ledger()
+    check_no_hash_links()
+    check_no_paid_content_in_repo()
+    check_route_plumbing()
+    check_routes_have_titles()
+    check_scripts_and_globals()
+    check_cache_buster()
+    check_renderer_parity()
+    check_sitemap_and_rss(list(slugs.keys()))
+
+    say("=" * 72)
+    say("SITE GUARD - %d articles, 10 check families" % len(arts))
+    for n in NOTES:
+        say("  " + MARK_NOTE + " " + n)
+    if WARNS:
+        say("\nWARNINGS (%d):" % len(WARNS))
+        for w in WARNS:
+            say("  " + MARK_WARN + " " + w)
+    if ERRORS:
+        say("\nERRORS (%d):" % len(ERRORS))
+        for e in ERRORS:
+            say("  " + MARK_ERR + " " + e)
+        # --gate code: fail only on the families a human ship can actually fix
+        # right now (code and configuration). Data-side findings in bot-owned
+        # stores are printed but do not block, because the authoritative repair
+        # is site-guard.yml running --fix in the same checkout as the bots —
+        # blocking the owner's ship on a row an agent will rewrite in ten
+        # minutes is how a guard gets disabled.
+        if "--gate" in sys.argv:
+            i = sys.argv.index("--gate")
+            scope = sys.argv[i + 1] if len(sys.argv) > i + 1 else "all"
+            if scope == "code":
+                code_fams = ("route-titles", "scripts", "cache-buster", "renderers",
+                             "hash-links", "routing", "paid-content")
+                blocking = [e for e in ERRORS if e.strip().startswith(code_fams)]
+                if not blocking:
+                    say("\nGUARD: no CODE-side errors — ship allowed. The data "
+                          "findings above are repaired by site-guard.yml in CI.")
+                    return 0
+                say("\nGUARD FAILED on code-side errors — do not ship this state.")
+                return 1
+        say("\nGUARD FAILED - do not ship this state.")
+        return 1
+    say("\nGUARD PASSED — every contract the site depends on is intact.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

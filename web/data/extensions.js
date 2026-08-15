@@ -15,9 +15,20 @@
 //     (made by the platform vendor itself), "self-host", "hosted".
 //   · Links verified against coverage as of 2026-08. The newsroom re-checks
 //     when a story touches an entry; a dead link is a correction, not a shrug.
+// FRESHNESS. This index is re-verified every week by the evolution run
+// (newsroom/runner/evolution-runbook.md §Extensions): dead links removed,
+// new entries added, categories re-checked. The date below is printed at the
+// bottom of the page, because a directory that does not say when it was last
+// checked is asking the reader to trust it blindly.
+window.RTFC_EXTENSIONS_META = {
+  updated: "2026-08-14",
+  cadence: "Re-verified weekly by the newsroom's evolution run.",
+  note: "Every link points at the maker's own site. No pricing is printed: in this industry a printed price is a future lie, so the link is the truth."
+};
+
 window.RTFC_EXTENSIONS = [
 
-  { cat:"Frontier model APIs", id:"frontier", icon:"⬡",
+  { cat:"Frontier model APIs", id:"frontier", group:"Access the models", order:1, icon:"⬡",
     desc:"Direct, metered access to the frontier models themselves — the raw material every other tool on this page is built around.",
     items:[
       { name:"Claude API", by:"Anthropic", kind:"api", url:"https://docs.claude.com",
@@ -46,7 +57,7 @@ window.RTFC_EXTENSIONS = [
         desc:"The GLM model line from one of China's earliest frontier labs, open weights included.", tags:["official","hosted"] }
     ]},
 
-  { cat:"Cloud AI platforms", id:"clouds", icon:"▣",
+  { cat:"Enterprise model platforms", id:"clouds", group:"Access the models", order:4, icon:"▣",
     desc:"The hyperscaler storefronts: many labs' models behind one enterprise bill, one compliance regime, one SDK.",
     items:[
       { name:"Amazon Bedrock", by:"AWS", kind:"platform", url:"https://aws.amazon.com/bedrock/",
@@ -61,7 +72,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Foundation model APIs and agent tooling living next to the data lakehouse the models are meant to read.", tags:["hosted"] }
     ]},
 
-  { cat:"Routers & inference clouds", id:"routers", icon:"⇶",
+  { cat:"Routers & inference clouds", id:"routers", group:"Access the models", order:2, icon:"⇶",
     desc:"One key, many models — the aggregators and GPU clouds that serve open-weight and frontier models fast and cheap.",
     items:[
       { name:"OpenRouter", by:"OpenRouter", kind:"api", url:"https://openrouter.ai",
@@ -88,7 +99,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Rentable GPU pods and serverless endpoints, the hobbyist-to-startup workhorse.", tags:["hosted"] }
     ]},
 
-  { cat:"Image generation", id:"image", icon:"❖",
+  { cat:"Image generation", id:"image", group:"Make pictures, video and voice", order:1, icon:"❖",
     desc:"The text-to-image APIs behind every cover, mockup and ad you've seen this year.",
     items:[
       { name:"OpenAI Images", by:"OpenAI", kind:"api", url:"https://platform.openai.com/docs/guides/images",
@@ -111,7 +122,7 @@ window.RTFC_EXTENSIONS = [
         desc:"A full production studio over image models — trained styles, canvas editing, and an API underneath.", tags:["hosted"] }
     ]},
 
-  { cat:"Video generation", id:"video", icon:"▶",
+  { cat:"Video generation", id:"video", group:"Make pictures, video and voice", order:2, icon:"▶",
     desc:"Text and image to moving picture. The category that went from lab demo to ad-industry tool in eighteen months.",
     items:[
       { name:"Sora", by:"OpenAI", kind:"api", url:"https://openai.com/sora",
@@ -134,7 +145,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Enterprise avatar video with governance and translation at platform scale.", tags:["hosted"] }
     ]},
 
-  { cat:"Voice & audio", id:"audio", icon:"◉",
+  { cat:"Voice & audio", id:"audio", group:"Make pictures, video and voice", order:3, icon:"◉",
     desc:"Speech in, speech out, music on demand — the APIs that gave AI a voice worth listening to.",
     items:[
       { name:"ElevenLabs", by:"ElevenLabs", kind:"api", url:"https://elevenlabs.io",
@@ -159,7 +170,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Voice AI with emotional expression measured and controlled as an API surface.", tags:["hosted"] }
     ]},
 
-  { cat:"Search, browsing & scraping", id:"search", icon:"⌕",
+  { cat:"The live web, for models", id:"search", group:"Give them tools and context", order:4, icon:"⌕",
     desc:"How agents see the live web: search APIs built for machines, page readers, and browser infrastructure.",
     items:[
       { name:"Tavily", by:"Tavily", kind:"api", url:"https://tavily.com",
@@ -182,7 +193,7 @@ window.RTFC_EXTENSIONS = [
         desc:"A marketplace of thousands of ready-made scrapers ('Actors') agents can call as tools.", tags:["hosted"] }
     ]},
 
-  { cat:"MCP — the connector standard", id:"mcp", icon:"⌘",
+  { cat:"MCP — the connector standard", id:"mcp", group:"Give them tools and context", order:1, icon:"⌘",
     desc:"Model Context Protocol: the open standard that lets any AI app plug into any tool or data source. The USB-C moment for AI — and the fastest-growing part of this page.",
     items:[
       { name:"Model Context Protocol", by:"Anthropic (open standard)", kind:"standard", url:"https://modelcontextprotocol.io",
@@ -207,7 +218,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Build and deploy remote MCP servers on Cloudflare's edge, auth and transport handled.", tags:["official","hosted"] }
     ]},
 
-  { cat:"Claude skills & extensions", id:"claude", icon:"✳",
+  { cat:"Claude skills & extensions", id:"claude", group:"Give them tools and context", order:2, icon:"✳",
     desc:"The extension surfaces of the Claude ecosystem itself — skills, agents, plugins and the places Claude shows up for work.",
     items:[
       { name:"Claude Skills", by:"Anthropic", kind:"skill", url:"https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview",
@@ -226,7 +237,7 @@ window.RTFC_EXTENSIONS = [
         desc:"One-click packaged MCP servers for the Claude desktop app — local tools without the config file.", tags:["official"] }
     ]},
 
-  { cat:"ChatGPT & OpenAI extensions", id:"openai-ext", icon:"◎",
+  { cat:"ChatGPT & OpenAI extensions", id:"openai-ext", group:"Give them tools and context", order:3, icon:"◎",
     desc:"The extension surfaces on the OpenAI side: custom GPTs, in-chat apps, and the agent tooling around the API.",
     items:[
       { name:"Custom GPTs & Actions", by:"OpenAI", kind:"skill", url:"https://openai.com/chatgpt",
@@ -239,7 +250,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Web search, file search, code execution and computer use as switch-on tools in the core API.", tags:["official","hosted"] }
     ]},
 
-  { cat:"Agent frameworks", id:"frameworks", icon:"⛓",
+  { cat:"Agent frameworks", id:"frameworks", group:"Build something", order:1, icon:"⛓",
     desc:"The scaffolding for building AI systems that plan, use tools and finish multi-step work — pick one, they all speak MCP now.",
     items:[
       { name:"LangChain & LangGraph", by:"LangChain", kind:"framework", url:"https://www.langchain.com",
@@ -268,7 +279,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Google's Agent Development Kit, the open framework under its own agent products.", tags:["open-source","official"] }
     ]},
 
-  { cat:"Coding agents & AI IDEs", id:"coding", icon:"⌨",
+  { cat:"Coding agents & AI IDEs", id:"coding", group:"Build something", order:2, icon:"⌨",
     desc:"Where AI actually ships software: terminal agents, AI-native editors, and the autonomous end of programming.",
     items:[
       { name:"Claude Code", by:"Anthropic", kind:"agent", url:"https://www.claude.com/product/claude-code",
@@ -297,7 +308,7 @@ window.RTFC_EXTENSIONS = [
         desc:"The leading open-source autonomous software agent, born as OpenDevin.", tags:["open-source"] }
     ]},
 
-  { cat:"Automation & workflow connectors", id:"automation", icon:"⚙",
+  { cat:"Automation & workflow connectors", id:"automation", group:"Build something", order:3, icon:"⚙",
     desc:"The glue layer: no-code and low-code platforms that wire models into the apps a business already runs on.",
     items:[
       { name:"Zapier", by:"Zapier", kind:"platform", url:"https://zapier.com",
@@ -318,7 +329,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Code-level integrations across thousands of APIs — automation for people who want the JavaScript.", tags:["hosted"] }
     ]},
 
-  { cat:"Vector databases & memory", id:"vectors", icon:"⬢",
+  { cat:"Memory and retrieval", id:"vectors", group:"Give them tools and context", order:6, icon:"⬢",
     desc:"Where AI systems keep what they know: embedding stores for retrieval, and the memory layers above them.",
     items:[
       { name:"Pinecone", by:"Pinecone", kind:"platform", url:"https://www.pinecone.io",
@@ -343,7 +354,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Temporal knowledge-graph memory for agents — what changed, and when, not just what's similar.", tags:["open-source","hosted"] }
     ]},
 
-  { cat:"Evals, observability & guardrails", id:"evals", icon:"☑",
+  { cat:"Evals, tracing and guardrails", id:"evals", group:"Know that it works", order:1, icon:"☑",
     desc:"How teams know their AI actually works: tracing, testing, scoring — and the safety rails around model output.",
     items:[
       { name:"LangSmith", by:"LangChain", kind:"platform", url:"https://smith.langchain.com",
@@ -368,7 +379,7 @@ window.RTFC_EXTENSIONS = [
         desc:"Real-time defense against prompt injection and data leakage — the security end of guardrails.", tags:["hosted"] }
     ]},
 
-  { cat:"Run it locally", id:"local", icon:"⌂",
+  { cat:"Run it locally", id:"local", group:"Access the models", order:3, icon:"⌂",
     desc:"No API key, no cloud, no bill: the runtimes that put open-weight models on your own hardware.",
     items:[
       { name:"Ollama", by:"Ollama", kind:"runtime", url:"https://ollama.com",
@@ -393,7 +404,7 @@ window.RTFC_EXTENSIONS = [
         desc:"A drop-in open replacement for the OpenAI API, running many model types on consumer hardware.", tags:["open-source","self-host"] }
     ]},
 
-  { cat:"Documents & data extraction", id:"docs", icon:"⎘",
+  { cat:"Documents in, clean text out", id:"docs", group:"Give them tools and context", order:5, icon:"⎘",
     desc:"Turning PDFs, scans and messy files into model-ready text — the unglamorous step every serious AI pipeline lives or dies on.",
     items:[
       { name:"Unstructured", by:"Unstructured", kind:"api", url:"https://unstructured.io",

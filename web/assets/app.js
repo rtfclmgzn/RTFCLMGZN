@@ -134,7 +134,7 @@
        changes when an item is removed. Re-render only that view and restore the
        scroll position synchronously — the spec's documented fallback, used here
        because a purely local repaint cannot remove a row from a filtered list. */
-    if((location.hash||"").indexOf("#/library")===0){
+    if(curPath()==="/library"){
       var y=window.scrollY, app=document.getElementById("app");
       if(app){
         app.innerHTML=viewLibrary();
@@ -233,7 +233,7 @@
   window.rtfcCheckout=function(plan,ev){
     if(ev){ ev.preventDefault(); ev.stopPropagation(); }
     var l=libGet();
-    if(!l.account){ location.hash="#/account"; return; }
+    if(!l.account){ go("/account"); return; }
     if(CHECKOUT_BUSY) return;
     if(typeof fetch!=="function"){ gtToast("Checkout needs a connection to the newsroom."); return; }
     CHECKOUT_BUSY=true;
@@ -331,7 +331,7 @@
     // config not answered yet → say so rather than offer a button that will fail;
     // checkout not live → the price stands, the button doesn't pretend.
     function buy(plan,label){
-      if(!l.account) return '<a class="cta pp-buy" href="#/account">Create a free account first</a>';
+      if(!l.account) return '<a class="cta pp-buy" href="/account">Create a free account first</a>';
       if(!st.known)  return '<button class="cta pp-buy" disabled>Checking with the newsroom…</button>';
       if(!st.enabled) return '<button class="cta pp-buy" disabled>'+esc(label)+'</button>';
       return '<button class="cta pp-buy" data-plan="'+escAttr(plan)+'" onclick="rtfcCheckout(\''+escAttr(plan)+'\',event)">'+esc(label)+'</button>';
@@ -350,7 +350,7 @@
       vh+='<div class="pp-soon">Subscriptions open soon at <b>'+billMoney(yr)+'/year</b>'+
         ' or '+billMoney(mo)+'/month. Articles stay free, forever.</div>';
       if(!l.account){
-        vh+='<a class="cta pp-buy" href="#/account">Create a free account to use a code</a>';
+        vh+='<a class="cta pp-buy" href="/account">Create a free account to use a code</a>';
       }
       vh+='</div>';
       return vh;
@@ -586,8 +586,22 @@
   }
   // url('...') inside a style attribute — allow-listed, then the characters that
   // could close the CSS string or the HTML attribute are percent-encoded.
+  /* ASSET PATHS ARE ROOT-RELATIVE (2026-08-14). The stores hold image paths as
+     "assets/img/newsroom/x.jpg" — written when every page lived at the origin
+     and a relative path could only mean one thing. Now that pages live at real
+     depths (/article/<slug>, /section/Frontier, /company/openai), the SAME
+     string resolves to /article/assets/img/... and every cover 404s.
+     Rather than rewrite 125 bot-owned records, every asset path is normalized
+     here, once, at the moment it is rendered. Absolute URLs and data: URIs are
+     passed through untouched. */
+  function assetUrl(u){
+    var s=String(u==null?"":u);
+    if(!s) return "";
+    if(/^(https?:)?\/\//i.test(s) || s.indexOf("data:")===0 || s.charAt(0)==="/") return s;
+    return "/"+s.replace(/^\.?\/*/,"");
+  }
   function safeCssUrl(u){
-    var s=safeUrl(u); if(!s) return "";
+    var s=safeUrl(assetUrl(u)); if(!s) return "";
     return escAttr(s.replace(/['"()\\\s]/g,function(c){ return "%"+c.charCodeAt(0).toString(16).toUpperCase(); }));
   }
   function slugify(s){ return String(s).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"").slice(0,40); }
@@ -735,14 +749,14 @@
 
   function cardHTML(a){
     var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
-    return '<a class="card" href="#/article/'+a.slug+'">'+
+    return '<a class="card" href="/article/'+a.slug+'">'+
       '<div class="art" style="'+artFill(a)+'">'+artGlyph(a,col)+saveBtns(a.id)+'</div>'+
       tagsHTML(a)+'<h3>'+esc(a.title)+'</h3>'+
       '<p class="dek">'+esc(a.dek)+'</p>'+bylineHTML(p,a.publishedAt,readTime(a),a)+'</a>';
   }
   function railHTML(a){
     var p=persona(a.persona);
-    return '<a class="rail-item" href="#/article/'+a.slug+'">'+tagsHTML(a)+
+    return '<a class="rail-item" href="/article/'+a.slug+'">'+tagsHTML(a)+
       '<h4>'+esc(a.title)+'</h4>'+bylineHTML(p,a.publishedAt,null,a)+'</a>';
   }
   /* ---------- story-card variants (spec §14) ----------
@@ -755,7 +769,7 @@
      Used to open a section of the page and break the column rhythm. */
   function cardWideHTML(a){
     var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
-    return '<a class="card card-wide" href="#/article/'+a.slug+'">'+
+    return '<a class="card card-wide" href="/article/'+a.slug+'">'+
       '<div class="art" style="'+artFill(a,true)+'">'+artGlyph(a,col)+saveBtns(a.id,true)+'</div>'+
       '<div class="cw-body">'+(a.breaking?'<span class="pill breaking">Breaking</span>':"")+tagsHTML(a)+
       '<h3>'+esc(a.title)+'</h3><p class="dek">'+esc(a.dek)+'</p>'+
@@ -765,7 +779,7 @@
      roughly three of these occupy the space one full-bleed card used to. */
   function cardThumbHTML(a){
     var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
-    return '<a class="card-thumb" href="#/article/'+a.slug+'">'+
+    return '<a class="card-thumb" href="/article/'+a.slug+'">'+
       '<div class="ct-art" style="'+artFill(a)+'">'+artGlyph(a,col)+'</div>'+
       '<div class="ct-body">'+tagsHTML(a)+'<h4>'+esc(a.title)+'</h4>'+
       bylineHTML(p,a.publishedAt,null,a)+'</div>'+saveBtns(a.id,true)+'</a>';
@@ -774,7 +788,7 @@
      imagery elsewhere on the page its value back (spec §17). */
   function briefRowHTML(a){
     var col=SECTION_COLORS[a.section]||"#8b7cf7";
-    return '<a class="brief-row" href="#/article/'+a.slug+'">'+
+    return '<a class="brief-row" href="/article/'+a.slug+'">'+
       '<span class="br-sec" style="color:'+escAttr(col)+'">'+esc(a.section)+'</span>'+
       '<span class="br-h">'+esc(a.title)+'</span>'+
       '<span class="br-meta">'+esc(relTime(a.publishedAt))+'</span></a>';
@@ -786,7 +800,7 @@
   }
   function featureHTML(a){
     var p=persona(a.persona), col=SECTION_COLORS[a.section]||"#8b7cf7";
-    return '<a class="feature" href="#/article/'+a.slug+'">'+
+    return '<a class="feature" href="/article/'+a.slug+'">'+
       '<div class="art" style="'+artFill(a,true)+'">'+artGlyph(a,col)+
         '<span class="beatline">'+esc(a.section)+' — '+FMT[trueFormat(a)]+'</span></div>'+
       '<div style="margin-top:20px">'+(a.breaking?'<span class="pill breaking">Breaking</span>':"")+tagsHTML(a)+'</div>'+
@@ -821,14 +835,14 @@
         '<div class="empty-state"><span class="es-mark">◈</span>'+
         '<div><b>No company has been covered twice yet.</b>'+
         '<span>This rail fills itself as the newsroom publishes — every player we write about lands here automatically, ranked by how often they appear.</span></div>'+
-        '<a class="es-go" href="#/companies">All companies →</a></div>';
+        '<a class="es-go" href="/companies">All companies →</a></div>';
     }
     return '<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Browse by player</div>'+
       '<div class="player-browse">'+ranked.map(function(x){
-        return '<a class="player-cell" href="#/company/'+x.c.key+'" style="--bc:'+brandColor(x.c.key)+'">'+
+        return '<a class="player-cell" href="/company/'+x.c.key+'" style="--bc:'+brandColor(x.c.key)+'">'+
           brandMark(x.c.key,x.c.name)+'<b>'+esc(x.c.name)+'</b><em>'+x.n+'</em></a>';
       }).join("")+
-      '<a class="player-cell player-all" href="#/companies"><b>All companies</b><em>→</em></a></div>';
+      '<a class="player-cell player-all" href="/companies"><b>All companies</b><em>→</em></a></div>';
   }
   /* ============== THE WIRE (homepage right-rail live stack) ==============
      The hero is taller than its three rail stories, and the leftover column
@@ -843,22 +857,23 @@
   function homeWireSlides(){
     var slides=[];
     var ns=nextSlot();
-    slides.push({k:"Next edition",cls:"edition-cd",body:'<b class="cd-time">'+(ns.overdue?"due now":fmtCountdown(ns.secs))+'</b><span class="wr-sub cd-slot">'+(ns.overdue?"Due now":"around "+ns.local+" your time")+'</span>',href:"#/pulse"});
+    slides.push({k:"Next edition",cls:"edition-cd",body:'<b class="cd-time">'+(ns.overdue?"due now":fmtCountdown(ns.secs))+'</b><span class="wr-sub cd-slot">'+(ns.overdue?"Due now":"around "+ns.local+" your time")+'</span>',href:"/pulse"});
     var bz=BUZZ[0];
-    if(bz) slides.push({k:"Hottest on the wire",body:'<span class="wr-txt">'+esc(String(bz.text||"").slice(0,150))+(String(bz.text||"").length>150?"…":"")+'</span><span class="wr-sub">— '+esc((bz.source&&bz.source.name)||"the feed")+'</span>',href:"#/buzz"});
+    if(bz) slides.push({k:"Hottest on the wire",body:'<span class="wr-txt">'+esc(String(bz.text||"").slice(0,150))+(String(bz.text||"").length>150?"…":"")+'</span><span class="wr-sub">— '+esc((bz.source&&bz.source.name)||"the feed")+'</span>',href:"/buzz"});
     var SBW=window.RTFC_SCOREBOARD||{rows:[]};
     var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;});
-    if(sc.length) slides.push({k:"Scoreboard · smartest",body:'<b class="wr-big">'+esc(sc[0].model)+'</b><span class="wr-sub">'+sc[0].score+' on the independent index · '+esc(sc[0].lab)+'</span>',href:"#/scoreboard"});
+    if(sc.length) slides.push({k:"Scoreboard · smartest",body:'<b class="wr-big">'+esc(sc[0].model)+'</b><span class="wr-sub">'+sc[0].score+' on the independent index · '+esc(sc[0].lab)+'</span>',href:"/scoreboard"});
     var preds=(window.RTFC_PREDICTIONS||[]).filter(function(p){return p.status==="pending";})
       .sort(function(a,b){return new Date(a.resolveBy)-new Date(b.resolveBy);});
     if(preds.length){
       var pd=Math.max(0,Math.ceil((new Date(preds[0].resolveBy)-new Date())/86400000));
-      slides.push({k:"Open prediction",body:'<span class="wr-txt">“'+esc(String(preds[0].claim||"").slice(0,130))+'”</span><span class="wr-sub">graded in public · resolves in '+pd+'d</span>',href:"#/predictions"});
+      slides.push({k:"Open prediction",body:'<span class="wr-txt">“'+esc(String(preds[0].claim||"").slice(0,130))+'”</span><span class="wr-sub">graded in public · resolves in '+pd+'d</span>',href:"/predictions"});
     }
-    var us=sumRecs(liveUsage());
-    slides.push({k:"The running bill",body:'<b class="wr-big">'+money(us.cost)+'</b><span class="wr-sub">total compute, run to date — every penny public</span>',href:"#/usage"});
+    var ub=costBasis();
+    slides.push({k:"The running bill",body:'<b class="wr-big">'+money(ub.cost)+'</b><span class="wr-sub">'+
+      (ub.unmetered?('metered compute · '+ub.unmetered+' runs still unmetered'):'total compute, run to date — every penny public')+'</span>',href:"/usage"});
     var gf=(GRID.facilities||[]).slice().sort(function(a,b){return String(b.addedAt||"").localeCompare(String(a.addedAt||""));})[0];
-    if(gf) slides.push({k:"Newest on The Grid",body:'<b class="wr-big">'+esc(gf.name)+'</b><span class="wr-sub">'+esc(gf.place)+' · '+esc(gf.status)+'</span>',href:"#/grid"});
+    if(gf) slides.push({k:"Newest on The Grid",body:'<b class="wr-big">'+esc(gf.name)+'</b><span class="wr-sub">'+esc(gf.place)+' · '+esc(gf.status)+'</span>',href:"/grid"});
     return slides;
   }
   function homeWireHTML(){
@@ -875,7 +890,7 @@
     var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;}).slice(0,5);
     if(sc.length<3) return "";
     var mx=sc[0].score||1;
-    return '<a class="mini-sb" href="#/scoreboard"><div class="msb-h">▤ SCOREBOARD · TOP 5</div>'+
+    return '<a class="mini-sb" href="/scoreboard"><div class="msb-h">▤ SCOREBOARD · TOP 5</div>'+
       sc.map(function(r,i){
         return '<div class="msb-row"><span class="msb-r">'+(i+1)+'</span><span class="msb-m">'+esc(r.model)+'</span>'+
           '<span class="msb-track"><i style="width:'+Math.round(r.score/mx*100)+'%"></i></span><b>'+r.score+'</b></div>';
@@ -899,6 +914,60 @@
     if(document.getElementById("home-wire") && !window.__wireT) window.__wireT=setInterval(wireTick,5000);
   };
 
+  /* ================= THE MAGAZINE, ON THE HOMEPAGE =================
+     Added 2026-08-14 (owner: "the homepage should mention our magazine
+     releases since it's the only means that will be making this whole thing
+     money"). The articles are free forever and always will be; the monthly
+     issue is the product. It had exactly one entry point — a nav link that on
+     a phone sat off the right edge of a scrolling rail — so the homepage sold
+     nothing at all.
+
+     This module is deliberately editorial rather than an ad: the newest issue
+     with its real cover, what is actually inside it (derived from the issue's
+     own metadata, so it cannot overstate), and the free Primer beside it as
+     the no-risk way in. It renders differently for a subscriber — no pitch, a
+     "read it" — because showing a paying reader a sales box is how you teach
+     them their subscription is invisible. */
+  function magHomeHTML(){
+    var issues=MAG.filter(function(m){ return m && m.cover && m.number>0; });
+    if(!issues.length) return "";
+    var iss=issues[0];
+    var primer=MAG.filter(function(m){ return m && m.id==="primer"; })[0];
+    var spreads=iss.spreadCount||(iss.spreads||[]).length||0;
+    var plus=isPlus();
+    var cover=(iss.cover&&iss.cover.image)||"";
+    var num="Issue "+String(iss.number).padStart(3,"0");
+    var when=iss.month?monthLabel(iss.month):"";
+
+    var facts=[];
+    if(spreads) facts.push(spreads+" spreads");
+    facts.push("cover story with hindsight");
+    facts.push("every editor's month in review");
+    facts.push("the Scoreboard, the Compendium, the Watchlist");
+
+    return '<section class="mag-home"'+(cover?' style="--cov:url(\''+escAttr(cover)+'\')"':'')+'>'+
+      '<a class="mh-cover" href="/issue/'+esc(iss.id)+'" aria-label="'+escAttr(num+" — "+(iss.title||""))+'">'+
+        (cover?'<img src="'+escAttr(assetUrl(cover))+'" alt="'+escAttr((iss.title||"Issue")+" cover")+'" loading="lazy">':'')+
+      '</a>'+
+      '<div class="mh-copy">'+
+        '<div class="mh-k">'+esc(num)+(when?(' · '+esc(when)):'')+' · The Magazine ◈</div>'+
+        '<h2>'+esc(iss.title||"The monthly issue")+'</h2>'+
+        (iss.tagline?('<p class="mh-tag">'+esc(iss.tagline)+'</p>'):'')+
+        '<ul class="mh-facts">'+facts.map(function(f){ return '<li>'+esc(f)+'</li>'; }).join("")+'</ul>'+
+        (plus
+          ? '<div class="mh-cta"><a class="mh-go" href="/issue/'+esc(iss.id)+'">Read '+esc(num)+' →</a>'+
+            '<span class="mh-note">Your Plus subscription is active — every back issue is included.</span></div>'
+          : '<div class="mh-cta"><a class="mh-go" href="/issue/'+esc(iss.id)+'">See what\'s inside →</a>'+
+            (primer?('<a class="mh-alt" href="/read/primer">Read The Primer free</a>'):'')+
+            '<span class="mh-note">Articles are free forever. The monthly issue is what Plus pays for — and Plus includes every back issue.</span></div>')+
+      '</div></section>';
+  }
+  function monthLabel(m){
+    var mm=String(m).match(/^(\d{4})-(\d{2})/);
+    if(!mm) return String(m);
+    return (MONTH_NAMES[parseInt(mm[2],10)-1]||"").replace(/^./,function(c){return c.toUpperCase();})+" "+mm[1];
+  }
+
   function viewHome(){
     // The homepage lead is the newest article -- UNLESS a breaking story is
     // still within its 24h headliner window (see activeBreakingHeadliner
@@ -910,12 +979,12 @@
     var h='<div class="container">'+editionHTML();
     if(window.speechSynthesis){
       var B0=briefingScript();
-      if(B0) h+='<div class="home-chips"><a class="brief-chip" href="#/briefing">▶ <b>The Daily Briefing</b><span>today\'s AI, read to you · ~'+B0.mins+' min</span></a></div>';
+      if(B0) h+='<div class="home-chips"><a class="brief-chip" href="/briefing">▶ <b>The Daily Briefing</b><span>today\'s AI, read to you · ~'+B0.mins+' min</span></a></div>';
     }
     var seen; try{seen=localStorage.getItem("rtfc-primer-seen");}catch(e){}
     if(!seen){
-      h+='<a class="primer-banner" href="#/read/primer">'+
-        '<span class="pb-art" style="background:url(\'assets/img/primer-cover.jpg\') center/cover"></span>'+
+      h+='<a class="primer-banner" href="/read/primer">'+
+        '<span class="pb-art" style="background:url(\'/assets/img/primer-cover.jpg\') center/cover"></span>'+
         '<span class="pb-txt"><b>New to AI? Start with The Primer.</b>'+
         '<span>Our free field guide to the whole AI world — who the players are, what the words mean, and what it can do for you tonight. 12 pages, no jargon walls.</span></span>'+
         '<span class="pb-go">Read free →</span>'+
@@ -928,7 +997,7 @@
       h+='<div class="empty-state es-lead"><span class="es-mark">◈</span>'+
         '<div><b>The newsroom is between editions.</b>'+
         '<span>No story has landed on the wire yet. The pipeline publishes on its own schedule — the lead slot fills itself the moment the next edition ships.</span></div>'+
-        '<a class="es-go" href="#/magazine">Read the magazine →</a></div>';
+        '<a class="es-go" href="/magazine">Read the magazine →</a></div>';
       h+='<div class="home-nl">'+newsletterHTML(true)+'</div>';
       return h+'</div>';
     }
@@ -978,7 +1047,8 @@
          :'<div class="thumb-list thumb-2col">'+lateThumbs.map(cardThumbHTML).join("")+'</div>'));
     }
     var left=Math.max(0, grid.length-TOTAL);
-    if(left) h+='<a class="home-more" href="#/archive">Browse all '+ARTICLES.length+' stories in the archive<span>'+left+' more →</span></a>';
+    if(left) h+='<a class="home-more" href="/archive">Browse all '+ARTICLES.length+' stories in the archive<span>'+left+' more →</span></a>';
+    h+=magHomeHTML();
     h+=eventsHomeHTML();
     h+='<div class="home-nl">'+newsletterHTML(true)+'</div>';
     return h+'</div>';
@@ -993,7 +1063,7 @@
       '<div><div class="kicker" style="margin:0 0 10px"><span class="dotc" style="background:'+col+'"></span>The '+esc(sec.label)+' Desk</div>'+
       '<h1 class="desk-title">'+esc(sec.label)+'</h1>'+
       (sec.desc?'<p class="desk-desc">'+esc(sec.desc)+'</p>':'')+'</div>'+
-      (ed?('<a class="desk-editor" href="#/persona/'+ed.key+'">'+avatar(ed)+
+      (ed?('<a class="desk-editor" href="/persona/'+ed.key+'">'+avatar(ed)+
         '<span><em>Desk editor</em><b>'+esc(ed.name)+'</b><span>'+esc(ed.tone)+'</span></span></a>'):'')+
       '</div>';
     h+='<div class="kicker"><span class="dotc" style="background:'+col+'"></span>'+list.length+(list.length===1?' story':' stories')+'</div>';
@@ -1014,7 +1084,7 @@
       '<div class="cell"><div class="num">0</div><div class="lbl">humans in the publishing loop</div></div></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The editors</div>';
     h+='<div class="mast-grid mast-3x3">'+ACTIVE.map(function(p){
-      return '<a class="mast-card" href="#/persona/'+p.key+'">'+
+      return '<a class="mast-card" href="/persona/'+p.key+'">'+
         '<span class="av-pop" title="Enlarge" data-persona="'+p.key+'">'+avatar(p)+'</span>'+
         '<h3>'+esc(p.name)+'</h3>'+
         '<div class="beat">'+esc(p.beat)+'</div>'+
@@ -1027,11 +1097,11 @@
   function viewPersona(key){
     var p=persona(key); if(!p) return notFound();
     var list=ARTICLES.filter(function(a){return a.persona===key;});
-    var h='<div class="container"><div style="padding-top:26px"><a class="back" href="#/masthead">← The masthead</a></div>'+
+    var h='<div class="container"><div style="padding-top:26px"><a class="back" href="/masthead">← The masthead</a></div>'+
       '<div class="persona-hero">'+avatar(p)+
       '<div><h1>'+esc(p.name)+(p.retired?' <span class="hi" style="background:color-mix(in srgb,var(--muted) 18%,transparent);color:var(--muted);border-color:var(--muted)">Alumni · desk retired</span>':(p.sensitivity==="high"?' <span class="hi">High sensitivity</span>':''))+'</h1>'+
       '<div class="beat">'+esc(p.beat)+'</div><div class="tone">Voice — '+esc(p.tone)+'</div>'+
-      ((window.RTFC_DOSSIERS&&window.RTFC_DOSSIERS[key])?'<a class="dsr-open" href="#/editor/'+esc(key)+'" title="Open '+esc(p.name)+'’s editor dossier">ⓘ <span>Dossier</span></a>':'')+
+      ((window.RTFC_DOSSIERS&&window.RTFC_DOSSIERS[key])?'<a class="dsr-open" href="/editor/'+esc(key)+'" title="Open '+esc(p.name)+'’s editor dossier">ⓘ <span>Dossier</span></a>':'')+
       '</div></div>'+
       '<p class="persona-bio">'+esc(p.bio)+'</p>'+
       '<div class="kicker">Byline archive · '+list.length+'</div>'+
@@ -1063,7 +1133,7 @@
     function beat(l,t){ return '<div class="dsr-beat"><div class="dsr-beat-l">'+l+'</div><p>'+esc(t)+'</p></div>'; }
     function mDay(iso){ if(!iso) return "—"; return new Date(iso).toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
     var mix=[]; if(s.fmt.synthesis)mix.push(s.fmt.synthesis+" synthesis"); if(s.fmt.brief)mix.push(s.fmt.brief+" brief"+(s.fmt.brief>1?"s":"")); if(s.fmt.research)mix.push(s.fmt.research+" research");
-    var h='<div class="container" style="max-width:840px"><div style="padding-top:26px"><a class="back" href="#/persona/'+esc(key)+'">← '+esc(p.name)+'</a></div>';
+    var h='<div class="container" style="max-width:840px"><div style="padding-top:26px"><a class="back" href="/persona/'+esc(key)+'">← '+esc(p.name)+'</a></div>';
     h+='<div class="dsr-hero" style="--dcol:'+col+'"><span class="dsr-av">'+avatar(p)+'</span>'+
        '<div class="dsr-id"><div class="dsr-eyebrow">◈ Editor dossier</div><h1>'+esc(p.name)+'</h1>'+
        '<div class="dsr-beat-top">'+esc(p.beat)+'</div></div></div>';
@@ -1088,7 +1158,7 @@
           var lbl=cls==="ok"?"resolved · right":(cls==="no"?"resolved · missed":"open");
           return '<div class="dsr-fc"><span class="dsr-fc-st '+cls+'">'+lbl+'</span><div><p class="dsr-fc-c">'+esc(pr.claim)+'</p><span class="dsr-fc-m">made '+esc(pr.made||"")+' · resolves '+esc(pr.resolveBy||"")+'</span></div></div>';
         }).join("")+
-        '</div><p class="dsr-note"><a href="#/predictions" style="color:var(--accent2)">The full Prediction Ledger →</a></p></div>';
+        '</div><p class="dsr-note"><a href="/predictions" style="color:var(--accent2)">The full Prediction Ledger →</a></p></div>';
     }
     if(s.recent.length){
       h+='<div class="dsr-block"><h2 class="dsr-h2">Selected bylines</h2><div class="grid">'+s.recent.map(cardHTML).join("")+'</div></div>';
@@ -1276,9 +1346,9 @@
     }
     var al=ACCESS_LABEL[m.access||"unknown"];
     if(al) rows.push(entRow("Access",esc(al)));
-    if(sc) rows.push(entRow("Index score",sc.score+' <a href="#/scoreboard">Scoreboard&nbsp;↗</a>'));
+    if(sc) rows.push(entRow("Index score",sc.score+' <a href="/scoreboard">Scoreboard&nbsp;↗</a>'));
     var foot=(org&&org.houseNote)?'<span class="ent-house">'+esc(org.houseNote)+'</span>':'';
-    var link=org?'<a class="ent-link" href="#/company/'+esc(org.key)+'">Dossier: '+esc(org.name)+'&nbsp;↗</a>':'';
+    var link=org?'<a class="ent-link" href="/company/'+esc(org.key)+'">Dossier: '+esc(org.name)+'&nbsp;↗</a>':'';
     return '<span class="ent-card"><span class="ent-h">'+esc(m.name)+
       (m.kind?'<i>'+esc(m.kind)+'</i>':'')+'</span>'+rows.join("")+foot+link+'</span>';
   }
@@ -1293,7 +1363,7 @@
     if(!rows.length) return "";
     var foot=org.houseNote?'<span class="ent-house">'+esc(org.houseNote)+'</span>':'';
     return '<span class="ent-card"><span class="ent-h">'+esc(org.name)+'<i>organization</i></span>'+
-      rows.join("")+foot+'<a class="ent-link" href="#/company/'+esc(org.key)+'">Full dossier&nbsp;↗</a></span>';
+      rows.join("")+foot+'<a class="ent-link" href="/company/'+esc(org.key)+'">Full dossier&nbsp;↗</a></span>';
   }
   // entities.js is data: `re` is expected to be a RegExp literal, but a string (or
   // anything else) must not reach .match()/.replace(), where a string is silently
@@ -1465,7 +1535,7 @@
       if(e.access) rows.push(entRow("Access",esc(ACCESS_LABEL[e.access]||e.access)));
       if(e.stake) rows.push(entRow("Stake",esc(e.stake)));
       (e.extra||[]).forEach(function(x){ rows.push(entRow(x.label,fmt(String(x.value)))); });
-      var link=e.companyKey?'<a class="ent-link" href="#/company/'+esc(e.companyKey)+'">Dossier&nbsp;↗</a>':'';
+      var link=e.companyKey?'<a class="ent-link" href="/company/'+esc(e.companyKey)+'">Dossier&nbsp;↗</a>':'';
       return '<div class="eb-card">'+
         '<div class="eb-name">'+esc(e.name)+(e.kind?'<i>'+esc(e.kind)+'</i>':'')+'</div>'+
         '<div class="eb-rows">'+rows.join("")+'</div>'+
@@ -1713,7 +1783,7 @@
       '<span>'+mine.length+' open question'+(mine.length===1?'':'s')+' from this piece '+
       (mine.length===1?'has':'have')+' since been settled. The article above is unchanged; '+
       'every resolution is added here, dated.</span></div>'+rows+
-      '<a class="up-all" href="#/claims">The full claims ledger →</a></div>';
+      '<a class="up-all" href="/claims">The full claims ledger →</a></div>';
   }
   function claimRowHTML(c,r){
     var oc=r?(RES_OUTCOME[r.outcome]||RES_OUTCOME.partly):null;
@@ -1721,7 +1791,7 @@
       '<div class="cl-main">'+
         '<div class="cl-claim">'+fmt(c.claim)+'</div>'+
         '<div class="cl-meta"><span class="cl-kind">'+(c.kind==="watch"?"Watching":esc((SC_LEVELS[c.level]||{l:"Open"}).l))+'</span>'+
-        '<a href="#/article/'+esc(c.slug)+'">'+esc(c.title)+'</a>'+
+        '<a href="/article/'+esc(c.slug)+'">'+esc(c.title)+'</a>'+
         '<time>'+when(c.publishedAt)+'</time></div>'+
       '</div>'+
       '<div class="cl-res">'+(r
@@ -1951,7 +2021,7 @@
     var rows=top.map(function(f,i){
       var w=Math.max(2,Math.round(f.value/max*100));
       var hi=f.id===c.highlight;
-      var href=f.slug?('#/article/'+f.slug):null;
+      var href=f.slug?('/article/'+f.slug):null;
       var inner='<span class="rk-n">'+(i+1)+'</span><span class="rk-l">'+esc(f.label)+'</span>'+
         '<span class="rk-track"><i style="width:'+w+'%"></i></span>'+
         '<span class="rk-v">'+esc((meta.prefix||"")+fmtModelNum(f.value,meta.dec)+unit)+'</span>';
@@ -2578,7 +2648,25 @@
     // Per-article first-mention set for the entity layer. Fresh per render so a
     // reader who opens two articles gets the provenance chip in both.
     var entSeen={};
-    var bodyHTML=a.body.map(function(b){
+    /* CONTAINMENT (2026-08-14). Three page-killing crashes in two days all had
+       the same shape: one field missing from one record, one unguarded read,
+       and the ENTIRE article route dies — reader gets "This page didn't
+       render" over a perfectly good story. Guarding each field as it burns is
+       not a strategy, because the next agent invents a new field to omit.
+       So the blast radius is now one block: a body block that throws renders
+       as a small, honest placeholder and the rest of the article publishes
+       around it. The console still gets the real error for the guard to catch,
+       and site_guard.py + render_smoke.py hunt these before readers do. */
+    var bodyHTML=(a.body||[]).map(function(b,bi){
+      try{ return renderBlock(b,bi); }
+      catch(e){
+        try{ console.error("[rtfc] body block "+bi+" failed to render:",e); }catch(_){}
+        return '<p class="block-fail">A block in this story could not be '+
+               'displayed. The rest of the piece is unaffected, and the '+
+               'newsroom has been alerted.</p>';
+      }
+    }).join("");
+    function renderBlock(b,bi){
       if(b.type==="h2"){ raSeg++; var id="s-"+slugify(b.text); toc.push({id:id,t:b.text}); return '<h2 id="'+id+'" data-ra="'+raSeg+'">'+esc(b.text)+'</h2>'; }
       if(b.type==="quote"){ raSeg++; return '<blockquote data-ra="'+raSeg+'">'+fmt(b.text)+'</blockquote>'; }
       if(isComponent(b)){
@@ -2599,13 +2687,27 @@
       if(ev) cls.push("has-ev");
       return '<p data-ra="'+raSeg+'"'+(cls.length?' class="'+cls.join(" ")+'"':'')+'>'+
         entAnnotate(fmtBody(b.text),entSeen)+ev+'</p>';
-    }).join("");
+    }
     var applySeg=(a.apply&&a.apply.length)?(raSeg+1):-1;
     var tocHTML=(toc.length>=3)?('<nav class="toc"><span class="toc-l">In this piece</span><ol>'+
-      toc.map(function(x,i){return '<li><a href="#/article/'+slug+'/'+x.id+'"><span>'+String(i+1).padStart(2,"0")+'</span>'+esc(x.t)+'</a></li>';}).join("")+'</ol></nav>'):'';
-    var disc="";
-    if(a.disclaimer==="not-medical-advice") disc='<div class="disclaimer med"><b>This is not medical advice.</b>For information only. Consult a qualified professional. Diagnostic or treatment-adjacent claims are adjudicated by the AI Editor-in-Chief recommendation layer before publication.</div>';
-    if(a.disclaimer==="not-financial-advice") disc='<div class="disclaimer fin"><b>This is not financial or investment advice.</b>For information only. RTFCLMGZN does not make trading recommendations.</div>';
+      toc.map(function(x,i){return '<li><a href="/article/'+slug+'/'+x.id+'"><span>'+String(i+1).padStart(2,"0")+'</span>'+esc(x.t)+'</a></li>';}).join("")+'</ol></nav>'):'';
+    /* DISCLAIMERS FAIL SAFE (2026-08-14). This used to be two exact-string
+       tests, so any other value rendered NOTHING — and the guard found two
+       live health articles carrying disclaimer:"health", a value no renderer
+       has ever known. Both had been publishing with no medical notice at all.
+       An unrecognised disclaimer now means "an editor flagged this for
+       something", and something is what the reader gets: matched by meaning
+       where possible, and a generic caution otherwise. A missing notice on a
+       flagged story is the one failure mode that is never acceptable. */
+    var disc="", dv=String(a.disclaimer||"none").toLowerCase();
+    if(dv!=="none" && dv!==""){
+      if(/med|health|clinic|drug|diagnos/.test(dv))
+        disc='<div class="disclaimer med"><b>This is not medical advice.</b>For information only. Consult a qualified professional. Diagnostic or treatment-adjacent claims are adjudicated by the AI Editor-in-Chief recommendation layer before publication.</div>';
+      else if(/financ|invest|crypto|trading|market/.test(dv))
+        disc='<div class="disclaimer fin"><b>This is not financial or investment advice.</b>For information only. RTFCLMGZN does not make trading recommendations.</div>';
+      else
+        disc='<div class="disclaimer fin"><b>Read this one with care.</b>This story was flagged for editorial scrutiny before publication. It is information, not advice — check anything you plan to act on against the primary sources listed below.</div>';
+    }
     /* Both of these were unguarded and crashed the whole article route on
        2026-08-13, when the breaking-scan published the first article ever to
        carry no `corrections` array — TypeError on .length, and the reader got
@@ -2625,7 +2727,7 @@
        story reads in Health's tint, a Markets story in Markets'. Pure CSS
        downstream of this one variable. */
     return '<div class="container"><article class="article" style="--sec:'+col+'">'+
-      '<a class="back" href="#/">← Home</a>'+
+      '<a class="back" href="/">← Home</a>'+
       '<div style="margin:20px 0 6px">'+tagsHTML(a)+'</div>'+
       '<h1 data-ra="0">'+esc(a.title)+'</h1><p class="dek" data-ra="0">'+esc(a.dek)+'</p>'+
       '<div class="dateline"><span class="dl-sec" style="color:'+col+'">'+esc(a.section)+'</span> · '+when(a.publishedAt)+' · '+readTime(a)+' min read'+saveBtns(a.id,true)+'</div>'+
@@ -2638,7 +2740,7 @@
       updatesHTML(a)+
       linksHTML(a)+
       reactsHTML(a.id)+
-      '<div class="endbyline">'+avatar(p)+'<div class="eb-who">'+((a.authors&&a.authors.length>1)?'A research collaboration by ':'Written by ')+'<b><a href="#/persona/'+p.key+'">'+esc(authorNames(a,p.name))+'</a></b><span>'+esc((a.authors&&a.authors.length>1)?"Cross-desk investigation":p.beat)+'</span><time class="eb-time">Filed '+fullTimestamp(a.publishedAt)+'</time></div></div>'+
+      '<div class="endbyline">'+avatar(p)+'<div class="eb-who">'+((a.authors&&a.authors.length>1)?'A research collaboration by ':'Written by ')+'<b><a href="/persona/'+p.key+'">'+esc(authorNames(a,p.name))+'</a></b><span>'+esc((a.authors&&a.authors.length>1)?"Cross-desk investigation":p.beat)+'</span><time class="eb-time">Filed '+fullTimestamp(a.publishedAt)+'</time></div></div>'+
       '<div class="ai-disclosure"><span class="ic">🤖</span><div><b>Researched, drafted, fact-checked, and edited end-to-end by RTFCLMGZN’s AI editorial system</b>, in the established voice of '+esc(p.name)+'. Facts are cross-checked against primary sources; legal- and safety-sensitive claims are adjudicated autonomously by an AI Editor-in-Chief that sources, reframes, or disclaims them before publication. Fully autonomous — no human in the publishing loop.</div></div>'+
       costFooterHTML(a)+
       provenanceHTML(a)+
@@ -2809,6 +2911,22 @@
      summed raw USAGE while /usage summed live-only. Use these, not USAGE. */
   function liveUsage(){ return USAGE.filter(function(r){ return provider(r.model)!=="unpriced"; }); }
   function retiredUsage(){ return USAGE.filter(function(r){ return provider(r.model)==="unpriced"; }); }
+  /* UNMETERED RUNS (2026-08-14). A row with no tokens and no images is a run
+     that logged its existence and not its cost. 153 of 269 rows were in that
+     state: every scheduled job since the move to GitHub Actions, because an
+     agent inside a run cannot see its own token accounting and a runbook that
+     asks it to self-report gets a zero. newsroom/runner/log_usage.py now
+     measures from the run's transcript in a workflow step, so new rows carry
+     real figures — but the site must never again present a total that quietly
+     excludes work it knows happened. Everywhere the running cost appears, the
+     count of unmetered runs appears with it. Structural test, not a trusted
+     field: a row counts as metered only if it actually carries usage. */
+  function isUnmetered(r){ return !((r.input_tokens||0)>0 || (r.output_tokens||0)>0 || (r.images||0)>0); }
+  function unmeteredRuns(){ return USAGE.filter(isUnmetered); }
+  function costBasis(){
+    var live=liveUsage(), s=sumRecs(live), un=unmeteredRuns().length;
+    return { cost:s.cost, sum:s, unmetered:un, total:USAGE.length };
+  }
   function viewUsage(){
     var now=new Date();
     var RETIRED=retiredUsage();
@@ -2833,8 +2951,11 @@
        "Today —" or a small 30-day figure, the reader compared THAT against the
        footer's all-time number, and the two "didn't match". Same ledger, two
        different questions — now the page answers the footer's question first. */
+    var basis=costBasis();
     h+='<div class="uhero-total"><div class="ut-num">'+money(allS.cost)+'</div>'+
-      '<div class="ut-cap"><b>Total compute, run to date</b> — the exact number the site footer quotes, from the same ledger and the same basis. The cards below slice this by time window; on a quiet week the short windows are small or empty while this total stands.</div></div>';
+      '<div class="ut-cap"><b>Metered compute, run to date</b> — the exact number the site footer quotes, from the same ledger and the same basis. The cards below slice it by time window; on a quiet week the short windows are small or empty while this total stands.'+
+      (basis.unmetered?('<br><b style="color:var(--gate,#e0564d)">'+basis.unmetered+' of '+basis.total+' logged runs carry no token figures</b> and are therefore <b>not</b> in that total. They are not free — the harness could not read their usage, so counting them as $0 would be a lie the other way. Every run from 2026-08-14 forward is measured by <code>log_usage.py</code> in the workflow itself rather than self-reported by the agent inside it; the count above is what remains from before that.'):'')+
+      '</div></div>';
 
     // stat row
     h+='<div class="ustats">'+
@@ -2993,7 +3114,7 @@
     h+='<div class="kicker"><span class="dotc" style="background:var(--ok)"></span>Cost per article</div>';
     h+='<div class="utable-wrap"><table class="utable"><thead><tr><th>Article</th><th>Tasks</th><th>Tokens</th><th>Compute cost</th></tr></thead><tbody>';
     h+=artRows.map(function(r){
-      var href=article2(r.k)?('#/article/'+article2(r.k).slug):(issueById(r.k)?('#/issue/'+r.k):'#/usage');
+      var href=article2(r.k)?('/article/'+article2(r.k).slug):(issueById(r.k)?('/issue/'+r.k):'/usage');
       return '<tr><td><a href="'+href+'">'+esc(articleTitle(r.k))+'</a></td>'+
         '<td>'+r.s.count+'</td><td>'+num(r.s.tokens)+'</td><td>'+money(r.s.cost)+'</td></tr>';
     }).join("")||'<tr><td colspan="4" style="color:var(--muted)">No article tasks logged yet.</td></tr>';
@@ -3034,8 +3155,8 @@
   // Where an issue is READ. Spread-format issues (every issue since July 2026) open
   // in the spread reader; the legacy page-card reader is kept for any pages[] issue.
   function issueHref(iss){
-    if(!iss) return "#/magazine";
-    return (iss.format==="spread" || !(iss.pages&&iss.pages.length)) ? ("#/read/"+iss.id) : ("#/issue/"+iss.id);
+    if(!iss) return "/magazine";
+    return (iss.format==="spread" || !(iss.pages&&iss.pages.length)) ? ("/read/"+iss.id) : ("/issue/"+iss.id);
   }
   function issuePageCount(iss){
     if(!iss) return 0;
@@ -3076,56 +3197,132 @@
     var vol='<span class="mag-vol" data-iss="'+esc(iss.id)+'">'+inner+'</span>';
     return link?('<a class="mag-link" href="'+href+'">'+vol+'</a>'):vol;
   }
+  /* ========================= THE MAGAZINE PAGE =========================
+     FULL OVERHAUL 2026-08-14 (owner: "our most important page on the whole
+     site... it's outdated too, the paragraph says 'seven editors' when we've
+     had nine for the longest. this whole page needs a complete aesthetic and
+     functional overhaul").
+
+     Two failures, and the first one is the instructive one:
+
+     1. IT WAS HAND-WRITTEN. "all seven editors' month-in-review columns" was
+        typed once and then the masthead grew to nine. Every number on this
+        page is now DERIVED — editors from activePersonas(), issues and pages
+        and spreads from the issue records, price per issue from the same
+        billing state the buttons use. A hand-typed figure on the page that
+        sells the product is a lie with a timer on it.
+
+     2. It read as a pricing table with covers above it. It is a storefront for
+        a designed magazine, so the newest issue now gets a real display: the
+        cover at size, what is actually inside it, and one button. Back issues
+        follow as a shelf. The plan comparison sits underneath, where a price
+        belongs — after the reader has seen the thing.
+
+     Everything about what Plus includes is stated from the same source of
+     truth as the rest of the site, so it cannot drift from what a subscriber
+     actually receives. */
+  function magStat(n,label){
+    return '<div class="ms-cell"><b>'+esc(String(n))+'</b><span>'+esc(label)+'</span></div>';
+  }
   function viewMagazine(){
+    var issues=MAG.filter(function(m){ return m && m.number>0; });
+    var primer=MAG.filter(function(m){ return m && m.id==="primer"; })[0];
+    var lead=issues[0];
+    var back=issues.slice(1);
+    var nEditors=activePersonas().length;
+    var pages=MAG.reduce(function(n,x){ return n+issuePageCount(x); },0);
+    var spreads=MAG.reduce(function(n,x){ return n+(x.spreadCount||(x.spreads||[]).length||0); },0);
+    var plus=isPlus();
+
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:10px">'+
-      '<div class="over">The Magazine</div>'+
+      '<div class="over">The Magazine ◈</div>'+
       '<h1>The month in AI,<br>understood with hindsight.</h1>'+
-      '<p>Every month, the Issue Desk distills the full run of our coverage into one premium issue — the cover story with the benefit of hindsight, all seven editors’ month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist we grade in public the following month. Articles are free, forever. The magazine is for subscribers — and subscribers get every back issue too.</p></div>';
-    // Product first, offer second. The old order put a paywall bar between the
-    // promise and the thing being sold, which pushed the covers a full screen
-    // below the fold -- a storefront where you cannot see the goods without
-    // scrolling past the price.
-    h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>Issues</div>';
-    h+='<div class="mag-grid">'+MAG.map(function(iss,i){
-      // Public Download PDF removed (spec §23): the PDF does not represent the
-      // designed issue, so it is no longer offered as a reading format. The files
-      // and pdfName()/iss.pdf stay for archival and newsroom workflows.
-      return '<div class="mag-cell'+(i===0?' is-lead':'')+'">'+issueCoverHTML(iss,true)+'</div>';
-    }).join("")+'</div>';
-    if(!isPlus()){
-      // The offer panel. The old version was one grey bar plus two faint
-      // "prototype" paragraphs -- the loudest supporting copy on the page was an
-      // apology for the thing it was trying to sell. Now: the three real plans,
-      // what is in it, what free already gets you, and the caveat reduced to one
-      // line of fine print under the buttons where fine print belongs.
-      var pages=MAG.reduce(function(n,x){ return n+issuePageCount(x); },0);
-      // Cost-per-issue is quoted against the ANNUAL price, because annual is the
-      // offer being recommended — and it is derived from the same numbers the
-      // pricing block prints, so the two can never quote different money.
+      '<p>Every month the Issue Desk distils the full run of this newsroom\'s coverage into one designed issue: the cover story with the benefit of hindsight, all '+nEditors+' editors\' month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist graded in public the following month. '+
+      '<b>Articles are free, forever.</b> The magazine is what Plus pays for — and Plus includes every back issue.</p></div>';
+
+    h+='<div class="mag-stats">'+
+      magStat(issues.length, issues.length===1?"issue published":"issues published")+
+      magStat(spreads||pages, spreads?"designed spreads":"designed pages")+
+      magStat(nEditors, "editors with a column in every issue")+
+      magStat("0", "humans in the publishing loop")+
+    '</div>';
+
+    /* ---- THE LEAD ISSUE ---- */
+    if(lead){
+      var cov=(lead.cover&&lead.cover.image)||"";
+      var lspreads=lead.spreadCount||(lead.spreads||[]).length||0;
+      var inside=[];
+      if(lspreads) inside.push(lspreads+" spreads");
+      inside.push("Cover story, with hindsight");
+      inside.push(nEditors+" month-in-review columns");
+      inside.push("The Scoreboard");
+      inside.push("The Compendium");
+      inside.push("The Watchlist, graded next month");
+      h+='<section class="mag-lead"'+(cov?' style="--cov:url(\''+escAttr(cov)+'\')"':'')+'>'+
+        '<a class="ml-cover" href="/issue/'+esc(lead.id)+'">'+
+          (cov?'<img src="'+escAttr(assetUrl(cov))+'" alt="'+escAttr((lead.title||"Issue")+" cover")+'" loading="lazy">':'')+
+          '<span class="ml-badge">Current issue</span>'+
+        '</a>'+
+        '<div class="ml-copy">'+
+          '<div class="ml-k">Issue '+String(lead.number).padStart(3,"0")+(lead.month?(' · '+esc(monthLabel(lead.month))):'')+'</div>'+
+          '<h2>'+esc(lead.title||"")+'</h2>'+
+          (lead.tagline?('<p class="ml-tag">'+esc(lead.tagline)+'</p>'):'')+
+          '<div class="ml-inside"><span class="ml-il">Inside</span><ul>'+
+            inside.map(function(x){ return '<li>'+esc(x)+'</li>'; }).join("")+'</ul></div>'+
+          '<div class="ml-cta">'+
+            '<a class="mh-go" href="/issue/'+esc(lead.id)+'">'+(plus?'Read the issue':'See what\'s inside')+' →</a>'+
+            (plus?'<span class="ml-note">Plus is active on this account — every back issue is yours too.</span>'
+                 :(primer?'<a class="mh-alt" href="/read/primer">Read The Primer free first</a>':''))+
+          '</div>'+
+        '</div></section>';
+    }
+
+    /* ---- THE SHELF ---- */
+    if(back.length || primer){
+      h+='<div class="kicker" style="margin-top:34px"><span class="dotc" style="background:var(--accent2)"></span>'+
+        (back.length?('The archive · '+back.length+' back issue'+(back.length===1?'':'s')):'Also free')+'</div>';
+      h+='<div class="mag-shelf">'+back.concat(primer?[primer]:[]).map(function(iss){
+        return '<div class="mag-cell">'+issueCoverHTML(iss,true)+'</div>';
+      }).join("")+'</div>';
+    }
+
+    /* ---- WHAT PLUS IS ---- */
+    if(!plus){
+      // Cost-per-issue is quoted against the ANNUAL price because annual is the
+      // recommended offer, and it is derived from the same billing state the
+      // buttons use, so the two can never quote different money.
       var yearly=billAmt(billingState(),"annual")/100;
-      var perIssue=yearly/Math.max(1,MAG.length);
-      h+='<div class="plusbar has-plans">'+
+      var perIssue=yearly/Math.max(1,issues.length);
+      h+='<section class="plusbar has-plans" style="margin-top:34px">'+
         '<div class="pb-offer">'+
           '<div class="pb-mark">RTFCLMGZN <b>Plus</b></div>'+
-          '<div class="pb-per">'+MAG.length+' issue'+(MAG.length===1?'':'s')+' published · '+pages+' designed pages · about $'+perIssue.toFixed(2)+' an issue on the annual plan today, less every month</div>'+
+          '<div class="pb-per">'+issues.length+' issue'+(issues.length===1?'':'s')+' published · '+
+            (spreads||pages)+' designed '+(spreads?'spreads':'pages')+' · about $'+perIssue.toFixed(2)+
+            ' an issue on the annual plan today, less with every issue that ships</div>'+
           plusPricingHTML({dek:false})+
         '</div>'+
         '<div class="pb-cols">'+
           '<div class="pb-col"><span class="pb-ct">Always free</span><ul>'+
             '<li>Every article, every day, forever</li>'+
-            '<li>The Primer — the complete beginner’s guide, free founding special</li>'+
-            '<li>Guides, Dictionary, Scoreboard, the Buzz</li>'+
-            '<li>Sources and costs attached to everything</li>'+
+            '<li>The Primer — the complete beginner\'s guide</li>'+
+            '<li>Guides, the Dictionary, the Scoreboard, the Buzz</li>'+
+            '<li>Sources and production costs attached to everything</li>'+
           '</ul></div>'+
           '<div class="pb-col pb-plus"><span class="pb-ct">Plus <b class="pb-dia">◈</b></span><ul>'+
-            '<li>The monthly issue, in the spread reader</li>'+
-            '<li>Special editions as they ship</li>'+
-            '<li>The full back-issue archive</li>'+
-            '<li>Every issue in the designed spread reader</li>'+
+            '<li>The monthly issue in the designed spread reader</li>'+
+            '<li>The full back-issue archive, including everything before you joined</li>'+
+            '<li>Special editions the month they ship</li>'+
+            '<li>The '+nEditors+' editors\' month-in-review columns, written for the issue</li>'+
           '</ul></div>'+
         '</div>'+
-      '</div>';
+      '</section>';
+    } else {
+      h+='<section class="mag-plusnote"><b>◈ Plus is active on this account.</b> '+
+        'Every issue above opens in the spread reader, including anything published before you subscribed. '+
+        '<a href="/account">Manage your subscription →</a></section>';
     }
+
+    h+='<p class="rm-cap" style="margin-top:22px">Every issue is produced end-to-end by the AI editorial system — researched, written, illustrated, laid out and adjudicated — and the production cost of each one is published in the <a href="/usage" style="color:var(--accent2)">operating ledger</a> like everything else here.</p>';
     return h+'</div>';
   }
   function issuePageHTML(iss,pg){
@@ -3166,10 +3363,10 @@
       return '<div class="ipage"><div class="ip-kicker">'+esc(pg.kicker||"")+'</div><h2 class="ip-title">'+esc(pg.title)+'</h2>'+
         '<p class="ip-note" style="margin:14px 0 18px">'+esc(pg.body||"")+'</p>'+
         '<div class="mast-strip" style="margin:0">'+pg.stats.map(function(s){return '<div class="cell"><div class="num">'+esc(s.k)+'</div><div class="lbl">'+esc(s.v)+'</div></div>';}).join("")+'</div>'+
-        '<p class="ip-note" style="margin-top:16px">Live figures always at the <a href="#/usage" style="color:var(--accent2)">transparency page</a>.</p></div>';
+        '<p class="ip-note" style="margin-top:16px">Live figures always at the <a href="/usage" style="color:var(--accent2)">transparency page</a>.</p></div>';
     }
     if(t==="closing"){
-      return '<div class="ipage ip-closing"><h2 class="ip-title big">'+esc(pg.title)+'</h2><p>'+esc(pg.body||"")+'</p><a class="cta" href="#/magazine">All issues →</a></div>';
+      return '<div class="ipage ip-closing"><h2 class="ip-title big">'+esc(pg.title)+'</h2><p>'+esc(pg.body||"")+'</p><a class="cta" href="/magazine">All issues →</a></div>';
     }
     return '<div class="ipage"><h2>'+esc(pg.title||"")+'</h2></div>';
   }
@@ -3194,7 +3391,7 @@
     var pg=pages[n];
     var locked=(iss.access==="plus" && !plus && !FREE_TYPES[pg.type]);
     var h='<div class="container"><div class="issue-shell">';
-    h+='<div class="issue-top"><a class="back" href="#/magazine">← All issues</a>'+
+    h+='<div class="issue-top"><a class="back" href="/magazine">← All issues</a>'+
        '<span class="issue-pos" aria-live="polite">Issue '+String(iss.number).padStart(3,"0")+' · page '+(n+1)+' / '+pages.length+'</span></div>';
     if(locked){
       h+='<div class="ipage ip-lock"><div class="lock-ic">◈</div><h2 class="ip-title">This page is for subscribers</h2>'+
@@ -3203,10 +3400,10 @@
     } else {
       h+=issuePageHTML(iss,pg);
     }
-    var prev=n>0?('<a class="pgbtn" href="#/issue/'+id+'/'+n+'">← Prev</a>'):'<span class="pgbtn dis">← Prev</span>';
-    var next=n<pages.length-1?('<a class="pgbtn" href="#/issue/'+id+'/'+(n+2)+'">Next →</a>'):'<span class="pgbtn dis">Next →</span>';
+    var prev=n>0?('<a class="pgbtn" href="/issue/'+id+'/'+n+'">← Prev</a>'):'<span class="pgbtn dis">← Prev</span>';
+    var next=n<pages.length-1?('<a class="pgbtn" href="/issue/'+id+'/'+(n+2)+'">Next →</a>'):'<span class="pgbtn dis">Next →</span>';
     h+='<div class="issue-nav">'+prev+'<span class="issue-dots">'+pages.map(function(_,i){
-      return '<a class="dot'+(i===n?' cur':'')+'" href="#/issue/'+id+'/'+(i+1)+'" aria-label="Page '+(i+1)+'"'+(i===n?' aria-current="page"':'')+'></a>';}).join("")+'</span>'+next+'</div>';
+      return '<a class="dot'+(i===n?' cur':'')+'" href="/issue/'+id+'/'+(i+1)+'" aria-label="Page '+(i+1)+'"'+(i===n?' aria-current="page"':'')+'></a>';}).join("")+'</span>'+next+'</div>';
     return h+'</div></div>';
   }
 
@@ -3292,7 +3489,7 @@
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Your library</div>'+
       '<h1>Saved for you</h1>'+
       '<p>'+(l.account? 'Signed in as <b>'+esc(l.account.email)+'</b> — your library follows your account.'
-        : 'Your library lives in this browser. <a href="#/account" style="color:var(--accent2)">Create a free account</a> to keep it permanently, sync across devices, and get the daily digest.')+'</p></div>';
+        : 'Your library lives in this browser. <a href="/account" style="color:var(--accent2)">Create a free account</a> to keep it permanently, sync across devices, and get the daily digest.')+'</p></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--gate)"></span>♥ Bookmarked · '+l.bookmarks.length+'</div>'+cardsByIds(l.bookmarks);
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>◷ Read later · '+l.readLater.length+'</div>'+cardsByIds(l.readLater);
     return h+'</div>';
@@ -3303,7 +3500,7 @@
      appearance is not gated behind an account. */
   function accountSettingsLinkHTML(){
     var e=themeEntry(currentTheme());
-    return '<a class="acct-settings" href="#/settings">'+
+    return '<a class="acct-settings" href="/settings">'+
       '<span class="ap-sw" aria-hidden="true"><i style="background:'+escAttr(e[4])+'"></i></span>'+
       '<span class="as-txt"><b>Settings</b><span>Appearance · '+esc(e[1])+' · language · motion</span></span>'+
       '<span class="as-go" aria-hidden="true">→</span></a>';
@@ -3335,7 +3532,7 @@
     h+='<div class="acct-card">'+
       '<div class="acct-row"><span>Plan</span><b>'+(plus?(esc(plusStatusLine(ent))+' ◈'):'Free')+'</b></div>'+
       '<div class="acct-row"><span>Daily digest</span><b>Enrolled (launches with the public site)</b></div>'+
-      '<div class="acct-row"><span>Library</span><b><a href="#/library" style="color:var(--accent2)">'+l.bookmarks.length+' bookmarks · '+l.readLater.length+' read-later</a></b></div>';
+      '<div class="acct-row"><span>Library</span><b><a href="/library" style="color:var(--accent2)">'+l.bookmarks.length+' bookmarks · '+l.readLater.length+' read-later</a></b></div>';
     if(plus && ent && ent.cancel_at_period_end){
       var endsOn=billDate(ent.expires_at);
       h+='<p class="acct-note">Your Plus '+(endsOn?('ends '+esc(endsOn)):'ends at the end of this billing period')+'. Every issue stays open to you until then'+
@@ -3486,7 +3683,7 @@
     var ext=LOGO_EXT[key];
     if(!ext) return '<span class="'+cls+' no-logo" style="--bc:'+brandColor(key)+'" title="'+esc(name)+'" aria-label="'+esc(name)+' (logo not sourced yet)"></span>';
     return '<span class="'+cls+'" style="--bc:'+brandColor(key)+'">'+
-      '<img src="assets/logos/'+key+'.'+ext+'" alt="'+esc(name)+' logo" loading="lazy" '+
+      '<img src="/assets/logos/'+key+'.'+ext+'" alt="'+esc(name)+' logo" loading="lazy" '+
       'onerror="this.parentNode.classList.add(\'no-logo\');this.remove()"></span>';
   }
   // Visual grouping only. A company missing from every group still renders
@@ -3556,29 +3753,127 @@
         return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
       }).join("")+'</div>'):'';
     return '<div class="lab-card" style="--bc:'+brandColor(c.key)+'">'+
-      '<a class="lab-head" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+
+      '<a class="lab-head" href="/company/'+c.key+'">'+brandMark(c.key,c.name)+
       '<div class="lab-who"><b>'+esc(c.name)+'</b><span>'+x.models.length+' model'+(x.models.length===1?'':'s')+' on record</span></div>'+
       '<span class="lab-go">Dossier →</span></a>'+
       '<div class="lab-models">'+chips+'</div>'+follow+'</div>';
   }
+  /* ============================ THE RESOURCES HUB ============================
+     RESTRUCTURED 2026-08-14 (owner): "scoreboard should go to resources page
+     also, and it should have its own page and be redirected from resources,
+     same with guides, and the labs and their models need their own section and
+     their own page, same with podcasts and everything."
+
+     So Resources stops being one enormous scrolling page that contained
+     everything, and becomes a HUB: a short directory whose every tile opens a
+     real page with its own URL, its own <title>, and its own place in search.
+     Nine destinations, each independently linkable:
+
+        #/labs        the labs and their models        (new, was a section here)
+        #/scoreboard  strength vs price                (moved off the top bar)
+        #/extensions  the API/skill/connector index
+        #/guides      the hands-on guides
+        #/dictionary  the vocabulary
+        #/grid        the AI megasites
+        #/podcasts    shows worth the commute          (new, was a section here)
+        #/wallpapers  make something from our covers
+        #/claims      the open-questions ledger
+
+     A hub tile carries a live count wherever one exists, so the directory
+     cannot quietly go stale the way a hand-written list would. */
+  function resTile(href,ic,kind,title,desc,go,count){
+    return '<a class="res-tile" href="'+href+'"><span class="rt-ic">'+ic+'</span>'+
+      '<span class="rt-k">'+esc(kind)+(count!=null?(' · '+count):'')+'</span>'+
+      '<b>'+esc(title)+'</b><span class="rt-d">'+esc(desc)+'</span>'+
+      '<span class="rt-go">'+esc(go)+' →</span></a>';
+  }
   function viewResources(){
     var DICT=window.RTFC_DICT||[];
     var dir=labDirectory();
+    var EXT=window.RTFC_EXTENSIONS||[];
+    var extN=EXT.reduce(function(n,c){ return n+(c.items||[]).length; },0);
+    var nModels=dir.reduce(function(n,x){ return n+x.models.length; },0);
+    var SBW=window.RTFC_SCOREBOARD||{rows:[]};
+    var sbScored=(SBW.rows||[]).filter(function(r){return r.score!=null;}).length;
+    var gridN=(GRID.facilities||[]).length, gridNewN=gdNewIds().length;
+    var podN=0;
+    RES.forEach(function(cat,i){ if(i>0 && /podcast/i.test(cat.title||"")) podN+=(cat.items||[]).length; });
 
-    /* THE RESTRUCTURE, and why.
-       The page used to open with six sections competing on equal footing: a lab
-       grid, then a separate pile of company chips that pointed at the SAME
-       dossiers the lab cards already point at, then two promo tiles, then the
-       follow-lists. Two of those blocks were the same information twice, and
-       nothing on the page was visibly more important than anything else, which
-       is what "cluttered" actually means here -- not too much, but nothing
-       leading.
-       Now there is one spine (the labs, grouped the way the field is actually
-       grouped) and everything else sits underneath it in intent order: learn it,
-       follow it, use it. The chip pile is gone; the lab cards were always the
-       better route to the same dossiers. */
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
+      '<h1>Everything this newsroom keeps, in one place</h1>'+
+      '<p>Nine reference surfaces, each its own page: who builds the models and how they score, the APIs and connectors you would actually wire up, the vocabulary, the physical sites underneath it all, and the guides that turn any of it into something you can do tonight. Every count below is live — read off the same data the newsroom publishes from.</p></div>';
 
-    // Derived headline numbers. Nothing typed by hand, so they cannot go stale.
+    h+='<div class="res-stats">'+
+      '<div class="rs-cell"><b>'+dir.length+'</b><span>labs with models on record</span></div>'+
+      '<div class="rs-cell"><b>'+nModels+'</b><span>models tracked</span></div>'+
+      '<div class="rs-cell"><b>'+extN+'</b><span>APIs, skills &amp; connectors</span></div>'+
+      '<div class="rs-cell"><b>'+DICT.length+'</b><span>terms defined</span></div>'+
+    '</div>';
+
+    h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent2)"></span>Know the field</div>'+
+      '<div class="res-tiles">'+
+      resTile("/labs","⬡","Directory",'The labs and their models',
+        "Who builds what, grouped the way the field actually splits, with the independent index score where one exists and a route into every dossier.",
+        "Open the directory",dir.length+" labs")+
+      resTile("/scoreboard","▤","Rankings",'The Scoreboard',
+        "Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move.",
+        "Open the Scoreboard",sbScored+" scored")+
+      resTile("/dictionary","✎","Vocabulary",'The AI Dictionary',
+        "Token, agent, hallucination, mixture-of-experts and the rest, each explained the way a person would explain it.",
+        "Open the dictionary",DICT.length+" terms")+
+      '</div>';
+
+    h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent)"></span>Build with it</div>'+
+      '<div class="res-tiles">'+
+      resTile("/extensions","⌘","Encyclopedia",'AI Extensions',
+        "Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — categorized, searchable, primary sources only.",
+        "Open AI Extensions",extN+" entries")+
+      resTile("/prompts","✦","Copy &amp; use",'The Prompt Library',
+        "Prompts that do a specific job, written to be pasted cold and used as-is. Copy one, or take the whole library as a markdown file.",
+        "Open the library",(window.RTFC_PROMPTS||[]).reduce(function(m,c){return m+(c.items||[]).length;},0)+" prompts")+
+      resTile("/guides","▶","Hands-on",'Guides',
+        "Plain-English walk-throughs: how to pick a model for a job, what the pricing actually means, and where the sharp edges are.",
+        "Browse the guides",GUIDES.length+" guides")+
+      resTile("/wallpapers","◫","Make",'Wallpapers',
+        "Turn any cover we have run into a phone wallpaper, sized and marked, in your browser. Free, no account.",
+        "Make a wallpaper",null)+
+      '</div>';
+
+    h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--gold,var(--accent2))"></span>Follow the field</div>'+
+      '<div class="res-tiles">'+
+      resTile("/grid","⌗","Infrastructure",'The Grid',
+        "The named frontier-AI megasites: who operates each, who the tenant is, and how sure we are — reconfirmed daily.",
+        "Open The Grid",gridN+(gridNewN?(" · "+gridNewN+" new"):""))+
+      resTile("/podcasts","◉","Listening",'Podcasts',
+        "The shows that consistently deliver signal, from daily news rundowns to deep technical conversations.",
+        "See the shows",podN?(podN+" shows"):null)+
+      resTile("/claims","◍","Trust",'The Claims Ledger',
+        "Every open question our stories named, the exact document that would settle each one, and what happened when it arrived.",
+        "Open the ledger",null)+
+      '</div>';
+
+    /* Start-from-zero reading and the newsroom's own feeds stay ON the hub:
+       they are two links each, not pages. Everything with real depth got one. */
+    h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent)"></span>Start from zero</div>'+
+      '<div class="res-tiles">'+
+      resTile("/read/primer","◈","Primer",'Start from zero',
+        "The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.",
+        "Read The Primer",null)+
+      resTile("/read/how-models-are-made","⌬","Deep dive",'How The Models Are Made',
+        "Pretraining to reasoning models, the economics behind it, every lab's strategy compared, and an honest ledger of proven vs. contested.",
+        "Read the issue",null)+
+      resTile("/usage","▥","Transparency",'What this newsroom costs',
+        "Every token and dollar this publication spends, itemised by story, model and task — including what we could not meter.",
+        "Open the ledger",null)+
+      '</div>';
+
+    h+='<p class="rm-cap" style="margin-top:24px">Something missing or wrong on any of these? <a href="/contact" style="color:var(--accent2)">Tell the newsroom</a> — a stale reference entry is treated like a correction.</p>';
+    return h+'</div>';
+  }
+
+  /* ---------------- #/labs — the directory, its own page ---------------- */
+  function viewLabs(){
+    var dir=labDirectory();
     var nModels=dir.reduce(function(n,x){ return n+x.models.length; },0);
     var nOpen=dir.reduce(function(n,x){ return n+x.models.filter(function(m){return m.access==="open-weights";}).length; },0);
     var nScored=dir.reduce(function(n,x){ return n+x.models.filter(function(m){return typeof m.score==="number";}).length; },0);
@@ -3586,11 +3881,8 @@
     var grouped=DOSSIER_GROUPS.map(function(g){
       return { label:g.label, items:dir.filter(function(x){ return g.keys.indexOf(x.c.key)>=0; }) };
     }).filter(function(g){ return g.items.length; });
-    /* ORDER FIX (2026-08-14, "the labs are not in order"). Within a group the
-       cards used to render in COMPANIES-array order — i.e. the order someone
-       once typed the registry in, which read as random. Now: most models on
-       record first, name as the tiebreak, so OpenAI/Anthropic/Google lead the
-       frontier group because they've shipped the most, not by editorial fiat. */
+    // Within a group: most models on record first, name as the tiebreak — never
+    // the order someone happened to type the registry in.
     grouped.forEach(function(g){ g.items.sort(function(a,b){
       return (b.models.length-a.models.length) || a.c.name.localeCompare(b.c.name);
     }); });
@@ -3598,34 +3890,14 @@
     grouped.forEach(function(g){ g.items.forEach(function(x){ placed[x.c.key]=1; }); });
     var rest=dir.filter(function(x){ return !placed[x.c.key]; });
     if(rest.length) grouped.push({label:"Also on record", items:rest});
-
-    // A company with a dossier but no model in either registry must not vanish
-    // just because the spine is organised around models.
     var noModel=COMPANIES.filter(function(c){
       return !dir.some(function(x){ return x.c.key===c.key; });
     });
 
-    var gridN=(GRID.facilities||[]).length, gridNewN=gdNewIds().length;
-    var EXT=window.RTFC_EXTENSIONS||[];
-    var extN=EXT.reduce(function(n,c){ return n+(c.items||[]).length; },0);
-    /* THE LEFT NAV IS THE TABLE OF CONTENTS, so it must list EVERY section on
-       the page — the 2026-08-14 restructure exists because Podcasts and the
-       Dictionary rendered on the page while the nav pretended they didn't. If
-       you add a section below, add it here in the same commit or the page is
-       lying about itself again. */
-    var secs=[{id:"res-grid",label:"The Grid"},{id:"res-labs",label:"Labs & models"}];
-    grouped.forEach(function(g,i){ secs.push({id:"res-g"+i,label:g.label,sub:true}); });
-    secs.push({id:"res-ext",label:"AI Extensions"});
-    secs.push({id:"res-guides",label:"Guides"});
-    secs.push({id:"res-dict",label:"The Dictionary"});
-    secs.push({id:"res-learn",label:"Start from zero"});
-    secs.push({id:"res-pods",label:"Podcasts"});
-    secs.push({id:"res-news",label:"From this newsroom"});
-    secs.push({id:"res-make",label:"Make something"});
-
-    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources</div>'+
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px">'+
+      '<div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Labs &amp; models</div>'+
       '<h1>Every lab, every model, one page</h1>'+
-      '<p>Who builds what, assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Then the extensions encyclopedia, the guides, the dictionary, the podcasts worth your commute, and the tools — every section listed in the page nav on the left.</p></div>';
+      '<p>Assembled live from the Scoreboard and the newsroom\'s own entity registry, so a model appears here the moment we cover it and never because someone remembered to add it. Tap any lab for its full dossier: every story, every number, every open question.</p></div>';
 
     h+='<div class="res-stats">'+
       '<div class="rs-cell"><b>'+dir.length+'</b><span>labs with models on record</span></div>'+
@@ -3634,22 +3906,10 @@
       '<div class="rs-cell"><b>'+nOpen+'</b><span>shipped open-weights</span></div>'+
     '</div>';
 
+    var secs=grouped.map(function(g,i){ return {id:"res-g"+i,label:g.label}; });
     h+='<div class="res-layout"><aside class="res-nav"><div class="rn-title">On this page</div>'+
-      secs.map(function(s){ return '<a class="'+(s.sub?"rn-sub":"")+'" onclick="rtfcJump(\''+s.id+'\')">'+esc(s.label)+'</a>'; }).join("")+
+      secs.map(function(s){ return '<a onclick="rtfcJump(\''+s.id+'\')">'+esc(s.label)+'</a>'; }).join("")+
       '</aside><div class="res-main">';
-
-    /* ---- THE GRID (promo) ------------------------------------------------ */
-    h+='<section id="res-grid"><a class="grid-promo" href="#/grid">'+
-      '<div class="gp-copy"><span class="gp-kicker">'+(gridNewN?('<b>'+gridNewN+' new</b> · '):'')+'Mapped and updated daily</span>'+
-      '<h2>The Grid — every datacenter running these models</h2>'+
-      '<p>Who operates each site, who the primary tenant is when that\'s a different company, and how sure we are of the details. Reconfirmed once a day with the Morning edition; a new facility shows up here the same day it\'s confirmed.</p>'+
-      '<span class="gp-go">Open The Grid →</span></div>'+
-      '<div class="gp-stats"><div><b>'+gridN+'</b><span>facilities</span></div><div><b>'+(GRID.facilities||[]).filter(function(f){return f.status==="operating";}).length+'</b><span>operating</span></div></div>'+
-      '</a></section>';
-
-    /* ---- THE SPINE ------------------------------------------------------ */
-    h+='<section id="res-labs"><div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>The labs &amp; their models</div>'+
-      '<p class="res-lede">Grouped the way the field actually splits. Each card is a live count of what that lab has shipped that this newsroom has covered, with the independent index score where one exists. Tap any lab for its full dossier: every story, every number, every open question.</p>';
 
     grouped.forEach(function(g,i){
       var gm=g.items.reduce(function(n,x){ return n+x.models.length; },0);
@@ -3663,95 +3923,167 @@
       h+='<div class="labg labg-thin"><div class="labg-h"><span class="labg-l">Tracked, no model shipped</span>'+
         '<span class="labg-n">'+noModel.length+'</span></div>'+
         '<div class="dossier-strip">'+noModel.map(function(c){
-          return '<a class="ds-chip" href="#/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>';
+          return '<a class="ds-chip" href="/company/'+c.key+'">'+brandMark(c.key,c.name)+esc(c.name)+'</a>';
         }).join("")+'</div></div>';
     }
-    h+='</section>';
+    return h+'</div></div></div>';
+  }
 
-    /* Shared renderer for the curated-directory categories (podcasts, newsroom
-       feeds). One renderer, two sections — they must never drift apart. */
-    function resCatHTML(cat){
-      return '<p class="res-sub">'+esc(cat.desc)+'</p>'+
-        '<div class="res-grid">'+cat.items.map(function(it){
-          var head=it.key?('<div class="rc-head">'+brandMark(it.key,it.name)+'<b>'+esc(it.name)+'</b></div>')
-                          :('<div class="rc-head"><span class="rglyph">'+esc(it.icon||"●")+'</span><b>'+esc(it.name)+'</b></div>');
-          return '<div class="res-card"'+(it.key?' style="--bc:'+brandColor(it.key)+'"':'')+'>'+head+'<span>'+esc(it.desc)+'</span>'+
-            '<div class="res-links">'+it.links.map(function(l){
+  /* ================= THE PROMPT LIBRARY (/prompts) =================
+     Added 2026-08-14 (owner). A page of prompts that actually do a job, built
+     to be TAKEN: every card copies to the clipboard in one tap, and the whole
+     library downloads as a single .md file the reader can keep, edit and paste
+     anywhere. Rendered from web/data/prompts.js, and the download is built in
+     the browser from that same data — so the file a reader keeps can never
+     drift from the page they read. */
+  function promptCard(it,ci,ii){
+    var id="pr-"+ci+"-"+ii;
+    return '<div class="pr-card" id="'+id+'">'+
+      '<div class="pr-head"><b>'+esc(it.title)+'</b>'+
+        '<button class="pr-copy" onclick="rtfcCopyPrompt(\'' +id+ '\',this)" aria-label="Copy this prompt">Copy</button></div>'+
+      '<div class="pr-use">'+esc(it.use||"")+'</div>'+
+      (it.needs?('<div class="pr-needs">'+esc(it.needs)+'</div>'):'')+
+      '<pre class="pr-text" data-prompt>'+esc(it.text||"")+'</pre>'+
+      (it.why?('<details class="pr-why"><summary>Why this works</summary><p>'+esc(it.why)+'</p></details>'):'')+
+    '</div>';
+  }
+  function viewPrompts(){
+    var P=window.RTFC_PROMPTS||[], META=window.RTFC_PROMPTS_META||{};
+    var n=P.reduce(function(m,c){ return m+(c.items||[]).length; },0);
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px">'+
+      '<div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Prompts</div>'+
+      '<h1>Prompts that do a job</h1>'+
+      '<p>Not a list of tricks — '+n+' prompts written to be pasted cold and used as-is, each one naming the job it does, what it needs from you in &lt;angle brackets&gt;, and what makes it work. Copy any of them in one tap, or take the whole library as a markdown file and keep it.</p></div>';
+
+    h+='<div class="pr-bar">'+
+      '<button class="pr-dl" onclick="rtfcDownloadPrompts()">↓ Download all '+n+' as .md</button>'+
+      '<input id="pr-q" type="search" placeholder="Search the library…" autocomplete="off" spellcheck="false" oninput="rtfcPromptFilter(this.value)" aria-label="Search prompts">'+
+      '<span id="pr-count">'+n+' prompts</span></div>';
+
+    h+='<div class="res-layout"><aside class="res-nav"><div class="rn-title">Categories</div>'+
+      P.map(function(c){ return '<a onclick="rtfcJump(\'prc-'+escAttr(c.id)+'\')">'+esc(c.cat)+'<em class="rn-n">'+(c.items||[]).length+'</em></a>'; }).join("")+
+      '</aside><div class="res-main">';
+
+    P.forEach(function(c,ci){
+      h+='<section class="pr-sec" id="prc-'+escAttr(c.id)+'">'+
+        '<div class="labg-h"><span class="labg-l"><span class="xs-ic">'+esc(c.icon||"◆")+'</span>'+esc(c.cat)+'</span>'+
+        '<span class="labg-n">'+(c.items||[]).length+'</span></div>'+
+        '<p class="res-sub">'+esc(c.desc||"")+'</p>'+
+        (c.items||[]).map(function(it,ii){ return promptCard(it,ci,ii); }).join("")+
+      '</section>';
+    });
+
+    h+='<div class="ext-foot">'+
+      (META.updated?('<span class="xf-when"><b>Last reviewed '+esc(META.updated)+'</b>'+(META.cadence?(' · '+esc(META.cadence)):'')+'</span>'):'')+
+      '<span class="xf-note">Angle-bracket placeholders are yours to fill. Nothing here asks a model to impersonate a real person, fabricate a source, or work around a safety measure — this is a newsroom.</span>'+
+      '</div>';
+    return h+'</div></div></div>';
+  }
+  function selectPre(pre){
+    try{ var r=document.createRange(); r.selectNodeContents(pre);
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); }catch(e){}
+  }
+  window.rtfcCopyPrompt=function(id,btn){
+    var el=document.getElementById(id); if(!el) return;
+    var pre=el.querySelector("[data-prompt]"); if(!pre) return;
+    var text=pre.textContent||"";
+    function done(ok){
+      if(!btn) return;
+      var old=btn.getAttribute("data-label")||btn.textContent;
+      btn.setAttribute("data-label",old);
+      btn.textContent=ok?"Copied":"Select + copy";
+      btn.classList.add("ok");
+      setTimeout(function(){ btn.textContent=old; btn.classList.remove("ok"); },1600);
+    }
+    // Clipboard API needs a secure context; over file:// or an old browser it
+    // simply is not there, so the fallback selects the text for the reader
+    // rather than failing silently at the one moment they wanted something.
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){done(true);},function(){ selectPre(pre); done(false); });
+    } else { selectPre(pre); done(false); }
+  };
+  window.rtfcPromptFilter=function(q){
+    q=String(q||"").toLowerCase().trim();
+    var cards=document.querySelectorAll(".pr-card"), shown=0, i;
+    for(i=0;i<cards.length;i++){
+      var hit=!q||(cards[i].textContent||"").toLowerCase().indexOf(q)>=0;
+      cards[i].style.display=hit?"":"none";
+      if(hit) shown++;
+    }
+    var secs=document.querySelectorAll(".pr-sec");
+    for(i=0;i<secs.length;i++){
+      var vis=false, cs=secs[i].querySelectorAll(".pr-card");
+      for(var j=0;j<cs.length;j++) if(cs[j].style.display!=="none"){ vis=true; break; }
+      secs[i].style.display=vis?"":"none";
+    }
+    var el=document.getElementById("pr-count");
+    if(el) el.textContent=q?(shown+" match"+(shown===1?"":"es")):(cards.length+" prompts");
+  };
+  window.rtfcDownloadPrompts=function(){
+    var P=window.RTFC_PROMPTS||[], META=window.RTFC_PROMPTS_META||{};
+    var out=["# The RTFCLMGZN Prompt Library","",
+      "Prompts that do a specific job, written to be pasted and used as-is.",
+      "Fill in anything in <ANGLE BRACKETS>.","",
+      "Last reviewed: "+(META.updated||"-"),
+      "Source: "+SITE_HOME+"/prompts","","---",""];
+    P.forEach(function(c){
+      out.push("## "+c.cat,"",(c.desc||""),"");
+      (c.items||[]).forEach(function(it){
+        out.push("### "+it.title,"");
+        if(it.use) out.push("**Use it for:** "+it.use,"");
+        if(it.needs) out.push("**Needs:** "+it.needs,"");
+        if(it.why) out.push("**Why it works:** "+it.why,"");
+        out.push("```text",String(it.text||""),"```","");
+      });
+      out.push("---","");
+    });
+    var blob=new Blob([out.join("\n")],{type:"text/markdown;charset=utf-8"});
+    var a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="rtfclmgzn-prompt-library.md";
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ try{URL.revokeObjectURL(a.href); a.remove();}catch(e){} },400);
+  };
+
+  /* ---------------- #/podcasts — its own page ---------------- */
+  function viewPodcasts(){
+    var cats=[];
+    RES.forEach(function(cat,i){ if(i>0 && /podcast/i.test(cat.title||"")) cats.push(cat); });
+    var n=cats.reduce(function(m,c){ return m+(c.items||[]).length; },0);
+    var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px">'+
+      '<div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Podcasts</div>'+
+      '<h1>Shows worth your commute</h1>'+
+      '<p>The AI shows that consistently deliver signal — daily news rundowns, practitioner deep-dives, and the long-form interviews worth the full hour. Curated by this newsroom; every link goes to the show itself.</p></div>';
+    if(!n) return h+'<p style="color:var(--muted)">Nothing listed yet.</p></div>';
+    h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>'+n+' shows</div>';
+    cats.forEach(function(cat){
+      h+='<p class="res-sub">'+esc(cat.desc||"")+'</p><div class="res-grid">'+(cat.items||[]).map(function(it){
+        var head=it.key?('<div class="rc-head">'+brandMark(it.key,it.name)+'<b>'+esc(it.name)+'</b></div>')
+                        :('<div class="rc-head"><span class="rglyph">'+esc(it.icon||"◉")+'</span><b>'+esc(it.name)+'</b></div>');
+        return '<div class="res-card">'+head+'<span>'+esc(it.desc)+'</span>'+
+          '<div class="res-links">'+(it.links||[]).map(function(l){
+            var ext=/^https?:/.test(l.url);
+            return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
+          }).join("")+'</div></div>';
+      }).join("")+'</div>';
+    });
+    // The newsroom's own feeds live here too — they are the same kind of thing
+    // (something you subscribe to), and they were the only other list left on
+    // the old Resources page once every real section became its own page.
+    var own=[];
+    RES.forEach(function(cat,i){ if(i>0 && !/podcast/i.test(cat.title||"")) own.push(cat); });
+    own.forEach(function(cat){
+      h+='<div class="labg" style="margin-top:26px"><div class="labg-h"><span class="labg-l">'+esc(cat.title)+'</span>'+
+        '<span class="labg-n">'+(cat.items||[]).length+'</span></div>'+
+        '<p class="res-sub">'+esc(cat.desc||"")+'</p><div class="res-grid">'+(cat.items||[]).map(function(it){
+          return '<div class="res-card"><div class="rc-head"><span class="rglyph">'+esc(it.icon||"●")+'</span><b>'+esc(it.name)+'</b></div>'+
+            '<span>'+esc(it.desc)+'</span><div class="res-links">'+(it.links||[]).map(function(l){
               var ext=/^https?:/.test(l.url);
               return '<a href="'+safeHref(l.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.label)+(ext?' ↗':'')+'</a>';
             }).join("")+'</div></div>';
-        }).join("")+'</div>';
-    }
-    // RES[0] ("Follow the primary sources") stays merged onto the lab cards via
-    // followLinks(). Podcasts get their own section (they were rendered but
-    // absent from the page nav — the exact complaint that forced this
-    // restructure); every remaining category lands in "From this newsroom".
-    var podCats=[], newsCats=[];
-    RES.forEach(function(cat,i){
-      if(i===0) return;
-      if(/podcast/i.test(cat.title||"")) podCats.push(cat); else newsCats.push(cat);
+        }).join("")+'</div></div>';
     });
-
-    /* ---- AI EXTENSIONS (promo) ------------------------------------------ */
-    h+='<section id="res-ext"><a class="grid-promo" href="#/extensions">'+
-      '<div class="gp-copy"><span class="gp-kicker">New · the connector encyclopedia</span>'+
-      '<h2>AI Extensions — every API, skill and connector in one place</h2>'+
-      '<p>The plugboard of the AI world: frontier model APIs, MCP servers, agent frameworks, coding agents, voice and video APIs, vector stores, local runtimes. Categorized, searchable, primary sources only.</p>'+
-      '<span class="gp-go">Open AI Extensions →</span></div>'+
-      '<div class="gp-stats"><div><b>'+extN+'</b><span>entries</span></div><div><b>'+EXT.length+'</b><span>categories</span></div></div>'+
-      '</a></section>';
-
-    /* ---- GUIDES (its own front door now that it left the top bar) -------- */
-    h+='<section id="res-guides"><div class="kicker"><span class="dotc" style="background:'+(SECTION_COLORS.Guide||"var(--accent)")+'"></span>Guides · '+GUIDES.length+'</div>'+
-      '<p class="res-lede">Hands-on, plain-English guides to actually using AI — no hype, no jargon walls; every guide ends with something you can do tonight. They live here now: this page is their front door.</p>'+
-      (GUIDES.length?('<div class="grid">'+GUIDES.map(cardHTML).join("")+'</div>'):'<p style="color:var(--muted)">First guides arrive with the daily pipeline.</p>')+
-      '<p class="res-sub" style="margin-top:10px"><a href="#/guides">All guides on one page →</a></p></section>';
-
-    /* ---- DICTIONARY ------------------------------------------------------ */
-    var dictSample=DICT.slice(0,10);
-    h+='<section id="res-dict"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>The AI Dictionary · '+DICT.length+' terms</div>'+
-      '<p class="res-lede">The words behind the headlines, each explained the way a person would explain it. Read one story with this open and the jargon wall comes down.</p>'+
-      '<div class="dossier-strip">'+dictSample.map(function(t){
-        return '<a class="ds-chip" href="#/dictionary">'+esc(t.term)+'</a>';
-      }).join("")+'<a class="ds-chip" href="#/dictionary" style="color:var(--accent2)">+ '+Math.max(0,DICT.length-dictSample.length)+' more →</a></div></section>';
-
-    /* ---- LEARN (start from zero) ---------------------------------------- */
-    h+='<section id="res-learn"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Start from zero</div>'+
-      '<div class="res-tiles">'+
-      '<a class="res-tile" href="#/read/primer"><span class="rt-ic">◈</span><span class="rt-k">Primer</span><b>Start from zero</b>'+
-        '<span class="rt-d">The long read that assumes nothing: what these systems are, who builds them, and why the money moves the way it does.</span>'+
-        '<span class="rt-go">Read The Primer →</span></a>'+
-      '<a class="res-tile" href="#/read/how-models-are-made"><span class="rt-ic">⌬</span><span class="rt-k">Deep Dive</span><b>How The Models Are Made</b>'+
-        '<span class="rt-d">Pretraining to reasoning models, the space-race economics behind it, every lab\'s strategy compared, and an honest ledger of what\'s proven vs. contested.</span>'+
-        '<span class="rt-go">Read the issue →</span></a>'+
-      '</div></section>';
-
-    /* ---- PODCASTS -------------------------------------------------------- */
-    h+='<section id="res-pods"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Podcasts</div>';
-    podCats.forEach(function(cat){ h+=resCatHTML(cat); });
-    if(!podCats.length) h+='<p style="color:var(--muted)">Nothing listed yet.</p>';
-    h+='</section>';
-
-    /* ---- FROM THIS NEWSROOM ---------------------------------------------- */
-    h+='<section id="res-news"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>From this newsroom</div>';
-    newsCats.forEach(function(cat){ h+=resCatHTML(cat); });
-    h+='</section>';
-
-    /* ---- MAKE ----------------------------------------------------------- */
-    h+='<section id="res-make"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>Make something</div>'+
-      '<div class="res-tiles">'+
-      '<a class="res-tile" href="#/wallpapers"><span class="rt-ic">◫</span><span class="rt-k">Wallpapers</span><b>Turn any cover into a phone wallpaper</b>'+
-        '<span class="rt-d">Every article and magazine cover we have run, sized for your phone, with the mark applied. Free, no account.</span>'+
-        '<span class="rt-go">Make a wallpaper →</span></a>'+
-      '<a class="res-tile" href="#/claims"><span class="rt-ic">◍</span><span class="rt-k">Ledger</span><b>Everything we said we did not know</b>'+
-        '<span class="rt-d">Open questions from every story, with the exact document that would settle each one, and what happened when it arrived.</span>'+
-        '<span class="rt-go">Open the claims ledger →</span></a>'+
-      '<a class="res-tile" href="#/scoreboard"><span class="rt-ic">▤</span><span class="rt-k">Scoreboard</span><b>Strength against price, with the frontier drawn</b>'+
-        '<span class="rt-d">Which models are worth their listing, and which are beaten on capability and cost at the same time.</span>'+
-        '<span class="rt-go">Open the Scoreboard →</span></a>'+
-      '</div></section>';
-
-    return h+'</div></div></div>';
+    return h+'</div>';
   }
 
   /* ================= AI EXTENSIONS (the connector encyclopedia) =================
@@ -3773,7 +4105,7 @@
       if(tg.indexOf("official")>=0) nOfficial++;
     }); });
 
-    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · AI Extensions</div>'+
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · AI Extensions</div>'+
       '<h1>AI Extensions</h1>'+
       '<p>The plugboard of the AI world: every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing, in one categorized, searchable encyclopedia. Primary sources only — every link is the maker\'s own site. We don\'t print pricing, because in this industry a printed price is a future lie; the link is the truth.</p></div>';
 
@@ -3788,30 +4120,65 @@
       'autocomplete="off" spellcheck="false" oninput="rtfcExtFilter(this.value)" aria-label="Search the extensions encyclopedia">'+
       '<span id="ext-count">'+total+' entries</span></div>';
 
+    /* GROUPED BY THE JOB (2026-08-14, owner: "the categories need to be more
+       thought out and smarter/better"). Nobody chooses a tool by what kind of
+       company made it — they choose by what they are trying to do, and those
+       jobs come in a natural order: get access to a model, give it tools and
+       context, build something, make media, prove it works. Each category
+       declares its group and position in web/data/extensions.js, so this view
+       stays dumb and the taxonomy stays editable by the weekly run. */
+    var GORDER=["Access the models","Give them tools and context","Build something",
+                "Make pictures, video and voice","Know that it works"];
+    var byGroup={};
+    EXT.forEach(function(c){ var g=c.group||"More"; (byGroup[g]=byGroup[g]||[]).push(c); });
+    var groups=GORDER.filter(function(g){ return byGroup[g]; })
+      .concat(Object.keys(byGroup).filter(function(g){ return GORDER.indexOf(g)<0; }));
+    groups.forEach(function(g){ byGroup[g].sort(function(a,b){ return (a.order||99)-(b.order||99); }); });
+
     h+='<div class="res-layout"><aside class="res-nav"><div class="rn-title">Categories</div>'+
-      EXT.map(function(c){ return '<a onclick="rtfcJump(\'ext-'+escAttr(c.id)+'\')">'+esc(c.cat)+'<em class="rn-n">'+(c.items||[]).length+'</em></a>'; }).join("")+
+      groups.map(function(g){
+        return '<div class="rn-group">'+esc(g)+'</div>'+
+          byGroup[g].map(function(c){
+            return '<a onclick="rtfcJump(\'ext-'+escAttr(c.id)+'\')">'+esc(c.cat)+'<em class="rn-n">'+(c.items||[]).length+'</em></a>';
+          }).join("");
+      }).join("")+
       '</aside><div class="res-main">';
 
-    EXT.forEach(function(c){
-      h+='<section class="ext-sec" id="ext-'+escAttr(c.id)+'">'+
-        '<div class="labg-h"><span class="labg-l"><span class="xs-ic">'+esc(c.icon||"⬡")+'</span>'+esc(c.cat)+'</span>'+
-        '<span class="labg-n">'+(c.items||[]).length+'</span></div>'+
-        '<p class="res-sub">'+esc(c.desc||"")+'</p>'+
-        '<div class="ext-grid">'+(c.items||[]).map(function(it){
-          var kind=EXT_KINDS[it.kind]||it.kind||"";
-          var hay=(it.name+" "+(it.by||"")+" "+kind+" "+(it.desc||"")+" "+((it.tags||[]).join(" "))+" "+c.cat).toLowerCase();
-          var dom=String(it.url||"").replace(/^https?:\/\//,"").replace(/^www\./,"").split("/")[0];
-          return '<div class="ext-card" data-ext="'+escAttr(hay)+'">'+
-            '<div class="xc-top"><b>'+esc(it.name)+'</b><span class="xc-kind xk-'+escAttr(it.kind||"tool")+'">'+esc(kind)+'</span></div>'+
-            '<span class="xc-by">'+esc(it.by||"")+'</span>'+
-            '<p class="xc-desc">'+esc(it.desc||"")+'</p>'+
-            '<div class="xc-foot"><a href="'+safeHref(it.url)+'" target="_blank" rel="noopener">'+esc(dom)+' ↗</a>'+
-            (it.tags&&it.tags.length?('<span class="xc-tags">'+it.tags.map(function(t){ return '<i>'+esc(t)+'</i>'; }).join("")+'</span>'):'')+
-            '</div></div>';
-        }).join("")+'</div></section>';
+    groups.forEach(function(g){
+      var gn=byGroup[g].reduce(function(m,c){ return m+(c.items||[]).length; },0);
+      h+='<div class="ext-group"><span class="eg-l">'+esc(g)+'</span>'+
+         '<span class="eg-n">'+byGroup[g].length+' categor'+(byGroup[g].length===1?'y':'ies')+' &middot; '+gn+' entries</span></div>';
+      byGroup[g].forEach(function(c){
+        h+='<section class="ext-sec" id="ext-'+escAttr(c.id)+'">'+
+          '<div class="labg-h"><span class="labg-l"><span class="xs-ic">'+esc(c.icon||"⬡")+'</span>'+esc(c.cat)+'</span>'+
+          '<span class="labg-n">'+(c.items||[]).length+'</span></div>'+
+          '<p class="res-sub">'+esc(c.desc||"")+'</p>'+
+          '<div class="ext-grid">'+(c.items||[]).map(function(it){
+            var kind=EXT_KINDS[it.kind]||it.kind||"";
+            var hay=(it.name+" "+(it.by||"")+" "+kind+" "+(it.desc||"")+" "+((it.tags||[]).join(" "))+" "+c.cat+" "+g).toLowerCase();
+            var dom=String(it.url||"").replace(/^https?:\/\//,"").replace(/^www\./,"").split("/")[0];
+            return '<div class="ext-card" data-ext="'+escAttr(hay)+'">'+
+              '<div class="xc-top"><b>'+esc(it.name)+'</b><span class="xc-kind xk-'+escAttr(it.kind||"tool")+'">'+esc(kind)+'</span></div>'+
+              '<span class="xc-by">'+esc(it.by||"")+'</span>'+
+              '<p class="xc-desc">'+esc(it.desc||"")+'</p>'+
+              '<div class="xc-foot"><a href="'+safeHref(it.url)+'" target="_blank" rel="noopener">'+esc(dom)+' ↗</a>'+
+              (it.tags&&it.tags.length?('<span class="xc-tags">'+it.tags.map(function(t){ return '<i>'+esc(t)+'</i>'; }).join("")+'</span>'):'')+
+              '</div></div>';
+          }).join("")+'</div></section>';
+      });
     });
 
-    h+='<p style="color:var(--muted);font-size:12.5px;margin:26px 0">Links point at primary sources and were last re-verified when a story touched them. Something dead or missing? <a href="#/contact">Tell the newsroom</a> — a stale directory entry gets treated like a correction, not a shrug.</p>';
+    /* FRESHNESS, STATED. A directory with no date on it is asking to be
+       trusted blindly — and this one is re-verified weekly by the evolution
+       run, so it can afford to say so. The date comes from the data file, not
+       from this code, so it moves when the index actually moves. */
+    var META=window.RTFC_EXTENSIONS_META||{};
+    h+='<div class="ext-foot">'+
+      (META.updated?('<span class="xf-when"><b>Last re-verified '+esc(META.updated)+'</b>'+
+        (META.cadence?(' · '+esc(META.cadence)):'')+'</span>'):'')+
+      (META.note?('<span class="xf-note">'+esc(META.note)+'</span>'):'')+
+      '<span class="xf-note">Something dead or missing? <a href="/contact">Tell the newsroom</a> — a stale directory entry is treated like a correction, not a shrug.</span>'+
+      '</div>';
     return h+'</div></div></div>';
   }
   // Hide/show, never re-render: filtering 150 cards through innerHTML would
@@ -3830,6 +4197,18 @@
       var vis=false, cs=secs[i].querySelectorAll(".ext-card");
       for(var j=0;j<cs.length;j++) if(cs[j].style.display!=="none"){ vis=true; break; }
       secs[i].style.display=vis?"":"none";
+    }
+    /* A group heading with nothing under it is a lie about the results. Walk
+       forward from each heading to the next one; if every section between them
+       is hidden, hide the heading too. */
+    var heads=document.querySelectorAll(".ext-group");
+    for(i=0;i<heads.length;i++){
+      var any=false, node=heads[i].nextElementSibling;
+      while(node && !node.classList.contains("ext-group")){
+        if(node.classList.contains("ext-sec") && node.style.display!=="none"){ any=true; break; }
+        node=node.nextElementSibling;
+      }
+      heads[i].style.display=any?"":"none";
     }
     var el=document.getElementById("ext-count");
     if(el) el.textContent=q?(shown+" match"+(shown===1?"":"es")):(cards.length+" entries");
@@ -3888,7 +4267,7 @@
   function viewWallpapers(){
     var imgs=wpImages();
     if((!WP.src||!/\.(jpe?g|png|webp)$/i.test(WP.src))&&imgs.length) WP.src=imgs[0].src;
-    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · Wallpapers</div>'+
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Wallpapers</div>'+
       '<h1>Make a phone wallpaper</h1>'+
       '<p>Turn any of our cover images into a phone wallpaper — sized for your screen, with the RTFCLMGZN mark on it. Pick an image, choose a size, download. Free, like everything here.</p></div>';
     h+='<div class="wp-wrap">'+
@@ -4117,12 +4496,12 @@
 
   function viewDictionary(){
     var DICT=window.RTFC_DICT||[];
-    var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="#/resources" style="color:var(--accent2)">Resources</a> · Dictionary</div>'+
+    var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Dictionary</div>'+
       '<h1>The AI Dictionary</h1>'+
       '<p>Every word that gates an AI headline, explained like a human — no jargon defending jargon. '+DICT.length+' terms, maintained by the newsroom as the language evolves. Search, or just scroll.</p></div>';
     h+='<input class="dict-search" type="text" placeholder="Search terms — try “token”, “agent”, “hallucination”…" oninput="rtfcDict(this.value)" autofocus>';
     h+=dictSectionHTML("");
-    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:14px">New to all this? The <a href="#/read/primer" style="color:var(--accent2)">Primer</a> walks you from zero to fluent — the dictionary is your reference once you\'re in.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:14px">New to all this? The <a href="/read/primer" style="color:var(--accent2)">Primer</a> walks you from zero to fluent — the dictionary is your reference once you\'re in.</p>';
     return h+'</div>';
   }
 
@@ -4156,7 +4535,7 @@
       (function(){
         var cov=bzCoverage(b); if(!cov.length) return "";
         return '<div class="bz-cover"><span class="bzc-k">We cited this</span>'+
-          cov.map(function(a){ return '<a href="#/article/'+esc(a.slug)+'">'+esc(a.title)+'</a>'; }).join("")+'</div>';
+          cov.map(function(a){ return '<a href="/article/'+esc(a.slug)+'">'+esc(a.title)+'</a>'; }).join("")+'</div>';
       })()+
     '</div>';
   }
@@ -4342,7 +4721,7 @@
   }
   window.rtfcShare=function(id){
     var a=article2(id); if(!a) return;
-    var url="https://rtfclmgzn.com/#/article/"+a.slug;
+    var url=SITE_HOME+"/article/"+a.slug;
     var btn=document.getElementById("share-btn");
     function copied(){
       if(!btn) return;
@@ -4360,7 +4739,7 @@
   function costFooterHTML(a){
     var c=articleCost(a.id);
     if(!c || !(c.cost>0)) return "";
-    return '<div class="cost-foot"><a class="cost-chip" href="#/usage" title="Full production ledger — every task, every token">'+
+    return '<div class="cost-foot"><a class="cost-chip" href="/usage" title="Full production ledger — every task, every token">'+
       '◈ Transparency: this story cost <b>'+money(c.cost)+'</b> to produce<span class="cc-go">see the ledger →</span></a></div>';
   }
 
@@ -4396,7 +4775,7 @@
     for(var i=0;i<all.length;i++) if(all[i].id===id) return all[i];
     return null;
   }
-  var AP={kind:null,id:null,slug:null,title:"",ownHash:"#/",segs:[],chunks:[],ci:0,seg:0,playing:false,paused:false,gen:0,u:null,beat:0,tries:0};
+  var AP={kind:null,id:null,slug:null,title:"",ownHash:"/",segs:[],chunks:[],ci:0,seg:0,playing:false,paused:false,gen:0,u:null,beat:0,tries:0};
   // House voice is British female, deliberately -- the previous priority list mixed
   // UK and US names with no accent ordering, so whichever US neural voice (aria/jenny)
   // happened to be installed won the pick() scan before libby/sonia ever got checked.
@@ -4514,22 +4893,22 @@
       if(sp) segs.push({t:null, text:cleanSpeech(sp)});
     });
     if(a.apply&&a.apply.length){ segs.push({t:null, text:cleanSpeech(applyLabel(a)+". "+a.apply.map(function(x){return x.label+" "+x.text;}).join(" "))}); }
-    apLoad("article", id, a.slug, a.title, "#/article/"+a.slug, segs);
+    apLoad("article", id, a.slug, a.title, "/article/"+a.slug, segs);
     apStart();
   };
   window.rtfcBriefToggle=function(){
     if(!window.speechSynthesis) return;
     if(AP.kind!=="briefing"){ var B=briefingScript(); if(!B) return;
-      apLoad("briefing","briefing",null,"The 8 AM Briefing","#/briefing", B.segs.map(function(s){return {t:s.t,text:s.x};})); }
+      apLoad("briefing","briefing",null,"The 8 AM Briefing","/briefing", B.segs.map(function(s){return {t:s.t,text:s.x};})); }
     window.rtfcApToggle();
   };
   window.rtfcBriefSeek=function(i){
     if(AP.kind!=="briefing"){ var B=briefingScript(); if(!B) return;
-      apLoad("briefing","briefing",null,"The 8 AM Briefing","#/briefing", B.segs.map(function(s){return {t:s.t,text:s.x};})); }
+      apLoad("briefing","briefing",null,"The 8 AM Briefing","/briefing", B.segs.map(function(s){return {t:s.t,text:s.x};})); }
     apSeekSeg(i);
   };
   function apRender(){
-    var onOwn = AP.ownHash && location.hash.indexOf(AP.ownHash)===0;
+    var onOwn = AP.ownHash && curPath().indexOf(String(AP.ownHash).replace(/^#/,""))===0;
     var glyph=(AP.playing&&!AP.paused)?"❚❚":"▶";
     var pct=AP.chunks.length?Math.round(AP.ci/AP.chunks.length*100):0;
     if(AP.kind==="briefing"){
@@ -4592,7 +4971,7 @@
     if(document.getElementById("miniplayer")) return;
     var d=document.createElement("div"); d.id="miniplayer"; d.hidden=true;
     d.innerHTML='<button id="mp-toggle" title="Play / pause">▶</button>'+
-      '<div class="mp-info"><a id="mp-open" href="#/briefing"><b id="mp-title">The Daily Briefing</b><span id="mp-seg"></span></a>'+
+      '<div class="mp-info"><a id="mp-open" href="/briefing"><b id="mp-title">The Daily Briefing</b><span id="mp-seg"></span></a>'+
       '<span class="mp-bar" id="mp-bar" title="Scrub"><i id="mp-prog"></i></span></div>'+
       '<button id="mp-close" title="Stop">✕</button>';
     document.body.appendChild(d);
@@ -4700,7 +5079,7 @@
       '<p>Living dossiers on the players that matter — every story, every Buzz card, every Scoreboard entry we\'ve published about each, auto-assembled from our own coverage and always current.</p></div>';
     h+='<div class="dossier-grid">'+COMPANIES.map(function(c){
       var m=companyMatches(c);
-      return '<a class="dossier-card" href="#/company/'+c.key+'" style="--bc:'+brandColor(c.key)+'">'+
+      return '<a class="dossier-card" href="/company/'+c.key+'" style="--bc:'+brandColor(c.key)+'">'+
         '<div class="dc-head">'+brandMark(c.key,c.name)+'<b>'+esc(c.name)+'</b></div>'+
         '<span>'+esc(c.desc)+'</span>'+
         '<div class="dc-counts">'+m.articles.length+' '+(m.articles.length===1?'story':'stories')+' · '+
@@ -4712,7 +5091,7 @@
     var c=companyByKey(key); if(!c) return notFound();
     var m=companyMatches(c);
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px">'+
-      '<div class="over"><a href="#/companies" style="color:var(--accent2)">Dossiers</a> · '+esc(c.name)+'</div>'+
+      '<div class="over"><a href="/companies" style="color:var(--accent2)">Dossiers</a> · '+esc(c.name)+'</div>'+
       '<div class="dsr-co-head">'+brandMark(c.key,c.name,'bmark-hero')+'<h1>'+esc(c.name)+'</h1></div>'+
       '<p>'+esc(c.desc)+'</p></div>';
     if(m.score.length){
@@ -4737,9 +5116,12 @@
     /* liveUsage(), NOT raw USAGE — the "single source of truth" note above
        liveUsage() exists because this exact bug shipped once between Pulse and
        /usage: two surfaces, two bases, two different "total cost". The footer
-       links straight to the ledger, so it must quote the ledger's own number. */
-    var s=sumRecs(liveUsage());
-    el.innerHTML='Run to date on <b>'+money(s.cost)+'</b> of compute — <a href="#/usage">every penny public →</a>';
+       links straight to the ledger, so it must quote the ledger's own number —
+       AND, since 2026-08-14, the number of runs that number leaves out. */
+    var b=costBasis();
+    el.innerHTML='Run to date on <b>'+money(b.cost)+'</b> of metered compute'+
+      (b.unmetered?(' · <b>'+b.unmetered+'</b> runs logged without token figures'):'')+
+      ' — <a href="/usage">every penny public →</a>';
   }
 
   /* ---------- THE CONTROL ROOM (newsroom pulse) ----------
@@ -4858,7 +5240,7 @@
     if(RM.phase==="geo"){ setTimeout(function(){ rmGeometry(cb); },120); return; }
     RM.phase="geo";
     var el=document.createElement("script");
-    el.src="data/worldmap.js"+rmCacheBust();
+    el.src="/data/worldmap.js"+rmCacheBust();
     el.onload=function(){ RM.phase="idle"; cb(window.RTFC_WORLDMAP||null); };
     el.onerror=function(){ RM.phase="idle"; cb(null); };
     document.head.appendChild(el);
@@ -5142,8 +5524,8 @@
   function gdDetailHTML(f){
     if(!f) return '<div class="gd-empty">Hover or tap a pin — or a row in the list below — for the full picture.</div>';
     var st=GD_STATUS[f.status]||{label:f.status,v:"--muted"};
-    var op=f.operatorKey ? ('<a href="#/company/'+f.operatorKey+'">'+esc(f.operatorLabel||f.operatorKey)+'</a>') : esc(f.operatorLabel||"Unnamed operator");
-    var tenant=f.tenantKey ? ('<div class="gd-tenant">Primary tenant: <a href="#/company/'+f.tenantKey+'">'+esc(f.tenantLabel||f.tenantKey)+'</a></div>')
+    var op=f.operatorKey ? ('<a href="/company/'+f.operatorKey+'">'+esc(f.operatorLabel||f.operatorKey)+'</a>') : esc(f.operatorLabel||"Unnamed operator");
+    var tenant=f.tenantKey ? ('<div class="gd-tenant">Primary tenant: <a href="/company/'+f.tenantKey+'">'+esc(f.tenantLabel||f.tenantKey)+'</a></div>')
       : (f.tenantLabel ? '<div class="gd-tenant">'+esc(f.tenantLabel)+'</div>' : '');
     var flinks=f.operatorKey?followLinks(f.operatorKey):null;
     var follow=flinks?('<div class="lab-follow">'+flinks.map(function(l){
@@ -5372,24 +5754,43 @@
     var nCountries={}; facilities.forEach(function(f){ nCountries[f.place.split(", ").pop()]=1; });
     var nCompanies={}; facilities.forEach(function(f){ if(f.operatorKey) nCompanies[f.operatorKey]=1; });
     var newIds=gdNewIds();
+    /* SCOPE, STATED (2026-08-14). The old headline was "Every datacenter
+       running these models, mapped" — and the honest answer to "why 25 when
+       Google says 12,000?" is that those count different things. ~12,000 is
+       every commercial and enterprise datacenter on earth: colos, bank server
+       rooms, regional edge sites. About 1,100 are hyperscale. This board is
+       narrower still and deliberately so: named frontier-AI training and
+       inference megasites this newsroom has actually covered and sourced,
+       where the operator, the tenant and the confidence level are all on the
+       record. A page that claimed "every datacenter" while showing 25 was
+       overclaiming, which on a site built on stated confidence is the one
+       thing we cannot do. It now says what it is, and prints the wider counts
+       next to ours so the reader can see the ratio themselves. */
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Resources · The Grid</div>'+
-      '<h1>Every datacenter running these models, mapped</h1>'+
-      '<p>The physical layer underneath every headline on this site: who operates each site, who the primary tenant is when that differs from the operator, and how sure we are of the details. '+esc(GRID.cadence||"")+'</p></div>';
+      '<h1>The megasites behind the models</h1>'+
+      '<p>Not every datacenter — the <b>named frontier-AI campuses</b> this newsroom has covered and sourced: who operates each site, who the primary tenant is when that differs, and how sure we are of the details. '+esc(GRID.cadence||"")+'</p></div>';
 
     if(newIds.length){
       h+='<div class="gd-newbar"><b>'+newIds.length+' facilit'+(newIds.length===1?"y":"ies")+' new since your last visit.</b> They\'re marked in the list below.</div>';
     }
 
     h+='<div class="res-stats">'+
-      '<div class="rs-cell"><b>'+facilities.length+'</b><span>facilities tracked</span></div>'+
+      '<div class="rs-cell"><b>'+facilities.length+'</b><span>AI megasites on this board</span></div>'+
       '<div class="rs-cell"><b>'+nOperating+'</b><span>confirmed operating</span></div>'+
       '<div class="rs-cell"><b>'+Object.keys(nCountries).length+'</b><span>countries</span></div>'+
       '<div class="rs-cell"><b>'+Object.keys(nCompanies).length+'</b><span>companies with a dossier here</span></div>'+
     '</div>';
 
+    // The ratio, in the reader's face, before they go and check it themselves.
+    h+='<div class="gd-scope"><b>Why '+facilities.length+' and not 12,000?</b> '+
+      'Industry directories count roughly <b>12,000</b> commercial and enterprise datacenters worldwide — every colo, bank server room and regional edge site. '+
+      'Around <b>1,100</b> of those are hyperscale. This board tracks a deliberately narrower set: the frontier-AI training and inference campuses that this newsroom has named, sourced and can state a confidence level on. '+
+      'A site gets a pin when our reporting establishes who runs it and where it is — never because a list somewhere said a building exists. '+
+      '<span>Counting definitions differ, and ours is the strictest one on this page.</span></div>';
+
     h+=gridHTML();
     h+='<div style="margin-top:22px">'+gdAlertHTML()+'</div>';
-    h+='<p class="rm-cap gd-method">'+esc(GRID.methodology||"")+' Updated '+esc(GRID.updated||"")+'. Something wrong or missing? <a href="#/contact" style="color:var(--accent2)">Tell the newsroom</a>.</p>';
+    h+='<p class="rm-cap gd-method">'+esc(GRID.methodology||"")+' Updated '+esc(GRID.updated||"")+'. Something wrong or missing? <a href="/contact" style="color:var(--accent2)">Tell the newsroom</a>.</p>';
     return h+'</div>';
   }
 
@@ -5415,7 +5816,7 @@
     h+='<div class="mast-strip" style="margin:18px 0 26px">'+
       '<div class="cell"><div class="num">'+todayArts.length+'</div><div class="lbl">stories published today</div></div>'+
       '<div class="cell"><div class="num">'+money(dayS.cost)+'</div><div class="lbl">today’s production cost</div></div>'+
-      '<div class="cell"><div class="num">'+money(allS.cost)+'</div><div class="lbl">all-time newsroom cost · <a href="#/usage" style="color:var(--accent2)">full ledger</a></div></div>'+
+      '<div class="cell"><div class="num">'+money(allS.cost)+'</div><div class="lbl">all-time newsroom cost · <a href="/usage" style="color:var(--accent2)">full ledger</a></div></div>'+
       '<div class="cell"><div class="num">0</div><div class="lbl">humans in the loop</div></div></div>';
     // reader geography heatmap (privacy-first, honest empty state until live)
     h+=readerMapHTML();
@@ -5427,7 +5828,7 @@
       agentNode("Editor-in-Chief","autonomous adjudicator","t-eic")+
       agentNode("Managing Editor","assignments · quality","t-me")+'</div>';
     h+='<div class="ptier"><div class="pt-l">The desks</div>'+activePersonas().map(function(p){
-      return agentNode(p.name,p.beat,"t-desk","#/persona/"+p.key);
+      return agentNode(p.name,p.beat,"t-desk","/persona/"+p.key);
     }).join("")+'</div>';
     h+='<div class="ptier"><div class="pt-l">Production</div>'+
       ["Research","Verification","Style","Compliance","Publishing","Social","Podcast"].map(function(n){
@@ -5656,7 +6057,7 @@
         '<div><b>Nothing on the board carries both a score and a price yet.</b>'+
         '<span>A model is listed here the day it ships, but it stays unmeasured until an independent aggregate scores it — we never rank on a lab’s own number. The strength-and-value view appears the moment the first independent score lands'+
         (other.length?(', for any of the '+other.length+' model'+(other.length===1?'':'s')+' listed below'):'')+'.</span></div>'+
-        '<a class="es-go" href="#/companies">Company dossiers →</a></div>';
+        '<a class="es-go" href="/companies">Company dossiers →</a></div>';
     }
     // the "aha" line — the top scorer vs the priciest scored model, derived live
     var priciest=scored.slice().sort(function(a,b){return b.pout-a.pout;})[0];
@@ -5712,7 +6113,7 @@
       scanEntries.map(function(x){ return '<p>'+esc(x)+'</p>'; }).join("")+
       '<p class="sbl-foot">Prices marked ~ are estimates where a lab hasn\'t published an exact figure.</p>'+
       '</div></details>';
-    h+='<p style="color:var(--muted);font-size:13px;margin-top:12px">Not sure which tier you need? Read the guide: <a href="#/article/which-ai-for-which-job" style="color:var(--accent2)">Right tool, right job →</a></p>';
+    h+='<p style="color:var(--muted);font-size:13px;margin-top:12px">Not sure which tier you need? Read the guide: <a href="/article/which-ai-for-which-job" style="color:var(--accent2)">Right tool, right job →</a></p>';
     if(SB.sources&&SB.sources.length) h+='<div class="sources" style="margin-top:16px"><h4>How we score · sourced from independent benchmarks &amp; our coverage</h4><ol>'+SB.sources.map(function(s){return '<li><a href="'+safeHref(s.url)+'" target="_blank" rel="noopener">'+esc(s.label)+'</a></li>';}).join("")+'</ol></div>';
     return h+'</div>';
   }
@@ -5735,7 +6136,7 @@
         '<div class="pr-mark">'+mark+'</div>'+
         '<div class="pr-body"><div class="pr-claim">"'+esc(x.claim)+'"</div>'+
         '<div class="pr-meta">'+esc(pName(x.by))+' · made '+when(x.made)+
-        (art?(' · <a href="#/article/'+esc(art.slug)+'">source</a>'):'')+
+        (art?(' · <a href="/article/'+esc(art.slug)+'">source</a>'):'')+
         (x.status==="pending"?(' · resolves by '+when(x.resolveBy)):(' · graded '+when(x.resolved)))+'</div>'+
         (x.verdict?'<div class="pr-verdict">'+esc(x.verdict)+'</div>':'')+
         '</div></div>';
@@ -5777,10 +6178,10 @@
     } else {
       h+=all.map(function(x){
         return '<div class="corr-row"><time>'+new Date(x.c.at).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})+'</time>'+
-          '<div><a href="#/article/'+x.a.slug+'">'+esc(x.a.title)+'</a><p>'+esc(x.c.text)+'</p></div></div>';
+          '<div><a href="/article/'+x.a.slug+'">'+esc(x.a.title)+'</a><p>'+esc(x.c.text)+'</p></div></div>';
       }).join("");
     }
-    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:26px">How verification works: see any article’s pipeline panel, or the <a href="#/review" style="color:var(--accent2)">Editor-in-Chief decision log</a>.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:26px">How verification works: see any article’s pipeline panel, or the <a href="/review" style="color:var(--accent2)">Editor-in-Chief decision log</a>.</p>';
     return h+'</div>';
   }
 
@@ -5788,18 +6189,18 @@
   function paletteIndex(){
     var items=[];
     ARTICLES.concat(GUIDES).forEach(function(a){
-      items.push({t:a.title, k:(a.section==="Guide"?"Guide":a.section), href:"#/article/"+a.slug, s:(a.title+" "+a.section+" "+(a.dek||"")).toLowerCase()});
+      items.push({t:a.title, k:(a.section==="Guide"?"Guide":a.section), href:"/article/"+a.slug, s:(a.title+" "+a.section+" "+(a.dek||"")).toLowerCase()});
     });
-    [["The Daily Briefing (listen)","Audio","#/briefing"],["Company dossiers","Dossiers","#/companies"],["The AI Dictionary","Learn","#/dictionary"],
-     ["The Prediction Ledger","Trust","#/predictions"],["The Claims Ledger","Trust","#/claims"],
-     ["The Control Room","Live","#/pulse"],["The Scoreboard","Models","#/scoreboard"],["The Buzz","Signal","#/buzz"],
-     ["The Primer (free magazine)","Magazine","#/read/primer"],["All magazine issues","Magazine","#/magazine"],
-     ["Guides","Section","#/guides"],["Resources","Section","#/resources"],["AI Extensions (APIs, skills, connectors)","Learn","#/extensions"],["Archive","Section","#/archive"],
-     ["Live & ongoing (AI streams)","Watch","#/live"],["AI events on the radar","Events","#/events"],["Contact the newsroom","Contact","#/contact"],
-     ["The Masthead","About","#/masthead"],["Cost transparency","Ledger","#/usage"],["Corrections log","Trust","#/corrections"],
-     ["EIC decision log","Trust","#/review"],["Privacy","Legal","#/privacy"],["Terms","Legal","#/terms"]
+    [["The Daily Briefing (listen)","Audio","/briefing"],["Company dossiers","Dossiers","/companies"],["The AI Dictionary","Learn","/dictionary"],
+     ["The Prediction Ledger","Trust","/predictions"],["The Claims Ledger","Trust","/claims"],
+     ["The Control Room","Live","/pulse"],["The Scoreboard","Models","/scoreboard"],["The Buzz","Signal","/buzz"],
+     ["The Primer (free magazine)","Magazine","/read/primer"],["All magazine issues","Magazine","/magazine"],
+     ["Guides","Section","/guides"],["Resources","Section","/resources"],["AI Extensions (APIs, skills, connectors)","Learn","/extensions"],["Archive","Section","/archive"],
+     ["Live & ongoing (AI streams)","Watch","/live"],["AI events on the radar","Events","/events"],["Contact the newsroom","Contact","/contact"],
+     ["The Masthead","About","/masthead"],["Cost transparency","Ledger","/usage"],["Corrections log","Trust","/corrections"],
+     ["EIC decision log","Trust","/review"],["Privacy","Legal","/privacy"],["Terms","Legal","/terms"]
     ].forEach(function(p){ items.push({t:p[0],k:p[1],href:p[2],s:p[0].toLowerCase()}); });
-    SECTIONS.forEach(function(sc){ items.push({t:"The "+sc.label+" Desk", k:"Desk", href:"#/section/"+sc.key, s:sc.label.toLowerCase()+" desk"}); });
+    SECTIONS.forEach(function(sc){ items.push({t:"The "+sc.label+" Desk", k:"Desk", href:"/section/"+sc.key, s:sc.label.toLowerCase()+" desk"}); });
     return items;
   }
   function initPalette(){
@@ -5880,7 +6281,7 @@
     input.addEventListener("keydown",function(e){
       if(e.key==="ArrowDown"){e.preventDefault();flush();move(1);}
       else if(e.key==="ArrowUp"){e.preventDefault();flush();move(-1);}
-      else if(e.key==="Enter"){ flush(); var it=items[sel]; if(it){ location.hash=it.href.slice(1); close(); } }
+      else if(e.key==="Enter"){ flush(); var it=items[sel]; if(it){ go(it.href); close(); } }
       else if(e.key==="Escape"){ e.preventDefault(); close(); }
     });
     // Focus trap: Tab must not walk out of a modal dialog into the page behind it.
@@ -6045,7 +6446,7 @@
     var BAND={glossary:"mg-band-gloss.jpg",list:"mg-band-list.jpg",timeline:"mg-band-timeline.jpg",faceoff:"mg-band-faceoff.jpg",resources:"mg-band-resources.jpg",players:"primer-act3.jpg",contents:"primer-part1.jpg"};
     // full-width image band across the top of a structured page — real magazine art,
     // fading into the cream so the content flows beneath it (no more corner medallions).
-    function band(k){ return BAND[k]?'<div class="mband" style="background-image:linear-gradient(180deg,rgba(245,241,232,0) 44%,rgba(245,241,232,.78) 80%,rgba(245,241,232,1)),url(\'assets/img/'+BAND[k]+'\')"></div>':''; }
+    function band(k){ return BAND[k]?'<div class="mband" style="background-image:linear-gradient(180deg,rgba(245,241,232,0) 44%,rgba(245,241,232,.78) 80%,rgba(245,241,232,1)),url(\'/assets/img/'+BAND[k]+'\')"></div>':''; }
     if(pg.kind==="timeline"){
       return '<div class="mpage light hasband">'+folio+band("timeline")+
         (pg.kicker?'<div class="ip-kicker" style="color:var(--accent)">'+esc(pg.kicker)+'</div>':'')+
@@ -6256,7 +6657,7 @@
   }
   function issueShell(iss,inner){
     return '<div class="container"><div class="ipage ip-lock" style="margin-top:40px">'+inner+
-      '<a class="cta ghost" href="#/magazine">← All issues</a></div></div>';
+      '<a class="cta ghost" href="/magazine">← All issues</a></div></div>';
   }
   function issueLoadingHTML(iss){
     var n=issuePageCount(iss);
@@ -6305,7 +6706,7 @@
        reflows fixed page compositions and breaks the no-cutoff law. Issues ship
        in English; per-language editions are a pipeline job, not a browser hack. */
     var h='<div class="mreader notranslate" translate="no"><div class="mbar">'+
-      '<a class="mexit" href="#/magazine">✕ <span>Close</span></a>'+
+      '<a class="mexit" href="/magazine">✕ <span>Close</span></a>'+
       '<span class="mtitle">'+esc(iss.title)+'</span>'+
       '<input type="range" class="mscrub" id="mscrub" min="1" max="'+total+'" value="'+(wanted+1)+'" step="1" aria-label="Jump to page" title="Drag to flip through pages">'+
       /* Public PDF download removed from reader chrome (spec §23) — the designed
@@ -6503,7 +6904,7 @@
         var pal=document.getElementById("palette");
         if(pal && !pal.hidden) return;                      // palette open → it owns the keyboard
         if(e.ctrlKey||e.metaKey||e.altKey) return;          // never steal a browser/app shortcut
-        if(e.key==="Escape"){ location.hash="#/magazine"; return; }
+        if(e.key==="Escape"){ go("/magazine"); return; }
         if(e.key==="Home"){ e.preventDefault(); window.__magGo(0); return; }
         if(e.key==="End"){ e.preventDefault(); window.__magGo(1e9); return; }
         if(e.key==="ArrowRight"||e.key==="ArrowDown"||e.key===" "){ e.preventDefault(); window.__magTurn(1); }
@@ -6526,7 +6927,7 @@
     return '<div class="kicker" style="margin-top:10px"><span class="dotc" style="background:var(--accent)"></span>Keep reading</div>'+
       '<div class="grid" style="margin-bottom:30px">'+picks.map(cardHTML).join("")+'</div>';
   }
-  function notFound(){ return '<div class="container"><div class="article"><h1>Not found</h1><a class="back" href="#/">← Home</a></div></div>'; }
+  function notFound(){ return '<div class="container"><div class="article"><h1>Not found</h1><a class="back" href="/">← Home</a></div></div>'; }
 
   /* ---- usage export (client-side, no server, no LLM) ---- */
   function download(name,text,type){
@@ -6563,25 +6964,25 @@
       var on=(active===key);
       return '<a href="'+href+'" class="'+(cls?cls+" ":"")+(on?"active":"")+'"'+(on?' aria-current="page"':'')+'>'+label+'</a>';
     }
-    /* Bar order is the publisher's spec, verbatim: Home · Sections · The Buzz ·
-       Scoreboard · Resources · Archive · Magazine. Guides came OFF the bar on
-       purpose — the route still exists, the footer still links it, and the
-       Resources page now owns its front door. Don't re-add it here. */
-    var h=navLink("#/","home","Home");
-    h+='<span class="sec-wrap"><button class="sec-btn'+(inSection?' active':'')+'" id="sec-btn" aria-haspopup="true" aria-expanded="false">Sections <span class="sec-caret">▾</span></button>'+
-      '<div class="sec-menu" id="sec-menu" hidden>'+SECTIONS.map(function(s){
-        var col=SECTION_COLORS[s.label]||"#8b7cf7";
-        var on=(curSec===s.key);
-        return '<a href="#/section/'+s.key+'" class="'+(on?"on":"")+'"'+(on?' aria-current="page"':'')+
-          '><span class="sec-dot" style="background:'+escAttr(col)+'"></span>'+esc(s.label)+'</a>';
-      }).join("")+'</div></span>';
-    h+=navLink("#/buzz","buzz","The Buzz");
-    h+=navLink("#/scoreboard","scoreboard","Scoreboard");
+    /* FIVE ITEMS. THAT IS THE WHOLE BAR (2026-08-14, owner).
+       Home . The Buzz . Resources . Archive . Magazine
+
+       Everything else earned its own page and a better front door:
+         - Sections: removed entirely. The Archive filters by desk, which is
+           the same job done better; section routes still work everywhere they
+           are linked (footer, cards, dossiers, search).
+         - Scoreboard, Guides, Labs, Podcasts, Extensions, Dictionary, Grid:
+           all on the Resources hub, each with its own URL and page title.
+       The bar was crowded enough on a phone that the Magazine, the only paid
+       surface on this site, sat off the right edge where nobody saw it. Do not
+       add an item here without removing one. */
+    var h=navLink("/","home","Home");
+    h+=navLink("/buzz","buzz","The Buzz");
     var gridNewN=gdNewIds().length;
-    h+=navLink("#/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
-    h+=navLink("#/archive","archive","Archive");
+    h+=navLink("/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
+    h+=navLink("/archive","archive","Archive");
     h+='<span class="nav-sep"></span>';
-    h+=navLink("#/magazine","magazine","Magazine ◈","masthead-link");
+    h+=navLink("/magazine","magazine","Magazine ◈","masthead-link");
     var navEl=document.getElementById("nav");
     // <main> and #nav live in index.html (owned elsewhere) and carry no accessible
     // name; both are landmarks a screen reader offers by name, so name them here.
@@ -6589,6 +6990,8 @@
     var mainEl=document.getElementById("app");
     if(mainEl) mainEl.setAttribute("aria-label","Main content");
     navEl.innerHTML=h;
+    // The Sections dropdown left the bar; this stays guarded so nothing throws
+    // if a future surface reintroduces the trigger.
     var sb=document.getElementById("sec-btn"), sm=document.getElementById("sec-menu");
     if(sb&&sm){ sb.onclick=function(e){ e.stopPropagation(); sm.hidden=!sm.hidden; sb.setAttribute("aria-expanded",String(!sm.hidden)); }; }
     var acct=document.getElementById("acct-btn");
@@ -6604,29 +7007,54 @@
   // the hidden items into view and glide back so the swipe affordance is obvious.
   var navHintUntil=0;   // set by the nav swipe hint; alignNavRail yields until then
   var navHintDone=false;
+  /* THE PEEK, ON A LOOP (2026-08-14, owner: "every 15 seconds so users never
+     miss that there are more things they can slide to"). It used to run once
+     per session, which meant a reader who looked away for the first two
+     seconds never learned the rail scrolls — and the Magazine, the one paid
+     surface on the site, is the item hidden off the right edge.
+     Rules it still respects: phones only, only when something is actually
+     hidden, never while the reader is touching the rail or has scrolled it
+     themselves, never while the tab is hidden, and never under reduced-motion. */
+  function navPeek(){
+    var nav=document.getElementById("nav"); if(!nav) return;
+    if(window.innerWidth>840) return;
+    if(document.hidden) return;
+    if(nav.getAttribute("data-touching")==="1") return;
+    if(nav.scrollLeft>6) return;                  // they have explored it themselves
+    var max=nav.scrollWidth-nav.clientWidth;
+    if(max<24) return;                            // nothing hidden to reveal
+    var reveal=Math.min(max, Math.round(nav.clientWidth*0.6));
+    function tween(to,dur,done){
+      var start=nav.scrollLeft, d=to-start, t0=null;
+      (function step(now){ if(t0==null)t0=now; var p=Math.min(1,(now-t0)/dur);
+        var e=p<0.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;      // easeInOutCubic
+        nav.scrollLeft=start+d*e; if(p<1) requestAnimationFrame(step); else if(done) done();
+      })(performance.now());
+    }
+    navHintUntil=Date.now()+650+560+700+120;   // the rail belongs to the hint until this passes
+    tween(reveal,650,function(){ setTimeout(function(){ tween(0,700); },560); });
+  }
   function navScrollHint(){
-    if(navHintDone) return;
-    if(window.innerWidth>840) return;                       // mobile widths only
-    try{ if(sessionStorage.getItem("navHint")){ navHintDone=true; return; } }catch(e){}
-    navHintDone=true;                                       // one attempt per session
+    var nav=document.getElementById("nav");
+    if(nav && !nav.getAttribute("data-peek")){
+      nav.setAttribute("data-peek","1");
+      // a reader's own touch always wins over the hint, and suspends it
+      ["touchstart","pointerdown"].forEach(function(ev){
+        nav.addEventListener(ev,function(){ nav.setAttribute("data-touching","1"); },{passive:true});
+      });
+      ["touchend","pointerup","pointercancel"].forEach(function(ev){
+        nav.addEventListener(ev,function(){
+          setTimeout(function(){ nav.setAttribute("data-touching","0"); },4000);
+        },{passive:true});
+      });
+    }
+    if(navHintDone) return;                       // one timer for the whole session
+    try{ if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return; }catch(e){}
+    navHintDone=true;
     // Measure AFTER layout + fonts settle — at render time scrollWidth still
     // equals clientWidth, so an immediate overflow check would wrongly bail.
-    setTimeout(function(){
-      var nav=document.getElementById("nav"); if(!nav) return;
-      var max=nav.scrollWidth-nav.clientWidth;
-      if(max<24) return;                                    // nothing hidden to reveal
-      try{ sessionStorage.setItem("navHint","1"); }catch(e){}
-      var reveal=Math.min(max, Math.round(nav.clientWidth*0.6));
-      function tween(to,dur,done){
-        var start=nav.scrollLeft, d=to-start, t0=null;
-        (function step(now){ if(t0==null)t0=now; var p=Math.min(1,(now-t0)/dur);
-          var e=p<0.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;      // easeInOutCubic
-          nav.scrollLeft=start+d*e; if(p<1) requestAnimationFrame(step); else if(done) done();
-        })(performance.now());
-      }
-      navHintUntil=Date.now()+650+560+700+120;   // the rail belongs to the hint until this passes
-      tween(reveal,650,function(){ setTimeout(function(){ tween(0,700); },560); });
-    },700);
+    setTimeout(navPeek,700);
+    if(!window.__navPeekT) window.__navPeekT=setInterval(navPeek,15000);
   }
   // Close the Sections menu on any click outside it (nav re-renders reset it on navigation).
   document.addEventListener("click",function(e){
@@ -6658,7 +7086,7 @@
         '<div class="ltv-who">'+esc(c.who)+'</div>'+
         '<div class="ltv-foot"><span class="ltv-cad">'+esc(c.cadence)+'</span><span class="ltv-go">Watch ↗</span></div></a>';
     }).join("")+'</div>';
-    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:22px">These are third-party channels; whether anything is live right now depends on the channel. Want a stream added? <a href="#/contact" style="color:var(--accent2)">Tell the newsroom</a>.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:22px">These are third-party channels; whether anything is live right now depends on the channel. Want a stream added? <a href="/contact" style="color:var(--accent2)">Tell the newsroom</a>.</p>';
     return h+'</div>';
   }
 
@@ -6695,7 +7123,7 @@
       '<h1>AI events worth watching</h1>'+
       '<p>Keynotes, launches, and conferences the newsroom is tracking. '+esc(D.note||"")+'</p></div>';
     if(!items.length){
-      h+='<div class="corr-empty"><div class="ce-mark">◈</div><h2>Nothing on the calendar yet.</h2><p>The Events desk adds dates as they’re announced. Check back — or watch <a href="#/live" style="color:var(--accent2)">what’s live now</a>.</p></div>';
+      h+='<div class="corr-empty"><div class="ce-mark">◈</div><h2>Nothing on the calendar yet.</h2><p>The Events desk adds dates as they’re announced. Check back — or watch <a href="/live" style="color:var(--accent2)">what’s live now</a>.</p></div>';
     } else {
       h+='<div class="ev-list">'+items.map(eventCardHTML).join("")+'</div>';
     }
@@ -6709,14 +7137,14 @@
     var stamp=D.updated?'<span class="he-stamp">tracked · updated '+esc(D.updated)+'</span>':'';
     if(!items.length){
       return '<section class="home-events"><div class="he-head"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>On the radar'+stamp+'</div>'+
-        '<span class="he-links"><a class="he-all" href="#/events">All events →</a></span></div>'+
+        '<span class="he-links"><a class="he-all" href="/events">All events →</a></span></div>'+
         '<div class="empty-state"><span class="es-mark">◷</span>'+
         '<div><b>Nothing scheduled in the next window.</b>'+
         '<span>Keynotes, model launches, hearings and earnings calls appear here as the events desk confirms them.</span></div>'+
-        '<a class="es-go" href="#/live">Live &amp; ongoing →</a></div></section>';
+        '<a class="es-go" href="/live">Live &amp; ongoing →</a></div></section>';
     }
     return '<section class="home-events"><div class="he-head"><div class="kicker"><span class="dotc" style="background:var(--accent)"></span>On the radar'+stamp+'</div>'+
-      '<span class="he-links"><a class="he-all live-link" href="#/live"><span class="live-dot"></span> Live &amp; ongoing</a><a class="he-all" href="#/events">All events →</a></span></div>'+
+      '<span class="he-links"><a class="he-all live-link" href="/live"><span class="live-dot"></span> Live &amp; ongoing</a><a class="he-all" href="/events">All events →</a></span></div>'+
       '<div class="ev-list">'+items.map(eventCardHTML).join("")+'</div></section>';
   }
 
@@ -6743,7 +7171,7 @@
     h+='<div class="contact-grid">'+
       '<a class="contact-card" href="mailto:hello@rtfclmgzn.com"><span class="cc-ic">✉</span><b>hello@rtfclmgzn.com</b><span>General, tips, and corrections</span></a>'+
       '<a class="contact-card" href="mailto:sponsors@rtfclmgzn.com"><span class="cc-ic">◈</span><b>sponsors@rtfclmgzn.com</b><span>Sponsorship &amp; partnerships</span></a>'+
-      '<a class="contact-card" href="#/corrections"><span class="cc-ic">✓</span><b>Corrections</b><span>See the public record</span></a>'+
+      '<a class="contact-card" href="/corrections"><span class="cc-ic">✓</span><b>Corrections</b><span>See the public record</span></a>'+
       '</div>';
     h+='<div class="contact-form"><h3>Send a message</h3>'+
       '<label>Your email</label><input id="cf-from" type="email" placeholder="you@example.com">'+
@@ -6896,7 +7324,7 @@
     var seen; try{ seen=localStorage.getItem("rtfc-consent"); }catch(e){}
     if(seen) return;
     var bar=document.createElement("div"); bar.id="cookiebar";
-    bar.innerHTML='<div class="cb-in"><div class="cb-txt">We keep your reading library in <b>your own browser</b> (localStorage) — that’s it. No ad trackers. Translation and traffic analytics are cookieless or off by default. <a href="#/privacy">Privacy</a>.</div>'+
+    bar.innerHTML='<div class="cb-in"><div class="cb-txt">We keep your reading library in <b>your own browser</b> (localStorage) — that’s it. No ad trackers. Translation and traffic analytics are cookieless or off by default. <a href="/privacy">Privacy</a>.</div>'+
       '<div class="cb-btns"><button class="cb-min" onclick="rtfcCookie(false)">Essential only</button><button class="cb-ok" onclick="rtfcCookie(true)">Got it</button></div></div>';
     document.body.appendChild(bar);
   }
@@ -6928,15 +7356,19 @@
     return o.replace(/\/+$/,"");
   }
   function absUrl(u){
-    var s=safeUrl(u); if(!s) return "";
+    var s=safeUrl(assetUrl(u)); if(!s) return "";
     if(/^https?:\/\//i.test(s)) return s;
-    if(s.charAt(0)==="#") return siteOrigin()+"/"+s;
     return siteOrigin()+"/"+s.replace(/^\/+/,"");
   }
-  function routeUrl(hash){
-    var h=String(hash||"").replace(/^#/,"");
+  /* The canonical URL of a route. Real path, never a fragment: a canonical
+     that points at "/#/resources" tells every crawler that every page on this
+     site is the same page, which is precisely the problem real URLs exist to
+     solve. Fragments are stripped, not preserved. */
+  function routeUrl(path){
+    var h=String(path||"").replace(/^#/,"");
     if(!h || h==="/") return siteOrigin()+"/";
-    return siteOrigin()+"/#"+(h.charAt(0)==="/"?h:"/"+h);
+    if(h.charAt(0)!=="/") h="/"+h;
+    return siteOrigin()+h;
   }
   function clampDesc(s,n){
     s=String(s==null?"":s).replace(/\[([^\]\n]+)\]\([^)\s]*\)/g,"$1")   // strip inline md links
@@ -7003,7 +7435,10 @@
        for weeks with a "Page not found" <title> over perfectly good content —
        caught 2026-08-14 during live verification. If you add a route to route(),
        add its head here in the same commit. */
-    grid:["The Grid","Every datacenter running these models, mapped: who operates each site, who the primary tenant is, and how sure we are of the details — reconfirmed daily."],
+    grid:["The Grid","The named frontier-AI megasites behind the models: who operates each site, who the primary tenant is, and how sure we are of the details — reconfirmed daily."],
+    labs:["Labs & Models","Every lab and every model this newsroom tracks, grouped the way the field actually splits, with the independent index score where one exists."],
+    prompts:["The Prompt Library","Prompts that do a specific job, written to be pasted and used as-is — copy any of them in one tap or take the whole library as a markdown file."],
+    podcasts:["Podcasts","The AI shows that consistently deliver signal — daily rundowns, practitioner deep-dives, and the long-form interviews worth the full hour."],
     buzz:["The Buzz","What the AI world is actually saying right now: the loudest posts, ranked by heat, with why each one is buzzing and which of our stories cited it."],
     scoreboard:["The Scoreboard","Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move — never on a lab’s own number."],
     claims:["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
@@ -7149,17 +7584,55 @@
     setRouteLD(ld);
   }
 
+  /* ---------------- the address bar, read and written in one place ----------- */
+  var FILE_MODE = (location.protocol === "file:");
+  function curRoute(){
+    var raw, q="";
+    if(FILE_MODE){
+      raw=location.hash.replace(/^#/,"")||"/";
+      var qi=raw.indexOf("?");
+      if(qi>=0){ q=raw.slice(qi+1); raw=raw.slice(0,qi)||"/"; }
+    } else {
+      raw=location.pathname||"/";
+      q=(location.search||"").replace(/^\?/,"");
+    }
+    // trailing slash is the same page; "/x/" and "/x" must never be two URLs
+    if(raw.length>1) raw=raw.replace(/\/+$/,"")||"/";
+    return { path:raw, query:q, parts:raw.split("/").filter(Boolean) };
+  }
+  function curPath(){ return curRoute().path; }
+  // The single writer. Everything that used to assign location.hash calls this.
+  function go(path,replace){
+    path=String(path||"/");
+    if(path.charAt(0)==="#") path=path.replace(/^#/,"");
+    if(path.charAt(0)!=="/") path="/"+path;
+    if(FILE_MODE){
+      if(replace) location.replace("#"+path); else location.hash=path;
+      return;
+    }
+    if(curPath()===path.split("?")[0].split("#")[0]){ navigate(); return; }
+    try{ history[replace?"replaceState":"pushState"]({},"",path); }
+    catch(e){ location.href=path; return; }
+    navigate();
+  }
+  window.rtfcGo=go;
+
   function route(){
-    var raw=location.hash.replace(/^#/,"")||"/";
-    // A hash can carry its own query string — Stripe sends readers back to
-    // #/account?checkout=success. Split it off the path BEFORE the path is split
-    // on "/", or parts[0] is "account?checkout=success", matches nothing, and a
-    // reader who just paid lands on the 404 page.
-    var qi=raw.indexOf("?");
-    var hash=(qi>=0?raw.slice(0,qi):raw)||"/";
-    var hashQuery=qi>=0?raw.slice(qi+1):"";
-    var parts=hash.split("/").filter(Boolean);
-    handleCheckoutReturn(hash,hashQuery);
+    /* REAL URLS (2026-08-14). Every page on this site now lives at a real,
+       crawlable path — /resources, /magazine, /grid — not a #/ fragment.
+       A fragment is invisible to every search engine on earth: the crawler
+       sees one URL (the origin) no matter how many pages the app renders,
+       which is why articles were moved to /article/<slug> weeks ago and why
+       everything else had to follow. Google indexes what it can fetch at a
+       URL; it cannot fetch a fragment.
+
+       curRoute() is the ONE reader of the address bar. Under http(s) it reads
+       location.pathname. Under file:// there is no server to fall back to, so
+       it keeps the old fragment behaviour and the site still opens by
+       double-clicking index.html — a design goal since the first commit. */
+    var r=curRoute();
+    var hash=r.path, parts=r.parts;
+    handleCheckoutReturn(hash,r.query);
     var view, active="home";
     if(parts.length===0){ view=viewHome(); active="home"; }
     else if(parts[0]==="section"){ view=viewSection(parts[1]); active="section:"+parts[1]; }
@@ -7171,12 +7644,15 @@
     else if(parts[0]==="guides"){ view=viewGuides(); active="guides"; }
     else if(parts[0]==="resources"){ view=viewResources(); active="resources"; }
     else if(parts[0]==="extensions"){ view=viewExtensions(); active="resources"; }
+    else if(parts[0]==="labs"){ view=viewLabs(); active="resources"; }
+    else if(parts[0]==="podcasts"){ view=viewPodcasts(); active="resources"; }
+    else if(parts[0]==="prompts"){ view=viewPrompts(); active="resources"; }
     else if(parts[0]==="grid"){ view=viewGrid(); active="resources"; }
     else if(parts[0]==="buzz"){ view=viewBuzz(); active="buzz"; }
     else if(parts[0]==="privacy"){ view=viewPrivacy(); active=""; }
     else if(parts[0]==="terms"){ view=viewTerms(); active=""; }
     else if(parts[0]==="pulse"||parts[0]==="control-room"){ view=viewPulse(); active="pulse"; }
-    else if(parts[0]==="scoreboard"){ view=viewScoreboard(); active="scoreboard"; }
+    else if(parts[0]==="scoreboard"){ view=viewScoreboard(); active="resources"; }
     else if(parts[0]==="claims"||parts[0]==="ledger-claims"){ view=viewClaims(); active="claims"; }
     else if(parts[0]==="corrections"){ view=viewCorrections(); active=""; }
     else if(parts[0]==="briefing"){ view=viewBriefing(); active=""; }
@@ -7516,7 +7992,7 @@
             if(app) app.innerHTML='<div class="container"><div class="article">'+
               '<h1>This page didn’t render</h1>'+
               '<p style="color:var(--muted)">Something in this route failed while drawing. The details are in the browser console. Everything else on the site still works.</p>'+
-              '<a class="back" href="#/">← Home</a></div></div>';
+              '<a class="back" href="/">← Home</a></div></div>';
           }
         });
       }
@@ -7525,15 +8001,51 @@
       route();
     }
   }
-  window.addEventListener("hashchange",navigate);
-  // Clicking the RTFCLMGZN logo or "Home" while already on the home page doesn't change
-  // the hash (so no hashchange/route fires) — scroll back to the top instead.
+  window.addEventListener("hashchange",navigate);   // file:// mode + legacy links
+  window.addEventListener("popstate",navigate);     // real back/forward buttons
+
+  /* THE LINK INTERCEPTOR. Every internal <a href="/..."> stays a real,
+     right-clickable, shareable, crawlable link in the markup — and is handled
+     in-page when clicked, so navigation is still instant. Anything that is not
+     a plain left-click on a same-origin app link (new tab, download, external,
+     modifier keys) is left entirely alone for the browser to do its job. */
   document.addEventListener("click",function(e){
-    var a=e.target&&e.target.closest?e.target.closest('a[href="#/"]'):null;
+    if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+    var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;
     if(!a) return;
-    var onHome=(location.hash.replace(/^#/,"")||"/")==="/";
-    if(onHome){ e.preventDefault(); window.scrollTo({top:0,behavior:"smooth"}); }
+    if(a.target&&a.target!=="_self") return;
+    if(a.hasAttribute("download")) return;
+    var href=a.getAttribute("href")||"";
+    if(!href || href.charAt(0)==="#") return;                    // in-page anchor
+    if(/^[a-z]+:/i.test(href) && href.indexOf(location.origin)!==0) return;  // external / mailto
+    var url;
+    try{ url=new URL(a.href, location.href); }catch(err){ return; }
+    if(url.origin!==location.origin) return;
+    // Real files (feeds, the newsroom map, assets) must NOT be intercepted.
+    if(/\.[a-z0-9]{2,5}$/i.test(url.pathname)) return;
+    if(url.pathname.indexOf("/api/")===0) return;
+    e.preventDefault();
+    if(url.pathname===location.pathname && url.search===location.search){
+      if(url.hash){ var el=document.getElementById(url.hash.slice(1));
+        if(el){ el.scrollIntoView({behavior:"smooth",block:"start"}); return; } }
+      window.scrollTo({top:0,behavior:"smooth"});
+      return;
+    }
+    go(url.pathname+url.search+url.hash);
   });
+
+  /* LEGACY FRAGMENTS. Years of shared links, social posts and bookmarks point
+     at rtfclmgzn.com/#/resources. They must keep working, and they must not
+     leave the reader on a duplicate URL that competes with the real one in
+     search — so the fragment is swapped for the real path in place, once, on
+     arrival. */
+  (function legacyHashRedirect(){
+    if(FILE_MODE) return;
+    var h=location.hash||"";
+    if(h.indexOf("/")!==0) return;
+    var target=h.slice(1);
+    try{ history.replaceState({},"",target); }catch(e){ location.replace(target); }
+  })();
 
   /* ---------- reading progress ---------- */
   function onScroll(){

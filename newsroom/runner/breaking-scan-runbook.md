@@ -1,5 +1,11 @@
 # RTFCLMGZN Breaking-News Scan Runbook
 
+
+> **READ `newsroom/OPERATING_LAW.md` FIRST — before this runbook, before any work.**
+> It is short, it is absolute, and it exists because rules that live only in a
+> conversation are gone the moment a run ends. Everything below assumes you have
+> read it. If anything here contradicts the Operating Law, the Law wins and you
+> report the contradiction.
 You are running unattended, headless, on the owner's Claude subscription. This is NOT one of the three regular publishing cycles (05:00/11:00/17:00 Central) — it runs every 2 hours in between them, for one purpose only: **make sure a genuinely major AI story never has to wait for the next regular cycle.** The owner's own words: "if a huge release like Opus 5 was just released, and I go to sleep tonight without seeing an article on that, this whole site is a failure."
 
 This is a scan, not a content quota. Most runs should find nothing worth an out-of-cycle publish, and that is success, not failure — do not lower the bar to have something to show.
@@ -7,6 +13,12 @@ This is a scan, not a content quota. Most runs should find nothing worth an out-
 ## 0. Kill switch
 
 If `newsroom/runner/PAUSED` exists, log a no-op entry (see Step 4) and stop immediately.
+
+## 0b. The guard comes first (REQUIRED)
+
+Run `python3 newsroom/quality/site_guard.py` before you write anything and again before you push. Fix any ERROR caused by a record you touched. Never edit `newsroom/quality/*` to make a check pass — a silenced guard reads as safety and is the opposite. Report anything you could not fix rather than working around it.
+
+Do not hand-write your own usage row for token counts you cannot see. The workflow measures the run and writes the ledger row itself (`newsroom/runner/log_usage.py`); a self-reported `input_tokens:0` is what froze the public cost figure for a month. Log what you DID (description, article ids) in your report — the harness logs what it cost.
 
 ## 1. What counts as "breaking" — the bar is high
 
@@ -38,8 +50,8 @@ In particular:
 - Verify the story against a primary source, not just aggregator coverage.
 - Real, working citation URLs only.
 - Self-reported claims from the company in the story (benchmarks, safety scores, etc.) must be attributed as theirs, not stated as neutral fact.
-- Cover image: **use the tool, not judgment-plus-memory** (a breaking scan on 2026-08-10 shipped the lead story with no cover at all, and others with 90-day reuses — this bullet is why that can't recur). Run `python3 newsroom/runner/verify_covers.py pick --article-id <id> --section <Section> --subjects "<keywords>"`, check the top pick's `description` for real semantic fit AND that `brand_visible` isn't a competing company's branding, then re-run with `--apply` — it resizes the jpg into place and records the manifest use for you. No clean fit → `python -m newsroom.cli generate-image ...`; generation down too → `pick ... --apply --allow-lru-exception` and flag it in your §4 log. **Never ship an article without a cover; the gate below blocks the push.** Full rules: cycle-runbook §4.
-- Ship it exactly like a regular cycle: bump every `?b=N` cache-buster, `git add` only touched files (including the cover jpg and `image-library/art/manifest.json`), run the cover gate `python3 newsroom/runner/verify_covers.py check` AND `python -m newsroom.runner.verify_publish_surface` — stop if either is non-zero — commit with a specific message noting this was an out-of-cycle breaking publish and why, then **`git pull --rebase origin main`** (see §5 — mandatory, and it matters most here: you run every 2 hours, between the regular cycles, so you are the schedule most likely to be pushing at the same moment as another one), push, poll-verify the deploy landed.
+- Cover image: library-first, semantic match, check `brand_visible` in the manifest carefully — never use an image with a competing company's branding baked into it.
+- Ship it exactly like a regular cycle: bump every `?b=N` cache-buster, `git add` only touched files, run `python -m newsroom.runner.verify_publish_surface` and stop if it's non-zero, commit with a specific message noting this was an out-of-cycle breaking publish and why, then **`git pull --rebase origin main`** (see §5 — mandatory, and it matters most here: you run every 2 hours, between the regular cycles, so you are the schedule most likely to be pushing at the same moment as another one), push, poll-verify the deploy landed.
 
 ## 3b. Refresh Buzz (REQUIRED every scan — regardless of whether Step 3 published anything)
 

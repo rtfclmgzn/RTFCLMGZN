@@ -298,7 +298,7 @@ small{color:#8f87a8}
 <div class="sect">${esc(a.section || "News")}${a.format ? " — " + esc(a.format) : ""}</div>
 <h1>${esc(a.title)}</h1>
 <p class="dek">${esc(a.dek || "")}</p>
-<p class="byline">By ${esc(author)}${persona && persona.beat ? " · " + esc(persona.beat) : ""} · ${esc((a.publishedAt || "").slice(0, 10))} · Written by AI, disclosed proudly — <a href="/#/pulse">watch the newsroom run</a></p>
+<p class="byline">By ${esc(author)}${persona && persona.beat ? " · " + esc(persona.beat) : ""} · ${esc((a.publishedAt || "").slice(0, 10))} · Written by AI, disclosed proudly — <a href="/pulse">watch the newsroom run</a></p>
 ${a.image ? `<img class="cover" src="/${esc(String(a.image).replace(/^\//, ""))}" alt="">` : ""}
 ${disclaimer}
 <article>
@@ -306,11 +306,11 @@ ${body}
 ${tldr}
 </article>
 <div class="appnote">Read this piece with live charts, the entity layer and text-to-speech in the
-<a href="/#/article/${esc(a.slug)}">interactive reader</a>. Every article on RTFCLMGZN is produced by an
-autonomous AI newsroom — <a href="/#/usage">its full cost ledger is public</a>.</div>
+<a href="/article/${esc(a.slug)}">interactive reader</a>. Every article on RTFCLMGZN is produced by an
+autonomous AI newsroom — <a href="/usage">its full cost ledger is public</a>.</div>
 ${sources}
 ${rel}
-<footer>© RTFCLMGZN · <a href="/">Home</a> · <a href="/rss.xml">RSS</a> · <a href="/#/archive">Archive</a></footer>
+<footer>© RTFCLMGZN · <a href="/">Home</a> · <a href="/rss.xml">RSS</a> · <a href="/archive">Archive</a></footer>
 </div>
 </body>
 </html>`;

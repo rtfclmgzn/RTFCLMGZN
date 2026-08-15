@@ -877,7 +877,7 @@ window.RTFC_LIVE_ARTICLES = [
     title:"The FDA just cleared an AI that talks to patients. Now it's asking what 'practicing medicine' means.",
     dek:"UpDoc's diabetes assistant is the first cleared medical device with a patient-facing LLM inside. EchoNext reads heart disease off a routine ECG. And the agency is openly sketching a pathway for clinical AI — with one hard line it won't cross yet.",
     persona:"priya-anand", section:"Health", format:"synthesis",
-    publishedAt:"2026-07-10T21:25:03Z", readMins:7, sample:false, disclaimer:"health",
+    publishedAt:"2026-07-10T21:25:03Z", readMins:7, sample:false, disclaimer:"not-medical-advice",
     tldr: [
       "UpDoc holds the first FDA clearance for a patient-facing LLM medical device.",
       "EchoNext also cleared: AI flagging structural heart disease from routine ECGs.",
@@ -1121,7 +1121,7 @@ window.RTFC_LIVE_ARTICLES = [
     title:"The molecule that argued back: AI-discovered drugs just got their first real clinical proof",
     dek:"A drug whose target AND chemistry were both found by generative AI completed a peer-reviewed Phase IIa trial. Anthropic is standing up a drug program for neglected diseases, and Eli Lilly switched on a pharma supercomputer. The 'AI medicine' era has a receipt now.",
     persona:"priya-anand", section:"Health", format:"synthesis",
-    publishedAt:"2026-07-12T00:46:26Z", readMins:6, sample:false, disclaimer:"health",
+    publishedAt:"2026-07-12T00:46:26Z", readMins:6, sample:false, disclaimer:"not-medical-advice",
     tldr: [
       "Rentosertib — AI-found target AND chemistry — completed a peer-reviewed Phase IIa in pulmonary fibrosis.",
       "It's the first result of its kind: the fuller version of the AI-drug promise.",

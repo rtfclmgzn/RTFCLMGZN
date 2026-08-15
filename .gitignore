@@ -64,3 +64,7 @@ newsroom/data/source-cache/
 # <<< RTFCLMGZN BATCH NEWS ENGINE 0.3.2 local cache <<<
 .wrangler/
 engine-product/
+functions/api/issue/_data/issue-001.json
+functions/api/issue/_data/issue-002.json
+resolve_rebase.py
+.shiptools/

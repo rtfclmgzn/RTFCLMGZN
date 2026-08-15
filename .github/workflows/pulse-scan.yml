@@ -38,3 +38,29 @@ jobs:
           claude_args: |
             --model claude-haiku-4-5
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
+
+      # MEASURED USAGE (2026-08-14). The agent inside the run cannot see its own
+      # token accounting, so for months every scheduled run logged 0/0 and the
+      # public cost figure froze at $11.48 while the newsroom kept publishing.
+      # Measurement belongs to the harness: this reads the run's own transcript
+      # and writes the real numbers. If it finds no transcript it writes an
+      # explicitly UNMETERED row rather than a silent $0 — the site counts and
+      # displays those separately. Never delete this step; if it starts writing
+      # unmetered rows, the transcript path changed and log_usage.py needs a new
+      # candidate, which its own output will tell you.
+      - name: Log measured usage to the public ledger
+        if: always()
+        run: |
+          python3 newsroom/runner/log_usage.py \
+            --agent pulse-scan --task-type maintenance --model claude-haiku-4-5 \
+            --description "Pulse scan (GitHub Actions run ${GITHUB_RUN_ID})"
+          git config user.name "rtfclmgzn-pipeline"
+          git config user.email "rtfclmgzn@gmail.com"
+          git add web/data/usage-log-current.js
+          if git diff --cached --quiet; then
+            echo "no ledger row written"
+          else
+            git commit -m "ledger: measured usage for pulse-scan run ${GITHUB_RUN_ID}"
+            git pull --rebase origin main || { git rebase --abort; echo "rebase race - row rides the next run"; }
+            git push origin main || echo "push race - row rides the next run"
+          fi

@@ -1,0 +1,73 @@
+name: Site Guard
+
+# THE STANDING CHECK. Runs on EVERY push to main — including the bots' own —
+# and hourly as a backstop. This is the answer to "what do we have all these
+# agents for if they don't check": the agents write, and this verifies, every
+# single time, with no agent in the verification loop.
+#
+# Two layers:
+#   site_guard.py    — data contracts, cross-surface promises, renderer parity,
+#                      ledger honesty, cache-buster integrity. Repairs what is
+#                      deterministically repairable (--fix) and pushes it.
+#   render_smoke.py  — actually opens every route and every article in a real
+#                      browser, plus a deliberately minimal "hostile" record
+#                      that catches unguarded field reads before a reader does.
+#
+# Loop safety: a repair commit is tagged [guard] and this workflow skips any
+# push whose head commit carries that tag, so it can never chase its own tail.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "40 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: site-guard
+  cancel-in-progress: true
+
+jobs:
+  guard:
+    if: "!contains(github.event.head_commit.message, '[guard]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+
+      - name: Repair what is deterministically repairable
+        run: |
+          python3 newsroom/quality/site_guard.py --fix || true
+          git config user.name "rtfclmgzn-pipeline"
+          git config user.email "rtfclmgzn@gmail.com"
+          git add web/data
+          if git diff --cached --quiet; then
+            echo "nothing to repair"
+          else
+            git commit -m "[guard] repair: store syntax and duplicate ledger ids"
+            git pull --rebase origin main || { git rebase --abort; echo "rebase race - repair rides the next run"; }
+            git push origin main || echo "push race - repair rides the next run"
+          fi
+
+      - name: Contract + cross-surface checks
+        run: python3 newsroom/quality/site_guard.py
+
+      - name: Install browser for the render check
+        run: |
+          python3 -m pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium
+
+      - name: Render every page, including a hostile minimal record
+        run: python3 newsroom/quality/render_smoke.py
+
+      # A failure here is loud on purpose: the run goes red, and the next
+      # newsroom cycle's runbook tells it to read the latest Site Guard result
+      # before it writes anything, so the system notices its own breakage
+      # without waiting for a human to open GitHub.
+      - name: Record the verdict
+        if: always()
+        run: |
+          echo "guard_conclusion=${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Checked at $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_STEP_SUMMARY"

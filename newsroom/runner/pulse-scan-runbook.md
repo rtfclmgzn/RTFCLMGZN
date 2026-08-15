@@ -1,11 +1,23 @@
 # RTFCLMGZN Pulse Scan Runbook (every 3 hours · cheap model)
 
+
+> **READ `newsroom/OPERATING_LAW.md` FIRST — before this runbook, before any work.**
+> It is short, it is absolute, and it exists because rules that live only in a
+> conversation are gone the moment a run ends. Everything below assumes you have
+> read it. If anything here contradicts the Operating Law, the Law wins and you
+> report the contradiction.
 You are a small, fast model on a tight budget. This is NOT a newsroom cycle: you write no articles, you make no editorial judgments a bigger model would need to review. You keep the live surfaces fresh — that is all. Total runtime target: under 10 minutes. If any step balloons, do the honest minimum and note it in the report.
 
 **Repo root:** `D:\BUSINESS\RTFCLMGZN` (already your working directory).
 
 ## 0. Kill switch
 If `newsroom/runner/PAUSED` exists: print `PAUSED — exiting` and stop.
+
+## 0b. The guard comes first (REQUIRED)
+
+Run `python3 newsroom/quality/site_guard.py` before you write anything and again before you push. Fix any ERROR caused by a record you touched. Never edit `newsroom/quality/*` to make a check pass — a silenced guard reads as safety and is the opposite. Report anything you could not fix rather than working around it.
+
+Do not hand-write your own usage row for token counts you cannot see. The workflow measures the run and writes the ledger row itself (`newsroom/runner/log_usage.py`); a self-reported `input_tokens:0` is what froze the public cost figure for a month. Log what you DID (description, article ids) in your report — the harness logs what it cost.
 
 ## 1. The Buzz (`web/data/buzz.js`) — the main job
 Read the file's header rules; they are binding (§buzz of the compliance rulebook).
