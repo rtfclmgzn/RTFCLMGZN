@@ -441,12 +441,21 @@ Run `python3 newsroom/runner/verify_covers.py check`. If it prints FAILures, a p
 0. Before touching anything, run `git status --short`. If it already shows uncommitted changes to a file you're about to edit (most likely `web/index.html`, since the owner sometimes hand-edits the UI directly), that's someone's in-progress work sitting in the same file you need to bump the cache-buster in -- `git add` stages the whole file, not just your lines, so your commit will unavoidably include it too. That's fine (don't try to strip it out or stash it -- an unattended stash/pop can conflict and wedge the repo for the next cycle), but say so explicitly in your Step 6 report (e.g. "note: index.html had a pre-existing unrelated edit already in the working tree, included in this commit") so the owner isn't confused by a diff your summary doesn't otherwise explain.
 1. Update `web/index.html`: bump every `?b=N` cache-buster by 1 (all occurrences, same new number). **Use the Edit tool, or Python opened with `encoding="utf-8"` on both read and write. Never PowerShell (`Get-Content`/`Set-Content`/`-replace`) or any tool that doesn't explicitly declare UTF-8 on both ends.** This file's `<title>`, meta descriptions, and the visible banner text on every page contain em dashes and curly quotes — a non-UTF-8-safe read/write silently mangles them into mojibake (`â€"` instead of `—`) across the *entire* file, not just the lines you meant to touch. This isn't hypothetical: it has happened for real, more than once, including during a routine no-op cache-buster bump — check `git log --oneline -- web/index.html` around any commit titled just "no-op" if you want to see it. It's a silent corruption: the commit looks fine, the diff looks like a normal bump, and nothing fails — it just quietly breaks the live site's title tag and OG metadata until someone notices. Sanity-check your own change before committing: `grep -c 'â€' web/index.html` should print `0`.
 1b. **Append your row to the ledger** — REQUIRED every cycle, including a cycle that publishes
-   nothing. Append one row to `web/data/usage-log-current.js`, matching an existing row's fields
-   exactly (it is a JS array literal, not JSON): a fresh sequential `u-NNNN` id past the highest in
-   the file, a real UTC `ts`, `agent:"newsroom-cycle"`, `task_type:"publish"` or `"no-op"`,
-   `article_id` set to the published article's id or `"system"`, an honest one-sentence
-   `description` of what you did and why, and `measured:"estimated"` unless you have metered
-   figures. Include `web/data/usage-log-current.js` in the `git add` below.
+   nothing. **Do not hand-write the row** — run the logger, which computes the next id, stamps the
+   real UTC time, and cannot produce the two faults hand-writing has already caused (four runs that
+   all chose id `u-0128` and silently lost three rows to the store's dedup; and a row appended with
+   no comma before it, a JavaScript SyntaxError that stopped the browser loading the whole file and
+   made `/usage` announce a 33-day outage that was not happening):
+
+   ```
+   python3 newsroom/runner/log_usage.py --agent "newsroom-cycle" \
+     --task-type "publish" --article-id "<article id or system>" \
+     --description "<one honest sentence: what you did and why>"
+   ```
+
+   Use `--task-type "no-op"` for a cycle that published nothing. Do not pass token counts you did
+   not measure; the logger labels an unmeasured run `unmetered`, which is the honest answer (Law 3).
+   Include `web/data/usage-log-current.js` in the `git add` below.
 
     **Why this is not optional.** This step did not exist until 2026-08-10, and the gap was not
     cosmetic. The breaking scan was the only job appending to the ledger, so **53 of the 90 rows on

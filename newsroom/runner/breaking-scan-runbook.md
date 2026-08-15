@@ -65,12 +65,30 @@ This is the owner's explicit standing requirement: Buzz should carry **at least 
 
 ## 4. Always log the outcome (this is how the owner sees what you checked, even when you publish nothing)
 
-Append one row to `web/data/usage-log-current.js` (follow its existing array-literal format exactly, matching an existing row's fields), regardless of outcome:
+**Do not hand-write this row.** Run the logger:
+
+```
+python3 newsroom/runner/log_usage.py --agent "breaking-scan" --task-type "<TYPE>" \
+  --article-id "<ID or system>" --description "<one honest sentence>"
+```
+
+WHY THIS IS A COMMAND AND NOT A FORMAT DESCRIPTION (2026-08-15). Four runbooks
+used to say "append one row, matching an existing row's fields exactly", and an
+agent obeying that instruction is an LLM writing punctuation into a live data
+file several times a day. It went wrong twice in a single day: four runs all
+picked the id `u-0128`, and the store's own dedup silently dropped three real
+rows; and a row was appended with no comma before it, which is a JavaScript
+SyntaxError, so the browser loaded NONE of the file and `/usage` told readers
+"this log is 33 days stale, the jobs are failing" while every job was running
+perfectly. `log_usage.py` computes the next id deterministically, stamps the
+real UTC time, and cannot produce either fault.
+
+Pass these values, regardless of outcome:
 - `agent: "breaking-scan"`
 - `task_type: "no-op"` (nothing qualified) or `"publish"` (you shipped something)
 - `description`: one honest sentence — what you checked and why you did or didn't act, **plus what you did to Buzz in §3b** (cards retired/added, or "widened the window, still below 9" if a real gap couldn't be closed honestly). If you deferred other qualifying stories per the one-per-scan cap in §3, name them here too.
 - `article_id`: the new article's `id` if you published, else `"system"`.
-- Give it a fresh `id` (increment past the highest existing `u-NNNN` in the file), a real UTC `ts`, and `measured:"estimated"` for a text-only scan (no metered spend to report).
+The id, the timestamp and `measured` are the logger's job, not yours. It writes `measured:"unmetered"` when no transcript is available, which is the honest label for a text-only scan — never invent token counts you cannot observe (Law 3).
 
 This entry is what surfaces on the Pulse/Control Room page's "Last activity on the floor" — it's the owner's visibility into the scan, so make the description genuinely informative, not a generic "scanned, nothing found."
 
