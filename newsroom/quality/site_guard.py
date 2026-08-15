@@ -649,6 +649,47 @@ def repair_ledger_duplicates(fix: bool) -> None:
          % (len(to_drop), len(adopt)))
 
 
+MD_HASH_LINK = re.compile(r"\]\(#(/[^)\s]*)\)")
+
+
+def repair_data_hash_links(fix: bool) -> None:
+    """Turn `[OpenAI](#/company/openai)` into `[OpenAI](/company/openai)` in the
+    article stores.
+
+    WHY (2026-08-15). 129 of these were live across 89 records, and every one of
+    them failed three ways at once:
+
+      · the app rendered `href="#/company/openai"`, which is dead — the router
+        reads location.pathname and nothing listens for hashchange any more
+      · the SERVER renderer matched only `[x](https?:...)`, so it printed the
+        raw text `[OpenAI](#/company/openai)` into the page — and that page is
+        what every visitor from X, from Google and from a shared link lands on
+      · a fragment is invisible to search, which is Law 1
+
+    check_no_hash_links never saw them: it scanned app.js, index.html and the
+    functions, not `web/data/*.js`, where the writers actually put them. It does
+    now. This is a text substitution inside a string literal, no structure
+    changes, so it is safe to apply mechanically.
+    """
+    for path in sorted(DATA.glob("*.js")):
+        try:
+            text = io.open(path, encoding="utf-8", newline="").read()
+        except OSError:
+            continue
+        n = len(MD_HASH_LINK.findall(text))
+        if not n:
+            continue
+        if fix:
+            io.open(path, "w", encoding="utf-8", newline="").write(
+                MD_HASH_LINK.sub(r"](\1)", text))
+            note("%s: rewrote %d markdown link(s) from #/path to /path" % (path.name, n))
+        else:
+            err("hash-links", "%s carries %d markdown link(s) to '#/...'. They are "
+                "dead in the app, invisible to search, and print as literal "
+                "markdown on the server-rendered page every outside visitor sees. "
+                "Run site_guard.py --fix." % (path.name, n))
+
+
 def check_ledger():
     base = read_store(DATA / "usage-log.js", "RTFC_USAGE_LOG") or []
     cur = read_appended_rows(DATA / "usage-log-current.js") or []
@@ -741,9 +782,14 @@ def check_no_hash_links():
     the build. Bare in-page anchors (`href="#tldr"`) are fine and untouched —
     it is specifically the "#/" route shape that is banned.
     """
-    targets = [APP, INDEX, SSR] + sorted((ROOT / "functions").rglob("*.js"))
+    # THE DATA LAYER IS IN SCOPE. It was not, and that is exactly where the
+    # writers put 129 fragment links that nothing caught for months: this check
+    # only ever looked at code.
+    targets = ([APP, INDEX, SSR]
+               + sorted((ROOT / "functions").rglob("*.js"))
+               + sorted(DATA.glob("*.js")))
     if not expect("check_no_hash_links", sum(1 for t in targets if t.is_file()),
-                  4, "files to scan"):
+                  8, "files to scan"):
         return
     seen = set()
     for p in targets:
@@ -751,8 +797,12 @@ def check_no_hash_links():
             continue
         seen.add(p)
         text = io.open(p, encoding="utf-8", errors="replace").read()
-        # strip comments so the historical explanations of the bug don't trip it
-        stripped = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+        # Strip comments so the historical explanations of the bug do not trip
+        # it. HTML comments count: index.html documents the old broken selector
+        # in a <!-- --> block, and a check that flags its own changelog is a
+        # check people learn to ignore.
+        stripped = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+        stripped = re.sub(r"/\*.*?\*/", "", stripped, flags=re.S)
         stripped = re.sub(r"^\s*(//|\*|#).*$", "", stripped, flags=re.M)
         hits = re.findall(r'href\s*=\s*["\'`]#/[^"\'`]*', stripped)
         hits += re.findall(r'["\'`]https?://[^"\'`]*/#/[^"\'`]*', stripped)
@@ -1437,6 +1487,12 @@ def main() -> int:
     if "--fix-syntax" in sys.argv:
         check_array_holes(True)
         repair_missing_script_tags(True)
+        # Same class as the missing comma: a mechanical text repair that fixes
+        # what a reader is looking at right now. Rewriting `](#/x)` to `](/x)`
+        # inside a string literal changes no structure and cannot corrupt a
+        # store, and until it runs, every server-rendered article shows raw
+        # markdown to everyone arriving from X, Google or a shared link.
+        repair_data_hash_links(True)
         run("check_engine_config", check_engine_config)
         for n in NOTES:
             say("  " + MARK_NOTE + " " + n)
@@ -1447,6 +1503,7 @@ def main() -> int:
     run("repair_ledger_ids", repair_ledger_ids, fix)
     run("repair_future_timestamps", repair_future_timestamps, fix)
     run("repair_ledger_duplicates", repair_ledger_duplicates, fix)
+    run("repair_data_hash_links", repair_data_hash_links, fix)
     run("repair_missing_script_tags", repair_missing_script_tags, fix)
     personas = run("read personas.js", read_store, DATA / "personas.js", "RTFC_PERSONAS") or []
     sections = run("read sections", read_store, DATA / "personas.js", "RTFC_SECTIONS") or []

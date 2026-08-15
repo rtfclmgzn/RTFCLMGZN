@@ -645,8 +645,15 @@
      machine-written and a permissive URL rule here would be an injection surface.
      Runs on already-escaped text, so &amp; in a query string stays correct. */
   function mdLinks(s){
-    return s.replace(/\[([^\]\n]+)\]\((#\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, function(all,label,url){
-      var ext=url.charAt(0)!=="#";
+    // Internal targets are REAL PATHS (/company/openai), not fragments. The
+    // writers emitted `[OpenAI](#/company/openai)` for months: dead in the app
+    // (the router reads location.pathname and nothing listens for hashchange),
+    // invisible to search, and printed as raw `[OpenAI](#/company/openai)` text
+    // on every server-rendered article — which is the page every visitor from X
+    // or Google actually lands on. `#/` is still accepted here so old records
+    // render as links rather than as literal text while the guard repairs them.
+    return s.replace(/\[([^\]\n]+)\]\((#?\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, function(all,label,url){
+      var ext=/^https?:/.test(url);
       // safeUrl, NOT safeHref: mdLinks runs on text esc() has already escaped, so a
       // second attribute-escape here would turn a legitimate &amp; in a query string
       // into &amp;amp;. The allow-list still applies.

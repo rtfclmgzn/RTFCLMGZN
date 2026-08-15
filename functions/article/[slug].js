@@ -163,7 +163,13 @@ function fmt(s) {
     .replace(/==(.+?)==/g, "<mark>$1</mark>")
     .replace(/\+\+(.+?)\+\+/g, "<em>$1</em>")
     .replace(/__([^_]+?)__/g, "<u>$1</u>")
-    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" rel="noopener">$1</a>');
+    // Internal links (/company/openai, /dictionary) AND external ones. The
+    // pattern used to match only https?:, so every internal link in an article
+    // body printed as literal "[OpenAI](#/company/openai)" markdown on the page
+    // that every visitor from X, Google or a shared link actually sees. 129 of
+    // them were live. `#/` is tolerated so older records still render as links.
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>')
+    .replace(/\[([^\]]+)\]\(#?(\/[^)\s]*)\)/g, '<a href="$2">$1</a>');
 }
 
 function kickerTitle(o) {

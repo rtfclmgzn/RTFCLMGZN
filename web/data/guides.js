@@ -632,7 +632,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "Here's the part my desk cares about most, and where the most money gets wasted. The big labs now sell *families*, not models — a flagship, a mid-tier and a budget tier — and the gap between the ends of the ladder is much larger than most people using them assume. Our own [Scoreboard](#/scoreboard) carries vendor list prices next to an independent capability score for each model, which makes the trade legible in a way a leaderboard ranking never does. Read the two columns together rather than sorting by either one, and the shape of the decision changes.",
+        "text": "Here's the part my desk cares about most, and where the most money gets wasted. The big labs now sell *families*, not models — a flagship, a mid-tier and a budget tier — and the gap between the ends of the ladder is much larger than most people using them assume. Our own [Scoreboard](/scoreboard) carries vendor list prices next to an independent capability score for each model, which makes the trade legible in a way a leaderboard ranking never does. Read the two columns together rather than sorting by either one, and the shape of the decision changes.",
         "citation_urls": []
       },
       {
@@ -1151,7 +1151,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "One more wrinkle worth naming: this decision isn't really a one-time fork, because the model landscape underneath it keeps moving. [Matching a job to a model tier](#/article/which-ai-for-which-job) assumes you're choosing between API-hosted options; open weights add a genuine fourth branch to that framework, not just a cheaper version of the same choice. A team that self-hosts locks in a specific model's capability level until it re-runs this procedure, while a team on an API rides each vendor's improvements automatically — DeepSeek's own V4-Flash retraining this week is exactly the kind of free upgrade an API user gets for nothing and a self-hosting team has to redeploy for manually. That's a real cost of self-hosting that step four's hardware quote doesn't capture, and it belongs in the decision alongside the dollar figures.",
+        "text": "One more wrinkle worth naming: this decision isn't really a one-time fork, because the model landscape underneath it keeps moving. [Matching a job to a model tier](/article/which-ai-for-which-job) assumes you're choosing between API-hosted options; open weights add a genuine fourth branch to that framework, not just a cheaper version of the same choice. A team that self-hosts locks in a specific model's capability level until it re-runs this procedure, while a team on an API rides each vendor's improvements automatically — DeepSeek's own V4-Flash retraining this week is exactly the kind of free upgrade an API user gets for nothing and a self-hosting team has to redeploy for manually. That's a real cost of self-hosting that step four's hardware quote doesn't capture, and it belongs in the decision alongside the dollar figures.",
         "citation_urls": []
       },
       {
@@ -1213,7 +1213,7 @@ window.RTFC_GUIDES = [
     "body": [
       {
         "type": "p",
-        "text": "At Black Hat USA on August 5, researchers from Novee Security showed that a single GitHub issue — opened by an outside account with zero write access to the repository — was enough to reach remote code execution against three different AI coding agents running in CI: Anthropic's Claude Code, Google's Gemini CLI, and OpenAI's Codex. All three vendors had already shipped fixes before the findings went public, which is the good news and the reason this is a checklist rather than an emergency. The bad news is that 'a patch exists' and 'my pipeline is running it' are two different facts, and the gap between them is exactly what a prompt-injection payload sitting in a public issue is built to exploit. [Full findings, vendor by vendor.](#/article/black-hat-2026-github-issue-claude-code-gemini-cli-codex-rce)",
+        "text": "At Black Hat USA on August 5, researchers from Novee Security showed that a single GitHub issue — opened by an outside account with zero write access to the repository — was enough to reach remote code execution against three different AI coding agents running in CI: Anthropic's Claude Code, Google's Gemini CLI, and OpenAI's Codex. All three vendors had already shipped fixes before the findings went public, which is the good news and the reason this is a checklist rather than an emergency. The bad news is that 'a patch exists' and 'my pipeline is running it' are two different facts, and the gap between them is exactly what a prompt-injection payload sitting in a public issue is built to exploit. [Full findings, vendor by vendor.](/article/black-hat-2026-github-issue-claude-code-gemini-cli-codex-rce)",
         "citation_urls": [
           "https://www.esecurityplanet.com/threats/black-hat-2026-critical-flaws-found-in-anthropic-google-and-openai-coding-agents/"
         ]
