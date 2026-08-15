@@ -22,7 +22,17 @@ jobs:
     env:
       # THE AGENT WRITES ITS ONE-SENTENCE SUMMARY HERE. The harness reads it into
       # the ledger row after the run. The agent never touches the ledger itself.
-      RTFC_RUN_SUMMARY: ${{ runner.temp }}/rtfc_run_summary.txt
+      # A LITERAL PATH, NOT ${{ runner.temp }}.
+      # The `runner` context does not exist at job-level `env:` — only inside a
+      # step. Using it here is not a warning, it makes the whole file an
+      # "Invalid workflow file", and GitHub then refuses to run ANY job in it:
+      # "Unrecognized named-value: 'runner'". On 2026-08-15 that silently killed
+      # the newsroom cycle, both scans, the evolution run and the resources
+      # refresh for eight hours — the site simply stopped publishing, and the
+      # only symptom was five runs listed by FILE PATH instead of by name.
+      # /tmp is always writable on ubuntu-latest and is outside the repo, so the
+      # summary can never be committed by accident.
+      RTFC_RUN_SUMMARY: /tmp/rtfc_run_summary.txt
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:

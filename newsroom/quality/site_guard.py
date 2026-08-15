@@ -1278,6 +1278,80 @@ def check_workflow_staging():
                 "was meant to rescue." % f.name)
 
 
+# Contexts GitHub allows in an expression, BY WHERE THE EXPRESSION SITS.
+# Source: GitHub's "Contexts / availability" table. The two that bite are
+# `runner` and `env`, which exist only inside a step.
+CONTEXT_SCOPE = {
+    "job-env": {"github", "needs", "strategy", "matrix", "vars", "inputs", "secrets"},
+    "job-if": {"github", "needs", "vars", "inputs"},
+    "workflow-level": {"github", "inputs", "vars"},
+}
+EXPR_RE = re.compile(r"\$\{\{\s*([A-Za-z_][A-Za-z_0-9]*)\s*\.")
+
+
+def check_workflow_contexts():
+    """A workflow that GitHub refuses to parse does not fail loudly. It vanishes.
+
+    WHY (2026-08-15). `RTFC_RUN_SUMMARY: ${{ runner.temp }}/...` was added to the
+    job-level `env:` of five workflows. The `runner` context does not exist
+    there — only inside a step — so GitHub rejected the whole file:
+
+        Invalid workflow file
+        (Line: 25, Col: 25): Unrecognized named-value: 'runner'
+
+    It does not skip the bad key. It runs NOTHING. The newsroom cycle, both
+    scans, the weekly evolution and the resources refresh all stopped for eight
+    hours, and the only visible symptom was five runs listed by FILE PATH
+    instead of by workflow name, because GitHub could not even read `name:`.
+    The site quietly stopped publishing and every other check stayed green,
+    because every other check reads the repo and the repo was fine.
+
+    So: parse the YAML the way GitHub does, and refuse to ship an expression
+    that uses a context which is not available where it is written.
+    """
+    try:
+        import yaml
+    except ImportError:
+        warn("workflow", "PyYAML not installed — workflow context validation skipped "
+             "(CI has it; install locally with: pip install pyyaml)")
+        return
+    wf = ROOT / ".github" / "workflows"
+    staged = ROOT / "workflow_updates"
+    files = []
+    for d in (wf, staged):
+        if d.is_dir():
+            files += sorted(d.glob("*.yml")) + sorted(d.glob("*.yaml"))
+    if not expect("check_workflow_contexts", len(files), 3, "workflow files"):
+        return
+    for f in files:
+        raw = io.open(f, encoding="utf-8", errors="replace").read()
+        try:
+            doc = yaml.safe_load(raw)
+        except Exception as exc:                           # noqa: BLE001
+            err("workflow", "%s is not valid YAML (%s) — GitHub will refuse to run "
+                "ANY job in it" % (f.name, str(exc).split("\n")[0][:120]))
+            continue
+        if not isinstance(doc, dict) or "jobs" not in doc:
+            err("workflow", "%s has no jobs: block — GitHub will not run it" % f.name)
+            continue
+        for jid, job in (doc.get("jobs") or {}).items():
+            if not isinstance(job, dict):
+                continue
+            for key, scope in (("env", "job-env"), ("if", "job-if")):
+                val = job.get(key)
+                if val is None:
+                    continue
+                text = yaml.safe_dump(val) if not isinstance(val, str) else val
+                for ctx in set(EXPR_RE.findall(text)):
+                    if ctx not in CONTEXT_SCOPE[scope]:
+                        err("workflow", "%s: job '%s' uses ${{ %s.* }} in its "
+                            "job-level `%s:`, where that context does not exist. "
+                            "GitHub rejects the ENTIRE FILE and runs no jobs at "
+                            "all. Allowed there: %s."
+                            % (f.name, jid, ctx, key,
+                               ", ".join(sorted(CONTEXT_SCOPE[scope]))))
+
+
 # --------------------------------------------------------------------------
 def run(label, fn, *args, **kwargs):
     """Run one check. If it throws, that becomes a FINDING, not the end of the run.
@@ -1397,6 +1471,7 @@ def main() -> int:
     run("check_ssr_store_parity", check_ssr_store_parity)
     run("check_engine_config", check_engine_config)
     run("check_workflow_staging", check_workflow_staging)
+    run("check_workflow_contexts", check_workflow_contexts)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
