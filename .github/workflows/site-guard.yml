@@ -180,7 +180,14 @@ jobs:
           # stages every tracked modification anywhere in the repo; it is not
           # -A, so it can never sweep up an untracked file by accident.
           git add -u
-          git add newsroom/quality/incidents.log
+          # -f IS LOAD-BEARING. .gitignore carries a blanket `*.log`, so a plain
+          # `git add` here exits 1 with "the following paths are ignored" and
+          # the step goes red. That happened on run 31898782024: the live check
+          # found a real problem, and the step whose job is to RECORD that
+          # failed too, so the stability-gate counter stayed empty and the only
+          # trace was a second red X. A recorder that cannot write is worse
+          # than no recorder, because the count reads as zero incidents.
+          git add -f newsroom/quality/incidents.log
           git commit -m "[guard] incident: live check failed" || exit 0
           git pull --rebase origin main || { git rebase --abort || true; exit 0; }
           git push origin main || true

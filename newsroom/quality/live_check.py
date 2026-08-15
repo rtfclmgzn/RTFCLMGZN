@@ -172,7 +172,18 @@ def main() -> int:
             notes.append("build stamp matches the repo (%s)" % sorted(set(got))[0])
 
     # 3. no fragment routes in what is actually served
-    frag = re.findall(r'href="#/[^"]*', home)
+    #
+    #    Comments are stripped first, and that is not cosmetic. site_guard's
+    #    check_no_hash_links learned this on 2026-08-15: index.html carries a
+    #    <!-- --> changelog documenting the OLD broken selector, which contains
+    #    the literal string href="#/article/<slug>". The repo-side check was
+    #    taught to ignore comments. THIS check, its sibling, was not, so it
+    #    kept reading the same comment off the live HTML and failed the `live`
+    #    job on a string that no browser ever renders. Class C, and the exact
+    #    shape the register warns about: fixed in one place, sibling untouched.
+    #    A guard that cries wolf about its own documentation gets ignored, and
+    #    then it is not a guard.
+    frag = re.findall(r'href="#/[^"]*', re.sub(r"<!--.*?-->", "", home, flags=re.S))
     if frag:
         fails.append("the live homepage still serves hash-route links: %s"
                      % sorted(set(frag))[:3])

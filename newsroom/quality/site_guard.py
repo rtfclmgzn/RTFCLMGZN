@@ -1326,6 +1326,71 @@ def check_workflow_staging():
                 "When the pull died before starting a rebase there is nothing "
                 "to abort, so the cleanup itself errors and fails the step it "
                 "was meant to rescue." % f.name)
+        for path in re.findall(r"^\s*git add (?!-)([^\s|&;]+)\s*$", text, re.M):
+            if _is_git_ignored(path):
+                err("workflow", "%s runs `git add %s`, and .gitignore matches "
+                    "that path. git does not skip it quietly — it exits 1 with "
+                    "\"the following paths are ignored\" and the step goes red. "
+                    "Use `git add -f`." % (f.name, path))
+
+
+def _is_git_ignored(path: str) -> bool:
+    """Would .gitignore swallow this path? Deliberately small.
+
+    Covers the three pattern shapes this repo actually uses — `*.ext`, `dir/`
+    and a literal path — because the failure it exists to catch was a blanket
+    `*.log` eating newsroom/quality/incidents.log. It does not implement
+    gitignore's full grammar and should not pretend to: a false NEGATIVE here
+    costs one red step, a false POSITIVE costs trust in the whole guard.
+    """
+    gi = ROOT / ".gitignore"
+    if not gi.is_file():
+        return False
+    import fnmatch
+    name = path.strip().strip("'\"").lstrip("./")
+    for raw in io.open(gi, encoding="utf-8", errors="replace").read().splitlines():
+        pat = raw.strip()
+        if not pat or pat.startswith("#") or pat.startswith("!"):
+            continue
+        if pat.endswith("/"):
+            if name.startswith(pat) or ("/" + pat) in ("/" + name):
+                return True
+            continue
+        if fnmatch.fnmatch(name, pat) or fnmatch.fnmatch(name.split("/")[-1], pat):
+            return True
+    return False
+
+
+def check_live_check_parity():
+    """live_check.py and site_guard.py scan for the same thing. They must
+    scan it the same way.
+
+    WHY (2026-08-15). check_no_hash_links was taught to strip <!-- --> comments,
+    because index.html carries a changelog block quoting the old broken selector
+    `href="#/article/<slug>"`. Its sibling in live_check.py ran the same regex
+    over the LIVE homepage and was never taught, so the `live` job failed on a
+    string that no browser renders and no reader can click. Two checks, one
+    promise, one of them updated. That is the single most repeated failure shape
+    in this repo, and the only defence against it is a check that reads the
+    sibling.
+    """
+    lc = ROOT / "newsroom" / "quality" / "live_check.py"
+    if not lc.is_file():
+        err("check-blind", "live_check.py is missing — the only check that "
+            "touches the published site is gone")
+        return
+    text = io.open(lc, encoding="utf-8", errors="replace").read()
+    frag = [ln for ln in text.splitlines()
+            if re.search(r"re\.findall\(\s*r?['\"]href=\"#/", ln)]
+    if not expect("check_live_check_parity", len(frag), 1,
+                  "fragment scans in live_check.py"):
+        return
+    for ln in frag:
+        if "<!--" not in ln:
+            err("routing", "live_check.py scans the live HTML for hash links "
+                "without stripping <!-- --> comments, but site_guard strips "
+                "them. The two will disagree, and the one that disagrees runs "
+                "in CI after every deploy: `%s`" % ln.strip()[:90])
 
 
 # Contexts GitHub allows in an expression, BY WHERE THE EXPRESSION SITS.
@@ -1529,6 +1594,7 @@ def main() -> int:
     run("check_engine_config", check_engine_config)
     run("check_workflow_staging", check_workflow_staging)
     run("check_workflow_contexts", check_workflow_contexts)
+    run("check_live_check_parity", check_live_check_parity)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
