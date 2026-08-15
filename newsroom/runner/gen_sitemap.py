@@ -31,7 +31,20 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 WEB = ROOT / "web"
-SITE = "https://rtfclmgzn.com"
+
+def _site() -> str:
+    """The canonical origin, from engine.config.json — the one place it lives.
+    Falls back to nothing rather than to a guess: a sitemap for the wrong domain
+    is worse than no sitemap, and the guard will catch the missing config."""
+    import json
+    cfg = ROOT / "engine.config.json"
+    try:
+        return json.loads(io.open(cfg, encoding="utf-8").read())["web"]["site_url"].rstrip("/")
+    except Exception:                                      # noqa: BLE001
+        return ""
+
+
+SITE = _site()
 
 # Keep this list identical to functions/article/[slug].js::STORES and to
 # site_guard.py::ARTICLE_STORES. guides.js was absent from two of the three for
@@ -225,7 +238,8 @@ def clean_rss() -> None:
     if not p.is_file():
         return
     s = io.open(p, encoding="utf-8", newline="").read()
-    fixed, count = re.subn(r"rtfclmgzn\.com/#/article/", "rtfclmgzn.com/article/", s)
+    host = re.escape(SITE.split("://", 1)[-1])
+    fixed, count = re.subn(host + r"/#/article/", SITE.split("://", 1)[-1] + "/article/", s)
     if count:
         io.open(p, "w", encoding="utf-8", newline="").write(fixed)
         print(f"gen_sitemap: rss.xml — rewrote {count} fragment link(s) to real URLs")
@@ -234,6 +248,10 @@ def clean_rss() -> None:
 
 
 if __name__ == "__main__":
+    if not SITE:
+        print("gen_sitemap: engine.config.json has no web.site_url — refusing to write "
+              "a sitemap for an unknown domain")
+        sys.exit(2)
     articles = load_articles()
     if not articles:
         print("gen_sitemap: no articles parsed — refusing to write an empty sitemap")

@@ -46,6 +46,7 @@ jobs:
       - name: Repair what is deterministically repairable
         run: |
           python3 newsroom/quality/site_guard.py --fix || true
+          python3 newsroom/runner/gen_engine_js.py || true
           python3 newsroom/runner/gen_sitemap.py || true
           git config user.name "rtfclmgzn-pipeline"
           git config user.email "rtfclmgzn@gmail.com"

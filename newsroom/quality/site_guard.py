@@ -920,6 +920,10 @@ DOMAIN_OK = {
 }
 
 
+def fix_requested() -> bool:
+    return "--fix" in sys.argv or "--fix-syntax" in sys.argv
+
+
 def check_engine_config():
     """The identity ratchet.
 
@@ -961,21 +965,39 @@ def check_engine_config():
     if "desks" not in cfg or "web" not in cfg:
         return
 
-    # 1. The config must agree with the code it describes.
+    # 1. The app must actually READ the config, and the generated JS the browser
+    #    loads must be byte-identical to what the config says. Either failing
+    #    means the config describes a site other than the one readers get.
     app = io.open(APP, encoding="utf-8").read()
-    m = re.search(r"var SECTION_COLORS\s*=\s*\{([^}]*)\}", app)
-    if m:
-        in_app = dict(re.findall(r'(\w+)\s*:\s*"(#[0-9a-fA-F]{6})"', m.group(1)))
-        in_cfg = {d["key"]: d["color"] for d in cfg["desks"]}
-        if in_app != in_cfg:
-            only_app = {k: v for k, v in in_app.items() if in_cfg.get(k) != v}
-            err("engine", "engine.config.json desks disagree with app.js "
-                "SECTION_COLORS: %s. One of them is what readers actually see; "
-                "a config that describes the wrong thing is worse than none."
-                % sorted(only_app.items())[:4])
+    if "window.RTFC_ENGINE" not in app:
+        err("engine", "app.js never reads window.RTFC_ENGINE — engine.config.json "
+            "is decorative; the site is still hardcoded")
+    if not re.search(r"var SECTION_COLORS\s*=\s*deskMap\(", app):
+        err("engine", "app.js SECTION_COLORS is not derived from the config's desks "
+            "— the desk list exists in two places again, and they WILL drift")
+    gen = ROOT / "newsroom" / "runner" / "gen_engine_js.py"
+    out = DATA / "engine.js"
+    if gen.is_file():
+        try:
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("gen_engine_js", gen)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            want = mod.render()
+            have = io.open(out, encoding="utf-8").read() if out.is_file() else ""
+            if want != have:
+                if fix_requested():
+                    io.open(out, "w", encoding="utf-8", newline="\n").write(want)
+                    note("engine: regenerated web/data/engine.js from engine.config.json")
+                else:
+                    err("engine", "web/data/engine.js is stale — it does not match "
+                        "engine.config.json. Run newsroom/runner/gen_engine_js.py "
+                        "(SHIP2 and CI do this automatically).")
+        except Exception as exc:                           # noqa: BLE001
+            err("check-crash", "check_engine_config could not render engine.js: %s" % exc)
     else:
-        err("check-blind", "check_engine_config could not find SECTION_COLORS "
-            "in app.js — the config is no longer being compared to anything")
+        err("engine", "newsroom/runner/gen_engine_js.py is missing — the browser has "
+            "no way to receive engine.config.json")
 
     # 2. Figures the site prints about itself must come from one place.
     personas = read_store(DATA / "personas.js", "RTFC_PERSONAS") or []
@@ -1033,12 +1055,12 @@ def check_engine_config():
             "place a second site breaks." % (f, domain, n, was))
     total, was_total = sum(counts.values()), sum(base.values())
     if total < was_total:
-        note("engine: hardcoded '%s' literals down to %d from %d%s"
-             % (domain, total, was_total,
-                " — run with --fix to lock in the lower baseline" if True else ""))
-        if "--fix" in sys.argv:
-            io.open(BASELINE, "w", encoding="utf-8").write(
-                json.dumps(counts, indent=2, sort_keys=True) + "\n")
+        # Lowering the ceiling can only make future runs stricter, never looser,
+        # so it is always safe to record and needs no flag.
+        io.open(BASELINE, "w", encoding="utf-8").write(
+            json.dumps(counts, indent=2, sort_keys=True) + "\n")
+        note("engine: hardcoded '%s' literals down to %d from %d — baseline lowered"
+             % (domain, total, was_total))
     else:
         note("engine: %d hardcoded '%s' literals across %d files (baseline held)"
              % (total, domain, len(counts)))
@@ -1173,6 +1195,7 @@ def main() -> int:
     if "--fix-syntax" in sys.argv:
         check_array_holes(True)
         repair_missing_script_tags(True)
+        run("check_engine_config", check_engine_config)
         for n in NOTES:
             say("  " + MARK_NOTE + " " + n)
         say("syntax repair pass complete" if NOTES else "no store-syntax faults found")

@@ -11,14 +11,11 @@
   "functions/api/billing/webhook.js": 1,
   "functions/api/issue/[id].js": 1,
   "functions/api/issue/_data/primer.json": 5,
-  "functions/article/[slug].js": 1,
   "newsroom/autonomy/source_cache.py": 1,
   "newsroom/core/release_builder.py": 1,
   "newsroom/core/service.py": 2,
   "newsroom/registry/story-package.schema.json": 1,
   "newsroom/runner/cycle-runbook.md": 1,
-  "newsroom/runner/gen_sitemap.py": 2,
   "newsroom/tests/helpers.py": 2,
-  "web/assets/app.js": 17,
   "web/index.html": 12
 }

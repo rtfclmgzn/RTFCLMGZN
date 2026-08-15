@@ -36,8 +36,19 @@ except Exception:
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 WEB = ROOT / "web"
-SITE = "https://rtfclmgzn.com"
-UA = {"User-Agent": "RTFCLMGZN-live-check/1.0 (+https://rtfclmgzn.com)"}
+
+def _site() -> str:
+    """From engine.config.json, so a clone checks ITS site and not this one."""
+    import json
+    try:
+        return json.loads(io.open(ROOT / "engine.config.json", encoding="utf-8")
+                          .read())["web"]["site_url"].rstrip("/")
+    except Exception:                                      # noqa: BLE001
+        return ""
+
+
+SITE = _site()
+UA = {"User-Agent": "engine-live-check/1.0 (+%s)" % SITE}
 
 # One from every family, INCLUDING the prefix routes. Not exhaustive on
 # purpose: this is a smoke alarm, and a smoke alarm that takes four minutes to
@@ -118,6 +129,9 @@ def wait_for_deploy(seconds: int) -> None:
 
 
 def main() -> int:
+    if not SITE:
+        print("LIVE CHECK: engine.config.json has no web.site_url — nothing to check")
+        return 1
     if "--wait" in sys.argv:
         i = sys.argv.index("--wait")
         wait_for_deploy(int(sys.argv[i + 1]) if len(sys.argv) > i + 1 else 300)

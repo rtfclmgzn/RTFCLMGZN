@@ -23,7 +23,13 @@
  *    page links to the interactive version in the app.
  */
 
-const SITE = "https://rtfclmgzn.com";
+// The publication's identity comes from the same file the app and the checks
+// read. Bundled at build time (esbuild inlines JSON imports), so it costs no
+// request and can never disagree with the site it renders for.
+import ENGINE from "../../engine.config.json";
+const SITE = ENGINE.web.site_url;
+const SITE_NAME = ENGINE.identity.name;
+const SITE_TAGLINE = ENGINE.identity.tagline;
 // EVERY STORE THE APP RENDERS AT /article/, WITHOUT EXCEPTION.
 //
 // guides.js was missing here until 2026-08-15 and the consequence was invisible
@@ -227,7 +233,7 @@ function blockHTML(b) {
 function pageHTML(a, persona, related) {
   const url = `${SITE}/article/${a.slug}`;
   const img = a.image ? `${SITE}/${String(a.image).replace(/^\//, "")}` : `${SITE}/assets/brand/rtfc-glyph-512.png`;
-  const author = persona ? persona.name : "RTFCLMGZN Newsroom";
+  const author = persona ? persona.name : `${SITE_NAME} Newsroom`;
   const desc = esc(a.dek || a.title).slice(0, 300);
   const body = (a.body || []).map(blockHTML).join("\n");
   const tldr = (a.tldr && a.tldr.length)
@@ -243,7 +249,7 @@ function pageHTML(a, persona, related) {
     headline: a.title, description: a.dek || "", image: [img],
     datePublished: a.publishedAt, dateModified: a.publishedAt,
     author: [{ "@type": "Person", name: author }],
-    publisher: { "@type": "Organization", name: "RTFCLMGZN", logo: { "@type": "ImageObject", url: `${SITE}/assets/brand/rtfc-glyph-512.png` } },
+    publisher: { "@type": "Organization", name: SITE_NAME, logo: { "@type": "ImageObject", url: `${SITE}/assets/brand/rtfc-glyph-512.png` } },
     mainEntityOfPage: url, isAccessibleForFree: true,
   };
   const disclaimer = a.disclaimer === "not-financial-advice"
@@ -256,17 +262,17 @@ function pageHTML(a, persona, related) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(a.title)} — RTFCLMGZN</title>
+<title>${esc(a.title)} — ${esc(SITE_NAME)}</title>
 <meta name="description" content="${desc}">
 <link rel="canonical" href="${url}">
 <link rel="icon" href="/assets/img/icon-192.png">
-<link rel="alternate" type="application/rss+xml" title="RTFCLMGZN" href="/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)}" href="/rss.xml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${esc(a.title)}">
 <meta property="og:description" content="${desc}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${esc(img)}">
-<meta property="og:site_name" content="RTFCLMGZN">
+<meta property="og:site_name" content="${esc(SITE_NAME)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(a.title)}">
 <meta name="twitter:description" content="${desc}">
@@ -304,7 +310,7 @@ small{color:#8f87a8}
 </head>
 <body>
 <div class="wrap">
-<header class="site"><img src="/assets/brand/rtfc-glyph-128.png" alt=""><a href="/">RTFCLMGZN — ARTIFICIAL MAGAZINE</a></header>
+<header class="site"><img src="/assets/brand/rtfc-glyph-128.png" alt=""><a href="/">${esc(SITE_NAME)} — ${esc(SITE_TAGLINE)}</a></header>
 <div class="sect">${esc(a.section || "News")}${a.format ? " — " + esc(a.format) : ""}</div>
 <h1>${esc(a.title)}</h1>
 <p class="dek">${esc(a.dek || "")}</p>
@@ -316,11 +322,11 @@ ${body}
 ${tldr}
 </article>
 <div class="appnote">Read this piece with live charts, the entity layer and text-to-speech in the
-<a href="/article/${esc(a.slug)}">interactive reader</a>. Every article on RTFCLMGZN is produced by an
+<a href="/article/${esc(a.slug)}">interactive reader</a>. Every article on ${esc(SITE_NAME)} is produced by an
 autonomous AI newsroom — <a href="/usage">its full cost ledger is public</a>.</div>
 ${sources}
 ${rel}
-<footer>© RTFCLMGZN · <a href="/">Home</a> · <a href="/rss.xml">RSS</a> · <a href="/archive">Archive</a></footer>
+<footer>© ${esc(SITE_NAME)} · <a href="/">Home</a> · <a href="/rss.xml">RSS</a> · <a href="/archive">Archive</a></footer>
 </div>
 </body>
 </html>`;
@@ -334,7 +340,7 @@ export async function onRequest({ request, env, params }) {
   const a = articles.find((x) => x && String(x.slug).toLowerCase() === slug);
   if (!a) {
     return new Response(
-      `<!doctype html><meta charset="utf-8"><title>Not found — RTFCLMGZN</title>` +
+      `<!doctype html><meta charset="utf-8"><title>Not found — ${esc(SITE_NAME)}</title>` +
       `<body style="background:#0b0714;color:#e8e4f4;font:17px system-ui;padding:60px 20px;text-align:center">` +
       `<h1>That story isn't here.</h1><p><a style="color:#b9a5ff" href="/">Back to the newsroom →</a></p>`,
       { status: 404, headers: { "content-type": "text/html; charset=utf-8" } });

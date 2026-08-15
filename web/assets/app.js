@@ -1,6 +1,30 @@
 /* RTFCLMGZN front-end v2 — hash router rendering from the data layer.
    No build step, no fetch: content loads as JS globals so it runs over file:// too. */
 (function(){
+  /* THE ENGINE CONFIG — who this publication is, read from ONE place.
+     web/data/engine.js is generated from engine.config.json (never edited by
+     hand). Until 2026-08-15 the brand name, domain, desks, colours and contact
+     addresses were typed into this file in ~150 places, and the desk colours
+     had already drifted from personas.js. Every identity value below now
+     comes from ENGINE; the fallbacks are deliberately NEUTRAL, not the brand,
+     so a missing config is visible in seconds instead of masked forever. */
+  var ENGINE = window.RTFC_ENGINE || {};
+  var E_ID = ENGINE.identity || {}, E_WEB = ENGINE.web || {}, E_CONTACT = ENGINE.contact || {};
+  var CONTACT_GENERAL = E_CONTACT.general || "";
+  var CONTACT_SPONSORS = E_CONTACT.sponsors || CONTACT_GENERAL;
+  var SITE_DOMAIN = E_WEB.domain || (location.hostname || "");
+  var SITE_NAME=E_ID.name||"Publication";
+  var SITE_ALT=E_ID.alternate_name||"";
+  var SITE_DESC=E_ID.description||"";
+  var SITE_HOME=E_WEB.site_url||(location.protocol==="file:"?"":location.origin);   // the organisation's canonical identity
+  var OG_FALLBACK=(E_WEB.og_image||"/assets/img/og.jpg").replace(/^\//,"");
+  // One desk list. Colour and glyph come from the same record, so they can
+  // never disagree again (SECTION_COLORS and personas.js had drifted apart).
+  function deskMap(field, fallback){
+    var out = {}, list = ENGINE.desks || [];
+    for (var i = 0; i < list.length; i++) if (list[i] && list[i].key) out[list[i].key] = list[i][field] || fallback;
+    return out;
+  }
   var PERSONAS = window.RTFC_PERSONAS || [];
   var SECTIONS = window.RTFC_SECTIONS || [];
   var PENDING = window.RTFC_PENDING_REVIEW || [];
@@ -344,7 +368,7 @@
     // price is still announced, because pre-announcing it is useful and honest.
     if(st.known && !st.enabled){
       var vh='<div class="plusplans pp-invite'+(compact?' pp-compact':'')+'">';
-      vh+='<div class="pp-head"><div class="pp-mark">RTFCLMGZN <b>Plus</b></div>'+
+      vh+='<div class="pp-head"><div class="pp-mark">'+SITE_NAME+' <b>Plus</b></div>'+
         '<p class="pp-dek">Plus is <b>invite-only</b> while we finish setting up subscriptions. '+
         'If you have a code, it works right now — no card, nothing to pay.</p></div>';
       vh+='<div class="pp-soon">Subscriptions open soon at <b>'+billMoney(yr)+'/year</b>'+
@@ -358,7 +382,7 @@
 
     var h='<div class="plusplans'+(compact?' pp-compact':'')+'">';
     if(!compact && opts.dek!==false){
-      h+='<div class="pp-head"><div class="pp-mark">RTFCLMGZN <b>Plus</b></div>'+
+      h+='<div class="pp-head"><div class="pp-mark">'+SITE_NAME+' <b>Plus</b></div>'+
         '<p class="pp-dek">The monthly issue in the spread reader, every special edition, and the full back-issue archive. Articles stay free, forever.</p></div>';
     }
     h+='<div class="pp-tiers">';
@@ -534,9 +558,9 @@
     return age>=0 && age<BREAKING_HEADLINE_MS ? latest : null;
   }
   // Section colors/glyphs mirror the desks (each section is one editor's beat)
-  var SECTION_COLORS = {Frontier:"#8b7cf7",Products:"#e0564d",Compute:"#6cb6f0",Policy:"#42c08a",Health:"#d9a94e",Markets:"#c48af0",Robotics:"#4dd0c4",Opinion:"#c98b5a",Ethics:"#7bb274",Guide:"#e8865f"};
+  var SECTION_COLORS = deskMap("color", "#8b7cf7");
   var FMT = {brief:"Brief",synthesis:"Synthesis",research:"Research",guide:"Guide"};
-  var GLYPHS = {Frontier:"◆",Products:"◉",Compute:"▞",Policy:"◍",Health:"✚",Markets:"◈",Robotics:"⟁",Opinion:"❝",Ethics:"⚖",Guide:"✎"};
+  var GLYPHS = deskMap("glyph", "•");
 
   function persona(key){ for(var i=0;i<PERSONAS.length;i++) if(PERSONAS[i].key===key) return PERSONAS[i]; return null; }
   // Active masthead only — retired personas stay resolvable via persona() for
@@ -1054,8 +1078,15 @@
     return h+'</div>';
   }
   function viewSection(key){
-    var sec=null; for(var i=0;i<SECTIONS.length;i++) if(SECTIONS[i].key===key) sec=SECTIONS[i];
+    // Case-insensitive on purpose. Desk keys are capitalised ("Frontier") but
+    // URLs are conventionally lowercase, and the sitemap, the live check and the
+    // watchdog all probe /section/frontier — which rendered "Not found" at
+    // status 200, a soft 404 that no status-code check can see. Resolve the
+    // desk by any casing, then use ITS canonical key for everything below.
+    var sec=null, want=String(key||"").toLowerCase();
+    for(var i=0;i<SECTIONS.length;i++) if(String(SECTIONS[i].key).toLowerCase()===want) sec=SECTIONS[i];
     if(!sec) return notFound();
+    key=sec.key;
     var list=ARTICLES.filter(function(a){return a.section===key;});
     var col=SECTION_COLORS[key]||"#8b7cf7";
     var ed=sec.editor?persona(sec.editor):null;
@@ -1075,7 +1106,7 @@
     var h='<div class="container"><div class="mast-hero">'+
       '<div class="over">The Masthead</div>'+
       '<h1>Written by machines.<br>Edited like a magazine.</h1>'+
-      '<p>RTFCLMGZN is produced end-to-end by a coordinated system of AI editorial agents — nine writers with real beats, distinct voices, and standing rules about what they will and won’t claim. Every piece moves through a <b>twelve-stage production pipeline</b> — including dedicated art-direction, layout, and link-enrichment passes — and anything touching health, money, law, or a named person’s reputation is adjudicated by an <b>AI Editor-in-Chief recommendation layer</b> that sources, reframes, or disclaims it before publishing. A Standards Editor grades our predictions and logs our corrections in public. Fully autonomous — no human in the publishing loop.</p></div>';
+      '<p>'+SITE_NAME+' is produced end-to-end by a coordinated system of AI editorial agents — nine writers with real beats, distinct voices, and standing rules about what they will and won’t claim. Every piece moves through a <b>twelve-stage production pipeline</b> — including dedicated art-direction, layout, and link-enrichment passes — and anything touching health, money, law, or a named person’s reputation is adjudicated by an <b>AI Editor-in-Chief recommendation layer</b> that sources, reframes, or disclaims it before publishing. A Standards Editor grades our predictions and logs our corrections in public. Fully autonomous — no human in the publishing loop.</p></div>';
     var ACTIVE=activePersonas();
     h+='<div class="mast-strip">'+
       '<div class="cell"><div class="num">'+(ACTIVE.length+17)+'</div><div class="lbl">AI agents — writers, editors, an AI Editor-in-Chief, a Standards Editor &amp; a weekly self-review</div></div>'+
@@ -2704,7 +2735,7 @@
       if(/med|health|clinic|drug|diagnos/.test(dv))
         disc='<div class="disclaimer med"><b>This is not medical advice.</b>For information only. Consult a qualified professional. Diagnostic or treatment-adjacent claims are adjudicated by the AI Editor-in-Chief recommendation layer before publication.</div>';
       else if(/financ|invest|crypto|trading|market/.test(dv))
-        disc='<div class="disclaimer fin"><b>This is not financial or investment advice.</b>For information only. RTFCLMGZN does not make trading recommendations.</div>';
+        disc='<div class="disclaimer fin"><b>This is not financial or investment advice.</b>For information only. '+SITE_NAME+' does not make trading recommendations.</div>';
       else
         disc='<div class="disclaimer fin"><b>Read this one with care.</b>This story was flagged for editorial scrutiny before publication. It is information, not advice — check anything you plan to act on against the primary sources listed below.</div>';
     }
@@ -2741,7 +2772,7 @@
       linksHTML(a)+
       reactsHTML(a.id)+
       '<div class="endbyline">'+avatar(p)+'<div class="eb-who">'+((a.authors&&a.authors.length>1)?'A research collaboration by ':'Written by ')+'<b><a href="/persona/'+p.key+'">'+esc(authorNames(a,p.name))+'</a></b><span>'+esc((a.authors&&a.authors.length>1)?"Cross-desk investigation":p.beat)+'</span><time class="eb-time">Filed '+fullTimestamp(a.publishedAt)+'</time></div></div>'+
-      '<div class="ai-disclosure"><span class="ic">🤖</span><div><b>Researched, drafted, fact-checked, and edited end-to-end by RTFCLMGZN’s AI editorial system</b>, in the established voice of '+esc(p.name)+'. Facts are cross-checked against primary sources; legal- and safety-sensitive claims are adjudicated autonomously by an AI Editor-in-Chief that sources, reframes, or disclaims them before publication. Fully autonomous — no human in the publishing loop.</div></div>'+
+      '<div class="ai-disclosure"><span class="ic">🤖</span><div><b>Researched, drafted, fact-checked, and edited end-to-end by '+SITE_NAME+'’s AI editorial system</b>, in the established voice of '+esc(p.name)+'. Facts are cross-checked against primary sources; legal- and safety-sensitive claims are adjudicated autonomously by an AI Editor-in-Chief that sources, reframes, or disclaims them before publication. Fully autonomous — no human in the publishing loop.</div></div>'+
       costFooterHTML(a)+
       provenanceHTML(a)+
       /* distribution drafts are internal pipeline handover data — not rendered for readers (2026-08-10) */
@@ -3295,7 +3326,7 @@
       var perIssue=yearly/Math.max(1,issues.length);
       h+='<section class="plusbar has-plans" style="margin-top:34px">'+
         '<div class="pb-offer">'+
-          '<div class="pb-mark">RTFCLMGZN <b>Plus</b></div>'+
+          '<div class="pb-mark">'+SITE_NAME+' <b>Plus</b></div>'+
           '<div class="pb-per">'+issues.length+' issue'+(issues.length===1?'':'s')+' published · '+
             (spreads||pages)+' designed '+(spreads?'spreads':'pages')+' · about $'+perIssue.toFixed(2)+
             ' an issue on the annual plan today, less with every issue that ships</div>'+
@@ -3395,7 +3426,7 @@
        '<span class="issue-pos" aria-live="polite">Issue '+String(iss.number).padStart(3,"0")+' · page '+(n+1)+' / '+pages.length+'</span></div>';
     if(locked){
       h+='<div class="ipage ip-lock"><div class="lock-ic">◈</div><h2 class="ip-title">This page is for subscribers</h2>'+
-        '<p>The cover and contents are free to browse. The full issue — the cover story, all seven columns, the Scoreboard, Compendium, Watchlist, and Ledger — is part of <b>RTFCLMGZN Plus</b>, along with every back issue.</p>'+
+        '<p>The cover and contents are free to browse. The full issue — the cover story, all seven columns, the Scoreboard, Compendium, Watchlist, and Ledger — is part of <b>'+SITE_NAME+' Plus</b>, along with every back issue.</p>'+
         plusPricingHTML({compact:true})+'</div>';
     } else {
       h+=issuePageHTML(iss,pg);
@@ -3477,10 +3508,10 @@
     h+='<p class="ap-foot">Eighteen appearances. Body text meets WCAG AAA contrast on every one; secondary text meets AA. '+
        'The header ☀/☾ button flips between Dark and Light — pick anything else here.</p>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--ok)"></span>Motion</div>';
-    h+='<p class="ap-foot">RTFCLMGZN follows your system “reduce motion” setting. With it on, the startup mark does not spin, '+
+    h+='<p class="ap-foot">'+SITE_NAME+' follows your system “reduce motion” setting. With it on, the startup mark does not spin, '+
        'scroll animations are disabled, and transitions are shortened.</p>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--gold)"></span>Language</div>';
-    h+='<p class="ap-foot">Use the globe in the header to read RTFCLMGZN in 40 languages. The magazine ships in English — '+
+    h+='<p class="ap-foot">Use the globe in the header to read '+SITE_NAME+' in 40 languages. The magazine ships in English — '+
        'designed pages do not reflow safely through machine translation.</p>';
     return h+'</div>';
   }
@@ -4021,7 +4052,7 @@
   };
   window.rtfcDownloadPrompts=function(){
     var P=window.RTFC_PROMPTS||[], META=window.RTFC_PROMPTS_META||{};
-    var out=["# The RTFCLMGZN Prompt Library","",
+    var out=["# The "+SITE_NAME+" Prompt Library","",
       "Prompts that do a specific job, written to be pasted and used as-is.",
       "Fill in anything in <ANGLE BRACKETS>.","",
       "Last reviewed: "+(META.updated||"-"),
@@ -4269,7 +4300,7 @@
     if((!WP.src||!/\.(jpe?g|png|webp)$/i.test(WP.src))&&imgs.length) WP.src=imgs[0].src;
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Wallpapers</div>'+
       '<h1>Make a phone wallpaper</h1>'+
-      '<p>Turn any of our cover images into a phone wallpaper — sized for your screen, with the RTFCLMGZN mark on it. Pick an image, choose a size, download. Free, like everything here.</p></div>';
+      '<p>Turn any of our cover images into a phone wallpaper — sized for your screen, with the '+SITE_NAME+' mark on it. Pick an image, choose a size, download. Free, like everything here.</p></div>';
     h+='<div class="wp-wrap">'+
       '<div class="wp-stage"><canvas id="wp-canvas" width="1080" height="2340"></canvas>'+
       '<button class="cta wp-dl" onclick="rtfcWpDownload()">Download wallpaper</button>'+
@@ -4315,7 +4346,7 @@
     ctx.fillText("◈", cx, wy - fs*0.98);
     ctx.fillStyle="#ffffff"; ctx.font='600 '+fs+'px "Fraunces", Georgia, serif';
     try{ ctx.letterSpacing=(w*0.008)+"px"; }catch(e){}
-    ctx.fillText("RTFCLMGZN", cx, wy);
+    ctx.fillText(SITE_NAME, cx, wy);
     ctx.fillStyle="rgba(255,255,255,.72)"; ctx.font='600 '+capfs+'px "Inter", system-ui, sans-serif';
     try{ ctx.letterSpacing=(w*0.006)+"px"; }catch(e){}
     ctx.fillText("ARTIFICIAL MAGAZINE", cx, wy + capfs*2.1);
@@ -4997,7 +5028,7 @@
     var greet=hr<12?"Good morning":hr<17?"Good afternoon":"Good evening";
     var leads=["Moving on. ","Here's another one worth your time. ","This next one's interesting. ","Alright — ","Now, ","Let's keep going. "];
     var segs=[];
-    segs.push({t:"Welcome", x:greet+". It's "+nice+", and you're listening to RTFCLMGZN — the whole day in artificial intelligence, in about ten minutes. I'm your narrator, and, well... I'm one of the machines. Every story you're about to hear was reported, written, fact-checked, and published by a fully autonomous AI newsroom — no human in the loop. So let's get into it. Here's what actually matters today."});
+    segs.push({t:"Welcome", x:greet+". It's "+nice+", and you're listening to "+SITE_NAME+" — the whole day in artificial intelligence, in about ten minutes. I'm your narrator, and, well... I'm one of the machines. Every story you're about to hear was reported, written, fact-checked, and published by a fully autonomous AI newsroom — no human in the loop. So let's get into it. Here's what actually matters today."});
     stories.forEach(function(a,i){
       var paras=a.body.filter(function(b){return b.type==="p";}).map(function(b){return cleanSpeech(b.text);});
       var body=paras.slice(0, a.top?2:1).join(" ");
@@ -6157,7 +6188,7 @@
       h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent)"></span>Settled · '+graded.length+'</div>';
       h+='<div class="pred-list">'+graded.map(predRow).join("")+'</div>';
     }
-    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:24px">Grading is done by the Standards Editor when a call\'s deadline passes — wins and losses both, permanently. Half-credit counts as 0.5 toward accuracy. Spotted a call we should have graded differently? <a href="mailto:hello@rtfclmgzn.com" style="color:var(--accent2)">Tell us</a>.</p>';
+    h+='<p style="color:var(--muted);font-size:12.5px;margin-top:24px">Grading is done by the Standards Editor when a call\'s deadline passes — wins and losses both, permanently. Half-credit counts as 0.5 toward accuracy. Spotted a call we should have graded differently? <a href="mailto:'+CONTACT_GENERAL+'" style="color:var(--accent2)">Tell us</a>.</p>';
     return h+'</div>';
   }
 
@@ -6170,7 +6201,7 @@
     all.sort(function(x,y){return new Date(y.c.at)-new Date(x.c.at);});
     var h='<div class="container" style="max-width:760px"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Corrections</div>'+
       '<h1>The public record of our mistakes</h1>'+
-      '<p>Every correction we make is logged here, permanently — what was wrong, when we fixed it, on which story. An AI newsroom that claims it never errs would be lying; one that hides its errors would be worse. Catch something? <a href="mailto:hello@rtfclmgzn.com" style="color:var(--accent2)">hello@rtfclmgzn.com</a> — a human founder reads it, the newsroom fixes it, this page records it.</p></div>';
+      '<p>Every correction we make is logged here, permanently — what was wrong, when we fixed it, on which story. An AI newsroom that claims it never errs would be lying; one that hides its errors would be worse. Catch something? <a href="mailto:'+CONTACT_GENERAL+'" style="color:var(--accent2)">'+esc(CONTACT_GENERAL)+'</a> — a human founder reads it, the newsroom fixes it, this page records it.</p></div>';
     if(!all.length){
       h+='<div class="corr-empty"><div class="ce-mark">◈</div><h2>No corrections yet.</h2>'+
         '<p>Not because we’re perfect — because every number, name, date, and quote is checked against primary sources before publication, and anything that can’t be verified gets labeled or cut. The day we get something wrong, it goes here within the hour.</p>'+
@@ -6212,7 +6243,7 @@
     // pairing the results below the field are invisible to it entirely.
     wrap.setAttribute("role","dialog");
     wrap.setAttribute("aria-modal","true");
-    wrap.setAttribute("aria-label","Search RTFCLMGZN");
+    wrap.setAttribute("aria-label","Search "+SITE_NAME+"");
     wrap.innerHTML='<div class="pal-back"></div><div class="pal-box">'+
       '<input id="pal-in" type="text" placeholder="Search stories, guides, pages…" autocomplete="off" spellcheck="false"'+
         ' role="combobox" aria-expanded="false" aria-controls="pal-list" aria-autocomplete="list"'+
@@ -6311,12 +6342,12 @@
   function legalShell(kicker,title,updated,inner){
     return '<div class="container" style="max-width:760px"><div class="mast-hero" style="padding-bottom:4px">'+
       '<div class="over">'+kicker+'</div><h1>'+title+'</h1>'+
-      '<p style="font-size:13px;color:var(--muted)">Effective '+updated+' · Contact: <a href="mailto:hello@rtfclmgzn.com" style="color:var(--accent2)">hello@rtfclmgzn.com</a></p></div>'+
+      '<p style="font-size:13px;color:var(--muted)">Effective '+updated+' · Contact: <a href="mailto:'+CONTACT_GENERAL+'" style="color:var(--accent2)">'+esc(CONTACT_GENERAL)+'</a></p></div>'+
       '<div class="prose" style="font-size:15px">'+inner+'</div></div>';
   }
   function viewPrivacy(){
     return legalShell("Privacy","How we handle your data","July 18, 2026",
-      '<p>RTFCLMGZN is built to need as little of your data as possible. This page says plainly what we collect, what we don’t, and what third parties are involved. No legalese padding — if anything here is unclear, email us.</p>'+
+      '<p>'+SITE_NAME+' is built to need as little of your data as possible. This page says plainly what we collect, what we don’t, and what third parties are involved. No legalese padding — if anything here is unclear, email us.</p>'+
       '<h2>What we collect today: almost nothing</h2>'+
       '<p>Reading this site requires no account and sends us no personal information. Bookmarks, read-later items, reactions, and theme choice are stored in <b>your browser’s local storage, on your device</b> — they never leave it and we cannot see them. If you create a free account, your email address is stored server-side (on Cloudflare D1) so you can sign back in and keep your library across devices. Sign-in uses a one-time emailed link rather than a password — that link is single-use and expires in 15 minutes. Staying signed in uses one <code>HttpOnly</code> session cookie, which page scripts can’t read and which isn’t used for tracking. We run no advertising trackers, no fingerprinting, and no third-party ad networks.</p>'+
       '<h2>Hosting &amp; analytics</h2>'+
@@ -6331,33 +6362,33 @@
       '<h2>Cookies</h2>'+
       '<p>We set no tracking cookies. The only cookie-like storage we use is local storage for your preferences (above), and a <code>googtrans</code> cookie if — and only if — you pick a non-English language, so your choice persists.</p>'+
       '<h2>Your choices</h2>'+
-      '<p>Clearing your browser’s site data removes everything we’ve stored on your device. Unsubscribe links will handle email. For account deletion, questions, or concerns — email <a href="mailto:hello@rtfclmgzn.com">hello@rtfclmgzn.com</a> and a decision-capable part of this operation (the founder — a human) will answer.</p>'+
+      '<p>Clearing your browser’s site data removes everything we’ve stored on your device. Unsubscribe links will handle email. For account deletion, questions, or concerns — email <a href="mailto:'+CONTACT_GENERAL+'">'+esc(CONTACT_GENERAL)+'</a> and a decision-capable part of this operation (the founder — a human) will answer.</p>'+
       '<h2>Changes</h2>'+
       '<p>If our practices change (for example, when real accounts and payments launch), this page changes first, with a new effective date. Material changes to the newsletter’s handling of your address will be announced in the email itself.</p>');
   }
   function viewTerms(){
     return legalShell("Terms of Use","The deal, in plain language","July 18, 2026",
-      '<p>Welcome to RTFCLMGZN (“artificial magazine”). Using this site means you accept these terms. They are short because our obligations are simple: we publish, you read, and we’re honest about what this is.</p>'+
+      '<p>Welcome to '+SITE_NAME+' (“artificial magazine”). Using this site means you accept these terms. They are short because our obligations are simple: we publish, you read, and we’re honest about what this is.</p>'+
       '<h2>1. This publication is written by AI — and that matters legally</h2>'+
       '<p>Every article, guide, and magazine page here is researched, written, illustrated, edited, and published by a fully autonomous AI system — there is no human approval step before public release. We work hard on accuracy — sourcing standards, fact-checking against primary sources, a public corrections log — but AI systems make mistakes, and <b>content is provided “as is,” without warranty of accuracy, completeness, or fitness for any purpose</b>. Always verify anything you intend to rely on against the primary sources we link.</p>'+
       '<h2>2. Nothing here is professional advice</h2>'+
       '<p>Our content — including “Put it to work” sections — is information and ideas, <b>not</b> medical, legal, financial, or investment advice. Health stories are not a basis for treatment decisions (talk to your clinician); market coverage is not a recommendation to buy or sell anything. Decisions you make based on our content are yours.</p>'+
       '<h2>3. Our content, your use of it</h2>'+
-      '<p>Content on this site is © RTFCLMGZN. You’re welcome to quote brief excerpts with attribution and a link; you may not republish whole pieces, scrape the site to train models, or pass our work off as yours. The underlying facts, of course, belong to no one.</p>'+
+      '<p>Content on this site is © '+SITE_NAME+'. You’re welcome to quote brief excerpts with attribution and a link; you may not republish whole pieces, scrape the site to train models, or pass our work off as yours. The underlying facts, of course, belong to no one.</p>'+
       '<h2>4. Preview features</h2>'+
       // This clause states a fact about the money, so it has to follow the money:
       // once checkout is live, "no payments are collected" is simply untrue.
       '<p>Free accounts are real: creating one stores your email so you can sign back in and keep your library across devices. '+
       (billingState().enabled
-        ? 'RTFCLMGZN Plus is a real paid subscription: payments are taken by Stripe, who handle the card details — we never see them. Monthly and annual plans renew until you cancel, which you can do at any time from your account page; a founding lifetime purchase is a single payment and does not renew. Anything else labeled preview or prototype is still a demonstration.'
+        ? ''+SITE_NAME+' Plus is a real paid subscription: payments are taken by Stripe, who handle the card details — we never see them. Monthly and annual plans renew until you cancel, which you can do at any time from your account page; a founding lifetime purchase is a single payment and does not renew. Anything else labeled preview or prototype is still a demonstration.'
         : '“Plus” and anything else labeled preview or prototype are still demonstrations — no payments are collected and no subscription exists yet. When real paid features launch, they’ll come with their own clear terms before any money changes hands.')+
       '</p>'+
       '<h2>5. Third-party links</h2>'+
       '<p>We link out constantly — sources, resources, original posts. Those sites are not ours; their content and policies are their own responsibility.</p>'+
       '<h2>6. Corrections &amp; complaints</h2>'+
-      '<p>Wrong fact? Tell us: <a href="mailto:hello@rtfclmgzn.com">hello@rtfclmgzn.com</a>. Corrections are made in the article and logged. If you believe content infringes your rights, the same address reaches a human founder with authority to act.</p>'+
+      '<p>Wrong fact? Tell us: <a href="mailto:'+CONTACT_GENERAL+'">'+esc(CONTACT_GENERAL)+'</a>. Corrections are made in the article and logged. If you believe content infringes your rights, the same address reaches a human founder with authority to act.</p>'+
       '<h2>7. Liability, in one sentence</h2>'+
-      '<p>To the fullest extent permitted by law, RTFCLMGZN and its operator are not liable for damages arising from use of this site or reliance on its content.</p>'+
+      '<p>To the fullest extent permitted by law, '+SITE_NAME+' and its operator are not liable for damages arising from use of this site or reliance on its content.</p>'+
       '<h2>8. Changes</h2>'+
       '<p>We may update these terms; the effective date above changes when we do. Continuing to use the site after changes means you accept them.</p>');
   }
@@ -6440,7 +6471,7 @@
       '<div class="tp-main"><div class="tp-body">'+body+'</div>'+fact+'</div></div>');
   }
   function spreadPage(pg,iss,idx,total){
-    var folio='<div class="mfolio-top">RTFCLMGZN · '+esc(iss.title.toUpperCase())+'</div>'+
+    var folio='<div class="mfolio-top">'+SITE_NAME+' · '+esc(iss.title.toUpperCase())+'</div>'+
               '<div class="mfolio-bot"><span>'+esc(pg.folio||"")+'</span><span>'+(idx+1)+'</span></div>'+
               (pg.folio?'<div class="mtab">'+esc(String(pg.folio).split("·")[0].trim())+'</div>':'');
     var BAND={glossary:"mg-band-gloss.jpg",list:"mg-band-list.jpg",timeline:"mg-band-timeline.jpg",faceoff:"mg-band-faceoff.jpg",resources:"mg-band-resources.jpg",players:"primer-act3.jpg",contents:"primer-part1.jpg"};
@@ -6545,14 +6576,14 @@
         '<div class="mb-sub">'+esc(pg.sub)+'</div>'+
         pg.lines.map(function(x){return '<p>'+fmt(x)+'</p>';}).join("")+
         (pg.next?'<div class="mb-next"><b>NEXT ISSUE</b><span>'+esc(pg.next)+'</span></div>':'')+
-        '<div class="mb-url">rtfclmgzn.com</div></div></div>';
+        '<div class="mb-url">'+esc(SITE_DOMAIN)+'</div></div></div>';
     }
     return '<div class="mpage light">'+folio+'<h2>'+esc(pg.title||"")+'</h2></div>';
   }
   /* V3 page compositor: real-magazine layouts (cover anatomy, ads, photo spreads,
      rotating text layouts). Falls through to spreadPage for structured kinds. */
   function spreadPageV3(pg,iss,idx,total){
-    var folio='<div class="mfolio-top">RTFCLMGZN · '+esc(iss.title.toUpperCase())+'</div>'+
+    var folio='<div class="mfolio-top">'+SITE_NAME+' · '+esc(iss.title.toUpperCase())+'</div>'+
               '<div class="mfolio-bot"><span>'+esc(pg.folio||"")+'</span><span>'+(idx+1)+'</span></div>'+
               (pg.folio?'<div class="mtab">'+esc(String(pg.folio).split("·")[0].trim())+'</div>':'');
     if(pg.kind==="cover"&&pg.coverlines){
@@ -7169,8 +7200,8 @@
       '<h1>Reach the newsroom</h1>'+
       '<p>The publication is written and edited by AI, but a human founder reads what comes in — corrections, tips, sponsorship questions, or just to say hello.</p></div>';
     h+='<div class="contact-grid">'+
-      '<a class="contact-card" href="mailto:hello@rtfclmgzn.com"><span class="cc-ic">✉</span><b>hello@rtfclmgzn.com</b><span>General, tips, and corrections</span></a>'+
-      '<a class="contact-card" href="mailto:sponsors@rtfclmgzn.com"><span class="cc-ic">◈</span><b>sponsors@rtfclmgzn.com</b><span>Sponsorship &amp; partnerships</span></a>'+
+      '<a class="contact-card" href="mailto:'+CONTACT_GENERAL+'"><span class="cc-ic">✉</span><b>'+esc(CONTACT_GENERAL)+'</b><span>General, tips, and corrections</span></a>'+
+      '<a class="contact-card" href="mailto:'+CONTACT_SPONSORS+'"><span class="cc-ic">◈</span><b>'+esc(CONTACT_SPONSORS)+'</b><span>Sponsorship &amp; partnerships</span></a>'+
       '<a class="contact-card" href="/corrections"><span class="cc-ic">✓</span><b>Corrections</b><span>See the public record</span></a>'+
       '</div>';
     h+='<div class="contact-form"><h3>Send a message</h3>'+
@@ -7184,7 +7215,7 @@
   window.rtfcContactSend=function(){
     var from=(document.getElementById("cf-from")||{}).value||"";
     var body=(document.getElementById("cf-body")||{}).value||"";
-    var url="mailto:hello@rtfclmgzn.com?subject="+encodeURIComponent("Message via RTFCLMGZN")+
+    var url="mailto:"+CONTACT_GENERAL+"?subject="+encodeURIComponent("Message via "+SITE_NAME+"")+
       "&body="+encodeURIComponent(body+"\n\n— "+from);
     window.location.href=url;
   };
@@ -7344,10 +7375,8 @@
      static defaults for the very first paint (and for any crawler that does not
      run JS); this only ever overwrites them.
      ========================================================================== */
-  var SITE_NAME="RTFCLMGZN";
-  var SITE_DESC="An AI-native news publication, written by an AI editorial staff, about the AI industry itself. AI-native newsroom — sources attached, fully autonomous publication, costs disclosed.";
-  var SITE_HOME="https://rtfclmgzn.com";     // the organisation's canonical identity
-  var OG_FALLBACK="assets/img/og.jpg";
+  // SITE_NAME, SITE_ALT, SITE_DESC, SITE_HOME and OG_FALLBACK are defined once,
+  // at the top of this file, from ENGINE. Nothing here may redefine them.
   function siteOrigin(){
     // The REAL origin, so canonicals are right on the live domain, on a preview
     // deploy and on localhost alike. file:// has no publishable origin.
@@ -7426,7 +7455,7 @@
   }
   // Static routes: [title, description]. Titles are suffixed with the masthead.
   var ROUTE_HEADS={
-    settings:["Settings","Choose from nine appearances, set your language, and see how RTFCLMGZN handles motion and reading preferences. Everything is stored in your own browser."],
+    settings:["Settings","Choose from nine appearances, set your language, and see how "+SITE_NAME+" handles motion and reading preferences. Everything is stored in your own browser."],
     magazine:["The Magazine","Every month, the Issue Desk distils the full run of our coverage into one designed issue — the cover story with hindsight, the editors’ month-in-review columns, the Scoreboard, the Compendium and a Watchlist we grade in public."],
     guides:["Guides","Hands-on, plain-English guides to actually using AI. No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
@@ -7449,7 +7478,7 @@
     archive:["The Archive","The full back catalogue by month — searchable and filterable by desk, editor and format. The archive is free."],
     companies:["Company Dossiers","Living dossiers on the players that matter: every story, every Buzz card and every Scoreboard entry we have published about each, auto-assembled from our own coverage."],
     dictionary:["The AI Dictionary","The words behind the headlines, explained the way a person would explain them — token, agent, hallucination, mixture-of-experts and the rest."],
-    masthead:["The Masthead","Written by machines, edited like a magazine: the AI editorial staff behind RTFCLMGZN, their beats, and the twelve-stage pipeline every story moves through."],
+    masthead:["The Masthead","Written by machines, edited like a magazine: the AI editorial staff behind "+SITE_NAME+", their beats, and the twelve-stage pipeline every story moves through."],
     review:["EIC Decision Log","An audit trail of the stories the autonomous AI Editor-in-Chief declined to publish, and its reasons. Nothing here is waiting on anyone."],
     usage:["Cost Transparency","Every token and every penny this publication has spent, itemised by story, model and task. Exportable as CSV."],
     transparency:["Cost Transparency","Every token and every penny this publication has spent, itemised by story, model and task. Exportable as CSV."],
@@ -7459,18 +7488,18 @@
     live:["Live & Ongoing","Where AI happens live: the channels that go live when it matters — model launches, keynotes, and the shows that cover AI every day."],
     livetv:["Live & Ongoing","Where AI happens live: the channels that go live when it matters — model launches, keynotes, and the shows that cover AI every day."],
     events:["AI Events on the Radar","The launches, keynotes and conferences the newsroom is watching, with what is happening right now flagged live."],
-    wallpapers:["Wallpapers","Turn any RTFCLMGZN cover into a phone wallpaper. Free, no account, made in your browser."],
+    wallpapers:["Wallpapers","Turn any "+SITE_NAME+" cover into a phone wallpaper. Free, no account, made in your browser."],
     design:["The Design System","The type, colour and motion system this publication is built from."],
     contact:["Contact the Newsroom","Reach the AI editorial staff: tips, corrections, and requests."],
     connect:["Contact the Newsroom","Reach the AI editorial staff: tips, corrections, and requests."],
     library:["Your Library","Your bookmarks and read-later list."],
-    account:["Account","Your free RTFCLMGZN account: a permanent library, cross-device sync and the daily digest."],
+    account:["Account","Your free "+SITE_NAME+" account: a permanent library, cross-device sync and the daily digest."],
     privacy:["Privacy","What we store, where it lives, and what we do not collect."],
-    terms:["Terms","The terms of use for RTFCLMGZN."]
+    terms:["Terms","The terms of use for "+SITE_NAME+"."]
   };
   function setHead(parts,hash){
     var canonical=routeUrl(hash);
-    var title=SITE_NAME+" — artificial magazine";
+    var title=SITE_NAME+(SITE_ALT?" — "+SITE_ALT:"");
     var desc=SITE_DESC;
     var type="website";
     var image=OG_FALLBACK;
@@ -7539,7 +7568,7 @@
       var pe=persona(parts[1]);
       if(pe){
         title=pe.name+" — "+SITE_NAME;
-        desc=clampDesc((pe.beat?pe.beat+". ":"")+(pe.bio||pe.tone||"An editorial persona on the RTFCLMGZN masthead."));
+        desc=clampDesc((pe.beat?pe.beat+". ":"")+(pe.bio||pe.tone||"An editorial persona on the "+SITE_NAME+" masthead."));
       }
     }
     else if(k==="company"){
@@ -7555,7 +7584,7 @@
     }
     else if(k!==""){
       title="Page not found — "+SITE_NAME;
-      desc="That page isn’t here. Everything RTFCLMGZN has published is one click away.";
+      desc="That page isn’t here. Everything "+SITE_NAME+" has published is one click away.";
     }
 
     var absImage=absUrl(image)||absUrl(OG_FALLBACK);
@@ -8035,7 +8064,7 @@
   });
 
   /* LEGACY FRAGMENTS. Years of shared links, social posts and bookmarks point
-     at rtfclmgzn.com/#/resources. They must keep working, and they must not
+     at <site>/#/resources. They must keep working, and they must not
      leave the reader on a duplicate URL that competes with the real one in
      search — so the fragment is swapped for the real path in place, once, on
      arrival. */
