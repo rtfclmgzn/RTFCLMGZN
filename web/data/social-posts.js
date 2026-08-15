@@ -2370,8 +2370,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088613737330847953",
+        "remote_id": "2088613737330847953",
+        "posted_at": "2026-08-15T13:08:14Z"
       },
       {
         "platform": "instagram",
