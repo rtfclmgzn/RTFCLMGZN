@@ -209,6 +209,7 @@
     { id:"u-0286", ts:"2026-08-15T06:56:38Z", article_id:"system", agent:"breaking-scan", task_type:"no-op", measured:"estimated", description:"Scanned since prior scan at 04:45 UTC (2h11m window); nothing new clears the breaking bar in the 04:45-06:56 UTC window. Buzz remains at 9 items from last 24h (floor met), all high-quality genuine signals from Aug 14; no stale cards to retire. Cache-buster bumped from ccd3837300 to ccd3837301." },
     { id:"u-0287", ts:"2026-08-15T07:00:23Z", article_id:"system", agent:"breaking-scan", task_type:"no-op", model:"claude-haiku-4-5", input_tokens:10276, output_tokens:16358, cached_input_tokens:6862910, description:"Hourly breaking scan (GitHub Actions run 31870648964)", measured:"metered", run:"gh-31870648964" },
     { id:"u-0288", ts:"2026-08-15T07:20:00Z", article_id:"system", agent:"pulse-scan", task_type:"no-op", description:"Pulse scan: searched 3h AI news, no new signals for buzz; 235 claims reviewed; scoreboard re-scanned, no model launches or benchmark moves", measured:"estimated" }
+    { id:"u-0289", ts:"2026-08-15T07:20:02Z", article_id:"system", agent:"pulse-scan", task_type:"maintenance", model:"claude-haiku-4-5", input_tokens:726, output_tokens:12039, cached_input_tokens:6445086, description:"Pulse scan (GitHub Actions run 31871470010)", measured:"metered", run:"gh-31871470010" },
   ];
   var seen={}; window.RTFC_USAGE_LOG.forEach(function(r){seen[r.id]=1;});
   rows.forEach(function(r){if(!seen[r.id]) window.RTFC_USAGE_LOG.push(r);});
