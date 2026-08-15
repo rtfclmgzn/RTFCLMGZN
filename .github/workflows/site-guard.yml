@@ -49,12 +49,21 @@ jobs:
           python3 newsroom/runner/gen_sitemap.py || true
           git config user.name "rtfclmgzn-pipeline"
           git config user.email "rtfclmgzn@gmail.com"
+          # STAGE EVERYTHING TRACKED, THEN THE NEW PATHS.
+          # A narrow `git add` list leaves other modified files dirty, and
+          # `git pull --rebase` REFUSES to run at all when the tree is dirty:
+          # "cannot pull with rebase: You have unstaged changes" -> exit 128 ->
+          # the whole run goes red AFTER the agent has already done 30 minutes
+          # of work. That killed 2 of the last 8 Newsroom Cycles. `git add -u`
+          # stages every tracked modification anywhere in the repo; it is not
+          # -A, so it can never sweep up an untracked file by accident.
+          git add -u
           git add web/data web/sitemap.xml web/rss.xml
           if git diff --cached --quiet; then
             echo "nothing to repair"
           else
             git commit -m "[guard] repair: stores, ledger ids, sitemap and feed"
-            git pull --rebase origin main || { git rebase --abort; echo "rebase race - repair rides the next run"; }
+            git pull --rebase origin main || { git rebase --abort || true; echo "rebase race - repair rides the next run"; }
             git push origin main || echo "push race - repair rides the next run"
           fi
 
@@ -161,7 +170,16 @@ jobs:
           git config user.name "rtfclmgzn-pipeline"
           git config user.email "rtfclmgzn@gmail.com"
           echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) live_check FAILED - run ${{ github.run_id }}" >> newsroom/quality/incidents.log
+          # STAGE EVERYTHING TRACKED, THEN THE NEW PATHS.
+          # A narrow `git add` list leaves other modified files dirty, and
+          # `git pull --rebase` REFUSES to run at all when the tree is dirty:
+          # "cannot pull with rebase: You have unstaged changes" -> exit 128 ->
+          # the whole run goes red AFTER the agent has already done 30 minutes
+          # of work. That killed 2 of the last 8 Newsroom Cycles. `git add -u`
+          # stages every tracked modification anywhere in the repo; it is not
+          # -A, so it can never sweep up an untracked file by accident.
+          git add -u
           git add newsroom/quality/incidents.log
           git commit -m "[guard] incident: live check failed" || exit 0
-          git pull --rebase origin main || { git rebase --abort; exit 0; }
+          git pull --rebase origin main || { git rebase --abort || true; exit 0; }
           git push origin main || true

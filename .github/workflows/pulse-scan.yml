@@ -60,11 +60,20 @@ jobs:
             --description "Pulse scan (GitHub Actions run ${GITHUB_RUN_ID})"
           git config user.name "rtfclmgzn-pipeline"
           git config user.email "rtfclmgzn@gmail.com"
+          # STAGE EVERYTHING TRACKED, THEN THE NEW PATHS.
+          # A narrow `git add` list leaves other modified files dirty, and
+          # `git pull --rebase` REFUSES to run at all when the tree is dirty:
+          # "cannot pull with rebase: You have unstaged changes" -> exit 128 ->
+          # the whole run goes red AFTER the agent has already done 30 minutes
+          # of work. That killed 2 of the last 8 Newsroom Cycles. `git add -u`
+          # stages every tracked modification anywhere in the repo; it is not
+          # -A, so it can never sweep up an untracked file by accident.
+          git add -u
           git add web/data/usage-log-current.js
           if git diff --cached --quiet; then
             echo "no ledger row written"
           else
             git commit -m "ledger: measured usage for pulse-scan run ${GITHUB_RUN_ID}"
-            git pull --rebase origin main || { git rebase --abort; echo "rebase race - row rides the next run"; }
+            git pull --rebase origin main || { git rebase --abort || true; echo "rebase race - row rides the next run"; }
             git push origin main || echo "push race - row rides the next run"
           fi
