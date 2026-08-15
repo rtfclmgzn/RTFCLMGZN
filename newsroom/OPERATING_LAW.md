@@ -45,6 +45,17 @@ The Scoreboard prints independent scores, never a vendor's own claim. The Grid p
 
 The Grid tracks 25 megasites while directories count ~12,000 datacenters — both true, different definitions. Any figure that invites a "that can't be right" reaction must state its own scope on the page, next to the number, before a reader has to go and check. Overclaiming on a site whose entire product is stated confidence is the one unrecoverable mistake.
 
+### 5b. A check may fail. A check may never crash.
+
+A guard that raises mid-run is worse than no guard: it blocks the ship, hides every finding it had already collected behind a stack trace, and looks like diligence while checking nothing. On 2026-08-15 one malformed ledger row an agent had written took `site_guard.py` down before it printed a single result, and nine other check families never ran.
+
+Two rules follow, and both are now enforced in code:
+
+- **Every check runs inside `run()`**, which turns an exception into a `check-crash` finding naming the check. The build still fails, but it fails *with the rest of the report*.
+- **Every store reader degrades to per-record salvage.** One unreadable record costs that record — reported with the actual characters around the failure — never the file and never the run.
+
+Write new checks the same way: a check that cannot answer must say "I could not answer", not die. And when a reader hands you partial data, say how much was lost. Silent partial data is the failure mode this law exists to prevent, in both directions.
+
 ### 6. Never silence a guard
 
 If a check fails, fix the thing it found. Do not edit `newsroom/quality/*` to make it pass, do not delete the check, do not work around it. If a check is genuinely wrong, say so in your run report and **leave it failing** for the owner. A disabled guard reads as safety and is its opposite.

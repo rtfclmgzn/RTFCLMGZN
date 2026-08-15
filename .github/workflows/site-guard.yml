@@ -37,16 +37,23 @@ jobs:
       - uses: actions/checkout@v6
         with: { fetch-depth: 0 }
 
+      # The sitemap regenerates HERE, hourly, not only on a publish.
+      # It had drifted to 151 URLs: every article, and three static pages out of
+      # twenty-nine. The whole point of moving off hash routes was that pages
+      # become findable, and a sitemap that names none of them delivers none of
+      # that. gen_sitemap.py is deterministic and idempotent, so running it every
+      # hour costs nothing and closes the gap permanently.
       - name: Repair what is deterministically repairable
         run: |
           python3 newsroom/quality/site_guard.py --fix || true
+          python3 newsroom/runner/gen_sitemap.py || true
           git config user.name "rtfclmgzn-pipeline"
           git config user.email "rtfclmgzn@gmail.com"
-          git add web/data
+          git add web/data web/sitemap.xml web/rss.xml
           if git diff --cached --quiet; then
             echo "nothing to repair"
           else
-            git commit -m "[guard] repair: store syntax and duplicate ledger ids"
+            git commit -m "[guard] repair: stores, ledger ids, sitemap and feed"
             git pull --rebase origin main || { git rebase --abort; echo "rebase race - repair rides the next run"; }
             git push origin main || echo "push race - repair rides the next run"
           fi

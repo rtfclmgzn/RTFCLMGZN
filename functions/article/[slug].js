@@ -24,11 +24,21 @@
  */
 
 const SITE = "https://rtfclmgzn.com";
+// EVERY STORE THE APP RENDERS AT /article/, WITHOUT EXCEPTION.
+//
+// guides.js was missing here until 2026-08-15 and the consequence was invisible
+// from inside the site: app.js looks up a slug across ARTICLES *and* GUIDES, so
+// clicking a guide card on /guides worked perfectly. It was only ever broken for
+// people who arrived from outside — a shared link, a refresh, Googlebot — and
+// they got a 404 on all six guides. The two readers must agree on which stores
+// exist or a URL is real in one place and fictional in the other.
+// site_guard.py::check_ssr_store_parity() now fails the build on any drift.
 const STORES = [
   "/data/newsroom-articles.js",
   "/data/live-articles.js",
   "/data/articles.js",
   "/data/research.js",
+  "/data/guides.js",
 ];
 
 /* ---------- tolerant store parsing (no eval on Workers) ----------

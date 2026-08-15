@@ -16,6 +16,113 @@ import re
 from pathlib import Path
 
 
+class StoreParseError(ValueError):
+    """A store could not be parsed, WITH the text around the failure.
+
+    A bare JSONDecodeError says "Expecting ',' delimiter: line 206 column 5
+    (char 221595)" about a file that has been machine-transformed on the way in,
+    so that line number belongs to no file anyone can open. This carries the
+    actual characters, which is the difference between a diagnosis and a guess.
+    """
+
+    def __init__(self, message, converted="", offset=0):
+        super().__init__(message)
+        self.converted = converted
+        self.offset = offset
+
+
+def snippet(text: str, offset: int, width: int = 160) -> str:
+    lo = max(0, offset - width // 2)
+    return repr(text[lo:lo + width])
+
+
+# Every record a salvage pass had to throw away, as (label, index, message).
+# site_guard.py drains this and reports it. Module-level rather than a return
+# value so that adding salvage did not change the signature of every reader and
+# every one of their call sites.
+SALVAGE_REPORT = []
+
+# One corrupt record can cascade into dozens of derived complaints. Report the
+# first few per file and count the rest: a wall of near-identical errors buries
+# the other nine check families' findings, which is the same harm as crashing,
+# just slower.
+SALVAGE_CAP = 5
+_salvage_seen = {}
+
+
+def _report(label, idx, msg):
+    n = _salvage_seen.get(label, 0) + 1
+    _salvage_seen[label] = n
+    if n <= SALVAGE_CAP:
+        SALVAGE_REPORT.append((label, idx, msg))
+    elif n == SALVAGE_CAP + 1:
+        SALVAGE_REPORT.append(
+            (label, -1, "... further salvage messages suppressed; fix the first one"))
+
+
+def _salvage_array(raw: str, label: str):
+    """Parse a JS array element by element, keeping everything that parses.
+
+    WHY (2026-08-15). One malformed row in usage-log-current.js — written by a
+    bot, invisible in the browser — made the WHOLE ledger unparseable, which
+    crashed site_guard mid-run, which blocked the ship and hid the nine other
+    check families' findings behind a stack trace. One bad record must cost one
+    record: never the file, never the run.
+    """
+    items, idx = [], 0
+    start = raw.find("[")
+    if start < 0:
+        SALVAGE_REPORT.append((label, -1, "no array literal found"))
+        return items
+    i, n = start + 1, len(raw)
+    while i < n:
+        c = raw[i]
+        if c.isspace() or c == ",":
+            i += 1
+            continue
+        if c == "]":
+            break
+        if c in "[{":
+            blob = slice_container(raw, i)
+            if blob is None:
+                _report(label, idx, "record %d never closes - %s" % (idx, snippet(raw, i)))
+                break
+            try:
+                items.append(tolerant_parse(blob))
+            except Exception as exc:                       # noqa: BLE001
+                _report(label, idx, "record %d dropped (%s) - %s"
+                        % (idx, exc, snippet(blob, 0)))
+            idx += 1
+            i += len(blob)
+            continue
+        # Anything else at the top level of an array of records is garbage: a
+        # stray token, a half-deleted row, a merge-conflict marker.
+        #
+        # Resynchronise on the next line that STARTS a record, not on the next
+        # comma. Commas are everywhere inside record bodies, so comma-hopping
+        # lands mid-string and reports the same corruption fifteen times with
+        # fifteen different offsets — a report nobody can act on.
+        nxt = re.search(r"\n\s*\{", raw[i:])
+        _report(label, idx, "element %d is not a record - %s" % (idx, snippet(raw, i)))
+        if not nxt:
+            break
+        i, idx = i + nxt.start() + 1, idx + 1
+    return items
+
+
+def parse_or_salvage(raw: str, label: str):
+    """tolerant_parse, but a failure degrades to per-record salvage instead of
+    propagating. Returns None only when there is nothing recoverable at all."""
+    try:
+        return tolerant_parse(raw)
+    except Exception as exc:                               # noqa: BLE001
+        if not raw.lstrip().startswith("["):
+            _report(label, -1, "unparseable, and not an array: %s" % exc)
+            return None
+        _report(label, -1, "whole-file parse failed (%s) - salvaging record by record" % exc)
+        return _salvage_array(raw, label)
+
+
 def tolerant_parse(raw: str):
     """JSON first; else strip comments / quote bare keys / convert single-quoted
     strings / drop trailing commas. Single pass, string-aware."""
@@ -128,7 +235,14 @@ def tolerant_parse(raw: str):
         if not c.isspace():
             last_sig = c
         i += 1
-    return json.loads("".join(out))
+    converted = "".join(out)
+    try:
+        return json.loads(converted)
+    except json.JSONDecodeError as exc:
+        raise StoreParseError(
+            "%s at line %d col %d, near %s"
+            % (exc.msg, exc.lineno, exc.colno, snippet(converted, exc.pos)),
+            converted, exc.pos) from None
 
 
 def slice_container(text: str, start: int) -> str | None:
@@ -176,7 +290,7 @@ def read_store(path: Path, var: str | None = None, last: bool = True):
     raw = slice_container(text, m.end())
     if raw is None:
         return None
-    return tolerant_parse(raw)
+    return parse_or_salvage(raw, path.name)
 
 
 def read_appended_rows(path: Path, var_name: str = "rows"):
@@ -189,4 +303,4 @@ def read_appended_rows(path: Path, var_name: str = "rows"):
     if not m:
         return None
     raw = slice_container(text, m.end())
-    return tolerant_parse(raw) if raw else None
+    return parse_or_salvage(raw, path.name) if raw else None

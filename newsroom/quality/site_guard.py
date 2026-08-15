@@ -64,7 +64,7 @@ def say(s: str) -> None:
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 sys.path.insert(0, str(HERE))
-from jsstore import read_store, read_appended_rows  # noqa: E402
+from jsstore import read_store, read_appended_rows, SALVAGE_REPORT  # noqa: E402
 
 WEB = ROOT / "web"
 DATA = WEB / "data"
@@ -594,6 +594,44 @@ def check_renderer_parity():
                      "Listen feature will speak the marker" % label)
 
 
+def check_ssr_store_parity():
+    """Every article store the APP renders at /article/<slug> must also be read
+    by the SERVER function and by the sitemap generator.
+
+    WHY (2026-08-15). guides.js was in app.js's lookup pool and in this guard's
+    ARTICLE_STORES, but in neither functions/article/[slug].js nor
+    gen_sitemap.py. The failure was invisible from inside the site: clicking a
+    guide card worked, because the SPA resolved the slug itself and never asked
+    the server. It broke only for people arriving from outside — a refresh, a
+    shared link, Googlebot — who got a 404 on all six guides, and it broke
+    silently, because nobody tests their own site cold.
+
+    This is the general form of that bug: a page is only real if every reader
+    agrees it exists. Three lists, one truth, checked on every push.
+    """
+    fn = ROOT / "functions" / "article" / "[slug].js"
+    gen = ROOT / "newsroom" / "runner" / "gen_sitemap.py"
+    for label, path in (("functions/article/[slug].js", fn),
+                        ("newsroom/runner/gen_sitemap.py", gen)):
+        if not path.is_file():
+            err("ssr-parity", "%s is missing — articles have no real URLs" % label)
+            continue
+        text = io.open(path, encoding="utf-8").read()
+        for _var, store in ARTICLE_STORES:
+            if not store.is_file():
+                continue
+            # Match the QUOTED path literal, not a bare mention. A plain
+            # substring search passes on any file that merely names the store in
+            # a comment — including the comment explaining this very check,
+            # which is exactly how the first version of it self-defeated.
+            pat = r"""["']/?(?:data/)?%s["']""" % re.escape(store.name)
+            if not re.search(pat, text):
+                err("ssr-parity",
+                    "%s is rendered by app.js but %s never reads it — its articles "
+                    "404 on a cold load and are invisible to search"
+                    % (store.name, label))
+
+
 def check_sitemap_and_rss(slugs):
     if not CHECK_ASSETS:
         return
@@ -617,32 +655,62 @@ def check_sitemap_and_rss(slugs):
 
 
 # --------------------------------------------------------------------------
+def run(label, fn, *args, **kwargs):
+    """Run one check. If it throws, that becomes a FINDING, not the end of the run.
+
+    WHY (2026-08-15). check_ledger hit a row a bot had written that the parser
+    could not read, raised, and took the whole guard down with it — mid-report,
+    before printing a single result. The ship was blocked by a stack trace and
+    the nine other check families never ran. A guard that dies while guarding is
+    worse than no guard: it is an outage that looks like diligence.
+
+    A crashing check is a real error and still fails the build. It just fails it
+    with a name, alongside everything the other checks found.
+    """
+    try:
+        return fn(*args, **kwargs)
+    except Exception as exc:                               # noqa: BLE001
+        err("check-crash", "%s raised %s: %s — this check could not run, so "
+            "whatever it protects is currently unchecked"
+            % (label, type(exc).__name__, exc))
+        return None
+
+
+def report_salvage():
+    """Surface anything a store reader had to skip to keep going."""
+    for label, idx, msg in SALVAGE_REPORT:
+        where = label if idx < 0 else "%s[%d]" % (label, idx)
+        err("store-salvage", "%s: %s" % (where, msg))
+
+
 def main() -> int:
     global CHECK_ASSETS
     fix = "--fix" in sys.argv
     CHECK_ASSETS = "--skip-assets" not in sys.argv
-    check_array_holes(fix)
-    repair_ledger_ids(fix)
-    personas = read_store(DATA / "personas.js", "RTFC_PERSONAS") or []
-    sections = read_store(DATA / "personas.js", "RTFC_SECTIONS") or []
-    entities = read_store(DATA / "entities.js", "RTFC_ENTITIES") or []
+    run("check_array_holes", check_array_holes, fix)
+    run("repair_ledger_ids", repair_ledger_ids, fix)
+    personas = run("read personas.js", read_store, DATA / "personas.js", "RTFC_PERSONAS") or []
+    sections = run("read sections", read_store, DATA / "personas.js", "RTFC_SECTIONS") or []
+    entities = run("read entities.js", read_store, DATA / "entities.js", "RTFC_ENTITIES") or []
     if isinstance(entities, dict):
         entities = entities.get("models") or []
 
-    arts = load_articles()
-    slugs = check_articles(arts, personas, sections)
-    check_scoreboard(entities)
-    check_grid()
-    check_extensions()
-    check_ledger()
-    check_no_hash_links()
-    check_no_paid_content_in_repo()
-    check_route_plumbing()
-    check_routes_have_titles()
-    check_scripts_and_globals()
-    check_cache_buster()
-    check_renderer_parity()
-    check_sitemap_and_rss(list(slugs.keys()))
+    arts = run("load_articles", load_articles) or []
+    slugs = run("check_articles", check_articles, arts, personas, sections) or {}
+    run("check_scoreboard", check_scoreboard, entities)
+    run("check_grid", check_grid)
+    run("check_extensions", check_extensions)
+    run("check_ledger", check_ledger)
+    run("check_no_hash_links", check_no_hash_links)
+    run("check_no_paid_content_in_repo", check_no_paid_content_in_repo)
+    run("check_route_plumbing", check_route_plumbing)
+    run("check_routes_have_titles", check_routes_have_titles)
+    run("check_scripts_and_globals", check_scripts_and_globals)
+    run("check_cache_buster", check_cache_buster)
+    run("check_renderer_parity", check_renderer_parity)
+    run("check_ssr_store_parity", check_ssr_store_parity)
+    run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
+    report_salvage()
 
     say("=" * 72)
     say("SITE GUARD - %d articles, 10 check families" % len(arts))
@@ -666,8 +734,18 @@ def main() -> int:
             i = sys.argv.index("--gate")
             scope = sys.argv[i + 1] if len(sys.argv) > i + 1 else "all"
             if scope == "code":
+                # "check-crash" is here on purpose. With the salvage layer in
+                # jsstore, bot-written data can no longer take a check down, so a
+                # crash now means the guard's OWN code is broken — and shipping
+                # while a whole check family silently isn't running is the exact
+                # hole that let three pages die in front of readers.
+                # "store-salvage" is NOT here: a malformed row is bot-owned data,
+                # repaired by site-guard.yml in CI, and blocking the owner's ship
+                # on a row an agent will rewrite in ten minutes is how a guard
+                # gets switched off.
                 code_fams = ("route-titles", "scripts", "cache-buster", "renderers",
-                             "hash-links", "routing", "paid-content")
+                             "hash-links", "routing", "paid-content", "ssr-parity",
+                             "check-crash")
                 blocking = [e for e in ERRORS if e.strip().startswith(code_fams)]
                 if not blocking:
                     say("\nGUARD: no CODE-side errors — ship allowed. The data "

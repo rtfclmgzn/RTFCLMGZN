@@ -33,11 +33,17 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 WEB = ROOT / "web"
 SITE = "https://rtfclmgzn.com"
 
+# Keep this list identical to functions/article/[slug].js::STORES and to
+# site_guard.py::ARTICLE_STORES. guides.js was absent from two of the three for
+# a day: the guides rendered in-app, had no server route, and appeared in no
+# sitemap, so six of the site's best top-of-funnel pages did not exist as far as
+# any search engine was concerned.
 STORES = [
     WEB / "data" / "newsroom-articles.js",
     WEB / "data" / "live-articles.js",
     WEB / "data" / "articles.js",
     WEB / "data" / "research.js",
+    WEB / "data" / "guides.js",
 ]
 
 # EVERY PAGE, NOT JUST ARTICLES (2026-08-14). Until the router moved off hash
