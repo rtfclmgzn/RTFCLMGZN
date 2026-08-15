@@ -114,25 +114,47 @@ def main() -> int:
             errs: list[str] = []
             page.on("pageerror", lambda e: errs.append(str(e)[:220]))
 
+            PROBE = """() => {
+                const app = document.getElementById('app') || {};
+                const h = document.querySelector('#app h1');
+                return {len: (app.innerHTML || '').length,
+                        crashed: !!h && h.textContent.indexOf('didn') >= 0,
+                        blockFail: document.querySelectorAll('.block-fail').length};
+            }"""
+
             def visit(url: str, label: str, settle: int = 500) -> None:
+                """Load a route and judge it — but WAIT for it, do not race it.
+
+                WHY THIS POLLS (2026-08-15). The old version slept a flat 500ms
+                and then asked once. /magazine renders a 3D shelf with cover
+                images and takes longer than that on a cold CI runner, so this
+                check reported "page is empty (0 chars)" and failed the build on
+                EVERY Site Guard run — ten in a row — while the page rendered
+                perfectly for every real reader. A guard that cries wolf gets
+                switched off, and a guard that is always red hides the run where
+                something is actually wrong. That is worse than not checking.
+
+                So emptiness is now a CONCLUSION, not a snapshot: poll until the
+                page has content or the deadline passes. A page that is really
+                empty still fails, ~6s later, which costs nothing because it
+                only happens when something is genuinely broken.
+                """
                 errs.clear()
                 page.goto(url, wait_until="load", timeout=45000)
                 page.wait_for_timeout(settle)
-                state = page.evaluate(
-                    """() => {
-                        const app = document.getElementById('app') || {};
-                        const h = document.querySelector('#app h1');
-                        return {len: (app.innerHTML || '').length,
-                                crashed: !!h && h.textContent.indexOf('didn') >= 0,
-                                blockFail: document.querySelectorAll('.block-fail').length};
-                    }"""
-                )
+                state = page.evaluate(PROBE)
+                waited = settle
+                while state["len"] < 300 and waited < 6000:
+                    page.wait_for_timeout(250)
+                    waited += 250
+                    state = page.evaluate(PROBE)
+                if state["len"] < 300:
+                    fails.append("%s — still empty after %dms (%d chars)"
+                                 % (label, waited, state["len"]))
                 if errs:
                     fails.append("%s — JS error: %s" % (label, errs[0]))
                 if state["crashed"]:
                     fails.append("%s — crash screen rendered" % label)
-                if state["len"] < 300:
-                    fails.append("%s — page is empty (%d chars)" % (label, state["len"]))
                 if state["blockFail"]:
                     fails.append("%s — %d body block(s) failed to render"
                                  % (label, state["blockFail"]))
