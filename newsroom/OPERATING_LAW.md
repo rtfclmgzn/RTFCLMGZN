@@ -19,6 +19,8 @@ Two things follow, and they are the whole philosophy of this system:
 
 **So the standing instruction to every agent is: when you learn something, encode it. A fix that leaves no check behind has not been finished.**
 
+**Read `newsroom/FAILURE_REGISTER.md` next.** It is every reader-visible failure this system has produced, sorted into the five shapes they keep taking, each with the named check that now makes it impossible. The laws below are the rules; the register is the evidence for them, and the place a new lesson goes.
+
 ---
 
 ## THE LAWS

@@ -423,6 +423,113 @@ def repair_ledger_ids(fix: bool) -> None:
     io.open(p, "w", encoding="utf-8", newline="").write("".join(out))
 
 
+def repair_missing_script_tags(fix: bool) -> None:
+    """Load any data file whose global the app reads and index.html forgot.
+
+    WHY THIS REPAIRS ITSELF RATHER THAN BEING FIXED BY HAND (2026-08-15).
+    `social-posts.js` sat in web/data/ for weeks — current, committed, 56
+    articles' worth of real distribution records — and the Distribution panel
+    on every article page rendered nothing, because one `<script>` tag was
+    never added. The data was fine. The reader was fine. Only the wiring was
+    missing, and nothing in the world could see it.
+
+    That is a mechanical fault with exactly one correct fix, so it is repaired
+    mechanically. The new tag is inserted after the last existing data script
+    and inherits whatever cache-buster the file already uses, so the next
+    restamp treats it like any other.
+
+    RTFC_WORLDMAP is exempt: the map code fetches it on demand, deliberately.
+    """
+    if not INDEX.is_file() or not APP.is_file():
+        return
+    idx = io.open(INDEX, encoding="utf-8", newline="").read()
+    app = io.open(APP, encoding="utf-8").read()
+    srcs = re.findall(r'<script defer src="/?(data/[^"?]+)', idx)
+    if len(srcs) < 20:
+        return                       # blind; expect() reports it in the check
+    loaded = set()
+    for s in srcs:
+        p = WEB / s
+        if p.is_file():
+            loaded |= set(re.findall(r"window\.(RTFC_[A-Z_0-9]+)",
+                                     io.open(p, encoding="utf-8").read()))
+    on_disk = {}
+    for p in sorted(DATA.glob("*.js")):
+        try:
+            for g in re.findall(r"window\.(RTFC_[A-Z_0-9]+)",
+                                io.open(p, encoding="utf-8").read()):
+                on_disk.setdefault(g, p.name)
+        except OSError:
+            pass
+    missing = sorted({on_disk[g] for g in
+                      set(re.findall(r"window\.(RTFC_[A-Z_0-9]+)", app))
+                      - loaded - {"RTFC_WORLDMAP"} if g in on_disk})
+    if not missing or not fix:
+        return
+    anchor = None
+    for m in re.finditer(r'[ \t]*<script defer src="/?data/[^\n]*\n', idx):
+        anchor = m
+    if anchor is None:
+        return
+    buster = ""
+    b = re.search(r"\?b=([0-9a-z]+)", idx)
+    if b:
+        buster = "?b=" + b.group(1)
+    tags = "".join('  <script defer src="/data/%s%s"></script>\n' % (f, buster)
+                   for f in missing)
+    io.open(INDEX, "w", encoding="utf-8", newline="").write(
+        idx[:anchor.end()] + tags + idx[anchor.end():])
+    for f in missing:
+        note("index.html: added the missing <script> for data/%s" % f)
+
+
+def repair_future_timestamps(fix: bool) -> None:
+    """A ledger row cannot have happened later than the moment we read it.
+
+    WHY (2026-08-15). u-0279 carried a `ts` in the future. Nothing in the
+    pipeline can know a future time, so the row was not measured — an agent
+    typed a timestamp, which is Law 3 in miniature: a number written instead of
+    observed. It is small, and it is the same failure that froze the public
+    cost figure at $11.48 for a month.
+
+    The repair is deliberately conservative. It does NOT invent when the run
+    happened; it clamps the claim to the latest moment we can actually stand
+    behind — the moment this check observed it. That is a true upper bound and
+    an honest one, and unlike the original it cannot put a row in the future or
+    reorder "newest activity" on the public page. Rows already in the past are
+    never touched.
+
+    log_usage.py stamps its own rows from the runner's clock and is not the
+    source of these. This exists for the hand-appended ones, and the runbook
+    rule is the real fix: agents log through log_usage.py, never by typing a
+    row.
+    """
+    p = DATA / "usage-log-current.js"
+    if not p.is_file():
+        return
+    text = io.open(p, encoding="utf-8", newline="").read()
+    horizon = now() + timedelta(hours=2)
+    stamp = now().strftime("%Y-%m-%dT%H:%M:%SZ")
+    out, pos, fixed = [], 0, 0
+    for m in re.finditer(r'ts:\s*"([^"]+)"', text):
+        out.append(text[pos:m.start()])
+        ts = parse_ts(m.group(1))
+        if ts is not None and ts > horizon:
+            fixed += 1
+            if fix:
+                out.append('ts:"%s"' % stamp)
+                note("ledger: clamped a future ts %s -> %s (observed time)"
+                     % (m.group(1), stamp))
+            else:
+                out.append(m.group(0))
+        else:
+            out.append(m.group(0))
+        pos = m.end()
+    out.append(text[pos:])
+    if fixed and fix:
+        io.open(p, "w", encoding="utf-8", newline="").write("".join(out))
+
+
 def check_ledger():
     base = read_store(DATA / "usage-log.js", "RTFC_USAGE_LOG") or []
     cur = read_appended_rows(DATA / "usage-log-current.js") or []
@@ -484,6 +591,9 @@ def check_no_hash_links():
     it is specifically the "#/" route shape that is banned.
     """
     targets = [APP, INDEX, SSR] + sorted((ROOT / "functions").rglob("*.js"))
+    if not expect("check_no_hash_links", sum(1 for t in targets if t.is_file()),
+                  4, "files to scan"):
+        return
     seen = set()
     for p in targets:
         if not p.is_file() or p in seen:
@@ -507,6 +617,8 @@ def check_route_plumbing():
     titled 'Page not found'."""
     app = io.open(APP, encoding="utf-8").read()
     routes = set(re.findall(r'parts\[0\]==="([a-z\-]+)"', app))
+    if not expect("check_route_plumbing", len(routes), 25, "routes in app.js"):
+        return
 
     # THE SERVER SIDE MOVED OUT OF _redirects (2026-08-15). Measured on the live
     # site, `_redirects` did not do either job it was there for: the 37 exact
@@ -603,6 +715,10 @@ def check_routes_have_titles():
     routes = set(re.findall(r'parts\[0\]==="([a-z\-]+)"', app))
     m = re.search(r"var ROUTE_HEADS=\{(.*?)\n  \};", app, re.S)
     heads = set(re.findall(r'^\s*"?([a-z\-]+)"?\s*:\s*\[', m.group(1), re.M)) if m else set()
+    if not expect("check_routes_have_titles", len(routes), 25, "routes in app.js"):
+        return
+    if not expect("check_routes_have_titles", len(heads), 20, "ROUTE_HEADS entries"):
+        return
     # These build their <title> from the record they render, not the table.
     dynamic = {"article", "section", "persona", "editor", "company", "read", "issue"}
     for r in sorted(routes - heads - dynamic):
@@ -617,6 +733,11 @@ def check_scripts_and_globals():
     # got a real URL, and this regex silently matched nothing for one commit —
     # a check that quietly stops checking is the worst failure mode there is.
     srcs = re.findall(r'<script defer src="/?(data/[^"?]+)', idx)
+    if not expect("check_scripts_and_globals", len(srcs), 20, "data script tags in index.html"):
+        return
+    read_globals = set(re.findall(r"window\.(RTFC_[A-Z_0-9]+)", app))
+    if not expect("check_scripts_and_globals", len(read_globals), 15, "RTFC_ globals read by app.js"):
+        return
     for s in srcs:
         if not (WEB / s).is_file():
             err("scripts", "index.html loads %s which does not exist" % s)
@@ -629,14 +750,39 @@ def check_scripts_and_globals():
     # Globals the app reads but nothing in index.html defines. RTFC_WORLDMAP is
     # deliberately lazy-loaded by the map code; everything else must be shipped.
     lazy = {"RTFC_WORLDMAP"}
-    for g in sorted(set(re.findall(r"window\.(RTFC_[A-Z_0-9]+)", app)) - loaded_globals - lazy):
-        warn("scripts", "app.js reads window.%s but no data file in index.html "
-             "defines it — anything drawn from it renders empty" % g)
+    on_disk = {}
+    for p in sorted(DATA.glob("*.js")):
+        try:
+            for g in re.findall(r"window\.(RTFC_[A-Z_0-9]+)",
+                                io.open(p, encoding="utf-8").read()):
+                on_disk.setdefault(g, p.name)
+        except OSError:
+            pass
+    for g in sorted(read_globals - loaded_globals - lazy):
+        if g in on_disk:
+            # The data exists, is committed, is current — and one <script> tag
+            # is missing, so the feature it powers renders nothing. This is a
+            # wiring bug with a known fix, not an open question. It blocks.
+            # (RTFC_SOCIAL_POSTS sat like this: 143KB of real distribution
+            # records, 56 articles' worth, and the Distribution panel on every
+            # article page rendered empty because nobody loaded the file.)
+            err("scripts", "app.js reads window.%s and web/data/%s defines it, "
+                "but index.html never loads that file — the feature renders "
+                "empty. Add the <script defer src=\"/data/%s?b=...\"> tag."
+                % (g, on_disk[g], on_disk[g]))
+        else:
+            warn("scripts", "app.js reads window.%s but no data file in index.html "
+                 "defines it — anything drawn from it renders empty" % g)
 
 
 def check_cache_buster():
     idx = io.open(INDEX, encoding="utf-8").read()
-    tokens = set(re.findall(r"\?b=([0-9a-z]+)", idx))
+    stamps = re.findall(r"\?b=([0-9a-z]+)", idx)
+    # Zero stamps is not "consistent". It means the stamping scheme changed and
+    # this check has been agreeing with itself about nothing ever since.
+    if not expect("check_cache_buster", len(stamps), 20, "?b= stamps in index.html"):
+        return
+    tokens = set(stamps)
     if len(tokens) > 1:
         err("cache-buster", "index.html carries %d different ?b= stamps %s — a "
             "partial restamp ships some assets stale" % (len(tokens), sorted(tokens)))
@@ -668,7 +814,15 @@ def check_renderer_parity():
 
     a, s = fmt_body(app), fmt_body(ssr)
     if not a or not s:
-        warn("renderers", "could not isolate one of the fmt() bodies")
+        # NOT a warning. If this check cannot find the two fmt() bodies it is
+        # comparing nothing, and "comparing nothing" has always printed the
+        # same clean result as "they match". Say the true thing instead.
+        err("check-blind", "check_renderer_parity could not isolate the fmt() "
+            "body in %s — the two renderers are NOT being compared, so they "
+            "can drift apart freely" % ("app.js" if not a else "the SSR function"))
+        return
+    if not expect("check_renderer_parity", sum(1 for pat, _ in MARKERS if pat in a),
+                  4, "known markers in app.js fmt()"):
         return
     for pat, label in MARKERS:
         in_app, in_ssr = pat in a, pat in s
@@ -770,6 +924,37 @@ def run(label, fn, *args, **kwargs):
         return None
 
 
+def expect(family: str, found: int, minimum: int, what: str) -> bool:
+    """Assert that a check actually FOUND something to check.
+
+    THE FAILURE MODE THIS EXISTS FOR (2026-08-15, owner: "make sure things I am
+    not even imagining are checked").
+
+    Almost every check here works by matching a pattern against a file. A
+    pattern that stops matching does not report anything — it reports NOTHING,
+    which is byte-for-byte identical to "I looked and everything was fine". A
+    guard cannot tell you it has gone blind; it just gets quieter.
+
+    This already happened. `check_scripts_and_globals` matched
+    `<script defer src="(data/...` and the day index.html moved to
+    `/data/...` it silently matched zero script tags and passed every run,
+    while it was checking nothing at all. It was caught by a human reading the
+    regex, which is not a system.
+
+    So every pattern-based check now states how many things it EXPECTS to find.
+    Finding fewer is not a clean pass; it is the check declaring itself broken,
+    and it fails the build under the same rules as any other code fault.
+    Returns True when the check may proceed.
+    """
+    if found >= minimum:
+        return True
+    err("check-blind", "%s found only %d %s (expected at least %d). The check "
+        "did not pass — it went blind. Its pattern no longer matches the files "
+        "it reads, so everything it protects is currently unchecked."
+        % (family, found, what, minimum))
+    return False
+
+
 def report_salvage():
     """Surface anything a store reader had to skip to keep going.
 
@@ -801,6 +986,7 @@ def main() -> int:
     # --fix (id renumbering and the rest) stays in CI, where there is no race.
     if "--fix-syntax" in sys.argv:
         check_array_holes(True)
+        repair_missing_script_tags(True)
         for n in NOTES:
             say("  " + MARK_NOTE + " " + n)
         say("syntax repair pass complete" if NOTES else "no store-syntax faults found")
@@ -808,6 +994,8 @@ def main() -> int:
 
     run("check_array_holes", check_array_holes, fix)
     run("repair_ledger_ids", repair_ledger_ids, fix)
+    run("repair_future_timestamps", repair_future_timestamps, fix)
+    run("repair_missing_script_tags", repair_missing_script_tags, fix)
     personas = run("read personas.js", read_store, DATA / "personas.js", "RTFC_PERSONAS") or []
     sections = run("read sections", read_store, DATA / "personas.js", "RTFC_SECTIONS") or []
     entities = run("read entities.js", read_store, DATA / "entities.js", "RTFC_ENTITIES") or []
@@ -815,6 +1003,7 @@ def main() -> int:
         entities = entities.get("models") or []
 
     arts = run("load_articles", load_articles) or []
+    expect("load_articles", len(arts), 50, "articles across every store")
     slugs = run("check_articles", check_articles, arts, personas, sections) or {}
     run("check_scoreboard", check_scoreboard, entities)
     run("check_grid", check_grid)
@@ -864,7 +1053,7 @@ def main() -> int:
                 # gets switched off.
                 code_fams = ("route-titles", "scripts", "cache-buster", "renderers",
                              "hash-links", "routing", "paid-content", "ssr-parity",
-                             "check-crash")
+                             "check-crash", "check-blind")
                 blocking = [e for e in ERRORS if e.strip().startswith(code_fams)]
                 if not blocking:
                     say("\nGUARD: no CODE-side errors — ship allowed. The data "

@@ -78,3 +78,38 @@ jobs:
         run: |
           echo "guard_conclusion=${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
           echo "Checked at $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_STEP_SUMMARY"
+
+  # ---------------------------------------------------------------------
+  # THE ONLY CHECK THAT TOUCHES REALITY.
+  #
+  # Everything in the job above reads files in this repository. On 2026-08-15
+  # every one of them passed, all day, while every page on the live site
+  # 308-redirected to the homepage and six whole route families returned 404 to
+  # anyone arriving from outside the app. The repo was perfect. The site was
+  # not. Nothing in a repo can tell you the difference.
+  #
+  # So this runs separately, after the deploy, and asks the site the same
+  # questions a stranger's browser would. It does not follow redirects: a page
+  # that answers 3xx is a page that does not exist, no matter what it
+  # eventually resolves to.
+  #
+  # It never blocks a deploy — the deploy has already happened by the time it
+  # can be true. It goes red, loudly, so the failure is discovered by a check
+  # instead of by a reader.
+  # ---------------------------------------------------------------------
+  live:
+    needs: guard
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Check the published site the way a stranger sees it
+        run: python3 newsroom/quality/live_check.py --wait 420
+
+      - name: Record the verdict
+        if: always()
+        run: |
+          echo "live_conclusion=${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Live site checked at $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_STEP_SUMMARY"

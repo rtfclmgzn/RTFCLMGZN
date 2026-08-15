@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import io
 import re
+import time
 import sys
 import urllib.error
 import urllib.request
@@ -88,7 +89,39 @@ def get(path: str, timeout: int = 20, follow: bool = True):
         return 0, str(e)[:120]
 
 
+def wait_for_deploy(seconds: int) -> None:
+    """Poll until the live cache-buster matches this checkout's, or give up.
+
+    Run straight after a push, this check would otherwise grade the PREVIOUS
+    deploy and pass, which is the same lie as not running at all. The buster is
+    derived from asset content, so matching it is proof the edge is serving
+    this exact commit. Giving up is not fatal: the checks below still run and
+    report against whatever is actually live, which is the honest answer to
+    "what are readers getting right now".
+    """
+    local = WEB / "index.html"
+    if not local.is_file():
+        return
+    want = set(re.findall(r"\?b=([0-9a-z]+)", io.open(local, encoding="utf-8").read()))
+    if not want:
+        return
+    deadline = time.time() + seconds
+    while time.time() < deadline:
+        _, home = get("/?deploycheck=1")
+        if want & set(re.findall(r"\?b=([0-9a-z]+)", home or "")):
+            print("live check: edge is serving this commit (%s)" % sorted(want)[0])
+            return
+        time.sleep(15)
+    notes.append("waited %ds and the edge never served this commit's build stamp "
+                 "(%s) — the checks below describe the PREVIOUS deploy"
+                 % (seconds, sorted(want)[0]))
+
+
 def main() -> int:
+    if "--wait" in sys.argv:
+        i = sys.argv.index("--wait")
+        wait_for_deploy(int(sys.argv[i + 1]) if len(sys.argv) > i + 1 else 300)
+
     status, home = get("/")
     if status != 200 or not home:
         print("LIVE CHECK: cannot reach %s (status %s). Nothing else can be "

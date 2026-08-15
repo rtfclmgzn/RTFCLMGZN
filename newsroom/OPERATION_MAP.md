@@ -42,6 +42,8 @@ That single design choice explains almost everything else: why deploys are just 
 
 **The law** — `newsroom/OPERATING_LAW.md`. Read first by every agent. The checks are its enforcement.
 
+**The evidence** — `newsroom/FAILURE_REGISTER.md`. Every failure this system has produced, its class, and the check that now blocks it. Read second.
+
 **Ship path** — `SHIP2.bat` on your PC: guard → commit → rebase past the bots → restamp → push, with retries.
 
 ---
