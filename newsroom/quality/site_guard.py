@@ -64,7 +64,8 @@ def say(s: str) -> None:
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 sys.path.insert(0, str(HERE))
-from jsstore import read_store, read_appended_rows, SALVAGE_REPORT  # noqa: E402
+from jsstore import (read_store, read_appended_rows, SALVAGE_REPORT,  # noqa: E402
+                     tolerant_parse, slice_container)
 
 WEB = ROOT / "web"
 DATA = WEB / "data"
@@ -290,24 +291,89 @@ def check_extensions():
 HOLE_RE = re.compile(r",[ \t]*(?:\r?\n[ \t]*)*,")
 
 
+# A record that ends and is immediately followed by the next record with no
+# comma between them. This is not sloppy JS — it is a SyntaxError, and a
+# SyntaxError anywhere in a data file means the browser executes NONE of it.
+# The store's global stays undefined and every page that reads it silently
+# falls back to whatever it had before.
+#
+# On 2026-08-15 exactly this sat in usage-log-current.js. The /usage page
+# announced "This log is 33 days stale — the jobs are failing", 200 rows were
+# invisible, and the public cost figure was wrong, all because one agent append
+# omitted one character. Nothing was failing. One comma was missing.
+MISSING_COMMA_RE = re.compile(r"(\}[ \t]*)(\r?\n[ \t]*\{)")
+
+
+def store_parses(path) -> bool:
+    """Does every array/object literal in this file parse cleanly?
+
+    The missing-comma repair below is only ever applied to a file that ALREADY
+    fails to parse. That is what makes a regex safe enough to edit a live data
+    store with: on a file that reads fine, the pattern is never even consulted,
+    so a false positive cannot insert a comma into working data.
+    """
+    try:
+        text = io.open(path, encoding="utf-8", newline="").read()
+    except Exception:                                      # noqa: BLE001
+        return False
+    ok = True
+    mark = len(SALVAGE_REPORT)
+    try:
+        starts = [m.end() for m in
+                  re.finditer(r"window\.[A-Za-z_0-9]+\s*=\s*(?=[\[{])", text)]
+        starts += [m.end() for m in re.finditer(r"var\s+rows\s*=\s*(?=\[)", text)]
+        for s in starts:
+            raw = slice_container(text, s)
+            if raw is None:
+                ok = False
+                continue
+            try:
+                tolerant_parse(raw)
+            except Exception:                              # noqa: BLE001
+                ok = False
+    finally:
+        # This is a probe, not a check. Anything it provoked must not show up
+        # in the report twice.
+        del SALVAGE_REPORT[mark:]
+    return ok
+
+
 def check_array_holes(fix: bool = False):
-    """A stray comma between two records makes a SPARSE array. forEach skips the
-    hole, so the site looks fine and one record's worth of nothing sits in a
-    live store indefinitely. Found in the ledger on 2026-08-14, written by an
-    agent append. Cheap to detect, so it is now never allowed to sit again."""
+    """Two syntax faults an agent append can leave behind, both invisible.
+
+    1. A STRAY comma makes a sparse array. forEach skips the hole, so the site
+       looks fine and one record's worth of nothing sits in a live store.
+    2. A MISSING comma is a SyntaxError, which kills the entire file in the
+       browser while the tolerant Python parsers here read it happily. That
+       asymmetry is the dangerous one: the guard says 284 rows, the reader sees
+       81, and only the reader is right.
+    """
     for p in sorted(DATA.glob("*.js")):
         text = io.open(p, encoding="utf-8", newline="").read()
-        # only look inside the data body, and never inside a string: the cheap
-        # proxy is a comma-comma pair separated solely by whitespace/newlines
-        if not HOLE_RE.search(text):
+        holes = HOLE_RE.search(text)
+        # Only a file that does not parse is a candidate for comma insertion.
+        gaps = MISSING_COMMA_RE.search(text) if not store_parses(p) else None
+        if not holes and not gaps:
             continue
         if fix:
-            new = HOLE_RE.sub(",", text)
+            new = text
+            if holes:
+                new = HOLE_RE.sub(",", new)
+            if gaps:
+                new, n = MISSING_COMMA_RE.subn(r"\1,\2", new)
+                note("inserted %d missing comma(s) in %s" % (n, p.name))
             io.open(p, "w", encoding="utf-8", newline="").write(new)
-            note("repaired array hole(s) in %s" % p.name)
+            if holes:
+                note("repaired array hole(s) in %s" % p.name)
         else:
-            err("store-syntax", "%s: stray comma creates a sparse-array hole — "
-                "run site_guard.py --fix" % p.name)
+            if holes:
+                err("store-syntax", "%s: stray comma creates a sparse-array hole — "
+                    "run site_guard.py --fix" % p.name)
+            if gaps:
+                err("store-syntax", "%s: two records with NO COMMA between them. "
+                    "This is a JavaScript SyntaxError, so the browser loads none "
+                    "of this file and every page reading it is stale right now — "
+                    "run site_guard.py --fix" % p.name)
 
 
 def repair_ledger_ids(fix: bool) -> None:
@@ -677,7 +743,19 @@ def run(label, fn, *args, **kwargs):
 
 
 def report_salvage():
-    """Surface anything a store reader had to skip to keep going."""
+    """Surface anything a store reader had to skip to keep going.
+
+    Read these as LIVE OUTAGES, not as parser trivia. This guard is deliberately
+    tolerant so that one bad record cannot blind it — but a browser is not. If a
+    store needed salvage here, the browser threw a SyntaxError on the whole file,
+    the global never got defined, and every page reading it is serving stale or
+    empty data to real readers right now.
+    """
+    if SALVAGE_REPORT:
+        err("store-salvage", "a store below needed salvage to be read at all. "
+            "The BROWSER has no salvage: it loads none of that file, so the "
+            "pages it feeds are stale on the live site until this is repaired "
+            "(site_guard.py --fix-syntax repairs the common causes).")
     for label, idx, msg in SALVAGE_REPORT:
         where = label if idx < 0 else "%s[%d]" % (label, idx)
         err("store-salvage", "%s: %s" % (where, msg))
@@ -687,6 +765,19 @@ def main() -> int:
     global CHECK_ASSETS
     fix = "--fix" in sys.argv
     CHECK_ASSETS = "--skip-assets" not in sys.argv
+
+    # --fix-syntax: repair ONLY the two faults that make a store unreadable to a
+    # browser, then stop. Safe to run from a workstation seconds before a push,
+    # because it edits punctuation in a file that is already invalid JS and
+    # touches nothing a bot could be appending to at the same moment. The full
+    # --fix (id renumbering and the rest) stays in CI, where there is no race.
+    if "--fix-syntax" in sys.argv:
+        check_array_holes(True)
+        for n in NOTES:
+            say("  " + MARK_NOTE + " " + n)
+        say("syntax repair pass complete" if NOTES else "no store-syntax faults found")
+        return 0
+
     run("check_array_holes", check_array_holes, fix)
     run("repair_ledger_ids", repair_ledger_ids, fix)
     personas = run("read personas.js", read_store, DATA / "personas.js", "RTFC_PERSONAS") or []
