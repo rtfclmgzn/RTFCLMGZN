@@ -36,7 +36,7 @@ That single design choice explains almost everything else: why deploys are just 
 
 **Server bits** — `functions/`: server-rendered article pages at `/article/<slug>`, the Stripe billing endpoints, the account library API. Cloudflare Pages Functions.
 
-**Routing** — `web/_redirects` maps every app path to `index.html` so deep links survive a cold visit. Adding a route means four edits: router, `ROUTE_HEADS`, `_redirects`, sitemap.
+**Routing** — `functions/[[path]].js` answers every app path at its own URL so deep links survive a cold visit; `web/_routes.json` keeps assets from invoking it. (`web/_redirects` held this job until 2026-08-15 and silently did not work: exact rules 308'd to the homepage, splat rules 404'd.) Adding a route means four edits: router, `ROUTE_HEADS`, the `EXACT`/`PREFIX` sets in that Function, sitemap.
 
 **The checks** — `newsroom/quality/`: `site_guard.py` (contracts + cross-surface promises), `render_smoke.py` (opens every page in a real browser), `live_check.py` (verifies the published site). Plus `ensure_covers.py`, `gen_sitemap.py`, `log_usage.py` in `newsroom/runner/`.
 

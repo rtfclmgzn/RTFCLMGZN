@@ -507,18 +507,46 @@ def check_route_plumbing():
     titled 'Page not found'."""
     app = io.open(APP, encoding="utf-8").read()
     routes = set(re.findall(r'parts\[0\]==="([a-z\-]+)"', app))
-    red = WEB / "_redirects"
-    if not red.is_file():
-        err("routing", "_redirects is missing — every deep link 404s on refresh")
+
+    # THE SERVER SIDE MOVED OUT OF _redirects (2026-08-15). Measured on the live
+    # site, `_redirects` did not do either job it was there for: the 37 exact
+    # rules proxied to /index.html, which Cloudflare canonicalises with a 308 to
+    # /, so every page redirected to the homepage; and the six /x/* splat rules
+    # were not honoured at all, so the magazine reader, sections, editors and
+    # company dossiers returned a hard 404 to anyone arriving from outside the
+    # app. functions/[[path]].js answers those URLs itself. This check now reads
+    # ITS route lists, because that file is what the server actually consults.
+    fn = ROOT / "functions" / "[[path]].js"
+    if not fn.is_file():
+        err("routing", "functions/[[path]].js is missing — every page except "
+            "/article/* 404s on a cold visit or a refresh")
         return
-    rules = io.open(red, encoding="utf-8").read()
-    served = set(re.findall(r"^/([a-z\-]+)\s+/index\.html\s+200", rules, re.M))
-    served |= set(re.findall(r"^/([a-z\-]+)/\*\s+/index\.html\s+200", rules, re.M))
-    # article/share are Functions, not rewrites; home needs no rule
+    src = io.open(fn, encoding="utf-8").read()
+
+    def literal_set(name):
+        m = re.search(r"const\s+%s\s*=\s*new Set\(\[(.*?)\]\)" % name, src, re.S)
+        return set(re.findall(r'"([a-z0-9\-]+)"', m.group(1))) if m else set()
+
+    served = literal_set("EXACT") | literal_set("PREFIX")
+    if not served:
+        err("routing", "functions/[[path]].js declares no routes — its EXACT/"
+            "PREFIX lists could not be read, so this check is blind")
+        return
+
+    # article/share have their own, more specific Functions; home needs no entry.
     handled_elsewhere = {"article", "share"}
     for r in sorted(routes - served - handled_elsewhere):
-        err("routing", "route '/%s' renders in the app but _redirects has no "
-            "rule for it — a cold visit or a refresh 404s" % r)
+        err("routing", "route '/%s' renders in the app but functions/[[path]].js "
+            "does not serve it — a cold visit or a refresh 404s" % r)
+    for r in sorted(served - routes - handled_elsewhere):
+        warn("routing", "functions/[[path]].js serves '/%s' but the app has no "
+             "route for it — it renders the not-found view at status 200" % r)
+
+    stale = WEB / "_redirects"
+    if stale.is_file():
+        err("routing", "web/_redirects still exists. Its 200-proxy rules send "
+            "every page to /index.html, which Cloudflare 308s to / — it will "
+            "undo functions/[[path]].js for any path it still matches. Delete it.")
 
 
 def tracked_files():

@@ -25,9 +25,11 @@ Two things follow, and they are the whole philosophy of this system:
 
 ### 1. Every page is a real, crawlable URL
 
-No `#/` route links, anywhere, ever. Fragments are invisible to search engines — the crawler sees one URL no matter how many pages the app renders. Every page lives at a real path (`/resources`, `/article/<slug>`, `/grid`), is listed in `web/_redirects` so a cold visit or a refresh works, has an entry in `ROUTE_HEADS` so it has a real title, and appears in the sitemap.
+No `#/` route links, anywhere, ever. Fragments are invisible to search engines — the crawler sees one URL no matter how many pages the app renders. Every page lives at a real path (`/resources`, `/article/<slug>`, `/grid`), is served at that path by `functions/[[path]].js`, has an entry in `ROUTE_HEADS` so it has a real title, and appears in the sitemap.
 
-*Adding a route means four edits in one commit: the router, `ROUTE_HEADS`, `_redirects`, and `gen_sitemap.py`'s STATIC list.* Enforced by `check_no_hash_links` and `check_route_plumbing`.
+*Adding a route means four edits in one commit: the router, `ROUTE_HEADS`, the `EXACT`/`PREFIX` sets in `functions/[[path]].js`, and `gen_sitemap.py`'s STATIC list.* Enforced by `check_no_hash_links` and `check_route_plumbing`.
+
+**And a real URL is only real once something has fetched it from the internet.** `web/_redirects` held this job until 2026-08-15 and did none of it: its 200-proxy rules pointed at `/index.html`, which Cloudflare canonicalises with a 308 to `/`, so all 37 pages redirected to the homepage; and its `/x/*` splat rules were ignored outright, so the magazine reader, every section, every editor and every company dossier returned a hard 404 to anyone arriving from outside the app. Four separate checks passed the whole time, because every one of them read files in the repo. The one check that touched the live site followed redirects and reported 200 OK. `live_check.py` no longer follows redirects: a page that answers with a 3xx is a page that does not exist, and it now says so.
 
 ### 2. Records are complete; renderers assume nothing
 

@@ -38,21 +38,49 @@ WEB = ROOT / "web"
 SITE = "https://rtfclmgzn.com"
 UA = {"User-Agent": "RTFCLMGZN-live-check/1.0 (+https://rtfclmgzn.com)"}
 
-# One from every family. Not exhaustive on purpose: this is a smoke alarm, and
-# a smoke alarm that takes four minutes to ring is not a smoke alarm.
-PAGES = ["/", "/buzz", "/resources", "/labs", "/extensions", "/scoreboard",
-         "/magazine", "/archive", "/grid", "/podcasts", "/dictionary",
-         "/guides", "/usage", "/pulse", "/masthead", "/contact"]
+# One from every family, INCLUDING the prefix routes. Not exhaustive on
+# purpose: this is a smoke alarm, and a smoke alarm that takes four minutes to
+# ring is not a smoke alarm. The /read, /section, /company and /issue entries
+# are here because those four families were returning a hard 404 to every
+# outside visitor for a full day while every check in the repo passed.
+PAGES = ["/", "/buzz", "/resources", "/labs", "/extensions", "/prompts",
+         "/scoreboard", "/magazine", "/archive", "/grid", "/podcasts",
+         "/dictionary", "/guides", "/usage", "/pulse", "/masthead", "/contact",
+         "/read/primer", "/section/frontier", "/company/openai",
+         "/issue/issue-002"]
 
 fails: list[str] = []
 notes: list[str] = []
 
 
-def get(path: str, timeout: int = 20):
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Refuse to follow 3xx, so a redirect surfaces as a result instead of
+    disappearing into a 200.
+
+    THIS IS THE WHOLE POINT (2026-08-15). urlopen follows redirects silently.
+    Every page on the site was 308-ing to the homepage — /usage, /magazine,
+    /scoreboard, all of them — and this check reported 200 OK for every one,
+    because it dutifully followed each redirect to the homepage and found a
+    perfectly good HTML document there. A live check that follows redirects
+    cannot tell "this page works" from "this page has been replaced by the
+    front page", which is the exact failure it exists to catch.
+    """
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_NOFOLLOW = urllib.request.build_opener(_NoRedirect)
+
+
+def get(path: str, timeout: int = 20, follow: bool = True):
+    """Returns (status, body). With follow=False a 3xx comes back AS its own
+    status code rather than as whatever the destination happens to serve."""
     url = path if path.startswith("http") else SITE + path
     req = urllib.request.Request(url, headers=UA)
+    opener = urllib.request.urlopen if follow else _NOFOLLOW.open
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with opener(req, timeout=timeout) as r:
             return r.status, r.read().decode("utf-8", "replace")
     except urllib.error.HTTPError as e:
         return e.code, ""
@@ -67,10 +95,18 @@ def main() -> int:
               "checked from here." % (SITE, status))
         return 1
 
-    # 1. every page answers a COLD request with real HTML
+    # 1. every page answers a COLD request with real HTML, AT ITS OWN URL.
+    #    follow=False is load-bearing: a 3xx here means the page the visitor
+    #    asked for is not the page they get, which is indistinguishable from
+    #    success once redirects are followed.
     for p in PAGES:
-        st, body = get(p)
-        if st != 200:
+        st, body = get(p, follow=False)
+        if 300 <= st < 400:
+            fails.append("%s answers a cold request with a %d REDIRECT. A "
+                         "visitor from Google, a shared link and a refresh all "
+                         "land somewhere else — this page effectively does not "
+                         "exist" % (p, st))
+        elif st != 200:
             fails.append("%s returned %s on a cold request — a visitor from "
                          "Google lands on nothing" % (p, st))
         elif "<title>" not in body:
