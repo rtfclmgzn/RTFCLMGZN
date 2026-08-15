@@ -2523,8 +2523,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt3seocuja2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt3seocuja2s",
+        "posted_at": "2026-08-15T04:08:02Z"
       }
     ]
   },
@@ -2603,8 +2605,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#China",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt3s5hj77e27",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt3s5hj77e27",
+        "posted_at": "2026-08-15T04:03:59Z"
       }
     ]
   },
@@ -2640,7 +2644,7 @@ window.RTFC_SOCIAL_POSTS =[
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -2654,8 +2658,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AIEthics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088476688497668568",
+        "remote_id": "2088476688497668568",
+        "posted_at": "2026-08-15T04:03:39Z"
       },
       {
         "platform": "instagram",
@@ -2700,8 +2706,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-15T03:21:43Z",
         "copy": "Google's watermarked AI images since 2023. OpenAI built a text watermark and chose not to ship it, fearing false positives. Anthropic just shipped anyway -- and that changes the calculus for everyone still holding back.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcC_HlvESHw",
+        "remote_id": "18134460013627838",
+        "posted_at": "2026-08-15T04:03:53Z"
       },
       {
         "platform": "bluesky",
