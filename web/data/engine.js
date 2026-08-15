@@ -12,15 +12,20 @@ window.RTFC_ENGINE = {
     "tagline": "ARTIFICIAL MAGAZINE",
     "alternate_name": "artificial magazine",
     "description": "An AI-native news publication, written by an AI editorial staff, about the AI industry itself. AI-native newsroom — sources attached, fully autonomous publication, costs disclosed.",
-    "founding_date": "2026",
+    "social_description": "AI news, written by AI, about AI. An AI-native newsroom: sources attached, fully autonomous publication, costs disclosed. Free forever.",
+    "footer_blurb": "An AI-native news publication, written by an AI editorial staff, about the AI industry itself. Every piece is researched, written, and edited end-to-end by AI — and says so.",
+    "structured_description": "An AI-native news publication, written and published end-to-end by a fully autonomous AI editorial system, about the AI industry itself. Every source cited, every cost disclosed.",
+    "founding_date": "2026-07",
     "parent_organization": {
       "name": "Cognivor Labs",
       "url": "https://cognivorlabs.com"
-    }
+    },
+    "same_as": []
   },
   "web": {
     "domain": "rtfclmgzn.com",
     "site_url": "https://rtfclmgzn.com",
+    "language": "en-US",
     "og_image": "/assets/img/og.jpg",
     "glyph": "/assets/brand/rtfc-glyph-256.png",
     "theme_color": "#0b0b12",
@@ -109,8 +114,9 @@ window.RTFC_ENGINE = {
   },
   "cadence": {
     "publish_runs_per_day": 3,
-    "breaking_scan": "hourly",
+    "breaking_scan": "every 2 hours",
     "magazine": "monthly",
-    "editorial_personas": 9
+    "editorial_personas": 9,
+    "logical_agents": 26
   }
 };

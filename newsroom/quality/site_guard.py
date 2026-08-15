@@ -983,16 +983,28 @@ def check_engine_config():
             spec = importlib.util.spec_from_file_location("gen_engine_js", gen)
             mod = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(mod)
-            want = mod.render()
-            have = io.open(out, encoding="utf-8").read() if out.is_file() else ""
-            if want != have:
+            targets = [("web/data/engine.js", out, mod.render())]
+            if INDEX.is_file():
+                html = io.open(INDEX, encoding="utf-8", newline="").read()
+                targets.append(("web/index.html identity regions", INDEX,
+                                mod.render_index(html, cfg)))
+            man = WEB / "manifest.json"
+            targets.append(("web/manifest.json", man, mod.render_manifest(cfg)))
+            for label, path, want in targets:
+                have = io.open(path, encoding="utf-8", newline="").read() if path.is_file() else ""
+                if want == have:
+                    continue
                 if fix_requested():
-                    io.open(out, "w", encoding="utf-8", newline="\n").write(want)
-                    note("engine: regenerated web/data/engine.js from engine.config.json")
+                    io.open(path, "w", encoding="utf-8", newline="").write(want)
+                    note("engine: regenerated %s from engine.config.json" % label)
                 else:
-                    err("engine", "web/data/engine.js is stale — it does not match "
-                        "engine.config.json. Run newsroom/runner/gen_engine_js.py "
-                        "(SHIP2 and CI do this automatically).")
+                    err("engine", "%s is stale — it does not match engine.config.json. "
+                        "Run newsroom/runner/gen_engine_js.py (SHIP2 and CI do this "
+                        "automatically)." % label)
+        except RuntimeError as exc:
+            # a marker was deleted from index.html — the generator can no longer
+            # own that region, and it will silently go stale from here on
+            err("engine", str(exc))
         except Exception as exc:                           # noqa: BLE001
             err("check-crash", "check_engine_config could not render engine.js: %s" % exc)
     else:
@@ -1028,9 +1040,14 @@ def check_engine_config():
         if f.name in DOMAIN_OK or "__pycache__" in str(f):
             continue
         try:
-            n = io.open(f, encoding="utf-8", errors="replace").read().count(domain)
+            text = io.open(f, encoding="utf-8", errors="replace").read()
         except OSError:
             continue
+        # Text between <!-- engine:X --> markers is GENERATED from the config.
+        # Counting it would punish the fix: the whole point of the markers is
+        # that those bytes are the config's output, not a hardcode.
+        text = re.sub(r"<!-- engine:(\w+) -->.*?<!-- /engine:\1 -->", "", text, flags=re.S)
+        n = text.count(domain)
         if n:
             counts[str(f.relative_to(ROOT)).replace("\\", "/")] = n
 

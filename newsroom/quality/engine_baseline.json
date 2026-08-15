@@ -16,6 +16,5 @@
   "newsroom/core/service.py": 2,
   "newsroom/registry/story-package.schema.json": 1,
   "newsroom/runner/cycle-runbook.md": 1,
-  "newsroom/tests/helpers.py": 2,
-  "web/index.html": 12
+  "newsroom/tests/helpers.py": 2
 }
