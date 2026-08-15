@@ -2421,8 +2421,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt44eznkno2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt44eznkno2u",
+        "posted_at": "2026-08-15T07:07:11Z"
       }
     ]
   },
@@ -2642,9 +2644,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AIEthics"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -2772,8 +2774,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Gemini",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088522842694402462",
+        "remote_id": "2088522842694402462",
+        "posted_at": "2026-08-15T07:07:03Z"
       },
       {
         "platform": "instagram",
