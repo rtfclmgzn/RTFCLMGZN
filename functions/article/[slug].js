@@ -172,9 +172,10 @@ function fmt(s) {
     .replace(/\[([^\]]+)\]\(#?(\/[^)\s]*)\)/g, '<a href="$2">$1</a>');
 }
 
+
 function kickerTitle(o) {
   let h = "";
-  if (o.kicker) h += `<div class="kick">${esc(o.kicker)}</div>`;
+  if (o.kicker) h += `<div class="rs-kick">${esc(o.kicker)}</div>`;
   if (o.title) h += `<h3>${esc(o.title)}</h3>`;
   return h;
 }
@@ -183,26 +184,34 @@ function kickerTitle(o) {
 // oddly-shaped payloads fall back to whatever labeled text they contain —
 // never throw: one bad block must not take down the page (learned from the
 // a.corrections crash of 2026-08-13).
+//
+// EVERY CLASS HERE IS PREFIXED rs-. That is not decoration. This markup is now
+// injected into the real site shell, which loads styles.css, and styles.css
+// already defines .comp (11 rules), .dek (8), .byline (6) and .big for its own
+// components. Unprefixed names would silently inherit whichever of those the
+// cascade preferred, so the server-rendered article would be styled by rules
+// written for something else entirely — the kind of breakage that looks like a
+// design mistake and is actually a namespace collision.
 function blockHTML(b) {
   try {
     const t = b.type;
     if (t === "p") return `<p>${fmt(b.text)}</p>`;
     if (t === "h2") return `<h2>${fmt(b.text)}</h2>`;
     if (t === "quote") return `<blockquote>${fmt(b.text)}</blockquote>`;
-    if (t === "stat") return `<div class="comp"><div class="kick">${esc(b.label || "")}</div><p class="big">${esc(b.value || "")}</p></div>`;
+    if (t === "stat") return `<div class="rs-comp"><div class="rs-kick">${esc(b.label || "")}</div><p class="rs-big">${esc(b.value || "")}</p></div>`;
     if (t === "keyfacts") {
       const k = b.keyfacts || {};
-      return `<div class="comp">${kickerTitle(k)}<dl>` +
+      return `<div class="rs-comp">${kickerTitle(k)}<dl>` +
         (k.items || []).map((i) => `<dt>${esc(i.label)}</dt><dd>${fmt(i.value)}</dd>`).join("") + "</dl></div>";
     }
     if (t === "timeline") {
       const k = b.timeline || {};
-      return `<div class="comp">${kickerTitle(k)}<ol class="tl">` +
+      return `<div class="rs-comp">${kickerTitle(k)}<ol class="rs-tl">` +
         (k.items || []).map((i) => `<li><b>${esc(i.when)}</b> — ${fmt(i.what)}</li>`).join("") + "</ol></div>";
     }
     if (t === "ledger") {
       const k = b.ledger || {};
-      return `<div class="comp">${kickerTitle(k)}<dl>` + (k.items || []).map((i) =>
+      return `<div class="rs-comp">${kickerTitle(k)}<dl>` + (k.items || []).map((i) =>
         `<dt>${esc(i.value)}${i.unit ? " · " + esc(i.unit) : ""}</dt><dd>${fmt(i.label)}` +
         (i.includes ? `<br><small>Includes: ${fmt(i.includes)}</small>` : "") +
         (i.excludes ? `<br><small>Excludes: ${fmt(i.excludes)}</small>` : "") + "</dd>").join("") + "</dl></div>";
@@ -210,7 +219,7 @@ function blockHTML(b) {
     if (t === "compare") {
       const k = b.compare || {};
       const cols = k.columns || [];
-      return `<div class="comp">${kickerTitle(k)}<table><thead><tr><th></th>` +
+      return `<div class="rs-comp">${kickerTitle(k)}<table><thead><tr><th></th>` +
         cols.map((c) => `<th>${esc(c.label)}${c.sub ? `<br><small>${esc(c.sub)}</small>` : ""}</th>`).join("") +
         "</tr></thead><tbody>" + (k.rows || []).map((r) =>
           `<tr><th>${esc(r.label)}</th>` + (r.values || []).map((v) => `<td>${fmt(v)}</td>`).join("") + "</tr>").join("") +
@@ -218,7 +227,7 @@ function blockHTML(b) {
     }
     if (t === "rank") {
       const k = b.rank || {};
-      return `<div class="comp">${kickerTitle(k)}<ol>` +
+      return `<div class="rs-comp">${kickerTitle(k)}<ol>` +
         (k.items || []).map((i) => `<li><b>${esc(i.label || i.name || "")}</b>${i.value ? " — " + fmt(String(i.value)) : ""}${i.note ? ` <small>${fmt(i.note)}</small>` : ""}</li>`).join("") + "</ol></div>";
     }
     // generic fallback: surface any labeled text the payload carries
@@ -230,110 +239,229 @@ function blockHTML(b) {
       return bits.length ? `<li>${bits.map(fmt).join(" — ")}</li>` : "";
     }).join("");
     if (k.kicker || k.title || items) {
-      return `<div class="comp">${kickerTitle(k)}${k.text ? `<p>${fmt(k.text)}</p>` : ""}${items ? `<ul>${items}</ul>` : ""}</div>`;
+      return `<div class="rs-comp">${kickerTitle(k)}${k.text ? `<p>${fmt(k.text)}</p>` : ""}${items ? `<ul>${items}</ul>` : ""}</div>`;
     }
     return "";
   } catch (_) { return ""; }
 }
 
-function pageHTML(a, persona, related) {
-  const url = `${SITE}/article/${a.slug}`;
-  const img = a.image ? `${SITE}/${String(a.image).replace(/^\//, "")}` : `${SITE}/assets/brand/rtfc-glyph-512.png`;
-  const author = persona ? persona.name : `${SITE_NAME} Newsroom`;
-  const desc = esc(a.dek || a.title).slice(0, 300);
+/* ================================================================
+   THE PAGE
+   ================================================================
+
+   WHY THIS FILE STOPPED BUILDING ITS OWN WEBSITE (2026-08-15)
+
+   Until today this function returned a complete, hand-written HTML document
+   with about thirty lines of inline CSS and its own header and footer. It never
+   loaded styles.css and never loaded app.js. The consequence was not subtle,
+   and it went unnoticed for a day because it is invisible from inside the site:
+
+     · click an article from the homepage  -> the SPA renders it: the site nav,
+       the evidence bar (sources, distinct outlets, share of paragraphs cited),
+       TL;DR, listen, share, the cover strip, the entity layer.
+     · open the SAME URL from X, Google, or a shared link -> this function
+       answers, and the reader gets a bare serif document. No nav. No evidence
+       bar. No TL;DR. No audio. Different type, different everything.
+
+   One URL, two products, and the worse one is the one every new reader sees.
+   It also ended with an invitation to "read this piece in the interactive
+   reader" that linked to /article/<slug> — the page you are already on. There
+   was no route from a shared link to the real reader at all.
+
+   THE FIX: serve the real shell, with the article already in it.
+
+   The response is now index.html itself — the same document /buzz and /archive
+   get — with three surgical substitutions:
+
+     1. <!-- engine:head -->   ... swapped for this article's title, canonical,
+                                   description, OG and Twitter cards.
+     2. <!-- engine:jsonld --> ... swapped for NewsArticle structured data.
+     3. <main id="app">        ... filled with the server-rendered article.
+
+   A crawler gets the full text and correct metadata, exactly as before. A
+   reader gets the actual website: styles.css and app.js load, the router sees
+   /article/<slug>, viewArticle() runs and replaces #app with the interactive
+   version. The server render is what they look at until that happens, and what
+   they keep if it never does — which is a strictly better failure mode than
+   today's, where a JS error left them with nothing.
+
+   WHY THE STANDALONE PAGE IS STILL HERE. If the shell cannot be fetched, or the
+   markers are ever renamed, assemble() returns null and standaloneHTML() takes
+   over. The alternative — falling through to the unmodified shell — would serve
+   every article under the HOMEPAGE's title and canonical URL, which is the
+   worst SEO outcome available and would look fine to every check we have.
+   site_guard.py::check_ssr_shell_markers fails the build if index.html and the
+   regexes below stop agreeing, so the fallback should never be reached in
+   practice. It exists because "should never" is not a guarantee.
+*/
+
+const HEAD_RE = /<!-- engine:head -->[\s\S]*?<!-- \/engine:head -->/;
+const JSONLD_RE = /<!-- engine:jsonld -->[\s\S]*?<!-- \/engine:jsonld -->/;
+const MAIN_RE = /(<main id="app"[^>]*>)[\s\S]*?(<\/main>)/;
+
+// Scoped to .rtfc-ssr and written against the site's own custom properties, so
+// the server render picks up whichever of the eighteen themes the reader has
+// chosen instead of hardcoding the dark one. Every var() carries a fallback:
+// this markup must also be legible in the standalone page, where styles.css is
+// not loaded and none of those properties exist.
+const SSR_STYLE = `<style>
+.rtfc-ssr{max-width:var(--measure,720px);margin:0 auto;padding:26px 20px 60px;
+  color:var(--ink,#e8e4f4);font:17px/1.65 Georgia,'Times New Roman',serif}
+.rtfc-ssr a{color:var(--accent,#b9a5ff)}
+.rtfc-ssr .rs-sect{font:700 11px/1 system-ui,sans-serif;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent,#8b7cf7);margin:0 0 10px}
+.rtfc-ssr h1{font-size:34px;line-height:1.18;margin:6px 0 12px;
+  font-family:var(--display,inherit)}
+.rtfc-ssr .rs-dek{font-size:19px;color:var(--ink-soft,#b6aecf);margin:0 0 14px}
+.rtfc-ssr .rs-byline{font:13px/1.5 system-ui,sans-serif;color:var(--muted,#8f87a8);
+  border-bottom:1px solid var(--line,#2c2440);padding-bottom:16px}
+.rtfc-ssr .rs-cover{width:100%;border-radius:12px;margin:20px 0}
+.rtfc-ssr h2{font-size:23px;margin-top:34px}
+.rtfc-ssr blockquote{border-left:3px solid var(--accent,#6018f0);margin:20px 0;
+  padding:4px 0 4px 18px;color:var(--ink-soft,#cfc6ea);font-style:italic}
+.rtfc-ssr .rs-comp{border:1px solid var(--line,#2c2440);border-radius:12px;
+  padding:16px 18px;margin:22px 0;font:14.5px/1.6 system-ui,sans-serif}
+.rtfc-ssr .rs-kick{font-size:10.5px;font-weight:800;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent,#8b7cf7);margin-bottom:6px}
+.rtfc-ssr .rs-comp h3{margin:0 0 10px;font-size:16px}
+.rtfc-ssr .rs-comp dl{margin:0}
+.rtfc-ssr .rs-comp dt{font-weight:700;color:var(--ink,#fff);margin-top:8px}
+.rtfc-ssr .rs-comp dd{margin:0 0 4px;color:var(--ink-soft,#b6aecf)}
+.rtfc-ssr .rs-comp table{border-collapse:collapse;width:100%}
+.rtfc-ssr .rs-comp th,.rtfc-ssr .rs-comp td{border-top:1px solid var(--line,#2c2440);
+  padding:6px 8px;text-align:left;vertical-align:top}
+.rtfc-ssr .rs-big{font-size:26px;font-weight:700;margin:2px 0}
+.rtfc-ssr .rs-tl li{margin:8px 0}
+.rtfc-ssr .rs-disc{font:13px/1.5 system-ui,sans-serif;color:var(--muted,#8f87a8);
+  border:1px solid var(--line,#2c2440);border-radius:10px;padding:10px 14px}
+.rtfc-ssr .rs-foot{margin-top:40px;border-top:1px solid var(--line,#2c2440);
+  padding-top:18px;font:13px/1.7 system-ui,sans-serif;color:var(--muted,#8f87a8)}
+.rtfc-ssr small{color:var(--muted,#8f87a8)}
+</style>`;
+
+function meta(a, persona) {
+  return {
+    url: `${SITE}/article/${a.slug}`,
+    img: a.image
+      ? `${SITE}/${String(a.image).replace(/^\//, "")}`
+      : `${SITE}/assets/brand/rtfc-glyph-512.png`,
+    desc: esc(a.dek || a.title).slice(0, 300),
+    author: persona ? persona.name : `${SITE_NAME} Newsroom`,
+  };
+}
+
+function headHTML(a, m) {
+  return [
+    `<title>${esc(a.title)} — ${esc(SITE_NAME)}</title>`,
+    `<meta name="description" content="${m.desc}">`,
+    `<link rel="canonical" href="${m.url}">`,
+    `<meta name="theme-color" content="${esc(ENGINE.web.theme_color || "#0b0b12")}">`,
+    `<meta property="og:type" content="article">`,
+    `<meta property="og:site_name" content="${esc(SITE_NAME)}">`,
+    `<meta property="og:title" content="${esc(a.title)}">`,
+    `<meta property="og:description" content="${m.desc}">`,
+    `<meta property="og:url" content="${m.url}">`,
+    `<meta property="og:image" content="${esc(m.img)}">`,
+    `<meta property="og:image:width" content="1200">`,
+    `<meta property="og:image:height" content="630">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${esc(a.title)}">`,
+    `<meta name="twitter:description" content="${m.desc}">`,
+    `<meta name="twitter:image" content="${esc(m.img)}">`,
+    `<meta property="article:published_time" content="${esc(a.publishedAt || "")}">`,
+    `<link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)}" href="/rss.xml">`,
+    SSR_STYLE,
+  ].join("\n");
+}
+
+function ldJSON(a, m) {
+  return JSON.stringify({
+    "@context": "https://schema.org", "@type": "NewsArticle",
+    headline: a.title, description: a.dek || "", image: [m.img],
+    datePublished: a.publishedAt, dateModified: a.publishedAt,
+    author: [{ "@type": "Person", name: m.author }],
+    publisher: {
+      "@type": "Organization", name: SITE_NAME,
+      logo: { "@type": "ImageObject", url: `${SITE}/assets/brand/rtfc-glyph-512.png` },
+    },
+    mainEntityOfPage: m.url, isAccessibleForFree: true,
+  });
+}
+
+function bodyHTML(a, persona, related, m) {
   const body = (a.body || []).map(blockHTML).join("\n");
   const tldr = (a.tldr && a.tldr.length)
-    ? `<div class="comp"><div class="kick">The story at a glance</div><ul>${a.tldr.map((t) => `<li>${fmt(t)}</li>`).join("")}</ul></div>` : "";
+    ? `<div class="rs-comp"><div class="rs-kick">The story at a glance</div><ul>${
+        a.tldr.map((t) => `<li>${fmt(t)}</li>`).join("")}</ul></div>` : "";
   const sources = (a.sources && a.sources.length)
     ? `<section><h2>Sources</h2><ol>${a.sources.map((s) =>
         `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a></li>`).join("")}</ol></section>` : "";
   const rel = related.length
     ? `<section><h2>More from ${esc(a.section || "the newsroom")}</h2><ul>${related.map((r) =>
         `<li><a href="/article/${esc(r.slug)}">${esc(r.title)}</a></li>`).join("")}</ul></section>` : "";
-  const ld = {
-    "@context": "https://schema.org", "@type": "NewsArticle",
-    headline: a.title, description: a.dek || "", image: [img],
-    datePublished: a.publishedAt, dateModified: a.publishedAt,
-    author: [{ "@type": "Person", name: author }],
-    publisher: { "@type": "Organization", name: SITE_NAME, logo: { "@type": "ImageObject", url: `${SITE}/assets/brand/rtfc-glyph-512.png` } },
-    mainEntityOfPage: url, isAccessibleForFree: true,
-  };
   const disclaimer = a.disclaimer === "not-financial-advice"
-    ? `<p class="disc">This is not financial or investment advice. For information only.</p>`
+    ? `<p class="rs-disc">This is not financial or investment advice. For information only.</p>`
     : a.disclaimer === "not-medical-advice"
-      ? `<p class="disc">This is not medical advice. For information only.</p>` : "";
+      ? `<p class="rs-disc">This is not medical advice. For information only.</p>` : "";
 
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(a.title)} — ${esc(SITE_NAME)}</title>
-<meta name="description" content="${desc}">
-<link rel="canonical" href="${url}">
-<link rel="icon" href="/assets/img/icon-192.png">
-<link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)}" href="/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="${esc(a.title)}">
-<meta property="og:description" content="${desc}">
-<meta property="og:url" content="${url}">
-<meta property="og:image" content="${esc(img)}">
-<meta property="og:site_name" content="${esc(SITE_NAME)}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${esc(a.title)}">
-<meta name="twitter:description" content="${desc}">
-<meta name="twitter:image" content="${esc(img)}">
-<meta property="article:published_time" content="${esc(a.publishedAt || "")}">
-<script type="application/ld+json">${JSON.stringify(ld)}</script>
-<style>
-:root{color-scheme:dark}
-body{margin:0;background:#0b0714;color:#e8e4f4;font:17px/1.65 Georgia,'Times New Roman',serif}
-a{color:#b9a5ff}
-.wrap{max-width:720px;margin:0 auto;padding:24px 20px 60px}
-header.site{display:flex;align-items:center;gap:10px;padding:18px 0;border-bottom:1px solid #2c2440;
-  font:700 15px/1 system-ui,sans-serif;letter-spacing:.06em}
-header.site img{width:28px;height:28px}
-header.site a{color:#e8e4f4;text-decoration:none}
-.sect{font:700 11px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8b7cf7;margin:26px 0 10px}
-h1{font-size:34px;line-height:1.18;margin:6px 0 12px}
-.dek{font-size:19px;color:#b6aecf;margin:0 0 14px}
-.byline{font:13px/1.5 system-ui,sans-serif;color:#8f87a8;border-bottom:1px solid #2c2440;padding-bottom:16px}
-img.cover{width:100%;border-radius:12px;margin:20px 0}
-h2{font-size:23px;margin-top:34px}
-blockquote{border-left:3px solid #6018f0;margin:20px 0;padding:4px 0 4px 18px;color:#cfc6ea;font-style:italic}
-.comp{border:1px solid #2c2440;border-radius:12px;padding:16px 18px;margin:22px 0;font:14.5px/1.6 system-ui,sans-serif}
-.comp .kick{font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#8b7cf7;margin-bottom:6px}
-.comp h3{margin:0 0 10px;font-size:16px}
-.comp dl{margin:0}.comp dt{font-weight:700;color:#fff;margin-top:8px}.comp dd{margin:0 0 4px;color:#b6aecf}
-.comp table{border-collapse:collapse;width:100%}.comp th,.comp td{border-top:1px solid #2c2440;padding:6px 8px;text-align:left;vertical-align:top}
-.comp .big{font-size:26px;font-weight:700;margin:2px 0}
-.tl li{margin:8px 0}
-.appnote{border:1px solid #2c2440;border-radius:12px;padding:14px 18px;margin:28px 0;font:14px/1.6 system-ui,sans-serif;color:#b6aecf}
-.disc{font:13px/1.5 system-ui,sans-serif;color:#8f87a8;border:1px solid #2c2440;border-radius:10px;padding:10px 14px}
-footer{margin-top:40px;border-top:1px solid #2c2440;padding-top:18px;font:13px/1.7 system-ui,sans-serif;color:#8f87a8}
-small{color:#8f87a8}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header class="site"><img src="/assets/brand/rtfc-glyph-128.png" alt=""><a href="/">${esc(SITE_NAME)} — ${esc(SITE_TAGLINE)}</a></header>
-<div class="sect">${esc(a.section || "News")}${a.format ? " — " + esc(a.format) : ""}</div>
+  return `<div class="rtfc-ssr">
+<div class="rs-sect">${esc(a.section || "News")}${a.format ? " — " + esc(a.format) : ""}</div>
 <h1>${esc(a.title)}</h1>
-<p class="dek">${esc(a.dek || "")}</p>
-<p class="byline">By ${esc(author)}${persona && persona.beat ? " · " + esc(persona.beat) : ""} · ${esc((a.publishedAt || "").slice(0, 10))} · Written by AI, disclosed proudly — <a href="/pulse">watch the newsroom run</a></p>
-${a.image ? `<img class="cover" src="/${esc(String(a.image).replace(/^\//, ""))}" alt="">` : ""}
+<p class="rs-dek">${esc(a.dek || "")}</p>
+<p class="rs-byline">By ${esc(m.author)}${persona && persona.beat ? " · " + esc(persona.beat) : ""} · ${
+    esc((a.publishedAt || "").slice(0, 10))} · Written by AI, disclosed proudly — <a href="/pulse">watch the newsroom run</a></p>
+${a.image ? `<img class="rs-cover" src="/${esc(String(a.image).replace(/^\//, ""))}" alt="">` : ""}
 ${disclaimer}
 <article>
 ${body}
 ${tldr}
 </article>
-<div class="appnote">Read this piece with live charts, the entity layer and text-to-speech in the
-<a href="/article/${esc(a.slug)}">interactive reader</a>. Every article on ${esc(SITE_NAME)} is produced by an
-autonomous AI newsroom — <a href="/usage">its full cost ledger is public</a>.</div>
 ${sources}
 ${rel}
-<footer>© ${esc(SITE_NAME)} · <a href="/">Home</a> · <a href="/rss.xml">RSS</a> · <a href="/archive">Archive</a></footer>
-</div>
+<p class="rs-foot">Every article on ${esc(SITE_NAME)} is produced by an autonomous AI newsroom.
+<a href="/usage">Its full cost ledger is public</a> · <a href="/">Home</a> · <a href="/rss.xml">RSS</a> · <a href="/archive">Archive</a></p>
+</div>`;
+}
+
+/* Put this article INTO the site shell. Returns null if the shell is not the
+ * document we expect, and null means "use the standalone page" — never "ship
+ * the shell unchanged", which would give every article the homepage's title.
+ *
+ * Every replacement uses a FUNCTION replacer. With a string replacement, `$&`,
+ * `$'` and `` $` `` inside an article title or dek are expansion patterns to
+ * String.replace, and a headline containing a dollar sign would silently
+ * inject a copy of the surrounding document into the page. */
+function assemble(shell, a, persona, related) {
+  if (!HEAD_RE.test(shell) || !MAIN_RE.test(shell)) return null;
+  const m = meta(a, persona);
+  let html = shell.replace(HEAD_RE, () => headHTML(a, m));
+  html = html.replace(JSONLD_RE, () =>
+    `<script type="application/ld+json">${ldJSON(a, m)}</script>`);
+  const inner = bodyHTML(a, persona, related, m);
+  html = html.replace(MAIN_RE, (_full, open, close) => open + inner + close);
+  return html;
+}
+
+/* The fallback. A complete document that depends on nothing but itself. */
+function standaloneHTML(a, persona, related) {
+  const m = meta(a, persona);
+  return `<!doctype html>
+<html lang="${esc(ENGINE.web.language || "en")}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+${headHTML(a, m)}
+<link rel="icon" href="/assets/img/icon-192.png">
+<script type="application/ld+json">${ldJSON(a, m)}</script>
+<style>:root{color-scheme:dark}body{margin:0;background:#0b0714;color:#e8e4f4}
+header.site{display:flex;align-items:center;gap:10px;max-width:720px;margin:0 auto;
+padding:18px 20px;border-bottom:1px solid #2c2440;font:700 15px/1 system-ui,sans-serif;letter-spacing:.06em}
+header.site img{width:28px;height:28px}header.site a{color:#e8e4f4;text-decoration:none}</style>
+</head>
+<body>
+<header class="site"><img src="/assets/brand/rtfc-glyph-128.png" alt=""><a href="/">${
+    esc(SITE_NAME)} — ${esc(SITE_TAGLINE)}</a></header>
+${bodyHTML(a, persona, related, m)}
 </body>
 </html>`;
 }
@@ -351,11 +479,23 @@ export async function onRequest({ request, env, params }) {
       `<h1>That story isn't here.</h1><p><a style="color:#b9a5ff" href="/">Back to the newsroom →</a></p>`,
       { status: 404, headers: { "content-type": "text/html; charset=utf-8" } });
   }
+  const persona = personas[a.persona];
   const related = articles
     .filter((x) => x && x.slug !== a.slug && x.section === a.section && x.title)
     .sort((x, y) => new Date(y.publishedAt || 0) - new Date(x.publishedAt || 0))
     .slice(0, 4);
-  return new Response(pageHTML(a, personas[a.persona], related), {
+
+  let html = null;
+  try {
+    // From "/" and never "/index.html" — asking for the file by name is what
+    // Cloudflare canonicalises with a 308, the bug that redirected every page
+    // on this site to the homepage for a day.
+    const shell = await env.ASSETS.fetch(new URL("/", request.url).toString());
+    if (shell.ok) html = assemble(await shell.text(), a, persona, related);
+  } catch (_) { /* fall through to the standalone page */ }
+  if (!html) html = standaloneHTML(a, persona, related);
+
+  return new Response(html, {
     headers: {
       "content-type": "text/html; charset=utf-8",
       // edge-cache 10 min: a new deploy purges Pages caches anyway, and the

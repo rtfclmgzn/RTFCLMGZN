@@ -71,6 +71,23 @@ jobs:
       - name: Contract + cross-surface checks
         run: python3 newsroom/quality/site_guard.py
 
+      # THE PAGE EVERY SHARED LINK LANDS ON, ACTUALLY RENDERED.
+      #
+      # /article/<slug> is not a file. It is a Cloudflare Function that
+      # assembles index.html at request time, so no Python check in this repo
+      # can see its output. That gap cost a day: the function was serving a
+      # hand-written mini-page with its own CSS - no nav, no evidence bar, no
+      # TL;DR, no audio - and every file-reading check passed the entire time,
+      # because every file was fine. The OUTPUT was the broken thing.
+      #
+      # This runs the real function against the real shell and the real stores
+      # and reads the HTML. Node is preinstalled on the runner; no deps, no
+      # network, ~1 second. It runs on the schedule too, unlike the browser
+      # pass, because it is nearly free and this is the highest-traffic surface
+      # on the site.
+      - name: Render a shared-link article page and read it
+        run: node newsroom/quality/ssr_render_check.mjs
+
       # THE BROWSER IS CACHED, AND THE RENDER PASS IS PUSH-ONLY.
       #
       # Measured 2026-08-15: downloading Chromium on every run was costing more

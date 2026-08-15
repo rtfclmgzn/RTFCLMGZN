@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -102,6 +102,14 @@ catch(e){document.documentElement.setAttribute("data-theme","dark");}
      very fast, then hard-stops upright the moment the first route has actually
      painted (app.js calls __bootReady), holds ~120ms, and fades. The timeout is
      only a fail-safe so a boot error can never trap the reader behind it. -->
+<noscript><style>/* The splash is removed by script. With scripting off, or if
+   app.js throws before it boots, it would otherwise sit over the page forever and
+   the reader would stare at a glowing dot instead of the article that is already
+   in the HTML underneath it. Found 2026-08-15 while moving /article/<slug> onto
+   this shell. data-theme on <html> above is the same fix for the same reason:
+   the theme bootstrap is inline script, so without it the page rendered unstyled
+   cream instead of dark. */
+#boot-splash{display:none!important}</style></noscript>
 <div id="boot-splash" aria-hidden="true"><i class="bs-ring"></i><i class="bs-ring bs-ring2"></i><span class="bs-motes"><i></i><i></i><i></i><i></i><i></i><i></i></span><i class="bs-glyph"></i></div><script>(function(){var s=document.getElementById('boot-splash');if(!s)return;var done=false;function finish(){if(done)return;done=true;s.className='stopped';setTimeout(function(){s.className='stopped out';setTimeout(function(){try{s.parentNode.removeChild(s);}catch(e){}},220);},120);}window.__bootReady=finish;setTimeout(finish,6000);})();</script>
   <!-- First focusable element in the document: there are 9 header tab stops
        before the content starts. href stays "#app" for no-JS keyboards, but the

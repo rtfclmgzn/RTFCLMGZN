@@ -1393,6 +1393,89 @@ def check_live_check_parity():
                 "in CI after every deploy: `%s`" % ln.strip()[:90])
 
 
+# Classes styles.css already owns. The SSR article markup is injected into the
+# real shell now, so any of these on a server-rendered element inherits rules
+# written for a different component. Counted, not guessed: `grep -c` on
+# styles.css gives comp 11, dek 8, byline 6, big 1.
+SSR_TAKEN_CLASSES = ("comp", "dek", "byline", "big", "kick", "sect", "cover")
+
+
+def check_ssr_shell_markers():
+    """The article function edits index.html. They must agree on where.
+
+    WHY (2026-08-15). /article/<slug> used to return a hand-written document
+    with its own inline CSS: no styles.css, no app.js, no nav, no evidence bar,
+    no TL;DR, no audio. Clicking an article from the homepage gave the real
+    product; opening the SAME URL from X or Google gave a bare serif page. One
+    URL, two experiences, and the worse one was the only one a new reader ever
+    saw. It also linked to "the interactive reader" at the URL it was already
+    on, so there was no route from a shared link to the real thing at all.
+
+    It now serves index.html with three substitutions: the engine:head region,
+    the engine:jsonld region, and the contents of <main id="app">. That is a
+    cross-surface promise between a Cloudflare Function and an HTML file that
+    nothing else connects — class A, the most repeated failure shape here. If a
+    marker is renamed, the function falls back to a standalone page and every
+    article quietly loses the site chrome again, with no error anywhere. This
+    check is the thing that notices.
+    """
+    idx = ROOT / "web" / "index.html"
+    fn = ROOT / "functions" / "article" / "[slug].js"
+    if not idx.is_file() or not fn.is_file():
+        err("check-blind", "cannot find index.html or the article function — "
+            "the SSR contract cannot be verified")
+        return
+    html = io.open(idx, encoding="utf-8", errors="replace").read()
+    src = io.open(fn, encoding="utf-8", errors="replace").read()
+
+    for open_m, close_m in (("<!-- engine:head -->", "<!-- /engine:head -->"),
+                            ("<!-- engine:jsonld -->", "<!-- /engine:jsonld -->")):
+        if open_m not in html or close_m not in html:
+            err("ssr-parity", "index.html has no %s ... %s region, but the "
+                "article function replaces it to set each article's title, "
+                "canonical and OG tags. Without it every shared article link "
+                "carries the HOMEPAGE's metadata." % (open_m, close_m))
+        if open_m.strip("<!- >").replace("engine:", "") not in src:
+            err("ssr-parity", "functions/article/[slug].js no longer names the "
+                "%s marker it depends on" % open_m)
+
+    if not re.search(r'<main id="app"[^>]*>', html):
+        err("ssr-parity", "index.html has no <main id=\"app\"> — the article "
+            "function injects the server-rendered story there, and app.js "
+            "renders every view there")
+    if 'id="app"' not in src:
+        err("ssr-parity", "the article function no longer targets <main "
+            "id=\"app\"> — server-rendered articles will not appear in the shell")
+
+    # The $& trap. `"...".replace(re, str)` expands $&, $` and $' inside the
+    # REPLACEMENT, so an article title containing a dollar sign would splice
+    # parts of the surrounding document into the page. Function replacers do
+    # not expand anything. All three shell edits must use one.
+    for m in re.finditer(r"\.replace\((HEAD_RE|JSONLD_RE|MAIN_RE)\s*,\s*(.)", src):
+        if m.group(2) not in "(_a-zA-Z":
+            err("ssr-parity", "the article function passes a STRING replacement "
+                "to %s. A title containing `$&` would then inject the "
+                "surrounding document into the page. Use a function replacer."
+                % m.group(1))
+
+    for cls in SSR_TAKEN_CLASSES:
+        if re.search(r'class="%s"' % re.escape(cls), src):
+            err("ssr-parity", "the article function emits class=\"%s\", which "
+                "styles.css already defines for its own components. Injected "
+                "into the shell it inherits rules meant for something else. "
+                "Prefix it rs-." % cls)
+
+    if "#boot-splash{display:none" not in html.replace(" ", ""):
+        err("ssr-parity", "index.html has no <noscript> rule hiding "
+            "#boot-splash. The splash is removed by script, so with scripting "
+            "off — or if app.js throws before it boots — it covers the "
+            "server-rendered article forever and the reader sees a glowing dot.")
+    if not re.search(r'<html[^>]*\sdata-theme=', html):
+        err("ssr-parity", "<html> carries no static data-theme. The theme "
+            "bootstrap is inline script; without it a no-script render comes "
+            "out unstyled cream instead of the site's dark skin.")
+
+
 # Contexts GitHub allows in an expression, BY WHERE THE EXPRESSION SITS.
 # Source: GitHub's "Contexts / availability" table. The two that bite are
 # `runner` and `env`, which exist only inside a step.
@@ -1595,6 +1678,7 @@ def main() -> int:
     run("check_workflow_staging", check_workflow_staging)
     run("check_workflow_contexts", check_workflow_contexts)
     run("check_live_check_parity", check_live_check_parity)
+    run("check_ssr_shell_markers", check_ssr_shell_markers)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
