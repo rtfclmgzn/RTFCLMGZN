@@ -17,6 +17,10 @@ concurrency:
 
 jobs:
   refresh:
+    env:
+      # THE AGENT WRITES ITS ONE-SENTENCE SUMMARY HERE. The harness reads it into
+      # the ledger row after the run. The agent never touches the ledger itself.
+      RTFC_RUN_SUMMARY: ${{ runner.temp }}/rtfc_run_summary.txt
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -55,16 +59,36 @@ jobs:
             5. Bump the ?b=N cache-buster on every asset tag in web/index.html if you
                changed any file under web/ — the edge serves the old file otherwise
                and the update silently does nothing.
-            6. Log the run. DO NOT hand-write the row - run the logger, which
-               computes the next id and stamps the real time. Hand-writing this
-               row has already produced a duplicate id that silently lost three
-               runs, and a missing comma that stopped the browser loading the
-               whole ledger file:
-                 python3 newsroom/runner/log_usage.py --agent "resources-desk" \
-                   --task-type "site" --description "<what changed, or that nothing did>"
+            6. Write ONE sentence describing what changed (or that nothing did) to
+               the file named by $RTFC_RUN_SUMMARY, and nothing else:
+                 printf '%s' "<your sentence>" > "$RTFC_RUN_SUMMARY"
+               Do NOT touch web/data/usage-log-current.js and do NOT run
+               log_usage.py yourself. The workflow measures your finished run and
+               writes the one ledger row from your sentence after you exit.
             7. Commit and push to main: git pull --rebase origin main first, because
                the hourly scans push to this branch too. On a conflict, stop and leave
                it for a human — never force-push.
           claude_args: |
             --model claude-sonnet-5
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
+
+      # MEASURED USAGE. The agent cannot see its own token accounting, so this
+      # step reads the finished transcript and writes the ONE ledger row for the
+      # run, using the sentence the agent left in $RTFC_RUN_SUMMARY.
+      - name: Log measured usage to the public ledger
+        if: always()
+        run: |
+          python3 newsroom/runner/log_usage.py \
+            --agent resources-desk --task-type site --model claude-sonnet-5 \
+            --description "Weekly resources refresh (GitHub Actions run ${GITHUB_RUN_ID})"
+          git config user.name "rtfclmgzn-pipeline"
+          git config user.email "rtfclmgzn@gmail.com"
+          git add -u
+          git add web/data/usage-log-current.js
+          if git diff --cached --quiet; then
+            echo "nothing to log"
+          else
+            git commit -m "ledger: measured usage for resources-desk run ${GITHUB_RUN_ID}"
+            git pull --rebase origin main || { git rebase --abort || true; echo "rebase race - ledger rides the next run"; }
+            git push origin main || echo "push race - ledger rides the next run"
+          fi

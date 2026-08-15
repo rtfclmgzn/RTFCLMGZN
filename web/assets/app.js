@@ -2955,8 +2955,16 @@
   function isUnmetered(r){ return !((r.input_tokens||0)>0 || (r.output_tokens||0)>0 || (r.images||0)>0); }
   function unmeteredRuns(){ return USAGE.filter(isUnmetered); }
   function costBasis(){
-    var live=liveUsage(), s=sumRecs(live), un=unmeteredRuns().length;
-    return { cost:s.cost, sum:s, unmetered:un, total:USAGE.length };
+    var live=liveUsage(), s=sumRecs(live), un=unmeteredRuns();
+    // The cutover is a fact in engine.config.json, not a date typed into prose.
+    // Before it, rows were self-reported and often blank. After it, the harness
+    // is the only writer and every row is measured — so an unmetered row AFTER
+    // it is not history, it is a live fault, and the page must say which it is.
+    var cutISO=((ENGINE.cadence||{}).ledger_measured_since)||"";
+    var cut=cutISO?new Date(cutISO).getTime():NaN;
+    var before=0, after=0;
+    un.forEach(function(r){ var t=new Date(r.ts).getTime(); if(!isNaN(cut) && t>=cut) after++; else before++; });
+    return { cost:s.cost, sum:s, unmetered:un.length, before:before, after:after, cut:cutISO, total:USAGE.length };
   }
   function viewUsage(){
     var now=new Date();
@@ -2985,8 +2993,10 @@
     var basis=costBasis();
     h+='<div class="uhero-total"><div class="ut-num">'+money(allS.cost)+'</div>'+
       '<div class="ut-cap"><b>Metered compute, run to date</b> — the exact number the site footer quotes, from the same ledger and the same basis. The cards below slice it by time window; on a quiet week the short windows are small or empty while this total stands.'+
-      (basis.unmetered?('<br><b style="color:var(--gate,#e0564d)">'+basis.unmetered+' of '+basis.total+' logged runs carry no token figures</b> and are therefore <b>not</b> in that total. They are not free — the harness could not read their usage, so counting them as $0 would be a lie the other way. Every run from 2026-08-14 forward is measured by <code>log_usage.py</code> in the workflow itself rather than self-reported by the agent inside it; the count above is what remains from before that.'):'')+
-      '</div></div>';
+      (basis.unmetered?('<br><b style="color:var(--gate,#e0564d)">'+basis.unmetered+' of '+basis.total+' logged runs carry no token figures</b> and are therefore <b>not</b> in that total. They are not free \u2014 their usage was never read, so counting them as $0 would be a lie the other way. '+
+        (basis.cut?('Since <b>'+esc(basis.cut.slice(0,10))+'</b> the ledger has one writer: the workflow measures each finished run\u2019s transcript and writes the row itself; agents no longer write rows at all. '+
+          (basis.after?('<b style="color:var(--gate,#e0564d)">'+basis.after+' unmetered '+(basis.after===1?'row is':'rows are')+' dated after that cutover \u2014 that is a live fault in the measurement, not history, and the site guard reports it.</b>'):
+                       ('All '+basis.before+' unmetered rows are from before that cutover; none since. That history stays labelled unmetered, permanently and on purpose.'))):'')):'')+'</div></div>';
 
     // stat row
     h+='<div class="ustats">'+

@@ -65,38 +65,30 @@ This is the owner's explicit standing requirement: Buzz should carry **at least 
 
 ## 4. Always log the outcome (this is how the owner sees what you checked, even when you publish nothing)
 
-**Do not hand-write this row.** Run the logger:
+**Do not write to the ledger. Do not run `log_usage.py`. Write ONE sentence to the summary file and move on:**
 
 ```
-python3 newsroom/runner/log_usage.py --agent "breaking-scan" --task-type "<TYPE>" \
-  --article-id "<ID or system>" --description "<one honest sentence>"
+printf '%s' "<one honest sentence: what you checked, what you did or did not do, and why>" > "$RTFC_RUN_SUMMARY"
 ```
 
-WHY THIS IS A COMMAND AND NOT A FORMAT DESCRIPTION (2026-08-15). Four runbooks
-used to say "append one row, matching an existing row's fields exactly", and an
-agent obeying that instruction is an LLM writing punctuation into a live data
-file several times a day. It went wrong twice in a single day: four runs all
-picked the id `u-0128`, and the store's own dedup silently dropped three real
-rows; and a row was appended with no comma before it, which is a JavaScript
-SyntaxError, so the browser loaded NONE of the file and `/usage` told readers
-"this log is 33 days stale, the jobs are failing" while every job was running
-perfectly. `log_usage.py` computes the next id deterministically, stamps the
-real UTC time, and cannot produce either fault.
+WHY THIS AND NOTHING ELSE (2026-08-15). The ledger has exactly one writer: the
+workflow step that runs after you finish. It measures your COMPLETE transcript
+and writes one row with real token counts, stamped with the run id, using your
+sentence above as the description. Every other arrangement has already failed
+in public: agents hand-writing rows produced a duplicate id that silently
+dropped three runs, a missing comma that stopped the browser loading the whole
+file, and 35 zero-token duplicate rows of runs the harness had also logged.
+An agent calling `log_usage.py` mid-run logs a PARTIAL transcript, and the
+harness's complete measurement is then skipped as a duplicate. So: one sentence,
+one file, and the harness does the accounting (Law 3).
 
-Pass these values, regardless of outcome:
-- `agent: "breaking-scan"`
-- `task_type: "no-op"` (nothing qualified) or `"publish"` (you shipped something)
-- `description`: one honest sentence — what you checked and why you did or didn't act, **plus what you did to Buzz in §3b** (cards retired/added, or "widened the window, still below 9" if a real gap couldn't be closed honestly). If you deferred other qualifying stories per the one-per-scan cap in §3, name them here too.
-- `article_id`: the new article's `id` if you published, else `"system"`.
-The id, the timestamp and `measured` are the logger's job, not yours. It writes `measured:"unmetered"` when no transcript is available, which is the honest label for a text-only scan — never invent token counts you cannot observe (Law 3).
-
-This entry is what surfaces on the Pulse/Control Room page's "Last activity on the floor" — it's the owner's visibility into the scan, so make the description genuinely informative, not a generic "scanned, nothing found."
+Your sentence is what surfaces on the Pulse/Control Room page's "Last activity on the floor" — it's the owner's visibility into the scan, so make the description genuinely informative, not a generic "scanned, nothing found."
 
 **Even on a no-op, bump every `?b=N` cache-buster in `web/index.html` by 1** before committing, exactly like a regular cycle would. `usage-log-current.js` and `buzz.js` are both loaded via cache-busted script tags — without the bump, a browser that already cached the old files at the same `?b=` URL won't see the new content, which defeats the entire point of this step.
 
 **Use the Edit tool, or Python opened with `encoding="utf-8"` on both read and write, for that bump. Never PowerShell (`Get-Content`/`Set-Content`/`-replace`) or any tool that doesn't explicitly declare UTF-8 on both ends.** `index.html` has em dashes and curly quotes in its `<title>`, meta tags, and visible banner — a non-UTF-8-safe read/write silently mangles all of them into mojibake across the whole file, not just the lines you touched, with no error and a normal-looking diff. This has genuinely happened before, more than once, during exactly this routine no-op bump. Sanity-check before committing: `grep -c 'â€' web/index.html` should print `0`.
 
-Then `git add` `web/index.html`, `web/data/usage-log-current.js`, and `web/data/buzz.js` (only if §3b actually changed it), run the publish-surface guard, and commit — then §5 before you push.
+Then `git add` `web/index.html` and `web/data/buzz.js` (only if §3b actually changed it) — never `usage-log-current.js`, which the harness owns, run the publish-surface guard, and commit — then §5 before you push.
 
 ## 5. Rebase before you push (REQUIRED — every scan, publish or no-op)
 

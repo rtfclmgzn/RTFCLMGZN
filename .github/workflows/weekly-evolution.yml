@@ -20,6 +20,10 @@ concurrency:
 
 jobs:
   evolve:
+    env:
+      # THE AGENT WRITES ITS ONE-SENTENCE SUMMARY HERE. The harness reads it into
+      # the ledger row after the run. The agent never touches the ledger itself.
+      RTFC_RUN_SUMMARY: ${{ runner.temp }}/rtfc_run_summary.txt
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:

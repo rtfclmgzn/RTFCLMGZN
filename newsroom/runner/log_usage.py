@@ -182,6 +182,25 @@ def main() -> int:
     run_id = os.environ.get("GITHUB_RUN_ID", "")
     run_tag = ("gh-%s" % run_id) if run_id else ""
 
+    # THE AGENT'S OWN WORDS, WITHOUT THE AGENT TOUCHING THE LEDGER.
+    # The workflow exports RTFC_RUN_SUMMARY=<runner temp>/rtfc_run_summary.txt.
+    # The runbook tells the agent to write its one honest sentence there — what
+    # it checked, what it did, what it deferred — and nothing else. This step
+    # then writes the ONE row for the run: measured tokens from the finished
+    # transcript, the agent's sentence as the description. Two writers was the
+    # bug: 35 of the 38 rows since 2026-08-14 were the agent's hand-written
+    # duplicate of a run the harness had also logged, each carrying zero tokens.
+    summary_path = os.environ.get("RTFC_RUN_SUMMARY", "")
+    if summary_path and os.path.isfile(summary_path):
+        try:
+            said = io.open(summary_path, encoding="utf-8", errors="replace").read().strip()
+            said = " ".join(said.split())
+            if said:
+                a.description = said[:600]
+                print("log_usage: description taken from the agent's summary file")
+        except OSError:
+            pass
+
     if run_tag and ('run:"%s"' % run_tag) in text:
         print("log_usage: run %s already logged — no duplicate row" % run_tag)
         return 0

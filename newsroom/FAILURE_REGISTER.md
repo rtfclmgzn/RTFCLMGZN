@@ -69,10 +69,15 @@ Nine failures in thirteen entries share five shapes. Recognising the shape is wo
 | What broke | What it cost | Now blocked by |
 |---|---|---|
 | 153 of 269 ledger rows carried `input_tokens:0` because agents cannot see their own token accounting and wrote a zero rather than a blank | The public cost figure froze at **$11.48 for a month** while the newsroom kept publishing. It appeared in the footer and in the homepage card deck, and was "fixed" repeatedly by editing the display. | `log_usage.py` — the workflow measures the run and writes the row. Every surface states metered and unmetered counts separately. Law 3. |
+| **Two writers on the ledger.** The workflow step measured each finished run and wrote a row; the agent inside the run, following its runbook, also wrote one, by hand, with zero tokens, because it cannot see its own accounting. Since the first cutover, 35 of 38 new rows were those zero-token twins. | The public "unmetered" count kept climbing after the page promised it was frozen history; run counts were inflated; and when an agent called `log_usage.py` mid-run, its PARTIAL transcript was logged and the harness's complete one skipped as a duplicate. | One writer. Agents write one sentence to `$RTFC_RUN_SUMMARY`; the harness writes the row. `check_ledger` errors on any post-cutover row without a run tag or with zero tokens; `repair_ledger_duplicates` merges twins, keeping the agent's description. The page computes before/after the cutover instead of asserting it. |
 | A row carried a `ts` in the future | Nothing in the pipeline can know a future time, so the row was typed, not measured. It reorders "newest activity" on a public page. | `repair_future_timestamps` — clamps to the observed moment, which is a true upper bound, and never invents when the run happened |
 | The Grid page said "25 facilities" next to an industry that counts ~12,000 datacenters | Both true, different definitions — but a reader cannot know that, and overclaiming is unrecoverable on a site whose product is stated confidence | Law 5: any figure that invites "that can't be right" states its own scope next to the number |
 
 ---
+
+### The shape under all of these
+
+Nine of the entries above were **fixed once and left broken elsewhere**: hash links fixed for articles and not pages, one unguarded field fixed while its siblings crashed, `git add -u` added to one workflow while six identical blocks stayed broken, the ledger writer fixed in the runbook while the workflow kept its own. `check_workflow_staging` exists because the check found two more copies in under a second after five had been fixed by hand. **A fix that does not come with a search for its siblings is half a fix**, and the half you skipped is the one that ships.
 
 ## STILL OPEN
 

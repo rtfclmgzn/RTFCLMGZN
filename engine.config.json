@@ -163,6 +163,8 @@
     "breaking_scan": "every 2 hours",
     "magazine": "monthly",
     "editorial_personas": 9,
-    "logical_agents": 26
+    "logical_agents": 26,
+    "ledger_measured_since": "2026-08-15T10:00:00Z",
+    "$comment_ledger": "From this moment the harness (log_usage.py, in the workflow) is the ONLY writer of usage rows: it measures the finished run's transcript and stamps the row with the run id. Agents write their one-sentence summary to $RTFC_RUN_SUMMARY and never touch the ledger. Any unmetered row dated after this is a harness failure and the guard says so; any row without a run tag after this was hand-written and the guard removes it."
   }
 }

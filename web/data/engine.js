@@ -117,6 +117,7 @@ window.RTFC_ENGINE = {
     "breaking_scan": "every 2 hours",
     "magazine": "monthly",
     "editorial_personas": 9,
-    "logical_agents": 26
+    "logical_agents": 26,
+    "ledger_measured_since": "2026-08-15T10:00:00Z"
   }
 };

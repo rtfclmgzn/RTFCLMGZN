@@ -530,6 +530,125 @@ def repair_future_timestamps(fix: bool) -> None:
         io.open(p, "w", encoding="utf-8", newline="").write("".join(out))
 
 
+def ledger_cutover():
+    """When the harness became the ledger's only writer, from engine.config.json."""
+    import json
+    try:
+        cfg = json.loads(io.open(CONFIG, encoding="utf-8").read())
+        return parse_ts((cfg.get("cadence") or {}).get("ledger_measured_since"))
+    except Exception:                                      # noqa: BLE001
+        return None
+
+
+def repair_ledger_duplicates(fix: bool) -> None:
+    """One run, one row. Remove the agent's hand-written twin of a harness row.
+
+    WHY (2026-08-15, owner: "$12.95 — 170 of 289 runs carry no token figures —
+    what is going on"). Two things were writing the ledger. The workflow step
+    (log_usage.py) measured each finished run and wrote a row with real tokens
+    and a `run:` tag. The agent INSIDE the run, following its runbook, also
+    appended a row for the same run — by hand, with `input_tokens: 0`, because
+    an agent cannot see its own accounting. Since the cutover, 35 of 38 new
+    rows were those zero-token twins. So the "unmetered" count kept climbing
+    even though every run WAS being measured, and the page's promise that it
+    was "what remains from before" was false.
+
+    The agent's row is not worthless: its description is the honest one-line
+    account of the run ("nothing qualified; retired 2 buzz cards"), where the
+    harness's is generic. So a pair is MERGED, not just deduplicated: keep the
+    measured row, adopt the agent's description if the harness's is boilerplate,
+    drop the zero-token twin.
+
+    A pair is: same agent, one row with a `run:` tag and one without, timestamps
+    within 20 minutes. Rows before the cutover are left alone — history stays
+    as it was written, labelled unmetered, permanently and on purpose.
+    """
+    p = DATA / "usage-log-current.js"
+    if not p.is_file():
+        return
+    cut = ledger_cutover()
+    if cut is None:
+        return
+    text = io.open(p, encoding="utf-8", newline="").read()
+    # split the rows array into raw record strings so a repair rewrites only the
+    # records it means to and never re-serialises the file
+    m = re.search(r"var\s+rows\s*=\s*\[", text)
+    if not m:
+        return
+    start = m.end()
+    recs, i, n = [], start, len(text)
+    while i < n:
+        c = text[i]
+        if c == "]":
+            break
+        if c == "{":
+            blob = slice_container(text, i)
+            if blob is None:
+                return
+            recs.append((i, i + len(blob), blob))
+            i += len(blob)
+            continue
+        i += 1
+    parsed = []
+    for (a, b, blob) in recs:
+        try:
+            parsed.append((a, b, tolerant_parse(blob)))
+        except Exception:                                  # noqa: BLE001
+            parsed.append((a, b, None))
+
+    def rid(r): return (r or {}).get("id")
+    def zero(r): return not ((r.get("input_tokens") or 0) or (r.get("output_tokens") or 0) or r.get("images"))
+    generic = re.compile(r"^(Hourly breaking scan|Pulse scan|Newsroom cycle|Weekly resources refresh|Weekly evolution)[^\n]*\(GitHub Actions run \d+\)\s*$")
+
+    to_drop, adopt = set(), {}
+    tagged = [(a, b, r) for (a, b, r) in parsed if r and r.get("run")]
+    for (a, b, r) in parsed:
+        if not r or r.get("run") or not zero(r):
+            continue
+        ts = parse_ts(r.get("ts"))
+        if ts is None or ts < cut:
+            continue
+        for (ta, tb, t) in tagged:
+            tts = parse_ts(t.get("ts"))
+            if t.get("agent") == r.get("agent") and tts and abs((tts - ts).total_seconds()) <= 1200:
+                to_drop.add((a, b))
+                if generic.match(str(t.get("description") or "")) and r.get("description"):
+                    adopt[(ta, tb)] = str(r["description"])
+                break
+    if not to_drop:
+        return
+    if not fix:
+        err("ledger", "%d row(s) since %s are zero-token twins of runs the harness "
+            "already measured — the agent inside the run also wrote a row. Run "
+            "site_guard.py --fix to merge them (the agent's description is kept)."
+            % (len(to_drop), cut.date()))
+        return
+    # REBUILD THE ARRAY ONLY. Everything outside `[ ... ]` — the header, and
+    # the trailer that pushes rows into the global — is copied through
+    # untouched. (A first version ran a cleanup regex over the whole file and
+    # turned the trailer's `var seen={}` into `var seen=;`, which is a
+    # SyntaxError, which is the exact outage this file has already caused once.
+    # A repair must never be able to break the thing it repairs.)
+    close = text.find("]", parsed[-1][1]) if parsed else -1
+    if close < 0:
+        return
+    kept = []
+    for (a, b, r) in parsed:
+        if (a, b) in to_drop:
+            continue
+        blob = text[a:b]
+        if (a, b) in adopt:
+            newd = adopt[(a, b)].replace("\\", "\\\\").replace('"', '\\"')
+            blob = re.sub(r'description:"(?:[^"\\]|\\.)*"', 'description:"%s"' % newd, blob, count=1)
+        kept.append(blob)
+    nl = "\r\n" if "\r\n" in text else "\n"
+    body = nl + "".join("    " + k + "," + nl for k in kept)
+    new = text[:start] + body + text[close:]
+    io.open(p, "w", encoding="utf-8", newline="").write(new)
+    note("ledger: merged %d hand-written twin row(s) into their measured rows (%d descriptions adopted)"
+         % (len(to_drop), len(adopt)))
+
+
 def check_ledger():
     base = read_store(DATA / "usage-log.js", "RTFC_USAGE_LOG") or []
     cur = read_appended_rows(DATA / "usage-log-current.js") or []
@@ -561,6 +680,38 @@ def check_ledger():
                 % (rid, r["model"]))
         if not (tin or tout or r.get("images")):
             unmetered += 1
+    # SINCE THE CUTOVER THE HARNESS IS THE ONLY WRITER. Two rules follow, and
+    # both are errors because both mean the accounting is wrong right now:
+    #   · a row after the cutover with no run tag was hand-written by an agent
+    #   · a row after the cutover with a run tag and zero tokens means the
+    #     harness ran but could not find the transcript — the measurement
+    #     itself is broken and every run since is being logged as free
+    cut = ledger_cutover()
+    if cut is not None:
+        untagged, unmeasured, seen_runs = 0, 0, {}
+        for r in rows:
+            ts = parse_ts(r.get("ts"))
+            if ts is None or ts < cut:
+                continue
+            tag = r.get("run")
+            if not tag:
+                untagged += 1
+            else:
+                if tag in seen_runs:
+                    err("ledger", "run %s is logged twice (%s and %s)" % (tag, seen_runs[tag], r.get("id")))
+                seen_runs[tag] = r.get("id")
+                if not ((r.get("input_tokens") or 0) or (r.get("output_tokens") or 0) or r.get("images")):
+                    unmeasured += 1
+        if untagged:
+            err("ledger", "%d row(s) since %s carry no run tag — an agent wrote them by hand. "
+                "The runbooks say: one sentence to $RTFC_RUN_SUMMARY, never the ledger. "
+                "site_guard.py --fix merges twins; a lone one means a runbook still tells "
+                "an agent to write rows." % (untagged, cut.date()))
+        if unmeasured:
+            err("ledger", "%d harness row(s) since %s have ZERO tokens — log_usage.py ran "
+                "but found no transcript. Every run since is being published as free. "
+                "Check transcript_candidates() in log_usage.py against the runner."
+                % (unmeasured, cut.date()))
     share = unmetered * 100 // max(1, len(rows))
     note("ledger: %d rows, %d unmetered (%d%%), newest %s"
          % (len(rows), unmetered, share, newest.isoformat() if newest else "?"))
@@ -1221,6 +1372,7 @@ def main() -> int:
     run("check_array_holes", check_array_holes, fix)
     run("repair_ledger_ids", repair_ledger_ids, fix)
     run("repair_future_timestamps", repair_future_timestamps, fix)
+    run("repair_ledger_duplicates", repair_ledger_duplicates, fix)
     run("repair_missing_script_tags", repair_missing_script_tags, fix)
     personas = run("read personas.js", read_store, DATA / "personas.js", "RTFC_PERSONAS") or []
     sections = run("read sections", read_store, DATA / "personas.js", "RTFC_SECTIONS") or []

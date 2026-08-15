@@ -67,28 +67,7 @@ One WebSearch for the Artificial Analysis leaderboard / major model-launch news 
 ## 4. Ship
 1. `git status --short` — you should only see the data files above (`buzz.js`, `events.js`, `livetv.js`, `scoreboard.js`, `resolutions.js`). If anything else is modified, do NOT stage it; note it in the report.
 2. Bump every `?b=N` in `web/index.html` by 1 (all occurrences, same number; UTF-8-safe tools ONLY — see the cycle runbook's warnings; `grep -c 'â€' web/index.html` must print 0).
-2b. **Append your row to the ledger** — REQUIRED every scan, including one that changes nothing.
-**Do not hand-write this row.** Run the logger:
-
-```
-python3 newsroom/runner/log_usage.py --agent "pulse-scan" --task-type "<TYPE>" \
-  --article-id "<ID or system>" --description "<one honest sentence>"
-```
-
-WHY THIS IS A COMMAND AND NOT A FORMAT DESCRIPTION (2026-08-15). Four runbooks
-used to say "append one row, matching an existing row's fields exactly", and an
-agent obeying that instruction is an LLM writing punctuation into a live data
-file several times a day. It went wrong twice in a single day: four runs all
-picked the id `u-0128`, and the store's own dedup silently dropped three real
-rows; and a row was appended with no comma before it, which is a JavaScript
-SyntaxError, so the browser loaded NONE of the file and `/usage` told readers
-"this log is 33 days stale, the jobs are failing" while every job was running
-perfectly. `log_usage.py` computes the next id deterministically, stamps the
-real UTC time, and cannot produce either fault.
-
-`--task-type` is `no-op` or `maintenance`, `--article-id` is `system`, and the
-description names cards retired/added, claims checked and closed, and whether the
-scoreboard was flagged. Add `web/data/usage-log-current.js` to the `git add` in step 3.
+2b. **Write your one-sentence summary to `$RTFC_RUN_SUMMARY`** (see §3 above) — REQUIRED every scan, including one that changes nothing. Do not touch `usage-log-current.js`; the harness writes the ledger row from your sentence after you finish.
 
 An unchanged-but-checked feed is a legitimate outcome, but it has to be *visible* as one. Without
 this row, a scan that ran and found nothing and a scan that never ran look identical on the Ledger
