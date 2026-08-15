@@ -61,12 +61,34 @@ jobs:
       - name: Contract + cross-surface checks
         run: python3 newsroom/quality/site_guard.py
 
+      # THE BROWSER IS CACHED, AND THE RENDER PASS IS PUSH-ONLY.
+      #
+      # Measured 2026-08-15: downloading Chromium on every run was costing more
+      # minutes than the checks it enabled, and the hourly cron was re-rendering
+      # pages that had not changed since the hour before. Two fixes:
+      #
+      #   · the browser is cached across runs, so a cache hit is seconds
+      #   · the render pass runs on PUSH, not on the schedule
+      #
+      # Coverage is not reduced by the second one. Every bot write ends in a
+      # push, so any data change that could break rendering still triggers a
+      # full render pass. The hourly cron keeps doing the data-contract checks,
+      # which are the ones that can go stale on their own.
+      - name: Cache the browser
+        if: github.event_name != 'schedule'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+
       - name: Install browser for the render check
+        if: github.event_name != 'schedule'
         run: |
           python3 -m pip install --quiet playwright
           python3 -m playwright install --with-deps chromium
 
       - name: Render every page, including a hostile minimal record
+        if: github.event_name != 'schedule'
         run: python3 newsroom/quality/render_smoke.py
 
       # A failure here is loud on purpose: the run goes red, and the next
@@ -108,8 +130,17 @@ jobs:
       - uses: actions/checkout@v6
         with: { fetch-depth: 0 }
 
+      # --wait ONLY AFTER A PUSH. On a scheduled run nothing was deployed, so
+      # waiting up to seven minutes for the edge to serve "this commit" is seven
+      # minutes of paying a runner to sleep, 24 times a day. My bug, measured
+      # and removed the same day it shipped.
       - name: Check the published site the way a stranger sees it
-        run: python3 newsroom/quality/live_check.py --wait 420
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python3 newsroom/quality/live_check.py --wait 420
+          else
+            python3 newsroom/quality/live_check.py
+          fi
 
       - name: Record the verdict
         if: always()

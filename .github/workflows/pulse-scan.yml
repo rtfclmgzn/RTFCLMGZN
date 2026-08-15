@@ -2,9 +2,13 @@ name: Pulse Scan
 
 # Was: Windows Scheduled Task "RTFCLMGZN Pulse Scan" (/sc hourly /mo 3 /st 00:45).
 # Kept at the same 3-hour cadence and the same :45 offset.
+# 2026-08-15: 3-hourly -> 6-hourly, owner-approved after measurement.
+# 21 runs in 63 hours at 5.2 min each, and the run summaries read "no cards
+# retired/added, scoreboard checked" almost every time. Halving the cadence
+# changes nothing a reader can see and removes four agent runs a day.
 on:
   schedule:
-    - cron: "45 */3 * * *"
+    - cron: "45 */6 * * *"
   workflow_dispatch:
 
 concurrency:

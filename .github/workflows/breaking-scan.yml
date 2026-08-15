@@ -12,10 +12,21 @@ name: Breaking Scan
 # something does clear the bar, haiku writes the breaking piece instead of sonnet.
 # That is accepted — running out of allowance and having every scan fail is worse
 # than a thinner first draft on a story the next newsroom cycle revisits anyway.
-# If you ever want sonnet back here, move the cron to every 2 hours: "15 */2 * * *".
+# 2026-08-15: MOVED TO EVERY TWO HOURS, owner-approved after measurement.
+# 48 runs in 63 hours at 4.3 min each made this the second-largest line on the
+# bill, and the overwhelming majority of those runs woke a full agent to
+# conclude that nothing had happened. Halving the cadence halves both the
+# Actions minutes and the token spend. The cost is stated plainly: a breaking
+# story can now land up to two hours late instead of one. Social dispatch runs
+# every three hours regardless, so in practice almost nothing reaches a reader
+# later than it did before.
+#
+# The pre-filter (newsroom/runner/breaking_prefilter.py) is the real fix: it
+# reads the feeds deterministically and exits before the agent starts when
+# there is nothing new, so a quiet window costs seconds instead of minutes.
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "15 */2 * * *"
   workflow_dispatch:
 
 concurrency:
