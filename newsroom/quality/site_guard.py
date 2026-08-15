@@ -903,6 +903,148 @@ def check_sitemap_and_rss(slugs):
 
 
 # --------------------------------------------------------------------------
+# 4. THE ENGINE — what makes this installation THIS publication
+# --------------------------------------------------------------------------
+CONFIG = ROOT / "engine.config.json"
+BASELINE = HERE / "engine_baseline.json"
+
+# Files that are ALLOWED to name the domain, because they are the ones that
+# will read it from the config once the extraction lands, or because naming it
+# is their whole job.
+DOMAIN_OK = {
+    "engine.config.json",
+    "autonomy.default.json",
+    "live_check.py",           # it exists to talk to this specific site
+    "FAILURE_REGISTER.md", "OPERATING_LAW.md", "OPERATION_MAP.md",
+    "site_guard.py",
+}
+
+
+def check_engine_config():
+    """The identity ratchet.
+
+    An audit on 2026-08-15 found this publication's identity in roughly 500
+    places: four separate SITE constants, a wordmark hand-inlined in three
+    files, a desk list written out five times with two copies already drifted
+    onto different colours, and a price table duplicated across two files that
+    disagreed with itself. That is what "not yet a product" looks like in
+    concrete terms.
+
+    Extracting all of it in one commit would be a rewrite of app.js, and a
+    rewrite is exactly the kind of change that breaks a live site. So this
+    check is a RATCHET instead of a wall:
+
+      · engine.config.json must exist and be internally consistent with the
+        code it claims to describe. Drift there is a hard error, because a
+        config that lies is worse than no config.
+      · the number of hardcoded domain literals per file may go DOWN or stay
+        flat, never up. New code reads the config; old code gets migrated when
+        someone is in the file anyway.
+
+    That makes "how close is this to being a sellable engine" a number that
+    only moves in one direction, instead of a feeling.
+    """
+    import json
+    if not CONFIG.is_file():
+        err("engine", "engine.config.json is missing — the engine has no "
+            "declared identity, so nothing can be rebranded without a rewrite")
+        return
+    try:
+        cfg = json.loads(io.open(CONFIG, encoding="utf-8").read())
+    except Exception as exc:                               # noqa: BLE001
+        err("engine", "engine.config.json does not parse: %s" % exc)
+        return
+
+    for key in ("identity", "web", "desks", "theme", "cadence"):
+        if key not in cfg:
+            err("engine", "engine.config.json has no '%s' block" % key)
+    if "desks" not in cfg or "web" not in cfg:
+        return
+
+    # 1. The config must agree with the code it describes.
+    app = io.open(APP, encoding="utf-8").read()
+    m = re.search(r"var SECTION_COLORS\s*=\s*\{([^}]*)\}", app)
+    if m:
+        in_app = dict(re.findall(r'(\w+)\s*:\s*"(#[0-9a-fA-F]{6})"', m.group(1)))
+        in_cfg = {d["key"]: d["color"] for d in cfg["desks"]}
+        if in_app != in_cfg:
+            only_app = {k: v for k, v in in_app.items() if in_cfg.get(k) != v}
+            err("engine", "engine.config.json desks disagree with app.js "
+                "SECTION_COLORS: %s. One of them is what readers actually see; "
+                "a config that describes the wrong thing is worse than none."
+                % sorted(only_app.items())[:4])
+    else:
+        err("check-blind", "check_engine_config could not find SECTION_COLORS "
+            "in app.js — the config is no longer being compared to anything")
+
+    # 2. Figures the site prints about itself must come from one place.
+    personas = read_store(DATA / "personas.js", "RTFC_PERSONAS") or []
+    want = (cfg.get("cadence") or {}).get("editorial_personas")
+    if personas and want and len(personas) != want:
+        err("engine", "engine.config.json says %d editorial personas, "
+            "personas.js has %d. The site prints this number, and it has been "
+            "wrong in public before ('7 editors' when there were 9)."
+            % (want, len(personas)))
+
+    # 3. THE RATCHET.
+    site_url = (cfg.get("web") or {}).get("site_url", "")
+    domain = (cfg.get("web") or {}).get("domain", "")
+    if not domain:
+        return
+    counts = {}
+    roots = [WEB / "assets" / "app.js", INDEX, ROOT / "functions",
+             ROOT / "newsroom", ROOT / "agents", ROOT / ".github"]
+    files = []
+    for r in roots:
+        if r.is_file():
+            files.append(r)
+        elif r.is_dir():
+            files += [f for f in r.rglob("*")
+                      if f.is_file() and f.suffix in
+                      (".js", ".py", ".json", ".yml", ".yaml", ".html", ".md")]
+    for f in files:
+        if f.name in DOMAIN_OK or "__pycache__" in str(f):
+            continue
+        try:
+            n = io.open(f, encoding="utf-8", errors="replace").read().count(domain)
+        except OSError:
+            continue
+        if n:
+            counts[str(f.relative_to(ROOT)).replace("\\", "/")] = n
+
+    base = {}
+    if BASELINE.is_file():
+        try:
+            base = json.loads(io.open(BASELINE, encoding="utf-8").read())
+        except Exception:                                  # noqa: BLE001
+            base = {}
+    if not base:
+        io.open(BASELINE, "w", encoding="utf-8").write(
+            json.dumps(counts, indent=2, sort_keys=True) + "\n")
+        note("engine: recorded the hardcoding baseline (%d files, %d literals). "
+             "It may go down from here, never up."
+             % (len(counts), sum(counts.values())))
+        return
+
+    grew = [(f, n, base.get(f, 0)) for f, n in counts.items() if n > base.get(f, 0)]
+    for f, n, was in sorted(grew):
+        err("engine", "%s hardcodes '%s' %d times, up from %d. New code must "
+            "read engine.config.json — every literal added here is another "
+            "place a second site breaks." % (f, domain, n, was))
+    total, was_total = sum(counts.values()), sum(base.values())
+    if total < was_total:
+        note("engine: hardcoded '%s' literals down to %d from %d%s"
+             % (domain, total, was_total,
+                " — run with --fix to lock in the lower baseline" if True else ""))
+        if "--fix" in sys.argv:
+            io.open(BASELINE, "w", encoding="utf-8").write(
+                json.dumps(counts, indent=2, sort_keys=True) + "\n")
+    else:
+        note("engine: %d hardcoded '%s' literals across %d files (baseline held)"
+             % (total, domain, len(counts)))
+
+
+# --------------------------------------------------------------------------
 def run(label, fn, *args, **kwargs):
     """Run one check. If it throws, that becomes a FINDING, not the end of the run.
 
@@ -1017,6 +1159,7 @@ def main() -> int:
     run("check_cache_buster", check_cache_buster)
     run("check_renderer_parity", check_renderer_parity)
     run("check_ssr_store_parity", check_ssr_store_parity)
+    run("check_engine_config", check_engine_config)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
@@ -1053,7 +1196,7 @@ def main() -> int:
                 # gets switched off.
                 code_fams = ("route-titles", "scripts", "cache-buster", "renderers",
                              "hash-links", "routing", "paid-content", "ssr-parity",
-                             "check-crash", "check-blind")
+                             "check-crash", "check-blind", "engine")
                 blocking = [e for e in ERRORS if e.strip().startswith(code_fams)]
                 if not blocking:
                     say("\nGUARD: no CODE-side errors — ship allowed. The data "

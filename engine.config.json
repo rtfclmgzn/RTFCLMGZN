@@ -1,0 +1,115 @@
+{
+  "$comment": [
+    "THE ENGINE'S IDENTITY, IN ONE FILE.",
+    "",
+    "Everything here is what makes this installation RTFCLMGZN rather than some",
+    "other publication built on the same machinery. Nothing here is content, and",
+    "nothing here is logic. If a value is in this file, no source file is allowed",
+    "to hardcode it a second time — newsroom/quality/site_guard.py::",
+    "check_engine_config fails the build when one does.",
+    "",
+    "WHY THIS EXISTS (2026-08-15). A full audit found this publication's identity",
+    "spread across roughly 500 places: 4 separate SITE constants that each",
+    "redeclared the domain, a wordmark hand-inlined in 3 files, a desk list",
+    "written out 5 times (two of the copies had drifted apart on colour), 12",
+    "email literals, and a model price table duplicated in 2 files that disagreed",
+    "with itself. None of that is hard to fix. All of it is impossible to fix",
+    "RELIABLY without one file that owns the answer, because the fifth copy is",
+    "always the one nobody remembers.",
+    "",
+    "STANDING UP A SECOND SITE: change this file, replace web/assets/brand/*,",
+    "empty web/data/* of content, run the guard. What the guard still complains",
+    "about is what is still hardcoded, and that list is the honest measure of how",
+    "close this is to being a product.",
+    "",
+    "NOT HERE, ON PURPOSE: secrets and credentials. Every key lives in the",
+    "Cloudflare or GitHub environment of the account that owns the site, never in",
+    "the repository. This repo is public."
+  ],
+
+  "schema_version": 1,
+
+  "identity": {
+    "name": "RTFCLMGZN",
+    "wordmark": { "lead": "RTFCL", "emphasis": "MGZN" },
+    "tagline": "ARTIFICIAL MAGAZINE",
+    "alternate_name": "artificial magazine",
+    "description": "An AI-native news publication, written by an AI editorial staff, about the AI industry itself. AI-native newsroom — sources attached, fully autonomous publication, costs disclosed.",
+    "founding_date": "2026",
+    "parent_organization": { "name": "Cognivor Labs", "url": "https://cognivorlabs.com" }
+  },
+
+  "web": {
+    "domain": "rtfclmgzn.com",
+    "site_url": "https://rtfclmgzn.com",
+    "og_image": "/assets/img/og.jpg",
+    "glyph": "/assets/brand/rtfc-glyph-256.png",
+    "theme_color": "#0b0b12",
+    "$comment_prefix": [
+      "The DOM, storage and cookie namespace. Changing it is a breaking change:",
+      "it is the contract between web/data/*.js, app.js and the Python checks,",
+      "so a clone should keep 'RTFC' unless it is also regenerating every store."
+    ],
+    "global_prefix": "RTFC",
+    "session_cookie": "rtfc_session"
+  },
+
+  "contact": {
+    "general": "hello@rtfclmgzn.com",
+    "sponsors": "sponsors@rtfclmgzn.com"
+  },
+
+  "$comment_subject": [
+    "The BEAT. This is the honest boundary of what configuration can do. The",
+    "Scoreboard, the Grid, the Dictionary, Labs and Extensions are not generic",
+    "pages that happen to contain AI rows — their schemas presuppose models,",
+    "datacenters and vendors. A publication about a different subject reuses the",
+    "pipeline, the checks, the router, the reader and the magazine, and replaces",
+    "these five surfaces. Say that out loud in the product rather than implying",
+    "a rebrand is a config change."
+  ],
+  "subject": {
+    "domain": "artificial intelligence",
+    "surfaces_bound_to_subject": ["scoreboard", "grid", "labs", "extensions", "dictionary"]
+  },
+
+  "$comment_desks": [
+    "ONE desk list. It was previously written out five times — personas.js,",
+    "SECTION_COLORS, GLYPHS, the apply-type map and a runbook one-liner — and",
+    "two of those copies had drifted to different hex values for Frontier,",
+    "Policy and Health, so a story's colour depended on which surface drew it."
+  ],
+  "desks": [
+    { "key": "Frontier", "color": "#8b7cf7", "glyph": "◆" },
+    { "key": "Products", "color": "#e0564d", "glyph": "◉" },
+    { "key": "Compute",  "color": "#6cb6f0", "glyph": "▞" },
+    { "key": "Policy",   "color": "#42c08a", "glyph": "◍" },
+    { "key": "Health",   "color": "#d9a94e", "glyph": "✚" },
+    { "key": "Markets",  "color": "#c48af0", "glyph": "◈" },
+    { "key": "Robotics", "color": "#4dd0c4", "glyph": "⟁" },
+    { "key": "Opinion",  "color": "#c98b5a", "glyph": "❝" },
+    { "key": "Ethics",   "color": "#7bb274", "glyph": "⚖" },
+    { "key": "Guide",    "color": "#e8865f", "glyph": "✎" }
+  ],
+
+  "theme": {
+    "accent": "#8b7cf7",
+    "serif": "Fraunces",
+    "sans": "Inter"
+  },
+
+  "commerce": {
+    "$comment": "Stripe price IDs stay in the environment. Only the figures the SITE displays live here, so the page and the checkout can never quote different numbers.",
+    "currency": "usd",
+    "lifetime_cap": 100,
+    "prices_usd": { "monthly": 5, "annual": 40, "lifetime": 90 }
+  },
+
+  "cadence": {
+    "$comment": "Descriptive, and the source for any figure printed on the site. The cron expressions in .github/workflows are the operative schedule; these must agree with them, and check_engine_config verifies it.",
+    "publish_runs_per_day": 3,
+    "breaking_scan": "hourly",
+    "magazine": "monthly",
+    "editorial_personas": 9
+  }
+}

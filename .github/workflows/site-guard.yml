@@ -102,8 +102,11 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
 
       - name: Check the published site the way a stranger sees it
         run: python3 newsroom/quality/live_check.py --wait 420
@@ -113,3 +116,21 @@ jobs:
         run: |
           echo "live_conclusion=${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
           echo "Live site checked at $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_STEP_SUMMARY"
+
+      # THE STABILITY GATE, MADE COUNTABLE.
+      # "Two weeks with no reader-visible breakage" was the stated bar for
+      # packaging this as a product, and it was being judged by feel. Only
+      # FAILURES are recorded here, so the file is a list of incident dates and
+      # "days since the last one" is something you can read at a glance instead
+      # of something you argue about. A green run writes nothing, so this never
+      # becomes 24 commits a day of noise.
+      - name: Log an incident if the live site failed
+        if: failure()
+        run: |
+          git config user.name "rtfclmgzn-pipeline"
+          git config user.email "rtfclmgzn@gmail.com"
+          echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) live_check FAILED - run ${{ github.run_id }}" >> newsroom/quality/incidents.log
+          git add newsroom/quality/incidents.log
+          git commit -m "[guard] incident: live check failed" || exit 0
+          git pull --rebase origin main || { git rebase --abort; exit 0; }
+          git push origin main || true
