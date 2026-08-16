@@ -1074,7 +1074,12 @@
    ],
    "text_space": "dark wall left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
+     "used_at": "2026-08-16"
+    }
+   ]
   },
   {
    "id": "art-040-hyperscale-construction-at-dusk",

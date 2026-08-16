@@ -1516,5 +1516,256 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g7",
+    "slug": "check-an-ai-labs-own-safety-claim",
+    "image": "assets/img/newsroom/g7.jpg",
+    "title": "How to check whether an AI lab's own safety claim actually holds up",
+    "dek": "Anthropic's latest Risk Report names an unreleased model and quietly raises its own risk rating. Neither claim is independently audited — here's the six-step read every self-reported safety disclosure deserves, worked through on this week's example.",
+    "persona": "luka-petrovic",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-16T11:00:00Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Frontier labs self-report almost every safety and capability claim — there's no external auditor yet.",
+      "The primary document usually has more precision than the press summary, and sometimes less than it claims.",
+      "Always separate what changed from why a lab says it changed — they're graded differently.",
+      "A grading process run by the lab being graded is real evidence, not proof, however careful it is.",
+      "Caveat: this method tells you what a lab actually said, not whether it's true — that part still takes judgment."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "This week, Anthropic's [August 2026 Risk Report](/article/anthropic-model-2-risk-report-misalignment-rating-raised) disclosed an unreleased internal model for the first time and raised the company's own assessed risk of catastrophic misalignment from \"very low\" to \"low.\" Within a day, a dozen outlets had a version of the story, and at least one of them attached a precise benchmark score to the new model that doesn't actually appear anywhere in Anthropic's own 186-page document — it's on a chart with no printed numbers. ==That gap between what a lab discloses and what gets repeated about it isn't unusual, and it isn't limited to Anthropic.== It's the normal condition of AI safety reporting right now, because there is no independent regulator reading these reports before the public does.",
+        "citation_urls": [
+          "https://www.anthropic.com/aug-2026-risk-report"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Start from the assumption that you're the auditor",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Every frontier lab now publishes something in this genre — a Risk Report, a System Card, a Responsible Scaling Policy update — and every one of them is written by the company describing its own product. That's not a reason to distrust them by default; it's a reason to read them the way you'd read an earnings call rather than a news article: **the specific wording is the whole product**, and the gap between a headline claim and its footnoted qualifier is usually where the real information lives. The six steps below are the same ones that went into checking this week's Model 2 disclosure, in the order that actually catches problems.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Read a safety disclosure like you're grading it",
+          "sub": "Fifteen minutes with the primary document beats an hour of secondary summaries.",
+          "est": "15 min",
+          "level": "Intermediate",
+          "track": true,
+          "prereqs": [
+            "A link to the lab's own primary document — not a news article about it.",
+            "Patience to open a PDF; most of these run 100+ pages and the useful part is rarely the executive summary."
+          ],
+          "steps": [
+            {
+              "do": "Find the primary document itself, not the press coverage of it.",
+              "detail": "Search the lab's own domain (its newsroom or a dedicated transparency page) rather than trusting a summary blog. **The primary document is the only thing worth quoting a number from.** Anthropic's Risk Reports live at anthropic.com under dated URLs; other labs use system-card or model-card pages.",
+              "verify": "You have a PDF or page hosted on the company's own domain, not a third party's paraphrase of it.",
+              "ifnot": "If you can only find secondary coverage, treat every specific number in it as unconfirmed until you find where it actually comes from."
+            },
+            {
+              "do": "Identify the exact threshold or threat model being discussed.",
+              "hi": true,
+              "detail": "Safety claims are meaningless without the criterion they're measured against. Anthropic's report frames every risk rating against a named threat model (e.g. \"misalignment in high-stakes settings\") with a stated threshold for what would trigger a higher tier — quote that threshold, don't paraphrase it.",
+              "why": "A vague read of \"low risk\" hides whether that's low against a strict bar or a loose one. Anthropic's own AI R&D threshold changed twice this year — the bar itself moved, not just the score against it.",
+              "verify": "You can write the threshold in one sentence, in the lab's own words.",
+              "ifnot": "If the document doesn't state a threshold at all, that absence is itself the finding — write it down as one."
+            },
+            {
+              "do": "Check who's grading, and who's graded.",
+              "detail": "Look for whether the evidence behind a claim comes from the lab's own internal evaluation, an outside auditor, or independent replication. Anthropic's Model 2 findings, for instance, come entirely from Anthropic's own behavioral-audit process — a real methodology, run on the company's own models, by tools the company built.",
+              "verify": "You can name the specific team or process that produced the evidence, and whether it sits inside or outside the company being assessed.",
+              "ifnot": "If the document doesn't say who ran the evaluation, assume internal until proven otherwise — that's the more common case industry-wide."
+            },
+            {
+              "do": "Separate what changed from why the lab says it changed.",
+              "detail": "A risk rating moving from \"very low\" to \"low\" is one fact. The stated reason — new evidence about the model itself, or updated uncertainty about something external — is a separate fact, and conflating them is the single most common misreading of these reports.",
+              "why": "Anthropic's own August report raised its rating for a reason that had nothing to do with new findings about the model in question — it cited outside industry incidents instead. A reader skimming only the rating change would miss that entirely.",
+              "verify": "You can state the reason for the change in the lab's own words, separately from the change itself.",
+              "ifnot": "If no reason is given, that's worth flagging as clearly as the change itself — an unexplained rating shift is weaker evidence than an explained one, in either direction."
+            },
+            {
+              "do": "Check whether a benchmark score is filtered, capped, or otherwise shaped before you compare it to anything.",
+              "detail": "Internal benchmarks are often deliberately restricted to hard cases (to keep them meaningful as models improve), which makes a raw percentage misleading without that context. Anthropic's CoBench evaluation, for instance, is explicitly filtered to problems its previous model failed at least once — a plainer sample would be roughly twice the size and the scores would likely be higher across the board.",
+              "verify": "You know whether the dataset behind a score is representative or deliberately hard-filtered, and can state which.",
+              "ifnot": "If the filtering method isn't disclosed, treat the raw score as incomparable to any other benchmark's raw score, even one with a similar name."
+            },
+            {
+              "do": "Write your own one-line verdict — what's established, what's the company's word, what's missing.",
+              "detail": "Close by sorting the claims you've just read into three piles: independently verifiable, internally verified only, and asserted without evidence. Most safety disclosures are mostly the middle pile, and that's not automatically damning — it's just the category to name honestly.",
+              "verify": "You can hand someone else your one-line verdict and they'd know what you checked and what you didn't.",
+              "ifnot": "If you can't write the verdict in one line, you've probably conflated two different claims — go back to step four."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Which claim are you actually looking at?",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Not every sentence in a safety report needs the same scrutiny. The router below sorts the four shapes these claims usually take, because the failure mode is different for each one.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH CLAIM",
+          "title": "Match the claim to the check that actually catches its failure mode",
+          "question": "Read the sentence you're checking, then take the branch that matches its shape.",
+          "branches": [
+            {
+              "when": "A specific benchmark score or percentage.",
+              "then": "Find the grading methodology and dataset filtering before treating the number as comparable to anything else.",
+              "because": "Two benchmarks with the same name can score on different, incompatibly filtered datasets — Anthropic's own CoBench explicitly says so.",
+              "hi": true
+            },
+            {
+              "when": "A risk-rating word — \"low,\" \"very low,\" \"critical\" — without a number attached.",
+              "then": "Find the named threat model and its threshold, and read the stated reason for any change separately from the change.",
+              "because": "The word alone tells you almost nothing; the threshold it's measured against is where the actual claim lives."
+            },
+            {
+              "when": "A quote attributed to a company spokesperson or an internal document.",
+              "then": "Trace it to the primary source and confirm it's reproduced exactly, not paraphrased as if verbatim.",
+              "because": "Secondary coverage regularly tightens or simplifies quoted language in ways that change its precision without changing its meaning enough to notice."
+            },
+            {
+              "when": "A claim that something hasn't happened yet, or won't be released.",
+              "then": "Check whether the stated reason is a safety finding or a procedural one — \"hasn't completed assessment\" and \"failed assessment\" are very different claims.",
+              "because": "Anthropic's own Model 2 disclosure stays internal for a procedural reason — an incomplete predeployment suite — not because it failed a safety test.",
+              "warn": "Don't assume the stronger, more alarming reading is the accurate one just because it's more dramatic. Check the document's own wording."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running all four branches against this week's disclosure lands on the same handful of facts, which is worth laying out plainly before the pitfalls below.",
+        "citation_urls": []
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "THIS WEEK'S WORKED EXAMPLE",
+          "title": "What Anthropic's own report actually says",
+          "items": [
+            {
+              "label": "The change",
+              "value": "Misalignment risk raised from \"very low\" to \"low\""
+            },
+            {
+              "label": "The stated reason",
+              "value": "Industry incident disclosures, not new findings about the model"
+            },
+            {
+              "label": "Who evaluated it",
+              "value": "Anthropic's own internal behavioral-audit process"
+            },
+            {
+              "label": "The threshold not yet met",
+              "value": "Full substitution for Anthropic's own research staff, by its own account"
+            },
+            {
+              "label": "What's unreleased and why",
+              "value": "Model 2 — predeployment suite incomplete, per Anthropic, not a safety failure"
+            }
+          ],
+          "source": "Anthropic, Risk Report: August 2026"
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running the six steps on this week's report is what surfaces the gap mentioned at the top: several outlets printed a precise CoBench percentage for Model 2 that doesn't appear anywhere in Anthropic's own text — only a chart with no axis labels printed in the extracted document. That's not evidence the number is wrong. It's evidence nobody outside Anthropic can currently confirm it's right, which is exactly the distinction step six asks you to keep straight rather than collapse into either \"true\" or \"false.\"",
+        "citation_urls": [
+          "https://www.unite.ai/anthropic-raises-misalignment-risk-to-low-and-shelves-internal-model-2/"
+        ]
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this reading gets done badly",
+          "items": [
+            {
+              "mistake": "Treating a rating word (\"low,\" \"critical\") as a number without checking the threshold behind it.",
+              "looks": "Confident comparisons between two labs' ratings that don't actually share a definition of the threat model.",
+              "why": "Each lab defines its own thresholds under its own policy document — the words aren't standardized across the industry.",
+              "fix": "Quote the specific threshold in the lab's own words before comparing it to anything else.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Repeating a specific figure from secondary coverage without checking it against the primary document.",
+              "looks": "A precise-sounding percentage that turns out to trace to a chart with no printed axis values, or to nothing at all.",
+              "why": "Secondary outlets sometimes OCR a chart, estimate a value, or simply repeat an earlier outlet's unverified number.",
+              "fix": "Open the primary document yourself before using any number you can't find printed in it.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Conflating a procedural non-release (\"hasn't finished testing\") with a safety failure.",
+              "looks": "Coverage implying a model was held back because it's dangerous, when the lab's own stated reason is an incomplete assessment.",
+              "why": "The more alarming reading is more shareable, which biases coverage toward it even without evidence.",
+              "fix": "Quote the lab's own stated reason and don't upgrade it without new evidence.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Forgetting that the evaluator is also the evaluated.",
+              "looks": "A report's findings cited as though independently confirmed, with no note that the audit process belongs to the same company.",
+              "why": "Self-assessment can be careful and well-documented and still be self-assessment — the two aren't in tension, but they're not the same thing as independent verification either.",
+              "fix": "State explicitly, every time, whether a finding is internal or externally verified.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes a self-reported safety disclosure worthless — Anthropic's report is genuinely more detailed and more self-critical than what most of the industry publishes, including a rating increase the company wasn't forced into by any regulator. But detail and rigor aren't the same claim as independence, and ==the six steps above exist to keep a reader from quietly upgrading one into the other==. The next report — from Anthropic or anyone else — deserves the same read, not a lighter one just because the last one held up.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Bookmark the primary source, not the summary, next time a lab publishes a safety report.",
+        "text": "Go straight to the company's own newsroom or transparency page rather than the first article that shows up in search — the six-step method above only works starting from the primary document."
+      },
+      {
+        "label": "Practice step four on the next rating change you see.",
+        "text": "The next time any lab announces a risk-rating change, write down the change and the stated reason as two separate sentences before reacting to either."
+      },
+      {
+        "label": "Ask who graded it, every time.",
+        "text": "Before repeating a safety claim, check one thing: was this measured by the company itself, or by someone outside it? That single question resolves most of the ambiguity in this genre."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Anthropic — Risk Report: August 2026 (primary source, worked example)",
+        "url": "https://www.anthropic.com/aug-2026-risk-report"
+      },
+      {
+        "label": "Anthropic — Responsible Scaling Policy",
+        "url": "https://www.anthropic.com/responsible-scaling-policy"
+      },
+      {
+        "label": "Unite.AI — Anthropic raises misalignment risk to low and shelves internal Model 2",
+        "url": "https://www.unite.ai/anthropic-raises-misalignment-risk-to-low-and-shelves-internal-model-2/"
+      }
+    ],
+    "corrections": []
   }
 ];

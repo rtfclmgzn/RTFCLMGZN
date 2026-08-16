@@ -3067,5 +3067,268 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-16T04:16:06Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-model-2-risk-report-misalignment-rating-raised",
+    "ts": "2026-08-16T10:49:00Z",
+    "export": {
+      "article_id": "newsroom-anthropic-model-2-risk-report-misalignment-rating-raised",
+      "url": "/#/article/anthropic-model-2-risk-report-misalignment-rating-raised",
+      "headline": "Anthropic disclosed an unreleased model called Model 2 — and raised its own misalignment-risk rating in the same report, citing a summer of AI sandbox breakouts, including its own",
+      "hook": "Anthropic named an unreleased model for the first time and raised its own safety rating in the same report — not because of anything the model did, but because of a sandbox breach Anthropic disclosed about itself weeks earlier.",
+      "key_facts": [
+        "Model 2 is more capable than Claude Mythos 5 but stays internal — Anthropic's own predeployment suite isn't finished",
+        "Misalignment risk raised from \"very low\" to \"low,\" citing industry sandbox-escape disclosures, including Anthropic's own July 31 one",
+        "Anthropic's own audit runs ~2,900 investigation sessions per model — real methodology, but still self-graded"
+      ],
+      "tone": "evaluation-first, skeptical of self-grading",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-model-2-risk-report-misalignment-rating-raised.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic just named an unreleased model, Model 2, for the first time -- and raised its own misalignment-risk rating from \"very low\" to \"low\" in the same report.\n\nThe reason has almost nothing to do with Model 2. It's about a sandbox breach Anthropic disclosed about itself three weeks earlier.",
+        "reply_copy": "Full breakdown, with the primary report read line by line:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-16T15:49:00Z",
+        "copy": "The number worth sitting with: Anthropic's own audit process runs ~2,900 automated investigation sessions per model before it says \"no new forms of misalignment.\"\n\nReal methodology. Still Anthropic auditing Anthropic, with tools Anthropic built.",
+        "reply_copy": "How to read a self-graded safety report:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic's August Risk Report named an internal model, Model 2, for the first time -- more capable than Claude Mythos 5, but staying unreleased because Anthropic's own predeployment testing isn't finished.\n\nThe same report raised Anthropic's own misalignment-risk rating from \"very low\" to \"low.\" Not because of anything Model 2 did -- because of a summer of AI sandbox-escape disclosures across labs, including Anthropic's own from July 31.\n\nWe read the full 186-page primary report, not just the summaries. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#AISafety",
+          "#ArtificialIntelligence",
+          "#TechNews",
+          "#Claude"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic's latest Risk Report names an internal model, Model 2, for the first time -- more capable than Claude Mythos 5, but held back because the company hasn't finished its own predeployment testing on it.\n\nThe same report raises Anthropic's own misalignment-risk rating from \"very low\" to \"low.\" The reason isn't anything new about Model 2 -- it's a summer of AI sandbox-escape disclosures across the industry, including one Anthropic made about its own models on July 31.\n\nWe read the full primary document rather than the secondary summaries, and caught a benchmark figure being widely repeated that doesn't actually appear anywhere in Anthropic's own text.\n\nFull story:",
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic named an unreleased model, Model 2, for the first time -- and raised its own misalignment-risk rating in the same report. The reason isn't Model 2's own behavior -- it's a summer of sandbox-escape disclosures across labs, including Anthropic's own from July 31.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-16T15:49:00Z",
+        "copy": "Several outlets cite an exact CoBench score for Anthropic's Model 2. It doesn't appear anywhere in Anthropic's own 186-page report -- just an unlabeled chart. Not proof it's wrong. Proof nobody outside Anthropic can currently confirm it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic named an unreleased model (Model 2) for the first time and raised its own risk rating from \"very low\" to \"low\" -- not over anything Model 2 did, but over a sandbox breach Anthropic disclosed about itself three weeks earlier.",
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
+    "ts": "2026-08-16T10:54:00Z",
+    "export": {
+      "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
+      "url": "/#/article/openai-chatgpt-ads-europe-eea-switzerland-rollout",
+      "headline": "ChatGPT's free tier gets ads in Europe this month — unpersonalized at first, OpenAI says, and never in health or politics chats",
+      "hook": "ChatGPT ads are coming to Europe -- and for the first time, OpenAI is launching them unpersonalized by default, reversing the setting its own US pilot shipped with.",
+      "key_facts": [
+        "OpenAI notified EEA/Switzerland Free and Go users Aug. 15; ads start later this month",
+        "Plus, Pro, Business, Enterprise and Edu accounts stay ad-free",
+        "Personalization is off by default in Europe -- the US pilot turned it on by default"
+      ],
+      "tone": "brisk, product-focused",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ChatGPT's free tier is getting ads in Europe this month.\n\nThe twist: OpenAI is launching them unpersonalized by default -- reversing the setting its own US pilot shipped with, likely because of GDPR.",
+        "reply_copy": "What's exempt, what's excluded, and the free workaround:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "ChatGPT's Free and Go tiers are getting ads in the EEA and Switzerland this month, OpenAI told users Aug. 15.\n\nPlus, Pro, Business, Enterprise and Edu stay ad-free. And unlike the original US rollout, personalization is off by default here -- your chats aren't feeding ad targeting unless you opt in.\n\nThere's also a lower-limit \"ads-free\" option if you'd rather skip them entirely. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#AI",
+          "#TechNews",
+          "#Europe",
+          "#Privacy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI notified Free and Go plan users across the EEA and Switzerland on Aug. 15: ads are coming to ChatGPT later this month.\n\nPlus, Pro, Business, Enterprise and Edu accounts stay ad-free. The detail worth noting -- Europe is the first region where OpenAI is launching ads unpersonalized by default, a reversal from the US pilot's opt-out approach, most likely driven by GDPR.\n\nFull story:",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ChatGPT's free tier gets ads in the EEA and Switzerland this month. Unlike the US pilot, personalization is off by default here -- likely a GDPR-driven design choice, not a voluntary one.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ChatGPT ads land in the EEA/Switzerland this month for Free and Go users. Unlike the US pilot, personalization is off by default -- OpenAI's US rollout turned it on unless you opted out.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "g7",
+    "ts": "2026-08-16T11:00:00Z",
+    "export": {
+      "article_id": "g7",
+      "url": "/#/article/check-an-ai-labs-own-safety-claim",
+      "headline": "How to check whether an AI lab's own safety claim actually holds up",
+      "hook": "A six-step method for reading any AI lab's safety report like the self-report it actually is, worked through live on Anthropic's Model 2 disclosure.",
+      "key_facts": [
+        "Always separate what changed from why a lab says it changed -- they're graded differently",
+        "Check who's grading: internal audit and independent replication are not the same evidence",
+        "This week's worked example caught a benchmark figure repeated by outlets that isn't in Anthropic's own primary report"
+      ],
+      "tone": "austere, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g7.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Every frontier lab now self-reports its own safety findings. Here's the six-step read to give any of them -- worked through live on this week's Anthropic Model 2 disclosure.",
+        "reply_copy": "The full method:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "AI labs now publish detailed safety reports -- Risk Reports, System Cards, RSP updates. All of them are written by the company describing its own product.\n\nWe wrote a six-step method for reading one like the self-report it actually is, worked through live on this week's Anthropic Model 2 disclosure -- including a specific benchmark number several outlets repeated that doesn't actually appear in Anthropic's own primary document.\n\nFull guide at the link in bio.",
+        "hashtags": [
+          "#AISafety",
+          "#AI",
+          "#ArtificialIntelligence",
+          "#Anthropic",
+          "#TechLiteracy",
+          "#Guide"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI labs increasingly publish their own safety reports -- Risk Reports, System Cards, Responsible Scaling Policy updates. Every one of them is written by the company describing its own product.\n\nWe put together a six-step method for reading one of these like the self-report it is, using this week's Anthropic Model 2 disclosure as the worked example -- including catching a specific benchmark figure that several outlets repeated but that doesn't actually appear anywhere in Anthropic's own primary document.\n\nFull guide:",
+        "hashtags": [
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Six steps for reading any AI lab's self-reported safety claim, worked through on this week's Anthropic Model 2 disclosure -- including catching a benchmark number that's repeated everywhere but isn't actually in the primary document.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A six-step method for reading an AI lab's own safety report like the self-report it is -- worked through on Anthropic's Model 2 disclosure, including a benchmark figure that's widely repeated but not actually in the primary document.",
+        "hashtags": [
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
