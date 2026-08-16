@@ -8126,6 +8126,8 @@
      a CSS block plus one line in this list. */
   var THEMES=[
     ["dark","Dark","dark","The default publication canvas.","#8b7cf7"],
+    ["kiosk","Kiosk","dark","Warm and loud. Food, retail, events.","#ff5a4d"],
+    ["studio","Studio","dark","Near black and cream. Portfolios, agencies, B2B.","#a99bff"],
     ["midnight","Midnight","dark","Cooler, deeper blue-black.","#6f8cf8"],
     ["graphite","Graphite","dark","Neutral grey, low colour temperature.","#a89bf0"],
     ["noir","Noir","dark","True black, maximum contrast.","#b9a8ff"],

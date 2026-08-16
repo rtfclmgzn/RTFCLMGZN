@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import io
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -73,7 +74,7 @@ def render() -> str:
 # ---------------------------------------------------------------------------
 INDEX = ROOT / "web" / "index.html"
 MANIFEST = ROOT / "web" / "manifest.json"
-REGIONS = ("head", "jsonld", "wordmark", "footbrand", "footmeta")
+REGIONS = ("head", "fonts", "typography", "jsonld", "wordmark", "footbrand", "footmeta")
 
 
 def _esc(s):
@@ -84,6 +85,65 @@ def _esc(s):
 def _year():
     import datetime
     return datetime.date.today().year
+
+
+
+# Google Fonts wants a variable-axis string per family, and getting it wrong
+# returns a stylesheet that silently omits the weights the design needs. So the
+# axes live here, keyed by family, rather than in a customer's config where a
+# typo becomes an unstyled site. A family that is not listed falls back to a
+# plain request, which always works and just loads regular and bold.
+FONT_AXES = {
+    "Fraunces":    "ital,opsz,wght@0,9..144,400..700;1,9..144,400..700",
+    "Inter":       "ital,opsz,wght@0,14..32,300..800;1,14..32,300..800",
+    "Instrument Serif": "ital@0;1",
+    "Space Grotesk":    "wght@300..700",
+    "Archivo":     "wght@300..800",
+    "Outfit":      "wght@300..800",
+    "DM Serif Display": "ital@0;1",
+    "Sora":        "wght@300..700",
+    "Playfair Display": "ital,wght@0,400..900;1,400..900",
+}
+
+
+def _font_family_param(fam: str) -> str:
+    fam = (fam or "").strip()
+    if not fam:
+        return ""
+    axis = FONT_AXES.get(fam)
+    slug = fam.replace(" ", "+")
+    return "family=%s%s" % (slug, ":" + axis if axis else "")
+
+
+def font_region(cfg) -> str:
+    theme = cfg.get("theme") or {}
+    fams = [f for f in (theme.get("serif"), theme.get("sans")) if f]
+    parts = [p for p in (_font_family_param(f) for f in fams) if p]
+    if not parts:
+        return "<!-- no webfonts configured; the stylesheet falls back to system faces -->"
+    url = "https://fonts.googleapis.com/css2?" + "&".join(parts) + "&display=swap"
+    return "\n".join([
+        '<link rel="preload" as="style" href="%s">' % url,
+        '<link href="%s" rel="stylesheet">' % url,
+    ])
+
+
+def typography_region(cfg) -> str:
+    """The families, as CSS variables.
+
+    Separate from the font <link> region and placed AFTER styles.css on purpose.
+    The links must be early so the preload is worth having; this override must
+    be late, because styles.css sets --serif in its own :root and source order
+    decides the winner at equal specificity. Emitting both together put the
+    override first and every generated site rendered in Fraunces while
+    downloading the face it actually asked for.
+    """
+    theme = cfg.get("theme") or {}
+    serif = theme.get("serif") or "Georgia"
+    sans = theme.get("sans") or "system-ui"
+    return ('<style>:root{--serif:"%s",Georgia,"Times New Roman",serif;'
+            '--sans:"%s",system-ui,-apple-system,"Segoe UI",sans-serif}</style>'
+            % (serif, sans))
 
 
 def region_bodies(cfg) -> dict:
@@ -171,8 +231,23 @@ def region_bodies(cfg) -> dict:
     bits.append("fully autonomous public releases")
     footmeta = "<span>%s</span>" % " · ".join(bits)
 
-    return {"head": head, "jsonld": jsonld, "wordmark": wordmark,
+    return {"fonts": font_region(cfg),
+        "typography": typography_region(cfg),
+        "head": head, "jsonld": jsonld, "wordmark": wordmark,
             "footbrand": footbrand, "footmeta": footmeta}
+
+
+def stamp_default_theme(html: str, cfg) -> str:
+    """The skin a generated publication opens in.
+
+    <html data-theme="..."> is the pre-paint default. The inline bootstrap
+    overrides it with the reader's saved choice, and that ordering matters:
+    without a static attribute a no-script render comes out unstyled, which is
+    the bug that shipped a cream-coloured article page on 2026-08-15.
+    """
+    pack = ((cfg.get("theme") or {}).get("pack") or "dark").strip()
+    return re.sub(r'(<html[^>]*\sdata-theme=")[^"]*(")', r"\g<1>%s\g<2>" % pack,
+                  html, count=1)
 
 
 def render_index(html: str, cfg) -> str:
@@ -181,6 +256,7 @@ def render_index(html: str, cfg) -> str:
     exists to prevent."""
     nl = "\r\n" if "\r\n" in html else "\n"
     bodies = region_bodies(cfg)
+    html = stamp_default_theme(html, cfg)
     for key in REGIONS:
         a, b = "<!-- engine:%s -->" % key, "<!-- /engine:%s -->" % key
         i, j = html.find(a), html.find(b)

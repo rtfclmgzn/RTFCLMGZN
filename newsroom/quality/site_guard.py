@@ -1444,6 +1444,55 @@ def check_live_check_parity():
 SSR_TAKEN_CLASSES = ("comp", "dek", "byline", "big", "kick", "sect", "cover")
 
 
+def check_theme_registry():
+    """One list of appearances, in three files. They must agree.
+
+    WHY (2026-08-16). Adding a theme means three edits: a [data-theme="x"] block
+    in styles.css, an entry in the pre-paint allowlist in index.html, and a row
+    in the THEMES array in app.js. Two packs were added with the first two done
+    and the third missed.
+
+    Nothing errored. The CSS was there, the HTML stamped the right attribute,
+    and then app.js's validTheme() did not recognise the name, fell back to
+    "dark", and wrote it onto <html>. Every generated publication booted in
+    RTFCLMGZN's colours no matter what its own config said, and the only symptom
+    was that the site looked wrong to someone who knew what it should look like.
+
+    Class A, textbook: two surfaces updated, the third left behind.
+    """
+    css = ROOT / "web" / "assets" / "styles.css"
+    app = ROOT / "web" / "assets" / "app.js"
+    idx = ROOT / "web" / "index.html"
+    if not (css.is_file() and app.is_file() and idx.is_file()):
+        err("check-blind", "cannot find styles.css, app.js or index.html — the "
+            "theme registry cannot be verified")
+        return
+
+    in_css = set(re.findall(r'\[data-theme="([a-z0-9-]+)"\]',
+                            io.open(css, encoding="utf-8", errors="replace").read()))
+    apptext = io.open(app, encoding="utf-8", errors="replace").read()
+    m = re.search(r"var THEMES\s*=\s*\[(.*?)\n  \];", apptext, re.S)
+    in_app = set(re.findall(r'\[\s*"([a-z0-9-]+)"', m.group(1))) if m else set()
+    html = io.open(idx, encoding="utf-8", errors="replace").read()
+    b = re.search(r"var _T=\[([^\]]*)\]", html)
+    in_html = set(re.findall(r'"([a-z0-9-]+)"', b.group(1))) if b else set()
+
+    if not expect("check_theme_registry", min(len(in_css), len(in_app), len(in_html)),
+                  3, "appearances in each of the three registries"):
+        return
+
+    for a, b_, an, bn in ((in_css, in_app, "styles.css", "app.js THEMES"),
+                          (in_css, in_html, "styles.css", "the index.html allowlist")):
+        for miss in sorted(a - b_):
+            err("engine", "appearance '%s' exists in %s but not in %s. app.js "
+                "falls back to \"dark\" for any name it does not know, so the "
+                "site silently boots in the wrong skin." % (miss, an, bn))
+        for extra in sorted(b_ - a):
+            err("engine", "appearance '%s' is listed in %s but has no "
+                "[data-theme=\"%s\"] block in styles.css. Selecting it leaves "
+                "the page on the previous palette." % (extra, bn, extra))
+
+
 def check_store_defaults():
     """`window.STORE || {rows:[]}` does not do what it looks like it does.
 
@@ -1913,6 +1962,7 @@ def main() -> int:
     run("check_workflow_source_parity", check_workflow_source_parity)
     run("check_static_link_coverage", check_static_link_coverage)
     run("check_store_defaults", check_store_defaults)
+    run("check_theme_registry", check_theme_registry)
     run("check_first_run_marker", check_first_run_marker)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()

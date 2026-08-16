@@ -5279,6 +5279,45 @@ html{scrollbar-gutter:stable}
   --on-accent:#170e07;
   --rtfc-glyph:url("brand/rtfc-glyph-256.png");
 }
+/* ------------------------------------------------------------------
+   THEME PACKS (2026-08-16). Added so a generated publication does not
+   have to look like RTFCLMGZN.
+
+   A pack is 17 variables. Everything downstream is already written
+   against them: 284 rules in this file read var(--accent) alone, which
+   is why the cursor glow, section chips, scoreboard bars and focus
+   rings all recolour without touching a line of JavaScript.
+
+   Typography is NOT set here. --serif and --sans come from
+   engine.config.json via the engine:fonts region, because the webfont
+   <link> and the CSS family have to agree or the page loads a font it
+   never requested and silently falls back.
+   ------------------------------------------------------------------ */
+
+[data-theme="kiosk"]{ /* Kiosk — warm, loud, consumer. Food, retail, events. */
+  --bg:#170a12;
+  --bg-glow:radial-gradient(1100px 520px at 60% -12%, rgba(240,70,90,.20), transparent 68%);
+  --surface:#22101a; --surface2:#2e1622; --surface3:#3a1c2b;
+  --ink:#fff3ee; --ink-soft:#f0cfc6; --muted:#c2938c; --faint:#a2756f;
+  --line:#43202f; --hairline:#341825;
+  --accent:#ff5a4d; --accent2:#ffa63d; --accent-ink:#ff7d5c;
+  --on-accent:#20080d;
+  --shadow:0 18px 50px rgba(0,0,0,.55);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+
+[data-theme="studio"]{ /* Studio — near black, cream, restrained. Portfolios, agencies, B2B. */
+  --bg:#08080a;
+  --bg-glow:radial-gradient(900px 460px at 50% -14%, rgba(150,140,255,.10), transparent 72%);
+  --surface:#0e0e12; --surface2:#151519; --surface3:#1c1c22;
+  --ink:#f4f1e8; --ink-soft:#c9c5ba; --muted:#8d8a82; --faint:#6d6a63;
+  --line:#22222a; --hairline:#191920;
+  --accent:#a99bff; --accent2:#7de0d0; --accent-ink:#b9adff;
+  --on-accent:#0b0b0f;
+  --shadow:0 22px 60px rgba(0,0,0,.7);
+  --rtfc-glyph:url("brand/rtfc-glyph-256.png");
+}
+
 [data-theme="sand"]{ /* Sand */
   --bg:#f6efe2;
   --bg-glow:radial-gradient(1200px 500px at 50% -10%, rgba(190,140,60,.10), transparent 70%);
