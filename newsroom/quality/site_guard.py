@@ -1400,6 +1400,60 @@ def check_live_check_parity():
 SSR_TAKEN_CLASSES = ("comp", "dek", "byline", "big", "kick", "sect", "cover")
 
 
+def check_store_defaults():
+    """`window.STORE || {rows:[]}` does not do what it looks like it does.
+
+    WHY (2026-08-16). `||` substitutes the default only when the left side is
+    FALSY. `{}` is truthy. So a store that exists but is empty, or that a repair
+    truncated, or that a partial write left as `{}`, sails past the guard clause
+    and the very next line reads `.rows.filter(...)` on undefined and takes the
+    whole view down.
+
+    Found by booting an engine bundle with empty seed stores: /scoreboard was
+    the one page that rendered nothing, with the splash stuck over it forever.
+    That is not an export artifact. It is the live site one truncated write away
+    from the same blank page, and it is the exact shape of the 2026-08-13
+    incident where three articles carried a `pipeline` record with no `gate`
+    block and the renderer read `pl.gate.decision`.
+
+    The fix is always the same: default the PROPERTY, not the object.
+    """
+    app = ROOT / "web" / "assets" / "app.js"
+    if not app.is_file():
+        err("check-blind", "web/assets/app.js is missing")
+        return
+    lines = io.open(app, encoding="utf-8", errors="replace").read().splitlines()
+    pat = re.compile(r"(\w+)\s*=\s*window\.(RTFC_[A-Z_0-9]+)\s*\|\|\s*\{")
+    checked = 0
+    for i, line in enumerate(lines):
+        m = pat.search(line)
+        if not m:
+            continue
+        checked += 1
+        var = m.group(1)
+        window_txt = "\n".join(lines[i:i + 15])
+        risky = re.findall(r"\b%s\.(\w+)\s*\.\s*(?:filter|map|forEach|slice|sort|reduce|join|length)\b"
+                           % re.escape(var), window_txt)
+        for prop in sorted(set(risky)):
+            # SAFE if that specific property carries its own fallback, either
+            # `v.prop||[]` or `{prop:v.prop||[]}`. That is the correct fix and
+            # the check must recognise it, or it fails the very code it asked
+            # for and gets switched off.
+            safe = re.search(r"\b%s\.%s\s*\|\||%s\s*:\s*%s\.%s\s*\|\|"
+                             % (re.escape(var), re.escape(prop),
+                                re.escape(prop), re.escape(var), re.escape(prop)),
+                             window_txt)
+            if safe:
+                continue
+            err("renderers", "app.js:%d `%s = window.%s || {...}` then reads "
+                "%s.%s. An EMPTY store is truthy, so the default never applies "
+                "and that read is undefined. Default the property, not the "
+                "object." % (i + 1, var, m.group(2), var, prop))
+    if not expect("check_store_defaults", checked, 1,
+                  "window.RTFC_* default guards in app.js"):
+        return
+
+
 def check_static_link_coverage():
     """Every page the sitemap promises must be reachable by a link in the HTML.
 
@@ -1809,6 +1863,7 @@ def main() -> int:
     run("check_desk_routing", check_desk_routing)
     run("check_workflow_source_parity", check_workflow_source_parity)
     run("check_static_link_coverage", check_static_link_coverage)
+    run("check_store_defaults", check_store_defaults)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 

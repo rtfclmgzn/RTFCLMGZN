@@ -891,7 +891,11 @@
     slides.push({k:"Next edition",cls:"edition-cd",body:'<b class="cd-time">'+(ns.overdue?"due now":fmtCountdown(ns.secs))+'</b><span class="wr-sub cd-slot">'+(ns.overdue?"Due now":"around "+ns.local+" your time")+'</span>',href:"/pulse"});
     var bz=BUZZ[0];
     if(bz) slides.push({k:"Hottest on the wire",body:'<span class="wr-txt">'+esc(String(bz.text||"").slice(0,150))+(String(bz.text||"").length>150?"…":"")+'</span><span class="wr-sub">— '+esc((bz.source&&bz.source.name)||"the feed")+'</span>',href:"/buzz"});
-    var SBW=window.RTFC_SCOREBOARD||{rows:[]};
+    // `||` fires only on a FALSY store. An empty object is truthy, so an
+    // empty or partially-written scoreboard used to give SBW.rows ===
+    // undefined and the next .filter() killed the whole view. Default the
+    // PROPERTY, not the object. (2026-08-16)
+    var SBW=window.RTFC_SCOREBOARD||{}; SBW={rows:SBW.rows||[],updated:SBW.updated||""};
     var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;});
     if(sc.length) slides.push({k:"Scoreboard · smartest",body:'<b class="wr-big">'+esc(sc[0].model)+'</b><span class="wr-sub">'+sc[0].score+' on the independent index · '+esc(sc[0].lab)+'</span>',href:"/scoreboard"});
     var preds=(window.RTFC_PREDICTIONS||[]).filter(function(p){return p.status==="pending";})
@@ -917,7 +921,11 @@
       '<div class="wr-dots">'+slides.map(function(s,i){return '<i class="'+(i===0?"on":"")+'"></i>';}).join("")+'</div></div>';
   }
   function miniSbHTML(){
-    var SBW=window.RTFC_SCOREBOARD||{rows:[]};
+    // `||` fires only on a FALSY store. An empty object is truthy, so an
+    // empty or partially-written scoreboard used to give SBW.rows ===
+    // undefined and the next .filter() killed the whole view. Default the
+    // PROPERTY, not the object. (2026-08-16)
+    var SBW=window.RTFC_SCOREBOARD||{}; SBW={rows:SBW.rows||[],updated:SBW.updated||""};
     var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;}).slice(0,5);
     if(sc.length<3) return "";
     var mx=sc[0].score||1;
@@ -3841,7 +3849,11 @@
     var EXT=window.RTFC_EXTENSIONS||[];
     var extN=EXT.reduce(function(n,c){ return n+(c.items||[]).length; },0);
     var nModels=dir.reduce(function(n,x){ return n+x.models.length; },0);
-    var SBW=window.RTFC_SCOREBOARD||{rows:[]};
+    // `||` fires only on a FALSY store. An empty object is truthy, so an
+    // empty or partially-written scoreboard used to give SBW.rows ===
+    // undefined and the next .filter() killed the whole view. Default the
+    // PROPERTY, not the object. (2026-08-16)
+    var SBW=window.RTFC_SCOREBOARD||{}; SBW={rows:SBW.rows||[],updated:SBW.updated||""};
     var sbScored=(SBW.rows||[]).filter(function(r){return r.score!=null;}).length;
     var gridN=(GRID.facilities||[]).length, gridNewN=gdNewIds().length;
     var podN=0;
@@ -6066,7 +6078,9 @@
 
   function priceStr(r,which){ var p=which==="in"?r.pin:r.pout; return (r.est?"~$":"$")+p; }
   function viewScoreboard(){
-    var SB=window.RTFC_SCOREBOARD||{updated:"",rows:[]};
+    // Default the PROPERTY, not the object: `||` never fires for {} because
+    // {} is truthy. See the note at viewScoreboardWidget. (2026-08-16)
+    var SB=window.RTFC_SCOREBOARD||{}; SB={rows:SB.rows||[],updated:SB.updated||""};
     var col=SECTION_COLORS.Compute||"#6cb6f0";
     var scored=SB.rows.filter(function(r){return r.score!=null && r.pout!=null;});
     var other=SB.rows.filter(function(r){return r.score==null || r.pout==null;});
