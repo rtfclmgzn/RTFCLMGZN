@@ -2166,8 +2166,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Manus",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088840153162744146",
+        "remote_id": "2088840153162744146",
+        "posted_at": "2026-08-16T04:07:56Z"
       },
       {
         "platform": "instagram",
@@ -2519,8 +2521,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "threads",
         "copy": "Databricks closed its new round at $190B -- up from the $188B figure attached when the same round opened in July. Not two competing numbers, same transaction at two different moments. We built the full valuation ladder back to Dec 2024's $62B, and what each figure actually covers.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcFkXLJlQhz",
+        "remote_id": "18100770875258287",
+        "posted_at": "2026-08-16T04:07:50Z"
       },
       {
         "platform": "threads",
@@ -2889,8 +2893,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088841162379366901",
+        "remote_id": "2088841162379366901",
+        "posted_at": "2026-08-16T04:11:57Z"
       },
       {
         "platform": "x",
@@ -2952,8 +2958,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt6d2sokp62u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt6d2sokp62u",
+        "posted_at": "2026-08-16T04:12:04Z"
       }
     ]
   },
@@ -3049,8 +3057,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#AIEthics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt6dbzemjl22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt6dbzemjl22",
+        "posted_at": "2026-08-16T04:16:06Z"
       }
     ]
   }
