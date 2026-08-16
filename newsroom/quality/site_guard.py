@@ -82,6 +82,50 @@ NOTES: list[str] = []
 CHECK_ASSETS = True
 
 
+# ---------------------------------------------------------------------------
+# A PUBLICATION THAT HAS NEVER PUBLISHED.
+#
+# Several checks assert things that are true of a mature publication and false
+# of a brand new one: the scoreboard has a scan log, the ledger has rows, the
+# archive has articles. Correct for a live site, wrong for a bundle that was
+# exported an hour ago and has not run a cycle yet.
+#
+# newsroom/FIRST_RUN_PENDING marks that state. While it exists, EMPTINESS is a
+# note rather than an error. Nothing else is relaxed: every structural,
+# cross-surface and routing check still blocks the build, because those are
+# exactly the ones a fresh publication is most likely to get wrong.
+#
+# The marker is deleted by the first cycle that publishes. check_first_run_marker
+# below makes that stick: if the marker survives once articles exist, it is an
+# ERROR, so it cannot be left in place to quietly disable a chunk of the guard
+# for the life of a customer's site.
+def first_run_pending() -> bool:
+    return (ROOT / "newsroom" / "FIRST_RUN_PENDING").is_file()
+
+
+def err_unless_fresh(family: str, msg: str) -> None:
+    """An emptiness complaint. Downgraded to a note before the first cycle."""
+    if first_run_pending():
+        note("%s: %s (expected before the first cycle)" % (family, msg))
+    else:
+        err(family, msg)
+
+
+def check_first_run_marker():
+    """The fresh-publication marker must not outlive the first publication."""
+    if not first_run_pending():
+        return
+    arts = load_articles() if "load_articles" in globals() else []
+    if arts:
+        err("engine", "newsroom/FIRST_RUN_PENDING still exists but this site has "
+            "%d published articles. That marker downgrades every emptiness check "
+            "to a note, so leaving it in place silently disables part of the "
+            "guard forever. Delete it." % len(arts))
+    else:
+        note("first run pending: emptiness checks are notes until the first "
+             "cycle publishes")
+
+
 def err(where: str, msg: str) -> None:
     ERRORS.append("%-22s %s" % (where, msg))
 
@@ -222,7 +266,7 @@ def check_scoreboard(entities):
     ent_names = " ".join(str(e.get("name", "")) for e in (entities or [])
                          if isinstance(e, dict)).lower()
     if not sb.get("basisNote"):
-        err("scoreboard", "basisNote is empty — the scan log IS the credibility")
+        err_unless_fresh("scoreboard", "basisNote is empty — the scan log IS the credibility")
     for r in sb.get("rows") or []:
         m = r.get("model", "?")
         if not r.get("lab"):
@@ -695,7 +739,7 @@ def check_ledger():
     cur = read_appended_rows(DATA / "usage-log-current.js") or []
     rows = list(base) + list(cur)
     if not rows:
-        err("ledger", "no usage rows at all")
+        err_unless_fresh("ledger", "no usage rows at all")
         return
     cost_cfg = read_store(DATA / "cost-config.js", "RTFC_COST_CONFIG") or {}
     priced = set((cost_cfg.get("models") or {}).keys())
@@ -1841,7 +1885,12 @@ def main() -> int:
         entities = entities.get("models") or []
 
     arts = run("load_articles", load_articles) or []
-    expect("load_articles", len(arts), 50, "articles across every store")
+    # The blindness floor is the point of expect(): a store reader that suddenly
+    # matches nothing has gone blind, and passing silently is the worst outcome.
+    # But a publication that has genuinely published nothing yet is not blind,
+    # it is new. Before the first cycle the floor is 0; after it, 50.
+    expect("load_articles", len(arts), 0 if first_run_pending() else 50,
+           "articles across every store")
     slugs = run("check_articles", check_articles, arts, personas, sections) or {}
     run("check_scoreboard", check_scoreboard, entities)
     run("check_grid", check_grid)
@@ -1864,6 +1913,7 @@ def main() -> int:
     run("check_workflow_source_parity", check_workflow_source_parity)
     run("check_static_link_coverage", check_static_link_coverage)
     run("check_store_defaults", check_store_defaults)
+    run("check_first_run_marker", check_first_run_marker)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
