@@ -2150,8 +2150,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Manus",
           "#ChinaTech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088811685083791633",
+        "remote_id": "2088811685083791633",
+        "posted_at": "2026-08-16T02:14:49Z"
       },
       {
         "platform": "x",
@@ -2215,8 +2217,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt64jfladh2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt64jfladh2a",
+        "posted_at": "2026-08-16T02:14:57Z"
       }
     ]
   },
@@ -2250,10 +2254,11 @@ window.RTFC_SOCIAL_POSTS =[
           "#Gemini",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088810675972046946",
         "attempts": 1,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2088810675972046946",
+        "posted_at": "2026-08-16T02:10:48Z"
       },
       {
         "platform": "x",
@@ -2319,8 +2324,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Google",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt64c6vzzl2k",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt64c6vzzl2k",
+        "posted_at": "2026-08-16T02:10:55Z"
       }
     ]
   },
@@ -2504,8 +2511,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Databricks",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112846405396947",
+        "remote_id": "1238977099292018_122112846405396947",
+        "posted_at": "2026-08-16T02:10:42Z"
       },
       {
         "platform": "threads",
@@ -2595,14 +2604,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Apple",
           "#Alibaba"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122112846087396947",
+        "remote_id": "1238977099292018_122112846087396947",
+        "posted_at": "2026-08-16T02:06:31Z"
       },
       {
         "platform": "threads",
         "copy": "Apple reportedly trained its own AI model for China with Alibaba's help -- the first foreign company Beijing has approved to offer a proprietary AI model there. Alibaba's Qwen becomes a separate option inside Siri, not a replacement. Neither company has confirmed on the record yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcFW79Rm7aB",
+        "remote_id": "17858282931695250",
+        "posted_at": "2026-08-16T02:10:32Z"
       },
       {
         "platform": "bluesky",
@@ -2797,8 +2810,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#ArtificialIntelligence",
           "#Coding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcFWbXLm9lh/",
+        "remote_id": "18421257649194076",
+        "posted_at": "2026-08-16T02:06:06Z"
       },
       {
         "platform": "facebook",
@@ -2825,8 +2840,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-15T03:21:43Z",
         "copy": "Google's own benchmark numbers for Gemini 3.7 Flash show the widest gains are all agentic/coding -- AutomationBench nearly doubled. Independent scoring so far only covers the Intelligence Index itself. Worth knowing before you switch.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcFWdkbGzSM",
+        "remote_id": "18127287940666993",
+        "posted_at": "2026-08-16T02:06:21Z"
       },
       {
         "platform": "bluesky",
@@ -2868,7 +2885,10 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "Anthropic says preliminary Q2 revenue topped $11.5B, beating its own $10.9B forecast. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount -- during the exact same two months.",
         "reply_copy": "Full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AIFunding"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIFunding"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -2879,21 +2899,34 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "A CFO's sworn court declaration says Anthropic's revenue was \"exceeding $5 billion to date.\" A separate company claim puts the run-rate at $19 billion. Neither figure is defined clearly enough to say if they agree.",
         "reply_copy": "More:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AI"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Anthropic says preliminary Q2 2026 revenue topped $11.5 BILLION -- beating its own $10.9B forecast from May, with a first-ever operating profit.\n\nBut here's the wrinkle: SpaceX's own IPO filing shows the $45 billion compute deal behind much of that capacity was running at a DISCOUNT during exactly those two months.\n\nNone of this makes the profit fake. It just means the timing deserves a closer look.\n\nFull breakdown at the link in bio.",
-        "hashtags": ["#Anthropic", "#AI", "#ArtificialIntelligence", "#TechNews", "#Startups", "#AIFunding"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#ArtificialIntelligence",
+          "#TechNews",
+          "#Startups",
+          "#AIFunding"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Anthropic's preliminary Q2 2026 results reportedly beat its own May forecast: revenue above $11.5 billion, against a projected $10.9 billion, with a first-ever positive operating profit.\n\nBut SpaceX's own IPO filing shows the $45 billion compute deal underneath much of that capacity ramped in at a discounted rate during May and June -- the same two months behind the profit claim. A discounted onboarding period is standard in big compute contracts, and Anthropic's real efficiency gains predate the SpaceX ramp. Still, it's a coincidence neither company has quantified.\n\nFull story:",
-        "hashtags": ["#Anthropic", "#AI"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -2914,7 +2947,11 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "Anthropic's preliminary Q2 revenue beat its own $10.9B forecast, landing above $11.5B. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount -- during those same two months.",
-        "hashtags": ["#Anthropic", "#AI", "#Markets"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#Markets"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -2945,7 +2982,10 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "Zuckerberg's new AI manifesto says personal AI will free up your time. Two days later, his own CTO told staff not to expect any of it back: \"I get an extra hour. I put it into that.\"",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#AI"],
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -2956,21 +2996,34 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "A critic's case: Zuckerberg is right that concentrated AI power is dangerous -- but Meta's own history with open standards like ActivityPub makes the company an unreliable messenger for delivering the outcome it's promising.",
         "reply_copy": "More:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#AIEthics"],
+        "hashtags": [
+          "#Meta",
+          "#AIEthics"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Zuckerberg's new AI manifesto, \"The Future Is for Everyone,\" argues AI's real danger is concentrated power -- backed by a $1 billion community fund and new board oversight.\n\nTwo days later, Meta's own CTO gave employees a very different answer when asked if AI productivity gains meant more time off:\n\n\"I get an extra hour. You know what I do with it? I put it into that.\"\n\nSame company. Same week. Two different answers about who AI is actually for.\n\nFull story at the link in bio.",
-        "hashtags": ["#Meta", "#AI", "#ArtificialIntelligence", "#TechNews", "#AIEthics", "#FutureOfWork"],
+        "hashtags": [
+          "#Meta",
+          "#AI",
+          "#ArtificialIntelligence",
+          "#TechNews",
+          "#AIEthics",
+          "#FutureOfWork"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Mark Zuckerberg published a roughly 6,500-word essay on Aug. 10 arguing that AI's central danger is concentrated control, not capability -- backed by a $1 billion community fund and new board-level safety oversight.\n\nTwo days later, Meta CTO Andrew Bosworth gave a different answer when an employee asked whether AI-driven productivity gains would mean more time off: he put his own extra hour into more work, not less.\n\nThe manifesto's concentration-of-power argument may still be right. But it didn't anticipate the company's own CTO answering a different question first.\n\nFull story:",
-        "hashtags": ["#Meta", "#AI"],
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -2991,7 +3044,11 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "Zuckerberg's AI manifesto says personal AI frees up your time. Two days later, Meta's own CTO told staff he puts his AI time savings into more work, not less. Same company, same week, different answers.",
-        "hashtags": ["#Meta", "#AI", "#AIEthics"],
+        "hashtags": [
+          "#Meta",
+          "#AI",
+          "#AIEthics"
+        ],
         "status": "ready",
         "post_url": null
       }
