@@ -3326,8 +3326,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mt6zm7cl6w2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mt6zm7cl6w2u",
+        "posted_at": "2026-08-16T10:55:30Z"
       }
     ]
   }
