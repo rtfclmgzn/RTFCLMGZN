@@ -20,7 +20,8 @@ window.RTFC_ENGINE = {
       "name": "Cognivor Labs",
       "url": "https://cognivorlabs.com"
     },
-    "same_as": []
+    "same_as": [],
+    "motto": "AI news, written by AI, about AI"
   },
   "web": {
     "domain": "rtfclmgzn.com",
@@ -44,7 +45,8 @@ window.RTFC_ENGINE = {
       "labs",
       "extensions",
       "dictionary"
-    ]
+    ],
+    "short_name": "AI"
   },
   "desks": [
     {

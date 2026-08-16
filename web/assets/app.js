@@ -16,6 +16,18 @@
   var SITE_NAME=E_ID.name||"Publication";
   var SITE_ALT=E_ID.alternate_name||"";
   var SITE_DESC=E_ID.description||"";
+  // The beat, in headline register. Every string below that used to say
+  // "AI" as the SUBJECT reads this instead. Strings where AI is the METHOD
+  // ("AI Editor-in-Chief", "our AI staff") are left alone on purpose: they
+  // are true of every publication this engine builds, and blanking them
+  // would delete the disclosure rather than generalise it.
+  var E_SUBJ = ENGINE.subject || {};
+  var SUBJECT = E_SUBJ.short_name || E_SUBJ.domain || "the beat";
+  // The masthead line, on every page. It was hardcoded to RTFCLMGZN's own
+  // motto, so a generated publication about anything else announced itself
+  // as an AI title in its own header. Config, with a derived fallback that
+  // is at least true.
+  var MOTTO = E_ID.motto || (SUBJECT + " news, written by AI, about " + SUBJECT);
   var SITE_HOME=E_WEB.site_url||(location.protocol==="file:"?"":location.origin);   // the organisation's canonical identity
   var OG_FALLBACK=(E_WEB.og_image||"/assets/img/og.jpg").replace(/^\//,"");
   // One desk list. Colour and glyph come from the same record, so they can
@@ -844,7 +856,7 @@
     var d=new Date();
     return '<div class="edition"><span class="date">'+
       d.toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"})+
-      '</span><span class="motto">AI news, written by AI, about AI</span></div>';
+      '</span><span class="motto">'+esc(MOTTO)+'</span></div>';
   }
   // (deskBrowseHTML was deleted 2026-07-31 — replaced by companyBrowseHTML below and
   //  never called again. Desks stay reachable via the nav "Sections" menu.)
@@ -1018,14 +1030,14 @@
     var h='<div class="container">'+editionHTML();
     if(window.speechSynthesis){
       var B0=briefingScript();
-      if(B0) h+='<div class="home-chips"><a class="brief-chip" href="/briefing">▶ <b>The Daily Briefing</b><span>today\'s AI, read to you · ~'+B0.mins+' min</span></a></div>';
+      if(B0) h+='<div class="home-chips"><a class="brief-chip" href="/briefing">▶ <b>The Daily Briefing</b><span>today\'s "+SUBJECT+", read to you · ~'+B0.mins+' min</span></a></div>';
     }
     var seen; try{seen=localStorage.getItem("rtfc-primer-seen");}catch(e){}
     if(!seen){
       h+='<a class="primer-banner" href="/read/primer">'+
         '<span class="pb-art" style="background:url(\'/assets/img/primer-cover.jpg\') center/cover"></span>'+
-        '<span class="pb-txt"><b>New to AI? Start with The Primer.</b>'+
-        '<span>Our free field guide to the whole AI world — who the players are, what the words mean, and what it can do for you tonight. 12 pages, no jargon walls.</span></span>'+
+        '<span class="pb-txt"><b>New to "+SUBJECT+"? Start with The Primer.</b>'+
+        '<span>Our free field guide to the whole "+SUBJECT+" world — who the players are, what the words mean, and what it can do for you tonight. 12 pages, no jargon walls.</span></span>'+
         '<span class="pb-go">Read free →</span>'+
         '<button class="pb-x" onclick="rtfcDismissPrimer();event.preventDefault();event.stopPropagation();" title="Dismiss">✕</button></a>';
     }
@@ -2804,7 +2816,7 @@
         '<ul><li>The AI Editor-in-Chief hasn’t declined any story. Sensitive pieces are being sourced, reframed, or disclaimed and published autonomously. Anything it ever judges unsound will be logged here as a settled decision — for the record, not for sign-off.</li></ul></div>';
       return h+'</div>';
     }
-    h+='<div class="kicker" style="margin-top:20px"><span class="dotc" style="background:var(--gate)"></span>'+PENDING.length+' spiked · AI recommendations</div>';
+    h+='<div class="kicker" style="margin-top:20px"><span class="dotc" style="background:var(--gate)"></span>'+PENDING.length+' spiked · "+SUBJECT+" recommendations</div>';
     h+=PENDING.map(function(a){
       var p=persona(a.persona)||{name:a.persona,color:"#e0564d"};
       var trig=(a.pipeline&&a.pipeline.gate&&a.pipeline.gate.triggers)||[];
@@ -3292,7 +3304,7 @@
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:10px">'+
       '<div class="over">The Magazine ◈</div>'+
-      '<h1>The month in AI,<br>understood with hindsight.</h1>'+
+      '<h1>The month in "+SUBJECT+",<br>understood with hindsight.</h1>'+
       '<p>Every month the Issue Desk distils the full run of this newsroom\'s coverage into one designed issue: the cover story with the benefit of hindsight, all '+nEditors+' editors\' month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist graded in public the following month. '+
       '<b>Articles are free, forever.</b> The magazine is what Plus pays for — and Plus includes every back issue.</p></div>';
 
@@ -3684,7 +3696,7 @@
   function viewGuides(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Guides</div>'+
       '<h1>Learn it by doing it</h1>'+
-      '<p>Hands-on, plain-English guides to actually using AI — published two to three times a week alongside the news. No hype, no jargon walls; every guide ends with something you can do tonight.</p></div>';
+      '<p>Hands-on, plain-English guides to actually using "+SUBJECT+" — published two to three times a week alongside the news. No hype, no jargon walls; every guide ends with something you can do tonight.</p></div>';
     h+='<div class="kicker"><span class="dotc" style="background:'+SECTION_COLORS.Guide+'"></span>'+GUIDES.length+(GUIDES.length===1?' guide':' guides')+'</div>';
     h+=GUIDES.length?('<div class="grid">'+GUIDES.map(cardHTML).join("")+'</div>'):'<p style="color:var(--muted)">First guides arrive with the daily pipeline.</p>';
     return h+'</div>';
@@ -4113,7 +4125,7 @@
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px">'+
       '<div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Podcasts</div>'+
       '<h1>Shows worth your commute</h1>'+
-      '<p>The AI shows that consistently deliver signal — daily news rundowns, practitioner deep-dives, and the long-form interviews worth the full hour. Curated by this newsroom; every link goes to the show itself.</p></div>';
+      '<p>The "+SUBJECT+" shows that consistently deliver signal — daily news rundowns, practitioner deep-dives, and the long-form interviews worth the full hour. Curated by this newsroom; every link goes to the show itself.</p></div>';
     if(!n) return h+'<p style="color:var(--muted)">Nothing listed yet.</p></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>'+n+' shows</div>';
     cats.forEach(function(cat){
@@ -4731,7 +4743,7 @@
   function viewBuzz(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><span class="live-dot"></span>The Buzz</div>'+
       '<h1>What the feed is arguing about</h1>'+
-      '<p>The posts, launches, and hot takes making noise across the AI world — curated from labs, builders, and researchers on every newsroom run. Every card links to the original. We pick the signal; you skip the doomscroll.</p></div>';
+      '<p>The posts, launches, and hot takes making noise across the "+SUBJECT+" world — curated from labs, builders, and researchers on every newsroom run. Every card links to the original. We pick the signal; you skip the doomscroll.</p></div>';
     if(!BUZZ.length){
       return h+'<p style="color:var(--muted)">The next Buzz run fills this page.</p></div>';
     }
@@ -5088,7 +5100,7 @@
     var curSeg=playingThis?AP.seg:0;
     var h='<div class="container" style="max-width:820px"><div class="mast-hero" style="padding-bottom:4px">'+
       '<div class="over"><span class="live-dot"></span>The Daily Briefing</div>'+
-      '<h1>The day in AI, read to you</h1>'+
+      '<h1>The day in "+SUBJECT+", read to you</h1>'+
       '<p>A ~10-minute spoken rundown of the latest coverage, narrated in a natural voice and assembled fresh from the newsroom\'s own reporting. Press play and drive — it keeps going as you move around the site.</p></div>';
     if(!B) return h+'<p style="color:var(--muted)">The first briefing assembles with the next edition.</p></div>';
     h+='<div class="brief-player">'+
@@ -6258,7 +6270,7 @@
      ["The Control Room","Live","/pulse"],["The Scoreboard","Models","/scoreboard"],["The Buzz","Signal","/buzz"],
      ["The Primer (free magazine)","Magazine","/read/primer"],["All magazine issues","Magazine","/magazine"],
      ["Guides","Section","/guides"],["Resources","Section","/resources"],["AI Extensions (APIs, skills, connectors)","Learn","/extensions"],["Archive","Section","/archive"],
-     ["Live & ongoing (AI streams)","Watch","/live"],["AI events on the radar","Events","/events"],["Contact the newsroom","Contact","/contact"],
+     ["Live & ongoing (AI streams)","Watch","/live"],[""+SUBJECT+" events on the radar","Events","/events"],["Contact the newsroom","Contact","/contact"],
      ["The Masthead","About","/masthead"],["Cost transparency","Ledger","/usage"],["Corrections log","Trust","/corrections"],
      ["EIC decision log","Trust","/review"],["Privacy","Legal","/privacy"],["Terms","Legal","/terms"]
     ].forEach(function(p){ items.push({t:p[0],k:p[1],href:p[2],s:p[0].toLowerCase()}); });
@@ -7140,8 +7152,8 @@
   function viewLiveTV(){
     var D=window.RTFC_LIVETV||{channels:[],tags:{}};
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px"><div class="over"><span class="live-dot"></span>Live &amp; ongoing</div>'+
-      '<h1>Where AI happens live</h1>'+
-      '<p>We don’t host streams — we point you to the channels that go live when it matters: model launches, keynotes, and the shows that cover AI every day. Click through to whatever’s on now. The newsroom keeps this board current.</p></div>';
+      '<h1>Where "+SUBJECT+" happens live</h1>'+
+      '<p>We don’t host streams — we point you to the channels that go live when it matters: model launches, keynotes, and the shows that cover "+SUBJECT+" every day. Click through to whatever’s on now. The newsroom keeps this board current.</p></div>';
     h+='<div class="ltv-grid">'+ (D.channels||[]).map(function(c){
       return '<a class="ltv-card" href="'+safeHref(c.url)+'" target="_blank" rel="noopener">'+
         '<div class="ltv-top"><span class="ltv-name">'+esc(c.name)+'</span><span class="ltv-tag">'+esc((D.tags||{})[c.tag]||c.tag||"")+'</span></div>'+
@@ -7182,7 +7194,7 @@
     var D=window.RTFC_EVENTS||{items:[]};
     var items=(D.items||[]).slice().sort(eventSort);
     var h='<div class="container" style="max-width:820px"><div class="mast-hero" style="padding-bottom:6px"><div class="over">On the radar</div>'+
-      '<h1>AI events worth watching</h1>'+
+      '<h1>"+SUBJECT+" events worth watching</h1>'+
       '<p>Keynotes, launches, and conferences the newsroom is tracking. '+esc(D.note||"")+'</p></div>';
     if(!items.length){
       h+='<div class="corr-empty"><div class="ce-mark">◈</div><h2>Nothing on the calendar yet.</h2><p>The Events desk adds dates as they’re announced. Check back — or watch <a href="/live" style="color:var(--accent2)">what’s live now</a>.</p></div>';
@@ -7221,7 +7233,7 @@
     if(el) el.value="";
   };
   function newsletterHTML(compact){
-    return '<div class="nl-card'+(compact?" compact":"")+'"><div class="nl-copy"><b>The Daily Digest</b><span>The day’s AI stories in one email. One send a day — never more. No spam, unsubscribe anytime.</span></div>'+
+    return '<div class="nl-card'+(compact?" compact":"")+'"><div class="nl-copy"><b>The Daily Digest</b><span>The day’s "+SUBJECT+" stories in one email. One send a day — never more. No spam, unsubscribe anytime.</span></div>'+
       '<div class="nl-form"><input id="nl-email" type="email" placeholder="you@example.com" autocomplete="email">'+
       '<button class="cta" onclick="rtfcNewsletter()">Subscribe</button></div>'+
       '<p class="nl-msg" id="nl-msg"></p></div>';
@@ -7488,7 +7500,7 @@
   var ROUTE_HEADS={
     settings:["Settings","Choose from nine appearances, set your language, and see how "+SITE_NAME+" handles motion and reading preferences. Everything is stored in your own browser."],
     magazine:["The Magazine","Every month, the Issue Desk distils the full run of our coverage into one designed issue — the cover story with hindsight, the editors’ month-in-review columns, the Scoreboard, the Compendium and a Watchlist we grade in public."],
-    guides:["Guides","Hands-on, plain-English guides to actually using AI. No hype, no jargon walls; every guide ends with something you can do tonight."],
+    guides:["Guides","Hands-on, plain-English guides to actually using "+SUBJECT+". No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
     extensions:["AI Extensions","Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — one categorized, searchable encyclopedia, primary sources only."],
     /* grid was the ONE rendered route missing from this table, so the page shipped
@@ -7498,8 +7510,8 @@
     grid:["The Grid","The named frontier-AI megasites behind the models: who operates each site, who the primary tenant is, and how sure we are of the details — reconfirmed daily."],
     labs:["Labs & Models","Every lab and every model this newsroom tracks, grouped the way the field actually splits, with the independent index score where one exists."],
     prompts:["The Prompt Library","Prompts that do a specific job, written to be pasted and used as-is — copy any of them in one tap or take the whole library as a markdown file."],
-    podcasts:["Podcasts","The AI shows that consistently deliver signal — daily rundowns, practitioner deep-dives, and the long-form interviews worth the full hour."],
-    buzz:["The Buzz","What the AI world is actually saying right now: the loudest posts, ranked by heat, with why each one is buzzing and which of our stories cited it."],
+    podcasts:["Podcasts","The "+SUBJECT+" shows that consistently deliver signal — daily rundowns, practitioner deep-dives, and the long-form interviews worth the full hour."],
+    buzz:["The Buzz","What the "+SUBJECT+" world is actually saying right now: the loudest posts, ranked by heat, with why each one is buzzing and which of our stories cited it."],
     scoreboard:["The Scoreboard","Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move — never on a lab’s own number."],
     claims:["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
     "ledger-claims":["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
@@ -7515,10 +7527,10 @@
     transparency:["Cost Transparency","Every token and every penny this publication has spent, itemised by story, model and task. Exportable as CSV."],
     pulse:["The Control Room","The newsroom pulse: what the agents are doing right now, the next edition’s countdown, and where in the world this publication is being read."],
     "control-room":["The Control Room","The newsroom pulse: what the agents are doing right now, the next edition’s countdown, and where in the world this publication is being read."],
-    briefing:["The Daily Briefing","The day in AI, read to you — a spoken rundown assembled fresh from the newsroom’s own reporting."],
-    live:["Live & Ongoing","Where AI happens live: the channels that go live when it matters — model launches, keynotes, and the shows that cover AI every day."],
-    livetv:["Live & Ongoing","Where AI happens live: the channels that go live when it matters — model launches, keynotes, and the shows that cover AI every day."],
-    events:["AI Events on the Radar","The launches, keynotes and conferences the newsroom is watching, with what is happening right now flagged live."],
+    briefing:["The Daily Briefing","The day in "+SUBJECT+", read to you — a spoken rundown assembled fresh from the newsroom’s own reporting."],
+    live:["Live & Ongoing","Where "+SUBJECT+" happens live: the channels that go live when it matters — model launches, keynotes, and the shows that cover "+SUBJECT+" every day."],
+    livetv:["Live & Ongoing","Where "+SUBJECT+" happens live: the channels that go live when it matters — model launches, keynotes, and the shows that cover "+SUBJECT+" every day."],
+    events:[""+SUBJECT+" Events on the Radar","The launches, keynotes and conferences the newsroom is watching, with what is happening right now flagged live."],
     wallpapers:["Wallpapers","Turn any "+SITE_NAME+" cover into a phone wallpaper. Free, no account, made in your browser."],
     design:["The Design System","The type, colour and motion system this publication is built from."],
     contact:["Contact the Newsroom","Reach the AI editorial staff: tips, corrections, and requests."],

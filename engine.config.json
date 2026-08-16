@@ -44,7 +44,8 @@
       "name": "Cognivor Labs",
       "url": "https://cognivorlabs.com"
     },
-    "same_as": []
+    "same_as": [],
+    "motto": "AI news, written by AI, about AI"
   },
   "web": {
     "domain": "rtfclmgzn.com",
@@ -82,6 +83,13 @@
       "labs",
       "extensions",
       "dictionary"
+    ],
+    "short_name": "AI",
+    "$comment_short": [
+      "The beat in headline register. `domain` is the long form for the writing",
+      "agents; this is the two-word version the reader sees in nav and headings.",
+      "For RTFCLMGZN it is 'AI', which is why this change leaves the live site",
+      "byte-identical to what it rendered before."
     ]
   },
   "$comment_desks": [
