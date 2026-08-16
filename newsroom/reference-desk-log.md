@@ -26,3 +26,4 @@ of this gets packaged and sold to someone.
 
 | Date | Page | Target query | Who ranks now, and why we can take it |
 |---|---|---|---|
+| 2026-08-16 | guides/how-to-tell-if-an-ai-valuation-is-real | "how to tell if an AI startup valuation number is real" | First page is all founder/investor-facing valuation-methodology content (blockchain-council.org, Causo Hub, Eqvista, Qubit Capital, Aventis Advisors, Lucid) answering "how do I price my own company," not "how do I verify a valuation headline I just read." No page teaches the reader-facing method (transaction verb, announced-vs-closed, equity-vs-debt, run-rate-vs-audited) worked through a real, dated example — the gap this guide fills, using Databricks' Aug 13 close and Moonshot AI's Series F/pre-IPO split as its two worked cases. |
