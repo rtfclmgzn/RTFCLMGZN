@@ -1,6 +1,6 @@
 // RTFCLMGZN — Resources directory (window.RTFC_RESOURCES).
 // Curated links: official AI companies split by platform, plus podcasts.
-// Handles/URLs are well-known as of 2026-07; verify before public launch.
+// Handles/URLs verified 2026-08-16.
 window.RTFC_RESOURCES = [
   {
     title:"Follow the primary sources",
@@ -13,7 +13,7 @@ window.RTFC_RESOURCES = [
       { name:"xAI / Grok", key:"xai", desc:"Maker of the Grok models; tightly integrated with X.",
         links:[{label:"Site",url:"https://x.ai"},{label:"X",url:"https://x.com/xai"},{label:"Grok on X",url:"https://x.com/grok"}] },
       { name:"Google DeepMind / Gemini", key:"google", desc:"Google's frontier lab and the Gemini model family (plus Nano Banana image models).",
-        links:[{label:"Site",url:"https://deepmind.google"},{label:"X",url:"https://x.com/GoogleDeepMind"},{label:"Gemini on X",url:"https://x.com/GeminiApp"},{label:"Instagram",url:"https://www.instagram.com/googledeepmind"},{label:"YouTube",url:"https://www.youtube.com/@Google_DeepMind"}] },
+        links:[{label:"Site",url:"https://deepmind.google"},{label:"X",url:"https://x.com/GoogleDeepMind"},{label:"Gemini on X",url:"https://x.com/GeminiApp"},{label:"Instagram",url:"https://www.instagram.com/googledeepmind"},{label:"YouTube",url:"https://www.youtube.com/@googledeepmind"}] },
       { name:"Meta AI", key:"meta", desc:"Meta's AI research and the Llama / Muse model lines.",
         links:[{label:"Site",url:"https://ai.meta.com"},{label:"X",url:"https://x.com/AIatMeta"},{label:"Instagram",url:"https://www.instagram.com/meta"},{label:"YouTube",url:"https://www.youtube.com/@MetaAI"}] },
       { name:"Mistral AI", key:"mistral", desc:"Europe's leading frontier lab; open-weight heritage.",
@@ -21,7 +21,7 @@ window.RTFC_RESOURCES = [
       { name:"DeepSeek", key:"deepseek", desc:"Chinese lab known for strong open models at aggressive cost.",
         links:[{label:"Site",url:"https://www.deepseek.com"},{label:"X",url:"https://x.com/deepseek_ai"}] },
       { name:"Perplexity", key:"perplexity", desc:"AI-native answer engine / search.",
-        links:[{label:"Site",url:"https://www.perplexity.ai"},{label:"X",url:"https://x.com/perplexity_ai"},{label:"Instagram",url:"https://www.instagram.com/perplexity.ai"},{label:"YouTube",url:"https://www.youtube.com/@PerplexityAI"}] },
+        links:[{label:"Site",url:"https://www.perplexity.ai"},{label:"X",url:"https://x.com/perplexity_ai"},{label:"Instagram",url:"https://www.instagram.com/perplexity"},{label:"YouTube",url:"https://www.youtube.com/@PerplexityAI"}] },
       { name:"NVIDIA", key:"nvidia", desc:"The silicon under nearly everything above.",
         links:[{label:"Site",url:"https://www.nvidia.com"},{label:"X",url:"https://x.com/nvidia"},{label:"Newsroom",url:"https://nvidianews.nvidia.com"},{label:"YouTube",url:"https://www.youtube.com/@NVIDIA"}] },
       { name:"Hugging Face", key:"huggingface", desc:"The home of open models, datasets, and the ML community.",
@@ -33,7 +33,7 @@ window.RTFC_RESOURCES = [
     desc:"Shows that consistently deliver signal — from daily news to deep technical conversations.",
     items:[
       { name:"Everyday AI", icon:"◉", desc:"Daily, practical, business-minded AI news and how to actually use it — a strong on-ramp for non-researchers.",
-        links:[{label:"Site",url:"https://www.youreverydayai.com"},{label:"Spotify",url:"https://open.spotify.com/show/6UwUsQfHzKmYGw4dxvndzq"},{label:"YouTube",url:"https://www.youtube.com/@EverydayAI"}] },
+        links:[{label:"Site",url:"https://www.youreverydayai.com"},{label:"Spotify",url:"https://open.spotify.com/show/6bSPqenYtlBc7AU6H5sjca"},{label:"YouTube",url:"https://www.youtube.com/@EverydayAI"}] },
       { name:"The AI Daily Brief", icon:"◉", desc:"Fast daily rundown of the biggest AI stories with sharp analysis.",
         links:[{label:"YouTube",url:"https://www.youtube.com/@AIDailyBrief"},{label:"Spotify",url:"https://open.spotify.com/show/7gKwwMLFLc6RmjmRpbMtEO"}] },
       { name:"Hard Fork", icon:"◉", desc:"The New York Times' tech show — AI's biggest stories with humor and access.",
@@ -41,7 +41,7 @@ window.RTFC_RESOURCES = [
       { name:"Latent Space", icon:"◉", desc:"The AI engineer's podcast — technical, practitioner-focused, ahead of the curve.",
         links:[{label:"Site",url:"https://www.latent.space"},{label:"X",url:"https://x.com/latentspacepod"}] },
       { name:"No Priors", icon:"◉", desc:"Sarah Guo and Elad Gil interview the founders and researchers building the frontier.",
-        links:[{label:"Site",url:"https://www.nopriors.com"},{label:"YouTube",url:"https://www.youtube.com/@NoPriorsPodcast"}] },
+        links:[{label:"Site",url:"https://www.no-priors.com"},{label:"YouTube",url:"https://www.youtube.com/@NoPriorsPodcast"}] },
       { name:"Lex Fridman Podcast", icon:"◉", desc:"Long-form conversations — the AI episodes are canonical listening.",
         links:[{label:"Site",url:"https://lexfridman.com/podcast"},{label:"YouTube",url:"https://www.youtube.com/@lexfridman"}] },
       { name:"Practical AI", icon:"◉", desc:"Grounded, weekly — AI for people who ship things.",
