@@ -109,6 +109,28 @@ def walk_usage(node, acc: dict, seen_ids: set):
         return
     if not isinstance(node, dict):
         return
+    # THE RESULT EVENT IS A SUMMARY, NOT ANOTHER API CALL (2026-08-16).
+    #
+    # Claude Code ends a transcript with {"type":"result", ...} carrying
+    # CUMULATIVE usage for the whole session plus total_cost_usd, which is
+    # Anthropic's own computed price. Adding its usage to the per-message sum
+    # counts the entire run twice. The dedup below could not catch it: it keys
+    # on message id, and the result event has none, and the `key is None` branch
+    # adds unconditionally.
+    #
+    # This was found while arguing about whether a cycle really costs $21 of
+    # API. The honest answer was that nobody knew, because the one authoritative
+    # number in the transcript was being ignored and the number we did print
+    # could be inflated. total_cost_usd settles it, so record it.
+    if node.get("type") == "result":
+        c = node.get("total_cost_usd")
+        if isinstance(c, (int, float)) and c > 0:
+            acc["reported_cost_usd"] = max(acc.get("reported_cost_usd", 0.0), float(c))
+        t = node.get("num_turns")
+        if isinstance(t, int) and t > 0:
+            acc["turns"] = max(acc.get("turns", 0), t)
+        return                      # never sum a cumulative summary
+
     u = node.get("usage")
     if isinstance(u, dict) and any(k in u for k in
                                    ("input_tokens", "output_tokens")):
@@ -126,8 +148,12 @@ def walk_usage(node, acc: dict, seen_ids: set):
         walk_usage(v, acc, seen_ids)
 
 
+ACC0 = {"input": 0, "output": 0, "cached": 0, "cache_write": 0, "msgs": 0,
+        "reported_cost_usd": 0.0, "turns": 0}
+
+
 def measure(paths: list[Path]) -> tuple[dict, str | None]:
-    acc = {"input": 0, "output": 0, "cached": 0, "cache_write": 0, "msgs": 0}
+    acc = dict(ACC0)
     for p in paths:
         try:
             if not p.is_file():
@@ -136,7 +162,7 @@ def measure(paths: list[Path]) -> tuple[dict, str | None]:
         except OSError:
             continue
         seen: set = set()
-        local = {"input": 0, "output": 0, "cached": 0, "cache_write": 0, "msgs": 0}
+        local = dict(ACC0)
         try:
             walk_usage(json.loads(text), local, seen)
         except json.JSONDecodeError:
@@ -148,7 +174,7 @@ def measure(paths: list[Path]) -> tuple[dict, str | None]:
                     walk_usage(json.loads(line), local, seen)
                 except json.JSONDecodeError:
                     continue
-        if local["input"] or local["output"]:
+        if local["input"] or local["output"] or local["reported_cost_usd"]:
             return local, str(p)
         acc = acc if acc["msgs"] else local
     return acc, None
@@ -211,12 +237,18 @@ def main() -> int:
               "not one run of one agent, so it is almost certainly someone "
               "else's transcript. Logging the run as unmetered instead."
               % (acc["input"], acc["output"], src))
-        acc = {"input": 0, "output": 0, "cached": 0, "cache_write": 0, "msgs": 0}
+        acc = dict(ACC0)
         src = None
     metered = bool(acc["input"] or acc["output"])
     if metered:
         print("log_usage: measured %d in / %d out (%d cached) from %s"
               % (acc["input"], acc["output"], acc["cached"], src))
+        if acc.get("reported_cost_usd"):
+            # Anthropic's own figure for this session. Authoritative, and the
+            # only number here that does not depend on our token arithmetic.
+            print("log_usage: transcript reports total_cost_usd = $%.4f%s"
+                  % (acc["reported_cost_usd"],
+                     " over %d turns" % acc["turns"] if acc.get("turns") else ""))
     else:
         print("log_usage: NO transcript with usage found — writing an "
               "explicitly UNMETERED row (the site shows these separately; "
@@ -242,6 +274,14 @@ def main() -> int:
     ]
     if acc["cached"]:
         fields.append("cached_input_tokens:%d" % acc["cached"])
+    # Anthropic's own price for this session, straight from the transcript's
+    # result event. Every other figure in this row is our arithmetic over token
+    # counts; this one is theirs. When both exist and they disagree, believe
+    # this one and go fix the arithmetic.
+    if acc.get("reported_cost_usd"):
+        fields.append("reported_cost_usd:%.4f" % acc["reported_cost_usd"])
+    if acc.get("turns"):
+        fields.append("turns:%d" % acc["turns"])
     fields.append('description:"%s"' % js_string(desc))
     fields.append('measured:"%s"' % ("metered" if metered else "unmetered"))
     if run_tag:
