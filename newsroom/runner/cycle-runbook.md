@@ -184,7 +184,7 @@ Dosage, per article — this is seasoning, not paint:
 
 Older articles predate the visual component system. Each cycle, AFTER your new articles are done, upgrade **exactly two** published articles to the §3b floor:
 
-1. Find candidates: `python -c "import json,re;s=open('web/data/newsroom-articles.js',encoding='utf-8').read();a=json.loads(s[s.index('['):].rstrip().rstrip(';'));C={'chart','compare','timeline','entity','scorecard','ledger','beforeafter','spectrum','flow','keyfacts','stakes','sourcecheck','stat'};import sys;[print(x['slug'],x['format'],sum(1 for b in x['body'] if b['type'] in C)) for x in a]"` — pick the two OLDEST below their format's floor.
+1. Find candidates: `python -c "import json,re;s=open('web/data/newsroom-articles.js',encoding='utf-8').read();a=json.loads(s[s.index('['):].rstrip().rstrip(';'));C={'chart','compare','timeline','entity','scorecard','ledger','beforeafter','spectrum','flow','keyfacts','stakes','sourcecheck','stat','model','rank','counter','document'};import sys;[print(x['slug'],x['format'],sum(1 for b in x['body'] if b['type'] in C)) for x in a]"` — pick the two OLDEST below their format's floor.
 2. Add components built ONLY from facts already in that article's own text and sources — the full §3b rules apply, especially: never invent a value, no top-level `text` on a component, word count and format tier must not change.
 3. Run Loop 2 (provenance check) on what you added.
 4. Note both slugs and what each gained in your report. When a candidate search finds nothing below floor, the backfill is complete — say so and drop this step.
@@ -253,14 +253,19 @@ this order, and mark it done here.
 
 **Data-only, no new writing — do these first, they are pure credibility:**
 
-1. `contents.items[].p` is wrong on 4 of 5 acts. `centerfold` and `verticalfold`
-   each render as TWO pages, and the TOC does not count the fold. Correct values
-   are 5 / 14 / 21 / 30 / 36. Also "Act IV, page 20" in the closing resources
-   spread points at something that renders on page 32.
-2. `iss.ledger` exists on the Primer (104K tokens, $1.55, 27 images, 0 humans) and
-   **is never rendered anywhere**. Add a `text/statFeature` spread that prints it,
-   the way 001 does. The free issue is the one that should carry the cost-
-   transparency promise.
+1. DONE (2026-08-16 cycle, found already fixed by an earlier untracked edit — no
+   commit had ever checked this off). `contents.items[].p` reads 5 / 14 / 21 / 30 /
+   36 and the closing resources spread already says "Act IV, page 32." Verified
+   against the render order (`web/assets/app.js`, `spreadPageV3`/`issuePageCount`):
+   the per-page corner folio badge is raw array-index+1 and does NOT itself
+   account for fold-doubling, so these `p`/page-reference values are hand-authored
+   data, not derived — if a future spread is inserted or removed, recheck this
+   item by hand rather than assuming it stays correct.
+2. DONE (2026-08-16 cycle). Added a `kind:"text", layout:"statFeature"` spread
+   ("Act V · The Ledger") printing the Primer's own ledger (104K tokens/est.,
+   $1.55/metered, 27 images), inserted after the closing `resources` spread and
+   before the sign-off ad/back matter — placement chosen specifically so it sits
+   after every TOC-referenced spread and needs no page-number updates elsewhere.
 3. `back.next` is a field the renderer already draws as a "NEXT ISSUE" box and
    neither issue sets. The free issue currently ends without pointing at the paid
    product it exists to sell.

@@ -829,6 +829,24 @@
       ]
     },
     {
+      "kind": "text",
+      "layout": "statFeature",
+      "folio": "Act V · The Ledger",
+      "kicker": "COST TRANSPARENCY, PRACTICED NOT JUST PROMISED",
+      "title": "What this issue actually cost",
+      "image": "assets/img/primer-scale.jpg",
+      "body": [
+        "\"Every cost disclosed\" is a line on the back cover of this issue. Here is the number behind it, not just the promise of one — the same figures this newsroom's own public Ledger page carries for every run, applied to itself.",
+        "The image budget is metered exactly: every generated page and cover draws from a capped, tracked spend. The token figure is estimated rather than metered, because the Primer's text is a re-synthesis of reporting this newsroom already published and researched under a separate accounting. Neither number is rounded up to look better or down to look leaner."
+      ],
+      "stats": [
+        { "n": "104,000", "label": "tokens spent writing and editing this issue (estimated)" },
+        { "n": "$1.55", "label": "total compute cost, metered" },
+        { "n": "27", "label": "images generated for this issue" },
+        { "n": "$0", "label": "price to you — the Primer is free forever" }
+      ]
+    },
+    {
       "kind": "ad",
       "image": "assets/img/ad-orbit.jpg",
       "house": true,
