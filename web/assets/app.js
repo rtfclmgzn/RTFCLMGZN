@@ -1030,14 +1030,14 @@
     var h='<div class="container">'+editionHTML();
     if(window.speechSynthesis){
       var B0=briefingScript();
-      if(B0) h+='<div class="home-chips"><a class="brief-chip" href="/briefing">▶ <b>The Daily Briefing</b><span>today\'s "+SUBJECT+", read to you · ~'+B0.mins+' min</span></a></div>';
+      if(B0) h+='<div class="home-chips"><a class="brief-chip" href="/briefing">▶ <b>The Daily Briefing</b><span>today\'s '+SUBJECT+', read to you · ~'+B0.mins+' min</span></a></div>';
     }
     var seen; try{seen=localStorage.getItem("rtfc-primer-seen");}catch(e){}
     if(!seen){
       h+='<a class="primer-banner" href="/read/primer">'+
         '<span class="pb-art" style="background:url(\'/assets/img/primer-cover.jpg\') center/cover"></span>'+
-        '<span class="pb-txt"><b>New to "+SUBJECT+"? Start with The Primer.</b>'+
-        '<span>Our free field guide to the whole "+SUBJECT+" world — who the players are, what the words mean, and what it can do for you tonight. 12 pages, no jargon walls.</span></span>'+
+        '<span class="pb-txt"><b>New to '+SUBJECT+'? Start with The Primer.</b>'+
+        '<span>Our free field guide to the whole '+SUBJECT+' world — who the players are, what the words mean, and what it can do for you tonight. 12 pages, no jargon walls.</span></span>'+
         '<span class="pb-go">Read free →</span>'+
         '<button class="pb-x" onclick="rtfcDismissPrimer();event.preventDefault();event.stopPropagation();" title="Dismiss">✕</button></a>';
     }
@@ -2816,7 +2816,7 @@
         '<ul><li>The AI Editor-in-Chief hasn’t declined any story. Sensitive pieces are being sourced, reframed, or disclaimed and published autonomously. Anything it ever judges unsound will be logged here as a settled decision — for the record, not for sign-off.</li></ul></div>';
       return h+'</div>';
     }
-    h+='<div class="kicker" style="margin-top:20px"><span class="dotc" style="background:var(--gate)"></span>'+PENDING.length+' spiked · "+SUBJECT+" recommendations</div>';
+    h+='<div class="kicker" style="margin-top:20px"><span class="dotc" style="background:var(--gate)"></span>'+PENDING.length+' spiked · '+SUBJECT+' recommendations</div>';
     h+=PENDING.map(function(a){
       var p=persona(a.persona)||{name:a.persona,color:"#e0564d"};
       var trig=(a.pipeline&&a.pipeline.gate&&a.pipeline.gate.triggers)||[];
@@ -3304,7 +3304,7 @@
 
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:10px">'+
       '<div class="over">The Magazine ◈</div>'+
-      '<h1>The month in "+SUBJECT+",<br>understood with hindsight.</h1>'+
+      '<h1>The month in '+SUBJECT+',<br>understood with hindsight.</h1>'+
       '<p>Every month the Issue Desk distils the full run of this newsroom\'s coverage into one designed issue: the cover story with the benefit of hindsight, all '+nEditors+' editors\' month-in-review columns, the Scoreboard, the applied-takeaways Compendium, and a Watchlist graded in public the following month. '+
       '<b>Articles are free, forever.</b> The magazine is what Plus pays for — and Plus includes every back issue.</p></div>';
 
@@ -3696,7 +3696,7 @@
   function viewGuides(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Guides</div>'+
       '<h1>Learn it by doing it</h1>'+
-      '<p>Hands-on, plain-English guides to actually using "+SUBJECT+" — published two to three times a week alongside the news. No hype, no jargon walls; every guide ends with something you can do tonight.</p></div>';
+      '<p>Hands-on, plain-English guides to actually using '+SUBJECT+' — published two to three times a week alongside the news. No hype, no jargon walls; every guide ends with something you can do tonight.</p></div>';
     h+='<div class="kicker"><span class="dotc" style="background:'+SECTION_COLORS.Guide+'"></span>'+GUIDES.length+(GUIDES.length===1?' guide':' guides')+'</div>';
     h+=GUIDES.length?('<div class="grid">'+GUIDES.map(cardHTML).join("")+'</div>'):'<p style="color:var(--muted)">First guides arrive with the daily pipeline.</p>';
     return h+'</div>';
@@ -4125,7 +4125,7 @@
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px">'+
       '<div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Podcasts</div>'+
       '<h1>Shows worth your commute</h1>'+
-      '<p>The "+SUBJECT+" shows that consistently deliver signal — daily news rundowns, practitioner deep-dives, and the long-form interviews worth the full hour. Curated by this newsroom; every link goes to the show itself.</p></div>';
+      '<p>The '+SUBJECT+' shows that consistently deliver signal — daily news rundowns, practitioner deep-dives, and the long-form interviews worth the full hour. Curated by this newsroom; every link goes to the show itself.</p></div>';
     if(!n) return h+'<p style="color:var(--muted)">Nothing listed yet.</p></div>';
     h+='<div class="kicker"><span class="dotc" style="background:var(--accent2)"></span>'+n+' shows</div>';
     cats.forEach(function(cat){
@@ -4743,7 +4743,7 @@
   function viewBuzz(){
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><span class="live-dot"></span>The Buzz</div>'+
       '<h1>What the feed is arguing about</h1>'+
-      '<p>The posts, launches, and hot takes making noise across the "+SUBJECT+" world — curated from labs, builders, and researchers on every newsroom run. Every card links to the original. We pick the signal; you skip the doomscroll.</p></div>';
+      '<p>The posts, launches, and hot takes making noise across the '+SUBJECT+' world — curated from labs, builders, and researchers on every newsroom run. Every card links to the original. We pick the signal; you skip the doomscroll.</p></div>';
     if(!BUZZ.length){
       return h+'<p style="color:var(--muted)">The next Buzz run fills this page.</p></div>';
     }
@@ -5100,7 +5100,7 @@
     var curSeg=playingThis?AP.seg:0;
     var h='<div class="container" style="max-width:820px"><div class="mast-hero" style="padding-bottom:4px">'+
       '<div class="over"><span class="live-dot"></span>The Daily Briefing</div>'+
-      '<h1>The day in "+SUBJECT+", read to you</h1>'+
+      '<h1>The day in '+SUBJECT+', read to you</h1>'+
       '<p>A ~10-minute spoken rundown of the latest coverage, narrated in a natural voice and assembled fresh from the newsroom\'s own reporting. Press play and drive — it keeps going as you move around the site.</p></div>';
     if(!B) return h+'<p style="color:var(--muted)">The first briefing assembles with the next edition.</p></div>';
     h+='<div class="brief-player">'+
@@ -7152,8 +7152,8 @@
   function viewLiveTV(){
     var D=window.RTFC_LIVETV||{channels:[],tags:{}};
     var h='<div class="container"><div class="mast-hero" style="padding-bottom:6px"><div class="over"><span class="live-dot"></span>Live &amp; ongoing</div>'+
-      '<h1>Where "+SUBJECT+" happens live</h1>'+
-      '<p>We don’t host streams — we point you to the channels that go live when it matters: model launches, keynotes, and the shows that cover "+SUBJECT+" every day. Click through to whatever’s on now. The newsroom keeps this board current.</p></div>';
+      '<h1>Where '+SUBJECT+' happens live</h1>'+
+      '<p>We don’t host streams — we point you to the channels that go live when it matters: model launches, keynotes, and the shows that cover '+SUBJECT+' every day. Click through to whatever’s on now. The newsroom keeps this board current.</p></div>';
     h+='<div class="ltv-grid">'+ (D.channels||[]).map(function(c){
       return '<a class="ltv-card" href="'+safeHref(c.url)+'" target="_blank" rel="noopener">'+
         '<div class="ltv-top"><span class="ltv-name">'+esc(c.name)+'</span><span class="ltv-tag">'+esc((D.tags||{})[c.tag]||c.tag||"")+'</span></div>'+
@@ -7194,7 +7194,7 @@
     var D=window.RTFC_EVENTS||{items:[]};
     var items=(D.items||[]).slice().sort(eventSort);
     var h='<div class="container" style="max-width:820px"><div class="mast-hero" style="padding-bottom:6px"><div class="over">On the radar</div>'+
-      '<h1>"+SUBJECT+" events worth watching</h1>'+
+      '<h1>'+SUBJECT+' events worth watching</h1>'+
       '<p>Keynotes, launches, and conferences the newsroom is tracking. '+esc(D.note||"")+'</p></div>';
     if(!items.length){
       h+='<div class="corr-empty"><div class="ce-mark">◈</div><h2>Nothing on the calendar yet.</h2><p>The Events desk adds dates as they’re announced. Check back — or watch <a href="/live" style="color:var(--accent2)">what’s live now</a>.</p></div>';
@@ -7233,7 +7233,7 @@
     if(el) el.value="";
   };
   function newsletterHTML(compact){
-    return '<div class="nl-card'+(compact?" compact":"")+'"><div class="nl-copy"><b>The Daily Digest</b><span>The day’s "+SUBJECT+" stories in one email. One send a day — never more. No spam, unsubscribe anytime.</span></div>'+
+    return '<div class="nl-card'+(compact?" compact":"")+'"><div class="nl-copy"><b>The Daily Digest</b><span>The day’s '+SUBJECT+' stories in one email. One send a day — never more. No spam, unsubscribe anytime.</span></div>'+
       '<div class="nl-form"><input id="nl-email" type="email" placeholder="you@example.com" autocomplete="email">'+
       '<button class="cta" onclick="rtfcNewsletter()">Subscribe</button></div>'+
       '<p class="nl-msg" id="nl-msg"></p></div>';
