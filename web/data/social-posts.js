@@ -2909,8 +2909,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088885828290531671",
+        "remote_id": "2088885828290531671",
+        "posted_at": "2026-08-16T07:09:26Z"
       },
       {
         "platform": "instagram",
@@ -2994,8 +2996,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Meta",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2088886836878082491",
+        "remote_id": "2088886836878082491",
+        "posted_at": "2026-08-16T07:13:26Z"
       },
       {
         "platform": "x",
