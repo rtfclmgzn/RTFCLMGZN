@@ -3415,5 +3415,108 @@ window.RTFC_SOCIAL_POSTS =[
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-fable-5-biology-safeguards-retuned",
+    "ts": "2026-08-16T22:47:24Z",
+    "export": {
+      "article_id": "newsroom-anthropic-fable-5-biology-safeguards-retuned",
+      "url": "/#/article/anthropic-fable-5-biology-safeguards-retuned",
+      "headline": "Anthropic cut Claude Fable 5's biology-question blocks by 85% — two months after near-total over-blocking drew scientist backlash",
+      "hook": "Fable 5 used to block basic questions like \"what are mitochondria.\" Two months and a scientist backlash later, Anthropic rewrote the classifier -- cutting biology-specific false blocks by about 85%, while keeping the wall up for virology, toxicology, and drug design.",
+      "key_facts": [
+        "Fable 5 launched June 9 blocking near-routine biology questions, rerouting them to the weaker Opus 5",
+        "Aug. 7 classifier rewrite cuts biology-specific false blocks by about 85%",
+        "Virology, toxicology, and drug-design queries still fall back -- that boundary hasn't moved"
+      ],
+      "tone": "evaluation-first, skeptical of self-grading",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/anthropic-fable-5-biology-safeguards-retuned.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Claude Fable 5 used to block basic questions like \"what are mitochondria\" -- rerouting them to a weaker model.\n\nTwo months and a scientist backlash later, Anthropic rewrote the safety classifier: biology-specific false blocks are down about 85%.",
+        "reply_copy": "What changed, what's still blocked, and what's actually verified vs. self-reported:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-17T03:47:24Z",
+        "copy": "Every number in Anthropic's Fable 5 fallback-reduction claim is Anthropic grading its own classifier, against a baseline Anthropic also defined -- with no raw counts published behind the percentages.\n\nStill more disclosure than most labs offer. Just not independently verified.",
+        "reply_copy": "The full read, including what's still blocked:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Claude Fable 5 launched June 9 blocking near-routine biology questions -- \"what are mitochondria,\" how mRNA vaccines work -- rerouting them to a weaker model.\n\nAn Aug. 7 rewrite of the safety classifier cuts those false blocks by about 85%. Virology, toxicology, and drug-design queries still get rerouted -- that boundary hasn't moved.\n\nEvery reduction figure here is Anthropic's own testing, not independently verified. We say so in the piece. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#AISafety",
+          "#ArtificialIntelligence",
+          "#Claude",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Claude Fable 5 launched June 9 with a safety classifier so cautious it blocked near-routine biology questions -- what mitochondria do, how mRNA vaccines work -- rerouting them to a less capable model. It became something of a running joke among researchers.\n\nAn Aug. 7 rewrite of the classifier's rules cuts those biology-specific false blocks by about 85%, according to Anthropic's own testing. Virology, toxicology, and drug-design queries still trip the same wall -- that line hasn't moved.\n\nWe also lay out what's actually verified here versus what's just Anthropic's own account.\n\nFull story:",
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Claude Fable 5 used to block basic biology questions, rerouting them to a weaker model. An Aug. 7 classifier rewrite cuts those false blocks ~85%, per Anthropic's own testing -- while virology, toxicology, and drug-design queries still fall back, unchanged.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-17T03:47:24Z",
+        "copy": "Anthropic's 85% biology-fallback reduction is a real, specific, checkable claim -- and also entirely self-graded, against a baseline Anthropic defined, with no raw counts published. Both things are true at once.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Claude Fable 5 used to block basic biology questions like \"what are mitochondria,\" rerouting them to a weaker model. An Aug. 7 classifier rewrite cuts those false blocks ~85%, Anthropic says -- virology, toxicology, and drug-design queries still fall back, unchanged.",
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

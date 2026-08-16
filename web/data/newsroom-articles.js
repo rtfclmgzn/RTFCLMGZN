@@ -22302,5 +22302,248 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-16T10:54:00Z"
+  },
+  {
+    "slug": "anthropic-fable-5-biology-safeguards-retuned",
+    "title": "Anthropic cut Claude Fable 5's biology-question blocks by 85% — two months after near-total over-blocking drew scientist backlash",
+    "dek": "Fable 5 launched June 9 rerouting almost every biology question, including \"what are mitochondria,\" to a weaker model. An Aug. 7 rewrite of the safety classifier's rules cuts those false-positive blocks by about 85%, while leaving the same wall up for virology, toxicology, and drug-design queries Anthropic still calls dual-use.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "not-medical-advice",
+    "tldr": [
+      "Fable 5 launched June 9 blocking nearly all biology questions, rerouting them to the weaker Opus 5.",
+      "An Aug. 7 rewrite of the safety classifier cut biology-specific false blocks by about 85%.",
+      "Total fallback volume dropped 67% on Claude.ai, 55% on Cowork, less on Code and the API.",
+      "Virology, toxicology, and drug-design queries still fall back — Anthropic still calls those dual-use.",
+      "Caveat: every reduction figure here is Anthropic's own internal testing, not independently measured."
+    ],
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether other labs publish the same kind of number",
+        "text": "Anthropic is describing this as a targeted classifier rewrite, not a one-off apology — whether OpenAI or Google publish similar before/after fallback data for their own biology classifiers is the natural next data point."
+      },
+      {
+        "label": "If you hit a biology fallback before Aug. 7",
+        "text": "The same everyday question — lab-result interpretation, symptom questions, mRNA-vaccine mechanics — is now far less likely to bounce to Opus 5. Worth trying again on Fable 5 directly."
+      },
+      {
+        "label": "The line that didn't move",
+        "text": "Virology, toxicology, and molecular-design queries still fall back regardless of framing — that boundary is the one to watch for any future loosening, not the one that just moved."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Claude Fable 5 launched June 9 with a safety classifier tuned so cautiously that it rerouted ==nearly all biology questions== — including routine ones like \"what are mitochondria\" or how mRNA vaccines work — to Opus 5, a less capable model with none of Fable 5's biological reasoning. Anthropic says an Aug. 7 rewrite of that classifier's rules cut biology-specific false blocks by roughly **85%** in testing, while leaving the same restriction in place for a narrower set of queries the company still calls dual-use.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+          "https://the-decoder.com/anthropic-loosens-fable-5s-biology-restrictions-but-keeps-the-guardrails-on-for-virology-and-toxicology/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The over-blocking became something of a running joke among researchers within weeks of launch: reporting on the original rollout named questions as ordinary as what mitochondria do, how mRNA vaccines work, and basic questions about cancer as the kind that reliably tripped the same wall built for genuinely dangerous requests. Anthropic doesn't dispute that pattern in its own update — it frames the rewrite as a direct response to it, drawing a distinction between broad biology education and the narrower set of professional, __dual-use__ queries the safeguard was actually built to catch. A safety system that can't tell those two categories apart doesn't just frustrate students and patients; it also teaches users to route around it, which is its own kind of failure for a classifier whose entire job is catching the requests that matter.",
+        "citation_urls": [
+          "https://the-decoder.com/anthropic-loosens-fable-5s-biology-restrictions-but-keeps-the-guardrails-on-for-virology-and-toxicology/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What the classifier actually does now",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "A \"fallback,\" in Anthropic's own terms, is what happens when the safety classifier fires: instead of answering, Fable 5 hands the request to Opus 5. The company says it rewrote the classifier's \"constitution\" — the rule set that decides what counts as safeguarded versus allowed — after gathering feedback from a diverse group of internal and external experts, generating new training data reflecting the revised rules, and retraining the classifier on it.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "beforeafter": {
+          "kicker": "WHAT ACTUALLY CHANGED",
+          "beforeLabel": "Fable 5 at launch (June 9)",
+          "afterLabel": "After the Aug. 7 rewrite",
+          "rows": [
+            {
+              "label": "Routine biology questions (mitochondria, mRNA mechanics)",
+              "before": "Frequently blocked, rerouted to Opus 5",
+              "after": "Biology-specific fallback rate cut about 85%"
+            },
+            {
+              "label": "Lab-result interpretation, symptom questions",
+              "before": "Subject to the same broad blocking",
+              "after": "Anthropic says these now see far fewer fallbacks"
+            },
+            {
+              "label": "Virology, toxicology, molecular design",
+              "before": "Blocked, rerouted to Opus 5",
+              "after": "Still blocked, still rerouted to Opus 5"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Anthropic frames the fix by how much total fallback volume it removes across every surface Fable 5 runs on, not just biology in isolation — and the size of the drop varies a lot by where people actually use it: total fallbacks are down **67%** on Claude.ai, **55%** on Cowork, **17%** on Claude Code, and just **7%** on the Claude Platform API, a gradient that roughly tracks how much of each surface's traffic was biology-adjacent to begin with.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "THE FALLBACK CUT, BY SURFACE",
+          "title": "Where the 85% biology-specific cut actually shows up",
+          "items": [
+            {
+              "value": "~85%",
+              "unit": "reduction",
+              "label": "Biology-specific fallback rate, Anthropic's own before/after testing",
+              "note": "The headline figure; not broken out by surface the same way the totals below are"
+            },
+            {
+              "value": "67%",
+              "unit": "total fallbacks",
+              "label": "Claude.ai",
+              "includes": "Consumer chat traffic, where biology questions were apparently the largest share of what was being over-blocked"
+            },
+            {
+              "value": "55%",
+              "unit": "total fallbacks",
+              "label": "Cowork"
+            },
+            {
+              "value": "17%",
+              "unit": "total fallbacks",
+              "label": "Claude Code",
+              "note": "Smallest drop — coding traffic was least affected by the biology classifier to begin with"
+            },
+            {
+              "value": "7%",
+              "unit": "total fallbacks",
+              "label": "Claude Platform (API)"
+            }
+          ],
+          "source": "Anthropic, \"Improving Fable 5's Biology Safeguards,\" Aug. 7, 2026"
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Why the wall went up this high in the first place",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The over-blocking wasn't an accident Anthropic is now quietly correcting; the company's own reasoning for building it that cautious is still on the page. Independent reporting on the update points to why regulators and safety researchers keep treating biology differently from most other risk categories: unlike a bad line of code, a released biological agent can't be recalled, and countermeasures take time to build. The Decoder's coverage cites U.S. intelligence-agency analysis, documented cases of people asking general-purpose chatbots for bioweapon-adjacent instructions, and a Stanford project that used AI tools to help design synthetic viruses as the backdrop against which Anthropic drew its original, overly broad line.",
+        "citation_urls": [
+          "https://the-decoder.com/anthropic-loosens-fable-5s-biology-restrictions-but-keeps-the-guardrails-on-for-virology-and-toxicology/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What still trips the classifier is narrower than what used to: **virology, toxicology, and molecular design** — professional and drug-development queries Anthropic groups under \"dual-use,\" meaning the same technical knowledge that helps a legitimate researcher also lowers the bar for someone building something dangerous. The company is explicit that the rewrite doesn't open the model to that category at all; it only stops catching the biology-education and clinical-adjacent questions that were never the actual target. That's a narrower boundary than \"biology\" as a whole, but it's still a judgment call about where a genuinely useful research question stops and a dangerous one begins — a line Anthropic is drawing itself, on its own account of the evidence, without a published methodology for exactly how a query gets sorted into one bucket or the other.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"The cost of Fable being misused in a dual-use domain like biology could potentially be catastrophic.\" — Anthropic, \"Improving Fable 5's Biology Safeguards,\" Aug. 7, 2026",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "Claude.ai users asking health-education questions",
+              "tone": "gains",
+              "what": "Lab-result interpretation, symptom questions, and basic biology education now see far fewer fallbacks to a weaker model, by Anthropic's own count."
+            },
+            {
+              "who": "Healthcare professionals using Claude for clinical tasks",
+              "tone": "gains",
+              "what": "Anthropic says clinical-adjacent professional use should see less friction, though it doesn't publish a separate before/after number for this group specifically."
+            },
+            {
+              "who": "Anyone attempting dual-use biology or drug-development queries",
+              "tone": "unclear",
+              "what": "Virology, toxicology, and molecular-design requests still fall back to Opus 5 — the stated line hasn't moved, but a freshly rewritten classifier is a new surface that hasn't had outside red-teaming time yet."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What's actually been verified, and what hasn't",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Every reduction figure in this piece is Anthropic grading its own classifier change, against a baseline Anthropic also defined, using fallback counts the company hasn't published in raw form — only the percentages.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "An 85% reduction measured by the same company that wrote the classifier, against a baseline it also defined, tells an outsider very little about whether the new line sits in the right place.",
+              "detail": "No independent red team appears to have tested the rewritten classifier's dual-use boundary before this rolled out publicly, and Anthropic hasn't published the raw fallback counts behind the percentage figures — only the percentages themselves.",
+              "whoHolds": "AI-safety researchers who argue self-reported before/after metrics can't substitute for outside testing"
+            }
+          ],
+          "verdict": "The critique is right that nothing here is independently verified, and it should temper how much weight the 85% figure carries on its own. But the two things it's being weighed against are also real: Fable 5 genuinely blocked routine biology-literacy questions for two months, and this update discloses a specific, checkable claim — a named baseline date, a named change date, four surface-level percentages — rather than a vague promise to do better. Verifiable-in-principle and independently-verified are different claims; this update only earns the first one.",
+          "source": "Anthropic, \"Improving Fable 5's Biology Safeguards\" (Aug. 7, 2026); The Decoder"
+        }
+      },
+      {
+        "type": "p",
+        "text": "This is Anthropic's second self-graded safety disclosure in as many weeks — the same pattern showed up in [the company's August Risk Report](/article/anthropic-model-2-risk-report-misalignment-rating-raised), which raised its own misalignment-risk rating using thresholds and audits Anthropic wrote. Neither disclosure is worthless for being self-graded — a lab narrowing an overcautious block it built, in public, with named numbers, is still more than most competitors disclose about how their safety classifiers actually work. But ==the checkable part remains what a user can verify by asking the question themselves==, not the percentage printed on the page.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        ]
+      }
+    ],
+    "id": "newsroom-anthropic-fable-5-biology-safeguards-retuned",
+    "image": "assets/img/newsroom/anthropic-fable-5-biology-safeguards-retuned.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-16T22:47:24Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced during this cycle's news sweep: Anthropic's Aug. 7 update to Fable 5's biology safeguards. This story replaces an earlier draft this same cycle on a reasoning-trace API vulnerability that a full-text grep of newsroom-articles.js revealed was already published 2026-08-13 as 'reasoning-trace-replay-vulnerability-openai-anthropic-google' — that draft was discarded before shipping once the duplicate was found; this topic was independently confirmed clean via 'grep -c -i \"fable 5.*biology\\|biology safeguard\\|biology fallback\"' against both newsroom-articles.js and buzz.js (zero hits) before drafting. Three independent, materially distinct threads: Anthropic's own post (primary, fetched and quote-verified directly), The Decoder's independent reporting (adds external validation context — intelligence-agency analysis, a Stanford synthetic-virus project — not in Anthropic's own post), and search-confirmed reporting on the original June 9 launch/backlash (historical context for the before state)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Anthropic's post was fetched directly and specific figures (85% biology-specific; 67/55/17/7% by surface; the fallback definition; the 'constitution' rewrite process; virology/toxicology/molecular-design as the retained boundary; the direct quote) were confirmed verbatim against the fetched text rather than trusted from a search summary alone. No raw fallback counts are published by Anthropic behind the percentages — noted explicitly in the piece and in the counter component rather than treated as if independently verified."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the draft initially implied healthcare-professional users had their own published before/after number; revised to state explicitly that Anthropic does not break that figure out separately. No self-referential language found. Confirmed component floor (synthesis: 2 minimum; 4 used — beforeafter, ledger, stakes, counter) and that no two components sit back to back."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "Trigger 1 (health/medical claims) applies: the piece discusses a safety classifier's handling of lab-result, symptom, and clinical-adjacent questions. Remediated by reporting only what the classifier now permits or blocks, making no medical claims of its own, and adding the not-medical-advice disclaimer defensively per compliance-rulebook.md §2. Trigger 6 (unverifiable central claim) considered: the central figures are Anthropic's own self-reported testing, not independently verified — stated plainly in the body and formalized in the counter component rather than presented as confirmed fact. No accusatory claims about a named party; no unattributed quotes."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for autonomous publication",
+        "note": "Cleared under the fully-autonomous pipeline (compliance-rulebook.md §1); no human sign-off in the loop this cycle. Synthesis floor cleared: 3 independent threads (1 primary, read directly), 4 components (beforeafter, ledger, stakes, counter), a pull quote, apply block present, cross-link to a related archive piece on Anthropic's August Risk Report."
+      }
+    },
+    "publishedAt": "2026-08-16T22:47:24Z"
   }
 ];
