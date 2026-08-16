@@ -1400,6 +1400,47 @@ def check_live_check_parity():
 SSR_TAKEN_CLASSES = ("comp", "dek", "byline", "big", "kick", "sect", "cover")
 
 
+def check_static_link_coverage():
+    """Every page the sitemap promises must be reachable by a link in the HTML.
+
+    WHY (2026-08-15). Five real pages — /companies (a 12,000-character dossier
+    index), /labs, /grid, /podcasts and /wallpapers — were in sitemap.xml and
+    linked from NOWHERE in the served HTML. app.js builds links to them at
+    runtime, so they looked fine to anyone using the site, and they were
+    invisible to anything that does not execute JavaScript.
+
+    That matters more than it used to. Google renders JS, but rendering is a
+    second, delayed pass, and a URL discovered only from a sitemap is treated as
+    a weaker signal than one an actual page links to with real anchor text. It
+    matters more again since /article/<slug> started serving the full shell:
+    the footer is now on 129 article pages instead of nowhere, which makes it
+    the highest-leverage static link surface on the site.
+
+    A sitemap entry is a promise that a page is worth indexing. A page nothing
+    links to is the site quietly disagreeing with its own sitemap.
+    """
+    idx = ROOT / "web" / "index.html"
+    sm = ROOT / "web" / "sitemap.xml"
+    if not idx.is_file() or not sm.is_file():
+        return                       # gen_sitemap runs before this in every path
+    shell = io.open(idx, encoding="utf-8", errors="replace").read()
+    static = {(m.group(1).rstrip("/") or "/")
+              for m in re.finditer(r'href="(/[^"#?]*)"', shell)}
+    if not expect("check_static_link_coverage", len(static), 20,
+                  "static internal links in index.html"):
+        return
+    smt = io.open(sm, encoding="utf-8", errors="replace").read()
+    top = {(m.group(1).rstrip("/") or "/")
+           for m in re.finditer(r"<loc>https?://[^/]+(/[a-z-]*)</loc>", smt)}
+    missing = sorted(p for p in top if p != "/" and p not in static)
+    for p in missing:
+        err("routing", "%s is in sitemap.xml but no static link in index.html "
+            "points at it. Only a JS-rendering crawler can find it, and a "
+            "sitemap-only URL is a weaker signal than a linked one. Add it to a "
+            "footer column (or drop it from the sitemap if it is not a real "
+            "page)." % p)
+
+
 def check_workflow_source_parity():
     """`workflow_updates/` is the SOURCE. `.github/workflows/` is a copy.
 
@@ -1767,6 +1808,7 @@ def main() -> int:
     run("check_ssr_shell_markers", check_ssr_shell_markers)
     run("check_desk_routing", check_desk_routing)
     run("check_workflow_source_parity", check_workflow_source_parity)
+    run("check_static_link_coverage", check_static_link_coverage)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()
 
