@@ -5183,6 +5183,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "citation_urls": [
           "https://finance.biggo.com/news/eee8707e-bad2-4464-a5fd-ed89557ae3a9"
         ]
+      },
+      {
+        "type": "p",
+        "text": "The $50 billion figure here is a negotiating target, not a closed price — [a general method for telling the two apart](/article/how-to-tell-if-an-ai-valuation-is-real) walks through exactly this distinction, using this round as one of its worked examples.",
+        "citation_urls": []
       }
     ],
     "apply": [
@@ -9527,6 +9532,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
             }
           ]
         }
+      },
+      {
+        "type": "p",
+        "text": "This exact pair of numbers -- a closed round and a separate, still-open ask wearing the same company's name -- is common enough across 2026's AI funding cycle to be worth a general method rather than a one-off ruling: [a step-by-step read for telling a priced valuation from a pitched one](/article/how-to-tell-if-an-ai-valuation-is-real) uses this round as one of its two worked examples.",
+        "citation_urls": []
       }
     ],
     "apply": [
@@ -20755,6 +20765,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "verdict": "Both hold up arithmetically — the valuation has grown faster than disclosed revenue, and **none of the underlying numbers are independently audited**. What the bear case doesn't explain is the size and repeat participation of the __syndicate__: the same institutional investors who'd have the most to lose from a markdown, including Goldman Sachs Alternatives and T. Rowe Price, **kept re-upping across all four rounds, at each higher price** — which is itself information about how the professional money is reading growth numbers Databricks won't yet put in front of public shareholders.",
           "source": "Investor list per Databricks' Aug 13, 2026 press release and Yahoo Finance's reporting on the close."
         }
+      },
+      {
+        "type": "p",
+        "text": "The same read applies to any funding number, not just this one — [a step-by-step method for checking whether a valuation is real](/article/how-to-tell-if-an-ai-valuation-is-real) walks through exactly this case, including the equity-versus-debt split behind the February round and how to compute a revenue multiple from numbers a company actually discloses.",
+        "citation_urls": []
       }
     ],
     "sources": [

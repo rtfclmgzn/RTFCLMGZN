@@ -3332,5 +3332,88 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-16T10:55:30Z"
       }
     ]
+  },
+  {
+    "article_id": "g8",
+    "ts": "2026-08-16T16:28:19Z",
+    "export": {
+      "article_id": "g8",
+      "url": "/#/article/how-to-tell-if-an-ai-valuation-is-real",
+      "headline": "How to tell whether an AI company's valuation number is real",
+      "hook": "A funding valuation is a price a few investors agreed to pay, not a market-tested number -- a five-step method for telling a closed price from a pitched ask, worked through on Databricks and Moonshot AI's real 2026 raises.",
+      "key_facts": [
+        "Databricks' round went from $188B (reported mid-July) to $190B (closed Aug. 13) -- the same transaction, caught twice.",
+        "Moonshot AI's $35B Series F and its separate $50B pre-IPO pitch are two different transactions, not one number revised.",
+        "Compute the multiple yourself: Moonshot AI's round prices out to roughly 117x its own disclosed $300M ARR."
+      ],
+      "tone": "brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g8.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Every AI funding headline is a price a few investors agreed to -- not one a market tested. A five-step method for telling a closed valuation from a pitched one, worked through on Databricks and Moonshot AI's real 2026 raises.",
+        "reply_copy": "The full method:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Databricks",
+          "#AIFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "An AI funding headline is a price a few investors agreed to pay -- not one a market tested.\n\nWe wrote a five-step method for telling a closed valuation from a pitched one, worked through on two real 2026 raises: Databricks' round that priced $2B higher between announcement and close, and Moonshot AI's $35B round that keeps getting confused with a separate $50B pitch.\n\nFull guide at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#ArtificialIntelligence",
+          "#Funding",
+          "#Startups",
+          "#VentureCapital",
+          "#Databricks",
+          "#TechLiteracy",
+          "#Guide"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Every AI funding number in the news is a price a handful of investors agreed to -- not one a public market tested. We put together a five-step method for reading one honestly: check the transaction verb, separate a run-rate from audited revenue, and compute the multiple yourself. Worked through on Databricks' $190B close and Moonshot AI's $35B round, which is already being confused with a separate $50B pitch.\n\nFull guide:",
+        "hashtags": [
+          "#AI",
+          "#Funding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A funding valuation is a price a few investors agreed to pay, not a market-tested number. Five steps for telling a closed price from a pitched ask, worked through on Databricks' $190B close and Moonshot AI's $35B round -- which is already being confused with a separate $50B pitch that hasn't priced yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A funding valuation is a price a few investors agreed to, not one a market tested. Five steps for telling a closed number from a pitched one, worked through on Databricks and Moonshot AI's real 2026 raises.",
+        "hashtags": [
+          "#AI",
+          "#Funding",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

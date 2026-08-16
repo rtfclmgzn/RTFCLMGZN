@@ -1767,5 +1767,291 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g8",
+    "slug": "how-to-tell-if-an-ai-valuation-is-real",
+    "image": "assets/img/newsroom/g8.jpg",
+    "title": "How to tell whether an AI company's valuation number is real",
+    "dek": "A funding headline is a price a handful of investors agreed to, not one a market tested — and the number attached to a company can shift depending on whether you catch it announced, closed, or merely pitched. A five-step read, worked through on two real 2026 raises where getting the timing wrong would mean repeating the wrong number.",
+    "persona": "kian-farzan",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-16T16:28:19Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "not-financial-advice",
+    "tldr": [
+      "A funding valuation is a price a few investors agreed to pay, not a market-tested number.",
+      "The same round can carry two figures depending on whether you catch it announced or closed.",
+      "Check whether a raise is equity, debt, or a mix before comparing it to any other round.",
+      "Revenue run-rate and audited revenue are different claims — know which one backs any multiple.",
+      "Caveat: even a closed valuation is a private number, never independently audited like a public filing."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Trace the transaction verb before repeating any funding number.",
+        "text": "\"In talks,\" \"targeting,\" and \"pitching\" describe an unclosed ask; \"closed,\" \"completed,\" and \"wired\" describe a price investors actually paid — check which one you're holding before you repeat it."
+      },
+      {
+        "label": "Compute the multiple yourself the next time a valuation and a revenue figure appear in the same story.",
+        "text": "Divide the valuation by the revenue figure it's priced against, and note whether that revenue is a run-rate or audited — the two numbers won't tell you that on their own."
+      },
+      {
+        "label": "Watch for Moonshot AI's pending pre-IPO round to actually close.",
+        "text": "As of this piece, the pitched $50 billion figure hasn't priced. When it does, run it through steps two and five above to see whether it lands where the ask implied."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "A company's valuation in a funding headline is not a price the market set. **It's a number a handful of investors agreed to pay for a slice of equity, in a round that usually keeps moving for weeks after the figure first leaks — and by the time it's official, it has often already changed.** [Databricks](/company/databricks) closed a $5 billion round at a $190 billion valuation on August 13, 2026, two billion dollars above the $188 billion figure attached to the same round when it was first reported in mid-July. [Moonshot AI](/company/moonshot) closed its own Series F at a $35 billion __post-money valuation__ on July 29, 2026 — and within the same window was already being pitched to new investors for a separate, still-open round at $50 billion. ==Neither number is wrong. Catching which one you're holding is the entire skill.==",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/",
+          "https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html",
+          "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value",
+          "https://www.bloomberg.com/news/articles/2026-07-21/china-s-moonshot-in-talks-on-pre-ipo-funds-at-50-billion-value"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Start from what a valuation actually is",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "A private company's valuation is set the moment new investors agree to buy a slice of equity at a given price — **not audited, not tested by a public market, and not necessarily final until money actually changes hands**. That's true of every private funding round, not just AI ones, but 2026's pace makes the gap between a reported number and a closed one wider than usual: rounds get covered while they're still being assembled, because the story is worth running before it's finished. ==The transaction verb is where most of these mistakes start.==",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Read a funding valuation like you're pricing it yourself",
+          "sub": "Six checks, in the order that actually catches a wrong number before you repeat it.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "A link to the primary funding announcement — the company's own release or a directly-quoted investor.",
+            "The patience to check a publish date against a completed-transaction verb before repeating any number."
+          ],
+          "steps": [
+            {
+              "do": "Find where the number actually originates.",
+              "detail": "Search for the company's own press release or a named investor's statement first, and treat a news aggregator's rewrite as a pointer to that primary source, not a substitute for it.",
+              "verify": "You have a link to the company's own announcement or a directly-quoted investor, not a third article summarizing a summary.",
+              "ifnot": "If you can only find secondary coverage, treat the specific number in it as provisional until you trace it back."
+            },
+            {
+              "do": "Check the transaction verb before treating the number as a price.",
+              "hi": true,
+              "detail": "**\"Closed,\" \"completed,\" and \"wired\" describe a price investors actually paid — \"in talks,\" \"targeting,\" and \"pitching\" describe an unclosed ask.** Moonshot AI's pre-IPO round was reported as being negotiated at up to $50 billion in July 2026 — an ask, not a price — while its Series F, reported separately, had already closed at $35 billion days earlier.",
+              "why": "The bigger, more dramatic number is also the more shareable one, and the qualifier that it hasn't closed tends to land several paragraphs down, if it survives into later coverage at all.",
+              "verify": "You can point to the specific verb the primary source used, and it's a completed-transaction verb, not a forward-looking one.",
+              "ifnot": "If the verb is forward-looking, log the number as a target and expect it to move by the time — if — it closes."
+            },
+            {
+              "do": "Confirm what the raised amount actually buys.",
+              "detail": "A headline valuation is usually an equity-only figure, but the raise behind it isn't always pure equity. Databricks' $134 billion valuation in February 2026 came from a $5 billion round split $3 billion equity and $2 billion debt — the debt financed the company without diluting the equity valuation attached to the round.",
+              "verify": "You can state in one sentence whether the raise was equity, debt, or a mix, and which part the headline valuation prices.",
+              "ifnot": "If the split isn't disclosed, assume equity-only and say so in your own notes rather than treating the assumption as confirmed."
+            },
+            {
+              "do": "Separate a revenue run-rate from audited revenue.",
+              "detail": "A __run-rate__ annualizes a recent period's revenue — take one strong month or quarter and multiply it out — which is a real number but not the same claim as a year of audited, closed-book revenue. Databricks reported a $7 billion run-rate; Moonshot AI reported $300 million in annualized recurring revenue for June 2026, up from $100 million in March. Both are the company's own disclosures, not third-party audits.",
+              "why": "Run-rate figures move faster than audited revenue, in both directions, which is exactly why companies raising money like to lead with them.",
+              "verify": "You know whether the revenue figure behind a valuation is a run-rate, ARR, or trailing audited revenue, and can name which.",
+              "ifnot": "If the source doesn't say, don't assume it's the stronger claim — assume it's the weaker one until proven otherwise."
+            },
+            {
+              "do": "Compute the multiple yourself, from numbers the company actually disclosed.",
+              "detail": "Divide the valuation by the revenue figure it's being priced against — Databricks' $190 billion against its $7 billion run-rate is roughly 27 times revenue; Moonshot AI's $35 billion against its $300 million ARR is roughly 117 times. **Neither multiple is inherently right or wrong; the point is that you now have a number you calculated, not one a press release characterized for you.**",
+              "verify": "You can state the multiple and whether it's larger or smaller than the same company's multiple at its prior round.",
+              "ifnot": "If you can't compute a multiple because one of the two inputs was never disclosed, that absence is itself worth writing down."
+            },
+            {
+              "do": "Note who's re-upping, as a soft signal only.",
+              "detail": "Existing investors returning for a later, higher-priced round is not proof the number is right, but it is real information: professional money choosing to buy in again at a higher price is a different signal than a round filled entirely by new entrants. Databricks' August round kept every investor from its February round and added one new firm; none of the prior backers sat it out.",
+              "verify": "You can name whether the investor list includes repeat backers from an earlier round, or only new ones.",
+              "ifnot": "If the investor list isn't disclosed, don't guess at this signal either way — leave it blank."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Which kind of number are you looking at?",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Running the same six checks on different kinds of claims catches a different failure mode each time, which is what the router below sorts by shape rather than by story.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH NUMBER",
+          "title": "Match the claim to the check that actually catches its failure mode",
+          "question": "Read the specific figure in front of you, then take the branch that matches its shape.",
+          "branches": [
+            {
+              "when": "A dollar valuation attached to a funding round.",
+              "then": "Check the transaction verb — closed vs. in talks — before repeating it as a price rather than an ask.",
+              "because": "An unclosed target and a closed price are different claims wearing the same dollar sign.",
+              "hi": true
+            },
+            {
+              "when": "A revenue or ARR figure used to justify a valuation.",
+              "then": "Confirm whether it's an annualized run-rate or trailing audited revenue, and whose disclosure it is.",
+              "because": "The two aren't the same claim, and a company raising money has every reason to lead with the larger one."
+            },
+            {
+              "when": "Two outlets reporting different numbers for what looks like the same round.",
+              "then": "Check the publish dates before assuming a conflict — they may be the same transaction caught at two different moments.",
+              "because": "TechCrunch's $188 billion Databricks figure and the company's own $190 billion close weren't competing reports; the round simply hadn't finished when TechCrunch wrote it up."
+            },
+            {
+              "when": "One company's valuation compared against a different company's.",
+              "then": "Normalize what each multiple is actually measured against — run-rate vs. audited revenue, equity-only vs. blended with debt — before treating the comparison as apples to apples.",
+              "because": "Two multiples that look close can be measuring genuinely different things underneath the same label.",
+              "warn": "A clean-looking comparison between two multiples is exactly where this kind of error hides best."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Two 2026 raises, read the right way",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The two companies above are a clean test case because each one holds a different trap. Databricks' number is a single transaction caught at two different moments — [TechCrunch's mid-July report](/article/databricks-5-billion-raise-190-billion-valuation) on the $188 billion figure said plainly that the round hadn't closed yet, which resolves what would otherwise look like a conflicting report once Databricks' own August 13 announcement confirmed the final $190 billion print. Moonshot AI's case is different: **its $35 billion Series F and its $50 billion pre-IPO talks are [two separate transactions](/article/moonshot-ai-series-f-35-billion-close), not one number revised — and treating the second as though it had already priced is the mistake, not the number itself.**",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/",
+          "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "TWO 2026 RAISES, READ BOTH WAYS",
+          "title": "The same method, two different traps",
+          "columns": [
+            {"label": "Databricks", "sub": "same round, two moments"},
+            {"label": "Moonshot AI", "sub": "two rounds, one gets mistaken for the other", "hi": true}
+          ],
+          "rows": [
+            {
+              "label": "What the headline number actually is",
+              "values": [
+                "$188 billion reported mid-July, $190 billion at the actual August 13 close — one transaction, caught twice.",
+                "$35 billion Series F, closed July 29 — and a separate $50 billion pre-IPO round still being pitched, not yet closed."
+              ]
+            },
+            {
+              "label": "The reader's mistake to avoid",
+              "values": [
+                "Treating the earlier $188 billion figure as wrong, instead of provisional.",
+                "Treating the pitched $50 billion figure as already priced, instead of a still-open ask."
+              ],
+              "note": "Both mistakes come from skipping the transaction-verb check in step two."
+            },
+            {
+              "label": "What actually resolves it",
+              "values": [
+                "Databricks' own press release and CNBC's August 13 report both confirm the final $190 billion print.",
+                "As of this piece, only the $35 billion Series F has closed; the $50 billion round has not."
+              ]
+            }
+          ],
+          "source": "Databricks and TechCrunch reporting on the August 13, 2026 close; Bloomberg and TechNode reporting on Moonshot AI's July 29, 2026 Series F close and its separate, unclosed pre-IPO talks."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Both traps come from skipping the same check — the transaction verb — but they fail in opposite directions. ==One makes an old number look wrong when it was only early; the other makes a new number look settled when it's still just an ask.== {{note: This same read applies outside AI — any private company's valuation moves through the same announced-to-closed arc.}}",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this reading gets done badly",
+          "items": [
+            {
+              "mistake": "Treating an 'in talks' or 'pitching' figure as an already-priced valuation.",
+              "looks": "A headline number gets repeated in later coverage as if the round had closed, when the original reporting said it was still being negotiated.",
+              "why": "Financial coverage tends to lead with the biggest number in a story, and the 'not yet closed' qualifier ends up in a later paragraph, if it survives at all.",
+              "fix": "Trace every valuation back to a completed-transaction verb before repeating it as a price.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Comparing multiples across companies without normalizing what the revenue figure actually is.",
+              "looks": "Two multiples reported side by side look comparable, but one is priced against a run-rate and the other against trailing audited revenue.",
+              "why": "Run-rate figures are typically higher and unaudited on top of that, so multiples built on trailing revenue read larger even when nothing else about the two companies differs.",
+              "fix": "State which kind of revenue backs each multiple before putting the two side by side.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Conflating a follow-on round's target with a company's current, closed valuation.",
+              "looks": "A company gets described as 'worth' a number that is actually a separate, still-open round pitched after an earlier round already closed lower.",
+              "why": "The pitched number is the more shareable one, and once it's in a headline it gets treated as settled fact regardless of the round's status.",
+              "fix": "Report the closed valuation and the pitched target as two separate numbers, on two separate lines.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming a debt component doesn't affect the equity valuation, without checking.",
+              "looks": "A company's valuation appears to jump between rounds when part of what changed was the mix of equity and debt in the raise, not the equity price.",
+              "why": "A raise split between equity and debt values the equity differently than the same total amount raised as pure equity would.",
+              "fix": "State the raised amount's equity-debt split before treating the headline valuation as a clean comparison to the prior round.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes a closed valuation meaningless — it means the number is only as useful as what you know about how it got priced. Run the arithmetic yourself, the way step five above does it, and Moonshot AI's Series F reduces to one figure nobody handed you pre-calculated: %%117×|Moonshot AI's Series F priced at roughly 117 times its own disclosed $300 million annualized recurring revenue — computed the same way step five above does it.%% That's the whole method, in the end: not distrust by default, just arithmetic before belief.",
+        "citation_urls": [
+          "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Databricks — \"Databricks Grows >80% YoY, Surpasses $7B Revenue Run-Rate, Scales Lakebase, Genie, and Unity AI Gateway\" (primary source)",
+        "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+        "primary": true
+      },
+      {
+        "label": "CNBC — \"Databricks wraps $5 billion funding round at $190 billion valuation\"",
+        "url": "https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html"
+      },
+      {
+        "label": "TechCrunch — \"Databricks hits $188B valuation, extending its run as AI's favorite second act\"",
+        "url": "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/"
+      },
+      {
+        "label": "CNBC — \"Databricks completes $5 billion funding round at $134 billion valuation\"",
+        "url": "https://www.cnbc.com/2026/02/09/databricks-completes-5-billion-funding-round-with-2-billion-in-debt.html"
+      },
+      {
+        "label": "Bloomberg — \"China's Moonshot AI passes funding goal to hit $35 billion value\"",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value"
+      },
+      {
+        "label": "Bloomberg — \"China's Moonshot in talks on pre-IPO funds at $50 billion value\"",
+        "url": "https://www.bloomberg.com/news/articles/2026-07-21/china-s-moonshot-in-talks-on-pre-ipo-funds-at-50-billion-value"
+      },
+      {
+        "label": "TechNode — \"Moonshot AI reportedly plans final pre-IPO round at $50 billion valuation\"",
+        "url": "https://technode.com/2026/07/22/moonshot-ai-reportedly-plans-final-pre-ipo-round-at-50-billion-valuation/"
+      }
+    ],
+    "corrections": []
   }
 ];
