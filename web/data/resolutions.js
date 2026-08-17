@@ -41,7 +41,7 @@
 //                real finding and worth logging, not a gap)
 // ============================================================================
 window.RTFC_RESOLUTIONS = {
-  updated: "2026-08-11",
+  updated: "2026-08-17",
   note: "Resolutions are append-only and dated. Articles are never rewritten; every resolution renders beneath the original piece and on the Claims Ledger.",
   items: [
     { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
@@ -97,6 +97,18 @@ window.RTFC_RESOLUTIONS = {
       outcome:"expired",
       note:"The August 1, 2026 deadline for new capital commitments passed with no confirmed close. Situational Awareness experienced a 67% fund drawdown (from $45B to ~$10B in assets) through July 2026 and explicitly announced it is not accepting new capital, citing the need to stabilize after margin calls and semiconductor-market volatility.",
       label:"Situational Awareness fund capital raise status as of August 1-14",
-      url:"https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html" }
+      url:"https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html" },
+    { key:"deepseek-v4-pro-0813-price-increase|w|0",
+      at:"2026-08-16T16:00:00Z",
+      outcome:"confirmed",
+      note:"DeepSeek's V4 Pro pricing took effect at 16:00 UTC on August 16, 2026, as announced. Peak-hour pricing increased to $3.96/million output tokens (from $0.87), off-peak to $1.98/million. Cache-hit input tokens increased to $0.044 peak / $0.022 off-peak (from $0.003625). Peak hours defined as 01:00-04:00 and 06:00-10:00 UTC.",
+      label:"DeepSeek V4 Pro peak/off-peak pricing effective date",
+      url:"https://finance.yahoo.com/technology/ai/articles/deepseek-raising-api-prices-1-174027670.html" },
+    { key:"anthropic-macquarie-gic-theseus-infrastructure|w|0",
+      at:"2026-08-10T12:00:00Z",
+      outcome:"confirmed",
+      note:"Anthropic, Macquarie, and GIC announced the Theseus Infrastructure partnership on August 10-12, 2026, with public disclosure of the first site: a 400-megawatt facility in Texas with grid upgrades funded entirely by Anthropic, targeted for Q4 2026 operation. Phased expansion planned to 2 gigawatts by 2028.",
+      label:"Theseus Infrastructure first-site capacity and location",
+      url:"https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html" }
   ]
 };
