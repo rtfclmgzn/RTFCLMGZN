@@ -3166,8 +3166,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtatxu4ncp2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtatxu4ncp2s",
+        "posted_at": "2026-08-17T04:19:58Z"
       }
     ]
   },
@@ -3246,8 +3248,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#ChatGPT"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtatqnsoi727",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtatqnsoi727",
+        "posted_at": "2026-08-17T04:15:56Z"
       }
     ]
   },
@@ -3281,8 +3285,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089204527882752222",
+        "remote_id": "2089204527882752222",
+        "posted_at": "2026-08-17T04:15:50Z"
       },
       {
         "platform": "instagram",
@@ -3404,10 +3410,11 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "threads",
         "copy": "A funding valuation is a price a few investors agreed to pay, not a market-tested number. Five steps for telling a closed price from a pitched ask, worked through on Databricks' $190B close and Moonshot AI's $35B round -- which is already being confused with a separate $50B pitch that hasn't priced yet.",
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcIKD9vkex2",
         "attempts": 1,
-        "last_error": "HTTP 500 https://graph.threads.net/v1.0/37645701721741382/threads_publish: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AcQxraQUXK-LNqxC-szBIdO\"}}"
+        "remote_id": "18488508598102737",
+        "posted_at": "2026-08-17T04:15:44Z"
       },
       {
         "platform": "bluesky",
@@ -3470,8 +3477,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089203400789401817",
+        "remote_id": "2089203400789401817",
+        "posted_at": "2026-08-17T04:11:21Z"
       },
       {
         "platform": "instagram",
@@ -3519,8 +3528,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-17T03:47:24Z",
         "copy": "Anthropic's 85% biology-fallback reduction is a real, specific, checkable claim -- and also entirely self-graded, against a baseline Anthropic defined, with no raw counts published. Both things are true at once.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcIJlqcEX0j",
+        "remote_id": "18468161971119786",
+        "posted_at": "2026-08-17T04:11:34Z"
       },
       {
         "platform": "bluesky",
