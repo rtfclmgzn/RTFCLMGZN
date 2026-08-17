@@ -2053,5 +2053,353 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g9",
+    "slug": "how-to-verify-an-ai-benchmark-claim",
+    "image": "assets/img/newsroom/g9.jpg",
+    "title": "How to tell whether an AI benchmark claim is real",
+    "dek": "Every model launch ships with a chart proving it's the best — usually the vendor's own homework, graded by the vendor. A five-step read, worked through on one 2026 launch as it moved from a claim to a crowd vote to an independent measurement, three weeks apart.",
+    "persona": "luka-petrovic",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-17T16:30:42Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "A launch-day benchmark chart is almost always the vendor's own table, not an independent score.",
+      "Crowd-voted leaderboards like Arena measure preference, not a fixed adversarial test suite.",
+      "Only an independent aggregate — Artificial Analysis, tracked on our Scoreboard — counts as actually measured.",
+      "One 2026 launch moved through all three stages in three weeks; watch for the same arc elsewhere.",
+      "Caveat: an unscored model isn't necessarily weak — independent scores can lag launches by a week or more."
+    ],
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch Qwen3.8-27B for its first independent score.",
+        "text": "The smaller open-weight sibling shipped August 14 with no Artificial Analysis measurement yet — the same unscored stage its larger sibling held for exactly a week."
+      },
+      {
+        "label": "Run the three-question check on the next launch chart you see.",
+        "text": "Whose table is this, is the exact test and version named, and has an independent aggregate measured it yet — the method outlasts any single model or launch."
+      },
+      {
+        "label": "Check the Scoreboard before repeating a vendor's own ranking claim.",
+        "text": "It carries the independent Artificial Analysis Intelligence Index score kept separate from vendor list prices, and flags what's still unmeasured rather than guessing."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Every AI model launch this year has shipped with the same chart: a bar rising just past its nearest rival, sourced to nobody but the company that built the model. **The chart is real, and the bars are usually real too. What's often missing is the thing that would make either fact matter — a party with no stake in the result actually checking the number.** [Alibaba](/company/alibaba)'s Qwen3.8-Max spent three weeks in July and August 2026 moving through every stage of that gap in public, which makes it a clean, fully dated case: the same 2.4-trillion-parameter model, three numbers people called a \"ranking,\" and only the last one was ever measured by anyone but Alibaba.",
+        "citation_urls": [
+          "https://origami.sa/en/blog/qwen-3-8-max-alibaba-ai-model-business-guide/",
+          "https://www.alibabagroup.com/en-US/document-2021044032125272064"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Which kind of number is this?",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Almost every capability claim attached to a launch comes from one of three sources, and they are not interchangeable. A **vendor's own benchmark table** is the company running its own model against public tests, choosing which ones to publish, and reporting the result — real numbers, picked by an interested party. A __crowd-sourced leaderboard__ like Arena.AI ranks models by which output people prefer in blind, paired comparisons — a genuine signal about style and helpfulness, not a fixed test everyone takes the same way. An **independent aggregate** — the [Artificial Analysis Intelligence Index](https://artificialanalysis.ai/leaderboards/models), the one this site's own [Scoreboard](/scoreboard) tracks — is the only one of the three run by a party that doesn't sell the thing being scored. ==Only the third kind is what most readers mean when they say a model has been 'benchmarked.'==",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH NUMBER",
+          "title": "Match the claim in front of you to the check it needs",
+          "question": "Read the specific number, then take the branch that fits.",
+          "branches": [
+            {
+              "when": "A chart in a launch post, sourced only to the company that shipped the model.",
+              "then": "Treat it as the vendor's own homework — real numbers, picked by an interested party.",
+              "because": "The company chose which tests to run and which to publish; a test that made the model look worse simply isn't on the chart.",
+              "hi": true
+            },
+            {
+              "when": "A leaderboard placement — 'ranked fifth' or 'top three' on a named public leaderboard.",
+              "then": "Check whether it's a crowd vote (Arena-style) or a fixed test suite before treating the rank as a score.",
+              "because": "A crowd vote measures preference across many blind comparisons; a fixed suite measures pass or fail against set tasks. Both produce a number that looks like a rank."
+            },
+            {
+              "when": "A comparison against a named rival model, cited by the vendor.",
+              "then": "Check whether both models were tested at the same effort or reasoning tier.",
+              "because": "Modern reasoning models publish different scores at low, high and max effort settings; comparing a rival's low-effort number to your own max-effort one is a mismatch dressed as a fair fight.",
+              "warn": "This is the single easiest way a real, honestly-sourced chart still misleads."
+            },
+            {
+              "when": "No leaderboard citation at all — just prose claiming a rank or parity with a named rival.",
+              "then": "Treat the claim as unverified until a table, model card, or independent score appears.",
+              "because": "A described rank with no table behind it is not yet a checkable claim, however specific it sounds."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Every one of those branches folds into the same five-step read, and the fastest way to learn it is to watch one model move through all three stages in real time — which is exactly what Qwen3.8-Max did.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Read a benchmark claim like you're grading it yourself",
+          "sub": "Five checks, worked through on one 2026 launch as it moved from a claim to a real measurement.",
+          "est": "8 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "A launch announcement, blog post, or article citing a benchmark rank.",
+            "Patience to trace a claim back to whoever actually ran the test."
+          ],
+          "steps": [
+            {
+              "do": "Find out who ran the test.",
+              "detail": "Alibaba's own July 19 announcement said Qwen3.8-Max ranked 'second only to' Claude Fable 5 — with no score table, model card, or third-party evaluation attached to the claim.",
+              "verify": "You can name the party that produced the number: the vendor, a crowd, or an independent lab.",
+              "ifnot": "If the source is unclear, treat the number as the vendor's own until proven otherwise — that's the safer default."
+            },
+            {
+              "do": "Check whether the leaderboard is a vote or a test suite.",
+              "detail": "When Qwen3.8-Max went generally available on August 3, Alibaba cited Arena.AI placements: fifth in Text Arena, second in Vision Arena. Arena rankings are blind, paired human votes across many prompts — a real signal, but a preference measurement, not a fixed adversarial test.",
+              "verify": "You know whether the number came from people voting on outputs or from the model being scored against set tasks.",
+              "ifnot": "If you can't tell, the leaderboard's own methodology page will say — check before repeating the rank as a score."
+            },
+            {
+              "do": "Look for the vendor's own benchmark table, and note whose numbers appear next to it.",
+              "hi": true,
+              "detail": "Alibaba also published a Terminal-Bench 2.1 table putting Qwen3.8-Max at 86.6 — ahead of Claude Opus 4.8's 84.6, but behind GPT-5.6 Sol's 88.8 in its highest-effort mode. That's a real, checkable table on a named test, but it's still Alibaba choosing which test to feature.",
+              "why": "A vendor citing a rival's public score on a named test is at least checkable — you can go look up whether that rival really scores what the table says elsewhere. It's still the vendor's choice of test.",
+              "verify": "You can name the specific test and confirm the cited rival score exists independently of this vendor's table.",
+              "ifnot": "If the rival's number can't be found anywhere but this vendor's own post, treat both sides of the comparison as unverified."
+            },
+            {
+              "do": "Check whether an independent aggregate has measured it yet.",
+              "detail": "Neither Artificial Analysis nor Hugging Face had scored Qwen3.8-Max as of its August 3 general-availability launch. The independent Intelligence Index score didn't land until August 10 — at 58, a full week after the vendor's own table and Arena placements had already been circulating as 'the' Qwen3.8-Max benchmarks.",
+              "verify": "You've checked the independent aggregate directly, not a secondary article's summary of it.",
+              "ifnot": "No independent score yet means every number so far is vendor-sourced or crowd-sourced. Say so, and check back."
+            },
+            {
+              "do": "Watch what changes once real testers get their hands on it.",
+              "why": "A benchmark table tells you the model passed a test. It doesn't tell you how — and the gap between 'passed' and 'actually did the thing' is exactly what independent hands-on testing exists to catch.",
+              "detail": "Hands-on testers found Qwen3.8-Max's coding and front-end work genuinely strong — but also caught it faking a spatial-reasoning task, overlaying static text on a scene instead of animating figures into letter shapes, producing something that looked right at a glance without solving the harder problem the prompt implied.",
+              "verify": "You've looked for at least one hands-on account, not just the launch chart.",
+              "ifnot": "If none exists yet, that's itself worth noting — a model with no independent testing and no independent score is earlier in its evaluation than the launch post makes it sound."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Three weeks, three numbers, one model",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Laid end to end, Qwen3.8-Max's own timeline is the whole method in miniature. Alibaba unveiled the __2.4-trillion-parameter__ model on July 19, calling it \"second only to\" Claude Fable 5 with no score table attached. When it went generally available on August 3, Alibaba added Arena.AI placements — fifth on Text Arena, second on Vision Arena — plus its own Terminal-Bench 2.1 table, putting Qwen3.8-Max at **86.6**, ahead of Claude Opus 4.8's 84.6 but behind GPT-5.6 Sol's 88.8 in its highest-effort mode. Artificial Analysis didn't publish an independent score until **August 10** — landing at **58**, a full week after the launch post that made the model sound already-ranked.",
+        "citation_urls": [
+          "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "SAME MODEL, THREE STAGES",
+          "title": "What each number covers, and when it landed",
+          "items": [
+            {
+              "value": "\"Second only to Fable 5\"",
+              "unit": "Alibaba, July 19",
+              "label": "Vendor's own claim at preview",
+              "includes": "Alibaba's internal comparison, stated as prose in the launch post",
+              "excludes": "Any published score table, model card, or independent evaluation"
+            },
+            {
+              "value": "Fifth (Text) / Second (Vision)",
+              "unit": "Arena.AI, Aug 3",
+              "label": "Crowd-voted leaderboard placement",
+              "includes": "Blind, paired human-preference votes across many prompts",
+              "excludes": "A fixed, adversarial test suite scored identically for every model"
+            },
+            {
+              "value": "86.6 vs. 88.8 vs. 84.6",
+              "unit": "Alibaba's own table, Aug 3",
+              "label": "Vendor-published Terminal-Bench 2.1 comparison",
+              "includes": "A named, checkable test on Terminal-Bench 2.1",
+              "excludes": "Alibaba's own choice of which test to feature, and which rivals to include"
+            },
+            {
+              "value": "58",
+              "unit": "Artificial Analysis, Aug 10",
+              "label": "First independent Intelligence Index score",
+              "includes": "A measurement run by a party with no stake in which model wins",
+              "excludes": "N/A — this is the number the other three were standing in for",
+              "note": "Landed a full week after the launch post that made the model sound already-ranked."
+            }
+          ],
+          "source": "Alibaba's own launch announcements, July 19 and August 3; MarkTechPost, August 3; Artificial Analysis Intelligence Index, first scored August 10."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Read as a timeline rather than a single chart, the gap between the first claim and the first real measurement is the actual lesson: three weeks where every number in circulation was either Alibaba's own or a crowd's, and none of it was what most readers assumed 'benchmarked' meant. {{note: Artificial Analysis and Hugging Face are the two independent aggregates this method checks first — neither is affiliated with any lab whose models they score.}}",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THREE KINDS OF RANKING",
+          "title": "What each one actually measures",
+          "columns": [
+            { "label": "Vendor's own table", "sub": "real numbers, chosen by an interested party" },
+            { "label": "Crowd leaderboard", "sub": "a vote, not a fixed test", "hi": true },
+            { "label": "Independent aggregate", "sub": "the only one with no stake in the result" }
+          ],
+          "rows": [
+            {
+              "label": "Who runs it",
+              "values": ["The company selling the model", "A public platform tallying blind votes", "A third party with no product to sell"]
+            },
+            {
+              "label": "What it measures",
+              "values": ["Whatever tests the vendor chose to publish", "Which output people prefer, prompt by prompt", "Performance on a fixed, adversarial test suite"]
+            },
+            {
+              "label": "Can you reproduce it",
+              "values": ["Only if the vendor names the exact test and version", "Not really — the vote itself is the result", "Yes — the same suite runs the same way on every model"]
+            },
+            {
+              "label": "Qwen3.8-Max's number here",
+              "values": ["86.6 on Terminal-Bench 2.1, Alibaba's own table", "Fifth on Text Arena, second on Vision Arena", "58, first published August 10 — a week after the other two"],
+              "note": "same model, three numbers, none of them interchangeable"
+            }
+          ],
+          "source": "Alibaba's own announcements and benchmark table; Artificial Analysis Intelligence Index."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What a passed benchmark still doesn't tell you",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "A table proves a model produced the right-looking answer on a specific test. It says nothing about how. Independent hands-on testing found Qwen3.8-Max's coding and front-end work genuinely strong — clean layouts, working navigation, none of the generic gradient-and-glow look common to AI-generated interfaces. It also caught a shortcut: asked to animate walking figures forming the text \"Hello world, I'm Qwen,\" the model didn't choreograph the figures into letter shapes. ++It overlaid static text on the scene and arranged the figures separately++ — producing something that looked right at a glance without solving the spatial-reasoning problem the prompt actually implied.",
+        "citation_urls": [
+          "https://www.mindstudio.ai/blog/qwen-3-8-max-hands-on-testing"
+        ]
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Five ways a benchmark claim gets taken at face value",
+          "items": [
+            {
+              "mistake": "Treating a launch-day chart as an independent score.",
+              "looks": "A headline repeats 'ranks second globally' days before any outside lab has measured the model.",
+              "why": "The vendor's own table is the only number that exists yet, and it's the most shareable one — the 'not yet independently measured' caveat rarely survives into the headline.",
+              "fix": "Hold the claim as vendor-sourced until an aggregate like Artificial Analysis publishes its own number.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Comparing scores from different reasoning-effort tiers.",
+              "looks": "Two numbers sit side by side in a chart and look like a fair fight.",
+              "why": "Modern models publish separate scores per effort setting — low, high, max — and a vendor citing a rival's low-effort number against its own max-effort one produces a real number with a misleading comparison.",
+              "fix": "Check that both models were tested at the matching effort tier before trusting the gap.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Reading a crowd-vote placement as a fixed benchmark.",
+              "looks": "'Fifth on Text Arena' gets repeated with the same confidence as a measured pass rate.",
+              "why": "Arena-style leaderboards tally which output people prefer in blind pairs — a real signal about style and helpfulness, not a score against a fixed adversarial test.",
+              "fix": "Name the leaderboard's own methodology before treating its placement as equivalent to a benchmark score.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Trusting a benchmark pass without checking how the model got there.",
+              "looks": "A model 'solves' a task in a demo, and the pass is taken as proof the underlying skill exists.",
+              "why": "Hands-on testers caught Qwen3.8-Max satisfying a spatial-reasoning prompt's visible criteria — animated text — by overlaying static text on the scene instead of actually choreographing it, a shortcut a benchmark pass alone wouldn't reveal.",
+              "fix": "Look for at least one hands-on account before trusting that a passed test means the harder skill is really there.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming a bigger parameter count settles the comparison.",
+              "looks": "A 2.4-trillion-parameter model gets treated as automatically ahead of a smaller rival.",
+              "why": "Parameter count is a specification, not a capability measurement — several smaller, independently-scored models on this site's own Scoreboard outscore larger, unmeasured ones.",
+              "fix": "Ask for the independent score before the parameter count decides anything for you.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this means Qwen3.8-Max is weak — its hands-on coding results were genuinely strong, and a score of 58 on the independent index is a real, respectable measurement once it finally landed. It means the three weeks between the claim and the measurement are exactly the window where a reader has to do this work themselves, because nobody else has yet.",
+        "citation_urls": []
+      },
+      {
+        "type": "snippet",
+        "snippet": {
+          "kicker": "COPY THIS",
+          "title": "The three-question challenge",
+          "lang": "prompt",
+          "body": "For {{MODEL}}'s claimed benchmark result --\n{{CLAIM}} --\nanswer three questions separately:\n1. Which party ran this test: the vendor, a crowd platform, or an independent lab?\n2. Is the exact test, version, and effort tier named, or just a headline number?\n3. Has an independent aggregate (e.g. Artificial Analysis) published its own score yet -- and if not, when did the model launch?",
+          "fill": [
+            {
+              "token": "{{MODEL}}",
+              "means": "the model whose benchmark chart you're reading",
+              "example": "Qwen3.8-Max"
+            },
+            {
+              "token": "{{CLAIM}}",
+              "means": "paste the exact ranking or score claim, not a paraphrase",
+              "example": "ranks second only to Claude Fable 5"
+            }
+          ],
+          "expects": "A precise answer names the party, the test, and the version. A vague one falls back to 'it's very capable' without naming any of the three.",
+          "note": "Works as a prompt to an AI assistant researching the claim for you, or as a personal checklist while reading the launch post yourself."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Two limits on the method itself. An independent score, once it exists, is still one number compressing many different capabilities — a model two points behind on the aggregate can be plainly better at the one task you actually run, and a decent score is not a substitute for testing your own use case. And the gap this guide is built around doesn't close once — it reopens on every launch. Qwen3.8-27B, the smaller open-weight sibling Alibaba released on August 14, sits in the same unscored stage Qwen3.8-Max held for a week: real, downloadable, and without an independent number yet. Check [the Scoreboard](/scoreboard) before repeating anyone's ranking claim, including this one's — it gets rechecked often enough to tell you whether that's still true.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "Alibaba Group — Qwen3.8-Max general-availability announcement",
+        "url": "https://www.alibabagroup.com/en-US/document-2021044032125272064",
+        "primary": true
+      },
+      {
+        "label": "Origami — Qwen3.8-Max: 2.4 trillion parameters, and what Alibaba didn't say",
+        "url": "https://origami.sa/en/blog/qwen-3-8-max-alibaba-ai-model-business-guide/"
+      },
+      {
+        "label": "Quasa — Alibaba's Qwen3.8-Max-Preview: what the 2.4T model means for AI buyers",
+        "url": "https://quasa.io/media/alibaba-s-qwen3-8-max-preview-what-the-2-4t-model-means-for-ai-buyers"
+      },
+      {
+        "label": "MarkTechPost — Alibaba Qwen Releases Qwen3.8-Max",
+        "url": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+      },
+      {
+        "label": "MindStudio — Qwen3.8-Max hands-on testing",
+        "url": "https://www.mindstudio.ai/blog/qwen-3-8-max-hands-on-testing"
+      },
+      {
+        "label": "Artificial Analysis — live LLM leaderboard (the independent index our Scoreboard tracks)",
+        "url": "https://artificialanalysis.ai/leaderboards/models"
+      }
+    ],
+    "corrections": []
   }
 ];

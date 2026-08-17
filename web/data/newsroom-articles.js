@@ -2339,7 +2339,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "No independent benchmark score exists yet, so K3 is not ranked on our Scoreboard — it appears there as released-but-unmeasured until an independent aggregate lands. The parameter count, the architecture details, the context window, and the head-to-head wins are all Moonshot's own figures pending the July 27 technical report. And 'open weights' is not yet true in the sense that matters: no one outside Moonshot has run the model on its own parameters. The next honest checkpoint is not another benchmark chart from the lab. It is the weight release, the technical report, and the first independent evaluation — in that order.",
+        "text": "No independent benchmark score exists yet, so K3 is not ranked on our Scoreboard — it appears there as released-but-unmeasured until an independent aggregate lands. The parameter count, the architecture details, the context window, and the head-to-head wins are all Moonshot's own figures pending the July 27 technical report. And 'open weights' is not yet true in the sense that matters: no one outside Moonshot has run the model on its own parameters. The next honest checkpoint is not another benchmark chart from the lab. It is the weight release, the technical report, and the first independent evaluation — in that order. [Our guide to verifying an AI benchmark claim](/article/how-to-verify-an-ai-benchmark-claim) walks through this same read on a later 2026 launch, start to finish.",
         "citation_urls": [
           "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/",
           "https://www.bloomberg.com/news/articles/2026-07-17/china-s-powerful-new-moonshot-ai-model-closes-gap-with-us-rivals"
@@ -2403,6 +2403,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Editorial review",
           "agent": "editor-in-chief",
           "note": "Framed on the self-reported-benchmark and not-yet-released-weights caveats rather than the launch claims. No financial disclaimer needed."
+        },
+        {
+          "name": "Reference-desk cross-link · 2026-08-17",
+          "agent": "claude-runner",
+          "note": "Added one inline link to the new guide 'how-to-verify-an-ai-benchmark-claim' (reference-desk cycle) at the end of the closing paragraph. No fact, number, or citation changed; no publishedAt change."
         }
       ],
       "gate": {
@@ -5822,7 +5827,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Alibaba's own material positions the preview as 'second only to' Anthropic's Claude Fable 5 among frontier systems, and says it beats its predecessor, Qwen3.7-Max, on coding, full-stack development, data analysis and office workflows. What's missing is anything a buyer could check: no score table, no task-level results, no model card and no independent evaluation accompanied the announcement. The ranking is Alibaba's word, not a reproducible result.",
+        "text": "Alibaba's own material positions the preview as 'second only to' Anthropic's Claude Fable 5 among frontier systems, and says it beats its predecessor, Qwen3.7-Max, on coding, full-stack development, data analysis and office workflows. What's missing is anything a buyer could check: no score table, no task-level results, no model card and no independent evaluation accompanied the announcement. The ranking is Alibaba's word, not a reproducible result — see [our guide to verifying an AI benchmark claim](/article/how-to-verify-an-ai-benchmark-claim) for the five-step read on exactly this kind of claim.",
         "citation_urls": [
           "https://quasa.io/media/alibaba-s-qwen3-8-max-preview-what-the-2-4t-model-means-for-ai-buyers"
         ]
@@ -5887,6 +5892,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Archive backfill · 2026-08-13",
           "agent": "claude-runner",
           "note": "§3c backfill: this brief carried 0 components against its 1-component floor per component_audit.py's backfill-debt report. Added a keyfacts box (parameters, context window, claimed rank, preview pricing, open-weights status) built entirely from figures already stated in the piece's own two paragraphs — no new facts or sources. Loop 2 provenance check: every value traces to the surrounding prose. component_audit.py backfill debt for this slug cleared."
+        },
+        {
+          "name": "Reference-desk cross-link · 2026-08-17",
+          "agent": "claude-runner",
+          "note": "Added one inline link to the new guide 'how-to-verify-an-ai-benchmark-claim' (reference-desk cycle) in the paragraph already discussing the missing score table. No fact, number, or citation changed; no publishedAt change."
         }
       ],
       "gate": {
@@ -14118,7 +14128,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Arena rankings are a real signal — thousands of people voting on blind, paired outputs isn't nothing — but it measures which answer people prefer to look at, not correctness under a fixed, adversarial test suite the way an independent [benchmark](/dictionary) aggregate does. Alibaba does publish its own benchmark table, which shows Qwen3.8-Max at 86.6 on Terminal-Bench 2.1, ahead of Claude Opus 4.8's 84.6 on the same test but behind GPT-5.6 Sol's 88.8 in its highest-effort mode. Those three numbers, on the same test, are the closest thing to an apples-to-apples comparison available at launch. Max output is capped at 131,000 tokens per response — a ceiling worth knowing before assuming the 1-million-token figure describes what a single reply can contain, rather than what the model can read.",
+        "text": "Arena rankings are a real signal — thousands of people voting on blind, paired outputs isn't nothing — but it measures which answer people prefer to look at, not correctness under a fixed, adversarial test suite the way an independent [benchmark](/dictionary) aggregate does. Alibaba does publish its own benchmark table, which shows Qwen3.8-Max at 86.6 on Terminal-Bench 2.1, ahead of Claude Opus 4.8's 84.6 on the same test but behind GPT-5.6 Sol's 88.8 in its highest-effort mode. Those three numbers, on the same test, are the closest thing to an apples-to-apples comparison available at launch. Max output is capped at 131,000 tokens per response — a ceiling worth knowing before assuming the 1-million-token figure describes what a single reply can contain, rather than what the model can read. The general method for telling these kinds of claims apart — a vendor's own table, a crowd vote, and an independent score — is laid out in [our guide to verifying an AI benchmark claim](/article/how-to-verify-an-ai-benchmark-claim), worked through on this exact launch.",
         "citation_urls": [
           "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
         ]
@@ -14255,6 +14265,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Compliance self-check",
           "agent": "claude-runner",
           "note": "No health, financial-advice, legal-proceeding, or accusatory-claim-about-a-named-party triggers apply. Trigger 6 (unverifiable central claim) considered for the Arena/benchmark rankings; addressed by scoping every ranking to its actual source (crowd vote vs. vendor table vs. independent index) rather than presenting any as a neutral capability measurement. Disclaimer: none."
+        },
+        {
+          "name": "Reference-desk cross-link · 2026-08-17",
+          "agent": "claude-runner",
+          "note": "Added one inline link to the new guide 'how-to-verify-an-ai-benchmark-claim' (reference-desk cycle), which uses this article's own Qwen3.8-Max arc as its worked example. No fact, number, or citation changed; no publishedAt change."
         }
       ],
       "gate": {

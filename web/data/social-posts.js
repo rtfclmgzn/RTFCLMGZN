@@ -3551,5 +3551,87 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-17T02:03:29Z"
       }
     ]
+  },
+  {
+    "article_id": "g9",
+    "ts": "2026-08-17T16:30:42Z",
+    "export": {
+      "article_id": "g9",
+      "url": "/#/article/how-to-verify-an-ai-benchmark-claim",
+      "headline": "How to tell whether an AI benchmark claim is real",
+      "hook": "Alibaba's Qwen3.8-Max moved through three different 'rankings' in three weeks -- its own claim, a crowd vote, and finally an independent score -- and only the last one was ever actually measured by anyone but Alibaba.",
+      "key_facts": [
+        "Alibaba claimed Qwen3.8-Max ranked 'second only to' Claude Fable 5 on July 19, with no benchmark table attached.",
+        "Its August 3 launch added an Arena.AI crowd-vote placement and Alibaba's own Terminal-Bench table (86.6) -- still no independent score.",
+        "Artificial Analysis didn't publish an independent score until August 10: 58, a full week after the launch."
+      ],
+      "tone": "evaluation-first, skeptical of self-grading",
+      "persona": "luka-petrovic",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g9.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Every AI launch chart is real. The bars are usually real too. What's missing: a party with no stake in the result actually checking it.\n\nOne 2026 launch moved vendor claim -> crowd vote -> independent score in 3 weeks. Here's how to tell which stage you're reading.",
+        "reply_copy": "The five-step method:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Alibaba",
+          "#AIBenchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Every AI model launch ships with a chart proving it's the best. Usually it's the vendor's own homework, graded by the vendor.\n\nWe tracked one 2026 model through all three stages a benchmark claim actually goes through: a vendor's own claim, a crowd-voted leaderboard, and -- a full week later -- the first score from an independent lab with no stake in the result.\n\nSame model. Three numbers. Only one of them was ever actually measured by anyone but the company selling it.\n\nFull guide at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#ArtificialIntelligence",
+          "#Benchmarks",
+          "#TechLiteracy",
+          "#Alibaba",
+          "#AIModels",
+          "#Guide"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Every AI model launch ships with a benchmark chart proving it's the best -- and most of the time, that chart is the vendor's own homework, graded by the vendor.\n\nWe walked through one 2026 launch as it moved through all three stages a benchmark claim actually goes through: a vendor's own claim with no table attached, a crowd-voted leaderboard placement, and -- a full week later -- the first score from an independent lab with no stake in the result.\n\nSame model, three numbers, and only the last one was ever actually measured.\n\nFull guide:",
+        "hashtags": [
+          "#AI",
+          "#Benchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Every AI launch chart is real. The bars are usually real too. What's missing is a party with no stake in the result actually checking the number.\n\nOne 2026 model moved through a vendor's own claim, a crowd vote, and an independent score in three weeks -- and only the last one was ever measured by anyone but the company selling it. Here's the read.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Every AI benchmark chart is real. The bars are usually real too. What's missing is a party with no stake in the result checking the number -- one 2026 launch moved through all three stages in three weeks.",
+        "hashtags": [
+          "#AI",
+          "#Benchmarks",
+          "#Alibaba"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
