@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-08-11",
+  updated: "2026-08-17",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -77,6 +77,8 @@ window.RTFC_ENTITIES = {
       kind:"frontier model", access:"closed" },
 
     // --- xAI ---
+    { re:/\bGrok 4\.6\b/i, name:"Grok 4.6", maker:"xAI", makerKey:"xai",
+      kind:"frontier model", access:"closed" },
     { re:/\bGrok 4\.5\b/i, name:"Grok 4.5", maker:"xAI", makerKey:"xai",
       kind:"frontier model", access:"closed" },
     { re:/\bGrok\b/i, name:"Grok", maker:"xAI", makerKey:"xai",
@@ -99,6 +101,8 @@ window.RTFC_ENTITIES = {
       kind:"open-weights frontier model", access:"open-weights" },
     { re:/\bKimi K2\b/i, name:"Kimi K2", maker:"Moonshot AI", makerKey:"moonshot",
       kind:"open-weights model", access:"open-weights" },
+    { re:/\bGLM-?5\.3\b/i, name:"GLM-5.3", maker:"Z.ai", makerKey:"zai",
+      kind:"low-cost frontier model", access:"open-weights" },
     { re:/\bGLM-?5\.2\b/i, name:"GLM-5.2", maker:"Z.ai", makerKey:"zai",
       kind:"low-cost frontier model", access:"open-weights" },
     { re:/\bGLM-?5\b/i, name:"GLM-5", maker:"Z.ai", makerKey:"zai",

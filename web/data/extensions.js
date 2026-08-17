@@ -21,7 +21,7 @@
 // bottom of the page, because a directory that does not say when it was last
 // checked is asking the reader to trust it blindly.
 window.RTFC_EXTENSIONS_META = {
-  updated: "2026-08-14",
+  updated: "2026-08-17",
   cadence: "Re-verified weekly by the newsroom's evolution run.",
   note: "Every link points at the maker's own site. No pricing is printed: in this industry a printed price is a future lie, so the link is the truth."
 };
@@ -160,8 +160,6 @@ window.RTFC_EXTENSIONS = [
         desc:"Transcription plus audio intelligence — speakers, sentiment, chapters — over one API.", tags:["hosted"] },
       { name:"Speechmatics", by:"Speechmatics", kind:"api", url:"https://www.speechmatics.com",
         desc:"Speech recognition with unusually wide language and accent coverage.", tags:["hosted"] },
-      { name:"Play.ht", by:"PlayHT", kind:"api", url:"https://play.ht",
-        desc:"Voice generation and cloning aimed at conversational agents and IVR replacement.", tags:["hosted"] },
       { name:"Suno", by:"Suno", kind:"tool", url:"https://suno.com",
         desc:"Full songs — vocals, lyrics, production — from a text prompt; the consumer face of AI music.", tags:["hosted"] },
       { name:"Udio", by:"Udio", kind:"tool", url:"https://www.udio.com",
