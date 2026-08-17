@@ -306,4 +306,10 @@ window.RTFC_BUZZ = [
     why:"A frontier-lab CEO's explicit diagnosis of the gap between industry development pace and public confidence, on record, as a direct response to investor pressure on his public messaging.",
     heat:51, topics:["anthropic","policy","trust","regulation","risk"],
     url:"https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/" },
+  { id:"bz-248", date:"2026-08-17",
+    source:{ name:"Google DeepMind", handle:"Google", platform:"web", kind:"lab" },
+    text:"Google discontinued the Imagen 4 standard, ultra, and fast image-generation endpoints on August 17, 2026, directing users to Gemini's image-generation capabilities instead. The shutdown consolidates Google's image-generation offering under the Gemini umbrella rather than maintaining a separate Imagen product line.",
+    why:"A frontier lab sunsetting a dedicated image-generation product line in favor of consolidated multi-modal capability — tracking how narrow single-modality products are folding into larger assistants.",
+    heat:44, topics:["google","imagen","product discontinuation","gemini","image generation"],
+    url:"https://developers.google.com/apis/design" },
 ];
