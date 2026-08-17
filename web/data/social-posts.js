@@ -3363,8 +3363,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Databricks",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089172012698571213",
+        "remote_id": "2089172012698571213",
+        "posted_at": "2026-08-17T02:06:38Z"
       },
       {
         "platform": "instagram",
@@ -3394,14 +3396,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Funding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113066455396947",
+        "remote_id": "1238977099292018_122113066455396947",
+        "posted_at": "2026-08-17T02:07:12Z"
       },
       {
         "platform": "threads",
         "copy": "A funding valuation is a price a few investors agreed to pay, not a market-tested number. Five steps for telling a closed price from a pitched ask, worked through on Databricks' $190B close and Moonshot AI's $35B round -- which is already being confused with a separate $50B pitch that hasn't priced yet.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 500 https://graph.threads.net/v1.0/37645701721741382/threads_publish: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AcQxraQUXK-LNqxC-szBIdO\"}}"
       },
       {
         "platform": "bluesky",
@@ -3411,8 +3417,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Funding",
           "#Startups"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtaml2nb2k2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtaml2nb2k2a",
+        "posted_at": "2026-08-17T02:07:32Z"
       }
     ]
   },
@@ -3446,8 +3454,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089171003456762314",
+        "remote_id": "2089171003456762314",
+        "posted_at": "2026-08-17T02:02:37Z"
       },
       {
         "platform": "x",
@@ -3479,8 +3489,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcH6286kTCX/",
+        "remote_id": "18194674501364964",
+        "posted_at": "2026-08-17T02:02:55Z"
       },
       {
         "platform": "facebook",
@@ -3489,14 +3501,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113065639396947",
+        "remote_id": "1238977099292018_122113065639396947",
+        "posted_at": "2026-08-17T02:03:07Z"
       },
       {
         "platform": "threads",
         "copy": "Claude Fable 5 used to block basic biology questions, rerouting them to a weaker model. An Aug. 7 classifier rewrite cuts those false blocks ~85%, per Anthropic's own testing -- while virology, toxicology, and drug-design queries still fall back, unchanged.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcH66drkaoC",
+        "remote_id": "18109799669055757",
+        "posted_at": "2026-08-17T02:03:22Z"
       },
       {
         "platform": "threads",
@@ -3514,8 +3530,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtamdt3fiz2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtamdt3fiz2q",
+        "posted_at": "2026-08-17T02:03:29Z"
       }
     ]
   }
