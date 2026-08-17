@@ -3099,7 +3099,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -3203,8 +3205,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#ChatGPT"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089253827648389397",
+        "remote_id": "2089253827648389397",
+        "posted_at": "2026-08-17T07:31:44Z"
       },
       {
         "platform": "instagram",
