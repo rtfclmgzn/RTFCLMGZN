@@ -3582,8 +3582,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Alibaba",
           "#AIBenchmarks"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089392198878114074",
+        "remote_id": "2089392198878114074",
+        "posted_at": "2026-08-17T16:41:34Z"
       },
       {
         "platform": "instagram",
@@ -3629,8 +3631,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Benchmarks",
           "#Alibaba"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtc5g5ykei26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtc5g5ykei26",
+        "posted_at": "2026-08-17T16:41:41Z"
       }
     ]
   }
