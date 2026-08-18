@@ -4019,5 +4019,163 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-18T16:46:32Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-preparedness-team-restructured-astra-timing",
+    "ts": "2026-08-18T22:44:06Z",
+    "export": {
+      "article_id": "newsroom-openai-preparedness-team-restructured-astra-timing",
+      "url": "https://rtfclmgzn.com/article/openai-preparedness-team-restructured-astra-timing",
+      "headline": "The OpenAI team built to judge its own catastrophic-risk models no longer exists as a standalone group — OpenAI disputes calling that a disbandment",
+      "hook": "OpenAI's Preparedness team lost its standalone structure at the end of July -- before, not after, the framework's biggest catch to date. OpenAI disputes the word 'disbanded' while confirming everything else about what changed.",
+      "key_facts": [
+        "The restructuring took effect before OpenAI's Aug. 7 disclosure that Astra tripped the framework's Critical cyber-risk tier.",
+        "OpenAI's own statement confirms no single Preparedness lead exists anymore -- it disputes only the word 'disbanded.'",
+        "Ethics lead Chloe Bakalar, chief futurist Josh Achiam, and head of safety Johannes Heidecke have all left OpenAI this year."
+      ],
+      "tone": "austere, evaluation-first, holds both sides to the same method",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-openai-preparedness-team-restructured-astra-timing.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI's Preparedness team -- the group that flags whether its own models could enable catastrophic harm -- no longer exists as a standalone unit. The change happened before, not after, the model's biggest catch to date. OpenAI disputes calling it disbanded.",
+        "reply_copy": "How the timeline actually lines up, and what OpenAI does and doesn't dispute:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#AISafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-19T03:44:06Z",
+        "copy": "Three OpenAI safety-specific teams, gone as standalone groups in two years: Superalignment (2024), AGI Readiness (2024), now Preparedness's own structure (2026). Same pattern, a different pressure each time.",
+        "reply_copy": "The full timeline:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#AISafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI's Preparedness team doesn't exist as its own group anymore.\n\nThat's the team responsible for judging whether the company's own models could enable catastrophic harm -- cyber, bio, self-improvement.\n\nThe restructuring happened at the end of July. OpenAI's biggest Preparedness Framework finding to date -- flagging its unreleased Astra model for Critical cyber capability -- came about a week later, under the already-changed structure.\n\nOpenAI disputes calling it disbanded. It doesn't dispute a single fact about what changed.\n\nFull breakdown at the link in bio.",
+        "hashtags": ["#OpenAI", "#AISafety", "#ArtificialIntelligence", "#TechNews", "#AIGovernance", "#FrontierAI"],
+        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Who's watching for the next AI model that could enable serious harm? Until the end of July, OpenAI had one team whose whole job was answering that question. It doesn't anymore -- not as a standalone group.\n\nThe restructuring happened before OpenAI's biggest Preparedness Framework finding to date, not after. OpenAI disputes calling it a disbandment while confirming every fact about what changed underneath the word.\n\nWe laid out the timeline, the dispute, and what's still unanswered.",
+        "hashtags": ["#OpenAI", "#AISafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI's Preparedness team -- the group that judges whether its own models could enable catastrophic harm -- no longer exists as a standalone unit. The restructuring happened before, not after, the framework's biggest catch to date. OpenAI disputes the word disbanded while confirming everything else about what changed.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-19T03:44:06Z",
+        "copy": "Third time in two years a team built around one category of OpenAI's own AI risk has stopped existing in the form it was built in: Superalignment (2024), AGI Readiness (2024), now Preparedness (2026). Worth tracking the pattern, not just the latest instance.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's team for catching catastrophic-risk models got restructured -- about a week before that same framework caught its biggest risk yet. OpenAI says it wasn't disbanded. It doesn't dispute anything else about what changed.",
+        "hashtags": ["#OpenAI", "#AISafety", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-chatgpt-for-teens-launch-age-prediction-lawsuits",
+    "ts": "2026-08-18T22:44:15Z",
+    "export": {
+      "article_id": "newsroom-openai-chatgpt-for-teens-launch-age-prediction-lawsuits",
+      "url": "https://rtfclmgzn.com/article/openai-chatgpt-for-teens-launch-age-prediction-lawsuits",
+      "headline": "OpenAI launches a separate ChatGPT for teens — guessing who's under 18 rather than verifying it, while lawsuits over the standard chatbot's role in teenagers' deaths continue",
+      "hook": "OpenAI launched a separate ChatGPT for teens today -- no romantic or sexual roleplay, limited self-harm engagement, homework hints instead of answers. It follows lawsuits, which OpenAI disputes in court, alleging the standard chatbot contributed to teenagers' suicides.",
+      "key_facts": [
+        "Eligibility is a behavioral age guess, not an ID check -- the system defaults to the restricted experience whenever it's uncertain.",
+        "New opt-in parental controls require both the teen and a parent to actively link accounts.",
+        "OpenAI has not published any independent audit of the age-prediction system's error rate."
+      ],
+      "tone": "principled, specific, evidence-led -- human stakes over feature description",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-openai-chatgpt-for-teens-launch-age-prediction-lawsuits.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI launched a separate ChatGPT for teens today -- no romantic/sexual roleplay, limited self-harm engagement, homework hints instead of answers. It follows lawsuits alleging the standard chatbot contributed to teens' suicides, which OpenAI disputes in court.",
+        "reply_copy": "How the age-guess actually works, and what's still unverified:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#ChildSafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-19T03:44:15Z",
+        "copy": "OpenAI's own materials say its age-prediction system 'isn't always accurate' and defaults to the more restricted experience when uncertain. No independent audit of that error rate exists yet.",
+        "reply_copy": "What's verified, and what still isn't:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#ChildSafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI launched a separate ChatGPT for teens today.\n\nNo romantic or sexual roleplay. Limited engagement on self-harm topics. Homework help that gives hints, not the answer.\n\nThe catch: nobody checks an ID by default. OpenAI's system guesses your age from behavior -- and defaults to the more restricted experience when it isn't sure.\n\nThis launches while OpenAI faces lawsuits, which it disputes in court, alleging its standard chatbot contributed to teenagers' suicides.\n\nFull breakdown -- what changes, how the age-guess works, and what's still unverified -- at the link in bio.",
+        "hashtags": ["#OpenAI", "#ChatGPT", "#AISafety", "#ChildSafety", "#ParentalControls", "#TechNews", "#AI"],
+        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI rolled out a separate, more restricted ChatGPT experience for teenagers today -- automatically, based on a guess about the user's age, not an ID check.\n\nThe rollout comes as OpenAI faces multiple lawsuits, which it disputes, alleging its standard chatbot contributed to teenagers' suicides.\n\nWe broke down exactly what changes between the two versions, how the age-prediction system works, and what OpenAI still hasn't published about how well it actually works.",
+        "hashtags": ["#OpenAI", "#ChildSafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI launched a separate, more restricted ChatGPT for teens today -- guessed by behavior, not verified by ID, defaulting to the safer experience when unsure. It follows lawsuits, which OpenAI disputes, alleging the standard chatbot contributed to teenagers' suicides.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-19T03:44:15Z",
+        "copy": "The most interesting design choice in OpenAI's new teen product isn't the content filter -- it's that the system is built to fail toward caution when it can't tell a user's age, rather than defaulting open. Whether that holds up at scale is the open question.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's new ChatGPT for Teens guesses your age from behavior, not ID -- and launches while the company disputes lawsuits alleging its standard chatbot contributed to teens' suicides.",
+        "hashtags": ["#OpenAI", "#ChildSafety", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
