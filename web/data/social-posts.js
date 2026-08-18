@@ -3700,8 +3700,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089743506273353994",
+        "remote_id": "2089743506273353994",
+        "posted_at": "2026-08-18T15:57:32Z"
       },
       {
         "platform": "instagram",
