@@ -261,11 +261,20 @@ this order, and mark it done here.
    account for fold-doubling, so these `p`/page-reference values are hand-authored
    data, not derived — if a future spread is inserted or removed, recheck this
    item by hand rather than assuming it stays correct.
-2. DONE (2026-08-16 cycle). Added a `kind:"text", layout:"statFeature"` spread
-   ("Act V · The Ledger") printing the Primer's own ledger (104K tokens/est.,
-   $1.55/metered, 27 images), inserted after the closing `resources` spread and
-   before the sign-off ad/back matter — placement chosen specifically so it sits
-   after every TOC-referenced spread and needs no page-number updates elsewhere.
+2. DONE (2026-08-16 cycle); drift found and fixed 2026-08-18. The 08-16 cycle
+   added the `kind:"text", layout:"statFeature"` Ledger spread (104K tokens/est.,
+   $1.55/metered, 27 images) to `functions/api/issue/_data/primer.json` only.
+   That file is NOT what most readers see: `web/index.html` loads
+   `web/data/primer-issue.js` client-side for the actual SPA reading experience;
+   `primer.json` only backs the `/api/issue/primer` Function route. The two files
+   are a maintained duplicate pair (confirmed drifted on other fields too — e.g.
+   taglines differ, and this file's own Act numbering runs one higher than
+   `primer.json`'s), not one source feeding the other. The 08-18 cycle added the
+   same Ledger spread to `primer-issue.js` (folio labeled "Act VI" to match this
+   file's own numbering, not copied verbatim as "Act V"), in the same position
+   (after the closing `resources` spread, before ad/back matter). **Any future
+   §3e edit must touch BOTH files, or it silently only reaches half of readers.**
+   A dedicated future pass should diff the two files fully for other drift.
 3. `back.next` is a field the renderer already draws as a "NEXT ISSUE" box and
    neither issue sets. The free issue currently ends without pointing at the paid
    product it exists to sell.

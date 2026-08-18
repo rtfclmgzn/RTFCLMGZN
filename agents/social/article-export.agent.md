@@ -26,7 +26,7 @@ Append one `export` object to the article's entry in `web/data/social-posts.js` 
 ```js
 {
   article_id: "live-0NN",
-  url: "/#/article/<slug>",              // canonical on-site URL (absolute once the site has a domain)
+  url: "https://<production-domain>/article/<slug>",  // real crawlable path — NEVER a #/ hash link (OPERATING_LAW.md Law 1)
   headline: "<the article title>",
   hook: "<ONE-sentence newsworthy hook — the single reason someone should care, in plain language>",
   key_facts: [ "<fact 1>", "<fact 2>", "<fact 3 (optional)>" ],   // 2–3 concrete, quotable facts
