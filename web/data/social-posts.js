@@ -4013,8 +4013,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Privacy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mteo5qmitl2k",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mteo5qmitl2k",
+        "posted_at": "2026-08-18T16:46:32Z"
       }
     ]
   }
