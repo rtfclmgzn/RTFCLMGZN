@@ -1,5 +1,18 @@
 # Living Notes — operational lessons for future runs
 
+- **2026-08-18**: `web/data/buzz.js` had been a hard `SyntaxError` since commit `1d1d024`
+  (2026-08-18T01:55 UTC, a breaking-scan "retire stale cards" edit) — that edit deleted
+  a card's body but left its trailing `url:"...",}` line behind, and a bare `key:"value"`
+  is not legal as an array element in JS (only as a labeled statement), so `window.RTFC_BUZZ`
+  never got defined in any real browser from that commit forward. Nothing caught it because
+  **no check in `site_guard.py` ever called `read_store()` on buzz.js at all** — the tolerant
+  salvage parser (`jsstore.py`) would have caught and reported it immediately if anything had
+  asked it to read the file; it simply was never asked. Fixed the stray line, and added
+  `check_buzz()` to `site_guard.py` (wired into `main()`, family count bumped 10→11) so this
+  class of damage is now visible on every push instead of invisible on the live site
+  indefinitely. If a future cycle adds a new `web/data/*.js` store, check whether
+  `site_guard.py` actually reads it before assuming a broken record there would be caught.
+
 - **2026-08-18**: WebFetch returns a hard 403 on every `help.openai.com` and `openai.com/policies/...` URL tried this cycle (multiple articles, both direct paths) — looks like a standing bot-block on that domain, not a one-off. WebSearch's own result snippets still surface real quoted content from those pages, so cite the URL from the search result rather than giving up on OpenAI's own help-center docs as a source; just don't expect WebFetch to confirm it directly.
 - **2026-08-18**: The 87-image art library (`image-library/art/manifest.json`) is entirely industrial/corporate/lab/robot-themed (data centers, fabs, HQ exteriors, humanoids) — zero images fit a consumer-device/personal-privacy/settings-menu topic (tried multiple keyword variations on `verify_covers.py pick`, all returned the same few robots/plaza mismatches). A guide or article on an everyday-consumer-app topic will likely need a generated cover; don't burn time re-querying `pick` with synonyms once the first couple of tries return the same handful of irrelevant IDs.
 - **2026-08-17**: Extensions verification caught dead Play.ht link; web verification is essential for directory integrity, not optional.

@@ -308,6 +308,50 @@ def check_grid():
                 % (n, f.get("confidence")))
 
 
+def check_buzz():
+    """Buzz has no build step and no schema check anywhere else in this file —
+    it is edited by the pulse scan (haiku-class, every ~2-3 hours) more often
+    than any other store, and a syntax break in it is invisible to every other
+    check because nothing else ever calls read_store() on buzz.js.
+
+    Found 2026-08-18: a "retire stale cards" edit deleted a card's body but
+    left its trailing `url:"...",}` line behind, which is not valid JS in an
+    array literal (a bare `key:"value"` is only legal as a labeled statement,
+    never as an array element) — buzz.js had been throwing a SyntaxError on
+    load, silently, since the commit that introduced it. read_store() below
+    routes any future repeat of that straight into the existing salvage
+    report, which report_salvage() already treats as a live outage.
+    """
+    items = read_store(DATA / "buzz.js", "RTFC_BUZZ")
+    if not isinstance(items, list):
+        err("buzz", "could not parse RTFC_BUZZ (see store-salvage above if the file failed to load at all)")
+        return
+    ids = set()
+    for b in items:
+        if not isinstance(b, dict):
+            err("buzz", "a card is not an object: %r" % (b,))
+            continue
+        bid = b.get("id", "?")
+        for field in ("id", "date", "source", "text", "url"):
+            if not b.get(field):
+                err("buzz", "%s: missing or empty '%s'" % (bid, field))
+        if bid in ids:
+            err("buzz", "duplicate card id '%s'" % bid)
+        ids.add(bid)
+        src = b.get("source")
+        if isinstance(src, dict):
+            if src.get("kind") not in ("lab", "person", "news", "gov"):
+                warn("buzz", "%s: unusual source.kind '%s'" % (bid, src.get("kind")))
+        elif src:
+            err("buzz", "%s: source is not an object" % bid)
+        heat = b.get("heat")
+        if heat is not None and not (isinstance(heat, (int, float)) and 0 <= heat <= 100):
+            err("buzz", "%s: heat '%s' is not 0-100" % (bid, heat))
+        date = b.get("date", "")
+        if date and not re.match(r"^\d{4}-\d{2}-\d{2}$", str(date)):
+            err("buzz", "%s: date '%s' is not YYYY-MM-DD" % (bid, date))
+
+
 def check_extensions():
     ext = read_store(DATA / "extensions.js", "RTFC_EXTENSIONS")
     if ext is None:
@@ -1942,6 +1986,7 @@ def main() -> int:
            "articles across every store")
     slugs = run("check_articles", check_articles, arts, personas, sections) or {}
     run("check_scoreboard", check_scoreboard, entities)
+    run("check_buzz", check_buzz)
     run("check_grid", check_grid)
     run("check_extensions", check_extensions)
     run("check_ledger", check_ledger)
@@ -1968,7 +2013,7 @@ def main() -> int:
     report_salvage()
 
     say("=" * 72)
-    say("SITE GUARD - %d articles, 10 check families" % len(arts))
+    say("SITE GUARD - %d articles, 11 check families" % len(arts))
     for n in NOTES:
         say("  " + MARK_NOTE + " " + n)
     if WARNS:
