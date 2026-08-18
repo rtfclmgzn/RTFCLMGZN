@@ -3100,7 +3100,7 @@ window.RTFC_SOCIAL_POSTS =[
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -3114,8 +3114,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089533411765686273",
+        "remote_id": "2089533411765686273",
+        "posted_at": "2026-08-18T02:02:42Z"
       },
       {
         "platform": "instagram",
@@ -3320,14 +3322,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113295331396947",
+        "remote_id": "1238977099292018_122113295331396947",
+        "posted_at": "2026-08-18T02:02:18Z"
       },
       {
         "platform": "threads",
         "copy": "Six steps for reading any AI lab's self-reported safety claim, worked through on this week's Anthropic Model 2 disclosure -- including catching a benchmark number that's repeated everywhere but isn't actually in the primary document.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcKfnfEjhEL",
+        "remote_id": "18036301724819852",
+        "posted_at": "2026-08-18T02:02:36Z"
       },
       {
         "platform": "bluesky",
@@ -3604,8 +3610,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcKfEGgCvpi/",
+        "remote_id": "18122400613873919",
+        "posted_at": "2026-08-18T01:57:54Z"
       },
       {
         "platform": "facebook",
@@ -3614,14 +3622,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Benchmarks"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113294947396947",
+        "remote_id": "1238977099292018_122113294947396947",
+        "posted_at": "2026-08-18T01:58:07Z"
       },
       {
         "platform": "threads",
         "copy": "Every AI launch chart is real. The bars are usually real too. What's missing is a party with no stake in the result actually checking the number.\n\nOne 2026 model moved through a vendor's own claim, a crowd vote, and an independent score in three weeks -- and only the last one was ever measured by anyone but the company selling it. Here's the read.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcKfI0zjJJA",
+        "remote_id": "17959273974189370",
+        "posted_at": "2026-08-18T01:58:24Z"
       },
       {
         "platform": "bluesky",
