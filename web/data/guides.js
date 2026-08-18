@@ -950,7 +950,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "Cost is what everyone wants to compare first, and it's the wrong place to start. One constraint overrides the entire cost conversation, and checking it first saves you from running a spreadsheet you didn't need. Everything else genuinely is a cost-and-convenience tradeoff — this one isn't.",
+        "text": "Cost is what everyone wants to compare first, and it's the wrong place to start. One constraint overrides the entire cost conversation, and checking it first saves you from running a spreadsheet you didn't need. Everything else genuinely is a cost-and-convenience tradeoff — this one isn't. The consumer-scale version of the same question is smaller-stakes but the same shape: [our guide to turning off chat training in ChatGPT, Claude, and Gemini](/article/stop-chatgpt-claude-gemini-training-on-your-chats) is the individual-account equivalent of the override below.",
         "citation_urls": []
       },
       {
@@ -2398,6 +2398,209 @@ window.RTFC_GUIDES = [
       {
         "label": "Artificial Analysis — live LLM leaderboard (the independent index our Scoreboard tracks)",
         "url": "https://artificialanalysis.ai/leaderboards/models"
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g10",
+    "slug": "stop-chatgpt-claude-gemini-training-on-your-chats",
+    "image": "assets/img/newsroom/g10.jpg",
+    "title": "How to stop ChatGPT, Claude, and Gemini from training on your chats",
+    "dek": "Three different companies, three different menus, and one common catch: opting out only ever protects what you send after you find the setting. Where each toggle lives today, and the exceptions all three still carve out anyway.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-18T16:38:07Z",
+    "readMins": 4,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "ChatGPT, Claude, and Gemini each have a separate setting to stop training on your chats.",
+      "Turning any of them off only protects chats sent afterward — nothing already trained gets undone.",
+      "All three still carve out an exception for feedback ratings and safety-flagged conversations.",
+      "Business, Team, Enterprise, and API accounts are already excluded by default at all three companies.",
+      "Caveat: these settings are new and move — Anthropic's own toggle didn't exist before August 2025."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Turn off training today in whichever of these three you actually use.",
+        "text": "The setting only protects chats sent after you flip it — there's no advantage to waiting, and no retroactive fix once you do."
+      },
+      {
+        "label": "Skip the feedback buttons on anything you don't want kept longer.",
+        "text": "All three companies extend retention for a rated conversation regardless of your general toggle — the rating itself is the exception, not a bug."
+      },
+      {
+        "label": "If you're on a paid Team, Enterprise, or API tier, verify it rather than assume it.",
+        "text": "Those tiers already exclude your data from training by default at all three companies — but that's worth confirming on your own plan's terms page, not taking on this guide's word alone."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Three separate settings decide whether your conversations with [OpenAI](/company/openai)'s ChatGPT, Claude, and Gemini get folded into the next version of each model, and none of the three works quite the way most people assume. Here's where each toggle actually lives, what turning it off does and doesn't cover, and the exceptions all three companies still carve out for feedback ratings and safety review — current as of August 18, 2026, because these settings menus move without much notice.",
+        "citation_urls": [
+          "https://help.openai.com/en/articles/8983130-what-if-i-want-to-keep-my-history-on-but-disable-model-training",
+          "https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings",
+          "https://support.google.com/gemini/answer/13594961?hl=en"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What \"off\" actually means",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "**Turning any of these three off only protects what you send afterward — none of them undoes training that already happened on a past conversation**, and none is a universal \"stop using my data\" switch. Each company frames it the same way: a forward-looking preference, not a retroactive deletion. [Anthropic](/company/anthropic)'s own version of this setting didn't exist before August 2025 — before that, its consumer plans trained on chats by default with no opt-out at all, and turning it off today still only drops retention from up to 5 years down to 30 days, not to zero. Google's own buffer is shorter but not zero either: Gemini keeps a new chat for 72 hours regardless of the setting, just to run the service. ==What each setting specifically excludes differs enough between the three that reading one company's help page tells you nothing reliable about the other two.==",
+        "citation_urls": [
+          "https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings",
+          "https://www.tomsguide.com/ai/claude/your-claude-chats-are-being-used-to-train-ai-heres-how-to-opt-out"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THREE MENUS, SIDE BY SIDE",
+          "title": "Where each setting lives, and what it actually covers",
+          "columns": [
+            { "label": "ChatGPT", "sub": "OpenAI" },
+            { "label": "Claude", "sub": "Anthropic" },
+            { "label": "Gemini", "sub": "Google" }
+          ],
+          "rows": [
+            { "label": "Setting name", "values": ["Improve the model for everyone", "Help improve our AI models", "Gemini Apps Activity"] },
+            { "label": "Where it lives", "values": ["Settings → Data Controls", "Settings → Privacy", "Profile → Gemini Apps Activity"] },
+            { "label": "On by default (consumer plans)", "values": ["Yes — Free, Plus, Pro", "Yes — Free, Pro, Max", "Yes — most personal accounts"] },
+            { "label": "Already excluded", "values": ["Business, Enterprise, API", "Team, Enterprise, API", "Workspace accounts (admin-controlled)"] },
+            { "label": "Retention once switched off", "values": ["Not stated as a fixed window on this setting", "30 days, down from up to 5 years", "New chats kept 72 hours, not used to train"] }
+          ],
+          "source": "OpenAI Help Center, Anthropic's Privacy Center, and Google's Gemini Apps Privacy Hub, read directly — current as of August 18, 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Flipping each one off takes under a minute once you know where it actually lives — the paths below are current today, not a memory of an older menu. [Google](/company/google)'s Gemini is the one most likely to trip people up: the setting is named **Activity**, not training, and it's easy to assume it only controls your visible chat history.",
+        "citation_urls": [
+          "https://support.google.com/gemini/answer/13594961?hl=en"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Turn off training in whichever of these you actually use",
+          "sub": "Three menus, one minute each, done once per account.",
+          "est": "3 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "An account on the product(s) you want to opt out of — this is a per-account setting, not a device setting."
+          ],
+          "steps": [
+            {
+              "do": "In ChatGPT, turn off \"Improve the model for everyone.\"",
+              "detail": "Profile picture → Settings → Data Controls → switch off \"Improve the model for everyone.\" It's on by default for Free, Plus, and Pro; Business, Enterprise, and API accounts are already excluded. Temporary Chat, from the icon top-right, skips both history and training for that one conversation.",
+              "verify": "The toggle shows off, and a chat you start afterward doesn't get listed as training-eligible in Data Controls.",
+              "ifnot": "If the toggle won't stay off, you may be on a Team or Enterprise seat where an admin controls this setting, not you."
+            },
+            {
+              "do": "In Claude, turn off \"Help improve our AI models.\"",
+              "detail": "Your name at the bottom of the sidebar → Settings → Privacy → switch it off. This also drops your __retention window__ from up to five years back down to the standard 30 days.",
+              "verify": "The Privacy page shows the toggle off and states the 30-day retention window rather than the multi-year one.",
+              "ifnot": "On Claude Team, Enterprise, or the API? This setting doesn't apply — those tiers don't train on your data already."
+            },
+            {
+              "do": "In Gemini, turn off Gemini Apps Activity.",
+              "detail": "Profile picture → Gemini Apps Activity → Turn off, or go straight to myactivity.google.com/product/gemini. On by default for most personal accounts.",
+              "verify": "New chats stop appearing in your Gemini Apps Activity list going forward.",
+              "ifnot": "Still seeing new items logged? A Workspace admin may control this setting on a work or school account instead of you."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Where the opt-out doesn't reach",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The setting in each product is real, but every company reserves at least one carve-out that survives it no matter how you have it configured:",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "title": "What the toggle doesn't cover",
+          "items": [
+            {
+              "mistake": "Assuming turning the toggle off erases what already trained on your past chats.",
+              "looks": "You've switched it off and still worry about a specific conversation from months ago.",
+              "why": "All three companies word this the same way — the setting stops future use of your data, not past use.",
+              "fix": "There's no user-side undo for a completed training run. The only real lever is going forward from today.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Rating an answer with thumbs up or down on something sensitive, then assuming your opt-out still covers it.",
+              "looks": "You're fully opted out, but the specific exchange you rated gets flagged for extended review anyway.",
+              "why": "ChatGPT and Claude both carve out a feedback exception: rating a response extends that conversation's retention regardless of your general training setting.",
+              "fix": "Skip the feedback buttons on anything you don't want kept longer, or use Temporary Chat or Incognito for that one conversation instead.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Treating \"delete this chat\" as the same action as \"stop this chat from training anything.\"",
+              "looks": "You delete a conversation from your history and consider the data question closed.",
+              "why": "Deleting a chat is a history action. If training already ran on it before deletion, the deletion doesn't reach back into a training run that already happened.",
+              "fix": "Set the training toggle before you send a message you'd regret — deleting it afterward doesn't substitute for that.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Assuming a safety flag never overrides your opt-out.",
+              "looks": "You're fully opted out and still get a notice that a conversation was reviewed.",
+              "why": "All three companies reserve the right to use safety-classifier-flagged conversations for abuse-prevention and safety research, regardless of your training setting.",
+              "fix": "Know the exception exists — it's narrow (safety review, not general model improvement) and it's disclosed in each company's own policy, not hidden.",
+              "cost": "low"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this applies if you're already on a paid Team, Enterprise, or API-level plan — those tiers already exclude that data from training by default at all three companies, which is still worth confirming on your own plan's terms page rather than assuming from this guide. If none of the three toggles feels like enough control, the underlying alternative is running a model yourself instead of renting someone else's — see [our guide to deciding between self-hosting and an API](/article/self-host-or-api-how-to-decide). And if \"[training data](/dictionary)\" itself is the term that's unclear, the dictionary has the one-paragraph version.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI Help Center — \"What if I want to keep my history on but disable model training?\"",
+        "url": "https://help.openai.com/en/articles/8983130-what-if-i-want-to-keep-my-history-on-but-disable-model-training",
+        "primary": true
+      },
+      {
+        "label": "OpenAI — \"How your data is used to improve model performance\"",
+        "url": "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/",
+        "primary": true
+      },
+      {
+        "label": "Anthropic Privacy Center — \"How do I change my model improvement privacy settings?\"",
+        "url": "https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings",
+        "primary": true
+      },
+      {
+        "label": "Google — \"Gemini Apps Privacy Hub\"",
+        "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+        "primary": true
+      },
+      {
+        "label": "Tom's Guide — \"Your Claude chats are being used to train AI — here's how to opt out\"",
+        "url": "https://www.tomsguide.com/ai/claude/your-claude-chats-are-being-used-to-train-ai-heres-how-to-opt-out"
+      },
+      {
+        "label": "BGR — \"How To Stop Google Gemini From Training On Your Personal Chats\"",
+        "url": "https://www.bgr.com/1939066/how-to-stop-google-gemini-training-personal-data/"
       }
     ],
     "corrections": []

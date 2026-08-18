@@ -7226,7 +7226,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "OpenAI says it will ask explicit permission before using any connected medical record or Apple Health data to personalize a response, and that connected health information — along with conversations that use it — is \"not used to train OpenAI's models or target ads.\" Users can also use the Health section for general questions without connecting any personal records at all.",
+        "text": "OpenAI says it will ask explicit permission before using any connected medical record or Apple Health data to personalize a response, and that connected health information — along with conversations that use it — is \"not used to train OpenAI's models or target ads.\" Users can also use the Health section for general questions without connecting any personal records at all. That pledge is narrower than it sounds: it covers this one feature, not the general chat-training toggle that's on by default elsewhere in the account — see [our guide to turning that off across ChatGPT, Claude, and Gemini](/article/stop-chatgpt-claude-gemini-training-on-your-chats) for the setting that covers everything else you type.",
         "citation_urls": [
           "https://www.macrumors.com/2026/07/23/chatgpt-apple-health-integration/"
         ]
@@ -22279,7 +22279,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "For anyone who'd rather not see sponsored results at all, OpenAI's notice points to a workaround short of paying for Plus: a reduced-feature \"ads-free\" configuration of the Free plan that trades a lower daily message limit for no ads. It's the same shape as the trade OpenAI already offers US Free users, and the notice frames it as available in the EEA and Switzerland from the same date the ads themselves arrive.",
+        "text": "For anyone who'd rather not see sponsored results at all, OpenAI's notice points to a workaround short of paying for Plus: a reduced-feature \"ads-free\" configuration of the Free plan that trades a lower daily message limit for no ads. It's the same shape as the trade OpenAI already offers US Free users, and the notice frames it as available in the EEA and Switzerland from the same date the ads themselves arrive. Ad targeting is a separate setting from the one that decides whether a chat trains the model at all — see [our guide to that toggle](/article/stop-chatgpt-claude-gemini-training-on-your-chats) if the distinction between the two is the part you actually came here for.",
         "citation_urls": [
           "https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/"
         ]

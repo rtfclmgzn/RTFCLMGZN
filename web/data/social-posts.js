@@ -3936,5 +3936,86 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-18T13:24:02Z"
       }
     ]
+  },
+  {
+    "article_id": "g10",
+    "ts": "2026-08-18T16:38:07Z",
+    "export": {
+      "article_id": "g10",
+      "url": "https://rtfclmgzn.com/article/stop-chatgpt-claude-gemini-training-on-your-chats",
+      "headline": "How to stop ChatGPT, Claude, and Gemini from training on your chats",
+      "hook": "Three different companies, three different menus, and one common catch: opting out only ever protects what you send after you find the setting -- and all three still carve out an exception for feedback ratings and safety review.",
+      "key_facts": [
+        "ChatGPT (Data Controls), Claude (Privacy), and Gemini (Apps Activity) each have a separate, differently-named toggle.",
+        "Turning any of them off only protects chats sent afterward -- nothing already trained gets undone.",
+        "Anthropic's own opt-out toggle didn't exist before August 2025; before that, consumer chats trained by default with no opt-out at all."
+      ],
+      "tone": "practical, consumer-facing, step-by-step",
+      "persona": "nova-reyes",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g10.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ChatGPT, Claude, and Gemini each have a setting that decides whether your chats train the next version of the model.\n\nNone of the three works the way you'd assume. All three still carve out exceptions for feedback ratings and safety review.",
+        "reply_copy": "Where each toggle actually lives, and what it doesn't cover:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Privacy",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "ChatGPT, Claude, and Gemini all have a setting that decides whether your chats get used to train the next version of the model. Here's what most people get wrong about it.\n\nTurning the setting off only protects what you send afterward -- none of the three undoes training that already happened.\n\nAnthropic's own version of this toggle didn't even exist before August 2025.\n\nAnd all three still carve out an exception: rate a response with thumbs up or down, and that conversation's retention window extends regardless of your general setting.\n\nWhere each toggle actually lives, step by step, at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Privacy",
+          "#ChatGPT",
+          "#Claude",
+          "#Gemini",
+          "#DataPrivacy",
+          "#TechTips"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "ChatGPT, Claude, and Gemini each have their own setting for whether your conversations get used to train future versions of the model -- and none of the three works quite the way most people assume.\n\nTurning it off only protects what you send afterward; it doesn't undo training that already happened on past chats. And all three companies still keep one exception alive regardless of your setting: rating a response with a thumbs up or down extends that specific conversation's retention.\n\nWe walked through exactly where each toggle lives today, and what it does and doesn't cover.",
+        "hashtags": [
+          "#AI",
+          "#Privacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ChatGPT, Claude, and Gemini each have a separate setting for whether your chats train the model. Turning it off only protects what you send afterward -- nothing already trained gets undone, and all three still carve out an exception for feedback ratings and safety review. Here's where each one actually lives.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ChatGPT, Claude, and Gemini each have a toggle for whether your chats train the model. Off only protects what you send after you flip it -- and all three still carve out an exception for feedback ratings and safety review.",
+        "hashtags": [
+          "#AI",
+          "#Privacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
