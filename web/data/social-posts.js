@@ -3881,8 +3881,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#Cerebras"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089704843728630245",
+        "remote_id": "2089704843728630245",
+        "posted_at": "2026-08-18T13:23:54Z"
       },
       {
         "platform": "instagram",
@@ -3926,8 +3928,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#Cerebras"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtectmx6xz22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtectmx6xz22",
+        "posted_at": "2026-08-18T13:24:02Z"
       }
     ]
   }
