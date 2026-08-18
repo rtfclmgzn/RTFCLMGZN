@@ -22762,5 +22762,769 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-08-17T13:07:39Z"
+  },
+  {
+    "slug": "amodei-hassabis-finra-ai-regulator-treasury-rival",
+    "title": "Anthropic's CEO just backed a “FINRA for AI.” The Treasury Department is quietly building a rival version of the same idea.",
+    "dek": "Demis Hassabis proposed an industry-run standards body for frontier AI on July 14; Treasury Secretary Scott Bessent had a competing, SEC-anchored draft in hand three days later. Both are being pitched to the same White House official — and on August 15, Dario Amodei called the AI backlash “fundamentally a crisis of trust” and threw his weight behind the model neither man runs.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch the White House Chief of Staff's office for a decision.",
+        "text": "Susie Wiles has had Bessent's Treasury draft since July 18 with no funding allocated and no timeline announced. Whichever plan she advances first — or whether she blends them — decides whether frontier-model testing answers to an industry board or to the SEC."
+      },
+      {
+        "label": "Watch for either plan to move from voluntary to mandatory.",
+        "text": "Both proposals start as a voluntary ~30-day pre-release review. Hassabis's own essay says mandatory submission follows only once the protocol \"proves itself\" — that requires either new legislation or an executive order neither has been drafted yet."
+      },
+      {
+        "label": "Watch which labs actually fund Hassabis's board.",
+        "text": "His plan needs money — \"mostly from industry,\" in his own words — to hire technical staff and buy compute for large-scale testing. A lab that talks about the standards body but doesn't pay into it is hedging on the Treasury alternative, not committing to self-regulation."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Anthropic CEO calls for stronger regulation of AI (exclusive interview)",
+        "url": "https://abcnews.com/Business/exclusive-anthropic-ceo-calls-stronger-regulation-ai/story?id=133753620",
+        "outlet": "ABC News",
+        "kind": "reporting"
+      },
+      {
+        "label": "A Framework for Frontier AI and the Dawning of a New Age",
+        "url": "https://demishassabis.substack.com/p/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age",
+        "outlet": "Demis Hassabis (Substack)",
+        "kind": "primary"
+      },
+      {
+        "label": "DeepMind CEO calls for an independent standards body to regulate frontier AI",
+        "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Demis Hassabis's proposal for a FINRA for AI gains momentum",
+        "url": "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/",
+        "outlet": "Fortune",
+        "kind": "reporting"
+      },
+      {
+        "label": "US Considers Creating a FINRA-Style Oversight Body to Evaluate Advanced AI Models",
+        "url": "https://fourweekmba.com/ai-trump-finra-sec-ai-watchdog-frontier-model-regulator/",
+        "outlet": "FourWeekMBA",
+        "kind": "reporting"
+      },
+      {
+        "label": "Hassabis Lobbied Bessent and Kratsios on AI Watchdog While Treasury Built Its Own",
+        "url": "https://www.techtimes.com/articles/324408/20260813/hassabis-lobbied-bessent-kratsios-ai-watchdog-while-treasury-built-its-own.htm",
+        "outlet": "Tech Times",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
+        "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Dario Amodei admits AI suffers from a crisis of trust",
+        "url": "https://fortune.com/2026/08/16/dario-amodei-anthropic-ai-trust-crisis-regulation-frontier-open-models-negative-views/",
+        "outlet": "Fortune",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic CEO Dario Amodei Calls AI Backlash a “Crisis of Trust,” Rejects Binary Framing on Regulation",
+        "url": "https://finance.biggo.com/news/b3b7863a-135a-4111-9b7d-dc1adf3d14f3",
+        "outlet": "BigGo Finance",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Anthropic CEO Dario Amodei endorsed a FINRA-style AI regulator on August 15, calling the AI backlash \"fundamentally a crisis of trust.\"",
+      "Google DeepMind's Demis Hassabis first proposed the industry-run “FINRA for AI” standards body on July 14.",
+      "Treasury Secretary Scott Bessent had a competing, SEC-anchored version drafted within three days, per Bloomberg's July 17 report.",
+      "Hassabis personally lobbied the same two officials — Bessent and Michael Kratsios — who are building the rival plan, on August 13.",
+      "Neither plan is mandatory yet, and the White House has set no timeline for choosing between them."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "On August 15, [Anthropic](/company/anthropic) chief executive **Dario Amodei** posted a diagnosis of his own industry's biggest problem. “I think it is fundamentally a crisis of trust,” he wrote. “I think that ordinary people don't trust companies, governments, or the tech industry and always suspect that we are cooking up some new way to screw them over.” ==That wasn't just a mea culpa — he used the moment to back a specific regulatory model that Anthropic did not invent and does not control==: a proposed “FINRA for AI,” the industry standards body first sketched out five weeks earlier by a rival lab's chief executive, [Google](/company/google) DeepMind's ++Demis Hassabis++.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+          "https://fortune.com/2026/08/16/dario-amodei-anthropic-ai-trust-crisis-regulation-frontier-open-models-negative-views/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Hassabis published his plan himself, in a July 14 essay titled “A Framework for Frontier AI and the Dawning of a New Age.” He proposed a U.S. Frontier AI Standards Body structured the way __FINRA__ regulates broker-dealers: an industry-funded, self-regulatory organization operating under federal oversight without being a government agency itself, its board seeded with independent technical experts and open-source representatives. Frontier labs would start by voluntarily submitting their most capable models for review up to 30 days before release; submission becomes mandatory only once the review protocol has proven itself. The pitch, in short, is that the people who build frontier models should also write the rules that test them — with Washington watching, not running the room.",
+        "citation_urls": [
+          "https://demishassabis.substack.com/p/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age",
+          "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Treasury is building a rival version",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Three days after Hassabis's essay ran, Bloomberg reported that Treasury Secretary Scott Bessent already had a competing draft — a FINRA-style body of his own, but anchored differently: reporting to the Securities and Exchange Commission rather than to the labs, screening frontier models specifically for deception, bioweapon-assistance, and hacking capability before release. Bessent's version shares Hassabis's basic shape — a voluntary submission window of roughly 30 days, no mandatory licensing at launch — but answers a different question about who is actually in charge. It has sat under review in White House Chief of Staff Susie Wiles's office since July 18, with no funding allocated and no timeline announced for a decision.",
+        "citation_urls": [
+          "https://fourweekmba.com/ai-trump-finra-sec-ai-watchdog-frontier-model-regulator/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "FIVE WEEKS, TWO PLANS",
+          "title": "How the FINRA-for-AI fight got here",
+          "items": [
+            {
+              "when": "Jun 10, 2026",
+              "what": "Amodei tells ABC News he wants government authority to block deployment of unsafe models — no FINRA mention yet.",
+              "source": "https://abcnews.com/Business/exclusive-anthropic-ceo-calls-stronger-regulation-ai/story?id=133753620"
+            },
+            {
+              "when": "Jul 14, 2026",
+              "what": "Hassabis publishes his FINRA-style Frontier AI Standards Body proposal.",
+              "hi": true,
+              "source": "https://demishassabis.substack.com/p/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age"
+            },
+            {
+              "when": "Jul 17, 2026",
+              "what": "Bloomberg reports Bessent's Treasury has its own FINRA-style, SEC-anchored draft.",
+              "source": "https://fourweekmba.com/ai-trump-finra-sec-ai-watchdog-frontier-model-regulator/"
+            },
+            {
+              "when": "Jul 18, 2026",
+              "what": "Bessent's proposal goes to White House Chief of Staff Susie Wiles for review.",
+              "source": "https://fourweekmba.com/ai-trump-finra-sec-ai-watchdog-frontier-model-regulator/"
+            },
+            {
+              "when": "Aug 13, 2026",
+              "what": "Hassabis personally lobbies Bessent and OSTP's Michael Kratsios on his own version.",
+              "source": "https://www.techtimes.com/articles/324408/20260813/hassabis-lobbied-bessent-kratsios-ai-watchdog-while-treasury-built-its-own.htm"
+            },
+            {
+              "when": "Aug 15, 2026",
+              "what": "Amodei publicly endorses the FINRA-style approach as “a meaningful change.”",
+              "hi": true,
+              "source": "https://finance.biggo.com/news/b3b7863a-135a-4111-9b7d-dc1adf3d14f3"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The two plans are not circling each other from a distance. On August 13, Hassabis personally lobbied Bessent and OSTP director Michael Kratsios on his own version — the same two officials Bessent had already enlisted to build a rival plan, according to reporting on the meetings. Whoever gets there first has an outsized say in which institution ends up testing the next generation of frontier models.",
+        "citation_urls": [
+          "https://www.techtimes.com/articles/324408/20260813/hassabis-lobbied-bessent-kratsios-ai-watchdog-while-treasury-built-its-own.htm"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "TWO “FINRA FOR AI” PLANS",
+          "title": "Who would actually run the standards body",
+          "columns": [
+            {
+              "label": "Hassabis's Standards Body",
+              "sub": "proposed Jul 14"
+            },
+            {
+              "label": "Bessent's Treasury plan",
+              "sub": "drafted by Jul 17",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Who governs",
+              "values": [
+                "Frontier labs + independent technical board",
+                "SEC oversight, drafted inside Treasury"
+              ]
+            },
+            {
+              "label": "Submission trigger",
+              "values": [
+                "Voluntary, ~30 days pre-release; mandatory once “proven”",
+                "Voluntary, ~30 days pre-release"
+              ],
+              "note": "the same window, under different ownership"
+            },
+            {
+              "label": "Funding",
+              "values": [
+                "Industry-funded, by Hassabis's own account",
+                "Not yet specified"
+              ]
+            },
+            {
+              "label": "Status as of Aug 17",
+              "values": [
+                "Author personally lobbying Treasury and OSTP",
+                "Under Susie Wiles's review since Jul 18, no timeline set"
+              ]
+            }
+          ],
+          "source": "Hassabis's Substack essay; Bloomberg via FourWeekMBA; Tech Times reporting on the Aug. 13 meetings."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What Amodei actually signed up for",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Two days after that meeting, Amodei picked a side, at least rhetorically. He called the FINRA-style approach “a meaningful change compared to six months ago, when most of the industry was only calling for the repeal of state regulations with no clear federal approach,” and said he was “very supportive, though [he] need[s] to see the details” of a Trump administration testing requirement that would apply once open-weight models near the frontier. He also rejected the framing of AI policy as a binary choice — unregulated proliferation versus power concentrated in a few companies through regulation — arguing the right rules could restrain dominant labs' influence while leaving room for open-weight competitors to keep operating.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/b3b7863a-135a-4111-9b7d-dc1adf3d14f3"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“We're proposing stronger regulation of the technology, proposing giving the government the ability to, again, in a narrow way, block deployment of unsafe technology.” — Dario Amodei, ABC News, June 10, 2026",
+        "citation_urls": [
+          "https://abcnews.com/Business/exclusive-anthropic-ceo-calls-stronger-regulation-ai/story?id=133753620"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That June position is notably blunter than the FINRA-style plans on the table now. Blocking deployment after an independent government assessment is direct state power over a company's product; the standards body both Hassabis and Bessent have since proposed starts as a voluntary review with no legal force at all. Amodei's August endorsement doesn't retract the June position — he still wants the government able to act — but it does mean he's now publicly attached to the softer, industry-adjacent version of that idea, not just his own harder one.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "kicker": "WHO WINS EACH VERSION",
+          "items": [
+            {
+              "who": "Frontier labs (Anthropic, Google DeepMind, OpenAI)",
+              "tone": "gains",
+              "what": "Under Hassabis's plan, they help write and fund the standard they'll be tested against — the same self-regulatory arrangement real brokerages have with FINRA today."
+            },
+            {
+              "who": "The SEC",
+              "tone": "gains",
+              "what": "Under Bessent's plan, gains a new supervisory lane over frontier AI without new legislation, if the White House adopts it."
+            },
+            {
+              "who": "Open-weight and smaller developers",
+              "tone": "exposed",
+              "what": "Neither plan's capability threshold for mandatory review has been fixed publicly — where that line lands decides whether they're covered at all."
+            },
+            {
+              "who": "The general public",
+              "tone": "unclear",
+              "what": "Both plans remain voluntary with no enforcement mechanism until Congress or an executive order changes that; today, neither can actually stop a release."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Not everyone reads Amodei's turn as principled. Investor Gavin Baker argued publicly that Amodei should “be a more positive advocate for his own industry” and had “lost the argument” on regulation; Amodei's reply located the problem in decades of eroding trust in institutions generally, not in his own messaging. It's also worth being precise about what a lab-anchored FINRA gets Anthropic that a Treasury-anchored one doesn't: a seat, alongside its rivals, in writing the standard it will eventually be tested against.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "This is the second time in five weeks that authority at the top of the industry has shifted rather than settled. [Hassabis moved from running Google DeepMind day to day to Alphabet chief scientist](/article/google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop) the same month he published this framework — the executive now pitching Washington on how frontier models should be tested is no longer the one who ships Google's own. And Anthropic's own [August risk report already raised its internal misalignment rating](/article/anthropic-model-2-risk-report-misalignment-rating-raised), citing a summer of AI sandbox breakouts including its own — exactly the kind of finding an external __frontier safety review__ body, whichever version wins, would exist to catch before a model ships rather than after.",
+        "citation_urls": []
+      }
+    ],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-18T10:40:00Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "WebSearch/WebFetch found Amodei's Aug 15 X posts (via TechCrunch, Fortune, BigGo Finance reporting), Hassabis's Jul 14 Substack essay (primary), Bessent/Treasury's competing Jul 17 draft (via FourWeekMBA's synthesis of Bloomberg reporting), and Tech Times's Aug 13 report on Hassabis lobbying Bessent/Kratsios. Cross-checked against the archive: the Aug 5-6 Hassabis/Kavukcuoglu leadership reshuffle and the Aug 16 Model 2 risk-report story are already published; this piece is a new development (the regulatory fight, not the reshuffle) and cross-links both rather than re-covering them. Six independent evidence threads: Hassabis's own essay, Amodei's Jun 10 ABC interview, Amodei's Aug 15 statements, Bessent's competing proposal, the Aug 13 lobbying meetings, and the Gavin Baker exchange. Three primary/near-primary sources (Hassabis's essay, Amodei's ABC interview, Amodei's own quoted statements)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Fetched ABC News's interview writeup directly for the exact June 10 quote used in the pull-quote block; fetched Hassabis's own Substack essay for the FINRA-structure details; fetched FourWeekMBA's dated comparison table for the Jul 14/17/18 sequence. TechCrunch and Fortune corroborate the Aug 15 X-post quotes verbatim across both outlets. The Tech Times Aug 13 lobbying story returned an HTTP 403 on direct fetch but is corroborated by its appearance and description across multiple independent search results; treated as reporting-kind, not primary, in the sources array for that reason."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the piece initially blurred Amodei's Jun 10 'block deployment' proposal with the Aug 15 FINRA endorsement as if they were the same ask; revised to add the explicit contrast paragraph after the pull quote so the piece doesn't overstate continuity. Also checked for self-referential language — none found. Cross-links to the DeepMind leadership piece and the Model 2 risk-report piece both phrase prior coverage by what happened, not by naming this outlet's coverage of it."
+        },
+        {
+          "name": "Loop 2 — component provenance check",
+          "agent": "claude-runner",
+          "note": "Timeline: all six dates and claims trace to the cited source for that item. Compare: every cell traces to Hassabis's essay or the FourWeekMBA/Tech Times reporting on Bessent's draft; no cell states a number not in the article. Stakes: no invented consequence — each item names the actual mechanism (self-regulatory seat, SEC jurisdiction, undefined threshold, no enforcement mechanism) rather than a vague harm. No component carries a top-level text field."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health/financial/legal-proceedings trigger. Trigger 4 (accusatory claims about a named party) considered for the Gavin Baker exchange — reported as an attributed, on-the-record public exchange between two named parties, sourced-neutral, not adopted as this piece's own claim. No unverifiable central claim: every load-bearing quote is attributed to a specific outlet and, where possible, fetched directly."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. Six evidence threads, three primary/near-primary sources, clears the synthesis floor. Three components (timeline, compare, stakes), none decorative, none adjacent to another. Apply block names three specific, dated watch-points rather than generic advice. Cross-links to two already-published pieces are phrased about the event, not about this outlet's coverage."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (6 threads, 3 primary/near-primary sources) and the §3b visual floor (3 components, one comparative/data-carrying). No compliance trigger required Editor-in-Chief adjudication beyond the self-check performed inline. disclaimer:none is correct — no health, financial, or legal-proceedings content."
+      }
+    },
+    "publishedAt": "2026-08-18T10:40:00Z",
+    "id": "newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival",
+    "image": "assets/img/newsroom/newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": []
+  },
+  {
+    "slug": "tesla-cybercab-austin-launch-driverless-mile-gap",
+    "title": "Tesla is targeting an August Cybercab launch in Austin. Its own driverless-mile count is 1/580th of Waymo's.",
+    "dek": "Tesla told employees it's aiming to put Cybercab — its first robotaxi built with no steering wheel or pedals at all — on Austin's public roads by the end of August, starting with employee rides. The company's own tally is 380,000 unsupervised miles across six cities; Waymo's, verified on its own public safety dashboard, is 220.6 million.",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for the first public (non-employee) Cybercab ride.",
+        "text": "Tesla's own internal target is end of August, starting with employee rides on public roads before folding Cybercab into the paid Robotaxi app days later. Employee-only test phases have no fixed end date Tesla has disclosed publicly."
+      },
+      {
+        "label": "Watch NHTSA's incident log after Cybercab adds volume.",
+        "text": "The 17 incidents reported since Austin's mid-2025 launch happened at low speed and low fleet volume (dozens of vehicles). A vehicle with no manual controls at all removes the option a teleoperator or safety monitor currently has to intervene physically — the incident-per-mile rate at scale is the number nobody has yet."
+      },
+      {
+        "label": "Watch whether Texas requires a separate authorization for Cybercab.",
+        "text": "Tesla self-certified its Model Y robotaxis as SAE Level 4 under Senate Bill 2807. Whether Cybercab, a structurally different vehicle with no fallback controls, needs its own state sign-off — or rides on the existing Model Y authorization — hasn't been publicly clarified by TxDMV or Tesla."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Tesla Readies August Launch of Cybercab, Its Robotaxi Without a Steering Wheel",
+        "url": "https://www.theinformation.com/articles/tesla-readies-august-launch-cybercab-robotaxi-without-steering-wheel",
+        "outlet": "The Information",
+        "kind": "reporting"
+      },
+      {
+        "label": "Tesla's Cybercab is about to launch — and we don't get it",
+        "url": "https://electrek.co/2026/08/17/tesla-cybercab-launch-least-exciting-vehicle-ever/",
+        "outlet": "Electrek",
+        "kind": "reporting"
+      },
+      {
+        "label": "Tesla touts 380,000 unsupervised robotaxi miles with 'zero notable incidents'",
+        "url": "https://www.foxbusiness.com/markets/tesla-touts-380000-unsupervised-robotaxi-miles-zero-notable-incidents",
+        "outlet": "Fox Business",
+        "kind": "reporting"
+      },
+      {
+        "label": "Waymo Safety Impact — rider-only miles dashboard",
+        "url": "https://waymo.com/safety/impact/",
+        "outlet": "Waymo",
+        "kind": "primary"
+      },
+      {
+        "label": "Tesla Robotaxi fleet in Texas less than one-tenth size of Waymo's, filings reveal",
+        "url": "https://www.cnbc.com/2026/05/28/tesla-robotaxi-fleet-texas-one-tenth-size-of-waymos-filings-reveal.html",
+        "outlet": "CNBC",
+        "kind": "reporting"
+      },
+      {
+        "label": "Tesla Self-Certified Its Model Y Robotaxis for Level 4 Autonomy Under a New Texas Law",
+        "url": "https://www.autoevolution.com/news/tesla-self-certified-its-model-y-robotaxis-for-level-4-autonomy-under-a-new-texas-law-270718.html",
+        "outlet": "autoevolution",
+        "kind": "reporting"
+      },
+      {
+        "label": "Texas DoT Confirms: Cybercab Has No Steering Wheel or Pedals",
+        "url": "https://www.basenor.com/blogs/news/texas-dot-confirms-cybercab-has-no-steering-wheel-or-pedals",
+        "outlet": "Basenor",
+        "kind": "reporting"
+      },
+      {
+        "label": "Tesla Robotaxi Paid Miles Stall in Q2 as Fleet Shrinks to 21 Cars Despite City Expansion",
+        "url": "https://mlq.ai/news/tesla-robotaxi-paid-miles-stall-in-q2-as-fleet-shrinks-to-21-cars-despite-city-expansion/",
+        "outlet": "MLQ",
+        "kind": "reporting"
+      },
+      {
+        "label": "Tesla discloses two Robotaxi crashes to NHTSA",
+        "url": "https://www.teslarati.com/tesla-discloses-two-robotaxi-crashes-nhtsa/",
+        "outlet": "Teslarati",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Tesla told employees it's targeting an Austin public launch of Cybercab, its pedal- and steering-wheel-free robotaxi, by the end of August.",
+      "The rollout starts with employee rides on public roads before Cybercab folds into the paid Robotaxi app.",
+      "Tesla's own count is 380,000 unsupervised miles across six cities; Waymo's public safety dashboard shows 220.6 million rider-only miles through March.",
+      "TxDMV filings and independent analysis put Tesla's actually-unsupervised Texas fleet at roughly 17-21 vehicles, well below the 186 registered under its authorization.",
+      "NHTSA has logged 17 Robotaxi incidents since Austin's mid-2025 launch — all at low speed, none involving a vehicle with no manual controls at all."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Tesla](/company/tesla) has told staff it wants **Cybercab** — the robotaxi it built with no steering wheel, no pedals, and no way for a human inside to take over — on Austin's public roads by the end of August, according to The Information. The rollout plan starts small: employees get rides on public roads first, and Cybercab folds into the paid Robotaxi app \"a few days later,\" per the same reporting. Tesla's Robotaxi account is already promoting a Cybercab launch event, with rides completed through August 23 counting as contest entries — a marketing push running ahead of an official launch date Tesla hasn't yet announced.",
+        "citation_urls": [
+          "https://www.theinformation.com/articles/tesla-readies-august-launch-cybercab-robotaxi-without-steering-wheel",
+          "https://electrek.co/2026/08/17/tesla-cybercab-launch-least-exciting-vehicle-ever/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "==The vehicle itself is the news here, not just the timing.== Every Tesla robotaxi on the road today is a Model Y with a steering wheel and pedals still installed — a human backup option even when nobody is meant to use it. Cybercab has neither. Texas's own Department of Transportation has confirmed the production units rolling off the line at Giga Texas carry no manual controls at all, and drone footage from the factory lot backs that up — more than 100 units had already been spotted there as of July, with none yet approved to carry a paying passenger on a public road. There is no fallback if the driving system fails; there is only the driving system.",
+        "citation_urls": [
+          "https://www.basenor.com/blogs/news/texas-dot-confirms-cybercab-has-no-steering-wheel-or-pedals",
+          "https://electrek.co/2026/08/17/tesla-cybercab-launch-least-exciting-vehicle-ever/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The mileage Tesla is launching on",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Tesla's case for readiness rests on a number the company itself put on the record. At the July 22 earnings call, VP of AI Software __Ashok Elluswamy__ said the fleet had logged \"zero notable incidents over 380,000 miles\" of unsupervised driving across six cities in two states, clarifying that the incidents that did occur involved \"other actors impacting us when we were stationary\" — parked, not driving. That is Tesla's own count, from Tesla's own call, and it has not been independently re-verified against raw telemetry.",
+        "citation_urls": [
+          "https://www.foxbusiness.com/markets/tesla-touts-380000-unsupervised-robotaxi-miles-zero-notable-incidents"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Zero notable incidents over 380,000 miles.” — Ashok Elluswamy, Tesla VP of AI Software, July 22, 2026 earnings call",
+        "citation_urls": [
+          "https://www.foxbusiness.com/markets/tesla-touts-380000-unsupervised-robotaxi-miles-zero-notable-incidents"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Set next to the company it's chasing, that figure is small. Waymo's own public Safety Impact dashboard put its rider-only mileage at 220.6 million through the end of March — a company-reported number too, but one Waymo has published continuously and in detail since 2020, across a materially larger and longer track record. Tesla's 380,000 miles is roughly ++1/580th++ of that total.",
+        "citation_urls": [
+          "https://waymo.com/safety/impact/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "unit": "miles",
+          "kicker": "DRIVERLESS TRACK RECORD",
+          "title": "Tesla's unsupervised miles vs. Waymo's rider-only miles",
+          "data": [
+            {
+              "label": "Tesla (through Jul 22, 2026)",
+              "value": 380000,
+              "note": "self-reported, 6 cities / 2 states"
+            },
+            {
+              "label": "Waymo (through Mar 2026)",
+              "value": 220600000,
+              "hi": true,
+              "note": "published on Waymo's own safety dashboard"
+            }
+          ],
+          "source": "Tesla VP Ashok Elluswamy, July 22 earnings call (Fox Business); Waymo Safety Impact dashboard. Bars are drawn to scale — Tesla's is intentionally almost invisible next to Waymo's; that gap is the actual data, not a rendering choice."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "How big is the fleet, actually",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The fleet size behind that mileage is itself a moving, and inconsistently reported, target. Texas's Senate Bill 2807 let companies self-certify SAE Level 4 systems starting May 28, and Tesla Robotaxi LLC registered 42 Model Y vehicles under it that day — a fleet CNBC described at the time as less than one-tenth the size of Waymo's in the same state. By mid-July the registered count had grown further; by mid-August, Electrek's read of the same TxDMV filings put registered vehicles at 186. But registered is not the same as driving unsupervised: independent analysis of Tesla's own Q2 disclosures put the actually-unsupervised fleet — cars operating with no safety monitor at all — at roughly 17 to 21 vehicles, a number MLQ's analysis described as shrinking even as Tesla added cities.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/05/28/tesla-robotaxi-fleet-texas-one-tenth-size-of-waymos-filings-reveal.html",
+          "https://electrek.co/2026/08/17/tesla-cybercab-launch-least-exciting-vehicle-ever/",
+          "https://mlq.ai/news/tesla-robotaxi-paid-miles-stall-in-q2-as-fleet-shrinks-to-21-cars-despite-city-expansion/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "FOUR NUMBERS, FOUR DIFFERENT FLEETS",
+          "title": "What each Tesla robotaxi count actually measures",
+          "items": [
+            {
+              "value": "42",
+              "unit": "Model Y, registered",
+              "label": "Baseline fleet registered the day SB 2807 took effect.",
+              "includes": "Vehicles Tesla self-certified as SAE Level 4 under the new law.",
+              "excludes": "Any vehicle added since May 28, or Cybercab units."
+            },
+            {
+              "value": "186",
+              "unit": "Model Y, registered",
+              "label": "Registered fleet as of Electrek's mid-August TxDMV filing check.",
+              "includes": "All vehicles on Tesla's Texas robotaxi registration, regardless of how they're currently operated.",
+              "excludes": "Whether a safety monitor is required in any given car."
+            },
+            {
+              "value": "17–21",
+              "unit": "Model Y, unsupervised",
+              "label": "Vehicles actually operating with no safety monitor, per independent analysis of Q2 disclosures.",
+              "includes": "Only cars driving with nobody in the vehicle able to intervene.",
+              "excludes": "The much larger registered count above."
+            },
+            {
+              "value": "100+",
+              "unit": "Cybercab units",
+              "label": "Units spotted in Giga Texas factory lots as of July.",
+              "includes": "Production units built so far.",
+              "excludes": "Any unit approved for or operating on a public road — that count is zero as of Aug. 17."
+            }
+          ],
+          "source": "CNBC (May 28 filing); Electrek (Aug. 17 TxDMV read); MLQ (Q2 unsupervised-fleet analysis); Electrek (Cybercab factory-lot spotting)."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The safety record it's scaling into",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "NHTSA data unredacted this month shows 17 total Robotaxi incidents since the Austin service launched in mid-2025 — no major crashes, mostly low-speed contact events, several involving the Tesla being struck by someone else. Two involved a remote teleoperator taking manual control at under 10 mph: one in July 2025, when a vehicle mounted a curb and struck a fence; one in January 2026, when a vehicle collided with a construction barricade at roughly 9 mph after a teleoperator took over from a stop. Tesla says teleoperators are authorized only for low-speed repositioning, not full driving control.",
+        "citation_urls": [
+          "https://www.teslarati.com/tesla-discloses-two-robotaxi-crashes-nhtsa/"
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "beforeafter": {
+          "kicker": "WHAT CYBERCAB REMOVES",
+          "beforeLabel": "Model Y Robotaxi (in service since mid-2025)",
+          "afterLabel": "Cybercab (targeting Aug. 2026 launch)",
+          "rows": [
+            {
+              "label": "Manual controls",
+              "before": "Steering wheel and pedals present",
+              "after": "None installed — confirmed by TxDMV"
+            },
+            {
+              "label": "Remote-teleoperator fallback",
+              "before": "Used in at least 2 of 17 logged incidents",
+              "after": "Same teleoperator system, but no physical controls for a human on board to ever use instead"
+            },
+            {
+              "label": "Public-road units",
+              "before": "Roughly 17–21 driving unsupervised",
+              "after": "Zero, as of Aug. 17 — 100+ built, none yet approved for public roads"
+            },
+            {
+              "label": "Regulatory path",
+              "before": "Self-certified SAE Level 4 under Texas SB 2807",
+              "after": "No separate Cybercab-specific authorization publicly confirmed"
+            }
+          ],
+          "source": "Basenor (TxDMV confirmation); Teslarati (NHTSA incident data); Electrek (Cybercab production count, Aug. 17)."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of that makes an August launch impossible — Texas's self-certification law was written to let a company make exactly this call itself, with no state inspection required before the first ride, and Tesla has already used that same law to put its current Model Y fleet on the road. It does mean the launch date is a Tesla decision resting on a Tesla-reported safety record, at a fleet size an order of magnitude smaller than the rival it's racing, in a vehicle that removes the one fallback its own incident log shows getting used. Elluswamy's 380,000-mile figure was presented on a Tesla earnings call, to Tesla's own shareholders, with no independent auditor named — worth holding separately from whether the number itself is accurate, because those are two different questions.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Robotics coverage this year has repeatedly landed on the same seam: a demo or a launch date is real, and the deployment scale behind it is much smaller than the announcement implies — the same gap this desk has tracked in [humanoid-robot shipment claims](/article/fcc-covered-list-bans-chinese-humanoid-robots) and elsewhere. Cybercab is a genuine engineering milestone — a production vehicle with no manual controls, legally certified to carry paying passengers in one U.S. state. Whether it is also a safe one at scale is a question this month's launch will start generating real data on, not one 380,000 miles has already answered.",
+        "citation_urls": []
+      }
+    ],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-18T11:00:00Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "WebSearch found The Information's Aug 17-18 report (paywalled, headline/byline confirmed via direct fetch) corroborated by Electrek's own Aug 17 reporting with additional detail (fleet numbers, emergency-responder training, launch-event promotion). Cross-checked against the archive: no prior Cybercab or Tesla Robotaxi article exists. Eight evidence threads: The Information's scoop, Electrek's independent reporting, Tesla's own July 22 earnings-call claim (Fox Business), Waymo's own safety dashboard, CNBC's May 28 filing story, autoevolution/Basenor's TxDMV confirmation, MLQ's Q2 fleet analysis, and Teslarati's NHTSA disclosure story. Three primary/official sources (Waymo's own dashboard, Tesla's own earnings-call statement, TxDMV/NHTSA filings as reported)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Fetched Electrek and Teslarati directly for exact figures and dates. Fetched Waymo's own safety-impact framing via search (220.6M rider-only miles through March, company's own dashboard). Fetched Fox Business directly for Elluswamy's exact quote and the earnings-call date. The Information's own article body was paywalled (403/subscribe-gate on direct fetch); its core claim (August target, employee-rides-first plan) is used only as attributed to The Information and cross-confirmed by Electrek's independent reporting of the same plan, not treated as independently re-verified beyond that."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique flagged that the NHTSA '17 incidents' figure and Electrek's '~17 unsupervised vehicles' figure are coincidentally the same number describing two different things — revised prose to keep them in separate paragraphs/components with explicit units so they can't be conflated. No self-referential language found; the one cross-link to prior robotics coverage is phrased about the pattern (deployment-scale gaps), not about this outlet's coverage history."
+        },
+        {
+          "name": "Loop 2 — component provenance check",
+          "agent": "claude-runner",
+          "note": "Chart: both values (380,000 and 220,600,000) trace to the cited earnings-call report and Waymo's dashboard respectively; no interpolation. Ledger: all four fleet figures trace to their named source and their includes/excludes are stated rather than assumed. Beforeafter: every cell is a stated fact from a cited source, not an inference — 'no separate Cybercab-specific authorization publicly confirmed' is phrased as an absence of evidence, not a claim that none exists. No component carries a top-level text field."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health/financial/legal-proceedings trigger. NHTSA crash details are drawn from the agency's own disclosed data as reported by Teslarati and stated neutrally (dates, speeds, outcomes) rather than in accusatory framing. Tesla's own safety claim is quoted and attributed, not adopted as independently confirmed fact."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. Eight evidence threads, three primary/official sources, well above the synthesis floor. Three components (ledger, chart, beforeafter), none decorative, none stacked adjacent to another. Apply block names three specific, checkable watch-points. Cross-link phrased about the pattern, not about this outlet."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (8 threads, 3 primary/official sources) and the §3b visual floor (3 components, two data-carrying). No compliance trigger required Editor-in-Chief adjudication. disclaimer:none is correct — no health, financial, or legal-proceedings content."
+      }
+    },
+    "publishedAt": "2026-08-18T11:00:00Z",
+    "id": "newsroom-tesla-cybercab-austin-launch-driverless-mile-gap",
+    "image": "assets/img/newsroom/newsroom-tesla-cybercab-austin-launch-driverless-mile-gap.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": []
+  },
+  {
+    "slug": "openai-ultrafast-cerebras-gpt-5-6-sol-preview",
+    "title": "OpenAI's new Ultrafast tier runs GPT-5.6 Sol at 750 tokens a second on Cerebras chips — with no price attached yet",
+    "dek": "OpenAI and Cerebras previewed a third GPT-5.6 Sol speed tier on August 13, up to 14 times faster than the standard API with the same model and the same output quality. It's limited to a handful of early customers, and neither company has said what it costs.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for a published Ultrafast price.",
+        "text": "Neither OpenAI nor Cerebras has said what the tier costs. Fast mode's precedent — roughly double Standard's price for 2.5x the speed — suggests Ultrafast, running on dedicated wafer-scale hardware, won't come cheap."
+      },
+      {
+        "label": "Watch which use cases get access first.",
+        "text": "Early testing spans coding, financial research, voice AI, and e-commerce. Which of those OpenAI expands to next signals whether Ultrafast becomes a real product tier or stays a narrow, premium add-on."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Accelerating GPT-5.6 Sol Ultrafast with OpenAI",
+        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+        "outlet": "Cerebras",
+        "kind": "primary"
+      },
+      {
+        "label": "GPT-5.6 Sol goes 14x faster as OpenAI launches Ultrafast mode powered by Cerebras",
+        "url": "https://the-decoder.com/gpt-5-6-sol-goes-14x-faster-as-openai-launches-ultrafast-mode-powered-by-cerebras/",
+        "outlet": "The Decoder",
+        "kind": "reporting"
+      },
+      {
+        "label": "OpenAI previews Cerebras-powered GPT-5.6 Sol tier at up to 750 tokens per second",
+        "url": "https://mlq.ai/news/openai-previews-cerebras-powered-gpt-56-sol-tier-at-up-to-750-tokens-per-second/",
+        "outlet": "MLQ",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "OpenAI and Cerebras previewed Ultrafast, a third GPT-5.6 Sol speed tier, on August 13, 2026.",
+      "It runs at up to 750 output tokens per second — up to 14x OpenAI's Standard API tier — with the model itself unchanged.",
+      "Cerebras's wafer-scale chips keep the model's weights on-chip, avoiding the memory transfers that cap GPU speed.",
+      "Access is limited to a small group of early customers across coding, finance, voice, and e-commerce.",
+      "Caveat: no price and no general-availability date have been published for either company's own announcement."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI and [Cerebras](/company/cerebras) unveiled **Ultrafast** on August 13 — a new API tier that runs GPT-5.6 Sol at up to 750 output tokens per second, which OpenAI describes as up to 14 times its Standard tier's speed. The model's intelligence, context window, and output quality don't change; only how fast the tokens arrive does. It's OpenAI's third GPT-5.6 Sol speed option: Standard, then the existing Fast mode at roughly 2.5 times Standard's speed for about 2 times the price, and now Ultrafast on top of both. Access is limited to a small group of early customers for now, spanning coding, financial research, voice AI, and e-commerce, with OpenAI saying it wants to study where the speed creates real value before expanding further.",
+        "citation_urls": [
+          "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+          "https://the-decoder.com/gpt-5-6-sol-goes-14x-faster-as-openai-launches-ultrafast-mode-powered-by-cerebras/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The speed comes from Cerebras's __wafer-scale__ chips rather than GPUs: each wafer-sized chip carries 44GB of on-chip SRAM, so a model's weights sit directly on the chip instead of shuttling back and forth from separate memory — the round trip that caps how fast a GPU cluster can serve ==tokens per second==. Cerebras's own announcement reports an 11x speedup over Anthropic's Claude Fable 5 and a 5.6x end-to-end gain on the GDPVal benchmark with no measured quality loss.",
+        "citation_urls": [
+          "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "SPEED, PRICED AND NOT",
+          "title": "What's disclosed about GPT-5.6 Sol's speed tiers — and what isn't",
+          "items": [
+            {
+              "value": "2.5x",
+              "unit": "Fast mode",
+              "label": "OpenAI's existing faster tier, already public.",
+              "includes": "Roughly double Standard's price for 2.5x the speed, per independent reporting.",
+              "excludes": "An OpenAI-published multiplier — the 2x figure is outside reporting's characterization, not a rate OpenAI states directly."
+            },
+            {
+              "value": "750 tok/s",
+              "unit": "Ultrafast (new)",
+              "label": "Up to 14x Standard's speed, per OpenAI and Cerebras's joint announcement.",
+              "includes": "Confirmed benchmark gains (11x vs. Fable 5, 5.6x on GDPVal) from Cerebras's own writeup.",
+              "excludes": "Any published price, and any confirmed general-availability date — limited preview only."
+            }
+          ],
+          "source": "The Decoder (Fast-mode pricing characterization); Cerebras's own Ultrafast announcement."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The timing lands one day after [Google shipped Gemini 3.7 Flash](/article/google-gemini-3-7-flash-launch-benchmarks-pricing), a launch that put inference speed back at the center of frontier-model marketing. OpenAI hasn't framed Ultrafast as a response to that release, but The Decoder's own read is blunter about the business logic either way: running a top model at 14x speed on rented specialist hardware is unlikely to be cheap, and a tiered-speed pricing ladder gives OpenAI a direct cut of whatever revenue gain the extra ++latency++ savings create for a customer.",
+        "citation_urls": [
+          "https://the-decoder.com/gpt-5-6-sol-goes-14x-faster-as-openai-launches-ultrafast-mode-powered-by-cerebras/"
+        ]
+      }
+    ],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-18T10:48:00Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Surfaced during this cycle's news sweep as a buzz-only item (bz-... Ultrafast card) never promoted to an article. WebFetch pulled Cerebras's own announcement directly (primary) and The Decoder's independent writeup (reporting, includes the Fast-mode pricing comparison and the competitive read against Gemini 3.7 Flash). Two evidence threads, one primary — cleanly a Brief, not a synthesis: one clear claim (a new speed tier exists, unpriced), not several distinct developments needing reconciliation."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "OpenAI's own blog post (openai.com/index/previewing-ultrafast/) returned an HTTP 403 on direct fetch; every figure in this piece is instead sourced to Cerebras's own co-announcement (fetched directly) and cross-checked against The Decoder's and MLQ's independent accounts, which agree on the 750 tok/s and 14x figures. No claim in this piece rests solely on the inaccessible OpenAI page."
+        },
+        {
+          "name": "Loop 1 — critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the draft implied OpenAI itself called this a response to Gemini 3.7 Flash; revised to attribute that framing explicitly to The Decoder's own read rather than to OpenAI. No self-referential language found. Component floor (1 minimum for brief) cleared with one ledger; word count and format tier checked against the brief range."
+        },
+        {
+          "name": "Compliance self-check",
+          "agent": "claude-runner",
+          "note": "No health/financial/legal-proceedings trigger. No claim about a named party is negative or accusatory. Central claim (the tier's existence and its published specs) is sourced to Cerebras's own co-announcement, not treated as unverifiable."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. Two evidence threads, one primary source (Cerebras's own announcement), clears the brief floor. One component (ledger), not decorative, not adjacent to another component. Apply block included because a genuine forward-looking angle exists (unpublished price, expanding access)."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Brief clears its evidence floor (2 threads, 1 primary source) and the §3b visual floor (1 component). disclaimer:none is correct — no health, financial, or legal-proceedings content."
+      }
+    },
+    "publishedAt": "2026-08-18T10:48:00Z",
+    "id": "newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview",
+    "image": "assets/img/newsroom/newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": []
   }
-];
+]
+;
