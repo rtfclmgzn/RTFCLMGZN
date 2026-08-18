@@ -3654,273 +3654,281 @@ window.RTFC_SOCIAL_POSTS =[
       }
     ]
   },
-{
-  "article_id": "newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival",
-  "ts": "2026-08-18T10:58:00Z",
-  "export": {
+  {
     "article_id": "newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival",
-    "url": "https://rtfclmgzn.com/article/amodei-hassabis-finra-ai-regulator-treasury-rival",
-    "headline": "Anthropic's CEO just backed a “FINRA for AI.” The Treasury Department is quietly building a rival version of the same idea.",
-    "hook": "Dario Amodei just endorsed the industry-run AI regulator Demis Hassabis proposed in July -- while the Treasury Department has been drafting a competing, SEC-anchored version of the same idea since three days after Hassabis's essay ran.",
-    "key_facts": [
-      "Hassabis proposed a FINRA-style, industry-funded Frontier AI Standards Body on July 14.",
-      "Treasury Secretary Scott Bessent had a competing, SEC-anchored draft by July 17 -- now under White House review since July 18.",
-      "Hassabis personally lobbied Bessent and OSTP's Kratsios on his own version on August 13, two days before Amodei's public endorsement."
-    ],
-    "tone": "composed, legally precise -- who governs, not just who's talking",
-    "persona": "evelyn-zhao",
-    "section": "Policy",
-    "primary_image": "assets/img/newsroom/newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Dario Amodei just endorsed a “FINRA for AI.”\n\nThe Treasury Dept has been quietly drafting a rival version of the same idea since 3 days after the original essay ran -- and pitching it to the same 2 officials.\n\nWho writes AI's rules: the labs, or Washington?",
-      "reply_copy": "The full timeline and who wins each version:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AIRegulation",
-        "#AIPolicy"
+    "ts": "2026-08-18T10:58:00Z",
+    "export": {
+      "article_id": "newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival",
+      "url": "https://rtfclmgzn.com/article/amodei-hassabis-finra-ai-regulator-treasury-rival",
+      "headline": "Anthropic's CEO just backed a “FINRA for AI.” The Treasury Department is quietly building a rival version of the same idea.",
+      "hook": "Dario Amodei just endorsed the industry-run AI regulator Demis Hassabis proposed in July -- while the Treasury Department has been drafting a competing, SEC-anchored version of the same idea since three days after Hassabis's essay ran.",
+      "key_facts": [
+        "Hassabis proposed a FINRA-style, industry-funded Frontier AI Standards Body on July 14.",
+        "Treasury Secretary Scott Bessent had a competing, SEC-anchored draft by July 17 -- now under White House review since July 18.",
+        "Hassabis personally lobbied Bessent and OSTP's Kratsios on his own version on August 13, two days before Amodei's public endorsement."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "composed, legally precise -- who governs, not just who's talking",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-amodei-hassabis-finra-ai-regulator-treasury-rival.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-08-18T15:40:00Z",
-      "copy": "Amodei in June: government should be able to block deployment of unsafe AI models.\n\nAmodei in August: backing a voluntary, industry-run review board instead.\n\nSame goal, much softer tool -- and he didn't write this one.",
-      "reply_copy": "How the two positions actually differ:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Anthropic",
-        "#AIPolicy"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Two “FINRA for AI” plans are competing for the same White House sign-off right now.\n\nGoogle DeepMind's Demis Hassabis proposed one in July: an industry-funded standards body, run by the labs themselves, with Washington watching from outside.\n\nThree days later, Treasury Secretary Scott Bessent had a rival version ready -- this one reporting straight to the SEC.\n\nOn August 15, Anthropic CEO Dario Amodei picked a side: he publicly backed the industry-run model, calling the AI backlash “fundamentally a crisis of trust.”\n\nNeither plan is mandatory yet. Full breakdown at the link in bio.",
-      "hashtags": [
-        "#AI",
-        "#ArtificialIntelligence",
-        "#AIRegulation",
-        "#AIPolicy",
-        "#Anthropic",
-        "#TechPolicy"
-      ],
-      "image": {
-        "prompt": null,
-        "status": "none",
-        "cost_usd": 0
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Dario Amodei just endorsed a “FINRA for AI.”\n\nThe Treasury Dept has been quietly drafting a rival version of the same idea since 3 days after the original essay ran -- and pitching it to the same 2 officials.\n\nWho writes AI's rules: the labs, or Washington?",
+        "reply_copy": "The full timeline and who wins each version:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIRegulation",
+          "#AIPolicy"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089669874302009370",
+        "remote_id": "2089669874302009370",
+        "posted_at": "2026-08-18T11:04:57Z"
       },
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Two competing plans for a “FINRA-style” AI regulator are sitting on the same White House desk right now.\n\nGoogle DeepMind's Demis Hassabis proposed an industry-run standards body in July -- labs write the rules, funded by the labs, with Washington watching. Three days later, Treasury Secretary Scott Bessent had drafted a rival version answering to the SEC instead.\n\nOn August 15, Anthropic CEO Dario Amodei picked the industry-run side publicly, calling the AI backlash “a crisis of trust.” Neither plan is mandatory yet -- and the White House hasn't said which one it's leaning toward.",
-      "hashtags": [
-        "#AIPolicy",
-        "#AIRegulation"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Amodei just backed a “FINRA for AI” he didn't write. Hassabis proposed it in July; Treasury had a rival, SEC-anchored version drafted 3 days later. Same White House official is reviewing both. Neither is mandatory yet -- the fight is over who gets to write the rules.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Two “FINRA for AI” plans, same White House desk: Hassabis's industry-run board vs. Bessent's SEC-anchored one. Amodei just publicly backed the industry version -- one he didn't write and doesn't control.",
-      "hashtags": [
-        "#AIPolicy",
-        "#Anthropic"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-tesla-cybercab-austin-launch-driverless-mile-gap",
-  "ts": "2026-08-18T10:58:00Z",
-  "export": {
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-18T15:40:00Z",
+        "copy": "Amodei in June: government should be able to block deployment of unsafe AI models.\n\nAmodei in August: backing a voluntary, industry-run review board instead.\n\nSame goal, much softer tool -- and he didn't write this one.",
+        "reply_copy": "How the two positions actually differ:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Two “FINRA for AI” plans are competing for the same White House sign-off right now.\n\nGoogle DeepMind's Demis Hassabis proposed one in July: an industry-funded standards body, run by the labs themselves, with Washington watching from outside.\n\nThree days later, Treasury Secretary Scott Bessent had a rival version ready -- this one reporting straight to the SEC.\n\nOn August 15, Anthropic CEO Dario Amodei picked a side: he publicly backed the industry-run model, calling the AI backlash “fundamentally a crisis of trust.”\n\nNeither plan is mandatory yet. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#ArtificialIntelligence",
+          "#AIRegulation",
+          "#AIPolicy",
+          "#Anthropic",
+          "#TechPolicy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Two competing plans for a “FINRA-style” AI regulator are sitting on the same White House desk right now.\n\nGoogle DeepMind's Demis Hassabis proposed an industry-run standards body in July -- labs write the rules, funded by the labs, with Washington watching. Three days later, Treasury Secretary Scott Bessent had drafted a rival version answering to the SEC instead.\n\nOn August 15, Anthropic CEO Dario Amodei picked the industry-run side publicly, calling the AI backlash “a crisis of trust.” Neither plan is mandatory yet -- and the White House hasn't said which one it's leaning toward.",
+        "hashtags": [
+          "#AIPolicy",
+          "#AIRegulation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Amodei just backed a “FINRA for AI” he didn't write. Hassabis proposed it in July; Treasury had a rival, SEC-anchored version drafted 3 days later. Same White House official is reviewing both. Neither is mandatory yet -- the fight is over who gets to write the rules.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Two “FINRA for AI” plans, same White House desk: Hassabis's industry-run board vs. Bessent's SEC-anchored one. Amodei just publicly backed the industry version -- one he didn't write and doesn't control.",
+        "hashtags": [
+          "#AIPolicy",
+          "#Anthropic"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mte335xdid26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mte335xdid26",
+        "posted_at": "2026-08-18T11:05:04Z"
+      }
+    ]
+  },
+  {
     "article_id": "newsroom-tesla-cybercab-austin-launch-driverless-mile-gap",
-    "url": "https://rtfclmgzn.com/article/tesla-cybercab-austin-launch-driverless-mile-gap",
-    "headline": "Tesla is targeting an August Cybercab launch in Austin. Its own driverless-mile count is 1/580th of Waymo's.",
-    "hook": "Tesla wants Cybercab -- its first robotaxi with no steering wheel or pedals at all -- on Austin's public roads by the end of August, on the strength of 380,000 self-reported unsupervised miles. Waymo's own public dashboard shows 220.6 million.",
-    "key_facts": [
-      "Cybercab has no manual controls at all, confirmed by Texas's DOT -- every Tesla robotaxi on the road today still has a steering wheel and pedals.",
-      "Tesla's own count: 380,000 unsupervised miles across 6 cities. Waymo's public safety dashboard: 220.6 million rider-only miles.",
-      "NHTSA has logged 17 Robotaxi incidents since Austin's mid-2025 launch, including 2 where a remote teleoperator took control at under 10 mph."
-    ],
-    "tone": "curious, hands-on, hard eye for the demo-vs-shipping gap",
-    "persona": "ash-lindqvist",
-    "section": "Robotics",
-    "primary_image": "assets/img/newsroom/newsroom-tesla-cybercab-austin-launch-driverless-mile-gap.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Tesla's Cybercab has no steering wheel. No pedals. No fallback if the driving system fails.\n\nIt's targeting an Austin public launch by end of August.\n\nTesla's own driverless-mile count: 380,000. Waymo's: 220,600,000.",
-      "reply_copy": "The fleet numbers, and what each one actually measures:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Tesla",
-        "#Robotaxi"
+    "ts": "2026-08-18T10:58:00Z",
+    "export": {
+      "article_id": "newsroom-tesla-cybercab-austin-launch-driverless-mile-gap",
+      "url": "https://rtfclmgzn.com/article/tesla-cybercab-austin-launch-driverless-mile-gap",
+      "headline": "Tesla is targeting an August Cybercab launch in Austin. Its own driverless-mile count is 1/580th of Waymo's.",
+      "hook": "Tesla wants Cybercab -- its first robotaxi with no steering wheel or pedals at all -- on Austin's public roads by the end of August, on the strength of 380,000 self-reported unsupervised miles. Waymo's own public dashboard shows 220.6 million.",
+      "key_facts": [
+        "Cybercab has no manual controls at all, confirmed by Texas's DOT -- every Tesla robotaxi on the road today still has a steering wheel and pedals.",
+        "Tesla's own count: 380,000 unsupervised miles across 6 cities. Waymo's public safety dashboard: 220.6 million rider-only miles.",
+        "NHTSA has logged 17 Robotaxi incidents since Austin's mid-2025 launch, including 2 where a remote teleoperator took control at under 10 mph."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "curious, hands-on, hard eye for the demo-vs-shipping gap",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-tesla-cybercab-austin-launch-driverless-mile-gap.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-08-18T16:00:00Z",
-      "copy": "Tesla's “186 registered” Austin robotaxi fleet and its “~17-21 actually unsupervised” fleet are two very different numbers hiding behind one headline count.\n\nCybercab launches into whichever one is real.",
-      "reply_copy": "What each fleet number actually counts:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Tesla",
-        "#SelfDriving"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Tesla wants its pedal-free, steering-wheel-free Cybercab on Austin's public roads by the end of August.\n\nThe case for readiness: 380,000 unsupervised miles with “zero notable incidents,” per Tesla's own July earnings call.\n\nThe scale check: Waymo's own public safety dashboard shows 220.6 million rider-only miles through March -- roughly 580 times Tesla's count.\n\nAnd the fleet actually driving unsupervised right now in Texas: somewhere around 17 to 21 vehicles, well below the 186 registered under Tesla's own authorization.\n\nFull breakdown, NHTSA incident data included, at the link in bio.",
-      "hashtags": [
-        "#Tesla",
-        "#Cybercab",
-        "#Robotaxi",
-        "#SelfDrivingCars",
-        "#Waymo",
-        "#Robotics",
-        "#AI"
-      ],
-      "image": {
-        "prompt": null,
-        "status": "none",
-        "cost_usd": 0
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Tesla's Cybercab has no steering wheel. No pedals. No fallback if the driving system fails.\n\nIt's targeting an Austin public launch by end of August.\n\nTesla's own driverless-mile count: 380,000. Waymo's: 220,600,000.",
+        "reply_copy": "The fleet numbers, and what each one actually measures:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Tesla",
+          "#Robotaxi"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089670883095060553",
+        "remote_id": "2089670883095060553",
+        "posted_at": "2026-08-18T11:08:57Z"
       },
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Tesla told employees it wants Cybercab -- its first robotaxi with no steering wheel or pedals at all -- on Austin's public roads by the end of August.\n\nThe company's own safety case: 380,000 unsupervised miles with “zero notable incidents,” per its July earnings call. Waymo's own public dashboard, for comparison: 220.6 million rider-only miles through March.\n\nAnd the Texas fleet actually driving with no safety monitor at all right now sits at roughly 17 to 21 vehicles -- well below the 186 registered under Tesla's own state authorization.",
-      "hashtags": [
-        "#Tesla",
-        "#Robotaxi"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Cybercab has no steering wheel, no pedals, no fallback -- and Tesla wants it in Austin by end of August. Tesla's own driverless-mile count: 380,000. Waymo's, on its own public dashboard: 220.6 million. The gap is the story.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Cybercab: no wheel, no pedals, targeting an Austin launch this month. Tesla's own driverless-mile count is 380,000. Waymo's public dashboard: 220.6 million. Do the math.",
-      "hashtags": [
-        "#Tesla",
-        "#Robotaxi"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview",
-  "ts": "2026-08-18T10:58:00Z",
-  "export": {
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-18T16:00:00Z",
+        "copy": "Tesla's “186 registered” Austin robotaxi fleet and its “~17-21 actually unsupervised” fleet are two very different numbers hiding behind one headline count.\n\nCybercab launches into whichever one is real.",
+        "reply_copy": "What each fleet number actually counts:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Tesla",
+          "#SelfDriving"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Tesla wants its pedal-free, steering-wheel-free Cybercab on Austin's public roads by the end of August.\n\nThe case for readiness: 380,000 unsupervised miles with “zero notable incidents,” per Tesla's own July earnings call.\n\nThe scale check: Waymo's own public safety dashboard shows 220.6 million rider-only miles through March -- roughly 580 times Tesla's count.\n\nAnd the fleet actually driving unsupervised right now in Texas: somewhere around 17 to 21 vehicles, well below the 186 registered under Tesla's own authorization.\n\nFull breakdown, NHTSA incident data included, at the link in bio.",
+        "hashtags": [
+          "#Tesla",
+          "#Cybercab",
+          "#Robotaxi",
+          "#SelfDrivingCars",
+          "#Waymo",
+          "#Robotics",
+          "#AI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Tesla told employees it wants Cybercab -- its first robotaxi with no steering wheel or pedals at all -- on Austin's public roads by the end of August.\n\nThe company's own safety case: 380,000 unsupervised miles with “zero notable incidents,” per its July earnings call. Waymo's own public dashboard, for comparison: 220.6 million rider-only miles through March.\n\nAnd the Texas fleet actually driving with no safety monitor at all right now sits at roughly 17 to 21 vehicles -- well below the 186 registered under Tesla's own state authorization.",
+        "hashtags": [
+          "#Tesla",
+          "#Robotaxi"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Cybercab has no steering wheel, no pedals, no fallback -- and Tesla wants it in Austin by end of August. Tesla's own driverless-mile count: 380,000. Waymo's, on its own public dashboard: 220.6 million. The gap is the story.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Cybercab: no wheel, no pedals, targeting an Austin launch this month. Tesla's own driverless-mile count is 380,000. Waymo's public dashboard: 220.6 million. Do the math.",
+        "hashtags": [
+          "#Tesla",
+          "#Robotaxi"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mte3cetjgt2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mte3cetjgt2s",
+        "posted_at": "2026-08-18T11:09:06Z"
+      }
+    ]
+  },
+  {
     "article_id": "newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview",
-    "url": "https://rtfclmgzn.com/article/openai-ultrafast-cerebras-gpt-5-6-sol-preview",
-    "headline": "OpenAI's new Ultrafast tier runs GPT-5.6 Sol at 750 tokens a second on Cerebras chips — with no price attached yet",
-    "hook": "OpenAI and Cerebras previewed a new GPT-5.6 Sol speed tier running at up to 14x the standard API's speed -- same model, same quality, just faster tokens. Neither company has said what it costs.",
-    "key_facts": [
-      "Ultrafast runs GPT-5.6 Sol at up to 750 output tokens/second, 14x OpenAI's Standard tier.",
-      "It's powered by Cerebras's wafer-scale chips, which keep model weights on-chip instead of shuttling them from separate memory.",
-      "Access is limited to early customers in coding, finance, voice AI, and e-commerce; no price or GA date published."
-    ],
-    "tone": "technical, detail-obsessed",
-    "persona": "jin-park",
-    "section": "Compute",
-    "primary_image": "assets/img/newsroom/newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "OpenAI's new Ultrafast tier runs GPT-5.6 Sol at 750 tokens/sec on Cerebras chips -- 14x the standard API.\n\nSame model. Same quality. Just faster.\n\nWhat it costs: undisclosed.",
-      "reply_copy": "How the speed tiers stack up:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#OpenAI",
-        "#Cerebras"
+    "ts": "2026-08-18T10:58:00Z",
+    "export": {
+      "article_id": "newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview",
+      "url": "https://rtfclmgzn.com/article/openai-ultrafast-cerebras-gpt-5-6-sol-preview",
+      "headline": "OpenAI's new Ultrafast tier runs GPT-5.6 Sol at 750 tokens a second on Cerebras chips — with no price attached yet",
+      "hook": "OpenAI and Cerebras previewed a new GPT-5.6 Sol speed tier running at up to 14x the standard API's speed -- same model, same quality, just faster tokens. Neither company has said what it costs.",
+      "key_facts": [
+        "Ultrafast runs GPT-5.6 Sol at up to 750 output tokens/second, 14x OpenAI's Standard tier.",
+        "It's powered by Cerebras's wafer-scale chips, which keep model weights on-chip instead of shuttling them from separate memory.",
+        "Access is limited to early customers in coding, finance, voice AI, and e-commerce; no price or GA date published."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-openai-ultrafast-cerebras-gpt-5-6-sol-preview.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "instagram",
-      "copy": "OpenAI and Cerebras just previewed Ultrafast: GPT-5.6 Sol running at up to 750 tokens per second, up to 14x faster than OpenAI's Standard API tier.\n\nThe model itself doesn't change -- same intelligence, same context window. Only how fast the tokens arrive.\n\nThe trick: Cerebras's wafer-scale chips keep a model's weights on the chip itself, skipping the memory round-trip that caps GPU speed.\n\nWhat's missing: a price. Access is limited to early customers in coding, finance, voice AI, and e-commerce for now.\n\nFull breakdown at the link in bio.",
-      "hashtags": [
-        "#OpenAI",
-        "#Cerebras",
-        "#AI",
-        "#GPT",
-        "#AIInfrastructure",
-        "#MachineLearning"
-      ],
-      "image": {
-        "prompt": null,
-        "status": "none",
-        "cost_usd": 0
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI's new Ultrafast tier runs GPT-5.6 Sol at 750 tokens/sec on Cerebras chips -- 14x the standard API.\n\nSame model. Same quality. Just faster.\n\nWhat it costs: undisclosed.",
+        "reply_copy": "How the speed tiers stack up:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#Cerebras"
+        ],
+        "status": "ready",
+        "post_url": null
       },
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "OpenAI and Cerebras previewed a new speed tier for GPT-5.6 Sol on August 13: Ultrafast, running at up to 750 tokens per second -- up to 14x OpenAI's Standard API tier, with the same model and the same output quality.\n\nThe catch: neither company has published a price, and access is limited to a small group of early customers across coding, financial research, voice AI, and e-commerce for now.",
-      "hashtags": [
-        "#OpenAI",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "OpenAI + Cerebras: GPT-5.6 Sol now runs at 750 tokens/sec in preview, 14x the Standard tier, same model and quality. No price published yet. Wafer-scale chips are the trick -- weights stay on-chip instead of shuttling from memory.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "OpenAI's new Ultrafast tier: GPT-5.6 Sol at 750 tok/s on Cerebras wafer-scale chips, 14x Standard speed, same model. No price disclosed yet.",
-      "hashtags": [
-        "#OpenAI",
-        "#Cerebras"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+      {
+        "platform": "instagram",
+        "copy": "OpenAI and Cerebras just previewed Ultrafast: GPT-5.6 Sol running at up to 750 tokens per second, up to 14x faster than OpenAI's Standard API tier.\n\nThe model itself doesn't change -- same intelligence, same context window. Only how fast the tokens arrive.\n\nThe trick: Cerebras's wafer-scale chips keep a model's weights on the chip itself, skipping the memory round-trip that caps GPU speed.\n\nWhat's missing: a price. Access is limited to early customers in coding, finance, voice AI, and e-commerce for now.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#Cerebras",
+          "#AI",
+          "#GPT",
+          "#AIInfrastructure",
+          "#MachineLearning"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI and Cerebras previewed a new speed tier for GPT-5.6 Sol on August 13: Ultrafast, running at up to 750 tokens per second -- up to 14x OpenAI's Standard API tier, with the same model and the same output quality.\n\nThe catch: neither company has published a price, and access is limited to a small group of early customers across coding, financial research, voice AI, and e-commerce for now.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI + Cerebras: GPT-5.6 Sol now runs at 750 tokens/sec in preview, 14x the Standard tier, same model and quality. No price published yet. Wafer-scale chips are the trick -- weights stay on-chip instead of shuttling from memory.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's new Ultrafast tier: GPT-5.6 Sol at 750 tok/s on Cerebras wafer-scale chips, 14x Standard speed, same model. No price disclosed yet.",
+        "hashtags": [
+          "#OpenAI",
+          "#Cerebras"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
