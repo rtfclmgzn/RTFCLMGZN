@@ -3012,8 +3012,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Meta",
           "#AIEthics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089564745082765822",
+        "remote_id": "2089564745082765822",
+        "posted_at": "2026-08-18T04:07:12Z"
       },
       {
         "platform": "instagram",
@@ -3098,9 +3100,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AISafety"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -3244,8 +3246,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "threads",
         "copy": "ChatGPT's free tier gets ads in the EEA and Switzerland this month. Unlike the US pilot, personalization is off by default here -- likely a GDPR-driven design choice, not a voluntary one.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcKt3pojtxh",
+        "remote_id": "17989960328841549",
+        "posted_at": "2026-08-18T04:07:06Z"
       },
       {
         "platform": "bluesky",
