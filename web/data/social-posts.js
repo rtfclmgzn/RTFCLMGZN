@@ -3731,14 +3731,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AIPolicy",
           "#AIRegulation"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113593291396947",
+        "remote_id": "1238977099292018_122113593291396947",
+        "posted_at": "2026-08-19T02:04:26Z"
       },
       {
         "platform": "threads",
         "copy": "Amodei just backed a “FINRA for AI” he didn't write. Hassabis proposed it in July; Treasury had a rival, SEC-anchored version drafted 3 days later. Same White House official is reviewing both. Neither is mandatory yet -- the fight is over who gets to write the rules.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcNEqp-lXSL",
+        "remote_id": "18210238486358381",
+        "posted_at": "2026-08-19T02:04:45Z"
       },
       {
         "platform": "bluesky",
@@ -3800,8 +3804,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Tesla",
           "#SelfDriving"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089896338737541242",
+        "remote_id": "2089896338737541242",
+        "posted_at": "2026-08-19T02:04:50Z"
       },
       {
         "platform": "instagram",
@@ -3967,8 +3973,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Privacy",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2089895107499540821",
+        "remote_id": "2089895107499540821",
+        "posted_at": "2026-08-19T01:59:57Z"
       },
       {
         "platform": "instagram",
@@ -3987,8 +3995,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcNEJHzDL6P/",
+        "remote_id": "18111782656791256",
+        "posted_at": "2026-08-19T02:00:13Z"
       },
       {
         "platform": "facebook",
@@ -3997,14 +4007,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Privacy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113592409396947",
+        "remote_id": "1238977099292018_122113592409396947",
+        "posted_at": "2026-08-19T02:00:23Z"
       },
       {
         "platform": "threads",
         "copy": "ChatGPT, Claude, and Gemini each have a separate setting for whether your chats train the model. Turning it off only protects what you send afterward -- nothing already trained gets undone, and all three still carve out an exception for feedback ratings and safety review. Here's where each one actually lives.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcNEMMSlWkW",
+        "remote_id": "17929900362385603",
+        "posted_at": "2026-08-19T02:00:38Z"
       },
       {
         "platform": "bluesky",
