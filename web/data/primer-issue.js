@@ -450,11 +450,12 @@ window.RTFC_MAGAZINE_ISSUES.push({
     "folio": "Act III · The Face-Off",
     "title": "The models, head to head",
     "kicker": "August 2026 · the honest comparison",
-    "note": "Price tiers are relative, not list prices, and they move often. Open models are free to run if you supply the hardware.",
+    "note": "Score is the current Artificial Analysis Intelligence Index for each model's flagship reasoning mode — an independent measure, never the lab's own claim. Price tiers are relative, not list prices, and they move often. Open models are free to run if you supply the hardware.",
     "cols": [
       "",
       "Best at",
       "Personality",
+      "Score",
       "Price tier"
     ],
     "rows": [
@@ -462,36 +463,42 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "m": "GPT-5.6 (OpenAI)",
         "a": "All-around default",
         "b": "Polished, capable, safe pick",
+        "score": 61,
         "c": "$$$"
       },
       {
         "m": "Claude Fable 5 (Anthropic)",
         "a": "Writing, coding, careful reasoning",
         "b": "Thoughtful and thorough",
+        "score": 62,
         "c": "$$$$"
       },
       {
         "m": "Gemini 3.5 (Google)",
         "a": "Living inside Google's world",
         "b": "Fast and deeply integrated",
+        "score": 50,
         "c": "$$$"
       },
       {
         "m": "Grok 4.5 (xAI)",
         "a": "Cheap bulk work, live X data",
         "b": "Fast and blunt; check it",
+        "score": 56,
         "c": "$"
       },
       {
         "m": "Kimi K3 (Moonshot, open)",
         "a": "Self-hosting, long documents",
         "b": "Newest open heavyweight",
+        "score": 60,
         "c": "$ / free"
       },
       {
         "m": "DeepSeek (open)",
         "a": "Running it yourself",
         "b": "Scrappy, open, strong",
+        "score": 53,
         "c": "$ / free"
       }
     ],

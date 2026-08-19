@@ -977,6 +977,7 @@ a:hover>.mag-cover{transform:translateY(-4px);border-color:var(--accent)}
 .mfaceoff tr:last-child td{border-bottom:none}
 .mfaceoff .fo-m{font-family:var(--serif);font-weight:700;color:#181320;font-size:1.45cqh}
 .mfaceoff .fo-p{font-family:var(--sans);font-weight:800;color:var(--accent);letter-spacing:.05em;white-space:nowrap}
+.mfaceoff .fo-s{font-family:var(--sans);font-weight:800;color:#181320;text-align:center;white-space:nowrap}
 .mfo-note{font-size:1.2cqh;color:rgba(34,29,40,.55);font-style:italic;margin-top:3%;line-height:1.5}
 /* full-bleed pages */
 .mcover-in{position:absolute;left:8%;right:8%;bottom:7%}

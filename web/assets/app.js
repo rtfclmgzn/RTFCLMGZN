@@ -6563,7 +6563,8 @@
     if(pg.kind==="faceoff"){
       var fhead='<tr>'+pg.cols.map(function(c){return '<th>'+esc(c)+'</th>';}).join("")+'</tr>';
       var frows=pg.rows.map(function(r){
-        return '<tr><td class="fo-m">'+esc(r.m)+'</td><td>'+esc(r.a)+'</td><td>'+esc(r.b)+'</td><td class="fo-p">'+esc(r.c)+'</td></tr>';
+        var scoreCell = r.score!=null ? '<td class="fo-s">'+esc(String(r.score))+'</td>' : '';
+        return '<tr><td class="fo-m">'+esc(r.m)+'</td><td>'+esc(r.a)+'</td><td>'+esc(r.b)+'</td>'+scoreCell+'<td class="fo-p">'+esc(r.c)+'</td></tr>';
       }).join("");
       return '<div class="mpage light hasband">'+folio+band("faceoff")+
         (pg.kicker?'<div class="ip-kicker" style="color:var(--accent)">'+esc(pg.kicker)+'</div>':'')+

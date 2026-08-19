@@ -4400,5 +4400,298 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-19T16:43:40Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-ray-framework-cisa-kev-anyscale-vulnerability-dispute",
+    "ts": "2026-08-19T22:52:16Z",
+    "export": {
+      "article_id": "newsroom-ray-framework-cisa-kev-anyscale-vulnerability-dispute",
+      "url": "https://rtfclmgzn.com/article/ray-framework-cisa-kev-anyscale-vulnerability-dispute",
+      "headline": "CISA's new three-day patch rule just landed on Ray, the AI framework whose own maintainer still disputes a second, actively exploited flaw is a bug at all",
+      "hook": "CISA gave federal agencies 3 days to patch a Ray flaw -- but the more severe one, exploited by a botnet since 2023, isn't patched at all because Anyscale calls it a design decision, not a bug.",
+      "key_facts": [
+        "CISA added CVE-2025-62593 (CVSS 9.4) to its KEV catalog Aug. 17, giving federal agencies until Aug. 20 to patch.",
+        "A second Ray flaw, CVE-2023-48022 (CVSS 9.8), remains unpatched -- Anyscale calls the missing authentication a design decision.",
+        "A botnet exploiting that second flaw now controls 200,000+ exposed Ray servers, up from a few thousand in 2024."
+      ],
+      "tone": "technical, detail-obsessed, evaluation-first",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-ray-framework-cisa-kev-anyscale-vulnerability-dispute.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "CISA just gave federal agencies 3 days to patch a Ray AI-framework flaw.\n\nA MORE severe Ray flaw -- the one a botnet has been exploiting since 2023 -- still has no patch, because Anyscale calls the missing authentication a design decision, not a bug.",
+        "reply_copy": "Two CVEs, one framework, one very different story on each:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-20T03:52:16Z",
+        "copy": "A botnet has quietly turned 200,000+ exposed Ray servers into a cryptomining operation.\n\nOne hijacked GPU cluster: worth $3M/year in stolen compute.\n\nThe framework coordinates AI training at OpenAI and, by one estimate, 60% of the Fortune 500.",
+        "reply_copy": "How a 2023 'not a bug' dispute became this:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Botnet"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Ray is the open-source framework quietly coordinating AI training at OpenAI, Uber, and -- by one outside estimate -- 60% of the Fortune 500.\n\nRight now it has TWO separate security problems open at once.\n\nOne: a browser-based bug CISA just added to its Known Exploited Vulnerabilities catalog, giving federal agencies just 3 days to patch it.\n\nTwo: an older, more severe flaw that a self-propagating botnet has spent nearly two years turning into a cryptomining operation -- 200,000+ servers exposed, one hijacked cluster worth $3M a year in stolen compute.\n\nRay's own maintainer, Anyscale, still calls that second one a design decision, not a bug. MITRE, NVD, and Google's vulnerability database disagree.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#OpenSource",
+          "#TechNews",
+          "#DataCenter",
+          "#InfoSec"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The AI framework coordinating training runs at OpenAI and roughly 60% of the Fortune 500 (by one outside estimate) has two separate security problems open at the same time. CISA just gave federal agencies three days to patch a newly disclosed browser-based flaw. But a second, more severe flaw -- one a self-propagating botnet has spent nearly two years turning into a cryptomining operation, now controlling over 200,000 exposed servers -- remains unpatched, because the framework's maintainer, Anyscale, calls the missing authentication a design decision rather than a bug.\n\nMITRE, NVD, and Google's own vulnerability database disagree. We broke down both CVEs, the botnet exploiting one of them, and what an operator should actually check today.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "CISA gave federal agencies 3 days to patch a Ray AI-framework bug. A second, more severe Ray flaw -- exploited by a botnet since 2023, now controlling 200,000+ servers -- still has no patch, because Anyscale calls it a design decision, not a bug. MITRE and NVD disagree.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-20T03:52:16Z",
+        "copy": "One hijacked Ray GPU cluster is worth $3M a year in stolen compute, per the security firm tracking the botnet exploiting it. The framework it's exploiting coordinates AI training at OpenAI. The flaw has had no patch since 2023.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "CISA gave feds 3 days to patch a Ray AI-framework flaw. A worse Ray flaw -- exploited by a botnet since 2023, now 200k+ servers deep -- has NO patch, because Anyscale calls it a design decision. MITRE and NVD disagree. Two CVEs, same repo, very different accountability.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-unitree-shanghai-star-market-ipo-debut-surge",
+    "ts": "2026-08-19T22:50:45Z",
+    "export": {
+      "article_id": "newsroom-unitree-shanghai-star-market-ipo-debut-surge",
+      "url": "https://rtfclmgzn.com/article/unitree-shanghai-star-market-ipo-debut-surge",
+      "headline": "Unitree's Shanghai debut peaked near 630% and closed at 460% -- a robot maker's IPO popped on a day China's own benchmark index fell",
+      "hook": "Unitree's Shanghai IPO closed up 460% (after peaking near 630%) and hit a ~$50B valuation -- on the same day China's benchmark index fell 3%, and the same week a rival passed it as the top-shipping humanoid-robot maker.",
+      "key_facts": [
+        "Unitree priced at 150.8 yuan/share, closed at 845 yuan (+460%), after an intraday peak of 1,100 yuan (+629%).",
+        "The listing raised roughly $905 million; DeepSeek and Tencent are both pre-IPO investors.",
+        "AgiBot passed Unitree as the top-shipping humanoid-robot maker in H1 2026 the same week Unitree's IPO price was set."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-unitree-shanghai-star-market-ipo-debut-surge.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Unitree's Shanghai IPO closed up 460% -- after peaking near 630% intraday.\n\nValuation: ~$50B.\n\nSame day: China's own benchmark index fell 3%.\n\nSame week: a rival passed Unitree as the world's top-shipping humanoid-robot maker.",
+        "reply_copy": "The numbers that don't quite agree with each other, reconciled:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-20T03:50:45Z",
+        "copy": "DeepSeek and Tencent were both already investors in Unitree before Wednesday's IPO.\n\nDeepSeek put in about 140.8 million yuan, per the listing filing.\n\nNeither company has commented on the debut.",
+        "reply_copy": "Who was in before the public was:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#DeepSeek"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Unitree's Shanghai stock market debut, by the numbers:\n\nPriced at 150.8 yuan a share. Hit an intraday high of 1,100 yuan -- more than six times the offer price. Closed at 845 yuan, a 460% gain.\n\nThat close puts the Hangzhou humanoid-robot maker's valuation near $50 billion.\n\nHere's the twist: China's own benchmark index FELL about 3% that same day. And the same week, a rival called AgiBot passed Unitree as the world's top-shipping humanoid-robot maker.\n\nA record debut doesn't settle either open question -- what a stock does on day one, and what a company ships in the second half, are different claims entirely.\n\nFull breakdown at the link in bio. (Not financial advice.)",
+        "hashtags": [
+          "#Robotics",
+          "#IPO",
+          "#China",
+          "#Humanoid",
+          "#StockMarket",
+          "#AI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Unitree's Shanghai STAR Market debut closed up 460% on Wednesday, after briefly touching an intraday peak near 630% -- some headlines used one number, some used the other, and at least one outlet's figure matched neither. The closing price puts the Hangzhou humanoid-robot maker's valuation near $50 billion, on a listing that raised roughly $905 million.\n\nThe context is what makes it interesting: China's own benchmark index fell about 3% the same day, and the same week, rival AgiBot passed Unitree as the world's top-shipping humanoid-robot maker. We reconciled the conflicting numbers and laid out what the debut does -- and doesn't -- actually resolve. (This is reporting, not financial advice.)",
+        "hashtags": [
+          "#Robotics",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Unitree's Shanghai IPO closed +460% (peaked near +630% intraday), valuing the humanoid-robot maker near $50B -- on a day China's own benchmark index fell 3%. Same week, a rival passed it as the top-shipping humanoid-robot maker. Not financial advice, just a number worth double-checking.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Unitree's Shanghai debut: closed +460%, peaked near +630% intraday, ~$50B valuation -- on a day China's benchmark index fell 3%. Different outlets reported the peak vs the close as if they were the same number. They're not. (Not financial advice.)",
+        "hashtags": [
+          "#Robotics",
+          "#IPO",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-private-safety-processing-zero-data-retention",
+    "ts": "2026-08-19T22:50:52Z",
+    "export": {
+      "article_id": "newsroom-openai-private-safety-processing-zero-data-retention",
+      "url": "https://rtfclmgzn.com/article/openai-private-safety-processing-zero-data-retention",
+      "headline": "OpenAI previews a safety system that watches for misuse across conversations without storing any of them -- and asks enterprise customers to take that on faith until September",
+      "hook": "OpenAI is testing a system that claims to catch cross-conversation misuse without ever storing your prompts. Every technical detail about how, right now, comes from OpenAI itself -- the independent white paper doesn't land until September.",
+      "key_facts": [
+        "Private Safety Processing targets eligible enterprise/API customers under Zero Data Retention, not consumer ChatGPT plans.",
+        "Anthropic's contrasting approach retains Covered Model data for 30 days specifically to support safety review.",
+        "OpenAI's technical white paper explaining the mechanism is due in September 2026 -- currently unverified outside the company."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-openai-private-safety-processing-zero-data-retention.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI is previewing a system that catches misuse across conversations WITHOUT storing any of them.\n\nEvery technical detail about how comes from OpenAI itself.\n\nThe independent white paper doesn't land until September.",
+        "reply_copy": "How it compares to Anthropic's opposite bet, and what's still unverified:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DataPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-20T03:50:52Z",
+        "copy": "Two labs, two opposite bets on AI safety data:\n\nOpenAI: never retain anything, detect patterns in real time.\nAnthropic: retain 30 days specifically to support safety review.\n\nNeither approach has been independently audited.",
+        "reply_copy": "The full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI says it's fixing a real gap in its own privacy promise.\n\nZero Data Retention means OpenAI doesn't keep your prompts or responses. Great for privacy -- except a safety system that forgets everything can't catch a risk that only shows up across MULTIPLE conversations strung together.\n\nThe fix, previewed this week: Private Safety Processing. OpenAI says it can flag misuse patterns across related interactions without ever exposing the actual content to OpenAI staff.\n\nHere's the catch -- every specific technical claim about how this works currently comes from OpenAI itself. The independent technical white paper isn't due until September.\n\nWe compared it to Anthropic's opposite approach (retain data 30 days specifically for safety review) and laid out exactly which claims are confirmed vs. still just OpenAI's word. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#DataPrivacy",
+          "#AISafety",
+          "#OpenAI",
+          "#TechNews",
+          "#Enterprise"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI is testing a new system, Private Safety Processing, aimed at enterprise and API customers using its Zero Data Retention policy. The pitch: catch misuse patterns across multiple related conversations without ever storing -- or exposing to OpenAI staff -- the actual content. It's a real engineering problem worth solving, since a system that retains nothing can't normally spot a risk that only becomes visible across several interactions.\n\nThe catch is that every specific claim about how it works right now comes from OpenAI itself; the promised technical white paper doesn't arrive until September. We compared it to Anthropic's opposite bet -- retaining data for 30 days specifically to support safety review -- and broke down what's actually confirmed versus still just a company's own account.",
+        "hashtags": [
+          "#AI",
+          "#DataPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI previews a system that flags AI misuse across conversations without storing any of them. Sounds great -- except every technical claim about how it works right now comes from OpenAI itself. The independent white paper isn't due until September. Compared to Anthropic's opposite bet (retain 30 days for safety review) here:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI previews Private Safety Processing: catches misuse across conversations, never stores content. Every technical detail right now is OpenAI's own account -- white paper due September. Anthropic does the opposite: retains 30 days specifically for safety review. Neither independently audited yet.",
+        "hashtags": [
+          "#AI",
+          "#DataPrivacy",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
