@@ -4499,8 +4499,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Cybersecurity",
           "#InfoSec"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mthua2upjf26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mthua2upjf26",
+        "posted_at": "2026-08-19T23:13:11Z"
       }
     ]
   },
