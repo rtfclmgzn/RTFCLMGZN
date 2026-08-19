@@ -275,9 +275,13 @@ this order, and mark it done here.
    (after the closing `resources` spread, before ad/back matter). **Any future
    §3e edit must touch BOTH files, or it silently only reaches half of readers.**
    A dedicated future pass should diff the two files fully for other drift.
-3. `back.next` is a field the renderer already draws as a "NEXT ISSUE" box and
-   neither issue sets. The free issue currently ends without pointing at the paid
-   product it exists to sell.
+3. DONE (2026-08-19 cycle). `back.next` is a field the renderer already draws as a
+   "NEXT ISSUE" box (`app.js`, `pg.next`). Added a one-line teaser for Issue 001 to
+   the Primer's closing `back` spread in BOTH `web/data/primer-issue.js` (client SPA)
+   and `functions/api/issue/_data/primer.json` (`/api/issue/primer` route), per the
+   two-file drift warning left by item 2. No prior example of `next` existed on any
+   `back` spread in either file to copy from; the field is a plain string per the
+   renderer (`esc(pg.next)`).
 4. The face-off spread prints columns with no score and no real prices, one page
    after a spread arguing that independent scores are what count. Add a Score
    column from `scoreboard.js`.
