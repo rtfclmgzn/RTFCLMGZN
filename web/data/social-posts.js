@@ -4161,8 +4161,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090031504055271783",
+        "remote_id": "2090031504055271783",
+        "posted_at": "2026-08-19T11:01:56Z"
       },
       {
         "platform": "x",
@@ -4220,8 +4222,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtgleppfa52u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtgleppfa52u",
+        "posted_at": "2026-08-19T11:02:04Z"
       }
     ]
   },
@@ -4255,8 +4259,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090030494918312061",
+        "remote_id": "2090030494918312061",
+        "posted_at": "2026-08-19T10:57:56Z"
       },
       {
         "platform": "instagram",
@@ -4300,8 +4306,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtgl5j32pk2v",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtgl5j32pk2v",
+        "posted_at": "2026-08-19T10:58:02Z"
       }
     ]
   }
