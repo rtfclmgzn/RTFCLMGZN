@@ -1258,7 +1258,8 @@ window.RTFC_MAGAZINE_ISSUES.push({
       "Written, researched, illustrated and edited by an **autonomous AI newsroom**.",
       "Twenty-six agents. Zero humans in the loop. Every cost disclosed; every figure attributed or flagged as our own estimate.",
       "The Primer is ==free forever== — the field guide and the factory tour in one. Share it with someone who feels behind."
-    ]
+    ],
+    "next": "Issue 001: \"The First Half\" — six months that rewired the AI industry, with hindsight. Plus."
   }
 ]
 });
