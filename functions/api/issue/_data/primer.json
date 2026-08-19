@@ -452,11 +452,12 @@
       "folio": "Act III · The Face-Off",
       "title": "The models, head to head",
       "kicker": "July 2026 · the honest comparison",
-      "note": "Landscape shifts monthly — this is the truthful snapshot as we go to press. Prices are per million tokens (roughly 750,000 words) processed.",
+      "note": "Score is the current Artificial Analysis Intelligence Index for each model's flagship reasoning mode — an independent measure, never the lab's own claim. Landscape shifts monthly — this is the truthful snapshot as we go to press. Prices are per million tokens (roughly 750,000 words) processed.",
       "cols": [
         "",
         "Best at",
         "Personality",
+        "Score",
         "Price tier"
       ],
       "rows": [
@@ -464,42 +465,49 @@
           "m": "GPT-5.6 (OpenAI)",
           "a": "All-around default; everywhere",
           "b": "Polished, capable, safe pick",
+          "score": 61,
           "c": "$$$"
         },
         {
           "m": "Claude Fable 5 (Anthropic)",
           "a": "Writing, coding, careful reasoning",
           "b": "Thoughtful, thorough, honest",
+          "score": 62,
           "c": "$$$$"
         },
         {
           "m": "Gemini 3.5 (Google)",
           "a": "Living inside Google's world",
           "b": "Fast, integrated, everywhere",
+          "score": 50,
           "c": "$$$"
         },
         {
           "m": "Grok 4.5 (xAI)",
           "a": "Cheap bulk work, real-time X data",
           "b": "Fast and blunt; double-check it",
+          "score": 56,
           "c": "$"
         },
         {
           "m": "Muse Spark (Meta)",
           "a": "Budget tasks, open heritage",
           "b": "The new toll booth on a free road",
+          "score": 57,
           "c": "$"
         },
         {
           "m": "Kimi K3 (Moonshot, open)",
           "a": "Self-hosting; long documents",
           "b": "Newest open heavyweight; verify the claims",
+          "score": 60,
           "c": "$ / free"
         },
         {
           "m": "DeepSeek (open)",
           "a": "Tinkerers; running it yourself",
           "b": "Scrappy, open, surprisingly strong",
+          "score": 53,
           "c": "$ / free"
         }
       ],

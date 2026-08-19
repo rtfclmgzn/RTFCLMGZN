@@ -1,5 +1,42 @@
 # Living Notes — operational lessons for future runs
 
+- **2026-08-19** (evening cycle): `web/data/buzz.js` was **broken JavaScript on
+  the live site** when this cycle started — two records (`bz-265`, `bz-266`,
+  added by the day's earlier pulse-scan) used curly "smart" quotes as the
+  actual JS string delimiters (`{ id:"bz-265", ...` instead of straight `"`),
+  and a third, older record (`bz-255`) had an unescaped straight quote inside
+  a double-quoted string (`"...Mariano-Florentino "Tino" Cuéllar..."`). Both
+  are real `SyntaxError`s, confirmed with `node --check` — a browser loads
+  NONE of a file with either fault, so `window.RTFC_BUZZ` never got defined
+  and the Buzz page + homepage "Hottest on the wire" widget were silently
+  empty (contained blast radius only because `app.js` does `window.RTFC_BUZZ
+  || []` — no crash, just a quietly empty feed) for however long this sat
+  unpushed. Fixed by hand this cycle (straight quotes throughout, nested
+  quotes converted to single quotes). **No existing site_guard.py check
+  caught this or would have caught it**: `check_array_holes` only checked two
+  narrow, differently-shaped faults (stray comma, missing comma between
+  records); `store_parses()` correctly returned False but nothing acted on
+  that unless one of the two specific regexes also matched. Added a new
+  `check_js_syntax` check (runs `node --check` on every `web/data/*.js`,
+  skips with a warn if Node isn't on PATH, never blocks on an environment
+  gap) — a REAL parser, not a heuristic. Worth recording why the first
+  attempt failed: a regex for "smart quote right after `:`/`,`/`[`" seemed
+  safe and caught the real bug, but also fired on ordinary house-style prose
+  across `newsroom-articles.js` (a comma introducing a curly-quoted phrase —
+  `..., "weakened or voided pledges..."` — is completely normal journalism)
+  and on `companies.js` (`store_parses()` itself returns False there for an
+  unrelated, harmless reason: its `re:/pattern/i` regex-literal fields aren't
+  valid JSON and the tolerant Python parser was never meant to understand
+  them). A blocking check with those false positives would have been worse
+  than the bug it was written to catch — the next move from an agent hitting
+  it is disabling it, which OPERATING_LAW.md Law 6 already names as the
+  actual failure mode. `node --check` has no opinion about quote style, only
+  about valid syntax, so it had zero false positives against the full archive
+  plus both of those known-tricky files. If you are extending guard coverage
+  to a NEW fault shape found in bot-written data: try the real parser first,
+  not a regex heuristic against the pattern you just saw — the pattern you
+  just saw is never the only shape a real prose archive will throw back at it.
+
 - **2026-08-19**: `check_no_hash_links` only matches `href="#/..."` and `https?://.../#/...` patterns — it does **not** scan `citation_urls` array entries or `sources[].url` fields, which are plain JSON strings, not `href=` attributes. Found a real instance: `newsroom-articles.js`'s `kimi-k3-open-weights-live-download` article has `"citation_urls": ["#/article/white-house-moonshot-fable-distillation-accusation"]` (a bare `#/` route) sitting inside a body block, and several `guides.js` records (`g1`, `g3`) carry `"url": "#/masthead"` / `"#/corrections"` / `"#/scoreboard"` in their `sources` arrays — none of these trip the guard. Low current reader impact: `evidenceMarkHTML()` in `app.js` was retired 2026-08-14 (`return ""` before the dead code that would render `citation_urls` as clickable links), so these are inert data today, only feeding the evidence-strip *count*, not an actual `<a href>`. But `newsroom/schemas/article-draft.json` requires `sources[].url` to match `^https?://`, so these records already fail that schema even though `component_audit.py` never checks top-level `sources`/`citation_urls` against it (only body *component* blocks get schema-validated). Did not fix this cycle — it's inert today and fixing it site-wide is a different-shaped job than this cycle's one guide — but if `evidenceMarkHTML()` or anything else ever starts rendering `citation_urls` as real links, or if `component_audit` is ever extended to validate `sources`, this becomes a live bug on day one. Did not add new instances of either pattern in this cycle's own new content.
 
 - **2026-08-19**: `git log --oneline <old-sha>..HEAD` and `git show <sha>` will happily show a commit's diff even when that commit is on a **divergent branch**, not an ancestor of HEAD — `git merge-base <sha> HEAD` is the actual test. Found this the hard way: a commit titled "cycle: OpenAI Preparedness-team dispute, ChatGPT for Teens launch" (sha c2462f4) looked like recent history but `merge-base` showed it was never on `main` — it only exists on `origin/cycle-2026-08-18-2244-unshipped`, a full cycle's work (2 articles, images, buzz/social updates) that a prior run wrote locally and then never pushed (almost certainly the §5 step 5 "rebase conflict → abort, leave unpushed" path firing as designed). Net effect: neither of those two stories has ever actually been published, despite a commit that reads like they were. Before treating any `git log`/`git show` result as "already shipped," confirm the commit is reachable from `origin/main`, not just present somewhere in the object database. This cycle covered fresh follow-up developments on one of the two topics (OpenAI's Aug 18 Preparedness Framework rewrite) as new reporting rather than trying to resurrect the stale branch; the branch and its ChatGPT-for-Teens article are still sitting there unshipped for the owner to look at.

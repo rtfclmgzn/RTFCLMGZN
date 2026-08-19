@@ -420,6 +420,68 @@ def check_array_holes(fix: bool = False):
                     "run site_guard.py --fix" % p.name)
 
 
+def check_js_syntax():
+    """Every web/data/*.js file must be valid JavaScript, checked by an actual
+    JS parser — not the tolerant Python readers this file uses everywhere else.
+
+    WHY THIS EXISTS, and why it is NOT a regex (2026-08-19). A pulse-scan
+    append put curly ("smart") quotes where buzz.js needed straight ones as
+    the actual string delimiters, breaking two whole records. It was found and
+    fixed by hand, not by this guard: `check_array_holes` only ever checked
+    for two specific, narrower fault shapes (a stray comma, a missing comma
+    between records), so a differently-shaped SyntaxError sailed through
+    silently — `store_parses()` (the Python tolerant reader used elsewhere)
+    correctly returned False, and nothing surfaced that.
+
+    The first fix attempt here was a regex — smart quote immediately after
+    `:`, `,` or `[` — and it was wrong. Tested against the live archive, it
+    fired on ordinary house-style prose (a comma introducing a quoted phrase:
+    `..., "weakened or voided pledges..."`), which is completely normal
+    journalism and appears constantly in newsroom-articles.js. A check that
+    floods on legitimate content is worse than no check, because the next
+    move is disabling it, and OPERATING_LAW.md Law 6 is explicit that a
+    disabled guard reads as safety and is its opposite.
+
+    `node --check <file>` is the actual fix: a real parser, not a heuristic,
+    so it has no opinion about curly quotes inside a string — only about
+    whether the file is syntactically valid JS. Verified against the full
+    archive plus the two known-tricky cases (companies.js's `re:/.../i`
+    regex-literal fields, and cover-remediation-2026-07-14.js's function-
+    valued IIFE) with zero false positives, and against a deliberately
+    reintroduced copy of the original bug, which it caught with a line number.
+
+    Skips (does not fail the build) if Node isn't on PATH — this check adds
+    real coverage where Node is available and must never be the reason an
+    unrelated environment gap blocks a ship.
+    """
+    import shutil
+    import subprocess
+
+    if shutil.which("node") is None:
+        warn("js-syntax", "node not found on PATH — skipped real-JS-parser "
+             "validation of web/data/*.js this run. Not a data problem; just "
+             "unchecked by this pass.")
+        return
+    checked = 0
+    for p in sorted(DATA.glob("*.js")):
+        checked += 1
+        try:
+            result = subprocess.run(["node", "--check", str(p)],
+                                     capture_output=True, text=True, timeout=30)
+        except Exception as exc:                            # noqa: BLE001
+            warn("js-syntax", "%s: could not run `node --check` (%s) — skipped"
+                 % (p.name, exc))
+            continue
+        if result.returncode != 0:
+            detail = (result.stderr or result.stdout or "").strip().splitlines()
+            first = next((l for l in detail if l.strip()), "").strip()
+            err("js-syntax", "%s: FAILS `node --check` — this is not valid "
+                "JavaScript, so a browser loads NONE of it and every page "
+                "reading it is stale or empty right now. %s"
+                % (p.name, first or "(no detail captured)"))
+    expect("js-syntax", checked, 20, "web/data/*.js files checked with a real JS parser")
+
+
 def repair_ledger_ids(fix: bool) -> None:
     """Duplicate row ids are SILENT DATA LOSS.
 
@@ -1922,6 +1984,7 @@ def main() -> int:
         return 0
 
     run("check_array_holes", check_array_holes, fix)
+    run("check_js_syntax", check_js_syntax)
     run("repair_ledger_ids", repair_ledger_ids, fix)
     run("repair_future_timestamps", repair_future_timestamps, fix)
     run("repair_ledger_duplicates", repair_ledger_duplicates, fix)

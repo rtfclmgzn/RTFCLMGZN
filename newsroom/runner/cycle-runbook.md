@@ -282,9 +282,26 @@ this order, and mark it done here.
    two-file drift warning left by item 2. No prior example of `next` existed on any
    `back` spread in either file to copy from; the field is a plain string per the
    renderer (`esc(pg.next)`).
-4. The face-off spread prints columns with no score and no real prices, one page
-   after a spread arguing that independent scores are what count. Add a Score
-   column from `scoreboard.js`.
+4. DONE (2026-08-19 cycle). Added a "Score" column (the current Artificial
+   Analysis Intelligence Index for each model's flagship mode, from
+   `web/data/scoreboard.js`) to the "Act III · The Face-Off" model-comparison
+   spread — NOT the separate "Act V · The Money" capex-comparison spread later
+   in the same file, which also uses `kind:"faceoff"` but has no model-score
+   column to add. Updated both `web/data/primer-issue.js` (6 rows) and
+   `functions/api/issue/_data/primer.json` (7 rows — that file's version
+   additionally carries a Muse Spark row `primer-issue.js` lacks; scored it too
+   rather than dropping it, since reconciling which file's row list is correct
+   is a separate drift question §3e item 2 already flagged for a future pass).
+   The `faceoff` spread type had no renderer support for a 5th column, so this
+   also required a small `web/assets/app.js` change (`pg.kind==="faceoff"`
+   block) plus a `.fo-s` CSS rule in `web/assets/styles.css` — backward
+   compatible, only renders the cell when a row has `score`, so the unrelated
+   "Act V" faceoff spread (no `score` field on its rows) is unaffected. Prices
+   remain unaddressed (the note text still calls them "relative, not list
+   prices"); real vendor list prices are already sitting in `scoreboard.js`'s
+   `pin`/`pout` fields and are the natural next sub-item if this spread is
+   revisited, but adding a 6th column in the same cycle as the 5th felt like
+   more render-surface risk than one work-order item should take on at once.
 
 **Then, one per cycle, with new writing:**
 
