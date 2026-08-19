@@ -4316,5 +4316,85 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-19T10:58:02Z"
       }
     ]
+  },
+  {
+    "article_id": "g11",
+    "ts": "2026-08-19T16:39:55Z",
+    "export": {
+      "article_id": "g11",
+      "url": "https://rtfclmgzn.com/article/check-an-open-weight-models-license",
+      "headline": "How to tell whether an 'open' AI model's license actually lets you use it",
+      "hook": "DeepSeek's V4 Pro ships true MIT, no conditions at all. Meta's Llama 3 grant expires outright past 700 million monthly users. Both get called 'open' in the same breath.",
+      "key_facts": [
+        "DeepSeek V4 Pro's MIT license carries zero usage conditions; Llama 3's Community License expires past 700M monthly active users.",
+        "Moonshot's Kimi K2 only adds an attribution requirement past 100M users or $20M in monthly revenue.",
+        "Tencent's Hunyuan Hy3 swapped a geo-restricted preview license for plain Apache 2.0 in about ten weeks."
+      ],
+      "tone": "practical, technical, procedural",
+      "persona": "jin-park",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g11.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "DeepSeek's V4 Pro ships true MIT -- zero conditions.\n\nMeta's Llama 3 license expires outright once your product crosses 700 million monthly users.\n\nBoth get called \"open\" in the same breath. They are not the same grant.",
+        "reply_copy": "The four-question check, run on four real 2026 releases:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#OpenSource"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Two AI models can both be marketed as \"open\" and hand you completely different rights.\n\nDeepSeek's V4 Pro ships under true MIT -- no conditions beyond keeping the copyright notice.\n\nMeta's Llama 3 Community License allows commercial use, but the free grant expires outright once your product crosses 700 million monthly active users.\n\nMoonshot's Kimi K2 sits in between: unrestricted until you clear 100 million users or $20 million in monthly revenue, then you just need to display \"Kimi K2\" in your interface.\n\nAnd Tencent's Hunyuan Hy3 changed its own answer mid-year -- a geo-restricted preview license in April, a plain Apache 2.0 grant by July.\n\nThe four-question check for reading any \"open\" model's actual license, at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OpenSource",
+          "#MachineLearning",
+          "#TechTips",
+          "#SoftwareLicensing",
+          "#DeveloperTools"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Two AI models marketed as \"open\" can hand you completely different rights. DeepSeek's V4 Pro ships under true MIT with zero conditions. Meta's Llama 3 Community License allows commercial use, but the free grant expires outright once your product crosses 700 million monthly active users -- at which point you need Meta's own separate license.\n\nMoonshot's Kimi K2 only adds an attribution requirement past 100 million users or $20 million in monthly revenue. And Tencent's Hunyuan Hy3 swapped a geo-restricted preview license for a plain Apache 2.0 grant in about ten weeks -- proof that a license you checked on a past release isn't evidence for the one you're about to deploy.\n\nWe put together the four-question check worth running on any \"open\" model before you build on it.",
+        "hashtags": [
+          "#AI",
+          "#OpenSource"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "DeepSeek's V4 Pro ships true MIT, zero conditions. Meta's Llama 3 grant expires outright past 700 million monthly users. Moonshot's Kimi K2 only adds attribution past 100M users or $20M monthly revenue. Same word, three different grants. Here's the four-question check.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "\"Open-weight\" AI models don't all carry the same rights. DeepSeek V4 Pro: true MIT, no conditions. Llama 3: free grant expires past 700M monthly users. Kimi K2: unrestricted until 100M users or $20M/mo revenue. Read the actual LICENSE file, not the launch post.",
+        "hashtags": [
+          "#AI",
+          "#OpenSource"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

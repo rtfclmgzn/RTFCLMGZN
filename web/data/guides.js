@@ -1156,7 +1156,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "Two honest limits before you run this yourself. First, the worked example above uses one model's numbers from one week — API prices and hardware costs both move, sometimes sharply, so re-check the actual figures rather than reusing these. Second, this framework assumes you can get a real hardware quote and real usage data; if either one is a guess, the output of step five is a guess too, dressed up as arithmetic. The six steps don't remove uncertainty from the decision. They make sure the uncertainty that's left is the kind you chose, rather than the kind you didn't notice.",
+        "text": "Two honest limits before you run this yourself. First, the worked example above uses one model's numbers from one week — API prices and hardware costs both move, sometimes sharply, so re-check the actual figures rather than reusing these. Second, this framework assumes you can get a real hardware quote and real usage data; if either one is a guess, the output of step five is a guess too, dressed up as arithmetic. The six steps don't remove uncertainty from the decision. They make sure the uncertainty that's left is the kind you chose, rather than the kind you didn't notice. One more thing this framework assumes: that the model's license actually lets you deploy it the way you're planning to — a self-hosting decision made on hardware math alone can still hit a wall the spreadsheet never priced in. [Our guide to checking an open-weight model's license](/article/check-an-open-weight-models-license) is the step to run before, not after, you buy the hardware.",
         "citation_urls": []
       }
     ],
@@ -2601,6 +2601,231 @@ window.RTFC_GUIDES = [
       {
         "label": "BGR — \"How To Stop Google Gemini From Training On Your Personal Chats\"",
         "url": "https://www.bgr.com/1939066/how-to-stop-google-gemini-training-personal-data/"
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g11",
+    "slug": "check-an-open-weight-models-license",
+    "image": "assets/img/newsroom/g11.jpg",
+    "title": "How to tell whether an 'open' AI model's license actually lets you use it",
+    "dek": "Two models marketed as open can hand you completely different rights — one lets you ship it commercially with nothing but a copyright notice, another's free grant expires the moment your product crosses a user count nobody put in the launch tweet. A four-question check, worked through on four real 2026 releases.",
+    "persona": "jin-park",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-19T16:45:00Z",
+    "readMins": 5,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "\"Open-weight\" doesn't mean open-source — read the actual license file, never the launch post.",
+      "DeepSeek's V4 Pro ships true MIT; Meta's Llama 3 grant expires past 700 million monthly users.",
+      "Moonshot's Kimi K2 only requires attribution past 100 million users or $20 million monthly revenue.",
+      "Tencent's Hunyuan Hy3 went from a restricted preview license to Apache 2.0 in ten weeks.",
+      "Caveat: a license you checked on a past release says nothing about the version you're deploying now."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Before your next self-host, run the four-question check on the model you're about to pull.",
+        "text": "Not on the whole industry — just the one license you're about to click \"agree\" on. Five minutes now beats a renegotiation later."
+      },
+      {
+        "label": "If your product is anywhere near a nine-figure user count, put the exact threshold in your own compliance tracking.",
+        "text": "A cap like Llama 3's 700 million doesn't announce itself — it sits in a document nobody reopens after launch day. A vague memory of \"it was fine when we checked\" isn't a control."
+      },
+      {
+        "label": "If your pipeline does any distillation or synthetic-data generation, read the field-of-use clause specifically.",
+        "text": "That's the exact restriction some \"open\" licenses write in — using a model's outputs to train or improve a different model — and it's easy to miss if you only skim for a user-count number."
+      },
+      {
+        "label": "Re-run the check at every major version, not just once.",
+        "text": "Tencent's Hy3 went from a restrictive, geo-carved preview license to a fully open Apache 2.0 grant in about ten weeks. Same lab, same model family, two different answers ten weeks apart."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Two models can both call themselves **\"open\"** and hand you completely different rights. One lets you fine-tune it, wrap it in a product, and sell that product with no restriction beyond keeping a copyright notice in place. The other's free grant quietly expires the moment your product crosses a user count nobody mentioned in the launch tweet — and by then, renegotiating is a business problem, not a code change. The fix costs about five minutes: read the actual license file, not the announcement, and check it against four specific things, every time.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What \"open-weight\" doesn't promise",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "\"Open-weight\" only means the trained parameters are downloadable — it says nothing about the terms attached to them. A genuine open-source license (__Apache 2.0__ or __MIT__, the same terms most of the software industry already trusts) grants blanket rights to use, modify, redistribute, and sell. A \"community license\" or \"acceptable use\" license can sit behind the identical download link with a completely different set of conditions: a user-count ceiling, a revenue threshold, a ban on using the model's own outputs to train a rival, or a naming requirement once your product gets big enough to notice. ==The download step looks identical either way — the difference lives entirely in a document most people never open.==",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check the license before you ship",
+          "sub": "Five minutes, once per model, before it's load-bearing in anything you've shipped.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "A specific model you're planning to self-host, fine-tune, or build a product on."
+          ],
+          "steps": [
+            {
+              "do": "Find the actual license file, not the announcement.",
+              "detail": "Open the model's card on Hugging Face or its GitHub repo and read the LICENSE file directly. A launch blog post is marketing copy, and it can describe terms that change before the model does.",
+              "verify": "You're reading a document titled something like LICENSE or license.txt, not a press release or a blog post.",
+              "ifnot": "No license file anywhere on the model card? That's a red flag on its own — don't assume permissive terms from silence."
+            },
+            {
+              "do": "Identify the license family.",
+              "detail": "A real Apache 2.0 or MIT grant — both OSI-approved, both give blanket rights to use, modify, redistribute, and sell — versus a custom \"community license\" or \"research license\" the vendor wrote itself.",
+              "verify": "The license's name matches one you could look up independently (Apache-2.0, MIT), or you can point to the specific custom clauses that make it neither.",
+              "ifnot": "If the license doesn't name itself, search the text for \"modified\" or the vendor's own product name in the title — that's your signal it's custom, not a standard grant."
+            },
+            {
+              "do": "Check for a usage-based threshold.",
+              "hi": true,
+              "detail": "Search the text for \"monthly active users\" or \"revenue.\" Some \"open\" licenses expire your free grant entirely past a user count; others only add an attribution requirement.",
+              "why": "This is the clause most teams never read, because a small product feels years away from tripping it — until it isn't.",
+              "verify": "You can state the exact number, in users or dollars, where your rights change — or confirm the license has none.",
+              "ifnot": "Can't find a number? The license is probably unconditional on this axis — but confirm by reading the full grant section, not just skimming for digits."
+            },
+            {
+              "do": "Check what you're allowed to build with the outputs.",
+              "detail": "Some licenses ban using the model's own outputs to train or improve a different model — a real constraint if your pipeline does any distillation or synthetic-data generation.",
+              "verify": "You know whether your actual planned use, including any training pipeline, sits inside or outside the grant.",
+              "ifnot": "If the clause reads ambiguous, treat it as a restriction, not a green light — asking the vendor costs less than guessing wrong."
+            },
+            {
+              "do": "Re-check at the version you're actually deploying, not the one you remember.",
+              "detail": "The same lab can ship a restrictive preview license and a permissive full release ten weeks apart, or the reverse. A license you checked in a prior release cycle is not evidence for this one.",
+              "verify": "The LICENSE file you're reading carries the same version number or date as the weights you're about to pull.",
+              "ifnot": "Mismatch between the LICENSE file's date and the model you're downloading? Stop and re-read — you may be looking at the wrong release's terms."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Four real 2026 licenses, side by side",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The differences aren't hypothetical. Four models released this year, all marketed as \"open,\" land in four different places once you actually read the document. [DeepSeek](/company/deepseek)'s V4 Pro ships under a true MIT license — commercial use, redistribution, and training other models on its outputs are all unrestricted beyond keeping the copyright notice intact. [Meta](/company/meta)'s Llama 3 Community License permits commercial use, but its free grant expires outright once a licensee's products cross **700 million** monthly active users in the preceding month, and it separately bars using Llama's outputs to improve any other large language model. [Moonshot](/company/moonshot)'s Kimi K2 ships under a Modified MIT License that stays permissive at any size — the only added condition is displaying \"Kimi K2\" in your product's interface once you clear **100 million** monthly active users or **$20 million** in monthly revenue. And [Tencent](/company/tencent)'s Hunyuan Hy3 changed its own answer mid-year: its April preview shipped under a restrictive custom license that excluded the EU, UK, and South Korea outright, and its July full release dropped that entirely for a plain Apache 2.0 grant.",
+        "citation_urls": [
+          "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/LICENSE",
+          "https://developer.meta.com/ai/llama3/license/",
+          "https://huggingface.co/moonshotai/Kimi-K2-Instruct/raw/main/LICENSE",
+          "https://huggingface.co/tencent/Hy3",
+          "https://www.digitalapplied.com/blog/tencent-hunyuan-hy3-open-weight-reasoning-model-2026"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "SAME WORD, FOUR DIFFERENT GRANTS",
+          "title": "What four 2026 \"open\" releases actually let you do",
+          "columns": [
+            { "label": "DeepSeek V4 Pro", "sub": "MIT" },
+            { "label": "Kimi K2", "sub": "Modified MIT" },
+            { "label": "Llama 3", "sub": "Community License" },
+            { "label": "Hunyuan Hy3", "sub": "Apache 2.0, current release", "hi": true }
+          ],
+          "rows": [
+            { "label": "License family", "values": ["MIT", "Modified MIT", "Llama 3 Community License", "Apache 2.0"] },
+            { "label": "Commercial use", "values": ["Unrestricted", "Unrestricted", "Allowed, with a cap", "Unrestricted"] },
+            { "label": "Where the grant changes", "values": ["Never", "Attribution required past 100M users or $20M monthly revenue", "Free grant expires past 700M monthly users; a separate license is required beyond it", "Was geo-restricted at its earlier preview; dropped entirely at the current release"] },
+            { "label": "Training other models on its outputs", "values": ["No restriction", "No restriction", "Explicitly banned for other large language models", "No restriction"] }
+          ],
+          "source": "Meta's Llama 3 Community License (developer.meta.com); DeepSeek-V4-Pro's and Kimi-K2-Instruct's Hugging Face LICENSE files; Tencent's Hy3 model card and Digital Applied's reporting on its April preview license — read directly, current as of August 19, 2026."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Where this reading goes wrong",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "title": "Five ways this check gets skipped",
+          "items": [
+            {
+              "mistake": "Reading the launch blog post instead of the LICENSE file.",
+              "looks": "You can describe the model as \"open\" but can't name which license, or point to the file.",
+              "why": "Launch copy is marketing, written before terms are final and never updated after — Hunyuan Hy3's own preview-to-release swing shows the operative document can change entirely.",
+              "fix": "Pull the LICENSE file linked on the model card and read it before you write a line of code against the model.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating every license marketed as \"open\" as functionally identical.",
+              "looks": "You assume a model is unrestricted because a competitor's model with a similar-sounding license was.",
+              "why": "MIT and a vendor's own \"Modified MIT\" are not the same document — one has zero conditions, the other adds one at scale.",
+              "fix": "Name the specific license, not the word \"open,\" every time you evaluate a model.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Skipping the usage-threshold check because your product is small today.",
+              "looks": "Nobody on the team can name the exact user count or revenue figure where the license's terms change.",
+              "why": "A cap like Llama 3's doesn't announce itself when you cross it — it just sits in a document nobody reopens after the integration ships.",
+              "fix": "Write the exact number down in your own compliance tracking the day you adopt the model, not the day you might hit it.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Missing the field-of-use restriction on training other models.",
+              "looks": "Your team runs a distillation or synthetic-data pipeline off a model's outputs without checking whether the license allows it.",
+              "why": "This is the exact clause some licenses write in, and it's invisible if you only search the text for a user-count number.",
+              "fix": "Read the full grant section for language about training, improving, or building competing models — not just the pricing-style thresholds.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Assuming a license checked on a past release still applies.",
+              "looks": "You cite terms you remember from an earlier version of the model instead of the one you're about to pull.",
+              "why": "Hunyuan Hy3 carried a geo-restricted custom license in April and a plain Apache 2.0 grant in July — same lab, same model family, different answer ten weeks apart.",
+              "fix": "Re-open the LICENSE file at every version bump. A prior check is not evidence for the current one.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is abstract for this beat specifically: a license's field-of-use clause is the same territory as the [distillation](/dictionary) dispute this newsroom has covered directly — Washington's [unproven accusation that Moonshot distilled Anthropic's models to build Kimi K3](/article/white-house-moonshot-fable-distillation-accusation) turns on exactly the question a license's training-restriction clause is meant to settle in advance: whose outputs can legally train whose next model. {{note: A license with no field-of-use restriction doesn't make an unauthorized-access claim like that one go away — it only settles what you're allowed to do with a model you already have lawful access to.}} If the next question is whether to self-host the model at all once its license clears, [our guide to deciding between self-hosting and an API](/article/self-host-or-api-how-to-decide) picks up from here.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "Meta — Llama 3 Community License",
+        "url": "https://developer.meta.com/ai/llama3/license/",
+        "primary": true
+      },
+      {
+        "label": "DeepSeek-V4-Pro — Hugging Face LICENSE file",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/LICENSE",
+        "primary": true
+      },
+      {
+        "label": "Kimi-K2-Instruct — Hugging Face LICENSE file",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/raw/main/LICENSE",
+        "primary": true
+      },
+      {
+        "label": "Tencent — Hy3 model card (license: apache-2.0)",
+        "url": "https://huggingface.co/tencent/Hy3",
+        "primary": true
+      },
+      {
+        "label": "Digital Applied — \"Tencent's Hunyuan Hy3: Open-Weight Reasoning Arrives\" (April preview license history)",
+        "url": "https://www.digitalapplied.com/blog/tencent-hunyuan-hy3-open-weight-reasoning-model-2026"
+      },
+      {
+        "label": "VentureBeat — \"Tencent's Apache-licensed Hy3 takes on GLM-5.2 at half the size\"",
+        "url": "https://venturebeat.com/technology/tencents-apache-licensed-hy3-takes-on-glm-5-2-at-half-the-size-and-wins-everywhere-except-coding"
       }
     ],
     "corrections": []
