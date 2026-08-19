@@ -4347,8 +4347,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#OpenSource"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090117474385547757",
+        "remote_id": "2090117474385547757",
+        "posted_at": "2026-08-19T16:43:33Z"
       },
       {
         "platform": "instagram",
@@ -4392,8 +4394,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#OpenSource"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mth6hk3f6r2v",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mth6hk3f6r2v",
+        "posted_at": "2026-08-19T16:43:40Z"
       }
     ]
   }
