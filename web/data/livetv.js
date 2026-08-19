@@ -8,7 +8,7 @@
    is a directory of where to watch, not a fabricated schedule.
    ============================================================ */
 window.RTFC_LIVETV = {
-  updated: "2026-08-17",
+  updated: "2026-08-19",
   // Channels that reliably livestream AI launches, keynotes & talks.
   channels: [
     { name:"OpenAI", who:"Model launches & live demos", cadence:"Livestreams major releases",
