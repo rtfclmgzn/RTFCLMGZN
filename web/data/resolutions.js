@@ -109,6 +109,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Anthropic, Macquarie, and GIC announced the Theseus Infrastructure partnership on August 10-12, 2026, with public disclosure of the first site: a 400-megawatt facility in Texas with grid upgrades funded entirely by Anthropic, targeted for Q4 2026 operation. Phased expansion planned to 2 gigawatts by 2028.",
       label:"Theseus Infrastructure first-site capacity and location",
-      url:"https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html" }
+      url:"https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html" },
+    { key:"alibaba-qwen38-max-preview-no-benchmarks|w|1",
+      at:"2026-08-12T16:00:00Z",
+      outcome:"confirmed",
+      note:"Alibaba released Qwen3.8-Max open weights on August 12, 2026, as Qwen3.8-2.4T-A95B (text-only variant, 2.4 trillion parameters with 95B active per token). The open-weights checkpoint is available on Hugging Face; the release removed multimodal (vision/video) capabilities from the API version.",
+      label:"Alibaba Qwen3.8-Max open weights release on Hugging Face",
+      url:"https://www.explainx.ai/blog/qwen3-8-max-open-weights-live-hugging-face-august-2026" }
   ]
 };
