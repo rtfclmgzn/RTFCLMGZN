@@ -3842,8 +3842,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "threads",
         "copy": "Cybercab has no steering wheel, no pedals, no fallback -- and Tesla wants it in Austin by end of August. Tesla's own driverless-mile count: 380,000. Waymo's, on its own public dashboard: 220.6 million. The gap is the story.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcNStODkRUO",
+        "remote_id": "18177493138418166",
+        "posted_at": "2026-08-19T04:07:27Z"
       },
       {
         "platform": "bluesky",
