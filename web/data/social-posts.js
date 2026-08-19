@@ -4066,8 +4066,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#FutureOfWork"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090067505242931294",
+        "remote_id": "2090067505242931294",
+        "posted_at": "2026-08-19T13:24:59Z"
       },
       {
         "platform": "x",
@@ -4126,8 +4128,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Labor"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtgtei2lof2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtgtei2lof2s",
+        "posted_at": "2026-08-19T13:25:06Z"
       }
     ]
   },
