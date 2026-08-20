@@ -150,4 +150,10 @@ window.RTFC_BUZZ = [
     why:"Complete sellout of a year of memory capacity 18 months in advance reveals the depth of the AI infrastructure buildout and gives hyperscalers and AI labs a scarcity signal that affects roadmap investment and hardware design choices across the board.",
     heat:62, topics:["memory chips","infrastructure","dram","hbm","supply chain","semiconductors"],
     url:"https://www.tweaktown.com/news/113004/memory-capacity-for-all-of-2027-has-reportedly-been-booked-and-sold-with-no-more-dram-or-hbm-available/index.html" },
+{ id:"bz-275", date:"2026-08-19",
+    source:{ name:"Ornith / DeepReinforce", handle:"Ornith", platform:"web", kind:"lab" },
+    text:"Ornith released Ornith-1.5, an open-weight model family in three sizes — 397B, 35B, and 9B parameters — under the MIT License. The 397B variant achieved 86.1 on Terminal-Bench 2.1, matching Claude Opus 4.8 (85.0), while the quantized 9B runs on smartphones. The model uses self-improvement training: it generates new tasks, builds test harnesses, and turns its own execution attempts into data for the next training round.",
+    why:"A large open-weight model achieving frontier-level benchmarks and shipping in phone-deployable sizes signals the end of size-based capability stratification — what earlier required $10M compute and closed infrastructure now runs locally.",
+    heat:60, topics:["open weights","model release","ornith","benchmark performance","self-improvement","local deployment"],
+    url:"https://gigazine.net/gsc_news/en/20260820-ornith-1-5" },
 ];
