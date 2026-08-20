@@ -129,6 +129,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://rtfclmgzn.com/advertise</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://rtfclmgzn.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

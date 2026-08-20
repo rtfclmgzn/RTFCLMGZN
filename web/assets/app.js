@@ -28,6 +28,15 @@
   // as an AI title in its own header. Config, with a derived fallback that
   // is at least true.
   var MOTTO = E_ID.motto || (SUBJECT + " news, written by AI, about " + SUBJECT);
+  // SUBJECT-BOUND SURFACES (2026-08-16). Scoreboard, Labs, Grid, Extensions and
+  // Dictionary have schemas that presuppose the AI beat, so engine.config.json
+  // switches each one on or off and names it. Off means: no route (not-found
+  // view; the server 404s too), no hub tile, no palette entry, no footer link
+  // (gen_engine_js stamps that), no sitemap URL (gen_sitemap drops it). A
+  // missing block means everything is on, which is exactly what RTFCLMGZN was.
+  var SURF = ENGINE.surfaces || {};
+  function surfOn(k){ var s=SURF[k]; return !(s && s.enabled===false); }
+  function surfLabel(k,d){ var s=SURF[k]; return (s && s.label) || d; }
   var SITE_HOME=E_WEB.site_url||(location.protocol==="file:"?"":location.origin);   // the organisation's canonical identity
   var OG_FALLBACK=(E_WEB.og_image||"/assets/img/og.jpg").replace(/^\//,"");
   // One desk list. Colour and glyph come from the same record, so they can
@@ -384,7 +393,7 @@
         '<p class="pp-dek">Plus is <b>invite-only</b> while we finish setting up subscriptions. '+
         'If you have a code, it works right now — no card, nothing to pay.</p></div>';
       vh+='<div class="pp-soon">Subscriptions open soon at <b>'+billMoney(yr)+'/year</b>'+
-        ' or '+billMoney(mo)+'/month. Articles stay free, forever.</div>';
+        ' or '+billMoney(mo)+'/month. Plus unlocks every article in full.</div>';
       if(!l.account){
         vh+='<a class="cta pp-buy" href="/account">Create a free account to use a code</a>';
       }
@@ -395,7 +404,7 @@
     var h='<div class="plusplans'+(compact?' pp-compact':'')+'">';
     if(!compact && opts.dek!==false){
       h+='<div class="pp-head"><div class="pp-mark">'+SITE_NAME+' <b>Plus</b></div>'+
-        '<p class="pp-dek">The monthly issue in the spread reader, every special edition, and the full back-issue archive. Articles stay free, forever.</p></div>';
+        '<p class="pp-dek">Every article in full the moment it publishes, the monthly issue in the spread reader, every special edition, and the full back-issue archive.</p></div>';
     }
     h+='<div class="pp-tiers">';
     // Annual first, and the only tier carrying .is-rec — it is the default offer.
@@ -909,7 +918,7 @@
     // PROPERTY, not the object. (2026-08-16)
     var SBW=window.RTFC_SCOREBOARD||{}; SBW={rows:SBW.rows||[],updated:SBW.updated||""};
     var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;});
-    if(sc.length) slides.push({k:"Scoreboard · smartest",body:'<b class="wr-big">'+esc(sc[0].model)+'</b><span class="wr-sub">'+sc[0].score+' on the independent index · '+esc(sc[0].lab)+'</span>',href:"/scoreboard"});
+    if(sc.length&&surfOn("scoreboard")) slides.push({k:"Scoreboard · smartest",body:'<b class="wr-big">'+esc(sc[0].model)+'</b><span class="wr-sub">'+sc[0].score+' on the independent index · '+esc(sc[0].lab)+'</span>',href:"/scoreboard"});
     var preds=(window.RTFC_PREDICTIONS||[]).filter(function(p){return p.status==="pending";})
       .sort(function(a,b){return new Date(a.resolveBy)-new Date(b.resolveBy);});
     if(preds.length){
@@ -920,7 +929,7 @@
     slides.push({k:"The running bill",body:'<b class="wr-big">'+money(ub.cost)+'</b><span class="wr-sub">'+
       (ub.unmetered?('metered compute · '+ub.unmetered+' runs still unmetered'):'total compute, run to date — every penny public')+'</span>',href:"/usage"});
     var gf=(GRID.facilities||[]).slice().sort(function(a,b){return String(b.addedAt||"").localeCompare(String(a.addedAt||""));})[0];
-    if(gf) slides.push({k:"Newest on The Grid",body:'<b class="wr-big">'+esc(gf.name)+'</b><span class="wr-sub">'+esc(gf.place)+' · '+esc(gf.status)+'</span>',href:"/grid"});
+    if(gf&&surfOn("grid")) slides.push({k:"Newest on The Grid",body:'<b class="wr-big">'+esc(gf.name)+'</b><span class="wr-sub">'+esc(gf.place)+' · '+esc(gf.status)+'</span>',href:"/grid"});
     return slides;
   }
   function homeWireHTML(){
@@ -939,7 +948,7 @@
     // PROPERTY, not the object. (2026-08-16)
     var SBW=window.RTFC_SCOREBOARD||{}; SBW={rows:SBW.rows||[],updated:SBW.updated||""};
     var sc=SBW.rows.filter(function(r){return r.score!=null;}).sort(function(a,b){return b.score-a.score;}).slice(0,5);
-    if(sc.length<3) return "";
+    if(!surfOn("scoreboard")||sc.length<3) return "";
     var mx=sc[0].score||1;
     return '<a class="mini-sb" href="/scoreboard"><div class="msb-h">▤ SCOREBOARD · TOP 5</div>'+
       sc.map(function(r,i){
@@ -1053,6 +1062,7 @@
       return h+'</div>';
     }
     h+='<div class="top-slot"><div>'+featureHTML(top)+'</div><div class="rail" role="region" aria-label="More stories">'+side.map(railHTML).join("")+homeWireHTML()+miniSbHTML()+'</div></div>';
+    h+=sponsorSlotHTML("home");
     // The homepage shows a curated slice, not the whole archive. Every story stays
     // one click away (desk pages + the archive below) -- an unbounded flat grid grew
     // to 56 cards / 18 screens before this, and it grows by ~3 more every single day.
@@ -2715,7 +2725,7 @@
        as a small, honest placeholder and the rest of the article publishes
        around it. The console still gets the real error for the guard to catch,
        and site_guard.py + render_smoke.py hunt these before readers do. */
-    var bodyHTML=(a.body||[]).map(function(b,bi){
+    var blockHTML=(a.body||[]).map(function(b,bi){
       try{ return renderBlock(b,bi); }
       catch(e){
         try{ console.error("[rtfc] body block "+bi+" failed to render:",e); }catch(_){}
@@ -2723,7 +2733,17 @@
                'displayed. The rest of the piece is unaffected, and the '+
                'newsroom has been alerted.</p>';
       }
-    }).join("");
+    });
+    /* SOFT PAYWALL (2026-08-17): non-Plus readers get the first third, a
+       blurred teaser, and the Plus panel. See the note above PAYWALL. */
+    var gate=-1;
+    if(PAYWALL.enabled&&!isPlus()&&blockHTML.length>=PAYWALL.minVisible+2){
+      gate=Math.max(PAYWALL.minVisible,Math.ceil(blockHTML.length*PAYWALL.ratio));
+    }
+    var bodyHTML=(gate<0)?blockHTML.join(""):
+      blockHTML.slice(0,gate).join("")+
+      '<div class="pw-rest" aria-hidden="true">'+blockHTML.slice(gate,gate+PAYWALL.teaser).join("")+'</div>'+
+      pwPanelHTML();
     function renderBlock(b,bi){
       if(b.type==="h2"){ raSeg++; var id="s-"+slugify(b.text); toc.push({id:id,t:b.text}); return '<h2 id="'+id+'" data-ra="'+raSeg+'">'+esc(b.text)+'</h2>'; }
       if(b.type==="quote"){ raSeg++; return '<blockquote data-ra="'+raSeg+'">'+fmt(b.text)+'</blockquote>'; }
@@ -2747,7 +2767,7 @@
         entAnnotate(fmtBody(b.text),entSeen)+ev+'</p>';
     }
     var applySeg=(a.apply&&a.apply.length)?(raSeg+1):-1;
-    var tocHTML=(toc.length>=3)?('<nav class="toc"><span class="toc-l">In this piece</span><ol>'+
+    var tocHTML=(gate<0&&toc.length>=3)?('<nav class="toc"><span class="toc-l">In this piece</span><ol>'+
       toc.map(function(x,i){return '<li><a href="/article/'+slug+'/'+x.id+'"><span>'+String(i+1).padStart(2,"0")+'</span>'+esc(x.t)+'</a></li>';}).join("")+'</ol></nav>'):'';
     /* DISCLAIMERS FAIL SAFE (2026-08-14). This used to be two exact-string
        tests, so any other value rendered NOTHING — and the guard found two
@@ -2793,8 +2813,9 @@
       articleToolsHTML(a)+
       '<div class="hero" style="'+artFill(a,true)+'">'+artGlyph(a,col)+'</div>'+
       tocHTML+
-      '<div class="prose">'+bodyHTML+'</div>'+ (a.steps?guideStepsHTML(a):"") + tldrHTML(a) +
-      (applySeg>=0?'<div data-ra="'+applySeg+'" class="ra-wrap">'+applyHTML(a)+'</div>':applyHTML(a))+
+      '<div class="prose">'+bodyHTML+'</div>'+ (gate<0?((a.steps?guideStepsHTML(a):"") + tldrHTML(a)):"") +
+      (gate>=0?"":(applySeg>=0?'<div data-ra="'+applySeg+'" class="ra-wrap">'+applyHTML(a)+'</div>':applyHTML(a)))+
+      sponsorSlotHTML("article")+
       updatesHTML(a)+
       linksHTML(a)+
       reactsHTML(a.id)+
@@ -3240,6 +3261,224 @@
   // them (see issueLoad below), so this only decides which offer the storefront draws.
   // Requires a CONFIRMED session: an unverified or forged local plan reads as free.
   function isPlus(){ var l=libGet(); return !!(ACCOUNT_VERIFIED && l.account && l.account.plan==="plus"); }
+
+  /* ---------- reader revenue (2026-08-17, owner) ---------- */
+  /* SOFT paywall: the full text still reaches the browser (the stores and the
+     SSR page are public), so this nudges the normal reader rather than locking
+     the determined one. A hard lock needs server-side truncation, which is a
+     different, larger change. Crawlers are told the truth about it through
+     isAccessibleForFree:false + .pw-rest in the article SSR JSON-LD, which is
+     the documented paywall markup, not cloaking. */
+  var PAYWALL={enabled:true, ratio:1/3, teaser:2, minVisible:3};
+
+  /* ---------- sponsors (2026-08-20, owner) ---------- */
+  /* One sponsor at a time, three placements: homepage, article foot, the
+     Resources hub. web/data/sponsors.js is the store; empty means every slot
+     renders the founding-sponsor pitch, which is itself the ad for the slot.
+     A live sponsor link carries rel="sponsored": that is the disclosure Google
+     requires for paid placements, and honesty is this site\u2019s whole brand. */
+  var SPON=window.RTFC_SPONSORS||{}; SPON={active:SPON.active||[],updated:SPON.updated||""};
+  function sponsorFor(slot){
+    var now=Date.now();
+    for(var i=0;i<SPON.active.length;i++){
+      var x=SPON.active[i]||{};
+      if((x.slots||[]).indexOf(slot)<0) continue;
+      if(x.start&&Date.parse(x.start)>now) continue;
+      if(x.end&&Date.parse(x.end)<now) continue;
+      return x;
+    }
+    return null;
+  }
+  function sponsorSlotHTML(slot){
+    var x=sponsorFor(slot);
+    if(x){
+      return '<a class="spon spon-live spon-'+slot+'" href="'+escAttr(x.url||"/advertise")+'" target="_blank" rel="sponsored noopener">'+
+        '<span class="spon-k">Sponsored</span>'+
+        (x.logo?'<img class="spon-logo" src="'+escAttr(x.logo)+'" alt="'+escAttr(x.name||"Sponsor")+'">':'')+
+        '<span class="spon-body"><b>'+esc(x.name||"")+'</b>'+
+        (x.tagline?'<span class="spon-sub">'+esc(x.tagline)+'</span>':'')+'</span>'+
+        '<span class="spon-cta">'+esc(x.cta||"Visit")+' \u2192</span></a>';
+    }
+    return '<a class="spon spon-open spon-'+slot+'" href="/advertise">'+
+      '<span class="spon-k">Sponsor</span>'+
+      '<span class="spon-body"><b>This space is reserved for one brand.</b>'+
+      '<span class="spon-sub">A single founding sponsor, on every page of a newsroom that runs itself. Seen in '+
+      sponCountries()+' countries and counting.</span></span>'+
+      '<span class="spon-cta">Claim it \u2192</span></a>';
+  }
+  function sponCountries(){
+    try{ var wm=window.RTFC_WORLDMAP||{}; var n=Object.keys(wm.countries||wm.byCountry||{}).length; return n>5?String(n):"40+"; }
+    catch(e){ return "40+"; }
+  }
+
+  function pwPanelHTML(){
+    var l=libGet();
+    return '<div class="pw-panel"><div class="lock-ic">\u25c8</div>'+
+      '<h2 class="ip-title">The rest of this story is for Plus readers</h2>'+
+      '<p>That was the free preview. Plus unlocks every article in full the moment it publishes, the monthly magazine, and the whole archive.</p>'+
+      plusPricingHTML({compact:true})+
+      (l.account?'':'<p class="pw-signin">Already Plus? <a href="/account">Sign in</a></p>')+
+      '</div>';
+  }
+  /* "Subscribe to read" nudge: fires once per 7 days, 20s in or 55% down,
+     whichever comes first. Never for Plus, never on account/settings/admin. */
+  function subnagSnoozed(){ try{ return Date.now()-(+localStorage.getItem("rtfc-subnag")||0) < 2*864e5; }catch(e){ return false; } }
+  window.rtfcSubnagClose=function(){ var el=document.getElementById("subnag"); if(el) el.remove();
+    try{ localStorage.setItem("rtfc-subnag",String(Date.now())); }catch(e){} };
+  function armSubnag(){
+    if(window.__subnagArmed) return; window.__subnagArmed=1;
+    if(subnagSnoozed()) return;
+    function fire(){
+      if(document.getElementById("subnag")||isPlus()) return;
+      if(/^\/(admin|account|settings|share)/.test(location.pathname)) return;
+      var d=document.createElement("div"); d.id="subnag"; d.className="subnag";
+      d.setAttribute("role","dialog"); d.setAttribute("aria-label","Subscribe to read");
+      d.innerHTML='<span class="subnag-t"><b>Subscribe to read.</b> Plus unlocks every full article, the magazine and the archive.</span>'+
+        '<a class="cta" href="/magazine" onclick="rtfcSubnagClose()">See Plus</a>'+
+        '<button class="subnag-x" onclick="rtfcSubnagClose()" aria-label="Not now">\u2715</button>';
+      document.body.appendChild(d);
+      removeEventListener("scroll",onScroll);
+    }
+    var onScroll=function(){ var h=document.documentElement;
+      if(h.scrollTop/((h.scrollHeight-h.clientHeight)||1)>0.55) fire(); };
+    setTimeout(fire,20000);
+    addEventListener("scroll",onScroll,{passive:true});
+  }
+
+
+  /* ---------- /admin: the owner's numbers (2026-08-17) ---------- */
+  /* Reads Cloudflare's own edge analytics through /api/admin (a Pages
+     Function). Nothing is tracked that Cloudflare does not already count:
+     no new cookies, no reader-side script, and the page is read-only. */
+  var ADM={state:"init",busy:false,err:"",data:null};
+  window.rtfcAdmLogin=function(form){
+    var pw=(form.pw&&form.pw.value)||"";
+    ADM.busy=true; ADM.err=""; route();
+    fetch("/api/admin/login",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({password:pw})})
+      .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+      .then(function(x){ ADM.busy=false;
+        if(!x.ok){ ADM.err=x.j.error||"sign-in failed"; route(); return; }
+        admLoad(); })
+      .catch(function(){ ADM.busy=false; ADM.err="could not reach the newsroom"; route(); });
+    return false;
+  };
+  function admLoad(){
+    ADM.state="loading"; ADM.err="";
+    fetch("/api/admin/stats?days=30",{credentials:"same-origin"})
+      .then(function(r){ return r.json().then(function(j){ return {st:r.status,j:j}; }); })
+      .then(function(x){
+        if(x.st===200){ ADM.data=x.j; ADM.state="ok"; }
+        else if(x.st===401){ ADM.state="locked"; }
+        else { ADM.state="err"; ADM.err=x.j.error||("stats failed ("+x.st+")"); }
+        route(); })
+      .catch(function(){ ADM.state="err"; ADM.err="could not load stats"; route(); });
+  }
+  function admTitleFor(path){
+    var m=/^\/article\/([a-z0-9\-]+)/.exec(path||"");
+    if(!m) return null;
+    var a=article(m[1]);
+    return a?a.title:m[1];
+  }
+  function admDelta(cur,prev){
+    if(!prev) return '<span class="adm-chip adm-new">new</span>';
+    var d=Math.round((cur-prev)/prev*100);
+    if(d===0) return '<span class="adm-chip">\u00b10%</span>';
+    return '<span class="adm-chip '+(d>0?'adm-up':'adm-dn')+'">'+(d>0?'\u25b2':'\u25bc')+' '+Math.abs(d)+'%</span>';
+  }
+  function viewAdmin(){
+    var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over">Newsroom</div><h1>Admin</h1>';
+    if(ADM.state==="init"){ admLoad(); return h+'<p>Reading the numbers\u2026</p></div></div>'; }
+    if(ADM.state==="loading"){ return h+'<p>Reading the numbers\u2026</p></div></div>'; }
+    if(ADM.state==="locked"){
+      h+='<p>This dashboard is locked. Sign in to read it; nothing here changes the site.</p></div>'+
+        '<form onsubmit="return rtfcAdmLogin(this)" style="max-width:420px">'+
+        '<input class="dict-search" type="password" name="pw" placeholder="Admin password" autocomplete="current-password">'+
+        '<button class="cta" style="margin-top:12px">'+(ADM.busy?"Checking\u2026":"Sign in")+'</button>'+
+        (ADM.err?'<p class="pw-err">'+esc(ADM.err)+'</p>':"")+'</form></div>';
+      return h;
+    }
+    if(ADM.state==="err"){
+      return h+'<p>The numbers could not be read.</p></div><p class="pw-err" style="max-width:64ch">'+esc(ADM.err)+'</p>'+
+        '<button class="cta" onclick="ADM=null;location.reload()">Try again</button></div>';
+    }
+    var d=ADM.data, T=d.total, P=d.prevTotal||null;
+    var engage=T.visits?(T.pageviews/T.visits):0;
+    h+='<p>Last '+d.days+' days against the '+d.days+' before, counted at Cloudflare\u2019s edge. No reader-side tracking was added for this.</p></div>';
+    h+='<div class="adm-grid">'+
+      '<div class="adm-tile"><b>'+fmtNum(T.pageviews)+'</b><span>page views</span>'+admDelta(T.pageviews,P&&P.pageviews)+'</div>'+
+      '<div class="adm-tile"><b>'+fmtNum(T.visits)+'</b><span>visits</span>'+admDelta(T.visits,P&&P.visits)+'</div>'+
+      '<div class="adm-tile"><b>'+engage.toFixed(1)+'</b><span>pages per visit</span></div>'+
+      '<div class="adm-tile"><b>'+fmtNum(ARTICLES.length)+'</b><span>stories live \u00b7 '+fmtNum(articlesLast7())+' this week</span></div>'+
+      '</div>';
+    var arts=d.byPath.filter(function(r){ return /^\/article\//.test(r.path); });
+    if(arts.length){
+      var top=arts[0], tt=admTitleFor(top.path)||top.path;
+      h+='<a class="adm-star" href="'+escAttr(top.path)+'"><span class="spon-k">Story of the month</span>'+
+        '<b>'+esc(tt)+'</b><span class="adm-mut">'+fmtNum(top.pageviews)+' views \u00b7 '+fmtNum(top.visits)+' readers</span></a>';
+    }
+    var mx=1; d.byDay.forEach(function(r){ if(r.pageviews>mx) mx=r.pageviews; });
+    h+='<div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent)"></span>Views by day</div>'+
+      '<div class="adm-chart">'+d.byDay.map(function(r){
+        return '<i style="height:'+Math.max(3,Math.round(r.pageviews/mx*100))+'%" title="'+escAttr(r.date+" \u00b7 "+r.pageviews+" views \u00b7 "+r.visits+" visits")+'"></i>';
+      }).join("")+'</div>'+
+      '<div class="adm-chart-x"><span>'+esc(d.since)+'</span><span>'+esc(d.until)+'</span></div>';
+    h+='<div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent2)"></span>Readers per story</div><table class="adm-table">'+
+      (arts.length?arts.slice(0,20).map(function(r){ var t=admTitleFor(r.path)||r.path;
+        return '<tr><td><a href="'+escAttr(r.path)+'">'+esc(t)+'</a></td><td style="white-space:nowrap;text-align:right">'+fmtNum(r.pageviews)+' \u00b7 '+fmtNum(r.visits)+' readers</td></tr>'; }).join(""):
+        '<tr><td class="adm-mut">No article views in this window yet.</td></tr>')+'</table>';
+    h+='<div class="adm-cols">';
+    h+='<div><div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent2)"></span>Top pages</div><table class="adm-table">'+
+      d.byPath.slice(0,12).map(function(r){ return '<tr><td>'+esc(r.path)+'</td><td style="text-align:right">'+fmtNum(r.pageviews)+'</td></tr>'; }).join("")+'</table></div>';
+    h+='<div><div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent2)"></span>Countries</div><table class="adm-table">'+
+      d.byCountry.slice(0,12).map(function(r){ return '<tr><td>'+esc(r.country)+'</td><td style="text-align:right">'+fmtNum(r.pageviews)+'</td></tr>'; }).join("")+'</table>'+
+      ((d.byDevice&&d.byDevice.length)?('<div class="kicker" style="margin-top:18px"><span class="dotc" style="background:var(--accent2)"></span>Devices</div><table class="adm-table">'+
+        d.byDevice.slice(0,4).map(function(r){ return '<tr><td>'+esc(r.device)+'</td><td style="text-align:right">'+fmtNum(r.pageviews)+'</td></tr>'; }).join("")+'</table>'):"")+'</div>';
+    h+='</div>';
+    var sp=(window.RTFC_SOCIAL_POSTS||[]).length;
+    h+='<p class="adm-mut" style="margin-top:20px">Elsewhere on the record: <a href="/usage">cost per story</a> \u00b7 <a href="/pulse">the control room</a> \u00b7 '+fmtNum(sp)+' social posts queued or sent \u00b7 sponsor slots: <a href="/advertise">'+(sponsorFor("home")?"filled":"open")+'</a> \u00b7 Plus revenue lives in the Stripe dashboard.</p>';
+    h+='</div>';
+    return h;
+  }
+
+  /* ---------- /advertise: the sponsor pitch (2026-08-20) ---------- */
+  function viewAdvertise(){
+    var h='<div class="container" style="max-width:880px">';
+    h+='<div class="mast-hero" style="padding-bottom:8px"><div class="over">Newsroom</div>'+
+      '<h1>One sponsor. Every page.</h1>'+
+      '<p>'+SITE_NAME+' is a newsroom with no staff: it researches, writes, illustrates, fact-checks and publishes '+SUBJECT+' coverage around the clock, and it shows its work \u2014 per-paragraph sources, a public cost ledger, a corrections log. Your brand sits inside that story, alone.</p></div>';
+    h+='<div class="adm-grid">'+
+      '<div class="adm-tile"><b>'+fmtNum(ARTICLES.length)+'</b><span>stories live</span></div>'+
+      '<div class="adm-tile"><b>'+sponCountries()+'</b><span>reader countries</span></div>'+
+      '<div class="adm-tile"><b>5</b><span>social platforms</span></div>'+
+      '<div class="adm-tile"><b>24/7</b><span>publishing, no humans</span></div>'+
+      '</div>';
+    h+='<div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent)"></span>What the founding sponsor gets</div>'+
+      '<div class="adv-list">'+
+      '<div class="adv-item"><b>Exclusivity.</b> One sponsor at a time, sitewide. Your brand is never stacked in a gutter of ads \u2014 there are no other ads.</div>'+
+      '<div class="adv-item"><b>Three placements.</b> The homepage, the foot of every article, and the Resources hub \u2014 designed placements in the site\u2019s own visual language, not banner boxes.</div>'+
+      '<div class="adv-item"><b>The story.</b> "Sponsor of the autonomous newsroom" is a line your own marketing can run with. We\u2019ll publish a short piece introducing the partnership.</div>'+
+      '<div class="adv-item"><b>Radical measurement.</b> This site publishes its running costs; your placement report is just as honest. Real numbers, monthly.</div>'+
+      '</div>';
+    h+='<div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent2)"></span>Founding rate</div>'+
+      '<div class="adv-tiers">'+
+      '<div class="adv-tier"><span class="pp-name">Monthly</span><div class="pp-price">$150<small>/month</small></div><span class="pp-note">Locked for a year. Cancel any month.</span></div>'+
+      '<div class="adv-tier adv-best"><span class="pp-badge">Founding</span><span class="pp-name">Quarter</span><div class="pp-price">$400<small>/quarter</small></div><span class="pp-note">Locked for a year, first refusal on renewal.</span></div>'+
+      '<div class="adv-tier"><span class="pp-name">Custom</span><div class="pp-price">Let\u2019s talk</div><span class="pp-note">A section takeover, the daily briefing, the magazine \u2014 name it.</span></div>'+
+      '</div>';
+    h+='<p class="adv-note">Honest note: this publication is young and its audience is still compounding. That is exactly why the founding rate exists \u2014 it is priced for what the site is becoming, locked in before it gets there.</p>';
+    h+='<a class="cta" style="margin-top:8px" href="/contact">Talk to the newsroom \u2192</a>';
+    h+='<p class="adm-mut" style="margin-top:14px">Sponsored placements are always labelled, always separated from coverage, and never influence what the newsroom writes. That is non-negotiable and it is also the point.</p>';
+    h+='</div>';
+    return h;
+  }
+
+  function articlesLast7(){
+    var t=Date.now()-7*864e5, n=0;
+    ARTICLES.forEach(function(a){ var d=Date.parse(a.publishedAt||""); if(d&&d>t) n++; });
+    return n;
+  }
+  function fmtNum(n){ n=+n||0; return n>=1e6?(n/1e6).toFixed(1)+"M":n>=1e4?(n/1e3).toFixed(1)+"k":String(n); }
+
   function issueCoverHTML(iss,link){
     var hasImg=iss.cover&&iss.cover.image;
     var bg=hasImg? "background:linear-gradient(180deg,rgba(5,5,10,.18) 0%,rgba(5,5,10,.05) 35%,rgba(5,5,10,.6) 100%),url('"+safeCssUrl(iss.cover.image)+"') center/cover no-repeat;"
@@ -3882,24 +4121,25 @@
       '<div class="rs-cell"><b>'+DICT.length+'</b><span>terms defined</span></div>'+
     '</div>';
 
-    h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent2)"></span>Know the field</div>'+
-      '<div class="res-tiles">'+
-      resTile("/labs","⬡","Directory",'The labs and their models',
+    var knowTiles=""+
+      (surfOn("labs")?resTile("/labs","⬡","Directory",surfLabel("labs",'The labs and their models'),
         "Who builds what, grouped the way the field actually splits, with the independent index score where one exists and a route into every dossier.",
-        "Open the directory",dir.length+" labs")+
-      resTile("/scoreboard","▤","Rankings",'The Scoreboard',
+        "Open the directory",dir.length+" labs"):"")+
+      (surfOn("scoreboard")?resTile("/scoreboard","▤","Rankings",surfLabel("scoreboard",'The Scoreboard'),
         "Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move.",
-        "Open the Scoreboard",sbScored+" scored")+
-      resTile("/dictionary","✎","Vocabulary",'The AI Dictionary',
+        "Open the Scoreboard",sbScored+" scored"):"")+
+      (surfOn("dictionary")?resTile("/dictionary","✎","Vocabulary",surfLabel("dictionary",'The AI Dictionary'),
         "Token, agent, hallucination, mixture-of-experts and the rest, each explained the way a person would explain it.",
-        "Open the dictionary",DICT.length+" terms")+
-      '</div>';
+        "Open the dictionary",DICT.length+" terms"):"");
+    if(knowTiles) h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent2)"></span>Know the field</div>'+
+      '<div class="res-tiles">'+knowTiles+'</div>';
 
+    h+=sponsorSlotHTML("resources");
     h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--accent)"></span>Build with it</div>'+
       '<div class="res-tiles">'+
-      resTile("/extensions","⌘","Encyclopedia",'AI Extensions',
+      (surfOn("extensions")?resTile("/extensions","⌘","Encyclopedia",surfLabel("extensions",'AI Extensions'),
         "Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — categorized, searchable, primary sources only.",
-        "Open AI Extensions",extN+" entries")+
+        "Open "+surfLabel("extensions","AI Extensions"),extN+" entries"):"")+
       resTile("/prompts","✦","Copy &amp; use",'The Prompt Library',
         "Prompts that do a specific job, written to be pasted cold and used as-is. Copy one, or take the whole library as a markdown file.",
         "Open the library",(window.RTFC_PROMPTS||[]).reduce(function(m,c){return m+(c.items||[]).length;},0)+" prompts")+
@@ -3913,9 +4153,9 @@
 
     h+='<div class="kicker" style="margin-top:26px"><span class="dotc" style="background:var(--gold,var(--accent2))"></span>Follow the field</div>'+
       '<div class="res-tiles">'+
-      resTile("/grid","⌗","Infrastructure",'The Grid',
+      (surfOn("grid")?resTile("/grid","⌗","Infrastructure",surfLabel("grid",'The Grid'),
         "The named frontier-AI megasites: who operates each, who the tenant is, and how sure we are — reconfirmed daily.",
-        "Open The Grid",gridN+(gridNewN?(" · "+gridNewN+" new"):""))+
+        "Open "+surfLabel("grid","The Grid"),gridN+(gridNewN?(" · "+gridNewN+" new"):"")):"")+
       resTile("/podcasts","◉","Listening",'Podcasts',
         "The shows that consistently deliver signal, from daily news rundowns to deep technical conversations.",
         "See the shows",podN?(podN+" shows"):null)+
@@ -4177,8 +4417,8 @@
       if(tg.indexOf("official")>=0) nOfficial++;
     }); });
 
-    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · AI Extensions</div>'+
-      '<h1>AI Extensions</h1>'+
+    var h='<div class="container"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · '+surfLabel("extensions","AI Extensions")+'</div>'+
+      '<h1>'+surfLabel("extensions","AI Extensions")+'</h1>'+
       '<p>The plugboard of the AI world: every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing, in one categorized, searchable encyclopedia. Primary sources only — every link is the maker\'s own site. We don\'t print pricing, because in this industry a printed price is a future lie; the link is the truth.</p></div>';
 
     h+='<div class="res-stats">'+
@@ -4569,7 +4809,7 @@
   function viewDictionary(){
     var DICT=window.RTFC_DICT||[];
     var h='<div class="container" style="max-width:900px"><div class="mast-hero" style="padding-bottom:4px"><div class="over"><a href="/resources" style="color:var(--accent2)">Resources</a> · Dictionary</div>'+
-      '<h1>The AI Dictionary</h1>'+
+      '<h1>'+surfLabel("dictionary","The AI Dictionary")+'</h1>'+
       '<p>Every word that gates an AI headline, explained like a human — no jargon defending jargon. '+DICT.length+' terms, maintained by the newsroom as the language evolves. Search, or just scroll.</p></div>';
     h+='<input class="dict-search" type="text" placeholder="Search terms — try “token”, “agent”, “hallucination”…" oninput="rtfcDict(this.value)" autofocus>';
     h+=dictSectionHTML("");
@@ -6265,15 +6505,19 @@
     ARTICLES.concat(GUIDES).forEach(function(a){
       items.push({t:a.title, k:(a.section==="Guide"?"Guide":a.section), href:"/article/"+a.slug, s:(a.title+" "+a.section+" "+(a.dek||"")).toLowerCase()});
     });
-    [["The Daily Briefing (listen)","Audio","/briefing"],["Company dossiers","Dossiers","/companies"],["The AI Dictionary","Learn","/dictionary"],
+    [["The Daily Briefing (listen)","Audio","/briefing"],["Company dossiers","Dossiers","/companies"],[surfLabel("dictionary","The AI Dictionary"),"Learn","/dictionary"],
      ["The Prediction Ledger","Trust","/predictions"],["The Claims Ledger","Trust","/claims"],
-     ["The Control Room","Live","/pulse"],["The Scoreboard","Models","/scoreboard"],["The Buzz","Signal","/buzz"],
+     ["The Control Room","Live","/pulse"],[surfLabel("scoreboard","The Scoreboard"),"Models","/scoreboard"],["The Buzz","Signal","/buzz"],
      ["The Primer (free magazine)","Magazine","/read/primer"],["All magazine issues","Magazine","/magazine"],
-     ["Guides","Section","/guides"],["Resources","Section","/resources"],["AI Extensions (APIs, skills, connectors)","Learn","/extensions"],["Archive","Section","/archive"],
+     ["Guides","Section","/guides"],["Resources","Section","/resources"],[surfLabel("extensions","AI Extensions"),"Learn","/extensions"],["Archive","Section","/archive"],
      ["Live & ongoing (AI streams)","Watch","/live"],[""+SUBJECT+" events on the radar","Events","/events"],["Contact the newsroom","Contact","/contact"],
      ["The Masthead","About","/masthead"],["Cost transparency","Ledger","/usage"],["Corrections log","Trust","/corrections"],
      ["EIC decision log","Trust","/review"],["Privacy","Legal","/privacy"],["Terms","Legal","/terms"]
-    ].forEach(function(p){ items.push({t:p[0],k:p[1],href:p[2],s:p[0].toLowerCase()}); });
+    ].forEach(function(p){
+      var key=p[2].replace(/^\//,"");
+      if(SURF[key] && !surfOn(key)) return;          // switched-off surface: not a destination
+      items.push({t:p[0],k:p[1],href:p[2],s:p[0].toLowerCase()});
+    });
     SECTIONS.forEach(function(sc){ items.push({t:"The "+sc.label+" Desk", k:"Desk", href:"/section/"+sc.key, s:sc.label.toLowerCase()+" desk"}); });
     return items;
   }
@@ -6746,7 +6990,7 @@
       '<h2 class="ip-title">“'+esc(iss.title||"This issue")+'” is part of Plus</h2>'+
       '<p>'+(iss.tagline?esc(iss.tagline)+' — ':'')+
       (n?('all '+n+' designed pages, '):'')+
-      'plus every back issue and every issue as a PDF. Articles stay free, forever; The Primer is free too.</p>'+
+      'plus every full article and every back issue as a PDF. The Primer stays free.</p>'+
       plusPricingHTML({compact:true}));
   }
   function issueErrorHTML(iss){
@@ -7053,7 +7297,7 @@
        add an item here without removing one. */
     var h=navLink("/","home","Home");
     h+=navLink("/buzz","buzz","The Buzz");
-    var gridNewN=gdNewIds().length;
+    var gridNewN=surfOn("grid")?gdNewIds().length:0;
     h+=navLink("/resources","resources","Resources"+(gridNewN?('<span class="nav-badge" title="'+gridNewN+' new on The Grid">'+gridNewN+'</span>'):""));
     h+=navLink("/archive","archive","Archive");
     h+='<span class="nav-sep"></span>';
@@ -7499,21 +7743,23 @@
   }
   // Static routes: [title, description]. Titles are suffixed with the masthead.
   var ROUTE_HEADS={
+    admin:["Admin","Owner dashboard: readers, page views per story, countries and publishing activity. Read-only."],
+    advertise:["Sponsor the newsroom","One sponsor at a time, on every page of a fully autonomous newsroom. Founding rate, honest reporting, always labelled."],
     settings:["Settings","Choose from nine appearances, set your language, and see how "+SITE_NAME+" handles motion and reading preferences. Everything is stored in your own browser."],
     magazine:["The Magazine","Every month, the Issue Desk distils the full run of our coverage into one designed issue — the cover story with hindsight, the editors’ month-in-review columns, the Scoreboard, the Compendium and a Watchlist we grade in public."],
     guides:["Guides","Hands-on, plain-English guides to actually using "+SUBJECT+". No hype, no jargon walls; every guide ends with something you can do tonight."],
     resources:["Resources","The primary sources, labs, feeds and tools the newsroom itself watches — so you can check our work against the same material."],
-    extensions:["AI Extensions","Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — one categorized, searchable encyclopedia, primary sources only."],
+    extensions:[surfLabel("extensions","AI Extensions"),"Every API, skill, connector, MCP server hub, agent framework and local runtime worth knowing — one categorized, searchable encyclopedia, primary sources only."],
     /* grid was the ONE rendered route missing from this table, so the page shipped
        for weeks with a "Page not found" <title> over perfectly good content —
        caught 2026-08-14 during live verification. If you add a route to route(),
        add its head here in the same commit. */
-    grid:["The Grid","The named frontier-AI megasites behind the models: who operates each site, who the primary tenant is, and how sure we are of the details — reconfirmed daily."],
-    labs:["Labs & Models","Every lab and every model this newsroom tracks, grouped the way the field actually splits, with the independent index score where one exists."],
+    grid:[surfLabel("grid","The Grid"),"The named frontier-AI megasites behind the models: who operates each site, who the primary tenant is, and how sure we are of the details — reconfirmed daily."],
+    labs:[surfLabel("labs","Labs & Models"),"Every lab and every model this newsroom tracks, grouped the way the field actually splits, with the independent index score where one exists."],
     prompts:["The Prompt Library","Prompts that do a specific job, written to be pasted and used as-is — copy any of them in one tap or take the whole library as a markdown file."],
     podcasts:["Podcasts","The "+SUBJECT+" shows that consistently deliver signal — daily rundowns, practitioner deep-dives, and the long-form interviews worth the full hour."],
     buzz:["The Buzz","What the "+SUBJECT+" world is actually saying right now: the loudest posts, ranked by heat, with why each one is buzzing and which of our stories cited it."],
-    scoreboard:["The Scoreboard","Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move — never on a lab’s own number."],
+    scoreboard:[surfLabel("scoreboard","The Scoreboard"),"Model strength against model price, side by side, with the efficient frontier drawn. Scores move only when independent benchmarks move — never on a lab’s own number."],
     claims:["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
     "ledger-claims":["The Claims Ledger","Every open question our stories named, the exact document that would settle each one, and what happened when it arrived."],
     predictions:["The Prediction Ledger","Every forecast this newsroom has made, graded in public by the Standards Editor — including the ones we got wrong."],
@@ -7521,7 +7767,7 @@
     corrections:["Corrections","Every correction this publication has made, dated and attached to the story it changed. Append-only: nothing above an article is ever quietly rewritten."],
     archive:["The Archive","The full back catalogue by month — searchable and filterable by desk, editor and format. The archive is free."],
     companies:["Company Dossiers","Living dossiers on the players that matter: every story, every Buzz card and every Scoreboard entry we have published about each, auto-assembled from our own coverage."],
-    dictionary:["The AI Dictionary","The words behind the headlines, explained the way a person would explain them — token, agent, hallucination, mixture-of-experts and the rest."],
+    dictionary:[surfLabel("dictionary","The AI Dictionary"),"The words behind the headlines, explained the way a person would explain them — token, agent, hallucination, mixture-of-experts and the rest."],
     masthead:["The Masthead","Written by machines, edited like a magazine: the AI editorial staff behind "+SITE_NAME+", their beats, and the twelve-stage pipeline every story moves through."],
     review:["EIC Decision Log","An audit trail of the stories the autonomous AI Editor-in-Chief declined to publish, and its reasons. Nothing here is waiting on anyone."],
     usage:["Cost Transparency","Every token and every penny this publication has spent, itemised by story, model and task. Exportable as CSV."],
@@ -7716,23 +7962,25 @@
     else if(parts[0]==="usage"||parts[0]==="transparency"){ view=viewUsage(); active="usage"; }
     else if(parts[0]==="guides"){ view=viewGuides(); active="guides"; }
     else if(parts[0]==="resources"){ view=viewResources(); active="resources"; }
-    else if(parts[0]==="extensions"){ view=viewExtensions(); active="resources"; }
-    else if(parts[0]==="labs"){ view=viewLabs(); active="resources"; }
+    else if(parts[0]==="extensions" && surfOn("extensions")){ view=viewExtensions(); active="resources"; }
+    else if(parts[0]==="labs" && surfOn("labs")){ view=viewLabs(); active="resources"; }
     else if(parts[0]==="podcasts"){ view=viewPodcasts(); active="resources"; }
     else if(parts[0]==="prompts"){ view=viewPrompts(); active="resources"; }
-    else if(parts[0]==="grid"){ view=viewGrid(); active="resources"; }
+    else if(parts[0]==="grid" && surfOn("grid")){ view=viewGrid(); active="resources"; }
     else if(parts[0]==="buzz"){ view=viewBuzz(); active="buzz"; }
     else if(parts[0]==="privacy"){ view=viewPrivacy(); active=""; }
     else if(parts[0]==="terms"){ view=viewTerms(); active=""; }
     else if(parts[0]==="pulse"||parts[0]==="control-room"){ view=viewPulse(); active="pulse"; }
-    else if(parts[0]==="scoreboard"){ view=viewScoreboard(); active="resources"; }
+    else if(parts[0]==="scoreboard" && surfOn("scoreboard")){ view=viewScoreboard(); active="resources"; }
     else if(parts[0]==="claims"||parts[0]==="ledger-claims"){ view=viewClaims(); active="claims"; }
     else if(parts[0]==="corrections"){ view=viewCorrections(); active=""; }
     else if(parts[0]==="briefing"){ view=viewBriefing(); active=""; }
     else if(parts[0]==="companies"){ view=viewCompanies(); active=""; }
     else if(parts[0]==="company"){ view=viewCompany(parts[1]); active=""; }
     else if(parts[0]==="predictions"||parts[0]==="ledger"){ view=viewPredictions(); active=""; }
-    else if(parts[0]==="dictionary"){ view=viewDictionary(); active=""; }
+    else if(parts[0]==="dictionary" && surfOn("dictionary")){ view=viewDictionary(); active=""; }
+    else if(parts[0]==="admin"){ view=viewAdmin(); active=""; }
+    else if(parts[0]==="advertise"){ view=viewAdvertise(); active=""; }
     else if(parts[0]==="wallpapers"){ view=viewWallpapers(); active="resources"; }
     else if(parts[0]==="design"){ view=viewDesign(); active=""; }
     else if(parts[0]==="live"||parts[0]==="livetv"){ view=viewLiveTV(); active="live"; }
@@ -8485,6 +8733,7 @@
     initTheme(); initLang(); initPalette(); initMiniPlayer(); initCostTicker();
     initTimeMeter(); initCookie(); initScrollGrip(); initMobKit(); initPointerGlow(); initTiltGlow(); logVisit();
     route();
+    armSubnag();
     syncAccount();
     /* Stop the splash on the REAL ready signal, not a timer: route() has now
        rendered the initial view, so two frames later it has actually painted.

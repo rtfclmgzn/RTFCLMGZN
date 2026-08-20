@@ -384,7 +384,12 @@ function ldJSON(a, m) {
       "@type": "Organization", name: SITE_NAME,
       logo: { "@type": "ImageObject", url: `${SITE}/assets/brand/rtfc-glyph-512.png` },
     },
-    mainEntityOfPage: m.url, isAccessibleForFree: true,
+    mainEntityOfPage: m.url,
+    // SOFT PAYWALL (2026-08-17): non-Plus readers see the first third; the
+    // rest renders inside .pw-rest. Declaring that here is Google's documented
+    // paywall markup — it is what separates a paywall from cloaking.
+    isAccessibleForFree: false,
+    hasPart: { "@type": "WebPageElement", isAccessibleForFree: false, cssSelector: ".pw-rest" },
   });
 }
 

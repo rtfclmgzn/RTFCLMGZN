@@ -1506,6 +1506,152 @@ def check_live_check_parity():
 SSR_TAKEN_CLASSES = ("comp", "dek", "byline", "big", "kick", "sect", "cover")
 
 
+SURFACE_KEYS = ("scoreboard", "labs", "grid", "extensions", "dictionary")
+
+
+def check_surface_switches():
+    """The five subject-bound surfaces are switched per publication in
+    engine.config.json. Five files must agree with that block or a niche ships
+    a page that says 'AI Dictionary' about construction, or a footer link into
+    a 404: index.html (footer slot per surface), app.js (route gate + label
+    lookups), functions/[[path]].js (server 404 for an off surface),
+    gen_sitemap.py (drops off surfaces) and web/sitemap.xml (the result)."""
+    if not CONFIG.is_file():
+        return
+    try:
+        cfg = json.loads(io.open(CONFIG, encoding="utf-8").read())
+    except Exception:
+        return                                   # check_engine_config owns that
+    sw = cfg.get("surfaces")
+    bound = set(((cfg.get("subject") or {}).get("surfaces_bound_to_subject")) or SURFACE_KEYS)
+    if not isinstance(sw, dict):
+        err("surfaces", "engine.config.json has no 'surfaces' block — the five "
+            "subject-bound pages cannot be switched off for a non-AI niche")
+        return
+    keys = {k for k in sw if not k.startswith("$")}
+    if keys != bound:
+        err("surfaces", "engine.config.json surfaces keys %s do not equal "
+            "subject.surfaces_bound_to_subject %s" % (sorted(keys), sorted(bound)))
+    html = io.open(INDEX, encoding="utf-8").read()
+    app = io.open(APP, encoding="utf-8").read()
+    fn = ROOT / "functions" / "[[path]].js"
+    fsrc = io.open(fn, encoding="utf-8").read() if fn.is_file() else ""
+    smap = io.open(WEB / "sitemap.xml", encoding="utf-8").read() if (WEB / "sitemap.xml").is_file() else ""
+    site = ((cfg.get("web") or {}).get("site_url") or "").rstrip("/")
+    if "surfaceOff(" not in fsrc or 'engine.config.json' not in fsrc:
+        err("surfaces", "functions/[[path]].js does not consult engine.config.json "
+            "surfaces — a switched-off surface would still be served at 200")
+    if "function surfOn(" not in app:
+        err("surfaces", "app.js has no surfOn() — the surface switches are ignored by the router")
+    gs = io.open(ROOT / "newsroom" / "runner" / "gen_sitemap.py", encoding="utf-8").read()
+    if "_disabled_surfaces" not in gs:
+        err("surfaces", "gen_sitemap.py does not drop switched-off surfaces from the sitemap")
+    for key in sorted(bound):
+        conf = sw.get(key) if isinstance(sw.get(key), dict) else None
+        if conf is None:
+            err("surfaces", "surfaces.%s missing or not an object" % key)
+            continue
+        on = conf.get("enabled", True) is not False
+        if not (conf.get("label") or "").strip():
+            err("surfaces", "surfaces.%s has no label" % key)
+        a, b = "<!-- engine:surface:%s -->" % key, "<!-- /engine:surface:%s -->" % key
+        i, j = html.find(a), html.find(b)
+        if i < 0 or j < 0 or j < i:
+            err("surfaces", "index.html lacks the footer slot markers for '%s'" % key)
+        else:
+            slot = html[i + len(a):j]
+            has_link = ('href="/%s"' % key) in slot
+            if on and not has_link:
+                err("surfaces", "surface '%s' is ON but its footer slot is empty — "
+                    "run gen_engine_js.py" % key)
+            if (not on) and has_link:
+                err("surfaces", "surface '%s' is OFF but index.html still links to "
+                    "/%s in the footer — run gen_engine_js.py" % (key, key))
+        gate = 'parts[0]==="%s" && surfOn("%s")' % (key, key)
+        if gate not in app:
+            err("surfaces", "app.js route for /%s is not gated by surfOn(\"%s\")" % (key, key))
+        if smap:
+            listed = ("<loc>%s/%s</loc>" % (site, key)) in smap or ("/%s</loc>" % key) in smap
+            if (not on) and listed:
+                err("surfaces", "surface '%s' is OFF but web/sitemap.xml lists /%s — "
+                    "run gen_sitemap.py" % (key, key))
+
+
+def check_template_leaks():
+    """THE 2026-08-16 LEAK. Turning hardcoded 'AI' into the SUBJECT variable
+    put `"+SUBJECT+"` inside thirteen SINGLE-quoted strings. Inside a
+    single-quoted literal that is text, not code, so the live homepage read
+    'New to "+SUBJECT+"? Start with The Primer.' for a whole night. Every guard
+    passed because they checked that the variable was READ, not that each
+    read actually evaluates. This walks app.js one character at a time with the
+    quote state, and fails on any `+IDENT+` splice whose quotes do not match
+    the literal it sits in. It also fails on the mirror image (`'+X+'` inside a
+    double-quoted string) and on `${...}` inside a non-template string."""
+    src = io.open(APP, encoding="utf-8").read()
+    n = len(src)
+    i = 0
+    line = 1
+    q = None            # current string delimiter or None
+    in_lc = in_bc = False
+    hits = []
+    IDENT = re.compile(r"[A-Za-z_$][A-Za-z0-9_$.]*")
+    while i < n:
+        c = src[i]
+        nxt = src[i + 1] if i + 1 < n else ""
+        if c == "\n":
+            line += 1
+        if in_lc:
+            if c == "\n": in_lc = False
+            i += 1; continue
+        if in_bc:
+            if c == "*" and nxt == "/": in_bc = False; i += 2; continue
+            i += 1; continue
+        if q is None:
+            if c == "/" and nxt == "/": in_lc = True; i += 2; continue
+            if c == "/" and nxt == "*": in_bc = True; i += 2; continue
+            if c == "/":
+                # regex literal or division? A regex follows an operator or an
+                # opening bracket; a division follows a value. Quotes inside a
+                # regex (/["']/) would otherwise desync the whole scan.
+                j = i - 1
+                while j >= 0 and src[j] in " \t\r\n": j -= 1
+                prev = src[j] if j >= 0 else "("
+                if prev in "(,=:[!&|?{};+-*%<>~^" or src[max(0, j - 5):j + 1].endswith(("return", "typeof")):
+                    k = i + 1; cls = False
+                    while k < n:
+                        ch = src[k]
+                        if ch == "\\": k += 2; continue
+                        if ch == "\n": break
+                        if cls:
+                            if ch == "]": cls = False
+                        elif ch == "[": cls = True
+                        elif ch == "/": break
+                        k += 1
+                    i = k + 1; continue
+            if c in ("'", '"', "`"):
+                q = c
+            i += 1; continue
+        # inside a string literal delimited by q
+        if c == "\\":
+            i += 2; continue
+        if c == q:
+            q = None; i += 1; continue
+        # a splice written for the OTHER quote: `"+NAME+"` inside '...' or `'+NAME+'` inside "..."
+        other = '"' if q == "'" else ("'" if q == '"' else None)
+        if other and c == other and nxt == "+":
+            m = IDENT.match(src, i + 2)
+            if m and src.startswith("+" + other, m.end()):
+                hits.append((line, "%s+%s+%s inside a %s-quoted string" % (other, m.group(0), other, q)))
+                i = m.end() + 2; continue
+        if q != "`" and c == "$" and nxt == "{":
+            hits.append((line, "${...} inside a %s-quoted string (not a template literal)" % q))
+        i += 1
+    for ln, what in hits:
+        err("template-leak", "app.js:%d %s — this renders as literal code on the page" % (ln, what))
+    if not hits:
+        note("template-leak: app.js has no mismatched-quote splices (%d lines scanned)" % line)
+
+
 def check_theme_registry():
     """One list of appearances, in three files. They must agree.
 
@@ -2026,6 +2172,8 @@ def main() -> int:
     run("check_static_link_coverage", check_static_link_coverage)
     run("check_store_defaults", check_store_defaults)
     run("check_theme_registry", check_theme_registry)
+    run("check_surface_switches", check_surface_switches)
+    run("check_template_leaks", check_template_leaks)
     run("check_first_run_marker", check_first_run_marker)
     run("check_sitemap_and_rss", check_sitemap_and_rss, list(slugs.keys()))
     report_salvage()

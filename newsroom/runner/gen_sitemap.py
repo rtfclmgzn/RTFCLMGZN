@@ -91,11 +91,34 @@ STATIC = [  # (path, changefreq, priority)
     ("/events", "weekly", "0.4"),
     ("/wallpapers", "monthly", "0.4"),
     ("/contact", "monthly", "0.3"),
+    ("/advertise", "monthly", "0.4"),
     ("/privacy", "yearly", "0.2"),
     ("/terms", "yearly", "0.2"),
     ("/rss.xml", "hourly", "0.8"),
     ("/newsroom-map.html", "monthly", "0.3"),
 ]
+
+SURFACE_KEYS = ("scoreboard", "labs", "grid", "extensions", "dictionary")
+
+
+def _disabled_surfaces() -> set:
+    """Subject-bound surfaces switched off in engine.config.json. Their URLs
+    must not be advertised: functions/[[path]].js answers 404 for them, and a
+    sitemap that lists a 404 is the fastest way to lose crawl trust."""
+    cfg_path = ROOT / "engine.config.json"
+    if not cfg_path.is_file():
+        return set()
+    try:
+        sw = (json.loads(io.open(cfg_path, encoding="utf-8").read()).get("surfaces") or {})
+    except Exception:
+        return set()
+    return {k for k in SURFACE_KEYS if (sw.get(k) or {}).get("enabled", True) is False}
+
+
+def static_entries():
+    off = _disabled_surfaces()
+    return [e for e in STATIC if e[0].strip("/") not in off]
+
 
 
 def tolerant_parse(raw: str):
@@ -208,7 +231,7 @@ def load_articles() -> list[dict]:
 
 def write_sitemap(arts: list[dict]) -> None:
     seen, rows = set(), []
-    for path, freq, pri in STATIC:
+    for path, freq, pri in static_entries():
         rows.append(
             f"  <url>\n    <loc>{SITE}{escape(path)}</loc>\n"
             f"    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>\n  </url>")
@@ -230,7 +253,7 @@ def write_sitemap(arts: list[dict]) -> None:
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(rows) + "\n</urlset>\n")
     io.open(WEB / "sitemap.xml", "w", encoding="utf-8", newline="").write(xml)
-    print(f"gen_sitemap: sitemap.xml written — {len(seen)} articles + {len(STATIC)} static URLs")
+    print(f"gen_sitemap: sitemap.xml written — {len(seen)} articles + {len(static_entries())} static URLs")
 
 
 def clean_rss() -> None:

@@ -1,3 +1,5 @@
+import ENGINE from "../engine.config.json";
+
 // THE APP-ROUTE SERVER — every page that is not an article or an API call.
 //
 // WHY THIS REPLACED `_redirects` (2026-08-15)
@@ -47,14 +49,25 @@ const EXACT = new Set([
   "pulse", "control-room", "usage", "transparency", "masthead", "review",
   "claims", "ledger-claims", "predictions", "ledger", "corrections", "design",
   "live", "livetv", "events",
-  "library", "account", "settings",
-  "contact", "connect", "privacy", "terms",
+  "library", "account", "settings", "admin",
+  "contact", "connect", "privacy", "terms", "advertise",
 ]);
 
 // Prefixes that own everything beneath them: /read/primer, /company/openai ...
 const PREFIX = new Set([
   "section", "persona", "editor", "company", "issue", "read",
 ]);
+
+// SUBJECT-BOUND SURFACES (2026-08-16). engine.config.json switches the five
+// AI-shaped pages on or off per publication. A switched-off route is not a
+// page, so it gets the same honest 404 as a typo — the sitemap and the footer
+// drop it too (gen_sitemap.py, gen_engine_js.py). esbuild inlines the JSON at
+// build time, exactly as functions/article/[slug].js already does.
+const SURFACES = (ENGINE && ENGINE.surfaces) || {};
+function surfaceOff(head) {
+  const s = SURFACES[head];
+  return !!(s && s.enabled === false);
+}
 
 export async function onRequest(context) {
   const { request, env } = context;
@@ -68,7 +81,7 @@ export async function onRequest(context) {
   const parts = url.pathname.split("/").filter(Boolean);
   const head = parts[0] || "";
   const known = parts.length === 1
-    ? EXACT.has(head)
+    ? EXACT.has(head) && !surfaceOff(head)
     : parts.length > 1 && PREFIX.has(head);
   if (!known) return asset;                      // honest 404, unchanged
 

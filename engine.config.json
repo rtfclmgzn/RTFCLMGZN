@@ -92,6 +92,43 @@
       "byte-identical to what it rendered before."
     ]
   },
+  "$comment_surfaces": [
+    "Switches for the subject-bound surfaces. Keys must equal subject.surfaces_bound_to_subject."
+  ],
+  "surfaces": {
+    "$comment": [
+      "The five surfaces whose SCHEMAS presuppose the AI beat (see subject.surfaces_bound_to_subject).",
+      "Each has an on/off switch and the label the reader sees. gen_engine_js stamps the switch into",
+      "index.html (footer links), gen_sitemap drops disabled URLs, functions/[[path]].js answers 404",
+      "for a disabled route, and app.js hides the hub tile, palette entry and route. RTFCLMGZN keeps",
+      "all five on; a generated niche starts with all five off until a surface pack exists for it."
+    ],
+    "scoreboard": {
+      "enabled": true,
+      "label": "The Scoreboard",
+      "nav_label": "Scoreboard"
+    },
+    "labs": {
+      "enabled": true,
+      "label": "Labs & Models",
+      "nav_label": "Labs & Models"
+    },
+    "grid": {
+      "enabled": true,
+      "label": "The Grid",
+      "nav_label": "The Grid"
+    },
+    "extensions": {
+      "enabled": true,
+      "label": "AI Extensions",
+      "nav_label": "AI Extensions"
+    },
+    "dictionary": {
+      "enabled": true,
+      "label": "The AI Dictionary",
+      "nav_label": "AI Dictionary"
+    }
+  },
   "$comment_desks": [
     "ONE desk list. It was previously written out five times — personas.js,",
     "SECTION_COLORS, GLYPHS, the apply-type map and a runbook one-liner — and",

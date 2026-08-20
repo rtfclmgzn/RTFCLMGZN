@@ -48,6 +48,33 @@ window.RTFC_ENGINE = {
     ],
     "short_name": "AI"
   },
+  "surfaces": {
+    "scoreboard": {
+      "enabled": true,
+      "label": "The Scoreboard",
+      "nav_label": "Scoreboard"
+    },
+    "labs": {
+      "enabled": true,
+      "label": "Labs & Models",
+      "nav_label": "Labs & Models"
+    },
+    "grid": {
+      "enabled": true,
+      "label": "The Grid",
+      "nav_label": "The Grid"
+    },
+    "extensions": {
+      "enabled": true,
+      "label": "AI Extensions",
+      "nav_label": "AI Extensions"
+    },
+    "dictionary": {
+      "enabled": true,
+      "label": "The AI Dictionary",
+      "nav_label": "AI Dictionary"
+    }
+  },
   "desks": [
     {
       "key": "Frontier",

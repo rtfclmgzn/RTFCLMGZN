@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import io
 import json
+from html import escape as html_escape
 import re
 import sys
 from pathlib import Path
@@ -250,6 +251,37 @@ def stamp_default_theme(html: str, cfg) -> str:
                   html, count=1)
 
 
+SURFACE_KEYS = ("scoreboard", "labs", "grid", "extensions", "dictionary")
+
+
+def surface_switches(cfg):
+    """{key: (enabled, nav_label)} for the subject-bound surfaces. A missing
+    `surfaces` block means every switch is on, which is what RTFCLMGZN ran as
+    before the block existed."""
+    sw = cfg.get("surfaces") or {}
+    out = {}
+    for key in SURFACE_KEYS:
+        s = sw.get(key) or {}
+        out[key] = (s.get("enabled", True) is not False,
+                    s.get("nav_label") or s.get("label") or key.title())
+    return out
+
+
+def stamp_surfaces(html: str, cfg) -> str:
+    """Rewrite each <!-- engine:surface:KEY --> footer slot: the link with its
+    configured label when the surface is on, nothing when it is off. The
+    markers stay either way so a niche can switch a surface back on later.
+    Raises if a marker is missing — the same rule as the identity regions."""
+    for key, (on, label) in surface_switches(cfg).items():
+        a, b = "<!-- engine:surface:%s -->" % key, "<!-- /engine:surface:%s -->" % key
+        i, j = html.find(a), html.find(b)
+        if i < 0 or j < 0 or j < i:
+            raise RuntimeError("index.html is missing the %s / %s markers" % (a, b))
+        body = ('<li><a href="/%s">%s</a></li>' % (key, html_escape(label))) if on else ""
+        html = html[:i + len(a)] + body + html[j:]
+    return html
+
+
 def render_index(html: str, cfg) -> str:
     """Return index.html with every marked region regenerated. Raises if a
     marker is missing — a silently-skipped region is exactly the drift this
@@ -257,6 +289,7 @@ def render_index(html: str, cfg) -> str:
     nl = "\r\n" if "\r\n" in html else "\n"
     bodies = region_bodies(cfg)
     html = stamp_default_theme(html, cfg)
+    html = stamp_surfaces(html, cfg)
     for key in REGIONS:
         a, b = "<!-- engine:%s -->" % key, "<!-- /engine:%s -->" % key
         i, j = html.find(a), html.find(b)
