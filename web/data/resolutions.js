@@ -115,6 +115,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Alibaba released Qwen3.8-Max open weights on August 12, 2026, as Qwen3.8-2.4T-A95B (text-only variant, 2.4 trillion parameters with 95B active per token). The open-weights checkpoint is available on Hugging Face; the release removed multimodal (vision/video) capabilities from the API version.",
       label:"Alibaba Qwen3.8-Max open weights release on Hugging Face",
-      url:"https://www.explainx.ai/blog/qwen3-8-max-open-weights-live-hugging-face-august-2026" }
+      url:"https://www.explainx.ai/blog/qwen3-8-max-open-weights-live-hugging-face-august-2026" },
+    { key:"california-ai-transparency-act-operative-august-2|w|0",
+      at:"2026-08-20T13:45:00Z",
+      outcome:"partly",
+      note:"California AB 853 operative August 2, 2026 required AI labs with over 1M monthly users to provide detection tools by that date. Anthropic shipped text detection API with watermarking; Google deployed AI Content Detection API on Google Cloud; Meta deployed beta AI detection for images/videos. OpenAI failed to publish a dedicated detection tool (previously shut down its classifier due to low accuracy); xAI published no official detection tool. Three of five labs complied; two did not.",
+      label:"AB 853 compliance: OpenAI, Anthropic, Google, Meta, xAI detection tool status",
+      url:"https://www.morganlewis.com/pubs/2026/08/new-california-ai-disclosure-rules-become-operative" }
   ]
 };
