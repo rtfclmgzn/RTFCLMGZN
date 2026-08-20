@@ -4431,8 +4431,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090257183820988860",
+        "remote_id": "2090257183820988860",
+        "posted_at": "2026-08-20T01:58:42Z"
       },
       {
         "platform": "x",
@@ -4464,8 +4466,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcPoy_On9aV/",
+        "remote_id": "18125757514783847",
+        "posted_at": "2026-08-20T01:59:02Z"
       },
       {
         "platform": "facebook",
@@ -4474,14 +4478,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113851315396947",
+        "remote_id": "1238977099292018_122113851315396947",
+        "posted_at": "2026-08-20T01:59:13Z"
       },
       {
         "platform": "threads",
         "copy": "CISA gave federal agencies 3 days to patch a Ray AI-framework bug. A second, more severe Ray flaw -- exploited by a botnet since 2023, now controlling 200,000+ servers -- still has no patch, because Anyscale calls it a design decision, not a bug. MITRE and NVD disagree.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcPo2kPmmHa",
+        "remote_id": "17949464616253657",
+        "posted_at": "2026-08-20T01:59:27Z"
       },
       {
         "platform": "threads",
@@ -4596,8 +4604,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#IPO",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mti5y7mmx42u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mti5y7mmx42u",
+        "posted_at": "2026-08-20T02:07:45Z"
       }
     ]
   },
@@ -4631,8 +4641,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#DataPrivacy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090258192840511881",
+        "remote_id": "2090258192840511881",
+        "posted_at": "2026-08-20T02:02:43Z"
       },
       {
         "platform": "x",
@@ -4674,14 +4686,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#DataPrivacy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122113851789396947",
+        "remote_id": "1238977099292018_122113851789396947",
+        "posted_at": "2026-08-20T02:03:16Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI previews a system that flags AI misuse across conversations without storing any of them. Sounds great -- except every technical claim about how it works right now comes from OpenAI itself. The independent white paper isn't due until September. Compared to Anthropic's opposite bet (retain 30 days for safety review) here:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcPpU4Cmu60",
+        "remote_id": "18112237486798119",
+        "posted_at": "2026-08-20T02:03:36Z"
       },
       {
         "platform": "bluesky",
@@ -4691,8 +4707,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#DataPrivacy",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mti5qykgcw2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mti5qykgcw2a",
+        "posted_at": "2026-08-20T02:03:43Z"
       }
     ]
   }
