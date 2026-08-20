@@ -4724,7 +4724,7 @@ window.RTFC_SOCIAL_POSTS =[
       }
     ]
   },
-{
+  {
     "article_id": "g12",
     "ts": "2026-08-20T17:15:00Z",
     "export": {
@@ -4799,8 +4799,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Deepfakes"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtjp45uqeg26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtjp45uqeg26",
+        "posted_at": "2026-08-20T16:46:51Z"
       }
     ]
   }
