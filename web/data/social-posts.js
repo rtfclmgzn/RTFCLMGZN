@@ -4447,8 +4447,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Botnet"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090289574450962749",
+        "remote_id": "2090289574450962749",
+        "posted_at": "2026-08-20T04:07:25Z"
       },
       {
         "platform": "instagram",
@@ -4496,8 +4498,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-20T03:52:16Z",
         "copy": "One hijacked Ray GPU cluster is worth $3M a year in stolen compute, per the security firm tracking the botnet exploiting it. The framework it's exploiting coordinates AI training at OpenAI. The flaw has had no patch since 2023.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcP3hfzG8NZ",
+        "remote_id": "18129089155674967",
+        "posted_at": "2026-08-20T04:07:39Z"
       },
       {
         "platform": "bluesky",
@@ -4657,8 +4661,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090290583634088435",
+        "remote_id": "2090290583634088435",
+        "posted_at": "2026-08-20T04:11:25Z"
       },
       {
         "platform": "instagram",
