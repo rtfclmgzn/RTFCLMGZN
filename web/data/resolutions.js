@@ -44,6 +44,12 @@ window.RTFC_RESOLUTIONS = {
   updated: "2026-08-17",
   note: "Resolutions are append-only and dated. Articles are never rewritten; every resolution renders beneath the original piece and on the Claims Ledger.",
   items: [
+    { key:"agibot-overtakes-unitree-h1-2026-shipments|w|0",
+      at:"2026-08-20T19:30:00Z",
+      outcome:"confirmed",
+      note:"Unitree's Shanghai IPO priced at 150.8 yuan per share, targeting $904 million (6.1 billion yuan) and marking the world's first listed humanoid-robot maker. The IPO validates Unitree's market position; first-day trading saw the stock surge 460-629% before paring gains.",
+      label:"Unitree Robotics Shanghai Star Market IPO, August 19, 2026",
+      url:"https://www.bloomberg.com/news/articles/2026-08-18/unitree-robotics-set-to-debut-after-904-million-shanghai-ipo" },
     { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
       at:"2026-08-10T02:15:00Z",
       outcome:"confirmed",
