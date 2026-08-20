@@ -3757,7 +3757,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The move treats the app stores as the enforcement chokepoint — the place where the law can reach a diffuse, fast-moving problem by leaning on two companies instead of hundreds of developers. That is also its limit: removals happen app by app, and nudify tools have a long record of reappearing under new names once the old ones are pulled. The 28-day clock tests whether platform-level pressure can outpace that churn, or whether it becomes a game of whack-a-mole with a legal deadline attached.",
+        "text": "The move treats the app stores as the enforcement chokepoint — the place where the law can reach a diffuse, fast-moving problem by leaning on two companies instead of hundreds of developers. That is also its limit: removals happen app by app, and nudify tools have a long record of reappearing under new names once the old ones are pulled. The 28-day clock tests whether platform-level pressure can outpace that churn, or whether it becomes a game of whack-a-mole with a legal deadline attached. Images from tools like these carry none of the provenance signals major labs now attach to their own output — [what that absence does and doesn't prove is worth knowing](/article/check-whether-an-image-is-ai-generated) before treating any single image as settled.",
         "citation_urls": [
           "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/"
         ]
@@ -12041,7 +12041,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The one-day round trip is itself a small data point worth reading correctly. It isn't evidence that Google's review process is broken — a company the size of Google can pull a live feature from a major product in hours once it decides to, and it did. It's evidence of something closer to the opposite problem: nothing in the launch review apparently flagged \"a reference map product can now generate fake documentary-style imagery of real places\" as a distinct risk category from \"a chat app can generate a fake image.\" That's the gap a relaunch actually has to close, and it's a harder one than shipping a watermark, because it means treating the product's own trustworthiness as part of the threat model, not just the output.",
+        "text": "The one-day round trip is itself a small data point worth reading correctly. It isn't evidence that Google's review process is broken — a company the size of Google can pull a live feature from a major product in hours once it decides to, and it did. It's evidence of something closer to the opposite problem: nothing in the launch review apparently flagged \"a reference map product can now generate fake documentary-style imagery of real places\" as a distinct risk category from \"a chat app can generate a fake image.\" That's the gap a relaunch actually has to close, and it's a harder one than shipping a watermark, because it means treating the product's own trustworthiness as part of the threat model, not just the output. The fabricated blast crater and the staged protest both carried a SynthID watermark the whole time, which nobody checked before sharing — [here's how to actually run that check](/article/check-whether-an-image-is-ai-generated) on an image like either one.",
         "citation_urls": []
       }
     ],
@@ -21183,7 +21183,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "None of this is unique to Anthropic's own products: this newsroom carries the same kind of AI-authorship disclosure, for the same underlying reason — the EU AI Act's transparency mandate treats \"who or what produced this\" as information a reader is owed, not an optional courtesy. What's new is that Claude now enforces the disclosure at the token level instead of leaving it to a byline. Whether that becomes the industry default depends less on Anthropic than on whether OpenAI decides the false-positive risk it has been weighing is now smaller than the risk of being the one major lab that still doesn't mark its output at all.",
+        "text": "None of this is unique to Anthropic's own products: this newsroom carries the same kind of AI-authorship disclosure, for the same underlying reason — the EU AI Act's transparency mandate treats \"who or what produced this\" as information a reader is owed, not an optional courtesy. What's new is that Claude now enforces the disclosure at the token level instead of leaving it to a byline. Whether that becomes the industry default depends less on Anthropic than on whether OpenAI decides the false-positive risk it has been weighing is now smaller than the risk of being the one major lab that still doesn't mark its output at all. For a reader checking a specific image rather than taking any lab's disclosure on faith, [the actual verification steps are here](/article/check-whether-an-image-is-ai-generated).",
         "citation_urls": []
       }
     ],

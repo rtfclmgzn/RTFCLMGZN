@@ -2829,5 +2829,247 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+{
+    "id": "g12",
+    "slug": "check-whether-an-image-is-ai-generated",
+    "image": "assets/img/newsroom/g12.jpg",
+    "title": "How to check whether an image is AI-generated",
+    "dek": "Google Earth's own image tool watermarked every fake blast crater and staged protest it produced in July 2026 — and almost nobody checked before sharing. Two real, independent systems can tell you what a lab's own tool won't: a signed Content Credentials manifest, and a pixel-level watermark. Here's the order to check them in, and what neither one proves.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-20T17:15:00Z",
+    "readMins": 5,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Check for a signed C2PA Content Credentials manifest first — it names the generating tool directly.",
+      "Google's SynthID watermark survives cropping and compression; check it via Gemini or Chrome's right-click tool.",
+      "A screenshot or repost strips the file's metadata before you ever see it — get the original file.",
+      "OpenAI's images have carried C2PA metadata since February 2024; SynthID now covers its images too.",
+      "Caveat: no watermark found doesn't mean a photo is real — it only means this check found nothing."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Before you reshare anything that reads as a live event, run the two-minute version: C2PA, then SynthID.",
+        "text": "verify.contentauthenticity.org and the Gemini app each cost you one file upload. That's cheaper than being the account that spread a fake blast crater."
+      },
+      {
+        "label": "If you only ever have a screenshot, skip the metadata checks and go straight to reverse image search.",
+        "text": "Google Images or TinEye works from the pixels alone, which is the one method a stripped screenshot can't defeat."
+      },
+      {
+        "label": "Say what you actually found, not what you conclude from it.",
+        "text": "\"No SynthID watermark\" is a fact. \"So it's a real photo\" is a guess — keep the two separate out loud, especially if you're the one about to share it further."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "On July 30, 2026, Google turned on an AI image generator inside Google Earth's web app: zoom into any point on the map, type a prompt, and get a photorealistic scene rendered onto that location's own satellite and terrain data. By July 31 the feature was gone. Screenshots had already spread of a fabricated blast crater over a real Los Angeles address and a staged protest outside Google's own Mountain View headquarters — neither event real, both built on genuine reference imagery of a genuine place. [The full rollback](/article/google-earth-ai-image-tool-rollback) happened in under 24 hours. Every image the tool produced carried an invisible Google SynthID watermark the entire time — nobody checked before sharing, because almost nobody knows the check exists. That's the actual gap this guide closes: not spotting a fake by eye, which gets harder every month, but knowing which real systems can tell you something concrete, and in what order to check them.",
+        "citation_urls": [
+          "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/",
+          "https://x.com/googleearth/status/2082818165503902043"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two different systems, and who's actually in them",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Two unrelated mechanisms currently do this work, and knowing which one you're looking for changes where you check. __Content Credentials__, built on the __C2PA__ standard, are a cryptographically signed manifest embedded in the file itself — a record of what tool made it, whether generative AI was involved, and what's been done to it since. The coalition's steering committee includes Adobe, Microsoft, Meta, Sony, the BBC, [Google](/company/google), and [OpenAI](/company/openai), which has embedded this metadata in every DALL·E 3 and ChatGPT image since February 6, 2024. __SynthID__ is a separate thing entirely: an invisible pattern Google embeds directly into the pixels — and, separately, the audio — of AI-generated content at the moment of creation, built to survive cropping, filters, and recompression in a way file metadata cannot. Since a May 2026 partnership, OpenAI's own image outputs carry both, layered on top of each other. [Anthropic takes a third approach again](/article/anthropic-claude-invisible-watermark-global-rollout): Claude's generated images and code files get signed C2PA metadata like OpenAI's, but Claude's generated *text* gets an entirely different, invisible pattern of its own. ==There is no single universal watermark== — only a handful of lab-specific systems that happen to overlap on images.",
+        "citation_urls": [
+          "https://petapixel.com/2024/02/08/ai-images-generated-on-dall-e-now-contain-the-content-authenticity-tag/",
+          "https://c2pa.org/",
+          "https://winbuzzer.com/2026/05/20/openai-adds-support-for-googles-synthid-watermarks-xcxwbn/"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check an image in this order",
+          "sub": "Five to ten minutes, and you don't need to install anything.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The image file itself — not a screenshot of it, if you can help it.",
+            "A browser."
+          ],
+          "steps": [
+            {
+              "do": "Get the original file, not a screenshot or repost.",
+              "detail": "Download the actual image rather than working from a screenshot, a social-media repost, or a pasted-in copy. Both C2PA metadata and, to a lesser extent, SynthID's watermark can be damaged or destroyed by a re-save.",
+              "verify": "You have a file you downloaded directly, with its original filename and extension intact.",
+              "ifnot": "If only a screenshot exists, skip straight to reverse image search below — the metadata check has nothing left to read."
+            },
+            {
+              "do": "Check for a Content Credentials manifest.",
+              "detail": "Open verify.contentauthenticity.org and drop the file in. If a manifest exists, it names the generating tool and shows what's been done to the file since.",
+              "verify": "The tool returns a manifest naming a specific application, or explicitly reports none was found.",
+              "ifnot": "No manifest doesn't mean the image is real — plenty of real cameras and plenty of AI tools never attach one. Move to the next check."
+            },
+            {
+              "do": "Check for a SynthID watermark.",
+              "hi": true,
+              "detail": "Upload the file to the Gemini app and ask whether it was created or altered by Google AI, or use Chrome's right-click \"Was this generated with AI?\" option if you're viewing it in-browser.",
+              "verify": "You get a direct answer about a Google-family watermark, one way or the other.",
+              "ifnot": "SynthID only ever confirms Google's own tools, and OpenAI's since their 2026 partnership — a clean result here says nothing about Midjourney, Grok, or any other generator."
+            },
+            {
+              "do": "Run a reverse image search.",
+              "detail": "Search Google Images or TinEye for the exact file. If the same image already exists online, attached to a different, older, real story, that settles it regardless of what any watermark check returned.",
+              "verify": "You know whether this exact image, or a close crop of it, has a prior, dated appearance online.",
+              "ifnot": "No prior hit doesn't confirm the image is new or fake — it only means this particular search didn't find one."
+            },
+            {
+              "do": "State your confidence in the same terms the tools gave you.",
+              "detail": "\"A signed manifest names Google's Imagen\" is a fact. \"No watermark, so it's probably real\" is a guess dressed as a finding.",
+              "verify": "Whatever you conclude, you can point to which specific check produced it.",
+              "ifnot": "If every check came back empty, the honest answer is \"unresolved,\" not \"real.\""
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Which of those five steps to start on depends on what you're actually holding — a link, a download, or a screenshot someone already sent you.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHAT YOU HAVE",
+          "title": "Start where the evidence still exists",
+          "question": "Take the branch matching what you're actually holding.",
+          "branches": [
+            {
+              "when": "You have the original file, downloaded directly from where it was posted.",
+              "then": "Run the C2PA check first, then the SynthID check — both have real data to read.",
+              "because": "This is the only case where every check in the ladder still has something to work with.",
+              "hi": true
+            },
+            {
+              "when": "You only have a screenshot, a repost, or a pasted-in copy.",
+              "then": "Skip straight to a reverse image search and treat any metadata check as unreliable.",
+              "because": "A screenshot strips embedded file metadata outright; a repost through most social platforms strips or re-encodes it too."
+            },
+            {
+              "when": "You know which specific AI product made it — a Gemini, ChatGPT, or Claude output someone showed you directly.",
+              "then": "Go straight to that lab's own check: the Gemini app for SynthID, verify.contentauthenticity.org for a C2PA manifest.",
+              "because": "Skipping to the one system that actually applies to this tool saves the other steps."
+            },
+            {
+              "when": "Every check comes back empty and you still need an answer.",
+              "then": "Say so plainly: unresolved, not confirmed real.",
+              "because": "None of these systems certify authenticity — they only ever confirm a specific tool's own involvement when one of them finds a match.",
+              "warn": "A confident-sounding conclusion built on an absence of evidence is the exact failure mode this whole check exists to prevent."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The two mechanisms, side by side",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "WHICH SIGNAL, WHAT IT'S WORTH",
+          "title": "C2PA and SynthID answer different questions",
+          "columns": [
+            { "label": "C2PA / Content Credentials", "sub": "signed file metadata" },
+            { "label": "SynthID", "sub": "pixel-level watermark", "hi": true },
+            { "label": "Reverse image search", "sub": "prior-publication check" }
+          ],
+          "rows": [
+            { "label": "What it actually checks", "values": ["A manifest embedded in the file, naming the tool and edit history", "A statistical pattern embedded in the pixels or audio at creation", "Whether this exact image has a prior, dated appearance online"] },
+            { "label": "Survives a screenshot or re-save", "values": ["No — screenshotting and most re-saves strip it", "Often, by design — built to survive cropping and recompression", "Not applicable — works from the pixels, not a file's history"] },
+            { "label": "Where to check it", "values": ["verify.contentauthenticity.org", "The Gemini app, or Chrome's right-click check", "Google Images or TinEye"] },
+            { "label": "What a clean result actually proves", "values": ["That specific tool was involved, if the manifest is present and unaltered", "That Google's (or OpenAI's) generator was involved, if a match is found", "That this image, or a close match, existed before now"] }
+          ],
+          "source": "Content Authenticity Initiative (verify.contentauthenticity.org); Google DeepMind SynthID documentation — both read directly, current as of August 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of these three replace judgment — they narrow it. A signed C2PA manifest naming a real generator is about as strong as this kind of evidence gets; a SynthID hit is nearly as strong for the labs it covers; a reverse-image match settles the question outright by proving the image already existed as something else. But all three can come back with nothing, and \"nothing\" is not the same finding as \"clean.\" The apps generating [nudify deepfakes that San Francisco ordered off the app stores](/article/san-francisco-orders-apple-google-remove-nudify-apps) in July 2026 don't run through OpenAI's or Google's pipelines, and their output carries none of these signals — which is exactly why the absence of a watermark can never be read as reassurance.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where this check breaks",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Five ways this check gets called done when it isn't",
+          "items": [
+            {
+              "mistake": "Running the check on a screenshot instead of the original file.",
+              "looks": "The C2PA check reports no manifest found, and that gets read as \"so it's real.\"",
+              "why": "A screenshot never carried the manifest in the first place — the platform's own re-encoding strips it before you ever see the image.",
+              "fix": "Track down the original file or post before concluding anything from a metadata check.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating a clean SynthID result as proof an image is untouched.",
+              "looks": "No watermark found, so the image gets forwarded as verified.",
+              "why": "SynthID only ever confirms Google's own tools, and OpenAI's since their 2026 partnership — a Midjourney, Grok, or Stable Diffusion image will never trigger it, watermarked or not.",
+              "fix": "Name which specific tool's watermark you checked for, not \"AI\" in general.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming a signed C2PA manifest means the underlying scene is true.",
+              "looks": "A manifest confirms a photo came from a real camera, and that alone gets treated as confirming the event it depicts.",
+              "why": "C2PA records tool history, not truth — a real camera can photograph a staged scene, and a manifest happily signs that too.",
+              "fix": "Read what the manifest actually asserts (capture, edit, AI-generation) rather than what you assume it implies.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Sharing before checking, because the platform's own preview looked convincing.",
+              "looks": "A fabricated blast crater or a staged protest circulates for hours before anyone runs a single check.",
+              "why": "Google Earth's own image tool watermarked every output it produced in July 2026, and the mark still didn't stop the fastest-spreading screenshots — nobody looked before sharing.",
+              "fix": "Run the C2PA and SynthID checks before resharing something that reads as newsworthy, not after.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Giving up after one check comes back empty.",
+              "looks": "No manifest, so the reverse-image search and the SynthID check never happen.",
+              "why": "Each of the three methods only covers part of the field — a gap in one says nothing about the others.",
+              "fix": "Work the full ladder before declaring an image unresolved, not just clean or fake.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same discipline applies one level up the stack, on claims rather than pictures: [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the text-side version of this same habit, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      { "label": "C2PA — coalition overview and steering committee", "url": "https://c2pa.org/", "primary": true },
+      { "label": "Content Authenticity Initiative — Content Credentials verifier", "url": "https://verify.contentauthenticity.org/", "primary": true },
+      { "label": "Google DeepMind — SynthID", "url": "https://deepmind.google/models/synthid/", "primary": true },
+      { "label": "Google — \"SynthID Detector: a new portal to help identify AI-generated content\"", "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/", "primary": true },
+      { "label": "PetaPixel — \"AI Images Generated on DALL-E Now Contain the Content Authenticity Tag\"", "url": "https://petapixel.com/2024/02/08/ai-images-generated-on-dall-e-now-contain-the-content-authenticity-tag/" },
+      { "label": "Winbuzzer — \"OpenAI Adopts Google SynthID Watermarks for AI Image Detection\"", "url": "https://winbuzzer.com/2026/05/20/openai-adds-support-for-googles-synthid-watermarks-xcxwbn/" },
+      { "label": "Yahoo Tech — Google SynthID comes to Chrome, Search, and ChatGPT", "url": "https://tech.yahoo.com/ai/gemini/articles/google-synthid-comes-chrome-search-174500591.html" },
+      { "label": "Engadget — Google rolls back its Google Earth AI image tool", "url": "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/" },
+      { "label": "TechCrunch — Apple and Google ordered to purge nudify apps from app stores", "url": "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/" }
+    ],
+    "corrections": []
   }
 ];

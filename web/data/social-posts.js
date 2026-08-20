@@ -4723,5 +4723,85 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-20T02:03:43Z"
       }
     ]
+  },
+{
+    "article_id": "g12",
+    "ts": "2026-08-20T17:15:00Z",
+    "export": {
+      "article_id": "g12",
+      "url": "https://rtfclmgzn.com/article/check-whether-an-image-is-ai-generated",
+      "headline": "How to check whether an image is AI-generated",
+      "hook": "Every fake image Google Earth's AI tool produced in July 2026 carried an invisible SynthID watermark. Nobody checked before it went viral. Here's how to actually run that check.",
+      "key_facts": [
+        "A signed C2PA Content Credentials manifest, checked at verify.contentauthenticity.org, names the tool that made an image.",
+        "Google's SynthID watermark survives cropping and recompression; check it via the Gemini app or Chrome's right-click tool.",
+        "A screenshot or repost strips a file's metadata before you ever see it -- always start from the original file."
+      ],
+      "tone": "energetic, conversational, practical",
+      "persona": "nova-reyes",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g12.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Every fake image Google Earth's AI tool made in July went viral with an invisible watermark already attached.\n\nNobody checked before sharing.\n\nHere's the actual 2-step check: signed file metadata first, then the pixel watermark.",
+        "reply_copy": "How to actually run the check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Deepfakes"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google Earth's AI image tool made a fake blast crater and a staged protest go viral in July 2026 -- and every single image carried an invisible watermark the whole time.\n\nNobody checked before sharing, because almost nobody knows the check exists.\n\nTwo real systems can tell you what's actually going on: a signed Content Credentials manifest embedded in the file, and Google's SynthID watermark baked into the pixels.\n\nThe five-minute order to check them in -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Deepfakes",
+          "#FactCheck",
+          "#DigitalLiteracy",
+          "#TechTips",
+          "#AIGenerated"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Every fake image Google Earth's AI tool produced in July 2026 -- including a fabricated blast crater and a staged protest outside Google's own headquarters -- carried an invisible SynthID watermark the entire time. Nobody checked before sharing, because almost nobody knows the check exists.\n\nTwo real, independent systems can actually tell you something: a signed Content Credentials (C2PA) manifest embedded in the file, and Google's SynthID watermark embedded in the pixels. We put together the order to check them in, and what neither one proves.",
+        "hashtags": [
+          "#AI",
+          "#Deepfakes"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Google Earth's AI image tool watermarked every fake it produced in July -- a blast crater, a staged protest -- and nobody checked before it went viral. Two real systems can tell you what a lab's own tool won't: a signed C2PA manifest, and a SynthID pixel watermark. Here's the order to check them in.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Every fake image Google Earth's AI tool made in July carried an invisible SynthID watermark. Nobody checked before it went viral. The real check: file metadata first, then the pixel watermark, then reverse image search.",
+        "hashtags": [
+          "#AI",
+          "#Deepfakes"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
