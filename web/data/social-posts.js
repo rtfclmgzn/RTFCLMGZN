@@ -4548,8 +4548,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics",
           "#IPO"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090338826107371556",
+        "remote_id": "2090338826107371556",
+        "posted_at": "2026-08-20T07:23:07Z"
       },
       {
         "platform": "x",
@@ -4562,8 +4564,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics",
           "#DeepSeek"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090339835483435032",
+        "remote_id": "2090339835483435032",
+        "posted_at": "2026-08-20T07:27:08Z"
       },
       {
         "platform": "instagram",
