@@ -5029,25 +5029,55 @@
         '<i class="tts-prog" id="tts-prog" role="progressbar" aria-label="Listening progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></i></button>';
     }
     h+='<button class="tool-btn share-btn" id="share-btn" onclick="rtfcShare(\''+a.id+'\')">⤴ <span>Share</span></button>';
+    /* COPY LINK, ALWAYS (2026-08-21, owner). Installed as a PWA the site runs
+       display:standalone, so there is no address bar to copy a URL out of. The
+       OS share sheet has its own Copy, but it is two taps down and some targets
+       hide it, so the deterministic path gets its own button. */
+    h+='<button class="tool-btn copy-btn" id="copy-btn" onclick="rtfcCopyLink(\''+a.id+'\')" aria-label="Copy a link to this story">⧉ <span>Copy link</span></button>';
     return h+'</div>';
   }
+  /* SHARE (rewritten 2026-08-21).
+     THE BUG: the payload used to be {title, text:a.dek, url}. A dek runs ~400
+     characters, and Android Chrome flattens title+text+url into ONE
+     EXTRA_TEXT string for the receiving app. So the link arrived buried at the
+     end of a wall of prose, and plenty of targets truncated it outright — the
+     reader experienced it as "share just copies the text". Desktop looked fine
+     only because there is an address bar to copy from.
+     THE RULE: share the LINK, not the article. title + url, nothing else.
+     Also: the old .catch() swallowed every rejection, so a failed share did
+     nothing at all. A real failure now falls through to the clipboard; only a
+     user cancel (AbortError) is silent, because that one is intentional. */
+  function articleUrl(a){ return SITE_HOME+"/article/"+a.slug; }
+  function flashBtn(id, label){
+    var btn=document.getElementById(id); if(!btn) return;
+    var was=btn.innerHTML;
+    btn.innerHTML='\u2713 <span>'+label+'</span>';
+    setTimeout(function(){ if(btn) btn.innerHTML=was; },2000);
+  }
+  function copyLink(url, btnId){
+    function manual(){ window.prompt("Copy this link:",url); }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){ flashBtn(btnId,"Link copied"); }, manual);
+    } else { manual(); }
+  }
+  window.rtfcCopyLink=function(id){
+    var a=article2(id); if(!a) return;
+    copyLink(articleUrl(a),"copy-btn");
+  };
   window.rtfcShare=function(id){
     var a=article2(id); if(!a) return;
-    var url=SITE_HOME+"/article/"+a.slug;
-    var btn=document.getElementById("share-btn");
-    function copied(){
-      if(!btn) return;
-      btn.innerHTML='✓ <span>Link copied</span>';
-      setTimeout(function(){ if(btn) btn.innerHTML='⤴ <span>Share</span>'; },2000);
-    }
+    var url=articleUrl(a);
     if(navigator.share){
-      navigator.share({title:a.title,text:a.dek||a.title,url:url}).catch(function(){});
-    } else if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(url).then(copied,function(){ window.prompt("Copy this link:",url); });
+      navigator.share({title:a.title, url:url}).catch(function(err){
+        // User dismissed the sheet: that is a choice, not a failure.
+        if(err && (err.name==="AbortError" || err.name==="NotAllowedError")) return;
+        copyLink(url,"share-btn");
+      });
     } else {
-      window.prompt("Copy this link:",url);
+      copyLink(url,"share-btn");
     }
   };
+
   function costFooterHTML(a){
     var c=articleCost(a.id);
     if(!c || !(c.cost>0)) return "";
