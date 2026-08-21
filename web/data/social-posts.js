@@ -4181,8 +4181,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#Astra"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090623067580178942",
+        "remote_id": "2090623067580178942",
+        "posted_at": "2026-08-21T02:12:36Z"
       },
       {
         "platform": "instagram",
@@ -4595,14 +4597,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics",
           "#IPO"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114166327396947",
+        "remote_id": "1238977099292018_122114166327396947",
+        "posted_at": "2026-08-21T02:12:12Z"
       },
       {
         "platform": "threads",
         "copy": "Unitree's Shanghai IPO closed +460% (peaked near +630% intraday), valuing the humanoid-robot maker near $50B -- on a day China's own benchmark index fell 3%. Same week, a rival passed it as the top-shipping humanoid-robot maker. Not financial advice, just a number worth double-checking.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcSPJL3kXhl",
+        "remote_id": "18128192431708706",
+        "posted_at": "2026-08-21T02:12:30Z"
       },
       {
         "platform": "bluesky",
@@ -4754,8 +4760,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Deepfakes"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090621835834794300",
+        "remote_id": "2090621835834794300",
+        "posted_at": "2026-08-21T02:07:42Z"
       },
       {
         "platform": "instagram",
@@ -4773,8 +4781,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcSOnrxjMHC/",
+        "remote_id": "17982883649878309",
+        "posted_at": "2026-08-21T02:07:58Z"
       },
       {
         "platform": "facebook",
@@ -4783,14 +4793,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Deepfakes"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114165775396947",
+        "remote_id": "1238977099292018_122114165775396947",
+        "posted_at": "2026-08-21T02:08:08Z"
       },
       {
         "platform": "threads",
         "copy": "Google Earth's AI image tool watermarked every fake it produced in July -- a blast crater, a staged protest -- and nobody checked before it went viral. Two real systems can tell you what a lab's own tool won't: a signed C2PA manifest, and a SynthID pixel watermark. Here's the order to check them in.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcSOqxzEasq",
+        "remote_id": "18101575676249962",
+        "posted_at": "2026-08-21T02:08:23Z"
       },
       {
         "platform": "bluesky",
