@@ -4082,8 +4082,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Labor"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090652523258593572",
+        "remote_id": "2090652523258593572",
+        "posted_at": "2026-08-21T04:09:39Z"
       },
       {
         "platform": "instagram",
@@ -4386,8 +4388,10 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "threads",
         "copy": "DeepSeek's V4 Pro ships true MIT, zero conditions. Meta's Llama 3 grant expires outright past 700 million monthly users. Moonshot's Kimi K2 only adds attribution past 100M users or $20M monthly revenue. Same word, three different grants. Here's the four-question check.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcSciQ6kZlu",
+        "remote_id": "18143050156554349",
+        "posted_at": "2026-08-21T04:09:33Z"
       },
       {
         "platform": "bluesky",
