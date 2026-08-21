@@ -222,4 +222,10 @@ window.RTFC_BUZZ = [
     why:"A memory chipmaker betting $28.6 billion on its own AI-driven future reveals confidence that AI chip demand will remain tight enough to justify returning capital at the current pace—a harder signal than forward guidance because it's live cash at current valuations.",
     heat:58, topics:["sk hynix","dram","memory","hbm","ai infrastructure","shareholder return","supply chain"],
     url:"https://news.skhynix.com/en/share-buyback-and-retirement/" },
+{ id:"bz-287", date:"2026-08-20",
+    source:{ name:"Binance", handle:"Binance", platform:"web", kind:"lab" },
+    text:"Binance launched Agent OS, an operating system that lets Claude, ChatGPT, Codex, Cursor, and VS Code place live crypto trades on Binance's 300+ million user base. The MCP server provides standardized access to market data, order books, balances, and positions without requiring agents to store API credentials locally. User-controlled permissions determine available functions; trading can be isolated to dedicated subaccounts with instant revocation. Competitors Coinbase, Kraken, and OKX are similarly enabling agent-integrated trading.",
+    why:"A major exchange opening live trading to frontier AI agents (Claude, ChatGPT) at scale represents a structural shift from AI-as-tool to AI-as-autonomous-actor with real financial authority — competing directly against earlier-mover exchanges and accelerating agent deployment into financial infrastructure.",
+    heat:70, topics:["binance","ai agents","cryptocurrency","trading","financial infrastructure","claude","chatgpt"],
+    url:"https://www.prnewswire.com/news-releases/binance-introduces-agent-os-to-connect-ai-applications-to-financial-infrastructure-302856306.html" },
 ];
