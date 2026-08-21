@@ -194,8 +194,32 @@ window.RTFC_MAGAZINE_ISSUES.push({
     },
     "body": [
       "Two words unlock how these things behave. The first is ==token==. Models read chunks of roughly three-quarters of a word, not letters. Every price you'll see is per **million tokens**, and every model's size limit is counted in them. Tokens are the kilowatt-hour of this industry.",
-      "The second is the ==context window== — working memory. It's how many tokens the model can hold at once: your question, the documents you pasted, everything said so far. Modern models hold enough for a whole book, but it is finite, and a long conversation quietly drops its own beginning.",
-      "The part that surprises everyone: **a model has no memory of you between separate conversations.** When an assistant seems to remember your name, a system outside the model is pasting that back in. Put what matters *in the conversation* — that window is all it can see."
+      "The second is the ==context window== — working memory. It's how many tokens the model can hold at once: your question, the documents you pasted, everything said so far. Modern models hold enough for a whole book, but it is finite, and a long conversation quietly drops its own beginning."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act I · The Plumbing",
+    "layout": "runover",
+    "cont": "Tokens, context, and why it 'forgets' you, continued",
+    "crosshead": "Why a token isn't a letter, or even always a word",
+    "body": [
+      "Tokenizers split text into pieces they've seen often enough to be worth their own slot — common words stay whole, rarer ones get chopped into fragments a model has actually encountered before. **'Unbelievable' might become 'un' + 'believ' + 'able'** rather than one token, which is how a model handles a word it was never trained on directly: by recognizing the pieces.",
+      "That splitting isn't even across languages or content. Text outside a model's most common training language, and strings like phone numbers, code, or unusual names, often cost **more tokens per visible character** than plain English prose does — the same sentence can be cheaper or pricier to run depending only on what it's made of, not how long it looks on screen.",
+      "Cost follows the same unit both directions: what you type in and what the model writes back are both metered, usually at different rates, and output tokens are typically the pricier half. A long back-and-forth costs more than the same question asked fresh — not because the model works harder, but because every earlier turn still sits in the window, and every token in that window gets paid for again on the next request."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act I · The Plumbing",
+    "layout": "runover",
+    "cont": "Tokens, context, and why it 'forgets' you, continued",
+    "crosshead": "Where the memory in 'it remembers me' actually comes from",
+    "end": true,
+    "body": [
+      "A bigger context window doesn't mean everything inside it gets equal attention. Content buried in the middle of a very long conversation is, in practice, attended to less reliably than what's at the start or the most recent few turns — a pattern researchers call the ++lost-in-the-middle++ effect. A short, well-organized prompt often beats pasting in everything you have, even when the window is technically large enough to hold it all.",
+      "So when a product seems to remember your name, your preferences, or a project you're working on across separate conversations, the model itself isn't holding onto any of that. Something outside it — a memory feature, a saved project, a custom instruction — is quietly writing a short note and pasting it back into the top of your next conversation, every time. Turn that feature off, and the memory is gone, because it was never inside the model to begin with.",
+      "The practical version of both ideas: when a long chat starts giving worse answers, that's usually the context window working against you, not the model having a bad day. Starting a fresh conversation with a short summary of what actually matters — rather than scrolling one giant thread further and further down — routinely gets better results, for the same reason a shorter memo beats a longer one that says the same thing twice."
     ]
   },
   {

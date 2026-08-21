@@ -4910,5 +4910,296 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-21T16:50:07Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-broadcom-100-billion-debt-anthropic-chip-financing",
+    "ts": "2026-08-21T22:34:29Z",
+    "export": {
+      "article_id": "newsroom-broadcom-100-billion-debt-anthropic-chip-financing",
+      "url": "https://rtfclmgzn.com/article/broadcom-100-billion-debt-anthropic-chip-financing",
+      "headline": "Broadcom is negotiating up to $100 billion in debt for Anthropic's chip buildout — nearly triple the round it closed ten weeks ago",
+      "hook": "Broadcom is reportedly negotiating up to $100B in debt to fund Anthropic's chip buildout — nearly triple the $35B round it closed ten weeks ago. No party has confirmed a number.",
+      "key_facts": [
+        "Reported structure: a $60-70 billion senior tranche plus a $30 billion junior tranche.",
+        "That would nearly triple the $35 billion AI XPV Platform round closed June 9, 2026.",
+        "The vehicle keeps the debt off Broadcom's own balance sheet while Apollo and Blackstone earn lender returns."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-broadcom-100-billion-debt-anthropic-chip-financing.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Broadcom is reportedly negotiating up to $100B in debt to fund Anthropic's chip buildout — nearly 3x the $35B deal it closed 10 weeks ago.\n\nNo party has confirmed a number. Reports don't even agree on the split. We reconciled what's actually known:",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Broadcom",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-22T03:34:29Z",
+        "copy": "The AI financing trick worth understanding: structure it as debt through a special-purpose vehicle, and a chip supplier can fund its own customer's buildout without it ever showing up as debt on its own balance sheet.\n\nBroadcom's doing it at up to $100B scale.",
+        "reply_copy": "How it works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Broadcom",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Broadcom is reportedly negotiating up to $100 billion in debt to fund Anthropic's chip and data-center buildout.\n\nThat's nearly triple the $35 billion round the same three companies (Broadcom, Apollo, Blackstone) closed just 10 weeks ago.\n\nNo party has confirmed a number — and the reporting itself doesn't fully agree. We broke down what each figure actually covers, and who's really taking on the risk.\n\nFull story — link in bio.",
+        "hashtags": [
+          "#Broadcom",
+          "#Anthropic",
+          "#AI",
+          "#AIInfrastructure",
+          "#TechFinance",
+          "#DataCenters",
+          "#Apollo",
+          "#Blackstone"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Ten weeks after closing a $35 billion financing platform for Anthropic's chip buildout, Broadcom, Apollo, and Blackstone are reportedly back at the table for a second round — this one reaching up to $100 billion. No party has confirmed a number, and the anonymously sourced reporting doesn't fully agree on the split between senior and junior debt. We broke down what each figure actually covers, who's taking on the real risk, and why the financing is structured to stay off Broadcom's own balance sheet.",
+        "hashtags": [
+          "#Broadcom",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Broadcom is reportedly negotiating up to $100B in debt for Anthropic's chip buildout — nearly 3x the $35B round it closed 10 weeks ago. No party has confirmed a number, and the reports don't even fully agree on the split. Here's what's actually known, and what isn't:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-22T03:34:29Z",
+        "copy": "The part of the Broadcom-Anthropic financing story that's easy to miss: this isn't Broadcom lending Anthropic money. It's Apollo and Blackstone lending against leased chips and data-center capacity — a structure that lets a lender bet on AI compute without betting on which AI lab wins.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Broadcom is reportedly negotiating up to $100B in debt for Anthropic's chip buildout — nearly 3x the $35B round it closed 10 weeks ago. No party has confirmed a number yet. What's actually known:",
+        "hashtags": [
+          "#Broadcom",
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nvidia-poolside-6-billion-license-not-an-acquisition",
+    "ts": "2026-08-21T22:37:42Z",
+    "export": {
+      "article_id": "newsroom-nvidia-poolside-6-billion-license-not-an-acquisition",
+      "url": "https://rtfclmgzn.com/article/nvidia-poolside-6-billion-license-not-an-acquisition",
+      "headline": "Nvidia is paying Poolside $6 billion for AI model-building software — and telling investors it isn't an acquisition",
+      "hook": "Nvidia is paying AI startup Poolside $6 billion to license its model-building software. Poolside's own letter to investors: this is 'not an acquisition and it is not an acquihire.'",
+      "key_facts": [
+        "$6 billion non-exclusive license for Poolside's Model Factory software.",
+        "Separate $1 billion Nvidia investment in Poolside at a $12 billion pre-money valuation.",
+        "109 job offers to Poolside staff who built its Laguna models; all 3 co-founders are staying."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-nvidia-poolside-6-billion-license-not-an-acquisition.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nvidia is paying AI startup Poolside $6B to license its model-building software.\n\nPoolside's own letter to investors: this is \"not an acquisition and it is not an acquihire.\"\n\nThe license is non-exclusive. All 3 founders are staying.",
+        "reply_copy": "The details:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#Poolside"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nvidia is paying AI startup Poolside $6 billion to license its Model Factory software — plus a separate $1 billion investment at a $12 billion valuation, plus job offers to the 109 employees who built its open-weight Laguna models.\n\nPoolside's own letter to investors says this is 'not an acquisition and it is not an acquihire.' The license is non-exclusive, and all three co-founders are staying.\n\nWhat that actually buys, broken down — link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#AI",
+          "#Poolside",
+          "#AIDeals",
+          "#TechNews",
+          "#StartupNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nvidia is paying AI model-building startup Poolside $6 billion to license its Model Factory software — the system behind Poolside's open-weight Laguna coding models — plus a separate $1 billion investment at a $12 billion valuation and job offers to 109 of Poolside's employees. Poolside's own letter to investors insists this isn't an acquisition or an acquihire: the license is non-exclusive, and all three founders are staying on. We broke down what the deal actually buys.",
+        "hashtags": [
+          "#Nvidia",
+          "#Poolside"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nvidia is paying Poolside $6B to license its AI model-building software, plus $1B invested at a $12B valuation, plus job offers to 109 staff. Poolside's own letter to investors: 'not an acquisition and it is not an acquihire.' The license is non-exclusive; all 3 founders stay.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia is paying Poolside $6B for a non-exclusive license to its AI model-building software — plus $1B invested at a $12B valuation. Poolside's letter to investors: this is 'not an acquisition.' All 3 founders are staying.",
+        "hashtags": [
+          "#Nvidia",
+          "#Poolside",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-chatgpt-for-teens-age-prediction-lawsuits",
+    "ts": "2026-08-21T22:39:00Z",
+    "export": {
+      "article_id": "newsroom-openai-chatgpt-for-teens-age-prediction-lawsuits",
+      "url": "https://rtfclmgzn.com/article/openai-chatgpt-for-teens-age-prediction-lawsuits",
+      "headline": "OpenAI launched a separate ChatGPT for Teens on Aug. 18 — built on an age-prediction system whose accuracy the company hasn't disclosed",
+      "hook": "OpenAI launched a separate ChatGPT for Teens mode on Aug. 18, built on an age-prediction system with no disclosed accuracy rate — as OpenAI defends a lawsuit alleging it weakened its own self-harm safeguards eight months before a 16-year-old user's death.",
+      "key_facts": [
+        "The mode auto-enrolls accounts OpenAI's systems predict belong to 13-to-17-year-olds.",
+        "OpenAI targets parental notification of high-risk flags within about an hour.",
+        "An amended complaint alleges OpenAI weakened self-harm guidance in February 2025, before Adam Raine's death that April."
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-openai-chatgpt-for-teens-age-prediction-lawsuits.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI launched a separate ChatGPT for Teens on Aug. 18 — built on an age-prediction system whose accuracy the company hasn't disclosed.\n\nIt arrives as OpenAI defends a lawsuit alleging it weakened its own self-harm safeguards 8 months before a 16-year-old's death.",
+        "reply_copy": "What we found:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-22T03:39:00Z",
+        "copy": "The safety feature nobody outside OpenAI has fact-checked yet: OpenAI says it can predict which ChatGPT accounts belong to minors from \"account signals and behavior patterns.\"\n\nNo disclosed accuracy rate. No independent test.",
+        "reply_copy": "Why that matters:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI launched a separate ChatGPT for Teens mode on August 18 — auto-enrolling accounts its own systems predict belong to 13-to-17-year-olds, restricting self-harm, eating-disorder, and sexual content, and aiming to notify parents of high-risk flags within about an hour.\n\nOpenAI hasn't disclosed an accuracy rate for the age-prediction system itself.\n\nThe launch arrives as OpenAI defends an amended lawsuit alleging the company weakened its own self-harm safeguards eight months before a 16-year-old user's death.\n\nWhat's confirmed, what's still just OpenAI's word, and what a court will have to decide — link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#AISafety",
+          "#TeenSafety",
+          "#AIEthics",
+          "#TechNews",
+          "#OnlineSafety",
+          "#AI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI began a global rollout of a separate ChatGPT for Teens mode on August 18, automatically switching in any account its own systems predict belongs to a 13-to-17-year-old. The restricted mode adds evaluations for self-harm, eating disorders, and sexual content, and aims to notify parents of high-risk flags within about an hour — though OpenAI hasn't disclosed an accuracy rate for the age-prediction system itself. The launch lands as OpenAI defends an amended wrongful-death lawsuit alleging the company weakened its own self-harm safeguards in February 2025, eight months before a 16-year-old user's death. We laid out what's confirmed, what's still only OpenAI's own account, and what's actively contested in court.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI launched a separate ChatGPT for Teens on Aug. 18, built on an age-prediction system whose accuracy it hasn't disclosed. It arrives as OpenAI defends a lawsuit alleging it weakened its own self-harm safeguards 8 months before a 16-year-old user's death. What's confirmed vs. still just OpenAI's word:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-22T03:39:00Z",
+        "copy": "The specific claim in OpenAI's ChatGPT for Teens launch that's still entirely OpenAI's own word: the age-prediction system's accuracy. No disclosed rate, no independent test. Same for the under-an-hour parental notification target. Both stay in the 'company says' column until someone outside OpenAI checks.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's new ChatGPT for Teens leans on an age-prediction system with no disclosed accuracy rate. It launched as OpenAI defends a lawsuit alleging it weakened self-harm safeguards 8 months before a 16-year-old user's death.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#TeenSafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
