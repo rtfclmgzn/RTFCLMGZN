@@ -216,4 +216,10 @@ window.RTFC_BUZZ = [
     why:"E-commerce infrastructure scale-up through autonomous delivery is a logistics innovation distinct from frontier AI models—tracks how AI and robotics are moving from controlled environments into real-world delivery networks at commercial scale, with federal certification and safety systems.",
     heat:56, topics:["amazon","drones","autonomous delivery","logistics","infrastructure","faa certification"],
     url:"https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion" },
+{ id:"bz-286", date:"2026-08-20",
+    source:{ name:"SK Hynix", handle:"SK Hynix", platform:"web", kind:"lab" },
+    text:"SK Hynix's board approved a $28.6 billion (40 trillion won) share buyback and cancellation of roughly 24 million shares (3.3% of outstanding), the largest treasury share cancellation in South Korean corporate history. The buyback began August 20 and will be completed within three months, with full share cancellation following. SK Hynix shares surged 12% on the announcement; management views the current share price as undervaluing the company's AI memory strength and 69 trillion won cash position. The company raised its shareholder payout pledge to at least 50% of free cash flow through 2027.",
+    why:"A memory chipmaker betting $28.6 billion on its own AI-driven future reveals confidence that AI chip demand will remain tight enough to justify returning capital at the current pace—a harder signal than forward guidance because it's live cash at current valuations.",
+    heat:58, topics:["sk hynix","dram","memory","hbm","ai infrastructure","shareholder return","supply chain"],
+    url:"https://news.skhynix.com/en/share-buyback-and-retirement/" },
 ];
