@@ -3055,7 +3055,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same discipline applies one level up the stack, on claims rather than pictures: [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the text-side version of this same habit, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
+        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same habit applies one level over, on words instead of pixels: [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) walks the same C2PA/SynthID logic through prose, where the watermarks exist but the public checkers mostly don't yet. For claims rather than authorship, [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the one to reach for, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
         "citation_urls": []
       }
     ],
@@ -3069,6 +3069,251 @@ window.RTFC_GUIDES = [
       { "label": "Yahoo Tech — Google SynthID comes to Chrome, Search, and ChatGPT", "url": "https://tech.yahoo.com/ai/gemini/articles/google-synthid-comes-chrome-search-174500591.html" },
       { "label": "Engadget — Google rolls back its Google Earth AI image tool", "url": "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/" },
       { "label": "TechCrunch — Apple and Google ordered to purge nudify apps from app stores", "url": "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/" }
+    ],
+    "corrections": []
+  },
+{
+    "id": "g13",
+    "slug": "check-whether-text-is-ai-written",
+    "image": "assets/img/newsroom/g13.jpg",
+    "title": "How to check whether text was written by AI",
+    "dek": "Anthropic began weaving an invisible watermark into everything Claude writes this month, with no way to opt out — the kind of real, checkable signal that sounds like it finally settles the question. It doesn't, yet: no lab has shipped a public tool to read the mark, and the detectors people already use instead guess from writing style, with a documented history of getting it wrong. Here's what each system can and can't actually tell you.",
+    "persona": "samira-nasser",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-21T16:42:00Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Anthropic and Google now weave real watermarks into AI-generated text — but neither offers a public checker yet.",
+      "Third-party detectors like GPTZero and Turnitin don't read a watermark — they guess from writing style.",
+      "Those guessing tools misclassify non-native English writing as AI-generated far more than native writing.",
+      "OpenAI's own 2023 detector correctly caught only 26% of AI text and wrongly flagged 9% of human writing.",
+      "Caveat: no tool here proves human authorship — a clean result only means this check found nothing."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Before you act on a detector's score, check what it actually measured.",
+        "text": "A GPTZero or Turnitin percentage is a style-based guess, not a watermark read — treat one flag as a reason to ask, not a verdict."
+      },
+      {
+        "label": "Watch for Anthropic's and Google's own detection tools to actually ship.",
+        "text": "Anthropic's help center says it is only \"working to enable\" third-party detection, with no date; Google's SynthID Detector has listed text as \"coming\" since May 2025."
+      },
+      {
+        "label": "If you're grading or judging someone else's writing, require a second signal before any penalty.",
+        "text": "A Stanford study found these detectors misclassify non-native English writing as AI-generated far more often than native writing — a score alone is not due process."
+      },
+      {
+        "label": "Keep the original file or version history when provenance might matter later.",
+        "text": "Google Docs' Version History or Word's Track Changes is harder to fake after the fact than any detector score."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Every reply Claude writes has carried an invisible signature since Aug. 2, 2026 — [Anthropic](/company/anthropic) wove a __watermark__ into the output of every model it released from that date on, worldwide, with **no way to turn it off**. It's the kind of real, checkable signal a reader might assume finally answers the question a search bar gets asked constantly: is this AI? It doesn't, not yet. Anthropic's own mark has no public reader anyone outside the company can use, [Google](/company/google)'s equivalent for Gemini is stuck in a year-plus-old journalist waitlist, and the tools most people already reach for instead — GPTZero, Turnitin, the free checkers a search turns up — don't read a watermark at all. ==They guess.== Knowing which of those three things you're actually looking at, and what each one has and hasn't earned the right to tell you, is the actual gap this guide closes.",
+        "citation_urls": [
+          "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+          "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/",
+          "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two different kinds of evidence, and only one of them is checkable today",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "__Watermarking__ and __detecting__ solve different problems, and the industry has spent three years proving it can build one far more easily than the other. A watermark is planted by the model itself at the moment it writes — Claude and Gemini both work by subtly steering word choices toward a pattern only the lab's own key can read back out, the same trick Google's SynthID uses on images. That's real, mathematically grounded evidence, ==if you can actually get a machine to check it for you==. A detector instead looks at finished text from an unknown source and estimates, statistically, how AI-shaped its phrasing is — no key, no cooperation from whichever model wrote it, ++just a guess++. [OpenAI](/company/openai) has tried building both, and its own history is the cleanest evidence of how far apart they sit: it shipped a detector in January 2023 and **killed it seven months later over accuracy**, then reportedly built a watermark accurate to 99.9% of its own output — and has kept it unreleased for two years over who it might falsely implicate.",
+        "citation_urls": [
+          "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/",
+          "https://techcrunch.com/2023/07/25/openai-scuttles-ai-written-text-detector-over-low-rate-of-accuracy/",
+          "https://www.infosecurity-magazine.com/news/openai-split-ai-watermarking/"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check a piece of text in this order",
+          "sub": "Five to ten minutes, and you don't need to install anything.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The text in question — ideally the original file or a live link, not a screenshot.",
+            "A browser."
+          ],
+          "steps": [
+            {
+              "do": "Ask the person who wrote it, if you can.",
+              "detail": "The fastest and most reliable check is also the easiest one to skip: ask directly, or ask to see the drafting process — an outline, a messy first pass, a version with mistakes still in it.",
+              "verify": "You get a direct answer, or you see real evidence of a drafting process.",
+              "ifnot": "If there's no one to ask — an anonymous submission, a stranger's post — move to the next check."
+            },
+            {
+              "do": "Check for a real edit or version history.",
+              "hi": true,
+              "detail": "Google Docs' Version History and Word's Track Changes both show whether a document grew in increments over time or arrived as one finished paste.",
+              "verify": "You can see incremental edits building up, or a single instant paste-in.",
+              "ifnot": "If no history exists — a printed page, a plain text file, a screenshot — move to the next check."
+            },
+            {
+              "do": "Find out whether the source platform embeds a real watermark, and whether anyone can check it yet.",
+              "detail": "As of August 2026, Claude and Gemini both weave an invisible pattern into the words they generate at the moment of creation — but neither lab has shipped a public tool for a reader to check it. Anthropic's own help center says it is only \"working to enable\" third-party detection, with no date; Google's SynthID Detector is limited to a waitlist for journalists and researchers, over a year after it opened.",
+              "verify": "You know which model is suspected and whether that lab has actually released a public checker (currently: neither has).",
+              "ifnot": "If the platform is unknown or hasn't published anything about watermarking its text, there's nothing here to check yet — go to the next step."
+            },
+            {
+              "do": "If you use a third-party \"AI detector,\" treat the score as a guess, not a verdict.",
+              "detail": "Tools like GPTZero, Turnitin, and Originality.ai don't read any lab's watermark — they estimate a probability from writing style, which is a fundamentally weaker kind of evidence. A Stanford study found these detectors misclassified non-native English writing as AI-generated far more often than native English writing.",
+              "verify": "You can name the specific tool used and its documented error pattern, not just cite \"the AI checker.\"",
+              "ifnot": "If the score conflicts with everything else you've found — a direct answer, a real edit history — weight the human evidence higher."
+            },
+            {
+              "do": "State your confidence in the same terms the tools actually gave you.",
+              "detail": "\"GPTZero returned an 85% AI-likelihood score\" is a fact. \"So this was written by AI\" is a guess wearing the first sentence's clothes — especially given how often that first sentence is wrong.",
+              "verify": "Whatever you conclude, you can point to the specific check that produced it.",
+              "ifnot": "If every check comes back inconclusive, the honest answer is \"unresolved,\" not \"human\" or \"AI.\""
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Which of those checks matters most depends on the situation — grading a student's essay carries different stakes than wondering about a stranger's post, and the order worth working through them changes accordingly.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "THE SITUATION",
+          "title": "Start where the real evidence is",
+          "question": "Take the branch matching what you're actually checking.",
+          "branches": [
+            {
+              "when": "You can ask the person directly, and they're willing to answer.",
+              "then": "Ask, and ask to see a version history or earlier draft if the stakes are real — a grade, a byline, an accusation.",
+              "because": "This is the only check with a real person behind it instead of a statistical guess.",
+              "hi": true
+            },
+            {
+              "when": "You're grading or judging someone else's work and a detector flagged it.",
+              "then": "Treat the flag as the start of a conversation, not the basis for a penalty, and look for a second, independent signal first.",
+              "because": "The tools used for exactly this purpose misclassify non-native English writing at a documented, high rate — a single score is not due process."
+            },
+            {
+              "when": "The text came from a named AI product someone showed you directly — a ChatGPT, Claude, or Gemini output.",
+              "then": "Check that lab's own current documentation on what it marks, rather than running it through an unrelated third-party detector.",
+              "because": "A generic detector wasn't built for that specific model's current output and adds noise, not signal, on top of what the lab itself already knows."
+            },
+            {
+              "when": "Every check comes back inconclusive and you still need to say something.",
+              "then": "Say so plainly: unresolved, not confirmed human or AI.",
+              "because": "None of today's systems, lab-built or third-party, can certify authorship on demand — pretending otherwise is the actual failure mode here.",
+              "warn": "A confident-sounding conclusion built on a guessing tool's score is worse than admitting the check came back empty."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What each system can actually tell you",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "WATERMARK VS. GUESS",
+          "title": "Two mechanisms, answering different questions",
+          "columns": [
+            { "label": "Lab-embedded watermark", "sub": "Claude, Gemini" },
+            { "label": "Third-party detector", "sub": "GPTZero, Turnitin, Originality.ai", "hi": true }
+          ],
+          "rows": [
+            { "label": "What it actually measures", "values": ["A statistical pattern the model wove into its own word choices at generation time", "A guess about word predictability and sentence rhythm in text of unknown origin"] },
+            { "label": "Public checker available today", "values": ["No — both labs describe detection tools as planned, not shipped, as of August 2026", "Yes — free and paid tools anyone can run right now"] },
+            { "label": "Documented error pattern", "values": ["Untested at public scale; no independent accuracy figures published yet", "Misclassifies non-native English writing as AI-generated far more than native writing"] },
+            { "label": "What a clean result actually proves", "values": ["Nothing yet checkable — there's no public reader of the mark to return a result", "That this specific tool's guess came back low — not that a human wrote it"] }
+          ],
+          "source": "Anthropic Help Center; Google SynthID Detector documentation; Liang et al., \"GPT detectors are biased against non-native English writers\" (arXiv:2304.02819) — current as of August 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes the underlying question go away — it narrows what any given check is entitled to claim. A lab-embedded watermark, once a public reader for it exists, will be strong evidence for the model that planted it and silent on every other model. A clean detector score is weaker than most people treat it as, because the tools most people already reach for were never reading a watermark in the first place — they were reading style, on a false-positive rate that isn't evenly distributed: reporting on the Stanford study found real international students named and disputing flags from exactly this kind of tool, well before anyone had a watermark to check instead.",
+        "citation_urls": [
+          "https://themarkup.org/machine-learning/2023/08/14/ai-detection-tools-falsely-accuse-international-students-of-cheating"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where this check goes wrong",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Five ways this check gets called settled when it isn't",
+          "items": [
+            {
+              "mistake": "Treating a detector's \"likely AI-generated\" score as proof.",
+              "looks": "A single number becomes the whole basis for a grade, a rejection, or an accusation.",
+              "why": "A Stanford study found these tools misclassify non-native English writing as AI-generated far more often than native English writing — a false-positive rate that high means the score alone tells you very little.",
+              "fix": "Require a second, independent signal — a direct answer, a version history — before acting on a flag.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming that because no watermark checker exists, no watermark exists.",
+              "looks": "\"I ran it through a detector and nothing showed up, so it's human.\"",
+              "why": "Anthropic's and Google's built-in watermarks are real and live today — it's only the public reader for them that's missing, not the mark itself.",
+              "fix": "Say \"unchecked,\" not \"unwatermarked,\" when no reader tool exists yet.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Working from a screenshot or a retyped copy instead of the live document.",
+              "looks": "Someone forwards a paste of the text with no way to see how it was produced.",
+              "why": "A copy like that carries no version history, and Anthropic's own documentation says its text watermark \"may persist through some editing\" but is not guaranteed to survive heavy rewriting — the two checks that actually work both need the original.",
+              "fix": "Ask for the original file or a live link, not a copy of it.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Citing OpenAI's own retired classifier as proof that AI-text detection basically works.",
+              "looks": "\"AI detectors exist, so this is a solved problem.\"",
+              "why": "OpenAI shipped its own detector in January 2023 and pulled it seven months later after it correctly caught only 26% of AI text and wrongly flagged 9% of human writing — the lab most incentivized to get this right gave up on its own tool.",
+              "fix": "Treat every detection claim, including a lab's own, as unproven until a real accuracy figure is published.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Letting a single tool's score be the only evidence in a decision that affects someone's grade, job, or reputation.",
+              "looks": "A student is failed, an applicant is rejected, or a writer is publicly accused on one detector's output alone.",
+              "why": "Universities have restricted or dropped these tools after exactly this happened to real students — the harm from a false positive is concrete and falls hardest on non-native English writers.",
+              "fix": "Never let a detector score stand alone in a decision with real consequences for a real person.",
+              "cost": "high"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes catching AI-written text effortless — it makes the claim checkable, which is the more honest goal. [Our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) walks the same discipline for pictures, using two real watermark systems already in wide use; [the dictionary](/dictionary) has short entries for terms used here — watermark, hallucination, model weights — if any of it needs unpacking further. The story behind Anthropic's move, including why writers are objecting to it, [is here](/article/anthropic-claude-invisible-watermark-global-rollout).",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      { "label": "Anthropic Help Center — \"How Claude marks AI-generated content\"", "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content", "primary": true },
+      { "label": "OpenAI — \"New AI classifier for indicating AI-written text\"", "url": "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/", "primary": true },
+      { "label": "Google — \"SynthID Detector: a new portal to help identify AI-generated content\"", "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/", "primary": true },
+      { "label": "Liang, Yuksekgonul, Mao, Wu, Zou — \"GPT detectors are biased against non-native English writers\" (arXiv:2304.02819)", "url": "https://arxiv.org/abs/2304.02819", "primary": true },
+      { "label": "TechCrunch — \"Anthropic says it will watermark text generated by its AI models\"", "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/" },
+      { "label": "TechCrunch — \"OpenAI scuttles AI-written text detector over low rate of accuracy\"", "url": "https://techcrunch.com/2023/07/25/openai-scuttles-ai-written-text-detector-over-low-rate-of-accuracy/" },
+      { "label": "Infosecurity Magazine — \"OpenAI Leadership Split About In-House AI Watermarking Technology\"", "url": "https://www.infosecurity-magazine.com/news/openai-split-ai-watermarking/" },
+      { "label": "The Markup — \"AI Detection Tools Falsely Accuse International Students of Cheating\"", "url": "https://themarkup.org/machine-learning/2023/08/14/ai-detection-tools-falsely-accuse-international-students-of-cheating" }
     ],
     "corrections": []
   }

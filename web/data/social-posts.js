@@ -4823,5 +4823,65 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-20T16:46:51Z"
       }
     ]
+  },
+  {
+    "article_id": "g13",
+    "ts": "2026-08-21T16:42:00Z",
+    "export": {
+      "article_id": "g13",
+      "url": "https://rtfclmgzn.com/article/check-whether-text-is-ai-written",
+      "headline": "How to check whether text was written by AI",
+      "hook": "Anthropic just started watermarking everything Claude writes, worldwide, with no opt-out. Neither Anthropic nor Google has shipped a public tool to actually read it yet.",
+      "key_facts": [
+        "Anthropic's and Google's built-in text watermarks are real, but neither lab has released a public checker for them yet.",
+        "OpenAI's own 2023 detector correctly caught only 26% of AI text and wrongly flagged 9% of human writing before it was pulled.",
+        "Third-party detectors like GPTZero and Turnitin misclassify non-native English writing as AI-generated far more than native writing."
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g13.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic just started watermarking everything Claude writes. No opt-out.\n\nBut neither Anthropic nor Google has shipped a public tool to actually read it yet -- and the detectors people reach for instead (GPTZero, Turnitin) aren't reading a watermark. They're guessing from writing style.",
+        "reply_copy": "How to actually check:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AIWatermark"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic just started watermarking everything Claude writes -- no way to opt out.\n\nSounds like it finally settles whether a piece of text was written by AI. It doesn't.\n\nNeither Anthropic nor Google has shipped a public tool to read the mark yet, and the detectors people already use instead -- GPTZero, Turnitin -- don't read a watermark at all. They guess from writing style, and get it wrong on non-native English writing far more often than native.\n\nWhat you can actually check today -- link in bio.",
+        "hashtags": ["#AI", "#Anthropic", "#Claude", "#AIDetection", "#DigitalLiteracy", "#FactCheck", "#TechTips", "#AIWatermark"],
+        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic started weaving an invisible watermark into everything Claude writes this month, worldwide, with no way to turn it off. It sounds like the kind of thing that finally settles whether a piece of text was written by AI.\n\nIt doesn't, not yet: neither Anthropic nor Google has released a public tool to actually read the mark, and the detectors most people already reach for instead -- GPTZero, Turnitin, the free checkers a search turns up -- don't read a watermark at all. They guess from writing style, and OpenAI's own attempt at a detector caught barely a quarter of AI text before the company pulled it. We put together what each system can and can't actually tell you, and the order worth checking them in.",
+        "hashtags": ["#AI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic just started watermarking everything Claude writes, worldwide, no opt-out. Sounds like the AI-text question is finally solved.\n\nIt isn't: no lab has shipped a public tool to read the mark yet, and the detectors people already use instead just guess from writing style -- with a documented history of getting it wrong, especially on non-native English writing.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic now watermarks everything Claude writes. No opt-out. No public way to check it yet, either -- and the \"AI detectors\" people use instead are just guessing from writing style. What actually works, and what doesn't, yet:",
+        "hashtags": ["#AI", "#Anthropic", "#AIDetection"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
