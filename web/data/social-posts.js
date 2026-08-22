@@ -4856,7 +4856,7 @@ window.RTFC_SOCIAL_POSTS =[
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -4941,8 +4941,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Broadcom",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2090982853680963786",
+        "remote_id": "2090982853680963786",
+        "posted_at": "2026-08-22T02:02:15Z"
       },
       {
         "platform": "x",
@@ -5011,8 +5013,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtn6mgtrij2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtn6mgtrij2s",
+        "posted_at": "2026-08-22T02:02:23Z"
       }
     ]
   },
@@ -5077,14 +5081,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Nvidia",
           "#Poolside"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114393763396947",
+        "remote_id": "1238977099292018_122114393763396947",
+        "posted_at": "2026-08-22T02:01:46Z"
       },
       {
         "platform": "threads",
         "copy": "Nvidia is paying Poolside $6B to license its AI model-building software, plus $1B invested at a $12B valuation, plus job offers to 109 staff. Poolside's own letter to investors: 'not an acquisition and it is not an acquihire.' The license is non-exclusive; all 3 founders stay.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcUyv23AO1K",
+        "remote_id": "17987549325014392",
+        "posted_at": "2026-08-22T02:02:10Z"
       },
       {
         "platform": "bluesky",
@@ -5168,8 +5176,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcUyNRVoGED/",
+        "remote_id": "18129730300661268",
+        "posted_at": "2026-08-22T01:57:29Z"
       },
       {
         "platform": "facebook",
@@ -5178,14 +5188,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114393415396947",
+        "remote_id": "1238977099292018_122114393415396947",
+        "posted_at": "2026-08-22T01:57:43Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI launched a separate ChatGPT for Teens on Aug. 18, built on an age-prediction system whose accuracy it hasn't disclosed. It arrives as OpenAI defends a lawsuit alleging it weakened its own self-harm safeguards 8 months before a 16-year-old user's death. What's confirmed vs. still just OpenAI's word:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcUyRQggBSr",
+        "remote_id": "17903152389537108",
+        "posted_at": "2026-08-22T01:57:58Z"
       },
       {
         "platform": "threads",
