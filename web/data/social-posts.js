@@ -5260,9 +5260,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#Anthropic",
           "#Claude"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -5370,8 +5370,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AIScams",
           "#VoiceCloning"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091203547362726008",
+        "remote_id": "2091203547362726008",
+        "posted_at": "2026-08-22T16:39:13Z"
       },
       {
         "platform": "instagram",
@@ -5418,8 +5420,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#VoiceCloning",
           "#AIScams"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtopmkl2fz2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtopmkl2fz2y",
+        "posted_at": "2026-08-22T16:39:20Z"
       }
     ]
   }
