@@ -25999,6 +25999,284 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Synthesis clears its evidence floor and the visual floor. Mandatory-scrutiny triggers (health-adjacent, active litigation, claims about a named company) remediated via sourced-neutral attribution throughout, not spiked -- the launch itself is confirmed fact and the contested claims are clearly marked as contested."
       }
     }
+  },
+  {
+    "slug": "anthropic-claude-protein-binder-design-adaptyv-twist",
+    "title": "Anthropic says Claude designed working protein binders in a lab test it ran and graded itself",
+    "dek": "Two Claude models generated 1,320 candidate protein designs against 15 targets; independent wet-lab testing from Adaptyv Bio and Twist Bioscience confirmed 354 of them actually bound, at roughly double the hit rate Anthropic says is typical for human-run design campaigns. The physical results are independently checked. The framing, the baseline, and the comparison to human experts are entirely Anthropic's own, and no outside peer review exists yet.",
+    "persona": "priya-anand",
+    "section": "Health",
+    "format": "synthesis",
+    "disclaimer": "not-medical-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for outside peer review or an independent replication of these hit rates.",
+        "text": "Every number in this study comes from Anthropic's own account of a study Anthropic designed. A peer-reviewed paper, or another lab running the same comparison independently, is what would move this from a company claim to an established result."
+      },
+      {
+        "label": "Watch whether Anthropic ever explains the Mythos-Preview/Opus-4.8 split on TNFα.",
+        "text": "Anthropic says it isn't sure why its less capable model succeeded on a target its more capable model failed. A real explanation — or a repeat failure on a similar target — would say something concrete about how well understood these design tools actually are, even to their own maker."
+      },
+      {
+        "label": "Watch Adaptyv Bio's next open protein-design competition.",
+        "text": "Adaptyv Bio runs recurring public benchmarks mixing AI and human entrants under identical, outside-controlled conditions. That is the clean test of whether Claude's 40%-vs-3.7% RBX1 result generalizes, since today's comparison is not from the same competition."
+      },
+      {
+        "label": "Watch Anthropic's access policy for its protein-design tooling.",
+        "text": "Anthropic already gates this capability over dual-use biosecurity concerns. A change to that access policy, in either direction, would be the next real signal about how seriously the company weighs the risk it names in its own study."
+      }
+    ],
+    "sources": [
+      {
+        "label": "How Claude is accelerating protein design and analytical chemistry",
+        "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "Autonomous de novo protein binder design with Claude (research summary PDF)",
+        "url": "https://www-cdn.anthropic.com/30bf50e22a01388bb29bf077ee3f244531594b7a.pdf",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "Anthropic Says Claude Designed Protein Binders Validated in Lab Tests",
+        "url": "https://www.eweek.com/news/anthropic-claude-protein-design-chemistry-research/",
+        "outlet": "eWeek",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic says Claude designed working protein binders, and beat human experts on some",
+        "url": "https://thenextweb.com/news/anthropic-claude-protein-design-chemistry",
+        "outlet": "TheNextWeb",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic says Claude designed protein binders for 14 of 15 targets in lab test",
+        "url": "https://www.storyboard18.com/digital/anthropic-says-claude-designed-protein-binders-for-14-of-15-targets-in-lab-test-108129.htm",
+        "outlet": "Storyboard18",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic Says Claude Autonomously Designed Proteins, Hitting 14 of 15 Targets",
+        "url": "https://finance.biggo.com/news/098c484e-bac4-4d7e-a4e2-0ca0127b8d37",
+        "outlet": "BigGo Finance",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Anthropic says Claude models designed protein binders that worked in independent lab tests.",
+      "Hit rates ran 22.6% to 35.1%, versus a typical 10-15% baseline Anthropic cites for the field.",
+      "Adaptyv Bio and Twist Bioscience physically tested the designs — this wasn't simulation alone.",
+      "One model failed a target the other succeeded on, and Anthropic says it doesn't know why.",
+      "Caveat: this is Anthropic's own self-run study, not yet independently peer-reviewed, on non-drug binders."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Anthropic said Monday that two of its Claude models — the invitation-only ++Mythos Preview++ and the publicly available **Claude Opus 4.8** — independently designed hundreds of protein binders that worked when physically synthesized and tested, in a company-run study it's framing as early evidence its models can speed up drug discovery. Given fifteen target proteins, the models generated 1,320 candidate designs; wet-lab testing carried out by two independent partners, Adaptyv Bio and Twist Bioscience, confirmed 354 of them actually bound their targets, across 14 of the 15 targets attempted.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The headline figure is the hit rate: depending on setup, ==between 22.6% and 35.1% of Claude's designs bound to their target==, against what Anthropic says is a typical 10% to 15% success rate for human-run protein-design campaigns today. Broken out by model and mode: Opus 4.8 hit 22.6% working across multiple targets at once, Mythos Preview reached 26.7% in that same multi-target mode, and Mythos Preview's own best showing, working one target at a time, was 35.1%. **Some of the strongest designs bound several times more tightly than the best previously published result** for their targets, by Anthropic's own account — the kind of claim that would normally need a peer-reviewed paper behind it, and doesn't have one yet.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+          "https://www.storyboard18.com/digital/anthropic-says-claude-designed-protein-binders-for-14-of-15-targets-in-lab-test-108129.htm"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Protein minibinders are not a standard therapeutic modality” — Anthropic, stating its own study's limits.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The two models didn't perform identically, and the gap is the most interesting data point in the release. Against RBX1, a regulatory protein, Mythos Preview hit a ==40% success rate== working alone — compared with a 3.7% average among human entrants in a prior Adaptyv Bio design competition. But against TNFα, the inflammatory-signaling protein targeted by blockbuster drugs like Humira, it was Opus 4.8 that succeeded, producing 12 valid designs that bound the human, cynomolgus, and mouse versions of the protein, while Mythos Preview — nominally the more capable model — failed on that same target. {{note: Anthropic said in the study it isn't sure why the less capable model succeeded where the stronger one didn't — a genuine unresolved question, not a detail it's glossing over.}} Not every target cooperated at all: against maltose-binding protein, none of 90 designs was confirmed to bind.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+          "https://thenextweb.com/news/anthropic-claude-protein-design-chemistry"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "TWO MODELS, ONE STUDY",
+          "title": "Mythos Preview vs. Opus 4.8 on the same targets",
+          "columns": [
+            {
+              "label": "Mythos Preview",
+              "sub": "invitation-only research preview"
+            },
+            {
+              "label": "Claude Opus 4.8",
+              "sub": "publicly available model",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Multi-target hit rate",
+              "values": [
+                "26.7%",
+                "22.6%"
+              ]
+            },
+            {
+              "label": "Best hit rate, single-target mode",
+              "values": [
+                "35.1%",
+                "Not reported at this rate"
+              ]
+            },
+            {
+              "label": "RBX1 result",
+              "values": [
+                "40% hit rate",
+                "Not the model used for this target"
+              ]
+            },
+            {
+              "label": "TNFα result",
+              "values": [
+                "Failed to produce a valid binder",
+                "12 valid cross-reactive designs"
+              ],
+              "note": "The one target where the less-capable model failed and the more-capable one succeeded; Anthropic says it doesn't know why."
+            }
+          ],
+          "source": "Anthropic's own study, \"How Claude is accelerating protein design and analytical chemistry.\""
+        }
+      },
+      {
+        "type": "p",
+        "text": "A second, smaller part of the release tested a different skill entirely: reading lab instrument output. Given raw NMR spectra, Claude Opus 5 completed an analysis in 23 minutes that matched the human lab's own reading to within 0.08 parts per million; on a separate LC-MS run, it estimated compound purity at 96.4%, against the lab's own 96.33% figure. ==Neither result is a protein-design claim.== It's a claim about reading and interpreting existing instrument data faster than a chemist would, not designing anything new.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What Anthropic itself says this isn't",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Anthropic's own caveats are worth stating as plainly as the results. **A designed protein binder is not a drug** — it's the first of many steps a real therapeutic would need to clear, and the company says so itself rather than leaving a reader to assume otherwise. Anthropic also restricts access to its protein-design capability specifically over dual-use biosecurity concerns: the same modeling tools that design a therapeutic binder could, in principle, be pointed at something harmful, which is why the underlying tool stays gated rather than shipping as a product anyone can call.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "For the two validation partners, the study doubles as a business signal. Twist Bioscience, a publicly traded DNA-synthesis company, and Adaptyv Bio, a startup that runs automated wet-lab validation as a service, are exactly the infrastructure a lab would need to actually use AI-designed binders at scale — and this is one of the more prominent public demonstrations either has had this year of a frontier AI lab paying to use that infrastructure directly.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "kicker": "THE CASE FOR SKEPTICISM",
+          "points": [
+            {
+              "claim": "This is a self-reported company study, not peer-reviewed science, and its baseline comparisons were chosen by the company being evaluated.",
+              "detail": "Every hit-rate number, and the characterization of what counts as a \"typical\" industry result, comes from Anthropic's own account. Independent labs confirmed the binders physically worked; they did not independently design the study or set its baselines.",
+              "whoHolds": "Coverage of the study noted explicitly that the findings are self-reported and lack outside peer review"
+            },
+            {
+              "claim": "The comparison most likely to make headlines — beating human experts 40% to 3.7% on RBX1 — isn't from the same competition.",
+              "detail": "The 3.7% figure is real, from an actual Adaptyv Bio competition with human entrants. The 40% figure is Anthropic's own later run, not an entry into that same competition under the same judging. Comparing the two is suggestive, not equivalent.",
+              "whoHolds": "The structure of the comparison as described in Anthropic's own study"
+            }
+          ],
+          "verdict": "Neither point means the underlying capability is fake — independent labs did physically confirm hundreds of working binders, which is a real, checkable result. But \"Claude beat human experts\" is a stronger claim than the data supports until Claude, or a successor, enters the same competition under rules Anthropic didn't set. Until then, this sits at promising company-run pilot, not independently established capability.",
+          "source": "Anthropic's own study; Adaptyv Bio's public competition results."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Breaking the study into its individual claims is what actually separates what's checkable today from what is riding on Anthropic's word alone. That physical binders exist and were tested by outside labs is confirmed. How those results get characterized against the rest of the field is not.",
+        "citation_urls": []
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "items": [
+            {
+              "claim": "Claude's protein designs bound their targets at 22.6%-35.1%, beating a 10-15% industry baseline.",
+              "level": "company",
+              "basis": "Reported by Anthropic in its own study; two independent labs ran the physical wet-lab testing, but the study design, framing, and baseline comparison are Anthropic's own.",
+              "resolver": "A peer-reviewed publication, or another lab replicating the same comparison independently of Anthropic."
+            },
+            {
+              "claim": "Mythos Preview's 40% hit rate against RBX1 beats the 3.7% human-entrant average from a prior competition.",
+              "level": "partial",
+              "basis": "The 3.7% figure comes from an actual Adaptyv Bio competition with real human entrants; the 40% figure is Anthropic's own follow-up run, not the same competition.",
+              "resolver": "Mythos Preview, or a successor, entered directly into Adaptyv Bio's next open competition under conditions Anthropic doesn't control."
+            },
+            {
+              "claim": "A protein binder from this study could become an actual drug.",
+              "level": "unverified",
+              "basis": "Anthropic's own account states plainly that a minibinder is not a standard therapeutic modality and represents only an early stage of drug development.",
+              "resolver": "Any of these candidates advancing into further preclinical development and being reported as such."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of the numbers above are independently published research yet. They come entirely from Anthropic's own account of a study Anthropic designed and ran, with two outside labs providing physical validation rather than the outside peer review a claim like this would normally need. That distinction is the whole gap between \"Claude can accelerate drug discovery\" and \"Claude produced striking numbers in a company-run pilot\" — and right now, only the second sentence is something an outsider can actually check for themselves.",
+        "citation_urls": [
+          "https://thenextweb.com/news/anthropic-claude-protein-design-chemistry"
+        ]
+      }
+    ],
+    "publishedAt": "2026-08-22T10:37:27Z",
+    "id": "newsroom-anthropic-claude-protein-binder-design-adaptyv-twist",
+    "image": "assets/img/newsroom/newsroom-anthropic-claude-protein-binder-design-adaptyv-twist.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-22T10:37:27Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Primary source is Anthropic's own research page (fetched directly, publication date confirmed as 2026-08-18) plus its linked PDF. eweek.com and thenextweb.com fetched directly and returned real quotes and caveats (self-reported, no outside peer review, the TNF-alpha model split, the MBP 0/90 failure); marketscreener.com and storyboard18.com's marketscreener link both 403'd on direct WebFetch, so storyboard18's own content was used via direct fetch (which succeeded) instead. Cross-checked against the archive: zero prior mentions of Adaptyv Bio, protein binders, or this study; genuinely new coverage, not a duplicate."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed the Mythos-Preview/Opus-4.8 TNF-alpha split and the RBX1 40%-vs-3.7% comparison independently across two fetched secondary sources before using either in a component, since both are the kind of specific, checkable numbers a single mis-scraped source could get wrong. Confirmed Claude Opus 4.8 already carries an entities.js entry; added a new entities.js entry for \"Claude Mythos Preview\" (distinct from the existing \"Claude Mythos 5\" entry) since it's named prominently here and had no chip coverage."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique flagged that an early draft stated the RBX1 human-vs-AI comparison as a clean head-to-head. Revised to add the counter component making the same-competition gap explicit, and downgraded the scorecard's RBX1 item to \"partial\" rather than \"confirmed\" for the same reason. No self-referential language found. Section/persona (Health / Priya Anand) and disclaimer (not-medical-advice) chosen because this is AI-in-biotech coverage; confirmed no treatment/efficacy claim about any human patient is made anywhere in the piece — the article is about a design-capability benchmark, not a medical claim, and Anthropic's own therapeutic-modality caveat is stated directly rather than implied."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "compare, counter, and scorecard all checked against prose: every figure in each component (26.7%, 22.6%, 35.1%, 40%, 3.7%, the TNF-alpha split) is also stated in a p block above it. No component carries a top-level text field."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources including 2 primary (Anthropic's own research page and PDF), synthesis-format word count, 3 components (compare carries the data-comparison requirement; scorecard and counter both earn their place given how much of the piece's central claim rests on a single company's own self-graded account). disclaimer:not-medical-advice correct for the Health section; no drug-efficacy or treatment claim made about any patient."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (6 sources, 2 primary) and the visual floor (3 components, one data-carrying). Mandatory-scrutiny health trigger considered and cleared: the piece makes a capability claim, not a treatment or efficacy claim, and states the not-a-drug caveat directly rather than omitting it."
+      }
+    }
   }
 ]
 ;

@@ -69,35 +69,35 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "n": "ACT II",
         "t": "The Big Bang",
         "d": "The night everything changed, the four-year climb, and the wager the whole industry is built on",
-        "p": "14",
+        "p": "16",
         "img": "assets/img/primer-part1.jpg"
       },
       {
         "n": "ACT III",
         "t": "The Players",
         "d": "The labs that matter, their models head to head, and how to read a benchmark without being sold by it",
-        "p": "21",
+        "p": "23",
         "img": "assets/img/primer-act3.jpg"
       },
       {
         "n": "ACT IV",
         "t": "How The Models Are Made",
         "d": "Inside the build: pretraining, post-training, the shift to models that think before they answer, and the day the internet ran out of text",
-        "p": "28",
+        "p": "30",
         "img": "assets/img/pr2-act-recipe.jpg"
       },
       {
         "n": "ACT V",
         "t": "The Race",
         "d": "The money, the power grid nobody can buy their way past, the supply chain under every lab, and an honest ledger of what is actually known",
-        "p": "39",
+        "p": "41",
         "img": "assets/img/primer-geopolitics.jpg"
       },
       {
         "n": "ACT VI",
         "t": "Your Move",
         "d": "The vocabulary, the one prompting skill, six things to try tonight, the honest page, and where to go from here",
-        "p": "49",
+        "p": "51",
         "img": "assets/img/primer-part2.jpg"
       }
     ],
@@ -273,6 +273,31 @@ window.RTFC_MAGAZINE_ISSUES.push({
       "You now know enough to understand the most important flaw in these systems — the one every headline calls 'hallucination.' It isn't a bug someone patches out next year. It falls straight out of how the thing works.",
       "Remember the one job: **predict a plausible next word.** A model trained that way will *always* produce fluent, confident text. When it knows the answer, plausible and true line up. When it doesn't — an obscure fact, a citation, something after its training — it doesn't stop. It generates the *shape* of a right answer anyway. ==The fluency never wavers, even when the facts underneath have evaporated.==",
       "So the rule for the rest of your life with these tools: **the model's confidence is a property of its writing style, not its knowledge.** Act VI gives you a thirty-second habit for catching it — but the instinct starts here."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act I · The Flaw",
+    "layout": "runover",
+    "cont": "Why it makes things up — and why that's built in, continued",
+    "crosshead": "Grounding helps. It doesn't fix it.",
+    "body": [
+      "The obvious fix is to stop asking the model to remember and start asking it to look something up — retrieval, a live web search, a document you pasted in yourself. Grounding a model in a real source measurably cuts the problem, which is why a well-built assistant with search turned on is safer than the same model answering from memory alone.",
+      "But grounding doesn't remove the underlying mechanism — it just hands it better material to be fluent about. A model can still misread a source, blend two documents into a claim neither one actually makes, or cite a real-looking case, paper, or function that doesn't exist. Specific enough a failure mode that lawyers who filed briefs full of fabricated citations from a chatbot have made news more than once, and a developer asking for a library function that 'should' exist gets a plausible one invented on the spot.",
+      "The tell, in every version of this, is the same one: **the fabricated answer reads exactly as confident as the real one.** Nothing in the model's own output marks the difference — the mechanism that produces a wrong answer is the identical mechanism that produces a right one."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act I · The Flaw",
+    "layout": "runover",
+    "cont": "Why it makes things up — and why that's built in, continued",
+    "crosshead": "Bigger and newer doesn't mean it stopped",
+    "end": true,
+    "body": [
+      "It would be convenient if hallucination were simply a young-technology problem, fading release by release. Act VI's own numbers say otherwise: one flagship model's error rate on the industry's own hallucination benchmark roughly doubled — from the mid-20s to the mid-50s in percentage terms — in the same year its underlying knowledge and reasoning measurably improved. ==A model can get smarter and less reliable on this one axis in the same twelve months.==",
+      "That isn't a contradiction once you remember the mechanism from the top of this page: a more capable model is a more capable *fluency* engine first. Reasoning and tool use raise the ceiling on what it gets right; neither one repeals the rule that when it's wrong, it doesn't sound wrong.",
+      "Which is the actual, permanent lesson here, not a beginner's one to outgrow: the fluency of an AI answer will never be evidence of its truth — on this model, the next one, or the one after that. **Verifying anything load-bearing isn't a habit you graduate out of. It's the one skill this technology never stops requiring.**"
     ]
   },
   {

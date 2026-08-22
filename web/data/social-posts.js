@@ -5229,5 +5229,109 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-21T23:01:53Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-claude-protein-binder-design-adaptyv-twist",
+    "ts": "2026-08-22T10:37:27Z",
+    "export": {
+      "article_id": "newsroom-anthropic-claude-protein-binder-design-adaptyv-twist",
+      "url": "https://rtfclmgzn.com/article/anthropic-claude-protein-binder-design-adaptyv-twist",
+      "headline": "Anthropic says Claude designed working protein binders in a lab test it ran and graded itself",
+      "hook": "Anthropic says two Claude models designed protein binders that worked in independent lab tests, at roughly double the hit rate it calls typical for the field. The physical results are independently checked. The framing and the baseline comparisons are entirely Anthropic's own.",
+      "key_facts": [
+        "1,320 candidate designs across 15 protein targets; 354 confirmed binders, independently tested by Adaptyv Bio and Twist Bioscience.",
+        "Hit rates ran 22.6% to 35.1%, vs. a 10-15% baseline Anthropic says is typical for human-run campaigns.",
+        "One model failed a target the other succeeded on; Anthropic says it doesn't know why."
+      ],
+      "tone": "precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-claude-protein-binder-design-adaptyv-twist.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic says Claude designed 354 protein binders that worked in independent lab tests -- hit rates of 22.6-35.1%, roughly double the field's usual 10-15%.\n\nThe physical results were checked by outside labs. The baseline comparisons are entirely Anthropic's own.",
+        "reply_copy": "What's independently checked, and what's still just Anthropic's word:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-22T15:37:27Z",
+        "copy": "The most interesting number in Anthropic's protein-binder study isn't the hit rate. It's that its more capable model, Opus 4.8, succeeded on a target its newer preview model failed -- and Anthropic says it doesn't know why.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Biotech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic says two Claude models -- Mythos Preview and Opus 4.8 -- designed 1,320 candidate protein binders against 15 targets. Independent labs (Adaptyv Bio, Twist Bioscience) physically tested them: 354 worked.\n\nThe hit rate -- 22.6% to 35.1% -- is roughly double what Anthropic calls the field's typical 10-15%. Some designs bound tighter than the best published result for their target.\n\nWhat's independently checked and what's still just Anthropic's own account -- full story at the link in bio. Not medical advice; a protein binder is not a drug.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude",
+          "#AI",
+          "#Biotech",
+          "#DrugDiscovery",
+          "#ProteinDesign"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic says two of its Claude models -- the invitation-only Mythos Preview and the public Opus 4.8 -- designed 1,320 candidate protein binders against 15 targets, and independent labs (Adaptyv Bio, Twist Bioscience) confirmed 354 of them actually worked when physically tested. The hit rate, 22.6% to 35.1%, is roughly double what Anthropic calls the field's typical 10-15% success rate -- and some designs reportedly bound tighter than the best previously published result for their target.\n\nWorth being precise about what that does and doesn't establish: the physical binding results are independently checked. The study's framing, its baseline comparisons, and its claim of beating human experts on one target are entirely Anthropic's own account, not yet independently peer-reviewed. We broke down which is which (not medical advice; a protein binder is not a drug).",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#Biotech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic says Claude designed 354 working protein binders across 15 targets, independently lab-tested by Adaptyv Bio and Twist Bioscience -- a 22.6-35.1% hit rate vs. a 10-15% baseline it calls typical. The physical results are checked; the framing and baseline are Anthropic's own account. Not medical advice.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-22T15:37:27Z",
+        "copy": "Anthropic's protein-binder study has a genuine unsolved oddity: on one target (TNF-alpha), its more capable model succeeded and its newer preview model failed. Anthropic says in its own writeup that it isn't sure why.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic: Claude designed 354 working protein binders across 15 targets, independently lab-tested by Adaptyv Bio/Twist Bioscience. 22.6-35.1% hit rate vs. a 10-15% baseline it calls typical. Physical results checked; framing/baseline are Anthropic's own. Not medical advice.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#Biotech"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

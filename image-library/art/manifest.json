@@ -1051,7 +1051,12 @@
    ],
    "text_space": "dark left wall",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-claude-protein-binder-design-adaptyv-twist",
+     "used_at": "2026-08-22"
+    }
+   ]
   },
   {
    "id": "art-039-smart-glasses-at-the-transit-plaza",
