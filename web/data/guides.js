@@ -3055,7 +3055,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same habit applies one level over, on words instead of pixels: [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) walks the same C2PA/SynthID logic through prose, where the watermarks exist but the public checkers mostly don't yet. For claims rather than authorship, [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the one to reach for, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
+        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same habit applies one level over, on words instead of pixels: [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) walks the same C2PA/SynthID logic through prose, where the watermarks exist but the public checkers mostly don't yet. Voice is the harder case still — [our guide to checking whether a phone call is AI-cloned](/article/check-whether-a-voice-is-ai-cloned) covers the one modality where a live scam call can't be checked by any file-based tool at all. For claims rather than authorship, [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the one to reach for, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
         "citation_urls": []
       }
     ],
@@ -3301,7 +3301,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this makes catching AI-written text effortless — it makes the claim checkable, which is the more honest goal. [Our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) walks the same discipline for pictures, using two real watermark systems already in wide use; [the dictionary](/dictionary) has short entries for terms used here — watermark, hallucination, model weights — if any of it needs unpacking further. The story behind Anthropic's move, including why writers are objecting to it, [is here](/article/anthropic-claude-invisible-watermark-global-rollout).",
+        "text": "None of this makes catching AI-written text effortless — it makes the claim checkable, which is the more honest goal. [Our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) walks the same discipline for pictures, using two real watermark systems already in wide use, and [our guide to checking whether a phone call is AI-cloned](/article/check-whether-a-voice-is-ai-cloned) covers the same question for a voice you can't just run through a detector mid-call; [the dictionary](/dictionary) has short entries for terms used here — watermark, hallucination, model weights — if any of it needs unpacking further. The story behind Anthropic's move, including why writers are objecting to it, [is here](/article/anthropic-claude-invisible-watermark-global-rollout).",
         "citation_urls": []
       }
     ],
@@ -3314,6 +3314,254 @@ window.RTFC_GUIDES = [
       { "label": "TechCrunch — \"OpenAI scuttles AI-written text detector over low rate of accuracy\"", "url": "https://techcrunch.com/2023/07/25/openai-scuttles-ai-written-text-detector-over-low-rate-of-accuracy/" },
       { "label": "Infosecurity Magazine — \"OpenAI Leadership Split About In-House AI Watermarking Technology\"", "url": "https://www.infosecurity-magazine.com/news/openai-split-ai-watermarking/" },
       { "label": "The Markup — \"AI Detection Tools Falsely Accuse International Students of Cheating\"", "url": "https://themarkup.org/machine-learning/2023/08/14/ai-detection-tools-falsely-accuse-international-students-of-cheating" }
+    ],
+    "corrections": []
+  },
+{
+    "id": "g14",
+    "slug": "check-whether-a-voice-is-ai-cloned",
+    "image": "assets/img/newsroom/g14.jpg",
+    "title": "How to check whether a voice on the phone is AI-cloned",
+    "dek": "ElevenLabs started stamping an inaudible watermark into the audio it generates in June 2026, and the FBI logged $893 million in AI-enabled fraud losses for 2025 — 40% of it from people 60 and older. Neither fact protects you on the call itself: the watermark only works on a saved file, and nobody has built a way to check a voice while it's still talking to you. Here's what actually still works, and the two-minute habit that beats every detector.",
+    "persona": "samira-nasser",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-22T16:27:59Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "AI can clone a familiar voice from three seconds of audio, security researchers and the FBI both confirm.",
+      "The FBI counted $893 million in 2025 fraud with confirmed AI involvement, 40% from people over 60.",
+      "ElevenLabs began watermarking its AI audio in June 2026 — but only its own platform's output.",
+      "Detection tools check saved audio files; none can check a live phone call while it's happening.",
+      "Caveat: no detector proves a call is safe — verify independently instead of listening for tells."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Agree on a family code word before you need one.",
+        "text": "Pick a word or phrase with the people you'd trust to call you in an emergency, and never post it anywhere public — a clone can only repeat what a scammer types."
+      },
+      {
+        "label": "Save a second way to reach the people who matter, not just their phone number.",
+        "text": "A coworker, a sibling, a workplace front desk — anyone who can confirm someone is actually in trouble without you having to trust the voice on the line."
+      },
+      {
+        "label": "Watch for live-call detection to actually ship, because nothing does it yet.",
+        "text": "Every system available today, including ElevenLabs' own SynthID detector, checks a saved file after the fact. Real-time detection on an ordinary phone call would be the actual fix; nothing here substitutes for it."
+      },
+      {
+        "label": "If you're recording a voicemail greeting or posting video of a family member, treat the audio as source material.",
+        "text": "Three seconds of clean audio is enough to clone a voice — a longer public clip doesn't make cloning meaningfully harder, but minimizing public audio at all shrinks the easy source pool."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "A voice that sounds exactly like your kid, your parent, or your boss can now be built from a few seconds of source audio pulled off a voicemail greeting, an old video, or a recorded call. %%3 seconds|of clean audio is enough today to clone a voice convincingly, per multiple 2026 security reviews%% The FBI's Internet Crime Complaint Center counted **$893 million in 2025 fraud losses with confirmed AI involvement**, 40% of it — $352 million — from people 60 and older. The instinct most people reach for when a call feels wrong is to listen closely for a robotic tone; that is not the check the FTC actually recommends, and on a live call it mostly ==can't be==: the tools built to catch AI-generated audio check a saved file, not a voice still talking to you. Here's what actually still works, and in what order.",
+        "citation_urls": [
+          "https://www.foxnews.com/tech/ai-voice-scams-clone-familys-voice",
+          "https://techeasehelp.com/blog/2025-fbi-elder-fraud-report-77-billion-in-senior-losses",
+          "https://consumer.ftc.gov/all-scams/family-emergency-scams"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Why listening for the robot voice stopped working",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The three-second benchmark isn't marketing copy — it's the plain mechanics of how a modern voice-cloning model works: feed it a short, clean sample and it can hold a live back-and-forth in that voice, with a real person typing responses behind the scenes. What used to give a fake away — flat delivery, mistimed pauses, a slightly wrong cadence — narrows with every new model generation, and what's left gets erased further by ordinary compression: a call routed through a cell network or re-encoded by a messaging app loses exactly the fine detail a detector needs. Independent reviews of today's voice-AI detectors are blunt about it: vendor accuracy claims __come from favorable test sets__, and real-world accuracy on short, re-encoded, or unfamiliar audio ==cuts sharply==. And the tools that do exist check a **file** someone hands them after the fact — real-time detection during a live call exists only inside call-center-grade enterprise systems, not on the phone in your hand.",
+        "citation_urls": [
+          "https://www.eyesift.com/blog/best-ai-voice-detectors-2026/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "The check that actually works here isn't better hearing. It's a callback.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "What to do the moment a call asks you for money or access",
+          "sub": "Two minutes, no software required — the checks that work here don't need a tool.",
+          "est": "2 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "A second way to reach the person the caller claims to be — a saved number, another family member, a coworker.",
+            "Nothing else. This works with zero technology."
+          ],
+          "steps": [
+            {
+              "do": "Hang up and call back on a number you already had saved — never the number that just called you.",
+              "hi": true,
+              "detail": "This is the FTC's own guidance for exactly this call, not 'listen closely.' A clone can be flawless; a callback to a number the scammer doesn't control ends the scam in one step, regardless of how good the voice sounds.",
+              "verify": "You reach the real person, or reach voicemail/no answer that lets you slow down instead of acting under pressure.",
+              "ifnot": "If you can't reach them directly, go to the next step before doing anything the call asked for."
+            },
+            {
+              "do": "Ask something only the real person would know — ideally a pre-agreed code word, not a public fact.",
+              "detail": "A cloned voice repeats what a scammer types; it does not know a private detail nobody has posted. The FBI and FTC both recommend agreeing on a family code word before an emergency happens, not during one.",
+              "verify": "The answer is specific and immediate, not vague or stalling ('I can't remember right now, just send it').",
+              "ifnot": "A wrong, vague, or dodged answer is itself the finding — treat the call as fraudulent and stop."
+            },
+            {
+              "do": "Refuse the payment method, whatever else is true about the voice.",
+              "detail": "Wire transfers, gift cards, and cryptocurrency get demanded because none of them can be reversed — a real emergency almost never requires exactly one of those three, right now, from you specifically.",
+              "verify": "You've identified which of the three the caller is pushing.",
+              "ifnot": "If it's none of the three and independently verifiable (a real office you can call back directly), it's more likely genuine — verify independently first regardless."
+            },
+            {
+              "do": "If you have the actual audio file — a voicemail, a forwarded recording — check it for a watermark before trusting your ear.",
+              "detail": "ElevenLabs began embedding an inaudible SynthID watermark in audio generated on its platform in June 2026, readable with its free public detector. A clean result only rules out that one platform's output made after that date — it proves nothing about a live call, an older clip, or any other voice tool.",
+              "verify": "You know which platform, if any, the detector implicates, and the recording's date relative to June 2026.",
+              "ifnot": "No file, or a live call only — this check doesn't apply; the callback and code word above are what actually protect you."
+            },
+            {
+              "do": "Report it, even if you didn't lose money.",
+              "detail": "The FTC (ReportFraud.ftc.gov) and the FBI's IC3 (ic3.gov) both take reports from calls that didn't succeed — that data is what let investigators total AI-enabled losses at $893 million for 2025, and it's the evidence base future protections get built on.",
+              "verify": "You've filed with at least one of the two."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Which of those matters first depends on what's actually happening — a live call under pressure needs a different first move than a recording someone forwards you after the fact.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "THE SITUATION",
+          "title": "Start with what you actually have",
+          "question": "Take the branch matching what's in front of you.",
+          "branches": [
+            {
+              "when": "You're on a live call right now and something feels off.",
+              "then": "Say you'll call them back, hang up, and dial the number you already had saved — not one the caller gives you.",
+              "because": "This is the one check that works regardless of how convincing the clone is, and it costs the scam its entire premise: urgency.",
+              "hi": true
+            },
+            {
+              "when": "You have a saved recording or forwarded audio clip, not a live call.",
+              "then": "Run it through the platform's own detector if you can identify a likely source (ElevenLabs' free Audio Detector, for its own output); otherwise verify independently exactly as you would a live call.",
+              "because": "A file-based check can only confirm or rule out one specific platform's watermark — it was never built to be the primary defense."
+            },
+            {
+              "when": "The caller claims to be a business, agency, or 'official' rather than a family member.",
+              "then": "Look up that organization's number independently — never one given to you on the call — and call that instead.",
+              "because": "A real agency or business doesn't need you to stay on the line while you verify it; a scammer impersonating one relies on you not doing this."
+            },
+            {
+              "when": "Nothing about the call is urgent and the ask is small or plausible on its own terms.",
+              "then": "Verify anyway, briefly, before acting — a callback takes under two minutes.",
+              "because": "Cheap-to-fake, low-stakes calls are exactly where people skip the check, and that's where scammers increasingly aim now that clones are hard to catch by ear.",
+              "warn": "'It didn't feel like a scam' is not a finding a voice clone will ever fail to produce."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What a watermark can and can't tell you",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "WATERMARK VS. EAR",
+          "title": "Two checks, and only one of them scales to a live call",
+          "columns": [
+            { "label": "SynthID watermark", "sub": "ElevenLabs audio only" },
+            { "label": "Listening for tells", "sub": "the old advice", "hi": true }
+          ],
+          "rows": [
+            { "label": "What it actually checks", "values": ["Whether a saved file's audio pattern matches ElevenLabs' own generation signature", "Whether the voice sounds natural to a human ear"] },
+            { "label": "Works on a live phone call", "values": ["No — requires a saved file run through the detector afterward", "In theory, but modern clones increasingly defeat it"] },
+            { "label": "Coverage", "values": ["Only ElevenLabs-generated audio made after June 2026 — other cloning platforms aren't covered", "Applies, unreliably, to any voice from any source"] },
+            { "label": "What a clean result proves", "values": ["Nothing about who's on the phone right now — only that no ElevenLabs watermark was found in that file", "Nothing reliable — vendor accuracy claims come from favorable test sets and real-world accuracy cuts sharply outside them"] }
+          ],
+          "source": "ElevenLabs, \"Detecting audio generated by ElevenLabs with SynthID\" (June 2026); eyesift.com AI voice detector comparison, current as of 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this closes the gap — it names it. [Google DeepMind](/company/google) built the SynthID watermark ElevenLabs adopted, but only a handful of the platforms capable of cloning a voice have adopted any watermark at all, and ++none has volunteered a way to check a call in progress++. In April 2026, Senator Maggie Hassan sent oversight letters to four voice-cloning companies — ElevenLabs, LOVO, Speechify, and VEED — asking whether any of them verify consent before cloning a voice, watermark their output, or report misuse to law enforcement; as of this writing, the answers aren't public. Until that changes, the defense that actually works predates all of it: call back on a number you already had.",
+        "citation_urls": [
+          "https://www.biometricupdate.com/202604/ai-voice-fraud-draws-new-congressional-scrutiny"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where this goes wrong",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Five ways this check gets skipped when it shouldn't be",
+          "items": [
+            {
+              "mistake": "Trusting caller ID because the name or number looks right.",
+              "looks": "The screen shows a familiar contact name, so the call itself is assumed genuine before anyone speaks.",
+              "why": "Caller ID can be spoofed independently of the voice — a scammer can fake the displayed number with no relationship to who's actually calling.",
+              "fix": "Treat caller ID as decoration, not verification; the callback is what actually confirms who you're talking to.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming a calm, natural-sounding voice rules out a clone.",
+              "looks": "\"It didn't sound robotic at all, so it must be real.\"",
+              "why": "Modern clones built from three seconds of source audio are designed to sound natural — a clean sound is the product working, not evidence against it.",
+              "fix": "Stop treating vocal naturalness as a signal either way; use the callback and code-word checks instead.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Waiting to set up a family code word until a suspicious call is already happening.",
+              "looks": "Mid-call, trying to improvise a question only a real relative would know, while under pressure.",
+              "why": "The FBI and FTC both frame this as a before-the-fact step — an improvised question gets answered by a panicking real relative and dodged by a coached scammer about equally well.",
+              "fix": "Agree on a code word with close family now, while there's no pressure, and never post it anywhere public.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Running a recording through a random online \"AI voice detector\" and treating the percentage as a verdict.",
+              "looks": "A free tool returns \"87% likely AI-generated\" and that number ends the conversation.",
+              "why": "Independent reviews found vendor accuracy claims come from favorable test sets, with real-world accuracy on short, re-encoded, or unfamiliar audio cutting sharply — the percentage is one tool's probability, not a fact.",
+              "fix": "Treat any single detector score as one weak signal, never the basis for a decision alone.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Believing a watermark detector \"proves\" a call is safe once it comes back clean.",
+              "looks": "A file passes ElevenLabs' own detector, so the whole call is treated as verified.",
+              "why": "A clean SynthID result only rules out one platform's watermark on one file — it says nothing about a live call, and most voice-cloning tools don't watermark their output at all.",
+              "fix": "Use a clean detector result as one data point, never a substitute for the callback and code-word checks.",
+              "cost": "high"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "This is the third of a kind, after [our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) and [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) — voice is the modality where the honest answer runs closest to don't rely on detection at all, because the fastest-growing use is a live call no file-based tool can reach. [The dictionary](/dictionary) has short entries for terms used here — jailbreak, guardrails — if any of the underlying mechanics need unpacking further. San Francisco's own order forcing Apple and Google to pull deepfake \"nudify\" apps, [covered here](/article/san-francisco-orders-apple-google-remove-nudify-apps), is the same underlying technology aimed at a different harm.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      { "label": "FBI Internet Crime Complaint Center — 2025 IC3 Annual Report", "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf", "primary": true },
+      { "label": "FTC — \"Family Emergency Scams\"", "url": "https://consumer.ftc.gov/all-scams/family-emergency-scams", "primary": true },
+      { "label": "FTC — \"Scammers use AI to enhance their family emergency schemes\"", "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes", "primary": true },
+      { "label": "ElevenLabs — \"Detecting audio generated by ElevenLabs with SynthID\"", "url": "https://elevenlabs.io/blog/synthid", "primary": true },
+      { "label": "Fox News — \"AI voice scams surge... as cloning needs just 3 seconds of audio\"", "url": "https://www.foxnews.com/tech/ai-voice-scams-clone-familys-voice" },
+      { "label": "TechEaseHelp — \"2025 FBI Elder Fraud Report: $7.7 Billion in Senior Losses\"", "url": "https://techeasehelp.com/blog/2025-fbi-elder-fraud-report-77-billion-in-senior-losses" },
+      { "label": "Ledger — \"FBI IC3 2025 Report: AI-Enabled Fraud Grew 1,210% in One Year\"", "url": "https://www.ledgerapp.app/blog/fbi-ic3-2025-ai-fraud-report" },
+      { "label": "Biometric Update — \"AI voice fraud draws new congressional scrutiny\"", "url": "https://www.biometricupdate.com/202604/ai-voice-fraud-draws-new-congressional-scrutiny" },
+      { "label": "Eyesift — \"Best AI Voice Detectors 2026\"", "url": "https://www.eyesift.com/blog/best-ai-voice-detectors-2026/" }
     ],
     "corrections": []
   }

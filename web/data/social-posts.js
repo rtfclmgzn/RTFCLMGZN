@@ -5339,5 +5339,88 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-22T13:09:28Z"
       }
     ]
+  },
+  {
+    "article_id": "g14",
+    "ts": "2026-08-22T16:27:59Z",
+    "export": {
+      "article_id": "g14",
+      "url": "https://rtfclmgzn.com/article/check-whether-a-voice-is-ai-cloned",
+      "headline": "How to check whether a voice on the phone is AI-cloned",
+      "hook": "Cloning a voice now takes three seconds of audio, and the tools that check for it can't reach a live phone call at all.",
+      "key_facts": [
+        "The FBI counted $893 million in 2025 fraud losses with confirmed AI involvement, 40% of it from people 60 and older.",
+        "ElevenLabs began watermarking its AI-generated audio in June 2026, but only for its own platform's files.",
+        "Detection tools check a saved audio file after the fact; none can check a voice on a live call."
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g14.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Cloning a voice now takes three seconds of audio. The FBI counted $893M in 2025 AI-enabled fraud losses, 40% of it from people over 60.\n\nElevenLabs started watermarking its AI audio in June -- but that only checks a saved file. Nothing checks a live call.",
+        "reply_copy": "How to actually check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIScams",
+          "#VoiceCloning"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three seconds of audio is enough to clone a voice convincingly today.\n\nThe FBI counted $893M in 2025 fraud with confirmed AI involvement -- 40% of it from people 60 and older.\n\nElevenLabs started watermarking its AI audio in June, but that only checks a saved file. Nothing checks a live call.\n\nThe habit that actually works, and the checks that don't -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#VoiceCloning",
+          "#Deepfake",
+          "#Scam",
+          "#ElderFraud",
+          "#DigitalLiteracy",
+          "#TechTips",
+          "#AIScams"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A voice that sounds exactly like your kid or your parent can now be built from three seconds of audio -- a voicemail greeting, an old video. The FBI counted $893 million in 2025 fraud losses with confirmed AI involvement, 40% of it from people 60 and older.\n\nElevenLabs started watermarking its AI-generated audio in June, but that only checks a saved file after the fact -- nothing checks a live call while it's happening. We put together what actually still works, starting with the two-minute habit that beats every detector.",
+        "hashtags": [
+          "#AI",
+          "#VoiceCloning"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Three seconds of audio is enough to clone a voice today. The FBI counted $893M in 2025 fraud losses with confirmed AI involvement -- 40% from people 60+.\n\nElevenLabs started watermarking its AI audio in June. That only checks a saved file, though -- nothing checks a live call. Here's what actually works instead.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Voice cloning needs 3 seconds of audio now. FBI: $893M in 2025 AI-fraud losses, 40% from people 60+. ElevenLabs watermarks its AI audio since June -- but that only checks a saved file, not a live call. What actually works instead:",
+        "hashtags": [
+          "#AI",
+          "#VoiceCloning",
+          "#AIScams"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
