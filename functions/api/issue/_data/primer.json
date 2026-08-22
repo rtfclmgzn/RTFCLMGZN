@@ -78,28 +78,28 @@
           "n": "ACT II",
           "t": "The Big Bang",
           "d": "The night everything changed, the four-year climb, and the trillion-dollar bet underneath it all",
-          "p": "14",
+          "p": "16",
           "img": "assets/img/primer-part1.jpg"
         },
         {
           "n": "ACT III",
           "t": "The Players",
           "d": "The labs that matter, their models head-to-head, how to read a benchmark, and which one is right for you",
-          "p": "21",
+          "p": "23",
           "img": "assets/img/primer-act3.jpg"
         },
         {
           "n": "ACT IV",
           "t": "Your Move",
           "d": "Twenty words of vocabulary, the one prompting skill, six things to try tonight, and the honest page nobody else prints",
-          "p": "30",
+          "p": "32",
           "img": "assets/img/primer-part2.jpg"
         },
         {
           "n": "ACT V",
           "t": "Going Deeper",
           "d": "What's coming next, how to use it safely, and where to go from here",
-          "p": "36",
+          "p": "38",
           "img": "assets/img/primer-act5.jpg"
         }
       ],
@@ -275,6 +275,31 @@
         "Remember the one job: **predict a plausible next word.** A model trained that way will *always* produce fluent, confident-sounding text, because that is literally the only thing it does. When it knows the answer, plausible and true line up and you get something useful. When it doesn't know — an obscure fact, a specific number, a citation, something that happened after its training — it doesn't stop and say 'I'm not sure.' It generates the *shape* of a right answer anyway, in the same confident voice. ==The fluency never wavers, even when the facts underneath have evaporated.==",
         "That's why a model can invent a court case, a statistic, or a quote that never existed, complete with a plausible-looking source. It isn't lying — lying requires knowing the truth. It's doing exactly what it was built to do, in a spot where 'sounds right' and 'is right' happened to come apart.",
         "The practical rule for the rest of your life with these tools: **the model's confidence is a property of its writing style, not its knowledge.** Never read one as evidence of the other. Act IV gives you a thirty-second habit for catching it — but the instinct starts here, on this page."
+      ]
+    },
+    {
+      "kind": "text",
+      "folio": "Act I · The Flaw",
+      "layout": "runover",
+      "cont": "Why it makes things up — and why that's built in, continued",
+      "crosshead": "Grounding helps. It doesn't cure it.",
+      "body": [
+        "The obvious fix is to stop asking the model to answer from memory and start asking it to look something up — retrieval, a live web search, a document you paste in yourself. Grounding a model in a real source measurably cuts the problem, which is why a well-built assistant with search turned on is safer than the same model working from memory alone.",
+        "But grounding doesn't remove the mechanism from the page before this one — it just hands it better material to be fluent about. A model can still misread the very source it was just given, blend two documents into a claim neither one actually makes, or take a lawyer's real request for case law and hand back a filing full of cases that don't exist — a failure specific enough that it has made news more than once.",
+        "The tell is the same one from the previous page: **the fabricated answer reads exactly as confident as the grounded one.** Nothing in the output marks which is which. You have to check."
+      ]
+    },
+    {
+      "kind": "text",
+      "folio": "Act I · The Flaw",
+      "layout": "runover",
+      "cont": "Why it makes things up — and why that's built in, continued",
+      "crosshead": "Bigger and newer doesn't mean it stopped",
+      "end": true,
+      "body": [
+        "It would be convenient if hallucination were simply a young-technology problem, fading release by release. Act IV's own numbers say otherwise: one flagship model's error rate on the industry's own hallucination benchmark roughly doubled — from the mid-20s to the mid-50s in percentage terms — in the same year its underlying knowledge and reasoning measurably improved. ==A model can get smarter and less reliable on this one axis in the same twelve months.==",
+        "That isn't a contradiction once you remember the mechanism from the top of this feature: a more capable model is a more capable *fluency* engine first. Reasoning and tool use raise the ceiling on what it gets right; neither one repeals the rule that when it's wrong, it doesn't sound wrong.",
+        "Which is the actual, permanent lesson — not a beginner's one to outgrow: the fluency of an AI answer will never be evidence of its truth, on this model, the next one, or the one after that. **Verifying anything load-bearing isn't a habit you graduate out of. It's the one skill this technology never stops requiring.**"
       ]
     },
     {
@@ -844,7 +869,7 @@
         },
         {
           "t": "Try the Six Things",
-          "d": "Act IV, page 32. Tonight. Reading about swimming only goes so far."
+          "d": "Act IV, page 34. Tonight. Reading about swimming only goes so far."
         },
         {
           "t": "One podcast for the commute",
@@ -872,10 +897,22 @@
         "The image budget is metered exactly: every generated page and cover draws from a capped, tracked spend. The token figure is estimated rather than metered, because the Primer's text is a re-synthesis of reporting this newsroom already published and researched under a separate accounting. Neither number is rounded up to look better or down to look leaner."
       ],
       "stats": [
-        { "n": "104,000", "label": "tokens spent writing and editing this issue (estimated)" },
-        { "n": "$1.55", "label": "total compute cost, metered" },
-        { "n": "27", "label": "images generated for this issue" },
-        { "n": "$0", "label": "price to you — the Primer is free forever" }
+        {
+          "n": "104,000",
+          "label": "tokens spent writing and editing this issue (estimated)"
+        },
+        {
+          "n": "$1.55",
+          "label": "total compute cost, metered"
+        },
+        {
+          "n": "27",
+          "label": "images generated for this issue"
+        },
+        {
+          "n": "$0",
+          "label": "price to you — the Primer is free forever"
+        }
       ]
     },
     {
