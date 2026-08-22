@@ -305,10 +305,49 @@ this order, and mark it done here.
 
 **Then, one per cycle, with new writing:**
 
-5. Convert the six strongest single pages into 2–3 page `runover` features with
-   `cont`, `crosshead` and `end`. Priority: tokens/context (currently three
-   concepts in 245 words), hallucination, prompting, what-AI-is, safety, the
-   honest-limits page. `runover` renders imageless, so this needs **no new art**.
+5. DONE (2026-08-22 cycle). Convert the six strongest single pages into 2–3
+   page `runover` features with `cont`, `crosshead` and `end`. Priority listed
+   here was tokens/context, hallucination, prompting, what-AI-is, safety, the
+   honest-limits page — but the first two were STALE by this cycle: a spot
+   check found `tokens/context` and `hallucination` (Act I, "why it makes
+   things up") had *already* been converted to 3-page `runover` features by an
+   earlier untracked edit, in both `web/data/primer-issue.js` and
+   `functions/api/issue/_data/primer.json` (6 `runover`-layout spreads existed
+   in each file before this cycle touched anything — verify with
+   `grep -c '"layout": "runover"'` on either file). Checked the remaining four
+   named candidates by actual word count instead of assuming the list order:
+   prompting ("The one skill: brief it like a new hire", 197 words in
+   `primer-issue.js`), what-AI-is ("So what actually is artificial
+   intelligence?", 152 words), safety ("What not to paste, and how to stay in
+   control", 119 words) and the honest-limits page ("What it can't do — and
+   what's genuinely worth worrying about", 119 words) were tied for thinnest
+   at 119 words each. Broke the tie with the runbook's own priority order
+   (safety listed before honest-limits) and converted **safety** —
+   "What not to paste, and how to stay in control" — from one `cornerCard`
+   page into a 3-page `runover` feature: the original page (trimmed to its
+   intro + the "Guard your data" habit) plus two new `runover` continuation
+   pages, one per remaining habit ("Verify what matters, every time it
+   counts" and "Stay the decider" — the latter carries `"end": true`). No new
+   art: the two new pages carry no `image` field, matching the existing
+   tokens/context and hallucination `runover` pages exactly. Edited BOTH
+   files — `web/data/primer-issue.js` (folio "Act VI · Use It Safely", body
+   text expanded from that file's own shorter/thinner original) and
+   `functions/api/issue/_data/primer.json` (folio "Act V · Use It Safely" —
+   this file's own Act-numbering convention, one lower, per the established
+   drift) — using each file's own existing body text as the only source of
+   facts for the expansion (no new claims, numbers or citations; one
+   illustrative sentence added per page, extending a metaphor/rule already on
+   the page, not introducing a new one). Verified `node --check
+   web/data/primer-issue.js` and `python3 -c "import json;
+   json.load(open('functions/api/issue/_data/primer.json'))"` both pass after
+   the edit. Did not touch the "104,000 tokens (estimated)" issue-cost figure
+   near the end of either file — Law 3 forbids self-reporting a number this
+   run cannot measure, and that figure was already a prior cycle's estimate,
+   not something to re-guess upward for the ~250 added words. Contents-page
+   `p` references (5/16/23/30/41/51 in `primer-issue.js`) and page-number
+   prose were checked and are unaffected: the insertion point is deep in Act
+   VI, after every `contents` entry's target and after every hardcoded
+   page-number mention in the body text (there are none past that point).
 6. Missing topics a beginner's issue cannot omit, in order of how badly they are
    missed: what it costs YOU (free vs paid tiers, limits, when to pay — the issue
    contains zero consumer pricing); where to actually type (the issue contains
