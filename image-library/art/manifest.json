@@ -1249,7 +1249,12 @@
    ],
    "text_space": "smoky left depth",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-dexmal-alibaba-embodied-ai-3-billion-valuation-talks",
+     "used_at": "2026-08-22"
+    }
+   ]
   },
   {
    "id": "art-046-violet-biotech-rig",
@@ -1437,7 +1442,12 @@
    ],
    "text_space": "white wall upper-left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-marvell-google-12-2-billion-warrant-tpu-custom-chips",
+     "used_at": "2026-08-22"
+    }
+   ]
   },
   {
    "id": "art-053-twilight-data-center-build",

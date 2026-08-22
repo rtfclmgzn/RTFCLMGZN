@@ -1232,9 +1232,32 @@ window.RTFC_MAGAZINE_ISSUES.push({
     },
     "body": [
       "Three habits, and you're covered for almost everything.",
-      "**Guard your data.** Unless your plan says otherwise, assume what you type may be stored and used to improve the model. Treat a consumer chatbot like a brilliant stranger on a park bench: wonderful for advice, wrong place for passwords, medical records or client secrets.",
+      "**Guard your data.** Unless your plan says otherwise, assume what you type may be stored and used to improve the model. Treat a consumer chatbot like a brilliant stranger on a park bench: wonderful for advice, wrong place for passwords, medical records or client secrets. If you wouldn't say it out loud to someone you just met, don't paste it into the box either — the chatbot has no idea it's supposed to forget."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act VI · Use It Safely",
+    "layout": "runover",
+    "cont": "What not to paste, and how to stay in control, continued",
+    "crosshead": "Verify what matters, every time it counts",
+    "body": [
       "**Verify what matters.** For anything load-bearing — a number, a legal or medical claim, a citation — ask for the source and check it. Low-stakes brainstorming needs none of this; a decision someone acts on needs all of it.",
-      "**Stay the decider.** These tools draft, explain and propose. They are not accountable for the outcome — you are. ==You bring the judgement; it brings the horsepower.=="
+      "The line between the two is usually obvious once you say it out loud: is anyone going to act on this? A restaurant recommendation, a first draft, a brainstormed list of gift ideas — none of it needs verifying, because getting it slightly wrong costs nothing. A dosage, a filing deadline, a case citation, a statistic that goes in front of a client — that's the load-bearing kind, and it's exactly the kind Act I already showed you these systems can get wrong while sounding completely sure of themselves.",
+      "So build the habit into the question itself: ask for the source alongside the answer, not after you've already trusted it. 'What are you basing that on?' is a complete sentence, and a good assistant will actually answer it."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act VI · Use It Safely",
+    "layout": "runover",
+    "cont": "What not to paste, and how to stay in control, continued",
+    "crosshead": "Stay the decider",
+    "end": true,
+    "body": [
+      "**Stay the decider.** These tools draft, explain and propose. They are not accountable for the outcome — you are. ==You bring the judgement; it brings the horsepower.==",
+      "That division of labor doesn't change no matter how fluent the draft sounds. A well-written answer and a correct one read identically on the page — the confidence in a sentence is never evidence for the fact inside it. Go back to Act I's page on hallucination if that ever stops feeling true; it's the fastest way to feel it in your bones rather than just know it as a rule.",
+      "None of this is a reason to hold the tools at arm's length. It's the opposite: knowing exactly where the edges are is what lets you use them at full speed everywhere else. Three habits, run by instinct instead of read off a page, are the whole difference between someone who got burned once and someone who never will."
     ]
   },
   {

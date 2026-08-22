@@ -5426,5 +5426,189 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-22T16:39:20Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-marvell-google-12-2-billion-warrant-tpu-custom-chips",
+    "ts": "2026-08-22T22:32:32Z",
+    "export": {
+      "article_id": "newsroom-marvell-google-12-2-billion-warrant-tpu-custom-chips",
+      "url": "https://rtfclmgzn.com/article/marvell-google-12-2-billion-warrant-tpu-custom-chips",
+      "headline": "Marvell granted Google a warrant worth $12.2 billion. Almost none of it is Google's yet.",
+      "hook": "Marvell's own SEC filing shows Google's new $12.2B stake is 97% contingent on Google actually buying $120B of chips first — only $281M vests no matter what.",
+      "key_facts": [
+        "Warrant for up to 58,970,907 Marvell shares at $206.58, exercisable through August 2033.",
+        "Only 1,360,867 shares vest automatically; the rest vests in $500M chip-purchase tranches.",
+        "Marvell stock jumped double digits and Broadcom fell ~5% — but Broadcom's own Google TPU deal runs through 2031."
+      ],
+      "tone": "technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-marvell-google-12-2-billion-warrant-tpu-custom-chips.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Marvell just granted Google a warrant worth $12.2B.\n\nAlmost none of it is Google's yet: only $281M vests automatically. The other 97% vests only as Google buys $500M chip-purchase tranches, through 2033.\n\nMarvell stock jumped double digits. Broadcom fell ~5%.",
+        "reply_copy": "The filing, broken down:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Marvell",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-23T03:32:32Z",
+        "copy": "An analyst's read on Marvell's new Google warrant: \"a growing pie at Google for new sources, rather than a competitive displacement of Broadcom.\"\n\nBroadcom's own Google TPU deal was extended through 2031 in April. Nothing in this filing touches it.",
+        "reply_copy": "What actually changed:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Marvell",
+          "#Broadcom"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google can eventually own up to 59 million shares of Marvell — a stake worth $12.2 billion if fully exercised.\n\nBut Marvell's own SEC filing shows almost none of it is guaranteed: just $281 million vests automatically. The other 97% vests only as Google buys Marvell's custom chips, in $500 million increments, through 2033.\n\nMarvell stock jumped double digits. Broadcom, Google's TPU partner of a decade, fell about 5% — though the analyst read is expansion, not displacement.\n\nWhat the filing actually says the warrant covers — link in bio.",
+        "hashtags": [
+          "#Marvell",
+          "#Google",
+          "#AIChips",
+          "#Broadcom",
+          "#TechNews",
+          "#Semiconductors"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google just got the right to become one of Marvell Technology's biggest shareholders — but almost none of that right is Google's yet. Marvell's August 18 SEC filing discloses a warrant for up to 58,970,907 shares, worth $12.2 billion if fully exercised. Only a sliver, worth about $281 million, vests automatically; the rest vests exclusively as Google buys Marvell's custom chips, in $500 million increments, through 2033. Marvell stock jumped double digits on the news; Broadcom, Google's TPU supplier of a decade, fell about 5% — though one analyst called it 'a growing pie,' not a displacement, since Broadcom's own Google contract runs through 2031. We broke down what the warrant actually guarantees versus what's still entirely contingent.",
+        "hashtags": [
+          "#Marvell",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Marvell granted Google a warrant worth $12.2B if fully exercised. Almost none of it is guaranteed: only $281M vests automatically, the rest only as Google buys $500M chip-purchase tranches through 2033. Marvell jumped double digits, Broadcom fell ~5% -- but Broadcom's own Google TPU deal runs through 2031, untouched by this filing.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-23T03:32:32Z",
+        "copy": "The nuance most headlines on the Marvell/Google warrant missed: it's a ceiling on Marvell's exposure, not a floor on Google's spending. Google can let it sit unexercised entirely and owes nothing.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Marvell granted Google a warrant worth $12.2B -- but 97% of it only vests if Google buys $120B of chips first, through 2033. Only $281M vests no matter what. Marvell jumped double digits; Broadcom (Google's TPU partner since 2014ish, contract runs to 2031) fell ~5%.",
+        "hashtags": [
+          "#Marvell",
+          "#Google",
+          "#AIChips"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-dexmal-alibaba-embodied-ai-3-billion-valuation-talks",
+    "ts": "2026-08-22T22:34:48Z",
+    "export": {
+      "article_id": "newsroom-dexmal-alibaba-embodied-ai-3-billion-valuation-talks",
+      "url": "https://rtfclmgzn.com/article/dexmal-alibaba-embodied-ai-3-billion-valuation-talks",
+      "headline": "Dexmal, an Alibaba-backed embodied-AI startup founded 17 months ago, is negotiating a $3 billion valuation",
+      "hook": "A 17-month-old Chinese robotics-software startup that has raised $140 million total is now negotiating a valuation more than 20x that.",
+      "key_facts": [
+        "Target valuation: 20 billion yuan (~$3 billion), per founder Tang Wenbin — still under negotiation.",
+        "Prior funding: ~$140 million across two rounds led by Alibaba and NIO Capital since March 2025.",
+        "News broke via Bloomberg interview at Beijing's World Robot Conference, which drew 300+ exhibitors this year."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-dexmal-alibaba-embodied-ai-3-billion-valuation-talks.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Dexmal has raised $140M total since founding 17 months ago.\n\nIt's now negotiating a new round at a $3B valuation -- more than 20x what it's actually banked.\n\nFounder says the number is still being negotiated, not signed.",
+        "reply_copy": "The funding history:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#China",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Dexmal, a Chinese embodied-AI startup founded in March 2025, is negotiating a new funding round targeting a $3 billion valuation.\n\nIts total raised to date: roughly $140 million, across two rounds led by Alibaba and NIO Capital.\n\nFounder Tang Wenbin told Bloomberg at Beijing's World Robot Conference the number is still being negotiated, not closed.\n\nThe funding boom behind China's embodied-AI race -- link in bio.",
+        "hashtags": [
+          "#Dexmal",
+          "#Alibaba",
+          "#Robotics",
+          "#EmbodiedAI",
+          "#China",
+          "#StartupFunding"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Dexmal, a Chinese embodied-AI startup barely 17 months old, is in talks to raise new funding at a 20 billion yuan valuation -- roughly $3 billion. Founder Tang Wenbin told Bloomberg at Beijing's World Robot Conference the number is still being negotiated, not a signed term sheet. The company has raised roughly $140 million total across two rounds led by Alibaba and NIO Capital since its March 2025 founding -- a steep jump against what's actually been banked, in a week China's robotics-funding boom was also on display at Unitree's 460%-plus Shanghai trading debut.",
+        "hashtags": [
+          "#Dexmal",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A company that's raised $140M total is negotiating a $3B valuation. Dexmal, a 17-month-old Chinese embodied-AI startup backed by Alibaba and NIO Capital, per founder Tang Wenbin's interview with Bloomberg at Beijing's World Robot Conference -- still being negotiated, not closed.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Dexmal has raised $140M total since March 2025. Now negotiating a new round at a $3B valuation -- 20x+ what it's banked. Backed by Alibaba, NIO Capital, and (per Bloomberg) Z.AI. Founder says the number's still being negotiated, not signed.",
+        "hashtags": [
+          "#China",
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
