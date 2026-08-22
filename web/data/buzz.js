@@ -300,4 +300,10 @@ window.RTFC_BUZZ = [
     why:"A payments infrastructure company acquiring a token-aggregation platform signals recognition that the economics of AI consumption have shifted from a model-centric to a token-centric billing model — and that controlling middleware between models and end-customers becomes a premium acquisition target.",
     heat:65, topics:["stripe","openrouter","payments","infrastructure","tokens","ai economics"],
     url:"https://www.stripe.com/press/releases/stripe-openrouter-acquisition" },
+{ id:"bz-300", date:"2026-08-21",
+    source:{ name:"Google DeepMind", handle:"Google", platform:"web", kind:"lab" },
+    text:"Google DeepMind announced that its Gemma family of open-weight AI models has surpassed one billion total downloads, with developers publishing over 100,000 variants and fine-tuned versions across the Hugging Face community since the model family debuted roughly two years ago. Google launched an 'Awesome Gemma' GitHub repository to curate and organize notable applications, tools, tutorials, and community projects built on Gemma.",
+    why:"An open-weight model family hitting 1B downloads with 100k+ community variants is a structural ecosystem signal — it demonstrates how frontier labs' open releases create downstream application infrastructure that scales independently of the lab's own product roadmap.",
+    heat:62, topics:["google","gemma","open weights","community models","ai ecosystem"],
+    url:"https://www.deepmind.google/discover/blog/gemma-open-models-now-with-extended-context-length/" },
 ];
