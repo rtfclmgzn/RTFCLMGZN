@@ -4957,8 +4957,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Broadcom",
           "#AIInfrastructure"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091014744849162294",
+        "remote_id": "2091014744849162294",
+        "posted_at": "2026-08-22T04:08:59Z"
       },
       {
         "platform": "instagram",
@@ -5155,8 +5157,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091013735036883020",
+        "remote_id": "2091013735036883020",
+        "posted_at": "2026-08-22T04:04:58Z"
       },
       {
         "platform": "instagram",
@@ -5206,8 +5210,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-22T03:39:00Z",
         "copy": "The specific claim in OpenAI's ChatGPT for Teens launch that's still entirely OpenAI's own word: the age-prediction system's accuracy. No disclosed rate, no independent test. Same for the under-an-hour parental notification target. Both stay in the 'company says' column until someone outside OpenAI checks.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcVA1YylhKU",
+        "remote_id": "18138534661591098",
+        "posted_at": "2026-08-22T04:05:13Z"
       },
       {
         "platform": "bluesky",
