@@ -179,7 +179,12 @@
    ],
    "text_space": "sky upper-left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "check-whether-a-companys-ai-claim-is-real",
+     "used_at": "2026-08-23"
+    }
+   ]
   },
   {
    "id": "art-007-blue-hour-cafe-and-delivery-bot",

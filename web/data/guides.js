@@ -3564,5 +3564,276 @@ window.RTFC_GUIDES = [
       { "label": "Eyesift — \"Best AI Voice Detectors 2026\"", "url": "https://www.eyesift.com/blog/best-ai-voice-detectors-2026/" }
     ],
     "corrections": []
+  },
+  {
+    "id": "g15",
+    "slug": "check-whether-a-companys-ai-claim-is-real",
+    "image": "assets/img/newsroom/check-whether-a-companys-ai-claim-is-real.jpg",
+    "title": "How to check whether a company's AI claim is real",
+    "dek": "Two federal regulators have started fining companies for AI capability they don't actually have — real settlements, not opinions. A four-question check, worked through on the cases that already collapsed: a \"listening\" feature that never touched audio, and a detector that tested worse than a coin flip.",
+    "persona": "kian-farzan",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-23T16:34:07Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "\"AI washing\" — claiming AI capability a product doesn't actually have — is now a finable violation.",
+      "The FTC and SEC have brought at least 13 cases since 2024, recovering roughly $51 million total.",
+      "Ask what specifically the AI decides, on what data, and who tested the claimed number.",
+      "Cox Media Group's \"AI\" ad targeter turned out to be resold email lists with no AI at all.",
+      "Caveat: no open case doesn't clear a company — regulators have reached only a slice of the market."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Run the four questions before you repeat any \"AI-powered\" claim.",
+        "text": "What decision does it actually make, on what data, who tested the number, and what's proprietary versus what you're owed a plain answer to."
+      },
+      {
+        "label": "Search \"[company] FTC\" or \"[company] SEC\" before trusting a vendor's own accuracy number.",
+        "text": "It won't clear a company that hasn't been caught yet, but it takes thirty seconds and has already surfaced real, settled cases."
+      },
+      {
+        "label": "Expect the enforcement pace to keep climbing, not plateau.",
+        "text": "Operation AI Comply has run roughly a dozen cases a year since 2024 against a market of thousands of AI-labeled products — the gap between claim and product stays profitable until it doesn't."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "An \"AI-powered\" claim used to be a matter of taste — you either believed the pitch or you didn't. **It isn't anymore.** The Federal Trade Commission and the Securities and Exchange Commission have between them settled more than a dozen cases since March 2024 against companies that advertised AI capability they didn't actually have, and each settlement lays out, in public, exactly what question would have caught the fake before anyone paid for it. ==Those same questions work on the next pitch, whether or not a regulator ever gets to it.==",
+        "citation_urls": [
+          "https://www.sec.gov/newsroom/press-releases/2024-36",
+          "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Why this became a checkable claim, not an opinion",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The SEC went first, on March 18, 2024, against two registered investment advisers. **Delphia** had told clients since 2019 that it used \"machine learning\" to analyze \"the collective data shared by its members\" and was \"training our algorithm for pursuing ever better returns\" — the firm had privately admitted, back in 2021, that it had never actually used any client data in its algorithm, and kept the public claim running two more years anyway. **Global Predictions** marketed itself as the \"first regulated AI financial advisor,\" offering \"expert AI-driven forecasts\" nothing backed up. Delphia paid $225,000, Global Predictions paid $175,000 — $400,000 combined — and neither firm had to admit wrongdoing, but both had to stop the specific claims.",
+        "citation_urls": [
+          "https://www.sec.gov/newsroom/press-releases/2024-36",
+          "https://www.mayerbrown.com/en/insights/publications/2024/04/securities-and-exchange-commission-brings-first-enforcement-actions-over-aiwashing"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The FTC opened a wider front six months later: **Operation AI Comply**, launched September 25, 2024, against five companies at once — an \"AI robot lawyer\" never tested against a real attorney, an e-commerce course promising AI-powered passive income, a writing tool marketed for generating fake reviews. The sweep has kept running since, with at least 13 settled cases and roughly $51 million recovered as of this piece, spanning consumer software, marketing services, and business-coaching programs.",
+        "citation_urls": [
+          "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+          "https://forkast.news/the-ftc-has-policed-13-ai-cases-none-target-agent-behavior/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "One of those 13 is worth walking through end to end, because it shows exactly how a fake number survives contact with a real one. **Workado** sold an AI Content Detector, marketed as \"98% accurate\" at flagging AI-written text. The 98% wasn't invented — it came from an independent Norwegian study of the underlying model, tested on academic writing. Workado just never ran that test on the general, non-academic content its own customers actually fed it; when the FTC did, the real number came back at 53%. \"Consumers trusted Workado's AI Content Detector to help them decipher whether AI was behind a piece of writing,\" said Chris Mufarridge, director of the FTC's Bureau of Consumer Protection, \"==but the product did no better than a coin toss.=={{note: The FTC's own language from its order against Workado — not this desk's characterization.}}\"",
+        "citation_urls": [
+          "https://www.ftc.gov/news-events/news/press-releases/2025/04/ftc-order-requires-workado-back-artificial-intelligence-detection-claims",
+          "https://cyberscoop.com/ftc-workado-settlement-ai-detector-false-and-misleading-claims/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Run this before repeating an \"AI-powered\" claim",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Every one of these cases collapses under the same short list of questions — asked before the purchase, the investment, or the headline, not after.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Four questions, in the order that catches a dressed-up claim",
+          "sub": "Costs a few minutes; every case above would have failed at least one of these before the money moved.",
+          "est": "8 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The product page, pitch deck, or press release making the AI claim.",
+            "Five minutes to search the company's name alongside \"FTC\" or \"SEC.\""
+          ],
+          "steps": [
+            {
+              "do": "Ask what decision or output the AI actually produces — not just where the word \"AI\" appears.",
+              "detail": "Cox Media Group's \"Active Listening\" product claimed to analyze conversations picked up by a phone's microphone and use them to target local ads. The FTC found in May 2026 that the service never touched voice data at all — it resold email lists bought from data brokers, marked up, with an AI label on top. The tell wasn't a bad output; it was that nobody could name the specific step where a model did anything.",
+              "verify": "You can state, in one sentence, the specific decision or content the model produces — not \"it uses AI to help.\"",
+              "ifnot": "If the answer stays vague after you ask twice, treat \"AI-powered\" as a label on the box, not a description of what's inside it."
+            },
+            {
+              "do": "Ask who tested the number, and on what data — never accept the vendor's own.",
+              "hi": true,
+              "detail": "Workado's \"98% accurate\" figure was real, just measured on the wrong content. A real number attached to the wrong use case reads exactly like a fabricated one from the outside — the only way to tell them apart is asking what it was actually measured on.",
+              "why": "A vendor has every reason to lead with whichever test made the number look best, and no obligation to mention that the test doesn't match how you'd actually use the product.",
+              "verify": "You know who ran the test, on what kind of data, and whether that matches what you'd actually use the product for.",
+              "ifnot": "If the company can't say, or the test data doesn't match your use case, treat the number as unproven for your purposes even if it's technically real somewhere."
+            },
+            {
+              "do": "Separate what's legitimately proprietary from what you're owed a plain answer to.",
+              "detail": "A model's exact weights or training recipe can be a real trade secret. What it decides, what kind of data trains it, and how a claimed number was measured are not the same kind of secret — Global Predictions called itself the \"first regulated AI financial advisor\" and never had to show its work, because nobody separated the ownable question from the proprietary one.",
+              "verify": "You can name the specific question you're asking (what does it decide, what was the number tested on) separately from the one you're not (the model architecture itself).",
+              "ifnot": "If a company can't answer the ownable question without deflecting to \"proprietary,\" that deflection is itself the finding."
+            },
+            {
+              "do": "Check whether the claim, or one shaped like it, has already been tested by a regulator.",
+              "detail": "Search the company's name alongside \"FTC\" or \"SEC\" before trusting a pitch. The same handful of claim shapes — an inflated accuracy number, an untested \"proprietary algorithm,\" a feature that doesn't do what the name implies — keep reappearing across unrelated companies once you know to look.",
+              "verify": "You've run the search and can say whether anything relevant turned up.",
+              "ifnot": "Nothing turning up doesn't clear the company — see the caveat further down — but something turning up is close to a settled answer."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The clearest example of question one — what does the AI actually decide — closed in May 2026. **Cox Media Group** and two smaller partners, MindSift and 1010 Digital Works, had sold \"Active Listening\": a service claiming to analyze conversations picked up by a phone's microphone in real time and use them to target local ads, with customers told they'd opted in. On May 21, 2026, the FTC found the service never touched voice data at all — it resold email lists bought from data brokers, marked up, with an AI label on top. Cox Media Group paid $880,000; MindSift and 1010 Digital Works paid $25,000 each — $930,000 combined.",
+        "citation_urls": [
+          "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived",
+          "https://natlawreview.com/article/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges"
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "beforeafter": {
+          "kicker": "FOUR CLAIMS, FOUR SETTLEMENTS",
+          "title": "What was claimed, and what a regulator actually found",
+          "beforeLabel": "The claim",
+          "afterLabel": "What the regulator found",
+          "rows": [
+            {
+              "label": "Cox Media Group's \"Active Listening\" ad service (FTC, May 2026)",
+              "before": "An AI system that analyzes phone-microphone audio in real time to target local ads.",
+              "after": "No voice data used at all — the product resold data-broker email lists, marked up."
+            },
+            {
+              "label": "Workado's AI Content Detector (FTC, 2025)",
+              "before": "\"98% accurate\" at flagging AI-written text.",
+              "after": "53% accurate on the content it was actually sold to check — \"no better than a coin toss.\""
+            },
+            {
+              "label": "Delphia's investment algorithm (SEC, March 2024)",
+              "before": "\"Training our algorithm\" on client trading data since 2019.",
+              "after": "Delphia had privately admitted in 2021 it never used any client data at all."
+            },
+            {
+              "label": "Global Predictions' robo-adviser (SEC, March 2024)",
+              "before": "\"First regulated AI financial advisor,\" with \"expert AI-driven forecasts.\"",
+              "after": "No evidence supporting the AI-driven-forecast claim, per the SEC's order."
+            }
+          ],
+          "source": "SEC press release 2024-36 (Delphia, Global Predictions); FTC orders against Workado (2025) and Cox Media Group, MindSift, and 1010 Digital Works (May 2026)."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of these four needed a whistleblower or a leaked memo. A customer or a regulator asked what the product actually did, on what data, and checked the number against reality. ==That's the whole method.==",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What the enforcement numbers actually cover",
+        "citation_urls": []
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "SCOPED, NOT TOTAL",
+          "title": "What the enforcement numbers actually cover",
+          "items": [
+            {
+              "value": "$51 million",
+              "unit": "FTC · Operation AI Comply",
+              "label": "Recovered across at least 13 settled cases since the Sept. 25, 2024 launch",
+              "includes": "Civil penalties and consumer redress from that named sweep of deceptive-AI-marketing cases",
+              "excludes": "Any FTC AI action outside the named sweep, and any state attorney-general enforcement"
+            },
+            {
+              "value": "$400,000",
+              "unit": "SEC · Delphia + Global Predictions",
+              "label": "Combined penalty from the SEC's first AI-washing cases, March 18, 2024",
+              "includes": "Two investment-adviser marketing-rule violations",
+              "excludes": "Later SEC AI matters, including Presto Automation's 2025 case against a public company under a different statute"
+            },
+            {
+              "value": "$930,000",
+              "unit": "FTC · Cox Media Group + partners",
+              "label": "Combined penalty for the \"Active Listening\" case, May 21, 2026",
+              "includes": "The three companies named in that specific settlement",
+              "excludes": "Any customers' own losses from the underlying ad-targeting service, which the settlement doesn't separately quantify"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of these totals should read as the size of the problem — they're the size of what's been caught. The FTC has run roughly a dozen cases a year against a market of many thousands of products carrying an \"AI-powered\" label; the absence of a settlement next to a company's name is not the same as a passed check. Run the four questions regardless of what the search above turns up.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Where this check gets skipped",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped when it shouldn't be",
+          "items": [
+            {
+              "mistake": "Accepting a vendor's own accuracy or effectiveness number as proof.",
+              "looks": "A 98% claim gets repeated because it's on the product page, not because anyone re-ran the test on the actual use case.",
+              "why": "Workado's number was real — just measured on a different, easier kind of content than the one it was sold to check.",
+              "fix": "Ask who ran the test, on what data, and whether that matches what you'd actually use the product for.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating any refusal to share methodology as automatic proof of fraud.",
+              "looks": "A company declines to detail its exact model or training pipeline, and that gets read as the same red flag as Delphia's.",
+              "why": "A model's exact architecture can be a legitimate trade secret; what it decides and what it was tested on are a different, ownable question.",
+              "fix": "Separate the question you're owed an answer to from the one you're not, and judge the refusal on the right one.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Assuming a company with no open enforcement case has a clean AI claim.",
+              "looks": "A search for \"[company] FTC\" or \"[company] SEC\" turns up nothing, so the product is treated as verified.",
+              "why": "Regulators have reached a small slice of a market with thousands of AI-labeled products — absence of enforcement is not the same as a passed check.",
+              "fix": "Use the search as one data point, never the whole verdict, and run the four questions regardless of what it turns up.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Confusing \"AI appears somewhere in the pipeline\" with \"the AI drives the outcome you're paying for.\"",
+              "looks": "A product markets itself as AI-powered because one minor feature touches a model, while the core function — like Cox Media Group's ad targeting — turns out to be ordinary automation or no automation at all.",
+              "why": "Marketing benefits from the association even when the mechanism actually doing the work is unrelated to it.",
+              "fix": "Ask specifically what decision or output the model produces, not whether the word \"AI\" appears anywhere in the product.",
+              "cost": "low"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Run the same check on a benchmark chart and you're doing what [this desk's guide to verifying an AI benchmark claim](/article/how-to-verify-an-ai-benchmark-claim) teaches; run it on a funding number and you're doing [the valuation read](/article/how-to-tell-if-an-ai-valuation-is-real). All three are the same instinct pointed at a different kind of claim: not distrust by default, just the question a regulator would already be asking. [The dictionary](/dictionary) has short entries for a few of the terms that come up along the way, if any need unpacking.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      { "label": "SEC — \"SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence\"", "url": "https://www.sec.gov/newsroom/press-releases/2024-36", "primary": true },
+      { "label": "Mayer Brown — \"Securities and Exchange Commission Brings First Enforcement Actions Over 'AI-Washing'\"", "url": "https://www.mayerbrown.com/en/insights/publications/2024/04/securities-and-exchange-commission-brings-first-enforcement-actions-over-aiwashing" },
+      { "label": "FTC — \"FTC Announces Crackdown on Deceptive AI Claims and Schemes\"", "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes", "primary": true },
+      { "label": "FTC — \"FTC Order Requires Workado to Back Up Artificial Intelligence Detection Claims\"", "url": "https://www.ftc.gov/news-events/news/press-releases/2025/04/ftc-order-requires-workado-back-artificial-intelligence-detection-claims", "primary": true },
+      { "label": "CyberScoop — \"Workado settles with FTC over allegations it inflated its AI detectors' capabilities\"", "url": "https://cyberscoop.com/ftc-workado-settlement-ai-detector-false-and-misleading-claims/" },
+      { "label": "FTC — \"FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About 'Active Listening' AI-Powered Marketing Service\"", "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived", "primary": true },
+      { "label": "National Law Review — \"FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About 'Active Listening' AI-Powered Marketing Service\"", "url": "https://natlawreview.com/article/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges" },
+      { "label": "Forkast News — \"The FTC Has Policed 13 AI Cases. None Target Agent Behavior.\"", "url": "https://forkast.news/the-ftc-has-policed-13-ai-cases-none-target-agent-behavior/" }
+    ],
+    "corrections": []
   }
 ];

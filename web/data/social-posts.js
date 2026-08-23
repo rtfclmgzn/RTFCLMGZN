@@ -5851,5 +5851,88 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-23T10:55:55Z"
       }
     ]
+  },
+  {
+    "article_id": "g15",
+    "ts": "2026-08-23T16:34:07Z",
+    "export": {
+      "article_id": "g15",
+      "url": "https://rtfclmgzn.com/article/check-whether-a-companys-ai-claim-is-real",
+      "headline": "How to check whether a company's AI claim is real",
+      "hook": "The FTC and SEC have started fining companies for AI claims that were fake, not just hyped -- a 'listening' ad tool that never touched audio, a detector that tested worse than a coin flip.",
+      "key_facts": [
+        "The FTC's Operation AI Comply has run at least 13 cases since Sept. 2024, recovering roughly $51 million.",
+        "Cox Media Group's \"Active Listening\" ad tool never analyzed voice data -- it resold data-broker email lists with an AI label on top.",
+        "Workado marketed its AI detector as 98% accurate; the FTC found it tested at 53% -- \"no better than a coin toss.\""
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/check-whether-a-companys-ai-claim-is-real.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Two federal regulators have started fining companies for AI claims that were fake, not just hyped.\n\nCox Media's \"AI\" ad tool that \"listened\" to your phone? Never touched voice data -- it resold email lists. Workado's \"98% accurate\" AI detector? Tested at 53%, per the FTC.",
+        "reply_copy": "The four questions that catch it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#FTC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Two federal regulators have started fining companies for AI claims that turned out to be fake.\n\nCox Media Group's \"Active Listening\" ad tool claimed to analyze your phone's microphone in real time. The FTC found it never touched voice data -- it resold data-broker email lists with an AI label on top.\n\nWorkado marketed its AI text detector as 98% accurate. The real number, on the content it was actually sold to check: 53%. \"No better than a coin toss,\" said the FTC.\n\nThe four questions that catch this before you pay for it -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#FTC",
+          "#SEC",
+          "#AIWashing",
+          "#Regulation",
+          "#TechNews",
+          "#DigitalLiteracy",
+          "#ConsumerProtection"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "\"AI-powered\" used to be a matter of taste. Now it's something two federal regulators check.\n\nThe FTC and SEC have settled more than a dozen cases since 2024 against companies advertising AI capability they didn't have -- including Cox Media Group's \"Active Listening\" ad tool, which claimed to analyze phone-microphone audio and turned out to just resell data-broker email lists, and Workado's AI detector, marketed at 98% accurate and found by the FTC to test at 53% -- \"no better than a coin toss.\"\n\nWe put together the four questions that catch a claim like this before you pay for it.",
+        "hashtags": [
+          "#AI",
+          "#FTC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "The FTC and SEC have started fining companies for AI claims that were fake, not just hyped -- Cox Media's \"AI\" ad tool never touched voice data (it resold email lists), and Workado's \"98% accurate\" detector tested at 53%. Here's the four-question check that catches it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "FTC + SEC have fined 13+ companies since 2024 for fake AI claims. Cox Media's \"AI\" ad tool never touched voice data. Workado's \"98% accurate\" detector tested at 53% -- \"no better than a coin toss,\" per the FTC. The 4 questions that catch it:",
+        "hashtags": [
+          "#AI",
+          "#FTC",
+          "#AIWashing"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

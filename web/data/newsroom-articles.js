@@ -22873,7 +22873,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Three days after Hassabis's essay ran, Bloomberg reported that Treasury Secretary Scott Bessent already had a competing draft — a FINRA-style body of his own, but anchored differently: reporting to the Securities and Exchange Commission rather than to the labs, screening frontier models specifically for deception, bioweapon-assistance, and hacking capability before release. Bessent's version shares Hassabis's basic shape — a voluntary submission window of roughly 30 days, no mandatory licensing at launch — but answers a different question about who is actually in charge. It has sat under review in White House Chief of Staff Susie Wiles's office since July 18, with no funding allocated and no timeline announced for a decision.",
+        "text": "Three days after Hassabis's essay ran, Bloomberg reported that Treasury Secretary Scott Bessent already had a competing draft — a FINRA-style body of his own, but anchored differently: reporting to the Securities and Exchange Commission rather than to the labs, screening frontier models specifically for deception, bioweapon-assistance, and hacking capability before release. Bessent's version shares Hassabis's basic shape — a voluntary submission window of roughly 30 days, no mandatory licensing at launch — but answers a different question about who is actually in charge. It has sat under review in White House Chief of Staff Susie Wiles's office since July 18, with no funding allocated and no timeline announced for a decision. The SEC isn't new to AI oversight, either, just to this particular proposal — separate from any frontier-model mandate, it has already fined companies over false AI-marketing claims, using [the same test a reader can already run themselves](/article/check-whether-a-companys-ai-claim-is-real).",
         "citation_urls": [
           "https://fourweekmba.com/ai-trump-finra-sec-ai-watchdog-frontier-model-regulator/"
         ]
@@ -23073,6 +23073,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Gate",
           "agent": "claude-runner",
           "note": "Approved. Six evidence threads, three primary/near-primary sources, clears the synthesis floor. Three components (timeline, compare, stakes), none decorative, none adjacent to another. Apply block names three specific, dated watch-points rather than generic advice. Cross-links to two already-published pieces are phrased about the event, not about this outlet's coverage."
+        },
+        {
+          "name": "Reference-desk cross-link · 2026-08-23",
+          "agent": "claude-runner",
+          "note": "Added one inline link, at the end of the Bessent/SEC paragraph, to the new guide 'check-whether-a-companys-ai-claim-is-real' (reference-desk cycle) — the SEC's existing AI-marketing enforcement record is a distinct fact from the frontier-model-testing mandate this piece covers, stated as such so the two aren't conflated. No fact, number, or citation_urls entry changed; no publishedAt change."
         }
       ],
       "gate": {
@@ -25828,7 +25833,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "body": [
       {
         "type": "p",
-        "text": "**[OpenAI](/company/openai)** began a global rollout of a separate **ChatGPT for Teens** mode on August 18, automatically switching in any account its own systems predict belongs to a 13-to-17-year-old — based on account signals and behavior patterns, not just a self-reported birthdate — or that a user identifies as being in that age range at signup. The company says the rollout will finish within about two weeks. OpenAI has not disclosed an accuracy rate for the age-prediction system itself.",
+        "text": "**[OpenAI](/company/openai)** began a global rollout of a separate **ChatGPT for Teens** mode on August 18, automatically switching in any account its own systems predict belongs to a 13-to-17-year-old — based on account signals and behavior patterns, not just a self-reported birthdate — or that a user identifies as being in that age range at signup. The company says the rollout will finish within about two weeks. OpenAI has not disclosed an accuracy rate for the age-prediction system itself — the kind of unverified capability claim [our guide to checking whether an AI claim is real](/article/check-whether-a-companys-ai-claim-is-real) walks through how to press on.",
         "citation_urls": [
           "https://thenextweb.com/news/chatgpt-for-teens-openai-age-prediction-study-mode"
         ]
@@ -25992,6 +25997,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "name": "Gate",
           "agent": "claude-runner",
           "note": "Approved. Four sources including a primary court filing, synthesis-format word count, two components (compare carries the data-comparison requirement, scorecard earns its place given how many central claims rest on OpenAI's own account or are actively contested). disclaimer:none correct -- no financial claim, no medical guidance given, litigation and safety claims handled via attribution and the scorecard rather than a boilerplate disclaimer."
+        },
+        {
+          "name": "Reference-desk cross-link · 2026-08-23",
+          "agent": "claude-runner",
+          "note": "Added one inline link, on the already-published sentence noting OpenAI hasn't disclosed the age-prediction system's accuracy rate, to the new guide 'check-whether-a-companys-ai-claim-is-real' (reference-desk cycle). No fact, allegation, number, or citation_urls entry changed -- the sentence linked was already neutral, sourced attribution, and the litigation/scorecard framing established at Verification/Loop 1 is untouched. No publishedAt change."
         }
       ],
       "gate": {
