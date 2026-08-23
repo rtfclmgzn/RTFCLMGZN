@@ -5930,8 +5930,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#FTC",
           "#AIWashing"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtra5bml3n2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtra5bml3n2q",
+        "posted_at": "2026-08-23T16:40:20Z"
       }
     ]
   }
