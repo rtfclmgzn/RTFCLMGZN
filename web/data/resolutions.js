@@ -127,6 +127,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"partly",
       note:"California AB 853 operative August 2, 2026 required AI labs with over 1M monthly users to provide detection tools by that date. Anthropic shipped text detection API with watermarking; Google deployed AI Content Detection API on Google Cloud; Meta deployed beta AI detection for images/videos. OpenAI failed to publish a dedicated detection tool (previously shut down its classifier due to low accuracy); xAI published no official detection tool. Three of five labs complied; two did not.",
       label:"AB 853 compliance: OpenAI, Anthropic, Google, Meta, xAI detection tool status",
-      url:"https://www.morganlewis.com/pubs/2026/08/new-california-ai-disclosure-rules-become-operative" }
+      url:"https://www.morganlewis.com/pubs/2026/08/new-california-ai-disclosure-rules-become-operative" },
+    { key:"moonshot-ai-50-billion-pre-ipo-valuation|w|1",
+      at:"2026-08-23T13:22:00Z",
+      outcome:"confirmed",
+      note:"Moonshot AI's Series F close (July 29, 2026) validated Q2/Q3 ARR progression: $100M (March) → $200M (April) → $300M (June). The growth rate held through and past K3 launch (July 16), confirming the valuation thesis was not purely launch-adjacent.",
+      label:"Moonshot Series F close - ARR progression",
+      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" }
   ]
 };
