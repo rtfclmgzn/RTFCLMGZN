@@ -5473,8 +5473,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Marvell",
           "#Broadcom"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091377123286294995",
+        "remote_id": "2091377123286294995",
+        "posted_at": "2026-08-23T04:08:57Z"
       },
       {
         "platform": "instagram",
@@ -5520,8 +5522,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-23T03:32:32Z",
         "copy": "The nuance most headlines on the Marvell/Google warrant missed: it's a ceiling on Marvell's exposure, not a floor on Google's spending. Google can let it sit unexercised entirely and owes nothing.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcXmFUkG5_n",
+        "remote_id": "17923869162182240",
+        "posted_at": "2026-08-23T04:09:11Z"
       },
       {
         "platform": "bluesky",
@@ -5570,7 +5574,7 @@ window.RTFC_SOCIAL_POSTS =[
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
