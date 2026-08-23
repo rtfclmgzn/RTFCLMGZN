@@ -133,6 +133,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Moonshot AI's Series F close (July 29, 2026) validated Q2/Q3 ARR progression: $100M (March) → $200M (April) → $300M (June). The growth rate held through and past K3 launch (July 16), confirming the valuation thesis was not purely launch-adjacent.",
       label:"Moonshot Series F close - ARR progression",
-      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" }
+      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" },
+    { key:"aschenbrenner-situational-awareness-capital-raise-ai-rout|w|1",
+      at:"2026-08-05T18:30:00Z",
+      outcome:"confirmed",
+      note:"Situational Awareness LP closed a $400 million investment by August 5, 2026, following the fund's July liquidation crisis. An additional $100 million investment was made in July. The August 1 capital-commitment deadline the fund had set for new investor commitments was met with confirmed investment activity, validating the fund's ability to access capital post-recovery.",
+      label:"Situational Awareness LP $400M investment close, August 2026",
+      url:"https://www.bloomberg.com/news/articles/2026-08-05/situational-awareness-returns-to-investing-with-400-million-bet" }
   ]
 };
