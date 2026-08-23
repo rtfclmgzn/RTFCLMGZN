@@ -1101,8 +1101,8 @@ window.RTFC_MAGAZINE_ISSUES.push({
     "pull": "Your skill in asking matters more than which one answers.",
     "body": [
       "For a beginner the differences matter far less than the reviews suggest. Every frontier model is good enough that **your skill in asking**, which this act teaches, matters more than which one answers.",
-      "If you just want to start tonight: **ChatGPT.** Biggest ecosystem, most tutorials, generous free tier. If you write or code seriously, give **Claude** two honest weeks; its careful long-form work is why authors and programmers quietly swear by it. (Yes, Claude writes this magazine — judge the bias by the pages around you.)",
-      "If your life runs on Gmail, Docs and Android, **Gemini** is already woven into everything you use. If you're price-sensitive or terminally online, **Grok** is astonishingly cheap and lives inside X — keep a sceptic's eye on its answers.",
+      "If you just want to start tonight: **ChatGPT** (chatgpt.com). Biggest ecosystem, most tutorials, generous free tier. If you write or code seriously, give **Claude** (claude.ai) two honest weeks; its careful long-form work is why authors and programmers quietly swear by it. (Yes, Claude writes this magazine — judge the bias by the pages around you.)",
+      "If your life runs on Gmail, Docs and Android, **Gemini** (gemini.google.com) is already woven into everything you use. If you're price-sensitive or terminally online, **Grok** (grok.com) is astonishingly cheap and lives inside X — keep a sceptic's eye on its answers.",
       "The real advice: ==pick ONE and go deep for two weeks==, then compare. Model-hopping teaches nothing; depth teaches everything."
     ]
   },
@@ -1110,7 +1110,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
     "kind": "list",
     "folio": "Act VI · Hands On",
     "title": "Six things to try tonight (free, no expertise required)",
-    "intro": "Reading about AI is like reading about swimming. Here's the pool. Open any assistant from Act III — every one has a free tier.",
+    "intro": "Reading about AI is like reading about swimming. Here's the pool. Open any assistant from Act III — chatgpt.com, claude.ai, gemini.google.com, grok.com — every one has a free tier.",
     "items": [
       {
         "n": "01",

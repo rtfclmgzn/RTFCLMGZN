@@ -5632,5 +5632,163 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-23T02:09:46Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-pax-silica-letter-35-countries-choose-us-china-ai",
+    "ts": "2026-08-23T10:42:16Z",
+    "export": {
+      "article_id": "newsroom-pax-silica-letter-35-countries-choose-us-china-ai",
+      "url": "https://rtfclmgzn.com/article/pax-silica-letter-35-countries-choose-us-china-ai",
+      "headline": "A draft State Department letter tells 35 countries they can't join both the US and Chinese AI blocs",
+      "hook": "A leaked State Department letter tells 35 allied nations they must choose between America's Pax Silica AI coalition and China's new WAICO bloc — Kazakhstan is the one country that's already joined both.",
+      "key_facts": [
+        "The draft letter argues \"to be part of everything is to be part of nothing\" (Reuters, Aug 14).",
+        "China's WAICO launched July 16 with 29 countries, including Kazakhstan, a Pax Silica member.",
+        "In May, a senior US official said Pax Silica \"isn't about countries choosing\" — the opposite line."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-pax-silica-letter-35-countries-choose-us-china-ai.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A draft State Department letter tells 35 countries: you can't be in both the US and China's AI coalitions.\n\nIts own language: \"To be part of everything is to be part of nothing.\"\n\nKazakhstan is the only country that's already joined both.",
+        "reply_copy": "The two coalitions, and the letter itself:",
+        "link_in_reply": true,
+        "hashtags": ["#AIPolicy", "#Kazakhstan"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-23T15:42:16Z",
+        "copy": "Three months before this letter, the same State Department's own AI envoy told reporters Pax Silica \"isn't about countries choosing.\"\n\nThen China founded a rival AI bloc. Then the tone changed.",
+        "reply_copy": "What changed between May and August:",
+        "link_in_reply": true,
+        "hashtags": ["#Diplomacy", "#China"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The State Department drafted a letter telling 35 countries they can't belong to both America's AI coalition and China's new one.\n\nThe letter's own words: \"To be part of everything is to be part of nothing.\"\n\nKazakhstan signed both — Pax Silica in June, China's WAICO in July. It's the test case this letter appears to be written for.\n\nThree months earlier, a senior US official said the opposite: Pax Silica \"isn't about countries choosing.\"\n\nThe full story — link in bio.",
+        "hashtags": ["#PaxSilica", "#AIPolicy", "#Geopolitics", "#China", "#Kazakhstan", "#StateDepartment", "#AI"],
+        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A draft State Department letter, reported by Reuters, tells 35 countries signed onto America's Pax Silica AI coalition that they can't also belong to China's new World AI Cooperation Organization. Kazakhstan is the only country confirmed to have joined both blocs. The letter hasn't been confirmed sent, and its hard line is a real shift from what the State Department's own Pax Silica envoy told reporters in May: that the coalition \"isn't about countries choosing.\"",
+        "hashtags": ["#AIPolicy", "#Geopolitics"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A draft letter sitting inside the State Department tells 35 countries they can't be in both Pax Silica and China's new AI bloc, WAICO. Its own language: \"to be part of everything is to be part of nothing.\" Kazakhstan already joined both. Three months earlier, a US official said the opposite publicly. The letter still hasn't been sent.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-23T15:42:16Z",
+        "copy": "The line that didn't make the leaked letter: in May, the State Department's own Pax Silica envoy told reporters the coalition \"isn't about countries choosing\" — pointing to the UAE and Qatar's own China ties as proof. Three months and one Chinese AI bloc later, an anonymous official gave Reuters a much harder version of the same policy.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A draft State Dept letter tells 35 countries: pick Pax Silica or China's new AI bloc, not both. Kazakhstan already joined both. In May a US official said Pax Silica \"isn't about choosing.\" Reuters: the letter still isn't confirmed sent.",
+        "hashtags": ["#AI", "#Geopolitics", "#China"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-beijing-humanoid-robot-games-tiangong-100m-record",
+    "ts": "2026-08-23T10:47:52Z",
+    "export": {
+      "article_id": "newsroom-beijing-humanoid-robot-games-tiangong-100m-record",
+      "url": "https://rtfclmgzn.com/article/beijing-humanoid-robot-games-tiangong-100m-record",
+      "headline": "A Chinese humanoid robot beat Usain Bolt's 100-meter world record at Beijing's second robot games",
+      "hook": "Tiangong Ultra ran the 100 meters in 9.39 seconds in real competition, beating Usain Bolt's actual world record — as 666 teams and 2,056 robots opened Beijing's second World Humanoid Robot Games.",
+      "key_facts": [
+        "Tiangong Ultra: 9.39s in the 100m, beating Bolt's 9.58s human record (2009).",
+        "666 teams, 2,056 robots, 16 countries, 51 events, Aug 22-26 in Beijing.",
+        "A second robot posted a faster 9.32s — but only in an untimed pre-Games trial."
+      ],
+      "tone": "curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-beijing-humanoid-robot-games-tiangong-100m-record.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A Chinese humanoid robot just ran the 100m in 9.39 seconds — in actual competition, beating Usain Bolt's 9.58s world record.\n\nIt happened at Beijing's second World Humanoid Robot Games: 666 teams, 2,056 robots, 51 events.",
+        "reply_copy": "The record, and the one that's faster but unofficial:",
+        "link_in_reply": true,
+        "hashtags": ["#Robotics", "#China"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-23T15:47:52Z",
+        "copy": "A second robot ran the 100m in 9.32 seconds — faster than the official winner.\n\nBut that number came from an untimed pre-Games trial, with a leg extended 10cm just for the test. Not the same thing as winning the actual race.",
+        "reply_copy": "Why the faster number doesn't count:",
+        "link_in_reply": true,
+        "hashtags": ["#Robotics", "#Humanoid"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A Chinese humanoid robot named Tiangong Ultra just ran the 100 meters in 9.39 seconds — in real competition, beating Usain Bolt's actual 9.58-second world record.\n\nIt happened on day one of Beijing's second World Humanoid Robot Games: 666 teams, 2,056 robots, 16 countries, 51 events, running through August 26.\n\nThe same robot also cleared 2.88 meters in the standing high jump — past the 2.45m human record.\n\nA second robot posted an even faster 9.32 seconds. But that one came from an untimed test, not the actual race.\n\nThe full story, records and caveats included — link in bio.",
+        "hashtags": ["#Robotics", "#Humanoid", "#China", "#Tiangong", "#AI", "#Beijing", "#WorldRecord"],
+        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A Chinese humanoid robot named Tiangong Ultra ran the 100 meters in 9.39 seconds in actual competition at Beijing's second World Humanoid Robot Games — beating Usain Bolt's real 9.58-second world record. The Games drew 666 teams and 2,056 robots from 16 countries into 51 events. A second robot, Honor's Lightning, posted a faster 9.32 seconds, but only in a pre-Games trial that wasn't run under competition conditions — an important distinction between a real result and a company's own best claim.",
+        "hashtags": ["#Robotics", "#China"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Tiangong Ultra ran the 100m in 9.39 seconds at Beijing's robot games — in competition, beating Usain Bolt's actual world record. 666 teams, 2,056 robots, 51 events. A second robot claimed a faster 9.32s, but that was an untimed trial, not the race. Neither counts as an official World Athletics record — humanoid sprinting isn't a recognized event.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-23T15:47:52Z",
+        "copy": "The number that actually matters here might not be the sprint time. Tiangong Ultra also cleared 2.88m in the standing high jump — past the 2.45m human record. And last year's 100m winner ran it in 21.5 seconds. This year's winner cut that time by more than half in twelve months.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A humanoid robot ran the 100m in 9.39s in real competition at Beijing's robot games — beating Bolt's 9.58s human record. 666 teams, 2,056 robots, 51 events. A second robot claimed 9.32s, but only in an untimed trial. Not an official record either way.",
+        "hashtags": ["#Robotics", "#AI", "#China"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
