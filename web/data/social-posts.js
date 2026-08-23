@@ -5457,8 +5457,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Marvell",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091347154111463746",
+        "remote_id": "2091347154111463746",
+        "posted_at": "2026-08-23T02:09:52Z"
       },
       {
         "platform": "x",
@@ -5500,14 +5502,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Marvell",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114689053396947",
+        "remote_id": "1238977099292018_122114689053396947",
+        "posted_at": "2026-08-23T02:13:26Z"
       },
       {
         "platform": "threads",
         "copy": "Marvell granted Google a warrant worth $12.2B if fully exercised. Almost none of it is guaranteed: only $281M vests automatically, the rest only as Google buys $500M chip-purchase tranches through 2033. Marvell jumped double digits, Broadcom fell ~5% -- but Broadcom's own Google TPU deal runs through 2031, untouched by this filing.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcXY4OiHF0J",
+        "remote_id": "18019466363880509",
+        "posted_at": "2026-08-23T02:13:47Z"
       },
       {
         "platform": "threads",
@@ -5525,8 +5531,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Google",
           "#AIChips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtpppybf5c26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtpppybf5c26",
+        "posted_at": "2026-08-23T02:13:55Z"
       }
     ]
   },
@@ -5561,7 +5569,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -5579,8 +5589,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcXYV_TnZU4/",
+        "remote_id": "18021182303880515",
+        "posted_at": "2026-08-23T02:09:13Z"
       },
       {
         "platform": "facebook",
@@ -5589,14 +5601,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Dexmal",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114681607396947",
+        "remote_id": "1238977099292018_122114681607396947",
+        "posted_at": "2026-08-23T02:09:23Z"
       },
       {
         "platform": "threads",
         "copy": "A company that's raised $140M total is negotiating a $3B valuation. Dexmal, a 17-month-old Chinese embodied-AI startup backed by Alibaba and NIO Capital, per founder Tang Wenbin's interview with Bloomberg at Beijing's World Robot Conference -- still being negotiated, not closed.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcXYZqbju5q",
+        "remote_id": "18110522612324995",
+        "posted_at": "2026-08-23T02:09:39Z"
       },
       {
         "platform": "bluesky",
@@ -5606,8 +5622,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtppiljmal2d",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtppiljmal2d",
+        "posted_at": "2026-08-23T02:09:46Z"
       }
     ]
   }
