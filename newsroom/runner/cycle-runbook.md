@@ -355,6 +355,27 @@ this order, and mark it done here.
    generative media and deepfakes (zero mentions); who owns whom (the data is
    already sitting in `entities.js` and `companies.js`).
 
+   PARTIAL (2026-08-23 cycle) — worked the "where to actually type" sub-item
+   only (the others in this list remain open for a future cycle). Added the
+   real product URL as a parenthetical next to each product's bolded first
+   mention on the "So which one should YOU use?" spread (ChatGPT → chatgpt.com,
+   Claude → claude.ai, Gemini → gemini.google.com, Grok → grok.com) and to the
+   "Hands On" list's intro line ("Open any assistant from Act III —
+   chatgpt.com, claude.ai, gemini.google.com, grok.com — every one has a free
+   tier"), in BOTH `web/data/primer-issue.js` (Act VI in this file's own
+   numbering) and `functions/api/issue/_data/primer.json` (the matching spread
+   is Act III here for "Your Pick" and Act IV for "Hands On" — confirmed by
+   content match, not position; the file-to-file Act offset is NOT a flat
+   "one lower" as earlier entries assumed, it varies spread to spread, so
+   future edits should match by body text, not by counting Acts across files).
+   No new claims or numbers added — URLs only, verified current via a live
+   web search the same cycle. Left the weaker "Labs" company-card spread
+   alone (its `n`/`tag`/`c`/`d` schema has no natural URL slot without a
+   structural change, and adding one there read as bolted-on encyclopedia
+   copy rather than an actionable "go do this" moment). The other four
+   missing-topic items (pricing, agents, jobs, generative media/deepfakes)
+   are still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
