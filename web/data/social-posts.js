@@ -5572,10 +5572,11 @@ window.RTFC_SOCIAL_POSTS =[
           "#China",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091513388514021583",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2091513388514021583",
+        "posted_at": "2026-08-23T13:10:25Z"
       },
       {
         "platform": "instagram",
