@@ -5680,8 +5680,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Diplomacy",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091552877047136742",
+        "remote_id": "2091552877047136742",
+        "posted_at": "2026-08-23T15:47:20Z"
       },
       {
         "platform": "instagram",
