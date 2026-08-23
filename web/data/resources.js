@@ -1,6 +1,6 @@
 // RTFCLMGZN — Resources directory (window.RTFC_RESOURCES).
 // Curated links: official AI companies split by platform, plus podcasts.
-// Handles/URLs verified 2026-08-16.
+// Handles/URLs verified 2026-08-23.
 window.RTFC_RESOURCES = [
   {
     title:"Follow the primary sources",
@@ -9,7 +9,7 @@ window.RTFC_RESOURCES = [
       { name:"Anthropic / Claude", key:"anthropic", desc:"Maker of the Claude family (Fable, Opus, Sonnet, Haiku).",
         links:[{label:"Site",url:"https://www.anthropic.com"},{label:"X",url:"https://x.com/AnthropicAI"},{label:"Claude on X",url:"https://x.com/claudeai"},{label:"YouTube",url:"https://www.youtube.com/@anthropic-ai"},{label:"LinkedIn",url:"https://www.linkedin.com/company/anthropicresearch"}] },
       { name:"OpenAI / ChatGPT", key:"openai", desc:"Maker of the GPT family (Sol, Terra, Luna) and ChatGPT.",
-        links:[{label:"Site",url:"https://openai.com"},{label:"X",url:"https://x.com/OpenAI"},{label:"ChatGPT on X",url:"https://x.com/ChatGPTapp"},{label:"Instagram",url:"https://www.instagram.com/openai"},{label:"YouTube",url:"https://www.youtube.com/@OpenAI"}] },
+        links:[{label:"Site",url:"https://openai.com"},{label:"X",url:"https://x.com/OpenAI"},{label:"ChatGPT on X",url:"https://x.com/ChatGPT"},{label:"Instagram",url:"https://www.instagram.com/openai"},{label:"YouTube",url:"https://www.youtube.com/@OpenAI"}] },
       { name:"xAI / Grok", key:"xai", desc:"Maker of the Grok models; tightly integrated with X.",
         links:[{label:"Site",url:"https://x.ai"},{label:"X",url:"https://x.com/xai"},{label:"Grok on X",url:"https://x.com/grok"}] },
       { name:"Google DeepMind / Gemini", key:"google", desc:"Google's frontier lab and the Gemini model family (plus Nano Banana image models).",
@@ -41,7 +41,7 @@ window.RTFC_RESOURCES = [
       { name:"Latent Space", icon:"◉", desc:"The AI engineer's podcast — technical, practitioner-focused, ahead of the curve.",
         links:[{label:"Site",url:"https://www.latent.space"},{label:"X",url:"https://x.com/latentspacepod"}] },
       { name:"No Priors", icon:"◉", desc:"Sarah Guo and Elad Gil interview the founders and researchers building the frontier.",
-        links:[{label:"Site",url:"https://www.no-priors.com"},{label:"YouTube",url:"https://www.youtube.com/@NoPriorsPodcast"}] },
+        links:[{label:"Site",url:"https://linktr.ee/nopriors"},{label:"YouTube",url:"https://www.youtube.com/@NoPriorsPodcast"}] },
       { name:"Lex Fridman Podcast", icon:"◉", desc:"Long-form conversations — the AI episodes are canonical listening.",
         links:[{label:"Site",url:"https://lexfridman.com/podcast"},{label:"YouTube",url:"https://www.youtube.com/@lexfridman"}] },
       { name:"Practical AI", icon:"◉", desc:"Grounded, weekly — AI for people who ship things.",
