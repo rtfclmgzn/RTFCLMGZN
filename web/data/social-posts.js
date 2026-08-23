@@ -5659,9 +5659,14 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "A draft State Department letter tells 35 countries: you can't be in both the US and China's AI coalitions.\n\nIts own language: \"To be part of everything is to be part of nothing.\"\n\nKazakhstan is the only country that's already joined both.",
         "reply_copy": "The two coalitions, and the letter itself:",
         "link_in_reply": true,
-        "hashtags": ["#AIPolicy", "#Kazakhstan"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AIPolicy",
+          "#Kazakhstan"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091480520194482575",
+        "remote_id": "2091480520194482575",
+        "posted_at": "2026-08-23T10:59:48Z"
       },
       {
         "platform": "x",
@@ -5670,22 +5675,40 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "Three months before this letter, the same State Department's own AI envoy told reporters Pax Silica \"isn't about countries choosing.\"\n\nThen China founded a rival AI bloc. Then the tone changed.",
         "reply_copy": "What changed between May and August:",
         "link_in_reply": true,
-        "hashtags": ["#Diplomacy", "#China"],
+        "hashtags": [
+          "#Diplomacy",
+          "#China"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "The State Department drafted a letter telling 35 countries they can't belong to both America's AI coalition and China's new one.\n\nThe letter's own words: \"To be part of everything is to be part of nothing.\"\n\nKazakhstan signed both — Pax Silica in June, China's WAICO in July. It's the test case this letter appears to be written for.\n\nThree months earlier, a senior US official said the opposite: Pax Silica \"isn't about countries choosing.\"\n\nThe full story — link in bio.",
-        "hashtags": ["#PaxSilica", "#AIPolicy", "#Geopolitics", "#China", "#Kazakhstan", "#StateDepartment", "#AI"],
-        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "hashtags": [
+          "#PaxSilica",
+          "#AIPolicy",
+          "#Geopolitics",
+          "#China",
+          "#Kazakhstan",
+          "#StateDepartment",
+          "#AI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "A draft State Department letter, reported by Reuters, tells 35 countries signed onto America's Pax Silica AI coalition that they can't also belong to China's new World AI Cooperation Organization. Kazakhstan is the only country confirmed to have joined both blocs. The letter hasn't been confirmed sent, and its hard line is a real shift from what the State Department's own Pax Silica envoy told reporters in May: that the coalition \"isn't about countries choosing.\"",
-        "hashtags": ["#AIPolicy", "#Geopolitics"],
+        "hashtags": [
+          "#AIPolicy",
+          "#Geopolitics"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -5706,9 +5729,15 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "A draft State Dept letter tells 35 countries: pick Pax Silica or China's new AI bloc, not both. Kazakhstan already joined both. In May a US official said Pax Silica \"isn't about choosing.\" Reuters: the letter still isn't confirmed sent.",
-        "hashtags": ["#AI", "#Geopolitics", "#China"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Geopolitics",
+          "#China"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtqn4mfofe2d",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtqn4mfofe2d",
+        "posted_at": "2026-08-23T10:59:57Z"
       }
     ]
   },
@@ -5738,9 +5767,14 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "A Chinese humanoid robot just ran the 100m in 9.39 seconds — in actual competition, beating Usain Bolt's 9.58s world record.\n\nIt happened at Beijing's second World Humanoid Robot Games: 666 teams, 2,056 robots, 51 events.",
         "reply_copy": "The record, and the one that's faster but unofficial:",
         "link_in_reply": true,
-        "hashtags": ["#Robotics", "#China"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#Robotics",
+          "#China"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091479511149793591",
+        "remote_id": "2091479511149793591",
+        "posted_at": "2026-08-23T10:55:48Z"
       },
       {
         "platform": "x",
@@ -5749,22 +5783,40 @@ window.RTFC_SOCIAL_POSTS =[
         "copy": "A second robot ran the 100m in 9.32 seconds — faster than the official winner.\n\nBut that number came from an untimed pre-Games trial, with a leg extended 10cm just for the test. Not the same thing as winning the actual race.",
         "reply_copy": "Why the faster number doesn't count:",
         "link_in_reply": true,
-        "hashtags": ["#Robotics", "#Humanoid"],
+        "hashtags": [
+          "#Robotics",
+          "#Humanoid"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "A Chinese humanoid robot named Tiangong Ultra just ran the 100 meters in 9.39 seconds — in real competition, beating Usain Bolt's actual 9.58-second world record.\n\nIt happened on day one of Beijing's second World Humanoid Robot Games: 666 teams, 2,056 robots, 16 countries, 51 events, running through August 26.\n\nThe same robot also cleared 2.88 meters in the standing high jump — past the 2.45m human record.\n\nA second robot posted an even faster 9.32 seconds. But that one came from an untimed test, not the actual race.\n\nThe full story, records and caveats included — link in bio.",
-        "hashtags": ["#Robotics", "#Humanoid", "#China", "#Tiangong", "#AI", "#Beijing", "#WorldRecord"],
-        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "hashtags": [
+          "#Robotics",
+          "#Humanoid",
+          "#China",
+          "#Tiangong",
+          "#AI",
+          "#Beijing",
+          "#WorldRecord"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "A Chinese humanoid robot named Tiangong Ultra ran the 100 meters in 9.39 seconds in actual competition at Beijing's second World Humanoid Robot Games — beating Usain Bolt's real 9.58-second world record. The Games drew 666 teams and 2,056 robots from 16 countries into 51 events. A second robot, Honor's Lightning, posted a faster 9.32 seconds, but only in a pre-Games trial that wasn't run under competition conditions — an important distinction between a real result and a company's own best claim.",
-        "hashtags": ["#Robotics", "#China"],
+        "hashtags": [
+          "#Robotics",
+          "#China"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -5785,9 +5837,15 @@ window.RTFC_SOCIAL_POSTS =[
       {
         "platform": "bluesky",
         "copy": "A humanoid robot ran the 100m in 9.39s in real competition at Beijing's robot games — beating Bolt's 9.58s human record. 666 teams, 2,056 robots, 51 events. A second robot claimed 9.32s, but only in an untimed trial. Not an official record either way.",
-        "hashtags": ["#Robotics", "#AI", "#China"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#Robotics",
+          "#AI",
+          "#China"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtqmvfhen22q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtqmvfhen22q",
+        "posted_at": "2026-08-23T10:55:55Z"
       }
     ]
   }
