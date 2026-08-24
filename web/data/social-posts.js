@@ -5952,5 +5952,87 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-23T16:40:20Z"
       }
     ]
+  },
+  {
+    "article_id": "g16",
+    "ts": "2026-08-24T16:44:57Z",
+    "export": {
+      "article_id": "g16",
+      "url": "https://rtfclmgzn.com/article/check-an-ai-distillation-accusation",
+      "headline": "How to tell whether an AI distillation accusation actually holds up",
+      "hook": "Two officials made incompatible claims about AI distillation the same week -- here's the evidence bar an accusation like that actually has to clear.",
+      "key_facts": [
+        "Treasury says it found \"watermarks\" proving Chinese AI models used American ones -- no sample or methodology has been made public.",
+        "Anthropic's own Feb. 2026 disclosure gives real numbers: ~24,000 fraudulent accounts, 16 million-plus logged Claude exchanges.",
+        "Kimi K3 scored 57 on an independent benchmark -- that measures capability, not how the model was actually built."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g16.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Treasury says it found 'watermarks' proving Chinese AI models used American ones. Nvidia's Jensen Huang calls the same technique 'fundamental to intelligence.' Both can't be right — here's the evidence bar a distillation accusation actually has to clear.",
+        "reply_copy": "The five-question check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Moonshot"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Treasury says it found \"watermarks\" proving Chinese AI models used American ones.\n\nNvidia's Jensen Huang calls the same underlying technique \"fundamental to intelligence.\"\n\nBoth can't be right. We built the five-question check for telling a documented distillation violation from an unproven accusation — worked through the still-unresolved Moonshot/Anthropic case. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Moonshot",
+          "#Anthropic",
+          "#AIPolicy",
+          "#TechNews",
+          "#China",
+          "#AIRegulation"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Treasury Secretary Scott Bessent says the U.S. found \"watermarks\" of American AI models inside Chinese ones, and threatened Moonshot with sanctions over its Kimi K3 model. Nvidia's Jensen Huang calls the same underlying technique — distillation — \"fundamental to intelligence,\" and says a ban has \"zero possibility.\"\n\nThey're not actually disagreeing about the same thing. We broke down the five questions that separate a documented violation from an unproven accusation, using the Moonshot case — still unresolved — as the worked example.",
+        "hashtags": [
+          "#AI",
+          "#TechPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Treasury says it found 'watermarks' proving Chinese AI models used American ones. Nvidia's Jensen Huang calls the same technique 'fundamental to intelligence.' Both can't be right — here's the five-question check for telling a documented distillation violation from an unproven accusation, worked through the still-open Moonshot case.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Treasury: found 'watermarks' proving Chinese models used American ones. Nvidia's Huang: distillation is 'fundamental to intelligence.' Both can't be right. The 5 questions that separate a documented violation from an unproven accusation:",
+        "hashtags": [
+          "#AI",
+          "#Moonshot",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

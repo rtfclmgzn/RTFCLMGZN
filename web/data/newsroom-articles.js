@@ -5693,6 +5693,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html",
           "https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/"
         ]
+      },
+      {
+        "type": "p",
+        "text": "The letter's own distillation-versus-extraction line is the one worth holding onto once the coalition's press cycle fades — [here's how to check whether a specific accusation actually clears that bar](/article/check-an-ai-distillation-accusation).",
+        "citation_urls": []
       }
     ],
     "apply": [
@@ -6339,6 +6344,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
           ],
           "source": "Aggregated from every primary source cited in this piece."
         }
+      },
+      {
+        "type": "p",
+        "text": "None of the individual claims above are unusual for this beat — an accusation like this will land again before the underlying policy questions do. [This desk's walkthrough of what actually counts as proof in a distillation dispute](/article/check-an-ai-distillation-accusation) turns this piece's method into a repeatable check.",
+        "citation_urls": []
       }
     ],
     "apply": [
@@ -6960,9 +6970,9 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The timing puts real weights into a dispute that, until now, has been argued entirely on benchmark numbers and unverified claims. The White House has accused Moonshot of distilling Anthropic's Fable models to build K3, an allegation Treasury Secretary Scott Bessent has said could trigger sanctions — one neither official has backed with public evidence, and one Moonshot has not responded to on the record. Separately, Artificial Analysis has already given K3 an independent Intelligence Index score of 57, third overall and ahead of Claude Opus 4.8. Lambert's own analysis argues the opposite of the White House's theory: he reads K3's efficiency gains as evidence of genuine architectural scaling work, not evidence that distillation explains the result — though that is one independent analyst's interpretation, not a resolution of the underlying accusation. Full published weights don't settle the dispute by themselves, but they do give outside researchers something they didn't have with the benchmark-only release: the actual architecture and parameters to inspect directly, rather than Moonshot's word for what's inside.",
+        "text": "The timing puts real weights into a dispute that, until now, has been argued entirely on benchmark numbers and unverified claims. The White House has accused Moonshot of distilling Anthropic's Fable models to build K3, an allegation Treasury Secretary Scott Bessent has said could trigger sanctions — one neither official has backed with public evidence, and one Moonshot has not responded to on the record. Separately, Artificial Analysis has already given K3 an independent Intelligence Index score of 57, third overall and ahead of Claude Opus 4.8. Lambert's own analysis argues the opposite of the White House's theory: he reads K3's efficiency gains as evidence of genuine architectural scaling work, not evidence that distillation explains the result — though that is one independent analyst's interpretation, not a resolution of the underlying accusation. Full published weights don't settle the dispute by themselves, but they do give outside researchers something they didn't have with the benchmark-only release: the actual architecture and parameters to inspect directly, rather than Moonshot's word for what's inside. Readers trying to weigh an accusation like this against a technical release like this one can use [this desk's framework for what actually counts as proof](/article/check-an-ai-distillation-accusation).",
         "citation_urls": [
-          "#/article/white-house-moonshot-fable-distillation-accusation"
+          "/article/white-house-moonshot-fable-distillation-accusation"
         ]
       },
       {
@@ -7032,11 +7042,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "label": "Our coverage: the White House's distillation accusation against Moonshot",
-        "url": "#/article/white-house-moonshot-fable-distillation-accusation"
+        "url": "/article/white-house-moonshot-fable-distillation-accusation"
       },
       {
         "label": "Our coverage: Kimi K3's July 16 launch",
-        "url": "#/article/moonshot-kimi-k3-open-model-launch"
+        "url": "/article/moonshot-kimi-k3-open-model-launch"
       }
     ],
     "id": "newsroom-kimi-k3-open-weights-live",

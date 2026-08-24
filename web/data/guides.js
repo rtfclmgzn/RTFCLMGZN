@@ -3835,5 +3835,287 @@ window.RTFC_GUIDES = [
       { "label": "Forkast News — \"The FTC Has Policed 13 AI Cases. None Target Agent Behavior.\"", "url": "https://forkast.news/the-ftc-has-policed-13-ai-cases-none-target-agent-behavior/" }
     ],
     "corrections": []
+  },
+  {
+    "id": "g16",
+    "slug": "check-an-ai-distillation-accusation",
+    "image": "assets/img/newsroom/g16.jpg",
+    "title": "How to tell whether an AI distillation accusation actually holds up",
+    "dek": "Treasury says it's found \"watermarks\" of American models inside Chinese ones and threatened Moonshot with sanctions over Kimi K3. Nvidia's Jensen Huang calls the same technique \"fundamental to intelligence.\" Both can't simply be right — here's the evidence bar an accusation like this actually has to clear, worked through the case that's still unresolved.",
+    "persona": "evelyn-zhao",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-24T16:44:57Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Treasury says it found \"watermarks\" proving Chinese models used American ones — undisclosed publicly.",
+      "The technique and the accused violation are different claims needing different evidence.",
+      "Anthropic's own disclosure names real numbers: 24,000 fraudulent accounts, 16 million-plus Claude exchanges.",
+      "An independent benchmark score measures capability, not how a model was actually trained.",
+      "Caveat: no forensic evidence tying Kimi K3 specifically to Fable has ever been made public."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Split any distillation claim into two questions before repeating it.",
+        "text": "What's actually alleged — the ordinary technique, or industrial-scale extraction — and has anyone published real numbers, not just an assertion."
+      },
+      {
+        "label": "Treat a capability score and a provenance claim as answering different questions.",
+        "text": "A model can be genuinely capable and still be built through disputed means. One independent benchmark doesn't settle the other."
+      },
+      {
+        "label": "Watch for the concrete checkpoints, not the press-release cycle.",
+        "text": "A published forensic finding, a formal Entity List filing, or open weights researchers can actually examine settle this — a post on X doesn't."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Two of the same week's headlines couldn't both be simply true. On July 21, 2026, Treasury Secretary Scott Bessent told Fox Business the U.S. had found \"watermarks\" of American AI models inside Chinese ones, and warned sanctions could follow within days or weeks. The next day, Nvidia CEO Jensen Huang told Axios a U.S. ban had \"zero possibility,\" calling the underlying technique — distillation — \"fundamental to intelligence.\" **They aren't actually arguing about the same claim.** One is describing a specific violation; the other is defending an ordinary research method that happens to share its name. Telling those two things apart, and knowing what real evidence for the violation looks like, is the actual skill — whether you're reading a Treasury threat, a rival lab's accusation, or the next one of these that lands.",
+        "citation_urls": [
+          "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two different things share the word \"distillation\"",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "**Distillation, the technique**, is training a smaller or cheaper model to imitate a stronger one's outputs — routine, legal, and used internally by essentially every major lab, including OpenAI, Anthropic, and Google, to turn a flagship model into faster, cheaper tiers. **The accusation**, when one lab levels it at another, is something narrower: querying a rival's API at industrial scale, through fabricated accounts, in violation of its terms of service, to extract training signal without permission. Nvidia's own open-weights policy letter — signed by roughly 50 companies including Microsoft, OpenAI, and Google — draws exactly this line, calling distillation \"a legitimate, longstanding research technique\" while arguing that unlawful extraction of a competitor's outputs should be handled through targeted legal and commercial measures, not a blanket restriction on open weights. ==Conflating the two is the single easiest way to either wave off a real violation as normal research, or treat normal research as theft.==",
+        "citation_urls": [
+          "https://www.explainx.ai/blog/open-weights-american-ai-leadership-letter-july-2026",
+          "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "SAME WORD, TWO CLAIMS",
+          "title": "Distillation the technique vs. the accusation",
+          "columns": [
+            { "label": "Distillation", "sub": "the technique" },
+            { "label": "Distillation attack", "sub": "the accusation", "hi": true }
+          ],
+          "rows": [
+            {
+              "label": "What it is",
+              "values": [
+                "Training a smaller or cheaper model to imitate a stronger one's outputs.",
+                "Extracting a rival's outputs at industrial scale, through fabricated accounts, against its terms of service."
+              ]
+            },
+            {
+              "label": "Who does it",
+              "values": [
+                "Every major lab, on its own models — OpenAI, Anthropic, and Google all distill their own flagships.",
+                "Alleged: specific outside labs running fraudulent-account networks against a competitor's API."
+              ]
+            },
+            {
+              "label": "Illegal on its own?",
+              "values": [
+                "No — no law bans the technique itself.",
+                "The violation is the access method, not the word \"distillation.\""
+              ],
+              "note": "A terms-of-service breach and, potentially, trade-secret misappropriation are the actual legal theories in play."
+            },
+            {
+              "label": "What proves it happened",
+              "values": [
+                "Nothing to prove — it's disclosed, or obvious from a model's own release notes.",
+                "Documented account and query-volume evidence, plus (rarely produced) forensic training-data or output linkage."
+              ]
+            }
+          ],
+          "source": "Nvidia-led open-weights letter, July 24, 2026; Anthropic's Feb. 23, 2026 distillation-attack disclosure."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What real evidence for the violation actually looks like",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The clearest example of documented evidence predates any of this week's claims. On February 23, 2026, Anthropic disclosed that three Chinese labs — DeepSeek, Moonshot, and MiniMax — had run what it called industrial-scale distillation campaigns against Claude: roughly 24,000 fraudulent accounts, one proxy network alone running more than 20,000 simultaneously, and more than 16 million logged exchanges combined, all in violation of Anthropic's terms of service. That's what a documented claim looks like — specific counts, from the company's own logs, describing an attack on its own system. What it is **not** is proof that any particular later model was built on that extracted data specifically; Anthropic's disclosure named the Kimi line generally, five months before Kimi K3 existed.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
+          "https://venturebeat.com/technology/anthropic-says-deepseek-moonshot-and-minimax-used-24-000-fake-accounts-to"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Compare that to Bessent's \"watermarks\" claim. A watermark, in the sense the AI industry actually uses the term, is a real and checkable thing — Google's SynthID and Anthropic's own text watermark both leave a machine-readable signal in a model's output that a detector can check for. If Treasury genuinely holds output samples carrying a traceable American-model signature, that would be close to the strongest evidence this kind of accusation can produce. But as of this writing, no methodology, sample, or supporting document behind the claim has been made public — it exists as a cabinet secretary's on-air assertion, not a filing. The same week, the White House's Michael Kratsios separately accused Moonshot by name of distilling Anthropic's Fable to build Kimi K3 specifically, and Treasury threatened Entity List action — also without releasing supporting documentation. Two officials, two claims, zero published evidence for either as of this writing.",
+        "citation_urls": [
+          "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html",
+          "https://www.yahoo.com/news/politics/articles/chinas-moonshot-tapped-anthropics-fable-143659340.html",
+          "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Evidence can cut the other way too, and it's worth knowing what that looks like. Technical write-ups of Kimi K3's architecture — Kimi Delta Attention, a hybrid linear-attention mechanism; Stable LatentMoE's 896-expert routing; quantization built in from the fine-tuning stage rather than bolted on afterward — describe engineering choices that don't come from training on a rival's chat outputs. None of that disproves the accusation, but it's the kind of specific, checkable detail the accusation itself hasn't offered. Separately, Kimi K3 has been independently scored: Artificial Analysis, an evaluator with no commercial stake in either company, placed it at 57 on its Intelligence Index — third overall, just ahead of Claude Opus 4.8. That's a real, independently produced number, and it answers \"is this model actually capable\" — a different question from \"how was it built,\" a distinction the accusation and its coverage both tend to collapse.",
+        "citation_urls": [
+          "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei",
+          "https://artificialanalysis.ai/models/kimi-k3"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Run this before you credit — or dismiss — the next one",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Five questions before you credit a distillation accusation",
+          "sub": "Costs about ten minutes; the Moonshot case below fails at least two of these as of this writing.",
+          "est": "10 min",
+          "level": "Intermediate",
+          "track": true,
+          "prereqs": [
+            "The statement, filing, or article making the accusation.",
+            "Ten minutes to check whether the underlying evidence was actually published anywhere, or just asserted."
+          ],
+          "steps": [
+            {
+              "do": "Identify which claim is actually being made — the technique or the violation.",
+              "detail": "Distillation the technique is what every major lab does to its own models. The accusation, when one lab levels it at another, is about unauthorized, industrial-scale extraction — a specific access-and-consent violation, not the word itself.",
+              "verify": "You can state in one sentence which of the two the claim is actually about.",
+              "ifnot": "If a claim uses \"distillation\" to mean both at once, that conflation is itself worth flagging before you repeat it."
+            },
+            {
+              "do": "Check whether the access-pattern evidence comes with real numbers attached.",
+              "hi": true,
+              "detail": "Anthropic's own disclosure named account counts, exchange counts, and dates from its own logs. Bessent's \"watermarks\" claim, by contrast, has never been accompanied by a sample, a methodology, or a document.",
+              "why": "A specific count from a company's own logs is a claim you can weigh. \"We found evidence\" with nothing attached is not yet a claim you can check — it's a claim you can only believe or not.",
+              "verify": "You can point to a specific figure, date, or document behind the claim, not just an official's characterization of it.",
+              "ifnot": "Treat the claim as an assertion pending evidence, not as settled — regardless of how senior the source is."
+            },
+            {
+              "do": "Check whether anyone has published forensic evidence tying the specific accused model to the specific source model.",
+              "detail": "General capability similarity, or a company's history of extraction against an older model line, is not the same as a forensic link between one named model's training data and another's outputs. As of this writing, no party in the Moonshot case has published that link.",
+              "verify": "The evidence you're looking at ties the accused model itself to the source model — not just to the same company's past conduct.",
+              "ifnot": "An older, adjacent finding can make an accusation plausible. It cannot make it proven."
+            },
+            {
+              "do": "Separate an independent capability score from a provenance claim.",
+              "detail": "A model scoring well on an independent benchmark answers \"is this good,\" not \"how was it built.\" The two get collapsed constantly because a strong score gets treated as either vindication or confirmation of an accusation, when it settles neither.",
+              "verify": "You can name what the benchmark actually measured, and what it didn't.",
+              "ifnot": "If a benchmark score is being cited as evidence for or against the accusation itself, that's a category error worth naming."
+            },
+            {
+              "do": "Check the actual status of any threatened action, and don't round it up.",
+              "detail": "An Entity List designation is a specific Commerce Department mechanism requiring a license for most U.S. exports to the named party, with a strong presumption of denial. \"On the table\" and \"threatened\" are not the same as imposed.",
+              "verify": "You know whether the action is proposed, under review, or actually in effect.",
+              "ifnot": "Coverage that says \"sanctioned\" or \"banned\" for a threatened-but-not-imposed action is overstating what's actually happened."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Run those five questions against the Moonshot case as it stands today, and the honest picture is narrower than either side's public framing.",
+        "citation_urls": []
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "WHAT'S ACTUALLY ESTABLISHED",
+          "title": "The Moonshot–Anthropic dispute, run through the five questions",
+          "items": [
+            {
+              "claim": "Chinese labs (DeepSeek, Moonshot, MiniMax) ran industrial-scale extraction against Claude, pre-Kimi K3",
+              "level": "strong",
+              "basis": "Anthropic's own Feb. 23, 2026 disclosure, with account counts (~24,000) and logged-exchange counts (16M+) from its own systems.",
+              "resolver": "An independent audit of Anthropic's detection logs would move this from strong to confirmed; none has been published, but this is a company's own record of an attack on itself, not an accusation against a third party."
+            },
+            {
+              "claim": "Kimi K3 specifically was built on distilled Fable outputs",
+              "level": "company",
+              "basis": "A White House official's and the Treasury Secretary's public posts, made without supporting documentation, met by an on-record Chinese government denial.",
+              "resolver": "A published forensic analysis linking Kimi K3's training data or outputs to Fable specifically."
+            },
+            {
+              "claim": "Treasury holds \"watermark\" evidence of American-model outputs inside Chinese models",
+              "level": "unverified",
+              "basis": "Bessent's on-air statement to Fox Business; no sample, methodology, or filing has been released.",
+              "resolver": "Publication of the watermark analysis itself, or a formal sanctions filing citing it."
+            },
+            {
+              "claim": "Kimi K3 is a genuinely capable model",
+              "level": "confirmed",
+              "basis": "Artificial Analysis, an evaluator with no commercial stake in either company, scored it 57 — third overall on its Intelligence Index.",
+              "resolver": "Already resolved by Artificial Analysis's own published methodology; a different question from provenance, not an open one."
+            }
+          ],
+          "source": "Anthropic's Feb. 23, 2026 disclosure; White House and Treasury statements, July 21–22, 2026; Artificial Analysis Intelligence Index."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Where this check gets skipped",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped when it shouldn't be",
+          "items": [
+            {
+              "mistake": "Treating \"distillation\" as inherently illicit because of who's being accused of it.",
+              "looks": "A headline uses \"distillation\" and \"theft\" interchangeably, when the technique itself is what every major lab does to its own models.",
+              "why": "The word describes a method, not a violation — the violation, when there is one, is the access method used to get the training signal, not the training step itself.",
+              "fix": "Ask which of the two claims is actually being made before repeating either word.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Accepting \"we found evidence\" as equivalent to evidence.",
+              "looks": "An official's on-air claim of \"watermarks\" or a \"review\" gets reported as though the underlying finding were itself public.",
+              "why": "A claim of evidence and a published finding carry very different weight, and coverage routinely compresses the distance between them.",
+              "fix": "Check whether a sample, methodology, or document actually exists to look at — not just a statement that one does.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating an independent benchmark score as settling a provenance dispute.",
+              "looks": "A strong capability score gets cited as either proof a model wasn't distilled, or, less often, as circumstantial evidence that it was.",
+              "why": "Capability and provenance are measured by completely different kinds of evidence; a benchmark can't see how a model was trained.",
+              "fix": "Hold the two questions apart, even when the same article discusses both.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Rounding a threatened action up to an imposed one.",
+              "looks": "\"On the table\" or \"under review\" gets shortened to \"sanctioned\" or \"banned\" in a headline or a recap.",
+              "why": "Entity List designation and similar mechanisms have real, specific legal effect once imposed — reporting them as already in force overstates the current state by a lot.",
+              "fix": "State explicitly whether an action has been proposed, is under review, or is actually in effect.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The same instinct — separate the claim that's documented from the claim that's merely stated — is what [checking a company's own AI claim](/article/check-whether-a-companys-ai-claim-is-real) and [checking an open-weight model's actual license terms](/article/check-an-open-weight-models-license) both teach, pointed at a different kind of dispute. [Anthropic](/company/anthropic) and [Moonshot](/company/moonshot) are both likely to be back in this position before the underlying policy questions resolve; [the dictionary](/dictionary) has a short entry for distillation itself if the term needs unpacking first.",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      { "label": "Anthropic — \"Detecting and preventing distillation attacks\"", "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks", "primary": true },
+      { "label": "VentureBeat — \"Anthropic says DeepSeek, Moonshot and MiniMax used 24,000 fake accounts to distill Claude\"", "url": "https://venturebeat.com/technology/anthropic-says-deepseek-moonshot-and-minimax-used-24-000-fake-accounts-to" },
+      { "label": "TechSpot — \"Nvidia's Jensen Huang defends Chinese AI, open source\"", "url": "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html", "primary": true },
+      { "label": "Yahoo News — \"China's Moonshot 'tapped' Anthropic's Fable, White House alleges\"", "url": "https://www.yahoo.com/news/politics/articles/chinas-moonshot-tapped-anthropics-fable-143659340.html" },
+      { "label": "TechCrunch — \"Treasury threatens sanctions after White House claims Moonshot distilled Anthropic's Fable\"", "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/" },
+      { "label": "\"Open Weights and American AI Leadership\" — the Nvidia-led industry letter", "url": "https://www.explainx.ai/blog/open-weights-american-ai-leadership-letter-july-2026", "primary": true },
+      { "label": "Hugging Face — Kimi K3 model overview, MXFP4 quantization and architecture", "url": "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei" },
+      { "label": "Artificial Analysis — Kimi K3 model page", "url": "https://artificialanalysis.ai/models/kimi-k3", "primary": true }
+    ],
+    "corrections": []
   }
 ];
