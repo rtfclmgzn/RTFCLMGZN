@@ -5840,8 +5840,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-23T15:47:52Z",
         "copy": "The number that actually matters here might not be the sprint time. Tiangong Ultra also cleared 2.88m in the standing high jump — past the 2.45m human record. And last year's 100m winner ran it in 21.5 seconds. This year's winner cut that time by more than half in twelve months.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcaLXu4kbHA",
+        "remote_id": "18090676289196110",
+        "posted_at": "2026-08-24T04:13:32Z"
       },
       {
         "platform": "bluesky",
