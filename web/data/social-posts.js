@@ -5790,8 +5790,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics",
           "#Humanoid"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091709899944100221",
+        "remote_id": "2091709899944100221",
+        "posted_at": "2026-08-24T02:11:17Z"
       },
       {
         "platform": "instagram",
@@ -5820,14 +5822,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Robotics",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114940837396947",
+        "remote_id": "1238977099292018_122114940837396947",
+        "posted_at": "2026-08-24T02:11:50Z"
       },
       {
         "platform": "threads",
         "copy": "Tiangong Ultra ran the 100m in 9.39 seconds at Beijing's robot games — in competition, beating Usain Bolt's actual world record. 666 teams, 2,056 robots, 51 events. A second robot claimed a faster 9.32s, but that was an untimed trial, not the race. Neither counts as an official World Athletics record — humanoid sprinting isn't a recognized event.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcZ9fEwjVll",
+        "remote_id": "18104361097920296",
+        "posted_at": "2026-08-24T02:12:09Z"
       },
       {
         "platform": "threads",
@@ -5882,8 +5888,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#FTC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2091708890895286333",
+        "remote_id": "2091708890895286333",
+        "posted_at": "2026-08-24T02:07:16Z"
       },
       {
         "platform": "instagram",
@@ -5903,8 +5911,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcZ89Qgm_jr/",
+        "remote_id": "18082722581455600",
+        "posted_at": "2026-08-24T02:07:35Z"
       },
       {
         "platform": "facebook",
@@ -5913,14 +5923,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#FTC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122114938761396947",
+        "remote_id": "1238977099292018_122114938761396947",
+        "posted_at": "2026-08-24T02:07:46Z"
       },
       {
         "platform": "threads",
         "copy": "The FTC and SEC have started fining companies for AI claims that were fake, not just hyped -- Cox Media's \"AI\" ad tool never touched voice data (it resold email lists), and Workado's \"98% accurate\" detector tested at 53%. Here's the four-question check that catches it.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcZ9AnuDfWw",
+        "remote_id": "18113173465778902",
+        "posted_at": "2026-08-24T02:08:00Z"
       },
       {
         "platform": "bluesky",
