@@ -5730,8 +5730,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-23T15:42:16Z",
         "copy": "The line that didn't make the leaked letter: in May, the State Department's own Pax Silica envoy told reporters the coalition \"isn't about countries choosing\" — pointing to the UAE and Qatar's own China ties as proof. Three months and one Chinese AI bloc later, an anonymous official gave Reuters a much harder version of the same policy.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dccvkz2Cs9t",
+        "remote_id": "18036674654830698",
+        "posted_at": "2026-08-25T04:08:26Z"
       },
       {
         "platform": "bluesky",
