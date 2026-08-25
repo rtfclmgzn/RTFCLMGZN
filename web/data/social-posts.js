@@ -5712,14 +5712,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AIPolicy",
           "#Geopolitics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122115250023396947",
+        "remote_id": "1238977099292018_122115250023396947",
+        "posted_at": "2026-08-25T02:04:21Z"
       },
       {
         "platform": "threads",
         "copy": "A draft letter sitting inside the State Department tells 35 countries they can't be in both Pax Silica and China's new AI bloc, WAICO. Its own language: \"to be part of everything is to be part of nothing.\" Kazakhstan already joined both. Three months earlier, a US official said the opposite publicly. The letter still hasn't been sent.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcchbV1DXxS",
+        "remote_id": "18139098052517075",
+        "posted_at": "2026-08-25T02:04:42Z"
       },
       {
         "platform": "threads",
@@ -6005,8 +6009,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dccg5VgjvGY/",
+        "remote_id": "18102171760985480",
+        "posted_at": "2026-08-25T02:00:06Z"
       },
       {
         "platform": "facebook",
@@ -6015,14 +6021,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#TechPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122115249243396947",
+        "remote_id": "1238977099292018_122115249243396947",
+        "posted_at": "2026-08-25T02:00:18Z"
       },
       {
         "platform": "threads",
         "copy": "Treasury says it found 'watermarks' proving Chinese AI models used American ones. Nvidia's Jensen Huang calls the same technique 'fundamental to intelligence.' Both can't be right — here's the five-question check for telling a documented distillation violation from an unproven accusation, worked through the still-open Moonshot case.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dccg84NjS0o",
+        "remote_id": "18625718032052157",
+        "posted_at": "2026-08-25T02:00:33Z"
       },
       {
         "platform": "bluesky",
