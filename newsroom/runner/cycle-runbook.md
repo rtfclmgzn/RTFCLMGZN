@@ -178,8 +178,6 @@ Dosage, per article — this is seasoning, not paint:
 - The lead paragraph gets a typographic drop cap and a small-caps opening line automatically; write it a strong opening sentence worthy of both.
 - Per-paragraph numbered evidence dots were retired 2026-08-14 by the owner — do not reintroduce anything like them. `citation_urls` still belong on every paragraph (they feed the evidence strip and the audit trail), they just don't render as footnote marks anymore.
 
-**One-time catch-up (delete this paragraph in the cycle that completes it):** articles published in the trailing 48 hours shipped before this rule. For each of them that has no `==` and no `__` anywhere in its body prose, apply the dosage above to its existing body text — emphasis ONLY, wording unchanged, in the same store-edit discipline as any other correction-free touch (no `publishedAt` change, no pipeline rewrite; append a one-line note to the pipeline record: "ink layer applied 2026-08-14"). Do at most 4 per cycle until none qualify.
-
 ### 3c. Archive backfill (2 articles per cycle, REQUIRED until the archive is done)
 
 Older articles predate the visual component system. Each cycle, AFTER your new articles are done, upgrade **exactly two** published articles to the §3b floor:
@@ -375,6 +373,21 @@ this order, and mark it done here.
    copy rather than an actionable "go do this" moment). The other four
    missing-topic items (pricing, agents, jobs, generative media/deepfakes)
    are still open.
+
+   PARTIAL, continued (2026-08-25 cycle) — worked the "what it costs YOU"
+   sub-item. Added real consumer subscription prices to the same "So which
+   one should YOU use?" spread in BOTH files: ChatGPT Plus $20/month, Claude
+   Pro $20/month (confirmed directly against claude.com/pricing, a primary
+   source), Gemini Pro $19.99/month, and Grok's SuperGrok $30/month with a
+   $10/month entry tier (SuperGrok Lite) — all four cross-checked against at
+   least two independent secondary sources (aizolo.com, ai-toolbox.co, and
+   others) since openai.com/chatgpt/pricing and gemini.google.com/subscriptions
+   both blocked direct fetch. Corrected an existing inaccuracy while doing
+   this: the copy called Grok "astonishingly cheap," but its main paid tier
+   ($30) is actually the most expensive of the four — rewrote to the accurate
+   claim (cheapest paid *entry point*, via the $10 Lite tier), matching
+   §3f's rule that a claim gets corrected to what the sourcing actually shows,
+   not defended. Agents, jobs, and generative-media/deepfakes remain open.
 
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
