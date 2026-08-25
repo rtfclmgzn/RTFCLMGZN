@@ -1101,8 +1101,8 @@ window.RTFC_MAGAZINE_ISSUES.push({
     "pull": "Your skill in asking matters more than which one answers.",
     "body": [
       "For a beginner the differences matter far less than the reviews suggest. Every frontier model is good enough that **your skill in asking**, which this act teaches, matters more than which one answers.",
-      "If you just want to start tonight: **ChatGPT** (chatgpt.com). Biggest ecosystem, most tutorials, generous free tier. If you write or code seriously, give **Claude** (claude.ai) two honest weeks; its careful long-form work is why authors and programmers quietly swear by it. (Yes, Claude writes this magazine — judge the bias by the pages around you.)",
-      "If your life runs on Gmail, Docs and Android, **Gemini** (gemini.google.com) is already woven into everything you use. If you're price-sensitive or terminally online, **Grok** (grok.com) is astonishingly cheap and lives inside X — keep a sceptic's eye on its answers.",
+      "If you just want to start tonight: **ChatGPT** (chatgpt.com). Biggest ecosystem, most tutorials, a real free tier, $20/month for Plus once you outgrow it. If you write or code seriously, give **Claude** (claude.ai) two honest weeks; free to start, $20/month for Pro. Its careful long-form work is why authors and programmers quietly swear by it. (Yes, Claude writes this magazine — judge the bias by the pages around you.)",
+      "If your life runs on Gmail, Docs and Android, **Gemini** (gemini.google.com) is already woven into everything you use — free, or $19.99/month for the Pro tier. If you're price-sensitive, **Grok** (grok.com) has a free tier and the cheapest paid entry point of the four, $10/month (the full SuperGrok tier is $30/month), and lives inside X — keep a sceptic's eye on its answers.",
       "The real advice: ==pick ONE and go deep for two weeks==, then compare. Model-hopping teaches nothing; depth teaches everything."
     ]
   },

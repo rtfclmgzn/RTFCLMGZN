@@ -6050,5 +6050,293 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-24T16:52:22Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-microsoft-copilot-cosnitch-one-click-data-theft",
+    "ts": "2026-08-25T10:54:36Z",
+    "export": {
+      "article_id": "newsroom-microsoft-copilot-cosnitch-one-click-data-theft",
+      "url": "https://rtfclmgzn.com/article/microsoft-copilot-cosnitch-one-click-data-theft",
+      "headline": "A Microsoft Copilot bug let one click empty a user's inbox, calendar, and Drive",
+      "hook": "A chained Copilot Personal vulnerability let attackers silently drain a victim's inbox, calendar, and Drive with one click — and researchers found it by arguing the AI into revealing its own defenses.",
+      "key_facts": [
+        "CVE-2026-24301 (\"CoSnitch\"), CVSS 8.8, patched by Microsoft August 18, 2026.",
+        "A hidden autorun URL parameter ran an attacker's prompt with zero clicks beyond opening a link.",
+        "Varonis found the bug via \"meta-hacking\" — asking Copilot to explain its own defenses until it did."
+      ],
+      "tone": "energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-microsoft-copilot-cosnitch-one-click-data-theft.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A Microsoft Copilot bug let one click silently empty your inbox, calendar, and Drive.\n\nResearchers found it by literally arguing with Copilot until it explained its own security holes.\n\nMicrosoft patched it Aug 18. No sign it was used against a real victim.",
+        "reply_copy": "How CoSnitch actually worked:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Copilot",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-25T15:54:36Z",
+        "copy": "The wildest part of the Copilot \"CoSnitch\" bug isn't the exploit — it's how it was found.\n\nResearchers kept asking Copilot why an automation \"couldn't\" happen. Mid-refusal, it named the exact hidden parameter that made it possible.\n\n\"Copilot wasn't breached; it was played.\"",
+        "reply_copy": "The full disclosure:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISecurity",
+          "#PromptInjection"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "One click. That's all it took to silently drain a Copilot Personal user's inbox, calendar, and Google Drive.\n\nThe bug, nicknamed CoSnitch, chained a hidden URL parameter, Copilot's own connected-app permissions, and its webpage-summarizer into a working data-theft pipeline that looked like normal traffic.\n\nHow was it found? Researchers kept asking Copilot to explain why an exploit \"couldn't\" work — until, mid-refusal, it named the exact hidden setting that made it possible.\n\nMicrosoft patched it August 18. Full breakdown — link in bio.",
+        "hashtags": [
+          "#Copilot",
+          "#Microsoft",
+          "#AISecurity",
+          "#Cybersecurity",
+          "#DataPrivacy",
+          "#TechNews",
+          "#PromptInjection"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A researcher-disclosed vulnerability in Microsoft Copilot Personal, nicknamed CoSnitch, let a single clicked link silently pull email, calendar, and Google Drive data from a victim's connected accounts — no further clicks or confirmations required. Varonis Threat Labs found it using a novel method: repeatedly asking Copilot to explain why certain automations were impossible, until the assistant itself revealed the undocumented setting that made the exploit work. Microsoft shipped a fix on August 18, and Varonis found no evidence it was ever used against a real account.",
+        "hashtags": [
+          "#Copilot",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Microsoft Copilot Personal had a bug (CoSnitch, CVE-2026-24301) that let one click silently pull your email, calendar, and Drive data. Researchers found it by asking Copilot to explain its own defenses until it gave up the exact hidden setting. Patched August 18 — no sign it was exploited for real.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-25T15:54:36Z",
+        "copy": "\"Copilot wasn't breached; it was played.\" Varonis found the CoSnitch vulnerability chain not by reverse-engineering code, but by repeatedly asking Copilot why an automation was impossible — until the AI itself named the undocumented parameter that made the exploit work.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Microsoft Copilot Personal bug (CoSnitch, CVSS 8.8) let one click silently drain your inbox, calendar, and Drive. Found by researchers who argued Copilot into revealing its own defenses. Patched Aug 18; no sign of real-world use.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#Copilot"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-phillips-v-parlade-ai-judicial-immunity-ruling",
+    "ts": "2026-08-25T10:54:39Z",
+    "export": {
+      "article_id": "newsroom-phillips-v-parlade-ai-judicial-immunity-ruling",
+      "url": "https://rtfclmgzn.com/article/phillips-v-parlade-ai-judicial-immunity-ruling",
+      "headline": "A federal court rules judges keep immunity even if they let AI write the ruling",
+      "hook": "A federal judge ruled that judicial immunity protects a judge even if she let AI write a ruling entirely — without ever deciding whether that's actually what happened.",
+      "key_facts": [
+        "Judge Gloria Navarro dismissed Phillips v. Parladé on August 17, 2026.",
+        "The ruling applies even assuming, for argument's sake, that the AI-delegation allegation is true.",
+        "The plaintiff's underlying claim was never adjudicated — and it was his tenth such suit, with zero prior wins."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-phillips-v-parlade-ai-judicial-immunity-ruling.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A federal court just ruled: a judge keeps absolute immunity even if she let AI write her ruling entirely.\n\nThe court never decided whether that actually happened. It didn't need to — even assuming it did, immunity still applies.",
+        "reply_copy": "How the ruling actually works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AILaw",
+          "#JudicialImmunity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-25T15:54:39Z",
+        "copy": "Judicial immunity dates to an 1870s Supreme Court case. In 1978 it protected a judge who approved a teenager's forced sterilization with no hearing at all.\n\nNow, for what looks like the first time, the same doctrine has been applied to an allegation that a judge let AI write the ruling.",
+        "reply_copy": "The full case:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Judiciary"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Can a judge be sued for letting AI write her ruling? A federal court just answered — sort of.\n\nU.S. District Judge Gloria Navarro dismissed Phillips v. Parladé on August 17, ruling that judicial immunity protects a judge's ruling even if she delegated it entirely to AI. Crucially, the court never decided whether that actually happened — it didn't have to. Even assuming the allegation is true, immunity still applies.\n\nThe underlying claim came from a plaintiff who, per Above the Law, had filed at least nine prior suits against state court officials and lost every one.\n\nWhat the ruling actually settles, and what it leaves open — link in bio.",
+        "hashtags": [
+          "#AILaw",
+          "#JudicialImmunity",
+          "#Courts",
+          "#AI",
+          "#LegalNews",
+          "#Policy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A federal court has ruled, in what appears to be the first case of its kind, that judicial immunity protects a judge from civil liability even if she delegated a ruling entirely to AI. U.S. District Judge Gloria Navarro dismissed Phillips v. Parladé on August 17 without ever deciding whether the underlying allegation -- that a Nevada family-court judge let AI write her ruling -- was actually true. Her reasoning: even assuming it happened exactly as alleged, choosing to use AI would still be the judge's own judicial act, and judicial acts carry absolute immunity. The plaintiff's claim itself was never adjudicated as true or false.",
+        "hashtags": [
+          "#AILaw",
+          "#Judiciary"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A federal court ruled that judicial immunity protects a judge even if she let AI write her ruling entirely -- without ever deciding whether that's what actually happened. The court applied the standard four-factor immunity test, treating \"used AI to decide\" like any other flawed judicial act. The underlying allegation itself was never adjudicated.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-25T15:54:39Z",
+        "copy": "Worth knowing: this ruling only closes a federal civil-damages suit. It doesn't clear the underlying allegation, and it doesn't stop a state judicial-conduct commission from investigating the same claim through a different channel with a lower bar.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Federal court: a judge keeps absolute immunity even if she let AI write her ruling entirely. Judge Navarro's Aug 17 order never decided if that actually happened -- just that immunity applies either way. Plaintiff's underlying claim: unadjudicated.",
+        "hashtags": [
+          "#AI",
+          "#Law",
+          "#Courts"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nvidia-perplexity-30-billion-valuation-talks",
+    "ts": "2026-08-25T10:54:46Z",
+    "export": {
+      "article_id": "newsroom-nvidia-perplexity-30-billion-valuation-talks",
+      "url": "https://rtfclmgzn.com/article/nvidia-perplexity-30-billion-valuation-talks",
+      "headline": "Nvidia is in talks to invest in Perplexity at a $30 billion-plus valuation",
+      "hook": "Nvidia is reportedly discussing a Perplexity investment at over $30 billion -- up from $23B in January -- a roughly 40x multiple on the startup's own reported revenue.",
+      "key_facts": [
+        "Reported valuation: $30B+, up from $23B (Series E-6, January 2026).",
+        "Perplexity says annualized revenue tops $750M, up from under $250M in January.",
+        "Unconfirmed: neither company has confirmed a valuation, round size, or completed deal."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-nvidia-perplexity-30-billion-valuation-talks.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nvidia is reportedly in talks to invest in Perplexity at a $30B+ valuation -- up from $23B in January.\n\nOn Perplexity's own reported $750M revenue, that's a ~40x multiple. Nothing's confirmed yet.",
+        "reply_copy": "The numbers, reconciled:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#Perplexity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nvidia is reportedly discussing a new investment in Perplexity that would value the AI search startup above $30 billion -- up from the $23 billion its last confirmed round set in January.\n\nPerplexity says annualized revenue has topped $750 million, up from under $250 million at the start of the year. On that self-reported number, $30B implies a roughly 40x revenue multiple.\n\nNeither company has confirmed a valuation, a round size, or that any deal will close. Full breakdown -- link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#Perplexity",
+          "#AI",
+          "#Funding",
+          "#StartupNews",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nvidia is discussing a new investment in Perplexity that would value the AI search startup at more than $30 billion, The Information reported August 24 -- up from the $23 billion valuation Perplexity's last confirmed round set in January. Perplexity says annualized revenue now exceeds $750 million, up from under $250 million at the start of the year. Neither company has confirmed a valuation, a round size, or that any deal will close.",
+        "hashtags": [
+          "#Nvidia",
+          "#Perplexity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nvidia is reportedly in talks to invest in Perplexity at a $30B+ valuation, up from $23B in January. Perplexity's own reported revenue: $750M annualized, up from under $250M in January. That's roughly a 40x multiple on a self-reported number -- and nothing here is a confirmed deal yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia reportedly in talks to invest in Perplexity at $30B+, up from $23B in January. Perplexity's own reported revenue: $750M annualized (was <$250M in Jan). ~40x multiple on that number. Not a confirmed deal.",
+        "hashtags": [
+          "#Nvidia",
+          "#Perplexity",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

@@ -26831,9 +26831,18 @@ window.RTFC_NEWSROOM_ARTICLES = [
               "hq": "Coordinated via the U.S. State Department",
               "structure": "Declaration + companion AI Opportunity Statement",
               "extra": [
-                {"label": "Founded", "value": "December 2025, seven nations"},
-                {"label": "Declaration signatories", "value": "25 as of June 2026"},
-                {"label": "Opportunity Statement signers", "value": "35 as of June 2026"}
+                {
+                  "label": "Founded",
+                  "value": "December 2025, seven nations"
+                },
+                {
+                  "label": "Declaration signatories",
+                  "value": "25 as of June 2026"
+                },
+                {
+                  "label": "Opportunity Statement signers",
+                  "value": "35 as of June 2026"
+                }
               ],
               "note": "Aligns export controls and co-invests in chips, minerals and data-center capacity among member states."
             },
@@ -26843,8 +26852,14 @@ window.RTFC_NEWSROOM_ARTICLES = [
               "hq": "Shanghai, China",
               "structure": "Independent intergovernmental organization",
               "extra": [
-                {"label": "Founded", "value": "July 16, 2026, twenty-nine founding countries"},
-                {"label": "Orientation", "value": "Global South-focused"}
+                {
+                  "label": "Founded",
+                  "value": "July 16, 2026, twenty-nine founding countries"
+                },
+                {
+                  "label": "Orientation",
+                  "value": "Global South-focused"
+                }
               ],
               "note": "Pitched as cooperation and access rather than a rival bloc; asks no export-control commitments of members."
             }
@@ -26865,10 +26880,28 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "timeline",
         "timeline": {
           "items": [
-            {"when": "Dec 2025", "what": "Pax Silica launches with seven founding members: the U.S., U.K., Japan, South Korea, Singapore, Australia and Israel.", "source": "https://itif.org/publications/2026/08/13/pax-silica-timeline/"},
-            {"when": "Jun 2026", "what": "Second Pax Silica Summit: the Declaration reaches 25 signatories and 35 countries sign the companion AI Opportunity Statement.", "source": "https://dig.watch/updates/second-pax-silica-summit-outcomes"},
-            {"when": "Jul 16, 2026", "what": "China launches WAICO in Shanghai; 29 countries sign, including Kazakhstan, which had already joined Pax Silica's Opportunity Statement.", "hi": true, "source": "https://english.news.cn/20260716/2d364f232dd7456c8edf1d67d5125d37/c.html"},
-            {"when": "Aug 14, 2026", "what": "Reuters reports a draft State Department letter telling the 35 Opportunity Statement signatories they must choose one bloc.", "hi": true, "source": "https://www.cnbc.com/2026/08/15/us-to-tell-allies-they-must-pick-sides-in-ai-race-with-china-reuters.html"}
+            {
+              "when": "Dec 2025",
+              "what": "Pax Silica launches with seven founding members: the U.S., U.K., Japan, South Korea, Singapore, Australia and Israel.",
+              "source": "https://itif.org/publications/2026/08/13/pax-silica-timeline/"
+            },
+            {
+              "when": "Jun 2026",
+              "what": "Second Pax Silica Summit: the Declaration reaches 25 signatories and 35 countries sign the companion AI Opportunity Statement.",
+              "source": "https://dig.watch/updates/second-pax-silica-summit-outcomes"
+            },
+            {
+              "when": "Jul 16, 2026",
+              "what": "China launches WAICO in Shanghai; 29 countries sign, including Kazakhstan, which had already joined Pax Silica's Opportunity Statement.",
+              "hi": true,
+              "source": "https://english.news.cn/20260716/2d364f232dd7456c8edf1d67d5125d37/c.html"
+            },
+            {
+              "when": "Aug 14, 2026",
+              "what": "Reuters reports a draft State Department letter telling the 35 Opportunity Statement signatories they must choose one bloc.",
+              "hi": true,
+              "source": "https://www.cnbc.com/2026/08/15/us-to-tell-allies-they-must-pick-sides-in-ai-race-with-china-reuters.html"
+            }
           ]
         }
       },
@@ -27055,11 +27088,28 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "kicker": "THE GAMES, IN SHORT",
           "title": "Second World Humanoid Robot Games",
           "items": [
-            {"label": "Dates", "value": "Aug 22-26, 2026"},
-            {"label": "Teams", "value": "666", "note": "from 16 countries"},
-            {"label": "Robots", "value": "2,056"},
-            {"label": "Events", "value": "51", "note": "30 competitive, 21 scenario-based"},
-            {"label": "Venue", "value": "National Speed Skating Oval, Beijing"}
+            {
+              "label": "Dates",
+              "value": "Aug 22-26, 2026"
+            },
+            {
+              "label": "Teams",
+              "value": "666",
+              "note": "from 16 countries"
+            },
+            {
+              "label": "Robots",
+              "value": "2,056"
+            },
+            {
+              "label": "Events",
+              "value": "51",
+              "note": "30 competitive, 21 scenario-based"
+            },
+            {
+              "label": "Venue",
+              "value": "National Speed Skating Oval, Beijing"
+            }
           ],
           "source": "Beijing Municipal Government Games program, Aug 15, 2026."
         }
@@ -27084,12 +27134,30 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "compare": {
           "title": "Robot times against the human records they beat",
           "columns": [
-            {"label": "Human record"},
-            {"label": "Robot result", "sub": "Aug 22, 2026 competition", "hi": true}
+            {
+              "label": "Human record"
+            },
+            {
+              "label": "Robot result",
+              "sub": "Aug 22, 2026 competition",
+              "hi": true
+            }
           ],
           "rows": [
-            {"label": "100m sprint", "values": ["9.58s — Usain Bolt, 2009 World Championships", "9.39s — Tiangong Ultra"]},
-            {"label": "Standing high jump", "values": ["2.45m — Javier Sotomayor, 1993", "2.88m — Tiangong Ultra"]}
+            {
+              "label": "100m sprint",
+              "values": [
+                "9.58s — Usain Bolt, 2009 World Championships",
+                "9.39s — Tiangong Ultra"
+              ]
+            },
+            {
+              "label": "Standing high jump",
+              "values": [
+                "2.45m — Javier Sotomayor, 1993",
+                "2.88m — Tiangong Ultra"
+              ]
+            }
           ],
           "source": "Associated Press, Aug 22, 2026; human records per World Athletics."
         }
@@ -27187,6 +27255,710 @@ window.RTFC_NEWSROOM_ARTICLES = [
       "gate": {
         "decision": "Approved for publication",
         "note": "Synthesis clears its evidence floor (5 sources, 1 primary, 4 independent threads: the official Games program, the AP competition result, ABC Australia's trial-figure reporting, and X-Humanoid's own funding history) and the visual floor (3 components, two data-carrying, no two adjacent). disclaimer:none is correct -- no health, financial-advice, or crypto framing."
+      }
+    }
+  },
+  {
+    "slug": "microsoft-copilot-cosnitch-one-click-data-theft",
+    "title": "A Microsoft Copilot bug let one click empty a user's inbox, calendar, and Drive",
+    "dek": "CoSnitch chained a hidden URL parameter, Copilot's own connected-app permissions, and its webpage-summarization feature into silent, one-click data theft — found after researchers argued the assistant into revealing its own defenses. Microsoft patched it August 18; Varonis found no sign it was ever used against a real victim.",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Check Copilot Personal's memory for instructions you didn't write.",
+        "text": "The third flaw let a malicious webpage write permanent entries into Copilot's memory store just by being summarized. Open Settings > Personalization > Memory at copilot.microsoft.com and delete anything you don't recognize — the patch closes the hole but doesn't clear what was already written."
+      },
+      {
+        "label": "Re-authorize your connected accounts rather than assuming the patch alone covers you.",
+        "text": "The exfiltration path used your existing Gmail, Calendar, and Drive permissions — it never needed to escalate access. Revoking and re-granting those connections in Copilot's settings forces a fresh permission grant on the patched version."
+      },
+      {
+        "label": "Watch NVD's CVSS 4.0 assessment, still marked pending as of this writing.",
+        "text": "The 8.8 severity score is the older 3.1 standard; the newer 4.0 metric weighs real-world attack complexity differently and will be the more current read on how dangerous CoSnitch actually was."
+      },
+      {
+        "label": "Watch whether Microsoft confirms the enterprise product's exposure in writing.",
+        "text": "Varonis's testing covered Copilot Personal only, and both the company and independent outlets reported no evidence Microsoft 365 Copilot shared the same three flaws — but that is an absence of evidence from outside testers, not a Microsoft statement ruling it out."
+      }
+    ],
+    "sources": [
+      {
+        "label": "CoSnitch: When Your AI Assistant Becomes Its Own Whistleblower",
+        "url": "https://www.varonis.com/blog/cosnitch",
+        "outlet": "Varonis Threat Labs",
+        "kind": "primary"
+      },
+      {
+        "label": "NVD — CVE-2026-24301 Detail",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-24301",
+        "outlet": "NIST National Vulnerability Database",
+        "kind": "primary"
+      },
+      {
+        "label": "Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps",
+        "url": "https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html",
+        "outlet": "The Hacker News",
+        "kind": "reporting"
+      },
+      {
+        "label": "CoSnitch Flaws Turned Microsoft Copilot Into a One-Click Data Theft Tool",
+        "url": "https://redmondmag.com/articles/2026/08/19/cosnitch-flaws-turned-microsoft-copilot-into-a-one-click-data-theft-tool.aspx",
+        "outlet": "Redmondmag",
+        "kind": "reporting"
+      },
+      {
+        "label": "Critical Microsoft Copilot CoSnitch Vulnerability Lets Attackers Steal Sensitive Data With One Click",
+        "url": "https://cybersecuritynews.com/copilot-cosnitch-vulnerability/",
+        "outlet": "Cyber Security News",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "CoSnitch chained three Microsoft Copilot Personal flaws into one-click, silent data theft.",
+      "A hidden autorun URL parameter ran an attacker's prompt the instant a victim opened a link.",
+      "Stolen data could include email bodies, Calendar events, Drive files, and Copilot's own chat history.",
+      "Researchers found the bug by asking Copilot to explain its own defenses — \"meta-hacking.\"",
+      "Caveat: Microsoft patched it August 18, and Varonis found no evidence it was exploited in the wild."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "One click on a booby-trapped link was enough to empty a Microsoft Copilot Personal user's inbox, calendar, and cloud drive, silently and without a single confirmation prompt. Varonis Threat Labs disclosed the flaw, nicknamed **CoSnitch** and tracked as **CVE-2026-24301**, and [Microsoft](/company/microsoft) shipped a fix for it on **August 18, 2026** — eight months after Varonis first reported it in December 2025. The U.S. National Vulnerability Database rates the bug 8.8 out of 10, its \"high\" severity tier, for a flaw that requires user interaction but no special privileges to trigger.",
+        "citation_urls": [
+          "https://www.varonis.com/blog/cosnitch",
+          "https://nvd.nist.gov/vuln/detail/cve-2026-24301"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "CoSnitch, at a glance",
+          "items": [
+            {
+              "label": "Tracked as",
+              "value": "CVE-2026-24301",
+              "note": "CWE-77, command injection"
+            },
+            {
+              "label": "Severity",
+              "value": "8.8 / 10 (High)",
+              "note": "CVSS 3.1; a 4.0 score is still pending"
+            },
+            {
+              "label": "Affected product",
+              "value": "Copilot Personal",
+              "note": "copilot.microsoft.com — not Microsoft 365 Copilot"
+            },
+            {
+              "label": "Disclosed to Microsoft",
+              "value": "December 2025"
+            },
+            {
+              "label": "Patched",
+              "value": "August 18, 2026"
+            },
+            {
+              "label": "Exploited in the wild?",
+              "value": "No evidence found",
+              "note": "per Varonis's own testing"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Copilot Personal is Microsoft's consumer assistant, distinct from the enterprise Microsoft 365 Copilot bundled into Office subscriptions — a distinction that matters here because neither Varonis nor the independent outlets that reviewed the research found evidence the enterprise product shared the same three flaws. What made CoSnitch dangerous wasn't a single hole; it was three ordinary-looking features that, chained together, add up to a working exfiltration pipeline running entirely inside normal-looking Copilot traffic.",
+        "citation_urls": [
+          "https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The chain starts with a URL. Copilot Personal supported a `q=` parameter to pre-fill a prompt from a link and an undocumented `autorun=1` parameter that, combined with it, executed that prompt the moment the page loaded — no click on a \"send\" button, no confirmation dialog. From there, an injected prompt could query whatever the victim had already connected — Gmail, Google Calendar, Google Drive — using permissions the victim had granted long before, encode the results, and hand them to Copilot's own webpage-fetch tool to quietly deliver to an attacker's server. Because that final step looks identical to Copilot innocently fetching a page to summarize it, ==the exfiltration traffic is indistinguishable from ordinary Copilot use to anyone watching the network==. The third flaw, a form of [prompt injection](/dictionary), let a malicious webpage write its own instructions permanently into a victim's Copilot memory just by being summarized — instructions that persisted across sessions, logins, and even a password change, until someone found and deleted them by hand.",
+        "citation_urls": [
+          "https://www.varonis.com/blog/cosnitch",
+          "https://cybersecuritynews.com/copilot-cosnitch-vulnerability/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "The three-step chain, before and after the patch",
+          "columns": [
+            {
+              "label": "Before Aug 18, 2026",
+              "sub": "unpatched"
+            },
+            {
+              "label": "After Aug 18, 2026",
+              "sub": "patched",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Opening a crafted link",
+              "values": [
+                "Prompt auto-runs via q= + autorun=1, no click needed",
+                "autorun parameter disabled; a prompt requires explicit user action"
+              ]
+            },
+            {
+              "label": "Reading connected accounts",
+              "values": [
+                "Injected prompt can query Gmail, Calendar, Drive under the victim's existing grants",
+                "Prompt execution path that reached connected-app data is closed"
+              ]
+            },
+            {
+              "label": "Summarizing a malicious webpage",
+              "values": [
+                "Page content can write persistent instructions into Copilot's memory store",
+                "Memory-write path from summarized content is patched"
+              ]
+            }
+          ],
+          "source": "Varonis Threat Labs disclosure; The Hacker News and Redmondmag reporting on the August 18, 2026 patch."
+        }
+      },
+      {
+        "type": "p",
+        "text": "In testing, Varonis confirmed the chain could pull full email bodies (including anything a message had embedded, like credentials pasted into a support ticket), sender and recipient metadata, Calendar event titles and attendee lists, Google Drive filenames and metadata, and Copilot's own saved chat history — a fuller picture of a person's digital life than most single breaches expose, assembled from one link and zero further clicks.",
+        "citation_urls": [
+          "https://www.varonis.com/blog/cosnitch"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The way Varonis found the bug is arguably the more interesting part of the story. Rather than reverse-engineering Copilot's code, researchers used what they call ++meta-hacking++: they repeatedly asked Copilot to explain *why* a given automation was impossible, and treated each refusal as a technical disclosure. \"We prompted Copilot to explain why auto-execution was impossible, and each refusal came with a technical justification, which mapped the architecture,\" Varonis wrote — and at one point, mid-refusal and unprompted, Copilot named the undocumented `autorun` parameter itself, along with its history and the protections meant to disable it.",
+        "citation_urls": [
+          "https://www.varonis.com/blog/cosnitch",
+          "https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Copilot wasn’t breached; it was played.” — Varonis Threat Labs, on how CoSnitch was found",
+        "citation_urls": [
+          "https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That is a genuinely different discovery method than the exploit-hunting security research has run on for decades, and it works precisely because a conversational assistant will, by design, try to be helpful about explaining itself. {{note: The same trait that makes Copilot good at troubleshooting your printer driver is what let researchers troubleshoot Copilot's own security model — the assistant had no way to know the person asking \"why can't this run automatically\" wasn't a legitimate developer.}} As more products wrap a chat interface around access to a user's real accounts, an assistant that answers technical questions about its own guardrails is handing out a debugging tool to anyone patient enough to keep asking.",
+        "citation_urls": []
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "items": [
+            {
+              "when": "Dec 2025",
+              "what": "Varonis Threat Labs privately discloses the CoSnitch vulnerability chain to Microsoft.",
+              "source": "https://www.varonis.com/blog/cosnitch"
+            },
+            {
+              "when": "Aug 18, 2026",
+              "what": "Microsoft ships a patch closing all three steps of the chain.",
+              "hi": true,
+              "source": "https://redmondmag.com/articles/2026/08/19/cosnitch-flaws-turned-microsoft-copilot-into-a-one-click-data-theft-tool.aspx"
+            },
+            {
+              "when": "Aug 18, 2026",
+              "what": "CVE-2026-24301 is published in the National Vulnerability Database with an 8.8 CVSS 3.1 score.",
+              "source": "https://nvd.nist.gov/vuln/detail/cve-2026-24301"
+            },
+            {
+              "when": "Aug 20, 2026",
+              "what": "NVD last updates the record; a CVSS 4.0 assessment remains pending.",
+              "source": "https://nvd.nist.gov/vuln/detail/cve-2026-24301"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Microsoft's patch and NVD's published record both land on the same bottom line Varonis reported: **no evidence CoSnitch was ever used against a real account.** That is Varonis's own finding from its testing and disclosure process, not an independent audit of Microsoft's logs — a real difference, and one worth holding onto rather than reading as a clean bill of health. What CoSnitch actually demonstrates is a threat model that has come up before on this desk in Claude Cowork's own sandbox-escape disclosure this summer: ==an assistant with real account access is only as safe as the narrowest of its own features==, and prompt injection — instructions smuggled in through content the assistant reads rather than typed by the user — is now the recurring shape these failures take across more than one company's product.",
+        "citation_urls": [
+          "https://www.varonis.com/blog/cosnitch",
+          "https://nvd.nist.gov/vuln/detail/cve-2026-24301"
+        ]
+      }
+    ],
+    "publishedAt": "2026-08-25T10:54:36Z",
+    "id": "newsroom-microsoft-copilot-cosnitch-one-click-data-theft",
+    "image": "assets/img/newsroom/newsroom-microsoft-copilot-cosnitch-one-click-data-theft.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-25T10:54:36Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Fetched Varonis Threat Labs' own disclosure post and the NVD record for CVE-2026-24301 directly (both primary/official); corroborated the patch date, CVSS 8.8 score, and the Copilot-Personal-only scope against The Hacker News, Redmondmag, and Cyber Security News independently. Confirmed via search that neither Microsoft's MSRC advisory page (JavaScript-rendered, would not return text to WebFetch) nor any outlet claims Microsoft 365 Copilot (enterprise) shares the same three flaws -- stated as an absence of evidence, not a confirmed all-clear, in both the keyfacts box and the body. Archive check: zero prior mentions of CoSnitch or CVE-2026-24301; the Claude Cowork SharedRoot sandbox-escape story from July 23 is a different vulnerability in a different Anthropic product, referenced only as parallel context in the closing paragraph, not conflated with this one."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "The 'Copilot wasn't breached; it was played' quote was corroborated as a genuine Varonis line via independent paraphrase/quotation in The Hacker News's own writeup, not taken from a single outlet. The 8.8 CVSS score, CWE-77 classification, and August 18/20 dates come directly from the NVD record itself, fetched first-hand rather than relayed through a secondary summary. No model is named in this piece (a product vulnerability, not a model release), so no entities.js addition applies; microsoft already has a companies.js entry, used for the inline cross-link on first mention."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the CVSS score was being presented as a settled, final number -- revised the keyfacts box and an apply item to flag that the newer CVSS 4.0 assessment is still pending per NVD, rather than implying 8.8 is the last word on severity. No self-referential language found. Added the /company/microsoft cross-link on first mention and a plain-text /dictionary link on prompt injection's first use rather than the underline-only marker, since a defined term with a real dictionary entry should link, not just underline. Confirmed the closing paragraph's reference to the Claude Cowork sandbox-escape story describes that story by what it was, not by naming this outlet's prior coverage of it."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts (CVE id, 8.8 score, product scope, Dec 2025/Aug 18 dates, no-wild-exploitation finding) and timeline (same four dates) checked against the lede and NVD-sourced prose above them. compare's before/after rows restate the three-step chain described in paragraph 3 and the patch confirmation in paragraph 3/9 -- no new figures introduced. No component carries a top-level text field."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources including 2 primary/official (Varonis's own disclosure, NVD's own CVE record), synthesis-format word count (~760 words in body prose), 3 components (keyfacts, compare carrying the before/after patch data, timeline), no two adjacent. No compliance trigger: not health, crypto, or legal-proceedings; Microsoft is named only in a factual, already-patched, already-independently-confirmed vulnerability disclosure, not an accusatory or reputationally novel claim beyond the NVD record itself; no quote is attributed without a linked, corroborated source."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (5 sources, 2 primary/official, at least 3 independent reporting threads once mirrored coverage of the same Varonis disclosure is collapsed) and the visual floor (3 components, one data-carrying compare, no two adjacent). disclaimer:none is correct -- a patched security disclosure, not health, financial-advice, or crypto framing."
+      }
+    }
+  },
+  {
+    "slug": "phillips-v-parlade-ai-judicial-immunity-ruling",
+    "title": "A federal court rules judges keep immunity even if they let AI write the ruling",
+    "dek": "Phillips v. Parladé asked whether a Nevada family-court judge could be sued for allegedly outsourcing a decision entirely to AI. U.S. District Judge Gloria Navarro dismissed the case August 17 without deciding whether that actually happened — ruling that even total AI delegation would still be a judge's own judicial act, and judges are absolutely immune for those.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether Phillips appeals to the Ninth Circuit.",
+        "text": "Above the Law notes this is at least his tenth federal suit against state court officials, with no prior wins — a pattern worth tracking if an appeal tests whether a circuit court reads the immunity question differently."
+      },
+      {
+        "label": "Watch for a state judicial-conduct complaint against Judge Parladé.",
+        "text": "Navarro's ruling explicitly did not decide whether Parladé used AI, or whether doing so was proper — federal immunity only closes off a civil damages suit. A state ethics or disciplinary body is the venue where the underlying allegation could actually be tested."
+      },
+      {
+        "label": "Watch whether another circuit reaches a different result.",
+        "text": "Navarro applied the standard four-factor judicial-immunity test rather than carving out a new AI-specific rule, which means the next court to face this fact pattern could reason its way to the same place — or explicitly decline to."
+      },
+      {
+        "label": "Watch for the first ruling that finds a judge's AI use falls outside judicial immunity.",
+        "text": "Navarro's own opinion leaves the door open: immunity protects the choice to use AI, not necessarily every act connected to it — a judge who let AI access case materials outside the judicial process, for instance, would raise a different question than this one."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Order, Phillips v. Parladé, No. 2:25-cv-01464-GMN-NJK (D. Nev.)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.nvd.176224/gov.uscourts.nvd.176224.16.0.pdf",
+        "outlet": "CourtListener (RECAP Archive)",
+        "kind": "primary"
+      },
+      {
+        "label": "Judge's Allegedly \"Relying Wholly\" on AI in Order Is Covered by Judicial Immunity, Court Rules",
+        "url": "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/",
+        "outlet": "Reason (The Volokh Conspiracy)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Judicial Immunity Still Applies Even If The Judge Let AI Decide The Case",
+        "url": "https://abovethelaw.com/2026/08/judicial-immunity-still-applies-even-if-the-judge-let-ai-decide-the-case/",
+        "outlet": "Above the Law",
+        "kind": "reporting"
+      },
+      {
+        "label": "Judge allegedly outsourced entire ruling to AI and still can't be sued",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/judges-who-use-ai-to-make-decisions-still-protected-by-judicial-immunity-court-ruling-protects-outcomes-regardless-of-ai-usage",
+        "outlet": "Tom's Hardware",
+        "kind": "reporting"
+      },
+      {
+        "label": "Nevada magistrate judge said alleged AI use did not defeat judicial immunity",
+        "url": "https://mlq.ai/news/nevada-magistrate-judge-said-alleged-ai-use-did-not-defeat-judicial-immunity/",
+        "outlet": "MLQ News",
+        "kind": "reporting"
+      },
+      {
+        "label": "Stump v. Sparkman, 435 U.S. 349 (1978)",
+        "url": "https://supreme.justia.com/cases/federal/us/435/349/",
+        "outlet": "Justia U.S. Supreme Court Center",
+        "kind": "primary"
+      }
+    ],
+    "tldr": [
+      "A federal judge ruled judicial immunity protects a judge even if AI wrote the ruling entirely.",
+      "Plaintiff Phillips alleged a Nevada family-court judge delegated a decision wholly to AI.",
+      "Judge Navarro dismissed the case using the standard four-part judicial-immunity test, unchanged for AI.",
+      "The order never determined whether AI was actually used — it didn't need to reach that question.",
+      "Caveat: this closes a federal damages suit only, not any separate state ethics complaint."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "A federal court has ruled, for what appears to be the first time, that a judge who allegedly let AI write a ruling from start to finish is still absolutely immune from being sued over it. U.S. District Judge Gloria Navarro of the District of Nevada dismissed **Phillips v. Parladé** on **August 17, 2026**, without ever deciding whether the underlying accusation — that a state family-court judge delegated a decision entirely to AI — was true. Her reasoning: even if it happened exactly as alleged, choosing to use AI would still be **the judge's own judicial act**, and judicial acts carry absolute immunity regardless of how badly they're performed.",
+        "citation_urls": [
+          "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/",
+          "https://abovethelaw.com/2026/08/judicial-immunity-still-applies-even-if-the-judge-let-ai-decide-the-case/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "The case, in short",
+          "items": [
+            {
+              "label": "Case",
+              "value": "Phillips v. Parladé",
+              "note": "No. 2:25-cv-01464-GMN-NJK"
+            },
+            {
+              "label": "Court",
+              "value": "U.S. District Court, District of Nevada"
+            },
+            {
+              "label": "Judge",
+              "value": "Gloria Navarro"
+            },
+            {
+              "label": "Ruling date",
+              "value": "August 17, 2026"
+            },
+            {
+              "label": "Outcome",
+              "value": "Case dismissed"
+            },
+            {
+              "label": "Underlying allegation",
+              "value": "Nevada family-court judge Mari Parladé allegedly delegated a ruling entirely to AI",
+              "note": "never adjudicated as true or false"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The plaintiff, T. Matthew Phillips, a California-licensed attorney representing himself, sued Nevada family-court judge Mari Parladé over a ruling in his own underlying state case. According to Above the Law's account of the complaint, his theory rested on a few concrete details: Parladé appeared to be reading from a prepared script during proceedings, stumbled over a word, and at one point misspoke \"appearance of any impartiality\" for the standard legal phrase \"appearance of impropriety.\" Phillips argued those details showed the ruling wasn't really hers — and that __judicial immunity__, the doctrine shielding judges from civil suits over their official acts, shouldn't cover a decision no human judge actually made.",
+        "citation_urls": [
+          "https://abovethelaw.com/2026/08/judicial-immunity-still-applies-even-if-the-judge-let-ai-decide-the-case/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "It's worth being precise about what Navarro's order does and doesn't establish, because the underlying facts are contested and unresolved. Above the Law reports this was at least Phillips's ++tenth++ federal lawsuit against state court officials, and none of the prior nine succeeded — context that matters for how much weight the specific factual allegations deserve on their own. Navarro's order never says Parladé used AI; it says the immunity analysis comes out the same way **even assuming, for the sake of argument, that she did.**",
+        "citation_urls": [
+          "https://abovethelaw.com/2026/08/judicial-immunity-still-applies-even-if-the-judge-let-ai-decide-the-case/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "What Phillips argued vs. what the court decided",
+          "columns": [
+            {
+              "label": "Phillips's argument"
+            },
+            {
+              "label": "Navarro's holding",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Does total AI delegation void immunity?",
+              "values": [
+                "Yes — full delegation means no judicial act occurred",
+                "No — the choice to delegate is itself a judicial act"
+              ]
+            },
+            {
+              "label": "Was the ruling within the judge's jurisdiction?",
+              "values": [
+                "No — a rare exception that can strip immunity",
+                "Yes — the case was properly before her"
+              ]
+            },
+            {
+              "label": "Did the court determine whether AI was actually used?",
+              "values": [
+                "Asserted as fact in the complaint",
+                "Not reached — immunity applies regardless"
+              ]
+            }
+          ],
+          "source": "Reason (The Volokh Conspiracy) and Above the Law reporting on Navarro's August 17, 2026 order."
+        }
+      },
+      {
+        "type": "p",
+        "text": "To get there, Navarro applied the ordinary four-factor test federal courts use to decide whether an act is \"judicial in nature\" and therefore immune: whether it's a normal judicial function, whether it happened in the judge's own chambers, whether it centered on a case actually pending before her, and whether it arose from a party's dealings with the judge in her official capacity. Issuing a ruling in a pending family-law case checked every box — the same test any ordinary contested ruling would pass, with nothing added or subtracted for the AI allegation.",
+        "citation_urls": [
+          "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/"
+        ]
+      },
+      {
+        "type": "flow",
+        "flow": {
+          "title": "The four-factor test Navarro applied",
+          "steps": [
+            {
+              "actor": "Court",
+              "what": "Was this a normal judicial function? (Issuing a ruling — yes.)"
+            },
+            {
+              "actor": "Court",
+              "what": "Did it happen in the judge's own chambers?"
+            },
+            {
+              "actor": "Court",
+              "what": "Did it concern a case actually pending before her?"
+            },
+            {
+              "actor": "Court",
+              "what": "Did it arise from dealings with the judge in her official capacity?",
+              "hi": true
+            },
+            {
+              "actor": "Result",
+              "what": "All four met → absolute judicial immunity applies, regardless of the AI allegation"
+            }
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "text": "“Judges enjoy absolute immunity from civil liability, even if their action was in error, done maliciously, or in excess of their authority.” — from Judge Navarro's order, as quoted by Reason's Volokh Conspiracy",
+        "citation_urls": [
+          "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That line states a doctrine far older than AI. The U.S. Supreme Court recognized absolute judicial immunity in the 1870s (**Bradley v. Fisher**) and reaffirmed it in 1978 in **Stump v. Sparkman**, a case where a judge approved a mother's petition to sterilize her teenage daughter without a hearing, notice, or any legal basis — and was still held immune, because approving the petition was a judicial act, however badly performed. ==What's new here is a court applying that same century-old doctrine, seemingly for the first time on the record, to an allegation that a judge handed a ruling to a machine rather than simply ruling badly herself.== Navarro's opinion treats \"used AI to decide\" as functionally identical to \"decided badly\" or \"decided with an undisclosed bias\" — categories immunity has always covered — rather than carving out a new, AI-specific hole in the doctrine.",
+        "citation_urls": [
+          "https://www.tomshardware.com/tech-industry/artificial-intelligence/judges-who-use-ai-to-make-decisions-still-protected-by-judicial-immunity-court-ruling-protects-outcomes-regardless-of-ai-usage",
+          "https://supreme.justia.com/cases/federal/us/435/349/"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "title": "What's actually established here",
+          "items": [
+            {
+              "claim": "Judge Parladé relied wholly on AI to issue her ruling.",
+              "level": "unverified",
+              "basis": "Alleged by a pro se plaintiff with, per Above the Law, no successful prior suits against state court officials in at least nine tries; Navarro's order expressly declined to determine whether it's true.",
+              "resolver": "A state judicial-conduct investigation, a sworn statement from Judge Parladé, or discovery in a separate proceeding that actually reaches the merits."
+            },
+            {
+              "claim": "Judicial immunity protects a judge's ruling even if she used AI to write it entirely.",
+              "level": "confirmed",
+              "basis": "The express holding of Navarro's August 17, 2026 order, applying the established four-factor judicial-immunity test.",
+              "resolver": "Already settled at the district-court level; only reversible on appeal to the Ninth Circuit."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "{{note: Immunity from a civil damages suit isn't the only accountability channel a judge faces — it just closes off this particular one. A state judicial-conduct commission could still investigate the same underlying allegation on its own authority, using a lower bar than a federal civil suit requires.}} Nothing in Navarro's order forecloses that route, and nothing in it says Parladé actually did what Phillips claims. What it settles is narrower and, for the AI industry, more durable: as machine-assisted drafting spreads through courts, agencies, and other places that issue binding decisions, the officials using it are not automatically stripped of the legal protections that came with the job before AI existed. The next case to test that line will need a plaintiff whose factual allegations survive first contact with a court — this one never got that far.",
+        "citation_urls": [
+          "https://abovethelaw.com/2026/08/judicial-immunity-still-applies-even-if-the-judge-let-ai-decide-the-case/",
+          "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/"
+        ]
+      }
+    ],
+    "publishedAt": "2026-08-25T10:54:39Z",
+    "id": "newsroom-phillips-v-parlade-ai-judicial-immunity-ruling",
+    "image": "assets/img/newsroom/newsroom-phillips-v-parlade-ai-judicial-immunity-ruling.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-25T10:54:39Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Direct WebFetch on the actual court order PDF (CourtListener/RECAP storage link) returned only binary/unparseable content -- could not extract primary text directly, a known WebFetch limitation for PDFs, not a .gov-style block. Relied on Reason's Volokh Conspiracy (Eugene Volokh, a law professor whose blog format specifically block-quotes the orders it covers) for excerpted order language, cross-read against Above the Law and Tom's Hardware's independent summaries of the same order before treating any fact as solid. Confirmed the case number (2:25-cv-01464-GMN-NJK) and that GMN maps to Judge Gloria Navarro via convergent naming across all three secondary sources. A WebSearch-synthesized result also surfaced a magistrate judge's name (Nancy Koppe) and a 'Judge Glenn M. Nakamura' that contradicted the GMN initials and every other source -- treated as an unreliable, likely-garbled search synthesis and left out of the piece entirely rather than reported as fact. Archive check: zero prior mentions of this case, Judge Navarro, or Judge Parlade -- genuinely new coverage."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "The 'absolute immunity...even if...done maliciously' quote and the tenth-lawsuit/zero-prior-successes detail were both corroborated: the immunity line appears in Reason's excerpt of the order, and Above the Law's own account (fetched directly, full content returned) independently states the litigation history. Verified the Stump v. Sparkman (1978) and Bradley v. Fisher (1872) historical claims against Justia's own case-text page for Stump, a primary legal source, rather than relying on general background knowledge alone -- added that URL as a sixth source. No model is named in this piece (a court ruling, not an AI product), so no entities.js action applies; no company in companies.js is central to this story (a court case involving individuals, not a company), so none was forced as a cross-link."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft's history paragraph asserted judicial immunity's precedent without a citation of its own -- added the Stump v. Sparkman citation and its Justia source rather than leaving a bare historical claim uncited. Also checked that every reference to the underlying AI-use allegation is attributed to the plaintiff and explicitly marked as undetermined by the court, per compliance-rulebook.md's mandatory-scrutiny trigger for accusatory claims about a named real person (Judge Parlade) -- the scorecard component exists specifically to make that unresolved status visible rather than asserting or implying the allegation is true. No self-referential language found. This is a completed federal dismissal, not active/ongoing litigation against a live claim, which keeps the legal-proceedings trigger to sourced-neutral reporting of a settled order rather than commentary on a pending dispute."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts (case number, court, judge, date, outcome) checked against the lede and paragraph 2. compare's rows restate the plaintiff's-argument-vs-holding structure laid out in paragraphs 2-3 and the flow component below it; flow's four factors match the test described in paragraph 5. scorecard's two claims and their basis/resolver fields trace to the tenth-lawsuit context (paragraph 3) and the order's holding (paragraph 1) -- no new figures introduced anywhere. No component carries a top-level text field."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources including 2 primary (the order itself via CourtListener/RECAP, and Stump v. Sparkman via Justia), synthesis-format word count (~715 words in body prose), 4 components (keyfacts, compare carrying the argument-vs-holding data, flow, scorecard), no two adjacent. Compliance: legal-proceedings and accusatory-claims-about-a-named-party triggers both fire (a completed federal case naming a sitting state judge) -- remediated by attributing every unresolved factual allegation to the plaintiff by name, stating explicitly and repeatedly that the court never determined whether the AI use occurred, and including the plaintiff's own weak litigation track record as context a reader needs to weigh the allegation fairly. disclaimer:none is correct -- not health, financial, or crypto framing."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (6 sources, 2 primary, 4 independent reporting threads: Volokh's legal analysis, Above the Law's litigation-history reporting, Tom's Hardware's tech-press account, and MLQ News) and the visual floor (4 components, one data-carrying compare, no two adjacent). Sourced-neutral treatment of the underlying allegation against a named judge satisfies compliance-rulebook.md's mandatory-scrutiny remediation path -- report the allegation as an allegation, attributed, with the court's own explicit non-finding stated plainly."
+      }
+    }
+  },
+  {
+    "slug": "nvidia-perplexity-30-billion-valuation-talks",
+    "title": "Nvidia is in talks to invest in Perplexity at a $30 billion-plus valuation",
+    "dek": "The Information reports Nvidia is discussing a new equity round that would value the AI search startup above $30 billion, up from the $23 billion its last confirmed round set in January. Perplexity says its annualized revenue has topped $750 million; neither company has confirmed the talks or a deal.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "brief",
+    "disclaimer": "not-financial-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for a completed term sheet, not just reported talks.",
+        "text": "The Information's reporting, and every outlet after it, describes discussions in progress. Neither Nvidia nor Perplexity has confirmed a valuation, a round size, or that a deal will close at all."
+      },
+      {
+        "label": "Watch whether Nvidia's stake comes with a compute or licensing tie-in.",
+        "text": "The Information's own headline flags a technology-licensing arrangement was also discussed alongside the equity investment — the kind of structure that would make this more than a passive financial bet, similar to Nvidia's recent Poolside deal."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nvidia Discusses Perplexity Investment at $30 Billion-Plus Valuation",
+        "url": "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal",
+        "outlet": "The Information",
+        "kind": "primary"
+      },
+      {
+        "label": "Nvidia in talks to invest in Perplexity at $30 billion-plus valuation",
+        "url": "https://the-decoder.com/nvidia-in-talks-to-invest-in-perplexity-at-30-billion-plus-valuation/",
+        "outlet": "The Decoder",
+        "kind": "reporting"
+      },
+      {
+        "label": "Perplexity AI: From $121M to $23B in 30 Months",
+        "url": "https://valueaddvc.com/blog/perplexity-ai-valuation-revenue-2026-23b-450m-arr",
+        "outlet": "ValueAdd VC",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Nvidia is discussing an equity investment in Perplexity above a $30 billion valuation.",
+      "That would be up from the $23 billion Perplexity's last confirmed round set in January 2026.",
+      "Perplexity says annualized revenue now exceeds $750 million, up from under $250 million in January.",
+      "A tech-licensing arrangement was also reportedly discussed alongside the equity stake.",
+      "Caveat: this is reported, unconfirmed talks — neither company has announced a completed deal."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Nvidia](/company/nvidia) is discussing a new investment in [Perplexity](/company/perplexity) that would value the AI search startup at **more than $30 billion**, The Information reported August 24 — a jump from the **$23 billion** valuation Perplexity's last confirmed round set in January. The report, since matched by multiple outlets, says Nvidia and Perplexity also discussed a technology-licensing arrangement alongside the equity stake, though neither company has confirmed a valuation, a round size, or that any deal will close.",
+        "citation_urls": [
+          "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal",
+          "https://the-decoder.com/nvidia-in-talks-to-invest-in-perplexity-at-30-billion-plus-valuation/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What each Perplexity valuation figure actually covers",
+          "items": [
+            {
+              "value": "$23B",
+              "unit": "Series E-6",
+              "label": "Last confirmed valuation, closed January 9, 2026",
+              "includes": "A completed, priced equity round with named investors",
+              "excludes": "Any figure from the reported August talks",
+              "note": "Reported total funding raised to date: roughly $1.7 billion."
+            },
+            {
+              "value": "$30B+",
+              "unit": "Reported, in talks",
+              "label": "Nvidia's discussed investment, per The Information, August 24, 2026",
+              "includes": "A single outlet's sourcing on active, unconfirmed negotiations",
+              "excludes": "Any public confirmation, signed term sheet, or closing date from either company",
+              "note": "Would be roughly 30% above the January round if it closes at this level."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Nvidia is not a new name on Perplexity's cap table — it was already among the investors in the January round, alongside Jeff Bezos, SoftBank's Vision Fund 2, IVP, Accel, and Databricks. A new investment would extend an existing relationship rather than start one, which fits Nvidia's broader pattern this year of taking stakes in AI companies it also sells chips to or partners with technically, following recent deals with [Poolside](/company/poolside) and others.",
+        "citation_urls": [
+          "https://valueaddvc.com/blog/perplexity-ai-valuation-revenue-2026-23b-450m-arr",
+          "https://the-decoder.com/nvidia-in-talks-to-invest-in-perplexity-at-30-billion-plus-valuation/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The reported talks come alongside a real, if self-reported, jump in Perplexity's own numbers: ==annualized revenue above $750 million==, up from under $250 million at the start of the year, which Perplexity and reporters covering the talks attribute in part to \"Perplexity Computer,\" the company's agentic tool, and rising token consumption as more of its usage shifts from single search answers to longer agent tasks. None of those figures are independently audited — they are the company's own reported numbers, relayed through reporting on the funding talks, not a filed disclosure.",
+        "citation_urls": [
+          "https://the-decoder.com/nvidia-in-talks-to-invest-in-perplexity-at-30-billion-plus-valuation/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Run the arithmetic and a $30 billion valuation against $750 million of annualized revenue is a roughly 40x revenue multiple — rich even by this year's frontier-AI standards, and one that assumes Perplexity's revenue growth (reportedly tripling over the past year) keeps compounding rather than leveling off as agent usage matures. **That's the bet a $30 billion price tag actually makes**, not a verdict on whether Perplexity's search-and-agent product is good; the two questions get conflated easily and shouldn't be.",
+        "citation_urls": [
+          "https://the-decoder.com/nvidia-in-talks-to-invest-in-perplexity-at-30-billion-plus-valuation/"
+        ]
+      }
+    ],
+    "publishedAt": "2026-08-25T10:54:46Z",
+    "id": "newsroom-nvidia-perplexity-30-billion-valuation-talks",
+    "image": "assets/img/newsroom/newsroom-nvidia-perplexity-30-billion-valuation-talks.jpg",
+    "top": false,
+    "sample": false,
+    "corrections": [],
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-25T10:54:46Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "The Information's own article is paywalled -- WebFetch returned only the headline and subscribe-wall text, so it is cited as the primary sourcing outlet (this is where every other outlet's reporting traces back to) while the actual figures used in the body come from The Decoder's independently fetched, full-content writeup and ValueAddVC's funding-history piece, both fetched directly. Cross-checked Perplexity's prior valuation: found and rejected a $8B/'five months earlier' figure already sitting in yesterday's Buzz card (bz-335, added 2026-08-24) as unsupported -- multiple independent funding-history sources (ValueAddVC, Tracxn, aibusinessweekly) converge on a $23B Series E-6 round closed January 9, 2026, not $8B five months before August. Corrected the Buzz card's text in this cycle's 4b pass rather than repeating the same unverified figure in this article."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "The $30B+ in-talks figure, the tech-licensing detail, and the $750M/$250M revenue figures all trace to The Information's reporting as relayed by The Decoder, which fetched cleanly with full text -- a single ultimate source (The Information's scoop), which is why this stays a Brief rather than a Synthesis despite multiple outlets repeating it (per format-routing.md's dedup rule: mirrors of one scoop are one thread). The $23B January valuation and Nvidia's prior investor status are corroborated independently via ValueAddVC. No model is named in this piece, so no entities.js action; nvidia, perplexity, and poolside all already have companies.js entries, used for inline cross-links."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft stated the $750M revenue figure without flagging it as company-reported and unaudited -- added that caveat explicitly to the closing paragraph rather than letting a self-reported number read as confirmed fact, consistent with compliance-rulebook.md's financial-claims mandatory-scrutiny trigger (valuation assertions must not be stated as settled fact). Added the not-financial-advice disclaimer per the Markets-section requirement and made sure no line reads as investment guidance -- the closing paragraph's revenue-multiple arithmetic is framed as what the price implies, not as advice to buy or avoid. No self-referential language found. Added /company/nvidia, /company/perplexity, and /company/poolside cross-links on first mention."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "ledger's two items (the $23B January figure and the $30B+ reported-talks figure, plus the ~$1.7B total-raised note) checked against paragraph 1 and paragraph 3 -- no figure appears only in the component. No component carries a top-level text field."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 3 sources including 1 primary (The Information, the originating scoop, cited even though paywalled since it is the article the entire story traces to), brief-format word count (~320 words in body prose), 1 component (ledger, carrying the valuation-scope data the brief's whole point rests on). No compliance trigger beyond the standard financial/valuation-claims scrutiny already remediated: every valuation and revenue figure is attributed as reported/self-reported and explicitly marked unconfirmed, never stated as settled fact; disclaimer:not-financial-advice applied per the Markets-section rule."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Brief clears its evidence floor (one primary scoop plus independent secondary confirmation, ~1-2 independent threads once mirrored coverage collapses per format-routing.md) and the visual floor (1 component, ledger, data-carrying). disclaimer:not-financial-advice is correct for a Markets-section valuation story; no claim is stated as investment guidance."
       }
     }
   }

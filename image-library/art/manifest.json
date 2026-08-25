@@ -208,7 +208,12 @@
    ],
    "text_space": "sky upper-right",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-microsoft-copilot-cosnitch-one-click-data-theft",
+     "used_at": "2026-08-25"
+    }
+   ]
   },
   {
    "id": "art-008-hologram-billboards-over-a-rainy-avenue",
@@ -1033,7 +1038,12 @@
    ],
    "text_space": "dark ceiling top",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-phillips-v-parlade-ai-judicial-immunity-ruling",
+     "used_at": "2026-08-25"
+    }
+   ]
   },
   {
    "id": "art-038-uv-bench-pharma-automation",
@@ -2102,7 +2112,12 @@
    ],
    "text_space": "dark sky top-left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-perplexity-30-billion-valuation-talks",
+     "used_at": "2026-08-25"
+    }
+   ]
   },
   {
    "id": "art-077-brutalist-data-center-in-a-storm",
