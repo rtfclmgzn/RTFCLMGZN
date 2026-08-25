@@ -6097,8 +6097,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#AISecurity",
           "#PromptInjection"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092283365718110516",
+        "remote_id": "2092283365718110516",
+        "posted_at": "2026-08-25T16:10:02Z"
       },
       {
         "platform": "instagram",
@@ -6206,7 +6208,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#Judiciary"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
