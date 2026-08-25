@@ -8,7 +8,7 @@
    anything past. `sort` is an approximate ISO start for ordering only.
    ============================================================ */
 window.RTFC_EVENTS = {
-  updated: "2026-08-23",
+  updated: "2026-08-25",
   note: "Curated by the newsroom. Dates are approximate windows — confirm exact times on each official page.",
   items: [
     { name:"Meta Connect", org:"Meta", when:"Expected Sept 2026", sort:"2026-09-15",
