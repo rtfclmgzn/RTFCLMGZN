@@ -6081,8 +6081,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Copilot",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092242571989078080",
+        "remote_id": "2092242571989078080",
+        "posted_at": "2026-08-25T13:27:56Z"
       },
       {
         "platform": "x",
@@ -6150,8 +6152,10 @@ window.RTFC_SOCIAL_POSTS =[
           "#Cybersecurity",
           "#Copilot"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtvwdbpxn32q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtvwdbpxn32q",
+        "posted_at": "2026-08-25T13:28:03Z"
       }
     ]
   },
