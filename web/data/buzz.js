@@ -408,4 +408,10 @@ window.RTFC_BUZZ = [
     why:"NVIDIA earnings are a barometer for which AI labs and cloud providers are leading spending — hyperscaler growth stalling while enterprise adoption accelerates would reorder the competitive landscape away from frontier-lab training toward distributed inference and enterprise deployment.",
     heat:61, topics:["nvidia","earnings","market signal","hyperscalers","enterprise ai","revenue","q2 2026"],
     url:"https://finance.yahoo.com/markets/stocks/articles/nvidias-next-earnings-report-aug-165358714.html" },
+{ id:"bz-355", date:"2026-08-26",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI disclosed a covert Russian influence operation using ChatGPT via VPNs to bypass access restrictions. The scheme routed connections through virtual private networks to generate English-language social posts across Substack, Telegram, X, Facebook and LinkedIn. The operation created a fake Israeli think tank called the International Burke Institute; 34 of 36 sampled articles were plagiarized, some falsely attributed to Francis Fukuyama and Noam Chomsky. The network featured a 'sovereignty index' praising Russia while attacking France, Germany and the US. OpenAI terminated the accounts.",
+    why:"A coordinated information operation using ChatGPT to generate at scale and mask its origins is a concrete signal of how frontier AI systems are becoming force-multipliers for state-aligned disinformation — and how quickly access restrictions can be circumvented via VPNs, distinct from model capability but material to information-security threat models.",
+    heat:69, topics:["openai","security incident","misinformation","influence operation","russia","chatgpt abuse","information warfare"],
+    url:"https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/" },
 ];
