@@ -6399,7 +6399,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -6413,8 +6413,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#DataCenters"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092652279551979535",
+        "remote_id": "2092652279551979535",
+        "posted_at": "2026-08-26T16:35:58Z"
       },
       {
         "platform": "instagram",
@@ -6679,8 +6681,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Google",
           "#EU"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtyrcgn33g2b",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtyrcgn33g2b",
+        "posted_at": "2026-08-26T16:36:05Z"
       }
     ]
   }
