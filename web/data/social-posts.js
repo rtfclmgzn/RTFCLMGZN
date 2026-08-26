@@ -6209,7 +6209,7 @@ window.RTFC_SOCIAL_POSTS =[
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -6238,14 +6238,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#AILaw",
           "#Judiciary"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122115526077396947",
+        "remote_id": "1238977099292018_122115526077396947",
+        "posted_at": "2026-08-26T02:13:01Z"
       },
       {
         "platform": "threads",
         "copy": "A federal court ruled that judicial immunity protects a judge even if she let AI write her ruling entirely -- without ever deciding whether that's what actually happened. The court applied the standard four-factor immunity test, treating \"used AI to decide\" like any other flawed judicial act. The underlying allegation itself was never adjudicated.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcfHNicjVP7",
+        "remote_id": "18126645856688486",
+        "posted_at": "2026-08-26T02:13:21Z"
       },
       {
         "platform": "threads",
@@ -6321,8 +6325,10 @@ window.RTFC_SOCIAL_POSTS =[
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcfGrTQjWtR/",
+        "remote_id": "17953789956235721",
+        "posted_at": "2026-08-26T02:08:44Z"
       },
       {
         "platform": "facebook",
@@ -6331,14 +6337,18 @@ window.RTFC_SOCIAL_POSTS =[
           "#Nvidia",
           "#Perplexity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122115525711396947",
+        "remote_id": "1238977099292018_122115525711396947",
+        "posted_at": "2026-08-26T02:08:56Z"
       },
       {
         "platform": "threads",
         "copy": "Nvidia is reportedly in talks to invest in Perplexity at a $30B+ valuation, up from $23B in January. Perplexity's own reported revenue: $750M annualized, up from under $250M in January. That's roughly a 40x multiple on a self-reported number -- and nothing here is a confirmed deal yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcfGu6EjTDL",
+        "remote_id": "18127590961687036",
+        "posted_at": "2026-08-26T02:09:12Z"
       },
       {
         "platform": "bluesky",
