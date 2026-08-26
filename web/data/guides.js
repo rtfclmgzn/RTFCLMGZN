@@ -3055,7 +3055,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same habit applies one level over, on words instead of pixels: [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) walks the same C2PA/SynthID logic through prose, where the watermarks exist but the public checkers mostly don't yet. Voice is the harder case still — [our guide to checking whether a phone call is AI-cloned](/article/check-whether-a-voice-is-ai-cloned) covers the one modality where a live scam call can't be checked by any file-based tool at all. For claims rather than authorship, [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the one to reach for, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
+        "text": "None of this makes spotting an AI image effortless — it makes it checkable, which is the more honest goal. The same habit applies one level over, on words instead of pixels: [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) walks the same C2PA/SynthID logic through prose, where the watermarks exist but the public checkers mostly don't yet. Voice is the harder case still — [our guide to checking whether a phone call is AI-cloned](/article/check-whether-a-voice-is-ai-cloned) covers the one modality where a live scam call can't be checked by any file-based tool at all, and [our guide to checking whether a video is AI-generated](/article/check-whether-a-video-is-ai-generated) walks the same C2PA/SynthID ladder one level up, on footage instead of a single frame. For claims rather than authorship, [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the one to reach for, and [the dictionary](/dictionary) has short entries for every term used here — manifest, watermark, provenance — if any of it needs unpacking further.",
         "citation_urls": []
       }
     ],
@@ -3548,7 +3548,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "This is the third of a kind, after [our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) and [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) — voice is the modality where the honest answer runs closest to don't rely on detection at all, because the fastest-growing use is a live call no file-based tool can reach. [The dictionary](/dictionary) has short entries for terms used here — jailbreak, guardrails — if any of the underlying mechanics need unpacking further. San Francisco's own order forcing Apple and Google to pull deepfake \"nudify\" apps, [covered here](/article/san-francisco-orders-apple-google-remove-nudify-apps), is the same underlying technology aimed at a different harm.",
+        "text": "This is the third of a kind, after [our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) and [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written) — voice is the modality where the honest answer runs closest to don't rely on detection at all, because the fastest-growing use is a live call no file-based tool can reach. A fourth guide covers the remaining modality: [checking whether a video is AI-generated](/article/check-whether-a-video-is-ai-generated), where a file-based check works again but the tooling is newer and patchier than it is for a still image. [The dictionary](/dictionary) has short entries for terms used here — jailbreak, guardrails — if any of the underlying mechanics need unpacking further. San Francisco's own order forcing Apple and Google to pull deepfake \"nudify\" apps, [covered here](/article/san-francisco-orders-apple-google-remove-nudify-apps), is the same underlying technology aimed at a different harm.",
         "citation_urls": []
       }
     ],
@@ -4115,6 +4115,336 @@ window.RTFC_GUIDES = [
       { "label": "\"Open Weights and American AI Leadership\" — the Nvidia-led industry letter", "url": "https://www.explainx.ai/blog/open-weights-american-ai-leadership-letter-july-2026", "primary": true },
       { "label": "Hugging Face — Kimi K3 model overview, MXFP4 quantization and architecture", "url": "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei" },
       { "label": "Artificial Analysis — Kimi K3 model page", "url": "https://artificialanalysis.ai/models/kimi-k3", "primary": true }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g17",
+    "slug": "check-whether-a-video-is-ai-generated",
+    "image": "assets/img/newsroom/g17.jpg",
+    "title": "How to check whether a video is AI-generated",
+    "dek": "A deepfake video of India's finance minister promising huge returns in a week racked up shares before anyone checked it — and the tools built to verify video are newer, patchier, and different from the ones that already work on photos. Here's what actually verifies a clip today, what's still rolling out, and what a missing visible watermark never proves.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-26T16:51:15Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Check for a signed C2PA Content Credentials manifest first — it now reads video files directly.",
+      "Google's SynthID watermark covers Veo video too, and the Gemini app can check it.",
+      "A repost or screen recording strips both signals before you ever see the file.",
+      "No metadata left? Reverse-search the video's actual frames with a free tool like InVID-WeVerify.",
+      "Caveat: no signal found doesn't mean a video is real — only that this check found nothing."
+    ],
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Chrome and Search still don't check video the way they check images.",
+        "text": "Google said in May 2026 that C2PA verification for video was coming to Search and Chrome \"in the coming months\" — if it's not there yet when you look, the Gemini app is still the one place SynthID checks video directly."
+      },
+      {
+        "label": "OpenAI's Sora API shuts down September 24, 2026.",
+        "text": "Any Sora-specific provenance question becomes moot once the API is gone — track which generator actually made a clip before applying a tool built for one system to a video another one made."
+      },
+      {
+        "label": "Every check here only ever confirms a tool's involvement, never a video's truth.",
+        "text": "A signed manifest or a SynthID hit tells you which generator was used — not whether the scene it shows is real. Keep those two questions separate out loud, especially in a scam or breaking-news context."
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "In April 2026, a video began circulating across Indian social media showing Finance Minister Nirmala Sitharaman personally endorsing an investment scheme that promised turning an initial ₹22,000 into ₹5.5 lakh within a week. She never said any of it. India's Press Information Bureau fact-checking unit debunked the clip within days, and an independent analysis from Hive Moderation put the odds it was AI-generated at 99.9% — but the claim had already reached however many people saw it and believed it before anyone ran a single check. Video is the modality where a convincing fake now costs almost nothing to produce and, unlike a still photo, carries a voice too, which is exactly why it deserves the same real-systems-first discipline [our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated) already applies to pictures — extended to what actually works, and doesn't yet, for something that moves.",
+        "citation_urls": [
+          "https://oecd.ai/en/incidents/2026-04-16-6971",
+          "https://gulfnews.com/world/asia/india/viral-ai-video-of-indias-fm-sitharaman-offering-huge-returns-is-fake-1.500510156",
+          "https://www.newschecker.in/fact-check/deepfake-video-of-nirmala-sitharaman-promoting-investment-project-shared-as-real"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two systems built for video — and the generator that just lost its provenance argument",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Two of the mechanisms already covering images now reach video too, though neither is finished rolling out. [C2PA](/dictionary) Content Credentials — the signed manifest naming which tool made a file — reads MP4 and MOV files directly at verify.contentauthenticity.org, and Google says Pixel 8, 9 and 10 phones are gaining video credentials of their own. [SynthID](/dictionary), Google's pixel-level watermark, already covers video inside the Gemini app; Google's own May 19, 2026 announcement said the wider Chrome and Search rollout for video specifically was still \"coming months\" out, so a browser right-click check that works instantly on a photo may not yet on a clip. The generator landscape shifted underneath all of this at the same time: [OpenAI](/company/openai) discontinued the Sora app in April 2026 and is retiring the Sora API on September 24, 2026 — after independent testing by researcher Ethan Le Sage in November 2025 found Sora's own C2PA metadata missing on downloads that kept their visible watermark, present only once a paid account removed it, the reverse of what a provenance system is supposed to guarantee. Most of what circulates today instead comes out of [Google](/company/google)'s Veo, Kuaishou's Kling, or MiniMax's Hailuo — three systems with three different track records on actually labeling their own output.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/",
+          "https://c2pa.org/",
+          "https://deepmind.google/models/synthid/",
+          "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+          "https://www.lesswrong.com/posts/kSvrmiyyN7CDyh3NN/openai-does-not-appear-to-be-applying-watermarks-honestly"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check a video in this order",
+          "sub": "Five to ten minutes, and you don't need to install anything but one free browser extension.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The video file itself — not a screen recording or a repost, if you can help it.",
+            "A browser."
+          ],
+          "steps": [
+            {
+              "do": "Get the original file, not a screen recording or a re-encoded repost.",
+              "detail": "Download the actual video file rather than working from a screen recording, a social-media repost, or a clip forwarded through a messaging app. Both C2PA metadata and, to a lesser extent, SynthID's watermark can be stripped or damaged by re-encoding.",
+              "verify": "You have a file you downloaded directly, with its original filename and extension intact.",
+              "ifnot": "If only a screen recording or repost exists, skip straight to the reverse-frame search below — the metadata check has nothing left to read."
+            },
+            {
+              "do": "Check for a Content Credentials manifest.",
+              "detail": "Open verify.contentauthenticity.org and drop the file in — it reads MP4 and MOV directly in your browser. If a manifest exists, it names the generating tool and shows what's been done to the file since.",
+              "verify": "The tool returns a manifest naming a specific application, or explicitly reports none was found.",
+              "ifnot": "No manifest doesn't mean the video is real — plenty of real footage and plenty of AI generators never attach one yet. Move to the next check."
+            },
+            {
+              "do": "Check for a SynthID watermark.",
+              "hi": true,
+              "detail": "Upload the file to the Gemini app and ask whether it was created or altered by Google AI — SynthID verification there covers video as well as images and audio.",
+              "verify": "You get a direct answer about a Google-family watermark, one way or the other.",
+              "ifnot": "SynthID only ever confirms Google's own generator, Veo — a Kling, Hailuo, or (while it lasted) Sora clip will never trigger it, watermarked or not."
+            },
+            {
+              "do": "Reverse-search the video's actual frames.",
+              "detail": "Run the clip through a free tool like InVID-WeVerify (weverify.eu/verification-plugin), a browser extension built for journalists that pulls the strongest keyframes and reverse-searches each one across Google, Bing, TinEye and Yandex at once.",
+              "verify": "You know whether this footage, or a close match, has a prior, dated appearance online.",
+              "ifnot": "No prior hit doesn't confirm the video is new or fake — it only means this particular search didn't find one."
+            },
+            {
+              "do": "State your confidence in the same terms the tools gave you.",
+              "detail": "\"A signed manifest names Google's Veo\" is a fact. \"No watermark, so it's probably real\" is a guess dressed as a finding.",
+              "verify": "Whatever you conclude, you can point to which specific check produced it.",
+              "ifnot": "If every check came back empty, the honest answer is \"unresolved,\" not \"real.\""
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Which of those five steps to start on depends on what you're actually holding — a link, a download, or a clip someone forwarded you.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHAT YOU HAVE",
+          "title": "Start where the evidence still exists",
+          "question": "Take the branch matching what you're actually holding.",
+          "branches": [
+            {
+              "when": "You have the original file, downloaded directly from where it was posted.",
+              "then": "Run the C2PA check first, then the SynthID check — both have real data to read.",
+              "because": "This is the only case where every check in the ladder still has something to work with.",
+              "hi": true
+            },
+            {
+              "when": "You only have a screen recording, a repost, or a clip forwarded through a messaging app.",
+              "then": "Skip straight to a reverse-frame search and treat any metadata check as unreliable.",
+              "because": "A screen recording never carried the original file's metadata to begin with, and most repost and forwarding pipelines strip or re-encode it too."
+            },
+            {
+              "when": "You know which specific generator made it — a Veo, Sora, or Grok output someone showed you directly.",
+              "then": "Go straight to that tool's own check: the Gemini app for a Veo clip's SynthID, verify.contentauthenticity.org for a C2PA manifest.",
+              "because": "Skipping to the one system that actually applies saves the other steps — though Sora's own C2PA embedding has been shown unreliable even when the company said it was present."
+            },
+            {
+              "when": "Every check comes back empty and you still need an answer.",
+              "then": "Say so plainly: unresolved, not confirmed real.",
+              "because": "None of these systems certify authenticity — they only ever confirm a specific tool's own involvement when one of them finds a match.",
+              "warn": "A confident-sounding conclusion built on an absence of evidence is the exact failure mode this whole check exists to prevent."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The three checks, side by side",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "WHICH SIGNAL, WHAT IT'S WORTH",
+          "title": "C2PA, SynthID, and reverse-frame search answer different questions",
+          "columns": [
+            {
+              "label": "C2PA / Content Credentials",
+              "sub": "signed file metadata"
+            },
+            {
+              "label": "SynthID",
+              "sub": "pixel-level watermark",
+              "hi": true
+            },
+            {
+              "label": "Reverse-frame search",
+              "sub": "prior-publication check"
+            }
+          ],
+          "rows": [
+            {
+              "label": "What it actually checks",
+              "values": [
+                "A manifest embedded in the file, naming the tool and edit history",
+                "A statistical pattern embedded in the video's pixels at creation",
+                "Whether keyframes from this exact clip have a prior, dated appearance online"
+              ]
+            },
+            {
+              "label": "Survives a repost or re-encode",
+              "values": [
+                "No — most social platforms strip it on upload",
+                "Often, by design — built to survive cropping and recompression",
+                "Not applicable — works from the pixels, not a file's history"
+              ]
+            },
+            {
+              "label": "Where to check it",
+              "values": [
+                "verify.contentauthenticity.org",
+                "The Gemini app",
+                "InVID-WeVerify (weverify.eu)"
+              ]
+            },
+            {
+              "label": "What a clean result actually proves",
+              "values": [
+                "That specific tool was involved, if the manifest is present and unaltered",
+                "That Google's Veo was involved, if a match is found",
+                "That this footage, or a close match, existed before now"
+              ]
+            }
+          ],
+          "source": "Content Authenticity Initiative (verify.contentauthenticity.org); Google DeepMind SynthID documentation; WeVerify project (weverify.eu) — all read directly, current as of August 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of these three replace judgment — they narrow it, and video is the modality where judgment alone fails the most. A 2025 industry-commissioned study of 2,000 UK and US consumers, run by the identity-verification firm iProov, found just 0.1% of participants correctly identified every synthetic clip and image they were shown — even though they'd been told going in that some of it was fake. That's the actual argument for running the real checks in order instead of trusting a gut read on blinking, hands, or lip-sync, all of which today's better generators have already been trained against.",
+        "citation_urls": [
+          "https://www.businesswire.com/news/home/20250211131029/en/iProov-Study-Reveals-Deepfake-Blindspot-Only-0.1-of-People-Can-Accurately-Detect-AI-Generated-Deepfakes",
+          "https://www.biometricupdate.com/202502/only-0-1-of-people-can-tell-a-deepfake-says-iproov"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where this check breaks",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Five ways this check gets called done when it isn't",
+          "items": [
+            {
+              "mistake": "Running the check on a repost or screen recording instead of the original file.",
+              "looks": "The C2PA check reports no manifest found, and that gets read as \"so it's real.\"",
+              "why": "A repost or screen recording never carried the manifest in the first place — the platform's own re-encoding strips it before you ever see the video.",
+              "fix": "Track down the original upload or source post before concluding anything from a metadata check.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating a clean SynthID result as proof a video is untouched.",
+              "looks": "No watermark found, so the clip gets forwarded as verified.",
+              "why": "SynthID only ever confirms Google's own generator, Veo — a Kling, Hailuo, or Sora clip will never trigger it, watermarked or not.",
+              "fix": "Name which specific generator's watermark you checked for, not \"AI\" in general.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Trusting a visible logo, or its absence, as the actual check.",
+              "looks": "No on-screen watermark is visible, so the clip is assumed to be genuine footage.",
+              "why": "A visible mark is cosmetic and openly defeated — a small industry of paid tools exists to erase Sora's old cloud logo frame by frame, and a clean removal says nothing about the invisible C2PA or SynthID layer underneath, which most of those tools never touch.",
+              "fix": "A missing visible watermark is not a finding on its own — go back to the C2PA and SynthID checks.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming eyeballing blinking, hands, or lip-sync settles it.",
+              "looks": "\"The hands looked fine and the lips matched, so it's real.\"",
+              "why": "Those tells are exactly what newer generators have been trained to fix, which is why controlled testing keeps finding people barely better than a coin flip at spotting the best current fakes.",
+              "fix": "Treat a physical-tell hunch as a reason to run the real checks, never as the check itself.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Giving up after one check comes back empty.",
+              "looks": "No manifest, so the SynthID check and reverse-frame search never happen.",
+              "why": "Each method only covers part of the field — a gap in one says nothing about the others.",
+              "fix": "Work the full ladder before declaring a video unresolved, not just clean or fake.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes spotting an AI video effortless — it makes it checkable, which is the more honest goal. This is the fourth of a kind, after [our guide to checking whether an image is AI-generated](/article/check-whether-an-image-is-ai-generated), [our guide to checking whether text was written by AI](/article/check-whether-text-is-ai-written), and [our guide to checking whether a phone call is AI-cloned](/article/check-whether-a-voice-is-ai-cloned) — and it's also the one where the underlying industry moved fastest while this series was being written: Sora is gone, and whatever comes next from OpenAI will have to earn back the provenance trust its predecessor didn't keep. For claims rather than authorship, [our guide to catching an AI assistant when it's making things up](/article/catch-an-ai-making-things-up) is the one to reach for, and [the dictionary](/dictionary) has short entries for the terms used here — manifest, watermark, provenance — if any of it needs unpacking further. The same underlying harm aimed at a different target is what forced [San Francisco's order pulling nudify apps from Apple's and Google's app stores](/article/san-francisco-orders-apple-google-remove-nudify-apps).",
+        "citation_urls": []
+      }
+    ],
+    "sources": [
+      {
+        "label": "C2PA — coalition overview and steering committee",
+        "url": "https://c2pa.org/",
+        "primary": true
+      },
+      {
+        "label": "Content Authenticity Initiative — Content Credentials verifier",
+        "url": "https://verify.contentauthenticity.org/",
+        "primary": true
+      },
+      {
+        "label": "Google DeepMind — SynthID",
+        "url": "https://deepmind.google/models/synthid/",
+        "primary": true
+      },
+      {
+        "label": "Google — \"Making it easier to understand how content was created and edited\"",
+        "url": "https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/",
+        "primary": true
+      },
+      {
+        "label": "WeVerify project — InVID-WeVerify verification plugin",
+        "url": "https://weverify.eu/verification-plugin/",
+        "primary": true
+      },
+      {
+        "label": "OpenAI Help Center — \"What to know about the Sora discontinuation\"",
+        "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+        "primary": true
+      },
+      {
+        "label": "Ethan Le Sage (LessWrong) — \"OpenAI Does Not Appear to be Applying Watermarks Honestly\"",
+        "url": "https://www.lesswrong.com/posts/kSvrmiyyN7CDyh3NN/openai-does-not-appear-to-be-applying-watermarks-honestly"
+      },
+      {
+        "label": "OECD.AI Incidents Monitor — deepfake video of India's Finance Minister",
+        "url": "https://oecd.ai/en/incidents/2026-04-16-6971",
+        "primary": true
+      },
+      {
+        "label": "Gulf News — \"Viral AI video of India's FM Sitharaman offering huge returns is fake\"",
+        "url": "https://gulfnews.com/world/asia/india/viral-ai-video-of-indias-fm-sitharaman-offering-huge-returns-is-fake-1.500510156"
+      },
+      {
+        "label": "Newschecker — \"Deepfake video of Nirmala Sitharaman promoting investment project shared as real\"",
+        "url": "https://www.newschecker.in/fact-check/deepfake-video-of-nirmala-sitharaman-promoting-investment-project-shared-as-real"
+      },
+      {
+        "label": "Business Wire — \"iProov Study Reveals Deepfake Blindspot: Only 0.1% of People Can Accurately Detect AI-Generated Deepfakes\"",
+        "url": "https://www.businesswire.com/news/home/20250211131029/en/iProov-Study-Reveals-Deepfake-Blindspot-Only-0.1-of-People-Can-Accurately-Detect-AI-Generated-Deepfakes"
+      },
+      {
+        "label": "Biometric Update — \"Only 0.1% of people can tell a deepfake, says iProov\"",
+        "url": "https://www.biometricupdate.com/202502/only-0-1-of-people-can-tell-a-deepfake-says-iproov"
+      }
     ],
     "corrections": []
   }

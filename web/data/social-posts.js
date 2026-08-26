@@ -6687,5 +6687,86 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-26T16:36:05Z"
       }
     ]
+  },
+  {
+    "article_id": "g17",
+    "ts": "2026-08-26T16:51:15Z",
+    "export": {
+      "article_id": "g17",
+      "url": "https://rtfclmgzn.com/article/check-whether-a-video-is-ai-generated",
+      "headline": "How to check whether a video is AI-generated",
+      "hook": "A deepfake video of India's finance minister promising huge investment returns spread before anyone checked it -- here's what actually verifies a video today, and what a missing watermark never proves.",
+      "key_facts": [
+        "A deepfake video of India's Finance Minister was confirmed fake by PIB Fact Check; Hive Moderation put the odds it was AI-generated at 99.9%.",
+        "Google's SynthID watermark now checks video inside the Gemini app; Chrome/Search video checks are still rolling out.",
+        "OpenAI's Sora is being retired -- API shutting down Sept. 24, 2026 -- after testing found its own C2PA metadata missing on watermarked downloads."
+      ],
+      "tone": "energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g17.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A deepfake video of India's finance minister promising huge investment returns spread before anyone checked it. C2PA and SynthID now both reach video -- here's the order to check them in, and what a missing watermark never proves.",
+        "reply_copy": "The four-step check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Deepfake"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A fake video of India's finance minister endorsing an investment scheme spread before anyone checked it -- and it was 99.9% likely AI-generated.\n\nVideo verification just got real: C2PA and SynthID both now reach video, not just photos. Here's the order to check them in, and why a missing watermark never proves a clip is real. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Deepfake",
+          "#FactCheck",
+          "#SynthID",
+          "#TechNews",
+          "#MediaLiteracy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A video showing India's finance minister promising huge investment returns went viral before anyone checked it -- it was AI-generated, confirmed fake by government fact-checkers.\n\nVideo verification tools have caught up to photos: Google's SynthID watermark and C2PA content credentials both now reach video. We walk through the order to check them in, plus what OpenAI's own Sora watermark got wrong even when the company said it was working.",
+        "hashtags": [
+          "#AI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A deepfake video of India's finance minister promising huge investment returns spread before anyone fact-checked it. C2PA and SynthID both now reach video, not just photos -- here's the actual order to check a clip in, and why a missing watermark never proves it's real.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A deepfake video of India's FM promising huge returns spread before anyone checked it. C2PA + SynthID now both reach video, not just photos. The order to check them in, and what a missing watermark never proves:",
+        "hashtags": [
+          "#AI",
+          "#Deepfake",
+          "#FactCheck"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

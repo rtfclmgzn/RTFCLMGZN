@@ -1823,7 +1823,12 @@
    ],
    "text_space": "ceiling band top-right",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "g17",
+     "used_at": "2026-08-26"
+    }
+   ]
   },
   {
    "id": "art-066-robotic-surgery-theater",
