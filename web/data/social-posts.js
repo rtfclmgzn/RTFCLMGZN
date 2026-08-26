@@ -6524,8 +6524,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092711831835967730",
+        "remote_id": "2092711831835967730",
+        "posted_at": "2026-08-26T20:32:36Z"
       },
       {
         "platform": "instagram",
@@ -6614,8 +6616,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Google",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092712840972906557",
+        "remote_id": "2092712840972906557",
+        "posted_at": "2026-08-26T20:36:37Z"
       },
       {
         "platform": "x",
