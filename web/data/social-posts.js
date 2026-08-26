@@ -6,7 +6,7 @@
 //
 // status: "ready" (staged, dry-run) | "posted" (live) | "failed"
 // image.status: "none" | "ready" (prompt only) | "generated"
-window.RTFC_SOCIAL_POSTS =[
+window.RTFC_SOCIAL_POSTS = [
   {
     "article_id": "live-014",
     "ts": "2026-07-13T08:10:00Z",
@@ -6366,5 +6366,315 @@ window.RTFC_SOCIAL_POSTS =[
         "posted_at": "2026-08-25T11:06:28Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
+    "ts": "2026-08-26T10:57:04Z",
+    "export": {
+      "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
+      "url": "https://rtfclmgzn.com/article/ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
+      "headline": "Nvidia, OpenAI and three funded chip startups all pitched the same metric this week: watts, not speed",
+      "hook": "Nvidia, OpenAI/Broadcom, and Groq's own former chip all led this week's hardware news with performance-per-watt, not speed -- and none of their efficiency claims share the same baseline.",
+      "key_facts": [
+        "Vera Rubin NVL72 claims up to 30x more throughput per megawatt vs. GB300 -- still pending outside review.",
+        "Jalapeno claims 1.5x-1.9x more AI work per watt vs. Blackwell, measured on a public third-party benchmark.",
+        "Three inference-chip startups raised $1.5B+ in 2026 on the same efficiency pitch."
+      ],
+      "tone": "technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nvidia, OpenAI/Broadcom and Groq's own former chip all led this week's hardware news with one number: performance per watt.\n\nProblem: their claims don't share a baseline. 30x, 1.9x and 3x are three different questions, not one answer three ways.",
+        "reply_copy": "The baseline problem, and why it's not just marketing:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AIChips"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-26T15:57:04Z",
+        "copy": "Microsoft's CEO, months before this week's chip announcements: \"You may actually have a bunch of chips sitting in inventory that I can't plug in. In fact, that is my problem today.\"\n\nA 30x-more-efficient chip still needs the megawatt -- a 4-5 year wait.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nvidia, OpenAI, and three funded chip startups all pitched the same number this week: watts, not speed.\n\nOn Aug 24-25 alone: Nvidia's Vera Rubin NVL72 claimed up to 30x more throughput per megawatt. OpenAI and Broadcom's Jalapeno claimed 1.5x-1.9x more AI work per watt, benchmarked publicly. Three startups -- OLIX, Positron, SambaNova -- raised $1.5B+ in 2026 on the same pitch.\n\nProblem: none of these numbers share a baseline, and Microsoft's own CEO says the real bottleneck isn't chip efficiency at all -- it's a 4-to-5-year wait for grid power.\n\nWhat each claim actually measures, and what a faster chip still can't fix -- link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#OpenAI",
+          "#AIChips",
+          "#DataCenters",
+          "#Semiconductors",
+          "#AI",
+          "#TechNews",
+          "#PowerGrid"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Three separate hardware announcements this week -- Nvidia's Vera Rubin NVL72, its newly-shipping Groq 3 LPX, and OpenAI/Broadcom's Jalapeno chip -- all led with performance-per-watt instead of raw speed. The same week, three inference-chip startups (OLIX, Positron, SambaNova) raised a combined $1.5 billion-plus pitching the same efficiency story. The gains are real in places, but the claimed multiples -- 30x, 1.9x, 3x -- are measured against three different baseline chips, which makes them harder to compare than the headlines suggest. And per Microsoft's own CEO, the actual bottleneck the industry is racing against isn't chip efficiency at all: it's a grid-power queue now running four to five years.",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nvidia, OpenAI/Broadcom and three funded startups all pitched the same number this week: watts, not speed. The claimed multiples -- 30x, 1.9x, 3x -- are measured against three different baseline chips, so they're not actually comparable. And the real bottleneck, per Microsoft's own CEO, isn't chip efficiency -- it's a 4-5 year wait for grid power.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-26T15:57:04Z",
+        "copy": "Worth knowing: SemiAnalysis, the firm behind both benchmarks Nvidia and OpenAI cited this week, is a semiconductor analysis outfit vendors love citing precisely because it isn't the vendor -- but it's not a neutral academic lab either. \"Pending SemiAnalysis review\" is a real checkpoint, not a rubber stamp, but it's one firm's methodology, not a chorus of independent labs.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia, OpenAI/Broadcom and 3 startups all pitched one number this week: watts, not speed. Vera Rubin claims 30x/MW; Jalapeno claims 1.9x/watt, publicly benchmarked. Real bottleneck per Microsoft's CEO: a 4-5yr grid-power wait.",
+        "hashtags": [
+          "#AI",
+          "#Nvidia",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-skild-ai-s1-robot-foundation-model-one-video-in-context-learning",
+    "ts": "2026-08-26T10:57:04Z",
+    "export": {
+      "article_id": "newsroom-skild-ai-s1-robot-foundation-model-one-video-in-context-learning",
+      "url": "https://rtfclmgzn.com/article/skild-ai-s1-robot-foundation-model-one-video-in-context-learning",
+      "headline": "Skild AI says one video is now enough to teach a robot a 10-minute task -- in a benchmark the company designed and ran itself",
+      "hook": "Skild AI says its new robot model needs one video, not thousands of training hours, to learn a task -- and the only lab that's tested the claim is the one that built it.",
+      "key_facts": [
+        "S1 reports 66% success on unseen 10-minute tasks from a single video demo, per Skild's own blog post.",
+        "That's against a 9% baseline for language-instruction robots, also built and tested by Skild.",
+        "Skild raised $1.4B at a $14B valuation in January -- 7 months before this week's numbers, not concurrent with them."
+      ],
+      "tone": "curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-skild-ai-s1-robot-foundation-model-one-video-in-context-learning.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Skild AI says one video is now enough to teach a robot a 10-minute task. 66% success, vs 9% for the old language-instruction approach.\n\nThe catch: every number comes from Skild's own blog post. No outside lab has run the test yet.",
+        "reply_copy": "The full story, including what's verified and what isn't:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-26T15:57:04Z",
+        "copy": "Skild's valuation tripled to $14B+ in 7 months. Reported revenue: ~$30M, within \"months\" of 2025 -- Skild's own figure, unaudited.\n\nThe funding history is well-sourced. S1's 66% success rate isn't the same kind of fact -- it's the company grading its own homework.",
+        "reply_copy": "What's confirmed vs unverified:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Skild AI says one video is now enough to teach a robot a 10-minute task -- no fine-tuning required.\n\nThe new S1 model reports 66% success on tasks it's never seen, using a single human video demo, vs just 9% for the older language-instruction approach it was compared against.\n\nHere's the catch: every one of those numbers comes from Skild's own blog post. No outside lab, customer, or competitor has independently run the test. And the company's last outside-verified milestone -- a $1.4B raise at a $14B valuation -- happened 7 months ago, not this week.\n\nWhat Skild's numbers do and don't tell you -- link in bio.",
+        "hashtags": [
+          "#Robotics",
+          "#AI",
+          "#Skild",
+          "#RobotLearning",
+          "#TechNews",
+          "#Startups"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Skild AI introduced a new robot foundation model this week, S1, that it says needs only a single video demonstration -- not the thousands of hours of task-specific training most systems require -- to learn a new task with no fine-tuning. The headline number: 66% success on tasks the model has never seen, compared with 9% for a language-instruction baseline Skild also built. Every figure describing what S1 can do comes from Skild's own blog post; no outside lab has run the benchmark. The company's last independently verified milestone was a $1.4 billion funding round at a $14 billion valuation in January -- seven months before this week's claims, not alongside them.",
+        "hashtags": [
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Skild AI says one video is now enough to teach a robot a 10-minute task -- 66% success on unseen tasks, per the company's own testing. No outside lab has verified it yet, and the $14B valuation everyone's citing is from a January round, 7 months before this week's numbers.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-26T15:57:04Z",
+        "copy": "Worth knowing: Nvidia is both an investor in Skild (via NVentures) and its technology partner (Isaac Lab, Cosmos Transfer) -- which means Nvidia is on both sides of any claim about how well Skild's software actually runs.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Skild AI says one video now teaches a robot a 10-min task: 66% success on unseen tasks vs 9% for the old approach. Every number is Skild's own -- no outside lab has run it. The $14B valuation people cite is from January, not this week.",
+        "hashtags": [
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
+    "ts": "2026-08-26T10:57:04Z",
+    "export": {
+      "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
+      "url": "https://rtfclmgzn.com/article/french-newspapers-google-ai-overviews-antitrust-complaint",
+      "headline": "Nearly 300 French newspapers accuse Google of breaking a legally binding pay-for-news pledge, this time over AI Overviews",
+      "hook": "Nearly 300 French newspapers just accused Google of breaking a legally binding pledge -- for the third time in five years, over the same underlying dispute.",
+      "key_facts": [
+        "APIG, representing ~300 French dailies, filed the complaint Aug. 11 over Google's July 22 AI Overviews launch.",
+        "France's regulator Arcom estimates AI summaries have cut publisher traffic by 33%-38%.",
+        "France has fined Google twice before over this exact dispute: EUR500M (2021), EUR250M (2024)."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-french-newspapers-google-ai-overviews-antitrust-complaint.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nearly 300 French newspapers filed an antitrust complaint against Google on Aug 11 -- alleging it launched AI Overviews without the negotiation its 2022 pledge requires.\n\nFrance has fined Google twice already over this same dispute: 500M euros in 2021, 250M in 2024.",
+        "reply_copy": "The full timeline and Google's response:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Google",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-26T15:57:04Z",
+        "copy": "Google's defense: publishers can now opt out of AI Overviews without losing regular Search visibility -- a real toggle since June 2026.\n\nAPIG's actual complaint is narrower: no negotiation preceded the July 22 France launch at all. The toggle doesn't answer that.",
+        "reply_copy": "Two separate EU cases explained:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Google",
+          "#EU"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nearly 300 French newspapers just accused Google of breaking a legally binding pledge -- for the third time in five years, over the same underlying dispute.\n\nAPIG filed the complaint Aug 11, alleging Google launched AI Overviews and AI Mode in France on July 22 without the separate negotiation its own 2022 commitments require. France's regulator Arcom estimates AI summaries have already cut publisher traffic by 33-38%.\n\nGoogle says it already pays and that publishers can opt out. France has fined Google twice before over this same fight -- 500M euros in 2021, 250M in 2024.\n\nWhat's actually new here, and what both proceedings against Google cover -- link in bio.",
+        "hashtags": [
+          "#Google",
+          "#AI",
+          "#Antitrust",
+          "#Journalism",
+          "#EU",
+          "#TechPolicy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nearly 300 French daily newspapers filed a complaint with France's competition authority on Aug. 11, accusing Google of violating a legally binding commitment to negotiate separately with publishers before launching new AI search features. The complaint centers on Google's July 22 rollout of AI Overviews and AI Mode in France, which APIG says breached commitments Google made legally binding in 2022 -- the same commitments that have already produced two fines against Google, totaling 750 million euros in 2021 and 2024. Google disputes the framing, saying it has reassessed its payment system and that publishers can opt out. A separate, EU-wide European Commission investigation into the same underlying conduct has been running since December 2025.",
+        "hashtags": [
+          "#Google",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nearly 300 French newspapers just accused Google of breaking a legally binding pledge over AI Overviews -- the third time in five years France has gone after Google over this same underlying 'neighbouring rights' dispute. Two prior fines: 500M euros (2021), 250M euros (2024).",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-26T15:57:04Z",
+        "copy": "Worth separating: France's national complaint and the EU Commission's investigation (opened Dec 2025, all 27 member states) are two different cases under two different legal theories. A ruling in one doesn't automatically produce a ruling in the other.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nearly 300 French papers accuse Google of breaking a pledge over AI Overviews -- 3rd time in 5yrs, same dispute. Prior fines: 500M euros (2021), 250M (2024). Google says it pays, publishers can opt out; APIG says no talks preceded launch.",
+        "hashtags": [
+          "#Google",
+          "#EU"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
-];
+]
+;

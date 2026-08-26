@@ -1155,6 +1155,11 @@
     {
      "article_id": "newsroom-china-agent-authorization-rules",
      "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
+     "used_at": "2026-08-26",
+     "exception": true
     }
    ]
   },
@@ -1183,6 +1188,11 @@
     {
      "article_id": "newsroom-ai-data-center-electricity-ratepayer-fight-2026",
      "used_at": "2026-08-10"
+    },
+    {
+     "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
+     "used_at": "2026-08-26",
+     "exception": true
     }
    ]
   },
@@ -1513,7 +1523,12 @@
    ],
    "text_space": "gray wall left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-skild-ai-s1-robot-foundation-model-one-video-in-context-learning",
+     "used_at": "2026-08-26"
+    }
+   ]
   },
   {
    "id": "art-055-night-lab-liquid-handling",
