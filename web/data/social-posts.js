@@ -6398,7 +6398,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIChips"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -6467,8 +6469,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtyh4absjl2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtyh4absjl2a",
+        "posted_at": "2026-08-26T13:33:39Z"
       }
     ]
   },
@@ -6502,8 +6506,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092606423498953149",
+        "remote_id": "2092606423498953149",
+        "posted_at": "2026-08-26T13:33:45Z"
       },
       {
         "platform": "x",
@@ -6569,8 +6575,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mtyhdh3jer2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mtyhdh3jer2q",
+        "posted_at": "2026-08-26T13:37:42Z"
       }
     ]
   },
@@ -6676,5 +6684,4 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
-]
-;
+];
