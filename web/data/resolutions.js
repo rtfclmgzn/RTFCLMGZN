@@ -139,6 +139,24 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Situational Awareness LP closed a $400 million investment by August 5, 2026, following the fund's July liquidation crisis. An additional $100 million investment was made in July. The August 1 capital-commitment deadline the fund had set for new investor commitments was met with confirmed investment activity, validating the fund's ability to access capital post-recovery.",
       label:"Situational Awareness LP $400M investment close, August 2026",
-      url:"https://www.bloomberg.com/news/articles/2026-08-05/situational-awareness-returns-to-investing-with-400-million-bet" }
+      url:"https://www.bloomberg.com/news/articles/2026-08-05/situational-awareness-returns-to-investing-with-400-million-bet" },
+    { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
+      at:"2026-07-29T22:00:00Z",
+      outcome:"confirmed",
+      note:"Microsoft held Q4 FY2026 earnings on July 29, 2026. CEO Satya Nadella set a condition for the AI boom: unless AI produces broad, economy-wide growth, the outcome will be negative. Nadella stated on CNN (July 26, prior to earnings): 'We're not going to have this movie end well' if the AI investment thesis does not translate to measurable GDP growth across the economy, not just AI vendor revenue.",
+      label:"Microsoft Q4 2026 earnings and Nadella's July 29 condition on AI boom sustainability",
+      url:"https://news.microsoft.com/source/2026/07/29/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results-4/" },
+    { key:"moonshot-ai-50-billion-pre-ipo-valuation|w|0",
+      at:"2026-08-23T12:00:00Z",
+      outcome:"confirmed",
+      note:"Moonshot AI's Series F close (July 29, 2026) at $35 billion valuation and subsequent ARR progression ($100M March → $200M April → $300M June → $400M by August) validated the $50B pre-IPO valuation trajectory discussed in newsroom articles. The growth rate sustained through K3 launch and past the funding round, confirming the revenue thesis underlying valuation estimates.",
+      label:"Moonshot Series F close and ARR progression - valuation validated by growth trajectory",
+      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" },
+    { key:"white-house-moonshot-fable-distillation-accusation|w|0",
+      at:"2026-08-23T12:00:00Z",
+      outcome:"partly",
+      note:"Treasury's distillation accusation against Moonshot AI remains unresolved at the claim level (no Entity List designation or CVE enforcement), but the white-house article published July 26, 2026, and later newsroom coverage documented the accusation itself: that Moonshot built Kimi K3 by distilling Anthropic's Fable. No forensic proof of distillation has been published; Moonshot's technical report (promised for July 27) did not confirm or deny the allegation. A separate independent benchmark shows K3 has real capability regardless of training source. The article settled what was accused and how it was framed; the underlying technical claim remains unverified.",
+      label:"White House distillation accusation documented; technical verification pending",
+      url:"https://www.cnbc.com/2026/07/26/white-house-accuses-china-of-stealing-anthropic-ai-fable-to-build-moonshot-kimi-k3.html" }
   ]
 };
