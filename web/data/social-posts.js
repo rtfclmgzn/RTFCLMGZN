@@ -6207,9 +6207,9 @@ window.RTFC_SOCIAL_POSTS =[
           "#AI",
           "#Judiciary"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -6256,8 +6256,10 @@ window.RTFC_SOCIAL_POSTS =[
         "variant": "second-wave",
         "not_before": "2026-08-25T15:54:39Z",
         "copy": "Worth knowing: this ruling only closes a federal civil-damages suit. It doesn't clear the underlying allegation, and it doesn't stop a state judicial-conduct commission from investigating the same claim through a different channel with a lower bar.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcfUitQjpnM",
+        "remote_id": "17953474689233306",
+        "posted_at": "2026-08-26T04:09:54Z"
       },
       {
         "platform": "bluesky",
