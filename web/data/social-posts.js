@@ -6446,14 +6446,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122115775875396947",
+        "remote_id": "1238977099292018_122115775875396947",
+        "posted_at": "2026-08-27T01:02:02Z"
       },
       {
         "platform": "threads",
         "copy": "Nvidia, OpenAI/Broadcom and three funded startups all pitched the same number this week: watts, not speed. The claimed multiples -- 30x, 1.9x, 3x -- are measured against three different baseline chips, so they're not actually comparable. And the real bottleneck, per Microsoft's own CEO, isn't chip efficiency -- it's a 4-5 year wait for grid power.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dchj4tGkWor",
+        "remote_id": "18113433683051126",
+        "posted_at": "2026-08-27T01:02:25Z"
       },
       {
         "platform": "threads",
@@ -6632,8 +6636,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Google",
           "#EU"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092779755418652904",
+        "remote_id": "2092779755418652904",
+        "posted_at": "2026-08-27T01:02:30Z"
       },
       {
         "platform": "instagram",
@@ -6743,8 +6749,10 @@ window.RTFC_SOCIAL_POSTS = [
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DchjWdXj-cT/",
+        "remote_id": "18616296667037590",
+        "posted_at": "2026-08-27T00:57:47Z"
       },
       {
         "platform": "facebook",
@@ -6753,14 +6761,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122115775419396947",
+        "remote_id": "1238977099292018_122115775419396947",
+        "posted_at": "2026-08-27T00:57:58Z"
       },
       {
         "platform": "threads",
         "copy": "A deepfake video of India's finance minister promising huge investment returns spread before anyone fact-checked it. C2PA and SynthID both now reach video, not just photos -- here's the actual order to check a clip in, and why a missing watermark never proves it's real.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DchjaFTkSxq",
+        "remote_id": "18128256208709208",
+        "posted_at": "2026-08-27T00:58:14Z"
       },
       {
         "platform": "bluesky",
