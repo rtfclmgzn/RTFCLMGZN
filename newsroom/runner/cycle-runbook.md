@@ -409,6 +409,24 @@ this order, and mark it done here.
    sentence where they previously had zero; a dedicated treatment (its own
    spread) is still open, as are agents and jobs.
 
+   PARTIAL, continued (2026-08-27 later cycle) — worked a narrow slice of the
+   "jobs (~40 words today)" sub-item. Found the two files had already drifted
+   on this exact paragraph (the "honest-limits" page's closing "bigger
+   questions" list): `functions/api/issue/_data/primer.json` already carried
+   a fuller jobs clause ("the answer so far looks like transformation more
+   than disappearance, but nobody serious claims certainty") that
+   `web/data/primer-issue.js`'s version of the same paragraph lacked. Ported
+   that existing, already-fact-checked framing into `primer-issue.js`'s
+   version rather than inventing new claims -- reconciling drift the
+   2026-08-18 living-notes entry already flagged as a future-pass item, in
+   the one paragraph this sub-item touches. `primer.json` itself was not
+   edited (it already had the fuller text). Verified `node --check
+   web/data/primer-issue.js` and `python3 -c "import json;
+   json.load(open('functions/api/issue/_data/primer.json'))"` both pass. No
+   page/contents impact -- same existing paragraph, no new spread. Agents
+   remains fully open (~70 words), and a dedicated deepfakes/jobs spread is
+   still the larger open item.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
