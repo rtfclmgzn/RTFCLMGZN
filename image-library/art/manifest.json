@@ -35,6 +35,11 @@
     {
      "article_id": "newsroom-claude-cowork-sandbox-escape",
      "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
+     "used_at": "2026-08-27",
+     "exception": true
     }
    ]
   },
@@ -390,6 +395,11 @@
     {
      "article_id": "newsroom-ai-layoffs-data-contested",
      "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
+     "used_at": "2026-08-27",
+     "exception": true
     }
    ]
   },

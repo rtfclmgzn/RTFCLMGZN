@@ -395,7 +395,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
     },
     "body": [
       "A snapshot of mid-2026 — not sci-fi, just shipping capability. They **write** at professional level and explain anything with infinite patience. They **see**: photograph a plant rash, a dashboard light, a confusing bill, and ask. They **listen and speak** well enough to interpret a live conversation. And they **act**: given tools, agents research across dozens of sources or complete multi-step tasks while you do something else.",
-      "The boundary matters just as much. They still ==confidently make things up==. They don't truly remember you between conversations unless built to. And nobody — including their makers — can fully explain any single answer.",
+      "The boundary matters just as much. They still ==confidently make things up==. The same generation ability cuts the other way, too: tools convincing enough to write in your voice or draw your face are exactly convincing enough to fake someone else's — a **deepfake** video or cloned voice is now a phone-camera-quality problem, not a Hollywood one. They don't truly remember you between conversations unless built to. And nobody — including their makers — can fully explain any single answer.",
       "Powerful and flawed, both at once. Now: what is the industry actually betting on?"
     ]
   },

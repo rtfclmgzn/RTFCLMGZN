@@ -6788,5 +6788,201 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-26T17:06:59Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
+    "ts": "2026-08-27T03:10:35Z",
+    "export": {
+      "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
+      "url": "https://rtfclmgzn.com/article/amazon-mechanical-turk-shutdown-ai-training-labor",
+      "headline": "Amazon is closing Mechanical Turk on September 30, ending the crowdsourced-labor marketplace that helped train the machine-learning era",
+      "hook": "Amazon is closing Mechanical Turk on Sept. 30 -- ending the 21-year-old marketplace that helped train the machine-learning era, with no severance for the workers who built it.",
+      "key_facts": [
+        "Amazon confirmed Aug. 25 that Mechanical Turk permanently closes Sept. 30, 2026, after 21 years.",
+        "A 2023 study found up to 46% of workers were using AI to do the human-judgment tasks they were paid for.",
+        "Amazon's own shutdown announcement offers no transition plan or severance for its workers."
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-amazon-mechanical-turk-shutdown-ai-training-labor.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Amazon is closing Mechanical Turk on Sept. 30 -- ending the 21-year-old \"artificial artificial intelligence\" marketplace that helped train the machine-learning era. No severance, no transition plan, just 35 days' notice for the workers who built it.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-27T08:10:35Z",
+        "copy": "“There's some people that still pretty much still do it full time. They're concerned now.” Krista Pawloski has done Mechanical Turk work since 2008. Amazon's shutdown notice doesn't mention workers like her once.",
+        "reply_copy": "Her story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Amazon confirmed it's permanently closing Mechanical Turk on September 30 -- the 21-year-old \"artificial artificial intelligence\" marketplace Jeff Bezos launched in 2005.\n\nThe trigger: a 2023 study found up to 46% of workers were quietly using AI to do the human-judgment tasks they were being paid for.\n\nAmazon's own announcement doesn't mention workers once. No severance, no transition plan -- just 35 days' notice.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#GigWork",
+          "#MechanicalTurk",
+          "#Labor",
+          "#TechNews",
+          "#AIEthics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Amazon confirmed this week that Mechanical Turk -- the crowdsourced-labor marketplace it launched in 2005 as \"artificial artificial intelligence\" -- closes for good on September 30. The proximate cause: a 2023 study found up to 46% of workers were using AI to complete the very tasks meant to test human judgment. Amazon's own shutdown notice doesn't mention its workers once -- no severance, no transition plan.",
+        "hashtags": [
+          "#AI",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Amazon is closing Mechanical Turk on Sept. 30, ending 21 years of the marketplace that quietly trained the machine-learning era. The trigger: up to 46% of workers were using AI to do the human-judgment tasks they were paid for. Amazon's shutdown notice doesn't mention workers once -- no severance, no transition plan, just 35 days' notice.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-27T08:10:35Z",
+        "copy": "The workers Mechanical Turk is losing spent two decades labeling images and rating outputs that trained the AI systems now capable enough to replace them -- cheaply enough that even the workers started using those systems themselves.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Amazon is closing Mechanical Turk on Sept. 30 after 21 years. Up to 46% of workers reportedly used AI to do the tasks they were paid to test human judgment on. No severance, no transition plan -- just 35 days' notice.",
+        "hashtags": [
+          "#AI",
+          "#Labor",
+          "#GigWork"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
+    "ts": "2026-08-27T03:10:35Z",
+    "export": {
+      "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
+      "url": "https://rtfclmgzn.com/article/anthropic-30-trillion-tam-ipo-pitch",
+      "headline": "Anthropic will reportedly pitch IPO investors a $30 trillion addressable market -- bigger than SpaceX's, and about the size of the entire US economy",
+      "hook": "Anthropic will reportedly pitch IPO investors a $30 trillion addressable market -- bigger than SpaceX's, and about the size of the entire US economy. Its own 2028 revenue target implies capturing well under 1% of it.",
+      "key_facts": [
+        "The Wall Street Journal reports Anthropic's TAM pitch tops SpaceX's $28.5 trillion pre-IPO claim.",
+        "Anthropic's Q2 2026 revenue hit $11.6 billion, more than double Q1's $4.73 billion.",
+        "Anthropic's own ~$190-200 billion 2028 revenue ambition is under 1% of the $30 trillion it's claiming."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-30-trillion-tam-ipo-pitch.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic will reportedly pitch IPO investors a $30 trillion addressable market -- bigger than SpaceX's, and roughly the size of the entire US economy. Its own 2028 revenue target implies capturing well under 1% of it.",
+        "reply_copy": "The numbers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-27T08:10:35Z",
+        "copy": "“Annual U.S. GDP is currently $32.5 trillion.” That's tech analyst Fred Hickey's read on Anthropic's reported $30 trillion IPO pitch -- a claimed market within 8% of the entire US economy.",
+        "reply_copy": "The pitch:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic is reportedly about to pitch IPO investors a $30 trillion addressable market -- bigger than SpaceX's $28.5T claim, and roughly the size of the entire US economy.\n\nHere's the catch: Anthropic's own 2028 revenue ambition (~$190-200B) is under 1% of that number.\n\n\"Annual U.S. GDP is currently $32.5 trillion,\" one analyst noted -- Anthropic's claimed market is within 8% of the entire American economy.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#IPO",
+          "#Markets",
+          "#TechNews",
+          "#StartupNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The Wall Street Journal reports Anthropic will pitch IPO investors a total addressable market of more than $30 trillion -- bigger than the $28.5 trillion SpaceX claimed before its own June IPO, and roughly the size of the entire US economy. Anthropic's actual business is growing fast (Q2 revenue more than doubled to $11.6 billion), but its own 2028 revenue ambition of $190-200 billion would capture well under 1% of the market it's describing.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic will reportedly pitch IPO investors a $30 trillion addressable market -- bigger than SpaceX's, and about the size of the entire US economy. Run the numbers Anthropic itself reports and its 2028 revenue target implies capturing well under 1% of that market. Growth story, not a market-share story.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-27T08:10:35Z",
+        "copy": "SpaceX pitched investors a $28.5 trillion market before its June IPO and drew skepticism for it. Anthropic's reported pitch is $30 trillion -- $1.5 trillion bigger, for a company whose own 2028 revenue target is under 1% of that number.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic will reportedly pitch IPO investors a $30T TAM -- bigger than SpaceX's, roughly the size of the US economy. Its own 2028 revenue target implies capturing under 1% of it. The growth is real; the denominator is doing a lot of work.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
