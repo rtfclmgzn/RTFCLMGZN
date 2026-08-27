@@ -6820,7 +6820,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Labor"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -6833,8 +6835,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Labor"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2092982205731762308",
+        "remote_id": "2092982205731762308",
+        "posted_at": "2026-08-27T14:26:58Z"
       },
       {
         "platform": "instagram",
@@ -6863,8 +6867,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Amazon is closing Mechanical Turk on Sept. 30, ending 21 years of the marketplace that quietly trained the machine-learning era. The trigger: up to 46% of workers were using AI to do the human-judgment tasks they were paid for. Amazon's shutdown notice doesn't mention workers once -- no severance, no transition plan, just 35 days' notice.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dci__XblFL5",
+        "remote_id": "18623619586052608",
+        "posted_at": "2026-08-27T14:27:12Z"
       },
       {
         "platform": "threads",
@@ -6882,8 +6888,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Labor",
           "#GigWork"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu32l4goaz2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu32l4goaz2a",
+        "posted_at": "2026-08-27T14:27:19Z"
       }
     ]
   },
@@ -6980,8 +6988,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#IPO"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu32sd6jkq22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu32sd6jkq22",
+        "posted_at": "2026-08-27T14:31:21Z"
       }
     ]
   }
