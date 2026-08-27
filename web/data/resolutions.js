@@ -41,7 +41,7 @@
 //                real finding and worth logging, not a gap)
 // ============================================================================
 window.RTFC_RESOLUTIONS = {
-  updated: "2026-08-17",
+  updated: "2026-08-27",
   note: "Resolutions are append-only and dated. Articles are never rewritten; every resolution renders beneath the original piece and on the Claims Ledger.",
   items: [
     { key:"agibot-overtakes-unitree-h1-2026-shipments|w|0",
