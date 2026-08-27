@@ -389,6 +389,26 @@ this order, and mark it done here.
    §3f's rule that a claim gets corrected to what the sourcing actually shows,
    not defended. Agents, jobs, and generative-media/deepfakes remain open.
 
+   PARTIAL, continued (2026-08-27 cycle) — worked a narrow slice of the
+   "generative media and deepfakes (zero mentions)" sub-item, deliberately
+   small in scope. Rather than add a new spread (which would ripple into
+   `contents.items[].p` page references and the Act-numbering scheme in both
+   files — a structural change item 5's own log entry flagged as higher-risk
+   than a single-cycle item should take on), added one sentence to the
+   existing "What they can actually do now" spread's already-present
+   limitations paragraph in BOTH `web/data/primer-issue.js` and
+   `functions/api/issue/_data/primer.json` (same paragraph, matched by exact
+   body text, not Act number, per the 2026-08-23 living-notes warning): the
+   same generation capability that lets a model write in your voice or draw
+   a face is exactly what makes a deepfake video or cloned voice a
+   phone-camera-quality problem now rather than a Hollywood one. No new
+   numeric claim added (no citation needed), no page/contents impact —
+   verified `node --check web/data/primer-issue.js` and
+   `python3 -c "import json; json.load(open('functions/api/issue/_data/primer.json'))"`
+   both still pass. This is real but modest progress: deepfakes now have one
+   sentence where they previously had zero; a dedicated treatment (its own
+   spread) is still open, as are agents and jobs.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
