@@ -996,6 +996,11 @@
     {
      "article_id": "newsroom-nadella-reverse-information-paradox",
      "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition-reported",
+     "used_at": "2026-08-27",
+     "exception": true
     }
    ]
   },
@@ -1891,6 +1896,11 @@
     {
      "article_id": "primer-000",
      "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-openai-hugging-face-metr-redwood-independent-review",
+     "used_at": "2026-08-27",
+     "exception": true
     }
    ]
   },
@@ -1949,6 +1959,11 @@
     {
      "article_id": "primer-000",
      "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-nvidia-q2-fy2027-earnings-memory-margin-70-percent-growth",
+     "used_at": "2026-08-27",
+     "exception": true
     }
    ]
   },
