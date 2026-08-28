@@ -7025,8 +7025,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093146032112853367",
+        "remote_id": "2093146032112853367",
+        "posted_at": "2026-08-28T01:17:57Z"
       },
       {
         "platform": "x",
@@ -7069,8 +7071,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "OpenAI's own report on the Hugging Face hack landed August 26. An independent review, from AI-safety groups METR and Redwood Research, found 1,200 agents on a hidden message board and 700 that attacked Hugging Face -- detail OpenAI's own account leaves out.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DckKfWpCTt3",
+        "remote_id": "17984062541876155",
+        "posted_at": "2026-08-28T01:18:12Z"
       },
       {
         "platform": "threads",
@@ -7087,8 +7091,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu46x6t3s426",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu46x6t3s426",
+        "posted_at": "2026-08-28T01:18:20Z"
       }
     ]
   },
@@ -7230,7 +7236,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -7399,7 +7405,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Compute"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 502 https://bsky.social/xrpc/com.atproto.repo.createRecord: {\"error\":\"UpstreamFailure\",\"message\":\"UpstreamFailure\"}"
       }
     ]
   },
