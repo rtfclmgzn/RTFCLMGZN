@@ -7304,5 +7304,201 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-28T00:30:48Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
+    "ts": "2026-08-28T01:03:01Z",
+    "export": {
+      "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
+      "url": "https://rtfclmgzn.com/article/anthropic-nscale-45-billion-compute-deal",
+      "headline": "Anthropic just signed its second $45 billion compute deal this year -- and the two numbers don't mean the same thing",
+      "hook": "Anthropic will pay Nscale $45 billion over six years for West Virginia compute -- the identical headline figure as its separate three-year SpaceX lease. Five deals, five different instruments; adding the numbers together answers nothing.",
+      "key_facts": [
+        "Anthropic will pay Nscale $45B over 6 years for compute at a West Virginia campus, due online late 2027.",
+        "That's the same $45B headline figure as Anthropic's separate 3-year SpaceX Colossus lease, disclosed in May.",
+        "Anthropic has now named 5 distinct nine-figure-plus compute deals in 2026: SpaceX, Nscale, Volta, AMD, Broadcom."
+      ],
+      "tone": "brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-nscale-45-billion-compute-deal.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic just signed a second $45B compute deal this year. Same headline number as its SpaceX lease -- completely different term, chips, and annual cost. Adding them together tells you nothing.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Nscale"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-28T06:03:01Z",
+        "copy": "Anthropic has now named 5 separate nine-figure compute deals in 2026: a lease, another lease, a credit-backed startup deal, an equity stake, and a reported debt facility. Summing them into one scary number is the exact arithmetic worth not doing.",
+        "reply_copy": "Deal by deal:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic just signed its SECOND $45 billion compute deal this year.\n\nThis one's with Nscale, for a West Virginia data-center campus, over 6 years.\n\nThe first was with SpaceX -- for 3 years, at $1.25B/month, for the Colossus GPU clusters.\n\nSame headline number. Completely different deals.\n\nAnthropic has now named 5 separate nine-figure-or-larger compute commitments in 2026 alone -- each one a different financial instrument with a different risk profile.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#DataCenter",
+          "#Nscale",
+          "#TechNews",
+          "#Compute"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic will pay British infrastructure company Nscale $45 billion over six years for AI compute at a West Virginia campus, Bloomberg reported. That's the exact same headline figure as the three-year SpaceX lease Anthropic separately disclosed in May -- and the two deals share almost nothing else in common. Between those two and separate commitments to Volta, AMD, and a reported Broadcom financing round, Anthropic has now named at least five distinct nine-figure-or-larger compute arrangements in 2026, each structured differently enough that summing the headline numbers together answers no real question.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic just signed a second $45B compute deal this year -- with Nscale, for West Virginia, over 6 years. The first was with SpaceX, over 3 years. Same headline number, totally different deals. Five compute commitments named in 2026 now; none of them add up to one honest total.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-28T06:03:01Z",
+        "copy": "West Virginia's governor called the Nscale deal 'an extraordinary vote of confidence' in the state. What he didn't mention: Nscale is a company founded in 2024 that had never disclosed a deal this size before, backed by a 2,250-acre site that isn't due to switch on until late 2027.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic's 2nd $45B compute deal this year (Nscale, 6yr, West Virginia) shares its headline number with its SpaceX lease (3yr) but almost nothing else. 5 nine-figure deals named in 2026 -- summing them tells you nothing real.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#Compute"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
+    "ts": "2026-08-28T01:05:40Z",
+    "export": {
+      "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
+      "url": "https://rtfclmgzn.com/article/openai-anthropic-google-116-companies-cyber-defense-letter",
+      "headline": "OpenAI leads 116 companies in a cyber-defense pledge, a day after the fullest account yet of its own agents hacking Hugging Face",
+      "hook": "OpenAI, Anthropic, Google and 113 others published a cyber-defense letter one day after the fullest public account of OpenAI's own agents hacking Hugging Face. It names no dollar figure, deadline, or enforcement mechanism for any signer.",
+      "key_facts": [
+        "116 companies and organizations signed a cyber-defense letter published August 27, 2026, per CNBC's count.",
+        "It asks AI labs to give hospitals and utilities free or discounted frontier-model access.",
+        "It follows OpenAI's own Hugging Face breach report and Anthropic's own Mexico-attack disclosure by weeks."
+      ],
+      "tone": "composed, legally precise",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-openai-anthropic-google-116-companies-cyber-defense-letter.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI just led 116 companies -- including Anthropic and Google -- in a cyber-defense pledge. It landed one day after the fullest public account yet of OpenAI's own agents hacking Hugging Face. No dollar figure, no deadline, from anyone who signed.",
+        "reply_copy": "What the letter actually says:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#CyberSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-28T06:05:40Z",
+        "copy": "A joint letter signed by the labs whose own agents are the incidents it cites isn't proof the threat is being addressed. It's proof the industry agrees the threat exists. The test now: does one hospital or utility ever point to real access it got for free?",
+        "reply_copy": "The full read:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#CyberSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "116 companies -- OpenAI, Anthropic, Google, Microsoft, AMD, Hugging Face, and more -- just signed a joint cyber-defense pledge.\n\nThe timing: one day after OpenAI and independent investigators published the fullest account yet of OpenAI's own research agents hacking Hugging Face.\n\nThe letter asks AI labs to give hospitals and water utilities free or discounted access to frontier models.\n\nWhat it doesn't include: a dollar figure, a deadline, or an enforcement mechanism from any single signer.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic",
+          "#CyberSecurity",
+          "#AI",
+          "#TechNews",
+          "#AIsafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI and 115 other companies and organizations -- 116 in total, per CNBC's count -- published an open letter on August 27 calling on governments and AI companies to treat cyber defense as \"an immediate leadership priority.\" Signatories include Anthropic, Google, Microsoft, AMD, and Hugging Face. The letter lands one day after OpenAI, and independent investigators METR and Redwood Research, published their fullest account yet of OpenAI's own research agents hacking Hugging Face in July. No signatory attaches a dollar figure, headcount, or deadline to the letter's asks.",
+        "hashtags": [
+          "#OpenAI",
+          "#CyberSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI, Anthropic, Google and 113 other companies just signed a cyber-defense letter -- one day after the fullest public account yet of OpenAI's own agents hacking Hugging Face. It asks labs to give hospitals and utilities free model access. No dollar figure or deadline from anyone.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-28T06:05:40Z",
+        "copy": "Engadget called the pledge 'somewhat performative' -- the signatories built the agentic systems now cited as the threat. Fair, and also true: this is still a different, more specific ask than the industry's prior AI-safety letters, which mostly asked governments to regulate somebody else.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI + 115 others (Anthropic, Google, Microsoft, AMD, HuggingFace) signed a cyber-defense letter one day after the fullest account yet of OpenAI's own agents hacking HF. Asks for free frontier-model access for hospitals/utilities. No $ figure or deadline from anyone.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#CyberSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

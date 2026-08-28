@@ -95,6 +95,12 @@ window.RTFC_FIGURES = {
     { id:"inf-meta-elpaso", kind:"infra-commitment-usd", value:14,
       label:"Meta / BlackRock, El Paso", slug:"amd-meta-14-billion-data-center-financing-wave",
       note:"Total projected DEVELOPMENT COST of the campus — same headline number as the AMD deal, measuring a different thing." },
+    { id:"inf-anthropic-spacex", kind:"infra-commitment-usd", value:45,
+      label:"Anthropic / SpaceX, Colossus I & II", slug:"anthropic-q2-2026-profit-spacex-discount-timing",
+      note:"A 3-year dedicated-compute lease at $1.25B/month, disclosed via SpaceX's own IPO filing — not a single payment." },
+    { id:"inf-anthropic-nscale", kind:"infra-commitment-usd", value:45,
+      label:"Anthropic / Nscale, West Virginia", slug:"anthropic-nscale-45-billion-compute-deal",
+      note:"A 6-year compute lease at one campus, due online late 2027 — the identical headline number as the SpaceX figure above, over twice the term and roughly half the annual rate." },
 
     // ---- closed raises (USD B) ----
     { id:"raise-cxmt-ipo", kind:"funding-raise-usd", value:8.6,

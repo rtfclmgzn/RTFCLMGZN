@@ -1142,6 +1142,11 @@
     {
      "article_id": "newsroom-alphabet-capex-raise",
      "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
+     "used_at": "2026-08-28",
+     "exception": true
     }
    ]
   },
@@ -1401,6 +1406,11 @@
     {
      "article_id": "newsroom-openai-kill-switch-act",
      "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
+     "used_at": "2026-08-28",
+     "exception": true
     }
    ]
   },
