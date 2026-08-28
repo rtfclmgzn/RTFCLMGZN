@@ -7539,8 +7539,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#DigitalHealth"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093225198455841034",
+        "remote_id": "2093225198455841034",
+        "posted_at": "2026-08-28T06:32:33Z"
       },
       {
         "platform": "x",
@@ -7602,8 +7604,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Health",
           "#PewResearch"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu4qjbr2wh2e",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu4qjbr2wh2e",
+        "posted_at": "2026-08-28T06:32:40Z"
       }
     ]
   },
@@ -7637,8 +7641,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AutonomousVehicles",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093226210356871406",
+        "remote_id": "2093226210356871406",
+        "posted_at": "2026-08-28T06:36:33Z"
       },
       {
         "platform": "instagram",
@@ -7677,8 +7683,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AutonomousVehicles",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu4qqiqdya2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu4qqiqdya2a",
+        "posted_at": "2026-08-28T06:36:42Z"
       }
     ]
   }
