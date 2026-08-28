@@ -448,6 +448,26 @@ this order, and mark it done here.
    word count is barely changed and a dedicated agents/jobs/deepfakes spread
    is still the larger open item, unaddressed for a fourth consecutive cycle.
 
+   PARTIAL, continued (2026-08-28 later cycle) -- worked a narrow slice of
+   the "jobs (~40 words today)" sub-item, distinct from the agents edit
+   logged just above from an earlier cycle the same day. Added one concrete,
+   illustrative pair of examples (a customer-service rep whose tickets a
+   model now drafts first; a translator editing a machine's first pass
+   instead of starting blank) to the existing "bigger questions" jobs
+   clause on the honest-limits page, in BOTH `web/data/primer-issue.js` and
+   `functions/api/issue/_data/primer.json` -- matched by exact body text,
+   not Act number, per the 2026-08-23 living-notes warning. No new numeric
+   claim, no new spread, no page/contents impact. Verified `node --check
+   web/data/primer-issue.js` and `python3 -c "import json;
+   json.load(open('functions/api/issue/_data/primer.json'))"` both pass.
+   Agents, jobs and deepfakes now each carry one illustrative clause where
+   they previously had none, but all three remain single-sentence
+   treatments -- a dedicated spread is still the larger open item, now
+   unaddressed for a fifth consecutive cycle. The other missing-topic item
+   (who owns whom, using entities.js/companies.js data already on hand) is
+   still fully open and is probably the next one worth a full cycle's
+   attention rather than another one-clause slice.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
