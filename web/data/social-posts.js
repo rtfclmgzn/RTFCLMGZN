@@ -7693,5 +7693,267 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-28T06:36:42Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
+    "ts": "2026-08-28T21:19:47Z",
+    "export": {
+      "article_id": "newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
+      "url": "https://rtfclmgzn.com/article/stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
+      "headline": "Young workers in AI-exposed jobs are now 19% behind where they'd otherwise be, Stanford payroll data shows -- a separate survey of 6,000 executives found over 90% saw no AI effect on employment at all",
+      "hook": "Two credible studies about AI and jobs point in opposite directions -- one payroll-data study finds a widening 19% employment gap for young workers, one executive survey finds no effect at all. Both are right, once you see what each is actually measuring.",
+      "key_facts": [
+        "Stanford's payroll-data study finds a 19% employment gap for 22-25-year-olds in AI-exposed jobs, up from 13% in mid-2025.",
+        "A separate NBER-organized survey of nearly 6,000 executives across 4 countries found over 90% saw no AI employment effect.",
+        "Wharton's Peter Cappelli argues investor pressure, not AI productivity, explains many of the layoffs blamed on AI."
+      ],
+      "tone": "evidence-first, reconciling conflicting data",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Stanford payroll data: young workers in AI-exposed jobs are now 19% behind where they'd otherwise be, and the gap keeps widening. A separate survey of 6,000 execs: over 90% saw no AI employment effect at all. Both are real. Here's why they disagree.",
+        "reply_copy": "The reconciliation:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIJobs",
+          "#FutureOfWork"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T02:19:47Z",
+        "copy": "The Stanford/NBER jobs gap isn't really a contradiction: one study reads payroll records for one narrow group, the other asks a CFO to self-report their WHOLE workforce. A hiring slowdown in fresh grads can vanish inside a firm-wide average.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIJobs"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Two studies. Same month. Opposite headlines.\n\nStanford's payroll-data project finds employment for 22-25-year-olds in AI-exposed jobs is now 19% below where it would otherwise be -- and the gap has widened every time researchers re-measured it since mid-2025.\n\nA separate survey of nearly 6,000 executives across 4 countries found the opposite: over 90% report AI has had NO effect on their firm's employment.\n\nBoth are credible. Both are real data. They're just measuring different things at different resolutions -- and one of them is built to see a narrow effect the other one can't.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AIJobs",
+          "#FutureOfWork",
+          "#LaborMarket",
+          "#AI",
+          "#Economy",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Stanford's ongoing payroll-data study finds that employment for 22-to-25-year-olds in the most AI-exposed occupations is now 19% below where it would be had it kept pace with less-exposed peers -- a gap that has widened every time researchers have re-measured it since mid-2025. A separate survey of nearly 6,000 executives across the US, UK, Germany and Australia found the opposite headline: over 90% report AI has had no effect on their own firm's employment. We dug into why two credible studies disagree this sharply -- and it isn't that one of them is wrong.",
+        "hashtags": [
+          "#AIJobs",
+          "#FutureOfWork"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Stanford payroll data says young workers in AI-exposed jobs are 19% behind where they'd otherwise be, and the gap is growing. A survey of 6,000 executives says over 90% saw no AI employment effect at all. Both are real findings. The resolution is in what each one is actually measuring.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T02:19:47Z",
+        "copy": "Wharton's Peter Cappelli's skeptical read on AI layoffs: \"The companies that are laying off are not struggling.\" His argument is investor pressure does more explanatory work than any measured AI productivity gain -- worth sitting with next to Stanford's 19% jobs gap.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Stanford payroll data: 19% employment gap for young workers in AI-exposed jobs, widening since mid-2025. Separate survey of 6,000 execs: 90%+ say AI hasn't touched their employment at all. Both real. Neither wrong. Here's why they disagree.",
+        "hashtags": [
+          "#AIJobs",
+          "#FutureOfWork",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
+    "ts": "2026-08-28T21:05:12Z",
+    "export": {
+      "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
+      "url": "https://rtfclmgzn.com/article/salesforce-anthropic-claudeforce-investment-gain-earnings",
+      "headline": "Salesforce's stock had its best day since 2020 on the Anthropic partnership -- $2.53 of the same quarter's $5.90 profit beat came from Salesforce's own Anthropic stake, not the deal",
+      "hook": "Salesforce stock closed up 22.58% -- its best day since 2020 -- on the new Claudeforce partnership with Anthropic. But $2.53 of the $5.90 EPS that drove the rally came from Salesforce's own Anthropic stock stake gaining value, not from the deal or the business.",
+      "key_facts": [
+        "Salesforce shares closed up 22.58% on August 27, the company's best day since 2020.",
+        "$2.53 of the reported $5.90 adjusted EPS came from a gain on Salesforce's own Anthropic equity stake.",
+        "Underlying operating EPS was closer to $3.37 -- still a beat, but a much smaller one."
+      ],
+      "tone": "arithmetic-skeptic, numbers-first",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Salesforce stock just had its best day since 2020 on the new Claudeforce/Anthropic partnership. But $2.53 of the $5.90 EPS beat that drove it came from Salesforce's OWN Anthropic stock stake gaining value -- not the deal, not the business. Here's the actual math.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Salesforce",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T02:05:12Z",
+        "copy": "Salesforce's $11.3B Q2 revenue and its $11.3B investment portfolio are the same number, purely by coincidence. Its Anthropic stake (~$5.1B, ~45% of that portfolio) means every future Anthropic valuation move flows straight through Salesforce's own earnings.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Salesforce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Salesforce just had its best day since 2020.\n\nShares closed up 22.58% after the company announced Claudeforce -- embedding Anthropic's Claude across its CRM, sales tools and Slack -- alongside a Q2 earnings beat.\n\nBut here's what most coverage skipped: $2.53 of the reported $5.90 EPS came from an unrealized GAIN on Salesforce's own Anthropic stock stake, not from the deal or the underlying business.\n\nStrip that out, and operating EPS was closer to $3.37 -- still a real beat, just a much smaller headline.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Salesforce",
+          "#Anthropic",
+          "#Claudeforce",
+          "#Earnings",
+          "#AI",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Salesforce shares closed up 22.58% on August 27 -- the company's best single-day gain since 2020 -- after announcing Claudeforce, a partnership embedding Anthropic's Claude across its CRM, sales tools and Slack, alongside a Q2 earnings beat. But a closer look at the filing shows $2.53 of the reported $5.90 adjusted EPS came from an unrealized gain on Salesforce's own equity stake in Anthropic -- not from operating the business or the new deal. We broke down what the headline number actually includes.",
+        "hashtags": [
+          "#Salesforce",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Salesforce's best day since 2020 wasn't purely a Claudeforce story. $2.53 of the $5.90 EPS beat came from Salesforce's own Anthropic stock stake gaining value -- a real but non-repeatable number sitting inside a very repeatable-looking headline.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Salesforce +22.58%, best day since 2020, on the new Claudeforce/Anthropic tie-up. But $2.53 of the $5.90 EPS beat is an unrealized gain on Salesforce's own Anthropic stake -- not the deal, not the business. Operating EPS: ~$3.37.",
+        "hashtags": [
+          "#Salesforce",
+          "#Markets",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-uk-actors-save-our-voices-now-ai-voice-cloning-campaign",
+    "ts": "2026-08-28T21:31:24Z",
+    "export": {
+      "article_id": "newsroom-uk-actors-save-our-voices-now-ai-voice-cloning-campaign",
+      "url": "https://rtfclmgzn.com/article/uk-actors-save-our-voices-now-ai-voice-cloning-campaign",
+      "headline": "Nearly 80 UK actors, including Nicola Coughlan and Hugh Bonneville, ask the government to make voice a protected legal right",
+      "hook": "Nearly 80 UK actors -- Nicola Coughlan, Hugh Bonneville, Matt Lucas among them -- are asking the government to make voice a protected legal right. The campaign's founder says a voice can be cloned in three seconds. The government's response so far: a promised consultation, not a bill.",
+      "key_facts": [
+        "Nearly 80 UK actors signed an open letter asking for statutory ownership of their own voice.",
+        "Campaign founder Peter Caulfield says a voice can be AI-cloned in three seconds.",
+        "The UK government has so far promised only a consultation, not legislation."
+      ],
+      "tone": "policy-precise, legally grounded",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-uk-actors-save-our-voices-now-ai-voice-cloning-campaign.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nearly 80 UK actors -- Nicola Coughlan, Hugh Bonneville, Matt Lucas among them -- are asking the UK government to make voice a protected legal right. Campaign founder: a voice can be AI-cloned in 3 seconds. Government's response so far: a consultation, not a bill.",
+        "reply_copy": "The full ask:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIVoiceCloning",
+          "#UKPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nearly 80 UK actors just asked the government for something that doesn't exist yet: legal ownership of your own voice.\n\nNicola Coughlan, Hugh Bonneville, Matt Lucas and Siobhan McSweeney are among the signatories of an open letter to the Prime Minister, backed by the Save Our Voices Now campaign.\n\nThe ask: a statutory voice right, enforceable in UK courts, with the burden of getting consent placed on AI platforms -- not individuals.\n\nThe UK government's response so far: a promised consultation, not a bill.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AIVoiceCloning",
+          "#UKPolicy",
+          "#AI",
+          "#ActorsRights",
+          "#TechNews",
+          "#DeepfakeLaw"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nearly 80 UK actors, narrators and singers -- including Nicola Coughlan, Hugh Bonneville, Matt Lucas, Siobhan McSweeney and Luke Evans -- have signed an open letter asking the UK government to grant every person statutory ownership of their own voice. Campaign founder Peter Caulfield says a voice can be AI-cloned in three seconds. The government's response so far is a promised consultation, not legislation.",
+        "hashtags": [
+          "#AIVoiceCloning",
+          "#UKPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nearly 80 UK actors -- Coughlan, Bonneville, Matt Lucas among them -- want the government to make voice a protected legal right, enforceable in UK courts, with the consent burden on AI platforms rather than individuals. So far the government has promised a consultation. Not a bill.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nearly 80 UK actors ask the government to make voice a protected legal right, citing AI clones made in 3 seconds. Nicola Coughlan, Hugh Bonneville, Matt Lucas among signatories. Government's response so far: a consultation, not a bill.",
+        "hashtags": [
+          "#AIVoiceCloning",
+          "#UKPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
-];
+]
+;

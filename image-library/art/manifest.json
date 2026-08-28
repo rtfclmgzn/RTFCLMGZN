@@ -366,6 +366,11 @@
     {
      "article_id": "newsroom-moonshot-ai-50-billion-pre-ipo",
      "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
+     "used_at": "2026-08-28",
+     "exception": true
     }
    ]
   },
@@ -1327,7 +1332,12 @@
    ],
    "text_space": "dark left wall",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
+     "used_at": "2026-08-28"
+    }
+   ]
   },
   {
    "id": "art-047-smart-glasses-outside-the-glass-hq",
@@ -1800,7 +1810,12 @@
    ],
    "text_space": "dark left third",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-uk-actors-save-our-voices-now-ai-voice-cloning-campaign",
+     "used_at": "2026-08-28"
+    }
+   ]
   },
   {
    "id": "art-064-autonomous-container-port-at-dusk",
