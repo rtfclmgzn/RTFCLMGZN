@@ -7441,8 +7441,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#CyberSecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093310050102120524",
+        "remote_id": "2093310050102120524",
+        "posted_at": "2026-08-28T12:09:42Z"
       },
       {
         "platform": "x",
@@ -7555,8 +7557,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Health"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093309041296437698",
+        "remote_id": "2093309041296437698",
+        "posted_at": "2026-08-28T12:05:42Z"
       },
       {
         "platform": "instagram",
