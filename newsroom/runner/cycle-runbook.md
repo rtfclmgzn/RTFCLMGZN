@@ -427,6 +427,27 @@ this order, and mark it done here.
    remains fully open (~70 words), and a dedicated deepfakes/jobs spread is
    still the larger open item.
 
+   PARTIAL, continued (2026-08-28 cycle) -- worked a narrow slice of the
+   "agents (~70 words today)" sub-item. Added one concrete, illustrative
+   sentence (a trip-planning example: comparing flights, checking a
+   calendar, drafting an itinerary) to the existing "act" clause on the
+   "What they can actually do now" spread, in BOTH `web/data/primer-issue.js`
+   and `functions/api/issue/_data/primer.json` -- matched by exact body text
+   per the 2026-08-23 living-notes warning, not by Act number (the two
+   files' versions of this exact sentence already differed slightly before
+   this edit: `primer.json` wraps "agents" in quotes and adds a trailing
+   "-- the frontier of the moment" that `primer-issue.js` lacks; left that
+   pre-existing drift alone and appended the new clause to each file's own
+   version rather than reconciling it, since reconciling wording drift is a
+   different-shaped job than this sub-item). No new numeric claim, no new
+   spread, no page/contents impact. Verified `node --check
+   web/data/primer-issue.js` and `python3 -c "import json;
+   json.load(open('functions/api/issue/_data/primer.json'))"` both pass.
+   This is real but modest progress: the one-clause treatment of agents now
+   has a concrete example where it previously had none, but the underlying
+   word count is barely changed and a dedicated agents/jobs/deepfakes spread
+   is still the larger open item, unaddressed for a fourth consecutive cycle.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
