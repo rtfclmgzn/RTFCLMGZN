@@ -103,6 +103,8 @@ window.RTFC_ENTITIES = {
       kind:"open-weights frontier model", access:"open-weights" },
     { re:/\bKimi K2\b/i, name:"Kimi K2", maker:"Moonshot AI", makerKey:"moonshot",
       kind:"open-weights model", access:"open-weights" },
+    { re:/\bGLM-?5\.3-Flash\b/i, name:"GLM-5.3-Flash", maker:"Z.ai", makerKey:"zai",
+      kind:"low-cost frontier model", access:"open-weights" },
     { re:/\bGLM-?5\.3\b/i, name:"GLM-5.3", maker:"Z.ai", makerKey:"zai",
       kind:"low-cost frontier model", access:"open-weights" },
     { re:/\bGLM-?5\.2\b/i, name:"GLM-5.2", maker:"Z.ai", makerKey:"zai",

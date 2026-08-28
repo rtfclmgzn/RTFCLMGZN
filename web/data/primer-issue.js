@@ -1179,7 +1179,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
     "body": [
       "A primer that only sells you the upside is an advertisement. So, plainly:",
       "These systems still **confidently make things up** — one prominent model doubled its hallucination rate this year even as its knowledge grew. ==Never act on an unverified AI answer when the stakes are real.== They reflect the biases of what they read, and nobody, including their makers, can fully explain an individual answer.",
-      "The bigger questions are open: jobs built on tasks these systems now do well — the answer so far looks like transformation more than disappearance, but nobody serious claims certainty; what always-listening assistants mean for privacy; whether capability this powerful should sit with the handful of companies Act V priced.",
+      "The bigger questions are open: jobs built on tasks these systems now do well — the customer-service rep whose tickets a model now drafts first, the translator editing a machine's first pass instead of starting from a blank page — the answer so far looks like transformation more than disappearance, but nobody serious claims certainty; what always-listening assistants mean for privacy; whether capability this powerful should sit with the handful of companies Act V priced.",
       "Anyone selling certainty is selling. Engage anyway: the best-positioned people got fluent early enough to form their own opinions."
     ]
   },

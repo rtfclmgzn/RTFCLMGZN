@@ -7508,5 +7508,178 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
+    "ts": "2026-08-28T06:12:43Z",
+    "export": {
+      "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
+      "url": "https://rtfclmgzn.com/article/pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
+      "headline": "A third of US adults now use an AI chatbot for a health question, Pew finds -- most call it helpful, but a separate survey found few call it accurate",
+      "hook": "34% of US adults have used an AI chatbot for a health question, Pew finds, and 47% of those users call the answers helpful -- but a separate, larger Pew survey found only 18% call the same kind of answer highly accurate.",
+      "key_facts": [
+        "34% of US adults used an AI chatbot for a health reason, per Pew's June 2026 survey.",
+        "47% of those users called the answers extremely or very helpful; only 5% called them unhelpful.",
+        "A separate April 2026 Pew survey found just 18% rate chatbot health answers as highly accurate."
+      ],
+      "tone": "precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Pew: 34% of US adults have used an AI chatbot for a health question. 47% of them call the answers helpful. A separate, larger Pew survey found just 18% call the same kind of answer highly accurate. Helpful and accurate are not the same question.",
+        "reply_copy": "Both surveys, side by side:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DigitalHealth"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-28T11:12:43Z",
+        "copy": "A quarter of US adults now ask an AI chatbot what's causing a symptom. 15% use one to decide whether to see a doctor at all. Only one of the two Pew surveys measuring this ever asked whether the answers were actually right.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Health"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "34% of US adults have used an AI chatbot for a health question, Pew Research finds.\n\n47% of those users call the answers helpful.\n\nBut a separate, larger Pew survey -- asking a different, harder question -- found only 18% call the same kind of chatbot health answer highly accurate.\n\nHelpful and accurate turn out to be very different questions, and Americans are answering them differently.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#DigitalHealth",
+          "#PewResearch",
+          "#HealthTech",
+          "#Chatbots",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A third of American adults now turn to an AI chatbot for something health-related, a Pew Research Center survey published August 25 finds -- and most of them (47%) call the experience helpful. But a separate, larger Pew survey from April found only 18% of chatbot health-info users rate it as highly accurate. The two numbers aren't a contradiction: they're answering different questions, on different samples, eight months apart. We line them up.",
+        "hashtags": [
+          "#AI",
+          "#Health"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Pew: 34% of US adults use an AI chatbot for health questions, 47% call it helpful. A separate, larger Pew survey found just 18% call chatbot health info highly accurate. Helpful and accurate aren't the same question -- and Americans answer them differently.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-28T11:12:43Z",
+        "copy": "The part of this that doesn't get said enough: ChatGPT Health and Claude for Healthcare both launched in January explicitly pointing users to a licensed professional for anything diagnostic. A quarter of chatbot users are already asking a general-purpose assistant to do exactly that.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Pew: 34% of US adults used an AI chatbot for a health question, 47% call it helpful. A separate, larger Pew survey found only 18% call the same kind of answer highly accurate. Helpful ≠ accurate, and only one survey asked the harder question.",
+        "hashtags": [
+          "#AI",
+          "#Health",
+          "#PewResearch"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
+    "ts": "2026-08-28T06:12:43Z",
+    "export": {
+      "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
+      "url": "https://rtfclmgzn.com/article/gatik-200-million-series-d-autonomous-trucking",
+      "headline": "Gatik raises $200 million as its driverless box trucks pass 85,000 completed deliveries -- two months after a PepsiCo deal put 41 of them on the road",
+      "hook": "Gatik raised a $200M Series D and says its driverless trucks have completed 85,000 orders with no human in the cab -- two months after signing PepsiCo to run 41 of them across Dallas, Phoenix and Northwest Arkansas.",
+      "key_facts": [
+        "Gatik raised $200 million in a Series D led by QIA and Koch Disruptive Technologies.",
+        "The company says its trucks have completed 85,000 fully driverless orders at a 99% on-time rate.",
+        "Gatik targets 100+ fully driverless trucks running by the end of 2026."
+      ],
+      "tone": "curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-gatik-200-million-series-d-autonomous-trucking.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Gatik raised $200M as its driverless box trucks pass 85,000 completed deliveries -- no human in the cab, 99% on time. Comes two months after PepsiCo put 41 of them on the road in Dallas, Phoenix and NW Arkansas.",
+        "reply_copy": "The round, in full:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AutonomousVehicles",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Gatik just raised $200 million -- its largest round yet.\n\nThe company's driverless box trucks have now completed 85,000 fully driverless orders, no human in the cab, at a 99% on-time rate.\n\nIt comes two months after a PepsiCo deal put 41 of them on fixed routes across Dallas, Phoenix and Northwest Arkansas.\n\nGatik's bet: skip the open-ended robotaxi problem, own the boring, repeatable \"middle mile\" instead.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AutonomousVehicles",
+          "#Robotics",
+          "#Trucking",
+          "#AI",
+          "#Logistics",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Gatik has raised $200 million in a Series D round led by the Qatar Investment Authority and Koch Disruptive Technologies -- its largest round to date, bringing total funding to roughly $500 million since 2019. The autonomous-trucking company says its trucks have completed 85,000 fully driverless orders with a 99% on-time rate, running fixed routes for retailers including Walmart, Kroger and, as of a deal two months ago, PepsiCo's Frito-Lay.",
+        "hashtags": [
+          "#AutonomousVehicles",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gatik raised $200M as its driverless trucks pass 85,000 completed orders, no human in the cab, 99% on time -- two months after PepsiCo put 41 of them on fixed routes. The pitch: skip robotaxi-hard city driving, own the boring repeatable middle mile instead.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Gatik: $200M Series D, 85,000 completed driverless orders (no human in cab), 99% on time. Two months after PepsiCo put 41 trucks on fixed routes in Dallas/Phoenix/NW Arkansas. The autonomy bet that isn't trying to solve open-ended city driving.",
+        "hashtags": [
+          "#AutonomousVehicles",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

@@ -1113,6 +1113,11 @@
     {
      "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
      "used_at": "2026-08-16"
+    },
+    {
+     "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
+     "used_at": "2026-08-28",
+     "exception": true
     }
    ]
   },
@@ -1824,6 +1829,11 @@
     {
      "article_id": "newsroom-fcc-covered-list-humanoid-robots",
      "used_at": "2026-07-29"
+    },
+    {
+     "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
+     "used_at": "2026-08-28",
+     "exception": true
     }
    ]
   },
