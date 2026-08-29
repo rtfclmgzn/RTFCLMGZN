@@ -8245,7 +8245,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "A federal judge just ruled the Pentagon's blacklisting of Anthropic was illegal -- retaliation for the company's 'arrogance' in refusing to let Claude be used for mass surveillance or autonomous weapons, per the 59-page order. Anthropic says the block could've cost billions.",
         "reply_copy": "The full ruling, and what's still unresolved:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AIPolicy"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIPolicy"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -8256,21 +8259,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "What this ruling doesn't do: settle whether Claude should be usable for surveillance or autonomous weapons at all. It only found the Pentagon's PROCESS unlawful. A separate, narrower case over a different rule is still pending in the D.C. Circuit.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic"],
+        "hashtags": [
+          "#Anthropic"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "A federal judge just struck down the Pentagon's blacklist of Anthropic.\n\nU.S. District Judge Rita Lin's 59-page order found the 'supply chain risk' designation was retaliation for Anthropic's public criticism -- punishment for the company's 'arrogance,' not a real security finding.\n\nThe designation followed Anthropic's refusal to let Claude be used for mass domestic surveillance or fully autonomous weapons. Anthropic's own executives say the block could have cost billions in lost federal business.\n\nWhat's still open: the government hasn't said whether it will appeal this ruling, and a separate, narrower case is still pending. Full breakdown at the link in bio.",
-        "hashtags": ["#Anthropic", "#Pentagon", "#AIPolicy", "#AI", "#Claude", "#TechNews"],
+        "hashtags": [
+          "#Anthropic",
+          "#Pentagon",
+          "#AIPolicy",
+          "#AI",
+          "#Claude",
+          "#TechNews"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "A federal judge ruled the night of August 27 that the Pentagon acted illegally when it designated Anthropic a 'supply chain risk to national security' -- finding the label was retaliation for the company's public criticism, not a genuine security judgment. The designation followed Anthropic's refusal to let Claude be used for mass domestic surveillance or fully autonomous weapons. Anthropic's own executives say the designation could have cost the company billions of dollars in lost federal business.",
-        "hashtags": ["#Anthropic", "#AIPolicy"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIPolicy"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -8283,7 +8298,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Judge Rita Lin: the Pentagon's Anthropic blacklist was illegal retaliation, aimed at punishing the company's 'arrogance' for refusing to let Claude be used for mass surveillance or autonomous weapons. Anthropic says the block could've cost billions. Appeal status: unclear.",
-        "hashtags": ["#Anthropic", "#AIPolicy"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIPolicy"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -8315,9 +8333,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Meta's smart glasses will now stop recording -- not just refuse to start -- if you cover the privacy light mid-clip. Second fix to the same loophole in 2 months. It lands alongside an unresolved lawsuit: Meta's own 'designed for privacy' marketing vs. human reviewers seeing real footage.",
         "reply_copy": "The full story:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#Privacy"],
+        "hashtags": [
+          "#Meta",
+          "#Privacy"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -8326,36 +8349,57 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Two different questions, easy to conflate: the LED fix is about BYSTANDER consent (can someone tell they're being recorded). The lawsuit is about WEARER consent (did buyers know a human, not just an algorithm, might watch what they captured). Today's update only answers the first.",
         "reply_copy": "Full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#Meta"],
+        "hashtags": [
+          "#Meta"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Meta just shipped its second fix in two months to the same privacy loophole on its smart glasses.\n\nThe camera will now stop recording -- not just refuse to start -- if the capture LED gets covered mid-clip, per AR VP Alex Himel.\n\nIt lands alongside an unresolved class-action lawsuit: plaintiffs say Meta's own 'designed for privacy, controlled by you' marketing contradicts a real review pipeline that has sent footage -- including nudity and sex -- to Kenya-based contractors.\n\nMeta doesn't dispute the practice, just whether the marketing was misleading. Full story at the link in bio.",
-        "hashtags": ["#Meta", "#SmartGlasses", "#Privacy", "#AI", "#TechNews", "#RayBanMeta"],
+        "hashtags": [
+          "#Meta",
+          "#SmartGlasses",
+          "#Privacy",
+          "#AI",
+          "#TechNews",
+          "#RayBanMeta"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Meta is rolling out a fix to its smart glasses that closes a specific workaround: a wearer could start recording, then cover the capture LED, and the camera would keep running. AR VP Alex Himel says the camera will now stop working if the light is covered mid-recording -- the second such fix in under two months. It lands alongside a still-unresolved lawsuit alleging Meta's own marketing misrepresented who actually sees captured footage.",
-        "hashtags": ["#Meta", "#Privacy"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#Meta",
+          "#Privacy"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122116407507396947",
+        "remote_id": "1238977099292018_122116407507396947",
+        "posted_at": "2026-08-29T07:20:17Z"
       },
       {
         "platform": "threads",
         "copy": "Meta's smart glasses now stop recording if you cover the light mid-clip, not just before -- second privacy fix in two months. Still unresolved: a lawsuit alleging Meta's 'designed for privacy' marketing contradicts a review pipeline that's sent real footage to human contractors in Kenya.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcnYwkhFdq9",
+        "remote_id": "17978831061087849",
+        "posted_at": "2026-08-29T07:20:35Z"
       },
       {
         "platform": "bluesky",
         "copy": "Meta's smart glasses: second privacy-light fix in two months, this one stopping recordings mid-clip if the LED is covered. Still open: a lawsuit over whether Meta's 'designed for privacy' marketing squares with a review pipeline that reaches human contractors in Kenya.",
-        "hashtags": ["#Meta", "#Privacy"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#Meta",
+          "#Privacy"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu7do3ak4e22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu7do3ak4e22",
+        "posted_at": "2026-08-29T07:20:41Z"
       }
     ]
   },
@@ -8385,9 +8429,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "DeepSeek is reportedly closing in on a ~$74B valuation -- weeks after leaked remarks from founder Liang Wenfeng admitted China still trails the US on funding and compute, and that DeepSeek itself remains reliant on Nvidia hardware. Its actual revenue, Jan-Jul: $70.7M.",
         "reply_copy": "The full numbers:",
         "link_in_reply": true,
-        "hashtags": ["#DeepSeek", "#AIFunding"],
+        "hashtags": [
+          "#DeepSeek",
+          "#AIFunding"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -8396,38 +8445,60 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The arithmetic: $74B valuation against ~$500M annualized revenue is roughly 148x. Not inherently damning for a frontier AI lab -- but it's a bet on where DeepSeek is headed, not where it is now. Try the slider yourself in the piece.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#DeepSeek"],
+        "hashtags": [
+          "#DeepSeek"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "DeepSeek is reportedly closing in on a funding round that would value it near $74 billion.\n\nThe timing is striking: the round was paused in July after founder Liang Wenfeng's leaked investor remarks went viral -- reportedly admitting China still trails the US mainly on funding and compute, not talent, and that DeepSeek itself still relies on Nvidia hardware.\n\nDeepSeek's actual revenue for January through July: $70.7 million, per The Information. At the reported figures, that's roughly a 148x multiple on annualized revenue.\n\nOutlets disagree on exactly how much new money is changing hands. Full breakdown, and an interactive model you can push on, at the link in bio.",
-        "hashtags": ["#DeepSeek", "#AIFunding", "#China", "#AI", "#Markets", "#TechNews"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#DeepSeek",
+          "#AIFunding",
+          "#China",
+          "#AI",
+          "#Markets",
+          "#TechNews"
+        ],
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcnYOuDEpKM/",
+        "remote_id": "18125287171694044",
+        "posted_at": "2026-08-29T07:16:04Z"
       },
       {
         "platform": "facebook",
         "copy": "DeepSeek is reported nearing a close, before the end of August, on a funding round that would value the Hangzhou lab at roughly 500 billion yuan -- about $74 billion -- as it prepares for a possible Shanghai IPO. The round was paused in July after founder Liang Wenfeng's leaked investor remarks, reportedly admitting China still trails the US on funding and compute, went viral. DeepSeek's actual revenue was $70.7 million for January through July 2026.",
-        "hashtags": ["#DeepSeek", "#AIFunding"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#DeepSeek",
+          "#AIFunding"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122116405089396947",
+        "remote_id": "1238977099292018_122116405089396947",
+        "posted_at": "2026-08-29T07:16:14Z"
       },
       {
         "platform": "threads",
         "copy": "DeepSeek is reportedly nearing a ~$74B valuation round -- weeks after its own founder's leaked remarks admitted China still trails the US on funding and compute. Actual revenue Jan-Jul: $70.7M. That's roughly 148x annualized revenue at the reported figures.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcnYSSpFRgD",
+        "remote_id": "18127858507703759",
+        "posted_at": "2026-08-29T07:16:27Z"
       },
       {
         "platform": "bluesky",
         "copy": "DeepSeek: reportedly closing in on a ~$74B valuation, weeks after its founder's leaked remarks admitted China still trails the US on funding and compute. Actual revenue Jan-Jul: $70.7M. Outlets disagree on how much new money is actually raised.",
-        "hashtags": ["#DeepSeek", "#AIFunding"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#DeepSeek",
+          "#AIFunding"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mu7dgox7c52d",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mu7dgox7c52d",
+        "posted_at": "2026-08-29T07:16:33Z"
       }
     ]
   }
-]
-;
+];
