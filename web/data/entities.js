@@ -77,6 +77,8 @@ window.RTFC_ENTITIES = {
       kind:"frontier model", access:"closed" },
     { re:/\bGemini 3\.5 Pro\b/i, name:"Gemini 3.5 Pro", maker:"Google DeepMind", makerKey:"google",
       kind:"frontier model", access:"closed" },
+    { re:/\bGemini Omni 1\.1 Flash\b/i, name:"Gemini Omni 1.1 Flash", maker:"Google DeepMind", makerKey:"google",
+      kind:"video generation model", access:"closed" },
 
     // --- xAI ---
     { re:/\bGrok 4\.6\b/i, name:"Grok 4.6", maker:"xAI", makerKey:"xai",

@@ -8508,5 +8508,167 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-29T07:16:33Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-model-hardware-standard-lab-robots-research-preview",
+    "ts": "2026-08-29T15:07:03Z",
+    "export": {
+      "article_id": "newsroom-anthropic-model-hardware-standard-lab-robots-research-preview",
+      "url": "https://rtfclmgzn.com/article/anthropic-model-hardware-standard-lab-robots-research-preview",
+      "headline": "Anthropic's new Model Hardware Standard lets an AI agent run a lab's microscopes and robotic arms directly",
+      "hook": "Anthropic opened a research preview letting an AI agent operate a lab's own hardware directly -- and its own release admits the models still can't reliably reason about physical failures.",
+      "key_facts": [
+        "Carnegie Mellon and the University of Washington cut lab-hardware integration from weeks to hours.",
+        "QuEra's agent held a quantum laser lock 99.3% of the time, up from 58% under expert manual tuning.",
+        "Automata, Tecan and Universal Robots are adding native support; open-sourcing MHS is still pending safety evaluations."
+      ],
+      "tone": "curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-model-hardware-standard-lab-robots-research-preview.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic opened a preview letting AI agents run lab hardware directly: microscopes, robotic arms, liquid handlers, one interface. QuEra's agent held a quantum laser lock 99.3% of the time, up from 58% by hand. Still can't reason well about physical failures, though.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T20:07:03Z",
+        "copy": "The sharpest number in Anthropic's own release: a lab-hardware agent cut PID servo noise 10x and held a quantum laser lock with zero losses over 19 hours, vs. 1.6 manual unlocks/hour by hand. The catch: it can't yet reason about why things physically fail.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic just opened a research preview letting an AI agent run a lab's own hardware directly: microscopes, liquid handlers, robotic arms, plate readers -- all through one shared interface, no more bespoke integration code per device.\n\nThe early numbers are real: Carnegie Mellon and the University of Washington cut integration time from weeks to hours. QuEra's agent held a quantum laser lock 99.3% of the time, up from 58% under expert manual tuning.\n\nBut Anthropic is unusually direct about the limits, too -- its own release admits the models still can't reliably reason about physical, chemical or biological failures. One example: foam forming during a liquid-handling run needed a human to fix.\n\nFull story, with the numbers and the honest counter-case, at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#Robotics",
+          "#AI",
+          "#PhysicalAI",
+          "#LabAutomation",
+          "#Science"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic has opened a research preview of the Model Hardware Standard, a shared interface that lets an AI agent operate lab hardware -- microscopes, liquid handlers, robotic arms -- without custom integration code for every device. Early results: Carnegie Mellon and the University of Washington cut integration time from weeks to hours, and QuEra's agent held a quantum laser lock 99.3% of the time versus 58% under expert manual tuning. Anthropic is direct about the catch, too: its own release says the models still can't reliably reason about physical, chemical or biological failures.",
+        "hashtags": [
+          "#Anthropic",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic opened a research preview of the Model Hardware Standard: AI agents running microscopes, liquid handlers and robotic arms through one shared interface. Carnegie Mellon and UW cut integration from weeks to hours. Anthropic's own release admits the models still struggle to reason about physical, chemical failures -- foam forming during a run needed a human to fix.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic opened a preview letting AI agents run lab hardware directly. QuEra's agent held a quantum laser lock 99.3% of the time (was 58% by hand). Anthropic's own caveat: it still can't reliably reason about physical failures.",
+        "hashtags": [
+          "#Anthropic",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes",
+    "ts": "2026-08-29T15:09:41Z",
+    "export": {
+      "article_id": "newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes",
+      "url": "https://rtfclmgzn.com/article/google-gemini-omni-1-1-flash-video-model-40-second-scenes",
+      "headline": "Google DeepMind ships Gemini Omni 1.1 Flash, stretching AI video clips to 40 seconds and adding a cheaper draft mode",
+      "hook": "Google DeepMind's newest video model stretches clips to 40 seconds and adds a cheaper draft tier -- but its claimed #1 benchmark ranking is Google's own unverified figure.",
+      "key_facts": [
+        "Scene extension now chains up to a cumulative 40 seconds, up from 10 seconds in the prior release.",
+        "A new 360p draft mode previews clips 60% faster at about a third of standard cost.",
+        "Google's claimed 1,515-point #1 Text-to-Video Arena ranking is self-reported, not independently verified."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google DeepMind shipped Gemini Omni 1.1 Flash: AI video clips now stretch to 40 seconds (up from 10), plus a cheaper 360p draft mode. Google says it tops its own Text-to-Video Arena at 1,515 points -- a claim nobody's independently checked yet.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#GoogleDeepMind"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google DeepMind just shipped Gemini Omni 1.1 Flash, its latest AI video model.\n\nWhat's new: scene extension now chains up to 40 seconds of continuous video (up from 10), developers can pin first and last frames for camera moves, and a new 360p draft mode previews clips 60% faster at about a third of the cost.\n\nStandard 720p runs about $0.10/second. Google also claims the model now tops its own Text-to-Video Arena leaderboard at 1,515 points -- worth knowing that's Google's own self-reported figure, not an independent benchmark.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleDeepMind",
+          "#AIVideo",
+          "#GenerativeAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google DeepMind released Gemini Omni 1.1 Flash on August 27, extending its AI video model's scene continuation from 10 seconds to a cumulative 40, and adding a cheaper 360p draft mode for fast iteration before paying full price to upscale. Google says the model now tops its own Text-to-Video Arena leaderboard at 1,515 points -- a figure from Google's own announcement that no independent benchmark has yet replicated.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleDeepMind"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini Omni 1.1 Flash just shipped: scene extension now chains to a cumulative 40 seconds, up from 10. A new 360p draft mode previews clips 60% faster at a third of the cost. Google's own claimed #1 spot on the Text-to-Video Arena (1,515 pts) is self-reported -- no independent benchmark has matched it yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Gemini Omni 1.1 Flash: AI video clips now stretch to 40 seconds (up from 10), plus a cheaper 360p draft mode. Google's claimed #1 Arena ranking is self-reported -- unverified so far.",
+        "hashtags": [
+          "#Gemini",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
