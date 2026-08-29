@@ -8218,6 +8218,216 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+    "ts": "2026-08-29T03:53:19Z",
+    "export": {
+      "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+      "url": "https://rtfclmgzn.com/article/pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+      "headline": "A federal judge ruled the Pentagon illegally blacklisted Anthropic to punish it for 'arrogance,' not a real security risk",
+      "hook": "A federal judge ruled the Pentagon's 'supply chain risk' label on Anthropic was illegal retaliation for the company's public criticism, not a genuine security finding.",
+      "key_facts": [
+        "Judge Rita Lin's 59-page order says the designation aimed to punish Anthropic for 'arrogance.'",
+        "The designation followed Anthropic's refusal to let Claude be used for mass surveillance or autonomous weapons.",
+        "Anthropic says the block could have cost it billions in lost federal business."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A federal judge just ruled the Pentagon's blacklisting of Anthropic was illegal -- retaliation for the company's 'arrogance' in refusing to let Claude be used for mass surveillance or autonomous weapons, per the 59-page order. Anthropic says the block could've cost billions.",
+        "reply_copy": "The full ruling, and what's still unresolved:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AIPolicy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T08:53:19Z",
+        "copy": "What this ruling doesn't do: settle whether Claude should be usable for surveillance or autonomous weapons at all. It only found the Pentagon's PROCESS unlawful. A separate, narrower case over a different rule is still pending in the D.C. Circuit.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A federal judge just struck down the Pentagon's blacklist of Anthropic.\n\nU.S. District Judge Rita Lin's 59-page order found the 'supply chain risk' designation was retaliation for Anthropic's public criticism -- punishment for the company's 'arrogance,' not a real security finding.\n\nThe designation followed Anthropic's refusal to let Claude be used for mass domestic surveillance or fully autonomous weapons. Anthropic's own executives say the block could have cost billions in lost federal business.\n\nWhat's still open: the government hasn't said whether it will appeal this ruling, and a separate, narrower case is still pending. Full breakdown at the link in bio.",
+        "hashtags": ["#Anthropic", "#Pentagon", "#AIPolicy", "#AI", "#Claude", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A federal judge ruled the night of August 27 that the Pentagon acted illegally when it designated Anthropic a 'supply chain risk to national security' -- finding the label was retaliation for the company's public criticism, not a genuine security judgment. The designation followed Anthropic's refusal to let Claude be used for mass domestic surveillance or fully autonomous weapons. Anthropic's own executives say the designation could have cost the company billions of dollars in lost federal business.",
+        "hashtags": ["#Anthropic", "#AIPolicy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A federal judge ruled the Pentagon's Anthropic blacklist was illegal retaliation -- the order says it aimed to punish the company's 'arrogance,' not address a real security risk. Anthropic refused to let Claude be used for mass surveillance or autonomous weapons; the designation followed. Billions in business were reportedly at stake.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Judge Rita Lin: the Pentagon's Anthropic blacklist was illegal retaliation, aimed at punishing the company's 'arrogance' for refusing to let Claude be used for mass surveillance or autonomous weapons. Anthropic says the block could've cost billions. Appeal status: unclear.",
+        "hashtags": ["#Anthropic", "#AIPolicy"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+    "ts": "2026-08-29T03:53:21Z",
+    "export": {
+      "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+      "url": "https://rtfclmgzn.com/article/meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+      "headline": "Meta closes a second privacy-light loophole on its smart glasses -- five months after a lawsuit said human reviewers, not just wearers, see the footage",
+      "hook": "Meta's smart glasses will now stop recording, not just refuse to start, if the privacy light gets covered mid-clip -- its second fix to the same loophole in two months.",
+      "key_facts": [
+        "AR VP Alex Himel says the camera will now stop working if the light is covered during a recording.",
+        "A March lawsuit alleges Meta's 'designed for privacy' marketing contradicts a real human-review pipeline.",
+        "A Swedish-press investigation found Kenya-based contractors reviewing footage including nudity and sex."
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Meta's smart glasses will now stop recording -- not just refuse to start -- if you cover the privacy light mid-clip. Second fix to the same loophole in 2 months. It lands alongside an unresolved lawsuit: Meta's own 'designed for privacy' marketing vs. human reviewers seeing real footage.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Meta", "#Privacy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T08:53:21Z",
+        "copy": "Two different questions, easy to conflate: the LED fix is about BYSTANDER consent (can someone tell they're being recorded). The lawsuit is about WEARER consent (did buyers know a human, not just an algorithm, might watch what they captured). Today's update only answers the first.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": ["#Meta"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Meta just shipped its second fix in two months to the same privacy loophole on its smart glasses.\n\nThe camera will now stop recording -- not just refuse to start -- if the capture LED gets covered mid-clip, per AR VP Alex Himel.\n\nIt lands alongside an unresolved class-action lawsuit: plaintiffs say Meta's own 'designed for privacy, controlled by you' marketing contradicts a real review pipeline that has sent footage -- including nudity and sex -- to Kenya-based contractors.\n\nMeta doesn't dispute the practice, just whether the marketing was misleading. Full story at the link in bio.",
+        "hashtags": ["#Meta", "#SmartGlasses", "#Privacy", "#AI", "#TechNews", "#RayBanMeta"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Meta is rolling out a fix to its smart glasses that closes a specific workaround: a wearer could start recording, then cover the capture LED, and the camera would keep running. AR VP Alex Himel says the camera will now stop working if the light is covered mid-recording -- the second such fix in under two months. It lands alongside a still-unresolved lawsuit alleging Meta's own marketing misrepresented who actually sees captured footage.",
+        "hashtags": ["#Meta", "#Privacy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Meta's smart glasses now stop recording if you cover the light mid-clip, not just before -- second privacy fix in two months. Still unresolved: a lawsuit alleging Meta's 'designed for privacy' marketing contradicts a review pipeline that's sent real footage to human contractors in Kenya.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Meta's smart glasses: second privacy-light fix in two months, this one stopping recordings mid-clip if the LED is covered. Still open: a lawsuit over whether Meta's 'designed for privacy' marketing squares with a review pipeline that reaches human contractors in Kenya.",
+        "hashtags": ["#Meta", "#Privacy"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+    "ts": "2026-08-29T03:53:23Z",
+    "export": {
+      "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+      "url": "https://rtfclmgzn.com/article/deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+      "headline": "DeepSeek is closing in on a $74 billion valuation -- weeks after its own founder's leaked remarks said China still trails the US on the money and compute behind it",
+      "hook": "DeepSeek is reported nearing a funding round that would value it near $74 billion -- on revenue its own founder just admitted, in leaked remarks, still trails top US labs on funding and compute.",
+      "key_facts": [
+        "The round is reported nearing a close before end of August at roughly 500 billion yuan ($74B).",
+        "DeepSeek's actual revenue was $70.7 million for January through July 2026, per The Information.",
+        "The round was paused in July after founder Liang Wenfeng's leaked investor remarks went viral."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "DeepSeek is reportedly closing in on a ~$74B valuation -- weeks after leaked remarks from founder Liang Wenfeng admitted China still trails the US on funding and compute, and that DeepSeek itself remains reliant on Nvidia hardware. Its actual revenue, Jan-Jul: $70.7M.",
+        "reply_copy": "The full numbers:",
+        "link_in_reply": true,
+        "hashtags": ["#DeepSeek", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T08:53:23Z",
+        "copy": "The arithmetic: $74B valuation against ~$500M annualized revenue is roughly 148x. Not inherently damning for a frontier AI lab -- but it's a bet on where DeepSeek is headed, not where it is now. Try the slider yourself in the piece.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#DeepSeek"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "DeepSeek is reportedly closing in on a funding round that would value it near $74 billion.\n\nThe timing is striking: the round was paused in July after founder Liang Wenfeng's leaked investor remarks went viral -- reportedly admitting China still trails the US mainly on funding and compute, not talent, and that DeepSeek itself still relies on Nvidia hardware.\n\nDeepSeek's actual revenue for January through July: $70.7 million, per The Information. At the reported figures, that's roughly a 148x multiple on annualized revenue.\n\nOutlets disagree on exactly how much new money is changing hands. Full breakdown, and an interactive model you can push on, at the link in bio.",
+        "hashtags": ["#DeepSeek", "#AIFunding", "#China", "#AI", "#Markets", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "DeepSeek is reported nearing a close, before the end of August, on a funding round that would value the Hangzhou lab at roughly 500 billion yuan -- about $74 billion -- as it prepares for a possible Shanghai IPO. The round was paused in July after founder Liang Wenfeng's leaked investor remarks, reportedly admitting China still trails the US on funding and compute, went viral. DeepSeek's actual revenue was $70.7 million for January through July 2026.",
+        "hashtags": ["#DeepSeek", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "DeepSeek is reportedly nearing a ~$74B valuation round -- weeks after its own founder's leaked remarks admitted China still trails the US on funding and compute. Actual revenue Jan-Jul: $70.7M. That's roughly 148x annualized revenue at the reported figures.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "DeepSeek: reportedly closing in on a ~$74B valuation, weeks after its founder's leaked remarks admitted China still trails the US on funding and compute. Actual revenue Jan-Jul: $70.7M. Outlets disagree on how much new money is actually raised.",
+        "hashtags": ["#DeepSeek", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ]
 ;

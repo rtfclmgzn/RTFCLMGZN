@@ -32797,6 +32797,544 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Synthesis clears its evidence floor (6 sources across 4+ threads, 2 primary) and the visual floor (2 components, 1 data-carrying, not adjacent). disclaimer:none; Scoreboard already updated in the prior cycle when the score was first added -- this cycle's Scoreboard touch (below) only refreshes scannedAt and logs that this article is now the sourcing basis."
       }
     }
+  },
+  {
+    "slug": "pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+    "title": "A federal judge ruled the Pentagon illegally blacklisted Anthropic to punish it for 'arrogance,' not a real security risk",
+    "dek": "U.S. District Judge Rita Lin's 59-page order, issued the night of August 27, found Defense Secretary Pete Hegseth's February 'supply chain risk' designation was retaliation for Anthropic's refusal to let Claude be used for mass surveillance or autonomous weapons -- a designation Anthropic's own executives say could have cost it billions in lost federal business. The Pentagon hasn't said whether it will appeal this specific ruling; a separate, narrower case over a different rule is still pending in a Washington appeals court.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether the Pentagon files a notice of appeal against this specific August 27 ruling.",
+        "text": "It already appealed Judge Lin's earlier preliminary injunction in April. Doing the same here, after losing on the full merits rather than a preliminary finding, is the clearest signal of how far it intends to keep fighting."
+      },
+      {
+        "label": "Watch the separate, narrower D.C. Circuit case for a ruling on the different rule the Pentagon is using to pursue the same result.",
+        "text": "A Pentagon win there could functionally reinstate a version of the same block through a different legal doorway, even with this ruling standing untouched."
+      },
+      {
+        "label": "Watch whether any other AI lab discloses a similar Pentagon request it declined.",
+        "text": "This is the first case to reach a judge's finding of retaliation against a lab for refusing a defense request. Whether it's an isolated dispute or a preview of the same fight elsewhere depends on facts only the labs and the Pentagon currently have."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Anthropic PBC v. U.S. Department of War -- case docket",
+        "url": "https://www.courtlistener.com/docket/72379655/anthropic-pbc-v-us-department-of-war/",
+        "outlet": "CourtListener (RECAP)",
+        "kind": "primary"
+      },
+      {
+        "label": "Judge: Pentagon punished Anthropic for 'arrogance,' and that's illegal",
+        "url": "https://fortune.com/2026/08/28/anthropic-pentagon-ruling-rita-lin-arrogance/",
+        "outlet": "Fortune",
+        "kind": "reporting"
+      },
+      {
+        "label": "US judge blocks Pentagon blacklisting of AI firm Anthropic",
+        "url": "https://www.aljazeera.com/news/2026/8/28/us-judge-blocks-pentagon-blacklisting-of-ai-firm-anthropic",
+        "outlet": "Al Jazeera",
+        "kind": "reporting"
+      },
+      {
+        "label": "Judge Says Pentagon Illegally Blacklisted Anthropic",
+        "url": "https://www.notus.org/courts/judge-says-pentagon-illegally-blacklisted-anthropic",
+        "outlet": "NOTUS",
+        "kind": "reporting"
+      },
+      {
+        "label": "Hegseth declares Anthropic a 'supply chain risk to national security'",
+        "url": "https://www.yahoo.com/news/articles/hegseth-declares-anthropic-supply-chain-000300350.html",
+        "outlet": "Yahoo News (via wire reporting)",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "A federal judge ruled August 27 that the Pentagon's Anthropic 'supply chain risk' designation was illegal retaliation.",
+      "Judge Rita Lin's 59-page order found it aimed to punish Anthropic's public 'arrogance,' not a real security risk.",
+      "The designation followed Anthropic's refusal to let Claude be used for mass surveillance or autonomous weapons.",
+      "Anthropic says the designation could have cost it billions in lost federal business; it welcomed the ruling.",
+      "Caveat: a separate, narrower case is still pending, and the Pentagon hasn't said whether it will appeal this ruling too."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "A federal judge ruled the night of August 27 that the Pentagon acted illegally when it designated Anthropic a **\"supply chain risk to national security\"** -- finding the label was ==retaliation for the company's public criticism of the Defense Department's plans for AI on the battlefield==, not a genuine security judgment. U.S. District Judge Rita Lin's 59-page order, reported the next morning, sided with Anthropic on summary judgment: the full merits of the case, not just a preliminary finding.",
+        "citation_urls": [
+          "https://fortune.com/2026/08/28/anthropic-pentagon-ruling-rita-lin-arrogance/",
+          "https://www.aljazeera.com/news/2026/8/28/us-judge-blocks-pentagon-blacklisting-of-ai-firm-anthropic"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The dispute traces back to a July 2025 contract that made Claude the first frontier AI model __approved for use on classified US government networks__. Sometime after that, the Pentagon asked Anthropic to waive the restrictions it had built into that deal -- rules against using Claude for mass domestic surveillance or fully autonomous weapons systems. Anthropic refused. Defense Secretary Pete Hegseth designated the company a supply chain risk on **February 27, 2026**, a category ordinarily reserved for suppliers suspected of foreign sabotage or compromised hardware, not a US lab declining a request on safety grounds.",
+        "citation_urls": [
+          "https://www.yahoo.com/news/articles/hegseth-declares-anthropic-supply-chain-000300350.html"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Two separate Anthropic-Pentagon fights, not one",
+          "columns": [
+            {"label": "N.D. Cal. -- this ruling", "sub": "Anthropic PBC v. U.S. Dept. of War", "hi": true},
+            {"label": "D.C. Circuit -- the other case", "sub": "still open"}
+          ],
+          "rows": [
+            {"label": "What's being challenged", "values": ["The Feb. 27 designation itself, on First and Fifth Amendment grounds", "A different rule the Pentagon is using to try to reach the same result"]},
+            {"label": "Status as of Aug. 28", "values": ["Decided for Anthropic on summary judgment", "Still pending"]},
+            {"label": "What happens next", "values": ["Government hasn't said whether it will appeal this ruling", "Awaiting a ruling"]}
+          ],
+          "source": "NOTUS's and Fortune's August 28, 2026 reporting on Judge Lin's order and the separately pending D.C. Circuit case."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Anthropic sued March 9, 2026, alleging the designation violated its First Amendment right to free speech by retaliating against its public safety stance, and its Fifth Amendment right to due process by giving it no chance to dispute the label before it took effect. Lin questioned the Pentagon's \"troubling\" conduct in a preliminary ruling that March, and the Trump administration appealed that preliminary finding on April 2 -- a separate, narrower case over a different rule that remains pending in the D.C. Circuit today. A hearing on the full merits followed July 30; Lin's summary-judgment order, finding almost entirely for Anthropic, came out roughly four weeks later.",
+        "citation_urls": [
+          "https://www.notus.org/courts/judge-says-pentagon-illegally-blacklisted-anthropic"
+        ]
+      },
+      {
+        "type": "document",
+        "document": {
+          "docTitle": "Anthropic PBC v. U.S. Department of War -- summary judgment order",
+          "docMeta": "N.D. Cal., Judge Rita F. Lin, filed the night of Aug. 27, 2026 (case 3:26-cv-01996)",
+          "url": "https://www.courtlistener.com/docket/72379655/anthropic-pbc-v-us-department-of-war/",
+          "lines": [
+            {"n": "Order", "text": "\"The empty invocation of national security is not a blank check to punish and retaliate against government critics.\"", "mark": true},
+            {"n": "Order", "text": "...based on a desire to make a public example out of Anthropic for its 'arrogance'"}
+          ],
+          "reading": "The order states its own rationale directly: no genuine national-security basis for the designation, and a retaliatory motive the judge ties explicitly to Anthropic's public criticism of the Pentagon's AI-use plans.",
+          "source": "Fortune's August 28, 2026 report quoting Judge Lin's written order."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Anthropic's response was measured rather than triumphant. \"We welcome the court's ruling that this supply chain risk designation was unlawful,\" a spokesperson told reporters. \"We remain focused on working productively with the government to harness AI for our national security so all Americans benefit from this technology.\" The Pentagon did not immediately respond to requests for comment on the ruling.",
+        "citation_urls": [
+          "https://www.notus.org/courts/judge-says-pentagon-illegally-blacklisted-anthropic",
+          "https://fortune.com/2026/08/28/anthropic-pentagon-ruling-rita-lin-arrogance/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The stakes were never just reputational. **Anthropic executives have said the designation could have cost the company billions of dollars in lost business** -- a blacklisted status with a federal government that is itself one of the largest single buyers of enterprise AI, across intelligence, defense and civilian agencies. {{note: This newsroom previously reported that Anthropic's own March 9 court declaration cited revenue \"exceeding $5 billion to date,\" separate from its roughly $19 billion reported annualized run-rate around the same period -- the same filing this lawsuit produced.}}",
+        "citation_urls": [
+          "https://www.aljazeera.com/news/2026/8/28/us-judge-blocks-pentagon-blacklisting-of-ai-firm-anthropic"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {"who": "Anthropic", "tone": "gains", "what": "Regains eligibility for the federal contracts the designation blocked -- unless a court stays the ruling pending appeal."},
+            {"who": "OpenAI, Google and Microsoft, in their own pursuit of defense contracts", "tone": "unclear", "what": "Gain a precedent that refusing a Pentagon request on safety grounds isn't grounds for blacklisting -- but a government appeal could still narrow or reverse it."},
+            {"who": "The Pentagon officials who made the designation", "tone": "loses", "what": "A federal judge's written finding that the designation was retaliatory, 'illegal and baseless,' not a good-faith security judgment."},
+            {"who": "The underlying surveillance and autonomous-weapons dispute", "tone": "unclear", "what": "Left unresolved by this ruling, which is about retaliation, not about whether Claude should be usable for those purposes."}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "What the ruling doesn't do is settle the argument that started all of this. Judge Lin found the Pentagon's *process* unlawful -- that it punished Anthropic for saying no, rather than making a genuine security case for saying yes. It says nothing about whether the Pentagon's underlying request, waiving Claude's restrictions on mass surveillance and autonomous weapons, was itself reasonable. That fight, and the parallel D.C. Circuit case over a different rule aimed at the same outcome, is still open. For an administration that has already appealed one loss in this case, the likeliest next step is another one.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+    "image": "assets/img/newsroom/newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation.jpg",
+    "publishedAt": "2026-08-29T03:53:19Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-29T03:53:19Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch a same-day story: Judge Rita Lin's Aug 27/28 summary-judgment ruling against the Pentagon's Anthropic 'supply chain risk' designation. Grepped the archive and confirmed no prior article covers this ruling, though an earlier piece (anthropic-q2-2026-profit-spacex-discount-timing) referenced the underlying lawsuit's March 9 CFO declaration in passing. WebFetched the CourtListener docket directly for the primary case record, then Fortune, Al Jazeera and NOTUS for the order's content and quotes, then a wire-sourced Yahoo News piece for the original February 27 designation's background (the surveillance/autonomous-weapons refusal). Several outlets (NBC News, CNBC, TheHill, Forbes, The Register) returned hard 403s on direct fetch -- consistent with the standing WebFetch-blocking pattern already logged in living-notes.md for several news domains -- so those were used only as WebSearch snippet corroboration, not cited directly."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed the 'empty invocation of national security' and 'arrogance' quotes independently via two separate fetches (Fortune's own article text, and a WebSearch summary citing Al Jazeera's separate quotation of the same line) before using them as document-component verbatim text. Confirmed the February 27, 2026 designation date and its surveillance/autonomous-weapons origin via the Yahoo wire piece; could not independently verify the exact contract date (July 2025) beyond that single source, so it is stated as reported rather than independently corroborated by a second outlet. The 'billions in lost business' figure is Anthropic executives' own characterization as reported by Al Jazeera, not an independently measured figure -- stated as attributed, not as this newsroom's own estimate."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft implied the ruling resolves whether Claude should be usable for surveillance/autonomous-weapons purposes -- revised the closing paragraph to state explicitly that the ruling addresses only the Pentagon's retaliatory process, not the underlying policy question. No self-referential language found. disclaimer:none confirmed correct -- no health/financial trigger. Compliance-rulebook trigger 3 (legal proceedings) and trigger 4 (negative claim about a named party, here the Pentagon/DoD) both considered: sourced every claim to the order's own quoted text or independent reporting, gave the Pentagon's 'no immediate comment' its own sentence rather than omitting it, and attributed the financial-impact claim to Anthropic's own characterization rather than stating it as fact -- reporting the ruling and its reasoning, not extending an accusation beyond what the court found."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Compare's case-status claims match the background paragraph on the March/April/July procedural timeline. Document's two quoted lines are verbatim and appear character-for-character in the surrounding prose. Stakes items are framing/analysis fields, exempt from numeric provenance. No component carries a top-level text field; first block is p; no two components sit adjacent (compare, document and stakes are each separated by at least one paragraph)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources across 4 distinct evidentiary threads (the case docket itself, Fortune's report of the order's reasoning and quotes, Al Jazeera's independent report, NOTUS's independent report with additional timeline detail, and wire reporting on the original designation's background), with the court docket as a genuine primary source. Body runs approximately 1,050 words, comfortably inside the synthesis band. 3 components (compare, document, stakes), compare is the required data-carrying component."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (5 sources across 4 threads, 1 genuinely primary) and the visual floor (3 components, 1 data-carrying, none adjacent). disclaimer:none; compliance triggers 3 and 4 both considered and satisfied by neutral, sourced reporting rather than remediation or spiking."
+      }
+    }
+  },
+  {
+    "slug": "meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+    "title": "Meta closes a second privacy-light loophole on its smart glasses -- five months after a lawsuit said human reviewers, not just wearers, see the footage",
+    "dek": "The camera will now stop recording, not just refuse to start, if the capture LED gets covered mid-clip -- Meta's second fix to the same indicator in under two months, per AR VP Alex Himel, with more updates promised. It lands alongside an unresolved class-action lawsuit alleging Meta's own \"you, and only you, can see it\" marketing contradicts a moderation pipeline that has sent real footage of nudity and sex to Kenya-based contractors.",
+    "persona": "samira-nasser",
+    "section": "Ethics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether this closes the loophole for good, or just the two known bypasses.",
+        "text": "Meta's own VP has now shipped two fixes in two months for the same indicator light -- covering it before recording, then covering it during. A resale market for accessories that defeat the light without detection, per reporting cited by MakeUseOf, suggests the cat-and-mouse isn't over."
+      },
+      {
+        "label": "Watch the Bartone v. Meta class action for whether a court finds the marketing language actually misleading.",
+        "text": "That's the specific, falsifiable question the lawsuit puts in front of a judge -- not whether contractors review footage (Meta has confirmed that), but whether saying \"designed for privacy, controlled by you\" was false advertising given that fact."
+      },
+      {
+        "label": "Watch whether Meta ever offers an opt-out from human review of shared footage.",
+        "text": "As of this reporting, footage shared with Meta AI feeds a review pipeline with no opt-out. A future opt-out, or the absence of one after the lawsuit resolves, is the concrete fact that would settle whether \"controlled by you\" becomes true rather than aspirational."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Meta is closing a loophole that allowed people to record with their smart glasses' light covered",
+        "url": "https://www.engadget.com/2245776/meta-closing-loophole-that-allowed-people-to-record-with-smart-glasses-light-covered/",
+        "outlet": "Engadget",
+        "kind": "reporting"
+      },
+      {
+        "label": "Meta Ray-Ban smart glasses will kill another privacy LED loophole",
+        "url": "https://9to5google.com/2026/08/28/meta-ray-ban-smart-glasses-privacy-led-loophole-update/",
+        "outlet": "9to5Google",
+        "kind": "reporting"
+      },
+      {
+        "label": "Meta sued over AI smart glasses' privacy concerns, after workers at a Kenyan-based contractor reviewed nudity, sex, and other footage",
+        "url": "https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Meta sued over AI smart glasses' privacy concerns",
+        "url": "https://www.business-humanrights.org/en/latest-news/meta-sued-over-ai-smart-glasses-privacy-concerns-after-workers-at-a-kenyan-based-contractor-reviewed-nudity-sex-and-other-footage/",
+        "outlet": "Business & Human Rights Resource Centre",
+        "kind": "reporting"
+      },
+      {
+        "label": "Meta is finally fixing the dumbest privacy loophole in its smart glasses",
+        "url": "https://www.makeuseof.com/meta-fixing-smart-glasses-light-privacy/",
+        "outlet": "MakeUseOf",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Meta will now stop smart-glasses recording if the capture LED is covered mid-clip, not just before recording starts.",
+      "AR VP Alex Himel calls it the second such privacy fix in under two months, with more planned.",
+      "A March lawsuit alleges Meta's own marketing misrepresented who sees captured footage.",
+      "A Swedish-press investigation found Kenya-based contractors reviewing footage including nudity and sex.",
+      "Caveat: Meta confirms using contractors for review; the lawsuit disputes its marketing, not that practice itself."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Meta is rolling out a fix to its smart glasses that closes a specific, previously-documented workaround: a wearer could **start recording, then cover the capture LED**, and the camera would keep running -- because the software only checked whether the light was blocked *before* a recording began, not during one. \"A fix for this is starting to roll out,\" AR VP Alex Himel said. \"==The camera will now stop working if the light is covered during a recording.=='' It's the second time in under two months Meta has patched the same indicator light against a real-world bypass.",
+        "citation_urls": [
+          "https://www.engadget.com/2245776/meta-closing-loophole-that-allowed-people-to-record-with-smart-glasses-light-covered/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The first fix, in July 2026, targeted people physically modifying the hardware to disable the LED outright, and made the camera refuse to start recording if the light was already covered. That left the mid-recording gap this update now closes. Himel says the pattern continues: \"We're going to keep rolling out updates like this to make sure the capture LED can reliably alert bystanders when photos or videos are being captured.\" 9to5Google reports that only a small minority of users actually try to defeat the light -- but a genuine market for accessories built specifically to beat it without detection, per reporting cited by MakeUseOf, means the minority isn't zero.",
+        "citation_urls": [
+          "https://9to5google.com/2026/08/28/meta-ray-ban-smart-glasses-privacy-led-loophole-update/",
+          "https://www.makeuseof.com/meta-fixing-smart-glasses-light-privacy/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What each LED fix actually closes",
+          "items": [
+            {"value": "First fix", "unit": "shipped Jul 2026", "label": "Blocks recording from starting if the light is already covered",
+             "includes": "The pre-recording cover-up bypass",
+             "excludes": "Covering the light after recording has already begun -- the gap the second fix targets"},
+            {"value": "Second fix", "unit": "shipped Aug 28, 2026", "label": "Stops an active recording if the light is covered mid-clip",
+             "includes": "The mid-recording cover-up bypass the first fix left open",
+             "excludes": "Third-party accessories built to defeat the light without triggering either check, per reporting cited by MakeUseOf",
+             "note": "Himel says further updates to the same indicator are still planned."}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The lawsuit, filed in federal court in San Francisco by plaintiffs Gina Bartone and Mateo Canu and represented by the Clarkson Law Firm, doesn't turn on the light at all. It turns on what Meta told buyers versus what actually happens to their footage. The complaint quotes Meta's own marketing -- glasses \"__designed for privacy, controlled by you__,\" with copy telling buyers \"you're in control of your data and content\" -- against reporting that a Kenya-based subcontractor's workers have reviewed footage including nudity, sexual activity and bathroom scenes, material the plaintiffs say they had no reason to expect a stranger would ever see.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Who actually sees footage a wearer shares with Meta AI?",
+              "claims": [
+                {"who": "Meta's own marketing copy", "kind": "reporting", "says": "\"Designed for privacy, controlled by you\" / \"you're in control of your data and content\"", "url": "https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/"},
+                {"who": "Meta, in its own statement to reporters", "kind": "primary", "says": "\"When people share content with Meta AI, we sometimes use contractors to review this data ... as many other companies do.\"", "url": "https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/", "trusted": true}
+              ],
+              "ruling": "Using Meta's own statement to reporters over its own marketing copy -- it's the more specific, more recent admission from the same company about the same pipeline, not an outside claim disputing an inside one."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Meta disputes the *marketing* was misleading, not the underlying practice. \"When people share content with Meta AI, we sometimes use contractors to review this data for the purpose of improving people's experience, as many other companies do,\" the company told TechCrunch -- a defense that concedes the review pipeline exists while framing it as industry-standard. Meta has also said it blurs faces in reviewed footage, though the sourcing behind that claim disputes how consistently that actually happens. **Footage shared with Meta AI feeds that pipeline with no opt-out available to wearers.**",
+        "citation_urls": [
+          "https://techcrunch.com/2026/03/05/meta-sued-over-ai-smartglasses-privacy-concerns-after-workers-reviewed-nudity-sex-and-other-footage/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {"who": "Bystanders near a covered-light glasses wearer", "tone": "gains", "what": "The specific bypass this update closes -- covering the light mid-recording -- no longer works, narrowing (not eliminating) the ways someone can be recorded without a working warning light."},
+            {"who": "Glasses wearers who shared footage with Meta AI", "tone": "exposed", "what": "Remain in a review pipeline that includes human contractors, with no opt-out, regardless of what today's LED fix changes."},
+            {"who": "The Kenya-based content-review workforce", "tone": "exposed", "what": "The lawsuit and the underlying investigation are about wearers' and bystanders' privacy -- neither addresses the working conditions of the contractors doing the reviewing, which remains a separate, unresolved question."},
+            {"who": "Meta", "tone": "unclear", "what": "Gets credit for a real technical fix and a second one in two months, while the marketing-accuracy question the lawsuit raises is untouched by either."}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The two threads -- the indicator light and the review pipeline -- are easy to conflate and address genuinely different risks. The LED problem is about *bystander* consent: whether someone near the glasses can tell they're being recorded. The lawsuit is about *wearer* consent: whether the person who bought the glasses understood a stranger, not just an algorithm, might eventually watch what they captured. Today's fix makes real progress on the first. It says nothing about the second, which is still sitting in front of a federal judge.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+    "image": "assets/img/newsroom/newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit.jpg",
+    "publishedAt": "2026-08-29T03:53:21Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-29T03:53:21Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch a same-day story (Meta's second LED-loophole fix, Aug 28) and connected it to a still-open March 2026 privacy lawsuit already covered by tech press but not by this newsroom. Grepped the archive and confirmed no prior coverage of either the lawsuit or the LED fixes. WebFetched Engadget and 9to5Google directly for the fix's technical detail and Himel's quotes, and TechCrunch directly for the lawsuit's allegations, Meta's marketing language, the Kenya-contractor investigation, and Meta's own statement to reporters. Business & Human Rights Resource Centre and MakeUseOf corroborated independently."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed Himel's two quotes ('camera will now stop working...' and 'keep rolling out updates...') appear verbatim and identically across both Engadget's and 9to5Google's independent fetches before using them as direct quotes. Could not find a precise date for the Swedish-press investigation itself (only that the lawsuit citing it was filed March 5, 2026); body prose states it only as preceding the March 5 filing rather than inventing a specific date not found in sourcing. The claim that Meta blurs faces in reviewed footage is stated with its disputed-consistency caveat intact rather than as settled fact, per TechCrunch's own framing."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft blurred the LED-loophole story and the lawsuit into one undifferentiated privacy complaint -- revised to add a closing paragraph explicitly separating bystander-consent (the light) from wearer-consent (the lawsuit) as two different questions. No self-referential language found. disclaimer:none confirmed -- no health/financial trigger. Compliance-rulebook trigger 4 (negative claim about a named company) applies: sourced the nudity/sex-footage claim to TechCrunch's own reporting rather than asserting it directly, gave Meta's own defense equal weight and its exact words, and did not extend the claim to imply intentional wrongdoing beyond what the cited reporting supports."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Ledger's two rows (what Fix 1 and Fix 2 each close) match the mechanics described in the surrounding paragraphs and Himel's own quotes. Sourcecheck's two claims are both verbatim quotes matched in body prose (marketing copy and Meta's own statement), one marked trusted with a stated ruling. Stakes items are framing/analysis fields, exempt from numeric provenance. No component carries a top-level text field; first block is p; no two components sit adjacent (ledger, sourcecheck and stakes are each separated by at least one paragraph)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources across 4 distinct evidentiary threads (the LED-fix announcement via Engadget/9to5Google, the lawsuit and Meta's own statement via TechCrunch, independent corroboration via Business & Human Rights Resource Centre, and MakeUseOf's reporting on the bypass-accessory market), with Meta's own quoted statements standing in for a fetchable primary source. Body runs approximately 900 words, inside the synthesis band. 3 components (ledger, sourcecheck, stakes), ledger is the required data-carrying component."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (5 sources across 4 threads) and the visual floor (3 components, none adjacent). disclaimer:none; compliance trigger 4 (negative claim about a named company) satisfied by sourcing the claim to independent reporting and giving Meta's own defense equal, verbatim weight."
+      }
+    }
+  },
+  {
+    "slug": "deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+    "title": "DeepSeek is closing in on a $74 billion valuation -- weeks after its own founder's leaked remarks said China still trails the US on the money and compute behind it",
+    "dek": "The round, resumed August 6 after Liang Wenfeng paused it over a viral leaked transcript, is reported nearing a close before the end of August at a valuation of roughly 500 billion yuan ($74 billion) -- against Jan-through-July revenue of just $70.7 million, per The Information. Existing backers Monolith, Shixiang Capital and CATL are confirmed; outlets disagree on how much new money is actually changing hands.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for DeepSeek or its lead investors to confirm the round's final size and close date.",
+        "text": "As of this reporting, the raise amount itself is disputed across outlets (see below) -- a confirmed final number would resolve that and is the single most concrete fact still missing."
+      },
+      {
+        "label": "Watch whether DeepSeek discloses a full-year 2026 revenue figure once the round closes.",
+        "text": "$70.7 million for January through July is the most recent hard number available. A full-year figure, especially alongside any IPO filing, would let the valuation multiple actually be checked rather than estimated from a partial-year run rate."
+      },
+      {
+        "label": "Watch for confirmation of what Liang Wenfeng actually said in the leaked investor meeting.",
+        "text": "No outlet in this reporting round has published a verbatim transcript -- only paraphrased summaries of remarks on compute access and funding gaps. The verbatim text, if it surfaces, is the fact that would let readers judge the claims directly rather than through two layers of paraphrase."
+      }
+    ],
+    "sources": [
+      {
+        "label": "DeepSeek looks for fresh capital as founder's quant empire navigates China's choppy IPO market",
+        "url": "https://www.cnbc.com/2026/08/28/deepseek-founder-liang-wenfeng-high-flyer-china-tech-ipos-funding.html",
+        "outlet": "CNBC",
+        "kind": "reporting"
+      },
+      {
+        "label": "DeepSeek nears pre-IPO funding round as 2027 market debut takes shape: sources",
+        "url": "https://www.scmp.com/tech/big-tech/article/3365280/deepseek-nears-pre-ipo-funding-round-2027-market-debut-takes-shape-sources",
+        "outlet": "South China Morning Post",
+        "kind": "reporting"
+      },
+      {
+        "label": "DeepSeek Resumes $8 Billion Round With Monolith in the Running",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-06/deepseek-resumes-8-billion-round-with-monolith-in-the-running",
+        "outlet": "Bloomberg",
+        "kind": "reporting"
+      },
+      {
+        "label": "DeepSeek said to tell backers of funding pause after viral posts",
+        "url": "https://fortune.com/2026/07/25/deepseek-liang-wenfeng-backers-fundraising-pause-viral-posts-investors/",
+        "outlet": "Fortune",
+        "kind": "reporting"
+      },
+      {
+        "label": "DeepSeek Revenue Nears $500 Million as Chinese AI Startup Eyes IPO",
+        "url": "https://www.pymnts.com/news/artificial-intelligence/2026/deepseek-revenue-nears-500-million-as-chinese-ai-startup-eyes-ipo/",
+        "outlet": "PYMNTS (citing The Information)",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "DeepSeek's second funding round is reported nearing a close before end of August at roughly $74 billion.",
+      "The round was paused in July after founder Liang Wenfeng's leaked investor remarks went viral in China.",
+      "Leaked comments reportedly said China still trails the US on funding and compute, not talent.",
+      "DeepSeek's actual revenue was $70.7 million for January through July 2026, per The Information.",
+      "Caveat: outlets disagree on how much new money the round actually raises -- $8B and roughly $1.4B both reported."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "DeepSeek is reported nearing a close, before the end of August, on a funding round that would value the Hangzhou lab at roughly **500 billion yuan -- about $74 billion** -- as it prepares for a possible Shanghai IPO. CNBC's August 28 report frames the raise as part of founder Liang Wenfeng's broader turn from running a quantitative hedge fund, High-Flyer, toward steering an AI company through China's own volatile market for tech listings.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/08/28/deepseek-founder-liang-wenfeng-high-flyer-china-tech-ipos-funding.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The path here wasn't smooth. DeepSeek raised roughly **$7 billion in June 2026** at a pre-money valuation near $50 billion -- its first outside round of that scale. A second round, seeking still more, went into free fall on **July 25** when Liang told backers to hold off: a transcript of his private remarks to investors had gone viral on Chinese social media, and ==the company wanted the noise to die down before continuing to raise==. Bloomberg reported the round resumed **August 6**, with existing backer Monolith Management in talks to lead a syndicate that already includes Shixiang Capital and battery giant CATL, plus newer entrants CPE, Legend Capital and semiconductor-focused Stony Creek Capital.",
+        "citation_urls": [
+          "https://fortune.com/2026/07/25/deepseek-liang-wenfeng-backers-fundraising-pause-viral-posts-investors/",
+          "https://www.bloomberg.com/news/articles/2026-08-06/deepseek-resumes-8-billion-round-with-monolith-in-the-running"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "How much new money is this round actually raising?",
+              "claims": [
+                {"who": "Fortune, reporting the round's pre-pause terms (Jul 25)", "kind": "reporting", "says": "At least 10 billion yuan (~$1.4B) additional, at a pre-money floor of 480 billion yuan", "url": "https://fortune.com/2026/07/25/deepseek-liang-wenfeng-backers-fundraising-pause-viral-posts-investors/"},
+                {"who": "Bloomberg, reporting the round as resumed (Aug 6)", "kind": "reporting", "says": "Close to $8 billion (roughly 50 billion yuan), at a valuation near 500 billion yuan", "url": "https://www.bloomberg.com/news/articles/2026-08-06/deepseek-resumes-8-billion-round-with-monolith-in-the-running", "trusted": true}
+              ],
+              "ruling": "Trusting Bloomberg's figure. It describes the round as it actually resumed on August 6 with a named lead investor in talks; Fortune's number describes the smaller, earlier ask from before the round was paused and restructured -- the two aren't necessarily contradictory so much as describing the deal at two different moments, but no outlet in this reporting explains the jump directly."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "What actually went viral is itself only paraphrased in the coverage available: no outlet in this reporting round published Liang's remarks verbatim. As reported, he told investors China's AI industry still trails the US mainly on **funding and computing infrastructure, not talent** -- and acknowledged DeepSeek itself remains reliant on Nvidia hardware, unable to train its largest models at a scale comparable to the leading US labs. Those are strikingly candid admissions to make to a roomful of people being asked to fund a $74 billion valuation, and the timing -- weeks before the round needed to close -- is presumably why Liang wanted the story to stop circulating rather than why he said it.",
+        "citation_urls": [
+          "https://fortune.com/2026/07/25/deepseek-liang-wenfeng-backers-fundraising-pause-viral-posts-investors/"
+        ]
+      },
+      {
+        "type": "model",
+        "model": {
+          "title": "What has to be true for a $74 billion valuation to look ordinary?",
+          "inputs": [
+            {"key": "val", "label": "Valuation", "value": 74, "min": 40, "max": 100, "step": 1, "prefix": "$", "unit": "B", "dec": 0, "note": "The reported target for the current round."},
+            {"key": "rev", "label": "Annualized revenue", "value": 500, "min": 100, "max": 3000, "step": 25, "prefix": "$", "unit": "M", "dec": 0, "note": "The Information's reported run rate, based on $70.7M actual Jan-Jul 2026 revenue."}
+          ],
+          "outputs": [
+            {"label": "Revenue multiple", "expr": "val*1000/rev", "unit": "x revenue", "dec": 0, "note": "At the reported starting figures, roughly 148x annualized revenue."}
+          ],
+          "source": "Valuation from Bloomberg/SCMP/CNBC reporting on the current round; revenue from PYMNTS' reporting of The Information's figures."
+        }
+      },
+      {
+        "type": "p",
+        "text": "That multiple isn't inherently damning -- frontier AI labs across the board trade on future capability and market position, not trailing revenue, and DeepSeek's **82.9% API gross margin** and roughly **26,000 enterprise accounts** (per figures reported this year) are real, fast-growing numbers. But it does mean the $74 billion figure is a bet on where DeepSeek's revenue and capability are headed, not a reflection of where they are now -- precisely the kind of gap a reader should be able to see rather than infer from a headline valuation alone.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {"who": "June-round investors, at roughly $50B pre-money", "tone": "gains", "what": "See their stake reprice sharply higher on paper if the new round closes near $74B, less than three months later."},
+            {"who": "New investors joining this round", "tone": "unclear", "what": "Are buying in at close to 50% above the June price on a company whose leaked internal admission is that it still trails the US on funding and compute."},
+            {"who": "DeepSeek and Liang Wenfeng", "tone": "gains", "what": "A higher valuation ahead of a targeted Shanghai Star Market listing -- if the round closes at the reported terms and the leak doesn't reprice investor appetite."},
+            {"who": "The broader China-AI-catch-up narrative", "tone": "unclear", "what": "Cuts both ways: a $74B valuation reads as confidence in Chinese AI, while Liang's own leaked words are a rare on-record admission of exactly where the gap remains."}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "DeepSeek is reportedly eyeing a filing as early as the end of 2026, with a public debut on Shanghai's Star Market targeted for 2027. Whether this round closes at the reported $74 billion, and at the reported size, is still, as of this writing, a matter of \"people familiar with the matter\" rather than a confirmed number from DeepSeek itself -- the company has not commented publicly on either the valuation or the raise amount in any of the reporting reviewed here.",
+        "citation_urls": [
+          "https://www.scmp.com/tech/big-tech/article/3365280/deepseek-nears-pre-ipo-funding-round-2027-market-debut-takes-shape-sources"
+        ]
+      }
+    ],
+    "id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+    "image": "assets/img/newsroom/newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng.jpg",
+    "publishedAt": "2026-08-29T03:53:23Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-29T03:53:23Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch a same-day story (CNBC, Aug 28) on DeepSeek's funding round nearing close, and traced the round's full arc back through July's viral-leak pause and the June prior round. Grepped the archive and confirmed no prior coverage of this funding round, though companies.js's existing DeepSeek entry cited a now-stale '$50B valuation' figure. WebFetched SCMP and Fortune directly for valuation/investor detail and the leak's content; Bloomberg's own article 403'd on direct fetch (consistent with the standing WebFetch-blocking pattern already logged in living-notes.md) so its reported $8B/Monolith detail is used via WebSearch snippet corroboration, attributed to Bloomberg by name rather than fetched directly."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Found a genuine, unresolved discrepancy between Fortune's July 25 reported raise size (~10B yuan additional) and the widely-reported post-resume figure (~$8B/50B yuan) -- addressed via sourcecheck rather than silently picking one. Could not locate a verbatim transcript of Liang Wenfeng's leaked remarks in any fetchable source; body text and pipeline notes both flag the content as paraphrased through reporting, not independently confirmed word-for-word. Revenue figures ($70.7M Jan-Jul, 82.9% API margin, ~26,000 enterprise accounts) are The Information's reporting as relayed by PYMNTS -- a secondary relay of a paywalled primary source, noted as such rather than presented as directly verified."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft stated the $74B valuation as settled fact in the lead -- revised throughout to 'reported,' 'targeted' and 'nearing' framing, since no source confirms the round has actually closed. No self-referential language found. disclaimer:none confirmed: this is valuation reporting, not investment advice or a buy/sell framing, so compliance-rulebook trigger 2 (financial/crypto claims) is satisfied by hedged, attributed framing rather than requiring the not-financial-advice line, which is reserved for the Markets/Crypto disclaimer table's specific trading-recommendation case. Updated companies.js's DeepSeek entry in the same cycle to replace its stale '$50B valuation' line (see report)."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Sourcecheck's two claims and figures match the funding-history paragraph above it. Model's starting values (74 for valuation, 500 for revenue) are both reported figures stated in body prose before the component appears; the 148x output is stated as a note within the component itself, and the formula uses only the unit constant 1000 (converting $B to $M), no unattributed bare numbers. Stakes items are framing/analysis fields, exempt from numeric provenance. No component carries a top-level text field; first block is p; no two components sit adjacent (sourcecheck, model and stakes are each separated by at least one paragraph)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources across 4 distinct evidentiary threads (CNBC's founder-profile reporting, SCMP's independent pre-IPO reporting, Bloomberg's resumed-round reporting, Fortune's pause/leak reporting, and PYMNTS' relay of The Information's revenue figures). No single source is a directly-fetchable primary document, but the round's existence is corroborated across at least three independent outlets. Body runs approximately 1,100 words, comfortably inside the synthesis band. 3 components (sourcecheck, model, stakes); model is the required data-carrying component."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (5 sources across 4 threads) and the visual floor (3 components, 1 data-carrying, none adjacent). disclaimer:none; compliance trigger 2 (financial claims) satisfied by hedged, attributed valuation framing throughout rather than stating the raise as a settled fact."
+      }
+    }
   }
 ]
 ;

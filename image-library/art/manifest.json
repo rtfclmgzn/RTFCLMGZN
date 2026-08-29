@@ -439,6 +439,11 @@
     {
      "article_id": "newsroom-moonshot-series-f-35-billion",
      "used_at": "2026-07-29"
+    },
+    {
+     "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
@@ -898,6 +903,11 @@
     {
      "article_id": "newsroom-anthropic-agentic-misalignment",
      "used_at": "2026-07-18"
+    },
+    {
+     "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
@@ -2037,6 +2047,11 @@
     {
      "article_id": "newsroom-openai-screenless-speaker",
      "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
