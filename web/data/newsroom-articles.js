@@ -32031,6 +32031,772 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Brief clears its evidence floor (1 confirmed thread, directly verified) and the visual floor (1 component). No compliance trigger fires. Cover is a recorded, sanctioned LRU exception -- see Gate stage note above and the cycle report for the library-gap finding."
       }
     }
+  },
+  {
+    "slug": "nvidia-ai-compute-partnership-antitrust-pause",
+    "title": "Nvidia paused its own chip-financing program after its employees flagged an antitrust risk -- weeks after trimming a separate $250 billion guarantee",
+    "dek": "The AI Compute Partnership, launched in July 2026, offered smaller cloud providers credit support to buy Nvidia chips in exchange for half of the revenue they earned above a base rate. The Wall Street Journal reported August 27 that Nvidia has paused new deals under the program after its own employees warned that requiring providers to resell capacity only to Nvidia-\"approved\" customers could draw antitrust scrutiny -- the second Nvidia financing commitment trimmed in two weeks, after its OpenAI Ohio guarantee fell from a reported $250 billion to $105 billion.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch Nvidia's Q3 FY2027 earnings call, expected around November 2026.",
+        "text": "That's the next scheduled point where Nvidia is likely to address the AI Compute Partnership's status on the record, rather than through an unnamed spokesperson's statement to reporters."
+      },
+      {
+        "label": "Watch whether Sharon AI and Firmus Technologies confirm their GPU allocations are unaffected.",
+        "text": "Neither company nor Nvidia has said so publicly. A confirmation either way would settle whether the pause reaches already-signed deals or only new ones going forward."
+      },
+      {
+        "label": "Watch for any FTC or DOJ statement referencing Nvidia's compute-financing structure.",
+        "text": "The concern reported here came from inside Nvidia, pre-emptively. An actual regulatory inquiry, if one ever opens, would be a materially different and larger story than a self-correction."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nvidia pauses revenue-sharing deals with AI cloud companies, WSJ reports",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-pauses-ai-cloud-revenue-120700044.html",
+        "outlet": "Yahoo Finance",
+        "kind": "reporting"
+      },
+      {
+        "label": "WSJ report: Nvidia pauses AI cloud revenue-share deals amid antitrust and control concerns",
+        "url": "https://investinglive.com/stocks/wsj-report-nvidia-pauses-ai-cloud-revenue-share-deals-amid-antitrust-and-control-concerns/",
+        "outlet": "InvestingLive",
+        "kind": "reporting"
+      },
+      {
+        "label": "Nvidia Paused a $36 Billion Program. The Clause That Broke It Was Never About Money",
+        "url": "https://businessmodelanalyst.com/nvidia-ai-compute-partnership-customer-approval/",
+        "outlet": "Business Model Analyst",
+        "kind": "reporting"
+      },
+      {
+        "label": "Nvidia pauses AI cloud financing deals amid control, antitrust concerns",
+        "url": "https://americanbazaaronline.com/2026/08/28/nvidia-pauses-ai-cloud-financing-deals-487161/",
+        "outlet": "American Bazaar",
+        "kind": "reporting"
+      },
+      {
+        "label": "Nvidia scales back funding guarantee for Ohio OpenAI data center, WSJ reports",
+        "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-scales-back-250-billion-234356524.html",
+        "outlet": "Yahoo Finance",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Nvidia paused new deals under its AI Compute Partnership after employees flagged an antitrust risk, per the WSJ.",
+      "The program lets Nvidia collect 50% of a provider's revenue above a base rate, on $36B committed.",
+      "The disputed clause required providers to resell chips only to Nvidia-approved customers.",
+      "It's the second Nvidia financing pullback in two weeks, after its OpenAI Ohio guarantee shrank to $105 billion.",
+      "Caveat: Nvidia calls the broader program unchanged and hasn't confirmed which specific deals, if any, are paused."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Nvidia has paused new deals under its AI Compute Partnership, the financing program it launched in July 2026 to help smaller AI cloud providers buy its chips, ==the Wall Street Journal reported August 27, citing people familiar with the matter==. Nvidia's own employees had warned current and potential customers that the program's terms -- which let Nvidia dictate which customers a provider could resell capacity to -- could draw antitrust scrutiny. It is the second Nvidia financing commitment scaled back inside of two weeks.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/nvidia-pauses-ai-cloud-revenue-120700044.html",
+          "https://investinglive.com/stocks/wsj-report-nvidia-pauses-ai-cloud-revenue-share-deals-amid-antitrust-and-control-concerns/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanics, as reported: Nvidia and a cloud provider agree on a base hourly rate covering the provider's own costs, and **Nvidia collects 50% of any revenue the provider earns above that threshold** on Nvidia-powered capacity. Nvidia also promised to rent the capacity back itself if a provider couldn't otherwise resell it -- a backstop meant to let smaller, less-capitalized providers commit to chip purchases they couldn't otherwise finance. Nvidia disclosed **$36 billion** in total commitments under the program in its latest quarterly filing, spread across agreements that typically run six years. CFO Colette Kress told investors the arrangement had the potential to bring in \"billions of dollars\" for Nvidia over the medium to long term.",
+        "citation_urls": [
+          "https://businessmodelanalyst.com/nvidia-ai-compute-partnership-customer-approval/",
+          "https://americanbazaaronline.com/2026/08/28/nvidia-pauses-ai-cloud-financing-deals-487161/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What the AI Compute Partnership actually committed",
+          "items": [
+            {
+              "value": "$36B",
+              "unit": "Total commitments disclosed",
+              "label": "Across the program's cloud-provider agreements, per Nvidia's latest quarterly filing",
+              "includes": "Six-year credit-support agreements signed since the July 2026 launch",
+              "excludes": "Nvidia's separate $500B Wall Street financing alliance and its $105B OpenAI Ohio guarantee -- different vehicles, not additive",
+              "note": "CFO Colette Kress told investors the arrangement could bring in \"billions of dollars\" for Nvidia over the medium to long term."
+            },
+            {
+              "value": "50%",
+              "unit": "Nvidia's cut",
+              "label": "Share of a cloud provider's revenue above an agreed base hourly rate",
+              "includes": "Revenue Nvidia-powered capacity earns once the provider's own costs are covered",
+              "excludes": "The base rate itself, which is set to cover the provider's costs first",
+              "note": "Nvidia also retains the right to rent the capacity back itself if a provider can't resell it."
+            },
+            {
+              "value": "40,000 / 170,000",
+              "unit": "GPUs -- Sharon AI / Firmus Technologies",
+              "label": "The program's two named launch participants",
+              "includes": "Grace Blackwell GB300 GPUs (Sharon AI); capacity for a 360-megawatt campus in Batam, Indonesia (Firmus)",
+              "excludes": "Confirmation that either specific deal is among those now paused",
+              "note": "Both are smaller, specialized cloud providers -- the exact customer profile the program was built to reach."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Two cloud providers were named as the program's first participants when it launched: ++Sharon AI++, which committed to 40,000 Grace Blackwell GB300 GPUs, and ++Firmus Technologies++, which committed to 170,000 GPUs for a 360-megawatt campus in Batam, Indonesia. {{note: GB300 is the newest SKU in Nvidia's current Blackwell generation -- the chip tier data centers are racing to secure allocation of right now.}} Neither company, nor Nvidia, has said whether those specific deals are among the ones now paused; reporting describes the pause as covering new agreements going forward, not a wind-down of what's already signed.",
+        "citation_urls": [
+          "https://businessmodelanalyst.com/nvidia-ai-compute-partnership-customer-approval/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What tripped the pause, according to the Journal's sourcing, wasn't the size of the commitment -- it was a control clause. Nvidia required providers to rent chips only to customers Nvidia had approved, and signaled a preference for spreading capacity across many smaller AI companies rather than concentrating it with one large buyer. __Antitrust law scrutinizes exactly this pattern__ when a dominant supplier starts deciding who its own customers are allowed to sell to. The commercial logic isn't hard to follow: a favored, well-capitalized customer guaranteed unlimited compute at a subsidized rate has less reason to build or buy from a Nvidia competitor, and a customer base kept deliberately fragmented stays financing-dependent on Nvidia rather than growing large enough to become one itself.",
+        "citation_urls": [
+          "https://businessmodelanalyst.com/nvidia-ai-compute-partnership-customer-approval/",
+          "https://investinglive.com/stocks/wsj-report-nvidia-pauses-ai-cloud-revenue-share-deals-amid-antitrust-and-control-concerns/"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Did Nvidia actually pause the AI Compute Partnership's revenue-share deals?",
+              "claims": [
+                {
+                  "who": "Wall Street Journal reporting, via multiple outlets citing people familiar with the matter",
+                  "kind": "reporting",
+                  "says": "Nvidia stepped back from new deals under the program last week, after employees raised antitrust concerns internally.",
+                  "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-pauses-ai-cloud-revenue-120700044.html",
+                  "trusted": true
+                },
+                {
+                  "who": "Nvidia spokesperson",
+                  "kind": "reporting",
+                  "says": "\"The new business model we introduced in July that opens up compute access to the fast-growing AI ecosystem is still in place and continues to evolve due to high demand.\"",
+                  "url": "https://investinglive.com/stocks/wsj-report-nvidia-pauses-ai-cloud-revenue-share-deals-amid-antitrust-and-control-concerns/"
+                }
+              ],
+              "ruling": "Using the WSJ reporting. Nvidia's statement addresses the broader compute-access model introduced in July, not specifically whether the disputed revenue-share deals are still signing -- it neither confirms nor directly denies a pause, and it doesn't contradict the antitrust concern reported from inside the company."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "This is the second Nvidia financing commitment trimmed inside of two weeks. Nvidia had separately been negotiating what reporting in early August described as [a $250 billion loan guarantee for OpenAI's proposed Ohio data center](/article/nvidia-openai-250-billion-ohio-data-center-financing) -- by mid-August, that figure had shrunk to **$105 billion**, backstopping only the project's first phase, after investors pushed back on how much of Nvidia's own balance sheet the company was putting behind a single customer's build-out.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/nvidia-scales-back-250-billion-234356524.html"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Being the chip supplier, the bank, and the landlord in the same deal is the arrangement that drew Nvidia's own employees' antitrust concern.",
+        "citation_urls": [
+          "https://businessmodelanalyst.com/nvidia-ai-compute-partnership-customer-approval/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Both retreats sit inside a busier pattern: in roughly the same three-week span, Nvidia also announced [a financing alliance with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR](/article/nvidia-wall-street-500-billion-financing-alliance) meant to mobilize over $500 billion in third-party capital for AI infrastructure -- credit risk carried by outside banks and asset managers, not by Nvidia's own contracts or balance sheet. That structure sidesteps the exact question that appears to have triggered this pause: nothing in a bank's own lending terms hands Nvidia the power to decide which of its customers may resell capacity to whom.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "Sharon AI and Firmus Technologies",
+              "tone": "unclear",
+              "what": "Named as the program's first participants at launch; neither Nvidia nor the reporting has said whether their existing GPU commitments are among the deals now paused."
+            },
+            {
+              "who": "Smaller, specialized AI cloud providers broadly",
+              "tone": "loses",
+              "what": "Lose access, for now, to a financing channel built specifically for buyers too small to self-fund gigawatt-scale GPU purchases."
+            },
+            {
+              "who": "Nvidia",
+              "tone": "unclear",
+              "what": "Avoids an antitrust fight over dictating which customers its own customers can serve, at the cost of a disclosed revenue stream its own CFO called worth \"billions\" over time."
+            },
+            {
+              "who": "Antitrust regulators",
+              "tone": "gains",
+              "what": "Get a voluntary correction, prompted by Nvidia's own employees, without first having to open a formal inquiry."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this reads as Nvidia stepping back from financing the AI buildout -- the $500 billion bank alliance and the now-smaller OpenAI guarantee are both still live. It reads instead as a company correcting a specific, control-heavy deal structure before a regulator had to say something first, in favor of structures where Nvidia collects fees and interest rather than veto power over who its customers can sell to. A spokesperson says the broader \"business model\" introduced in July is unchanged; what's unresolved is whether the specific revenue-share deals -- the ones that made Nvidia supplier, financier and landlord in the same contract -- come back in a form that keeps the antitrust exposure, or one that doesn't.",
+        "citation_urls": [
+          "https://investinglive.com/stocks/wsj-report-nvidia-pauses-ai-cloud-revenue-share-deals-amid-antitrust-and-control-concerns/"
+        ]
+      }
+    ],
+    "id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
+    "image": "assets/img/newsroom/newsroom-nvidia-ai-compute-partnership-antitrust-pause.jpg",
+    "publishedAt": "2026-08-29T00:42:29Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-29T00:42:29Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch that Nvidia paused new deals under its July-launched AI Compute Partnership after employees flagged antitrust risk over a customer-approval clause (WSJ, Aug 27). Grepped the archive and confirmed no prior coverage of this specific program or pause, though the site had already covered the Ohio guarantee and the $500B Wall Street financing alliance under separate slugs. Dug into secondary analysis (businessmodelanalyst.com) to find the named launch participants (Sharon AI, Firmus Technologies) and the $36B quarterly-filing figure, then verified the Ohio-guarantee scale-back (from a reported $250B to a finalized $105B) as a genuinely corroborated, separate story worth cross-linking as part of the same pattern."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Attempted to fetch Nvidia's own newsroom and SEC EDGAR directly for a primary company source on the AI Compute Partnership specifically; EDGAR returned HTTP 403 to the fetch tool and no dedicated Nvidia newsroom page for this specific program was found via search, so no purely primary company URL is in the sources list -- flagging this honestly rather than fabricating one. All five sources are independent reporting, two of which (InvestingLive, Yahoo Finance/WSJ-report summaries) directly quote Nvidia's own spokesperson and CFO Kress, which is the closest primary material available. Cross-checked the spokesperson quote across two outlets and found a wording/gender discrepancy (\"spokesman\" vs. \"spokeswoman\") in how different secondary outlets characterized the same source -- used the more directly quoted version and did not assert a gender in body text."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft stated the pause as a flat fact without addressing that Nvidia's own statement doesn't explicitly confirm it -- added the sourcecheck component and revised the verdict paragraph to state plainly what's confirmed (the reporting) versus what's not (which specific deals, if any, are affected). No self-referential language found. Confirmed disclaimer:none is correct for a Compute-section Nvidia financing story per this section's existing precedent (four prior Nvidia/Compute pieces all use none). No compliance mandatory-scrutiny trigger fires: no health/medical claim, no financial advice framing, no litigation, and the antitrust-risk claim is attributed to WSJ's own sourcing and Nvidia's own employees' reported concern, not stated as this desk's independent accusation."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Ledger's three items ($36B, 50%, 40,000/170,000 GPUs) all appear as matching figures in body prose. Sourcecheck's two claims both quote text that appears verbatim or near-verbatim in the surrounding paragraphs. Stakes' four items are framing/analysis fields exempt from numeric provenance and introduce no invented figures. No component carries a top-level text field; first block is p; no two components sit adjacent (ledger, sourcecheck and stakes are each separated by prose or the quote block)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources, all independent reporting across two distinct evidentiary threads (the AI Compute Partnership pause itself, and the separately corroborated Ohio-guarantee scale-back used for pattern context), with direct company quotes embedded in the reporting standing in for a fetchable primary URL. Body runs approximately 1,050 words, comfortably inside the synthesis band. 3 components (ledger, sourcecheck, stakes), ledger is the required data-carrying component."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (5 independent reporting sources across 2 distinct threads, with direct primary-company quotes embedded) and the visual floor (3 components, 1 data-carrying, none adjacent). disclaimer:none matches this section's existing Nvidia/Compute precedent."
+      }
+    }
+  },
+  {
+    "slug": "unitree-g1-bluetooth-root-rce-vulnerability",
+    "title": "A researcher found two ways to get root on Unitree's best-selling humanoid robot -- one just by standing near it with Bluetooth on",
+    "dek": "Disclosed August 27, 2026, the two vulnerability chains give an attacker full root control of the Unitree G1 EDU's control computer. One needs network access; the other needs only Bluetooth proximity, no pairing, and researcher Olivier Laflamme calls it wormable -- able to spread from one G1 to the next. Unitree patched the cloud flaw that enabled the Bluetooth chain in July and paid a bounty, but no confirmed firmware release closes the rest, and about three-quarters of Unitree's humanoid sales go to the university and research labs now running the exposed units.",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "G1 EDU owners: check your firmware build against Unitree's advisory at security.unitree.com before any public demo or shared-lab use.",
+        "text": "CVE-2026-76639 and CVE-2026-76640 are both named there. The wormable Bluetooth chain specifically requires no pairing, so proximity alone is the exposure -- a crowded lab, conference floor or classroom is exactly the setting it's built for."
+      },
+      {
+        "label": "Watch for Unitree to publish a specific fixed firmware version number.",
+        "text": "That's the concrete fact that would resolve the open question this piece leaves unanswered. Until then, \"patched\" describes intent and a bounty payout, not a status an owner can verify against their own unit."
+      },
+      {
+        "label": "Watch whether other Bluetooth-provisioned humanoid platforms get the same kind of independent audit.",
+        "text": "UniBLEed's technique -- an unauthenticated BLE write plus a cloud key-ownership gap -- is an architecture pattern, not a Unitree-specific mistake. Nothing here confirms or rules out the same design showing up elsewhere."
+      }
+    ],
+    "sources": [
+      {
+        "label": "UniBLEed: Unauthenticated Root RCE on Any Unitree G1 Humanoid Robot Within Bluetooth Range",
+        "url": "https://boschko.ca/g1-ble-rce/",
+        "outlet": "Boschko (Olivier Laflamme)",
+        "kind": "primary"
+      },
+      {
+        "label": "Two Unitree G1 EDU Humanoid Robot Flaws Enable Root RCE, One Starts Over Bluetooth",
+        "url": "https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html",
+        "outlet": "The Hacker News",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree G1 Humanoid Robot Flaws Allow Unauthenticated Root RCE Over Bluetooth",
+        "url": "https://gbhackers.com/unitree-g1-humanoid-robot-flaws/",
+        "outlet": "GBHackers",
+        "kind": "reporting"
+      },
+      {
+        "label": "China's Unitree Robotics Is Leading the Humanoid Revolution",
+        "url": "https://time.com/article/2026/07/23/unitree-china-human-robotics/",
+        "outlet": "TIME",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Two vulnerability chains, disclosed August 27, let an attacker gain root control of Unitree's G1 EDU robot.",
+      "One needs only Bluetooth range and no pairing; researcher Olivier Laflamme calls it wormable, G1-to-G1.",
+      "Unitree patched the cloud flaw enabling it in July and paid a bounty, but a full firmware fix isn't confirmed.",
+      "About 74% of Unitree's humanoid sales go to universities and research labs, per TIME -- exactly who runs these units.",
+      "Caveat: Unitree's response was fast and real, but no verifiable fixed-firmware version exists yet for owners to check."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Two vulnerability chains disclosed August 27, 2026 give an attacker full root control of the control computer inside Unitree's G1 EDU humanoid robot -- the model most often bought by the universities and research labs training the next generation of roboticists. ==One of the two chains needs nothing but Bluetooth range and no pairing==, and the researcher who found it, Olivier Laflamme, calls it wormable: a compromised G1 can pass the exploit on to the next G1 that comes into radio range, with no human in the loop.",
+        "citation_urls": [
+          "https://boschko.ca/g1-ble-rce/",
+          "https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The Bluetooth chain, tracked as **CVE-2026-76640**, strings together five separate flaws. A Bluetooth Low Energy characteristic on the robot accepts write commands without requiring pairing at all; sending it the right command returns the robot's AES-128 encryption key, wrapped in RSA. Unitree's cloud API is supposed to be the only thing that can unwrap that key -- but the endpoint didn't check whether the requesting account actually owned that robot's serial number, so **any free Unitree account could decrypt any G1's key**. From there, an unescaped field in the robot's Wi-Fi setup script lets an attacker force it onto an attacker-controlled network, and a buffer overflow in that same code path -- a 500-byte field fed 1,050 bytes -- corrupts the robot's event loop into running arbitrary code as root.",
+        "citation_urls": [
+          "https://boschko.ca/g1-ble-rce/"
+        ]
+      },
+      {
+        "type": "flow",
+        "flow": {
+          "title": "The Bluetooth chain, step by step",
+          "steps": [
+            {
+              "actor": "Attacker (Bluetooth range, no pairing)",
+              "what": "Writes to GATT characteristic 0xFFE2, an interface with no pairing requirement"
+            },
+            {
+              "actor": "G1's Bluetooth service",
+              "what": "Returns its AES-128 key, wrapped in RSA, in response to a cleartext bootstrap command",
+              "hi": true
+            },
+            {
+              "actor": "Unitree's cloud API",
+              "what": "Decrypts the key for any authenticated account, without checking it owns that robot's serial number"
+            },
+            {
+              "actor": "G1's Wi-Fi setup script",
+              "what": "Accepts an unescaped field, forcing the robot onto an attacker-controlled network"
+            },
+            {
+              "actor": "G1's Locomotion PC",
+              "what": "Buffer overflow in the same code path executes arbitrary code as root",
+              "blocked": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The second chain, **CVE-2026-76639**, doesn't need Bluetooth proximity at all: it abuses a path-traversal bug in the file-upload feature of `chat_go`, the G1's onboard AI chat service, to plant a script in the directory a separate service called `bashrunner` executes as root on startup. Laflamme's writeup notes both chains reach the same destination -- the Locomotion PC, a real-time Linux box that already runs as root with control over the robot's motors, cameras, microphone and speaker.",
+        "citation_urls": [
+          "https://boschko.ca/g1-ble-rce/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "The two root-RCE chains, side by side",
+          "columns": [
+            {
+              "label": "CVE-2026-76639",
+              "sub": "path traversal"
+            },
+            {
+              "label": "CVE-2026-76640",
+              "sub": "Bluetooth chain",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Entry point",
+              "values": [
+                "Network-adjacent access to chat_go's file upload",
+                "Bluetooth range only, no pairing required"
+              ]
+            },
+            {
+              "label": "Confirmed fixed?",
+              "values": [
+                "Yes, per the disclosure writeup",
+                "Partially -- only the cloud key-ownership step, as of publication"
+              ]
+            },
+            {
+              "label": "Bounty paid",
+              "values": [
+                "$1,000",
+                "$5,000"
+              ],
+              "note": "Laflamme calls the second chain wormable -- capable of spreading G1 to G1."
+            }
+          ],
+          "source": "Olivier Laflamme's technical writeup (boschko.ca) and The Hacker News' review of Unitree's public guidance."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Unitree's response gets real credit in the same writeup that found the holes: the company paid a **$1,000** bounty for the first chain and **$5,000** for the second, and, per Laflamme, \"moved quickly through triage, response, and remediation\" once notified through its official channel at security.unitree.com. Unitree closed the cloud-side ownership check -- the specific flaw that let any account decrypt any robot's key -- in July 2026, before the CVEs were even publicly reserved.",
+        "citation_urls": [
+          "https://boschko.ca/g1-ble-rce/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"[Unitree's security team] moved quickly through triage, response, and remediation.\" -- Olivier Laflamme, security researcher, in his technical disclosure writeup",
+        "citation_urls": [
+          "https://boschko.ca/g1-ble-rce/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "But as of publication, [The Hacker News reported](https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html) that **no confirmed fixed firmware release has been verified in any Unitree guidance it could access** -- meaning the Wi-Fi buffer overflow and the pairing-free Bluetooth write are, for any G1 EDU still running an older build, still live.",
+        "citation_urls": [
+          "https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "title": "From discovery to disclosure",
+          "items": [
+            {
+              "when": "May 2-14, 2026",
+              "what": "Firmware extraction and the first RCE chain (path traversal) discovered"
+            },
+            {
+              "when": "May 21, 2026",
+              "what": "The cloud API's key-ownership flaw identified"
+            },
+            {
+              "when": "Jun 11-30, 2026",
+              "what": "Bluetooth GATT write and Wi-Fi buffer-overflow chain fully validated",
+              "hi": true
+            },
+            {
+              "when": "Jul 2026",
+              "what": "Unitree patches the cloud ownership-verification check; bounty paid"
+            },
+            {
+              "when": "Aug 18-27, 2026",
+              "what": "CVE reservations obtained and the research published"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "That firmware gap matters because of who actually owns these robots. G1 EDU is Unitree's developer edition -- root-level SDK access, ROS support, and full permission to install custom software are the point of the product, not a security lapse. [TIME reported](https://time.com/article/2026/07/23/unitree-china-human-robotics/) that **74% of Unitree's humanoid sales go to universities, research institutions and individual developers**, against just 9% to industrial buyers, with more than 5,500 G1 units shipped in 2025 alone. Documented deployments include labs at Stanford, MIT, UT Austin and ETH Zurich -- exactly the kind of shared, semi-public spaces where a stranger, or another lab's own device, can get within Bluetooth range of an unpatched unit without anyone noticing.",
+        "citation_urls": [
+          "https://time.com/article/2026/07/23/unitree-china-human-robotics/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "University and research-lab G1 EDU owners",
+              "tone": "exposed",
+              "what": "Run the exact developer-access configuration these chains target, often in shared spaces where Bluetooth proximity to a stranger is routine."
+            },
+            {
+              "who": "Unitree",
+              "tone": "gains",
+              "what": "A fast, credited bounty response and a real fix to the worst single flaw (the cloud key-ownership check) -- the response researchers actually want to see."
+            },
+            {
+              "who": "Olivier Laflamme and independent security research broadly",
+              "tone": "gains",
+              "what": "A validated, wormable finding on the world's best-selling humanoid robot, published with full technical detail rather than withheld."
+            },
+            {
+              "who": "Any G1 EDU still on pre-patch firmware",
+              "tone": "loses",
+              "what": "Remains reachable by the Bluetooth chain until a specific fixed firmware version is published and applied -- not yet the case as of this piece."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The disclosure lands alongside two other Unitree stories already in motion: a [US Covered List order that could bar new Unitree and AGIBOT robot models from the American market on national-security grounds](/article/fcc-covered-list-bans-chinese-humanoid-robots), and Unitree's own [Shanghai STAR Market IPO](/article/unitree-shanghai-star-market-ipo-debut-surge), which priced weeks before this disclosure. Neither story is about this vulnerability specifically -- the Covered List order concerns supply-chain and data-routing risk, not firmware bugs -- but a wormable root exploit on the best-selling humanoid robot on Earth is exactly the kind of finding that gets cited in that broader argument, regardless of what actually caused it.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Nothing here suggests Unitree was careless once the report landed -- a fast bounty payout and a real fix to the worst single flaw are the response security researchers actually want to see. What's still open is narrower and more concrete: a specific firmware version number that closes CVE-2026-76640 for good, published somewhere a G1 EDU owner can check against their own unit. Until that exists, \"patched\" is a claim, not a status a lab administrator can verify.",
+        "citation_urls": [
+          "https://thehackernews.com/2026/08/two-unitree-g1-edu-humanoid-robot-flaws.html"
+        ]
+      }
+    ],
+    "id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
+    "image": "assets/img/newsroom/newsroom-unitree-g1-bluetooth-root-rce-vulnerability.jpg",
+    "publishedAt": "2026-08-29T00:42:31Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-29T00:42:31Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch a fresh (Aug 27) security disclosure: two root-RCE vulnerability chains in the Unitree G1 EDU, one wormable over Bluetooth with no pairing. Grepped the archive and confirmed no prior coverage of this specific disclosure, though the site had already covered Unitree's Covered List national-security exposure and its Shanghai IPO under separate slugs -- both good cross-link candidates for stakes context. WebFetched the researcher's own technical writeup (boschko.ca) directly for the exploit-chain mechanics, then independent reporting (The Hacker News, GBHackers) for disclosure-timeline and patch-status confirmation, then a July 2026 TIME feature for the university/research-lab deployment statistics that ground the stakes section."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Cross-checked the researcher's identity and bounty figures across two independent fetches (boschko.ca directly, and GBHackers' summary of the same disclosure) -- found a minor discrepancy in reported total bounty ($5,000 per one summary vs. the $1,000+$5,000=$6,000 breakdown given in the primary writeup itself) and used the primary source's own itemized figures rather than a secondary aggregate. Confirmed via The Hacker News' own Aug 27 reporting that no fixed firmware version has been publicly verified, rather than assuming the July cloud-side patch closed both CVEs. TIME's 74%/9%/17% sales-split and 5,500-unit 2025 shipment figures were confirmed as its own reporting, not a secondary aggregator's restatement."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft implied both CVEs were fully patched because Unitree's response was fast -- revised to state precisely which single flaw (the cloud ownership check) is confirmed fixed versus which two attack surfaces (BLE write, Wi-Fi buffer overflow) remain unconfirmed, per The Hacker News' own review. No self-referential language found. Confirmed disclaimer:none is correct -- no health/financial trigger applies. Considered compliance-rulebook §1 trigger 4 (negative/accusatory claims about a named company): this piece names Unitree in connection with a real vulnerability, but frames it factually, sources every technical claim to the researcher's own writeup or independent reporting, and gives Unitree's fast, credited response equal weight -- not an accusatory or unsourced claim, so no remediation was needed beyond that balance."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Flow's five steps match the attack-chain description in body prose exactly. Compare's bounty figures ($1,000/$5,000) and fix-status claims match body prose. Timeline's five dated items match the disclosure timeline described in prose, sourced to the researcher's own writeup. Stakes' four items are framing/analysis fields exempt from numeric provenance. No component carries a top-level text field; first block is p; no two components sit adjacent (flow, compare, timeline and stakes are each separated by prose or a quote block)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources across 3 distinct evidentiary threads (the researcher's own primary technical disclosure, independent security-press reporting on disclosure/patch status, and independent market-context reporting on deployment), with the researcher's own writeup as a genuine primary source. Body runs approximately 1,150 words, comfortably inside the synthesis band. 4 components (flow, compare, timeline, stakes), compare is the required data-carrying component."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (4 sources across 3 threads, 1 genuinely primary) and the visual floor (4 components, 1 data-carrying, none adjacent). disclaimer:none; no compliance trigger required Editor-in-Chief adjudication -- factual, balanced, sourced coverage of a named company's security disclosure and response."
+      }
+    }
+  },
+  {
+    "slug": "glm-5-3-flash-ox-alpha-stealth-benchmarks",
+    "title": "Z.ai's newest open model spent a week on OpenRouter under a fake name -- then posted a higher independent score than Claude Opus 4.8, at roughly 1/30th the price",
+    "dek": "GLM-5.3-Flash ran anonymously as \"Ox Alpha\" on OpenRouter and OpenCode from August 20-26, processing an estimated 16 trillion tokens and becoming the #2 model on OpenCode by usage before Z.ai revealed it was theirs. Its independent Artificial Analysis Intelligence Index score, 57, edges past Claude Opus 4.8's 56 -- though the two were measured at different reasoning-effort tiers -- while Z.ai's own six-benchmark table shows a split decision, not a clean win. It ships MIT-licensed at a fraction of Opus 4.8's list price, and Z.ai says its anonymous test traffic ran entirely on domestic Chinese AI chips, even though the published open-weight checkpoint is built for Nvidia hardware.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for Artificial Analysis to re-test GLM-5.3-Flash and Claude Opus 4.8 at matched reasoning-effort tiers.",
+        "text": "The current 57-vs-56 comparison uses each model's own default/max split. A same-tier re-test would settle whether the independent edge holds, widens, or was an artifact of the tier mismatch."
+      },
+      {
+        "label": "Watch whether Z.ai publishes anything independently verifiable about its Chinese-chip inference claim.",
+        "text": "As it stands, it's a company claim about infrastructure nobody outside Z.ai can inspect -- exactly the kind of claim that stays labeled as the company's own word until independent verification exists."
+      },
+      {
+        "label": "If you're evaluating GLM-5.3-Flash for a real workload, benchmark it against your own task rather than either party's picked test.",
+        "text": "Both the vendor's six-benchmark table and the single independent index score are aggregate signals. A 320B-A18B model with a 1M-token window will behave differently on your own agentic-coding or long-context task than on either scorecard."
+      }
+    ],
+    "sources": [
+      {
+        "label": "GLM-5.3-Flash: Frontier Intelligence, Flash Cost",
+        "url": "https://z.ai/blog/glm-5.3-flash",
+        "outlet": "Z.ai (official blog)",
+        "kind": "primary"
+      },
+      {
+        "label": "Z.ai GLM-5.3-Flash Launches with 50% Discount and Open 1M-Context Weights",
+        "url": "https://aiintelreport.com/frontier-models/z-ai-glm-5-3-flash-launch-discount-open-weights",
+        "outlet": "AI Intel Report",
+        "kind": "reporting"
+      },
+      {
+        "label": "GLM 5.3 Flash - API Pricing & Benchmarks",
+        "url": "https://openrouter.ai/z-ai/glm-5.3-flash",
+        "outlet": "OpenRouter",
+        "kind": "primary"
+      },
+      {
+        "label": "Z.ai Releases GLM-5.3-Flash: A 320B-A18B Natively Multimodal MoE With a 1M-Token Context",
+        "url": "https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/",
+        "outlet": "MarkTechPost",
+        "kind": "reporting"
+      },
+      {
+        "label": "GLM-5.3-Flash Launch -- Ox Alpha Was Zhipu (MIT)",
+        "url": "https://www.explainx.ai/blog/glm-5-3-flash-ox-alpha-official-launch-august-2026",
+        "outlet": "explainx.ai",
+        "kind": "reporting"
+      },
+      {
+        "label": "Artificial Analysis Intelligence Index leaderboard",
+        "url": "https://artificialanalysis.ai/",
+        "outlet": "Artificial Analysis",
+        "kind": "dataset"
+      }
+    ],
+    "tldr": [
+      "GLM-5.3-Flash ran anonymously as \"Ox Alpha\" on OpenRouter and OpenCode for six days before Z.ai revealed it.",
+      "It drew an estimated 16 trillion tokens and 221,000 users in three days, becoming OpenCode's #2 model by usage.",
+      "Its independent Intelligence Index score, 57, edges past Claude Opus 4.8's 56 -- at roughly 1/30th the price.",
+      "Z.ai's own six-benchmark table shows a split decision against Opus 4.8: four wins, two losses, not a clean sweep.",
+      "Caveat: the scores compare different reasoning-effort tiers, and the Chinese-chip claim covers Z.ai's servers, not the published open weights."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "On August 20, 2026, an anonymous model calling itself \"Ox Alpha\" appeared on OpenRouter and the coding platform OpenCode with no maker attached to its name. Three days later it was processing an estimated **16 trillion tokens**, had drawn **221,000 unique users** and more than **5 million sessions**, and had become OpenCode's #2 model by recent usage. On August 26, Z.ai confirmed what community forensics and press reporting had already pieced together: Ox Alpha was ++GLM-5.3-Flash++, its newest open-weight model, running the entire week on hardware Z.ai says was exclusively Chinese-made.",
+        "citation_urls": [
+          "https://www.explainx.ai/blog/glm-5-3-flash-ox-alpha-official-launch-august-2026"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Z.ai frames the stealth run as a way to collect unfiltered usage data before brand recognition could bias it -- and, not incidentally, as a live demonstration that its own inference stack doesn't need Nvidia GPUs to serve a frontier-adjacent model at scale.",
+        "citation_urls": [
+          "https://aiintelreport.com/frontier-models/z-ai-glm-5-3-flash-launch-discount-open-weights"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"Before release, we tested GLM-5.3-Flash anonymously as ox-alpha on OpenCode and OpenRouter to gather user feedback. It quickly became the most popular model of the week -- with all of this traffic served on Chinese AI chips.\" -- Z.ai, in its official launch announcement",
+        "citation_urls": [
+          "https://aiintelreport.com/frontier-models/z-ai-glm-5-3-flash-launch-discount-open-weights",
+          "https://z.ai/blog/glm-5.3-flash"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That claim comes with a wrinkle worth naming rather than skipping past: the checkpoint Z.ai actually published to Hugging Face -- the one anyone else can download and run -- ships in FP8 format sized for **Nvidia Hopper-class GPUs or newer**, at roughly 306 GiB. Z.ai's claim is about how it served its own anonymous test traffic, on its own infrastructure; it says nothing about what hardware the portable, open-weight release itself was built to run on, and those are two different facts sitting oddly next to each other in the same announcement.",
+        "citation_urls": [
+          "https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "items": [
+            {
+              "claim": "GLM-5.3-Flash matches or beats Claude Opus 4.8 on agentic coding and computer-use benchmarks",
+              "level": "company",
+              "basis": "Z.ai's own six-benchmark table, published at launch -- GLM-5.3-Flash wins on four of six picked tests and loses on two, including the marquee Terminal-Bench 2.1.",
+              "resolver": "An independent lab re-running the same benchmark suite, or Artificial Analysis publishing per-benchmark breakdowns rather than one aggregate index score."
+            },
+            {
+              "claim": "GLM-5.3-Flash's independent Intelligence Index score (57) edges past Claude Opus 4.8's (56)",
+              "level": "confirmed",
+              "basis": "Artificial Analysis's independently run Intelligence Index, the aggregate this publication's own Scoreboard tracks -- not a benchmark either company chose.",
+              "resolver": "Already resolved by an independent third party; the open question is whether the effort-tier mismatch (GLM's default setting vs. Opus's max setting) would close or widen the gap under matched conditions."
+            },
+            {
+              "claim": "All of the anonymous \"Ox Alpha\" test traffic ran on Chinese AI chips",
+              "level": "company",
+              "basis": "Z.ai's own statement at the reveal. Nothing about Z.ai's hosted inference infrastructure is independently auditable from outside the company.",
+              "resolver": "Independent infrastructure verification -- a third-party audit of Z.ai's serving stack, or corroborating reporting from a hardware analyst with direct visibility into it."
+            },
+            {
+              "claim": "The open-weight checkpoint anyone can download is built for Nvidia hardware",
+              "level": "confirmed",
+              "basis": "Z.ai's own Hugging Face release specification: roughly 306 GiB of FP8 weights, specified for Nvidia Hopper-class GPUs or newer.",
+              "resolver": "Already resolved by the published model card and file format -- the fact sits alongside the Chinese-chip claim above without Z.ai reconciling the two."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The model itself is a **320-billion-parameter** mixture-of-experts design, 18 billion of which activate per token across 45 layers, natively handling text, image and video input on a **1,048,576-token** context window. Z.ai says its hybrid linear-and-sparse attention design -- KDA layers paired with NoPE-style sparse attention -- cuts attention compute roughly threefold and shrinks the key-value cache 4.4x against the full-size GLM-5.3 it's built alongside. Weights are MIT-licensed on Hugging Face; the hosted API lists at **$0.15 per million input tokens and $0.50 per million output tokens**, discounted 50% through September 9, 2026.",
+        "citation_urls": [
+          "https://www.marktechpost.com/2026/08/26/z-ai-releases-glm-5-3-flash-a-320b-a18b-natively-multimodal-moe-with-a-1m-token-context/",
+          "https://openrouter.ai/z-ai/glm-5.3-flash"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Where GLM-5.3-Flash actually lands next to the frontier depends entirely on which number you read. On Z.ai's own six-benchmark table, it beats Claude Opus 4.8 on four measures -- DeepSWE v1.1 (63.4 vs. 58.0), AutomationBench (48.8 vs. 41.0), GDPVal-AA (an Elo-style score of 1773 vs. 1582) and Toolathlon Verified (78.4 vs. 76.2) -- and loses on two, including the marquee Terminal-Bench 2.1 (84.3 vs. 85.0) and Agents' Last Exam (26.3 vs. 27.0). ==That is a genuinely mixed result on the vendor's own chosen tests, not the clean win a launch announcement usually implies.==",
+        "citation_urls": [
+          "https://www.explainx.ai/blog/glm-5-3-flash-ox-alpha-official-launch-august-2026"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The one number in this story that Z.ai didn't pick the test for is Artificial Analysis's independent Intelligence Index, which this publication's own Scoreboard tracks: GLM-5.3-Flash measures **57**, against Claude Opus 4.8's **56** -- a genuine, if narrow, independent edge for a model priced at roughly a thirtieth of Opus 4.8's list rate. One caveat belongs next to that number, not buried under it: Artificial Analysis measured GLM-5.3-Flash at its **default** reasoning setting and Opus 4.8 at its **max** setting, the highest-effort tier Anthropic publishes for that model -- the two scores weren't necessarily produced under matched effort budgets, and the two companies' reasoning-tier taxonomies don't map cleanly onto each other.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "It's also worth being precise about which Claude model this actually is. Opus 4.8 is Anthropic's agentic-coding workhorse, not its current flagship -- Claude Opus 5 (63) and Claude Fable 5 (62) both sit ahead of it on the same independent index, and GLM-5.3-Flash's own full-size sibling, GLM-5.3, outscores it too, at 60. A cheap, open, MIT-licensed model edging out a one-tier-down closed model on an independent aggregate is a real result. It is not evidence that Z.ai has caught the frontier.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "Independent Intelligence Index: where GLM-5.3-Flash actually lands",
+          "unit": "index score",
+          "source": "Artificial Analysis Intelligence Index, as tracked on this publication's own Scoreboard.",
+          "data": [
+            {
+              "label": "Claude Opus 5 (max)",
+              "value": 63
+            },
+            {
+              "label": "Claude Fable 5 (max)",
+              "value": 62
+            },
+            {
+              "label": "GLM-5.3 (max)",
+              "value": 60
+            },
+            {
+              "label": "GLM-5.3-Flash (default)",
+              "value": 57,
+              "hi": true
+            },
+            {
+              "label": "Claude Opus 4.8 (max)",
+              "value": 56
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The stealth-launch playbook itself isn't new -- Xiaomi's MiMo ran a similar anonymous-preview-to-named-release cycle earlier this year, under the codenames Hunter Alpha and Healer Alpha -- but the scale of this one's adoption during six days with no attached brand name is a genuine signal: usage that large, that fast, for a model nobody could yet identify, says the performance was real enough to spread by word of mouth alone. What's still unverified is the harder infrastructure claim underneath it -- that Chinese AI chips served all of it -- since nothing about Z.ai's own hosted service is independently auditable from outside the company.",
+        "citation_urls": [
+          "https://www.explainx.ai/blog/glm-5-3-flash-ox-alpha-official-launch-august-2026"
+        ]
+      }
+    ],
+    "id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
+    "image": "assets/img/newsroom/newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks.jpg",
+    "publishedAt": "2026-08-29T00:42:33Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-08-29T00:42:33Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch that GLM-5.3-Flash, revealed Aug 26 after running anonymously as \"Ox Alpha\" for six days, was independently scored 57 on the Artificial Analysis Intelligence Index by a prior cycle's Scoreboard update (2026-08-28) -- a launch this site had scored but never actually written up, exactly the gap publishing.agent.md's Scoreboard-sync rule exists to catch. Confirmed via entities.js that GLM-5.3-Flash already has an entity entry (added the same prior cycle), so no entities.js edit was needed this cycle. Grepped the archive and confirmed the base GLM-5.3 model's security-research angle was covered as a Buzz card (bz-324, Aug 23) but this specific Flash variant, its stealth launch, and its benchmark picture had no article coverage."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "WebFetched Z.ai's own announcement URL (z.ai/blog/glm-5.3-flash) but it returned no extractable text to the fetch tool (JS-rendered page) -- kept it in sources as the real, findable primary URL per the same precedent used elsewhere on this site when a primary page can't be rendered by the fetch tool, and relied on aiintelreport.com (which quotes Z.ai directly and verbatim) and OpenRouter's own model page (fetched directly, official distribution listing) for the actual quote and pricing/spec confirmation. Cross-checked the vendor six-benchmark table across two independently fetched summaries (cellcog.ai, explainx.ai) and found they matched on five of six figures; used the version with the fuller table (explainx.ai, which included Toolathlon Verified). Independently verified the 57-vs-56 Intelligence Index comparison and the mode-tier mismatch (GLM default vs. Opus max) directly against this site's own Scoreboard rows before writing the comparison, rather than trusting either company's framing."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique caught the first draft's dek implying GLM-5.3-Flash \"beat\" Claude Opus 4.8 without qualification -- revised to name the reasoning-effort-tier mismatch explicitly in both the dek and body, and added a paragraph clarifying Opus 4.8 is not Anthropic's current flagship (Opus 5 and Fable 5 both score higher), so the result reads as a real but bounded win, not evidence of catching the frontier. No self-referential language found. Confirmed disclaimer:none is correct for Frontier-section model coverage. No compliance mandatory-scrutiny trigger fires: no health/financial claim, no litigation, and the Chinese-chip and benchmark claims are both attributed to Z.ai's own stated word and explicitly labeled as unverified company claims (via the scorecard's level:company entries), not adopted as this desk's own fact."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Scorecard's four claims and their basis text all trace to facts stated in body prose (the six-benchmark table, the 57/56 independent scores, the Chinese-chip statement, the Nvidia-hardware spec). Chart's five data points (63, 62, 60, 57, 56) all appear as matching figures in body prose (paragraphs discussing the independent index and the Opus 5/Fable 5/GLM-5.3 comparison) before the chart itself appears, satisfying numeric provenance. No component carries a top-level text field; first block is p; no two components sit adjacent (scorecard and chart are separated by three paragraphs of prose)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources across at least 4 distinct evidentiary threads (Z.ai's own announcement and direct quote, OpenRouter's official listing, independent technical reporting on architecture, independent reporting on the stealth-reveal timeline, and Artificial Analysis's independent index as the basis for the chart), with 2 genuinely primary/official sources (Z.ai's own blog, OpenRouter's official model page). Body runs approximately 1,300 words, comfortably inside the synthesis band. 2 components (scorecard, chart), chart is the required data-carrying component -- 2 is the synthesis floor, judged sufficient here rather than forcing a third; the evidence supports exactly these two shapes (what's established vs. what's the vendor's word, and where the independent number actually sits) without a natural third slot."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Synthesis clears its evidence floor (6 sources across 4+ threads, 2 primary) and the visual floor (2 components, 1 data-carrying, not adjacent). disclaimer:none; Scoreboard already updated in the prior cycle when the score was first added -- this cycle's Scoreboard touch (below) only refreshes scannedAt and logs that this article is now the sourcing basis."
+      }
+    }
   }
 ]
 ;

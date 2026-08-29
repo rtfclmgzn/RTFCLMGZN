@@ -7954,6 +7954,270 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
+    "ts": "2026-08-29T00:42:29Z",
+    "export": {
+      "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
+      "url": "https://rtfclmgzn.com/article/nvidia-ai-compute-partnership-antitrust-pause",
+      "headline": "Nvidia paused its own chip-financing program after its employees flagged an antitrust risk -- weeks after trimming a separate $250 billion guarantee",
+      "hook": "Nvidia quietly paused new deals under its AI Compute Partnership -- the program that let it collect 50% of a cloud provider's revenue above a base rate -- after its own employees warned the customer-approval clause could draw antitrust scrutiny.",
+      "key_facts": [
+        "Nvidia paused new deals under its AI Compute Partnership after employees flagged an antitrust risk, per the WSJ.",
+        "The program let Nvidia collect 50% of a provider's revenue above a base rate, on $36B committed.",
+        "It's the second Nvidia financing pullback in two weeks, after its OpenAI Ohio guarantee shrank to $105B."
+      ],
+      "tone": "technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-nvidia-ai-compute-partnership-antitrust-pause.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nvidia quietly paused new deals under its AI Compute Partnership -- the program that let it collect 50% of a cloud provider's revenue above a base rate -- after its OWN employees warned the customer-approval clause could draw antitrust scrutiny. Second Nvidia financing pullback in 2 weeks.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T05:42:29Z",
+        "copy": "Nvidia's own CFO called the AI Compute Partnership worth 'billions of dollars' over time. It paused new deals anyway, rather than keep a clause letting it dictate which customers a cloud provider could resell chips to. Being supplier, bank AND landlord in one deal is what tripped the antitrust flag.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nvidia just paused its own chip-financing program.\n\nThe AI Compute Partnership, launched in July, let Nvidia collect 50% of a cloud provider's revenue above a base rate, in exchange for credit support to buy its chips. Nvidia disclosed $36 billion in commitments under the program in its latest filing.\n\nBut employees warned that requiring providers to resell chips only to Nvidia-\"approved\" customers could draw antitrust scrutiny -- so new deals are on hold.\n\nIt's the second Nvidia financing commitment trimmed in two weeks, after its OpenAI Ohio guarantee fell from a reported $250 billion to $105 billion.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#Antitrust",
+          "#AIInfrastructure",
+          "#Compute",
+          "#TechNews",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nvidia has paused new deals under its AI Compute Partnership, the financing program it launched in July 2026 to help smaller AI cloud providers buy its chips. The Wall Street Journal reported August 27 that Nvidia's own employees warned the program's terms -- which let Nvidia dictate which customers a provider could resell capacity to -- could draw antitrust scrutiny. It's the second Nvidia financing commitment scaled back in two weeks, after its OpenAI Ohio guarantee fell from a reported $250 billion to $105 billion.",
+        "hashtags": [
+          "#Nvidia",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nvidia paused new deals under its AI Compute Partnership after employees flagged an antitrust risk over a clause letting Nvidia pick which customers a cloud provider could resell chips to. Second Nvidia financing pullback in two weeks -- its OpenAI Ohio guarantee also just shrank, from a reported $250B to $105B.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia paused new deals under its AI Compute Partnership (50% of a cloud provider's revenue above a base rate, $36B committed) after employees flagged antitrust risk over a customer-approval clause. Second Nvidia financing pullback in two weeks.",
+        "hashtags": [
+          "#Nvidia",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
+    "ts": "2026-08-29T00:42:31Z",
+    "export": {
+      "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
+      "url": "https://rtfclmgzn.com/article/unitree-g1-bluetooth-root-rce-vulnerability",
+      "headline": "A researcher found two ways to get root on Unitree's best-selling humanoid robot -- one just by standing near it with Bluetooth on",
+      "hook": "Two vulnerability chains give an attacker full root control of Unitree's G1 EDU. One needs only Bluetooth range, no pairing -- and researcher Olivier Laflamme calls it wormable, able to spread G1 to G1.",
+      "key_facts": [
+        "Two vulnerability chains, disclosed August 27, let an attacker gain root control of Unitree's G1 EDU robot.",
+        "One needs only Bluetooth range and no pairing; researcher Olivier Laflamme calls it wormable, G1-to-G1.",
+        "About 74% of Unitree's humanoid sales go to universities and research labs, per TIME -- exactly who runs these units."
+      ],
+      "tone": "curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-unitree-g1-bluetooth-root-rce-vulnerability.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A security researcher found two ways to get ROOT on Unitree's best-selling humanoid robot. One needs only Bluetooth range -- no pairing required -- and it's wormable: a compromised G1 can infect the next G1 that walks into range. ~74% of these robots run in university labs.",
+        "reply_copy": "The full disclosure:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Unitree",
+          "#Robotics",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T05:42:31Z",
+        "copy": "Unitree paid the bounty and patched the cloud-side flaw fast -- real credit there. But as of publication, no confirmed fixed firmware version exists for the wormable Bluetooth chain itself. \"Patched\" is a claim right now, not something a lab admin can verify against their own unit.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Unitree"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Two ways to get ROOT on the world's best-selling humanoid robot.\n\nSecurity researcher Olivier Laflamme disclosed two vulnerability chains in Unitree's G1 EDU. One needs network access. The other needs only Bluetooth proximity -- no pairing -- and it's wormable: a compromised G1 can pass the exploit to the next G1 that comes into range.\n\nUnitree patched the cloud-side flaw and paid a bounty fast. But no confirmed fixed firmware release closes the rest.\n\nAbout 74% of Unitree's humanoid sales go to universities and research labs -- exactly where these robots run in shared, public spaces.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#Unitree",
+          "#Robotics",
+          "#Cybersecurity",
+          "#Humanoid",
+          "#TechNews",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Two vulnerability chains disclosed August 27, 2026 give an attacker full root control of the Unitree G1 EDU's control computer. One needs network access; the other needs only Bluetooth proximity, no pairing, and researcher Olivier Laflamme calls it wormable -- able to spread from one G1 to the next. Unitree patched the cloud flaw that enabled the Bluetooth chain in July and paid a bounty, but no confirmed firmware release closes the rest, and about three-quarters of Unitree's humanoid sales go to the university and research labs now running the exposed units.",
+        "hashtags": [
+          "#Unitree",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A researcher found two ways to root Unitree's G1 EDU humanoid robot. One needs only Bluetooth proximity, no pairing -- and it's wormable, G1 to G1. Unitree patched the cloud flaw fast and paid a bounty, but no confirmed firmware fix exists yet for the rest. ~74% of these robots run in university and research labs.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Two root-RCE chains disclosed in Unitree's G1 EDU humanoid robot -- one wormable over Bluetooth, no pairing needed. Unitree patched the cloud flaw and paid a bounty, but no confirmed firmware fix exists for the rest yet. ~74% of G1 sales go to university/research labs.",
+        "hashtags": [
+          "#Unitree",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
+    "ts": "2026-08-29T00:42:33Z",
+    "export": {
+      "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
+      "url": "https://rtfclmgzn.com/article/glm-5-3-flash-ox-alpha-stealth-benchmarks",
+      "headline": "Z.ai's newest open model spent a week on OpenRouter under a fake name -- then posted a higher independent score than Claude Opus 4.8, at roughly 1/30th the price",
+      "hook": "GLM-5.3-Flash ran anonymously as \"Ox Alpha\" for six days before Z.ai revealed it. Its independent Intelligence Index score, 57, edges past Claude Opus 4.8's 56 -- at roughly 1/30th the price, though the two were measured at different reasoning-effort tiers.",
+      "key_facts": [
+        "GLM-5.3-Flash ran anonymously as \"Ox Alpha\" on OpenRouter and OpenCode for six days before Z.ai revealed it.",
+        "Its independent Intelligence Index score, 57, edges past Claude Opus 4.8's 56 -- at roughly 1/30th the price.",
+        "Z.ai's own six-benchmark table shows a split decision against Opus 4.8: four wins, two losses, not a clean sweep."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "An anonymous model called \"Ox Alpha\" topped OpenRouter for 6 days before Z.ai revealed it was GLM-5.3-Flash. Its independent score (57) edges past Claude Opus 4.8 (56) -- at ~1/30th the price. Z.ai's own picked benchmarks? A split decision, not a clean win.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#GLM53Flash",
+          "#OpenWeights"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-29T05:42:33Z",
+        "copy": "One caveat that matters: Artificial Analysis scored GLM-5.3-Flash at its DEFAULT setting and Opus 4.8 at its MAX setting. Not necessarily matched effort budgets. And Opus 4.8 isn't even Anthropic's flagship anymore -- Opus 5 (63) and Fable 5 (62) both sit ahead of it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#GLM53Flash"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "An anonymous model called \"Ox Alpha\" spent 6 days topping OpenRouter and OpenCode -- 16 trillion tokens, 221,000 users, before anyone knew whose it was.\n\nOn August 26, Z.ai revealed it: GLM-5.3-Flash, their newest open-weight model.\n\nIts independent Intelligence Index score, 57, edges past Claude Opus 4.8's 56 -- at roughly 1/30th the list price. But Z.ai's own six-benchmark table shows a split decision: four wins, two losses, not a clean sweep.\n\nMIT-licensed, 320B parameters, 1M-token context. Full breakdown -- including the caveat about matched reasoning tiers -- at the link in bio.",
+        "hashtags": [
+          "#GLM53Flash",
+          "#OpenWeights",
+          "#AI",
+          "#Zai",
+          "#Benchmarks",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "GLM-5.3-Flash ran anonymously as \"Ox Alpha\" on OpenRouter and OpenCode from August 20-26, processing an estimated 16 trillion tokens and becoming the #2 model on OpenCode by usage before Z.ai revealed it was theirs. Its independent Artificial Analysis Intelligence Index score, 57, edges past Claude Opus 4.8's 56 -- though the two were measured at different reasoning-effort tiers -- while Z.ai's own six-benchmark table shows a split decision, not a clean win. It ships MIT-licensed at a fraction of Opus 4.8's list price.",
+        "hashtags": [
+          "#GLM53Flash",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "GLM-5.3-Flash spent 6 days on OpenRouter under the fake name \"Ox Alpha\" before Z.ai revealed it. Independent score: 57, edging past Claude Opus 4.8's 56, at ~1/30th the price -- though the two were tested at different reasoning-effort tiers, and Opus 4.8 isn't even Anthropic's current flagship.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "GLM-5.3-Flash ran anonymously as \"Ox Alpha\" for 6 days before Z.ai revealed it. Independent Intelligence Index: 57, vs Claude Opus 4.8's 56, at ~1/30th the price. Z.ai's own benchmark table: 4 wins, 2 losses against Opus 4.8 -- a split decision, not a sweep.",
+        "hashtags": [
+          "#GLM53Flash"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ]
 ;

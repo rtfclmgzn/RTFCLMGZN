@@ -98,6 +98,11 @@
     {
      "article_id": "newsroom-hf-forensic-timeline-open-secure-alliance",
      "used_at": "2026-07-29"
+    },
+    {
+     "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
@@ -749,6 +754,11 @@
     {
      "article_id": "newsroom-tesla-optimus-fremont-conversion",
      "used_at": "2026-07-18"
+    },
+    {
+     "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
@@ -2369,6 +2379,11 @@
     {
      "article_id": "primer-000",
      "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
