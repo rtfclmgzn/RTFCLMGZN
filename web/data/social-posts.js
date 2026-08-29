@@ -8214,8 +8214,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#GLM53Flash"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mua4cxh7dt27",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mua4cxh7dt27",
+        "posted_at": "2026-08-29T14:41:52Z"
       }
     ]
   },
@@ -8292,8 +8294,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "A federal judge ruled the Pentagon's Anthropic blacklist was illegal retaliation -- the order says it aimed to punish the company's 'arrogance,' not address a real security risk. Anthropic refused to let Claude be used for mass surveillance or autonomous weapons; the designation followed. Billions in business were reportedly at stake.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcoKyUFFFOs",
+        "remote_id": "18177355804421397",
+        "posted_at": "2026-08-29T14:37:43Z"
       },
       {
         "platform": "bluesky",
@@ -8302,8 +8306,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mua43qo5s42u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mua43qo5s42u",
+        "posted_at": "2026-08-29T14:37:50Z"
       }
     ]
   },
@@ -8435,7 +8441,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -8448,8 +8454,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#DeepSeek"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093709633676267816",
+        "remote_id": "2093709633676267816",
+        "posted_at": "2026-08-29T14:37:31Z"
       },
       {
         "platform": "instagram",
