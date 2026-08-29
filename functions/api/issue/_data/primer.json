@@ -454,19 +454,19 @@
           "n": "OpenAI",
           "tag": "THE ONE THAT LIT THE FUSE",
           "c": "#7ee0b8",
-          "d": "Maker of ChatGPT and the GPT models — the current family is GPT-5.6 (nicknamed Sol, Terra, and Luna). Backed by Microsoft's billions. The household name with the biggest audience on earth, and the default many people mean when they say 'AI.'"
+          "d": "Maker of ChatGPT and the GPT models — the current family is GPT-5.6 (nicknamed Sol, Terra, and Luna). Backed by Microsoft's billions. The household name with the biggest audience on earth, and the default many people mean when they say 'AI.' Who owns it: a capped-profit company under a nonprofit foundation's board, with Microsoft as its largest outside backer."
         },
         {
           "n": "Anthropic",
           "tag": "THE CAREFUL ONE",
           "c": "#8b7cf7",
-          "d": "Founded by OpenAI alumni who wanted safety at the center. Maker of Claude (families named Fable, Opus, Sonnet, and Haiku), beloved by writers and programmers for careful, thoughtful work. Full disclosure: Claude models write this very publication."
+          "d": "Founded by OpenAI alumni who wanted safety at the center. Maker of Claude (families named Fable, Opus, Sonnet, and Haiku), beloved by writers and programmers for careful, thoughtful work. Full disclosure: Claude models write this very publication. Who owns it: a public benefit corporation with no controlling parent; Google and Amazon are both large outside investors."
         },
         {
           "n": "Google DeepMind",
           "tag": "THE RESEARCH EMPIRE",
           "c": "#6cb6f0",
-          "d": "The lab with the deepest scientific bench — its research invented the transformer that powers everyone. Maker of the Gemini models, woven into Search, Gmail, and Android, plus the image models that illustrated this magazine."
+          "d": "The lab with the deepest scientific bench — its research invented the transformer that powers everyone. Maker of the Gemini models, woven into Search, Gmail, and Android, plus the image models that illustrated this magazine. Who owns it: a research division fully owned by Alphabet, Google's parent company."
         }
       ]
     },
@@ -479,13 +479,13 @@
           "n": "Meta",
           "tag": "THE OPEN-SOURCE GIANT",
           "c": "#5fa8e8",
-          "d": "Facebook's parent spent years giving its Llama models away free — seeding an entire ecosystem of open AI. Its newest models (the Muse line) now carry price tags for the first time, a strategy shift the industry is watching closely."
+          "d": "Facebook's parent spent years giving its Llama models away free — seeding an entire ecosystem of open AI. Its newest models (the Muse line) now carry price tags for the first time, a strategy shift the industry is watching closely. Who owns it: Meta itself -- a publicly traded company (Nasdaq: META) with no separate corporate structure for its AI lab."
         },
         {
           "n": "xAI",
           "tag": "THE AGGRESSOR",
           "c": "#e0564d",
-          "d": "Elon Musk's lab, maker of Grok, wired directly into X. Competes on speed and shockingly low prices — its latest model costs a fraction of rivals' rates. Moves fast, courts controversy, ships constantly."
+          "d": "Elon Musk's lab, maker of Grok, wired directly into X. Competes on speed and shockingly low prices — its latest model costs a fraction of rivals' rates. Moves fast, courts controversy, ships constantly. Who owns it: a private company controlled by Elon Musk, with no public shareholders."
         },
         {
           "n": "DeepSeek",
