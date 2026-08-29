@@ -468,6 +468,32 @@ this order, and mark it done here.
    still fully open and is probably the next one worth a full cycle's
    attention rather than another one-clause slice.
 
+   DONE, "who owns whom" (2026-08-29 cycle) -- found this sub-item was
+   already substantially complete from two untracked-by-this-log cycles
+   earlier the same day (commits `05f83f8` and `1b169d7`): every one of
+   the six Act III "Labs" cards (OpenAI, Anthropic, Google DeepMind, Meta,
+   xAI, DeepSeek) in BOTH `web/data/primer-issue.js` and
+   `functions/api/issue/_data/primer.json` already carried a "Who owns
+   it:" clause (confirmed via `git log -p -S"Who owns it:"`) -- this had
+   simply never been checked off here, the same "fixed but never logged"
+   pattern items 1 and 2 already hit. Closed the one remaining gap this
+   cycle: the spread's own "Supporting cast" outro line (Mistral, NVIDIA,
+   Hugging Face) had no ownership clause at all. Added one short parenthetical
+   per name to the outro in BOTH files (Mistral: independent French
+   startup, no Big Tech parent; NVIDIA: standalone public company; Hugging
+   Face: independent, partners with nearly everyone on the page) --
+   uncontroversial, widely-known ownership facts matching the confidence
+   level of the cards' own existing claims, no new sourcing required, no
+   new spread, no page/contents impact. Verified `node --check
+   web/data/primer-issue.js` and `python3 -c "import json;
+   json.load(open('functions/api/issue/_data/primer.json'))"` both pass.
+   This closes the "who owns whom" missing-topic item for the Act III Labs
+   spread specifically -- ownership is not addressed anywhere else in the
+   Primer outside that one spread, which was always the actual target of
+   this sub-item. Agents, jobs, and deepfakes remain single-clause
+   treatments; a dedicated spread for any of the three is still the
+   largest open item in this section.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
