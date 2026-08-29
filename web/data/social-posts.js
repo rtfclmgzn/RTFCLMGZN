@@ -7,6 +7,7 @@
 // status: "ready" (staged, dry-run) | "posted" (live) | "failed"
 // image.status: "none" | "ready" (prompt only) | "generated"
 window.RTFC_SOCIAL_POSTS = [
+
   {
     "article_id": "live-014",
     "ts": "2026-07-13T08:10:00Z",
@@ -8674,6 +8675,185 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muajvtx6ec2s",
         "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muajvtx6ec2s",
         "posted_at": "2026-08-29T18:45:04Z"
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-fda-ai-medical-devices-clinical-outcomes-gap",
+    "ts": "2026-08-29T19:23:00Z",
+    "export": {
+      "article_id": "newsroom-fda-ai-medical-devices-clinical-outcomes-gap",
+      "url": "https://rtfclmgzn.com/article/fda-ai-medical-devices-clinical-outcomes-gap",
+      "headline": "Only 3 of 1,357 FDA-cleared AI medical devices have ever been tested on whether they actually help patients",
+      "hook": "A University of Toronto audit found that of 1,357 FDA-cleared AI medical devices, only 3 have ever been tested on whether patients actually got better.",
+      "key_facts": [
+        "Just 34 of 1,357 FDA-cleared AI devices (2.5%) were linked to any registered clinical trial.",
+        "Only 3 devices (0.2%) were evaluated against a real patient outcome like death, stroke, or hospitalization.",
+        "The finding published one day after the FDA opened public comment on regulating the next generation of generative-AI devices."
+      ],
+      "tone": "precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/newsroom-fda-ai-medical-devices-clinical-outcomes-gap.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "1,357 AI medical devices are FDA-cleared. Only 3 have ever been tested on whether patients actually got better -- not just \"accurate,\" but fewer deaths, strokes, or hospital stays. A new University of Toronto audit lays out the gap.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIinHealthcare",
+          "#FDA"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-30T00:23:00Z",
+        "copy": "\"FDA-cleared\" means resembles an existing device -- not proven to help patients. Only 12 of 1,357 AI medical devices even posted clinical-trial results. The 510(k) pathway was built for forceps and catheters, not diagnostic software.",
+        "reply_copy": "How the gap happens:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIinHealthcare",
+          "#MedTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "1,357 AI medical devices carry FDA clearance.\n\nOnly 3 have ever been tested on whether patients actually did better -- fewer deaths, strokes, hospital stays, or a better quality of life.\n\nJust 34 (2.5%) were even linked to a registered clinical trial at all. The rest lean on the FDA's \"substantially equivalent to an existing device\" pathway, which was built in 1976 for things like updated forceps -- not diagnostic software.\n\nThe finding landed one day after the FDA opened public comment on how to regulate the next generation of generative-AI devices.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AIinHealthcare",
+          "#FDA",
+          "#HealthTech",
+          "#MedTech",
+          "#AI",
+          "#DigitalHealth"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A University of Toronto team audited every FDA-cleared AI medical device through December 2025 -- 1,357 of them. Only 34 (2.5%) were linked to a registered clinical trial, and just 3 (0.2%) were ever evaluated against a real patient outcome like death, stroke, or hospitalization. The finding published one day after the FDA opened public comment on regulating the next, more autonomous generation of AI-enabled devices.",
+        "hashtags": [
+          "#AIinHealthcare",
+          "#FDA"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Of 1,357 FDA-cleared AI medical devices, only 3 have ever been tested on whether patients actually did better. \"FDA-cleared\" mostly just means \"resembles an existing device\" -- not proof of patient benefit. The gap traces back to the 510(k) pathway, built in 1976 for things like updated forceps.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "1,357 FDA-cleared AI medical devices. Only 3 ever tested on whether patients actually got better. The 510(k) pathway just requires \"resembles an existing device\" -- not proof of benefit.",
+        "hashtags": [
+          "#AIinHealthcare",
+          "#FDA",
+          "#MedTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
+    "ts": "2026-08-29T19:23:02Z",
+    "export": {
+      "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
+      "url": "https://rtfclmgzn.com/article/instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
+      "headline": "Instinct's AI-assistant valuation rose fivefold in three weeks to $2.5 billion -- while its early users were the ones finding it could be phished by email",
+      "hook": "Instinct's valuation jumped fivefold in three weeks to $2.5 billion -- in the same week named early users publicly found a phishing hole, an unapproved sent email, and post-disconnect data retention.",
+      "key_facts": [
+        "Index Ventures and Benchmark priced Instinct's Series B at $2.5B, up from a $500M Series A three weeks earlier.",
+        "Instinct's terms of service grant a perpetual, irrevocable license to use a user's data, including for training.",
+        "No revenue, retention, or paying-user figure has been disclosed alongside any of the three rounds."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Instinct's AI-assistant valuation went from $500M to $2.5B in three weeks. In the same week, named early users publicly found a phishing hole, an email it sent without asking, and inbox data it kept after they disconnected.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIStartups",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-30T00:23:02Z",
+        "copy": "Instinct's terms of service grant it a \"perpetual and irrevocable\" license to use your data, including for training -- and no revenue or user number has been disclosed at any of its three rounds. A $2.5B valuation with nothing to divide it by.",
+        "reply_copy": "What has to be true:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIStartups",
+          "#DataPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Instinct went from a $500M valuation to $2.5 billion in three weeks.\n\nIndex Ventures and Benchmark just closed the always-on AI assistant's Series B -- five times its Series A price, three weeks earlier.\n\nIn the same stretch, named early users publicly found a phishing hole, an email Instinct sent without asking first, and inbox data it kept storing hours after they'd disconnected Gmail.\n\nInstinct's own terms of service grant it a \"perpetual and irrevocable\" license to use your data -- including for training its models. No revenue, retention, or paying-user number has been disclosed at any of its three funding rounds.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AIStartups",
+          "#VentureCapital",
+          "#DataPrivacy",
+          "#AI",
+          "#TechNews",
+          "#StartupFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Index Ventures and Benchmark just priced four-month-old Instinct at a $2.5 billion valuation -- five times its Series A price three weeks earlier. In the same stretch, named early users of its always-on AI assistant publicly documented a phishing hole, an email sent without approval, and inbox data retained hours after they'd disconnected the service. Instinct's own terms of service grant it a \"perpetual and irrevocable\" license to use user data, including for training -- and no revenue or user figure has been disclosed alongside any of its three funding rounds.",
+        "hashtags": [
+          "#AIStartups",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Instinct's valuation: $50M seed, $500M Series A in early August, $2.5B Series B on August 26. Same week its early users found a phishing hole and an unapproved sent email. Its terms of service grant a \"perpetual and irrevocable\" license to your data. No revenue figure disclosed at any round.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Instinct: $500M to $2.5B valuation in 3 weeks. Same week, named users found a phishing hole and an unapproved sent email. Its ToS grants a \"perpetual and irrevocable\" data license. No revenue disclosed.",
+        "hashtags": [
+          "#AIStartups",
+          "#DataPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
       }
     ]
   }

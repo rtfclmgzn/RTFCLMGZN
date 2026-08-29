@@ -1644,6 +1644,11 @@
     {
      "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
      "used_at": "2026-08-13"
+    },
+    {
+     "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
+     "used_at": "2026-08-29",
+     "exception": true
     }
    ]
   },
@@ -1927,7 +1932,12 @@
    ],
    "text_space": "dark floor bottom-left",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-fda-ai-medical-devices-clinical-outcomes-gap",
+     "used_at": "2026-08-29"
+    }
+   ]
   },
   {
    "id": "art-067-mission-control-network-map",

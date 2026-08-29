@@ -492,7 +492,7 @@ window.RTFC_MAGAZINE_ISSUES.push({
         "d": "The Chinese lab that stunned the industry by matching frontier performance at a fraction of the training cost, then giving much of it away open-weight. Proof the frontier isn't exclusively American — and the opening act of a whole efficiency movement you'll meet in Act V. Who owns it: founder Liang Wenfeng, who also runs the quant hedge fund that financed it — no Big Tech parent, unlike almost everyone else on this page."
       }
     ],
-    "outro": "Supporting cast worth knowing: Mistral (Europe's champion), NVIDIA (the chip maker whose hardware nearly all of the above runs on — arguably the most powerful company in the story), and Hugging Face (the town square where open models live)."
+    "outro": "Supporting cast worth knowing: Mistral (Europe's champion — an independent French startup, no Big Tech parent), NVIDIA (the chip maker whose hardware nearly all of the above runs on — arguably the most powerful company in the story, and a standalone public company in its own right), and Hugging Face (the town square where open models live — also independent, though it partners with nearly everyone on this page)."
   },
   {
     "kind": "faceoff",
