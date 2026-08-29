@@ -7,7 +7,6 @@
 // status: "ready" (staged, dry-run) | "posted" (live) | "failed"
 // image.status: "none" | "ready" (prompt only) | "generated"
 window.RTFC_SOCIAL_POSTS = [
-
   {
     "article_id": "live-014",
     "ts": "2026-07-13T08:10:00Z",
@@ -8708,8 +8707,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIinHealthcare",
           "#FDA"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093786279758422515",
+        "remote_id": "2093786279758422515",
+        "posted_at": "2026-08-29T19:42:04Z"
       },
       {
         "platform": "x",
@@ -8798,8 +8799,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIStartups",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093785270621474991",
+        "remote_id": "2093785270621474991",
+        "posted_at": "2026-08-29T19:38:04Z"
       },
       {
         "platform": "x",
