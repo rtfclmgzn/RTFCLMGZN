@@ -8127,8 +8127,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Unitree",
           "#InfoSec"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mucefmdqsx2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mucefmdqsx2a",
+        "posted_at": "2026-08-30T12:11:50Z"
       }
     ]
   },
@@ -8439,10 +8441,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#DeepSeek",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094035254122270882",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2094035254122270882",
+        "posted_at": "2026-08-30T12:11:24Z"
       },
       {
         "platform": "x",
@@ -8596,8 +8599,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muce6exjrx2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muce6exjrx2q",
+        "posted_at": "2026-08-30T12:07:48Z"
       }
     ]
   },
@@ -8631,10 +8636,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#Gemini",
           "#GoogleDeepMind"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094034245237063816",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2094034245237063816",
+        "posted_at": "2026-08-30T12:07:24Z"
       },
       {
         "platform": "instagram",
@@ -8662,8 +8668,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Gemini Omni 1.1 Flash just shipped: scene extension now chains to a cumulative 40 seconds, up from 10. A new 360p draft mode previews clips 60% faster at a third of the cost. Google's own claimed #1 spot on the Text-to-Video Arena (1,515 pts) is self-reported -- no independent benchmark has matched it yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcqeZzFjXNk",
+        "remote_id": "17969480832137908",
+        "posted_at": "2026-08-30T12:07:40Z"
       },
       {
         "platform": "bluesky",
