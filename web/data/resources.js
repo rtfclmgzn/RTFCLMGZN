@@ -1,6 +1,6 @@
 // RTFCLMGZN — Resources directory (window.RTFC_RESOURCES).
 // Curated links: official AI companies split by platform, plus podcasts.
-// Handles/URLs verified 2026-08-23.
+// Handles/URLs verified 2026-08-30.
 window.RTFC_RESOURCES = [
   {
     title:"Follow the primary sources",
@@ -10,8 +10,8 @@ window.RTFC_RESOURCES = [
         links:[{label:"Site",url:"https://www.anthropic.com"},{label:"X",url:"https://x.com/AnthropicAI"},{label:"Claude on X",url:"https://x.com/claudeai"},{label:"YouTube",url:"https://www.youtube.com/@anthropic-ai"},{label:"LinkedIn",url:"https://www.linkedin.com/company/anthropicresearch"}] },
       { name:"OpenAI / ChatGPT", key:"openai", desc:"Maker of the GPT family (Sol, Terra, Luna) and ChatGPT.",
         links:[{label:"Site",url:"https://openai.com"},{label:"X",url:"https://x.com/OpenAI"},{label:"ChatGPT on X",url:"https://x.com/ChatGPT"},{label:"Instagram",url:"https://www.instagram.com/openai"},{label:"YouTube",url:"https://www.youtube.com/@OpenAI"}] },
-      { name:"xAI / Grok", key:"xai", desc:"Maker of the Grok models; tightly integrated with X.",
-        links:[{label:"Site",url:"https://x.ai"},{label:"X",url:"https://x.com/xai"},{label:"Grok on X",url:"https://x.com/grok"}] },
+      { name:"SpaceXAI / Grok", key:"xai", desc:"Maker of the Grok models; merged into SpaceX in Feb 2026 and rebranded SpaceXAI that July.",
+        links:[{label:"Site",url:"https://x.ai"},{label:"X",url:"https://x.com/SpaceXAI"},{label:"Grok on X",url:"https://x.com/grok"}] },
       { name:"Google DeepMind / Gemini", key:"google", desc:"Google's frontier lab and the Gemini model family (plus Nano Banana image models).",
         links:[{label:"Site",url:"https://deepmind.google"},{label:"X",url:"https://x.com/GoogleDeepMind"},{label:"Gemini on X",url:"https://x.com/GeminiApp"},{label:"Instagram",url:"https://www.instagram.com/googledeepmind"},{label:"YouTube",url:"https://www.youtube.com/@googledeepmind"}] },
       { name:"Meta AI", key:"meta", desc:"Meta's AI research and the Llama / Muse model lines.",
@@ -45,7 +45,7 @@ window.RTFC_RESOURCES = [
       { name:"Lex Fridman Podcast", icon:"◉", desc:"Long-form conversations — the AI episodes are canonical listening.",
         links:[{label:"Site",url:"https://lexfridman.com/podcast"},{label:"YouTube",url:"https://www.youtube.com/@lexfridman"}] },
       { name:"Practical AI", icon:"◉", desc:"Grounded, weekly — AI for people who ship things.",
-        links:[{label:"Site",url:"https://practicalai.fm"},{label:"Spotify",url:"https://open.spotify.com/show/1LaCr5TFAgYPK5qHjP3XDp"}] }
+        links:[{label:"Site",url:"https://practicalai.show"},{label:"Spotify",url:"https://open.spotify.com/show/1LaCr5TFAgYPK5qHjP3XDp"}] }
     ]
   },
   {
