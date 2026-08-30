@@ -157,6 +157,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"partly",
       note:"Treasury's distillation accusation against Moonshot AI remains unresolved at the claim level (no Entity List designation or CVE enforcement), but the white-house article published July 26, 2026, and later newsroom coverage documented the accusation itself: that Moonshot built Kimi K3 by distilling Anthropic's Fable. No forensic proof of distillation has been published; Moonshot's technical report (promised for July 27) did not confirm or deny the allegation. A separate independent benchmark shows K3 has real capability regardless of training source. The article settled what was accused and how it was framed; the underlying technical claim remains unverified.",
       label:"White House distillation accusation documented; technical verification pending",
-      url:"https://www.cnbc.com/2026/07/26/white-house-accuses-china-of-stealing-anthropic-ai-fable-to-build-moonshot-kimi-k3.html" }
+      url:"https://www.cnbc.com/2026/07/26/white-house-accuses-china-of-stealing-anthropic-ai-fable-to-build-moonshot-kimi-k3.html" },
+    { key:"anthropic-claude-opus-5-launch|sc|0",
+      at:"2026-08-30T15:24:00Z",
+      outcome:"confirmed",
+      note:"ARC Prize Foundation reported Opus 5 achieved a verified 30.16% on ARC-AGI 3, roughly three times the performance of the next-best model. This independent third-party benchmark from a source outside Anthropic satisfies the resolver requirement for outside-group evaluation of Opus 5's ARC-AGI 3 performance.",
+      label:"ARC Prize Foundation verified Opus 5 30.16% on ARC-AGI 3",
+      url:"https://arcprize.org/blog/arc-agi-3-competition-results" }
   ]
 };
