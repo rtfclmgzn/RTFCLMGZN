@@ -8887,8 +8887,7 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-30T05:40:06Z"
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-a16z-machine-age-fund-ai-hardware",
     "ts": "2026-08-30T14:56:41Z",
@@ -9018,8 +9017,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Intel",
           "#AIChips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094083456561242174",
+        "remote_id": "2094083456561242174",
+        "posted_at": "2026-08-30T15:22:57Z"
       },
       {
         "platform": "x",
@@ -9118,8 +9119,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094082447613034894",
+        "remote_id": "2094082447613034894",
+        "posted_at": "2026-08-30T15:18:56Z"
       },
       {
         "platform": "x",
@@ -9182,8 +9185,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mucouf7sys2b",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mucouf7sys2b",
+        "posted_at": "2026-08-30T15:19:04Z"
       }
     ]
   }
