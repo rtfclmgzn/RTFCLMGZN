@@ -8725,8 +8725,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIinHealthcare",
           "#MedTech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093937586003669121",
+        "remote_id": "2093937586003669121",
+        "posted_at": "2026-08-30T05:43:19Z"
       },
       {
         "platform": "instagram",
@@ -8749,14 +8751,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIinHealthcare",
           "#FDA"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122116631985396947",
+        "remote_id": "1238977099292018_122116631985396947",
+        "posted_at": "2026-08-30T05:43:47Z"
       },
       {
         "platform": "threads",
         "copy": "Of 1,357 FDA-cleared AI medical devices, only 3 have ever been tested on whether patients actually did better. \"FDA-cleared\" mostly just means \"resembles an existing device\" -- not proof of patient benefit. The gap traces back to the 510(k) pathway, built in 1976 for things like updated forceps.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dcpyg7LjrUH",
+        "remote_id": "18582918427071293",
+        "posted_at": "2026-08-30T05:44:07Z"
       },
       {
         "platform": "bluesky",
@@ -8766,8 +8772,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#FDA",
           "#MedTech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muboqjgvko22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muboqjgvko22",
+        "posted_at": "2026-08-30T05:44:14Z"
       }
     ]
   },
@@ -8817,8 +8825,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIStartups",
           "#DataPrivacy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2093936576875069823",
+        "remote_id": "2093936576875069823",
+        "posted_at": "2026-08-30T05:39:18Z"
       },
       {
         "platform": "instagram",
@@ -8831,8 +8841,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#StartupFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dcpx_dujgfc/",
+        "remote_id": "18069039044722167",
+        "posted_at": "2026-08-30T05:39:36Z"
       },
       {
         "platform": "facebook",
@@ -8841,14 +8853,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIStartups",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122116631715396947",
+        "remote_id": "1238977099292018_122116631715396947",
+        "posted_at": "2026-08-30T05:39:45Z"
       },
       {
         "platform": "threads",
         "copy": "Instinct's valuation: $50M seed, $500M Series A in early August, $2.5B Series B on August 26. Same week its early users found a phishing hole and an unapproved sent email. Its terms of service grant a \"perpetual and irrevocable\" license to your data. No revenue figure disclosed at any round.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcpyChIjmwe",
+        "remote_id": "18052218224575755",
+        "posted_at": "2026-08-30T05:39:59Z"
       },
       {
         "platform": "bluesky",
@@ -8857,8 +8873,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIStartups",
           "#DataPrivacy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muboj5cy7q22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muboj5cy7q22",
+        "posted_at": "2026-08-30T05:40:06Z"
       }
     ]
   }
