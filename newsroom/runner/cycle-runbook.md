@@ -494,6 +494,34 @@ this order, and mark it done here.
    treatments; a dedicated spread for any of the three is still the
    largest open item in this section.
 
+   PARTIAL, blocked (2026-08-30 cycle) -- attempted a small, low-risk
+   deepfakes-sub-item addition: one cross-link sentence pointing the
+   existing "phone-camera-quality problem" clause (on the "What they can
+   actually do now" spread) to this newsroom's own guide on checking
+   whether a video is AI-generated (`/article/check-whether-a-video-is-ai-generated`).
+   Added identically to both `web/data/primer-issue.js` and the KV-served
+   twin `functions/api/issue/_data/primer.json`, matched by exact body
+   text per the 2026-08-23 living-notes warning. Discovered at §5 step 3
+   that `python -m newsroom.runner.verify_publish_surface` categorically
+   blocks any push touching `functions/api/issue/_data/primer.json` --
+   its `ALLOWED_PREFIXES` is `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` and `functions/` is not on it, so
+   the check fails every time regardless of what else is staged. Per Law 6,
+   did not edit the guard to add an exception for this cycle's own push --
+   unstaged and reverted the `functions/` copy of the edit and shipped
+   only the `web/data/primer-issue.js` half (the file most readers
+   actually see per the 2026-08-18 entry above), leaving the two files'
+   §3e content freshly drifted on top of the drift item 2 already
+   catalogues. Full finding and the two possible fixes (widen
+   `ALLOWED_PREFIXES`, or change what §3e asks agents to edit) are logged
+   in `living-notes.md` 2026-08-30 for the owner -- this appears to have
+   been silently true for every §3e cycle since at least 2026-08-16 (ten+
+   commits touching this exact file exist in history, none of which this
+   guard could have passed), which means either the guard was never
+   actually run before those pushes, or it was run and its failure
+   ignored. Worth a dedicated audit of whether the paid Issue 001 content
+   served via `/api/issue/*` has drifted further than anyone has checked.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
