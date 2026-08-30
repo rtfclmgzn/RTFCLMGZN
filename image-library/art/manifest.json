@@ -69,6 +69,11 @@
     {
      "article_id": "newsroom-nvidia-open-weights-letter",
      "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-intel-hot-chips-2026-diamond-rapids-crescent-island-wildcat-lake",
+     "used_at": "2026-08-30",
+     "exception": true
     }
    ]
   },
@@ -1412,6 +1417,11 @@
     {
      "article_id": "newsroom-nvidia-openai-ohio-financing",
      "used_at": "2026-07-27"
+    },
+    {
+     "article_id": "newsroom-a16z-machine-age-fund-ai-hardware",
+     "used_at": "2026-08-30",
+     "exception": true
     }
    ]
   },
@@ -2000,6 +2010,11 @@
     {
      "article_id": "newsroom-qwen38-max-preview",
      "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-openai-codex-persistent-mode-proactivity-gpt-5-6-sol-safety",
+     "used_at": "2026-08-30",
+     "exception": true
     }
    ]
   },
