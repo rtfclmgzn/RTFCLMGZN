@@ -1031,6 +1031,11 @@
      "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition-reported",
      "used_at": "2026-08-27",
      "exception": true
+    },
+    {
+     "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
+     "used_at": "2026-08-30",
+     "exception": true
     }
    ]
   },
@@ -1980,6 +1985,11 @@
     {
      "article_id": "newsroom-openai-hugging-face-metr-redwood-independent-review",
      "used_at": "2026-08-27",
+     "exception": true
+    },
+    {
+     "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
+     "used_at": "2026-08-30",
      "exception": true
     }
    ]

@@ -9192,4 +9192,178 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
+,
+  {
+    "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
+    "ts": "2026-08-30T19:30:00Z",
+    "export": {
+      "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
+      "url": "https://rtfclmgzn.com/article/openai-cursor-spacex-model-access-cutoff",
+      "headline": "OpenAI will cut Cursor off from its own models on November 12 -- citing Elon Musk's history of broken contracts, weeks after SpaceX closed a $60 billion buyout of the coding startup",
+      "hook": "OpenAI is cutting Cursor off from its models on Nov. 12 -- because it no longer trusts Cursor's new owner, SpaceX, to honor its terms of service.",
+      "key_facts": [
+        "The cutoff follows SpaceX's $60B all-stock acquisition of Cursor's parent, Anysphere, closed Aug. 14.",
+        "Cursor CEO Michael Truell says OpenAI models power only about 5% of the platform's traffic.",
+        "Anthropic pledged more Claude compute for Cursor -- while itself leasing 300MW from SpaceX's own data centers."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-openai-cursor-spacex-model-access-cutoff.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI is cutting Cursor off from its models Nov. 12 -- because it no longer trusts Cursor's new owner, SpaceX, to honor its terms. The kicker: OpenAI's own models are only ~5% of Cursor's traffic anyway.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#SpaceX"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-31T00:30:00Z",
+        "copy": "The irony: Anthropic just pledged MORE Claude compute for Cursor after OpenAI's exit -- while Anthropic itself leases 300+ megawatts from the same SpaceX data centers Musk used to buy Cursor in the first place.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AIagents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI is cutting Cursor off from its models on November 12.\n\nWhy: OpenAI says it can't trust Cursor's new owner -- SpaceX -- to honor its terms of service, citing Musk's history of contract disputes.\n\nThe twist: Cursor's own CEO says OpenAI's models are only about 5% of the platform's traffic. Anthropic already pledged more Claude compute to fill the gap -- even though Anthropic itself leases hundreds of megawatts from SpaceX's own data centers.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#SpaceX",
+          "#Cursor",
+          "#Anthropic",
+          "#AI",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI will end Cursor's access to its models on November 12, saying it can no longer trust SpaceX -- Cursor's new owner after a $60 billion buyout -- to honor its terms of service. Cursor's CEO says the practical impact is small (OpenAI models are only ~5% of its traffic), and Anthropic has already stepped in to add more Claude compute. The deeper story: three companies that started 2026 independent -- SpaceX, xAI and Cursor -- are now one balance sheet.",
+        "hashtags": [
+          "#OpenAI",
+          "#SpaceX"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI is cutting Cursor off from its models Nov. 12 -- doesn't trust SpaceX, Cursor's new owner, to honor its terms. Real impact: small. OpenAI's models are only ~5% of Cursor's traffic per its own CEO. Anthropic's already filling the gap with more Claude compute.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-31T00:30:00Z",
+        "copy": "Cutting off a 5%-share supplier doesn't stop SpaceXAI from building its own coding models on compute it already owns. If anything, losing an easy-to-swap supplier is exactly what pushes an owner to finish the in-house replacement faster.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI is cutting Cursor off from its models Nov. 12 -- says it can't trust new owner SpaceX to honor its terms. Cursor's CEO: OpenAI models are only ~5% of traffic anyway. Anthropic's already filling the gap.",
+        "hashtags": [
+          "#OpenAI",
+          "#SpaceX",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
+    "ts": "2026-08-30T19:30:30Z",
+    "export": {
+      "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
+      "url": "https://rtfclmgzn.com/article/dataminr-department-of-war-318-million-agentic-contract",
+      "headline": "Dataminr signs a $318 million, 5-year deal to run 'agentic' AI alerts across the entire US Department of War",
+      "hook": "Dataminr just signed a $318 million, 5-year deal to run autonomous AI alerting across every branch of the US military -- and every capability claim about the AI is Dataminr's own, unverified by anyone outside the company.",
+      "key_facts": [
+        "The 5-year, $318M contract covers Air Force, Army, Navy, Marine Corps, Space Force and combatant commands through 2031.",
+        "First Alert Advanced adds four 'agentic' features: autonomous corroboration, live AI briefs, context and prediction.",
+        "Reuters and government-contract tracker Govly independently confirmed the award's size, term and scope."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-dataminr-department-of-war-318-million-agentic-contract.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Dataminr just signed a $318M, 5-year deal to run 'agentic' AI alerting across the ENTIRE US Department of War. Every capability claim about the AI itself is Dataminr's own -- unverified by anyone outside the company.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Defense"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Dataminr just signed a 5-year, $318 million contract to run AI-driven alerting across every branch of the US military.\n\nFirst Alert Advanced adds four \"agentic\" features: autonomous corroboration, live AI-written briefs, historical context, and predictive intelligence.\n\nReuters and a government-contract tracker independently confirmed the deal's size and scope. But every claim about how well the AI actually works comes from Dataminr alone.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Defense",
+          "#GovTech",
+          "#ArtificialIntelligence",
+          "#Pentagon"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Dataminr will run AI-driven, real-time alerting across the entire US Department of War for the next five years, under a $318 million contract announced August 26. The product adds four \"agentic\" features -- autonomous corroboration, live AI briefs, historical context, and event prediction -- but every capability claim comes from Dataminr's own announcement, not an independent evaluation.",
+        "hashtags": [
+          "#AI",
+          "#Defense"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Dataminr signed a $318M, 5-year deal to run agentic AI alerting across the whole US Department of War. Reuters and Govly confirmed the contract itself. The AI's actual capabilities? Entirely Dataminr's own word.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Dataminr signed a $318M, 5-year deal to run agentic AI alerting across the entire US Department of War. The contract is independently confirmed; the AI's capability claims are entirely Dataminr's own.",
+        "hashtags": [
+          "#AI",
+          "#Defense"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
