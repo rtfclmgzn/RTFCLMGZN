@@ -9286,8 +9286,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#SpaceX",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muea7v3rfj2b",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muea7v3rfj2b",
+        "posted_at": "2026-08-31T06:02:22Z"
       }
     ]
   },
@@ -9321,8 +9323,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Defense"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094303677796262276",
+        "remote_id": "2094303677796262276",
+        "posted_at": "2026-08-31T05:58:02Z"
       },
       {
         "platform": "instagram",
@@ -9350,8 +9354,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Dataminr signed a $318M, 5-year deal to run agentic AI alerting across the whole US Department of War. Reuters and Govly confirmed the contract itself. The AI's actual capabilities? Entirely Dataminr's own word.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcsY7Qvlrbp",
+        "remote_id": "18212275738356359",
+        "posted_at": "2026-08-31T05:58:15Z"
       },
       {
         "platform": "bluesky",
@@ -9360,8 +9366,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Defense"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mue7yozymk2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mue7yozymk2a",
+        "posted_at": "2026-08-31T05:58:21Z"
       }
     ]
   },
@@ -9494,8 +9502,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Policy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094302668428656642",
+        "remote_id": "2094302668428656642",
+        "posted_at": "2026-08-31T05:54:01Z"
       },
       {
         "platform": "instagram",
