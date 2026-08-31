@@ -313,5 +313,11 @@ window.RTFC_BUZZ = [
     text:"A TIME profile published August 26 describes OpenAI demoing Astra to customers with 16 AI agents dividing a research-level math problem into subproblems, coordinating their work, and assembling a proposed proof -- days after Sam Altman briefed Washington officials behind closed doors on Astra's capabilities. Altman told TIME the coordination-over-time capability, not any single answer, is the part he expects to matter.",
     why:"This is a different claim than the ten solved math problems OpenAI already published with checkable Lean proofs: a live multi-agent coordination demo has no equivalent public, independently verifiable artifact, so it's worth tracking as OpenAI's own framing until something checkable follows it.",
     heat:43, topics:["openai","astra","multi-agent","sam altman","math"],
-    url:"https://time.com/article/2026/08/26/openai-sam-altman-interview/" }
+    url:"https://time.com/article/2026/08/26/openai-sam-altman-interview/" },
+{ id:"bz-419", date:"2026-08-26",
+    source:{ name:"Google DeepMind", handle:"Google", platform:"web", kind:"lab" },
+    text:"Google DeepMind released Gemini 3.5 Transcribe on August 26 as a speech-to-text model in public preview, supporting automatic detection of 85+ languages with a 2.6% word error rate on recorded audio and 4.0% on real-time streams. The model automatically removes filler words ('um', 'uh'), fixes mid-sentence self-corrections, and can identify up to three speakers with word-level timestamps. For recorded audio, it's 70% faster than its predecessor Chirp 3.",
+    why:"A frontier lab releasing a specialized speech-to-text model with multilingual support and production-grade WER metrics is a concrete tool for voice-first AI applications -- worth tracking against OpenAI's Whisper and Anthropic's non-public transcription tooling for enterprise deployment choices.",
+    heat:55, topics:["google deepmind","gemini 3.5 transcribe","speech-to-text","multilingual","model release"],
+    url:"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" }
 ];
