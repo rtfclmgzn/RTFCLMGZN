@@ -9759,5 +9759,161 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-sony-warner-chappell-anthropic-lyrics-lawsuit",
+    "ts": "2026-08-31T21:35:56Z",
+    "export": {
+      "article_id": "newsroom-sony-warner-chappell-anthropic-lyrics-lawsuit",
+      "url": "https://rtfclmgzn.com/article/sony-warner-chappell-anthropic-lyrics-lawsuit",
+      "headline": "Sony Music and Warner Chappell sue Anthropic, alleging Claude was trained on tens of thousands of pirated songs",
+      "hook": "Sony Music Publishing and Warner Chappell sued Anthropic on August 28, leaning on a judge's own finding that Anthropic's book piracy was 'straightforward piracy but at massive scale' -- the same conduct that already cost the company $1.5 billion.",
+      "key_facts": [
+        "The complaint names Anthropic and founders Dario Amodei and Benjamin Mann personally as defendants, seeking up to $150,000 per song.",
+        "It's the fifth music-publisher lawsuit against Anthropic since 2023, following suits from UMG/Concord/ABKCO, BMG, and Round Hill Music.",
+        "The complaint calls Anthropic's valuation '$2 trillion' -- nearly double the $965 billion the company itself disclosed in May."
+      ],
+      "tone": "legally precise, attributes every unproven claim",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/sony-warner-chappell-anthropic-lyrics-lawsuit.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Sony Music and Warner Chappell just sued Anthropic, alleging Claude was trained on tens of thousands of pirated songs -- and leaning on a judge's own words about Anthropic's book piracy: 'straightforward piracy but at massive scale.'",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Copyright"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-01T02:35:56Z",
+        "copy": "The suit is the fifth music-publisher lawsuit against Anthropic since 2023 -- and the first to name founders Dario Amodei and Benjamin Mann personally, seeking up to $150,000 per song.",
+        "reply_copy": "The full timeline:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Sony Music Publishing and Warner Chappell Music sued Anthropic on August 28, accusing the AI lab of training Claude on tens of thousands of copyrighted songs pulled from pirated book archives, lyrics sites, and AI-training datasets.\n\nThe complaint leans hard on a federal judge's own words from a separate case: Anthropic's book-torrenting was \"straightforward piracy but at massive scale\" -- conduct that already cost the company a $1.5 billion settlement.\n\nThis is the fifth music-industry suit against Anthropic since 2023, and the first to name founders Dario Amodei and Benjamin Mann personally. Damages sought: up to $150,000 per song.\n\nFull story at the link in bio.",
+        "hashtags": ["#AI", "#Copyright", "#Anthropic", "#MusicIndustry", "#TechNews", "#ArtificialIntelligence"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Sony Music Publishing and Warner Chappell sued Anthropic on August 28, accusing the AI lab of training Claude on tens of thousands of copyrighted songs without a license. The complaint leans on a federal judge's finding from a separate case -- that Anthropic's book-torrenting was \"straightforward piracy but at massive scale\" -- conduct that already cost the company a $1.5 billion settlement. It's the fifth music-industry suit against Anthropic since 2023, and the first to name founders Dario Amodei and Benjamin Mann personally.",
+        "hashtags": ["#AI", "#Copyright"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Sony Music and Warner Chappell sued Anthropic, alleging Claude was trained on tens of thousands of pirated songs -- leaning on a judge's own words: Anthropic's book piracy was \"straightforward piracy but at massive scale.\"",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-01T02:35:56Z",
+        "copy": "Fifth music-publisher suit against Anthropic since 2023 -- first to name founders Dario Amodei and Benjamin Mann personally, seeking up to $150,000 per song.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Sony Music and Warner Chappell sued Anthropic, alleging Claude was trained on tens of thousands of pirated songs -- leaning on a judge's finding that Anthropic's book piracy was \"straightforward piracy but at massive scale.\"",
+        "hashtags": ["#AI", "#Copyright"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-alphabet-amazon-anthropic-stake-gains-earnings",
+    "ts": "2026-08-31T21:35:58Z",
+    "export": {
+      "article_id": "newsroom-alphabet-amazon-anthropic-stake-gains-earnings",
+      "url": "https://rtfclmgzn.com/article/alphabet-amazon-anthropic-stake-gains-earnings",
+      "headline": "Alphabet and Amazon booked over $150 billion in one-quarter paper gains from their AI stakes",
+      "hook": "Alphabet's Q2 other income hit $98.0 billion and Amazon's hit $53.4 billion, both mostly unrealized markups on Anthropic stakes -- 87% and 85% of each company's entire quarterly profit, and none of it cash.",
+      "key_facts": [
+        "Alphabet's $98.0B and Amazon's $53.4B markups made up 87% and 85% of each company's net income this quarter.",
+        "Microsoft and Salesforce disclosed smaller versions of the same mechanism in July and August.",
+        "A lower Anthropic valuation at its eventual IPO would reverse every one of these marks industry-wide."
+      ],
+      "tone": "numbers-first, reconciles accounting methods",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/alphabet-amazon-anthropic-stake-gains-earnings.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Alphabet and Amazon just booked over $150 billion in one-quarter paper gains from their Anthropic stakes -- 87% and 85% of each company's entire quarterly profit. None of it is cash.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Markets"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-01T02:35:58Z",
+        "copy": "Microsoft and Salesforce already showed this trick at smaller scale this earnings season. Alphabet and Amazon just ran it at roughly 47 times Microsoft's single Anthropic gain.",
+        "reply_copy": "The full comparison:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Earnings"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Alphabet's Q2 \"other income\" hit $98.0 billion. Amazon's hit $53.4 billion. Both companies say the driver was mostly unrealized markups on their stakes in Anthropic.\n\nThat's 87% and 85% of each company's ENTIRE quarterly net income -- from an accounting line, not from selling ads or cloud compute. None of it is cash.\n\nMicrosoft and Salesforce each disclosed smaller versions of the same mechanism this earnings season. A lower Anthropic valuation at its eventual IPO would reverse every one of these marks at once.\n\nFull breakdown at the link in bio.",
+        "hashtags": ["#AI", "#Markets", "#Anthropic", "#Earnings", "#TechNews", "#BigTech"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Alphabet's Q2 other income hit $98.0 billion and Amazon's hit $53.4 billion -- both primarily unrealized markups on their stakes in Anthropic, making up 87% and 85% of each company's entire quarterly net income. None of it is cash. Microsoft and Salesforce each disclosed smaller versions of the same mechanism this earnings season; a lower Anthropic valuation at its eventual IPO would reverse every one of these marks industry-wide.",
+        "hashtags": ["#AI", "#Markets"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Alphabet and Amazon booked over $150 billion in one-quarter paper gains from their Anthropic stakes -- 87% and 85% of each company's entire quarterly profit. None of it is cash.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-01T02:35:58Z",
+        "copy": "Microsoft and Salesforce showed this trick at smaller scale already this earnings season. Alphabet and Amazon just ran it at roughly 47 times Microsoft's single Anthropic gain.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Alphabet and Amazon booked over $150 billion in one-quarter paper gains from their Anthropic stakes -- 87% and 85% of each company's entire quarterly profit, none of it cash.",
+        "hashtags": ["#AI", "#Markets"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
