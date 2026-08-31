@@ -131,3 +131,21 @@
   calling `date -u` at the moment it actually writes the file, that's a Law 3 violation
   (self-reporting a number the run cannot actually measure) baked into that job specifically,
   not a one-off.
+- **2026-08-31** (newsroom cycle): found and fixed a real `verify_covers.py` id-mismatch bug
+  rather than routing around it. `verify_covers.py pick --article-id <id> --apply` writes the
+  manifest's `used_in[].article_id` using EXACTLY the `--article-id` value passed on the command
+  line -- but `verify_covers.py check` keys its per-article "surface" off the *article record's own
+  `id` field* (`entry.get("id") or entry.get("slug")`), which by this newsroom's own convention
+  carries a `newsroom-` prefix that the bare slug does not. Passing `--article-id <slug>` (no
+  prefix) to `pick` -- which is what the runbook's own example command in §4 does -- silently
+  writes a manifest record `check` can never match back to the article, so a legitimately recorded
+  `"exception": true` LRU pick is invisible to `check` and reports as a hard FAIL ("perceptually
+  near-identical", no `[recorded LRU exception]` suffix) instead of a WARN, even though the pick
+  was fully sanctioned. Hit this for real this cycle on `alphabet-amazon-anthropic-stake-gains-earnings`
+  (picked via the LRU exception path, `check` still failed it). Fixed by hand-correcting the two
+  `used_in[].article_id` values this cycle wrote to match the real `newsroom-`-prefixed article
+  ids, which cleared the FAIL to the expected WARN. Did not touch `verify_covers.py` itself (Law 6)
+  -- the real fix is either `pick` should default `--article-id` to a `newsroom-`-prefixed id, or
+  `check` should normalize both sides before comparing. Left for the owner. Worth checking whether
+  any PRIOR cycle's LRU-exception picks have the same silent mismatch and are sitting as
+  unexplained FAILs (or worse, unrecorded WARNs) the next `check` run surfaces.
