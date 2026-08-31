@@ -9395,8 +9395,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Gemini",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094228441684115766",
+        "remote_id": "2094228441684115766",
+        "posted_at": "2026-08-31T00:59:04Z"
       },
       {
         "platform": "instagram",
@@ -9419,14 +9421,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122116823859396947",
+        "remote_id": "1238977099292018_122116823859396947",
+        "posted_at": "2026-08-31T00:59:35Z"
       },
       {
         "platform": "threads",
         "copy": "Gemini 3.5 Transcribe's 2.6% word-error rate is real and independently measured. It's also 5th place on the same leaderboard Google cites -- a detail the launch post skips.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dcr2yBIiee6",
+        "remote_id": "18027173105684060",
+        "posted_at": "2026-08-31T00:59:54Z"
       },
       {
         "platform": "bluesky",
@@ -9435,8 +9441,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Gemini"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mudpd726ba2k",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mudpd726ba2k",
+        "posted_at": "2026-08-31T01:00:00Z"
       }
     ]
   },
@@ -9470,8 +9478,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094227432991862985",
+        "remote_id": "2094227432991862985",
+        "posted_at": "2026-08-31T00:55:03Z"
       },
       {
         "platform": "x",
@@ -9498,8 +9508,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#ArtificialIntelligence",
           "#Regulation"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dcr2QaXFkOs/",
+        "remote_id": "18105768281521841",
+        "posted_at": "2026-08-31T00:55:21Z"
       },
       {
         "platform": "facebook",
@@ -9508,14 +9520,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Policy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122116823649396947",
+        "remote_id": "1238977099292018_122116823649396947",
+        "posted_at": "2026-08-31T00:55:32Z"
       },
       {
         "platform": "threads",
         "copy": "Alabama subpoenaed OpenAI over the Hugging Face breach -- first of 15 states to go past a warning letter. The subpoena landed 2 days before OpenAI's own account of the breach went public.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dcr2TsoCRIT",
+        "remote_id": "18115026352754854",
+        "posted_at": "2026-08-31T00:55:45Z"
       },
       {
         "platform": "bluesky",
@@ -9525,8 +9541,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Policy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mudp3seafi2v",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mudp3seafi2v",
+        "posted_at": "2026-08-31T00:55:52Z"
       }
     ]
   }
