@@ -115,3 +115,19 @@
   or fix the `--exclude` + `--allow-lru-exception` interaction in `pick` so a genuinely exhausted
   clean pool falls through to LRU ranking even when exclusion is what emptied it.
 - **2026-08-31** (weekly evolution): scoreboard freshness checks work as designed — seven score movements this scan (Claude Opus 4.8, GPT-5.5, Muse Spark 1.1, Gemini 3.5 Flash, Gemini 3.1 Pro Preview, GLM-5.3-Flash, plus Qwen3.8-Flash-Next's first independent measurement) caught by fetching the live Artificial Analysis leaderboard directly and comparing integer-rounded scores against the board's existing rows. The site_guard's "scored but has no entities.js entry" warnings for Gemini 3.1 Pro Preview / DeepSeek models are confirmed false positives (the regex patterns in entities.js DO match, including version suffixes as optional groups; the guard's substring check against displayed `name` fields misses them). Weekly scans prevent scoreboard staleness; leaderboard scores move fast enough that a monthly cadence would lag badly.
+- **2026-08-31** (newsroom cycle): the "Weekly evolution" scan that landed just before this cycle
+  (commit `93ae71e`) wrote `scannedAt: "2026-08-31T22:15:00Z"` into `web/data/scoreboard.js` --
+  a timestamp that was already in the future at the moment this cycle started (`date -u` read
+  `2026-08-31T17:26:51Z` at the top of this run, nearly 5 hours earlier). This is the same
+  ahead-of-actual-time failure mode `scoreboard.js`'s own `basisNote` has flagged on itself
+  repeatedly (2026-08-14, 2026-08-21, 2026-08-25, 2026-08-27 entries all note a scan's real time
+  reading earlier than the *prior* recorded `scannedAt`) -- but this is the first instance found
+  where the gap is large enough (~5 hours, not minutes) and specifically traced to a
+  non-newsroom-cycle job (the weekly "evolution" run, not the pulse scan or the cycle itself).
+  Per this board's own established convention, did not overwrite or "fix" the prior entry --
+  prepended an honest note with this cycle's own measured `date -u` timestamp instead, same
+  pattern those four prior notes already used. Worth a dedicated look at whatever writes the
+  weekly evolution run's `scannedAt`: if it's computing a scheduled/intended run time rather than
+  calling `date -u` at the moment it actually writes the file, that's a Law 3 violation
+  (self-reporting a number the run cannot actually measure) baked into that job specifically,
+  not a one-off.
