@@ -9563,5 +9563,201 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-31T00:55:52Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
+    "ts": "2026-08-31T17:41:22Z",
+    "export": {
+      "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
+      "url": "https://rtfclmgzn.com/article/claude-sonnet-5-price-hike-canceled",
+      "headline": "The Claude Sonnet 5 price increase scheduled for September 1 already isn't happening",
+      "hook": "Anthropic made Claude Sonnet 5's $2/$10 launch pricing permanent on August 10, canceling a 50% price increase to $3/$15 that had been scheduled since June -- three weeks before it was due to take effect.",
+      "key_facts": [
+        "The $2/$10 per-million-token introductory rate is now Anthropic's permanent, standard price.",
+        "The canceled increase would have raised prices 50%, to $3/$15 per million tokens, on September 1.",
+        "A separate tokenizer change already bills roughly 20-35% more tokens per request than Sonnet 4.6, unaffected by this reversal."
+      ],
+      "tone": "measured, numbers-first",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-claude-sonnet-5-price-hike-canceled.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Claude Sonnet 5's scheduled 50% price hike -- set for tomorrow -- already isn't happening. Anthropic made the $2/$10 launch rate permanent on August 10, three weeks before the increase was due.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Claude Sonnet 5's API pricing was scheduled to jump 50% tomorrow, September 1.\n\nIt already isn't happening. Anthropic made the $2/$10 introductory rate permanent back on August 10 -- three weeks before the increase was due.\n\nOne cost driver the reversal doesn't touch: a separate tokenizer change already bills more tokens per request than the previous model, regardless of the per-token price.\n\nFull story at the link in bio.",
+        "hashtags": ["#Anthropic", "#Claude", "#AI", "#APIpricing", "#TechNews", "#ArtificialIntelligence"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic just canceled a scheduled 50% price increase for Claude Sonnet 5's API -- the $2/$10 per-million-token introductory rate is now the permanent price, not a temporary discount. The increase to $3/$15 had been on the calendar since the model's June launch and was due to take effect tomorrow, September 1.",
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Claude Sonnet 5's API price hike -- scheduled for tomorrow -- already isn't happening. Anthropic made the $2/$10 launch rate permanent on August 10.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Claude Sonnet 5's scheduled 50% API price hike, due tomorrow, already isn't happening -- Anthropic made the $2/$10 launch rate permanent on August 10.",
+        "hashtags": ["#Anthropic", "#AI", "#Claude"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
+    "ts": "2026-08-31T17:44:05Z",
+    "export": {
+      "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
+      "url": "https://rtfclmgzn.com/article/anthropic-infostealer-claude-session-hijacking",
+      "headline": "Infostealer malware is stealing Claude login sessions to drain paid usage -- Anthropic is signing affected users out",
+      "hook": "Infostealer malware is stealing active Claude login sessions and draining paid usage -- bypassing passwords and two-factor authentication entirely by copying already-authenticated session cookies.",
+      "key_facts": [
+        "Named malware families: Vidar, LummaC2, StealC, RedLine and Acreed on Windows; Atomic Stealer on macOS.",
+        "Anthropic has signed out affected sessions, removed saved payment methods, and refunded unauthorized charges.",
+        "Signing a session out doesn't remove the malware -- the next login can be stolen the same way."
+      ],
+      "tone": "urgent, practical",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-infostealer-claude-session-hijacking.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Infostealer malware is hijacking Claude login sessions to drain paid usage -- skipping passwords and 2FA entirely by stealing already-authenticated session cookies. Anthropic is signing affected users out and refunding charges.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Cybersecurity", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Malware on your own computer can steal an active Claude login session -- no password, no 2FA needed.\n\nAnthropic says infostealers including Vidar, LummaC2, StealC and RedLine are copying session cookies straight off infected machines to drain paid usage.\n\nThe company is signing affected users out and refunding unauthorized charges -- but warns that doesn't remove the malware itself.\n\nFull story at the link in bio.",
+        "hashtags": ["#Cybersecurity", "#Anthropic", "#AI", "#Malware", "#TechNews", "#InfoSec"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Infostealer malware is stealing active Claude login sessions straight off infected computers -- bypassing passwords and two-factor authentication by copying already-authenticated session cookies. Anthropic says it's signing out affected sessions, removing saved payment methods, and refunding unauthorized charges, but warns that doesn't remove the malware still on the device.",
+        "hashtags": ["#Cybersecurity", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Infostealer malware is hijacking Claude login sessions to drain paid usage, skipping passwords and 2FA by stealing session cookies directly. Anthropic is signing affected users out and refunding charges.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Infostealer malware is stealing Claude login sessions to drain paid usage -- no password or 2FA needed, just a stolen session cookie. Anthropic is signing affected users out and refunding charges.",
+        "hashtags": ["#Cybersecurity", "#AI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
+    "ts": "2026-08-31T17:52:18Z",
+    "export": {
+      "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
+      "url": "https://rtfclmgzn.com/article/npr-newsguard-ai-chatbot-propaganda-test",
+      "headline": "Six AI chatbots debunked foreign propaganda three-quarters of the time in a new NPR/NewsGuard test -- outperforming every search engine tried",
+      "hook": "NPR and NewsGuard tested six AI chatbots against real Russian, Chinese and Iranian disinformation -- the chatbots debunked it about 75% of the time, beating every search engine and AI search summary tested.",
+      "key_facts": [
+        "Chatbots (ChatGPT, Gemini, Copilot, Meta AI, Grok, Claude) correctly debunked false narratives about 75% of the time.",
+        "AI-generated search summaries did worse -- Google's AI Overview beat Bing's, and Yandex barely generated any.",
+        "A separate study found Google AI Overviews cite unsupported claims in roughly 1 of 9 factual statements."
+      ],
+      "tone": "evaluation-first, reconciles conflicting evidence",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-npr-newsguard-ai-chatbot-propaganda-test.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "AI chatbots debunked Russian, Chinese and Iranian propaganda about 75% of the time in a new NPR/NewsGuard test -- beating every search engine and AI search summary tried.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Misinformation"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-31T22:52:18Z",
+        "copy": "A separate study found Google's AI Overviews cite unsupported claims in roughly 1 of 9 factual statements -- worth knowing before you trust that 75% chatbot debunking score too far.",
+        "reply_copy": "The full picture:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#GoogleAI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "AI chatbots vs. search engines: who catches propaganda better?\n\nNPR and NewsGuard tested ChatGPT, Gemini, Copilot, Meta AI, Grok and Claude against 30 questions built from real Russian, Chinese and Iranian disinformation.\n\nThe chatbots won -- debunking false narratives about 75% of the time, beating every search engine and AI-generated search summary tested.\n\nBut two separate academic studies complicate the good news: one found Google's AI Overviews cite unsupported claims roughly 1 time in 9; another found chatbots answer more favorably about China's government when asked in Chinese instead of English.\n\nFull story at the link in bio.",
+        "hashtags": ["#AI", "#Misinformation", "#Chatbots", "#NewsGuard", "#TechNews", "#ArtificialIntelligence", "#MediaLiteracy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "NPR and NewsGuard tested six AI chatbots against 30 questions built from real Russian, Chinese and Iranian disinformation -- the chatbots debunked false narratives about 75% of the time, beating every search engine and AI-generated search summary tested. Two separate academic studies complicate that good news without contradicting it: one found Google's AI Overviews cite unsupported claims roughly once in nine, the other found chatbots answering more favorably about China's government when asked in Chinese instead of English.",
+        "hashtags": ["#AI", "#Misinformation"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "AI chatbots debunked Russian, Chinese and Iranian propaganda about 75% of the time in a new NPR/NewsGuard test -- beating every search engine and AI summary tried. Two academic studies complicate the good news without contradicting it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-08-31T22:52:18Z",
+        "copy": "The 75% chatbot debunking score is real -- but a separate study found Google's AI Overviews cite unsupported claims roughly 1 time in 9. Worth knowing before you trust any single AI answer too far.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "AI chatbots debunked Russian, Chinese and Iranian propaganda ~75% of the time in a new NPR/NewsGuard test -- beating every search engine and AI summary tried. Two academic studies complicate the good news without contradicting it.",
+        "hashtags": ["#AI", "#Misinformation", "#NewsGuard"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

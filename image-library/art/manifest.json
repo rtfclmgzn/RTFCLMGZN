@@ -1528,6 +1528,11 @@
     {
      "article_id": "newsroom-kimi-k3-redis-zerodays",
      "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
+     "used_at": "2026-08-31",
+     "exception": true
     }
    ]
   },
@@ -1812,6 +1817,11 @@
     {
      "article_id": "newsroom-china-ai-export-controls",
      "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
+     "used_at": "2026-08-31",
+     "exception": true
     }
    ]
   },
@@ -2426,6 +2436,11 @@
     {
      "article_id": "newsroom-fli-safety-index",
      "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
+     "used_at": "2026-08-31",
+     "exception": true
     }
    ]
   },
