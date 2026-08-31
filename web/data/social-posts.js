@@ -9084,8 +9084,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#AIChips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muf42lmymz2a",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muf42lmymz2a",
+        "posted_at": "2026-08-31T14:20:30Z"
       }
     ]
   },
@@ -9222,8 +9224,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#SpaceX"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094429088605675918",
+        "remote_id": "2094429088605675918",
+        "posted_at": "2026-08-31T14:16:22Z"
       },
       {
         "platform": "x",
@@ -9236,8 +9240,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AIagents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094430097851752863",
+        "remote_id": "2094430097851752863",
+        "posted_at": "2026-08-31T14:20:23Z"
       },
       {
         "platform": "instagram",
