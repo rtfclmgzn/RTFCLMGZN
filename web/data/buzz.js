@@ -319,5 +319,17 @@ window.RTFC_BUZZ = [
     text:"Google DeepMind released Gemini 3.5 Transcribe on August 26 as a speech-to-text model in public preview, supporting automatic detection of 85+ languages with a 2.6% word error rate on recorded audio and 4.0% on real-time streams. The model automatically removes filler words ('um', 'uh'), fixes mid-sentence self-corrections, and can identify up to three speakers with word-level timestamps. For recorded audio, it's 70% faster than its predecessor Chirp 3.",
     why:"A frontier lab releasing a specialized speech-to-text model with multilingual support and production-grade WER metrics is a concrete tool for voice-first AI applications -- worth tracking against OpenAI's Whisper and Anthropic's non-public transcription tooling for enterprise deployment choices.",
     heat:55, topics:["google deepmind","gemini 3.5 transcribe","speech-to-text","multilingual","model release"],
-    url:"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" }
+    url:"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" },
+{ id:"bz-420", date:"2026-08-31",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic began locking Claude users out of their accounts after infostealer malware on user PCs siphoned active Claude login sessions via commodity stealers including Vidar, LummaC2, StealC, RedLine, and Acreed. The malware harvests browser cookies and session tokens, bypassing two-factor authentication entirely and letting attackers replay sessions to drain paid usage without logging in. Anthropic detected the pattern after noticing usage limits being refilled and then drained while account owners were inactive; the company is revoking compromised sessions and removing saved payment methods to prevent unauthorized purchases.",
+    why:"A coordinated exploitation of commodity malware harvesting Claude session cookies is a real operational security incident affecting a widely-used AI system -- and a concrete case where 2FA was defeated not by attacking the auth system but by stealing an already-authenticated session cookie, a different threat model than most security advisories address.",
+    heat:75, topics:["anthropic","security incident","malware","infostealer","session hijacking","claude accounts"],
+    url:"https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/" },
+{ id:"bz-421", date:"2026-08-31",
+    source:{ name:"Apple", handle:"Apple", platform:"web", kind:"lab" },
+    text:"John Ternus became Apple CEO on September 1, 2026, succeeding Tim Cook and immediately inheriting the company's most pressing strategic challenge: closing the gap with competitors in generative AI. Apple's previous AI division underwent a leadership shake-up; the company rebuilt Siri using Google's Gemini as its foundation. Ternus, 51, spent 25 years at Apple, leading the engineering teams behind the iPhone and broader hardware product lineup; his first major challenge will be shepherding the company's fall product cycle including its first foldable iPhone.",
+    why:"A hardware-engineering executive taking over a consumer tech giant on the exact day their AI strategy is becoming the decisive product question is a concrete signal of how much Apple's new leadership reads AI integration—not iPhone design—as the company's defining challenge for the next decade.",
+    heat:58, topics:["apple","john ternus","tim cook","ai strategy","siri","gemini","leadership"],
+    url:"https://www.cnbc.com/2026/08/31/apple-john-ternus-new-ceo-ai-strategy/" }
 ];
