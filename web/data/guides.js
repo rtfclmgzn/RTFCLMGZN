@@ -1941,8 +1941,15 @@ window.RTFC_GUIDES = [
           "kicker": "TWO 2026 RAISES, READ BOTH WAYS",
           "title": "The same method, two different traps",
           "columns": [
-            {"label": "Databricks", "sub": "same round, two moments"},
-            {"label": "Moonshot AI", "sub": "two rounds, one gets mistaken for the other", "hi": true}
+            {
+              "label": "Databricks",
+              "sub": "same round, two moments"
+            },
+            {
+              "label": "Moonshot AI",
+              "sub": "two rounds, one gets mistaken for the other",
+              "hi": true
+            }
           ],
           "rows": [
             {
@@ -2257,26 +2264,52 @@ window.RTFC_GUIDES = [
           "kicker": "THREE KINDS OF RANKING",
           "title": "What each one actually measures",
           "columns": [
-            { "label": "Vendor's own table", "sub": "real numbers, chosen by an interested party" },
-            { "label": "Crowd leaderboard", "sub": "a vote, not a fixed test", "hi": true },
-            { "label": "Independent aggregate", "sub": "the only one with no stake in the result" }
+            {
+              "label": "Vendor's own table",
+              "sub": "real numbers, chosen by an interested party"
+            },
+            {
+              "label": "Crowd leaderboard",
+              "sub": "a vote, not a fixed test",
+              "hi": true
+            },
+            {
+              "label": "Independent aggregate",
+              "sub": "the only one with no stake in the result"
+            }
           ],
           "rows": [
             {
               "label": "Who runs it",
-              "values": ["The company selling the model", "A public platform tallying blind votes", "A third party with no product to sell"]
+              "values": [
+                "The company selling the model",
+                "A public platform tallying blind votes",
+                "A third party with no product to sell"
+              ]
             },
             {
               "label": "What it measures",
-              "values": ["Whatever tests the vendor chose to publish", "Which output people prefer, prompt by prompt", "Performance on a fixed, adversarial test suite"]
+              "values": [
+                "Whatever tests the vendor chose to publish",
+                "Which output people prefer, prompt by prompt",
+                "Performance on a fixed, adversarial test suite"
+              ]
             },
             {
               "label": "Can you reproduce it",
-              "values": ["Only if the vendor names the exact test and version", "Not really — the vote itself is the result", "Yes — the same suite runs the same way on every model"]
+              "values": [
+                "Only if the vendor names the exact test and version",
+                "Not really — the vote itself is the result",
+                "Yes — the same suite runs the same way on every model"
+              ]
             },
             {
               "label": "Qwen3.8-Max's number here",
-              "values": ["86.6 on Terminal-Bench 2.1, Alibaba's own table", "Fifth on Text Arena, second on Vision Arena", "58, first published August 10 — a week after the other two"],
+              "values": [
+                "86.6 on Terminal-Bench 2.1, Alibaba's own table",
+                "Fifth on Text Arena, second on Vision Arena",
+                "58, first published August 10 — a week after the other two"
+              ],
               "note": "same model, three numbers, none of them interchangeable"
             }
           ],
@@ -2466,16 +2499,60 @@ window.RTFC_GUIDES = [
           "kicker": "THREE MENUS, SIDE BY SIDE",
           "title": "Where each setting lives, and what it actually covers",
           "columns": [
-            { "label": "ChatGPT", "sub": "OpenAI" },
-            { "label": "Claude", "sub": "Anthropic" },
-            { "label": "Gemini", "sub": "Google" }
+            {
+              "label": "ChatGPT",
+              "sub": "OpenAI"
+            },
+            {
+              "label": "Claude",
+              "sub": "Anthropic"
+            },
+            {
+              "label": "Gemini",
+              "sub": "Google"
+            }
           ],
           "rows": [
-            { "label": "Setting name", "values": ["Improve the model for everyone", "Help improve our AI models", "Gemini Apps Activity"] },
-            { "label": "Where it lives", "values": ["Settings → Data Controls", "Settings → Privacy", "Profile → Gemini Apps Activity"] },
-            { "label": "On by default (consumer plans)", "values": ["Yes — Free, Plus, Pro", "Yes — Free, Pro, Max", "Yes — most personal accounts"] },
-            { "label": "Already excluded", "values": ["Business, Enterprise, API", "Team, Enterprise, API", "Workspace accounts (admin-controlled)"] },
-            { "label": "Retention once switched off", "values": ["Not stated as a fixed window on this setting", "30 days, down from up to 5 years", "New chats kept 72 hours, not used to train"] }
+            {
+              "label": "Setting name",
+              "values": [
+                "Improve the model for everyone",
+                "Help improve our AI models",
+                "Gemini Apps Activity"
+              ]
+            },
+            {
+              "label": "Where it lives",
+              "values": [
+                "Settings → Data Controls",
+                "Settings → Privacy",
+                "Profile → Gemini Apps Activity"
+              ]
+            },
+            {
+              "label": "On by default (consumer plans)",
+              "values": [
+                "Yes — Free, Plus, Pro",
+                "Yes — Free, Pro, Max",
+                "Yes — most personal accounts"
+              ]
+            },
+            {
+              "label": "Already excluded",
+              "values": [
+                "Business, Enterprise, API",
+                "Team, Enterprise, API",
+                "Workspace accounts (admin-controlled)"
+              ]
+            },
+            {
+              "label": "Retention once switched off",
+              "values": [
+                "Not stated as a fixed window on this setting",
+                "30 days, down from up to 5 years",
+                "New chats kept 72 hours, not used to train"
+              ]
+            }
           ],
           "source": "OpenAI Help Center, Anthropic's Privacy Center, and Google's Gemini Apps Privacy Hub, read directly — current as of August 18, 2026."
         }
@@ -2730,16 +2807,61 @@ window.RTFC_GUIDES = [
           "kicker": "SAME WORD, FOUR DIFFERENT GRANTS",
           "title": "What four 2026 \"open\" releases actually let you do",
           "columns": [
-            { "label": "DeepSeek V4 Pro", "sub": "MIT" },
-            { "label": "Kimi K2", "sub": "Modified MIT" },
-            { "label": "Llama 3", "sub": "Community License" },
-            { "label": "Hunyuan Hy3", "sub": "Apache 2.0, current release", "hi": true }
+            {
+              "label": "DeepSeek V4 Pro",
+              "sub": "MIT"
+            },
+            {
+              "label": "Kimi K2",
+              "sub": "Modified MIT"
+            },
+            {
+              "label": "Llama 3",
+              "sub": "Community License"
+            },
+            {
+              "label": "Hunyuan Hy3",
+              "sub": "Apache 2.0, current release",
+              "hi": true
+            }
           ],
           "rows": [
-            { "label": "License family", "values": ["MIT", "Modified MIT", "Llama 3 Community License", "Apache 2.0"] },
-            { "label": "Commercial use", "values": ["Unrestricted", "Unrestricted", "Allowed, with a cap", "Unrestricted"] },
-            { "label": "Where the grant changes", "values": ["Never", "Attribution required past 100M users or $20M monthly revenue", "Free grant expires past 700M monthly users; a separate license is required beyond it", "Was geo-restricted at its earlier preview; dropped entirely at the current release"] },
-            { "label": "Training other models on its outputs", "values": ["No restriction", "No restriction", "Explicitly banned for other large language models", "No restriction"] }
+            {
+              "label": "License family",
+              "values": [
+                "MIT",
+                "Modified MIT",
+                "Llama 3 Community License",
+                "Apache 2.0"
+              ]
+            },
+            {
+              "label": "Commercial use",
+              "values": [
+                "Unrestricted",
+                "Unrestricted",
+                "Allowed, with a cap",
+                "Unrestricted"
+              ]
+            },
+            {
+              "label": "Where the grant changes",
+              "values": [
+                "Never",
+                "Attribution required past 100M users or $20M monthly revenue",
+                "Free grant expires past 700M monthly users; a separate license is required beyond it",
+                "Was geo-restricted at its earlier preview; dropped entirely at the current release"
+              ]
+            },
+            {
+              "label": "Training other models on its outputs",
+              "values": [
+                "No restriction",
+                "No restriction",
+                "Explicitly banned for other large language models",
+                "No restriction"
+              ]
+            }
           ],
           "source": "Meta's Llama 3 Community License (developer.meta.com); DeepSeek-V4-Pro's and Kimi-K2-Instruct's Hugging Face LICENSE files; Tencent's Hy3 model card and Digital Applied's reporting on its April preview license — read directly, current as of August 19, 2026."
         }
@@ -2830,7 +2952,7 @@ window.RTFC_GUIDES = [
     ],
     "corrections": []
   },
-{
+  {
     "id": "g12",
     "slug": "check-whether-an-image-is-ai-generated",
     "image": "assets/img/newsroom/g12.jpg",
@@ -2984,15 +3106,53 @@ window.RTFC_GUIDES = [
           "kicker": "WHICH SIGNAL, WHAT IT'S WORTH",
           "title": "C2PA and SynthID answer different questions",
           "columns": [
-            { "label": "C2PA / Content Credentials", "sub": "signed file metadata" },
-            { "label": "SynthID", "sub": "pixel-level watermark", "hi": true },
-            { "label": "Reverse image search", "sub": "prior-publication check" }
+            {
+              "label": "C2PA / Content Credentials",
+              "sub": "signed file metadata"
+            },
+            {
+              "label": "SynthID",
+              "sub": "pixel-level watermark",
+              "hi": true
+            },
+            {
+              "label": "Reverse image search",
+              "sub": "prior-publication check"
+            }
           ],
           "rows": [
-            { "label": "What it actually checks", "values": ["A manifest embedded in the file, naming the tool and edit history", "A statistical pattern embedded in the pixels or audio at creation", "Whether this exact image has a prior, dated appearance online"] },
-            { "label": "Survives a screenshot or re-save", "values": ["No — screenshotting and most re-saves strip it", "Often, by design — built to survive cropping and recompression", "Not applicable — works from the pixels, not a file's history"] },
-            { "label": "Where to check it", "values": ["verify.contentauthenticity.org", "The Gemini app, or Chrome's right-click check", "Google Images or TinEye"] },
-            { "label": "What a clean result actually proves", "values": ["That specific tool was involved, if the manifest is present and unaltered", "That Google's (or OpenAI's) generator was involved, if a match is found", "That this image, or a close match, existed before now"] }
+            {
+              "label": "What it actually checks",
+              "values": [
+                "A manifest embedded in the file, naming the tool and edit history",
+                "A statistical pattern embedded in the pixels or audio at creation",
+                "Whether this exact image has a prior, dated appearance online"
+              ]
+            },
+            {
+              "label": "Survives a screenshot or re-save",
+              "values": [
+                "No — screenshotting and most re-saves strip it",
+                "Often, by design — built to survive cropping and recompression",
+                "Not applicable — works from the pixels, not a file's history"
+              ]
+            },
+            {
+              "label": "Where to check it",
+              "values": [
+                "verify.contentauthenticity.org",
+                "The Gemini app, or Chrome's right-click check",
+                "Google Images or TinEye"
+              ]
+            },
+            {
+              "label": "What a clean result actually proves",
+              "values": [
+                "That specific tool was involved, if the manifest is present and unaltered",
+                "That Google's (or OpenAI's) generator was involved, if a match is found",
+                "That this image, or a close match, existed before now"
+              ]
+            }
           ],
           "source": "Content Authenticity Initiative (verify.contentauthenticity.org); Google DeepMind SynthID documentation — both read directly, current as of August 2026."
         }
@@ -3060,19 +3220,50 @@ window.RTFC_GUIDES = [
       }
     ],
     "sources": [
-      { "label": "C2PA — coalition overview and steering committee", "url": "https://c2pa.org/", "primary": true },
-      { "label": "Content Authenticity Initiative — Content Credentials verifier", "url": "https://verify.contentauthenticity.org/", "primary": true },
-      { "label": "Google DeepMind — SynthID", "url": "https://deepmind.google/models/synthid/", "primary": true },
-      { "label": "Google — \"SynthID Detector: a new portal to help identify AI-generated content\"", "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/", "primary": true },
-      { "label": "PetaPixel — \"AI Images Generated on DALL-E Now Contain the Content Authenticity Tag\"", "url": "https://petapixel.com/2024/02/08/ai-images-generated-on-dall-e-now-contain-the-content-authenticity-tag/" },
-      { "label": "Winbuzzer — \"OpenAI Adopts Google SynthID Watermarks for AI Image Detection\"", "url": "https://winbuzzer.com/2026/05/20/openai-adds-support-for-googles-synthid-watermarks-xcxwbn/" },
-      { "label": "Yahoo Tech — Google SynthID comes to Chrome, Search, and ChatGPT", "url": "https://tech.yahoo.com/ai/gemini/articles/google-synthid-comes-chrome-search-174500591.html" },
-      { "label": "Engadget — Google rolls back its Google Earth AI image tool", "url": "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/" },
-      { "label": "TechCrunch — Apple and Google ordered to purge nudify apps from app stores", "url": "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/" }
+      {
+        "label": "C2PA — coalition overview and steering committee",
+        "url": "https://c2pa.org/",
+        "primary": true
+      },
+      {
+        "label": "Content Authenticity Initiative — Content Credentials verifier",
+        "url": "https://verify.contentauthenticity.org/",
+        "primary": true
+      },
+      {
+        "label": "Google DeepMind — SynthID",
+        "url": "https://deepmind.google/models/synthid/",
+        "primary": true
+      },
+      {
+        "label": "Google — \"SynthID Detector: a new portal to help identify AI-generated content\"",
+        "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/",
+        "primary": true
+      },
+      {
+        "label": "PetaPixel — \"AI Images Generated on DALL-E Now Contain the Content Authenticity Tag\"",
+        "url": "https://petapixel.com/2024/02/08/ai-images-generated-on-dall-e-now-contain-the-content-authenticity-tag/"
+      },
+      {
+        "label": "Winbuzzer — \"OpenAI Adopts Google SynthID Watermarks for AI Image Detection\"",
+        "url": "https://winbuzzer.com/2026/05/20/openai-adds-support-for-googles-synthid-watermarks-xcxwbn/"
+      },
+      {
+        "label": "Yahoo Tech — Google SynthID comes to Chrome, Search, and ChatGPT",
+        "url": "https://tech.yahoo.com/ai/gemini/articles/google-synthid-comes-chrome-search-174500591.html"
+      },
+      {
+        "label": "Engadget — Google rolls back its Google Earth AI image tool",
+        "url": "https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/"
+      },
+      {
+        "label": "TechCrunch — Apple and Google ordered to purge nudify apps from app stores",
+        "url": "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/"
+      }
     ],
     "corrections": []
   },
-{
+  {
     "id": "g13",
     "slug": "check-whether-text-is-ai-written",
     "image": "assets/img/newsroom/g13.jpg",
@@ -3231,14 +3422,45 @@ window.RTFC_GUIDES = [
           "kicker": "WATERMARK VS. GUESS",
           "title": "Two mechanisms, answering different questions",
           "columns": [
-            { "label": "Lab-embedded watermark", "sub": "Claude, Gemini" },
-            { "label": "Third-party detector", "sub": "GPTZero, Turnitin, Originality.ai", "hi": true }
+            {
+              "label": "Lab-embedded watermark",
+              "sub": "Claude, Gemini"
+            },
+            {
+              "label": "Third-party detector",
+              "sub": "GPTZero, Turnitin, Originality.ai",
+              "hi": true
+            }
           ],
           "rows": [
-            { "label": "What it actually measures", "values": ["A statistical pattern the model wove into its own word choices at generation time", "A guess about word predictability and sentence rhythm in text of unknown origin"] },
-            { "label": "Public checker available today", "values": ["No — both labs describe detection tools as planned, not shipped, as of August 2026", "Yes — free and paid tools anyone can run right now"] },
-            { "label": "Documented error pattern", "values": ["Untested at public scale; no independent accuracy figures published yet", "Misclassifies non-native English writing as AI-generated far more than native writing"] },
-            { "label": "What a clean result actually proves", "values": ["Nothing yet checkable — there's no public reader of the mark to return a result", "That this specific tool's guess came back low — not that a human wrote it"] }
+            {
+              "label": "What it actually measures",
+              "values": [
+                "A statistical pattern the model wove into its own word choices at generation time",
+                "A guess about word predictability and sentence rhythm in text of unknown origin"
+              ]
+            },
+            {
+              "label": "Public checker available today",
+              "values": [
+                "No — both labs describe detection tools as planned, not shipped, as of August 2026",
+                "Yes — free and paid tools anyone can run right now"
+              ]
+            },
+            {
+              "label": "Documented error pattern",
+              "values": [
+                "Untested at public scale; no independent accuracy figures published yet",
+                "Misclassifies non-native English writing as AI-generated far more than native writing"
+              ]
+            },
+            {
+              "label": "What a clean result actually proves",
+              "values": [
+                "Nothing yet checkable — there's no public reader of the mark to return a result",
+                "That this specific tool's guess came back low — not that a human wrote it"
+              ]
+            }
           ],
           "source": "Anthropic Help Center; Google SynthID Detector documentation; Liang et al., \"GPT detectors are biased against non-native English writers\" (arXiv:2304.02819) — current as of August 2026."
         }
@@ -3306,18 +3528,46 @@ window.RTFC_GUIDES = [
       }
     ],
     "sources": [
-      { "label": "Anthropic Help Center — \"How Claude marks AI-generated content\"", "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content", "primary": true },
-      { "label": "OpenAI — \"New AI classifier for indicating AI-written text\"", "url": "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/", "primary": true },
-      { "label": "Google — \"SynthID Detector: a new portal to help identify AI-generated content\"", "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/", "primary": true },
-      { "label": "Liang, Yuksekgonul, Mao, Wu, Zou — \"GPT detectors are biased against non-native English writers\" (arXiv:2304.02819)", "url": "https://arxiv.org/abs/2304.02819", "primary": true },
-      { "label": "TechCrunch — \"Anthropic says it will watermark text generated by its AI models\"", "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/" },
-      { "label": "TechCrunch — \"OpenAI scuttles AI-written text detector over low rate of accuracy\"", "url": "https://techcrunch.com/2023/07/25/openai-scuttles-ai-written-text-detector-over-low-rate-of-accuracy/" },
-      { "label": "Infosecurity Magazine — \"OpenAI Leadership Split About In-House AI Watermarking Technology\"", "url": "https://www.infosecurity-magazine.com/news/openai-split-ai-watermarking/" },
-      { "label": "The Markup — \"AI Detection Tools Falsely Accuse International Students of Cheating\"", "url": "https://themarkup.org/machine-learning/2023/08/14/ai-detection-tools-falsely-accuse-international-students-of-cheating" }
+      {
+        "label": "Anthropic Help Center — \"How Claude marks AI-generated content\"",
+        "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+        "primary": true
+      },
+      {
+        "label": "OpenAI — \"New AI classifier for indicating AI-written text\"",
+        "url": "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/",
+        "primary": true
+      },
+      {
+        "label": "Google — \"SynthID Detector: a new portal to help identify AI-generated content\"",
+        "url": "https://blog.google/innovation-and-ai/products/google-synthid-ai-content-detector/",
+        "primary": true
+      },
+      {
+        "label": "Liang, Yuksekgonul, Mao, Wu, Zou — \"GPT detectors are biased against non-native English writers\" (arXiv:2304.02819)",
+        "url": "https://arxiv.org/abs/2304.02819",
+        "primary": true
+      },
+      {
+        "label": "TechCrunch — \"Anthropic says it will watermark text generated by its AI models\"",
+        "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/"
+      },
+      {
+        "label": "TechCrunch — \"OpenAI scuttles AI-written text detector over low rate of accuracy\"",
+        "url": "https://techcrunch.com/2023/07/25/openai-scuttles-ai-written-text-detector-over-low-rate-of-accuracy/"
+      },
+      {
+        "label": "Infosecurity Magazine — \"OpenAI Leadership Split About In-House AI Watermarking Technology\"",
+        "url": "https://www.infosecurity-magazine.com/news/openai-split-ai-watermarking/"
+      },
+      {
+        "label": "The Markup — \"AI Detection Tools Falsely Accuse International Students of Cheating\"",
+        "url": "https://themarkup.org/machine-learning/2023/08/14/ai-detection-tools-falsely-accuse-international-students-of-cheating"
+      }
     ],
     "corrections": []
   },
-{
+  {
     "id": "g14",
     "slug": "check-whether-a-voice-is-ai-cloned",
     "image": "assets/img/newsroom/g14.jpg",
@@ -3478,14 +3728,45 @@ window.RTFC_GUIDES = [
           "kicker": "WATERMARK VS. EAR",
           "title": "Two checks, and only one of them scales to a live call",
           "columns": [
-            { "label": "SynthID watermark", "sub": "ElevenLabs audio only" },
-            { "label": "Listening for tells", "sub": "the old advice", "hi": true }
+            {
+              "label": "SynthID watermark",
+              "sub": "ElevenLabs audio only"
+            },
+            {
+              "label": "Listening for tells",
+              "sub": "the old advice",
+              "hi": true
+            }
           ],
           "rows": [
-            { "label": "What it actually checks", "values": ["Whether a saved file's audio pattern matches ElevenLabs' own generation signature", "Whether the voice sounds natural to a human ear"] },
-            { "label": "Works on a live phone call", "values": ["No — requires a saved file run through the detector afterward", "In theory, but modern clones increasingly defeat it"] },
-            { "label": "Coverage", "values": ["Only ElevenLabs-generated audio made after June 2026 — other cloning platforms aren't covered", "Applies, unreliably, to any voice from any source"] },
-            { "label": "What a clean result proves", "values": ["Nothing about who's on the phone right now — only that no ElevenLabs watermark was found in that file", "Nothing reliable — vendor accuracy claims come from favorable test sets and real-world accuracy cuts sharply outside them"] }
+            {
+              "label": "What it actually checks",
+              "values": [
+                "Whether a saved file's audio pattern matches ElevenLabs' own generation signature",
+                "Whether the voice sounds natural to a human ear"
+              ]
+            },
+            {
+              "label": "Works on a live phone call",
+              "values": [
+                "No — requires a saved file run through the detector afterward",
+                "In theory, but modern clones increasingly defeat it"
+              ]
+            },
+            {
+              "label": "Coverage",
+              "values": [
+                "Only ElevenLabs-generated audio made after June 2026 — other cloning platforms aren't covered",
+                "Applies, unreliably, to any voice from any source"
+              ]
+            },
+            {
+              "label": "What a clean result proves",
+              "values": [
+                "Nothing about who's on the phone right now — only that no ElevenLabs watermark was found in that file",
+                "Nothing reliable — vendor accuracy claims come from favorable test sets and real-world accuracy cuts sharply outside them"
+              ]
+            }
           ],
           "source": "ElevenLabs, \"Detecting audio generated by ElevenLabs with SynthID\" (June 2026); eyesift.com AI voice detector comparison, current as of 2026."
         }
@@ -3553,15 +3834,46 @@ window.RTFC_GUIDES = [
       }
     ],
     "sources": [
-      { "label": "FBI Internet Crime Complaint Center — 2025 IC3 Annual Report", "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf", "primary": true },
-      { "label": "FTC — \"Family Emergency Scams\"", "url": "https://consumer.ftc.gov/all-scams/family-emergency-scams", "primary": true },
-      { "label": "FTC — \"Scammers use AI to enhance their family emergency schemes\"", "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes", "primary": true },
-      { "label": "ElevenLabs — \"Detecting audio generated by ElevenLabs with SynthID\"", "url": "https://elevenlabs.io/blog/synthid", "primary": true },
-      { "label": "Fox News — \"AI voice scams surge... as cloning needs just 3 seconds of audio\"", "url": "https://www.foxnews.com/tech/ai-voice-scams-clone-familys-voice" },
-      { "label": "TechEaseHelp — \"2025 FBI Elder Fraud Report: $7.7 Billion in Senior Losses\"", "url": "https://techeasehelp.com/blog/2025-fbi-elder-fraud-report-77-billion-in-senior-losses" },
-      { "label": "Ledger — \"FBI IC3 2025 Report: AI-Enabled Fraud Grew 1,210% in One Year\"", "url": "https://www.ledgerapp.app/blog/fbi-ic3-2025-ai-fraud-report" },
-      { "label": "Biometric Update — \"AI voice fraud draws new congressional scrutiny\"", "url": "https://www.biometricupdate.com/202604/ai-voice-fraud-draws-new-congressional-scrutiny" },
-      { "label": "Eyesift — \"Best AI Voice Detectors 2026\"", "url": "https://www.eyesift.com/blog/best-ai-voice-detectors-2026/" }
+      {
+        "label": "FBI Internet Crime Complaint Center — 2025 IC3 Annual Report",
+        "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+        "primary": true
+      },
+      {
+        "label": "FTC — \"Family Emergency Scams\"",
+        "url": "https://consumer.ftc.gov/all-scams/family-emergency-scams",
+        "primary": true
+      },
+      {
+        "label": "FTC — \"Scammers use AI to enhance their family emergency schemes\"",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+        "primary": true
+      },
+      {
+        "label": "ElevenLabs — \"Detecting audio generated by ElevenLabs with SynthID\"",
+        "url": "https://elevenlabs.io/blog/synthid",
+        "primary": true
+      },
+      {
+        "label": "Fox News — \"AI voice scams surge... as cloning needs just 3 seconds of audio\"",
+        "url": "https://www.foxnews.com/tech/ai-voice-scams-clone-familys-voice"
+      },
+      {
+        "label": "TechEaseHelp — \"2025 FBI Elder Fraud Report: $7.7 Billion in Senior Losses\"",
+        "url": "https://techeasehelp.com/blog/2025-fbi-elder-fraud-report-77-billion-in-senior-losses"
+      },
+      {
+        "label": "Ledger — \"FBI IC3 2025 Report: AI-Enabled Fraud Grew 1,210% in One Year\"",
+        "url": "https://www.ledgerapp.app/blog/fbi-ic3-2025-ai-fraud-report"
+      },
+      {
+        "label": "Biometric Update — \"AI voice fraud draws new congressional scrutiny\"",
+        "url": "https://www.biometricupdate.com/202604/ai-voice-fraud-draws-new-congressional-scrutiny"
+      },
+      {
+        "label": "Eyesift — \"Best AI Voice Detectors 2026\"",
+        "url": "https://www.eyesift.com/blog/best-ai-voice-detectors-2026/"
+      }
     ],
     "corrections": []
   },
@@ -3825,14 +4137,42 @@ window.RTFC_GUIDES = [
       }
     ],
     "sources": [
-      { "label": "SEC — \"SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence\"", "url": "https://www.sec.gov/newsroom/press-releases/2024-36", "primary": true },
-      { "label": "Mayer Brown — \"Securities and Exchange Commission Brings First Enforcement Actions Over 'AI-Washing'\"", "url": "https://www.mayerbrown.com/en/insights/publications/2024/04/securities-and-exchange-commission-brings-first-enforcement-actions-over-aiwashing" },
-      { "label": "FTC — \"FTC Announces Crackdown on Deceptive AI Claims and Schemes\"", "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes", "primary": true },
-      { "label": "FTC — \"FTC Order Requires Workado to Back Up Artificial Intelligence Detection Claims\"", "url": "https://www.ftc.gov/news-events/news/press-releases/2025/04/ftc-order-requires-workado-back-artificial-intelligence-detection-claims", "primary": true },
-      { "label": "CyberScoop — \"Workado settles with FTC over allegations it inflated its AI detectors' capabilities\"", "url": "https://cyberscoop.com/ftc-workado-settlement-ai-detector-false-and-misleading-claims/" },
-      { "label": "FTC — \"FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About 'Active Listening' AI-Powered Marketing Service\"", "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived", "primary": true },
-      { "label": "National Law Review — \"FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About 'Active Listening' AI-Powered Marketing Service\"", "url": "https://natlawreview.com/article/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges" },
-      { "label": "Forkast News — \"The FTC Has Policed 13 AI Cases. None Target Agent Behavior.\"", "url": "https://forkast.news/the-ftc-has-policed-13-ai-cases-none-target-agent-behavior/" }
+      {
+        "label": "SEC — \"SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence\"",
+        "url": "https://www.sec.gov/newsroom/press-releases/2024-36",
+        "primary": true
+      },
+      {
+        "label": "Mayer Brown — \"Securities and Exchange Commission Brings First Enforcement Actions Over 'AI-Washing'\"",
+        "url": "https://www.mayerbrown.com/en/insights/publications/2024/04/securities-and-exchange-commission-brings-first-enforcement-actions-over-aiwashing"
+      },
+      {
+        "label": "FTC — \"FTC Announces Crackdown on Deceptive AI Claims and Schemes\"",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+        "primary": true
+      },
+      {
+        "label": "FTC — \"FTC Order Requires Workado to Back Up Artificial Intelligence Detection Claims\"",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/04/ftc-order-requires-workado-back-artificial-intelligence-detection-claims",
+        "primary": true
+      },
+      {
+        "label": "CyberScoop — \"Workado settles with FTC over allegations it inflated its AI detectors' capabilities\"",
+        "url": "https://cyberscoop.com/ftc-workado-settlement-ai-detector-false-and-misleading-claims/"
+      },
+      {
+        "label": "FTC — \"FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About 'Active Listening' AI-Powered Marketing Service\"",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived",
+        "primary": true
+      },
+      {
+        "label": "National Law Review — \"FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About 'Active Listening' AI-Powered Marketing Service\"",
+        "url": "https://natlawreview.com/article/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges"
+      },
+      {
+        "label": "Forkast News — \"The FTC Has Policed 13 AI Cases. None Target Agent Behavior.\"",
+        "url": "https://forkast.news/the-ftc-has-policed-13-ai-cases-none-target-agent-behavior/"
+      }
     ],
     "corrections": []
   },
@@ -3898,8 +4238,15 @@ window.RTFC_GUIDES = [
           "kicker": "SAME WORD, TWO CLAIMS",
           "title": "Distillation the technique vs. the accusation",
           "columns": [
-            { "label": "Distillation", "sub": "the technique" },
-            { "label": "Distillation attack", "sub": "the accusation", "hi": true }
+            {
+              "label": "Distillation",
+              "sub": "the technique"
+            },
+            {
+              "label": "Distillation attack",
+              "sub": "the accusation",
+              "hi": true
+            }
           ],
           "rows": [
             {
@@ -4107,14 +4454,42 @@ window.RTFC_GUIDES = [
       }
     ],
     "sources": [
-      { "label": "Anthropic — \"Detecting and preventing distillation attacks\"", "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks", "primary": true },
-      { "label": "VentureBeat — \"Anthropic says DeepSeek, Moonshot and MiniMax used 24,000 fake accounts to distill Claude\"", "url": "https://venturebeat.com/technology/anthropic-says-deepseek-moonshot-and-minimax-used-24-000-fake-accounts-to" },
-      { "label": "TechSpot — \"Nvidia's Jensen Huang defends Chinese AI, open source\"", "url": "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html", "primary": true },
-      { "label": "Yahoo News — \"China's Moonshot 'tapped' Anthropic's Fable, White House alleges\"", "url": "https://www.yahoo.com/news/politics/articles/chinas-moonshot-tapped-anthropics-fable-143659340.html" },
-      { "label": "TechCrunch — \"Treasury threatens sanctions after White House claims Moonshot distilled Anthropic's Fable\"", "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/" },
-      { "label": "\"Open Weights and American AI Leadership\" — the Nvidia-led industry letter", "url": "https://www.explainx.ai/blog/open-weights-american-ai-leadership-letter-july-2026", "primary": true },
-      { "label": "Hugging Face — Kimi K3 model overview, MXFP4 quantization and architecture", "url": "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei" },
-      { "label": "Artificial Analysis — Kimi K3 model page", "url": "https://artificialanalysis.ai/models/kimi-k3", "primary": true }
+      {
+        "label": "Anthropic — \"Detecting and preventing distillation attacks\"",
+        "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
+        "primary": true
+      },
+      {
+        "label": "VentureBeat — \"Anthropic says DeepSeek, Moonshot and MiniMax used 24,000 fake accounts to distill Claude\"",
+        "url": "https://venturebeat.com/technology/anthropic-says-deepseek-moonshot-and-minimax-used-24-000-fake-accounts-to"
+      },
+      {
+        "label": "TechSpot — \"Nvidia's Jensen Huang defends Chinese AI, open source\"",
+        "url": "https://www.techspot.com/news/113210-nvidia-jensen-huang-defends-chinese-ai-open-source.html",
+        "primary": true
+      },
+      {
+        "label": "Yahoo News — \"China's Moonshot 'tapped' Anthropic's Fable, White House alleges\"",
+        "url": "https://www.yahoo.com/news/politics/articles/chinas-moonshot-tapped-anthropics-fable-143659340.html"
+      },
+      {
+        "label": "TechCrunch — \"Treasury threatens sanctions after White House claims Moonshot distilled Anthropic's Fable\"",
+        "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/"
+      },
+      {
+        "label": "\"Open Weights and American AI Leadership\" — the Nvidia-led industry letter",
+        "url": "https://www.explainx.ai/blog/open-weights-american-ai-leadership-letter-july-2026",
+        "primary": true
+      },
+      {
+        "label": "Hugging Face — Kimi K3 model overview, MXFP4 quantization and architecture",
+        "url": "https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei"
+      },
+      {
+        "label": "Artificial Analysis — Kimi K3 model page",
+        "url": "https://artificialanalysis.ai/models/kimi-k3",
+        "primary": true
+      }
     ],
     "corrections": []
   },
@@ -4444,6 +4819,170 @@ window.RTFC_GUIDES = [
       {
         "label": "Biometric Update — \"Only 0.1% of people can tell a deepfake, says iProov\"",
         "url": "https://www.biometricupdate.com/202502/only-0-1-of-people-can-tell-a-deepfake-says-iproov"
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g18",
+    "slug": "catch-a-bad-ai-transcript-before-you-send-it",
+    "image": "assets/img/newsroom/g18.jpg",
+    "title": "How to catch a bad AI transcript before you send it out",
+    "dek": "A 2.6% word-error rate still means roughly one wrong word every 40 words -- and the ones that matter aren't random typos. They're a missing \"not,\" a swapped number, or a misheard name, each confident enough to read as correct on a skim. Here's the five-minute check that catches them first.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-08-31T00:39:39Z",
+    "readMins": 3,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "A low word-error rate still means real errors -- 2.6% is roughly one wrong word every 40.",
+      "Most transcription errors are substitutions, not deletions: a wrong word, not a missing one.",
+      "Check names, numbers, and negations first -- they change meaning, not just spelling.",
+      "Spot-check a few risk-based samples against the audio instead of relistening to everything.",
+      "Caveat: the same error type showing up twice usually means it's happening throughout, not just there."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Do this on the next AI-generated transcript you're about to send or publish.",
+        "text": "Run the check below before forwarding a meeting summary, publishing a captioned clip, or quoting from an AI transcript -- the failure mode isn't gibberish, it's a wrong word that reads as correct."
+      },
+      {
+        "label": "Do this before trusting a transcription vendor's headline accuracy number.",
+        "text": "A 2.6% or 4% word-error rate is an average across a benchmark set, not a guarantee for your specific audio -- background noise, accents, and crosstalk all push real-world error rates higher than the number on the box."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Intelligent transcription with Gemini 3.5 Transcribe",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+        "outlet": "Google",
+        "kind": "primary"
+      },
+      {
+        "label": "Handling transcript errors: Homophones, corrections and AI quality improvement",
+        "url": "https://www.assemblyai.com/blog/transcription-errors",
+        "outlet": "AssemblyAI",
+        "kind": "primary"
+      },
+      {
+        "label": "How to Fix an Inaccurate AI Transcript (Fast Checklist)",
+        "url": "https://gotranscript.com/en/blog/fix-inaccurate-ai-transcript-fast-checklist",
+        "outlet": "GoTranscript",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Google's new [Gemini 3.5 Transcribe reported a 2.6% word error rate](/article/google-gemini-3-5-transcribe-launch) on recorded audio this week, an independently measured, genuine improvement. But **2.6%** is not zero. On a 1,000-word meeting transcript, that's roughly 26 wrong words -- and AssemblyAI's own published breakdown of a modern speech-recognition model's errors found that the large majority, **81%**, are __substitutions__: a confident wrong word standing in for the right one, not an obvious gap. Those are exactly the errors a skim doesn't catch.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+          "https://www.assemblyai.com/blog/transcription-errors"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Why the failures are invisible, not obvious",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The errors worth worrying about are homophones and dropped words, not garbled nonsense. AssemblyAI's own writeup gives the starkest example: a missing negation turns \"the patient is allergic to penicillin\" into its dangerous opposite -- the sentence still reads fine, it just says the wrong thing. ==Names and technical terms fail the same way: a person's name spelled a plausible-but-wrong way, a term autocorrected into a similar-sounding common word.== None of these look like errors on a skim, which is exactly why skimming isn't the check.",
+        "citation_urls": [
+          "https://www.assemblyai.com/blog/transcription-errors"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check an AI transcript in this order",
+          "sub": "Five to ten minutes for a typical hour of audio -- you don't need to relisten to all of it.",
+          "est": "5-10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The transcript file.",
+            "The original audio or video, cued up and seekable."
+          ],
+          "steps": [
+            {
+              "do": "Scan for repeated homophones or nonsense words first.",
+              "detail": "A run of odd substitutions -- swapped words, garbled proper nouns -- usually means a language or accent mismatch, not a one-off mistake.",
+              "verify": "You can read the whole transcript once at normal speed without hitting a sentence that fails to parse.",
+              "ifnot": "If several sentences don't parse, the file likely needs a language or dialect setting fix and a re-run, not line-by-line editing."
+            },
+            {
+              "do": "Fix names, technical terms, and acronyms first, before anything else.",
+              "detail": "This is the highest-frequency error category and the fastest to verify against a participant list, an agenda, or a company directory.",
+              "verify": "Every proper noun in the transcript matches a name you can independently confirm belongs in this recording.",
+              "ifnot": "If a name doesn't match anyone on the call, check it against the audio directly rather than guessing the closest real name."
+            },
+            {
+              "do": "Scan every number, date, and unit next.",
+              "detail": "Money amounts, percentages, dates, and measurements are the category most likely to be silently wrong in a way that still reads as confident and correct.",
+              "verify": "Every number in the transcript matches what you hear when you jump to that timestamp.",
+              "ifnot": "If a number sounds ambiguous in the audio itself, mark it as unconfirmed in the transcript rather than picking one reading."
+            },
+            {
+              "do": "Read every sentence containing \"not,\" \"no,\" \"never,\" or \"can't\" against the audio.",
+              "detail": "Negation words are short, often unstressed in speech, and are exactly the words a model is most likely to drop without leaving any sign something's missing.",
+              "verify": "Every negation in the transcript is audible in the original recording at that timestamp.",
+              "ifnot": "If you can't confirm a negation either way, flag the sentence rather than publishing it as-is."
+            },
+            {
+              "do": "Spot-check three to five random two-minute chunks against the audio.",
+              "detail": "Sample across the recording rather than relistening to all of it -- if the same error type shows up in more than one sample, treat it as happening throughout, not just in the spots you checked.",
+              "verify": "None of your sampled chunks surface an error type you haven't already fixed elsewhere.",
+              "ifnot": "If a new error type turns up, widen the check to every instance of that pattern before calling the transcript done."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The order matters more than the thoroughness. Fixing punctuation before checking whether a dollar figure is right just means the highest-stakes error sits uncaught the longest.",
+        "citation_urls": [
+          "https://gotranscript.com/en/blog/fix-inaccurate-ai-transcript-fast-checklist"
+        ]
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Three ways this check gets skipped",
+          "items": [
+            {
+              "mistake": "Treating a low headline word-error rate as a guarantee for this specific recording.",
+              "looks": "A vendor cites \"2.6% WER\" and the transcript gets forwarded without any check at all.",
+              "why": "Benchmark WER numbers are measured against a specific test set; background noise, overlapping speakers, and accents outside that set all push the real error rate on your actual audio higher.",
+              "fix": "Treat the vendor's number as a floor, not a guarantee, and run the spot-check regardless of how good the headline figure is.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Reading the transcript instead of listening to sampled chunks against it.",
+              "looks": "The transcript reads smoothly end to end, so it gets marked accurate.",
+              "why": "Substitution errors -- the dominant error type in modern speech recognition -- are specifically the ones that read smoothly; that's what makes them substitutions instead of gibberish.",
+              "fix": "A transcript that reads clean tells you nothing on its own -- the check has to touch the audio, not just the page.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Fixing errors in the order you notice them instead of by risk.",
+              "looks": "Time goes to punctuation and paragraph breaks before anyone checks whether a dollar figure or a date is right.",
+              "why": "Names, numbers, and negations are the error categories most likely to change what the transcript actually means; formatting errors are the least likely to.",
+              "fix": "Work names and terms first, then numbers and dates, then speaker labels, then formatting -- so the highest-stakes errors get caught even if you run out of time.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes an AI transcript untrustworthy -- **2.6%** is a genuine improvement over what shipped even a year ago. It just means the number on the announcement and the number that matters for your specific recording are two different things, and only one of them is checkable from a chair.",
+        "citation_urls": []
       }
     ],
     "corrections": []

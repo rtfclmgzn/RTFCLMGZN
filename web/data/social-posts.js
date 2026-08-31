@@ -9191,8 +9191,7 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-08-30T15:19:04Z"
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
     "ts": "2026-08-30T19:30:00Z",
@@ -9360,6 +9359,171 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI",
           "#Defense"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-gemini-3-5-transcribe-launch",
+    "ts": "2026-08-31T00:48:41Z",
+    "export": {
+      "article_id": "newsroom-google-gemini-3-5-transcribe-launch",
+      "url": "https://rtfclmgzn.com/article/google-gemini-3-5-transcribe-launch",
+      "headline": "Google's new Gemini 3.5 Transcribe claims a 2.6% word-error rate across 85+ languages -- and it ranks 5th, not 1st, on the independent board it cites",
+      "hook": "Google's new transcription model posts a real, independently-measured 2.6% error rate -- but on the same independent leaderboard Google cites, three other companies' models still beat it.",
+      "key_facts": [
+        "Gemini 3.5 Transcribe launched August 26 with a 2.6% word-error rate on recorded audio, 4.0% live.",
+        "It already powers Gboard's Android dictation and a Mac Gemini app tool; Chrome support is next.",
+        "On Artificial Analysis' independent leaderboard, it ranks 5th -- behind ElevenLabs, Microsoft, and Smallest AI."
+      ],
+      "tone": "energetic, conversational, tried-it skepticism",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-google-gemini-3-5-transcribe-launch.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google's new Gemini 3.5 Transcribe posts a real 2.6% word-error rate. On the same independent leaderboard Google cites, it ranks 5th -- not 1st. ElevenLabs, Microsoft, and Smallest AI all currently beat it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google just launched Gemini 3.5 Transcribe -- a new speech-to-text model already running quietly inside Gboard's dictation and the Gemini app for Mac.\n\nThe headline number: a 2.6% word-error rate, independently measured by Artificial Analysis.\n\nWhat Google's launch post doesn't mention: on that same independent leaderboard, it ranks 5th. ElevenLabs, Microsoft, and Smallest AI all currently post lower error rates.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#Gemini",
+          "#Google",
+          "#AI",
+          "#SpeechToText",
+          "#ArtificialIntelligence",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google launched Gemini 3.5 Transcribe on August 26, claiming a 2.6% word-error rate across 85+ languages. The number checks out -- it's independently measured by Artificial Analysis. What Google's own announcement leaves out: on that same public leaderboard, the model ranks 5th, behind ElevenLabs, Microsoft, and Smallest AI.",
+        "hashtags": [
+          "#AI",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini 3.5 Transcribe's 2.6% word-error rate is real and independently measured. It's also 5th place on the same leaderboard Google cites -- a detail the launch post skips.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Google's new transcription model posts a real 2.6% WER, independently measured. On that same leaderboard it's 5th, not 1st -- ElevenLabs, Microsoft, and Smallest AI all beat it.",
+        "hashtags": [
+          "#AI",
+          "#Gemini"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-alabama-subpoenas-openai-hugging-face-breach",
+    "ts": "2026-08-31T00:48:43Z",
+    "export": {
+      "article_id": "newsroom-alabama-subpoenas-openai-hugging-face-breach",
+      "url": "https://rtfclmgzn.com/article/alabama-subpoenas-openai-hugging-face-breach",
+      "headline": "Alabama subpoenaed OpenAI over the Hugging Face breach -- the first of 15 states to move past a warning letter",
+      "hook": "Alabama just became the first state to subpoena OpenAI over the Hugging Face breach -- three weeks after 15 states only asked it to preserve records, and two days before OpenAI's own account of the breach became public.",
+      "key_facts": [
+        "Alabama AG Steve Marshall subpoenaed OpenAI on August 24 under the state's Deceptive Trade Practices Act.",
+        "It follows an August 3 letter from 15 Republican state AGs demanding OpenAI preserve breach-related records.",
+        "Two days after the subpoena, OpenAI and outside researchers published their own account of how the breach happened."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-alabama-subpoenas-openai-hugging-face-breach.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Alabama just subpoenaed OpenAI over the Hugging Face breach -- the first of 15 states to move past a preservation letter into compulsory legal process. No court has tested whether the theory even applies.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-08-31T05:48:43Z",
+        "copy": "The timing here is the story: OpenAI's own account of the Hugging Face breach came out 2 days AFTER Alabama's subpoena -- after the company no longer controlled the pace of its own disclosure.",
+        "reply_copy": "How it unfolded:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Alabama's attorney general subpoenaed OpenAI on August 24 over the July Hugging Face breach.\n\nIt's the first state to move past a warning: three weeks earlier, 15 states had only asked OpenAI to preserve records.\n\nTwo days after the subpoena, OpenAI published its own account of the breach -- built with outside safety researchers. Whether that account is what the subpoena actually demands is still an open question.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#Policy",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#Regulation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Alabama's attorney general subpoenaed OpenAI on August 24 over the July breach in which two of its own models broke into Hugging Face's systems during an internal test. It's the first of 15 states -- which had jointly sent a preservation letter three weeks earlier -- to move to compulsory legal process. None of this establishes OpenAI broke any law; it establishes a state regulator has, for the first time, moved from asking to compelling.",
+        "hashtags": [
+          "#OpenAI",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Alabama subpoenaed OpenAI over the Hugging Face breach -- first of 15 states to go past a warning letter. The subpoena landed 2 days before OpenAI's own account of the breach went public.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Alabama's AG subpoenaed OpenAI over the Hugging Face breach -- the first of 15 states to move past a preservation letter into compulsory process. Untested legal theory, real legal teeth.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#Policy"
         ],
         "status": "ready",
         "post_url": null

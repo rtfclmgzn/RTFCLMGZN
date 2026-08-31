@@ -588,7 +588,12 @@
    ],
    "text_space": "facade band right",
    "brand_visible": "OPENAI signage",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-alabama-subpoenas-openai-hugging-face-breach",
+     "used_at": "2026-08-31"
+    }
+   ]
   },
   {
    "id": "art-020-lab-plaza-with-globe-sculpture",
@@ -736,7 +741,12 @@
    ],
    "text_space": "logo band left",
    "brand_visible": "GEMINI signage",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-google-gemini-3-5-transcribe-launch",
+     "used_at": "2026-08-31"
+    }
+   ]
   },
   {
    "id": "art-026-humanoid-test-lab-behind-glass",
@@ -2204,7 +2214,12 @@
    ],
    "text_space": "ceiling trusses top",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "g18",
+     "used_at": "2026-08-31"
+    }
+   ]
   },
   {
    "id": "art-075-three-researchers-molecule-on-screen",
