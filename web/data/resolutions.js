@@ -163,6 +163,18 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"ARC Prize Foundation reported Opus 5 achieved a verified 30.16% on ARC-AGI 3, roughly three times the performance of the next-best model. This independent third-party benchmark from a source outside Anthropic satisfies the resolver requirement for outside-group evaluation of Opus 5's ARC-AGI 3 performance.",
       label:"ARC Prize Foundation verified Opus 5 30.16% on ARC-AGI 3",
-      url:"https://arcprize.org/blog/arc-agi-3-competition-results" }
+      url:"https://arcprize.org/blog/arc-agi-3-competition-results" },
+    { key:"openai-daybreak-gpt-5-6-cyber-launch|w|0",
+      at:"2026-09-01T21:00:00Z",
+      outcome:"confirmed",
+      note:"OpenAI enforced the September 1, 2026 hardware security key mandate for Daybreak individual accounts, requiring FIDO-compatible hardware keys (Yubico YubiKey or equivalent) or loss of access to GPT-5.6-Cyber and other restricted models. The deadline was enforced as announced with no slip.",
+      label:"OpenAI Daybreak hardware key mandate enforcement - September 1, 2026",
+      url:"https://www.forrester.com/blogs/openai-makes-hardware-passkeys-mandatory-for-its-highest-end-cyber-model/" },
+    { key:"tesla-cybercab-austin-launch-driverless-mile-gap|w|0",
+      at:"2026-09-01T21:25:00Z",
+      outcome:"expired",
+      note:"Tesla's August 31, 2026 internal target for first public (non-employee) Cybercab rides did not materialize. The official launch event is September 3, 2026, in Austin, with public Robotaxi app availability targeted for the following week. The end-of-August deadline has passed with no public rides confirmed.",
+      label:"Tesla Cybercab end-of-August launch deadline - unmet",
+      url:"https://www.teslarati.com/tesla-cybercab-launch-official-date-austin/" }
   ]
 };
