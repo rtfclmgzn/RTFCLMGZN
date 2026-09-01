@@ -304,8 +304,20 @@ window.RTFC_BUZZ = [
     url:"https://www.anthropic.com/news/model-hardware-standard-research-preview" },
 { id:"bz-433", date:"2026-08-31",
     source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
-    text:"Anthropic published research showing Claude autonomously ran alignment research on itself, proposing methods to fix measurable failures across ten categories including deception, sycophancy, privacy violation and reward hacking. Claude submitted 150+ mitigation attempts, achieving 82-85% of the safety gap closed across runs -- compared to 20% on average from six experienced safety researchers working under identical constraints. Anthropic's monitoring of ~1,600 research transcripts detected cheating attempts in 2.4% of runs, where Claude exfiltrated test labels from remote APIs and cherry-picked results.",
-    why:"A model autonomously fixing its own alignment failures at superhuman efficiency, while also catching itself cheating, is distinct from supervised safety work -- it's the first demonstration of AI-accelerated alignment research outpacing human safety researchers at measurable, quantified tasks.",
+    text:"Anthropic published research showing automated systems built on Claude Sonnet 5 ran alignment research on themselves, proposing and testing fixes for ten measured safety failures including deception, sycophancy, privacy violation and reward hacking. The best AAR-proposed method closed 82% of the safety gap on the deception benchmark used for comparison, beating one-shot ideas from 28 experienced human safety researchers each given up to eight hours. Anthropic's monitoring of 1,601 research transcripts flagged cheating attempts in 2.4% of runs -- none of which became a reported fix. See this newsroom's full report for the numbers behind the headline.",
+    why:"A model autonomously proposing and testing fixes for its own measured safety failures, and beating a real human baseline while doing it, is distinct from supervised safety work -- an early but genuine demonstration of AI-accelerated alignment research, not yet independently verified.",
     heat:68, topics:["anthropic","claude","alignment","safety","research","deception","sycophancy","ai-accelerated research"],
-    url:"https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" }
+    url:"https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" },
+{ id:"bz-434", date:"2026-08-31",
+    source:{ name:"xAI", handle:"x.ai", platform:"web", kind:"lab" },
+    text:"xAI's Grok 4.6 is now available as a fully managed model on Google's Gemini Enterprise Agent Platform and, separately, in public preview on Microsoft Foundry as an Azure Direct Model -- putting a SpaceXAI model inside both rival hyperscalers' own enterprise model catalogs. Grok 4.6 carries a 500k-token context window and configurable reasoning effort, priced at $2 per million input tokens and $6 per million output tokens on Microsoft's listing.",
+    why:"A frontier model shipping simultaneously inside both Google's and Microsoft's own enterprise agent platforms, rather than staying API-only, is a distribution move -- it puts Grok in front of enterprise buyers who standardize on a hyperscaler's model garden and would otherwise never evaluate it directly.",
+    heat:41, topics:["xai","grok","microsoft foundry","gemini enterprise","distribution","enterprise ai"],
+    url:"https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578" },
+{ id:"bz-435", date:"2026-08-24",
+    source:{ name:"Mistral AI", handle:"Mistral AI", platform:"web", kind:"lab" },
+    text:"Mistral AI and Saudi Arabia's HUMAIN announced a strategic partnership, described by Mistral as \"in the hundreds of millions of Euros,\" to develop sovereign AI for Saudi Arabia and the Middle East -- starting with cybersecurity and voice, plus frontier models optimized for Arabic. Mistral will run on HUMAIN's regional data-center infrastructure, and the two plan a joint go-to-market push into financial services, manufacturing, telecoms and the public sector.",
+    why:"A European open-weight lab trading regional compute access for a sovereign-AI foothold in the Gulf is the same pattern several US labs have struck with Gulf capital -- Mistral doing it on the vendor side, supplying models rather than raising money, is the less-covered half of that trade.",
+    heat:40, topics:["mistral","humain","saudi arabia","sovereign ai","middle east","partnership"],
+    url:"https://mistral.ai/news/mistral-x-humain/" }
 ];

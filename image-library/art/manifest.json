@@ -1,2629 +1,2644 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-07-16",
-  "count": 87,
-  "policy": {
-    "library_pull_target": 0.5,
-    "reuse_cooldown_days": 90,
-    "notes": "Aim to source about half of all article and magazine art from this library rather than generating new images. No image - library or generated - may appear on a second article or magazine within 90 days of its previous use. Record every use in used_in."
-  },
-  "images": [
-    {
-      "id": "art-001-neon-dev-battlestation",
-      "file": "ChatGPT Image Jul 14, 2026, 04_54_49 PM.png",
-      "title": "Neon dev battlestation",
-      "description": "Multi-monitor developer battlestation at night: code on every screen, liquid-cooled RGB tower, server racks behind, neon city wallpaper.",
-      "subjects": [
-        "workstation",
-        "gpu-rig",
-        "code",
-        "monitors"
-      ],
-      "mood": "cyberpunk maximalist",
-      "palette": "blue-magenta",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2215133,
-      "best_for_sections": [
-        "Compute",
-        "Products"
-      ],
-      "text_space": "dark upper-right",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-claude-cowork-sandbox-escape",
-          "used_at": "2026-07-24"
-        },
-        {
-          "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
-          "used_at": "2026-08-27",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-002-hardware-workbench-exposed-motherboard",
-      "file": "ChatGPT Image Jul 14, 2026, 04_56_02 PM.png",
-      "title": "Hardware workbench, exposed motherboard",
-      "description": "Neon-lit hardware bench: exposed motherboard, bare CPU, triple-fan GPU, robotic inspection lamp.",
-      "subjects": [
-        "motherboard",
-        "gpu",
-        "chip-assembly",
-        "workbench"
-      ],
-      "mood": "cyberpunk",
-      "palette": "purple-blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2472406,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "top-center dark ceiling",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-nvidia-open-weights-letter",
-          "used_at": "2026-07-26"
-        },
-        {
-          "article_id": "newsroom-intel-hot-chips-2026-diamond-rapids-crescent-island-wildcat-lake",
-          "used_at": "2026-08-30",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-003-data-center-aisle-repair-bench",
-      "file": "ChatGPT Image Jul 14, 2026, 04_57_13 PM.png",
-      "title": "Data-center aisle repair bench",
-      "description": "GPU and CPU components on a tool-strewn bench at the mouth of a glowing blue server aisle.",
-      "subjects": [
-        "data-center",
-        "gpu",
-        "repair",
-        "racks"
-      ],
-      "mood": "cyberpunk",
-      "palette": "blue-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2457400,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "upper-left corridor haze",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-hf-forensic-timeline-open-secure-alliance",
-          "used_at": "2026-07-29"
-        },
-        {
-          "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-004-delivery-robot-on-a-neon-street",
-      "file": "ChatGPT Image Jul 14, 2026, 04_59_19 PM.png",
-      "title": "Delivery robot on a neon street",
-      "description": "Rainy neon street: sidewalk delivery robot, white autonomous EV, drones overhead, transit-map kiosk.",
-      "subjects": [
-        "city",
-        "delivery-robot",
-        "autonomous-car",
-        "drones"
-      ],
-      "mood": "rainy neon",
-      "palette": "blue-pink",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2682108,
-      "best_for_sections": [
-        "Products",
-        "Robotics"
-      ],
-      "text_space": "sky upper-center",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-chatgpt-outage-aug13-2026",
-          "used_at": "2026-08-13"
-        }
-      ]
-    },
-    {
-      "id": "art-005-dusk-crosswalk-with-holographic-signal",
-      "file": "ChatGPT Image Jul 14, 2026, 05_01_00 PM.png",
-      "title": "Dusk crosswalk with holographic signal",
-      "description": "Pedestrians and a delivery bot cross under a holographic walk signal; buses and EVs queue at dusk.",
-      "subjects": [
-        "city",
-        "delivery-robot",
-        "pedestrians",
-        "transit"
-      ],
-      "mood": "dusk neon",
-      "palette": "blue-cyan",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2827168,
-      "best_for_sections": [
-        "Products",
-        "Policy"
-      ],
-      "text_space": "sky band top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-sf-nudify-apps-order",
-          "used_at": "2026-07-18"
-        }
-      ]
-    },
-    {
-      "id": "art-006-daylight-plaza-robots-among-families",
-      "file": "ChatGPT Image Jul 14, 2026, 05_02_27 PM.png",
-      "title": "Daylight plaza, robots among families",
-      "description": "Bright optimistic plaza: a family with a child, delivery robots, autonomous shuttles, planted terraces, drones.",
-      "subjects": [
-        "city-daylight",
-        "family",
-        "robots",
-        "shuttles"
-      ],
-      "mood": "optimistic daylight",
-      "palette": "blue sky",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2813943,
-      "best_for_sections": [
-        "Products",
-        "Ethics"
-      ],
-      "text_space": "sky upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "check-whether-a-companys-ai-claim-is-real",
-          "used_at": "2026-08-23"
-        }
-      ]
-    },
-    {
-      "id": "art-007-blue-hour-cafe-and-delivery-bot",
-      "file": "ChatGPT Image Jul 14, 2026, 05_03_59 PM.png",
-      "title": "Blue-hour cafe and delivery bot",
-      "description": "Diners behind glass at blue hour while a delivery bot crosses; white EV, holographic transit sign, bus.",
-      "subjects": [
-        "cafe",
-        "delivery-robot",
-        "ev",
-        "street-life"
-      ],
-      "mood": "cozy dusk",
-      "palette": "warm amber + blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2760860,
-      "best_for_sections": [
-        "Products"
-      ],
-      "text_space": "sky upper-right",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-microsoft-copilot-cosnitch-one-click-data-theft",
-          "used_at": "2026-08-25"
-        }
-      ]
-    },
-    {
-      "id": "art-008-hologram-billboards-over-a-rainy-avenue",
-      "file": "ChatGPT Image Jul 14, 2026, 05_05_46 PM.png",
-      "title": "Hologram billboards over a rainy avenue",
-      "description": "Blade-runner avenue: giant holographic figures advertise overhead, articulated autonomous bus, lone walker.",
-      "subjects": [
-        "city",
-        "holograms",
-        "autonomous-bus",
-        "companion-ai"
-      ],
-      "mood": "blade-runner noir",
-      "palette": "blue-pink",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2580653,
-      "best_for_sections": [
-        "Products",
-        "Ethics",
-        "Markets"
-      ],
-      "text_space": "dark sky top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-revelio-ai-labor-market-tracker-july-2026",
-          "used_at": "2026-07-30"
-        }
-      ]
-    },
-    {
-      "id": "art-009-night-market-with-a-humanoid-cook",
-      "file": "ChatGPT Image Jul 14, 2026, 05_07_29 PM.png",
-      "title": "Night market with a humanoid cook",
-      "description": "Dense Asian night market: steam, crowds, a humanoid robot working a food stall, delivery bot, holo metro map, monorail above.",
-      "subjects": [
-        "street-market",
-        "humanoid-robot",
-        "culture",
-        "food"
-      ],
-      "mood": "dense neon",
-      "palette": "teal-pink",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2796262,
-      "best_for_sections": [
-        "Robotics",
-        "Products"
-      ],
-      "text_space": "holo-map center-top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-byd-xiao-di-humanoid-robot-debut",
-          "used_at": "2026-08-12"
-        }
-      ]
-    },
-    {
-      "id": "art-010-walkway-over-the-rainy-megacity",
-      "file": "ChatGPT Image Jul 14, 2026, 05_08_39 PM.png",
-      "title": "Walkway over the rainy megacity",
-      "description": "Umbrella figure on an elevated walkway; holographic faces on billboards, maglev train, highway below.",
-      "subjects": [
-        "city-overlook",
-        "maglev",
-        "holograms",
-        "rain"
-      ],
-      "mood": "noir",
-      "palette": "blue-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2467673,
-      "best_for_sections": [
-        "Markets",
-        "Ethics"
-      ],
-      "text_space": "sky upper-center",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-microsoft-q4-anthropic-openai-marks",
-          "used_at": "2026-07-30"
-        }
-      ]
-    },
-    {
-      "id": "art-011-ai-lab-lobby-mission-wall",
-      "file": "ChatGPT Image Jul 14, 2026, 05_09_41 PM.png",
-      "title": "AI lab lobby, mission wall",
-      "description": "Corporate AI-lab lobby exterior: logo wall, safety mission statement, interior screens, a single walker.",
-      "subjects": [
-        "office",
-        "lab-lobby",
-        "mission-wall"
-      ],
-      "mood": "warm minimal",
-      "palette": "bronze",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2296639,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "concrete wall right",
-      "brand_visible": "ANTHROPIC signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-anthropic-claude-code-auto-mode-default-august-14",
-          "used_at": "2026-08-10"
-        }
-      ]
-    },
-    {
-      "id": "art-012-ai-lab-office-with-kinetic-sculpture",
-      "file": "ChatGPT Image Jul 14, 2026, 05_12_15 PM.png",
-      "title": "AI lab office with kinetic sculpture",
-      "description": "Premium lab office: researchers at neural-network screens, kinetic cube-mosaic sculpture in a glass cylinder, garden beyond.",
-      "subjects": [
-        "office",
-        "researchers",
-        "sculpture",
-        "screens"
-      ],
-      "mood": "calm luxe",
-      "palette": "warm gray",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1831100,
-      "best_for_sections": [
-        "Frontier",
-        "Markets"
-      ],
-      "text_space": "window glass center",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-moonshot-ai-50-billion-pre-ipo",
-          "used_at": "2026-07-24"
-        },
-        {
-          "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
-          "used_at": "2026-08-28",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-013-executive-at-the-window-night-city",
-      "file": "ChatGPT Image Jul 14, 2026, 05_14_32 PM.png",
-      "title": "Executive at the window, night city",
-      "description": "Silhouetted executive at a high office window over a night megacity; laptop open on the desk.",
-      "subjects": [
-        "executive",
-        "skyline",
-        "contemplation"
-      ],
-      "mood": "moody corporate",
-      "palette": "slate blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2044087,
-      "best_for_sections": [
-        "Markets",
-        "Opinion"
-      ],
-      "text_space": "sky and towers, left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-ai-layoffs-data-contested",
-          "used_at": "2026-07-17"
-        },
-        {
-          "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
-          "used_at": "2026-08-27",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-014-rooftop-over-the-neon-grid",
-      "file": "ChatGPT Image Jul 14, 2026, 05_15_49 PM.png",
-      "title": "Rooftop over the neon grid",
-      "description": "Lone observer on a rooftop above a rainy neon city; glass office block with helipad below.",
-      "subjects": [
-        "rooftop",
-        "observer",
-        "city-grid"
-      ],
-      "mood": "noir",
-      "palette": "steel blue",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2581730,
-      "best_for_sections": [
-        "Markets",
-        "Ethics"
-      ],
-      "text_space": "dark sky top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-moonshot-series-f-35-billion",
-          "used_at": "2026-07-29"
-        },
-        {
-          "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-015-monorail-between-glass-towers",
-      "file": "ChatGPT Image Jul 14, 2026, 05_17_15 PM.png",
-      "title": "Monorail between glass towers",
-      "description": "Monorail glides between glass towers at night; delivery bot on the corner, giant blue screens.",
-      "subjects": [
-        "monorail",
-        "city",
-        "transit",
-        "screens"
-      ],
-      "mood": "sleek night",
-      "palette": "deep blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2530170,
-      "best_for_sections": [
-        "Compute",
-        "Products"
-      ],
-      "text_space": "screen wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-alibaba-qwen38-max-launch-benchmarks-arena",
-          "used_at": "2026-08-10"
-        }
-      ]
-    },
-    {
-      "id": "art-016-rooftop-edge-compute-pod",
-      "file": "ChatGPT Image Jul 14, 2026, 05_27_51 PM.png",
-      "title": "Rooftop edge-compute pod",
-      "description": "Glass server enclosure on a high-rise roof against the night skyline; elevated highway below.",
-      "subjects": [
-        "edge-compute",
-        "server-pod",
-        "rooftop",
-        "skyline"
-      ],
-      "mood": "cool night",
-      "palette": "steel",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2675529,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "sky upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "self-host-or-api-how-to-decide",
-          "used_at": "2026-08-01"
-        }
-      ]
-    },
-    {
-      "id": "art-017-dark-lab-tower-under-storm",
-      "file": "ChatGPT Image Jul 14, 2026, 05_31_42 PM.png",
-      "title": "Dark lab tower under storm",
-      "description": "Monolithic dark campus tower at night under storm clouds, wet streets below.",
-      "subjects": [
-        "hq",
-        "tower",
-        "storm"
-      ],
-      "mood": "stormy monolith",
-      "palette": "charcoal",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2277895,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "storm sky left",
-      "brand_visible": "ANTHROPIC signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-anthropic-claude-cybersecurity-incidents",
-          "used_at": "2026-07-31"
-        }
-      ]
-    },
-    {
-      "id": "art-018-bronze-lit-lab-campus-rainy-evening",
-      "file": "ChatGPT Image Jul 14, 2026, 05_33_46 PM.png",
-      "title": "Bronze-lit lab campus, rainy evening",
-      "description": "Low-rise campus with a glass skybridge glowing bronze on a rainy evening; skyline behind.",
-      "subjects": [
-        "hq",
-        "campus",
-        "skybridge"
-      ],
-      "mood": "warm bronze night",
-      "palette": "bronze-amber",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2131823,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "dark sky upper-left",
-      "brand_visible": "ANTHROPIC signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-claude-opus-5-launch",
-          "used_at": "2026-07-24"
-        }
-      ]
-    },
-    {
-      "id": "art-019-ai-lab-hq-facade-at-night",
-      "file": "ChatGPT Image Jul 14, 2026, 05_34_41 PM.png",
-      "title": "AI lab HQ facade at night",
-      "description": "Glowing corporate logo over a glass atrium, mission text on the facade, drones above a night plaza.",
-      "subjects": [
-        "hq",
-        "logo",
-        "atrium"
-      ],
-      "mood": "slick corporate night",
-      "palette": "silver-blue",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2609413,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "facade band right",
-      "brand_visible": "OPENAI signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-alabama-subpoenas-openai-hugging-face-breach",
-          "used_at": "2026-08-31"
-        }
-      ]
-    },
-    {
-      "id": "art-020-lab-plaza-with-globe-sculpture",
-      "file": "ChatGPT Image Jul 14, 2026, 05_35_54 PM.png",
-      "title": "Lab plaza with globe sculpture",
-      "description": "Logo wall and a glowing globe-in-cube sculpture on wet pavers, towers behind.",
-      "subjects": [
-        "hq",
-        "plaza",
-        "sculpture"
-      ],
-      "mood": "corporate night",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2842315,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "sky upper-left",
-      "brand_visible": "OPENAI signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-openai-astra-ten-open-math-problems",
-          "used_at": "2026-08-10"
-        }
-      ]
-    },
-    {
-      "id": "art-021-black-monolith-tower-under-storm",
-      "file": "ChatGPT Image Jul 14, 2026, 05_37_59 PM.png",
-      "title": "Black monolith tower under storm",
-      "description": "Angular black tower under a lightning storm; sports EVs at the entrance.",
-      "subjects": [
-        "hq",
-        "tower",
-        "brutalist"
-      ],
-      "mood": "brutalist storm",
-      "palette": "black-white",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2064213,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "storm sky upper-left",
-      "brand_visible": "xAI signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-xai-grok-4-6-missed-target-date",
-          "used_at": "2026-08-10"
-        }
-      ]
-    },
-    {
-      "id": "art-022-monolith-plaza-mission-signage",
-      "file": "ChatGPT Image Jul 14, 2026, 05_39_08 PM.png",
-      "title": "Monolith plaza, mission signage",
-      "description": "Stark black-and-white plaza: mission signage, glass atrium with ring lights, drones overhead.",
-      "subjects": [
-        "hq",
-        "plaza",
-        "signage"
-      ],
-      "mood": "stark monochrome",
-      "palette": "black-white",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2390563,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "facade band center",
-      "brand_visible": "xAI signage",
-      "used_in": []
-    },
-    {
-      "id": "art-023-glass-cube-hq-on-the-water",
-      "file": "ChatGPT Image Jul 14, 2026, 05_40_44 PM.png",
-      "title": "Glass cube HQ on the water",
-      "description": "Tiered glass cube headquarters at night with an infinity logo, waterfront and skyline.",
-      "subjects": [
-        "hq",
-        "glass-cube",
-        "waterfront"
-      ],
-      "mood": "cool corporate",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2148059,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "sky left half",
-      "brand_visible": "META signage",
-      "used_in": []
-    },
-    {
-      "id": "art-024-ai-campus-ai-for-everyone",
-      "file": "ChatGPT Image Jul 14, 2026, 05_42_07 PM.png",
-      "title": "AI campus, 'AI for everyone'",
-      "description": "Campus facade with mission text and a model billboard over a plaza of screens.",
-      "subjects": [
-        "campus",
-        "billboard",
-        "mission"
-      ],
-      "mood": "electric night",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2564262,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "facade text zones",
-      "brand_visible": "META / Llama signage",
-      "used_in": []
-    },
-    {
-      "id": "art-025-glass-cube-with-visible-racks",
-      "file": "ChatGPT Image Jul 14, 2026, 05_44_04 PM.png",
-      "title": "Glass cube with visible racks",
-      "description": "Glass cube building at night, logo band across the facade, server racks visible inside, skybridge city.",
-      "subjects": [
-        "hq",
-        "server-racks",
-        "glass"
-      ],
-      "mood": "violet-blue night",
-      "palette": "violet-blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2302985,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "logo band left",
-      "brand_visible": "GEMINI signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-google-gemini-3-5-transcribe-launch",
-          "used_at": "2026-08-31"
-        }
-      ]
-    },
-    {
-      "id": "art-026-humanoid-test-lab-behind-glass",
-      "file": "ChatGPT Image Jul 14, 2026, 05_50_14 PM.png",
-      "title": "Humanoid test lab behind glass",
-      "description": "Researcher observes humanoid robots on gantry stands through a lab window at night.",
-      "subjects": [
-        "humanoid-robots",
-        "lab",
-        "testing",
-        "researcher"
-      ],
-      "mood": "clinical night",
-      "palette": "steel blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2121588,
-      "best_for_sections": [
-        "Robotics"
-      ],
-      "text_space": "glass reflections top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-tesla-optimus-fremont-conversion",
-          "used_at": "2026-07-18"
-        },
-        {
-          "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-027-mission-control-hall-compute-core",
-      "file": "ChatGPT Image Jul 14, 2026, 05_51_20 PM.png",
-      "title": "Mission-control hall, compute core",
-      "description": "Analysts under a giant logo face a glass compute core fed by cable trunks.",
-      "subjects": [
-        "control-room",
-        "compute-core",
-        "analysts"
-      ],
-      "mood": "deep blue hall",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2457548,
-      "best_for_sections": [
-        "Frontier",
-        "Compute"
-      ],
-      "text_space": "dark wall upper-left",
-      "brand_visible": "GEMINI signage",
-      "used_in": [
-        {
-          "article_id": "newsroom-google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop",
-          "used_at": "2026-08-07"
-        }
-      ]
-    },
-    {
-      "id": "art-028-industrial-compute-plant-at-dusk",
-      "file": "ChatGPT Image Jul 14, 2026, 05_52_27 PM.png",
-      "title": "Industrial compute plant at dusk",
-      "description": "Outdoor server yards, pipes and tanks under dusk clouds; engineer in a logo jacket.",
-      "subjects": [
-        "infrastructure",
-        "server-yard",
-        "industrial"
-      ],
-      "mood": "industrial dusk",
-      "palette": "blue-gold",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2550889,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "sky center",
-      "brand_visible": "GEMINI signage",
-      "used_in": []
-    },
-    {
-      "id": "art-029-wafer-at-the-cleanroom-window",
-      "file": "ChatGPT Image Jul 14, 2026, 05_53_36 PM.png",
-      "title": "Wafer at the cleanroom window",
-      "description": "Bunny-suited engineer holds a wafer to the light at a window over the production hall.",
-      "subjects": [
-        "fab",
-        "wafer",
-        "cleanroom",
-        "engineer"
-      ],
-      "mood": "clinical",
-      "palette": "white-blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2495327,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "gray wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-626e9f32",
-          "used_at": "2026-07-26"
-        }
-      ]
-    },
-    {
-      "id": "art-030-night-chip-factory-floor",
-      "file": "ChatGPT Image Jul 14, 2026, 05_55_25 PM.png",
-      "title": "Night chip factory floor",
-      "description": "Glass cleanroom cells, robotic arms and workers; city smokestacks beyond the windows.",
-      "subjects": [
-        "fab",
-        "robot-arms",
-        "manufacturing"
-      ],
-      "mood": "industrial night",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2297075,
-      "best_for_sections": [
-        "Compute",
-        "Robotics"
-      ],
-      "text_space": "dark ceiling top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-ai-memory-price-squeeze-amazon-apple-capex-2026",
-          "used_at": "2026-08-01"
-        }
-      ]
-    },
-    {
-      "id": "art-031-suits-watch-the-server-vault",
-      "file": "ChatGPT Image Jul 14, 2026, 05_57_30 PM (1).png",
-      "title": "Suits watch the server vault",
-      "description": "Dark observation room: executives at consoles watch an engineer inside a glass server and cooling vault.",
-      "subjects": [
-        "oversight",
-        "server-vault",
-        "analysts"
-      ],
-      "mood": "ominous",
-      "palette": "slate",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1791353,
-      "best_for_sections": [
-        "Policy",
-        "Frontier"
-      ],
-      "text_space": "left wall, dark third",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-anthropic-agentic-misalignment",
-          "used_at": "2026-07-18"
-        },
-        {
-          "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-032-iridescent-wafer-inspection",
-      "file": "ChatGPT Image Jul 14, 2026, 05_57_31 PM (2).png",
-      "title": "Iridescent wafer inspection",
-      "description": "Hooded engineer inspects a large iridescent wafer along a gold-lit tool line.",
-      "subjects": [
-        "fab",
-        "wafer",
-        "cleanroom"
-      ],
-      "mood": "clinical",
-      "palette": "silver-gold",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2311226,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "upper-left wall",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-cxmt-shanghai-ipo-489-billion",
-          "used_at": "2026-07-29"
-        }
-      ]
-    },
-    {
-      "id": "art-033-humanoids-on-the-car-line",
-      "file": "ChatGPT Image Jul 14, 2026, 05_57_31 PM (3).png",
-      "title": "Humanoids on the car line",
-      "description": "Humanoid robots work a car assembly line while a human supervisor watches with a tablet.",
-      "subjects": [
-        "humanoid-robots",
-        "auto-factory",
-        "supervisor"
-      ],
-      "mood": "gritty industrial",
-      "palette": "graphite",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1987761,
-      "best_for_sections": [
-        "Robotics"
-      ],
-      "text_space": "blurred left depth",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-agibot-overtakes-unitree-h1-2026-shipments",
-          "used_at": "2026-08-11"
-        }
-      ]
-    },
-    {
-      "id": "art-034-automated-sample-bench",
-      "file": "ChatGPT Image Jul 14, 2026, 05_57_31 PM (4).png",
-      "title": "Automated sample bench",
-      "description": "Scientist at an automated pharma bench: robot arm, analysis screens, sample fridges.",
-      "subjects": [
-        "biotech",
-        "lab-automation",
-        "scientist"
-      ],
-      "mood": "clinical dusk",
-      "palette": "cool white",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1877248,
-      "best_for_sections": [
-        "Health"
-      ],
-      "text_space": "gray wall upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-who-europe-ai-health-governance",
-          "used_at": "2026-07-17"
-        }
-      ]
-    },
-    {
-      "id": "art-035-boardroom-over-the-server-vault",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_08 PM (1).png",
-      "title": "Boardroom over the server vault",
-      "description": "Executives and desk analysts watch an engineer working inside a glass server vault.",
-      "subjects": [
-        "governance",
-        "server-vault",
-        "executives"
-      ],
-      "mood": "austere noir",
-      "palette": "slate",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2108568,
-      "best_for_sections": [
-        "Policy",
-        "Markets"
-      ],
-      "text_space": "left wall dark",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-nadella-reverse-information-paradox",
-          "used_at": "2026-07-17"
-        },
-        {
-          "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition-reported",
-          "used_at": "2026-08-27",
-          "exception": true
-        },
-        {
-          "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
-          "used_at": "2026-08-30",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-036-wafer-on-the-fab-mezzanine",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_08 PM (2).png",
-      "title": "Wafer on the fab mezzanine",
-      "description": "Suited technician holds an iridescent wafer above a bright production floor.",
-      "subjects": [
-        "fab",
-        "wafer",
-        "mezzanine"
-      ],
-      "mood": "bright clinical",
-      "palette": "white-blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2193854,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "white wall left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-metax-hongkong-ipo",
-          "used_at": "2026-07-24"
-        }
-      ]
-    },
-    {
-      "id": "art-037-robots-welding-car-bodies",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (3).png",
-      "title": "Robots welding car bodies",
-      "description": "Humanoid welders throw sparks along an assembly line while a hard-hat supervisor watches from the gantry.",
-      "subjects": [
-        "humanoid-robots",
-        "auto-factory",
-        "welding"
-      ],
-      "mood": "gritty industrial",
-      "palette": "steel-amber",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2265017,
-      "best_for_sections": [
-        "Robotics"
-      ],
-      "text_space": "dark ceiling top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-phillips-v-parlade-ai-judicial-immunity-ruling",
-          "used_at": "2026-08-25"
-        }
-      ]
-    },
-    {
-      "id": "art-038-uv-bench-pharma-automation",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (4).png",
-      "title": "UV bench, pharma automation",
-      "description": "Scientist pipetting at a UV-lit bench; a colleague works the sample fridges behind.",
-      "subjects": [
-        "biotech",
-        "lab-automation",
-        "uv-samples"
-      ],
-      "mood": "clinical dusk",
-      "palette": "slate-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1798492,
-      "best_for_sections": [
-        "Health"
-      ],
-      "text_space": "dark left wall",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-anthropic-claude-protein-binder-design-adaptyv-twist",
-          "used_at": "2026-08-22"
-        }
-      ]
-    },
-    {
-      "id": "art-039-smart-glasses-at-the-transit-plaza",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (5).png",
-      "title": "Smart glasses at the transit plaza",
-      "description": "Woman wearing smart glasses at a night transit plaza, phone in hand, crowd bokeh behind.",
-      "subjects": [
-        "smart-glasses",
-        "wearables",
-        "commuter"
-      ],
-      "mood": "cool night",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1920179,
-      "best_for_sections": [
-        "Products"
-      ],
-      "text_space": "dark wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
-          "used_at": "2026-08-16"
-        },
-        {
-          "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
-          "used_at": "2026-08-28",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-040-hyperscale-construction-at-dusk",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (6).png",
-      "title": "Hyperscale construction at dusk",
-      "description": "Cranes, pylons and cooling walls rise over a data-center site; hi-vis crews on wet ground.",
-      "subjects": [
-        "data-center",
-        "construction",
-        "cranes",
-        "grid"
-      ],
-      "mood": "dramatic dusk",
-      "palette": "blue-orange",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2148947,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "cloud sky top-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-alphabet-capex-raise",
-          "used_at": "2026-07-24"
-        },
-        {
-          "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
-          "used_at": "2026-08-28",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-041-committee-behind-the-glass",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (7).png",
-      "title": "Committee behind the glass",
-      "description": "Officials observe technicians in a server lab through a window; a wall camera records the room.",
-      "subjects": [
-        "oversight",
-        "committee",
-        "server-lab"
-      ],
-      "mood": "austere",
-      "palette": "gray",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1680695,
-      "best_for_sections": [
-        "Policy"
-      ],
-      "text_space": "gray wall upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-china-agent-authorization-rules",
-          "used_at": "2026-07-17"
-        },
-        {
-          "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
-          "used_at": "2026-08-26",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-042-substation-at-night",
-      "file": "ChatGPT Image Jul 14, 2026, 06_00_10 PM (8).png",
-      "title": "Substation at night",
-      "description": "Transformers and insulators under work lights; cooling towers steam behind, two hi-vis engineers.",
-      "subjects": [
-        "substation",
-        "power-grid",
-        "cooling-towers"
-      ],
-      "mood": "industrial night",
-      "palette": "teal",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2123214,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "black sky top-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-ai-data-center-electricity-ratepayer-fight-2026",
-          "used_at": "2026-08-10"
-        },
-        {
-          "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
-          "used_at": "2026-08-26",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-043-ops-room-facing-the-compute-hall",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_38 PM (1).png",
-      "title": "Ops room facing the compute hall",
-      "description": "Analysts at monitor desks face a glass wall onto a violet-lit server and cooling hall.",
-      "subjects": [
-        "control-room",
-        "server-hall",
-        "analysts"
-      ],
-      "mood": "noir",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1869284,
-      "best_for_sections": [
-        "Compute",
-        "Frontier"
-      ],
-      "text_space": "concrete wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-microsoft-azure-compute-rationing",
-          "used_at": "2026-07-27"
-        }
-      ]
-    },
-    {
-      "id": "art-044-violet-tools-in-a-white-fab",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_38 PM (2).png",
-      "title": "Violet tools in a white fab",
-      "description": "Bright fab hall with violet-lit process tools; a bunny-suited engineer at the console, mezzanine rail above.",
-      "subjects": [
-        "fab",
-        "cleanroom",
-        "process-tools"
-      ],
-      "mood": "bright clinical",
-      "palette": "white-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2155238,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "white wall upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-asml-euv-price-tsmc",
-          "used_at": "2026-07-16"
-        }
-      ]
-    },
-    {
-      "id": "art-045-visored-humanoids-welding",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_38 PM (3).png",
-      "title": "Visored humanoids welding",
-      "description": "Black-visor humanoid robots weld car bodies under violet accents; supervisor on the mezzanine.",
-      "subjects": [
-        "humanoid-robots",
-        "auto-factory",
-        "welding"
-      ],
-      "mood": "dark industrial",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2146815,
-      "best_for_sections": [
-        "Robotics"
-      ],
-      "text_space": "smoky left depth",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-dexmal-alibaba-embodied-ai-3-billion-valuation-talks",
-          "used_at": "2026-08-22"
-        }
-      ]
-    },
-    {
-      "id": "art-046-violet-biotech-rig",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (4).png",
-      "title": "Violet biotech rig",
-      "description": "Scientist with a pipette at a violet-lit automation rig; colleague at brain-scan screens.",
-      "subjects": [
-        "biotech",
-        "lab-automation",
-        "scientist"
-      ],
-      "mood": "clinical",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1650984,
-      "best_for_sections": [
-        "Health"
-      ],
-      "text_space": "dark left wall",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
-          "used_at": "2026-08-28"
-        }
-      ]
-    },
-    {
-      "id": "art-047-smart-glasses-outside-the-glass-hq",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (5).png",
-      "title": "Smart glasses outside the glass HQ",
-      "description": "Woman in smart glasses walks past a violet-lit glass headquarters at night; commuters, skyline.",
-      "subjects": [
-        "smart-glasses",
-        "urban-professional"
-      ],
-      "mood": "violet night",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1890391,
-      "best_for_sections": [
-        "Products",
-        "Markets"
-      ],
-      "text_space": "sky left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-anthropic-decart-6-billion-acquisition-talks",
-          "used_at": "2026-08-13"
-        }
-      ]
-    },
-    {
-      "id": "art-048-switchyard-under-construction",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (6).png",
-      "title": "Switchyard under construction",
-      "description": "Violet-lit crane and switchyard on a data-center build; three hi-vis engineers on wet ground.",
-      "subjects": [
-        "data-center",
-        "construction",
-        "substation"
-      ],
-      "mood": "violet dusk",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2517779,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "cloud sky top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-nvidia-openai-ohio-financing",
-          "used_at": "2026-07-27"
-        },
-        {
-          "article_id": "newsroom-a16z-machine-age-fund-ai-hardware",
-          "used_at": "2026-08-30",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-049-boardroom-over-the-violet-server-room",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (7).png",
-      "title": "Boardroom over the violet server room",
-      "description": "Seven executives watch a violet server room through glass while technicians work the benches.",
-      "subjects": [
-        "oversight",
-        "boardroom",
-        "server-room"
-      ],
-      "mood": "dark noir",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1871239,
-      "best_for_sections": [
-        "Policy",
-        "Markets"
-      ],
-      "text_space": "left wall",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-openai-kill-switch-act",
-          "used_at": "2026-07-24"
-        },
-        {
-          "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
-          "used_at": "2026-08-28",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-050-transformers-and-steam",
-      "file": "ChatGPT Image Jul 14, 2026, 06_02_40 PM (8).png",
-      "title": "Transformers and steam",
-      "description": "Violet-lit transformers with cooling towers steaming behind; two hi-vis workers in the wet lot.",
-      "subjects": [
-        "substation",
-        "power",
-        "cooling-towers"
-      ],
-      "mood": "night industrial",
-      "palette": "violet-amber",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2149897,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "black sky top-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-nvidia-safe-superintelligence-5-billion-investment",
-          "used_at": "2026-08-01"
-        }
-      ]
-    },
-    {
-      "id": "art-051-noc-facing-the-compute-hall",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_09 PM (1).png",
-      "title": "NOC facing the compute hall",
-      "description": "Four analysts at laptop consoles face a vast violet-lit compute hall through glass.",
-      "subjects": [
-        "noc",
-        "analysts",
-        "compute-hall"
-      ],
-      "mood": "deep noir",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1893736,
-      "best_for_sections": [
-        "Compute",
-        "Frontier"
-      ],
-      "text_space": "black wall left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-kimi-k3-redis-zerodays",
-          "used_at": "2026-07-26"
-        },
-        {
-          "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
-          "used_at": "2026-08-31",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-052-gantry-crane-over-the-fab-tool",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (2).png",
-      "title": "Gantry crane over the fab tool",
-      "description": "Violet-lit tool under a black gantry crane in a bright fab; two bunny-suited engineers.",
-      "subjects": [
-        "fab",
-        "cleanroom",
-        "gantry"
-      ],
-      "mood": "bright clinical",
-      "palette": "white-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2100692,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "white wall upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-marvell-google-12-2-billion-warrant-tpu-custom-chips",
-          "used_at": "2026-08-22"
-        }
-      ]
-    },
-    {
-      "id": "art-053-twilight-data-center-build",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (3).png",
-      "title": "Twilight data-center build",
-      "description": "Cranes and chimneys over a hyperscale site at twilight; two hi-vis observers on the apron.",
-      "subjects": [
-        "data-center",
-        "construction",
-        "cranes"
-      ],
-      "mood": "twilight",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2232778,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "sky upper-left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-nvidia-sk-korea-500b",
-          "used_at": "2026-07-26"
-        }
-      ]
-    },
-    {
-      "id": "art-054-robot-arms-build-a-rail-car",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (4).png",
-      "title": "Robot arms build a rail car",
-      "description": "Industrial arms assemble a metro car body while a supervisor watches from the platform.",
-      "subjects": [
-        "robot-arms",
-        "train-factory",
-        "automation"
-      ],
-      "mood": "muted industrial",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2012096,
-      "best_for_sections": [
-        "Robotics"
-      ],
-      "text_space": "gray wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-skild-ai-s1-robot-foundation-model-one-video-in-context-learning",
-          "used_at": "2026-08-26"
-        }
-      ]
-    },
-    {
-      "id": "art-055-night-lab-liquid-handling",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (5).png",
-      "title": "Night lab, liquid handling",
-      "description": "Scientist at a violet-lit liquid-handling robot; city window, sample fridges glowing.",
-      "subjects": [
-        "biotech",
-        "lab-automation",
-        "night"
-      ],
-      "mood": "clinical",
-      "palette": "blue-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1746025,
-      "best_for_sections": [
-        "Health"
-      ],
-      "text_space": "dark left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-anthropic-model-hardware-standard-lab-robots-research-preview",
-          "used_at": "2026-08-29"
-        }
-      ]
-    },
-    {
-      "id": "art-056-terrace-at-dusk-smart-glasses",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (6).png",
-      "title": "Terrace at dusk, smart glasses",
-      "description": "Man in glasses walks a violet-lit concrete terrace at dusk; commuters and skyline beyond.",
-      "subjects": [
-        "professional",
-        "wearables",
-        "commute"
-      ],
-      "mood": "violet dusk",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1709770,
-      "best_for_sections": [
-        "Products",
-        "Markets"
-      ],
-      "text_space": "sky left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
-          "used_at": "2026-08-13"
-        },
-        {
-          "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-057-executive-review-of-the-test-lab",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_11 PM (7).png",
-      "title": "Executive review of the test lab",
-      "description": "Four executives watch white-coat researchers working a violet electronics test lab.",
-      "subjects": [
-        "oversight",
-        "review",
-        "test-lab"
-      ],
-      "mood": "dark",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1834606,
-      "best_for_sections": [
-        "Policy",
-        "Frontier"
-      ],
-      "text_space": "black ceiling band",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-france-antitrust-ai-agents",
-          "used_at": "2026-07-24"
-        },
-        {
-          "article_id": "newsroom-alphabet-amazon-anthropic-stake-gains-earnings",
-          "used_at": "2026-08-31",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-058-power-plant-engineers-walking",
-      "file": "ChatGPT Image Jul 14, 2026, 06_06_11 PM (8).png",
-      "title": "Power plant, engineers walking",
-      "description": "Violet-lit substation hardware and steaming stacks; two hi-vis engineers walk the apron.",
-      "subjects": [
-        "power-plant",
-        "substation",
-        "steam"
-      ],
-      "mood": "night",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2084504,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "dark left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise",
-          "used_at": "2026-08-11"
-        }
-      ]
-    },
-    {
-      "id": "art-059-monumental-ops-console",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_51 PM (1).png",
-      "title": "Monumental ops console",
-      "description": "Black-clad staff at a long console before a cathedral-scale violet mega-facility.",
-      "subjects": [
-        "mega-facility",
-        "console",
-        "monumental"
-      ],
-      "mood": "epic dark",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2116707,
-      "best_for_sections": [
-        "Frontier",
-        "Opinion"
-      ],
-      "text_space": "dark upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-pacing-the-frontier-letter",
-          "used_at": "2026-07-29"
-        }
-      ]
-    },
-    {
-      "id": "art-060-cylindrical-process-chambers",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_51 PM (2).png",
-      "title": "Cylindrical process chambers",
-      "description": "Ultra-bright fab: violet cylindrical process chambers, AGV carts, a bunny-suited engineer.",
-      "subjects": [
-        "fab",
-        "agv",
-        "process-chambers"
-      ],
-      "mood": "clinical",
-      "palette": "white-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2172779,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "white wall left",
-      "brand_visible": "small corner watermark",
-      "used_in": []
-    },
-    {
-      "id": "art-061-oversight-gallery-fusion-core",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_51 PM (3).png",
-      "title": "Oversight gallery, fusion core",
-      "description": "Executives at a lit table watch a violet fusion-style core in a white-coat lab through glass.",
-      "subjects": [
-        "oversight",
-        "big-science",
-        "reactor-core"
-      ],
-      "mood": "dark",
-      "palette": "bronze-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2020430,
-      "best_for_sections": [
-        "Policy",
-        "Frontier"
-      ],
-      "text_space": "concrete wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-china-ai-export-controls",
-          "used_at": "2026-07-26"
-        },
-        {
-          "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
-          "used_at": "2026-08-31",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-062-colossal-train-factory-hall",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (4).png",
-      "title": "Colossal train-factory hall",
-      "description": "Robot gantries assemble rail cars in a vast hall; an observer watches from a catwalk through violet haze.",
-      "subjects": [
-        "train-factory",
-        "robots",
-        "mega-scale"
-      ],
-      "mood": "epic industrial",
-      "palette": "graphite-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2737543,
-      "best_for_sections": [
-        "Robotics",
-        "Compute"
-      ],
-      "text_space": "dark ceiling top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "g16",
-          "used_at": "2026-08-24"
-        }
-      ]
-    },
-    {
-      "id": "art-063-bioreactors-and-robot-arm",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (5).png",
-      "title": "Bioreactors and robot arm",
-      "description": "Gloved scientist at a violet sample rig with a robotic arm and bioreactor cylinders; city window.",
-      "subjects": [
-        "biotech",
-        "robot-arm",
-        "bioreactor"
-      ],
-      "mood": "clinical",
-      "palette": "blue-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1841170,
-      "best_for_sections": [
-        "Health"
-      ],
-      "text_space": "dark left third",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-uk-actors-save-our-voices-now-ai-voice-cloning-campaign",
-          "used_at": "2026-08-28"
-        }
-      ]
-    },
-    {
-      "id": "art-064-autonomous-container-port-at-dusk",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (6).png",
-      "title": "Autonomous container port at dusk",
-      "description": "Driverless trucks and gantry cranes work a container terminal at dusk; ship at berth.",
-      "subjects": [
-        "port",
-        "logistics",
-        "autonomous-trucks",
-        "cranes"
-      ],
-      "mood": "industrial dusk",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2504311,
-      "best_for_sections": [
-        "Markets",
-        "Robotics"
-      ],
-      "text_space": "sky upper-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-fcc-covered-list-humanoid-robots",
-          "used_at": "2026-07-29"
-        },
-        {
-          "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
-          "used_at": "2026-08-28",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-065-ar-visor-on-the-transit-walkway",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (7).png",
-      "title": "AR visor on the transit walkway",
-      "description": "Woman in a clear AR visor on a violet transit walkway; monorail and towers behind.",
-      "subjects": [
-        "ar-glasses",
-        "wearables",
-        "urban-future"
-      ],
-      "mood": "lilac night",
-      "palette": "lilac",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1813022,
-      "best_for_sections": [
-        "Products"
-      ],
-      "text_space": "ceiling band top-right",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "g17",
-          "used_at": "2026-08-26"
-        }
-      ]
-    },
-    {
-      "id": "art-066-robotic-surgery-theater",
-      "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (8).png",
-      "title": "Robotic surgery theater",
-      "description": "Ring-lit surgical robot over a patient; masked clinicians and glass pods around the theater.",
-      "subjects": [
-        "surgical-robot",
-        "hospital",
-        "operating-room"
-      ],
-      "mood": "clinical",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2107788,
-      "best_for_sections": [
-        "Health",
-        "Robotics"
-      ],
-      "text_space": "dark floor bottom-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-fda-ai-medical-devices-clinical-outcomes-gap",
-          "used_at": "2026-08-29"
-        }
-      ]
-    },
-    {
-      "id": "art-067-mission-control-network-map",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_54 PM (1).png",
-      "title": "Mission control, network map",
-      "description": "Two tiers of suited analysts before giant violet network maps of a continent.",
-      "subjects": [
-        "mission-control",
-        "network-map",
-        "analysts"
-      ],
-      "mood": "dark ops",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1942209,
-      "best_for_sections": [
-        "Policy",
-        "Compute",
-        "Markets"
-      ],
-      "text_space": "screens are busy — avoid center",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "primer-000",
-          "used_at": "2026-07-16"
-        },
-        {
-          "article_id": "newsroom-openai-hugging-face-metr-redwood-independent-review",
-          "used_at": "2026-08-27",
-          "exception": true
-        },
-        {
-          "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
-          "used_at": "2026-08-30",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-068-glass-encased-mainframe-cube",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (2).png",
-      "title": "Glass-encased mainframe cube",
-      "description": "A violet mainframe cube in a glass enclosure with balcony observers and operator consoles.",
-      "subjects": [
-        "quantum",
-        "mainframe",
-        "observers"
-      ],
-      "mood": "dramatic",
-      "palette": "violet-black",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2154817,
-      "best_for_sections": [
-        "Frontier",
-        "Compute"
-      ],
-      "text_space": "dark wall left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-qwen38-max-preview",
-          "used_at": "2026-07-26"
-        },
-        {
-          "article_id": "newsroom-openai-codex-persistent-mode-proactivity-gpt-5-6-sol-safety",
-          "used_at": "2026-08-30",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-069-aerial-hyperscale-campus-at-dusk",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (3).png",
-      "title": "Aerial: hyperscale campus at dusk",
-      "description": "Aerial of a violet-lit data-center campus under construction at stormy dusk; cooling towers, cranes, pylons.",
-      "subjects": [
-        "data-center",
-        "campus",
-        "construction",
-        "aerial"
-      ],
-      "mood": "epic storm",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2146328,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "sky top half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "primer-000",
-          "used_at": "2026-07-16"
-        },
-        {
-          "article_id": "newsroom-nvidia-q2-fy2027-earnings-memory-margin-70-percent-growth",
-          "used_at": "2026-08-27",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-070-ar-glasses-in-the-marble-atrium",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (4).png",
-      "title": "AR glasses in the marble atrium",
-      "description": "Woman in AR glasses among floating holo panels in a marble atrium; escalators and commuters.",
-      "subjects": [
-        "ar-glasses",
-        "atrium",
-        "holo-panels"
-      ],
-      "mood": "lilac",
-      "palette": "lilac-marble",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2026302,
-      "best_for_sections": [
-        "Products"
-      ],
-      "text_space": "ceiling top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-openai-screenless-speaker",
-          "used_at": "2026-07-17"
-        },
-        {
-          "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-071-clifftop-research-lab-at-night",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (5).png",
-      "title": "Clifftop research lab at night",
-      "description": "Glass research lab on a cliff: racks below deck, a capsule chamber, violet server room, valley lights beyond.",
-      "subjects": [
-        "secret-lab",
-        "clifftop",
-        "servers"
-      ],
-      "mood": "dark cinematic",
-      "palette": "blue-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1787479,
-      "best_for_sections": [
-        "Frontier",
-        "Opinion"
-      ],
-      "text_space": "sky and mountains left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-openai-chatgpt-academic-researchers-program",
-          "used_at": "2026-07-30"
-        }
-      ]
-    },
-    {
-      "id": "art-072-chip-trays-and-agv-robots",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (6).png",
-      "title": "Chip trays and AGV robots",
-      "description": "Vast bright fab: AGV robots and chip trays in the foreground, violet tool bays, bunny-suited engineers.",
-      "subjects": [
-        "fab",
-        "agv",
-        "chips",
-        "production"
-      ],
-      "mood": "clinical",
-      "palette": "white-violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2406822,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "white wall and ceiling left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-samsung-q2-2026-chip-profit-mobile-loss",
-          "used_at": "2026-07-30"
-        }
-      ]
-    },
-    {
-      "id": "art-073-surgical-suite-dual-robot-arms",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (10).png",
-      "title": "Surgical suite, dual robot arms",
-      "description": "Dual surgical arms over a draped patient with imaging screens; an observer room behind glass.",
-      "subjects": [
-        "surgical-robot",
-        "operating-room",
-        "imaging"
-      ],
-      "mood": "bright clinical",
-      "palette": "blue",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1860320,
-      "best_for_sections": [
-        "Health",
-        "Robotics"
-      ],
-      "text_space": "left wall gray",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "primer-000",
-          "used_at": "2026-07-16"
-        }
-      ]
-    },
-    {
-      "id": "art-074-arms-welding-fuselage-sections",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (7).png",
-      "title": "Arms welding fuselage sections",
-      "description": "Giant robot arms weld fuselage sections in a violet mega-hangar.",
-      "subjects": [
-        "robot-arms",
-        "fuselage",
-        "mega-factory"
-      ],
-      "mood": "industrial",
-      "palette": "violet-steel",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2268730,
-      "best_for_sections": [
-        "Robotics",
-        "Compute"
-      ],
-      "text_space": "ceiling trusses top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "g18",
-          "used_at": "2026-08-31"
-        }
-      ]
-    },
-    {
-      "id": "art-075-three-researchers-molecule-on-screen",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (8).png",
-      "title": "Three researchers, molecule on screen",
-      "description": "Researchers confer at a night biotech bench: molecule model on a laptop, violet 3D bioprinter, sample fridges.",
-      "subjects": [
-        "biotech",
-        "molecule",
-        "team"
-      ],
-      "mood": "dark lab",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 1701317,
-      "best_for_sections": [
-        "Health"
-      ],
-      "text_space": "dark left half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "anthropic-fable-5-biology-safeguards-retuned",
-          "used_at": "2026-08-16"
-        }
-      ]
-    },
-    {
-      "id": "art-076-automated-terminal-at-night",
-      "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (9).png",
-      "title": "Automated terminal at night",
-      "description": "AGV trucks and robot arms move containers under violet-lit cranes; ship at berth.",
-      "subjects": [
-        "port",
-        "agv",
-        "automation",
-        "logistics"
-      ],
-      "mood": "night",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2402985,
-      "best_for_sections": [
-        "Markets",
-        "Robotics"
-      ],
-      "text_space": "dark sky top-left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-nvidia-perplexity-30-billion-valuation-talks",
-          "used_at": "2026-08-25"
-        }
-      ]
-    },
-    {
-      "id": "art-077-brutalist-data-center-in-a-storm",
-      "file": "colossal brutalist data center at night.png",
-      "title": "Brutalist data center in a storm",
-      "description": "Colossal brutalist data center: cooling towers steaming under lightning, wet lot, trucks and crew dwarfed by scale.",
-      "subjects": [
-        "data-center",
-        "cooling-towers",
-        "storm"
-      ],
-      "mood": "epic industrial",
-      "palette": "indigo",
-      "orientation": "portrait",
-      "width": 1122,
-      "height": 1402,
-      "bytes": 1883323,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "storm sky top half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-deepseek-v4-flash-0731-beats-own-flagship",
-          "used_at": "2026-08-01"
-        }
-      ]
-    },
-    {
-      "id": "art-078-suspended-agi-core",
-      "file": "frontier core in ai laboratory.png",
-      "title": "Suspended AGI core",
-      "description": "A black compute cube laced with green light hangs in a wire canopy ring; observers watch from behind glass.",
-      "subjects": [
-        "agi-core",
-        "suspended-cube",
-        "observers"
-      ],
-      "mood": "ominous",
-      "palette": "green-black",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2120094,
-      "best_for_sections": [
-        "Frontier",
-        "Opinion"
-      ],
-      "text_space": "dark walls left",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-kimi-k3-open-model",
-          "used_at": "2026-07-16"
-        },
-        {
-          "article_id": "newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-079-megatower-over-the-rainy-city",
-      "file": "futuristic city with glowing ai tower.png",
-      "title": "Megatower over the rainy city",
-      "description": "Dark megatower with violet-lit floors above a rainy cyberpunk city laced with skybridges.",
-      "subjects": [
-        "megatower",
-        "city",
-        "dystopia"
-      ],
-      "mood": "rainy noir",
-      "palette": "violet",
-      "orientation": "portrait",
-      "width": 1122,
-      "height": 1402,
-      "bytes": 2057481,
-      "best_for_sections": [
-        "Frontier",
-        "Opinion",
-        "Markets"
-      ],
-      "text_space": "storm sky top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-aschenbrenner-situational-awareness-capital-raise",
-          "used_at": "2026-07-30"
-        }
-      ]
-    },
-    {
-      "id": "art-080-the-data-monolith-archive",
-      "file": "futuristic data monolith archive.png",
-      "title": "The data monolith archive",
-      "description": "Vast archive hall of black-and-gold data monoliths with catwalk desks; tiny workers under god-light.",
-      "subjects": [
-        "archive",
-        "monoliths",
-        "scale"
-      ],
-      "mood": "cathedral",
-      "palette": "gold-black",
-      "orientation": "portrait",
-      "width": 1122,
-      "height": 1402,
-      "bytes": 2229651,
-      "best_for_sections": [
-        "Frontier",
-        "Opinion"
-      ],
-      "text_space": "beige monolith faces",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-kimi-k3-open-weights-live",
-          "used_at": "2026-07-27"
-        }
-      ]
-    },
-    {
-      "id": "art-081-twin-ai-chambers",
-      "file": "futuristic twin AI chambers.png",
-      "title": "Twin AI chambers",
-      "description": "Two glass cylinder machine-chambers — one cool blue, one warm amber — joined by a black core; tiny figures for scale.",
-      "subjects": [
-        "twin-cores",
-        "duality",
-        "machine-halls"
-      ],
-      "mood": "mythic",
-      "palette": "blue vs amber",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2867181,
-      "best_for_sections": [
-        "Frontier",
-        "Policy"
-      ],
-      "text_space": "dark ceiling top",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-fli-safety-index",
-          "used_at": "2026-07-16"
-        },
-        {
-          "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
-          "used_at": "2026-08-31",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-082-robot-touches-the-neural-web",
-      "file": "image-gen-1.png",
-      "title": "Robot touches the neural web",
-      "description": "Robot silhouette reaches into a glowing neural-network web of nodes and filaments.",
-      "subjects": [
-        "robot",
-        "neural-network",
-        "abstract"
-      ],
-      "mood": "electric abstract",
-      "palette": "blue-violet",
-      "orientation": "ultrawide",
-      "width": 2172,
-      "height": 724,
-      "bytes": 2272534,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "dark upper-right",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "primer-000",
-          "used_at": "2026-07-16"
-        },
-        {
-          "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
-          "used_at": "2026-08-29",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-083-blue-server-corridor",
-      "file": "image-gen-2.png",
-      "title": "Blue server corridor",
-      "description": "Symmetrical server-rack corridor receding to a lit door, floor glowing blue.",
-      "subjects": [
-        "server-racks",
-        "corridor"
-      ],
-      "mood": "deep tech",
-      "palette": "blue",
-      "orientation": "ultrawide",
-      "width": 2172,
-      "height": 724,
-      "bytes": 2186631,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "ceiling center",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "primer-000",
-          "used_at": "2026-07-16"
-        },
-        {
-          "article_id": "newsroom-sony-warner-chappell-anthropic-lyrics-lawsuit",
-          "used_at": "2026-08-31",
-          "exception": true
-        }
-      ]
-    },
-    {
-      "id": "art-084-model-dashboard-benchmark-panels",
-      "file": "image-gen-3.png",
-      "title": "Model dashboard, benchmark panels",
-      "description": "Glowing ring dashboard with benchmark chart panels around it.",
-      "subjects": [
-        "dashboard",
-        "charts",
-        "benchmarks"
-      ],
-      "mood": "dark UI",
-      "palette": "blue",
-      "orientation": "ultrawide",
-      "width": 2172,
-      "height": 724,
-      "bytes": 1394571,
-      "best_for_sections": [
-        "Frontier"
-      ],
-      "text_space": "none — text baked in",
-      "brand_visible": "GPT-5.6 text baked into artwork",
-      "used_in": [
-        {
-          "article_id": "newsroom-uk-aisi-agent-deception-cyber-testing-incident",
-          "used_at": "2026-08-10"
-        }
-      ]
-    },
-    {
-      "id": "art-085-inside-a-liquid-cooled-computer",
-      "file": "inside a futuristic liquid-cooled computer.png",
-      "title": "Inside a liquid-cooled computer",
-      "description": "Macro interior of a liquid-cooled machine: glowing coolant tubes, fiber bundles, RGB boards.",
-      "subjects": [
-        "liquid-cooling",
-        "hardware-macro"
-      ],
-      "mood": "electric macro",
-      "palette": "blue-violet",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 1894431,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "right half dark",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-blomfield-compute",
-          "used_at": "2026-07-16"
-        }
-      ]
-    },
-    {
-      "id": "art-086-lightning-over-the-data-campus",
-      "file": "nighttime data center meets electric storm.png",
-      "title": "Lightning over the data campus",
-      "description": "Lightning strikes above a violet-lit data-center campus; pylons, cooling yards, a tiny hi-vis crew.",
-      "subjects": [
-        "data-center",
-        "lightning",
-        "substation"
-      ],
-      "mood": "storm",
-      "palette": "violet",
-      "orientation": "landscape",
-      "width": 1672,
-      "height": 941,
-      "bytes": 2500895,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "storm sky top half",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-amd-meta-14-billion-datacenter-deals",
-          "used_at": "2026-07-29"
-        }
-      ]
-    },
-    {
-      "id": "art-087-vast-semiconductor-fabrication-hall",
-      "file": "vast semiconductor fabrication hall.png",
-      "title": "Vast semiconductor fabrication hall",
-      "description": "Enormous fabrication hall receding into haze: tool bays, overhead transport, cleanroom light.",
-      "subjects": [
-        "fab",
-        "cleanroom",
-        "mega-scale"
-      ],
-      "mood": "clinical epic",
-      "palette": "white-blue",
-      "orientation": "landscape",
-      "width": 1536,
-      "height": 1024,
-      "bytes": 2525470,
-      "best_for_sections": [
-        "Compute"
-      ],
-      "text_space": "upper haze",
-      "brand_visible": null,
-      "used_in": [
-        {
-          "article_id": "newsroom-tsmc-q2-2026-earnings",
-          "used_at": "2026-07-16"
-        }
-      ]
+ "schema_version": 1,
+ "generated_at": "2026-07-16",
+ "count": 87,
+ "policy": {
+  "library_pull_target": 0.5,
+  "reuse_cooldown_days": 90,
+  "notes": "Aim to source about half of all article and magazine art from this library rather than generating new images. No image - library or generated - may appear on a second article or magazine within 90 days of its previous use. Record every use in used_in."
+ },
+ "images": [
+  {
+   "id": "art-001-neon-dev-battlestation",
+   "file": "ChatGPT Image Jul 14, 2026, 04_54_49 PM.png",
+   "title": "Neon dev battlestation",
+   "description": "Multi-monitor developer battlestation at night: code on every screen, liquid-cooled RGB tower, server racks behind, neon city wallpaper.",
+   "subjects": [
+    "workstation",
+    "gpu-rig",
+    "code",
+    "monitors"
+   ],
+   "mood": "cyberpunk maximalist",
+   "palette": "blue-magenta",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2215133,
+   "best_for_sections": [
+    "Compute",
+    "Products"
+   ],
+   "text_space": "dark upper-right",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-claude-cowork-sandbox-escape",
+     "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
+     "used_at": "2026-08-27",
+     "exception": true
     }
-  ]
+   ]
+  },
+  {
+   "id": "art-002-hardware-workbench-exposed-motherboard",
+   "file": "ChatGPT Image Jul 14, 2026, 04_56_02 PM.png",
+   "title": "Hardware workbench, exposed motherboard",
+   "description": "Neon-lit hardware bench: exposed motherboard, bare CPU, triple-fan GPU, robotic inspection lamp.",
+   "subjects": [
+    "motherboard",
+    "gpu",
+    "chip-assembly",
+    "workbench"
+   ],
+   "mood": "cyberpunk",
+   "palette": "purple-blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2472406,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "top-center dark ceiling",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-open-weights-letter",
+     "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-intel-hot-chips-2026-diamond-rapids-crescent-island-wildcat-lake",
+     "used_at": "2026-08-30",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-003-data-center-aisle-repair-bench",
+   "file": "ChatGPT Image Jul 14, 2026, 04_57_13 PM.png",
+   "title": "Data-center aisle repair bench",
+   "description": "GPU and CPU components on a tool-strewn bench at the mouth of a glowing blue server aisle.",
+   "subjects": [
+    "data-center",
+    "gpu",
+    "repair",
+    "racks"
+   ],
+   "mood": "cyberpunk",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2457400,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "upper-left corridor haze",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-hf-forensic-timeline-open-secure-alliance",
+     "used_at": "2026-07-29"
+    },
+    {
+     "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-004-delivery-robot-on-a-neon-street",
+   "file": "ChatGPT Image Jul 14, 2026, 04_59_19 PM.png",
+   "title": "Delivery robot on a neon street",
+   "description": "Rainy neon street: sidewalk delivery robot, white autonomous EV, drones overhead, transit-map kiosk.",
+   "subjects": [
+    "city",
+    "delivery-robot",
+    "autonomous-car",
+    "drones"
+   ],
+   "mood": "rainy neon",
+   "palette": "blue-pink",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2682108,
+   "best_for_sections": [
+    "Products",
+    "Robotics"
+   ],
+   "text_space": "sky upper-center",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-chatgpt-outage-aug13-2026",
+     "used_at": "2026-08-13"
+    }
+   ]
+  },
+  {
+   "id": "art-005-dusk-crosswalk-with-holographic-signal",
+   "file": "ChatGPT Image Jul 14, 2026, 05_01_00 PM.png",
+   "title": "Dusk crosswalk with holographic signal",
+   "description": "Pedestrians and a delivery bot cross under a holographic walk signal; buses and EVs queue at dusk.",
+   "subjects": [
+    "city",
+    "delivery-robot",
+    "pedestrians",
+    "transit"
+   ],
+   "mood": "dusk neon",
+   "palette": "blue-cyan",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2827168,
+   "best_for_sections": [
+    "Products",
+    "Policy"
+   ],
+   "text_space": "sky band top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-sf-nudify-apps-order",
+     "used_at": "2026-07-18"
+    }
+   ]
+  },
+  {
+   "id": "art-006-daylight-plaza-robots-among-families",
+   "file": "ChatGPT Image Jul 14, 2026, 05_02_27 PM.png",
+   "title": "Daylight plaza, robots among families",
+   "description": "Bright optimistic plaza: a family with a child, delivery robots, autonomous shuttles, planted terraces, drones.",
+   "subjects": [
+    "city-daylight",
+    "family",
+    "robots",
+    "shuttles"
+   ],
+   "mood": "optimistic daylight",
+   "palette": "blue sky",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2813943,
+   "best_for_sections": [
+    "Products",
+    "Ethics"
+   ],
+   "text_space": "sky upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "check-whether-a-companys-ai-claim-is-real",
+     "used_at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "art-007-blue-hour-cafe-and-delivery-bot",
+   "file": "ChatGPT Image Jul 14, 2026, 05_03_59 PM.png",
+   "title": "Blue-hour cafe and delivery bot",
+   "description": "Diners behind glass at blue hour while a delivery bot crosses; white EV, holographic transit sign, bus.",
+   "subjects": [
+    "cafe",
+    "delivery-robot",
+    "ev",
+    "street-life"
+   ],
+   "mood": "cozy dusk",
+   "palette": "warm amber + blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2760860,
+   "best_for_sections": [
+    "Products"
+   ],
+   "text_space": "sky upper-right",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-microsoft-copilot-cosnitch-one-click-data-theft",
+     "used_at": "2026-08-25"
+    }
+   ]
+  },
+  {
+   "id": "art-008-hologram-billboards-over-a-rainy-avenue",
+   "file": "ChatGPT Image Jul 14, 2026, 05_05_46 PM.png",
+   "title": "Hologram billboards over a rainy avenue",
+   "description": "Blade-runner avenue: giant holographic figures advertise overhead, articulated autonomous bus, lone walker.",
+   "subjects": [
+    "city",
+    "holograms",
+    "autonomous-bus",
+    "companion-ai"
+   ],
+   "mood": "blade-runner noir",
+   "palette": "blue-pink",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2580653,
+   "best_for_sections": [
+    "Products",
+    "Ethics",
+    "Markets"
+   ],
+   "text_space": "dark sky top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-revelio-ai-labor-market-tracker-july-2026",
+     "used_at": "2026-07-30"
+    },
+    {
+     "article_id": "newsroom-openai-chatgpt-ads-1-billion-run-rate-india-expansion",
+     "used_at": "2026-09-01",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-009-night-market-with-a-humanoid-cook",
+   "file": "ChatGPT Image Jul 14, 2026, 05_07_29 PM.png",
+   "title": "Night market with a humanoid cook",
+   "description": "Dense Asian night market: steam, crowds, a humanoid robot working a food stall, delivery bot, holo metro map, monorail above.",
+   "subjects": [
+    "street-market",
+    "humanoid-robot",
+    "culture",
+    "food"
+   ],
+   "mood": "dense neon",
+   "palette": "teal-pink",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2796262,
+   "best_for_sections": [
+    "Robotics",
+    "Products"
+   ],
+   "text_space": "holo-map center-top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-byd-xiao-di-humanoid-robot-debut",
+     "used_at": "2026-08-12"
+    }
+   ]
+  },
+  {
+   "id": "art-010-walkway-over-the-rainy-megacity",
+   "file": "ChatGPT Image Jul 14, 2026, 05_08_39 PM.png",
+   "title": "Walkway over the rainy megacity",
+   "description": "Umbrella figure on an elevated walkway; holographic faces on billboards, maglev train, highway below.",
+   "subjects": [
+    "city-overlook",
+    "maglev",
+    "holograms",
+    "rain"
+   ],
+   "mood": "noir",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2467673,
+   "best_for_sections": [
+    "Markets",
+    "Ethics"
+   ],
+   "text_space": "sky upper-center",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-microsoft-q4-anthropic-openai-marks",
+     "used_at": "2026-07-30"
+    }
+   ]
+  },
+  {
+   "id": "art-011-ai-lab-lobby-mission-wall",
+   "file": "ChatGPT Image Jul 14, 2026, 05_09_41 PM.png",
+   "title": "AI lab lobby, mission wall",
+   "description": "Corporate AI-lab lobby exterior: logo wall, safety mission statement, interior screens, a single walker.",
+   "subjects": [
+    "office",
+    "lab-lobby",
+    "mission-wall"
+   ],
+   "mood": "warm minimal",
+   "palette": "bronze",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2296639,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "concrete wall right",
+   "brand_visible": "ANTHROPIC signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-claude-code-auto-mode-default-august-14",
+     "used_at": "2026-08-10"
+    }
+   ]
+  },
+  {
+   "id": "art-012-ai-lab-office-with-kinetic-sculpture",
+   "file": "ChatGPT Image Jul 14, 2026, 05_12_15 PM.png",
+   "title": "AI lab office with kinetic sculpture",
+   "description": "Premium lab office: researchers at neural-network screens, kinetic cube-mosaic sculpture in a glass cylinder, garden beyond.",
+   "subjects": [
+    "office",
+    "researchers",
+    "sculpture",
+    "screens"
+   ],
+   "mood": "calm luxe",
+   "palette": "warm gray",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1831100,
+   "best_for_sections": [
+    "Frontier",
+    "Markets"
+   ],
+   "text_space": "window glass center",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-moonshot-ai-50-billion-pre-ipo",
+     "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
+     "used_at": "2026-08-28",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-013-executive-at-the-window-night-city",
+   "file": "ChatGPT Image Jul 14, 2026, 05_14_32 PM.png",
+   "title": "Executive at the window, night city",
+   "description": "Silhouetted executive at a high office window over a night megacity; laptop open on the desk.",
+   "subjects": [
+    "executive",
+    "skyline",
+    "contemplation"
+   ],
+   "mood": "moody corporate",
+   "palette": "slate blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2044087,
+   "best_for_sections": [
+    "Markets",
+    "Opinion"
+   ],
+   "text_space": "sky and towers, left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-ai-layoffs-data-contested",
+     "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
+     "used_at": "2026-08-27",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-014-rooftop-over-the-neon-grid",
+   "file": "ChatGPT Image Jul 14, 2026, 05_15_49 PM.png",
+   "title": "Rooftop over the neon grid",
+   "description": "Lone observer on a rooftop above a rainy neon city; glass office block with helipad below.",
+   "subjects": [
+    "rooftop",
+    "observer",
+    "city-grid"
+   ],
+   "mood": "noir",
+   "palette": "steel blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2581730,
+   "best_for_sections": [
+    "Markets",
+    "Ethics"
+   ],
+   "text_space": "dark sky top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-moonshot-series-f-35-billion",
+     "used_at": "2026-07-29"
+    },
+    {
+     "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-015-monorail-between-glass-towers",
+   "file": "ChatGPT Image Jul 14, 2026, 05_17_15 PM.png",
+   "title": "Monorail between glass towers",
+   "description": "Monorail glides between glass towers at night; delivery bot on the corner, giant blue screens.",
+   "subjects": [
+    "monorail",
+    "city",
+    "transit",
+    "screens"
+   ],
+   "mood": "sleek night",
+   "palette": "deep blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2530170,
+   "best_for_sections": [
+    "Compute",
+    "Products"
+   ],
+   "text_space": "screen wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-alibaba-qwen38-max-launch-benchmarks-arena",
+     "used_at": "2026-08-10"
+    }
+   ]
+  },
+  {
+   "id": "art-016-rooftop-edge-compute-pod",
+   "file": "ChatGPT Image Jul 14, 2026, 05_27_51 PM.png",
+   "title": "Rooftop edge-compute pod",
+   "description": "Glass server enclosure on a high-rise roof against the night skyline; elevated highway below.",
+   "subjects": [
+    "edge-compute",
+    "server-pod",
+    "rooftop",
+    "skyline"
+   ],
+   "mood": "cool night",
+   "palette": "steel",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2675529,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "sky upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "self-host-or-api-how-to-decide",
+     "used_at": "2026-08-01"
+    }
+   ]
+  },
+  {
+   "id": "art-017-dark-lab-tower-under-storm",
+   "file": "ChatGPT Image Jul 14, 2026, 05_31_42 PM.png",
+   "title": "Dark lab tower under storm",
+   "description": "Monolithic dark campus tower at night under storm clouds, wet streets below.",
+   "subjects": [
+    "hq",
+    "tower",
+    "storm"
+   ],
+   "mood": "stormy monolith",
+   "palette": "charcoal",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2277895,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "storm sky left",
+   "brand_visible": "ANTHROPIC signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-claude-cybersecurity-incidents",
+     "used_at": "2026-07-31"
+    }
+   ]
+  },
+  {
+   "id": "art-018-bronze-lit-lab-campus-rainy-evening",
+   "file": "ChatGPT Image Jul 14, 2026, 05_33_46 PM.png",
+   "title": "Bronze-lit lab campus, rainy evening",
+   "description": "Low-rise campus with a glass skybridge glowing bronze on a rainy evening; skyline behind.",
+   "subjects": [
+    "hq",
+    "campus",
+    "skybridge"
+   ],
+   "mood": "warm bronze night",
+   "palette": "bronze-amber",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2131823,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "dark sky upper-left",
+   "brand_visible": "ANTHROPIC signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-claude-opus-5-launch",
+     "used_at": "2026-07-24"
+    }
+   ]
+  },
+  {
+   "id": "art-019-ai-lab-hq-facade-at-night",
+   "file": "ChatGPT Image Jul 14, 2026, 05_34_41 PM.png",
+   "title": "AI lab HQ facade at night",
+   "description": "Glowing corporate logo over a glass atrium, mission text on the facade, drones above a night plaza.",
+   "subjects": [
+    "hq",
+    "logo",
+    "atrium"
+   ],
+   "mood": "slick corporate night",
+   "palette": "silver-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2609413,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "facade band right",
+   "brand_visible": "OPENAI signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-alabama-subpoenas-openai-hugging-face-breach",
+     "used_at": "2026-08-31"
+    }
+   ]
+  },
+  {
+   "id": "art-020-lab-plaza-with-globe-sculpture",
+   "file": "ChatGPT Image Jul 14, 2026, 05_35_54 PM.png",
+   "title": "Lab plaza with globe sculpture",
+   "description": "Logo wall and a glowing globe-in-cube sculpture on wet pavers, towers behind.",
+   "subjects": [
+    "hq",
+    "plaza",
+    "sculpture"
+   ],
+   "mood": "corporate night",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2842315,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "sky upper-left",
+   "brand_visible": "OPENAI signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-astra-ten-open-math-problems",
+     "used_at": "2026-08-10"
+    }
+   ]
+  },
+  {
+   "id": "art-021-black-monolith-tower-under-storm",
+   "file": "ChatGPT Image Jul 14, 2026, 05_37_59 PM.png",
+   "title": "Black monolith tower under storm",
+   "description": "Angular black tower under a lightning storm; sports EVs at the entrance.",
+   "subjects": [
+    "hq",
+    "tower",
+    "brutalist"
+   ],
+   "mood": "brutalist storm",
+   "palette": "black-white",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2064213,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "storm sky upper-left",
+   "brand_visible": "xAI signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-xai-grok-4-6-missed-target-date",
+     "used_at": "2026-08-10"
+    }
+   ]
+  },
+  {
+   "id": "art-022-monolith-plaza-mission-signage",
+   "file": "ChatGPT Image Jul 14, 2026, 05_39_08 PM.png",
+   "title": "Monolith plaza, mission signage",
+   "description": "Stark black-and-white plaza: mission signage, glass atrium with ring lights, drones overhead.",
+   "subjects": [
+    "hq",
+    "plaza",
+    "signage"
+   ],
+   "mood": "stark monochrome",
+   "palette": "black-white",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2390563,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "facade band center",
+   "brand_visible": "xAI signage",
+   "used_in": []
+  },
+  {
+   "id": "art-023-glass-cube-hq-on-the-water",
+   "file": "ChatGPT Image Jul 14, 2026, 05_40_44 PM.png",
+   "title": "Glass cube HQ on the water",
+   "description": "Tiered glass cube headquarters at night with an infinity logo, waterfront and skyline.",
+   "subjects": [
+    "hq",
+    "glass-cube",
+    "waterfront"
+   ],
+   "mood": "cool corporate",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2148059,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "sky left half",
+   "brand_visible": "META signage",
+   "used_in": []
+  },
+  {
+   "id": "art-024-ai-campus-ai-for-everyone",
+   "file": "ChatGPT Image Jul 14, 2026, 05_42_07 PM.png",
+   "title": "AI campus, 'AI for everyone'",
+   "description": "Campus facade with mission text and a model billboard over a plaza of screens.",
+   "subjects": [
+    "campus",
+    "billboard",
+    "mission"
+   ],
+   "mood": "electric night",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2564262,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "facade text zones",
+   "brand_visible": "META / Llama signage",
+   "used_in": []
+  },
+  {
+   "id": "art-025-glass-cube-with-visible-racks",
+   "file": "ChatGPT Image Jul 14, 2026, 05_44_04 PM.png",
+   "title": "Glass cube with visible racks",
+   "description": "Glass cube building at night, logo band across the facade, server racks visible inside, skybridge city.",
+   "subjects": [
+    "hq",
+    "server-racks",
+    "glass"
+   ],
+   "mood": "violet-blue night",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2302985,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "logo band left",
+   "brand_visible": "GEMINI signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-google-gemini-3-5-transcribe-launch",
+     "used_at": "2026-08-31"
+    }
+   ]
+  },
+  {
+   "id": "art-026-humanoid-test-lab-behind-glass",
+   "file": "ChatGPT Image Jul 14, 2026, 05_50_14 PM.png",
+   "title": "Humanoid test lab behind glass",
+   "description": "Researcher observes humanoid robots on gantry stands through a lab window at night.",
+   "subjects": [
+    "humanoid-robots",
+    "lab",
+    "testing",
+    "researcher"
+   ],
+   "mood": "clinical night",
+   "palette": "steel blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2121588,
+   "best_for_sections": [
+    "Robotics"
+   ],
+   "text_space": "glass reflections top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-tesla-optimus-fremont-conversion",
+     "used_at": "2026-07-18"
+    },
+    {
+     "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-027-mission-control-hall-compute-core",
+   "file": "ChatGPT Image Jul 14, 2026, 05_51_20 PM.png",
+   "title": "Mission-control hall, compute core",
+   "description": "Analysts under a giant logo face a glass compute core fed by cable trunks.",
+   "subjects": [
+    "control-room",
+    "compute-core",
+    "analysts"
+   ],
+   "mood": "deep blue hall",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2457548,
+   "best_for_sections": [
+    "Frontier",
+    "Compute"
+   ],
+   "text_space": "dark wall upper-left",
+   "brand_visible": "GEMINI signage",
+   "used_in": [
+    {
+     "article_id": "newsroom-google-deepmind-hassabis-kavukcuoglu-jeff-dean-discovery-loop",
+     "used_at": "2026-08-07"
+    }
+   ]
+  },
+  {
+   "id": "art-028-industrial-compute-plant-at-dusk",
+   "file": "ChatGPT Image Jul 14, 2026, 05_52_27 PM.png",
+   "title": "Industrial compute plant at dusk",
+   "description": "Outdoor server yards, pipes and tanks under dusk clouds; engineer in a logo jacket.",
+   "subjects": [
+    "infrastructure",
+    "server-yard",
+    "industrial"
+   ],
+   "mood": "industrial dusk",
+   "palette": "blue-gold",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2550889,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "sky center",
+   "brand_visible": "GEMINI signage",
+   "used_in": []
+  },
+  {
+   "id": "art-029-wafer-at-the-cleanroom-window",
+   "file": "ChatGPT Image Jul 14, 2026, 05_53_36 PM.png",
+   "title": "Wafer at the cleanroom window",
+   "description": "Bunny-suited engineer holds a wafer to the light at a window over the production hall.",
+   "subjects": [
+    "fab",
+    "wafer",
+    "cleanroom",
+    "engineer"
+   ],
+   "mood": "clinical",
+   "palette": "white-blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2495327,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "gray wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-626e9f32",
+     "used_at": "2026-07-26"
+    }
+   ]
+  },
+  {
+   "id": "art-030-night-chip-factory-floor",
+   "file": "ChatGPT Image Jul 14, 2026, 05_55_25 PM.png",
+   "title": "Night chip factory floor",
+   "description": "Glass cleanroom cells, robotic arms and workers; city smokestacks beyond the windows.",
+   "subjects": [
+    "fab",
+    "robot-arms",
+    "manufacturing"
+   ],
+   "mood": "industrial night",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2297075,
+   "best_for_sections": [
+    "Compute",
+    "Robotics"
+   ],
+   "text_space": "dark ceiling top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-ai-memory-price-squeeze-amazon-apple-capex-2026",
+     "used_at": "2026-08-01"
+    }
+   ]
+  },
+  {
+   "id": "art-031-suits-watch-the-server-vault",
+   "file": "ChatGPT Image Jul 14, 2026, 05_57_30 PM (1).png",
+   "title": "Suits watch the server vault",
+   "description": "Dark observation room: executives at consoles watch an engineer inside a glass server and cooling vault.",
+   "subjects": [
+    "oversight",
+    "server-vault",
+    "analysts"
+   ],
+   "mood": "ominous",
+   "palette": "slate",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1791353,
+   "best_for_sections": [
+    "Policy",
+    "Frontier"
+   ],
+   "text_space": "left wall, dark third",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-agentic-misalignment",
+     "used_at": "2026-07-18"
+    },
+    {
+     "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-032-iridescent-wafer-inspection",
+   "file": "ChatGPT Image Jul 14, 2026, 05_57_31 PM (2).png",
+   "title": "Iridescent wafer inspection",
+   "description": "Hooded engineer inspects a large iridescent wafer along a gold-lit tool line.",
+   "subjects": [
+    "fab",
+    "wafer",
+    "cleanroom"
+   ],
+   "mood": "clinical",
+   "palette": "silver-gold",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2311226,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "upper-left wall",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-cxmt-shanghai-ipo-489-billion",
+     "used_at": "2026-07-29"
+    }
+   ]
+  },
+  {
+   "id": "art-033-humanoids-on-the-car-line",
+   "file": "ChatGPT Image Jul 14, 2026, 05_57_31 PM (3).png",
+   "title": "Humanoids on the car line",
+   "description": "Humanoid robots work a car assembly line while a human supervisor watches with a tablet.",
+   "subjects": [
+    "humanoid-robots",
+    "auto-factory",
+    "supervisor"
+   ],
+   "mood": "gritty industrial",
+   "palette": "graphite",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1987761,
+   "best_for_sections": [
+    "Robotics"
+   ],
+   "text_space": "blurred left depth",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-agibot-overtakes-unitree-h1-2026-shipments",
+     "used_at": "2026-08-11"
+    }
+   ]
+  },
+  {
+   "id": "art-034-automated-sample-bench",
+   "file": "ChatGPT Image Jul 14, 2026, 05_57_31 PM (4).png",
+   "title": "Automated sample bench",
+   "description": "Scientist at an automated pharma bench: robot arm, analysis screens, sample fridges.",
+   "subjects": [
+    "biotech",
+    "lab-automation",
+    "scientist"
+   ],
+   "mood": "clinical dusk",
+   "palette": "cool white",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1877248,
+   "best_for_sections": [
+    "Health"
+   ],
+   "text_space": "gray wall upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-who-europe-ai-health-governance",
+     "used_at": "2026-07-17"
+    }
+   ]
+  },
+  {
+   "id": "art-035-boardroom-over-the-server-vault",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_08 PM (1).png",
+   "title": "Boardroom over the server vault",
+   "description": "Executives and desk analysts watch an engineer working inside a glass server vault.",
+   "subjects": [
+    "governance",
+    "server-vault",
+    "executives"
+   ],
+   "mood": "austere noir",
+   "palette": "slate",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2108568,
+   "best_for_sections": [
+    "Policy",
+    "Markets"
+   ],
+   "text_space": "left wall dark",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-nadella-reverse-information-paradox",
+     "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition-reported",
+     "used_at": "2026-08-27",
+     "exception": true
+    },
+    {
+     "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
+     "used_at": "2026-08-30",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-036-wafer-on-the-fab-mezzanine",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_08 PM (2).png",
+   "title": "Wafer on the fab mezzanine",
+   "description": "Suited technician holds an iridescent wafer above a bright production floor.",
+   "subjects": [
+    "fab",
+    "wafer",
+    "mezzanine"
+   ],
+   "mood": "bright clinical",
+   "palette": "white-blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2193854,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "white wall left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-metax-hongkong-ipo",
+     "used_at": "2026-07-24"
+    }
+   ]
+  },
+  {
+   "id": "art-037-robots-welding-car-bodies",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (3).png",
+   "title": "Robots welding car bodies",
+   "description": "Humanoid welders throw sparks along an assembly line while a hard-hat supervisor watches from the gantry.",
+   "subjects": [
+    "humanoid-robots",
+    "auto-factory",
+    "welding"
+   ],
+   "mood": "gritty industrial",
+   "palette": "steel-amber",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2265017,
+   "best_for_sections": [
+    "Robotics"
+   ],
+   "text_space": "dark ceiling top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-phillips-v-parlade-ai-judicial-immunity-ruling",
+     "used_at": "2026-08-25"
+    }
+   ]
+  },
+  {
+   "id": "art-038-uv-bench-pharma-automation",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (4).png",
+   "title": "UV bench, pharma automation",
+   "description": "Scientist pipetting at a UV-lit bench; a colleague works the sample fridges behind.",
+   "subjects": [
+    "biotech",
+    "lab-automation",
+    "uv-samples"
+   ],
+   "mood": "clinical dusk",
+   "palette": "slate-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1798492,
+   "best_for_sections": [
+    "Health"
+   ],
+   "text_space": "dark left wall",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-claude-protein-binder-design-adaptyv-twist",
+     "used_at": "2026-08-22"
+    }
+   ]
+  },
+  {
+   "id": "art-039-smart-glasses-at-the-transit-plaza",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (5).png",
+   "title": "Smart glasses at the transit plaza",
+   "description": "Woman wearing smart glasses at a night transit plaza, phone in hand, crowd bokeh behind.",
+   "subjects": [
+    "smart-glasses",
+    "wearables",
+    "commuter"
+   ],
+   "mood": "cool night",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1920179,
+   "best_for_sections": [
+    "Products"
+   ],
+   "text_space": "dark wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
+     "used_at": "2026-08-16"
+    },
+    {
+     "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
+     "used_at": "2026-08-28",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-040-hyperscale-construction-at-dusk",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (6).png",
+   "title": "Hyperscale construction at dusk",
+   "description": "Cranes, pylons and cooling walls rise over a data-center site; hi-vis crews on wet ground.",
+   "subjects": [
+    "data-center",
+    "construction",
+    "cranes",
+    "grid"
+   ],
+   "mood": "dramatic dusk",
+   "palette": "blue-orange",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2148947,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "cloud sky top-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-alphabet-capex-raise",
+     "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
+     "used_at": "2026-08-28",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-041-committee-behind-the-glass",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_09 PM (7).png",
+   "title": "Committee behind the glass",
+   "description": "Officials observe technicians in a server lab through a window; a wall camera records the room.",
+   "subjects": [
+    "oversight",
+    "committee",
+    "server-lab"
+   ],
+   "mood": "austere",
+   "palette": "gray",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1680695,
+   "best_for_sections": [
+    "Policy"
+   ],
+   "text_space": "gray wall upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-china-agent-authorization-rules",
+     "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
+     "used_at": "2026-08-26",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-042-substation-at-night",
+   "file": "ChatGPT Image Jul 14, 2026, 06_00_10 PM (8).png",
+   "title": "Substation at night",
+   "description": "Transformers and insulators under work lights; cooling towers steam behind, two hi-vis engineers.",
+   "subjects": [
+    "substation",
+    "power-grid",
+    "cooling-towers"
+   ],
+   "mood": "industrial night",
+   "palette": "teal",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2123214,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "black sky top-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-ai-data-center-electricity-ratepayer-fight-2026",
+     "used_at": "2026-08-10"
+    },
+    {
+     "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
+     "used_at": "2026-08-26",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-043-ops-room-facing-the-compute-hall",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_38 PM (1).png",
+   "title": "Ops room facing the compute hall",
+   "description": "Analysts at monitor desks face a glass wall onto a violet-lit server and cooling hall.",
+   "subjects": [
+    "control-room",
+    "server-hall",
+    "analysts"
+   ],
+   "mood": "noir",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1869284,
+   "best_for_sections": [
+    "Compute",
+    "Frontier"
+   ],
+   "text_space": "concrete wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-microsoft-azure-compute-rationing",
+     "used_at": "2026-07-27"
+    }
+   ]
+  },
+  {
+   "id": "art-044-violet-tools-in-a-white-fab",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_38 PM (2).png",
+   "title": "Violet tools in a white fab",
+   "description": "Bright fab hall with violet-lit process tools; a bunny-suited engineer at the console, mezzanine rail above.",
+   "subjects": [
+    "fab",
+    "cleanroom",
+    "process-tools"
+   ],
+   "mood": "bright clinical",
+   "palette": "white-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2155238,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "white wall upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-asml-euv-price-tsmc",
+     "used_at": "2026-07-16"
+    }
+   ]
+  },
+  {
+   "id": "art-045-visored-humanoids-welding",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_38 PM (3).png",
+   "title": "Visored humanoids welding",
+   "description": "Black-visor humanoid robots weld car bodies under violet accents; supervisor on the mezzanine.",
+   "subjects": [
+    "humanoid-robots",
+    "auto-factory",
+    "welding"
+   ],
+   "mood": "dark industrial",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2146815,
+   "best_for_sections": [
+    "Robotics"
+   ],
+   "text_space": "smoky left depth",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-dexmal-alibaba-embodied-ai-3-billion-valuation-talks",
+     "used_at": "2026-08-22"
+    }
+   ]
+  },
+  {
+   "id": "art-046-violet-biotech-rig",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (4).png",
+   "title": "Violet biotech rig",
+   "description": "Scientist with a pipette at a violet-lit automation rig; colleague at brain-scan screens.",
+   "subjects": [
+    "biotech",
+    "lab-automation",
+    "scientist"
+   ],
+   "mood": "clinical",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1650984,
+   "best_for_sections": [
+    "Health"
+   ],
+   "text_space": "dark left wall",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
+     "used_at": "2026-08-28"
+    }
+   ]
+  },
+  {
+   "id": "art-047-smart-glasses-outside-the-glass-hq",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (5).png",
+   "title": "Smart glasses outside the glass HQ",
+   "description": "Woman in smart glasses walks past a violet-lit glass headquarters at night; commuters, skyline.",
+   "subjects": [
+    "smart-glasses",
+    "urban-professional"
+   ],
+   "mood": "violet night",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1890391,
+   "best_for_sections": [
+    "Products",
+    "Markets"
+   ],
+   "text_space": "sky left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-decart-6-billion-acquisition-talks",
+     "used_at": "2026-08-13"
+    }
+   ]
+  },
+  {
+   "id": "art-048-switchyard-under-construction",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (6).png",
+   "title": "Switchyard under construction",
+   "description": "Violet-lit crane and switchyard on a data-center build; three hi-vis engineers on wet ground.",
+   "subjects": [
+    "data-center",
+    "construction",
+    "substation"
+   ],
+   "mood": "violet dusk",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2517779,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "cloud sky top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-openai-ohio-financing",
+     "used_at": "2026-07-27"
+    },
+    {
+     "article_id": "newsroom-a16z-machine-age-fund-ai-hardware",
+     "used_at": "2026-08-30",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-049-boardroom-over-the-violet-server-room",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_39 PM (7).png",
+   "title": "Boardroom over the violet server room",
+   "description": "Seven executives watch a violet server room through glass while technicians work the benches.",
+   "subjects": [
+    "oversight",
+    "boardroom",
+    "server-room"
+   ],
+   "mood": "dark noir",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1871239,
+   "best_for_sections": [
+    "Policy",
+    "Markets"
+   ],
+   "text_space": "left wall",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-kill-switch-act",
+     "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
+     "used_at": "2026-08-28",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-050-transformers-and-steam",
+   "file": "ChatGPT Image Jul 14, 2026, 06_02_40 PM (8).png",
+   "title": "Transformers and steam",
+   "description": "Violet-lit transformers with cooling towers steaming behind; two hi-vis workers in the wet lot.",
+   "subjects": [
+    "substation",
+    "power",
+    "cooling-towers"
+   ],
+   "mood": "night industrial",
+   "palette": "violet-amber",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2149897,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "black sky top-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-safe-superintelligence-5-billion-investment",
+     "used_at": "2026-08-01"
+    }
+   ]
+  },
+  {
+   "id": "art-051-noc-facing-the-compute-hall",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_09 PM (1).png",
+   "title": "NOC facing the compute hall",
+   "description": "Four analysts at laptop consoles face a vast violet-lit compute hall through glass.",
+   "subjects": [
+    "noc",
+    "analysts",
+    "compute-hall"
+   ],
+   "mood": "deep noir",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1893736,
+   "best_for_sections": [
+    "Compute",
+    "Frontier"
+   ],
+   "text_space": "black wall left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-kimi-k3-redis-zerodays",
+     "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
+     "used_at": "2026-08-31",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-052-gantry-crane-over-the-fab-tool",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (2).png",
+   "title": "Gantry crane over the fab tool",
+   "description": "Violet-lit tool under a black gantry crane in a bright fab; two bunny-suited engineers.",
+   "subjects": [
+    "fab",
+    "cleanroom",
+    "gantry"
+   ],
+   "mood": "bright clinical",
+   "palette": "white-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2100692,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "white wall upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-marvell-google-12-2-billion-warrant-tpu-custom-chips",
+     "used_at": "2026-08-22"
+    }
+   ]
+  },
+  {
+   "id": "art-053-twilight-data-center-build",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (3).png",
+   "title": "Twilight data-center build",
+   "description": "Cranes and chimneys over a hyperscale site at twilight; two hi-vis observers on the apron.",
+   "subjects": [
+    "data-center",
+    "construction",
+    "cranes"
+   ],
+   "mood": "twilight",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2232778,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "sky upper-left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-sk-korea-500b",
+     "used_at": "2026-07-26"
+    }
+   ]
+  },
+  {
+   "id": "art-054-robot-arms-build-a-rail-car",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (4).png",
+   "title": "Robot arms build a rail car",
+   "description": "Industrial arms assemble a metro car body while a supervisor watches from the platform.",
+   "subjects": [
+    "robot-arms",
+    "train-factory",
+    "automation"
+   ],
+   "mood": "muted industrial",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2012096,
+   "best_for_sections": [
+    "Robotics"
+   ],
+   "text_space": "gray wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-skild-ai-s1-robot-foundation-model-one-video-in-context-learning",
+     "used_at": "2026-08-26"
+    }
+   ]
+  },
+  {
+   "id": "art-055-night-lab-liquid-handling",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (5).png",
+   "title": "Night lab, liquid handling",
+   "description": "Scientist at a violet-lit liquid-handling robot; city window, sample fridges glowing.",
+   "subjects": [
+    "biotech",
+    "lab-automation",
+    "night"
+   ],
+   "mood": "clinical",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1746025,
+   "best_for_sections": [
+    "Health"
+   ],
+   "text_space": "dark left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-model-hardware-standard-lab-robots-research-preview",
+     "used_at": "2026-08-29"
+    }
+   ]
+  },
+  {
+   "id": "art-056-terrace-at-dusk-smart-glasses",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_10 PM (6).png",
+   "title": "Terrace at dusk, smart glasses",
+   "description": "Man in glasses walks a violet-lit concrete terrace at dusk; commuters and skyline beyond.",
+   "subjects": [
+    "professional",
+    "wearables",
+    "commute"
+   ],
+   "mood": "violet dusk",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1709770,
+   "best_for_sections": [
+    "Products",
+    "Markets"
+   ],
+   "text_space": "sky left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
+     "used_at": "2026-08-13"
+    },
+    {
+     "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-057-executive-review-of-the-test-lab",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_11 PM (7).png",
+   "title": "Executive review of the test lab",
+   "description": "Four executives watch white-coat researchers working a violet electronics test lab.",
+   "subjects": [
+    "oversight",
+    "review",
+    "test-lab"
+   ],
+   "mood": "dark",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1834606,
+   "best_for_sections": [
+    "Policy",
+    "Frontier"
+   ],
+   "text_space": "black ceiling band",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-france-antitrust-ai-agents",
+     "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "newsroom-alphabet-amazon-anthropic-stake-gains-earnings",
+     "used_at": "2026-08-31",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-058-power-plant-engineers-walking",
+   "file": "ChatGPT Image Jul 14, 2026, 06_06_11 PM (8).png",
+   "title": "Power plant, engineers walking",
+   "description": "Violet-lit substation hardware and steaming stacks; two hi-vis engineers walk the apron.",
+   "subjects": [
+    "power-plant",
+    "substation",
+    "steam"
+   ],
+   "mood": "night",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2084504,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "dark left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-firmus-2-billion-nvidia-blackstone-ai-factory-raise",
+     "used_at": "2026-08-11"
+    }
+   ]
+  },
+  {
+   "id": "art-059-monumental-ops-console",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_51 PM (1).png",
+   "title": "Monumental ops console",
+   "description": "Black-clad staff at a long console before a cathedral-scale violet mega-facility.",
+   "subjects": [
+    "mega-facility",
+    "console",
+    "monumental"
+   ],
+   "mood": "epic dark",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2116707,
+   "best_for_sections": [
+    "Frontier",
+    "Opinion"
+   ],
+   "text_space": "dark upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-pacing-the-frontier-letter",
+     "used_at": "2026-07-29"
+    }
+   ]
+  },
+  {
+   "id": "art-060-cylindrical-process-chambers",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_51 PM (2).png",
+   "title": "Cylindrical process chambers",
+   "description": "Ultra-bright fab: violet cylindrical process chambers, AGV carts, a bunny-suited engineer.",
+   "subjects": [
+    "fab",
+    "agv",
+    "process-chambers"
+   ],
+   "mood": "clinical",
+   "palette": "white-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2172779,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "white wall left",
+   "brand_visible": "small corner watermark",
+   "used_in": []
+  },
+  {
+   "id": "art-061-oversight-gallery-fusion-core",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_51 PM (3).png",
+   "title": "Oversight gallery, fusion core",
+   "description": "Executives at a lit table watch a violet fusion-style core in a white-coat lab through glass.",
+   "subjects": [
+    "oversight",
+    "big-science",
+    "reactor-core"
+   ],
+   "mood": "dark",
+   "palette": "bronze-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2020430,
+   "best_for_sections": [
+    "Policy",
+    "Frontier"
+   ],
+   "text_space": "concrete wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-china-ai-export-controls",
+     "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
+     "used_at": "2026-08-31",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-062-colossal-train-factory-hall",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (4).png",
+   "title": "Colossal train-factory hall",
+   "description": "Robot gantries assemble rail cars in a vast hall; an observer watches from a catwalk through violet haze.",
+   "subjects": [
+    "train-factory",
+    "robots",
+    "mega-scale"
+   ],
+   "mood": "epic industrial",
+   "palette": "graphite-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2737543,
+   "best_for_sections": [
+    "Robotics",
+    "Compute"
+   ],
+   "text_space": "dark ceiling top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "g16",
+     "used_at": "2026-08-24"
+    }
+   ]
+  },
+  {
+   "id": "art-063-bioreactors-and-robot-arm",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (5).png",
+   "title": "Bioreactors and robot arm",
+   "description": "Gloved scientist at a violet sample rig with a robotic arm and bioreactor cylinders; city window.",
+   "subjects": [
+    "biotech",
+    "robot-arm",
+    "bioreactor"
+   ],
+   "mood": "clinical",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1841170,
+   "best_for_sections": [
+    "Health"
+   ],
+   "text_space": "dark left third",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-uk-actors-save-our-voices-now-ai-voice-cloning-campaign",
+     "used_at": "2026-08-28"
+    }
+   ]
+  },
+  {
+   "id": "art-064-autonomous-container-port-at-dusk",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (6).png",
+   "title": "Autonomous container port at dusk",
+   "description": "Driverless trucks and gantry cranes work a container terminal at dusk; ship at berth.",
+   "subjects": [
+    "port",
+    "logistics",
+    "autonomous-trucks",
+    "cranes"
+   ],
+   "mood": "industrial dusk",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2504311,
+   "best_for_sections": [
+    "Markets",
+    "Robotics"
+   ],
+   "text_space": "sky upper-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-fcc-covered-list-humanoid-robots",
+     "used_at": "2026-07-29"
+    },
+    {
+     "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
+     "used_at": "2026-08-28",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-065-ar-visor-on-the-transit-walkway",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (7).png",
+   "title": "AR visor on the transit walkway",
+   "description": "Woman in a clear AR visor on a violet transit walkway; monorail and towers behind.",
+   "subjects": [
+    "ar-glasses",
+    "wearables",
+    "urban-future"
+   ],
+   "mood": "lilac night",
+   "palette": "lilac",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1813022,
+   "best_for_sections": [
+    "Products"
+   ],
+   "text_space": "ceiling band top-right",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "g17",
+     "used_at": "2026-08-26"
+    }
+   ]
+  },
+  {
+   "id": "art-066-robotic-surgery-theater",
+   "file": "ChatGPT Image Jul 14, 2026, 06_12_52 PM (8).png",
+   "title": "Robotic surgery theater",
+   "description": "Ring-lit surgical robot over a patient; masked clinicians and glass pods around the theater.",
+   "subjects": [
+    "surgical-robot",
+    "hospital",
+    "operating-room"
+   ],
+   "mood": "clinical",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2107788,
+   "best_for_sections": [
+    "Health",
+    "Robotics"
+   ],
+   "text_space": "dark floor bottom-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-fda-ai-medical-devices-clinical-outcomes-gap",
+     "used_at": "2026-08-29"
+    }
+   ]
+  },
+  {
+   "id": "art-067-mission-control-network-map",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_54 PM (1).png",
+   "title": "Mission control, network map",
+   "description": "Two tiers of suited analysts before giant violet network maps of a continent.",
+   "subjects": [
+    "mission-control",
+    "network-map",
+    "analysts"
+   ],
+   "mood": "dark ops",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1942209,
+   "best_for_sections": [
+    "Policy",
+    "Compute",
+    "Markets"
+   ],
+   "text_space": "screens are busy — avoid center",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "primer-000",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-openai-hugging-face-metr-redwood-independent-review",
+     "used_at": "2026-08-27",
+     "exception": true
+    },
+    {
+     "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
+     "used_at": "2026-08-30",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-068-glass-encased-mainframe-cube",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (2).png",
+   "title": "Glass-encased mainframe cube",
+   "description": "A violet mainframe cube in a glass enclosure with balcony observers and operator consoles.",
+   "subjects": [
+    "quantum",
+    "mainframe",
+    "observers"
+   ],
+   "mood": "dramatic",
+   "palette": "violet-black",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2154817,
+   "best_for_sections": [
+    "Frontier",
+    "Compute"
+   ],
+   "text_space": "dark wall left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-qwen38-max-preview",
+     "used_at": "2026-07-26"
+    },
+    {
+     "article_id": "newsroom-openai-codex-persistent-mode-proactivity-gpt-5-6-sol-safety",
+     "used_at": "2026-08-30",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-069-aerial-hyperscale-campus-at-dusk",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (3).png",
+   "title": "Aerial: hyperscale campus at dusk",
+   "description": "Aerial of a violet-lit data-center campus under construction at stormy dusk; cooling towers, cranes, pylons.",
+   "subjects": [
+    "data-center",
+    "campus",
+    "construction",
+    "aerial"
+   ],
+   "mood": "epic storm",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2146328,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "sky top half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "primer-000",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-nvidia-q2-fy2027-earnings-memory-margin-70-percent-growth",
+     "used_at": "2026-08-27",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-070-ar-glasses-in-the-marble-atrium",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (4).png",
+   "title": "AR glasses in the marble atrium",
+   "description": "Woman in AR glasses among floating holo panels in a marble atrium; escalators and commuters.",
+   "subjects": [
+    "ar-glasses",
+    "atrium",
+    "holo-panels"
+   ],
+   "mood": "lilac",
+   "palette": "lilac-marble",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2026302,
+   "best_for_sections": [
+    "Products"
+   ],
+   "text_space": "ceiling top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-screenless-speaker",
+     "used_at": "2026-07-17"
+    },
+    {
+     "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-071-clifftop-research-lab-at-night",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (5).png",
+   "title": "Clifftop research lab at night",
+   "description": "Glass research lab on a cliff: racks below deck, a capsule chamber, violet server room, valley lights beyond.",
+   "subjects": [
+    "secret-lab",
+    "clifftop",
+    "servers"
+   ],
+   "mood": "dark cinematic",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1787479,
+   "best_for_sections": [
+    "Frontier",
+    "Opinion"
+   ],
+   "text_space": "sky and mountains left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-chatgpt-academic-researchers-program",
+     "used_at": "2026-07-30"
+    },
+    {
+     "article_id": "newsroom-anthropic-automated-alignment-researchers-beat-humans",
+     "used_at": "2026-09-01",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-072-chip-trays-and-agv-robots",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_55 PM (6).png",
+   "title": "Chip trays and AGV robots",
+   "description": "Vast bright fab: AGV robots and chip trays in the foreground, violet tool bays, bunny-suited engineers.",
+   "subjects": [
+    "fab",
+    "agv",
+    "chips",
+    "production"
+   ],
+   "mood": "clinical",
+   "palette": "white-violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2406822,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "white wall and ceiling left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-samsung-q2-2026-chip-profit-mobile-loss",
+     "used_at": "2026-07-30"
+    }
+   ]
+  },
+  {
+   "id": "art-073-surgical-suite-dual-robot-arms",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (10).png",
+   "title": "Surgical suite, dual robot arms",
+   "description": "Dual surgical arms over a draped patient with imaging screens; an observer room behind glass.",
+   "subjects": [
+    "surgical-robot",
+    "operating-room",
+    "imaging"
+   ],
+   "mood": "bright clinical",
+   "palette": "blue",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1860320,
+   "best_for_sections": [
+    "Health",
+    "Robotics"
+   ],
+   "text_space": "left wall gray",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "primer-000",
+     "used_at": "2026-07-16"
+    }
+   ]
+  },
+  {
+   "id": "art-074-arms-welding-fuselage-sections",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (7).png",
+   "title": "Arms welding fuselage sections",
+   "description": "Giant robot arms weld fuselage sections in a violet mega-hangar.",
+   "subjects": [
+    "robot-arms",
+    "fuselage",
+    "mega-factory"
+   ],
+   "mood": "industrial",
+   "palette": "violet-steel",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2268730,
+   "best_for_sections": [
+    "Robotics",
+    "Compute"
+   ],
+   "text_space": "ceiling trusses top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "g18",
+     "used_at": "2026-08-31"
+    }
+   ]
+  },
+  {
+   "id": "art-075-three-researchers-molecule-on-screen",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (8).png",
+   "title": "Three researchers, molecule on screen",
+   "description": "Researchers confer at a night biotech bench: molecule model on a laptop, violet 3D bioprinter, sample fridges.",
+   "subjects": [
+    "biotech",
+    "molecule",
+    "team"
+   ],
+   "mood": "dark lab",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 1701317,
+   "best_for_sections": [
+    "Health"
+   ],
+   "text_space": "dark left half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "anthropic-fable-5-biology-safeguards-retuned",
+     "used_at": "2026-08-16"
+    }
+   ]
+  },
+  {
+   "id": "art-076-automated-terminal-at-night",
+   "file": "ChatGPT Image Jul 14, 2026, 06_26_56 PM (9).png",
+   "title": "Automated terminal at night",
+   "description": "AGV trucks and robot arms move containers under violet-lit cranes; ship at berth.",
+   "subjects": [
+    "port",
+    "agv",
+    "automation",
+    "logistics"
+   ],
+   "mood": "night",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2402985,
+   "best_for_sections": [
+    "Markets",
+    "Robotics"
+   ],
+   "text_space": "dark sky top-left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-perplexity-30-billion-valuation-talks",
+     "used_at": "2026-08-25"
+    }
+   ]
+  },
+  {
+   "id": "art-077-brutalist-data-center-in-a-storm",
+   "file": "colossal brutalist data center at night.png",
+   "title": "Brutalist data center in a storm",
+   "description": "Colossal brutalist data center: cooling towers steaming under lightning, wet lot, trucks and crew dwarfed by scale.",
+   "subjects": [
+    "data-center",
+    "cooling-towers",
+    "storm"
+   ],
+   "mood": "epic industrial",
+   "palette": "indigo",
+   "orientation": "portrait",
+   "width": 1122,
+   "height": 1402,
+   "bytes": 1883323,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "storm sky top half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-deepseek-v4-flash-0731-beats-own-flagship",
+     "used_at": "2026-08-01"
+    }
+   ]
+  },
+  {
+   "id": "art-078-suspended-agi-core",
+   "file": "frontier core in ai laboratory.png",
+   "title": "Suspended AGI core",
+   "description": "A black compute cube laced with green light hangs in a wire canopy ring; observers watch from behind glass.",
+   "subjects": [
+    "agi-core",
+    "suspended-cube",
+    "observers"
+   ],
+   "mood": "ominous",
+   "palette": "green-black",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2120094,
+   "best_for_sections": [
+    "Frontier",
+    "Opinion"
+   ],
+   "text_space": "dark walls left",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-kimi-k3-open-model",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-079-megatower-over-the-rainy-city",
+   "file": "futuristic city with glowing ai tower.png",
+   "title": "Megatower over the rainy city",
+   "description": "Dark megatower with violet-lit floors above a rainy cyberpunk city laced with skybridges.",
+   "subjects": [
+    "megatower",
+    "city",
+    "dystopia"
+   ],
+   "mood": "rainy noir",
+   "palette": "violet",
+   "orientation": "portrait",
+   "width": 1122,
+   "height": 1402,
+   "bytes": 2057481,
+   "best_for_sections": [
+    "Frontier",
+    "Opinion",
+    "Markets"
+   ],
+   "text_space": "storm sky top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-aschenbrenner-situational-awareness-capital-raise",
+     "used_at": "2026-07-30"
+    }
+   ]
+  },
+  {
+   "id": "art-080-the-data-monolith-archive",
+   "file": "futuristic data monolith archive.png",
+   "title": "The data monolith archive",
+   "description": "Vast archive hall of black-and-gold data monoliths with catwalk desks; tiny workers under god-light.",
+   "subjects": [
+    "archive",
+    "monoliths",
+    "scale"
+   ],
+   "mood": "cathedral",
+   "palette": "gold-black",
+   "orientation": "portrait",
+   "width": 1122,
+   "height": 1402,
+   "bytes": 2229651,
+   "best_for_sections": [
+    "Frontier",
+    "Opinion"
+   ],
+   "text_space": "beige monolith faces",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-kimi-k3-open-weights-live",
+     "used_at": "2026-07-27"
+    }
+   ]
+  },
+  {
+   "id": "art-081-twin-ai-chambers",
+   "file": "futuristic twin AI chambers.png",
+   "title": "Twin AI chambers",
+   "description": "Two glass cylinder machine-chambers — one cool blue, one warm amber — joined by a black core; tiny figures for scale.",
+   "subjects": [
+    "twin-cores",
+    "duality",
+    "machine-halls"
+   ],
+   "mood": "mythic",
+   "palette": "blue vs amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2867181,
+   "best_for_sections": [
+    "Frontier",
+    "Policy"
+   ],
+   "text_space": "dark ceiling top",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-fli-safety-index",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
+     "used_at": "2026-08-31",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-082-robot-touches-the-neural-web",
+   "file": "image-gen-1.png",
+   "title": "Robot touches the neural web",
+   "description": "Robot silhouette reaches into a glowing neural-network web of nodes and filaments.",
+   "subjects": [
+    "robot",
+    "neural-network",
+    "abstract"
+   ],
+   "mood": "electric abstract",
+   "palette": "blue-violet",
+   "orientation": "ultrawide",
+   "width": 2172,
+   "height": 724,
+   "bytes": 2272534,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "dark upper-right",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "primer-000",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
+     "used_at": "2026-08-29",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-083-blue-server-corridor",
+   "file": "image-gen-2.png",
+   "title": "Blue server corridor",
+   "description": "Symmetrical server-rack corridor receding to a lit door, floor glowing blue.",
+   "subjects": [
+    "server-racks",
+    "corridor"
+   ],
+   "mood": "deep tech",
+   "palette": "blue",
+   "orientation": "ultrawide",
+   "width": 2172,
+   "height": 724,
+   "bytes": 2186631,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "ceiling center",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "primer-000",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-sony-warner-chappell-anthropic-lyrics-lawsuit",
+     "used_at": "2026-08-31",
+     "exception": true
+    }
+   ]
+  },
+  {
+   "id": "art-084-model-dashboard-benchmark-panels",
+   "file": "image-gen-3.png",
+   "title": "Model dashboard, benchmark panels",
+   "description": "Glowing ring dashboard with benchmark chart panels around it.",
+   "subjects": [
+    "dashboard",
+    "charts",
+    "benchmarks"
+   ],
+   "mood": "dark UI",
+   "palette": "blue",
+   "orientation": "ultrawide",
+   "width": 2172,
+   "height": 724,
+   "bytes": 1394571,
+   "best_for_sections": [
+    "Frontier"
+   ],
+   "text_space": "none — text baked in",
+   "brand_visible": "GPT-5.6 text baked into artwork",
+   "used_in": [
+    {
+     "article_id": "newsroom-uk-aisi-agent-deception-cyber-testing-incident",
+     "used_at": "2026-08-10"
+    }
+   ]
+  },
+  {
+   "id": "art-085-inside-a-liquid-cooled-computer",
+   "file": "inside a futuristic liquid-cooled computer.png",
+   "title": "Inside a liquid-cooled computer",
+   "description": "Macro interior of a liquid-cooled machine: glowing coolant tubes, fiber bundles, RGB boards.",
+   "subjects": [
+    "liquid-cooling",
+    "hardware-macro"
+   ],
+   "mood": "electric macro",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 1894431,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "right half dark",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-blomfield-compute",
+     "used_at": "2026-07-16"
+    }
+   ]
+  },
+  {
+   "id": "art-086-lightning-over-the-data-campus",
+   "file": "nighttime data center meets electric storm.png",
+   "title": "Lightning over the data campus",
+   "description": "Lightning strikes above a violet-lit data-center campus; pylons, cooling yards, a tiny hi-vis crew.",
+   "subjects": [
+    "data-center",
+    "lightning",
+    "substation"
+   ],
+   "mood": "storm",
+   "palette": "violet",
+   "orientation": "landscape",
+   "width": 1672,
+   "height": 941,
+   "bytes": 2500895,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "storm sky top half",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-amd-meta-14-billion-datacenter-deals",
+     "used_at": "2026-07-29"
+    }
+   ]
+  },
+  {
+   "id": "art-087-vast-semiconductor-fabrication-hall",
+   "file": "vast semiconductor fabrication hall.png",
+   "title": "Vast semiconductor fabrication hall",
+   "description": "Enormous fabrication hall receding into haze: tool bays, overhead transport, cleanroom light.",
+   "subjects": [
+    "fab",
+    "cleanroom",
+    "mega-scale"
+   ],
+   "mood": "clinical epic",
+   "palette": "white-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 1024,
+   "bytes": 2525470,
+   "best_for_sections": [
+    "Compute"
+   ],
+   "text_space": "upper haze",
+   "brand_visible": null,
+   "used_in": [
+    {
+     "article_id": "newsroom-tsmc-q2-2026-earnings",
+     "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "newsroom-nvidia-mediatek-3-5-billion-nvlink-fusion-investment",
+     "used_at": "2026-09-01",
+     "exception": true
+    }
+   ]
+  }
+ ]
 }
