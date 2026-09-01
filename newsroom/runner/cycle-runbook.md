@@ -522,6 +522,24 @@ this order, and mark it done here.
    ignored. Worth a dedicated audit of whether the paid Issue 001 content
    served via `/api/issue/*` has drifted further than anyone has checked.
 
+   PARTIAL, continued (2026-09-01 earlier cycle, commit `d9f3d7c`) --
+   worked another slice of the "agents" sub-item: added one clause to the
+   same "act" sentence on the "What they can actually do now" spread in
+   `web/data/primer-issue.js` only (the `functions/` twin still blocked per
+   the entry directly above), noting that a well-built agent still pauses
+   for confirmation before booking or sending -- "the checkpoint is a
+   design choice, not a limit of the technology." That commit's own message
+   mentioned the Primer edit but never logged it here, so this line is a
+   same-day backfill of a real, already-shipped edit, not new work --
+   confirmed via `git show d9f3d7c -- web/data/primer-issue.js`. This
+   cycle (a later, separate cycle the same day) reviewed the section for
+   its own required §3e touch and judged that re-editing the same
+   just-changed paragraph again within hours would read as forced
+   stacking rather than genuine progress -- see `agents/_shared/visual-
+   components.md`'s "never decorate" principle, which applies to prose
+   thickening here as much as to components. Deferring this cycle's own
+   fresh prose edit to the next cycle rather than manufacturing one.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
