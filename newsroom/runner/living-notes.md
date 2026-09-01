@@ -149,3 +149,35 @@
   `check` should normalize both sides before comparing. Left for the owner. Worth checking whether
   any PRIOR cycle's LRU-exception picks have the same silent mismatch and are sitting as
   unexplained FAILs (or worse, unrecorded WARNs) the next `check` run surfaces.
+- **2026-09-01** (newsroom cycle): the art library's Policy and Frontier pools now both have zero
+  images fitting a Pentagon/defense-procurement story specifically -- checked all `Policy`-tagged
+  images by hand after `pick --allow-lru-exception` for a GenAI.mil/Pentagon story returned only a
+  fab hall, a surgical suite, a liquid-cooled-computer macro, and a pharma bench as its top four
+  candidates (all off-topic; the exception path sorts the WHOLE library by staleness, not just
+  on-topic images, so a genuinely fitting but recently-used image never surfaces there). This is
+  the same class of gap 2026-08-18/08-25 already flagged for privacy/legal/cybersecurity topics --
+  now confirmed for defense/military too. Worked around by hand-picking the least-recently-used
+  genuinely on-topic Policy image instead (`art-041-committee-behind-the-glass`, an oversight/
+  server-lab scene, last used 6 days prior on an unrelated antitrust story) and hand-replicating
+  `cmd_pick`'s own apply logic (RGB convert, resize to 1536px width if wider, JPEG quality 85,
+  manifest `used_in` append with `exception: true`) rather than accepting the tool's off-topic
+  top pick. Also confirmed `component_audit.py`'s numeric-provenance check is exact enough to catch
+  a single missing DAY-of-month: a `compare` cell reading "Live since Dec 9, 2025" failed because
+  prose only said "December 2025" (no "9") -- fixed by dropping the day from the cell rather than
+  adding a throwaway "Dec 9" mention to prose. Worth remembering when writing compare/ledger cells
+  with full dates: either state the exact same date in prose too, or round the cell to what prose
+  actually supports.
+- **2026-09-01** (newsroom cycle, same run): re-confirmed the 2026-08-30 finding that
+  `functions/api/issue/_data/issue-001.json` does not exist in this checkout (only `primer.json`
+  does) -- §3f (Issue 001 sourcing queue) remains fully unexecutable from this sandboxed runner.
+  No new research attempted this cycle beyond what 2026-08-30 already logged for queue item 1;
+  a future cycle with Cloudflare KV access should pick up at item 2 ("Act II · The Crunch + The
+  Climb"). Separately, continued the §3e work order with one more small, safe addition (one
+  clause on the agent-checkpoint/confirmation behavior, added to the "What they can actually do
+  now" spread in `web/data/primer-issue.js` only, per the 2026-08-30 `ALLOWED_PREFIXES` finding
+  that blocks any push touching `functions/api/issue/_data/primer.json` -- that file's matching
+  sentence was left untouched and is now one clause further drifted from `primer-issue.js`'s,
+  on top of the drift 2026-08-18/08-23 already catalogue). This gap (§3e directs edits to a file
+  the publish-surface gate can never let ship) is now confirmed across at least four separate
+  cycles' worth of attempts and is a standing owner decision, not something worth re-discovering
+  again -- see the 2026-08-30/08-31 entries above for the two concrete fixes available.
