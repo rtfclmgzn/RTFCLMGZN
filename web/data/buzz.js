@@ -361,5 +361,17 @@ window.RTFC_BUZZ = [
     text:"Apate.AI, a Sydney-founded startup whose AI agents tie up scam callers and texters in fake conversations to waste their time and extract intelligence, raised a US$8.15 million (A$11.4 million) seed round led by Lobby Capital, with OIF Ventures, Investible, Concept Ventures and Baobab Ventures participating. The company is reincorporating in Delaware to expand into the US and Europe. Commonwealth Bank has run more than 2.5 million autonomous conversations through the platform, pulling over 250,000 intelligence artifacts on scam operations.",
     why:"Turning the same conversational-AI capability that powers scam calls into the tool that wastes scammers' time and harvests intelligence on their operations is a direct, adversarial use of the technology against the fraud it also enables -- and a bank running 2.5 million real conversations through it is a genuine deployment, not a pilot.",
     heat:33, topics:["apate.ai","funding","scam prevention","fraud","conversational ai","cybersecurity"],
-    url:"https://www.startupdaily.net/topic/funding/anti-scammer-startup-apate-ai-nabs-11-4-million-seed-raise-amid-us-move/" }
+    url:"https://www.startupdaily.net/topic/funding/anti-scammer-startup-apate-ai-nabs-11-4-million-seed-raise-amid-us-move/" },
+{ id:"bz-444", date:"2026-09-01",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic sealed a six-year cloud-computing agreement with Lambda, a Nvidia-backed cloud service provider, worth approximately $35 billion -- one of the largest compute contracts in the AI industry. The infrastructure centers on Nueces County, Texas, where Hut 8 is transitioning from Bitcoin mining to data center operations; Nvidia, an investor and supplier to Lambda, will provide its chips and hold the lease on the facility. Anthropic has been seeking compute capacity after hitting supply bottlenecks earlier this year.",
+    why:"A frontier lab committing to $35 billion in compute with a single provider over six years signals confidence in its model trajectory while cementing Nvidia's gatekeeper role on the supply side -- and puts another hyperscaler-scale infrastructure bet on Texas alongside the Stargate buildout and data center consolidation.",
+    heat:71, topics:["anthropic","infrastructure","compute","lambda","nvidia","texas","6-year contract"],
+    url:"https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda" },
+{ id:"bz-445", date:"2026-09-01",
+    source:{ name:"EuroHPC", handle:"EuroHPC Joint Undertaking", platform:"web", kind:"gov" },
+    text:"The EuroHPC Joint Undertaking signed a €387.8 million ($425M) contract on August 31 with Bull to build and deploy LUMI-AI, a dedicated AI supercomputer hosted in Kajaani, Finland by the six-country LUMI AI Factory consortium (Finland, Czechia, Denmark, Estonia, Norway, Poland). The system will feature AMD Instinct MI430X GPUs and EPYC 6th generation CPUs, delivering approximately 10 times the AI capacity of the existing LUMI supercomputer. Deployment is scheduled for the second half of 2027.",
+    why:"A European sovereign investment in AI infrastructure independent of Nvidia -- using AMD chips instead -- marks a concrete pivot in how Europe's research and industrial base competes on compute, and the multi-country consortium structure signals political alignment that sustained infrastructure funding requires.",
+    heat:61, topics:["eurohpc","supercomputer","ai infrastructure","europe","amd","sovereign capability","finland"],
+    url:"https://lumi-supercomputer.eu/bull-to-deliver-lumi-ai-supercomputer/" }
 ];
