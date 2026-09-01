@@ -10541,8 +10541,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DeepSeek",
           "#OpenSource"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094803944950186224",
+        "remote_id": "2094803944950186224",
+        "posted_at": "2026-09-01T15:05:55Z"
       },
       {
         "platform": "instagram",
