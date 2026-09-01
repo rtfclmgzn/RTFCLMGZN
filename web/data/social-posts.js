@@ -10586,5 +10586,259 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-together-ai-humain-saudi-arabia-250mw-data-center",
+    "ts": "2026-09-01T19:30:05Z",
+    "export": {
+      "article_id": "newsroom-together-ai-humain-saudi-arabia-250mw-data-center",
+      "url": "https://rtfclmgzn.com/article/together-ai-humain-saudi-arabia-250mw-data-center",
+      "headline": "Together AI is building 250 megawatts of compute in Saudi Arabia -- two months after the Saudi state oil giant's venture arm led its own funding round",
+      "hook": "Together AI is building a 250-megawatt data center in Saudi Arabia with HUMAIN, and its CEO says US permitting fights -- not cost -- are why.",
+      "key_facts": [
+        "The deal is projected to bring Together AI over $5 billion in first-year gross revenue and nearly triple its compute capacity.",
+        "Aramco Ventures, the Saudi state oil giant's venture arm, led Together AI's $8.3B round just two months earlier.",
+        "More than 530 US counties and localities have banned or limited data-center construction this year."
+      ],
+      "tone": "analytical, numbers-first",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-together-ai-humain-saudi-arabia-250mw-data-center.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Together AI is building 250 megawatts of compute in Saudi Arabia -- two months after the Saudi oil fund's venture arm led its own $8.3B round. CEO: US permitting fights, not cost, are why.",
+        "reply_copy": "The full picture:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#TogetherAI",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T00:30:05Z",
+        "copy": "530+ US counties have now banned or limited data centers. Together AI's answer: build the next 250MW in Saudi Arabia instead, with the same government's capital already on its cap table.",
+        "reply_copy": "How it connects:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIInfrastructure",
+          "#HUMAIN"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Together AI is building a 250-megawatt data center in Saudi Arabia with HUMAIN.\n\nThe reason, per CEO Vipul Ved Prakash: US permitting fights and local opposition, not cost, are pushing the next big AI buildout offshore.\n\nTwo months earlier, Aramco Ventures -- the Saudi state oil giant's venture arm -- led Together AI's own $8.3B funding round. Full story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#TogetherAI",
+          "#HUMAIN",
+          "#SaudiArabia",
+          "#DataCenters",
+          "#AIInfrastructure",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Together AI is building a 250-megawatt data center in Saudi Arabia with HUMAIN, projected to bring over $5 billion in first-year revenue. CEO Vipul Ved Prakash says the real driver isn't cost -- it's US permitting fights and community opposition, which have now stalled data-center projects in 530+ counties nationwide.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Together AI is building 250 megawatts of compute in Saudi Arabia with HUMAIN -- two months after the Saudi oil fund's venture arm led its own $8.3B round. The CEO's stated reason: US permitting fights, not cost.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Together AI is putting 250MW of compute in Saudi Arabia with HUMAIN. CEO's reason: US permitting fights and local opposition -- not cost. Aramco Ventures led its own funding round two months ago.",
+        "hashtags": [
+          "#AI",
+          "#TogetherAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-john-ternus-apple-ceo-gemini-siri-ai-strategy",
+    "ts": "2026-09-01T19:30:07Z",
+    "export": {
+      "article_id": "newsroom-john-ternus-apple-ceo-gemini-siri-ai-strategy",
+      "url": "https://rtfclmgzn.com/article/john-ternus-apple-ceo-gemini-siri-ai-strategy",
+      "headline": "John Ternus is now Apple's CEO -- the AI strategy he inherits runs through a $1 billion-a-year deal with Google",
+      "hook": "John Ternus is Apple's CEO now. The AI strategy he inherits hands Siri's hardest queries to a licensed Gemini model, not Apple's own.",
+      "key_facts": [
+        "Apple pays Google roughly $1 billion a year for a custom, 1.2-trillion-parameter Gemini model -- about 8x the size of Apple's own largest model.",
+        "Siri's AI overhaul has already slipped twice, from spring 2025 to iOS 26.4 to now iOS 27 this fall.",
+        "Apple's AI chief John Giannandrea is retiring; his successor spent 16 years at Google, including running engineering for Gemini Assistant."
+      ],
+      "tone": "analytical, skeptical of the official framing",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-john-ternus-apple-ceo-gemini-siri-ai-strategy.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "John Ternus is Apple's CEO now. The AI strategy he inherits: Siri's hardest queries go to a licensed, 1.2T-parameter Gemini model Apple pays Google ~$1B/year for -- not Apple's own.",
+        "reply_copy": "The full picture:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Apple",
+          "#Gemini"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T00:30:07Z",
+        "copy": "The person now shaping Apple's foundation models spent 16 years at Google, including running engineering for Gemini Assistant -- right as Apple licenses Gemini to power Siri.",
+        "reply_copy": "How it fits together:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Apple",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "John Ternus is Apple's CEO now, succeeding Tim Cook after 15 years.\n\nThe AI strategy he inherits: a rebuilt Siri that hands its hardest queries to a licensed, 1.2-trillion-parameter Gemini model -- about 8x the size of Apple's own largest model -- for roughly $1 billion a year.\n\nSiri's AI overhaul has already slipped twice. Full story at the link in bio.",
+        "hashtags": [
+          "#Apple",
+          "#AI",
+          "#Siri",
+          "#Gemini",
+          "#Google",
+          "#TechNews",
+          "#CEO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "John Ternus became Apple's CEO on Sept. 1, succeeding Tim Cook. The AI strategy he inherits leans on a rival: Apple pays Google roughly $1 billion a year for a custom Gemini model to power Siri's hardest queries, rather than building that capability in-house.",
+        "hashtags": [
+          "#Apple",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "John Ternus is Apple's CEO now. What he actually inherits: an AI strategy built on a licensed Gemini model Apple pays Google ~$1B/year for, and a Siri overhaul that's already slipped twice.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Ternus is Apple's CEO now. The AI strategy he inherits: Siri's hardest queries go to a licensed Gemini model Apple pays Google ~$1B/year for -- not a model Apple built itself.",
+        "hashtags": [
+          "#Apple",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-clay-7-billion-valuation-wellington-management",
+    "ts": "2026-09-01T19:30:09Z",
+    "export": {
+      "article_id": "newsroom-clay-7-billion-valuation-wellington-management",
+      "url": "https://rtfclmgzn.com/article/clay-7-billion-valuation-wellington-management",
+      "headline": "Clay is raising at a $7 billion pre-money valuation -- its fourth valuation jump in nineteen months",
+      "hook": "Clay is raising at a $7B pre-money valuation, led by Wellington Management -- its fourth valuation jump in about nineteen months.",
+      "key_facts": [
+        "Three of Clay's last five valuation marks were employee tender offers, not new capital into the company.",
+        "Clay's ARR was independently estimated near $150 million by May 2026.",
+        "The amount being raised and the resulting post-money valuation haven't been disclosed."
+      ],
+      "tone": "brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-clay-7-billion-valuation-wellington-management.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Clay is raising at a $7B pre-money valuation, led by Wellington Management -- its fourth valuation jump in 19 months. Three of the last five marks were employee tender offers, not new capital.",
+        "reply_copy": "The valuation history:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Clay",
+          "#AIFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Clay is raising at a $7 billion pre-money valuation, led by Wellington Management.\n\nIt's the AI sales-automation startup's fourth valuation jump in about nineteen months -- but three of the last five marks were employee tender offers, not new money into the company. Full story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Clay",
+          "#StartupFunding",
+          "#VentureCapital",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Clay, the AI sales-and-marketing automation startup, is raising at a $7 billion pre-money valuation led by Wellington Management -- its fourth valuation increase in roughly nineteen months. Three of the five prior marks were employee tender offers rather than new company capital, a distinction worth knowing before comparing the numbers.",
+        "hashtags": [
+          "#AI",
+          "#Funding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Clay is raising at a $7B pre-money valuation, led by Wellington Management -- its fourth valuation jump in 19 months. Worth knowing: three of the last five marks were tender offers, not new capital.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Clay is raising at a $7B pre-money valuation (Wellington-led) -- its fourth jump in 19 months. Three of the last five marks were employee tender offers, not new capital in the door.",
+        "hashtags": [
+          "#AI",
+          "#Funding"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
