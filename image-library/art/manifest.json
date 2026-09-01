@@ -351,6 +351,11 @@
     {
      "article_id": "newsroom-anthropic-claude-code-auto-mode-default-august-14",
      "used_at": "2026-08-10"
+    },
+    {
+     "article_id": "newsroom-anthropic-reward-hacking-sandbox-escape-engineer-reassignment",
+     "used_at": "2026-09-01",
+     "exception": true
     }
    ]
   },
@@ -1234,6 +1239,11 @@
     {
      "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
      "used_at": "2026-08-26",
+     "exception": true
+    },
+    {
+     "article_id": "newsroom-pentagon-genai-mil-chatgpt-grok-claude-purge-deadline",
+     "used_at": "2026-09-01",
      "exception": true
     }
    ]
@@ -2422,6 +2432,11 @@
     {
      "article_id": "newsroom-kimi-k3-open-weights-live",
      "used_at": "2026-07-27"
+    },
+    {
+     "article_id": "newsroom-deepseek-v4-flash-vision-exp-open-weights",
+     "used_at": "2026-09-01",
+     "exception": true
     }
    ]
   },

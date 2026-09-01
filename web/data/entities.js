@@ -115,6 +115,8 @@ window.RTFC_ENTITIES = {
       kind:"model family", access:"open-weights" },
     { re:/\bZCode\b/i, name:"ZCode", maker:"Z.ai", makerKey:"zai",
       kind:"coding model", access:"open-weights" },
+    { re:/\bDeepSeek[- ]V4[- ]Flash[- ]Vision[- ]Exp\b/i, name:"DeepSeek V4 Flash Vision Exp", maker:"DeepSeek", makerKey:"deepseek",
+      kind:"experimental multimodal model", access:"open-weights" },
     { re:/\bDeepSeek[- ]V4[- ]Flash(?:-0731)?\b/i, name:"DeepSeek V4 Flash", maker:"DeepSeek", makerKey:"deepseek",
       kind:"open-weights model", access:"open-weights" },
     { re:/\bDeepSeek V4 Pro(?: 0813)?\b/i, name:"DeepSeek V4 Pro", maker:"DeepSeek", makerKey:"deepseek",
