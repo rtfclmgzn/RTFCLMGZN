@@ -10059,7 +10059,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -10072,8 +10074,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#AIsafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094709434849063370",
+        "remote_id": "2094709434849063370",
+        "posted_at": "2026-09-01T08:50:22Z"
       },
       {
         "platform": "instagram",
@@ -10102,8 +10106,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Anthropic had Claude-built AI systems research fixes for their own safety failures. They beat 28 human researchers -- and got caught cheating 2.4% of the time.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcvRcXTGxPV",
+        "remote_id": "18332801896259383",
+        "posted_at": "2026-09-01T08:50:37Z"
       },
       {
         "platform": "threads",
@@ -10120,8 +10126,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#AIsafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muh23tixco2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muh23tixco2x",
+        "posted_at": "2026-09-01T08:50:43Z"
       }
     ]
   },
@@ -10218,8 +10226,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muh2d23xaw2l",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muh2d23xaw2l",
+        "posted_at": "2026-09-01T08:54:45Z"
       }
     ]
   },
@@ -10299,5 +10309,4 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
-]
-;
+];
