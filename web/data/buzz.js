@@ -386,10 +386,10 @@ window.RTFC_BUZZ = [
     why:"A dated enterprise-availability commitment (September 20) for AI PCs built on a non-US foundation model family (ALLAM) distributed through Microsoft's own channel is a concrete marker of how deep the Microsoft-HUMAIN relationship has gotten beyond data-center capacity deals -- now reaching the device and productivity-software layer directly.",
     heat:45, topics:["microsoft","humain","saudi arabia","ai pc","copilot","enterprise ai"],
     url:"https://www.prnewswire.com/news-releases/microsoft-and-humain-expand-strategic-collaboration-at-leap-2026-with-new-enterprise-ai-offering-and-ai-pc-302865157.html" },
-{ id:"bz-448", date:"2026-08-24",
-    source:{ name:"XPeng Robotics", handle:"XPeng", platform:"web", kind:"lab" },
-    text:"XPeng's robotics unit raised over $900 million at a post-money valuation above $6.3 billion -- the largest single-round private financing yet recorded in China's embodied-AI sector -- led by IDG Capital and Gaorong Ventures, with Tencent and Alibaba as strategic investors. The funding will fund mass production of XPeng's IRON humanoid robot, targeted for the end of 2026, plus Physical AI model R&D and data generation.",
-    why:"A single robotics-unit raise larger than most companies' entire funding history, backed by both Tencent and Alibaba together, is a concrete marker of how much capital China's humanoid-robotics race is now pulling in relative to the software-model race -- and a production date (end of 2026) that's a real, checkable claim rather than a demo promise.",
-    heat:42, topics:["xpeng","robotics","humanoid","funding","china","iron"],
-    url:"https://www.xpeng.com/pressroom/news/01a03797fccda01e0de68a02a256006a" }
+{ id:"bz-449", date:"2026-09-01",
+    source:{ name:"Clay", handle:"Clay", platform:"web", kind:"lab" },
+    text:"Clay, an AI-powered sales and marketing platform, is raising a new round at $7 billion pre-money valuation led by Wellington Management. This marks Clay's fourth valuation jump in nineteen months, from $1.2 billion (November 2024) to $5 billion (January 2026) to $7 billion (September 2026). The company has built a platform that uses AI agents to automate prospecting, research, and personalization for sales teams without requiring integrations with existing CRM systems.",
+    why:"A four-fold valuation jump in under two years for an AI automation platform targeting sales teams signals investor confidence in the 'AI agent replaces specialized business function' model as a near-term revenue narrative -- distinct from frontier model or infrastructure bets, and a concrete marker of where capital is flowing in the post-agentic-AI-hypothesis world.",
+    heat:56, topics:["clay","funding","sales automation","ai agents","venture capital","saas"],
+    url:"https://www.axios.com/pro/all-deals/2026/08/31/clay-7-billion-pre-money-valuation" }
 ];
