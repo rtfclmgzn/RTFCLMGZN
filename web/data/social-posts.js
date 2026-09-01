@@ -9590,21 +9590,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Claude Sonnet 5's scheduled 50% price hike -- set for tomorrow -- already isn't happening. Anthropic made the $2/$10 launch rate permanent on August 10, three weeks before the increase was due.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AI"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Claude Sonnet 5's API pricing was scheduled to jump 50% tomorrow, September 1.\n\nIt already isn't happening. Anthropic made the $2/$10 introductory rate permanent back on August 10 -- three weeks before the increase was due.\n\nOne cost driver the reversal doesn't touch: a separate tokenizer change already bills more tokens per request than the previous model, regardless of the per-token price.\n\nFull story at the link in bio.",
-        "hashtags": ["#Anthropic", "#Claude", "#AI", "#APIpricing", "#TechNews", "#ArtificialIntelligence"],
+        "hashtags": [
+          "#Anthropic",
+          "#Claude",
+          "#AI",
+          "#APIpricing",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Anthropic just canceled a scheduled 50% price increase for Claude Sonnet 5's API -- the $2/$10 per-million-token introductory rate is now the permanent price, not a temporary discount. The increase to $3/$15 had been on the calendar since the model's June launch and was due to take effect tomorrow, September 1.",
-        "hashtags": ["#Anthropic", "#AI"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -9617,7 +9630,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Claude Sonnet 5's scheduled 50% API price hike, due tomorrow, already isn't happening -- Anthropic made the $2/$10 launch rate permanent on August 10.",
-        "hashtags": ["#Anthropic", "#AI", "#Claude"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#Claude"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -9649,21 +9666,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Infostealer malware is hijacking Claude login sessions to drain paid usage -- skipping passwords and 2FA entirely by stealing already-authenticated session cookies. Anthropic is signing affected users out and refunding charges.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#Cybersecurity", "#AI"],
+        "hashtags": [
+          "#Cybersecurity",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Malware on your own computer can steal an active Claude login session -- no password, no 2FA needed.\n\nAnthropic says infostealers including Vidar, LummaC2, StealC and RedLine are copying session cookies straight off infected machines to drain paid usage.\n\nThe company is signing affected users out and refunding unauthorized charges -- but warns that doesn't remove the malware itself.\n\nFull story at the link in bio.",
-        "hashtags": ["#Cybersecurity", "#Anthropic", "#AI", "#Malware", "#TechNews", "#InfoSec"],
+        "hashtags": [
+          "#Cybersecurity",
+          "#Anthropic",
+          "#AI",
+          "#Malware",
+          "#TechNews",
+          "#InfoSec"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Infostealer malware is stealing active Claude login sessions straight off infected computers -- bypassing passwords and two-factor authentication by copying already-authenticated session cookies. Anthropic says it's signing out affected sessions, removing saved payment methods, and refunding unauthorized charges, but warns that doesn't remove the malware still on the device.",
-        "hashtags": ["#Cybersecurity", "#AI"],
+        "hashtags": [
+          "#Cybersecurity",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -9676,7 +9706,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Infostealer malware is stealing Claude login sessions to drain paid usage -- no password or 2FA needed, just a stolen session cookie. Anthropic is signing affected users out and refunding charges.",
-        "hashtags": ["#Cybersecurity", "#AI", "#Anthropic"],
+        "hashtags": [
+          "#Cybersecurity",
+          "#AI",
+          "#Anthropic"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -9708,7 +9742,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "AI chatbots debunked Russian, Chinese and Iranian propaganda about 75% of the time in a new NPR/NewsGuard test -- beating every search engine and AI search summary tried.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Misinformation"],
+        "hashtags": [
+          "#AI",
+          "#Misinformation"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -9719,21 +9756,35 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "A separate study found Google's AI Overviews cite unsupported claims in roughly 1 of 9 factual statements -- worth knowing before you trust that 75% chatbot debunking score too far.",
         "reply_copy": "The full picture:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#GoogleAI"],
+        "hashtags": [
+          "#AI",
+          "#GoogleAI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "AI chatbots vs. search engines: who catches propaganda better?\n\nNPR and NewsGuard tested ChatGPT, Gemini, Copilot, Meta AI, Grok and Claude against 30 questions built from real Russian, Chinese and Iranian disinformation.\n\nThe chatbots won -- debunking false narratives about 75% of the time, beating every search engine and AI-generated search summary tested.\n\nBut two separate academic studies complicate the good news: one found Google's AI Overviews cite unsupported claims roughly 1 time in 9; another found chatbots answer more favorably about China's government when asked in Chinese instead of English.\n\nFull story at the link in bio.",
-        "hashtags": ["#AI", "#Misinformation", "#Chatbots", "#NewsGuard", "#TechNews", "#ArtificialIntelligence", "#MediaLiteracy"],
+        "hashtags": [
+          "#AI",
+          "#Misinformation",
+          "#Chatbots",
+          "#NewsGuard",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#MediaLiteracy"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "NPR and NewsGuard tested six AI chatbots against 30 questions built from real Russian, Chinese and Iranian disinformation -- the chatbots debunked false narratives about 75% of the time, beating every search engine and AI-generated search summary tested. Two separate academic studies complicate that good news without contradicting it: one found Google's AI Overviews cite unsupported claims roughly once in nine, the other found chatbots answering more favorably about China's government when asked in Chinese instead of English.",
-        "hashtags": ["#AI", "#Misinformation"],
+        "hashtags": [
+          "#AI",
+          "#Misinformation"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -9754,7 +9805,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "AI chatbots debunked Russian, Chinese and Iranian propaganda ~75% of the time in a new NPR/NewsGuard test -- beating every search engine and AI summary tried. Two academic studies complicate the good news without contradicting it.",
-        "hashtags": ["#AI", "#Misinformation", "#NewsGuard"],
+        "hashtags": [
+          "#AI",
+          "#Misinformation",
+          "#NewsGuard"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -9786,9 +9841,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Sony Music and Warner Chappell just sued Anthropic, alleging Claude was trained on tens of thousands of pirated songs -- and leaning on a judge's own words about Anthropic's book piracy: 'straightforward piracy but at massive scale.'",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Copyright"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Copyright"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094587911522152668",
+        "remote_id": "2094587911522152668",
+        "posted_at": "2026-09-01T00:47:28Z"
       },
       {
         "platform": "x",
@@ -9797,29 +9857,46 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The suit is the fifth music-publisher lawsuit against Anthropic since 2023 -- and the first to name founders Dario Amodei and Benjamin Mann personally, seeking up to $150,000 per song.",
         "reply_copy": "The full timeline:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Anthropic"],
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Sony Music Publishing and Warner Chappell Music sued Anthropic on August 28, accusing the AI lab of training Claude on tens of thousands of copyrighted songs pulled from pirated book archives, lyrics sites, and AI-training datasets.\n\nThe complaint leans hard on a federal judge's own words from a separate case: Anthropic's book-torrenting was \"straightforward piracy but at massive scale\" -- conduct that already cost the company a $1.5 billion settlement.\n\nThis is the fifth music-industry suit against Anthropic since 2023, and the first to name founders Dario Amodei and Benjamin Mann personally. Damages sought: up to $150,000 per song.\n\nFull story at the link in bio.",
-        "hashtags": ["#AI", "#Copyright", "#Anthropic", "#MusicIndustry", "#TechNews", "#ArtificialIntelligence"],
+        "hashtags": [
+          "#AI",
+          "#Copyright",
+          "#Anthropic",
+          "#MusicIndustry",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Sony Music Publishing and Warner Chappell sued Anthropic on August 28, accusing the AI lab of training Claude on tens of thousands of copyrighted songs without a license. The complaint leans on a federal judge's finding from a separate case -- that Anthropic's book-torrenting was \"straightforward piracy but at massive scale\" -- conduct that already cost the company a $1.5 billion settlement. It's the fifth music-industry suit against Anthropic since 2023, and the first to name founders Dario Amodei and Benjamin Mann personally.",
-        "hashtags": ["#AI", "#Copyright"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Copyright"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117034711396947",
+        "remote_id": "1238977099292018_122117034711396947",
+        "posted_at": "2026-09-01T00:48:02Z"
       },
       {
         "platform": "threads",
         "copy": "Sony Music and Warner Chappell sued Anthropic, alleging Claude was trained on tens of thousands of pirated songs -- leaning on a judge's own words: Anthropic's book piracy was \"straightforward piracy but at massive scale.\"",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcuaQnvmNQX",
+        "remote_id": "18332712160302207",
+        "posted_at": "2026-09-01T00:48:24Z"
       },
       {
         "platform": "threads",
@@ -9832,9 +9909,14 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Sony Music and Warner Chappell sued Anthropic, alleging Claude was trained on tens of thousands of pirated songs -- leaning on a judge's finding that Anthropic's book piracy was \"straightforward piracy but at massive scale.\"",
-        "hashtags": ["#AI", "#Copyright"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Copyright"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mug75kftmz2d",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mug75kftmz2d",
+        "posted_at": "2026-09-01T00:48:30Z"
       }
     ]
   },
@@ -9864,9 +9946,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Alphabet and Amazon just booked over $150 billion in one-quarter paper gains from their Anthropic stakes -- 87% and 85% of each company's entire quarterly profit. None of it is cash.",
         "reply_copy": "Full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Markets"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Markets"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2094586902808797480",
+        "remote_id": "2094586902808797480",
+        "posted_at": "2026-09-01T00:43:28Z"
       },
       {
         "platform": "x",
@@ -9875,29 +9962,48 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Microsoft and Salesforce already showed this trick at smaller scale this earnings season. Alphabet and Amazon just ran it at roughly 47 times Microsoft's single Anthropic gain.",
         "reply_copy": "The full comparison:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Earnings"],
+        "hashtags": [
+          "#AI",
+          "#Earnings"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Alphabet's Q2 \"other income\" hit $98.0 billion. Amazon's hit $53.4 billion. Both companies say the driver was mostly unrealized markups on their stakes in Anthropic.\n\nThat's 87% and 85% of each company's ENTIRE quarterly net income -- from an accounting line, not from selling ads or cloud compute. None of it is cash.\n\nMicrosoft and Salesforce each disclosed smaller versions of the same mechanism this earnings season. A lower Anthropic valuation at its eventual IPO would reverse every one of these marks at once.\n\nFull breakdown at the link in bio.",
-        "hashtags": ["#AI", "#Markets", "#Anthropic", "#Earnings", "#TechNews", "#BigTech"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Markets",
+          "#Anthropic",
+          "#Earnings",
+          "#TechNews",
+          "#BigTech"
+        ],
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DcuZubWHczB/",
+        "remote_id": "18100115021369113",
+        "posted_at": "2026-09-01T00:43:47Z"
       },
       {
         "platform": "facebook",
         "copy": "Alphabet's Q2 other income hit $98.0 billion and Amazon's hit $53.4 billion -- both primarily unrealized markups on their stakes in Anthropic, making up 87% and 85% of each company's entire quarterly net income. None of it is cash. Microsoft and Salesforce each disclosed smaller versions of the same mechanism this earnings season; a lower Anthropic valuation at its eventual IPO would reverse every one of these marks industry-wide.",
-        "hashtags": ["#AI", "#Markets"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Markets"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117033493396947",
+        "remote_id": "1238977099292018_122117033493396947",
+        "posted_at": "2026-09-01T00:43:58Z"
       },
       {
         "platform": "threads",
         "copy": "Alphabet and Amazon booked over $150 billion in one-quarter paper gains from their Anthropic stakes -- 87% and 85% of each company's entire quarterly profit. None of it is cash.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcuZx-bmGsI",
+        "remote_id": "18107002214583564",
+        "posted_at": "2026-09-01T00:44:15Z"
       },
       {
         "platform": "threads",
@@ -9910,9 +10016,14 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Alphabet and Amazon booked over $150 billion in one-quarter paper gains from their Anthropic stakes -- 87% and 85% of each company's entire quarterly profit, none of it cash.",
-        "hashtags": ["#AI", "#Markets"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Markets"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mug6w4p7jj2d",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mug6w4p7jj2d",
+        "posted_at": "2026-09-01T00:44:20Z"
       }
     ]
   }
