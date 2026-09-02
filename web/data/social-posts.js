@@ -10836,8 +10836,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Funding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mujtxuqmbo2i",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mujtxuqmbo2i",
+        "posted_at": "2026-09-02T11:39:07Z"
       }
     ]
   },
@@ -10933,8 +10935,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Apple",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mujtqnscpr2i",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mujtqnscpr2i",
+        "posted_at": "2026-09-02T11:35:05Z"
       }
     ]
   },
@@ -10970,7 +10974,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -11026,8 +11030,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-02T05:06:19Z",
         "copy": "A reported \"$135 billion\" total for Anthropic's 2026 compute deals sums a six-year purchase agreement against a separately structured six-year purchase agreement at a different site. Real number, not a comparable one.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DcyJC19GyVf",
+        "remote_id": "18112857086083624",
+        "posted_at": "2026-09-02T11:34:58Z"
       },
       {
         "platform": "bluesky",
@@ -11075,7 +11081,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
