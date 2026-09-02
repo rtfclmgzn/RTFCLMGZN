@@ -11466,8 +11466,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Texas",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095236026486911187",
+        "remote_id": "2095236026486911187",
+        "posted_at": "2026-09-02T19:42:51Z"
       },
       {
         "platform": "x",
@@ -11563,8 +11565,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIinEducation",
           "#NYC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095235017803026641",
+        "remote_id": "2095235017803026641",
+        "posted_at": "2026-09-02T19:38:50Z"
       },
       {
         "platform": "x",
