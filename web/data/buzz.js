@@ -403,5 +403,17 @@ window.RTFC_BUZZ = [
     text:"Anthropic released Claude Fable 5.1 and Mythos 5.1 on September 1, twinned versions of its most advanced model with different safeguard levels. Fable 5.1 is available to all users; Mythos 5.1 is restricted to US organizations in Anthropic's cybersecurity and life sciences trusted-access programs. Cache-read pricing dropped 75%, cutting typical workload costs by roughly 25% and highly agentic workloads by up to 45%, while base pricing remains $10/$50 per million tokens. Both models ship with a 1M-token context window and 128K-token maximum output.",
     why:"A frontier lab releasing its highest-capability model with dramatically reduced costs for agentic workloads -- up to 45% cheaper for agent-heavy tasks -- is a direct pricing move aimed at capturing the emerging agent-build market before competitors consolidate that segment. The cost drop is the loudest signal, not the safeguard split.",
     heat:68, topics:["anthropic","claude","fable 5.1","mythos 5.1","model release","pricing","agents"],
-    url:"https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/" }
+    url:"https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/" },
+{ id:"bz-452", date:"2026-08-31",
+    source:{ name:"Jason Isbell", handle:"Musicians v. Suno", platform:"web", kind:"person" },
+    text:"Jason Isbell, David Lowery, Guy Forsyth and Eduardo Calle filed a class-action lawsuit against Suno in Massachusetts federal court on August 31, alleging the AI music generator encoded their identities into its model and lets users type a musician's name to generate songs imitating their voice and style -- a right-of-publicity claim that, per the complaint, does not depend on copyright infringement at all. Typing Isbell's name reportedly produced an Americana track called \"Paper Bell\" mimicking his vocal style.",
+    why:"This is a distinct legal theory from the copyright suits already stacking up against Suno -- it targets name-and-style exploitation directly, a claim that could reach AI voice/style mimicry even where no specific song was copied, which is a broader and potentially more dangerous exposure for music-generation tools.",
+    heat:52, topics:["suno","jason isbell","lawsuit","right of publicity","ai music","class action"],
+    url:"https://stereogum.com/2510079/jason-isbell-david-lowery-more-sue-suno-for-violating-rights-of-publicity/news" },
+{ id:"bz-454", date:"2026-09-01",
+    source:{ name:"Meta", handle:"Alexandr Wang", platform:"x", kind:"lab" },
+    text:"Meta took its terminal coding agent Muse Code out of beta on September 1, three weeks after its August 5 launch, adding three subscription tiers ($5 to $50 a month) and a developer-preview SDK that lets outside developers build their own agents on top of Muse Code's sessions, tools and permissions. Alexandr Wang, who leads Meta Superintelligence Labs, posted on X that \"muse code is out of beta,\" and Mark Zuckerberg said it is \"now built to power agents beyond the terminal.\"",
+    why:"Meta going from beta to a paid, SDK-backed product in three weeks is an aggressive cadence against Claude Code and Codex, and the SDK move -- letting others build on Muse Code rather than just use it -- is the more consequential part of the announcement than the pricing.",
+    heat:47, topics:["meta","muse code","muse spark","coding agent","sdk","product launch"],
+    url:"https://x.com/alexandr_wang/status/2094502557129543774" }
 ];

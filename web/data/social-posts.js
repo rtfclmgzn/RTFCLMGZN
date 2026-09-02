@@ -10840,5 +10840,220 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-apple-openai-trade-secrets-evidence-destruction",
+    "ts": "2026-09-02T00:06:16Z",
+    "export": {
+      "article_id": "newsroom-apple-openai-trade-secrets-evidence-destruction",
+      "url": "https://rtfclmgzn.com/article/apple-openai-trade-secrets-evidence-destruction",
+      "headline": "Apple says a forensic laptop exam caught a former engineer destroying evidence in its OpenAI trade-secrets suit",
+      "hook": "Apple's August 31 filing alleges a former engineer downloaded a confidential circuit schematic after leaving for OpenAI, then asked a colleague to destroy the evidence once he learned Apple was investigating.",
+      "key_facts": [
+        "Apple's suit, filed July 10, names ex-engineer Chang Liu, ex-VP Tang Tan, OpenAI and Jony Ive's io Products.",
+        "Apple says Liu asked colleague Yu-Ting Peng to wipe his devices once he learned of the probe.",
+        "A hearing before Judge Edward J. Davila is set for October 1."
+      ],
+      "tone": "composed, legally precise, attributes every allegation rather than stating it as fact",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-apple-openai-trade-secrets-evidence-destruction.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Apple says a forensic laptop exam caught a former engineer destroying evidence in its OpenAI trade-secrets suit -- alleging he downloaded a confidential circuit schematic two months after leaving Apple.",
+        "reply_copy": "What each side is actually saying:",
+        "link_in_reply": true,
+        "hashtags": ["#Apple", "#OpenAI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T05:06:16Z",
+        "copy": "OpenAI's defense blames Apple's own device-handover practices. What it hasn't specifically rebutted: the claim that a colleague was asked to wipe the ex-engineer's devices once Apple came looking.",
+        "reply_copy": "The full filing breakdown:",
+        "link_in_reply": true,
+        "hashtags": ["#Apple", "#OpenAI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Apple told a federal court on August 31 that a forensic laptop exam caught a former engineer destroying evidence in its OpenAI trade-secrets suit.\n\nThe filing says Chang Liu downloaded a confidential Apple circuit schematic two months after leaving for OpenAI, then asked a colleague to wipe his devices once he learned of the investigation.\n\nOpenAI calls the case \"a mess of Apple's own making\" and blames Apple's own security practices -- but hasn't specifically rebutted the evidence-destruction claim.\n\nFull breakdown of both sides' claims at the link in bio.",
+        "hashtags": ["#Apple", "#OpenAI", "#TechNews", "#AI", "#Lawsuit", "#TradeSecrets"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Apple's August 31 court filing says a forensic laptop exam caught former engineer Chang Liu destroying evidence in its trade-secrets lawsuit against OpenAI -- alleging he downloaded a confidential circuit schematic two months after leaving Apple, then asked a colleague to wipe his devices once he learned of the investigation. OpenAI calls the case \"a mess of Apple's own making\" and blames Apple's own security practices, though it hasn't specifically addressed the evidence-destruction claim. A hearing is set for October 1.",
+        "hashtags": ["#Apple", "#OpenAI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Apple says a forensic laptop exam caught a former engineer destroying evidence in its OpenAI trade-secrets suit. New Aug. 31 filing: he allegedly downloaded a confidential circuit schematic, then asked a colleague to wipe his devices once he learned Apple was investigating.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T05:06:16Z",
+        "copy": "OpenAI's public response blames Apple's own iCloud and device-handover policies -- but doesn't specifically deny the claim that a colleague was asked to wipe the ex-engineer's devices.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Apple's Aug. 31 filing says a forensic laptop exam caught a former engineer destroying evidence in its OpenAI trade-secrets suit.",
+        "hashtags": ["#Apple", "#OpenAI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-lambda-35-billion-nvidia-hut8-compute-chain",
+    "ts": "2026-09-02T00:06:19Z",
+    "export": {
+      "article_id": "newsroom-anthropic-lambda-35-billion-nvidia-hut8-compute-chain",
+      "url": "https://rtfclmgzn.com/article/anthropic-lambda-35-billion-nvidia-hut8-compute-chain",
+      "headline": "Anthropic's $35 billion Lambda deal is its second six-year, nine-figure compute contract in six days -- and the money passes through three companies before it reaches a GPU",
+      "hook": "Anthropic is paying Lambda $35 billion for Nvidia-powered compute in Texas, but Lambda doesn't own the site -- Nvidia leases it from a former Bitcoin miner in a separate $19.6 billion deal.",
+      "key_facts": [
+        "Anthropic pays Lambda $35B over 6 years; Nvidia separately pays Hut 8 $19.6B over 15 years for the same facility.",
+        "It's Anthropic's second six-year, nine-figure compute deal in six days, after $45B with Nscale.",
+        "What Lambda pays Nvidia for the capacity it resells is not disclosed anywhere."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-lambda-35-billion-nvidia-hut8-compute-chain.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic will pay Lambda $35B over 6 years for Nvidia-powered compute in Texas. But Lambda doesn't own the site -- Nvidia leases it from a former Bitcoin miner in a separate $19.6B deal. Three companies, three contracts, one building.",
+        "reply_copy": "The three-company money chain:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#Nvidia"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T05:06:19Z",
+        "copy": "Anthropic's 2nd six-year, nine-figure compute deal in 6 days. A reported '$135B' 2026 total sums deals priced completely differently -- adding the headline numbers together answers no real question.",
+        "reply_copy": "Why the numbers don't add up:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic is paying cloud provider Lambda $35 billion over six years for Nvidia-powered compute at a 350-megawatt Texas site.\n\nBut Lambda doesn't own that site. Nvidia leases it from Hut 8 -- a former Bitcoin miner -- in a separate deal reported at $19.6 billion over 15 years. Nvidia then supplies Lambda, which sells to Anthropic.\n\nThree companies, three contracts, one building -- and what Lambda actually pays Nvidia for the capacity it resells has never been disclosed.\n\nIt's Anthropic's second six-year, nine-figure compute deal in six days. Full breakdown at the link in bio.",
+        "hashtags": ["#Anthropic", "#Nvidia", "#AI", "#DataCenters", "#TechNews", "#Compute"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic is paying Lambda $35 billion over six years for Nvidia-powered compute at a 350-megawatt Texas site -- but Lambda doesn't own that site. Nvidia leases it from Hut 8, a former Bitcoin miner, in a separate deal reported at $19.6 billion over 15 years. It's Anthropic's second six-year, nine-figure compute commitment in six days, after $45 billion with Nscale -- and the headline dollar figures describe different transactions in the same supply chain, not one comparable pile of money.",
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's $35B Lambda deal is its second six-year, nine-figure compute contract in six days. The twist: the money passes through three companies -- Anthropic, Lambda, Nvidia, and a former Bitcoin miner -- before it reaches a single GPU.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T05:06:19Z",
+        "copy": "A reported \"$135 billion\" total for Anthropic's 2026 compute deals sums a six-year purchase agreement against a separately structured six-year purchase agreement at a different site. Real number, not a comparable one.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic's $35B Lambda deal: the money passes through three companies (Lambda, Nvidia, a former Bitcoin miner) before it reaches a GPU. Second nine-figure compute deal in six days.",
+        "hashtags": ["#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-aurora-ransomware-cursor-ai-agent-attack-planning",
+    "ts": "2026-09-02T00:06:23Z",
+    "export": {
+      "article_id": "newsroom-aurora-ransomware-cursor-ai-agent-attack-planning",
+      "url": "https://rtfclmgzn.com/article/aurora-ransomware-cursor-ai-agent-attack-planning",
+      "headline": "A ransomware affiliate used Cursor's AI coding agent to plan real attacks on more than 20 companies",
+      "hook": "CloudSEK says a ransomware affiliate fed Cursor's AI coding agent live credentials, then had it draft reconnaissance and exploitation plans that compromised 20-plus real companies across nine countries.",
+      "key_facts": [
+        "The operator worked entirely in Russian and excluded all CIS-region targets.",
+        "Cursor drafted a full Active Directory Certificate Services exploitation plan.",
+        "20-plus organizations across nine countries were compromised between April and July 2026."
+      ],
+      "tone": "technical, detail-obsessed, attributes every claim to CloudSEK's report",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-aurora-ransomware-cursor-ai-agent-attack-planning.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A ransomware affiliate used Cursor's AI coding agent to plan real attacks on 20+ companies -- feeding it live credentials, then having it draft exploitation plans in Russian, per a new CloudSEK report.",
+        "reply_copy": "The attack chain, step by step:",
+        "link_in_reply": true,
+        "hashtags": ["#Cybersecurity", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A ransomware affiliate used Cursor -- an AI coding agent -- as a hands-on tool to plan and run real attacks on more than 20 companies, according to a new report from security firm CloudSEK.\n\nThe operator fed Cursor live stolen credentials, then had it run reconnaissance, check privilege levels, and draft a full Active Directory Certificate Services exploitation plan -- entirely in Russian.\n\n20-plus organizations across nine countries were compromised between April and July 2026. Full breakdown at the link in bio.",
+        "hashtags": ["#Cybersecurity", "#AI", "#Ransomware", "#TechNews", "#InfoSec"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Security firm CloudSEK reports that a Russian-speaking Aurora ransomware affiliate used Cursor, an AI coding agent, to plan and run real attacks on more than 20 companies across nine countries between April and July -- feeding the tool live credentials and having it draft reconnaissance and exploitation plans. CloudSEK frames the AI agent as a force multiplier for the attacker's own planning, not the source of the vulnerabilities it was used to find.",
+        "hashtags": ["#Cybersecurity", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "CloudSEK says a ransomware affiliate used Cursor's AI coding agent as a hands-on tool -- recon, privilege checks, a full Active Directory exploitation plan -- to compromise 20+ real companies across 9 countries between April and July.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A ransomware affiliate used Cursor's AI coding agent to plan real attacks on 20+ companies, per a new CloudSEK report -- recon and exploitation planning done by the agent itself.",
+        "hashtags": ["#Cybersecurity", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
