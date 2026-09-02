@@ -11132,5 +11132,301 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-02T04:54:15Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-eu-designates-chatgpt-very-large-search-engine-dsa",
+    "ts": "2026-09-02T14:27:39Z",
+    "export": {
+      "article_id": "newsroom-eu-designates-chatgpt-very-large-search-engine-dsa",
+      "url": "https://rtfclmgzn.com/article/eu-designates-chatgpt-very-large-search-engine-dsa",
+      "headline": "The EU classified ChatGPT as a search engine under its toughest platform law -- and OpenAI's own transparency numbers are what triggered it",
+      "hook": "The EU designated ChatGPT a Very Large Online Search Engine under the DSA -- the first time a generative AI chatbot has drawn the classification, triggered by OpenAI's own transparency numbers.",
+      "key_facts": [
+        "OpenAI's own disclosure of 159.1 million EU users, more than triple the 45-million threshold, is what triggered the designation.",
+        "Reddit (57.2M) and Roblox (46.6M) were designated in the same batch; Roblox cleared the bar by just 1.6 million.",
+        "Reported outlets disagree on the exact compliance deadline -- dates range from late November 2026 to January 2027."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-eu-designates-chatgpt-very-large-search-engine-dsa.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "The EU just classified ChatGPT as a search engine under its toughest platform law -- triggered by OpenAI's own disclosure of 159.1M EU users, 3x the threshold. Reddit and Roblox got the same designation in the same batch.",
+        "reply_copy": "What it actually requires:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#ChatGPT",
+          "#EU"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T19:27:39Z",
+        "copy": "Gemini, Claude and Perplexity all offer live web search in a chat interface. The EU's test for ChatGPT's new designation is capability-based, not brand-based -- cross 45M EU users doing that, and you're next.",
+        "reply_copy": "The precedent that matters:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#EU"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The EU just put ChatGPT in its toughest regulatory tier.\n\nThe European Commission designated ChatGPT a \"Very Large Online Search Engine\" under the Digital Services Act -- the first time a generative AI chatbot has gotten that label.\n\nThe trigger wasn't a government probe. It was OpenAI's own transparency disclosure: 159.1 million average monthly EU users, more than triple the 45-million threshold.\n\nReddit and Roblox got the parallel \"platform\" designation in the same batch. All three now owe annual risk assessments, outside audits, and fines of up to 6% of global revenue.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#ChatGPT",
+          "#OpenAI",
+          "#EU",
+          "#DigitalServicesAct",
+          "#AIRegulation",
+          "#TechNews",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The European Commission designated ChatGPT a \"Very Large Online Search Engine\" under the Digital Services Act on August 31 -- the first time a generative AI chatbot has drawn the EU's toughest platform classification. The trigger was OpenAI's own transparency disclosure: 159.1 million average monthly EU users, more than triple the 45-million threshold. Reddit and Roblox were designated in the same batch. All three now face annual risk assessments, independent audits, and fines of up to 6% of global revenue.",
+        "hashtags": [
+          "#ChatGPT",
+          "#EU"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "The EU designated ChatGPT a \"Very Large Online Search Engine\" under the DSA -- the first AI chatbot to get that label. The trigger: OpenAI's own transparency disclosure of 159.1M EU users, 3x the threshold. Reddit and Roblox got the parallel designation the same day.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T19:27:39Z",
+        "copy": "Outlets can't agree on ChatGPT's DSA compliance deadline -- reported dates span late November 2026 to January 2027. Most cite the same \"four months from designation\" rule and still land in three different places. We ran the actual arithmetic.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "The EU designated ChatGPT a search engine under its toughest platform law -- triggered by OpenAI's own numbers (159.1M EU users, 3x the threshold). Reddit and Roblox got the same tier in the same batch.",
+        "hashtags": [
+          "#ChatGPT",
+          "#EU",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-claude-code-auto-mode-exploit-rehberger-containment-escape",
+    "ts": "2026-09-02T14:27:42Z",
+    "export": {
+      "article_id": "newsroom-claude-code-auto-mode-exploit-rehberger-containment-escape",
+      "url": "https://rtfclmgzn.com/article/claude-code-auto-mode-exploit-rehberger-containment-escape",
+      "headline": "A researcher got Claude Code's Auto Mode to run malware up to 80% of the time. Anthropic closed the report as 'Informative,' not a vulnerability",
+      "hook": "A researcher got Claude Code's Auto Mode to run malware up to 80% of the time by asking it to summarize a website. Anthropic closed the report as 'Informative,' not a vulnerability.",
+      "key_facts": [
+        "Rehberger reported the exploit chain succeeding 60-80% of the time across his own small-sample tests.",
+        "Anthropic closed the report as 'Informative,' not a vulnerability requiring a fix.",
+        "Claude Code 2.1.257 later added a 'Containment Escape' rule, though nothing public links the two."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-claude-code-auto-mode-exploit-rehberger-containment-escape.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A researcher got Claude Code's Auto Mode to run malware up to 80% of the time -- just by asking it to summarize a booby-trapped website. Anthropic's response: closed as 'Informative,' not a vulnerability.",
+        "reply_copy": "How the exploit actually works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#ClaudeCode",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T19:27:42Z",
+        "copy": "Anthropic cites a 0.00% prompt-injection success rate for Claude Code's Auto Mode. A researcher's chained exploit hit 60-80%. Different tests of different things -- but worth knowing before you run Auto Mode unattended.",
+        "reply_copy": "What's actually established vs. reported:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A security researcher just showed Claude Code's Auto Mode can be tricked into running real malware -- up to 80% of the time.\n\nThe trick: ask it to summarize a website. It downloads a booby-trapped ZIP, writes its own decoder (the \"safe\" choice), and Python's own import system loads the attacker's poisoned file instead.\n\nAnthropic's security team reviewed the report and closed it as \"Informative\" -- not a vulnerability requiring a fix.\n\nDays later, Claude Code shipped a new security rule. Nothing official links the two.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#ClaudeCode",
+          "#Anthropic",
+          "#AI",
+          "#Cybersecurity",
+          "#AIAgents",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Security researcher Johann Rehberger showed that asking Claude Code to summarize a booby-trapped website can chain, inside Auto Mode's default permissions, into real code execution -- up to 80% of the time across his own tests. Anthropic's security team closed his report as \"Informative\" rather than a vulnerability, calling Auto Mode \"a convenience feature backed by a best-effort classifier, not a security guarantee.\" Days later, Claude Code shipped a new \"Containment Escape\" security rule -- though nothing public ties the two together.",
+        "hashtags": [
+          "#ClaudeCode",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A researcher got Claude Code's Auto Mode to run malware up to 80% of the time -- just by asking it to summarize a website. Anthropic's security team closed the report as \"Informative,\" calling Auto Mode \"a convenience feature backed by a best-effort classifier, not a security guarantee.\"",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T19:27:42Z",
+        "copy": "Anthropic cites a 0.00% prompt-injection success rate for Auto Mode. A researcher's chained exploit hit 60-80%. Not a contradiction -- different tests measuring different things. But worth knowing which claim is actually established before trusting either one.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A researcher got Claude Code's Auto Mode to run malware up to 80% of the time, just by asking it to summarize a website. Anthropic closed the report as \"Informative,\" not a vulnerability.",
+        "hashtags": [
+          "#ClaudeCode",
+          "#AI",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-ipo-30-trillion-tam-pitch-unconfirmed",
+    "ts": "2026-09-02T14:27:45Z",
+    "export": {
+      "article_id": "newsroom-anthropic-ipo-30-trillion-tam-pitch-unconfirmed",
+      "url": "https://rtfclmgzn.com/article/anthropic-ipo-30-trillion-tam-pitch-unconfirmed",
+      "headline": "Anthropic is reportedly pitching IPO investors a $30 trillion market -- bigger than SpaceX's own record claim, and close to the entire US economy",
+      "hook": "Anthropic is reportedly pitching IPO investors a $30 trillion addressable market -- bigger than SpaceX's own record claim. Every figure in the pitch is unconfirmed by Anthropic itself.",
+      "key_facts": [
+        "Reported targets: a $2 trillion valuation and up to $100 billion raised, as soon as September.",
+        "The $30 trillion TAM claim exceeds SpaceX's own $28.5 trillion prospectus figure and nears total US GDP.",
+        "Anthropic's only on-the-record statement is that it filed confidentially for an IPO June 1 -- no figures attached."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-ipo-30-trillion-tam-pitch-unconfirmed.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic is reportedly pitching IPO investors a $30 TRILLION addressable market -- bigger than SpaceX's own record prospectus claim, close to the entire US economy. Every number here is unconfirmed by Anthropic itself.",
+        "reply_copy": "What's actually confirmed vs. just reported:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T19:27:45Z",
+        "copy": "Uber's 2019 prospectus cited a $6T TAM by counting all ground transport + food delivery spend. It's now cited as marketing, not math. Anthropic's reported $30T pitch invites the same question: what share could it actually capture?",
+        "reply_copy": "The skeptic's case, made explicit:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic is reportedly pitching IPO investors a market opportunity worth $30 TRILLION.\n\nThat's bigger than SpaceX's own record $28.5 trillion prospectus claim -- and close to the US's entire $32.5 trillion GDP.\n\nReported targets: a $2 trillion valuation, up to $100 billion raised, as soon as September.\n\nHere's the catch: every one of these numbers comes from unnamed people familiar with the pitch. Anthropic's only on-the-record statement is that it filed confidentially for an IPO on June 1 -- with zero figures attached.\n\nWe ran the actual arithmetic. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#IPO",
+          "#AI",
+          "#Investing",
+          "#TechNews",
+          "#StockMarket",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic is reportedly pitching IPO investors a total addressable market topping $30 trillion -- larger than SpaceX's own $28.5 trillion prospectus figure and within reach of total US GDP. Reported targets: a $2 trillion valuation and up to $100 billion raised, as soon as September. Every headline figure here, including Anthropic's own revenue growth, comes from unnamed people familiar with the matter -- the only fact Anthropic has confirmed on the record is that it filed confidentially for an IPO on June 1, with no numbers attached.",
+        "hashtags": [
+          "#Anthropic",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic is reportedly pitching IPO investors a $30 trillion addressable market -- bigger than SpaceX's own record claim, close to total US GDP. Reported targets: $2 trillion valuation, up to $100 billion raised. Every number here is unconfirmed by Anthropic itself.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-02T19:27:45Z",
+        "copy": "One investor told the FT that even 800%-annual growth would justify roughly a 30x revenue multiple -- which implies a $3 trillion valuation off a $100B run rate, not the reported $2 trillion target. The arithmetic doesn't obviously support either number yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic is reportedly pitching IPO investors a $30 trillion addressable market -- bigger than SpaceX's own record claim. Every figure here, including the $2T valuation target, is unconfirmed by Anthropic itself.",
+        "hashtags": [
+          "#Anthropic",
+          "#IPO",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

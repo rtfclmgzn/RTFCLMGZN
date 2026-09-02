@@ -39,6 +39,8 @@ window.RTFC_ENTITIES = {
   // ---------------------------------------------------------------------------
   models: [
     // --- Anthropic ---
+    { re:/\bClaude Fable 5\.1\b|\bFable 5\.1\b/i, name:"Claude Fable 5.1", maker:"Anthropic", makerKey:"anthropic",
+      kind:"frontier reasoning model", access:"closed" },
     { re:/\bClaude Fable 5\b|\bFable 5\b/i, name:"Claude Fable 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"frontier reasoning model", access:"closed" },
     { re:/\bClaude Opus 5\b/i, name:"Claude Opus 5", maker:"Anthropic", makerKey:"anthropic",
@@ -47,6 +49,8 @@ window.RTFC_ENTITIES = {
       kind:"agentic coding model", access:"closed" },
     { re:/\bClaude Sonnet 5\b/i, name:"Claude Sonnet 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"mid-tier workhorse model", access:"closed" },
+    { re:/\bClaude Mythos 5\.1\b|\bMythos 5\.1\b/i, name:"Claude Mythos 5.1", maker:"Anthropic", makerKey:"anthropic",
+      kind:"smaller safety-focused model, restricted-access", access:"closed" },
     { re:/\bClaude Mythos 5\b|\bMythos 5\b/i, name:"Claude Mythos 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"smaller safety-focused model", access:"closed" },
     { re:/\bClaude Mythos Preview\b|\bMythos Preview\b/i, name:"Claude Mythos Preview", maker:"Anthropic", makerKey:"anthropic",

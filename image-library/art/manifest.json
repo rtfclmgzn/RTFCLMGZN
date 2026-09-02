@@ -1897,7 +1897,12 @@
    ],
    "text_space": "screens are busy — avoid center",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-eu-designates-chatgpt-very-large-search-engine-dsa",
+     "used_at": "2026-09-02"
+    }
+   ]
   },
   {
    "id": "art-068-glass-encased-mainframe-cube",
@@ -2493,7 +2498,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-01-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-ipo-30-trillion-tam-pitch-unconfirmed",
+     "used_at": "2026-09-02"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-02",
@@ -4100,7 +4110,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Autonomous-Compute-Lab-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-claude-code-auto-mode-exploit-rehberger-containment-escape",
+     "used_at": "2026-09-02"
+    }
+   ]
   },
   {
    "id": "art-wp-cryogenic-aisle-01",
