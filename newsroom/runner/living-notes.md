@@ -233,3 +233,35 @@
   identical reasoning ("never decorate" applies to forced prose-thickening, not just components).
   Section 3e is now unaddressed for a cycle for the first time in this log's history; the next
   cycle should pick it back up rather than treat one skip as license for a second.
+- **2026-09-02** (maintenance pass): fixed the duplicate-cover chain the 2026-08-26
+  through 2026-09-02 entries above kept working around by hand. Three compounding
+  faults, all now closed. (1) **Gemini image generation is not "temporarily" out of
+  quota — the key is on the FREE TIER.** The 429s name
+  `GenerateRequestsPerDayPerProjectPerModel-FreeTier`, and they persist on both
+  `gemini-3.1-flash-lite-image` and `gemini-2.5-flash-image` after waiting out the
+  per-minute window, so this is a standing capacity ceiling, not a transient spike.
+  It cannot be fixed from this repo: billing must be enabled on the Google Cloud
+  project behind `gemini_api_key`. Until then, treat generation as unavailable and
+  do not burn cycle time retrying it. (2) **`pick --allow-lru-exception` used to
+  re-serve the least-recently-used library image**, which on an exhausted library
+  is a guaranteed duplicate — that flag is what actually produced the 40+ shared
+  covers, not the quota alone. It now SYNTHESIZES a branded cover seeded from the
+  article id (`ensure_covers.synthesize`), unique by construction. A plainer cover
+  beats the same cover twice, and any later cycle can overwrite it with real art.
+  (3) **`check` downgraded any duplicate carrying `"exception": true` to a
+  warning**, so all 44 findings sat under a green `failures=0` gate for weeks. That
+  downgrade is gone; duplicates are failures regardless of provenance. Also fixed:
+  `pick --apply` wrote to `<article_id>.jpg`, but older articles' store id and image
+  filename differ (`newsroom-alphabet-…` vs `alphabet-….jpg`), so it wrote a correct
+  cover to a path nothing loads and reported success — this is the "verify_covers
+  article-id mismatch" noted on 2026-08-29; it now asks the store for the real path.
+  Library restocked from the previously unindexed 4K wallpaper archive: 68 on-theme
+  images center-cropped 9:16 -> 16:9 at 1536px and manifest-indexed (`wp-*.jpg`,
+  ids `art-wp-*`), taking the library from 87 entries with zero headroom to 155 with
+  31 clean. Purged 45 stale `used_in` rows pointing at images their article no
+  longer uses, which had been inflating apparent exhaustion. Gate now reports
+  `checked=196 failures=0 warnings=0` — first fully clean run on record.
+  One caveat for whoever hits an empty pool next: the 90-day cooldown plus 31 clean
+  images means the library can go dry again in roughly a month at current cadence.
+  The durable fix is billing on the Gemini project; the synthesizer is a floor, not
+  a substitute for editorial art.

@@ -26,11 +26,18 @@ pick    Deterministically choose a library image that is clean under the
               --subjects "openai,model,launch" --apply
 
         Without --apply it only prints the ranked candidates (dry-run).
-        --allow-lru-exception: if NO clean candidate exists, take the globally
-        least-recently-used image and record it with "exception": true. This is
-        the only sanctioned way to bend the 90-day rule, and only because a
-        blank cover is the worse failure. The check subcommand treats a
-        recorded exception as a warning, not a failure.
+        --allow-lru-exception: if NO clean candidate exists, SYNTHESIZE a
+        branded cover seeded from the article id (ensure_covers.synthesize).
+        It is unique by construction, so an exhausted library can no longer
+        produce two articles wearing the same picture.
+
+        Until 2026-09-01 this flag instead re-served the least-recently-used
+        library image and recorded "exception": true, and `check` downgraded any
+        duplicate carrying that marker to a warning. When image generation went
+        down (Gemini free-tier quota) and the library ran dry, those two
+        behaviours combined to ship 40+ duplicate covers with the gate green.
+        Reuse is gone, and a recorded exception no longer softens a finding —
+        duplicates are failures whatever their provenance.
 
 Dependencies: stdlib. Pillow is optional — when present, `pick --apply`
 resizes to ~1536px JPEG and `check` adds perceptual near-duplicate detection;
@@ -47,6 +54,7 @@ import re
 import shutil
 import sys
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 REPO = os.environ.get("RTFC_REPO") or os.path.abspath(
     os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
@@ -198,6 +206,26 @@ def resolve_image(image_path):
     return None
 
 
+def resolve_out_path(article_id):
+    """Where a cover for `article_id` must be written.
+
+    NOT simply article_id + ".jpg": for older articles the store id and the
+    image filename differ ("newsroom-alphabet-…" vs "alphabet-….jpg"), so that
+    assumption wrote a perfectly good cover to a path nothing loads — a fix that
+    reports success and changes nothing. Ask the published store instead, and
+    only fall back to the naming convention for an id no store knows.
+    """
+    for use in collect_uses():
+        if use["surface"] == article_id and use.get("image"):
+            existing = resolve_image(use["image"])
+            if existing:
+                return existing
+            return os.path.join(REPO, "web", use["image"].lstrip("/").replace("/", os.sep))
+    print(f"NOTE: {article_id} is in no published store; "
+          f"falling back to the {article_id}.jpg naming convention")
+    return os.path.join(OUT_DIR, f"{article_id}.jpg")
+
+
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, "rb") as fh:
@@ -282,15 +310,21 @@ def cmd_check(args):
         return abs(a["date"] - b["date"]) <= cooldown
 
     def dup_report(a, b, how):
+        # A recorded LRU exception explains WHY a duplicate happened; it is not a
+        # licence for one. Until 2026-09-01 it downgraded the finding to a warning,
+        # so 44 duplicate covers shipped green while the gate exited 0 — the whole
+        # point of the gate, defeated by its own escape hatch. The annotation stays
+        # (it tells you the library was exhausted, which is the real thing to fix);
+        # the severity no longer does.
         exc = source_of.get(a["surface"], (None, False))[1] or \
               source_of.get(b["surface"], (None, False))[1]
         newer = max((u for u in (a, b)), key=lambda u: u["date"] or now)
         msg = (f"same cover as {b['surface'] if newer is a else a['surface']} "
                f"within {args.cooldown}d ({how}): {a['image']}")
         if exc:
-            warnings.append(f"{newer['surface']}: {msg} [recorded LRU exception]")
-        else:
-            report(newer["surface"], newer["date"], msg)
+            msg += " [recorded LRU exception — library was exhausted; add art or"
+            msg += " restore image generation]"
+        report(newer["surface"], newer["date"], msg)
 
     # exact duplicates
     for sha, group in hashes.items():
@@ -389,22 +423,49 @@ def cmd_pick(args):
         pool = [i for i in pool if not i.get("brand_visible")]
     candidates = sorted((i for i in pool if clean(i)), key=score, reverse=True)
     exception = False
+    synth = False
     if not candidates:
         if not args.allow_lru_exception:
             print("NO_CLEAN_CANDIDATE: every eligible library image was used within "
                   f"{args.cooldown}d. Generate an image instead, or re-run with "
-                  "--allow-lru-exception as the last resort.")
+                  "--allow-lru-exception to synthesize a unique branded cover.")
             return 3
-        exception = True
-        candidates = sorted(pool, key=lambda i: (last_use(i) or datetime.min.replace(
-            tzinfo=timezone.utc)))
+        # LAST RESORT (changed 2026-09-01). This used to re-serve the
+        # least-recently-used library image, which is how 40+ articles ended up
+        # sharing covers when image generation went down and the library ran
+        # dry: an exhausted library has NO non-duplicate answer, so reuse was
+        # guaranteed to duplicate. Synthesizing is seeded from the article id,
+        # so it is unique by construction — a plainer cover beats the same
+        # cover twice, and it can be replaced by real art at any later cycle.
+        synth = True
     if args.exclude:
         excluded = {e.strip() for e in args.exclude.split(",") if e.strip()}
         candidates = [c for c in candidates if c.get("id") not in excluded
                       and c.get("file") not in excluded]
-    if not candidates:
+    if not candidates and not synth:
         print("NO_CANDIDATE after exclusions")
         return 3
+
+    if synth:
+        print("SYNTHESIZE unique branded cover (library exhausted — no clean "
+              "library image exists, and reuse would duplicate)")
+        if not args.apply:
+            return 0
+        if not args.article_id:
+            print("--apply requires --article-id", file=sys.stderr)
+            return 2
+        out_path = resolve_out_path(args.article_id)
+        ig_path = re.sub(r"\.jpg$", "-ig.jpg", out_path)
+        try:
+            from ensure_covers import synthesize  # same directory
+        except ImportError:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            from ensure_covers import synthesize
+        synthesize(args.article_id, args.section or "", Path(out_path), Path(ig_path))
+        rel = os.path.relpath(out_path, os.path.join(REPO, "web")).replace(os.sep, "/")
+        print("APPLIED image =", rel, "(synthesized — replace with real art when "
+              "the library or image generation recovers)")
+        return 0
 
     top = candidates[0]
     print(("LRU-EXCEPTION " if exception else "") + "PICK "
@@ -425,7 +486,7 @@ def cmd_pick(args):
         print(f"library file missing on disk: {src}", file=sys.stderr)
         return 2
     os.makedirs(OUT_DIR, exist_ok=True)
-    out_path = os.path.join(OUT_DIR, f"{args.article_id}.jpg")
+    out_path = resolve_out_path(args.article_id)
     if HAVE_PIL:
         with Image.open(src) as img:
             img = img.convert("RGB")

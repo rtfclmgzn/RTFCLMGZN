@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "generated_at": "2026-07-16",
- "count": 87,
+ "count": 155,
  "policy": {
   "library_pull_target": 0.5,
   "reuse_cooldown_days": 90,
@@ -35,16 +35,6 @@
     {
      "article_id": "newsroom-claude-cowork-sandbox-escape",
      "used_at": "2026-07-24"
-    },
-    {
-     "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
-     "used_at": "2026-08-27",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-aurora-ransomware-cursor-ai-agent-attack-planning",
-     "used_at": "2026-09-02",
-     "exception": true
     }
    ]
   },
@@ -74,11 +64,6 @@
     {
      "article_id": "newsroom-nvidia-open-weights-letter",
      "used_at": "2026-07-26"
-    },
-    {
-     "article_id": "newsroom-intel-hot-chips-2026-diamond-rapids-crescent-island-wildcat-lake",
-     "used_at": "2026-08-30",
-     "exception": true
     }
    ]
   },
@@ -108,11 +93,6 @@
     {
      "article_id": "newsroom-hf-forensic-timeline-open-secure-alliance",
      "used_at": "2026-07-29"
-    },
-    {
-     "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
-     "used_at": "2026-08-29",
-     "exception": true
     }
    ]
   },
@@ -263,11 +243,6 @@
     {
      "article_id": "newsroom-revelio-ai-labor-market-tracker-july-2026",
      "used_at": "2026-07-30"
-    },
-    {
-     "article_id": "newsroom-openai-chatgpt-ads-1-billion-run-rate-india-expansion",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -356,11 +331,6 @@
     {
      "article_id": "newsroom-anthropic-claude-code-auto-mode-default-august-14",
      "used_at": "2026-08-10"
-    },
-    {
-     "article_id": "newsroom-anthropic-reward-hacking-sandbox-escape-engineer-reassignment",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -391,11 +361,6 @@
     {
      "article_id": "newsroom-moonshot-ai-50-billion-pre-ipo",
      "used_at": "2026-07-24"
-    },
-    {
-     "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
-     "used_at": "2026-08-28",
-     "exception": true
     }
    ]
   },
@@ -425,16 +390,6 @@
     {
      "article_id": "newsroom-ai-layoffs-data-contested",
      "used_at": "2026-07-17"
-    },
-    {
-     "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
-     "used_at": "2026-08-27",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-john-ternus-apple-ceo-gemini-siri-ai-strategy",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -464,11 +419,6 @@
     {
      "article_id": "newsroom-moonshot-series-f-35-billion",
      "used_at": "2026-07-29"
-    },
-    {
-     "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
-     "used_at": "2026-08-29",
-     "exception": true
     }
    ]
   },
@@ -794,11 +744,6 @@
     {
      "article_id": "newsroom-tesla-optimus-fremont-conversion",
      "used_at": "2026-07-18"
-    },
-    {
-     "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
-     "used_at": "2026-08-29",
-     "exception": true
     }
    ]
   },
@@ -938,16 +883,6 @@
     {
      "article_id": "newsroom-anthropic-agentic-misalignment",
      "used_at": "2026-07-18"
-    },
-    {
-     "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
-     "used_at": "2026-08-29",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-apple-openai-trade-secrets-evidence-destruction",
-     "used_at": "2026-09-02",
-     "exception": true
     }
    ]
   },
@@ -1061,16 +996,6 @@
     {
      "article_id": "newsroom-nadella-reverse-information-paradox",
      "used_at": "2026-07-17"
-    },
-    {
-     "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition-reported",
-     "used_at": "2026-08-27",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
-     "used_at": "2026-08-30",
-     "exception": true
     }
    ]
   },
@@ -1183,11 +1108,6 @@
     {
      "article_id": "newsroom-openai-chatgpt-ads-europe-eea-switzerland-rollout",
      "used_at": "2026-08-16"
-    },
-    {
-     "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
-     "used_at": "2026-08-28",
-     "exception": true
     }
    ]
   },
@@ -1217,16 +1137,6 @@
     {
      "article_id": "newsroom-alphabet-capex-raise",
      "used_at": "2026-07-24"
-    },
-    {
-     "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
-     "used_at": "2026-08-28",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-anthropic-lambda-35-billion-nvidia-hut8-compute-chain",
-     "used_at": "2026-09-02",
-     "exception": true
     }
    ]
   },
@@ -1255,16 +1165,6 @@
     {
      "article_id": "newsroom-china-agent-authorization-rules",
      "used_at": "2026-07-17"
-    },
-    {
-     "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
-     "used_at": "2026-08-26",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-pentagon-genai-mil-chatgpt-grok-claude-purge-deadline",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -1293,11 +1193,6 @@
     {
      "article_id": "newsroom-ai-data-center-electricity-ratepayer-fight-2026",
      "used_at": "2026-08-10"
-    },
-    {
-     "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
-     "used_at": "2026-08-26",
-     "exception": true
     }
    ]
   },
@@ -1467,11 +1362,6 @@
     {
      "article_id": "newsroom-nvidia-openai-ohio-financing",
      "used_at": "2026-07-27"
-    },
-    {
-     "article_id": "newsroom-a16z-machine-age-fund-ai-hardware",
-     "used_at": "2026-08-30",
-     "exception": true
     }
    ]
   },
@@ -1501,11 +1391,6 @@
     {
      "article_id": "newsroom-openai-kill-switch-act",
      "used_at": "2026-07-24"
-    },
-    {
-     "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
-     "used_at": "2026-08-28",
-     "exception": true
     }
    ]
   },
@@ -1563,11 +1448,6 @@
     {
      "article_id": "newsroom-kimi-k3-redis-zerodays",
      "used_at": "2026-07-26"
-    },
-    {
-     "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
-     "used_at": "2026-08-31",
-     "exception": true
     }
    ]
   },
@@ -1624,11 +1504,6 @@
     {
      "article_id": "newsroom-nvidia-sk-korea-500b",
      "used_at": "2026-07-26"
-    },
-    {
-     "article_id": "newsroom-together-ai-humain-saudi-arabia-250mw-data-center",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -1714,11 +1589,6 @@
     {
      "article_id": "newsroom-thrive-holdings-2-billion-raise-openai-circular-deal",
      "used_at": "2026-08-13"
-    },
-    {
-     "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
-     "used_at": "2026-08-29",
-     "exception": true
     }
    ]
   },
@@ -1748,11 +1618,6 @@
     {
      "article_id": "newsroom-france-antitrust-ai-agents",
      "used_at": "2026-07-24"
-    },
-    {
-     "article_id": "newsroom-alphabet-amazon-anthropic-stake-gains-earnings",
-     "used_at": "2026-08-31",
-     "exception": true
     }
    ]
   },
@@ -1862,11 +1727,6 @@
     {
      "article_id": "newsroom-china-ai-export-controls",
      "used_at": "2026-07-26"
-    },
-    {
-     "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
-     "used_at": "2026-08-31",
-     "exception": true
     }
    ]
   },
@@ -1954,11 +1814,6 @@
     {
      "article_id": "newsroom-fcc-covered-list-humanoid-robots",
      "used_at": "2026-07-29"
-    },
-    {
-     "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
-     "used_at": "2026-08-28",
-     "exception": true
     }
    ]
   },
@@ -2042,22 +1897,7 @@
    ],
    "text_space": "screens are busy — avoid center",
    "brand_visible": null,
-   "used_in": [
-    {
-     "article_id": "primer-000",
-     "used_at": "2026-07-16"
-    },
-    {
-     "article_id": "newsroom-openai-hugging-face-metr-redwood-independent-review",
-     "used_at": "2026-08-27",
-     "exception": true
-    },
-    {
-     "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
-     "used_at": "2026-08-30",
-     "exception": true
-    }
-   ]
+   "used_in": []
   },
   {
    "id": "art-068-glass-encased-mainframe-cube",
@@ -2085,11 +1925,6 @@
     {
      "article_id": "newsroom-qwen38-max-preview",
      "used_at": "2026-07-26"
-    },
-    {
-     "article_id": "newsroom-openai-codex-persistent-mode-proactivity-gpt-5-6-sol-safety",
-     "used_at": "2026-08-30",
-     "exception": true
     }
    ]
   },
@@ -2115,17 +1950,7 @@
    ],
    "text_space": "sky top half",
    "brand_visible": null,
-   "used_in": [
-    {
-     "article_id": "primer-000",
-     "used_at": "2026-07-16"
-    },
-    {
-     "article_id": "newsroom-nvidia-q2-fy2027-earnings-memory-margin-70-percent-growth",
-     "used_at": "2026-08-27",
-     "exception": true
-    }
-   ]
+   "used_in": []
   },
   {
    "id": "art-070-ar-glasses-in-the-marble-atrium",
@@ -2152,11 +1977,6 @@
     {
      "article_id": "newsroom-openai-screenless-speaker",
      "used_at": "2026-07-17"
-    },
-    {
-     "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
-     "used_at": "2026-08-29",
-     "exception": true
     }
    ]
   },
@@ -2186,11 +2006,6 @@
     {
      "article_id": "newsroom-openai-chatgpt-academic-researchers-program",
      "used_at": "2026-07-30"
-    },
-    {
-     "article_id": "newsroom-anthropic-automated-alignment-researchers-beat-humans",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -2245,12 +2060,7 @@
    ],
    "text_space": "left wall gray",
    "brand_visible": null,
-   "used_in": [
-    {
-     "article_id": "primer-000",
-     "used_at": "2026-07-16"
-    }
-   ]
+   "used_in": []
   },
   {
    "id": "art-074-arms-welding-fuselage-sections",
@@ -2393,11 +2203,6 @@
     {
      "article_id": "newsroom-kimi-k3-open-model",
      "used_at": "2026-07-16"
-    },
-    {
-     "article_id": "newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes",
-     "used_at": "2026-08-29",
-     "exception": true
     }
    ]
   },
@@ -2428,11 +2233,6 @@
     {
      "article_id": "newsroom-aschenbrenner-situational-awareness-capital-raise",
      "used_at": "2026-07-30"
-    },
-    {
-     "article_id": "newsroom-clay-7-billion-valuation-wellington-management",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -2462,11 +2262,6 @@
     {
      "article_id": "newsroom-kimi-k3-open-weights-live",
      "used_at": "2026-07-27"
-    },
-    {
-     "article_id": "newsroom-deepseek-v4-flash-vision-exp-open-weights",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
   },
@@ -2496,11 +2291,6 @@
     {
      "article_id": "newsroom-fli-safety-index",
      "used_at": "2026-07-16"
-    },
-    {
-     "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
-     "used_at": "2026-08-31",
-     "exception": true
     }
    ]
   },
@@ -2527,13 +2317,8 @@
    "brand_visible": null,
    "used_in": [
     {
-     "article_id": "primer-000",
-     "used_at": "2026-07-16"
-    },
-    {
-     "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
-     "used_at": "2026-08-29",
-     "exception": true
+     "article_id": "newsroom-kimi-k3-open-model",
+     "used_at": "2026-09-02"
     }
    ]
   },
@@ -2677,13 +2462,2157 @@
     {
      "article_id": "newsroom-tsmc-q2-2026-earnings",
      "used_at": "2026-07-16"
-    },
-    {
-     "article_id": "newsroom-nvidia-mediatek-3-5-billion-nvlink-fusion-investment",
-     "used_at": "2026-09-01",
-     "exception": true
     }
    ]
+  },
+  {
+   "id": "art-wp-abstract-flux-01",
+   "file": "wp-abstract-flux-01.jpg",
+   "title": "Abstract intelligence flux 1",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 249495,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-01-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-a16z-machine-age-fund-ai-hardware",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-02",
+   "file": "wp-abstract-flux-02.jpg",
+   "title": "Abstract intelligence flux 2",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 207649,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-02-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-amazon-mechanical-turk-shutdown-ai-training-labor",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-03",
+   "file": "wp-abstract-flux-03.jpg",
+   "title": "Abstract intelligence flux 3",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 191817,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-03-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-30-trillion-tam-ipo-pitch",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-04",
+   "file": "wp-abstract-flux-04.jpg",
+   "title": "Abstract intelligence flux 4",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 163349,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-04-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-infostealer-claude-session-hijacking",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-05",
+   "file": "wp-abstract-flux-05.jpg",
+   "title": "Abstract intelligence flux 5",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 202076,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-05-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-apple-openai-trade-secrets-evidence-destruction",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-06",
+   "file": "wp-abstract-flux-06.jpg",
+   "title": "Abstract intelligence flux 6",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 166680,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-06-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-claude-sonnet-5-price-hike-canceled",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-07",
+   "file": "wp-abstract-flux-07.jpg",
+   "title": "Abstract intelligence flux 7",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 290729,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-07-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-clay-7-billion-valuation-wellington-management",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-08",
+   "file": "wp-abstract-flux-08.jpg",
+   "title": "Abstract intelligence flux 8",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 144345,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-08-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-dataminr-department-of-war-318-million-agentic-contract",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-09",
+   "file": "wp-abstract-flux-09.jpg",
+   "title": "Abstract intelligence flux 9",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 307405,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-09-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-deepseek-v4-flash-vision-exp-open-weights",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-10",
+   "file": "wp-abstract-flux-10.jpg",
+   "title": "Abstract intelligence flux 10",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 188836,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-10-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-french-newspapers-google-ai-overviews-antitrust-complaint",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-11",
+   "file": "wp-abstract-flux-11.jpg",
+   "title": "Abstract intelligence flux 11",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 193196,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-11-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-glm-5-3-flash-ox-alpha-stealth-benchmarks",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-12",
+   "file": "wp-abstract-flux-12.jpg",
+   "title": "Abstract intelligence flux 12",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 211896,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-12-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-google-gemini-omni-1-1-flash-video-model-40-second-scenes",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-13",
+   "file": "wp-abstract-flux-13.jpg",
+   "title": "Abstract intelligence flux 13",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 230745,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-13-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-instinct-ai-assistant-2-5-billion-valuation-privacy-backlash",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-14",
+   "file": "wp-abstract-flux-14.jpg",
+   "title": "Abstract intelligence flux 14",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 161703,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-14-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-anthropic-google-116-companies-cyber-defense-letter",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-15",
+   "file": "wp-abstract-flux-15.jpg",
+   "title": "Abstract intelligence flux 15",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 126149,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-15-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-cursor-spacex-model-access-cutoff",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-16",
+   "file": "wp-abstract-flux-16.jpg",
+   "title": "Abstract intelligence flux 16",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 413496,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-16-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-hugging-face-metr-redwood-independent-review",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-17",
+   "file": "wp-abstract-flux-17.jpg",
+   "title": "Abstract intelligence flux 17",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 392557,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-17-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-pentagon-anthropic-blacklist-ruling-illegal-retaliation",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-18",
+   "file": "wp-abstract-flux-18.jpg",
+   "title": "Abstract intelligence flux 18",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 141232,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-18-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-pentagon-genai-mil-chatgpt-grok-claude-purge-deadline",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-19",
+   "file": "wp-abstract-flux-19.jpg",
+   "title": "Abstract intelligence flux 19",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 389954,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-19-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-pew-ai-chatbot-health-survey-helpfulness-accuracy-gap",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-flux-20",
+   "file": "wp-abstract-flux-20.jpg",
+   "title": "Abstract intelligence flux 20",
+   "description": "Abstract flowing energy ribbons in violet, indigo and cyan against deep black — luminous data currents suggesting machine cognition.",
+   "subjects": [
+    "abstract",
+    "energy",
+    "data-flow",
+    "neural"
+   ],
+   "mood": "abstract luminous",
+   "palette": "violet-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 187037,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Health",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-20-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-salesforce-anthropic-claudeforce-investment-gain-earnings",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-data-tides-01",
+   "file": "wp-abstract-data-tides-01.jpg",
+   "title": "Luminous data tides 1",
+   "description": "Tidal sheets of luminous data washing through darkness in teal and violet — flowing, oceanic abstraction of information at scale.",
+   "subjects": [
+    "abstract",
+    "data-flow",
+    "waves",
+    "scale"
+   ],
+   "mood": "abstract flowing",
+   "palette": "teal-violet",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 296315,
+   "best_for_sections": [
+    "Research",
+    "Markets",
+    "Policy",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Luminous-Data-Tides-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-lambda-35-billion-nvidia-hut8-compute-chain",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-prism-01",
+   "file": "wp-abstract-prism-01.jpg",
+   "title": "Prismatic light architecture 1",
+   "description": "Prismatic planes of violet and blue light folding through dark space — high-gloss abstract composition with cinematic rim light.",
+   "subjects": [
+    "abstract",
+    "prism",
+    "light",
+    "geometry"
+   ],
+   "mood": "abstract cinematic",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 241656,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-61-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-meta-smart-glasses-led-loophole-fix-privacy-lawsuit",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-prism-02",
+   "file": "wp-abstract-prism-02.jpg",
+   "title": "Prismatic light architecture 2",
+   "description": "Prismatic planes of violet and blue light folding through dark space — high-gloss abstract composition with cinematic rim light.",
+   "subjects": [
+    "abstract",
+    "prism",
+    "light",
+    "geometry"
+   ],
+   "mood": "abstract cinematic",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 265957,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-62-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-chatgpt-ads-1-billion-run-rate-india-expansion",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-prism-03",
+   "file": "wp-abstract-prism-03.jpg",
+   "title": "Prismatic light architecture 3",
+   "description": "Prismatic planes of violet and blue light folding through dark space — high-gloss abstract composition with cinematic rim light.",
+   "subjects": [
+    "abstract",
+    "prism",
+    "light",
+    "geometry"
+   ],
+   "mood": "abstract cinematic",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 172777,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-63-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-alphabet-amazon-anthropic-stake-gains-earnings",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-abstract-prism-04",
+   "file": "wp-abstract-prism-04.jpg",
+   "title": "Prismatic light architecture 4",
+   "description": "Prismatic planes of violet and blue light folding through dark space — high-gloss abstract composition with cinematic rim light.",
+   "subjects": [
+    "abstract",
+    "prism",
+    "light",
+    "geometry"
+   ],
+   "mood": "abstract cinematic",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 215108,
+   "best_for_sections": [
+    "Research",
+    "Ethics",
+    "Policy",
+    "Frontier",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-64-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-architecture-01",
+   "file": "wp-silicon-architecture-01.jpg",
+   "title": "CPU architecture macro 1",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 941,
+   "height": 529,
+   "bytes": 148373,
+   "best_for_sections": [
+    "Compute",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/ChatGPT Image Jul 19, 2026, 04_28_42 AM (2).png",
+   "used_in": [
+    {
+     "article_id": "newsroom-ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-02",
+   "file": "wp-silicon-architecture-02.jpg",
+   "title": "CPU architecture macro 2",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 429807,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-41-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-aurora-ransomware-cursor-ai-agent-attack-planning",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-03",
+   "file": "wp-silicon-architecture-03.jpg",
+   "title": "CPU architecture macro 3",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 249508,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-42-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-john-ternus-apple-ceo-gemini-siri-ai-strategy",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-04",
+   "file": "wp-silicon-architecture-04.jpg",
+   "title": "CPU architecture macro 4",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 307259,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-43-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-ai-compute-partnership-antitrust-pause",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-05",
+   "file": "wp-silicon-architecture-05.jpg",
+   "title": "CPU architecture macro 5",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 327316,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-44-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition-reported",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-06",
+   "file": "wp-silicon-architecture-06.jpg",
+   "title": "CPU architecture macro 6",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 364449,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-45-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-mediatek-3-5-billion-nvlink-fusion-investment",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-07",
+   "file": "wp-silicon-architecture-07.jpg",
+   "title": "CPU architecture macro 7",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 411969,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-46-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-q2-fy2027-earnings-memory-margin-70-percent-growth",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-architecture-08",
+   "file": "wp-silicon-architecture-08.jpg",
+   "title": "CPU architecture macro 8",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 264790,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-47-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-architecture-09",
+   "file": "wp-silicon-architecture-09.jpg",
+   "title": "CPU architecture macro 9",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 468589,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-48-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-architecture-10",
+   "file": "wp-silicon-architecture-10.jpg",
+   "title": "CPU architecture macro 10",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 288532,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-49-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-architecture-11",
+   "file": "wp-silicon-architecture-11.jpg",
+   "title": "CPU architecture macro 11",
+   "description": "Macro view of processor architecture: die surface, traced interconnect and glowing logic blocks lit in cyan and amber.",
+   "subjects": [
+    "chip",
+    "cpu",
+    "silicon",
+    "hardware",
+    "die"
+   ],
+   "mood": "technical macro",
+   "palette": "cyan-amber",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 435048,
+   "best_for_sections": [
+    "Compute",
+    "Products",
+    "Markets"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-50-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-post-silicon-01",
+   "file": "wp-post-silicon-01.jpg",
+   "title": "Post-silicon compute substrate 1",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 326270,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-31-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-intel-hot-chips-2026-diamond-rapids-crescent-island-wildcat-lake",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-post-silicon-02",
+   "file": "wp-post-silicon-02.jpg",
+   "title": "Post-silicon compute substrate 2",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 387409,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-32-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-codex-persistent-mode-proactivity-gpt-5-6-sol-safety",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-post-silicon-03",
+   "file": "wp-post-silicon-03.jpg",
+   "title": "Post-silicon compute substrate 3",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 392369,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-33-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-together-ai-humain-saudi-arabia-250mw-data-center",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-post-silicon-04",
+   "file": "wp-post-silicon-04.jpg",
+   "title": "Post-silicon compute substrate 4",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 279266,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-34-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-unitree-g1-bluetooth-root-rce-vulnerability",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-post-silicon-05",
+   "file": "wp-post-silicon-05.jpg",
+   "title": "Post-silicon compute substrate 5",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 267405,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-35-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-post-silicon-06",
+   "file": "wp-post-silicon-06.jpg",
+   "title": "Post-silicon compute substrate 6",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 235245,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-36-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-post-silicon-07",
+   "file": "wp-post-silicon-07.jpg",
+   "title": "Post-silicon compute substrate 7",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 234356,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-37-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-post-silicon-08",
+   "file": "wp-post-silicon-08.jpg",
+   "title": "Post-silicon compute substrate 8",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 424035,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-38-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-post-silicon-09",
+   "file": "wp-post-silicon-09.jpg",
+   "title": "Post-silicon compute substrate 9",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 349295,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-39-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-post-silicon-10",
+   "file": "wp-post-silicon-10.jpg",
+   "title": "Post-silicon compute substrate 10",
+   "description": "Speculative post-silicon compute substrate — crystalline logic lattices and photonic pathways glowing violet against black.",
+   "subjects": [
+    "chip",
+    "photonics",
+    "substrate",
+    "next-gen",
+    "hardware"
+   ],
+   "mood": "speculative technical",
+   "palette": "violet-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 300559,
+   "best_for_sections": [
+    "Compute",
+    "Frontier",
+    "Research"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-40-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-01",
+   "file": "wp-silicon-beyond-01.jpg",
+   "title": "Silicon frontier 1",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 393560,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-21-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-nscale-45-billion-compute-deal",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-beyond-02",
+   "file": "wp-silicon-beyond-02.jpg",
+   "title": "Silicon frontier 2",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 412060,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-22-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-deepseek-74-billion-valuation-funding-round-liang-wenfeng",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-silicon-beyond-03",
+   "file": "wp-silicon-beyond-03.jpg",
+   "title": "Silicon frontier 3",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 348043,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-23-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-04",
+   "file": "wp-silicon-beyond-04.jpg",
+   "title": "Silicon frontier 4",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 358351,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-24-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-05",
+   "file": "wp-silicon-beyond-05.jpg",
+   "title": "Silicon frontier 5",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 347036,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-25-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-06",
+   "file": "wp-silicon-beyond-06.jpg",
+   "title": "Silicon frontier 6",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 420006,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-26-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-07",
+   "file": "wp-silicon-beyond-07.jpg",
+   "title": "Silicon frontier 7",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 366216,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-27-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-08",
+   "file": "wp-silicon-beyond-08.jpg",
+   "title": "Silicon frontier 8",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 350919,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-28-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-09",
+   "file": "wp-silicon-beyond-09.jpg",
+   "title": "Silicon frontier 9",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 405622,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-29-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-silicon-beyond-10",
+   "file": "wp-silicon-beyond-10.jpg",
+   "title": "Silicon frontier 10",
+   "description": "Layered silicon wafer geometry receding into darkness, edge-lit in electric blue — the manufacturing frontier of compute.",
+   "subjects": [
+    "chip",
+    "wafer",
+    "fab",
+    "silicon",
+    "manufacturing"
+   ],
+   "mood": "industrial technical",
+   "palette": "electric-blue",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 450614,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Products"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-30-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-autonomous-lab-01",
+   "file": "wp-autonomous-lab-01.jpg",
+   "title": "Autonomous compute lab 1",
+   "description": "Robotic arms servicing a live compute rack in an unmanned laboratory, lit in cold blue and violet.",
+   "subjects": [
+    "lab",
+    "robotics",
+    "automation",
+    "compute"
+   ],
+   "mood": "cinematic robotic",
+   "palette": "blue-violet",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 298011,
+   "best_for_sections": [
+    "Robotics",
+    "Compute",
+    "Frontier"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Autonomous-Compute-Lab-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-gatik-200-million-series-d-autonomous-trucking",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-cryogenic-aisle-01",
+   "file": "wp-cryogenic-aisle-01.jpg",
+   "title": "Cryogenic data aisle 1",
+   "description": "Mirror-floored cold aisle of a cryogenic data centre receding to a lit vanishing point.",
+   "subjects": [
+    "datacenter",
+    "infrastructure",
+    "cooling",
+    "racks"
+   ],
+   "mood": "cinematic infrastructure",
+   "palette": "steel-cyan",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 294500,
+   "best_for_sections": [
+    "Compute",
+    "Markets",
+    "Frontier"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Cryogenic-Data-Aisle-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-01",
+   "file": "wp-frontier-lab-01.jpg",
+   "title": "Frontier research lab 1",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 251137,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-51-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-automated-alignment-researchers-beat-humans",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-frontier-lab-02",
+   "file": "wp-frontier-lab-02.jpg",
+   "title": "Frontier research lab 2",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 312888,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-52-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-reward-hacking-sandbox-escape-engineer-reassignment",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-frontier-lab-03",
+   "file": "wp-frontier-lab-03.jpg",
+   "title": "Frontier research lab 3",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 295879,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-53-4K.jpg",
+   "used_in": [
+    {
+     "article_id": "newsroom-npr-newsguard-ai-chatbot-propaganda-test",
+     "used_at": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "id": "art-wp-frontier-lab-04",
+   "file": "wp-frontier-lab-04.jpg",
+   "title": "Frontier research lab 4",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 299838,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-54-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-05",
+   "file": "wp-frontier-lab-05.jpg",
+   "title": "Frontier research lab 5",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 186056,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-55-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-06",
+   "file": "wp-frontier-lab-06.jpg",
+   "title": "Frontier research lab 6",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 302181,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-56-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-07",
+   "file": "wp-frontier-lab-07.jpg",
+   "title": "Frontier research lab 7",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 235363,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-57-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-08",
+   "file": "wp-frontier-lab-08.jpg",
+   "title": "Frontier research lab 8",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 271740,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-58-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-09",
+   "file": "wp-frontier-lab-09.jpg",
+   "title": "Frontier research lab 9",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 271543,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-59-4K.jpg",
+   "used_in": []
+  },
+  {
+   "id": "art-wp-frontier-lab-10",
+   "file": "wp-frontier-lab-10.jpg",
+   "title": "Frontier research lab 10",
+   "description": "Impossible research laboratory interior — instrumented chambers, suspended apparatus and volumetric violet light down a long hall.",
+   "subjects": [
+    "lab",
+    "research",
+    "facility",
+    "apparatus"
+   ],
+   "mood": "cinematic interior",
+   "palette": "violet-indigo",
+   "orientation": "landscape",
+   "width": 1536,
+   "height": 864,
+   "bytes": 324428,
+   "best_for_sections": [
+    "Frontier",
+    "Research",
+    "Compute",
+    "Ethics"
+   ],
+   "text_space": "dark lower-left",
+   "brand_visible": null,
+   "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-60-4K.jpg",
+   "used_in": []
   }
  ]
 }
