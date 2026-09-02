@@ -11434,5 +11434,198 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-02T16:46:33Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-texas-ercot-data-center-ghost-demand-grid-freeze",
+    "ts": "2026-09-02T19:28:22Z",
+    "export": {
+      "article_id": "newsroom-texas-ercot-data-center-ghost-demand-grid-freeze",
+      "url": "https://rtfclmgzn.com/article/texas-ercot-data-center-ghost-demand-grid-freeze",
+      "headline": "Texas froze new data-center grid hookups after its own queue hit 474 gigawatts -- and admitted it can no longer tell which requests are real",
+      "hook": "Texas's data-center grid queue hit 474 gigawatts -- 5x peak demand -- and the state admitted it can't tell which requests are real, so it froze new hookups until it can check.",
+      "key_facts": [
+        "ERCOT's queue grew from 48.5 GW (2023) to 233 GW (2025) to 474 GW (Sept. 2026), ~90% data centers.",
+        "Pennsylvania's own count: just 5 of 100+ proposed data centers hold every permit needed to build.",
+        "BloombergNEF warns the audit could also delay real, financed projects, at a cost up to $15 billion."
+      ],
+      "tone": "technical, detail-obsessed, evaluation-first",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-texas-ercot-data-center-ghost-demand-grid-freeze.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Texas's data-center grid queue hit 474 GW -- 5x peak demand, ~90% data centers. The state just admitted it can't tell which requests are real, and froze new hookups until it can check.",
+        "reply_copy": "How the number got that big, and what Pennsylvania found when it checked too:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#DataCenters",
+          "#Texas",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T00:28:22Z",
+        "copy": "Pennsylvania checked its own data-center pipeline: 100+ proposed, 58 talked to regulators, 15 applied for a permit, 5 actually hold one. That ratio is the real finding behind Texas's freeze too.",
+        "reply_copy": "Full breakdown of the numbers, state by state:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#DataCenters",
+          "#EnergyPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Texas's data-center power queue hit 474 GIGAWATTS -- more than 5x the grid's own peak demand, ~90% of it filed by data centers.\n\nOn August 3, the state froze new grid hookups because it admitted it can no longer tell which requests are real.\n\nPennsylvania checked its own numbers around the same time: of 100+ proposed data centers, only 5 hold every permit needed to actually build.\n\nBloombergNEF warns the freeze itself could delay real, already-financed projects too -- at a cost of up to $15 billion.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#DataCenters",
+          "#Texas",
+          "#AI",
+          "#EnergyPolicy",
+          "#Pennsylvania",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Texas froze new data-center grid connections on August 3 after its interconnection queue hit 474 gigawatts -- more than five times the grid's own peak demand, about 90% of it filed by data centers. The state admitted it can no longer tell which requests are real without a verification audit. Pennsylvania's own numbers, released around the same time, show a similar pattern: of more than 100 proposed data centers, only 5 hold every permit needed to build. BloombergNEF warns the freeze could also delay real, already-financed projects, at a cost of up to $15 billion.",
+        "hashtags": [
+          "#DataCenters",
+          "#Texas"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Texas's data-center grid queue hit 474 GW -- 5x peak demand. The state froze new hookups Aug. 3 because it can't tell which requests are real. Pennsylvania checked too: only 5 of 100+ proposed projects hold a full permit.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T00:28:22Z",
+        "copy": "Exelon cut its own tracked data-center demand ~40% once it required proof of commitment. AEP Ohio's fell by more than half. That's roughly the real core hiding under every state's padded queue number.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Texas's data-center grid queue hit 474 GW, ~90% data centers, 5x peak demand -- and the state froze new hookups because it can't tell which requests are real. Pennsylvania's own check: 5 of 100+ proposed projects hold a full permit.",
+        "hashtags": [
+          "#DataCenters",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nyc-schools-generative-ai-ban-k-8-mamdani",
+    "ts": "2026-09-02T19:28:25Z",
+    "export": {
+      "article_id": "newsroom-nyc-schools-generative-ai-ban-k-8-mamdani",
+      "url": "https://rtfclmgzn.com/article/nyc-schools-generative-ai-ban-k-8-mamdani",
+      "headline": "New York City bars generative AI for its 600,000 K-8 students, the largest such ban by any US school district",
+      "hook": "NYC is banning generative AI for its 600,000 pre-K-8 students starting next school year -- the largest such ban by any US district, while high schoolers keep it through capped pilots.",
+      "key_facts": [
+        "One-year moratorium on student-facing generative AI + companion chatbots, pre-K through grade 8.",
+        "High schoolers keep access via 5 pilot programs (capped ~50,000 students) plus AI-literacy lessons.",
+        "A Technology in Schools Coalition studies the year and recommends what, if anything, follows."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-nyc-schools-generative-ai-ban-k-8-mamdani.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NYC just banned generative AI for its 600,000 pre-K-8 students -- the largest such ban by any US school district. High schoolers keep it, through 5 capped pilot programs.",
+        "reply_copy": "What's actually banned, what's exempted, and why it splits at 9th grade:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIinEducation",
+          "#NYC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T00:28:25Z",
+        "copy": "NYC's teachers union backs the screen-time limits but says the policy 'leaves many questions unanswered' -- namely how the city will actually verify AI safeguards in the software it buys, not just in the chatbots it bans.",
+        "reply_copy": "The full policy, grade band by grade band:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIinEducation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "New York City just banned generative AI for roughly 600,000 students -- pre-K through 8th grade, about two-thirds of the country's largest public school system.\n\nThe one-year moratorium starts the 2026-2027 school year. Companion chatbots are banned at every grade, including high school.\n\nHigh schoolers keep generative AI through 5 closely watched pilot programs (capped ~50,000 students) plus twice-yearly AI-literacy lessons.\n\nA Technology in Schools Coalition will study the year and recommend what comes next -- this is a pause, not confirmed to be permanent.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AIinEducation",
+          "#NYC",
+          "#GenerativeAI",
+          "#EdTech",
+          "#SchoolPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "New York City is banning generative AI for roughly 600,000 students in pre-K through 8th grade, starting the 2026-2027 school year -- the largest such ban by any US school district. Companion chatbots are banned at every grade, including high school, where the rest of the policy is more permissive: high schoolers keep generative AI through 5 capped pilot programs plus twice-yearly AI-literacy lessons. Teachers keep AI for lesson planning and admin work. A Technology in Schools Coalition will study the year and recommend what, if anything, follows the one-year moratorium.",
+        "hashtags": [
+          "#AIinEducation",
+          "#NYC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NYC is banning generative AI for its 600,000 pre-K-8 students starting next school year -- the largest such ban by any US district. Companion chatbots are banned at every grade. High schoolers keep it through capped pilots.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T00:28:25Z",
+        "copy": "The real split in NYC's new AI policy isn't generative AI vs. none -- it's pre-K-8 vs. 9-12, with a one-year coalition study watching both sides of that line before deciding what comes next.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NYC just banned generative AI for its 600,000 pre-K-8 students -- the largest such ban by any US school district. High schoolers keep it through 5 capped pilot programs plus AI-literacy lessons.",
+        "hashtags": [
+          "#AIinEducation",
+          "#NYC"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

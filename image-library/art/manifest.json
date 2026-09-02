@@ -1955,7 +1955,12 @@
    ],
    "text_space": "sky top half",
    "brand_visible": null,
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-texas-ercot-data-center-ghost-demand-grid-freeze",
+     "used_at": "2026-09-02"
+    }
+   ]
   },
   {
    "id": "art-070-ar-glasses-in-the-marble-atrium",
