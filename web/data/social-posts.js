@@ -11278,8 +11278,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095292947096863073",
+        "remote_id": "2095292947096863073",
+        "posted_at": "2026-09-02T23:29:02Z"
       },
       {
         "platform": "instagram",
@@ -11362,9 +11364,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#IPO"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
