@@ -194,3 +194,42 @@
   (or at minimum `newsroom/runner/`) so this stops being a per-cycle rediscovery -- the gate's
   actual purpose (keep the live site's publish surface clean) has no stake in these two files,
   since neither is ever served to a reader.
+- **2026-09-02** (newsroom cycle): before adding a new Buzz card, actually `grep` `buzz.js` for the
+  specific company/topic name -- don't rely on a mental cross-check against what you remember
+  researching. This cycle drafted a fresh LUMI-AI/EuroHPC Buzz card from original research, and
+  only caught afterward (by grepping "lumi") that an earlier same-day pulse scan (basisNote
+  timestamp 2026-09-01T16:20:00Z, itself citing "Anthropic $35B Lambda compute deal, EuroHPC
+  €387.8M LUMI-AI supercomputer" as its own Buzz additions) had already staged the identical
+  story as `bz-445`, word-for-word the same facts from a different source URL. Deleted the
+  duplicate (`bz-453`) before shipping. The near-miss is worth flagging because the two research
+  processes (this cycle's fresh WebSearch, and the earlier pulse scan) independently converged on
+  the exact same story as buzz-worthy -- a good sign the editorial judgment is sound, a bad sign
+  that nothing forces the grep-before-add step. Do the grep first, not as a pre-commit sanity
+  check.
+- **2026-09-02** (newsroom cycle): confirmed the `verify_covers.py pick` clean-pool bug chain
+  (2026-08-26/27/28/31 entries above) is still live, and worked around it three more times by
+  hand-replicating `cmd_pick`'s own apply logic (RGB convert, resize to 1536px width, JPEG quality
+  85, manifest `used_in` append with `exception: true`) against manually chosen, genuinely
+  on-topic library images instead of the CLI's off-topic top picks (a fab hall for a
+  legal/courtroom story, a surgical suite for a compute-deal story, etc.). One new observation:
+  the hand-write's `json.dump(..., indent=1)` reformatted the ENTIRE `manifest.json` file
+  (5,300+ changed lines in the commit diff) even though only three `used_in` arrays actually
+  changed -- the file's prior on-disk formatting didn't match what this exact dump call produces.
+  Content and `python3 -c "import json; json.load(...)"` both confirmed intact/valid before and
+  after, and `verify_covers.py check` reported the expected `[recorded LRU exception]` warnings
+  with zero failures, so this is a cosmetic whitespace-normalization side effect of ever writing
+  to this file with this exact tool logic, not a data-loss risk -- but it makes an otherwise
+  three-line manifest change look like a full-file rewrite in the commit history. Worth knowing
+  before assuming a huge manifest.json diff means something went wrong.
+- **2026-09-02** (newsroom cycle): image generation (`newsroom.cli generate-image`) failed with
+  HTTP 429 quota-exhausted on both model fallbacks again, consistent with the 2026-08-28/08-31
+  entries -- this looks like a standing, not transient, capacity problem across the shared
+  `GEMINI_API_KEY`. Also reconfirmed (a third time, per living Policy/Frontier notes above) that
+  the art library has no real fit for litigation/courtroom stories -- the closest usable images
+  are "executives watching a server vault"-style oversight scenes, which work as a loose
+  corporate/legal-dispute visual but are not a literal fit. Deferred this cycle's own required
+  §3e (Primer work-order) touch entirely, rather than force a narrow edit under time pressure on
+  top of an already-large cycle (3 new articles) -- see the 2026-09-01T14:57 cycle's own
+  identical reasoning ("never decorate" applies to forced prose-thickening, not just components).
+  Section 3e is now unaddressed for a cycle for the first time in this log's history; the next
+  cycle should pick it back up rather than treat one skip as license for a second.
