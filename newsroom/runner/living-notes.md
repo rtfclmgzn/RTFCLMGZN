@@ -265,3 +265,25 @@
   images means the library can go dry again in roughly a month at current cadence.
   The durable fix is billing on the Gemini project; the synthesizer is a floor, not
   a substitute for editorial art.
+- **2026-09-02** (maintenance pass, later same day): **image generation is FIXED and
+  working — disregard every "quota exhausted" entry above, including the one directly
+  preceding this.** The owner funded the Gemini key (Google moved image generation off
+  the free tier, so it needed a paid plan, which is why the 429s were permanent rather
+  than transient). Verified end to end: both `gemini-3.1-flash-lite-image` and
+  `gemini-2.5-flash-image` return images, and the full `generate_cover_image` path
+  including the budget guard and ledger write works. Do NOT reach for the art library
+  on the assumption generation is down. Backfilled bespoke covers for the 41 articles
+  that were carrying stopgap library crops, and released their library reservations —
+  the art library is back to 71 clean images of headroom.
+  Two things learned worth carrying forward. (1) **The binding constraint is now
+  `daily_budget_usd: 2.00`, not quota.** Images book at the $0.06/image cushion, so
+  ~33 images consume an entire day's budget and every autonomous cycle afterwards gets
+  BudgetError until it resets. This backfill (44 calls, $2.64 booked) did exactly that
+  — if you plan a batch, raise the cap first or expect to starve that day's cycles.
+  Monthly ($30) is nowhere near binding; the daily cap is the one that bites.
+  (2) **STYLE_NEGATIVE's "no text" is not reliable.** Of 41 generations, three came
+  back with rendered signage ("OMNICORP"), a game-style character-select UI, and a
+  captioned kiosk. Adding an explicit "absolutely no signage, no lettering, no
+  numerals, no user interface panels, no readable writing anywhere" clause to the
+  scene text fixed all three on the first retry. Budget a visual review pass over any
+  generated batch rather than trusting the negative prompt alone.
