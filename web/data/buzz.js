@@ -281,5 +281,17 @@ window.RTFC_BUZZ = [
     text:"JetStream debuted Clearance, a zero-trust reasoning engine that evaluates and authorizes every AI agent action against an approved design before it executes—blocking dangerous sequences like exfiltration patterns mid-execution rather than only logging them after the fact. Clearance binds policy to the identity of the requesting agent and reaches inside tools to the individual parameter level; a team can enable a server's read tool and block its delete, so an agent never holds a permission it was never meant to have. General availability is scheduled for this fall.",
     why:"A reasoning engine that stops a malicious or buggy agent action mid-sequence, rather than detecting it post-hoc, is the structural difference between a log-after-exfil approach and an approve-before-run one -- and moves AI governance from reactive detection to preventive authorization.",
     heat:65, topics:["jetstream","ai governance","agent authorization","zero trust","security","reasoning engine"],
-    url:"https://www.pr-inside.com/jetstream-announces-clearance-an-ai-zero-trust-reasoning-engine-r5218694.htm" }
+    url:"https://www.pr-inside.com/jetstream-announces-clearance-an-ai-zero-trust-reasoning-engine-r5218694.htm" },
+{ id:"bz-470", date:"2026-09-02",
+    source:{ name:"Government of South Korea", handle:"Government of South Korea", platform:"web", kind:"gov" },
+    text:"South Korea's government announced a $919 billion sovereign-AI investment plan across three \"mega projects\" led by domestic conglomerates SK, GS, and Naver, targeting 8.4 gigawatts of AI data-center capacity by 2029 and 18.4 gigawatts by 2035. The government said it will support site development, permitting, and construction, with the first-phase projects breaking ground in the first half of 2028 and entering phased operation from 2029.",
+    why:"A single national government committing more than $900 billion and a fixed gigawatt buildout schedule is a concrete marker of how far sovereign AI ambitions have moved from policy language into scheduled construction -- and a scale that puts South Korea's own state-directed buildout in the same conversation as the US hyperscalers' capex.",
+    heat:64, topics:["south korea","sovereign ai","data centers","government investment","sk","gs","naver"],
+    url:"https://www.datacenterdynamics.com/en/news/south-korea-announces-919bn-investment-into-three-mega-projects-plans-to-build-184gw-worth-of-data-centers-by-2035/" },
+{ id:"bz-471", date:"2026-09-02",
+    source:{ name:"Cisco", handle:"Cisco", platform:"web", kind:"lab" },
+    text:"Cisco rolled out a personalized AI agent called MyAgent to its entire roughly 90,000-person workforce, built on the company's internal multi-model platform Circuit. Each employee's agent pulls permissioned context from tools including Outlook, Webex, Jira, and SharePoint and can call more than 800 backend subagents; for cost control, Cisco says 50-60% of requests route to open-weight models and 20-30% to plain software automation, with only a small remainder going to a frontier model.",
+    why:"One of the world's largest networking companies giving every employee, not a pilot group, an agent that can act across its own core work tools is a concrete test of agentic AI at full-workforce scale, and the routing split toward open-weight models and automation is a real data point on how a large enterprise actually controls agent costs in practice.",
+    heat:59, topics:["cisco","ai agents","enterprise ai","open weights","cost optimization","workforce"],
+    url:"https://www.pymnts.com/news/artificial-intelligence/2026/cisco-deploys-custom-ai-agent-to-entire-90000-person-workforce" }
 ];

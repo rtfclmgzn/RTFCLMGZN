@@ -65,6 +65,8 @@ window.RTFC_ENTITIES = {
       kind:"budget high-volume model", access:"closed" },
     { re:/\bGPT-5\.6-Cyber\b/i, name:"GPT-5.6-Cyber", maker:"OpenAI", makerKey:"openai",
       kind:"gated offensive-security research model", access:"closed" },
+    { re:/\bAstra\b/i, name:"Astra", maker:"OpenAI", makerKey:"openai",
+      kind:"unreleased model, first to cross OpenAI's 'Critical' cyber-capability threshold", access:"closed" },
     { re:/\bGPT-5\.6\b/i, name:"GPT-5.6", maker:"OpenAI", makerKey:"openai",
       kind:"frontier model family", access:"closed" },
     { re:/\bGPT-5\.5\b/i, name:"GPT-5.5", maker:"OpenAI", makerKey:"openai",

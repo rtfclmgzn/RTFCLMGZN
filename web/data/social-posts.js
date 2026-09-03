@@ -11831,5 +11831,258 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-03T04:52:32Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-google-anthropic-gated-cyber-ai-models-same-week",
+    "ts": "2026-09-03T14:26:00Z",
+    "export": {
+      "article_id": "newsroom-openai-google-anthropic-gated-cyber-ai-models-same-week",
+      "url": "https://rtfclmgzn.com/article/openai-google-anthropic-gated-cyber-ai-models-same-week",
+      "headline": "OpenAI's Astra crossed its own 'Critical' cyber threshold this week -- Google and Anthropic each shipped a competing gated hacking-capable model in the same three days",
+      "hook": "Three labs, three gated cyber-AI models, one week -- and every comparative capability claim among them is self-reported, not independently verified.",
+      "key_facts": [
+        "OpenAI's Astra is the first model to cross its own 'Critical' cyber-capability threshold.",
+        "Google gated Gemini 3.8 Flash Cyber behind a new Fairwind Program for ~650 vetted defenders.",
+        "Anthropic restricted Claude Mythos 5.1's fuller cyber toolset to a US-only verification program."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-openai-google-anthropic-gated-cyber-ai-models-same-week.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI's Astra just crossed its own 'Critical' cyber threshold. Google and Anthropic each shipped a competing gated hacking-capable model in the same 3 days. Every comparative claim about who's best? Self-reported, not independently checked.",
+        "reply_copy": "The full breakdown, company by company:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T19:21:56Z",
+        "copy": "What's actually established vs. asserted in this week's 3-way cyber-AI release: OpenAI's ExploitBench 100%, Google's CyberGym win, Anthropic's 60%-fewer-interventions claim -- all three are the company's own number, graded by the company's own test.",
+        "reply_copy": "Full scorecard:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three of the biggest AI labs just shipped gated cybersecurity models within three days of each other.\n\nOpenAI's Astra is the first model to cross its own \"Critical\" cyber-capability threshold. Google gated Gemini 3.8 Flash Cyber behind a new Fairwind Program for ~650 vetted defenders. Anthropic restricted Claude Mythos 5.1's fuller toolset to US-only vetted organizations.\n\nEach company says its model is the best at real hacking. None of those comparisons has been checked by anyone outside the company making the claim.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#OpenAI",
+          "#Anthropic",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI, Google, and Anthropic each shipped a gated cybersecurity AI model within the same three days this week. OpenAI's Astra is the first model to cross the company's own \"Critical\" cyber-capability threshold. Google gated Gemini 3.8 Flash Cyber behind a new Fairwind Program. Anthropic restricted Claude Mythos 5.1's cyber toolset to vetted US organizations. Every comparative claim about which model is actually best at real hacking comes from the company making it -- not an outside evaluator.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI's Astra crossed its own 'Critical' cyber threshold this week. Google and Anthropic each shipped a competing gated model in the same 3 days. Every comparative claim between them is self-reported -- no outside evaluator has checked any of it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T19:21:56Z",
+        "copy": "The pattern behind this week's 3 gated cyber-AI launches: each lab has spent weeks disclosing its own models misbehaving in ways old safeguards couldn't catch. A vetted-access gate is each company's answer -- but none of the benchmark numbers next to it are independently checked either.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's Astra crossed its own 'Critical' cyber threshold this week. Google and Anthropic each shipped a competing gated hacking-capable model in the same 3 days. Every comparative capability claim among them is self-reported, not independently verified.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-chatgpt-health-epic-ehr-integration",
+    "ts": "2026-09-03T14:27:00Z",
+    "export": {
+      "article_id": "newsroom-chatgpt-health-epic-ehr-integration",
+      "url": "https://rtfclmgzn.com/article/chatgpt-health-epic-ehr-integration",
+      "headline": "ChatGPT Health now plugs directly into Epic's patient charts, covering more than 325 million records -- read-only, and OpenAI says its own safety testing rated 99.1% of responses safe",
+      "hook": "ChatGPT can now read a patient's chart straight out of Epic -- read-only, covering over 325 million patients -- and OpenAI's own safety study rates 99.1% of responses safe.",
+      "key_facts": [
+        "Epic's system covers over 325 million patients; the ChatGPT connection is read-only.",
+        "UCSF Health, the pilot partner, says the tool is already saving clinicians time.",
+        "OpenAI's 99.1%-safe figure is its own study; the company still says the tool isn't for diagnosis."
+      ],
+      "tone": "precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/newsroom-chatgpt-health-epic-ehr-integration.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ChatGPT Health now reads straight out of Epic's patient charts -- 325M+ patients covered, read-only. OpenAI's own study says 99.1% of responses were rated safe. OpenAI itself still says: not for diagnosis or treatment.",
+        "reply_copy": "What's actually established vs. OpenAI's own word:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DigitalHealth"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T19:23:24Z",
+        "copy": "One question OpenAI's ChatGPT Health/Epic launch doesn't answer: what a patient is actually told about an AI reading their chart, or whether they can opt out. The controls described are all clinician- and institution-level -- not patient-facing.",
+        "reply_copy": "Full piece:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "ChatGPT Health now connects directly to Epic -- the hospital software behind more than 325 million patients' charts.\n\nClinicians can pull a patient's notes, labs, medications, and specialist records into ChatGPT, or use it right inside Epic's own workflow. It's read-only: nothing writes back to the chart.\n\nUCSF Health, the pilot partner, says it's already saving clinicians time. OpenAI's own study rates 99.1% of responses safe across 4,363 physician ratings -- but OpenAI itself still says the tool isn't for diagnosis or treatment.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#DigitalHealth",
+          "#HealthTech",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI's ChatGPT Health now connects directly to Epic, the hospital software behind more than 325 million patients' charts. Clinicians can pull a patient's notes, labs, medications, and specialist records into ChatGPT -- read-only, nothing writes back to the record. UCSF Health, the pilot partner, says it's already saving clinicians time. OpenAI's own study rates 99.1% of responses safe; the company still says the tool isn't for diagnosis or treatment.",
+        "hashtags": [
+          "#AI",
+          "#DigitalHealth"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ChatGPT Health now reads straight out of Epic's patient charts -- 325M+ patients, read-only. OpenAI's own study says 99.1% of responses were rated safe. OpenAI itself still says it's not for diagnosis or treatment.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ChatGPT Health now plugs into Epic's patient charts -- 325M+ patients covered, read-only. OpenAI's own study says 99.1% of responses were rated safe. OpenAI itself still says the tool isn't for diagnosis or treatment.",
+        "hashtags": [
+          "#AI",
+          "#DigitalHealth"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-hiddenlayer-100-million-series-b-ai-security",
+    "ts": "2026-09-03T14:28:00Z",
+    "export": {
+      "article_id": "newsroom-hiddenlayer-100-million-series-b-ai-security",
+      "url": "https://rtfclmgzn.com/article/hiddenlayer-100-million-series-b-ai-security",
+      "headline": "HiddenLayer raises $100 million to sell protection against AI attacks it says grew tenfold in a year",
+      "hook": "HiddenLayer just raised $100 million to protect AI models and agents from attacks -- and says its revenue grew more than 10x in the past year.",
+      "key_facts": [
+        "$100 million Series B led by Delta-v Capital, with Morgan Stanley and Microsoft's M12 joining.",
+        "HiddenLayer says ARR grew more than 10x over the past year, now in the tens of millions.",
+        "No new valuation was disclosed; the prior round was a $50 million Series A in 2023."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-hiddenlayer-100-million-series-b-ai-security.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "AI-security startup HiddenLayer just raised a $100M Series B, led by Delta-v Capital with Morgan Stanley and Microsoft's M12 joining. The company says ARR grew more than 10x in the past year. No valuation disclosed.",
+        "reply_copy": "The round, in short:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "HiddenLayer, which builds protection for AI models and agents against adversarial attacks, just closed a $100 million Series B led by Delta-v Capital -- with Morgan Stanley and Microsoft's M12 among the participants.\n\nThe company says annual recurring revenue grew more than 10x over the past year, now in the tens of millions -- mostly from new customers, not existing accounts spending more.\n\nNo new valuation was disclosed. Full story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#StartupFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI-security startup HiddenLayer raised a $100 million Series B led by Delta-v Capital, with Morgan Stanley, Microsoft's M12, Ten Eleven Ventures, and Booz Allen Ventures also participating. The company says annual recurring revenue grew more than 10x over the past year, now in the tens of millions of dollars, mostly driven by new customers. No new valuation was disclosed.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "HiddenLayer just raised a $100M Series B to protect AI models and agents from attacks -- and says its ARR grew more than 10x in the past year. No valuation disclosed.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "AI-security startup HiddenLayer raised a $100M Series B led by Delta-v Capital. The company says ARR grew more than 10x over the past year, now in the tens of millions. No new valuation disclosed.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
