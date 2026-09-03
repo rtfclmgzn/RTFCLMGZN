@@ -1179,8 +1179,21 @@ window.RTFC_MAGAZINE_ISSUES.push({
     "body": [
       "A primer that only sells you the upside is an advertisement. So, plainly:",
       "These systems still **confidently make things up** — one prominent model doubled its hallucination rate this year even as its knowledge grew. ==Never act on an unverified AI answer when the stakes are real.== They reflect the biases of what they read, and nobody, including their makers, can fully explain an individual answer.",
-      "The bigger questions are open: jobs built on tasks these systems now do well — the customer-service rep whose tickets a model now drafts first, the translator editing a machine's first pass instead of starting from a blank page — the answer so far looks like transformation more than disappearance, but nobody serious claims certainty; one concrete thing worth watching is entry-level hiring in those exact roles, since a real headcount shift would show up there first, long before any company said so out loud; what always-listening assistants mean for privacy; whether capability this powerful should sit with the handful of companies Act V priced.",
-      "Anyone selling certainty is selling. Engage anyway: the best-positioned people got fluent early enough to form their own opinions."
+      "The bigger questions are still open, and each one deserves more than a single clause."
+    ]
+  },
+  {
+    "kind": "text",
+    "folio": "Act VI · The Honest Page",
+    "layout": "runover",
+    "cont": "What it can't do — and what's genuinely worth worrying about, continued",
+    "crosshead": "The questions worth sitting with",
+    "end": true,
+    "body": [
+      "**Jobs.** The clearest early pattern is tasks changing hands before whole jobs do: the customer-service rep whose tickets a model now drafts first, the translator editing a machine's first pass instead of starting from a blank page. The trip-planning agent from Act II — comparing flights, checking a calendar, drafting the itinerary — is the same shift at the task level, just earlier in its spread. The honest answer so far looks like transformation more than disappearance, but nobody serious claims certainty. One concrete thing worth watching: entry-level hiring in those exact roles, since a real headcount shift would show up there first, long before any company said so out loud.",
+      "**Always-listening assistants and privacy.** The same convenience that lets an assistant act on your calendar or your inbox means it's also positioned to see more of your life than any tool before it. What gets stored, for how long, and who else can query it are decisions each company makes in its own terms of service — not decisions you're asked to make.",
+      "**Concentration.** Whether capability this powerful should sit with the handful of companies Act V priced is a question this issue keeps returning to rather than answering, because nobody outside those companies actually knows the honest answer yet.",
+      "Anyone selling certainty on any of the three is selling. Engage anyway: the best-positioned people got fluent early enough to form their own opinions."
     ]
   },
   {

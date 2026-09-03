@@ -41524,6 +41524,452 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-09-02T19:28:25Z"
+  },
+  {
+    "slug": "doj-openai-fair-use-statement-nyt-copyright-mdl",
+    "title": "Trump's Justice Department tells a federal court that training AI on copyrighted news is fair use, backing OpenAI against The New York Times",
+    "dek": "In a first-of-its-kind statement of interest filed September 2 in the consolidated copyright docket covering the Times and more than a dozen other publishers, the DOJ argued training large language models on copyrighted text is legally transformative and warned that ruling otherwise would cede AI dominance to \"foreign adversaries.\" The Times called it siding with \"trillion-dollar AI companies\" against the reporters whose work trained them; an attorney on the other side of the same docket called the brief disconnected from the evidence. Judge Sidney H. Stein has given both sides until Friday to file for summary judgment.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch Friday, September 4 -- the summary-judgment deadline in MDL No. 3143.",
+        "text": "That's the first point where Judge Stein, not a filer, could actually rule on whether training itself is fair use across the whole consolidated docket -- the exact question this DOJ brief was written to influence."
+      },
+      {
+        "label": "Watch whether DOJ files similar statements in the roughly 400-publisher coalition suit (filed June 2026) or the new Suno music-copyright case.",
+        "text": "One filing is advocacy in a single docket; a pattern across multiple AI-copyright cases would be a standing executive-branch position, not a one-off assist to OpenAI."
+      },
+      {
+        "label": "Watch whether publishers who haven't sued read this as a reason to take a licensing deal instead.",
+        "text": "Several publishers already have paid licensing agreements with OpenAI; a ruling that training is broadly fair use removes the main leverage anyone else has to negotiate similar terms through a lawsuit."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Trump Administration Backs OpenAI in New York Times Copyright Fight",
+        "url": "https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/",
+        "outlet": "TheWrap",
+        "kind": "reporting"
+      },
+      {
+        "label": "Justice Dept. Sides With OpenAI in New York Times Copyright Suit",
+        "url": "https://gvwire.com/2026/09/02/justice-dept-sides-with-openai-in-new-york-times-copyright-suit/",
+        "outlet": "GV Wire / Associated Press",
+        "kind": "reporting"
+      },
+      {
+        "label": "Trump administration backs OpenAI 'fair use' argument in suit from NYT",
+        "url": "https://thehill.com/homenews/media/6066304-ny-times-openai-ai-lawsuit/",
+        "outlet": "The Hill",
+        "kind": "reporting"
+      },
+      {
+        "label": "US government backs OpenAI in NY Times copyright case",
+        "url": "https://www.rte.ie/news/business/2026/0902/1590122-trump-ai-business/",
+        "outlet": "RTE",
+        "kind": "reporting"
+      },
+      {
+        "label": "Trump Admin Tells Court: Let OpenAI Rip Off The Intercept's Articles",
+        "url": "https://theintercept.com/2026/09/02/trump-openai-copyright-lawsuit-news-articles/",
+        "outlet": "The Intercept",
+        "kind": "reporting"
+      },
+      {
+        "label": "In Re: OpenAI, Inc. Copyright Infringement Litigation, MDL No. 3143 -- docket",
+        "url": "https://www.courtlistener.com/docket/69879510/in-re-openai-inc-copyright-infringement-litigation/",
+        "outlet": "CourtListener",
+        "kind": "filing_or_official"
+      }
+    ],
+    "tldr": [
+      "The DOJ told a federal court that training AI on copyrighted news is fair use.",
+      "It's the first time the U.S. government has intervened in AI copyright litigation this way.",
+      "The filing covers a docket consolidating the Times' suit with more than a dozen others.",
+      "The Times called it siding with AI companies over the journalists whose work trained them.",
+      "Caveat: Judge Stein hasn't ruled -- summary judgment briefing is due Friday, and a brief isn't a verdict."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The U.S. Department of Justice told a federal judge on September 2 that training AI systems on copyrighted news articles **is legal under fair use** -- the first time the federal government has formally intervened in the wave of copyright lawsuits against AI companies, and a direct assist to **OpenAI** in its highest-profile fight. Associate Attorney General Stanley Woodward Jr., who signed the filing, called it \"a historic statement of interest\" in a post on X, adding that President Trump \"has made clear that AI dominance is critical to promote national security, prosperity, and economic mobility for all Americans.\"",
+        "citation_urls": [
+          "https://gvwire.com/2026/09/02/justice-dept-sides-with-openai-in-new-york-times-copyright-suit/",
+          "https://www.rte.ie/news/business/2026/0902/1590122-trump-ai-business/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The filing lands in the consolidated docket __In re: OpenAI, Inc., Copyright Infringement Litigation__ (MDL No. 3143), the Southern District of New York case that folds The New York Times' 2023 lawsuit together with more than a dozen others against OpenAI and its partner [Microsoft](/company/microsoft) -- including suits from the Daily News, the Center for Investigative Reporting, and the Ziff Davis network of sites -- all assigned to U.S. District Judge Sidney H. Stein. Most coverage of the filing led with the Times alone; the government's brief actually speaks to the fair-use question for the whole consolidated docket at once.",
+        "citation_urls": [
+          "https://www.courtlistener.com/docket/69879510/in-re-openai-inc-copyright-infringement-litigation/",
+          "https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "title": "How the case got to a DOJ filing",
+          "items": [
+            {
+              "when": "Dec 27, 2023",
+              "what": "The New York Times sues OpenAI and Microsoft in the Southern District of New York, alleging copyright infringement and trademark dilution.",
+              "source": "https://en.wikipedia.org/wiki/The_New_York_Times_v._Microsoft_and_OpenAI"
+            },
+            {
+              "when": "Mar 26, 2025",
+              "what": "Judge Stein denies most of the defendants' motions to dismiss, letting the core infringement claims proceed.",
+              "hi": true,
+              "source": "https://en.wikipedia.org/wiki/The_New_York_Times_v._Microsoft_and_OpenAI"
+            },
+            {
+              "when": "2025",
+              "what": "The Daily News' and the Center for Investigative Reporting's separate suits are consolidated into the same docket before Judge Stein, later folded into MDL No. 3143.",
+              "source": "https://www.courtlistener.com/docket/69879510/in-re-openai-inc-copyright-infringement-litigation/"
+            },
+            {
+              "when": "Jun 2026",
+              "what": "The Times amends its complaint to allege Microsoft actively encouraged OpenAI's use of its articles; a coalition of roughly 400 publishers files a similar suit against both companies.",
+              "source": "https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/"
+            },
+            {
+              "when": "Jul 2026",
+              "what": "The Times seeks sanctions against OpenAI, accusing it of withholding evidence in discovery.",
+              "source": "https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/"
+            },
+            {
+              "when": "Sep 2, 2026",
+              "what": "The DOJ files its statement of interest backing OpenAI's fair-use defense.",
+              "hi": true,
+              "source": "https://gvwire.com/2026/09/02/justice-dept-sides-with-openai-in-new-york-times-copyright-suit/"
+            },
+            {
+              "when": "Sep 4, 2026",
+              "what": "Deadline for both sides to file for summary judgment.",
+              "future": true,
+              "detail": "The first point Judge Stein could rule on the fair-use question without a trial.",
+              "source": "https://thehill.com/homenews/media/6066304-ny-times-openai-ai-lawsuit/"
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What the government actually argued"
+      },
+      {
+        "type": "p",
+        "text": "The DOJ's core claim is that using copyrighted text to train a model is __transformative__ -- the model doesn't reproduce the work, the argument goes, it learns statistical patterns from it -- and that transformative use sits squarely inside fair use as courts have long defined it. \"The United States has a strong interest in this court rejecting any argument that training LLMs on copyrighted texts violates copyright law,\" the filing states, framing the stakes as competitive rather than purely legal: forcing AI companies to license training data at scale, the government argued, would be \"legally incorrect\" and could hand the advantage to rivals operating under looser rules.",
+        "citation_urls": [
+          "https://gvwire.com/2026/09/02/justice-dept-sides-with-openai-in-new-york-times-copyright-suit/",
+          "https://theintercept.com/2026/09/02/trump-openai-copyright-lawsuit-news-articles/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Woodward put the same argument more bluntly outside the filing itself: \"This Administration will never let our Nation be at a disadvantage relative to our foreign adversaries based on a plainly incorrect understanding of copyright law.\"",
+        "citation_urls": [
+          "https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/",
+          "https://www.rte.ie/news/business/2026/0902/1590122-trump-ai-business/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "The fair-use fight, boiled down",
+          "columns": [
+            {
+              "label": "DOJ / OpenAI"
+            },
+            {
+              "label": "Times / publishers",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Core legal theory",
+              "values": [
+                "Training is transformative use -- the model learns patterns, it doesn't republish text",
+                "Training required systematic, large-scale copying of protected work without a license"
+              ]
+            },
+            {
+              "label": "What's framed as at stake",
+              "values": [
+                "Falling behind \"foreign adversaries\" on AI capability",
+                "An uncompensated transfer of journalism's economic value to AI companies"
+              ]
+            },
+            {
+              "label": "What a win looks like",
+              "values": [
+                "Court finds training itself does not infringe, docket-wide",
+                "Licensing terms or damages for use of millions of articles"
+              ]
+            },
+            {
+              "label": "Who's on record saying so",
+              "values": [
+                "Assoc. AG Stanley Woodward Jr.",
+                "Times spokesperson Graham James; Intercept counsel Matt Topic"
+              ]
+            }
+          ],
+          "source": "DOJ statement of interest as quoted by GV Wire/AP and The Intercept; Times statement as quoted by GV Wire/AP"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The Times rejected the government's framing outright. \"==The Administration is siding with a handful of trillion-dollar AI companies at the expense of the countless American creators whose work they stole==,\" said Times spokesperson Graham James, arguing the government's position would \"undermine the sustainability of the human-created content that a healthy society depends on, and which AI needs to function.\"",
+        "citation_urls": [
+          "https://gvwire.com/2026/09/02/justice-dept-sides-with-openai-in-new-york-times-copyright-suit/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The pushback from inside the same docket"
+      },
+      {
+        "type": "p",
+        "text": "The sharpest critique came from a lawyer representing a different plaintiff in the same consolidated case. Matt Topic, an attorney for The Intercept -- one of the more than a dozen outlets whose suits were folded into MDL No. 3143 -- argued the DOJ's brief \"isn't based on any understanding of actual facts,\" since the department was never a party to the two years of discovery the publishers have conducted. He called the administration's position \"out of touch and a threat to the financial survival of media outlets.\"",
+        "citation_urls": [
+          "https://theintercept.com/2026/09/02/trump-openai-copyright-lawsuit-news-articles/"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "The DOJ's brief reflects the industry's talking points, not case-specific analysis.",
+              "detail": "The department was not a party to discovery in the consolidated docket, and its filing does not engage with the specific evidence -- internal communications, training logs, examples of near-verbatim output -- that the publishers have spent two years compiling.",
+              "whoHolds": "Matt Topic, attorney for The Intercept in the same MDL"
+            },
+            {
+              "claim": "Accepting the government's framing would strip news organizations of their only real leverage, without compensation.",
+              "detail": "If training on copyrighted text is broadly fair use, publishers lose the one legal claim -- copyright -- that gives them a negotiating position against AI products already replacing referral traffic with direct chatbot answers.",
+              "whoHolds": "Matt Topic"
+            }
+          ],
+          "verdict": "Both points land on the same objection: a statement of interest is advocacy, not adjudication, and Judge Stein isn't bound by it. But they name the real fight inside \"fair use\" -- whether transformation should be judged by what the model does internally (learn patterns) or by what it does to the market for the original work (compete with it for the same readers and ad revenue). That second framing is what the Times' suit was built to test, and the DOJ's brief does not directly rebut it.",
+          "source": "The Intercept, Sept. 2, 2026"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The brief doesn't land in a vacuum. **Anthropic** agreed in May to pay $1.5 billion to settle a related case after a judge found it had illegally downloaded pirated books to train its models -- the closest thing the industry has to a fair-use price tag, and a settlement rather than a ruling precisely because Anthropic chose not to test in court the question the DOJ is now trying to answer for OpenAI. A coalition of roughly 400 news publishers sued OpenAI and Microsoft on similar grounds in June, and musicians sued the AI-music startup Suno this week over the same underlying theory applied to audio. Every one of those cases turns on the question the DOJ's filing tries to settle in one motion: does training itself infringe, regardless of what a chatbot's output looks like?",
+        "citation_urls": [
+          "https://www.thewrap.com/industry-news/tech/trump-administration-openai-new-york-times-ai-copyright/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What's next"
+      },
+      {
+        "type": "p",
+        "text": "Judge Stein has given both sides in the consolidated docket until **Friday, September 4** to file for summary judgment -- the point at which a judge can rule on the core legal question without a trial, if the underlying facts aren't genuinely in dispute. A DOJ statement of interest carries no independent legal weight; Stein can credit it, ignore it, or weigh it alongside everything else, the way judges typically treat amicus-style filings. But it now sits in the record the same week both sides ask him to decide the case, ==putting the executive branch on record making the argument OpenAI has been making alone for nearly three years.==",
+        "citation_urls": [
+          "https://thehill.com/homenews/media/6066304-ny-times-openai-ai-lawsuit/",
+          "https://gvwire.com/2026/09/02/justice-dept-sides-with-openai-in-new-york-times-copyright-suit/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"An unprecedented, uncompensated transfer of IP rights from news organizations to tech companies.\" -- Matt Topic, attorney for The Intercept in the consolidated copyright docket",
+        "citation_urls": [
+          "https://theintercept.com/2026/09/02/trump-openai-copyright-lawsuit-news-articles/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "For a defendant three years into the same lawsuit, having the Justice Department volunteer its argument for free is close to the best outcome short of a plaintiff walking away. But a statement of interest is not a ruling, and Judge Stein's own March 2025 order already found the Times' core copying claims **strong enough to survive dismissal once**. Whether \"transformative\" training beats that finding a second time is now his call, on a record the government just added itself to."
+      }
+    ],
+    "id": "newsroom-doj-openai-fair-use-statement-nyt-copyright-mdl",
+    "image": "assets/img/newsroom/newsroom-doj-openai-fair-use-statement-nyt-copyright-mdl.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-03T00:08:12Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "6 sources, 1 filing-class (the MDL docket itself via CourtListener), 5 independent reporting outlets (TheWrap, GV Wire/AP, The Hill, RTE, The Intercept) each contributing distinct facts: TheWrap and GV Wire carried the Woodward and Times quotes and the broader litigation landscape (Anthropic settlement, publisher coalition suit, Suno suit); The Hill carried the Friday summary-judgment deadline and Judge Stein's name; The Intercept carried the Matt Topic critique, which no other outlet reported. Cross-checked the case docket directly on CourtListener to confirm this is MDL No. 3143 consolidating 16+ suits, not a standalone NYT case -- most secondary coverage collapsed this distinction."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Reconciled a real framing conflict: outlets covering the Times' angle describe this as filed 'in the New York Times case,' while The Intercept's own coverage describes it as filed 'in The Intercept's lawsuit.' Both are accurate -- it is one filing in the single consolidated MDL docket that contains both suits (plus the Daily News, CIR, and Ziff Davis actions) before Judge Stein. Treated as a naming/framing difference to correct in prose (the article states the MDL structure explicitly), not a sourcecheck-worthy numeric conflict. Verified the case timeline (filing date, March 2025 ruling, June 2026 amended complaint) against Wikipedia's own cited timeline for the underlying case, independent of the DOJ-filing coverage. No model launch in this piece, so no entities.js action. Cross-linked companies.js entries for openai and microsoft (both already tracked); no dictionary term forced."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Mandatory-scrutiny trigger (legal proceedings, compliance-rulebook.md #3) fires -- confirmed both sides are quoted on the record and the piece states the DOJ's argument and the Times'/Topic's rebuttal as positions, not as this desk's own conclusions; no accusatory claim is adopted as narrator voice. Critique found the first draft's closing paragraph read as siding with OpenAI by omission; revised to close on the unresolved procedural question (Stein's prior ruling vs. this filing) rather than an implied verdict. TL;DR final bullet carries the load-bearing caveat -- a brief isn't a ruling."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "timeline's 7 items each carry a real date and a source; the one future item is marked future:true. compare's 4 rows each have 2 values matching the 2 columns, and every value traces to a quote or fact already in the body text above it. counter's 2 points are Topic's actual reported positions, not a strawman, and the verdict engages them rather than dismissing both. No component carries a top-level text field (the quote block's text field is the exempt body-block type, not a component). No two components sit adjacent -- each is preceded and followed by prose. First block is a p."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources, 1 filing-class, clears the synthesis floor (3+ threads) with room to spare. Body runs approximately 855 words, within the 800-1,900 synthesis band. 3 components (timeline, compare, counter) clear the synthesis minimum of 2, with compare carrying data. Mandatory-scrutiny trigger (legal proceedings) fires and is handled: both sides quoted on the record, no accusatory claim adopted as this desk's voice, the DOJ's and the Times'/Topic's positions are each attributed rather than asserted as fact. Disclaimer: none (no health/financial claim present)."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Clears its evidence floor with 6 sources across 5 outlets plus the underlying docket, and does real reconciliation work a wire rewrite wouldn't: identifying that this is one filing in a 16-suit MDL rather than a standalone NYT case, and surfacing a same-docket rebuttal (Topic) that most coverage of the Times angle never mentioned. Legal-proceedings mandatory-scrutiny trigger handled -- sourced-neutral throughout, both sides on the record."
+      }
+    },
+    "publishedAt": "2026-09-03T00:08:12Z"
+  },
+  {
+    "slug": "google-gemini-agentic-video-understanding-launch",
+    "title": "Google adds an 'agentic' mode to Gemini video analysis, claiming up to 88% fewer tokens",
+    "dek": "Google says letting Gemini 3.7, 3.6, and 3.5 Flash-Lite dynamically choose which frames, audio, or transcript to inspect -- instead of processing every frame at a fixed rate -- cuts video-analysis token use up to 88% and cost up to 66%, with up to 7% better accuracy. The mode is live now via the Gemini API and Google AI Studio; the numbers are Google's own benchmark, not yet independently verified, and the bigger rollout -- into the consumer Gemini app and YouTube's 'Ask YouTube' feature -- is still pending.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Try it now via the Gemini API in Google AI Studio if you process video at scale.",
+        "text": "The mode needs no separate feature flag or fee -- it runs at standard token pricing on Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite today."
+      },
+      {
+        "label": "Don't plan a cost budget off the 88%/66%/7% figures yet.",
+        "text": "Every published number so far traces back to Google's own blog post; no outside lab has re-run the comparison independently."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Introducing agentic video understanding in Gemini",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+        "outlet": "Google (official blog)",
+        "kind": "primary"
+      },
+      {
+        "label": "Google is making Gemini better at analyzing videos",
+        "url": "https://www.androidauthority.com/gemini-agentic-video-understanding-3705876/",
+        "outlet": "Android Authority",
+        "kind": "reporting"
+      },
+      {
+        "label": "Google To Bring New Video Understanding Tech To Ask YouTube",
+        "url": "https://www.searchenginejournal.com/google-video-understanding-ask-youtube/588123/",
+        "outlet": "Search Engine Journal",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Google added \"agentic video understanding\" to three Gemini Flash models on September 1.",
+      "The model chooses which frames, audio, or transcript to inspect instead of fixed-rate sampling.",
+      "Google says this cuts video-analysis token use up to 88% and cost up to 66%.",
+      "It's live now via the Gemini API and AI Studio; the consumer app and YouTube come later.",
+      "Caveat: these are Google's own benchmark figures, not yet independently verified."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Google** rolled out an ++agentic++ mode for video analysis in Gemini on September 1, letting the model **decide for itself which parts of a video are worth inspecting** instead of grinding through every frame at a fixed rate. Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite can now request specific frames, audio segments, or transcript chunks on demand -- an internal loop the model runs before answering a query about a video, rather than ingesting the whole thing uniformly.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "Agentic video understanding, in short",
+          "items": [
+            {
+              "label": "Models",
+              "value": "Gemini 3.7 Flash, 3.6 Flash, 3.5 Flash-Lite"
+            },
+            {
+              "label": "Token use",
+              "value": "Down up to 88%",
+              "note": "Google's own benchmark"
+            },
+            {
+              "label": "Cost",
+              "value": "Down up to 66%"
+            },
+            {
+              "label": "Accuracy",
+              "value": "Up up to 7%"
+            },
+            {
+              "label": "Available now",
+              "value": "Gemini API, Google AI Studio, Gemini Enterprise Agent Platform"
+            },
+            {
+              "label": "Coming later",
+              "value": "Consumer Gemini app; YouTube's \"Ask YouTube\""
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Google frames four jobs the ++agentic++ approach targets: catching sub-second state changes for precise video editing, answering complex queries across multi-hour footage without processing all of it at one frame rate, resampling suspect windows at higher frame rates to catch visual anomalies, and counting repeated actions or objects over time. The efficiency numbers -- up to 88% fewer [__tokens__](/dictionary) consumed, up to 66% lower cost, up to 7% better accuracy -- are Google's own reported benchmarks; independent verification hasn't caught up yet, and outside coverage of the launch has so far only restated the company's own figures rather than testing them.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+          "https://www.androidauthority.com/gemini-agentic-video-understanding-3705876/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The bigger test of the claim is what happens when it reaches products people use daily rather than developers calling an API. Google says the mode will roll out to the consumer Gemini app \"soon\" and will power YouTube's ==\"Ask YouTube\" answer feature on video watch pages== \"in the coming months\" -- though YouTube's own help documentation still doesn't explain how a video gets chosen as Ask YouTube's primary citation versus a supporting one, leaving creators an efficiency gain they can't see yet and no clear way to influence how their videos get read.",
+        "citation_urls": [
+          "https://www.searchenginejournal.com/google-video-understanding-ask-youtube/588123/",
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
+        ]
+      }
+    ],
+    "id": "newsroom-google-gemini-agentic-video-understanding-launch",
+    "image": "assets/img/newsroom/newsroom-google-gemini-agentic-video-understanding-launch.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-03T00:08:18Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "3 sources, 1 primary (Google's own announcement blog, fetched directly), 2 independent reporting outlets. Android Authority and Search Engine Journal both substantially restate the blog's own figures rather than adding independent measurement, so this collapses to roughly 2 independent evidence threads (the vendor announcement, and SEJ's distinct reporting on the Ask YouTube creator-documentation gap) -- below the 3-thread synthesis floor, so this ran as a brief rather than padding it into a synthesis it hadn't earned."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed the 88%/66%/7% figures appear verbatim in Google's own post and are not independently benchmarked anywhere found -- stated explicitly as a vendor claim in the body and TL;DR caveat, per compliance-rulebook.md's unverifiable-central-claim trigger and Law 4 (never adopt a vendor's self-reported benchmark as this desk's own fact). No new model launch in the Scoreboard sense (this is a capability feature on existing, already-scored Gemini Flash models), so no scoreboard/entities.js action needed. Dictionary cross-link to 'Token' (already an existing term) added naturally at first relevant use."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found an early draft stated the token/cost/accuracy numbers as plain fact in the lede; revised to attribute them explicitly to Google in the body and flag the lack of independent verification, both in-body and as the TL;DR's load-bearing final bullet."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' six items each restate a fact stated directly in the surrounding paragraphs, sourced to Google's own blog. No component carries a top-level text field. Only one component total, matching the brief floor exactly -- no chart used, per house-style-guide.md's rule that a brief earns no chart."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 3 sources, 1 primary, appropriately routed as a brief (roughly 2 independent evidence threads, one event/announcement). Body runs approximately 274 words, within the 250-450 brief band. 1 component (keyfacts) clears the brief minimum. No mandatory-scrutiny trigger fires other than the vendor-benchmark caveat, which is handled by attribution rather than adoption. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A clean, honestly-scoped brief: the evidence supported roughly two independent threads, not a synthesis, and the piece says so in its own pipeline record rather than being stretched to a bigger format. The one genuine piece of original reporting value -- noting that Google's own efficiency numbers are unverified and that coverage of the launch has so far just repeated them -- is stated plainly rather than buried."
+      }
+    },
+    "publishedAt": "2026-09-03T00:08:18Z"
   }
 ]
 ;

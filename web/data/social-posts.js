@@ -11636,4 +11636,175 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
+,
+  {
+    "article_id": "newsroom-doj-openai-fair-use-statement-nyt-copyright-mdl",
+    "ts": "2026-09-03T00:08:12Z",
+    "export": {
+      "article_id": "newsroom-doj-openai-fair-use-statement-nyt-copyright-mdl",
+      "url": "https://rtfclmgzn.com/article/doj-openai-fair-use-statement-nyt-copyright-mdl",
+      "headline": "Trump's Justice Department tells a federal court that training AI on copyrighted news is fair use, backing OpenAI against The New York Times",
+      "hook": "The DOJ told a federal court that training AI on copyrighted news is fair use -- the first time the U.S. government has intervened in AI copyright litigation, and a direct assist to OpenAI against The New York Times.",
+      "key_facts": [
+        "Filed Sept. 2 in the consolidated MDL covering the Times' suit and a dozen+ others against OpenAI and Microsoft.",
+        "The Times called it siding with 'trillion-dollar AI companies' against the journalists whose work trained them.",
+        "Judge Sidney H. Stein has given both sides until Friday, Sept. 4, to file for summary judgment."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-doj-openai-fair-use-statement-nyt-copyright-mdl.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "The DOJ just told a federal court that training AI on copyrighted news is fair use -- backing OpenAI against The New York Times. The Times: it's siding with 'trillion-dollar AI companies' over the journalists whose work trained them.",
+        "reply_copy": "The filing, the pushback, and the Friday deadline that actually matters:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AICopyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T05:08:12Z",
+        "copy": "A lawyer for The Intercept -- a plaintiff in the SAME consolidated copyright case as The New York Times -- says the DOJ's brief backing OpenAI isn't based on any understanding of actual facts, since the government wasn't part of two years of discovery.",
+        "reply_copy": "The docket most coverage missed, and the argument getting overlooked in it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The Trump DOJ just told a federal court that training AI on copyrighted news is fair use -- the first time the U.S. government has weighed in on AI copyright litigation this way.\n\nIt's a direct assist to OpenAI in its highest-profile fight: the consolidated case covering The New York Times' lawsuit plus more than a dozen others.\n\nThe Times says the government is siding with 'trillion-dollar AI companies' over the journalists whose work trained them. A lawyer on the other side of the same docket calls the DOJ's brief disconnected from the evidence.\n\nJudge Stein has given both sides until Friday to file for summary judgment -- full breakdown at the link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#AICopyright",
+          "#NewYorkTimes",
+          "#AIRegulation",
+          "#TechNews",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The Trump administration's Justice Department told a federal court on September 2 that training AI on copyrighted news is fair use -- the first time the U.S. government has formally intervened in AI copyright litigation, and a direct assist to OpenAI in its fight with The New York Times and more than a dozen other publishers. The Times calls it siding with 'trillion-dollar AI companies' over the journalists whose work trained them; a lawyer for another publisher in the same case calls the DOJ's brief disconnected from the evidence. A federal judge has given both sides until Friday to file for summary judgment.",
+        "hashtags": [
+          "#OpenAI",
+          "#AICopyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "The DOJ just told a federal court that training AI on copyrighted news is fair use -- backing OpenAI against The New York Times and a dozen other publishers in one filing. The Times says it's siding with AI companies over the journalists whose work trained them. Judge Stein wants summary judgment motions by Friday.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-03T05:08:12Z",
+        "copy": "The sharpest pushback on the DOJ's brief didn't come from The New York Times -- it came from a lawyer for The Intercept, in the very same consolidated case, who says the government's filing isn't based on any understanding of actual facts.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "The DOJ told a federal court training AI on copyrighted news is fair use, backing OpenAI against The New York Times. The Times: siding with 'trillion-dollar AI companies' over the journalists whose work trained them.",
+        "hashtags": [
+          "#OpenAI",
+          "#AICopyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-gemini-agentic-video-understanding-launch",
+    "ts": "2026-09-03T00:08:18Z",
+    "export": {
+      "article_id": "newsroom-google-gemini-agentic-video-understanding-launch",
+      "url": "https://rtfclmgzn.com/article/google-gemini-agentic-video-understanding-launch",
+      "headline": "Google adds an 'agentic' mode to Gemini video analysis, claiming up to 88% fewer tokens",
+      "hook": "Google says an 'agentic' mode for Gemini video analysis cuts token use up to 88% and cost up to 66% -- but the numbers are Google's own, not yet independently verified.",
+      "key_facts": [
+        "Live now on Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite via the API and Google AI Studio.",
+        "The model requests specific frames, audio, or transcript on demand instead of fixed-rate sampling.",
+        "Consumer Gemini app and YouTube's 'Ask YouTube' rollout are still pending."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-google-gemini-agentic-video-understanding-launch.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google says a new agentic mode for Gemini video analysis cuts token use up to 88% and cost up to 66%. Live now on 3.7/3.6/3.5 Flash-Lite via the API. Caveat: these are Google's own benchmarks, not independently verified yet.",
+        "reply_copy": "How the model decides what to actually watch:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google just added an 'agentic' mode to Gemini's video analysis -- letting the model decide what to watch, instead of processing every frame at a fixed rate.\n\nGoogle's own numbers: up to 88% fewer tokens, up to 66% lower cost, up to 7% better accuracy.\n\nIt's live now via the Gemini API and Google AI Studio on 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite. The consumer app and YouTube's 'Ask YouTube' are still coming.\n\nOne honest caveat: every number so far is Google's own -- no independent lab has re-run the comparison. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI",
+          "#AIVideo",
+          "#MachineLearning",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google added an 'agentic' mode to Gemini's video analysis on September 1, letting the model choose which frames, audio, or transcript to inspect instead of processing every frame at a fixed rate. Google says this cuts video-analysis token use up to 88%, cost up to 66%, with up to 7% better accuracy -- live now via the Gemini API on Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite. One caveat worth keeping in mind: those are Google's own benchmark numbers, and no independent lab has verified them yet.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Google added an agentic mode to Gemini video analysis -- the model now decides what to watch instead of processing every frame. Google says: up to 88% fewer tokens, 66% lower cost. Caveat: that's Google's own benchmark, not independently verified.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Google's new agentic Gemini video mode picks which frames/audio/transcript to inspect instead of fixed-rate sampling. Google says up to 88% fewer tokens, 66% lower cost. Numbers are Google's own -- unverified independently so far.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
