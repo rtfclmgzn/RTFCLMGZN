@@ -287,3 +287,22 @@
   numerals, no user interface panels, no readable writing anywhere" clause to the
   scene text fixed all three on the first retry. Budget a visual review pass over any
   generated batch rather than trusting the negative prompt alone.
+- **2026-09-03** (newsroom cycle): generalizing the 2026-09-02 "grep before add" Buzz
+  lesson (Law 7) -- on a day with multiple scheduled jobs, by the time the newsroom
+  cycle starts its own research, an earlier same-day pulse scan has often already
+  staged Buzz cards for the loudest signals. This cycle researched five candidate
+  Buzz items from scratch (Astra's release, Gemini 3.8 Flash Cyber, JetStream
+  Clearance, iPronics' $125M raise, Huskeys' $27M raise) before checking buzz.js and
+  found all five already there, added hours earlier the same day -- wasted research
+  budget that a single `grep` against the candidate company/topic names would have
+  avoided before searching, not just before writing the card. Do the grep FIRST,
+  against buzz.js (and this cycle's own draft article slugs/topics, to avoid the
+  inverse problem of writing a full article on something Buzz already flagged as
+  buzz-only) -- before spending WebSearch calls chasing a topic, not after.
+- **2026-09-03** (newsroom cycle): confirmed `agents/social/post_social.py --live`
+  (already documented 2026-08-23 as slow) can exceed even a deliberately generous
+  60s foreground timeout with zero stdout in that window -- the anti-burst cooldown
+  logic prints nothing until it's actually posting, so a 60s wait can show nothing
+  at all, not even a partial progress line. Running it as a genuinely backgrounded
+  process (not a foreground call with a longer timeout) is the reliable way to avoid
+  mistaking "still in its cooldown" for "hung."
