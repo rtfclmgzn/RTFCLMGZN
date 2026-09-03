@@ -270,10 +270,16 @@ window.RTFC_BUZZ = [
     why:"Two back-to-back rounds closing weeks apart, from two separate top-tier firms, for a company still six months old is a concrete sign of how urgently enterprises are looking for a way to audit what their own AI agents are quietly plugging into -- the supply-chain-security problem this newsroom's coverage of agent tooling keeps circling back to.",
     heat:56, topics:["air security","sequoia","greenoaks","ai agents","supply chain security","funding","seed"],
     url:"https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/" },
-{ id:"bz-467", date:"2026-08-24",
-    source:{ name:"Alibaba", handle:"Alibaba Cloud", platform:"web", kind:"lab" },
-    text:"Alibaba's Wan3.0 video model generates up to 30 seconds of narrated 1080p video in a single pass -- with natively synchronized speech, ambience and sound effects, not a separate audio pass -- from a text prompt, an image, or a full document, spreadsheet, slide deck or webpage via what Alibaba calls Omni-Reference. Standard pricing runs $0.05/second at 480p up to $0.20/second at 1080p, so a full 30-second 1080p clip costs $6.",
-    why:"Accepting a spreadsheet or slide deck as a direct video-generation input, not just a prompt or image, is a genuinely different product shape than the text-to-video model most competitors ship -- it's aimed at turning existing business documents into video directly, not just generating novel footage from a description.",
-    heat:54, topics:["alibaba","wan3.0","video generation","china","omni-reference","text-to-video"],
-    url:"https://the-decoder.com/alibabas-wan3-0-generates-ai-videos-up-to-30-seconds-long-from-text-images-and-documents/" }
+{ id:"bz-468", date:"2026-09-02",
+    source:{ name:"Google", handle:"Google AI", platform:"web", kind:"lab" },
+    text:"Google released Gemini 3.8 Flash on September 2, 2026, shipping its third Flash variant in six weeks alongside Gemini 3.8 Flash Cyber, a security-focused sibling optimized for vulnerability detection. The 3.8 Flash model handles text, image, audio, video and PDF input with a 1M token context window and 64K output window, beats Claude Opus 5 on three published benchmarks, and maintains pricing at $0.75 per 1M input tokens and $3.75 per million output tokens — though both double on January 1, 2027. The model is tuned for long-horizon coding and autonomous agents.",
+    why:"A model shipped three weeks after its predecessor, beating a frontier competitor on published benchmarks while holding pricing, signals Google is rotating releases at a pace that emphasizes agent-readiness over release-spacing -- and locking in January 2027 as a pricing cliff month across the stack.",
+    heat:71, topics:["google","gemini 3.8 flash","frontier ai","agents","coding","benchmark","pricing"],
+    url:"https://venturebeat.com/security/googles-gemini-3-8-flash-is-built-for-agents-while-its-cyber-twin-hunts-vulnerabilities" },
+{ id:"bz-469", date:"2026-09-02",
+    source:{ name:"JetStream", handle:"JetStream Security", platform:"web", kind:"lab" },
+    text:"JetStream debuted Clearance, a zero-trust reasoning engine that evaluates and authorizes every AI agent action against an approved design before it executes—blocking dangerous sequences like exfiltration patterns mid-execution rather than only logging them after the fact. Clearance binds policy to the identity of the requesting agent and reaches inside tools to the individual parameter level; a team can enable a server's read tool and block its delete, so an agent never holds a permission it was never meant to have. General availability is scheduled for this fall.",
+    why:"A reasoning engine that stops a malicious or buggy agent action mid-sequence, rather than detecting it post-hoc, is the structural difference between a log-after-exfil approach and an approve-before-run one -- and moves AI governance from reactive detection to preventive authorization.",
+    heat:65, topics:["jetstream","ai governance","agent authorization","zero trust","security","reasoning engine"],
+    url:"https://www.pr-inside.com/jetstream-announces-clearance-an-ai-zero-trust-reasoning-engine-r5218694.htm" }
 ];
