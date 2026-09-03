@@ -11635,8 +11635,7 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-doj-openai-fair-use-statement-nyt-copyright-mdl",
     "ts": "2026-09-03T00:08:12Z",
@@ -11667,8 +11666,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AICopyright"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095374381782343934",
+        "remote_id": "2095374381782343934",
+        "posted_at": "2026-09-03T04:52:37Z"
       },
       {
         "platform": "x",
@@ -11704,14 +11705,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AICopyright"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117498301396947",
+        "remote_id": "1238977099292018_122117498301396947",
+        "posted_at": "2026-09-03T04:56:13Z"
       },
       {
         "platform": "threads",
         "copy": "The DOJ just told a federal court that training AI on copyrighted news is fair use -- backing OpenAI against The New York Times and a dozen other publishers in one filing. The Times says it's siding with AI companies over the journalists whose work trained them. Judge Stein wants summary judgment motions by Friday.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc0AQAel3qY",
+        "remote_id": "18114099787783988",
+        "posted_at": "2026-09-03T04:56:34Z"
       },
       {
         "platform": "threads",
@@ -11728,8 +11733,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AICopyright"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mulnx6woay2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mulnx6woay2u",
+        "posted_at": "2026-09-03T04:56:42Z"
       }
     ]
   },
@@ -11764,7 +11771,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#GoogleAI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -11776,8 +11785,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#MachineLearning",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dcz_tJsCJG4/",
+        "remote_id": "18103607810210805",
+        "posted_at": "2026-09-03T04:51:55Z"
       },
       {
         "platform": "facebook",
@@ -11786,14 +11797,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Gemini",
           "#GoogleAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117497875396947",
+        "remote_id": "1238977099292018_122117497875396947",
+        "posted_at": "2026-09-03T04:52:09Z"
       },
       {
         "platform": "threads",
         "copy": "Google added an agentic mode to Gemini video analysis -- the model now decides what to watch instead of processing every frame. Google says: up to 88% fewer tokens, 66% lower cost. Caveat: that's Google's own benchmark, not independently verified.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dcz_xYrEZyP",
+        "remote_id": "18110667929030318",
+        "posted_at": "2026-09-03T04:52:25Z"
       },
       {
         "platform": "bluesky",
@@ -11802,8 +11817,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Gemini",
           "#GoogleAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mulnpr4azc24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mulnpr4azc24",
+        "posted_at": "2026-09-03T04:52:32Z"
       }
     ]
   }
