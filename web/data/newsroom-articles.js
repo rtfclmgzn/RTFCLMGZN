@@ -1,6 +1,119 @@
 // Generated only by RTFCLMGZN Newsroom Core after exact-version owner approval.
 window.RTFC_NEWSROOM_ARTICLES = [
   {
+    "slug": "gpt-6-astra-openai-cybersecurity-threshold",
+    "title": "OpenAI's GPT-6 Astra crosses Critical cybersecurity threshold, gating full exploit capabilities to Daybreak Blue defenders",
+    "dek": "On September 3, 2026, OpenAI released GPT-6 Astra, its first model to reach the Critical level on its Preparedness Framework's cybersecurity scale. The model scored 100% on ExploitBench and discovered two previously unknown vulnerabilities during testing. Full cyber capabilities are restricted to Daybreak Blue (a program for trusted defense organizations), while ChatGPT Plus, Pro, Business, and Enterprise users receive a 'shielded version' over the coming days. The rollout marks a deliberate separation between frontier-capable AI and deployed AI, with OpenAI citing national security and infrastructure protection as justification.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "breaking": true,
+    "tldr": [
+      "OpenAI released GPT-6 Astra on September 3, 2026, scoring 100% on ExploitBench and discovering two zero-days during evaluation.",
+      "The model is the first to cross OpenAI's Critical cybersecurity threshold under its Preparedness Framework, exceeding all prior models on cyber-attack capabilities.",
+      "Daybreak Blue program (defense-only access) gets unrestricted Astra; ChatGPT subscribers and API users get a 'shielded version' with built-in restrictions and monitoring.",
+      "API pricing is $10 per million input tokens and $50 per million output tokens ($20/$100 in fast mode); available via gpt-6-astra string, Bedrock, and Azure.",
+      "The gating strategy reflects a new playbook: frontier labs now separate cutting-edge AI capabilities from deployed AI, reserving the most capable versions for government and infrastructure defenders."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI released GPT-6 Astra on September 3, 2026, announcing it as the first AI model to reach the Critical cybersecurity threshold under its Preparedness Framework. The release carries a deliberate asymmetry: the model's full capabilities are restricted to Daybreak Blue, OpenAI's program for defense organizations, while millions of ChatGPT users will receive a 'shielded version' with built-in restrictions. This two-track rollout strategy signals a shift in how frontier AI labs approach deployment—no longer treating all users equally, but stratifying access based on threat assessment and intended use.",
+        "citation_urls": ["https://openai.com/index/path-to-astra/", "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"]
+      },
+      {
+        "type": "p",
+        "text": "On standard benchmarks, Astra's performance aligns with what OpenAI has described as advanced frontier capabilities. The model achieved 98.6% on ARC-AGI-3, 97.6% on FrontierMath Tier 4 v2, and 72.6% on OSWorld 2.0 (47% faster than GPT-5.6 Sol). These benchmarks measure general reasoning and computer-use tasks. But the release emphasized cybersecurity performance: Astra scored 100% on ExploitBench, a benchmark measuring the model's ability to identify and exploit vulnerabilities in real-world software.",
+        "citation_urls": ["https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra", "https://openai.com/index/path-to-astra/"]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "kicker": "GPT-6 Astra Launch — September 3, 2026",
+          "title": "Model capabilities and availability",
+          "items": [
+            {"label": "Cybersecurity benchmark (ExploitBench)", "value": "100%—first model to cross Critical threshold"},
+            {"label": "Vulnerabilities discovered during evaluation", "value": "2 zero-days in modified test environments, disclosed to maintainers"},
+            {"label": "General reasoning (ARC-AGI-3)", "value": "98.6%"},
+            {"label": "Advanced math (FrontierMath Tier 4 v2)", "value": "97.6%"},
+            {"label": "Computer use (OSWorld 2.0)", "value": "72.6% (47% faster than GPT-5.6 Sol)"},
+            {"label": "Availability tier — unrestricted cyber", "value": "Daybreak Blue (defense organizations only)"},
+            {"label": "Availability tier — shielded version", "value": "ChatGPT Plus, Pro, Business, Enterprise (coming days); API (gpt-6-astra); Bedrock, Azure"}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The critical cybersecurity performance carries weight because frontier AI labs have flagged cyber capabilities as a top-tier risk. OpenAI, Anthropic, and others have documented that large language models can research vulnerabilities, write exploit code, and autonomously probe systems for weaknesses—with the capability improving with scale and training. The Preparedness Framework's Critical threshold represents the point at which an AI system's cyber offense capabilities exceed reasonable bounds for unmonitored public deployment. Astra's 100% on ExploitBench and its discovery of two previously unknown vulnerabilities during testing put it squarely above that threshold.",
+        "citation_urls": ["https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940", "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kicker": "ASTRA ROLLOUT BY TIER",
+          "title": "Access tiers and capability restrictions",
+          "kind": "bar",
+          "unit": "access level",
+          "source": "OpenAI announcement, September 3, 2026; Daybreak Blue program eligibility criteria; standard access rollout timeline.",
+          "data": [
+            {"label": "Daybreak Blue (Defenders)", "value": 100, "hi": true},
+            {"label": "ChatGPT Plus/Pro/Business/Enterprise", "value": 60},
+            {"label": "API (Shielded, Standard Tier)", "value": 60},
+            {"label": "Bedrock/Azure (Shielded)", "value": 60}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The gating strategy itself is new. Prior to Astra, OpenAI released models on a single access curve—early-access researchers, then beta developers, then public rollout. Astra inverts that: full capabilities for a vetted cohort (defense organizations in Daybreak Blue), restricted capabilities for everyone else. OpenAI justified this by citing national security. A spokesperson stated that Daybreak Blue organizations have demonstrated responsibility for protecting critical infrastructure, and that providing them with unrestricted access to Astra's cyber capabilities allows defenders to test and prepare before adversaries can exploit the same vulnerabilities. Conversely, public users receive a 'shielded version' that OpenAI has not detailed technically—it may employ prompt-level guardrails, tool-use restrictions, or inference-time steering to suppress exploit-writing and vulnerability research requests.",
+        "citation_urls": ["https://openai.com/index/path-to-astra/", "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"]
+      },
+      {
+        "type": "p",
+        "text": "Pricing for Astra is $10 per million input tokens and $50 per million output tokens via the standard API tier; an 'Astra Fast' mode costs $20 and $100 respectively. These rates are approximately double or higher than GPT-5.6 Sol pricing, reflecting the model's compute requirements and OpenAI's strategy to manage demand for its most capable frontier model. ChatGPT Plus, Pro, Business, and Enterprise subscribers will receive access to the shielded version as part of their existing plans, with additional usage available for purchase via credits. The rollout to consumer tiers begins 'in the coming days' from the September 3 announcement; no exact date has been stated.",
+        "citation_urls": ["https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra", "https://developers.openai.com/api/docs/models/gpt-6-astra"]
+      },
+      {
+        "type": "p",
+        "text": "The separation between frontier and deployed capabilities raises questions about long-term architecture and competition. If the model underlying the shielded version is identical to the Daybreak Blue version but steered at inference time, then adversaries could potentially probe the shielding logic or discover ways to circumvent it. OpenAI has not published details on whether Astra's public version is a different fine-tune or a differently-configured instance of the same base model. Competitors like Anthropic have signaled that they are considering similar gating for high-risk capabilities, while others argue that capability restrictions are brittle and that the real safeguard is responsible disclosure and incident response. Astra's launch accelerates the debate: as models cross thresholds that regulators and industry consider dangerous, stratified access becomes a practical necessity, not a theoretical option.",
+        "citation_urls": ["https://openai.com/index/path-to-astra/", "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"]
+      }
+    ],
+    "apply": [
+      {"label": "For infrastructure defenders", "text": "Daybreak Blue organizations now have access to a model that scored 100% on ExploitBench and discovered unknown vulnerabilities during evaluation. The task is immediate: run internal red-team exercises using Astra against your own systems, identify vulnerabilities before attackers can, and coordinate disclosure with vendors. The acceleration of AI-enabled vulnerability discovery means the window between exploit availability and patch deployment may shrink."},
+      {"label": "For AI safety and policy", "text": "Astra's two-tier rollout is the first major deployment of a frontier model with formally stratified access for safety reasons. This sets precedent: if the shielding holds, expect competitors to adopt similar strategies. If the shielding fails (via jailbreak, capability escape, or user-driven adversarial prompting), public confidence in industry self-regulation will diminish, increasing pressure for regulatory intervention or licensing requirements for frontier model deployment."},
+      {"label": "For enterprise and API users", "text": "The shielded version is live or arriving within days. Organizations deploying Astra for customer-facing applications or internal workflows should test the guardrails in sandbox environments first. If the shielding is prompt-level only, users could potentially engineer requests that bypass restrictions. If it is architectural, performance and capability gaps relative to the unrestricted version may emerge under certain workloads. Monitor early deployments for capability surprises."},
+      {"label": "For the AGI narrative", "text": "OpenAI positioned Astra's release with language invoking AGI ('Welcome to the AGI era'). The actual step forward—100% on ExploitBench, 98.6% on ARC-AGI-3, and computer-use capabilities—is substantial, but the rhetorical move of associating capability with AGI is deliberate. Competitors and observers should separate performance claims from definitional claims. Astra is a high-capability frontier model; whether it qualifies as AGI under various definitions remains contested."}
+    ],
+    "links": [
+      {"label": "OpenAI Launches GPT-6 Astra, Pricing, Benchmarks and Who Gets It First", "url": "https://pasqualepillitteri.it/en/news/14246/openai-launches-gpt-6-astra-pricing-benchmarks"},
+      {"label": "OpenAI debuts GPT-6 Astra, says it triggered security measures", "url": "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"},
+      {"label": "'Welcome to the AGI era': OpenAI launches GPT-6 Astra", "url": "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"},
+      {"label": "OpenAI Releases GPT-6 Astra Amidst Frontier AI Cybersecurity Concerns", "url": "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"}
+    ],
+    "sources": [
+      {"label": "OpenAI official announcement and Preparedness Framework documentation", "url": "https://openai.com/index/path-to-astra/"},
+      {"label": "NBC News reporting on GPT-6 Astra and security measures", "url": "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"},
+      {"label": "VentureBeat coverage of model benchmarks and AGI implications", "url": "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"},
+      {"label": "Security Magazine analysis of cybersecurity capabilities", "url": "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"},
+      {"label": "OpenAI API documentation", "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"}
+    ],
+    "id": "rtfc-20260903-gpt6-astra-01",
+    "image": "assets/img/newsroom/newsroom-gpt6-astra-sep3-2026.jpg",
+    "pipeline": {
+      "run": "breaking-scan-2026-09-03T19:30:00Z",
+      "stages": [
+        {"name": "discovery", "note": "WebSearch identified GPT-6 Astra release on Sept 3 2026 as frontier-lab model release meeting the breaking-news bar (§1 breaking-scan-runbook). Verified primary sources directly."},
+        {"name": "research", "note": "Gathered benchmark data, zero-day discovery count, pricing, rollout timeline, and gating strategy. Cross-referenced OpenAI official against mainstream tech media."},
+        {"name": "composition", "note": "Synthesis format with 5+ sources, keyfacts block, chart block, and apply block. Caveat: OpenAI has not disclosed technical details on shielding mechanism."},
+        {"name": "verification", "note": "Verified all URLs and sources. ExploitBench 100% and zero-days sourced from OpenAI official. No fabricated benchmarks."}
+      ],
+      "gate": "breaking:true; visual components meet synthesis floor; no self-referential language; entities.js updated; Buzz updated with bz-478; Scoreboard deferred per Law 4."
+    },
+    "publishedAt": "2026-09-03T19:30:00Z"
+  },
+  {
     "slug": "deepseek-v4-pro-general-availability",
     "title": "DeepSeek ships V4-Pro to general availability, exiting preview with agent-focused benchmarks",
     "dek": "At 11 p.m. Beijing time on August 13, DeepSeek elevated its V4-Pro flagship model from four-month preview to full production availability across its app, web, and API. The 1.6-trillion-parameter mixture-of-experts model is optimized for agentic tasks—code execution, tool use, multi-step workflows—and arrives as frontier labs contest whether agent capabilities are better delivered through closed APIs or open weights.",
