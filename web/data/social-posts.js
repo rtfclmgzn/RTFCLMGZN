@@ -11534,8 +11534,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mume7tmwe72g",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mume7tmwe72g",
+        "posted_at": "2026-09-03T11:35:14Z"
       }
     ]
   },
@@ -11631,8 +11633,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIinEducation",
           "#NYC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mumdynpevv2v",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mumdynpevv2v",
+        "posted_at": "2026-09-03T11:31:13Z"
       }
     ]
   },
@@ -11681,8 +11685,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095474594555613396",
+        "remote_id": "2095474594555613396",
+        "posted_at": "2026-09-03T11:30:50Z"
       },
       {
         "platform": "instagram",
@@ -11723,8 +11729,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-03T05:08:12Z",
         "copy": "The sharpest pushback on the DOJ's brief didn't come from The New York Times -- it came from a lawyer for The Intercept, in the very same consolidated case, who says the government's filing isn't based on any understanding of actual facts.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc0tZcbEStd",
+        "remote_id": "18118632286939797",
+        "posted_at": "2026-09-03T11:31:06Z"
       },
       {
         "platform": "bluesky",
@@ -11772,7 +11780,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
