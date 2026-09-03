@@ -12090,5 +12090,274 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-03T16:36:15Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition",
+    "ts": "2026-09-03T19:20:00Z",
+    "export": {
+      "article_id": "newsroom-nvidia-hugging-face-12-9-billion-acquisition",
+      "url": "https://rtfclmgzn.com/article/nvidia-hugging-face-12-9-billion-acquisition",
+      "headline": "NVIDIA agrees to buy Hugging Face for $12.93 billion, its first AI deal antitrust regulators can't wave through",
+      "hook": "NVIDIA is paying $12.93 billion for Hugging Face, the open-model hub 18 million developers use -- and unlike its recent AI deals, this one can't dodge a full antitrust review.",
+      "key_facts": [
+        "$11.9B to Hugging Face's shareholders plus up to $1B in employee retention equity; closing expected H1 2027.",
+        "NVIDIA structured roughly $27B in other AI deals as licenses specifically to avoid antitrust review -- this one can't be.",
+        "The deal follows a $500M NVIDIA offer Hugging Face rejected last year, and a July security breach at Hugging Face."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-nvidia-hugging-face-12-9-billion-acquisition.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NVIDIA is paying $12.93B for Hugging Face, the open-model hub 18M developers use. Unlike NVIDIA's recent AI deals, this one can't dodge a full antitrust review.",
+        "reply_copy": "How the price breaks down, and why this deal is different:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#NVIDIA",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T00:17:17Z",
+        "copy": "NVIDIA structured ~$27B in other AI deals as licenses specifically so they wouldn't trigger antitrust review. Buying Hugging Face outright, it can't dodge one -- and its 2022 Arm bid collapsed on a similar theory.",
+        "reply_copy": "Full breakdown, including the scorecard on what's confirmed vs. contested:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "NVIDIA agreed to buy Hugging Face -- the hub hosting the open AI industry's shared models -- for $12.93 billion. $11.9B goes to shareholders, up to $1B more is an employee retention pool, and NVIDIA says no chip is required to use the platform.\n\nWhat's different this time: NVIDIA structured roughly $27 billion in other recent AI deals as licenses specifically to dodge antitrust review. It can't do that here -- this is a full acquisition, triggering the same kind of scrutiny that killed NVIDIA's $40 billion Arm bid in 2022.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#NVIDIA",
+          "#HuggingFace",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "NVIDIA agreed to buy Hugging Face, the hub hosting the open AI industry's shared models and datasets, for $12.93 billion -- $11.9 billion to shareholders plus up to $1 billion in employee retention equity. NVIDIA says the platform stays open, with no requirement to use its own chips.\n\nWhat makes this deal different from NVIDIA's recent AI dealmaking: it's the first one structured as a full acquisition rather than the license-and-hire arrangements NVIDIA used on roughly $27 billion of other deals specifically to avoid a full antitrust review. NVIDIA's $40 billion bid for Arm collapsed in 2022 on a similar theory.",
+        "hashtags": [
+          "#AI",
+          "#NVIDIA",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NVIDIA is paying $12.93B for Hugging Face -- 18M developers use the platform. Unlike NVIDIA's recent AI deals, this one can't dodge a full antitrust review.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T00:17:20Z",
+        "copy": "The deal also lands six weeks after a security incident put Hugging Face's own systems at the center of an OpenAI story. Delangue's own account: open-source AI needed more resources, not that the breach forced the sale.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NVIDIA is paying $12.93B for Hugging Face -- the open-model hub 18M developers use. Unlike NVIDIA's recent AI deals, this one can't dodge a full antitrust review.",
+        "hashtags": [
+          "#AI",
+          "#NVIDIA"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-uber-driver-unions-autonomous-vehicle-lobbying",
+    "ts": "2026-09-03T19:20:00Z",
+    "export": {
+      "article_id": "newsroom-uber-driver-unions-autonomous-vehicle-lobbying",
+      "url": "https://rtfclmgzn.com/article/uber-driver-unions-autonomous-vehicle-lobbying",
+      "headline": "Uber is lobbying with the driver unions it spent a decade fighting -- to slow robotaxis down",
+      "hook": "Uber spent a decade fighting driver unions in court. Now it's lobbying alongside them in New Jersey and DC for rules that would slow Waymo and other autonomous fleets down.",
+      "key_facts": [
+        "Draft New Jersey language would require human drivers on 85% of rides, on every platform, for 3 years.",
+        "Uber estimates one autonomous vehicle displaces roughly four human drivers from its network.",
+        "Uber holds 25+ AV partnerships and wants to be the required platform every robotaxi operator routes through."
+      ],
+      "tone": "principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/newsroom-uber-driver-unions-autonomous-vehicle-lobbying.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Uber spent a decade fighting driver unions in court. Now it's lobbying alongside them in NJ and DC for rules that would slow Waymo and other robotaxi fleets down.",
+        "reply_copy": "Why that's not as selfless as it sounds:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Uber",
+          "#Robotaxi"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T00:17:23Z",
+        "copy": "Uber has 25+ AV partnerships, including with Waymo itself, and wants to be \"the go-to commercial platform for all robotaxi operators.\" A mandatory hybrid-network rule serves that goal directly, whatever else it also does for drivers.",
+        "reply_copy": "The full reconciliation, including where NJ's two different AV bills get conflated:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Uber spent a decade fighting driver unions in court over pay and classification. Now, in New Jersey and DC, it's showing up at the same hearings on the same side as those unions -- pushing rules that would slow how fast Waymo and other autonomous fleets can go fully driverless.\n\nUber's own estimate: one robotaxi displaces roughly four human drivers. But Uber also holds 25+ AV partnerships and wants to be the platform every robotaxi operator has to route through -- a goal a mandatory hybrid-network rule serves either way.\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Uber",
+          "#Robotaxi",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Uber spent a decade fighting driver unions in court and at statehouses over pay, benefits and classification. This year, in New Jersey and Washington DC, it's showing up at the same legislative hearings on the same side as those unions -- arguing for rules that would slow how fast Waymo and other autonomous-vehicle operators can put driverless cars on the road.\n\nUber's own estimate is that one autonomous vehicle displaces roughly four human drivers. But Uber also holds more than 25 AV partnerships and has told investors it wants to be the platform every robotaxi operator routes through -- a goal a mandatory hybrid-network rule serves directly, regardless of which side of the AV race wins.",
+        "hashtags": [
+          "#AI",
+          "#Uber",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Uber spent a decade fighting driver unions in court. Now it's lobbying alongside them in NJ and DC -- to slow Waymo and other robotaxi fleets down.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T00:17:25Z",
+        "copy": "Neither read of Uber's motives cancels the other out: the rule can genuinely help drivers AND be the one structure that makes Uber the required platform every AV operator routes through.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Uber spent a decade fighting driver unions in court. Now it's lobbying alongside them in NJ and DC for rules that would slow Waymo and other robotaxi fleets down.",
+        "hashtags": [
+          "#AI",
+          "#Labor"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-tiktok-4-5-billion-video-scrape-private-api",
+    "ts": "2026-09-03T19:20:00Z",
+    "export": {
+      "article_id": "newsroom-tiktok-4-5-billion-video-scrape-private-api",
+      "url": "https://rtfclmgzn.com/article/tiktok-4-5-billion-video-scrape-private-api",
+      "headline": "A researcher scraped 4.5 billion TikTok videos through the app's private API and put them on Hugging Face",
+      "hook": "A free, 289GB dataset of 4.5 billion TikTok video records is now on Hugging Face -- and its own documentation admits the collection violated TikTok's terms and counts as personal data under GDPR.",
+      "key_facts": [
+        "4,501,811,789 records, 14 fields each -- captions, tagged accounts, engagement counts, no video content.",
+        "Collected over ~3 weeks via TikTok's private Android API, reverse-engineering its request-signing scheme.",
+        "The dataset's own card: \"Collection was contrary to TikTok's terms of service.\""
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-tiktok-4-5-billion-video-scrape-private-api.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A free, 289GB dataset of 4.5 billion TikTok video records just landed on Hugging Face. Its own documentation admits the collection violated TikTok's terms -- and counts as personal data under GDPR.",
+        "reply_copy": "What's actually in it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Privacy",
+          "#TikTok"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A pseudonymous researcher scraped 4.5 billion TikTok video records -- captions, tagged accounts, engagement counts -- through the app's private Android API, and put the 289GB dataset on Hugging Face for free.\n\nThe dataset's own documentation is unusually candid about what it is: \"Collection was contrary to TikTok's terms of service,\" and the captions and tagged accounts count as \"personal data under GDPR.\"\n\nFull story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Privacy",
+          "#DataScraping",
+          "#GDPR"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A pseudonymous developer scraped 4.5 billion TikTok video records -- captions, tagged accounts, engagement counts, no video content -- through the app's private Android API over about three weeks, and posted the 289GB dataset to Hugging Face for free, research-use only.\n\nThe dataset's own documentation admits the collection method violated TikTok's terms of service, and that the captions and tagged accounts count as personal data under GDPR -- an unusually candid admission on a public download.",
+        "hashtags": [
+          "#AI",
+          "#Privacy",
+          "#TikTok"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A free 289GB dataset of 4.5 billion TikTok video records just landed on Hugging Face. Its own documentation admits the collection violated TikTok's terms -- and counts as personal data under GDPR.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A free, 289GB dataset of 4.5 billion TikTok video records is now on Hugging Face. Its own documentation admits the collection violated TikTok's terms -- and counts as personal data under GDPR.",
+        "hashtags": [
+          "#AI",
+          "#Privacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
