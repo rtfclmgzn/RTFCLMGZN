@@ -100,7 +100,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       {"label": "OpenAI API documentation", "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"}
     ],
     "id": "rtfc-20260903-gpt6-astra-01",
-    "image": "assets/img/newsroom/newsroom-gpt6-astra-sep3-2026.jpg",
+    "image": "assets/img/newsroom/rtfc-20260903-gpt6-astra-01.jpg",
     "pipeline": {
       "run": "breaking-scan-2026-09-03T19:30:00Z",
       "stages": [
