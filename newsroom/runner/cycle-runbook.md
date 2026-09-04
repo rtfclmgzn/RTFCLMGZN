@@ -616,6 +616,28 @@ this order, and mark it done here.
    divergence, not a copy-paste gap -- that's a judgment call for
    whichever pass does the content-level (not just count-level) diff.
 
+   PARTIAL, checked (2026-09-04T19:12 cycle) -- reviewed the queue for this
+   cycle's required touch before writing anything, distinct from the two
+   §3e passes already logged above earlier today. Re-read the live
+   `primer-issue.js` content for the three prose sub-items (agents, jobs,
+   deepfakes) and confirmed the "no longer thin" finding two cycles ago
+   still holds -- no further prose edit made, per the same "thickening
+   prose that isn't thin is decoration" reasoning those entries already
+   established. Looked for a fresh, unblocked next step from the structural
+   full-diff finding logged directly above and found none: the one concrete
+   divergence it named (`primer.json` carries a seventh Act opener, "Going
+   Deeper", that `primer-issue.js` lacks) can't be resolved from this side
+   alone -- adding a matching opener to `primer-issue.js` wouldn't reconcile
+   anything, since the actual disagreement is about `primer.json`'s own
+   structure, and `functions/api/issue/_data/primer.json` is still outside
+   `verify_publish_surface.py`'s `ALLOWED_PREFIXES` (re-confirmed by reading
+   the check directly; unchanged since 2026-08-30). No candidate for a
+   genuine, non-decorative, shippable `primer-issue.js`-only edit was found
+   this cycle. Did not force one. The two real next steps remain exactly
+   what the entry above named: an owner decision on `ALLOWED_PREFIXES` vs.
+   regenerating `primer.json`, and the content-level diff once that's
+   unblocked.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
