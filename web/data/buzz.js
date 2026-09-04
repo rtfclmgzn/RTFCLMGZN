@@ -329,5 +329,17 @@ window.RTFC_BUZZ = [
     text:"Adobe acquired Rilo, a six-person Indian startup out of IIT Bombay whose AI tools let marketing teams build custom workflows for competitor intelligence, content repurposing, and sales-call analysis, the companies confirmed September 2. Terms weren't disclosed. Rilo had raised $1 million from Peak XV, DeVC, and Day Zero Ventures and reportedly passed 10,000 users within months of launch; its standalone product will shut down as its team and technology fold into Adobe's marketing and customer-experience tools. It's Adobe's second India acquisition, after Rephrase.ai in 2023.",
     why:"A 15-month-old, six-person startup getting bought by Adobe -- with its own product shut down rather than kept running -- is the acquihire-plus-technology pattern showing up again in enterprise marketing AI, not just at the frontier-lab scale most funding coverage focuses on.",
     heat:35, topics:["adobe","rilo","acquisition","marketing ai","india","acquihire"],
-    url:"https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/" }
+    url:"https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/" },
+{ id:"bz-482", date:"2026-09-03",
+    source:{ name:"Genesys", handle:"Genesys", platform:"web", kind:"lab" },
+    text:"Genesys revealed four new AI agent products for Genesys Cloud on September 3: Navigator (intent and conversation understanding), Orchestrator (automated action planning), Contextual Intelligence (real-time knowledge synthesis from enterprise systems), and an AI Control Plane for managing agentic workflows at scale. The suite targets contact center automation, stitching intent detection, context assembly and policy enforcement into a single platform rather than requiring separate point tools.",
+    why:"A major contact center platform rolling out end-to-end agentic automation products—from conversation understanding through policy-constrained action execution—is a concrete signal of how enterprise automation is moving from script-and-transfer workflows to genuine agent autonomy, even at the cost center that still handles sensitive customer interactions.",
+    heat:52, topics:["genesys","contact centers","agents","automation","navigator","orchestrator","ai control plane"],
+    url:"https://www.genesys.com/en-us/press-releases" },
+{ id:"bz-483", date:"2026-09-03",
+    source:{ name:"Alibaba", handle:"Alibaba Qwen", platform:"web", kind:"lab" },
+    text:"Alibaba updated Qwen3.8-Max with a 1 million-token context window on September 3, priced at $2 per million input tokens and $8 per million output tokens. New post-training focuses on coding tasks and multi-agent collaborative workloads. The update maintains feature parity with prior Qwen3.8 variants while doubling context capacity and explicitly targeting agentic and code-generation use cases.",
+    why:"A major Chinese frontier lab matching the context and pricing moves of Western frontier labs while emphasizing agent-collaborative workloads is a concrete signal of how quickly Chinese model providers are converging on the feature sets (context, agent-focus, pricing parity) driving frontier model differentiation in late 2026.",
+    heat:49, topics:["alibaba","qwen","model update","context window","pricing","agents","china","frontier models"],
+    url:"https://github.com/QwenLM/Qwen/releases/tag/Qwen3.8-Max-2026-09-03" }
 ];
