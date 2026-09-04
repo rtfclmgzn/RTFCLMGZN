@@ -12396,8 +12396,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095670648353739196",
+        "remote_id": "2095670648353739196",
+        "posted_at": "2026-09-04T00:29:53Z"
       },
       {
         "platform": "x",
@@ -12424,8 +12426,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Chips",
           "#DataCenter"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dc2GjiVICRv/",
+        "remote_id": "17872907409576512",
+        "posted_at": "2026-09-04T00:30:11Z"
       },
       {
         "platform": "facebook",
@@ -12434,14 +12438,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117651331396947",
+        "remote_id": "1238977099292018_122117651331396947",
+        "posted_at": "2026-09-04T00:30:21Z"
       },
       {
         "platform": "threads",
         "copy": "Broadcom's AI chip revenue: $8.4B -> $10.8B -> $16.7B across three quarters this year, each faster than the last. CEO Hock Tan just put $230B on the table for 2028 -- with the supply already secured, he says. Two of six major customers still need outside financing though.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc2Gmvsia2d",
+        "remote_id": "17993529884830999",
+        "posted_at": "2026-09-04T00:30:35Z"
       },
       {
         "platform": "threads",
@@ -12459,8 +12467,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Chips",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3munpkhymrm2c",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3munpkhymrm2c",
+        "posted_at": "2026-09-04T00:30:42Z"
       }
     ]
   },
@@ -12494,8 +12504,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095671657293627901",
+        "remote_id": "2095671657293627901",
+        "posted_at": "2026-09-04T00:33:53Z"
       },
       {
         "platform": "x",
@@ -12532,14 +12544,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117651949396947",
+        "remote_id": "1238977099292018_122117651949396947",
+        "posted_at": "2026-09-04T00:34:23Z"
       },
       {
         "platform": "threads",
         "copy": "Wonderful raised $550M at a $5B valuation (up from $2B seven months ago). The catch: a separate $170M secondary sale most headlines aren't counting brings the real round to $720M. Four rounds in 14 months, zero disclosed revenue at any of them.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc2HFJ0iSsM",
+        "remote_id": "18043745852810728",
+        "posted_at": "2026-09-04T00:34:43Z"
       },
       {
         "platform": "threads",
@@ -12557,8 +12573,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#VC",
           "#Startups"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3munprvddag2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3munprvddag2x",
+        "posted_at": "2026-09-04T00:34:51Z"
       }
     ]
   },
@@ -12659,5 +12677,4 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
-]
-;
+];
