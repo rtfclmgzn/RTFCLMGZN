@@ -540,6 +540,32 @@ this order, and mark it done here.
    thickening here as much as to components. Deferring this cycle's own
    fresh prose edit to the next cycle rather than manufacturing one.
 
+   PARTIAL, continued (2026-09-04 cycle) -- reviewed item 6 for this
+   cycle's required touch and found the three sub-items logged above as
+   "single-clause" or "~40-70 words" (agents, jobs, deepfakes) have
+   actually grown well past that description across the accumulated
+   partial edits: in `web/data/primer-issue.js`, the "What they can
+   actually do now" spread's agents clause now runs a full sentence with
+   a worked trip-planning example AND a separate sentence on the
+   confirm-before-booking checkpoint; its deepfakes clause is a full
+   sentence with a cross-link to this newsroom's own video-verification
+   guide; and the honest-limits page's "Jobs" bigger-question entry is a
+   genuine full paragraph (concrete customer-service/translator examples,
+   a named leading indicator to watch -- entry-level hiring in those
+   roles). None of the three read as thin anymore on a direct read of the
+   live file. Did not force a further edit onto already-solid paragraphs
+   -- per the 2026-09-01 entry's own reasoning, thickening prose that
+   isn't thin is decoration, not progress. Restating the two sub-items
+   that are NOT part of this finding and remain genuinely open: the
+   `functions/api/issue/_data/primer.json` twin is still one clause
+   behind `primer-issue.js` on the agents checkpoint sentence specifically
+   (blocked by the `ALLOWED_PREFIXES` gap logged 2026-08-30/08-31, still
+   unresolved as of this cycle), and nobody has yet done the dedicated
+   pass the 2026-08-18 entry called for to diff the two Primer files in
+   full for other accumulated drift beyond the spots already caught one
+   at a time. That full-diff pass, not another single-clause edit, is
+   the actual next item worth a cycle's attention here.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)

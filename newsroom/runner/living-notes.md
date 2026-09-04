@@ -306,3 +306,37 @@
   at all, not even a partial progress line. Running it as a genuinely backgrounded
   process (not a foreground call with a longer timeout) is the reliable way to avoid
   mistaking "still in its cooldown" for "hung."
+- **2026-09-04** (newsroom cycle): `newsroom.cli generate-image` can render a
+  real, recognizable brand logo (a distinct Apple wordmark/silhouette on a
+  laptop lid) on a generic "person holding a smartphone at a desk" prompt
+  even without the prompt naming Apple or any device brand -- confirmed by
+  regenerating the same scene with an explicit "no brand logos, no apple
+  logo, no company insignia, generic unbranded laptop/phone" clause added,
+  which produced a clean image on the first retry. The existing
+  `STYLE_NEGATIVE` "no text" fix (2026-09-02 entry above) does not cover
+  this failure mode -- logos are a different generation artifact than
+  rendered text/signage. Caught this by viewing the generated cover
+  directly before shipping, not by any automated check; `verify_covers.py`
+  only inspects library images' `brand_visible` field, which does not
+  exist for freshly generated art. Worth a dedicated check or a
+  standing negative-prompt addition (logos/brand marks, not just text) if
+  this recurs. Also reconfirmed the `verify_covers.py pick` off-topic-match
+  problem (2026-08-26 through 09-02 entries) for a third distinct subject
+  category: consumer phone-assistant products return silicon-die and
+  cyberpunk-street macro shots as top picks, not just legal/courtroom or
+  labor-market topics as previously logged -- generation (now confirmed
+  working, per 2026-09-02) was used instead rather than a forced library
+  pick.
+- **2026-09-04** (newsroom cycle): reviewed `cycle-runbook.md` SS3e item 6
+  (agents/jobs/deepfakes "missing topics") for this cycle's required touch
+  and found the three sub-items, logged repeatedly as single-clause or
+  "~40-70 words," have actually grown into full sentences/paragraphs across
+  the accumulated partial edits from five prior cycles -- confirmed by
+  reading the live `primer-issue.js` content directly rather than trusting
+  the log's own word-count claims, which were stale. Did not force a
+  further edit onto already-solid prose; logged the finding in the runbook
+  itself instead (see SS3e). General lesson: a work-order log that
+  accumulates many small "PARTIAL" entries can undersell how far the work
+  has actually gotten -- worth periodically checking the live file against
+  the log's own claims rather than assuming the last entry's word count
+  still holds.
