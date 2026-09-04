@@ -20,12 +20,18 @@ window.RTFC_NEWSROOM_ARTICLES = [
       {
         "type": "p",
         "text": "OpenAI released GPT-6 Astra on September 3, 2026, announcing it as the first AI model to reach the Critical cybersecurity threshold under its Preparedness Framework. The release carries a deliberate asymmetry: the model's full capabilities are restricted to Daybreak Blue, OpenAI's program for defense organizations, while millions of ChatGPT users will receive a 'shielded version' with built-in restrictions. This two-track rollout strategy signals a shift in how frontier AI labs approach deployment—no longer treating all users equally, but stratifying access based on threat assessment and intended use.",
-        "citation_urls": ["https://openai.com/index/path-to-astra/", "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"]
+        "citation_urls": [
+          "https://openai.com/index/path-to-astra/",
+          "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"
+        ]
       },
       {
         "type": "p",
         "text": "On standard benchmarks, Astra's performance aligns with what OpenAI has described as advanced frontier capabilities. The model achieved 98.6% on ARC-AGI-3, 97.6% on FrontierMath Tier 4 v2, and 72.6% on OSWorld 2.0 (47% faster than GPT-5.6 Sol). These benchmarks measure general reasoning and computer-use tasks. But the release emphasized cybersecurity performance: Astra scored 100% on ExploitBench, a benchmark measuring the model's ability to identify and exploit vulnerabilities in real-world software.",
-        "citation_urls": ["https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra", "https://openai.com/index/path-to-astra/"]
+        "citation_urls": [
+          "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra",
+          "https://openai.com/index/path-to-astra/"
+        ]
       },
       {
         "type": "keyfacts",
@@ -33,20 +39,44 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "kicker": "GPT-6 Astra Launch — September 3, 2026",
           "title": "Model capabilities and availability",
           "items": [
-            {"label": "Cybersecurity benchmark (ExploitBench)", "value": "100%—first model to cross Critical threshold"},
-            {"label": "Vulnerabilities discovered during evaluation", "value": "2 zero-days in modified test environments, disclosed to maintainers"},
-            {"label": "General reasoning (ARC-AGI-3)", "value": "98.6%"},
-            {"label": "Advanced math (FrontierMath Tier 4 v2)", "value": "97.6%"},
-            {"label": "Computer use (OSWorld 2.0)", "value": "72.6% (47% faster than GPT-5.6 Sol)"},
-            {"label": "Availability tier — unrestricted cyber", "value": "Daybreak Blue (defense organizations only)"},
-            {"label": "Availability tier — shielded version", "value": "ChatGPT Plus, Pro, Business, Enterprise (coming days); API (gpt-6-astra); Bedrock, Azure"}
+            {
+              "label": "Cybersecurity benchmark (ExploitBench)",
+              "value": "100%—first model to cross Critical threshold"
+            },
+            {
+              "label": "Vulnerabilities discovered during evaluation",
+              "value": "2 zero-days in modified test environments, disclosed to maintainers"
+            },
+            {
+              "label": "General reasoning (ARC-AGI-3)",
+              "value": "98.6%"
+            },
+            {
+              "label": "Advanced math (FrontierMath Tier 4 v2)",
+              "value": "97.6%"
+            },
+            {
+              "label": "Computer use (OSWorld 2.0)",
+              "value": "72.6% (47% faster than GPT-5.6 Sol)"
+            },
+            {
+              "label": "Availability tier — unrestricted cyber",
+              "value": "Daybreak Blue (defense organizations only)"
+            },
+            {
+              "label": "Availability tier — shielded version",
+              "value": "ChatGPT Plus, Pro, Business, Enterprise (coming days); API (gpt-6-astra); Bedrock, Azure"
+            }
           ]
         }
       },
       {
         "type": "p",
         "text": "The critical cybersecurity performance carries weight because frontier AI labs have flagged cyber capabilities as a top-tier risk. OpenAI, Anthropic, and others have documented that large language models can research vulnerabilities, write exploit code, and autonomously probe systems for weaknesses—with the capability improving with scale and training. The Preparedness Framework's Critical threshold represents the point at which an AI system's cyber offense capabilities exceed reasonable bounds for unmonitored public deployment. Astra's 100% on ExploitBench and its discovery of two previously unknown vulnerabilities during testing put it squarely above that threshold.",
-        "citation_urls": ["https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940", "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"]
+        "citation_urls": [
+          "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940",
+          "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"
+        ]
       },
       {
         "type": "chart",
@@ -57,57 +87,130 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "unit": "access level",
           "source": "OpenAI announcement, September 3, 2026; Daybreak Blue program eligibility criteria; standard access rollout timeline.",
           "data": [
-            {"label": "Daybreak Blue (Defenders)", "value": 100, "hi": true},
-            {"label": "ChatGPT Plus/Pro/Business/Enterprise", "value": 60},
-            {"label": "API (Shielded, Standard Tier)", "value": 60},
-            {"label": "Bedrock/Azure (Shielded)", "value": 60}
+            {
+              "label": "Daybreak Blue (Defenders)",
+              "value": 100,
+              "hi": true
+            },
+            {
+              "label": "ChatGPT Plus/Pro/Business/Enterprise",
+              "value": 60
+            },
+            {
+              "label": "API (Shielded, Standard Tier)",
+              "value": 60
+            },
+            {
+              "label": "Bedrock/Azure (Shielded)",
+              "value": 60
+            }
           ]
         }
       },
       {
         "type": "p",
         "text": "The gating strategy itself is new. Prior to Astra, OpenAI released models on a single access curve—early-access researchers, then beta developers, then public rollout. Astra inverts that: full capabilities for a vetted cohort (defense organizations in Daybreak Blue), restricted capabilities for everyone else. OpenAI justified this by citing national security. A spokesperson stated that Daybreak Blue organizations have demonstrated responsibility for protecting critical infrastructure, and that providing them with unrestricted access to Astra's cyber capabilities allows defenders to test and prepare before adversaries can exploit the same vulnerabilities. Conversely, public users receive a 'shielded version' that OpenAI has not detailed technically—it may employ prompt-level guardrails, tool-use restrictions, or inference-time steering to suppress exploit-writing and vulnerability research requests.",
-        "citation_urls": ["https://openai.com/index/path-to-astra/", "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"]
+        "citation_urls": [
+          "https://openai.com/index/path-to-astra/",
+          "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"
+        ]
       },
       {
         "type": "p",
         "text": "Pricing for Astra is $10 per million input tokens and $50 per million output tokens via the standard API tier; an 'Astra Fast' mode costs $20 and $100 respectively. These rates are approximately double or higher than GPT-5.6 Sol pricing, reflecting the model's compute requirements and OpenAI's strategy to manage demand for its most capable frontier model. ChatGPT Plus, Pro, Business, and Enterprise subscribers will receive access to the shielded version as part of their existing plans, with additional usage available for purchase via credits. The rollout to consumer tiers begins 'in the coming days' from the September 3 announcement; no exact date has been stated.",
-        "citation_urls": ["https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra", "https://developers.openai.com/api/docs/models/gpt-6-astra"]
+        "citation_urls": [
+          "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra",
+          "https://developers.openai.com/api/docs/models/gpt-6-astra"
+        ]
       },
       {
         "type": "p",
         "text": "The separation between frontier and deployed capabilities raises questions about long-term architecture and competition. If the model underlying the shielded version is identical to the Daybreak Blue version but steered at inference time, then adversaries could potentially probe the shielding logic or discover ways to circumvent it. OpenAI has not published details on whether Astra's public version is a different fine-tune or a differently-configured instance of the same base model. Competitors like Anthropic have signaled that they are considering similar gating for high-risk capabilities, while others argue that capability restrictions are brittle and that the real safeguard is responsible disclosure and incident response. Astra's launch accelerates the debate: as models cross thresholds that regulators and industry consider dangerous, stratified access becomes a practical necessity, not a theoretical option.",
-        "citation_urls": ["https://openai.com/index/path-to-astra/", "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"]
+        "citation_urls": [
+          "https://openai.com/index/path-to-astra/",
+          "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"
+        ]
       }
     ],
     "apply": [
-      {"label": "For infrastructure defenders", "text": "Daybreak Blue organizations now have access to a model that scored 100% on ExploitBench and discovered unknown vulnerabilities during evaluation. The task is immediate: run internal red-team exercises using Astra against your own systems, identify vulnerabilities before attackers can, and coordinate disclosure with vendors. The acceleration of AI-enabled vulnerability discovery means the window between exploit availability and patch deployment may shrink."},
-      {"label": "For AI safety and policy", "text": "Astra's two-tier rollout is the first major deployment of a frontier model with formally stratified access for safety reasons. This sets precedent: if the shielding holds, expect competitors to adopt similar strategies. If the shielding fails (via jailbreak, capability escape, or user-driven adversarial prompting), public confidence in industry self-regulation will diminish, increasing pressure for regulatory intervention or licensing requirements for frontier model deployment."},
-      {"label": "For enterprise and API users", "text": "The shielded version is live or arriving within days. Organizations deploying Astra for customer-facing applications or internal workflows should test the guardrails in sandbox environments first. If the shielding is prompt-level only, users could potentially engineer requests that bypass restrictions. If it is architectural, performance and capability gaps relative to the unrestricted version may emerge under certain workloads. Monitor early deployments for capability surprises."},
-      {"label": "For the AGI narrative", "text": "OpenAI positioned Astra's release with language invoking AGI ('Welcome to the AGI era'). The actual step forward—100% on ExploitBench, 98.6% on ARC-AGI-3, and computer-use capabilities—is substantial, but the rhetorical move of associating capability with AGI is deliberate. Competitors and observers should separate performance claims from definitional claims. Astra is a high-capability frontier model; whether it qualifies as AGI under various definitions remains contested."}
+      {
+        "label": "For infrastructure defenders",
+        "text": "Daybreak Blue organizations now have access to a model that scored 100% on ExploitBench and discovered unknown vulnerabilities during evaluation. The task is immediate: run internal red-team exercises using Astra against your own systems, identify vulnerabilities before attackers can, and coordinate disclosure with vendors. The acceleration of AI-enabled vulnerability discovery means the window between exploit availability and patch deployment may shrink."
+      },
+      {
+        "label": "For AI safety and policy",
+        "text": "Astra's two-tier rollout is the first major deployment of a frontier model with formally stratified access for safety reasons. This sets precedent: if the shielding holds, expect competitors to adopt similar strategies. If the shielding fails (via jailbreak, capability escape, or user-driven adversarial prompting), public confidence in industry self-regulation will diminish, increasing pressure for regulatory intervention or licensing requirements for frontier model deployment."
+      },
+      {
+        "label": "For enterprise and API users",
+        "text": "The shielded version is live or arriving within days. Organizations deploying Astra for customer-facing applications or internal workflows should test the guardrails in sandbox environments first. If the shielding is prompt-level only, users could potentially engineer requests that bypass restrictions. If it is architectural, performance and capability gaps relative to the unrestricted version may emerge under certain workloads. Monitor early deployments for capability surprises."
+      },
+      {
+        "label": "For the AGI narrative",
+        "text": "OpenAI positioned Astra's release with language invoking AGI ('Welcome to the AGI era'). The actual step forward—100% on ExploitBench, 98.6% on ARC-AGI-3, and computer-use capabilities—is substantial, but the rhetorical move of associating capability with AGI is deliberate. Competitors and observers should separate performance claims from definitional claims. Astra is a high-capability frontier model; whether it qualifies as AGI under various definitions remains contested."
+      }
     ],
     "links": [
-      {"label": "OpenAI Launches GPT-6 Astra, Pricing, Benchmarks and Who Gets It First", "url": "https://pasqualepillitteri.it/en/news/14246/openai-launches-gpt-6-astra-pricing-benchmarks"},
-      {"label": "OpenAI debuts GPT-6 Astra, says it triggered security measures", "url": "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"},
-      {"label": "'Welcome to the AGI era': OpenAI launches GPT-6 Astra", "url": "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"},
-      {"label": "OpenAI Releases GPT-6 Astra Amidst Frontier AI Cybersecurity Concerns", "url": "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"}
+      {
+        "label": "OpenAI Launches GPT-6 Astra, Pricing, Benchmarks and Who Gets It First",
+        "url": "https://pasqualepillitteri.it/en/news/14246/openai-launches-gpt-6-astra-pricing-benchmarks"
+      },
+      {
+        "label": "OpenAI debuts GPT-6 Astra, says it triggered security measures",
+        "url": "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"
+      },
+      {
+        "label": "'Welcome to the AGI era': OpenAI launches GPT-6 Astra",
+        "url": "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"
+      },
+      {
+        "label": "OpenAI Releases GPT-6 Astra Amidst Frontier AI Cybersecurity Concerns",
+        "url": "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"
+      }
     ],
     "sources": [
-      {"label": "OpenAI official announcement and Preparedness Framework documentation", "url": "https://openai.com/index/path-to-astra/"},
-      {"label": "NBC News reporting on GPT-6 Astra and security measures", "url": "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"},
-      {"label": "VentureBeat coverage of model benchmarks and AGI implications", "url": "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"},
-      {"label": "Security Magazine analysis of cybersecurity capabilities", "url": "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"},
-      {"label": "OpenAI API documentation", "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"}
+      {
+        "label": "OpenAI official announcement and Preparedness Framework documentation",
+        "url": "https://openai.com/index/path-to-astra/"
+      },
+      {
+        "label": "NBC News reporting on GPT-6 Astra and security measures",
+        "url": "https://www.nbcnews.com/tech/tech-news/openai-debuts-gpt-6-astra-security-measures-rcna595940"
+      },
+      {
+        "label": "VentureBeat coverage of model benchmarks and AGI implications",
+        "url": "https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra"
+      },
+      {
+        "label": "Security Magazine analysis of cybersecurity capabilities",
+        "url": "https://www.securitymagazine.com/articles/102559-openai-releases-gpt-6-astra-amidst-frontier-ai-cybersecurity-concerns"
+      },
+      {
+        "label": "OpenAI API documentation",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      }
     ],
     "id": "rtfc-20260903-gpt6-astra-01",
     "image": "assets/img/newsroom/rtfc-20260903-gpt6-astra-01.jpg",
     "pipeline": {
       "run": "breaking-scan-2026-09-03T19:30:00Z",
       "stages": [
-        {"name": "discovery", "note": "WebSearch identified GPT-6 Astra release on Sept 3 2026 as frontier-lab model release meeting the breaking-news bar (§1 breaking-scan-runbook). Verified primary sources directly."},
-        {"name": "research", "note": "Gathered benchmark data, zero-day discovery count, pricing, rollout timeline, and gating strategy. Cross-referenced OpenAI official against mainstream tech media."},
-        {"name": "composition", "note": "Synthesis format with 5+ sources, keyfacts block, chart block, and apply block. Caveat: OpenAI has not disclosed technical details on shielding mechanism."},
-        {"name": "verification", "note": "Verified all URLs and sources. ExploitBench 100% and zero-days sourced from OpenAI official. No fabricated benchmarks."}
+        {
+          "name": "discovery",
+          "note": "WebSearch identified GPT-6 Astra release on Sept 3 2026 as frontier-lab model release meeting the breaking-news bar (§1 breaking-scan-runbook). Verified primary sources directly."
+        },
+        {
+          "name": "research",
+          "note": "Gathered benchmark data, zero-day discovery count, pricing, rollout timeline, and gating strategy. Cross-referenced OpenAI official against mainstream tech media."
+        },
+        {
+          "name": "composition",
+          "note": "Synthesis format with 5+ sources, keyfacts block, chart block, and apply block. Caveat: OpenAI has not disclosed technical details on shielding mechanism."
+        },
+        {
+          "name": "verification",
+          "note": "Verified all URLs and sources. ExploitBench 100% and zero-days sourced from OpenAI official. No fabricated benchmarks."
+        }
       ],
       "gate": "breaking:true; visual components meet synthesis floor; no self-referential language; entities.js updated; Buzz updated with bz-478; Scoreboard deferred per Law 4."
     },
@@ -39728,12 +39831,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "keyfacts": {
           "title": "The case, in short",
           "items": [
-            {"label": "Filed", "value": "July 10, 2026", "note": "Northern District of California"},
-            {"label": "Defendants", "value": "Chang Liu, Tang Tan, OpenAI, io Products"},
-            {"label": "New filing", "value": "August 31, 2026", "note": "forensic laptop analysis plus evidence-destruction claim"},
-            {"label": "Judge", "value": "Edward J. Davila"},
-            {"label": "Next hearing", "value": "October 1, 2026"},
-            {"label": "Context cited by Apple", "value": "400+ former Apple staff now at OpenAI"}
+            {
+              "label": "Filed",
+              "value": "July 10, 2026",
+              "note": "Northern District of California"
+            },
+            {
+              "label": "Defendants",
+              "value": "Chang Liu, Tang Tan, OpenAI, io Products"
+            },
+            {
+              "label": "New filing",
+              "value": "August 31, 2026",
+              "note": "forensic laptop analysis plus evidence-destruction claim"
+            },
+            {
+              "label": "Judge",
+              "value": "Edward J. Davila"
+            },
+            {
+              "label": "Next hearing",
+              "value": "October 1, 2026"
+            },
+            {
+              "label": "Context cited by Apple",
+              "value": "400+ former Apple staff now at OpenAI"
+            }
           ]
         }
       },
@@ -39763,14 +39886,43 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "compare": {
           "title": "What each side is actually saying",
           "columns": [
-            {"label": "Apple's claim"},
-            {"label": "OpenAI's response", "hi": true}
+            {
+              "label": "Apple's claim"
+            },
+            {
+              "label": "OpenAI's response",
+              "hi": true
+            }
           ],
           "rows": [
-            {"label": "The circuit schematic", "values": ["Liu downloaded it in March, two months after leaving, and ran it through LTspice simulations for OpenAI hardware work.", "Says Liu accessed his own past work product only to help former colleagues, and calls \"residual access\" common at Apple."]},
-            {"label": "The 1,000-plus-page file compilation", "values": ["Liu exploited a security gap to download manufacturing-process files after his departure.", "No claim-specific rebuttal found in the sources reviewed for this piece; general denial applies."]},
-            {"label": "Evidence destruction", "values": ["Liu asked colleague Yu-Ting Peng to wipe his Apple devices once he learned of the probe; Peng agreed.", "No claim-specific rebuttal found in the sources reviewed for this piece; general denial applies."]},
-            {"label": "Who's really at fault", "values": ["\"Apple is not conducting 'fishing expeditions'... its trade secrets are being used and evidence is being destroyed.\"", "\"A mess of Apple's own making\" -- blames Apple's own iCloud policy and its device-handover practices."]}
+            {
+              "label": "The circuit schematic",
+              "values": [
+                "Liu downloaded it in March, two months after leaving, and ran it through LTspice simulations for OpenAI hardware work.",
+                "Says Liu accessed his own past work product only to help former colleagues, and calls \"residual access\" common at Apple."
+              ]
+            },
+            {
+              "label": "The 1,000-plus-page file compilation",
+              "values": [
+                "Liu exploited a security gap to download manufacturing-process files after his departure.",
+                "No claim-specific rebuttal found in the sources reviewed for this piece; general denial applies."
+              ]
+            },
+            {
+              "label": "Evidence destruction",
+              "values": [
+                "Liu asked colleague Yu-Ting Peng to wipe his Apple devices once he learned of the probe; Peng agreed.",
+                "No claim-specific rebuttal found in the sources reviewed for this piece; general denial applies."
+              ]
+            },
+            {
+              "label": "Who's really at fault",
+              "values": [
+                "\"Apple is not conducting 'fishing expeditions'... its trade secrets are being used and evidence is being destroyed.\"",
+                "\"A mess of Apple's own making\" -- blames Apple's own iCloud policy and its device-handover practices."
+              ]
+            }
           ],
           "source": "Apple's August 31 filing and OpenAI's public statements, via TechCrunch, MacRumors and Business Today."
         }
@@ -39786,13 +39938,37 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "timeline",
         "timeline": {
           "items": [
-            {"when": "Feb 2024", "what": "Tang Tan, then Apple's VP of iPhone and Apple Watch product design, leaves the company after 24 years."},
-            {"when": "Jan 2026", "what": "Chang Liu, an eight-year Apple system electrical engineer, departs for OpenAI."},
-            {"when": "Mar 2026", "what": "Apple alleges Liu downloaded a confidential circuit schematic and began running LTspice simulations for OpenAI hardware work.", "hi": true},
-            {"when": "Jul 10, 2026", "what": "Apple files suit against Liu, Tan, OpenAI and io Products in the Northern District of California."},
-            {"when": "Aug 2026", "what": "Apple requests expedited discovery, citing the 400-plus former Apple employees now at OpenAI."},
-            {"when": "Aug 31, 2026", "what": "Apple files forensic MacBook analysis and the evidence-destruction allegation against Liu.", "hi": true},
-            {"when": "Oct 1, 2026", "what": "Hearing before Judge Edward J. Davila.", "future": true}
+            {
+              "when": "Feb 2024",
+              "what": "Tang Tan, then Apple's VP of iPhone and Apple Watch product design, leaves the company after 24 years."
+            },
+            {
+              "when": "Jan 2026",
+              "what": "Chang Liu, an eight-year Apple system electrical engineer, departs for OpenAI."
+            },
+            {
+              "when": "Mar 2026",
+              "what": "Apple alleges Liu downloaded a confidential circuit schematic and began running LTspice simulations for OpenAI hardware work.",
+              "hi": true
+            },
+            {
+              "when": "Jul 10, 2026",
+              "what": "Apple files suit against Liu, Tan, OpenAI and io Products in the Northern District of California."
+            },
+            {
+              "when": "Aug 2026",
+              "what": "Apple requests expedited discovery, citing the 400-plus former Apple employees now at OpenAI."
+            },
+            {
+              "when": "Aug 31, 2026",
+              "what": "Apple files forensic MacBook analysis and the evidence-destruction allegation against Liu.",
+              "hi": true
+            },
+            {
+              "when": "Oct 1, 2026",
+              "what": "Hearing before Judge Edward J. Davila.",
+              "future": true
+            }
           ]
         }
       },
@@ -39940,12 +40116,33 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "keyfacts": {
           "title": "The chain, in short",
           "items": [
-            {"label": "Anthropic pays Lambda", "value": "$35 billion", "note": "six-year compute purchase, reported Aug. 31"},
-            {"label": "Nvidia pays Hut 8", "value": "$19.6 billion", "note": "15-year facility lease, separately reported"},
-            {"label": "Site", "value": "Nueces County, Texas", "note": "~350 megawatts, built by Hut 8"},
-            {"label": "Hut 8's prior business", "value": "Bitcoin mining"},
-            {"label": "Lambda pays Nvidia", "value": "Not disclosed"},
-            {"label": "Anthropic's prior deal", "value": "$45B / 6yr with Nscale, Aug. 26"}
+            {
+              "label": "Anthropic pays Lambda",
+              "value": "$35 billion",
+              "note": "six-year compute purchase, reported Aug. 31"
+            },
+            {
+              "label": "Nvidia pays Hut 8",
+              "value": "$19.6 billion",
+              "note": "15-year facility lease, separately reported"
+            },
+            {
+              "label": "Site",
+              "value": "Nueces County, Texas",
+              "note": "~350 megawatts, built by Hut 8"
+            },
+            {
+              "label": "Hut 8's prior business",
+              "value": "Bitcoin mining"
+            },
+            {
+              "label": "Lambda pays Nvidia",
+              "value": "Not disclosed"
+            },
+            {
+              "label": "Anthropic's prior deal",
+              "value": "$45B / 6yr with Nscale, Aug. 26"
+            }
           ]
         }
       },
@@ -40013,10 +40210,26 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "stakes",
         "stakes": {
           "items": [
-            {"who": "Hut 8", "tone": "gains", "what": "Completes its pivot from Bitcoin mining to AI infrastructure with a 15-year, investment-grade lease anchoring a single site -- the kind of long-dated commitment crypto-mining revenue never offered."},
-            {"who": "Anthropic", "tone": "gains", "what": "Locks in a second large compute source in a week, continuing a pattern of diversifying across counterparties (SpaceX, Nscale, now Lambda) rather than depending on any single supplier."},
-            {"who": "Nvidia", "tone": "exposed", "what": "Sits in the middle of the chain as both facility lessee and Lambda's investor -- financially exposed to Lambda's ability to keep reselling the capacity profitably, on top of its existing exposure as Anthropic's own investor."},
-            {"who": "Anyone trying to size total 2026 AI-infrastructure spend from headline deal figures", "tone": "unclear", "what": "Faces at least six Anthropic compute deals this year alone, each on different terms, before counting any other lab's commitments -- a reported aggregate is a real number, but not a comparable one."}
+            {
+              "who": "Hut 8",
+              "tone": "gains",
+              "what": "Completes its pivot from Bitcoin mining to AI infrastructure with a 15-year, investment-grade lease anchoring a single site -- the kind of long-dated commitment crypto-mining revenue never offered."
+            },
+            {
+              "who": "Anthropic",
+              "tone": "gains",
+              "what": "Locks in a second large compute source in a week, continuing a pattern of diversifying across counterparties (SpaceX, Nscale, now Lambda) rather than depending on any single supplier."
+            },
+            {
+              "who": "Nvidia",
+              "tone": "exposed",
+              "what": "Sits in the middle of the chain as both facility lessee and Lambda's investor -- financially exposed to Lambda's ability to keep reselling the capacity profitably, on top of its existing exposure as Anthropic's own investor."
+            },
+            {
+              "who": "Anyone trying to size total 2026 AI-infrastructure spend from headline deal figures",
+              "tone": "unclear",
+              "what": "Faces at least six Anthropic compute deals this year alone, each on different terms, before counting any other lab's commitments -- a reported aggregate is a real number, but not a comparable one."
+            }
           ]
         }
       },
@@ -40127,11 +40340,28 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "flow",
         "flow": {
           "steps": [
-            {"actor": "Operator", "what": "Supplies Cursor with stolen credentials or an existing foothold in the victim's network"},
-            {"actor": "Cursor agent", "what": "Runs reconnaissance and scans the environment for privilege-escalation paths", "hi": true},
-            {"actor": "Cursor agent", "what": "Drafts a step-by-step Active Directory Certificate Services exploitation plan, in Russian"},
-            {"actor": "Operator", "what": "Executes the plan by hand, installs a VPN client, runs the certificate attack"},
-            {"actor": "Operator", "what": "Deploys the encryptor directly, without a broker or reseller", "blocked": true}
+            {
+              "actor": "Operator",
+              "what": "Supplies Cursor with stolen credentials or an existing foothold in the victim's network"
+            },
+            {
+              "actor": "Cursor agent",
+              "what": "Runs reconnaissance and scans the environment for privilege-escalation paths",
+              "hi": true
+            },
+            {
+              "actor": "Cursor agent",
+              "what": "Drafts a step-by-step Active Directory Certificate Services exploitation plan, in Russian"
+            },
+            {
+              "actor": "Operator",
+              "what": "Executes the plan by hand, installs a VPN client, runs the certificate attack"
+            },
+            {
+              "actor": "Operator",
+              "what": "Deploys the encryptor directly, without a broker or reseller",
+              "blocked": true
+            }
           ]
         }
       },
@@ -40275,14 +40505,46 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "compare": {
           "title": "Three services, one threshold",
           "columns": [
-            {"label": "ChatGPT", "sub": "Very Large Online Search Engine"},
-            {"label": "Reddit", "sub": "Very Large Online Platform"},
-            {"label": "Roblox", "sub": "Very Large Online Platform", "hi": true}
+            {
+              "label": "ChatGPT",
+              "sub": "Very Large Online Search Engine"
+            },
+            {
+              "label": "Reddit",
+              "sub": "Very Large Online Platform"
+            },
+            {
+              "label": "Roblox",
+              "sub": "Very Large Online Platform",
+              "hi": true
+            }
           ],
           "rows": [
-            {"label": "Declared EU monthly active users", "values": ["159.1 million", "57.2 million", "46.6 million"]},
-            {"label": "Margin over the 45 million threshold", "values": ["Well above the threshold", "Comfortably above the threshold", "1.6 million over"], "note": "Roblox cleared the bar by the narrowest margin of the three"},
-            {"label": "Reporting window", "values": ["6 months to Mar 31, 2026", "Self-reported, same batch", "Self-reported, same batch"]}
+            {
+              "label": "Declared EU monthly active users",
+              "values": [
+                "159.1 million",
+                "57.2 million",
+                "46.6 million"
+              ]
+            },
+            {
+              "label": "Margin over the 45 million threshold",
+              "values": [
+                "Well above the threshold",
+                "Comfortably above the threshold",
+                "1.6 million over"
+              ],
+              "note": "Roblox cleared the bar by the narrowest margin of the three"
+            },
+            {
+              "label": "Reporting window",
+              "values": [
+                "6 months to Mar 31, 2026",
+                "Self-reported, same batch",
+                "Self-reported, same batch"
+              ]
+            }
           ],
           "source": "European Commission designation announcement, Aug. 31, 2026, and company transparency disclosures."
         }
@@ -40330,9 +40592,25 @@ window.RTFC_NEWSROOM_ARTICLES = [
             {
               "question": "When exactly must ChatGPT, Reddit and Roblox meet the DSA's additional obligations?",
               "claims": [
-                {"who": "Euronews and RTTNews", "kind": "reporting", "says": "\"Four months\" from designation, dated to late November 2026", "url": "https://www.euronews.com/next/2026/08/31/eu-places-chatgpt-reddit-and-roblox-under-strictest-digital-safety-rules"},
-                {"who": "ppc.land", "kind": "reporting", "says": "End of December 2026", "url": "https://ppc.land/chatgpt-faces-eu-risk-rules-after-declaring-159-1-million-users/", "trusted": true},
-                {"who": "NotebookCheck", "kind": "reporting", "says": "January 2027", "url": "https://www.notebookcheck.net/European-Commission-brings-ChatGPT-Reddit-and-Roblox-under-Digital-Services-Act-rules.1384298.0.html"}
+                {
+                  "who": "Euronews and RTTNews",
+                  "kind": "reporting",
+                  "says": "\"Four months\" from designation, dated to late November 2026",
+                  "url": "https://www.euronews.com/next/2026/08/31/eu-places-chatgpt-reddit-and-roblox-under-strictest-digital-safety-rules"
+                },
+                {
+                  "who": "ppc.land",
+                  "kind": "reporting",
+                  "says": "End of December 2026",
+                  "url": "https://ppc.land/chatgpt-faces-eu-risk-rules-after-declaring-159-1-million-users/",
+                  "trusted": true
+                },
+                {
+                  "who": "NotebookCheck",
+                  "kind": "reporting",
+                  "says": "January 2027",
+                  "url": "https://www.notebookcheck.net/European-Commission-brings-ChatGPT-Reddit-and-Roblox-under-Digital-Services-Act-rules.1384298.0.html"
+                }
               ],
               "ruling": "No outlet reviewed here is the Commission's own published notice, which this desk could not retrieve directly. Trusting ppc.land's December date because it's the one that actually matches the 'four months from the Aug. 31 designation' mechanism two other outlets independently describe -- November is only three months out, and no outlet explains where January comes from. Treat this as the best available reading, not a confirmed date."
             }
@@ -40350,10 +40628,26 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "stakes",
         "stakes": {
           "items": [
-            {"who": "OpenAI", "tone": "exposed", "what": "Must run annual systemic-risk assessments covering minors, mental health and elections, submit to independent audits, and share data with vetted researchers -- obligations Google and Meta have carried since 2023 but no AI chatbot maker has faced before."},
-            {"who": "EU users of ChatGPT", "tone": "gains", "what": "Gain the DSA's strongest transparency and risk-mitigation regime, previously reserved for the largest search engines and social platforms."},
-            {"who": "Google Gemini, Anthropic's Claude, Perplexity", "tone": "exposed", "what": "Face the same capability-based test the moment any of them crosses 45 million EU monthly users with a live-search feature switched on."},
-            {"who": "The European Commission", "tone": "gains", "what": "Establishes it can extend platform-era enforcement machinery to generative AI without writing new legislation -- a template, not a one-off."}
+            {
+              "who": "OpenAI",
+              "tone": "exposed",
+              "what": "Must run annual systemic-risk assessments covering minors, mental health and elections, submit to independent audits, and share data with vetted researchers -- obligations Google and Meta have carried since 2023 but no AI chatbot maker has faced before."
+            },
+            {
+              "who": "EU users of ChatGPT",
+              "tone": "gains",
+              "what": "Gain the DSA's strongest transparency and risk-mitigation regime, previously reserved for the largest search engines and social platforms."
+            },
+            {
+              "who": "Google Gemini, Anthropic's Claude, Perplexity",
+              "tone": "exposed",
+              "what": "Face the same capability-based test the moment any of them crosses 45 million EU monthly users with a live-search feature switched on."
+            },
+            {
+              "who": "The European Commission",
+              "tone": "gains",
+              "what": "Establishes it can extend platform-era enforcement machinery to generative AI without writing new legislation -- a template, not a one-off."
+            }
           ]
         }
       },
@@ -40483,11 +40777,28 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "flow": {
           "title": "How a website summary became code execution",
           "steps": [
-            {"actor": "Attacker's site", "what": "Returns an HTTP 415 error, nudging Claude off WebFetch and onto curl/bash instead"},
-            {"actor": "Claude (Auto Mode)", "what": "Downloads a ZIP archive disguised as an archive of notebook records, containing a poisoned struct.py"},
-            {"actor": "Claude (Auto Mode)", "what": "Declines to run the archive's suspicious binary decoder and writes its own Python decoder instead -- the safer-looking choice", "hi": true},
-            {"actor": "Python interpreter", "what": "Running that decoder from inside the archive's own folder loads the attacker's local struct.py ahead of the standard-library module of the same name"},
-            {"actor": "Poisoned module", "what": "Downloads and runs native malware, opening a command-and-control channel", "blocked": false}
+            {
+              "actor": "Attacker's site",
+              "what": "Returns an HTTP 415 error, nudging Claude off WebFetch and onto curl/bash instead"
+            },
+            {
+              "actor": "Claude (Auto Mode)",
+              "what": "Downloads a ZIP archive disguised as an archive of notebook records, containing a poisoned struct.py"
+            },
+            {
+              "actor": "Claude (Auto Mode)",
+              "what": "Declines to run the archive's suspicious binary decoder and writes its own Python decoder instead -- the safer-looking choice",
+              "hi": true
+            },
+            {
+              "actor": "Python interpreter",
+              "what": "Running that decoder from inside the archive's own folder loads the attacker's local struct.py ahead of the standard-library module of the same name"
+            },
+            {
+              "actor": "Poisoned module",
+              "what": "Downloads and runs native malware, opening a command-and-control channel",
+              "blocked": false
+            }
           ]
         }
       },
@@ -40533,14 +40844,46 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "compare": {
           "title": "Two very different tests of the same product",
           "columns": [
-            {"label": "Rehberger's test", "sub": "Aug. 26 report"},
-            {"label": "Anthropic's cited evaluation", "sub": "0.00% figure", "hi": true}
+            {
+              "label": "Rehberger's test",
+              "sub": "Aug. 26 report"
+            },
+            {
+              "label": "Anthropic's cited evaluation",
+              "sub": "0.00% figure",
+              "hi": true
+            }
           ],
           "rows": [
-            {"label": "What was measured", "values": ["A chained exploit built from individually ordinary-looking steps", "A fixed set of known prompt-injection scenarios"]},
-            {"label": "Sample size", "values": ["A handful of runs per variant", "Not disclosed in public reporting"]},
-            {"label": "Reported result", "values": ["60-80% success across variants", "0.00% success"], "note": "Different tests of different things, not two measurements of the same claim"},
-            {"label": "Published by", "values": ["Independent researcher, own blog", "Third party, cited by Anthropic"]}
+            {
+              "label": "What was measured",
+              "values": [
+                "A chained exploit built from individually ordinary-looking steps",
+                "A fixed set of known prompt-injection scenarios"
+              ]
+            },
+            {
+              "label": "Sample size",
+              "values": [
+                "A handful of runs per variant",
+                "Not disclosed in public reporting"
+              ]
+            },
+            {
+              "label": "Reported result",
+              "values": [
+                "60-80% success across variants",
+                "0.00% success"
+              ],
+              "note": "Different tests of different things, not two measurements of the same claim"
+            },
+            {
+              "label": "Published by",
+              "values": [
+                "Independent researcher, own blog",
+                "Third party, cited by Anthropic"
+              ]
+            }
           ],
           "source": "Rehberger's Aug. 26 report; Anthropic's public citation of a third-party evaluation."
         }
@@ -40586,10 +40929,26 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "stakes",
         "stakes": {
           "items": [
-            {"who": "Developers running Claude Code's Auto Mode unattended", "tone": "exposed", "what": "Face a demonstrated, if not independently replicated, path from 'summarize this website' to malware execution and a C2 callback -- the exact unattended workflow Auto Mode exists to support."},
-            {"who": "Anthropic", "tone": "exposed", "what": "Faces a credibility gap between a cited 0.00% injection success rate and a working exploit closed as merely 'Informative' -- the kind of contrast a competitor or regulator can point to directly."},
-            {"who": "Rehberger and independent security researchers", "tone": "gains", "what": "Gets a public, on-record example of how Anthropic triages a report it disagrees with, useful for calibrating what future disclosures should expect."},
-            {"who": "Rival agentic coding tools", "tone": "unclear", "what": "Face the same class of module-shadowing and step-chaining risk in principle, but neither Rehberger's report nor this piece tested any of them directly."}
+            {
+              "who": "Developers running Claude Code's Auto Mode unattended",
+              "tone": "exposed",
+              "what": "Face a demonstrated, if not independently replicated, path from 'summarize this website' to malware execution and a C2 callback -- the exact unattended workflow Auto Mode exists to support."
+            },
+            {
+              "who": "Anthropic",
+              "tone": "exposed",
+              "what": "Faces a credibility gap between a cited 0.00% injection success rate and a working exploit closed as merely 'Informative' -- the kind of contrast a competitor or regulator can point to directly."
+            },
+            {
+              "who": "Rehberger and independent security researchers",
+              "tone": "gains",
+              "what": "Gets a public, on-record example of how Anthropic triages a report it disagrees with, useful for calibrating what future disclosures should expect."
+            },
+            {
+              "who": "Rival agentic coding tools",
+              "tone": "unclear",
+              "what": "Face the same class of module-shadowing and step-chaining risk in principle, but neither Rehberger's report nor this piece tested any of them directly."
+            }
           ]
         }
       },
@@ -40787,11 +41146,39 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "model": {
           "title": "What revenue does a $2 trillion valuation actually require?",
           "inputs": [
-            {"key": "val", "label": "Target valuation", "value": 2000, "min": 500, "max": 3000, "step": 50, "prefix": "$", "unit": "B", "dec": 0, "note": "Reported target is $2 trillion; range extends toward the $3 trillion figure one investor floated and down toward more conservative outcomes."},
-            {"key": "arr", "label": "Annualized revenue run rate", "value": 65, "min": 9, "max": 200, "step": 1, "prefix": "$", "unit": "B", "dec": 0, "note": "Reported range spans the ~$9B pace at end-2025 to backers' own ~$100-120B year-end-2026 expectation."}
+            {
+              "key": "val",
+              "label": "Target valuation",
+              "value": 2000,
+              "min": 500,
+              "max": 3000,
+              "step": 50,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 0,
+              "note": "Reported target is $2 trillion; range extends toward the $3 trillion figure one investor floated and down toward more conservative outcomes."
+            },
+            {
+              "key": "arr",
+              "label": "Annualized revenue run rate",
+              "value": 65,
+              "min": 9,
+              "max": 200,
+              "step": 1,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 0,
+              "note": "Reported range spans the ~$9B pace at end-2025 to backers' own ~$100-120B year-end-2026 expectation."
+            }
           ],
           "outputs": [
-            {"label": "Implied revenue multiple", "expr": "val/arr", "unit": "x revenue", "dec": 1, "note": "One investor told the Financial Times that even a company growing 800% annually would command roughly a 30x multiple at the low end of reasonable -- which implies a $3 trillion valuation off a $100B run rate, not $2 trillion."}
+            {
+              "label": "Implied revenue multiple",
+              "expr": "val/arr",
+              "unit": "x revenue",
+              "dec": 1,
+              "note": "One investor told the Financial Times that even a company growing 800% annually would command roughly a 30x multiple at the low end of reasonable -- which implies a $3 trillion valuation off a $100B run rate, not $2 trillion."
+            }
           ],
           "source": "Valuation and revenue figures as reported by the Wall Street Journal, Bloomberg and the Financial Times; multiple is this newsroom's own arithmetic on those reported figures."
         }
@@ -43436,6 +43823,826 @@ window.RTFC_NEWSROOM_ARTICLES = [
       }
     },
     "publishedAt": "2026-09-03T19:17:23Z"
+  },
+  {
+    "slug": "broadcom-q3-fy2026-ai-revenue-230-billion-target",
+    "title": "Broadcom's AI chip revenue growth rate has more than doubled since January -- and its CEO just put a $230 billion number on 2028",
+    "dek": "Broadcom's AI semiconductor revenue hit $16.7 billion this quarter, up 221% year-over-year -- the third straight quarter its growth rate has accelerated, with a fourth already guided higher -- and CEO Hock Tan says the supply to hit $115 billion next year and $230 billion the year after is already secured, with two of his six largest customers still needing outside financing to pay for it.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch Broadcom's Q4 FY2026 report, expected in December.",
+        "text": "$21.7 billion is guidance, not a filed result -- the first real test of whether the acceleration seen every actual quarter this year holds or breaks."
+      },
+      {
+        "label": "Watch whether the XPV financing platform's next tranche gets confirmed.",
+        "text": "Reporting already has the Anthropic facility in talks to grow toward $100 billion; a confirmed number would settle a figure no party has put on the record yet."
+      },
+      {
+        "label": "Watch Anthropic's and OpenAI's own next funding rounds.",
+        "text": "Broadcom's fiscal 2027-28 targets assume both companies keep raising the outside capital Tan says they still need to keep buying at this pace."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Broadcom Inc. Announces Third Quarter Fiscal Year 2026 Financial Results",
+        "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+        "outlet": "Broadcom Inc. (investor relations)",
+        "kind": "primary"
+      },
+      {
+        "label": "Broadcom's AI Revenue Just Soared 221%, and Profits Tripled. So, Why Is the Stock Flat?",
+        "url": "https://www.fool.com/investing/2026/09/03/broadcom-ai-revenue-soared-221-profits-tripled-why-is-the-stock-flat/",
+        "outlet": "The Motley Fool",
+        "kind": "reporting"
+      },
+      {
+        "label": "Hock Tan Just Put a $230 Billion Number on Broadcom's 2028 AI Revenue",
+        "url": "https://www.fool.com/investing/2026/09/03/hock-tan-just-put-a-usd230-billion-number-on-broadcom-s-2028-ai-revenue-that-is-4-times-this-year-s/",
+        "outlet": "The Motley Fool",
+        "kind": "reporting"
+      },
+      {
+        "label": "Why Broadcom CEO Hock Tan Called Anthropic and OpenAI 'Two Geniuses in the Middle of Mongolia'",
+        "url": "https://finance.yahoo.com/technology/ai/articles/why-broadcom-ceo-hock-tan-072232809.html",
+        "outlet": "Yahoo Finance",
+        "kind": "reporting"
+      },
+      {
+        "label": "Broadcom Q2 2026 earnings: AI chip revenue doubles, stock sinks",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-q2-2026-earnings-ai-111613207.html",
+        "outlet": "Yahoo Finance",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Broadcom's Q3 FY2026 AI semiconductor revenue hit $16.7 billion, up 221% year-over-year.",
+      "Growth has accelerated every quarter this fiscal year: 106%, then 143%, then 221% -- guided to 236% next.",
+      "CEO Hock Tan projects $115 billion in fiscal 2027 and $230 billion in fiscal 2028 AI revenue.",
+      "Only two of Broadcom's six major custom-chip customers, Anthropic and OpenAI, need outside financing.",
+      "Caveat: the 2027-28 numbers are Tan's own on-call projections, not filed guidance or a customer contract."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "%%$16.7B|Broadcom's AI semiconductor revenue this quarter, up 221% from a year earlier%% [Broadcom](/company/broadcom) posted fiscal third-quarter results on September 2 built around one number: **$16.7 billion in AI semiconductor revenue**, up 221% year-over-year and 54% from the prior quarter, against total revenue of $29.6 billion. The result beat the roughly $16 billion guidance Broadcom itself gave three months earlier, and it did so while the growth rate was still climbing rather than leveling off.",
+        "citation_urls": [
+          "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+          "https://www.fool.com/investing/2026/09/03/broadcom-ai-revenue-soared-221-profits-tripled-why-is-the-stock-flat/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That climb has now held for three straight actual quarters, with a fourth already guided higher. AI semiconductor revenue went ==$8.4 billion in Q1 (up 106% year-over-year), $10.8 billion in Q2 (up 143%), then $16.7 billion in Q3 (up 221%)== -- each quarter's year-over-year growth rate higher than the one before it, not just its dollar total. That is an acceleration curve, not a growth curve, and it is the specific pattern Tan pointed to on the call as evidence the current run isn't cresting yet.",
+        "citation_urls": [
+          "https://finance.yahoo.com/markets/stocks/articles/broadcom-q2-2026-earnings-ai-111613207.html",
+          "https://www.fool.com/investing/2026/09/03/broadcom-ai-revenue-soared-221-profits-tripled-why-is-the-stock-flat/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "line",
+          "title": "Broadcom's AI semiconductor revenue, by quarter, FY2026",
+          "unit": "$B",
+          "source": "Broadcom quarterly results, as reported each quarter this fiscal year.",
+          "data": [
+            {
+              "label": "Q1",
+              "value": 8.4,
+              "note": "+106% YoY"
+            },
+            {
+              "label": "Q2",
+              "value": 10.8,
+              "note": "+143% YoY"
+            },
+            {
+              "label": "Q3",
+              "value": 16.7,
+              "hi": true,
+              "note": "+221% YoY, +54% QoQ"
+            },
+            {
+              "label": "Q4 (guided)",
+              "value": 21.7,
+              "note": "+236% YoY -- guidance, not yet reported"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Broadcom is guiding to $21.7 billion for the fourth quarter, which would put full fiscal-2026 AI semiconductor revenue at roughly $58 billion. Tan then went past the current year entirely, telling analysts Broadcom already has the __supply secured__ -- meaning wafer capacity and packaging booked, not just customer demand -- to hit **roughly $115 billion in fiscal 2027** and **$230 billion in fiscal 2028**, about four times this year's total. \"Demand actually exceeds this outlook,\" he said of the $230 billion figure -- an unusual thing for a chipmaker to volunteer about a target two years out.",
+        "citation_urls": [
+          "https://www.fool.com/investing/2026/09/03/hock-tan-just-put-a-usd230-billion-number-on-broadcom-s-2028-ai-revenue-that-is-4-times-this-year-s/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What each Broadcom AI number actually is",
+          "items": [
+            {
+              "value": "$16.7B",
+              "unit": "Q3 FY2026 (reported)",
+              "label": "AI semiconductor revenue already booked",
+              "includes": "Results for the quarter ended August 2, 2026",
+              "excludes": "Anything not yet shipped or invoiced",
+              "note": "Beat the ~$16B guidance Broadcom gave alongside its Q2 results."
+            },
+            {
+              "value": "$21.7B",
+              "unit": "Q4 FY2026 (guidance)",
+              "label": "What Broadcom expects to report next",
+              "includes": "Management's own forecast, given alongside Q3 results",
+              "excludes": "Any filed confirmation -- this is guidance, not a result",
+              "note": "Would be up 236% year-over-year if it holds."
+            },
+            {
+              "value": "$58B",
+              "unit": "Full fiscal 2026 (estimate)",
+              "label": "Broadcom's own stated full-year AI total",
+              "includes": "Three quarters of actuals plus the Q4 guidance above",
+              "excludes": "Nothing new -- a sum Broadcom itself cited on the same call",
+              "note": "Not independently audited; the fiscal year isn't over."
+            },
+            {
+              "value": "$115B -> $230B",
+              "unit": "FY2027 -> FY2028 (Tan's targets)",
+              "label": "The furthest-out numbers in this ledger",
+              "includes": "Supply Tan says is 'already secured' for both years",
+              "excludes": "Any signed, publicly disclosed customer contract for either year",
+              "note": "Tan's own words on an earnings call, not a regulatory filing."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The AI semiconductor line isn't the whole company. Broadcom's infrastructure-software business, mostly VMware, kept growing at a steadier pace on the same call, giving the company a non-AI floor that a pure-play accelerator startup doesn't have if the cycle turns. That mix cuts the other way too: Tan has previously flagged that AI semiconductors carry thinner margins than Broadcom's networking and software lines, so the fastest-growing part of the business is also, by his own account, the part diluting the company's overall gross margin.",
+        "citation_urls": [
+          "https://finance.yahoo.com/markets/stocks/articles/broadcom-q2-2026-earnings-ai-111613207.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Underneath both multi-year targets sits a concentration Broadcom keeps volunteering rather than hiding: nearly all of that revenue runs through just ==six custom-chip customers==, and Tan says only two of them need outside help paying for it.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/why-broadcom-ceo-hock-tan-072232809.html"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Anthropic and OpenAI are like two geniuses in the middle of Mongolia” who need financing to reach their potential -- Hock Tan, Broadcom CEO",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/why-broadcom-ceo-hock-tan-072232809.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That financing mostly runs through [a platform Broadcom launched in June with Apollo Global Management and Blackstone](/article/broadcom-100-billion-debt-anthropic-chip-financing), built to fund customers' chip and data-center buildouts off Broadcom's own balance sheet. Its first tranche, $35 billion, has already closed and is earmarked for [Anthropic](/company/anthropic), which Tan said is on track to pass [Google](/company/google) as Broadcom's largest custom-chip customer sometime in 2027. Reporting in late August put the same platform in talks to grow toward $100 billion for Anthropic's buildout alone -- nearly triple that first close, though no party has confirmed a final figure. {{note: Broadcom helping arrange financing for the customer that then spends it on Broadcom's own chips is not new in this industry, but it does mean some of the \"demand\" behind the 2028 target is demand Broadcom itself is helping create.}}",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/why-broadcom-ceo-hock-tan-072232809.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Tan put a number on why that financing is worth arranging: each gigawatt of AI compute a customer like Anthropic or OpenAI deploys, he told analysts, can generate roughly **$30 billion a year** in Broadcom revenue over the life of the contract. That math is Tan's own explanation for why a chipmaker would help arrange financing for its customers rather than just wait for a purchase order: locking in the compute now locks in the chip revenue that compute requires for years afterward, regardless of who ultimately fronts the cash for the buildout. It also explains why Broadcom is willing to compete for a customer relationship years before the matching revenue shows up on an income statement -- the up-front financing is itself a way of winning the order against rival accelerator suppliers, not just a courtesy extended after the sale.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/why-broadcom-ceo-hock-tan-072232809.html"
+        ]
+      },
+      {
+        "type": "model",
+        "model": {
+          "title": "What does Broadcom's \"$30 billion per gigawatt\" claim actually project?",
+          "inputs": [
+            {
+              "key": "gw",
+              "label": "AI compute a customer deploys",
+              "value": 1,
+              "min": 1,
+              "max": 10,
+              "step": 1,
+              "unit": "GW",
+              "dec": 0,
+              "note": "Hock Tan's own framing, on this call, for a single large customer's deployed compute capacity."
+            }
+          ],
+          "outputs": [
+            {
+              "label": "Implied Broadcom revenue",
+              "expr": "gw*30",
+              "unit": "$B/yr",
+              "dec": 0,
+              "note": "Tan's stated per-gigawatt figure -- his own arithmetic for why financing a customer's buildout pays off, not a disclosed contract value."
+            }
+          ],
+          "source": "Hock Tan, Broadcom Q3 FY2026 earnings call, September 2, 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Broadcom's stock barely moved on the results despite the beat. The reason was narrower than the AI story: $34.8 billion in guided Q4 total revenue landed a shade under the roughly $35 billion analysts wanted, enough on its own to offset an otherwise clean quarter. That gap sat entirely in the parts of the business the AI numbers don't touch -- a reminder that ==a record AI print and a flat stock price aren't a contradiction== once the rest of a $30-billion-a-quarter company is counted too.",
+        "citation_urls": [
+          "https://www.fool.com/investing/2026/09/03/broadcom-ai-revenue-soared-221-profits-tripled-why-is-the-stock-flat/"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "The $230 billion target is financing risk dressed up as demand.",
+              "detail": "Two of Broadcom's six named customers need outside capital to keep buying, and Broadcom itself now helps arrange that capital through the XPV platform -- meaning part of the demand its own forecast counts on is a purchase Broadcom is financing back to its own customer.",
+              "whoHolds": "The standing circularity critique leveled at vendor-financed AI buildouts across the industry this year, not unique to Broadcom."
+            },
+            {
+              "claim": "A quarter beating a lowered bar isn't three years of guaranteed growth.",
+              "detail": "Broadcom's own Q3 guidance, set in June, was about $16 billion; the actual $16.7 billion beat it by roughly 4% -- real, but a modest margin against a target the company set for itself.",
+              "whoHolds": "Investors who left the stock roughly flat despite the beat, following Q4 guidance that narrowly undershot consensus."
+            }
+          ],
+          "verdict": "The second point is weaker than it looks: Q1 and Q2 also beat their own prior guidance, and each quarter's year-over-year growth rate has topped the last -- a harder pattern to wave away than one good print. The financing-circularity point is harder to dismiss, because it doesn't require any of Broadcom's numbers to be wrong -- only for Anthropic's or OpenAI's own capital-raising to slow before fiscal 2028 arrives.",
+          "source": "Broadcom's own disclosures (sources above); the circularity framing reflects a debate already public across AI-infrastructure financing."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Nothing about today's print changes what a customer of Broadcom's non-AI business sees. What changed is the shape of the bet the company is now making in public: **three straight quarters of accelerating growth**, a fourth already guided higher, a two-year target built on financing arrangements Broadcom itself helps structure, and a CEO willing to say on the record that demand already exceeds even a $230 billion outlook -- a claim that, like the outlook itself, nobody outside Broadcom has independently checked. The next real checkpoint isn't another quote on a call; it's whether $21.7 billion actually shows up in December.",
+        "citation_urls": [
+          "https://www.fool.com/investing/2026/09/03/hock-tan-just-put-a-usd230-billion-number-on-broadcom-s-2028-ai-revenue-that-is-4-times-this-year-s/"
+        ]
+      }
+    ],
+    "id": "newsroom-broadcom-q3-fy2026-ai-revenue-230-billion-target",
+    "image": "assets/img/newsroom/newsroom-broadcom-q3-fy2026-ai-revenue-230-billion-target.jpg",
+    "publishedAt": "2026-09-04T00:14:37Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-04T00:14:37Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "5 sources, 1 primary (Broadcom's own Q3 FY2026 earnings release; direct fetch timed out twice, so its figures were corroborated against four independent outlets quoting the same release and call, including two Motley Fool pieces and two Yahoo Finance pieces). 6 distinct evidence threads: the Q3 print itself, the Q1-Q3 quarterly trajectory, Q4/FY2026 guidance, the FY2027-28 multi-year targets, the customer-financing mechanism (XPV platform), and the per-gigawatt revenue framing. Routed as a synthesis given the single-event news peg and reporting-tier sourcing on several threads, despite the depth."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Financial/markets trigger fires (earnings, guidance, stock reaction) -- not-financial-advice disclaimer attached. The FY2027/FY2028 targets and the 'demand exceeds outlook' claim are explicitly attributed to Tan's own on-call remarks throughout, never adopted as independently confirmed fact -- reflected in the scorecard-equivalent framing inside the ledger and made explicit in the counter component. The 'six customers' figure and the two-need-financing detail are corroborated across two independent outlets; did not name the other four customers because outlet-to-outlet reporting on the full list itself conflicted (Google/Meta/Apple in one tally, Google/Meta/Fujitsu/ByteDance in another) -- left unnamed rather than guessed. No health or legal-proceeding triggers."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft's title claimed AI revenue growth had 'tripled' -- checked the actual math (106% to 221% is roughly 2.1x) and corrected to 'more than doubled' throughout the title, dek, tldr and body rather than leaving an inflated framing. Also caught and fixed an internal inconsistency where 'four straight quarters of acceleration' was asserted without a baseline quarter to compare Q1 against -- revised to 'three straight actual quarters, with a fourth already guided higher' everywhere the claim appears."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "chart's four values (8.4, 10.8, 16.7, 21.7) and growth rates all appear in prose. ledger's five value rows all appear in prose with matching scope language. model's only bare constant (30, the $/GW figure) is stated in the paragraph immediately preceding it, moved there specifically so the number appears before the component uses it. counter's claims each trace to a distinct part of the body. No component carries a top-level text field; no two components sit adjacent (chart, ledger, model, counter each separated by prose)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources, 1 primary, correctly routed as a synthesis. Body runs 864 words, within the 800-1900 band. 4 components (chart, ledger, model, counter), two carrying data, clears the 2-minimum/3-4-typical floor with real variety. Disclaimer: not-financial-advice. No scoreboard/entities.js action -- not a model launch."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A well-sourced earnings synthesis that separates Broadcom's actual results from its own multi-year targets at every step, hands the reader the arithmetic behind the company's most quotable claim, and states plainly that the financing arrangement behind two of six customers is itself a source of the demand the forecast counts on."
+      }
+    }
+  },
+  {
+    "slug": "wonderful-ai-550-million-series-c-5-billion-valuation",
+    "title": "Enterprise AI startup Wonderful raised $550 million and hit a $5 billion valuation -- its fourth round in fourteen months",
+    "dek": "Wonderful's valuation has gone from an undisclosed seed to $700 million to $2 billion to $5 billion in just over a year, with Salesforce joining Insight Partners as a new backer -- and the widely quoted $550 million headline is actually $720 million once a $170 million secondary sale to early employees and angels is counted.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "numbers",
+    "apply": [
+      {
+        "label": "Watch Wonderful's next 12 months of enterprise deployments.",
+        "text": "The company says it will use the money to expand product development and global deployment teams -- headcount and named enterprise customers are the concrete tests of whether the valuation is catching up to real usage or getting ahead of it."
+      },
+      {
+        "label": "Watch whether Salesforce's investment turns into a distribution deal.",
+        "text": "A strategic investor joining a round is one thing; a reseller or integration agreement is the version that would actually move Wonderful's enterprise reach."
+      },
+      {
+        "label": "Watch the next round's headline number against this one's.",
+        "text": "If Wonderful raises again within a year at the same pace -- four rounds in fourteen months so far -- the more interesting question becomes what revenue, if any, is disclosed alongside it."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Wonderful Raises $550 Million Series C to Scale the AI Operating System for the Enterprise",
+        "url": "https://www.wonderful.ai/blog-articles/wonderful-raises-550m-series-c",
+        "outlet": "Wonderful (company blog)",
+        "kind": "primary"
+      },
+      {
+        "label": "Wonderful raises $550M at $5B valuation for its AI automation platform",
+        "url": "https://siliconangle.com/2026/09/02/wonderful-raises-550m-at-5b-valuation-for-its-ai-automation-platform/",
+        "outlet": "SiliconANGLE",
+        "kind": "reporting"
+      },
+      {
+        "label": "Wonderful raises $550M Series C at $5B valuation for enterprise AI OS",
+        "url": "https://dealroom.co/news/148397-wonderful-raises-550m-series-c-at-5b-valuation-for-enterprise-ai-os",
+        "outlet": "Dealroom",
+        "kind": "reporting"
+      },
+      {
+        "label": "Wonderful adds $170 million secondary to $550 million round as it hits $5 billion valuation",
+        "url": "https://www.calcalistech.com/ctechnews/article/2lcydeh3v",
+        "outlet": "CTech (Calcalist)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Index Ventures triples down as Wonderful raises $150M Series B to scale its hyper-local enterprise AI platform",
+        "url": "https://www.indexventures.com/perspectives/index-ventures-triples-down-as-wonderful-raises-150m-series-b-to-scale-its-hyper-local-enterprise-ai-platform/",
+        "outlet": "Index Ventures",
+        "kind": "primary"
+      }
+    ],
+    "tldr": [
+      "Wonderful raised a $550 million Series C led by Insight Partners, with Salesforce joining as a new investor.",
+      "The round values the enterprise AI-agent startup at $5 billion, up from $2 billion seven months earlier.",
+      "A separate $170 million secondary sale brings the full round to $720 million once counted together.",
+      "This is Wonderful's fourth disclosed round since a 2025 seed -- roughly one every three to four months.",
+      "Caveat: no revenue, ARR, or customer-count figures were disclosed alongside any of the four rounds."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "%%$5B|Wonderful's new valuation, up from $2 billion seven months ago%% [Wonderful](/company/wonderful), an Amsterdam-based startup selling what it calls an \"AI Operating System\" for building and running enterprise AI agents, said on September 2 that it raised a **$550 million Series C** led by Insight Partners. [Salesforce](/company/salesforce) joined as a new investor alongside returning backers Index Ventures, IVP, Vine Ventures, 9Yards Capital and Bessemer Venture Partners. The round values the company at $5 billion -- up from $2 billion just seven months earlier.",
+        "citation_urls": [
+          "https://www.wonderful.ai/blog-articles/wonderful-raises-550m-series-c",
+          "https://siliconangle.com/2026/09/02/wonderful-raises-550m-at-5b-valuation-for-its-ai-automation-platform/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That $550 million figure is the number in every headline, including Wonderful's own. It is not the full size of the round. A separate $170 million secondary sale -- new investors buying shares directly from early employees and angel investors, rather than from the company -- ran alongside it, bringing the ==total transaction to $720 million==. The secondary let people who backed Wonderful in its first months realize some of that value less than two years after the company was founded, without waiting for an IPO or acquisition that may be years off.",
+        "citation_urls": [
+          "https://www.calcalistech.com/ctechnews/article/2lcydeh3v"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What \"$550 million\" actually covers",
+          "items": [
+            {
+              "value": "$550M",
+              "unit": "Primary, to the company",
+              "label": "New capital Wonderful itself raised",
+              "includes": "Cash that goes onto Wonderful's own balance sheet for product and hiring",
+              "excludes": "Any money paid to existing shareholders",
+              "note": "This is the figure in Wonderful's own announcement and in most headlines."
+            },
+            {
+              "value": "$170M",
+              "unit": "Secondary, to shareholders",
+              "label": "Early employees and angels cashing out",
+              "includes": "Share purchases from people who backed Wonderful before this round",
+              "excludes": "Any new money for the company itself",
+              "note": "Reported separately by CTech; not mentioned in Wonderful's own blog post."
+            },
+            {
+              "value": "$720M",
+              "unit": "Full transaction",
+              "label": "The two tranches combined",
+              "includes": "Everything above",
+              "excludes": "Nothing -- this is the complete round size",
+              "note": "The more accurate number for \"how large was this round,\" even though it isn't the one being quoted."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The announcement landed the same week [NVIDIA agreed to pay $12.93 billion for Hugging Face](/article/nvidia-hugging-face-12-9-billion-acquisition) -- a reminder that early September's AI dealmaking pace isn't limited to the frontier labs. Wonderful's own round is smaller than that acquisition by roughly an order of magnitude, but the underlying pattern is the same: capital moving into AI infrastructure and tooling companies faster than most of those companies are disclosing the revenue to match it.",
+        "citation_urls": [
+          "https://www.wonderful.ai/blog-articles/wonderful-raises-550m-series-c"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The pace matters as much as the size. Wonderful has now raised four disclosed rounds in roughly fourteen months: a $34 million seed in July 2025, a $100 million Series A that July's follow-on at a $700 million valuation in November, a $150 million Series B at $2 billion in March 2026, and now this $550 million Series C at $5 billion. Each round has arrived faster and at a steeper valuation step-up than the last.",
+        "citation_urls": [
+          "https://www.indexventures.com/perspectives/index-ventures-triples-down-as-wonderful-raises-150m-series-b-to-scale-its-hyper-local-enterprise-ai-platform/",
+          "https://dealroom.co/news/148397-wonderful-raises-550m-series-c-at-5b-valuation-for-enterprise-ai-os"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "items": [
+            {
+              "when": "Jul 2025",
+              "what": "Seed round, $34 million"
+            },
+            {
+              "when": "Nov 2025",
+              "what": "Series A, $100 million, at a $700 million valuation, led by Index Ventures"
+            },
+            {
+              "when": "Mar 2026",
+              "what": "Series B, $150 million, at a $2 billion valuation, led by Insight Partners"
+            },
+            {
+              "when": "Sep 2, 2026",
+              "what": "Series C, $550 million ($720 million with the secondary), at a $5 billion valuation",
+              "hi": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "**None of the four announcements disclosed revenue, annualized recurring revenue, or a customer count** -- unusual restraint for a company now telling investors it is worth $5 billion, and the gap that makes the valuation itself the only publicly checkable number in the entire story. What Wonderful does disclose is scale of a different kind: 650 employees as of this round (up from 350 planned to reach roughly 900 by the end of this year, per its Series B round), and operations in more than 35 countries. The product itself is a platform for building, versioning, and A/B-testing AI agents inside a company, with a \"Gateway\" layer that routes requests across different large language models depending on task complexity -- pitched, per co-founder and CTO ++Roey Lalazar++, as modular specifically so customers \"shouldn't have to replace everything they already have to become AI-native.\"",
+        "citation_urls": [
+          "https://siliconangle.com/2026/09/02/wonderful-raises-550m-at-5b-valuation-for-its-ai-automation-platform/",
+          "https://dealroom.co/news/148397-wonderful-raises-550m-series-c-at-5b-valuation-for-enterprise-ai-os",
+          "https://www.indexventures.com/perspectives/index-ventures-triples-down-as-wonderful-raises-150m-series-b-to-scale-its-hyper-local-enterprise-ai-platform/"
+        ]
+      },
+      {
+        "type": "rank",
+        "rank": {
+          "kind": "funding-raise-usd",
+          "highlight": "raise-wonderful-c",
+          "limit": 8,
+          "source": "Each figure as reported in its own linked article; Wonderful's entry counts the $550M raised by the company, not the $170M secondary."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Against that register, $550 million is a large but not extreme round for this beat -- the story here is less the single number than the __step-up__ between rounds: ==roughly 2.9x from Series A to B, then 2.5x from B to C==, on a company still not disclosing the revenue that would normally anchor a multiple like that. CEO and co-founder **Bar Winkler** framed the raise around demand rather than metrics, adding that the company needed the capital to capitalize on growth it worried it would otherwise miss.",
+        "citation_urls": [
+          "https://www.calcalistech.com/ctechnews/article/2lcydeh3v"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“More and more organizations are looking for a single system where they can build everything they need in AI, and we make that possible.” — Bar Winkler, Wonderful CEO and co-founder",
+        "citation_urls": [
+          "https://www.calcalistech.com/ctechnews/article/2lcydeh3v"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "\"AI Operating System\" is Wonderful's own label, and it's a deliberately broad one -- the platform covers agent development with team-based folders, version control and rollback, A/B-testing agent performance, and support for Google's A2A protocol to split a complex task across multiple agents, plus forward-deployed engineering teams that build custom applications directly with clients. That breadth is the pitch against narrower point-solution rivals: instead of buying a customer-service bot from one vendor and a coding agent from another, a company standardizes on one platform and one set of governance rules for every agent it runs. Whether that consolidation pitch holds up against specialized competitors with deeper expertise in any single use case is exactly the kind of question a disclosed customer list -- which Wonderful still hasn't published -- would help answer.",
+        "citation_urls": [
+          "https://siliconangle.com/2026/09/02/wonderful-raises-550m-at-5b-valuation-for-its-ai-automation-platform/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "Wonderful's early employees and angel investors",
+              "tone": "gains",
+              "what": "Got real liquidity via the $170 million secondary, less than two years after the company started -- an unusually fast payout window."
+            },
+            {
+              "who": "Enterprise buyers evaluating a multi-year AI-agent platform",
+              "tone": "exposed",
+              "what": "Are being asked to commit to a vendor whose only public financial signal is valuation, with no disclosed revenue, retention, or customer count to weigh it against."
+            },
+            {
+              "who": "Smaller, less-capitalized AI-agent-platform rivals",
+              "tone": "loses",
+              "what": "Now compete against a company that has raised $834 million in primary capital across four rounds in fourteen months, with Salesforce's enterprise distribution behind the newest one."
+            },
+            {
+              "who": "Salesforce",
+              "tone": "unclear",
+              "what": "Gains a stake in a fast-growing adjacent platform, but hasn't disclosed any integration, resale, or partnership terms beyond the investment itself."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "What changed today is concrete: a bigger round, a new strategic investor, and a valuation two and a half times what it was in March. What hasn't changed is what a reader still can't check -- **whether $5 billion reflects revenue Wonderful isn't disclosing**, or a funding environment where enterprise AI-agent platforms are being priced years ahead of the numbers that would normally justify it. Wonderful is not unusual in that particular silence; it is unusual only in how fast the silence has compounded, from an undisclosed seed valuation to $5 billion in fourteen months without a single revenue figure attached to any step along the way.",
+        "citation_urls": [
+          "https://www.wonderful.ai/blog-articles/wonderful-raises-550m-series-c"
+        ]
+      }
+    ],
+    "id": "newsroom-wonderful-ai-550-million-series-c-5-billion-valuation",
+    "image": "assets/img/newsroom/newsroom-wonderful-ai-550-million-series-c-5-billion-valuation.jpg",
+    "publishedAt": "2026-09-04T00:14:38Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-04T00:14:38Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "5 sources, 2 primary (Wonderful's own funding blog post; Index Ventures' own Series B post, used only for the prior-round figures it discloses directly). 5 evidence threads: the Series C terms, the $170M secondary CTech reported separately from Wonderful's own announcement, the full four-round funding history, the product's own feature set, and the CEO/CTO quotes -- with the CEO-vs-CTO quote-attribution conflict between outlets caught and resolved during research (see Verification)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Financial/markets trigger fires (funding round, valuation) -- not-financial-advice disclaimer attached. Caught a real attribution conflict: SiliconANGLE's fetched summary labeled the 'modular AI OS' quote as coming from Wonderful's CEO, but a separate LinkedIn/search cross-check confirmed Bar Winkler is CEO and Roey Lalazar is CTO -- the quote is attributed to Lalazar by title (co-founder and CTO) throughout, not copied from the mislabeled source. No health or legal-proceeding triggers."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the draft's stakes component originally summed the four rounds' figures using the $720M full-round number for Series C, producing a $954M total that double-counted secondary money as if it were capital raised by the company -- recalculated using primary-only figures (34+100+150+550=834M) and corrected the component."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "ledger's three values ($550M, $170M, $720M) all appear in the preceding paragraph. timeline's four dates/amounts match the funding-history paragraph exactly. rank reads figures.js live; the newly added raise-wonderful-c entry's value (0.55) matches the $550M primary figure stated in prose, and its slug matches this article. stakes' $834M figure is computed from figures already in the body, arithmetic not asserted as a disclosed number. No component carries a top-level text field; no two sit adjacent."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources, 2 primary, correctly routed as a synthesis. Body runs 824 words, within the 800-1900 band. 4 components (ledger, timeline, rank, stakes), meeting the 2-minimum/3-4-typical floor. Disclaimer: not-financial-advice. Added companies.js entry for wonderful and a figures.js funding-raise-usd entry (raise-wonderful-c) in this same cycle."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Separates the quoted $550M headline from the full $720M transaction, corrects a source's mis-attributed executive quote rather than repeating it, and is explicit throughout about the one figure -- revenue -- that four rounds of announcements still haven't disclosed."
+      }
+    }
+  },
+  {
+    "slug": "catch-ai-admin-assistant-launch-phone-calls-stealth",
+    "title": "Catch's AI assistant now makes real phone calls on your behalf -- and says it's already booked 12,000 meetings doing it",
+    "dek": "The Tel Aviv startup emerged from stealth with a $5 million seed and a flat $99-a-month admin assistant that dials restaurants, clinics and airlines, talks its way past a phone tree, and identifies itself as software the moment a human picks up -- built on an architecture the company says restricts each task to its own narrow, audited agent rather than one system with access to everything.",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Try it on one recurring annoyance before handing over your whole inbox.",
+        "text": "A restaurant booking or a single recurring meeting is a lower-stakes first test of the voice feature than a doctor's office or anything financial -- see what the call transcript actually looks like before delegating more."
+      },
+      {
+        "label": "Ask what happens to your data before connecting every channel.",
+        "text": "Catch says interaction data is anonymized before it's used to train open-source models -- worth reading that policy directly rather than assuming \"anonymized\" means \"not used.\""
+      },
+      {
+        "label": "Tell the people you interact with that an AI may call them.",
+        "text": "Catch says it identifies itself as software on calls, but the person on the other end of a restaurant or clinic line didn't opt into that conversation the way you did."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Catch -- product and pricing",
+        "url": "https://www.catchagent.ai/",
+        "outlet": "Catch (company site)",
+        "kind": "primary"
+      },
+      {
+        "label": "Catch Raises $5 Million Seed Round To Launch Agentic Admin Assistant For Business Leaders",
+        "url": "https://pulse2.com/catch-raises-5-million-seed-round-to-launch-agentic-admin-assistant-for-business-leaders/",
+        "outlet": "Pulse2",
+        "kind": "reporting"
+      },
+      {
+        "label": "Catch emerges from stealth with $5M to build an AI executive assistant that handles admin work for you",
+        "url": "https://techstartups.com/2026/09/03/catch-emerges-from-stealth-with-5m-to-build-an-ai-executive-assistant-that-handles-admin-work-for-you/",
+        "outlet": "TechStartups",
+        "kind": "reporting"
+      },
+      {
+        "label": "Catch Emerges From Stealth With $5M Seed to Build an Autonomous AI Executive Assistant",
+        "url": "https://www.unite.ai/catch-emerges-from-stealth-with-5m-seed-to-build-an-autonomous-ai-executive-assistant/",
+        "outlet": "Unite.AI",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Catch emerged from stealth with a $5 million seed round and a public admin-assistant product.",
+      "It makes real outbound phone calls, books meetings and travel, and triages email across channels.",
+      "Pricing is a flat $99 a month with voice included, and a 10-day free trial.",
+      "It says it has scheduled 12,000+ meetings, delegated 20,000+ tasks, and handled 200,000+ emails.",
+      "Caveat: Catch's own site currently shows a lower meeting count than the figure in this week's press coverage."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Catch](/company/catch), a Tel Aviv startup, emerged from stealth on September 3 with a **$5 million seed round** -- co-led by Entree Capital and Pitango, with Seedcamp and Factorial Capital also participating -- and a product built to do something most AI assistants still won't: place a real phone call on your behalf and talk its way through an automated menu to reach an actual person. The company, founded by CEO **Nir Sabato** and CTO **Yoav Ramon**, says it has already run quietly for four months with hundreds of paying customers before today's public launch.",
+        "citation_urls": [
+          "https://pulse2.com/catch-raises-5-million-seed-round-to-launch-agentic-admin-assistant-for-business-leaders/",
+          "https://techstartups.com/2026/09/03/catch-emerges-from-stealth-with-5m-to-build-an-ai-executive-assistant-that-handles-admin-work-for-you/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The pitch is a single assistant that ==runs a calendar, triages an inbox, books travel, and makes outbound calls== -- to restaurants, clinics, hotels, and airlines -- connected across Slack, WhatsApp, iMessage, email, and phone, working inside the accounts a user already has rather than a new dashboard to check. Catch says it can talk its way through an automated phone tree to reach a human, identifies itself as software calling on someone's behalf, and dials only on instruction; it returns a call summary and full transcript afterward. Pricing is a flat **$99 a month**, voice included, no per-call fees, with a 10-day free trial.",
+        "citation_urls": [
+          "https://www.catchagent.ai/",
+          "https://www.unite.ai/catch-emerges-from-stealth-with-5m-seed-to-build-an-autonomous-ai-executive-assistant/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What Catch's $99-a-month price actually includes",
+          "items": [
+            {
+              "value": "$99/mo",
+              "unit": "Every plan",
+              "label": "Flat subscription fee",
+              "includes": "Calendar management, email triage and drafting, task delegation, unlimited integrations, and outbound voice calls",
+              "excludes": "Any per-call or per-task surcharge",
+              "note": "10-day free trial before the first charge."
+            },
+            {
+              "value": "$5M",
+              "unit": "Seed round, Sept 2026",
+              "label": "Capital raised at today's stealth launch",
+              "includes": "Entree Capital and Pitango co-led; Seedcamp and Factorial Capital also participated",
+              "excludes": "Any disclosed valuation -- none given alongside the round",
+              "note": "The company says it was otherwise self-sustaining through four months of paying customers before this raise."
+            },
+            {
+              "value": "SOC 2",
+              "unit": "Compliance claim",
+              "label": "Security certification Catch says it holds",
+              "includes": "An independent audit, per the company's own account",
+              "excludes": "Public disclosure of the audit report itself",
+              "note": "Stated by Catch; not independently verified here."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The security architecture is the part aimed at the objection every version of this pitch eventually meets: why would anyone connect an AI system to their email, calendar, and phone line all at once? Catch says it is __SOC 2__ compliant and independently audited, and its answer beyond the certificate is what it calls __\"splinter agents\"__ -- rather than one general-purpose assistant with standing access to everything, each task spins up its own narrow agent scoped to only the data and permissions that task needs, so a restaurant-booking call can't also read three months of email. Whether that architecture holds up under real adversarial testing is not something a company's own launch materials can settle -- it's a claim about internal design that an outside security audit, not a product page, would need to confirm.",
+        "citation_urls": [
+          "https://techstartups.com/2026/09/03/catch-emerges-from-stealth-with-5m-to-build-an-ai-executive-assistant-that-handles-admin-work-for-you/",
+          "https://www.catchagent.ai/"
+        ]
+      },
+      {
+        "type": "flow",
+        "flow": {
+          "steps": [
+            {
+              "actor": "User",
+              "what": "Delegates a task by text, email, Slack message, or voice note -- no prompt template required"
+            },
+            {
+              "actor": "Catch",
+              "what": "Spins up a task-scoped \"splinter agent\" with access limited to what that task needs",
+              "hi": true
+            },
+            {
+              "actor": "Splinter agent",
+              "what": "Executes across the relevant channel -- drafts an email, moves a meeting, or places a call"
+            },
+            {
+              "actor": "Catch",
+              "what": "Returns a summary and, for calls, a full transcript, before the task is marked done"
+            }
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "text": "“Catch works alongside business leaders the way a great human assistant would, but 24/7, with no dip in attention and fully secure.” — Nir Sabato, Catch CEO and co-founder",
+        "citation_urls": [
+          "https://pulse2.com/catch-raises-5-million-seed-round-to-launch-agentic-admin-assistant-for-business-leaders/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "On traction, Catch's own numbers don't fully agree with each other depending on where you read them this week. The company's press materials, cited across this week's coverage, put the total at **12,000-plus meetings scheduled**, ==20,000-plus tasks delegated, and 200,000-plus emails handled==. Catch's own live site, checked the same day, shows a lower meetings figure -- 5,000-plus -- while matching the other two numbers exactly.",
+        "citation_urls": [
+          "https://pulse2.com/catch-raises-5-million-seed-round-to-launch-agentic-admin-assistant-for-business-leaders/",
+          "https://www.catchagent.ai/"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "How many meetings has Catch actually scheduled?",
+              "claims": [
+                {
+                  "who": "This week's press coverage (citing Catch's own materials)",
+                  "kind": "reporting",
+                  "says": "12,000+",
+                  "url": "https://pulse2.com/catch-raises-5-million-seed-round-to-launch-agentic-admin-assistant-for-business-leaders/",
+                  "trusted": true
+                },
+                {
+                  "who": "Catch's own website, same day",
+                  "kind": "primary",
+                  "says": "5,000+",
+                  "url": "https://www.catchagent.ai/"
+                }
+              ],
+              "ruling": "Using the press figure. It's more likely tied to the specific milestone attached to this week's launch, while a homepage counter is easy to leave stale between updates -- but the discrepancy itself, on a company's own numbers, is worth a reader's notice regardless of which is current."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Catch isn't entering an empty market. AI scheduling and inbox assistants are a crowded category, and Catch's own comparison page names ten rivals -- among them Lindy, Motion, Fyxer AI, Reclaim, and Poke -- and draws the line at exactly the feature this launch leads with: voice. By Catch's own account, most of that field stops at drafting an email or proposing meeting times, a text-generation problem large language models already handle well. Dialing a real business, sitting through hold music, and improvising through a receptionist's actual questions is a harder, higher-stakes capability most competitors have avoided shipping as a default feature rather than a narrow demo -- though it's worth being clear that the comparison itself comes from Catch's own marketing, not an independent test of the other nine tools.",
+        "citation_urls": [
+          "https://www.catchagent.ai/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The harder question isn't the exact count -- it's who else is on the other end of an automated call that only one party agreed to. Catch says the assistant identifies itself as software the moment a human answers, which addresses transparency in the moment. It doesn't address consent before the moment: a restaurant host, a clinic receptionist, or an airline agent didn't sign up to have their call handled by an AI system, the way the Catch subscriber did. {{note: This is the same tension every AI-calling product runs into -- the paying customer opts in, but everyone that customer's assistant calls on their behalf did not.}}",
+        "citation_urls": [
+          "https://www.catchagent.ai/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "Solo founders and small-business owners without a human assistant",
+              "tone": "gains",
+              "what": "Get access to admin support previously priced for executives with a budget for a full-time hire, at $99 a month."
+            },
+            {
+              "who": "People on the receiving end of a Catch-placed call",
+              "tone": "exposed",
+              "what": "Interact with an AI system as a condition of doing business with a Catch customer, without having chosen that themselves."
+            },
+            {
+              "who": "Human executive-assistant roles at the margin Catch is pricing against",
+              "tone": "loses",
+              "what": "Compete against a $99-a-month tool for the specific tasks -- scheduling, triage, routine calls -- that make up a real share of the job."
+            },
+            {
+              "who": "Catch itself",
+              "tone": "unclear",
+              "what": "Says it trains open-source models on anonymized interaction data -- a real business model, but one that depends entirely on how well \"anonymized\" holds up against a corpus of real calendars, emails and call transcripts."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is unique to Catch -- AI scheduling and inbox tools have existed for years, and at least one rival startup let its own AI agent run its $100 million fundraise this summer as a publicity move. What's new here is narrower and more concrete: a **real outbound phone call**, not just a calendar invite, at a flat consumer-style price, backed by a security model the company is willing to name in public even if it hasn't yet been independently tested. Four months of quiet paying customers before today's launch is a genuine signal the product works well enough for someone to keep paying for it. It isn't yet a signal that the security architecture, or the anonymization behind the training-data pipeline, will hold up the way the launch materials say it will -- those are claims a $5 million seed round buys the company time to prove, not evidence that it already has.",
+        "citation_urls": [
+          "https://techstartups.com/2026/09/03/catch-emerges-from-stealth-with-5m-to-build-an-ai-executive-assistant-that-handles-admin-work-for-you/"
+        ]
+      }
+    ],
+    "id": "newsroom-catch-ai-admin-assistant-launch-phone-calls-stealth",
+    "image": "assets/img/newsroom/newsroom-catch-ai-admin-assistant-launch-phone-calls-stealth.jpg",
+    "publishedAt": "2026-09-04T00:14:39Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-04T00:14:39Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources, 1 primary (Catch's own live product site, fetched directly for pricing, features, and traction numbers). 5 evidence threads: the funding/founding facts, the product feature set, the security-architecture claim, the traction metrics (which disagreed between the company's own site and press coverage of the same launch), and the company's own named competitor comparison, fetched directly from Catch's blog to confirm it names real competitors rather than assuming from a search-result title."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "No health trigger. Financial trigger fires narrowly (a disclosed seed round) -- not-financial-advice disclaimer attached, consistent with how this desk has handled other funding-adjacent brief/synthesis pieces. The 'splinter agents' security claim and the anonymized-training-data practice are both stated as the company's own account, not independently verified, and the piece says so explicitly rather than repeating them as fact. The competitor comparison table is flagged as Catch's own marketing, not an independent test."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft stated the 12,000-meetings figure as settled fact without noting Catch's own site currently shows a lower number -- caught during a direct fetch of catchagent.ai and added as a sourcecheck component rather than silently using the larger, more flattering figure."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items each match a figure stated in the surrounding paragraphs. flow's four steps describe the splinter-agent mechanism as described in body prose, no invented step. sourcecheck's two claims (12,000+ vs 5,000+) are each sourced to a distinct, named source with a dated ruling. stakes' four items name specific parties, none as generic as 'consumers.' No component carries a top-level text field; no two sit adjacent."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, 1 primary, correctly routed as a synthesis. Body runs 809 words, within the 800-1900 band. 4 components (keyfacts, flow, sourcecheck, stakes), meeting the 2-minimum/3-4-typical floor. Disclaimer: not-financial-advice. Added companies.js entry for catch in this same cycle. Cover generated fresh (twice -- first attempt skewed cyberpunk/neon and was regenerated with an explicit warm-office prompt) after the art library returned only off-topic silicon-die and cyberpunk-street matches for a consumer phone-assistant story."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Takes a stealth-launch pitch seriously without adopting its unverified security and traction claims as fact, surfaces the company's own conflicting meeting-count figures instead of picking the more flattering one, and names the consent gap -- the person on the other end of the call -- that the launch materials don't address."
+      }
+    }
   }
 ]
 ;

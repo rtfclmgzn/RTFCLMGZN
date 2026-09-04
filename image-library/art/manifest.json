@@ -3248,7 +3248,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/ChatGPT Image Jul 19, 2026, 04_28_42 AM (2).png",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-broadcom-q3-fy2026-ai-revenue-230-billion-target",
+     "used_at": "2026-09-04"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-02",

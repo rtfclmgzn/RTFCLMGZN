@@ -115,6 +115,9 @@ window.RTFC_FIGURES = {
     { id:"raise-firmus-blackstone", kind:"funding-raise-usd", value:2.0,
       label:"Firmus, strategic equity round", slug:"firmus-2-billion-nvidia-blackstone-ai-factory-raise",
       note:"Fully subscribed equity only. A separate $10B Blackstone-led debt facility from February 2026 is excluded — different instrument, not additive to this figure." },
+    { id:"raise-wonderful-c", kind:"funding-raise-usd", value:0.55,
+      label:"Wonderful, Series C (primary)", slug:"wonderful-ai-550-million-series-c-5-billion-valuation",
+      note:"The $550M raised by the company. A separate $170M secondary sale to early employees and angels brought the full transaction to $720M, but that tranche paid departing shareholders, not the company — excluded here as a different kind of money." },
 
     // ---- valuations (USD B) ----
     { id:"val-cxmt", kind:"valuation-usd", value:489,

@@ -12365,5 +12365,299 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-broadcom-q3-fy2026-ai-revenue-230-billion-target",
+    "ts": "2026-09-04T00:22:08Z",
+    "export": {
+      "article_id": "newsroom-broadcom-q3-fy2026-ai-revenue-230-billion-target",
+      "url": "https://rtfclmgzn.com/article/broadcom-q3-fy2026-ai-revenue-230-billion-target",
+      "headline": "Broadcom's AI chip revenue growth rate has more than doubled since January -- and its CEO just put a $230 billion number on 2028",
+      "hook": "Broadcom's AI semiconductor revenue hit $16.7B this quarter, up 221% YoY -- three straight quarters of acceleration -- and its CEO says the supply to hit $230B by 2028 is already secured.",
+      "key_facts": [
+        "AI semiconductor revenue: $8.4B -> $10.8B -> $16.7B across three quarters, each faster than the last.",
+        "Guided to $21.7B next quarter; CEO Hock Tan projects $115B in FY2027 and $230B in FY2028.",
+        "Only 2 of Broadcom's 6 named custom-chip customers -- Anthropic and OpenAI -- need outside financing to keep pace."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-broadcom-q3-fy2026-ai-revenue-230-billion-target.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Broadcom's AI chip revenue hit $16.7B this quarter (+221% YoY) -- 3 straight quarters of acceleration. CEO Hock Tan says the supply to hit $230B by 2028 is already secured. 2 of his 6 biggest customers still need outside financing to pay for it.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T05:22:08Z",
+        "copy": "Broadcom's own math: each gigawatt of AI compute a customer like Anthropic or OpenAI deploys is worth ~$30B in Broadcom revenue over the life of the contract. That's why a chipmaker is now helping arrange its customers' financing, not just waiting for the order.",
+        "reply_copy": "How the numbers break down:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Chips"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Broadcom's AI chip business just posted $16.7 billion in quarterly revenue -- up 221% from a year ago, and accelerating for the third straight quarter.\n\nCEO Hock Tan says the company already has the supply secured to hit $115B next year and $230B by 2028. But only 2 of Broadcom's 6 major custom-chip customers -- Anthropic and OpenAI -- need outside financing to keep buying at that pace.\n\nWe break down what each number actually covers, and the case for and against the bet. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors",
+          "#Broadcom",
+          "#TechNews",
+          "#Chips",
+          "#DataCenter"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Broadcom's AI semiconductor revenue hit $16.7 billion this quarter -- up 221% year-over-year, the third straight quarter its growth rate has accelerated.\n\nCEO Hock Tan is now projecting $115 billion next fiscal year and $230 billion the year after, saying the supply is already secured. The catch: only two of Broadcom's six named custom-chip customers, Anthropic and OpenAI, need outside financing to keep pace -- and Broadcom itself helps arrange that financing.\n\nWe break down what each of Broadcom's numbers actually covers, and the strongest case against the company's own forecast.",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Broadcom's AI chip revenue: $8.4B -> $10.8B -> $16.7B across three quarters this year, each faster than the last. CEO Hock Tan just put $230B on the table for 2028 -- with the supply already secured, he says. Two of six major customers still need outside financing though.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T05:22:08Z",
+        "copy": "The stock barely moved on a record AI quarter. Why? Total Q4 guidance landed a shade under what analysts wanted -- in the parts of Broadcom's business that have nothing to do with AI chips at all.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Broadcom's AI chip revenue: $16.7B this quarter, +221% YoY, 3rd straight quarter of acceleration. CEO says $230B by 2028 is already secured. 2 of 6 major customers still need outside financing to keep buying.",
+        "hashtags": [
+          "#AI",
+          "#Chips",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-wonderful-ai-550-million-series-c-5-billion-valuation",
+    "ts": "2026-09-04T00:22:08Z",
+    "export": {
+      "article_id": "newsroom-wonderful-ai-550-million-series-c-5-billion-valuation",
+      "url": "https://rtfclmgzn.com/article/wonderful-ai-550-million-series-c-5-billion-valuation",
+      "headline": "Enterprise AI startup Wonderful raised $550 million and hit a $5 billion valuation -- its fourth round in fourteen months",
+      "hook": "Wonderful's valuation went from $700M to $2B to $5B in just over a year -- and the $550M headline everyone's quoting is actually $720M once a $170M secondary sale is counted.",
+      "key_facts": [
+        "Four rounds in fourteen months: $34M seed, $100M Series A ($700M val.), $150M Series B ($2B val.), now $550M Series C ($5B val.).",
+        "A separate $170M secondary sale brings the real round size to $720M -- not mentioned in Wonderful's own announcement.",
+        "None of the four rounds disclosed revenue, ARR, or a customer count."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-wonderful-ai-550-million-series-c-5-billion-valuation.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Wonderful just raised $550M at a $5B valuation -- up from $2B seven months ago. What most headlines are missing: a separate $170M secondary sale brings the real round to $720M. Still zero disclosed revenue across four rounds in 14 months.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T05:22:08Z",
+        "copy": "Wonderful's valuation step-ups: ~2.9x from Series A to B, ~2.5x from B to C -- on a company that still hasn't disclosed a single revenue figure across four rounds. We ranked the round against every other AI funding raise on record.",
+        "reply_copy": "See where it ranks:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Wonderful, an enterprise \"AI Operating System\" startup, just raised $550 million at a $5 billion valuation -- up from $2 billion seven months ago, and $700 million before that.\n\nWhat most headlines skip: a separate $170 million secondary sale (existing shareholders cashing out) brings the real transaction to $720 million.\n\nFour rounds in fourteen months. Zero disclosed revenue at any step. We break down what the number actually covers, and what it doesn't. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital",
+          "#Startups",
+          "#EnterpriseAI",
+          "#Funding",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Wonderful, an Amsterdam-based enterprise AI-agent startup, raised a $550 million Series C at a $5 billion valuation -- its fourth disclosed round in fourteen months, and more than double its valuation from seven months ago.\n\nWhat the headline number leaves out: a separate $170 million secondary sale to early employees and investors brings the real transaction size to $720 million. And across all four rounds, Wonderful still hasn't disclosed revenue, ARR, or a customer count.\n\nWe break down what each figure actually covers -- and what a reader still can't check.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Wonderful raised $550M at a $5B valuation (up from $2B seven months ago). The catch: a separate $170M secondary sale most headlines aren't counting brings the real round to $720M. Four rounds in 14 months, zero disclosed revenue at any of them.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T05:22:08Z",
+        "copy": "Salesforce just became a new investor in Wonderful's $550M round. No word yet on whether that turns into an actual distribution or integration deal -- or stays a line item on a cap table.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Wonderful raised $550M at a $5B valuation, up from $2B seven months ago. What the headline misses: a separate $170M secondary sale brings the real round to $720M. Four rounds in 14 months, still zero disclosed revenue.",
+        "hashtags": [
+          "#AI",
+          "#VC",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-catch-ai-admin-assistant-launch-phone-calls-stealth",
+    "ts": "2026-09-04T00:22:08Z",
+    "export": {
+      "article_id": "newsroom-catch-ai-admin-assistant-launch-phone-calls-stealth",
+      "url": "https://rtfclmgzn.com/article/catch-ai-admin-assistant-launch-phone-calls-stealth",
+      "headline": "Catch's AI assistant now makes real phone calls on your behalf -- and says it's already booked 12,000 meetings doing it",
+      "hook": "Catch's AI assistant places real outbound phone calls -- to restaurants, clinics, airlines -- and talks its way through a phone tree for $99 a month flat.",
+      "key_facts": [
+        "Emerged from stealth Sept 3 with a $5M seed; four months of quiet paying customers before the public launch.",
+        "Flat $99/month, voice included, no per-call fees -- makes real outbound calls and identifies itself as software.",
+        "Catch's own site shows 5,000+ meetings scheduled; this week's press coverage cites 12,000+."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-catch-ai-admin-assistant-launch-phone-calls-stealth.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Catch's AI assistant makes real outbound phone calls on your behalf -- books a restaurant, talks its way through a phone tree, identifies itself as software. $99/month flat. It says it's booked 12,000+ meetings -- though its own site currently shows a lower number.",
+        "reply_copy": "How the security model works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#ProductLaunch"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T05:22:08Z",
+        "copy": "The person on the other end of a Catch-placed call didn't opt into talking to an AI -- the paying customer did. That consent gap is the part every AI-calling product runs into, and no launch page addresses it.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Privacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Catch just emerged from stealth with a product most AI assistants still won't do: place a real phone call, talk through an automated menu, and reach an actual human -- for a flat $99 a month.\n\nThe security pitch: \"splinter agents\" -- each task gets its own narrow, scoped AI instead of one system with access to everything.\n\nWe also caught something the launch materials don't flag: Catch's own site shows a lower meeting count than this week's press coverage does. Link in bio for the full breakdown.",
+        "hashtags": [
+          "#AI",
+          "#ProductLaunch",
+          "#Productivity",
+          "#TechNews",
+          "#AIAssistant",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Catch, a Tel Aviv startup, emerged from stealth this week with an AI admin assistant that does something most competitors still avoid: place a real outbound phone call and talk its way through an automated menu to reach a human -- for a flat $99 a month, voice included.\n\nIts security pitch is \"splinter agents\": rather than one assistant with access to everything, each task gets its own narrow, scoped agent. And its traction numbers don't fully agree with each other -- the company's own site currently shows fewer scheduled meetings than this week's press coverage cites.\n\nWe break down the product, the security claims, and the consent question nobody's launch page addresses: the person on the other end of the call didn't opt in.",
+        "hashtags": [
+          "#AI",
+          "#ProductLaunch"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Catch's AI assistant places real outbound phone calls -- restaurants, clinics, airlines -- and talks through automated menus to reach a human. $99/month flat. It says it's booked 12,000+ meetings; its own site currently shows 5,000+. We flagged the discrepancy.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T05:22:08Z",
+        "copy": "Catch names 9 competitors on its own comparison page -- Lindy, Motion, Fyxer, Reclaim, Poke and others -- and says voice is where the whole category stops. Worth noting: that comparison is Catch's own marketing, not an independent test.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Catch's AI assistant makes real outbound phone calls -- restaurants, clinics, airlines -- for $99/month flat. Says it's booked 12,000+ meetings; its own site shows 5,000+. We flagged the gap and the consent question nobody's addressing.",
+        "hashtags": [
+          "#AI",
+          "#ProductLaunch"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
-];
+]
+;
