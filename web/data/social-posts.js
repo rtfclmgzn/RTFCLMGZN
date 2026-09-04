@@ -12691,178 +12691,180 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   },
-{
-  "article_id": "newsroom-gpt-6-astra-arc-agi-3-two-scores",
-  "ts": "2026-09-04T14:26:00Z",
-  "export": {
+  {
     "article_id": "newsroom-gpt-6-astra-arc-agi-3-two-scores",
-    "url": "https://rtfclmgzn.com/article/gpt-6-astra-arc-agi-3-two-scores",
-    "headline": "OpenAI's GPT-6 Astra scored 62.7% on ARC-AGI-3's neutral test -- and 99.9% on a version only Astra can run",
-    "hook": "The benchmark widely called AI's hardest reasoning test gave GPT-6 Astra two very different scores -- and neither one is the number that went viral.",
-    "key_facts": [
-      "ARC Prize measured Astra at 62.7% on its standard, provider-neutral harness -- the same one every rival model is tested on.",
-      "The same model hit 99.9% using a harness built around OpenAI's own hidden reasoning state, unavailable to any other lab.",
-      "Astra needed fewer moves than the median human tester on 96% of levels -- an efficiency measure, not accuracy."
-    ],
-    "tone": "Austere, technically exacting, evaluation-first",
-    "persona": "luka-petrovic",
-    "section": "Frontier",
-    "primary_image": "assets/img/newsroom/newsroom-gpt-6-astra-arc-agi-3-two-scores.jpg",
-    "disclaimer": "none"
+    "ts": "2026-09-04T14:26:00Z",
+    "export": {
+      "article_id": "newsroom-gpt-6-astra-arc-agi-3-two-scores",
+      "url": "https://rtfclmgzn.com/article/gpt-6-astra-arc-agi-3-two-scores",
+      "headline": "OpenAI's GPT-6 Astra scored 62.7% on ARC-AGI-3's neutral test -- and 99.9% on a version only Astra can run",
+      "hook": "The benchmark widely called AI's hardest reasoning test gave GPT-6 Astra two very different scores -- and neither one is the number that went viral.",
+      "key_facts": [
+        "ARC Prize measured Astra at 62.7% on its standard, provider-neutral harness -- the same one every rival model is tested on.",
+        "The same model hit 99.9% using a harness built around OpenAI's own hidden reasoning state, unavailable to any other lab.",
+        "Astra needed fewer moves than the median human tester on 96% of levels -- an efficiency measure, not accuracy."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-gpt-6-astra-arc-agi-3-two-scores.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "GPT-6 Astra scored 62.7% on ARC-AGI-3's neutral benchmark harness. The viral \"99.9%\" only works with a harness built around OpenAI's own hidden reasoning state -- no other lab's model gets tested that way. Both numbers are real. Neither is the whole story.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#ARCAGI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T19:20:00Z",
+        "copy": "The nonprofit that built ARC-AGI-3 says GPT-6 Astra's result is real progress -- and, in the same breath, says we don't have evidence to call it AGI. The people who made the test are the ones adding that caveat.",
+        "reply_copy": "More:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#AGI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI's GPT-6 Astra just posted two wildly different scores on the same benchmark.\n\n62.7% under neutral testing conditions. 99.9% using a harness built just for OpenAI, that hides the model's reasoning from everyone -- including the benchmark's own creators.\n\nBoth numbers are real. The screenshots going viral don't mention which one they're citing. Link in bio for the full breakdown.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Benchmarks",
+          "#ARCAGI",
+          "#TechNews",
+          "#AGI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "ARC Prize, the nonprofit behind the benchmark widely considered AI's hardest reasoning test, published two very different numbers for OpenAI's newest model this week: 62.7% under the same neutral conditions every other lab's model is tested with, and 99.9% under a special harness built around OpenAI's own hidden reasoning state.\n\nBoth figures are real, and they're ARC Prize's own numbers -- not marketing. But the flat \"99.9%\" (and a separate, unconfirmed 98.6%) that spread across social media cite neither one correctly.\n\nEven the benchmark's own co-founders are split on what it means: one calls it a major breakthrough, the other says we don't yet have evidence to call it AGI. We break down both numbers, the reactions, and what's still unverified.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "GPT-6 Astra scored 62.7% on ARC-AGI-3 under neutral testing rules. Also scored 99.9% -- but only with a harness that hides its reasoning from everyone, including the people who built the benchmark. Both numbers are real. The viral 99.9% screenshots skip that part.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-04T19:20:00Z",
+        "copy": "Under the Provider Adapter harness, GPT-6 Astra needed fewer moves than the median human tester on 96% of ARC-AGI-3 levels. That's a real, sourced efficiency result -- and a different claim than \"beat humans on accuracy.\"",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "GPT-6 Astra: 62.7% on ARC-AGI-3's neutral test, 99.9% on a version built just for OpenAI that hides its reasoning from the benchmark's own creators. Both real. Viral screenshots only mention one.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#ARCAGI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "GPT-6 Astra scored 62.7% on ARC-AGI-3's neutral benchmark harness. The viral \"99.9%\" only works with a harness built around OpenAI's own hidden reasoning state -- no other lab's model gets tested that way. Both numbers are real. Neither is the whole story.",
-      "reply_copy": "The full breakdown:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#ARCAGI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-04T19:20:00Z",
-      "copy": "The nonprofit that built ARC-AGI-3 says GPT-6 Astra's result is real progress -- and, in the same breath, says we don't have evidence to call it AGI. The people who made the test are the ones adding that caveat.",
-      "reply_copy": "More:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#AGI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "OpenAI's GPT-6 Astra just posted two wildly different scores on the same benchmark.\n\n62.7% under neutral testing conditions. 99.9% using a harness built just for OpenAI, that hides the model's reasoning from everyone -- including the benchmark's own creators.\n\nBoth numbers are real. The screenshots going viral don't mention which one they're citing. Link in bio for the full breakdown.",
-      "hashtags": [
-        "#AI",
-        "#OpenAI",
-        "#Benchmarks",
-        "#ARCAGI",
-        "#TechNews",
-        "#AGI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "ARC Prize, the nonprofit behind the benchmark widely considered AI's hardest reasoning test, published two very different numbers for OpenAI's newest model this week: 62.7% under the same neutral conditions every other lab's model is tested with, and 99.9% under a special harness built around OpenAI's own hidden reasoning state.\n\nBoth figures are real, and they're ARC Prize's own numbers -- not marketing. But the flat \"99.9%\" (and a separate, unconfirmed 98.6%) that spread across social media cite neither one correctly.\n\nEven the benchmark's own co-founders are split on what it means: one calls it a major breakthrough, the other says we don't yet have evidence to call it AGI. We break down both numbers, the reactions, and what's still unverified.",
-      "hashtags": [
-        "#AI",
-        "#OpenAI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "GPT-6 Astra scored 62.7% on ARC-AGI-3 under neutral testing rules. Also scored 99.9% -- but only with a harness that hides its reasoning from everyone, including the people who built the benchmark. Both numbers are real. The viral 99.9% screenshots skip that part.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-09-04T19:20:00Z",
-      "copy": "Under the Provider Adapter harness, GPT-6 Astra needed fewer moves than the median human tester on 96% of ARC-AGI-3 levels. That's a real, sourced efficiency result -- and a different claim than \"beat humans on accuracy.\"",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "GPT-6 Astra: 62.7% on ARC-AGI-3's neutral test, 99.9% on a version built just for OpenAI that hides its reasoning from the benchmark's own creators. Both real. Viral screenshots only mention one.",
-      "hashtags": [
-        "#AI",
-        "#OpenAI",
-        "#ARCAGI"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
-  "ts": "2026-09-04T14:26:30Z",
-  "export": {
+  {
     "article_id": "newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
-    "url": "https://rtfclmgzn.com/article/chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
-    "headline": "ChatGPT, Claude, and Grok all went down within hours of each other on the same morning -- and none of the three has linked its outage to the others",
-    "hook": "Three of the biggest AI products in the world went down within the same few-hour window -- and all three companies say it's a coincidence.",
-    "key_facts": [
-      "xAI blamed a failure at its own Memphis compute center for Grok's roughly 3.5-hour outage.",
-      "Anthropic cited an unspecified infrastructure issue for a ~3-hour outage across five Claude model versions.",
-      "OpenAI logged a routing error that took down ChatGPT and Codex the same morning; major cloud providers reported no incidents."
-    ],
-    "tone": "Energetic, conversational",
-    "persona": "nova-reyes",
-    "section": "Products",
-    "primary_image": "assets/img/newsroom/newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "ChatGPT, Claude, and Grok all went down within hours of each other on Sept 3. xAI blamed a Memphis data-center failure. Anthropic cited an unspecified infrastructure issue. OpenAI pointed to a routing error. Cloudflare, AWS, and Google Cloud all reported clean status pages.",
-      "reply_copy": "What we know:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#Outage"
+    "ts": "2026-09-04T14:26:30Z",
+    "export": {
+      "article_id": "newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
+      "url": "https://rtfclmgzn.com/article/chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
+      "headline": "ChatGPT, Claude, and Grok all went down within hours of each other on the same morning -- and none of the three has linked its outage to the others",
+      "hook": "Three of the biggest AI products in the world went down within the same few-hour window -- and all three companies say it's a coincidence.",
+      "key_facts": [
+        "xAI blamed a failure at its own Memphis compute center for Grok's roughly 3.5-hour outage.",
+        "Anthropic cited an unspecified infrastructure issue for a ~3-hour outage across five Claude model versions.",
+        "OpenAI logged a routing error that took down ChatGPT and Codex the same morning; major cloud providers reported no incidents."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "instagram",
-      "copy": "ChatGPT, Claude, and Grok all went down within the same few-hour window on September 3.\n\nxAI blamed a failure at its own Memphis compute center. Anthropic cited an unspecified infrastructure issue. OpenAI logged a routing error.\n\nCloudflare, AWS, and Google Cloud all reported clean status pages -- and none of the three companies says the outages were connected. Link in bio.",
-      "hashtags": [
-        "#AI",
-        "#OpenAI",
-        "#Anthropic",
-        "#TechNews",
-        "#Outage",
-        "#ChatGPT"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "ChatGPT, Claude, and Grok -- three of the biggest AI products in the world -- were all degraded or unavailable within the same few-hour window on the morning of September 3.\n\nEach company opened its own separate incident report with its own explanation: xAI pointed to a failure at its Memphis compute center, Anthropic cited an unspecified infrastructure issue, and OpenAI logged a routing error. Cloudflare, AWS, and Google Cloud all reported clean status pages that morning.\n\nNone of the three companies has said the outages were connected -- and the honest read, per every source we checked, is that this was a coincidence, not one bigger event.",
-      "hashtags": [
-        "#AI",
-        "#TechNews"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "ChatGPT, Claude, and Grok all went down within hours of each other on Sept 3. Three separate companies, three separate explanations (Memphis data center, an unspecified infra issue, a routing error), and no confirmed shared cause. Probably just a bad morning, three times over.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "ChatGPT, Claude, and Grok all went down within hours of each other on Sept 3. Three separate incident reports, three different causes, no confirmed link. Sometimes it really is just a coincidence.",
-      "hashtags": [
-        "#AI",
-        "#Outage",
-        "#TechNews"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ChatGPT, Claude, and Grok all went down within hours of each other on Sept 3. xAI blamed a Memphis data-center failure. Anthropic cited an unspecified infrastructure issue. OpenAI pointed to a routing error. Cloudflare, AWS, and Google Cloud all reported clean status pages.",
+        "reply_copy": "What we know:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Outage"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095882510232342784",
+        "remote_id": "2095882510232342784",
+        "posted_at": "2026-09-04T14:31:45Z"
+      },
+      {
+        "platform": "instagram",
+        "copy": "ChatGPT, Claude, and Grok all went down within the same few-hour window on September 3.\n\nxAI blamed a failure at its own Memphis compute center. Anthropic cited an unspecified infrastructure issue. OpenAI logged a routing error.\n\nCloudflare, AWS, and Google Cloud all reported clean status pages -- and none of the three companies says the outages were connected. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Anthropic",
+          "#TechNews",
+          "#Outage",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "ChatGPT, Claude, and Grok -- three of the biggest AI products in the world -- were all degraded or unavailable within the same few-hour window on the morning of September 3.\n\nEach company opened its own separate incident report with its own explanation: xAI pointed to a failure at its Memphis compute center, Anthropic cited an unspecified infrastructure issue, and OpenAI logged a routing error. Cloudflare, AWS, and Google Cloud all reported clean status pages that morning.\n\nNone of the three companies has said the outages were connected -- and the honest read, per every source we checked, is that this was a coincidence, not one bigger event.",
+        "hashtags": [
+          "#AI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ChatGPT, Claude, and Grok all went down within hours of each other on Sept 3. Three separate companies, three separate explanations (Memphis data center, an unspecified infra issue, a routing error), and no confirmed shared cause. Probably just a bad morning, three times over.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ChatGPT, Claude, and Grok all went down within hours of each other on Sept 3. Three separate incident reports, three different causes, no confirmed link. Sometimes it really is just a coincidence.",
+        "hashtags": [
+          "#AI",
+          "#Outage",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
