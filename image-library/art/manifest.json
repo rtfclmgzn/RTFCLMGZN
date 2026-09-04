@@ -2573,7 +2573,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-03-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-microsoft-mai-transcribe-2-independent-benchmark-check",
+     "used_at": "2026-09-04"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-04",
@@ -4157,7 +4162,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Cryogenic-Data-Aisle-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-crusoe-3-billion-raise-30-billion-valuation-unconfirmed",
+     "used_at": "2026-09-04"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-01",

@@ -12866,5 +12866,296 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-tesla-cybercab-nhtsa-investigation-launch-day",
+    "ts": "2026-09-04T19:14:00Z",
+    "export": {
+      "article_id": "newsroom-tesla-cybercab-nhtsa-investigation-launch-day",
+      "url": "https://rtfclmgzn.com/article/tesla-cybercab-nhtsa-investigation-launch-day",
+      "headline": "Tesla's wheel-free Cybercab draws a federal audit within hours of its Austin debut",
+      "hook": "NHTSA opened a federal audit into Tesla's Cybercab the same day it started selling driverless rides -- Tesla self-certified the vehicle instead of asking first, and rival Zoox took the opposite path.",
+      "key_facts": [
+        "NHTSA's Audit Query AQ26002 covers up to 1,000 Cybercabs -- vehicles with no steering wheel, pedals, or mirrors.",
+        "Zoox petitioned NHTSA for an exemption in 2022 and won approval in July 2026; Tesla self-certified instead.",
+        "Tesla shares fell more than 4.5% within about an hour of the investigation becoming public."
+      ],
+      "tone": "Curious, hands-on, hard eye for the demo-versus-shipping gap",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-tesla-cybercab-nhtsa-investigation-launch-day.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Tesla started selling driverless Cybercab rides in Austin on Sept 3. Same day, NHTSA opened a federal audit into how it certified a car with no steering wheel, pedals, or mirrors. Zoox took the opposite path -- it asked first, and got a yes in July.",
+        "reply_copy": "The regulatory paths, compared:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Tesla",
+          "#Robotaxi"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T00:14:00Z",
+        "copy": "NHTSA's own case file: up to 1,000 Cybercabs under audit, far more than are actually on Austin's streets today. The agency isn't alleging a defect -- it's checking the paperwork Tesla used to skip an exemption Zoox spent 4 years getting.",
+        "reply_copy": "The full document:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Tesla",
+          "#NHTSA"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Tesla began charging riders for driverless Cybercab trips in Austin on September 3. The same day, NHTSA opened a federal audit into how Tesla certified a vehicle with no steering wheel, brake pedal, or mirrors as road-legal.\n\nTesla self-certified and deployed. Amazon's Zoox, facing the same missing-controls problem, petitioned NHTSA directly and waited four years for a yes.\n\nNHTSA isn't alleging a defect -- it's examining the reasoning behind Tesla's certification. Full breakdown, link in bio.",
+        "hashtags": [
+          "#Tesla",
+          "#Cybercab",
+          "#Robotaxi",
+          "#NHTSA",
+          "#SelfDriving",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Tesla began commercial Cybercab rides in Austin on September 3 -- a driverless vehicle with no steering wheel, brake pedal, or mirrors. The same day, federal regulators at NHTSA opened Audit Query AQ26002 into how Tesla certified it as road-legal.\n\nTesla self-certified compliance and deployed without asking first. Amazon-owned Zoox, which faced the identical missing-controls problem with its own robotaxi, petitioned NHTSA directly in 2022 and didn't get approval until this past July.\n\nNHTSA isn't alleging a defect or ordering a recall -- it's examining the process and technical data behind Tesla's certification, on a rule the agency itself has proposed changing later this year.",
+        "hashtags": [
+          "#Tesla",
+          "#Robotaxi"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Tesla's Cybercab started giving driverless rides in Austin Sept 3. Same day, NHTSA opened a federal audit into how Tesla certified a car with no steering wheel or pedals. Zoox asked permission first for the same thing and waited 4 years for a yes -- Tesla didn't ask.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T00:14:00Z",
+        "copy": "The twist: NHTSA itself proposed dropping the brake-pedal rule for driverless-only cars back in June. If that rule finalizes, the standard Tesla's being audited over might not exist much longer -- which doesn't end the audit, but changes how it reads.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Tesla's Cybercab began driverless rides in Austin Sept 3. Same day, NHTSA opened a federal audit into how Tesla certified a car with no steering wheel or pedals -- Zoox took the opposite path and petitioned first, waiting 4 years for approval.",
+        "hashtags": [
+          "#Tesla",
+          "#Robotaxi"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-crusoe-3-billion-raise-30-billion-valuation-unconfirmed",
+    "ts": "2026-09-04T19:14:05Z",
+    "export": {
+      "article_id": "newsroom-crusoe-3-billion-raise-30-billion-valuation-unconfirmed",
+      "url": "https://rtfclmgzn.com/article/crusoe-3-billion-raise-30-billion-valuation-unconfirmed",
+      "headline": "Crusoe reportedly raised $3 billion at a $30 billion valuation -- tripling its price in ten months, unconfirmed by the company",
+      "hook": "Bloomberg says Crusoe just tripled its valuation to $30B in ten months -- but unlike its last round, Crusoe itself hasn't confirmed a single number in this one.",
+      "key_facts": [
+        "Reported $3B+ raise values Crusoe at ~$30B, up from a company-confirmed $10B in October 2025.",
+        "Follows a reported $13B, five-year cloud contract with trading firm Jane Street.",
+        "Crusoe has not issued any statement confirming the round, its size, or its investors."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-crusoe-3-billion-raise-30-billion-valuation-unconfirmed.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Bloomberg: Crusoe raised $3B+ at a ~$30B valuation, triple its $10B price ten months ago. The catch -- Crusoe itself hasn't confirmed the round, the size, or the investors. Every figure in this story is 'reported,' not 'confirmed.'",
+        "reply_copy": "Why that distinction matters here:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T00:14:05Z",
+        "copy": "The timing: a reported $13B, 5-year Jane Street cloud deal landed the same week as the reported $30B valuation. Neither is confirmed by either company. We lay out what's actually been confirmed vs. what's only been reported.",
+        "reply_copy": "The ledger:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Bloomberg reports Crusoe, an AI-infrastructure company, closed a round of more than $3 billion valuing it at roughly $30 billion -- triple its $10 billion valuation from ten months ago.\n\nThe catch: Crusoe itself hasn't confirmed the round, its size, or its investors. Compare that to its last round, announced directly by the company with a named lead investor and a CEO quote.\n\nThe same week, Bloomberg also reported a $13 billion, five-year cloud contract with trading firm Jane Street -- also unconfirmed by either company.\n\nWe break down what's actually confirmed vs. only reported. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital",
+          "#DataCenters",
+          "#Funding",
+          "#TechNews",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI-infrastructure company Crusoe has reportedly raised more than $3 billion at a valuation of roughly $30 billion, according to Bloomberg News -- nearly triple the $10 billion valuation from its own confirmed Series E just ten months ago.\n\nWhat's different this time: Crusoe hasn't put out any statement confirming the round, its size, or its investors, unlike its detailed, quoted announcement of the prior round. The same week, Bloomberg also reported a $13 billion, five-year cloud contract with trading firm Jane Street -- likewise unconfirmed by either company.\n\nWe separate what Crusoe has actually confirmed from what's only been reported, and lay out the strongest case for skepticism alongside the case for taking the number seriously.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Crusoe reportedly raised $3B+ at a ~$30B valuation -- triple its $10B price ten months ago. Unlike that last round, Crusoe hasn't confirmed a single number in this one. Every figure traces to Bloomberg's sourcing, not the company.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T00:14:05Z",
+        "copy": "Also reported the same week: a $13B, 5-year Crusoe/Jane Street cloud deal. Also unconfirmed. Crusoe is reportedly in early IPO talks with 4 major banks too -- a filed S-1 would be the first audited numbers this company has ever made public.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Crusoe reportedly raised $3B+ at a ~$30B valuation, triple its $10B price ten months ago -- but unlike that last round, Crusoe hasn't confirmed a single figure in this one. Reported, not confirmed, and we say so throughout.",
+        "hashtags": [
+          "#AI",
+          "#VC"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-microsoft-mai-transcribe-2-independent-benchmark-check",
+    "ts": "2026-09-04T19:14:10Z",
+    "export": {
+      "article_id": "newsroom-microsoft-mai-transcribe-2-independent-benchmark-check",
+      "url": "https://rtfclmgzn.com/article/microsoft-mai-transcribe-2-independent-benchmark-check",
+      "headline": "Microsoft calls its new transcription model \"the fastest, most accurate, and cheapest in the world\" -- an independent leaderboard ranks it 2nd on both",
+      "hook": "Microsoft says its new transcription model is the fastest, most accurate, and cheapest in the world. An independent leaderboard checked all three claims -- and ranks it 2nd on two of them.",
+      "key_facts": [
+        "MAI-Transcribe-2 launched Sept. 3 at $0.10/hour, a 72% cut from its predecessor -- promotional through end of 2026.",
+        "Microsoft's own FLEURS benchmark ranks it 1st across 60 languages at 5.2% word error rate.",
+        "Artificial Analysis's independent leaderboard ranks it 2nd on both word-error rate and speed, not 1st."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-microsoft-mai-transcribe-2-independent-benchmark-check.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Microsoft's new MAI-Transcribe-2: \"the fastest, most accurate, and cheapest speech model in the world.\" We checked it against Artificial Analysis's independent leaderboard. It ranks 2nd on accuracy and 2nd on speed -- not 1st on either.",
+        "reply_copy": "What actually beats it, and by how much:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Microsoft"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T00:14:10Z",
+        "copy": "This isn't new: when Google's Gemini 3.5 Transcribe launched last month claiming a top result, the same independent board ranked it 5th. Two vendor launches, two weeks apart, both checked against a leaderboard that doesn't play favorites.",
+        "reply_copy": "The scorecard:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Benchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Microsoft launched MAI-Transcribe-2 on September 3, calling it \"the fastest, most accurate, and cheapest speech recognition model in the world.\"\n\nWe checked that claim against Artificial Analysis, an independent benchmark firm Microsoft's own post cites. Its leaderboard ranks MAI-Transcribe-2 2nd on word-error rate and 2nd on speed -- not 1st on either.\n\nThe $0.10/hour price genuinely does undercut its named rivals. But \"fastest\" and \"most accurate\" don't hold up the same way once you check the board instead of the press release.\n\nFull breakdown, link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Microsoft",
+          "#SpeechRecognition",
+          "#Benchmarks",
+          "#TechNews",
+          "#MachineLearning"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Microsoft AI released MAI-Transcribe-2 on September 3, calling it \"the fastest, most accurate, and cheapest speech recognition model in the world\" -- and citing Microsoft's own FLEURS benchmark run, which ranks it 1st across 60 languages.\n\nWe checked the same claim against Artificial Analysis, an independent benchmark firm Microsoft's own announcement cites for context. Its continuously updated leaderboard, which tests every model against the same audio, ranks MAI-Transcribe-2 2nd on word-error rate and 2nd on speed -- both behind smaller models most readers haven't heard of.\n\nThe $0.10-per-hour launch price genuinely does undercut its named competitors, so \"cheapest\" holds up better than the other two claims. We break down exactly where the marketing and the measurement agree, and where they don't.",
+        "hashtags": [
+          "#AI",
+          "#Microsoft"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Microsoft says its new MAI-Transcribe-2 is \"the fastest, most accurate, and cheapest\" speech model in the world. An independent leaderboard ranks it 2nd on accuracy and 2nd on speed. We checked the board directly instead of taking the press release's word for it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T00:14:10Z",
+        "copy": "Same pattern as Google's Gemini 3.5 Transcribe last month: a vendor's own launch claim, checked against an independent board, lands a rank or two lower than the headline. Worth bookmarking the leaderboard, not just the press releases.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Microsoft's new MAI-Transcribe-2: \"the fastest, most accurate, cheapest speech model in the world,\" per Microsoft. Per Artificial Analysis's independent leaderboard: 2nd on accuracy, 2nd on speed. We checked the board instead of the press release.",
+        "hashtags": [
+          "#AI",
+          "#Microsoft"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
