@@ -12286,8 +12286,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Labor"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muoutuodxz2l",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muoutuodxz2l",
+        "posted_at": "2026-09-04T11:38:06Z"
       }
     ]
   },
@@ -12414,8 +12416,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Chips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095837770011099492",
+        "remote_id": "2095837770011099492",
+        "posted_at": "2026-09-04T11:33:58Z"
       },
       {
         "platform": "instagram",
@@ -12522,8 +12526,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Startups"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095838778904715415",
+        "remote_id": "2095838778904715415",
+        "posted_at": "2026-09-04T11:37:58Z"
       },
       {
         "platform": "instagram",
