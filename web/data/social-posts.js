@@ -12122,9 +12122,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#NVIDIA",
           "#Antitrust"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -12185,8 +12185,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#NVIDIA"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muo6jukokx2i",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muo6jukokx2i",
+        "posted_at": "2026-09-04T04:58:47Z"
       }
     ]
   },
@@ -12610,8 +12612,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#ProductLaunch"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2095737200826618126",
+        "remote_id": "2095737200826618126",
+        "posted_at": "2026-09-04T04:54:20Z"
       },
       {
         "platform": "x",
@@ -12654,8 +12658,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Catch's AI assistant places real outbound phone calls -- restaurants, clinics, airlines -- and talks through automated menus to reach a human. $99/month flat. It says it's booked 12,000+ meetings; its own site currently shows 5,000+. We flagged the discrepancy.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc2k0SlnOSu",
+        "remote_id": "18084917882262897",
+        "posted_at": "2026-09-04T04:54:39Z"
       },
       {
         "platform": "threads",
@@ -12672,8 +12678,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#ProductLaunch"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muo6co5pfs24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muo6co5pfs24",
+        "posted_at": "2026-09-04T04:54:46Z"
       }
     ]
   }
