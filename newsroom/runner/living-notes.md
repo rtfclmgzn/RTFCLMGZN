@@ -340,3 +340,22 @@
   has actually gotten -- worth periodically checking the live file against
   the log's own claims rather than assuming the last entry's word count
   still holds.
+- **2026-09-04** (newsroom cycle, later same day): ran the first real
+  slice of the SS3e "full-diff" pass between `web/data/primer-issue.js`
+  and `functions/api/issue/_data/primer.json` that multiple prior entries
+  (2026-08-18 onward) called for but never did -- scoped to spread `kind`
+  counts and titles only. Finding: the two files are **not** "one clause"
+  apart, they differ by 20 whole spreads (69 vs 49) -- `primer.json` is
+  missing an entire capex-comparison faceoff spread, a photo spread, a
+  second glossary/list/timeline spread, and a players card, while itself
+  carrying one opener (`"Going Deeper"`) `primer-issue.js` lacks. Full
+  list logged in `cycle-runbook.md` SS3e. Could not fix `primer.json`:
+  confirmed by reading `newsroom/runner/verify_publish_surface.py` directly
+  that `functions/` is still outside `ALLOWED_PREFIXES`, so no unattended
+  cycle can ship an edit to that file until the owner either widens the
+  allow-list or decides to stop hand-maintaining it as a twin. General
+  lesson: when a work-order log's own running total ("one clause behind")
+  hasn't been re-derived from the live files in a while, treat it as a
+  claim to re-check, not a fact -- the same pattern the entry right above
+  this one flagged for a different SS3e sub-item, now confirmed for the
+  cross-file drift question too.

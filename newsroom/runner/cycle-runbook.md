@@ -566,6 +566,56 @@ this order, and mark it done here.
    at a time. That full-diff pass, not another single-clause edit, is
    the actual next item worth a cycle's attention here.
 
+   PARTIAL, continued (2026-09-04 later cycle) -- took a first real bite
+   out of the full-diff pass the entry directly above (and 2026-08-18
+   before it) flagged as the actual next item, scoped to structure only
+   (spread `kind` counts and titles), not full prose reconciliation --
+   still data-only, no new writing, consistent with this section's own
+   ordering. Counted every spread by `kind` in both files:
+   `web/data/primer-issue.js` carries **69** spread objects against
+   `functions/api/issue/_data/primer.json`'s **49** -- a 20-spread gap,
+   materially larger than any prior entry in this log characterized it
+   (the closest prior claim was "one clause behind," which undersold this
+   by orders of magnitude). Per-kind breakdown of what `primer.json` is
+   missing that `primer-issue.js` has: `text` +10, `ad` +2, `opener` +1,
+   `photo` +1, `players` +1, `faceoff` +1, `glossary` +1, `list` +1,
+   `quote` +1, `timeline` +1 (verticalfold, back, centerfold, contents,
+   cover, letter, and resources all match 1-for-1 -- correcting my own
+   mid-pass misread that briefly took verticalfold for a gap too; it
+   isn't). Identified concrete, named spreads by title where the gap is
+   real content, not a counting artifact: `primer.json` has **no capex
+   money-comparison faceoff spread at all** ("The money, compared" --
+   what earlier entries called "Act V · The Money" exists only in
+   `primer-issue.js`); it's missing a `photo` spread ("Not chips.
+   Power."); missing a second `glossary` spread ("Ten more words, now
+   that you've seen the factory floor"); missing a second `list` spread
+   ("How sure are we, really?"); missing a `players` card ("The
+   efficiency challengers"); and missing a second `timeline` ("The
+   training-method timeline, not the product-launch one"). Conversely
+   `primer.json` carries one `opener` ("Going Deeper") that
+   `primer-issue.js` does not have at all, and the two files' shared
+   third `photo` spread has drifted wording ("This is what a training
+   run runs on" in `primer-issue.js` vs "This is what intelligence runs
+   on" in `primer.json`) -- so this is not simply "`primer.json` is a
+   strict subset," it has at least one spread of its own. Did not attempt
+   any fix this cycle: `functions/` is still outside
+   `verify_publish_surface.py`'s `ALLOWED_PREFIXES`
+   (`web/`, `docs/operations/releases/`, `image-library/art/manifest.json`),
+   confirmed by reading the check directly, so a `primer.json` edit
+   cannot ship from an unattended cycle regardless, and one-sided edits
+   to `primer-issue.js` alone would be exactly the wrong direction (it's
+   already the fuller file). This finding, not another prose slice, is
+   the real §3e output this cycle. The genuinely open next steps: (1) an
+   owner or human-reviewed commit needs to either widen
+   `ALLOWED_PREFIXES` or decide `primer.json` should be regenerated from
+   `primer-issue.js` rather than hand-maintained as a twin; (2) once
+   `primer.json` is editable again, the seven named spreads above are a
+   concrete backfill list, not a fresh search; (3) nobody has yet
+   reconciled the "Going Deeper" / "Race" / "How The Models Are Made"
+   opener-naming difference, which looks like a real Act-structure
+   divergence, not a copy-paste gap -- that's a judgment call for
+   whichever pass does the content-level (not just count-level) diff.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
