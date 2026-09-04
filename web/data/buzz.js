@@ -341,5 +341,11 @@ window.RTFC_BUZZ = [
     text:"Alibaba updated Qwen3.8-Max with a 1 million-token context window on September 3, priced at $2 per million input tokens and $8 per million output tokens. New post-training focuses on coding tasks and multi-agent collaborative workloads. The update maintains feature parity with prior Qwen3.8 variants while doubling context capacity and explicitly targeting agentic and code-generation use cases.",
     why:"A major Chinese frontier lab matching the context and pricing moves of Western frontier labs while emphasizing agent-collaborative workloads is a concrete signal of how quickly Chinese model providers are converging on the feature sets (context, agent-focus, pricing parity) driving frontier model differentiation in late 2026.",
     heat:49, topics:["alibaba","qwen","model update","context window","pricing","agents","china","frontier models"],
-    url:"https://github.com/QwenLM/Qwen/releases/tag/Qwen3.8-Max-2026-09-03" }
+    url:"https://github.com/QwenLM/Qwen/releases/tag/Qwen3.8-Max-2026-09-03" },
+{ id:"bz-484", date:"2026-09-03",
+    source:{ name:"Google DeepMind", handle:"Google DeepMind", platform:"web", kind:"lab" },
+    text:"Google DeepMind and Google Research launched WeatherNext 3 on September 3, an AI weather model generating hourly global forecasts at up to 5-kilometer resolution by layering real-time geostationary satellite imagery on top of ECMWF data, instead of waiting on government datasets that update every six hours. Google says it is roughly five times sharper than predecessor WeatherNext 2 (25km grid, 6-hour increments) and up to 50% more accurate on precipitation a day or more out. It began powering weather in Search, the Gemini app, Maps, the Maps Platform Weather API, and Earth Engine the same day.",
+    why:"A frontier lab shipping an hourly, satellite-fed weather model straight into search and maps -- not a research paper -- is a concrete signal that AI forecasting has moved from beating benchmarks to replacing the update cadence of government weather data for ordinary consumer products.",
+    heat:54, topics:["google deepmind","weathernext","weather forecasting","satellite data","gemini","maps"],
+    url:"https://www.unite.ai/google-deepmind-launches-weathernext-3-with-hourly-5-kilometer-forecasts/" }
 ];

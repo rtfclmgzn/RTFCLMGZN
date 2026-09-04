@@ -44643,6 +44643,414 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Takes a stealth-launch pitch seriously without adopting its unverified security and traction claims as fact, surfaces the company's own conflicting meeting-count figures instead of picking the more flattering one, and names the consent gap -- the person on the other end of the call -- that the launch materials don't address."
       }
     }
+  },
+{
+  "slug": "gpt-6-astra-arc-agi-3-two-scores",
+  "title": "OpenAI's GPT-6 Astra scored 62.7% on ARC-AGI-3's neutral test -- and 99.9% on a version only Astra can run",
+  "dek": "ARC Prize, the nonprofit behind the benchmark widely treated as AI's hardest reasoning test, measured GPT-6 Astra at 62.7% under its standard, provider-neutral harness -- and 99.9% under a second harness built around OpenAI's own hidden reasoning state, which no other lab's model is tested with. Both numbers are ARC Prize's own. A flat \"99.9%\" and an unconfirmed 98.6% that spread across social media within hours cite neither one correctly.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+    {
+      "label": "Watch for a rival lab to test through a comparable adapter.",
+      "text": "The 99.9% score depends on infrastructure ARC Prize built specifically around OpenAI's API. If Anthropic or Google ship a similar provider-level harness for their own frontier models, the near-100% tier stops being an OpenAI-only outlier and becomes a real cross-lab comparison."
+    },
+    {
+      "label": "Watch ARC-AGI-4.",
+      "text": "Mike Knoop says the next version of the benchmark will target \"open-ended invention\" -- the gap he says this result does not close. Its release will be the next real test of whether this week's number reflects general reasoning progress or one benchmark's specific shape."
+    },
+    {
+      "label": "Watch for Astra's public release date.",
+      "text": "Both this result and Astra's cybersecurity classification were produced under controlled, gated conditions. When -- or whether -- OpenAI opens broader access is the fact that turns either claim into something a reader can verify themselves."
+    },
+    {
+      "label": "Watch for an evaluator outside ARC Prize.",
+      "text": "Every number in this story comes from one benchmark organization, however independent. A second group -- Epoch AI, METR, or a peer lab's own replication -- publishing a matching or diverging result would be the first outside check on ARC Prize's own methodology."
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+      "url": "https://arcprize.org/blog/astra",
+      "outlet": "ARC Prize (official)",
+      "kind": "primary"
+    },
+    {
+      "label": "GPT-6 Astra -- ARC-AGI Results",
+      "url": "https://arcprize.org/results/openai-gpt-6-astra",
+      "outlet": "ARC Prize (official results page)",
+      "kind": "primary"
+    },
+    {
+      "label": "François Chollet on X: \"GPT-6 Astra represents a step-function change...\"",
+      "url": "https://x.com/fchollet/status/2095598451115614371",
+      "outlet": "François Chollet (ARC Prize co-founder)",
+      "kind": "primary"
+    },
+    {
+      "label": "Mike Knoop on X: \"GPT-6 Astra is the new SOTA on ARC-AGI-3...\"",
+      "url": "https://x.com/mikeknoop/status/2095600676919455857",
+      "outlet": "Mike Knoop (ARC Prize co-founder)",
+      "kind": "primary"
+    },
+    {
+      "label": "GPT-6 Astra aced the hardest AI benchmark. The asterisk matters more than the score.",
+      "url": "https://thenewstack.io/astra-arc-agi-benchmark/",
+      "outlet": "The New Stack",
+      "kind": "reporting"
+    },
+    {
+      "label": "GPT-6 Astra \"Major Breakthrough\" On ARC-AGI-3 With Score Of 62%",
+      "url": "https://officechai.com/ai/gpt-6-astra-major-breakthrough-on-arc-agi-3-with-score-of-62/",
+      "outlet": "OfficeChai",
+      "kind": "reporting"
+    }
+  ],
+  "tldr": [
+    "ARC Prize measured GPT-6 Astra at 62.7% on ARC-AGI-3's standard, provider-neutral harness.",
+    "The same model scored 99.9% using a harness built around OpenAI's own hidden reasoning state.",
+    "Astra needed fewer moves than the median human on 96% of levels -- an efficiency measure, not accuracy.",
+    "ARC Prize's own co-founders call the result real progress but not evidence of AGI.",
+    "Caveat: viral posts citing a flat 99.9% or an unconfirmed 98.6% score attach neither harness."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "ARC Prize, the nonprofit behind the __benchmark__ most AI researchers treat as the hardest general-reasoning test available, published two very different numbers for OpenAI's newest model on the same results page this week. Under its standard, provider-neutral harness -- the same interface every other lab's model is tested on -- GPT-6 Astra solved 62.7% of ARC-AGI-3's Semi-Private evaluation set. Under a second harness built specifically around OpenAI's own infrastructure, the same model hit 99.9%. **Both figures came from ARC Prize's own testing, not from OpenAI's marketing team** -- and ==the gap between them is bigger than the improvement most model generations manage in a full year==.",
+      "citation_urls": [
+        "https://arcprize.org/results/openai-gpt-6-astra",
+        "https://arcprize.org/blog/astra"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "ARC-AGI-3 does not ask multiple-choice questions. It drops an AI agent into an unfamiliar, video-game-like environment with no instructions, and scores it on whether the agent can work out the rules, the goal, and a workable plan purely by acting and observing what happens -- reasoning under genuine novelty, the thing the benchmark is designed to resist memorizing its way around. ARC Prize co-founder François Chollet, who designed the underlying test, reviewed Astra's own reasoning traces and said the model was performing highly efficient, on-the-fly ++symbolic world modeling++ -- inventing its own shorthand notation to represent in-game situations as it played.",
+      "citation_urls": [
+        "https://arcprize.org/blog/astra",
+        "https://x.com/fchollet/status/2095598451115614371"
+      ]
+    },
+    {
+      "type": "compare",
+      "compare": {
+        "title": "Two harnesses, one model",
+        "columns": [
+          {
+            "label": "Standard harness"
+          },
+          {
+            "label": "Provider Adapter",
+            "hi": true
+          }
+        ],
+        "rows": [
+          {
+            "label": "ARC-AGI-3 score (max reasoning)",
+            "values": [
+              "62.7%",
+              "99.9%"
+            ]
+          },
+          {
+            "label": "Cost per task run",
+            "values": [
+              "$26,098",
+              "$18,817"
+            ]
+          },
+          {
+            "label": "Model's reasoning state between moves",
+            "values": [
+              "Discarded; written out in plain text each turn",
+              "Preserved internally, hidden even from ARC Prize"
+            ]
+          },
+          {
+            "label": "Available to other labs' models",
+            "values": [
+              "Yes -- identical interface for every model tested",
+              "No -- built specifically around OpenAI's own API"
+            ]
+          }
+        ],
+        "source": "ARC Prize official results page, https://arcprize.org/results/openai-gpt-6-astra"
+      }
+    },
+    {
+      "type": "p",
+      "text": "The difference between 62.7% and 99.9% is not raw reasoning power -- it is memory. The standard harness treats every model the same way: whatever notes it wants to keep between moves, it has to write out and carry forward itself, through the same plain interface Claude Opus 5 or Gemini get tested on. The ++Provider Adapter++ instead lets Astra hold its own internal reasoning state across an entire game and compress it as needed -- state that ARC Prize itself cannot inspect, and that OpenAI has not built for any other benchmark to use. Across the tasks solved under both setups, ARC Prize found the adapter runs were **3.66 times faster**, used 49% fewer total tokens, and cost less in absolute terms -- $18,817 per max-reasoning task versus $26,098 under the standard harness -- a real efficiency gain, measured on a track no competitor's model is running. ARC Prize's own leaderboard also runs Claude Opus 5, Claude Fable 5, Gemini 3.5 and 3.7, GPT-5.6, and Grok 4.5 and 4.6 through that same standard harness -- which is exactly why 62.7%, not 99.9%, is the number that tells a reader anything about where Astra actually stands next to its rivals. {{note: For comparison, ARC Prize's human testers earned an average of $12.78 per attempted game; Astra's own max-reasoning run cost $26,098 per task under the standard harness -- roughly 2,000 times as much.}}",
+      "citation_urls": [
+        "https://arcprize.org/blog/astra"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Neither of ARC Prize's own numbers is the one that spread widest. Screenshots citing a flat 99.9%, with no mention of which harness produced it, circulated within hours, alongside a separate, widely shared claim that Astra scored 98.6% -- a figure that matches no confirmed ARC Prize result. [The New Stack](https://thenewstack.io/astra-arc-agi-benchmark/) flagged the gap directly, under the headline \"the asterisk matters more than the score.\" The asterisk is the harness.",
+      "citation_urls": [
+        "https://thenewstack.io/astra-arc-agi-benchmark/"
+      ]
+    },
+    {
+      "type": "sourcecheck",
+      "sourcecheck": {
+        "items": [
+          {
+            "question": "What did GPT-6 Astra actually score on ARC-AGI-3?",
+            "claims": [
+              {
+                "who": "Unattributed social-media screenshots",
+                "kind": "reporting",
+                "says": "A flat 99.9%, or a separate 98.6%, with no harness specified"
+              },
+              {
+                "who": "ARC Prize (official results page)",
+                "kind": "primary",
+                "says": "62.7% on the standard harness; 99.9% on the Provider Adapter harness",
+                "url": "https://arcprize.org/results/openai-gpt-6-astra",
+                "trusted": true
+              }
+            ],
+            "ruling": "Using ARC Prize's own two-number result, not the unattributed single figure. The standard-harness 62.7% is the number comparable to every other model on the board; 99.9% is real but requires infrastructure no other lab's model is tested with, and no confirmed ARC Prize result matches 98.6% at all."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "ARC Prize's own co-founders read the result as genuine progress, not a marketing artifact -- while disagreeing on how far it goes. Chollet called the run ++a major breakthrough in model intelligence++, describing it in a separate post as representing a step-function change in interactive-reasoning capability.",
+      "citation_urls": [
+        "https://x.com/fchollet/status/2095598451115614371"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "“GPT-6 Astra represents a step-function change in model capability for interactive reasoning problems.” — François Chollet, ARC Prize co-founder",
+      "citation_urls": [
+        "https://x.com/fchollet/status/2095598451115614371"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Co-founder Mike Knoop was more careful about what the result proves. He called the provider-adapter run \"a qualitatively large leap towards AGI\" -- but added, in the same post, that \"we lack evidence to call this AGI yet,\" and noted that ARC-AGI-3 was never built to test everything the __AGI__ label implies. \"Open-ended invention is unsolved,\" he wrote, \"and this will form the new basis for ARC-AGI-4.\"",
+      "citation_urls": [
+        "https://x.com/mikeknoop/status/2095600676919455857"
+      ]
+    },
+    {
+      "type": "counter",
+      "counter": {
+        "points": [
+          {
+            "claim": "The headline 99.9% score is the real measure of Astra's capability.",
+            "detail": "That number only exists because ARC Prize built a harness around OpenAI's own proprietary, unobservable reasoning-state API -- no rival lab's model has been tested the same way, so it cannot be compared to anyone else's score.",
+            "whoHolds": "Social-media posts, and at least one outlet, repeating the figure without the harness attached"
+          },
+          {
+            "claim": "A near-perfect score on an interactive-reasoning benchmark means AGI is close.",
+            "detail": "ARC-AGI-3's own co-creator says the benchmark deliberately leaves open-ended invention untested, and is already designing ARC-AGI-4 around exactly that gap -- a sign this result answers a narrower question than \"is this AGI.\"",
+            "whoHolds": "Mike Knoop, ARC Prize co-founder, in his own post announcing the result"
+          }
+        ],
+        "verdict": "Both objections hold up against ARC Prize's own published data and its own creators' words. The standard-harness 62.7% is the number that means anything comparatively; the 99.9% is real but architecture-specific; and the people who built the test are the ones saying it isn't evidence of general intelligence.",
+        "source": "https://arcprize.org/blog/astra"
+      }
+    },
+    {
+      "type": "p",
+      "text": "The one figure ARC Prize highlighted without any caveat is about efficiency, not accuracy: under the Provider Adapter, Astra needed fewer moves than the median human tester on 96% of levels, using 51.7% fewer actions on average to reach the same goals. Frontier models have beaten specific human benchmarks on accuracy before; a documented efficiency edge against a human baseline, on a benchmark built to resist exactly this kind of shortcut, has not been reported here before.",
+      "citation_urls": [
+        "https://arcprize.org/blog/astra"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "%%96%|of ARC-AGI-3 levels where Astra needed fewer moves than the median human tester%%"
+    },
+    {
+      "type": "p",
+      "text": "The result lands the same week OpenAI confirmed [Astra crossed its own \"Critical\" cybersecurity threshold](/article/gpt-6-astra-openai-cybersecurity-threshold) under a separate, gated access program -- a different capability claim, evaluated by a different method, but the same pattern: a real number, produced under conditions no outside party can fully replicate, arriving well ahead of any public release date. OpenAI has not said when, or whether, the version of Astra that scored 99.9% will be available outside ARC Prize's own test environment. The pattern reaches beyond Astra: as frontier labs increasingly test unreleased models through bespoke, vendor-built harnesses before any public launch, the reader-facing question shifts from what a model scored to under what conditions, and who else could reproduce them.",
+      "citation_urls": [
+        "https://arcprize.org/blog/astra"
+      ]
+    }
+  ],
+  "id": "newsroom-gpt-6-astra-arc-agi-3-two-scores",
+  "image": "assets/img/newsroom/newsroom-gpt-6-astra-arc-agi-3-two-scores.jpg",
+  "publishedAt": "2026-09-04T14:16:44Z",
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-09-04T14:16:44Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "6 sources: ARC Prize's own blog post and results page (both primary, fetched directly), François Chollet's and Mike Knoop's own X posts (primary -- the benchmark's co-founders speaking in their own words, not paraphrased secondhand), plus The New Stack and OfficeChai as independent reporting. Distinguished from the already-published gpt-6-astra-openai-cybersecurity-threshold piece: that story is about Astra's Preparedness Framework cyber classification; this one is about a separate, unrelated benchmark result (ARC-AGI-3 general reasoning) reported the same week. Ruled out a cryptobriefing.com piece surfaced in search as a source: on inspection it predates Astra's public ARC-AGI-3 numbers and cites a different, unconfirmed 98.6% figure against the wrong model (GPT-5.6 Sol) -- used only to confirm that an unattributed 98.6% claim was circulating, not as a factual source for any number in this piece."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "Mandatory-scrutiny trigger 6 (unverifiable central claim) considered: the viral 99.9%/98.6% claims circulating without harness attribution are exactly this pattern. Handled by sourcing both real ARC Prize numbers directly from arcprize.org's own results page and stating explicitly, in a sourcecheck component and in prose, that the unattributed viral figures do not match any confirmed ARC Prize result. No health/financial/legal/accusatory triggers present. Confirmed Astra already has an entities.js entry (added by the 2026-09-03 cyber-threshold cycle) -- no new entity needed. Did not add a Scoreboard row: Astra remains gated/unreleased and ARC-AGI-3 is not the Artificial Analysis Intelligence Index this board tracks, so per Law 4 no score entry was fabricated or borrowed from a different benchmark."
+      },
+      {
+        "name": "Loop 1 - critique and revise",
+        "agent": "claude-runner",
+        "note": "Self-referential-language check: clean. Critique found the first draft's compare component stated the $18,817 Provider Adapter cost only inside the component, with no matching mention in body prose -- fixed by folding both cost figures into the harness-difference paragraph so Loop 2's provenance check holds. Also found the piece read as OpenAI-only until a leaderboard detail (Claude Opus 5, Fable 5, Gemini, GPT-5.6, Grok, all scored under the same standard harness) was added, which is what actually makes 62.7% the comparable number -- added to the harness-difference paragraph rather than left implicit."
+      },
+      {
+        "name": "Loop 2 - component provenance check",
+        "agent": "claude-runner",
+        "note": "compare: 62.7%, 99.9%, $26,098, and $18,817 all appear in body prose, not just the component. sourcecheck: 62.7%, 99.9%, and 98.6% all appear in body text; exactly one claim marked trusted with a ruling naming why (primary ARC Prize data over unattributed social claims). counter: both points trace to Knoop's own on-the-record post and the harness architecture already described in prose; no strawman. No component carries a top-level text field. No two components sit adjacent -- each is bracketed by prose."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Approved. 6 sources, 4 primary/official-class (ARC Prize x2, Chollet, Knoop), clears the synthesis floor. Body runs 849 words, within the 800-1,900 band. 3 components (compare, sourcecheck, counter) plus one pull quote, meeting the 2-minimum/3-4-typical floor with compare and sourcecheck carrying data. Disclaimer: none (no health/financial claim present). Cross-link to the cybersecurity-threshold piece is phrased about the event, not about this desk's own coverage."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "Reconciles a real, sourced discrepancy (62.7% vs. 99.9%, both from ARC Prize itself) that a wire rewrite would have flattened into whichever number sounded more impressive -- and names, rather than repeats, the unattributed viral figures that were actually circulating."
+    }
   }
+},
+{
+  "slug": "chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
+  "title": "ChatGPT, Claude, and Grok all went down within hours of each other on the same morning -- and none of the three has linked its outage to the others",
+  "dek": "OpenAI, Anthropic, and xAI each opened a separate incident report on September 3, with ChatGPT, Claude, and Grok all degraded or unavailable at overlapping points that morning. xAI blamed a failure at its own Memphis compute center; Anthropic cited an unspecified infrastructure issue; OpenAI pointed to a routing error. Cloudflare, AWS, and Google Cloud all reported clean status pages, and none of the three AI companies has said the incidents were connected.",
+  "persona": "nova-reyes",
+  "section": "Products",
+  "format": "brief",
+  "disclaimer": "none",
+  "sources": [
+    {
+      "label": "Claude Status: elevated errors for multiple models",
+      "url": "https://status.claude.com/",
+      "outlet": "Anthropic (status page)",
+      "kind": "primary"
+    },
+    {
+      "label": "SpaceXAI on X: apology for the Grok/Memphis outage",
+      "url": "https://x.com/SpaceXAI/status/2095597264043717014",
+      "outlet": "SpaceXAI (official)",
+      "kind": "primary"
+    },
+    {
+      "label": "OpenAI Status: elevated error rates for ChatGPT and Platform users",
+      "url": "https://status.openai.com/incidents/01KGJK9Q6PDB3C3VX6MPCY6106",
+      "outlet": "OpenAI (status page)",
+      "kind": "primary"
+    },
+    {
+      "label": "True AI-pocalypse as ChatGPT, Claude, and Grok all go down at once",
+      "url": "https://www.theregister.com/ai-and-ml/2026/09/03/chatgpt-and-claude-and-grok-all-had-outages-at-the-same-time/5294322",
+      "outlet": "The Register",
+      "kind": "reporting"
+    },
+    {
+      "label": "SpaceXAI apologizes for outage that affected Grok and other 'compute partners'",
+      "url": "https://www.engadget.com/2250789/spacexai-apologizes-for-outage-that-affected-grok-and-other-compute-partners/",
+      "outlet": "Engadget",
+      "kind": "reporting"
+    }
+  ],
+  "tldr": [
+    "ChatGPT, Claude, and Grok each had separate outages on September 3, overlapping within hours.",
+    "xAI said a failure at its Memphis compute center caused Grok's roughly 3.5-hour outage.",
+    "Anthropic cited an unspecified infrastructure issue for a 3-hour Claude outage.",
+    "OpenAI logged a routing error that took down ChatGPT and Codex the same morning.",
+    "Caveat: major cloud providers reported no incidents, and no shared cause has been confirmed."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "ChatGPT, Claude, and Grok were all degraded or unavailable within the same few-hour window on the morning of September 3 -- a rare simultaneous stumble by three of the industry's largest AI products. **Each company opened its own, separate incident report, and each gave a different explanation** -- and ==none of the three has said its outage was connected to either of the others'==.",
+      "citation_urls": [
+        "https://www.theregister.com/ai-and-ml/2026/09/03/chatgpt-and-claude-and-grok-all-had-outages-at-the-same-time/5294322"
+      ]
+    },
+    {
+      "type": "timeline",
+      "timeline": {
+        "items": [
+          {
+            "when": "Sept. 3, 6:26 a.m. PT",
+            "what": "Anthropic's status page reports investigating elevated errors across Claude Mythos 5.1, Fable 5.1, and Opus 5"
+          },
+          {
+            "when": "Sept. 3, ~6:30 a.m. PT",
+            "what": "Grok goes down; xAI later says a failure at its Memphis compute center was the cause",
+            "hi": true
+          },
+          {
+            "when": "Sept. 3, 7:43 a.m. PT",
+            "what": "OpenAI logs a routing error, taking down ChatGPT and Codex for some users"
+          },
+          {
+            "when": "Sept. 3, 9:16 a.m. PT",
+            "what": "Anthropic marks Claude's roughly 3-hour outage resolved"
+          },
+          {
+            "when": "Sept. 3, later that day",
+            "what": "Grok and ChatGPT are both restored; none of the three companies states a shared cause"
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "xAI said the outage traced to a failure at its Memphis compute center -- the same facility that trains Grok -- and apologized not just to users but to unnamed \"impacted compute partners,\" without naming them. Anthropic's status page never named a root cause beyond \"an infrastructure issue,\" though it confirmed elevated \"529 overloaded\" errors across five separate Claude model versions before resolving them. OpenAI attributed its own incident to **a routing error** that affected ChatGPT, Codex, logins, file uploads, voice mode, and several other components at once.",
+      "citation_urls": [
+        "https://x.com/SpaceXAI/status/2095597264043717014",
+        "https://status.openai.com/incidents/01KGJK9Q6PDB3C3VX6MPCY6106"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Cloudflare, AWS, and Google Cloud all reported no relevant incidents on their own status pages that morning, and Microsoft Azure -- which hosts OpenAI's infrastructure -- showed nothing that lines up either. {{note: The likelier read, per outlets that checked each shared-infrastructure provider's status page independently, is three unrelated failures landing in the same few hours -- not one bigger event wearing three names.}} xAI's own apology to unnamed \"compute partners\" is the one loose thread still hanging: it implies at least one other company depends on xAI's Memphis facility, but xAI hasn't said who, and nothing ties that dependency to OpenAI's or Anthropic's outage specifically.",
+      "citation_urls": [
+        "https://www.engadget.com/2250789/spacexai-apologizes-for-outage-that-affected-grok-and-other-compute-partners/"
+      ]
+    }
+  ],
+  "id": "newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause",
+  "image": "assets/img/newsroom/newsroom-chatgpt-claude-grok-simultaneous-outages-no-shared-cause.jpg",
+  "publishedAt": "2026-09-04T14:22:00Z",
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-09-04T14:22:00Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "5 sources: Anthropic's and OpenAI's own status pages and SpaceXAI's own X post (3 primary/official threads, one per company), plus The Register and Engadget as independent reporting that cross-checked Cloudflare/AWS/Google Cloud status pages for a shared cause. All three companies' outages confirmed as separately logged, separately explained incidents."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "No mandatory-scrutiny trigger fires -- this is an operational/reliability story, not health, financial, legal, accusatory, quoted, or resting on one unverifiable central claim. The one claim that could read as accusatory (a link between the three outages) is exactly what the piece declines to assert, stating instead what each company's own status page says and that no shared cause is confirmed."
+      },
+      {
+        "name": "Loop 1 - critique and revise",
+        "agent": "claude-runner",
+        "note": "Self-referential-language check: clean. Critique found an early draft implied via headline order that xAI's Memphis outage caused the other two; revised the headline and lead to state explicitly that none of the three companies has linked its outage to the others, and moved the 'compute partners' detail to a clearly-labeled loose thread rather than a suggested cause."
+      },
+      {
+        "name": "Loop 2 - component provenance check",
+        "agent": "claude-runner",
+        "note": "timeline: all 5 items carry a real time or a stated 'later that day' for the one item without a precise minute, none vague like 'recently'; the item order matches the sequence established in body prose. No component carries a top-level text field."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Approved as a brief. 5 sources (3 primary), well above the 1-2 minimum; correctly routed as Brief rather than Synthesis -- the actual finding ('probably coincidence, not one event') doesn't need 800+ words to state honestly. Body runs within the 250-450 target band. 1 component (timeline), meeting the brief floor. Disclaimer: none."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "States what each company's own status page says without inflating the coincidence into a claimed shared-infrastructure failure no source actually supports."
+    }
+  }
+}
 ]
 ;

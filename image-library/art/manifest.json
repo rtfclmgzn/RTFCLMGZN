@@ -2538,7 +2538,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-02-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-gpt-6-astra-arc-agi-3-two-scores",
+     "used_at": "2026-09-04"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-03",
