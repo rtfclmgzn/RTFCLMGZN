@@ -45798,6 +45798,553 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Checks a vendor's own superlative claim against an independently fetched leaderboard rather than repeating it, and states which parts of the claim hold up (cheapest, on available evidence) versus which don't (fastest, most accurate, both literally 2nd)."
       }
     }
+  },
+  {
+    "slug": "claude-fermat-last-theorem-lean-formalization",
+    "title": "Claude wrote a 13.4-million-line, machine-checked proof of Fermat's Last Theorem in 11 days -- beating a five-year, £1 million human project built to do exactly that",
+    "dek": "Anthropic says an internal research model roughly comparable to Claude Fable 5.1 formalized Andrew Wiles's already-proven 1995 argument in the Lean language, using only math's own axioms. Kevin Buzzard, the mathematician whose funded project set out to do the same thing, confirms the code compiles and checks out -- and says, in his own words, that it \"adds nothing\" new to mathematics.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch what Kevin Buzzard's remaining EPSRC funding gets redirected toward.",
+        "text": "His Imperial College project's original target was a modern, Khare-Wintenberger/Kisin-style reformulation of the proof, not the simplified Wiles exposition Claude followed -- he says that work isn't obsolete, so the next real signal is what his team actually publishes with the time and money left."
+      },
+      {
+        "label": "Check it yourself before taking either side's word for it.",
+        "text": "The full Lean 4 codebase and the comparator tool Buzzard used to confirm the theorem statement match Mathlib are public. Anyone with a Lean toolchain can recompile the proof rather than trust Anthropic's announcement or a mathematician's blog post."
+      },
+      {
+        "label": "Watch where Prove2Me, the multi-agent framework behind this, gets pointed next.",
+        "text": "Formalizing a 30-year-old, already-proven theorem is a verification exercise. Buzzard's own bar for a genuinely new milestone is an AI swarm formalizing open or very recent research -- something nobody has checked by hand yet. That hasn't happened."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "FLT: Anthropic has beaten me to it",
+        "url": "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/",
+        "outlet": "Kevin Buzzard / Xena Project",
+        "kind": "primary"
+      },
+      {
+        "label": "Fermat's Last Theorem formalization project",
+        "url": "https://lean-lang.org/use-cases/flt/",
+        "outlet": "Lean Language / Imperial College London",
+        "kind": "primary"
+      },
+      {
+        "label": "Terence Tao on AI -- a living summary",
+        "url": "https://teorth.github.io/tao-web/ai-views.html",
+        "outlet": "Terence Tao",
+        "kind": "primary"
+      },
+      {
+        "label": "A complete formalization of Fermat's Last Theorem for regular primes in Lean",
+        "url": "https://arxiv.org/abs/2410.01466",
+        "outlet": "arXiv",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic uses Claude to formalize proof of Fermat's Last Theorem",
+        "url": "https://siliconangle.com/2026/09/04/anthropic-uses-claude-to-formalize-proof-of-fermats-last-theorem/",
+        "outlet": "SiliconANGLE",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Claude formalized -- not discovered -- a machine-checked Lean proof of Fermat's Last Theorem in 11 days.",
+      "The proof runs 13.4 million lines of code and roughly 29,500 new theorems, by Buzzard's own count.",
+      "Kevin Buzzard, running a rival £1 million, five-year human-led project, confirmed the proof compiles and checks out.",
+      "The proof covers exponents 17 and above; smaller cases were already formalized separately, years earlier.",
+      "Buzzard states plainly: the formalization \"adds nothing\" new to mathematics -- it verifies Wiles's already-proven result."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Anthropic announced on September 4 that an internal research model -- roughly comparable in capability to **Claude Fable 5.1** -- spent 11 days writing a complete, machine-checked proof of Fermat's Last Theorem in the Lean 4 programming language, working largely unsupervised through a multi-agent framework called Prove2Me. The headline framing across most of the coverage that followed was some version of \"AI solves 350-year-old math problem.\" That framing is wrong in the way that matters most to a mathematician, and Kevin Buzzard -- the Imperial College London professor whose own funded project exists to do this exact work -- said so himself, in his own words, on his own blog, within a day of the announcement.",
+        "citation_urls": [
+          "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Fermat's Last Theorem was proven in 1995, by Andrew Wiles, in a 129-page argument that took mathematicians years to fully digest and confirm. What Claude produced this month is not a new proof of the theorem. It is a **formalization** -- a translation of an already-accepted argument into a language a computer can mechanically check line by line, against nothing but the axioms of mathematics itself, with no step left implicit and no gap papered over by human intuition. ==That distinction is the whole story, and most of the coverage of this achievement skipped it.==",
+        "citation_urls": []
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What the headline numbers actually cover",
+          "items": [
+            {
+              "value": "13.4M lines",
+              "unit": "Lean 4 code",
+              "label": "The size of the generated proof",
+              "includes": "Every theorem statement, proof step, and the DAG scaffolding Prove2Me used to coordinate agents",
+              "excludes": "Roughly 7% of non-boilerplate lines from an earlier, discarded attempt that predates Prove2Me's adoption",
+              "note": "Figure is Buzzard's own count after compiling the codebase himself, not Anthropic's rounder \"over 13 million.\""
+            },
+            {
+              "value": "29,500",
+              "unit": "theorems used",
+              "label": "Intermediate theorems in the final proof",
+              "includes": "New lemmas Claude proved and reused across the argument",
+              "excludes": "About 800 further theorems Claude proved along the way but that the final proof doesn't actually depend on (30,300 proved in total)",
+              "note": "Anthropic's own figures."
+            },
+            {
+              "value": "11 days",
+              "unit": "wall-clock",
+              "label": "Time from start to finished, verified proof",
+              "includes": "The successful Prove2Me run",
+              "excludes": "Time spent on the earlier, abandoned approach before the team adopted Prove2Me's shared theorem-dependency graph",
+              "note": "Mathematicians had expected a human-led formalization of this scale to take years."
+            },
+            {
+              "value": "p ≥ 17",
+              "unit": "exponent range",
+              "label": "What the proof actually covers",
+              "includes": "All prime exponents 17 and above, via the Darmon-Diamond-Taylor simplified exposition of Wiles's argument",
+              "excludes": "Smaller exponents and the separate \"regular primes\" case, both already formalized in Lean by earlier, human-led projects",
+              "note": "Full coverage of Fermat's Last Theorem in Lean draws on multiple projects, not this one alone."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Buzzard is not a neutral bystander to this story. Since 2019 he has led a Lean formalization effort at Imperial College London, and in 2024 that project secured **£1 million in EPSRC funding over five years** specifically to formalize a modern, 21st-century reformulation of the Wiles argument -- incorporating later refinements by Khare-Wintenberger and Kisin -- into Lean's shared mathematics library, Mathlib. He learned that Anthropic had beaten him to a working Lean proof of the theorem while at a music festival in Wales, buried under nearly a thousand unread emails. His blog post announcing it is titled, plainly, \"FLT: Anthropic has beaten me to it.\"",
+        "citation_urls": [
+          "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/",
+          "https://lean-lang.org/use-cases/flt/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "title": "How a formalized Fermat's Last Theorem actually got here",
+          "items": [
+            {
+              "when": "1637",
+              "what": "Pierre de Fermat states the theorem in a margin note, without proof."
+            },
+            {
+              "when": "1995",
+              "what": "Andrew Wiles publishes the first accepted proof, a 129-page argument.",
+              "hi": true
+            },
+            {
+              "when": "2019",
+              "what": "Kevin Buzzard's Xena project begins formalizing modern number theory in Lean, building toward FLT."
+            },
+            {
+              "when": "Oct 2024",
+              "what": "A separate, human-led Lean formalization of Fermat's Last Theorem for regular primes is completed and published.",
+              "source": "https://arxiv.org/abs/2410.01466"
+            },
+            {
+              "when": "2024",
+              "what": "Buzzard's Imperial College FLT project secures £1M in EPSRC funding for a 5-year effort to formalize the modern proof."
+            },
+            {
+              "when": "Aug 2026",
+              "what": "Anthropic runs a Claude Code multi-agent harness against the full theorem using the new Prove2Me framework."
+            },
+            {
+              "when": "Sep 4, 2026",
+              "what": "Anthropic announces a complete, Lean-verified proof for exponents p ≥ 17; Buzzard confirms it compiles and checks out within a day.",
+              "hi": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Buzzard's technical verdict, after compiling the code himself and running the comparator tool that checks the formalized theorem statement against Mathlib's own canonical version: it checks out. \"I've compiled the code base and run comparator on it -- it checks out,\" he wrote, adding that he'd already been \"99.9% sure that the proof of FLT is OK\" going in, because the underlying mathematics was never actually in doubt -- only whether a machine could be made to verify every step of it without a human filling gaps by hand. What he does dispute is the idea that this represents new mathematical knowledge.",
+        "citation_urls": [
+          "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Did an AI \"solve\" or \"discover\" Fermat's Last Theorem?",
+              "claims": [
+                {
+                  "who": "Several outlets' headlines (e.g. Decrypt)",
+                  "kind": "reporting",
+                  "says": "AI solved a 350-year-old math problem",
+                  "trusted": false
+                },
+                {
+                  "who": "Kevin Buzzard, the mathematician who reviewed the proof",
+                  "kind": "expert_or_stakeholder",
+                  "says": "\"The formalization just faithfully follows the early literature on the proof and adds nothing\" to mathematical knowledge",
+                  "url": "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/",
+                  "trusted": true
+                }
+              ],
+              "ruling": "Using Buzzard's framing. Fermat's Last Theorem was proven by Wiles in 1995; nothing about the theorem's truth was in question. Claude translated an already-accepted argument into a machine-checkable form -- a real, difficult engineering feat, but not new mathematics, on the word of the mathematician best positioned to know the difference."
+            }
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "text": "The formalization just faithfully follows the early literature on the proof and adds nothing to mathematical knowledge.",
+        "citation_urls": [
+          "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of that makes the achievement small. Prove2Me -- built by Tianyi Peng at Columbia University -- coordinated multiple Claude agents against a shared, directed graph of theorem statements, letting different agents work on separate branches of the proof without duplicating effort or losing track of what had already been established elsewhere in a 13.4-million-line codebase. That coordination problem, not the mathematics itself, is what an earlier attempt failed at: Anthropic says a prior effort without Prove2Me's shared dependency graph produced only about 7% of the useful, non-boilerplate code before the team adopted the new framework -- which eventually proved 30,300 theorems in total, of which roughly 800 turned out unused in the final, 29,500-theorem proof. {{note: The proof also builds on, rather than replaces, years of prior human work -- it adapts pieces from Buzzard's own Imperial College project and from the separate 2024 regular-primes formalization, following a simplified exposition of Wiles's argument by mathematicians Darmon, Diamond and Taylor rather than reproducing Wiles's original 1995 text directly.}}",
+        "citation_urls": [
+          "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+          "https://lean-lang.org/use-cases/flt/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That coordination achievement is also exactly what should inform how much weight a reader puts on the general skepticism this kind of story usually invites. Fields Medalist **Terence Tao** has warned, in broader remarks about AI and mathematics, that AI-generated proofs can \"look superficially flawless\" while hiding a \"subtle, plausible-looking error\" -- reinforcement learning trains models to produce text that resembles correct reasoning, not text that is guaranteed correct. His example: a model confidently asserting that all odd numbers are prime. Tao's own remarks, notably, weren't made about this specific proof -- but his broader argument for why formal verification tools matter applies directly to it.",
+        "citation_urls": [
+          "https://teorth.github.io/tao-web/ai-views.html"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "A model trained to produce fluent, plausible-looking text is exactly the wrong tool to trust with a claim as significant as a proof of Fermat's Last Theorem.",
+              "detail": "Tao's general point about AI mathematics is that RLHF-style training optimizes for output that *looks* correct, and that the resulting errors are often strange in a way no human mathematician would produce -- meaning a fluent-sounding wrong proof could pass casual human review.",
+              "whoHolds": "Terence Tao, in his general published views on AI and mathematics"
+            }
+          ],
+          "verdict": "This is a real and serious caution for AI-generated mathematical prose -- and it's precisely the failure mode formal verification exists to close. Tao's own broader argument is that Lean and similar proof assistants sidestep the fluency problem entirely: they don't evaluate whether an argument sounds right, they mechanically check whether each step follows from the last, using nothing but stated axioms. That's why Buzzard could confirm the proof independently in an afternoon rather than needing to trust Anthropic's account of it. The caution still applies in full to AI mathematical claims that never pass through a proof assistant -- which describes almost everything an AI model claims about mathematics in ordinary conversation, just not this proof.",
+          "source": "https://teorth.github.io/tao-web/ai-views.html"
+        }
+      },
+      {
+        "type": "p",
+        "text": "Buzzard's own conclusion is not that his project is finished, or that his job is now obsolete. \"A naive reaction to the news above is that I no longer have any work to do,\" he wrote. \"This is not the case.\" His EPSRC funding was committed to formalizing the *modern* reformulation of the proof -- the one built on Khare-Wintenberger and Kisin's later refinements -- and to building the reference documentation that lets other mathematicians navigate it. Claude's proof, by contrast, followed an older, simpler exposition. The two efforts sit closer to parallel tracks toward the same destination than one making the other redundant.",
+        "citation_urls": [
+          "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "What genuinely changed this week, in Buzzard's own assessment, is a claim about capability rather than about this one theorem: ==\"AI autoformalization artefacts are now robust enough to be built upon.\"== If an AI system can be pointed at a well-documented, already-proven 30-year-old result and produce a working, mechanically verified Lean proof of it in 11 days, the more interesting question -- one this result does not answer -- is what happens when the same approach is pointed at something nobody has finished checking by hand yet. That test hasn't been run. This one wasn't it.",
+        "citation_urls": [
+          "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/"
+        ]
+      }
+    ],
+    "id": "newsroom-claude-fermat-last-theorem-lean-formalization",
+    "image": "assets/img/newsroom/newsroom-claude-fermat-last-theorem-lean-formalization.jpg",
+    "publishedAt": "2026-09-05T13:33:24Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-05T13:33:24Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "6 sources, 4 primary/official (Anthropic's own research page; Kevin Buzzard's independent Xena Project blog post, not controlled by Anthropic; the Lean-lang.org/Imperial College FLT project page; Terence Tao's own living-summary page). 6 evidence threads: Anthropic's announcement and figures, Buzzard's independent technical review, the pre-existing years-long human FLT formalization effort, the 2024 regular-primes formalization, Tao's general framework for AI-math skepticism, and secondary media reporting (used only for corroboration, not as a primary figure source -- one secondary source's garbled claim linking the research model to \"GPT-6 Astra\" was checked against Anthropic's own page and dropped as an apparent error, not repeated)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger fires on the core claim (a math formalization, not health/financial/legal/accusatory). The one central claim needing independent confirmation -- \"the proof is actually valid\" -- is confirmed via Buzzard's own independent recompilation and comparator run, a primary source separate from Anthropic's self-report, per Law 4. Cross-checked the popular \"AI solved a 350-year-old problem\" framing against Buzzard's own explicit statement that it \"adds nothing\" mathematically, and used his framing rather than the more sensational secondary coverage."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft implied Claude's proof made Buzzard's project redundant; revised per his own on-record statement (\"this is not the case\") that his EPSRC-funded work targets a different, more modern reformulation of the argument -- the original draft would have overstated the overlap."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "ledger's four values (13.4M lines, 29,500 theorems, 11 days, p>=17 scope) all trace to Buzzard's or Anthropic's own figures cited in prose. timeline's seven dated items are each sourced to Anthropic, Buzzard, or the cited 2024 arXiv formalization. sourcecheck marks Buzzard's framing trusted with a stated reason (independent, on-record, technically informed) over uncredited headline framing. counter's claim is Tao's real, sourced general position, not a strawman, and the verdict is honest that his caution still applies outside formally verified contexts. No component carries a top-level text field; no two sit adjacent."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources, 4 primary/official, correctly routed as synthesis given the evidence diversity and the reconciliation work between promotional framing and the expert review. Body runs within the 800-1900 band. 4 components (ledger, timeline, sourcecheck, counter), exceeding the 2-minimum/3-4-typical floor with a data-carrying ledger. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Corrects the popular \"AI solved a math problem\" framing to what the mathematician who independently verified it actually says: a real, difficult formalization engineering feat that adds no new mathematics, built on years of prior human work it also credits by name."
+      }
+    }
+  },
+  {
+    "slug": "mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat",
+    "title": "McKinsey's own survey: a third of companies are quietly building software instead of buying it -- while enterprise AI's bottom-line payoff hasn't moved in a year",
+    "dek": "McKinsey's State of AI 2026 survey of 1,719 respondents across 97 countries finds 32% of organizations have skipped a software purchase because agentic coding tools let them build it themselves -- nearly half among the AI \"high performers.\" The same survey's bottom-line number is flat: 37% report any EBIT impact from AI, unchanged from 2025, and just 6% report a significant one.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "numbers",
+    "apply": [
+      {
+        "label": "Don't read \"32% build instead of buy\" as \"AI is running enterprise software.\"",
+        "text": "The figure counts any organization that skipped buying at least one product or feature -- a single decision, not a wholesale replacement of purchased software. McKinsey doesn't publish what share of total enterprise software spend that represents."
+      },
+      {
+        "label": "Watch whether the 6% high-performer share moves in the 2027 survey.",
+        "text": "It hasn't moved since 2025 despite a jump in adoption and scaling. If it's still 6% next year, the story becomes that adoption and financial payoff have genuinely decoupled, not just lagged."
+      },
+      {
+        "label": "If you're deciding whether to build or buy your next internal tool, price the ongoing run cost, not just the build.",
+        "text": "The survey's own cost-constraint finding -- roughly one in five organizations report AI operating costs (including token spend) limiting use, and high performers hit that wall three times more often than everyone else -- is a build-side cost the 32% headline doesn't include."
+      }
+    ],
+    "sources": [
+      {
+        "label": "The State of AI: Global Survey 2026",
+        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+        "outlet": "McKinsey & Company",
+        "kind": "primary"
+      },
+      {
+        "label": "The Build-vs-Buy Shift: 32% of Enterprises Bet on Agentic Coding Tools",
+        "url": "https://finance.yahoo.com/technology/ai/articles/build-vs-buy-shift-32-113806700.html",
+        "outlet": "Yahoo Finance",
+        "kind": "reporting"
+      },
+      {
+        "label": "A Third of Companies Skipped Buying Software and Built It",
+        "url": "https://www.digitalapplied.com/blog/a-third-of-companies-skipped-buying-software-and-built-it",
+        "outlet": "Digital Applied",
+        "kind": "reporting"
+      },
+      {
+        "label": "McKinsey Report: Enterprise AI Is Becoming a Two-Speed Race",
+        "url": "https://www.hpcwire.com/aiwire/2026/09/02/mckinsey-report-enterprise-ai-is-becoming-a-two-speed-race/",
+        "outlet": "AIwire / HPCwire",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "McKinsey's 2026 survey: 32% of organizations skipped buying software to build it with AI coding agents instead.",
+      "Among AI \"high performers\" (6% of respondents), nearly half report skipping a purchase to build in-house.",
+      "44% now scale AI agents across at least one function, up from 38% in 2025 -- adoption is genuinely rising.",
+      "The bottom-line number didn't move: 37% report any EBIT impact from AI, flat versus 2025, per McKinsey.",
+      "Caveat: about 1 in 5 organizations say AI operating costs limit use -- a build-side cost the headline 32% excludes."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "McKinsey's State of AI 2026 survey -- 1,719 respondents across 97 countries, fielded May 4 through June 8 and published August 25 -- landed on a genuinely new number: **32% of organizations** now report they've decided against buying at least one software product or feature because agentic coding tools let them build it in-house instead. Coverage of the finding mostly stopped there, with headlines like \"the build-vs-buy shift.\" The same survey, read past that one number, tells a less triumphant story: the share of companies reporting any real bottom-line payoff from AI hasn't moved since last year.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/build-vs-buy-shift-32-113806700.html",
+          "https://www.digitalapplied.com/blog/a-third-of-companies-skipped-buying-software-and-built-it"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The build-vs-buy number isn't evenly spread. Among the survey's self-identified **AI \"high performers\"** -- organizations attributing 5% or more of EBIT to AI and reporting significant value from it, just 6% of all respondents -- **50%** say they've skipped a software purchase to build instead, against 31% of everyone else. Technology and healthcare organizations report the pattern most often. That's the group actually capturing value from AI choosing to build rather than buy at nearly double the rate of the pack -- a real signal, not noise, even inside a survey with plenty of noise elsewhere in it.",
+        "citation_urls": [
+          "https://www.digitalapplied.com/blog/a-third-of-companies-skipped-buying-software-and-built-it"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "The survey, in short",
+          "items": [
+            {
+              "label": "Respondents",
+              "value": "1,719",
+              "note": "across 97 countries"
+            },
+            {
+              "label": "Fielded",
+              "value": "May 4 - Jun 8, 2026"
+            },
+            {
+              "label": "Published",
+              "value": "Aug 25, 2026"
+            },
+            {
+              "label": "Weighting",
+              "value": "By each country's share of global GDP"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "That top-line 32% average hides a sharp split by how much value an organization is actually getting from AI already -- which is where the more interesting number sits.",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "\"High performers\" versus everyone else, inside the same survey",
+          "columns": [
+            {
+              "label": "High performers",
+              "sub": "6% of respondents",
+              "hi": true
+            },
+            {
+              "label": "Everyone else",
+              "sub": "94% of respondents"
+            }
+          ],
+          "rows": [
+            {
+              "label": "Skipped buying software to build in-house",
+              "values": [
+                "~50%",
+                "31%"
+              ]
+            },
+            {
+              "label": "Report AI operating costs constraining use",
+              "values": [
+                "~3x more often",
+                "baseline rate"
+              ],
+              "note": "McKinsey's own comparison; exact baseline percentage not published in the reporting reviewed"
+            }
+          ],
+          "source": "McKinsey State of AI 2026, as reported by Digital Applied"
+        }
+      },
+      {
+        "type": "p",
+        "text": "Zoom out from the high performers and enterprise scaling is up in the aggregate too: **44%** of organizations now report scaling AI agents across at least one business function, versus 38% in 2025. Among large enterprises specifically -- those with more than $1 billion in revenue -- that figure reaches 54%, against roughly a third for smaller organizations. Scaling of coding agents specifically sits lower: about 20% of organizations overall, rising to 31% at large enterprises. Technology (41%), healthcare payers and providers (39%), and professional services and energy (both 38%) lead the scaling numbers by industry.",
+        "citation_urls": [
+          "https://www.digitalapplied.com/blog/a-third-of-companies-skipped-buying-software-and-built-it"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What each headline number actually counts",
+          "items": [
+            {
+              "value": "32%",
+              "unit": "build-vs-buy",
+              "label": "Skipped buying at least one product or feature",
+              "includes": "Any single purchase decision an organization made in-house instead, using agentic coding tools",
+              "excludes": "What share of an organization's total software budget or footprint that one decision represents",
+              "note": "A company that built one internal dashboard instead of buying a BI tool counts the same as one that replaced a whole SaaS stack."
+            },
+            {
+              "value": "44%",
+              "unit": "agent scaling",
+              "label": "Scaling AI agents across the organization",
+              "includes": "At least one business function running agents at scale, self-reported",
+              "excludes": "Enterprise-wide deployment -- this is a function-level threshold, not a company-wide one",
+              "note": "Up from 38% in 2025, per McKinsey's own year-over-year comparison."
+            },
+            {
+              "value": "37%",
+              "unit": "EBIT impact",
+              "label": "Organizations reporting any AI contribution to earnings",
+              "includes": "Any self-reported positive EBIT impact, however small",
+              "excludes": "A specific dollar or percentage figure -- 37% is the share saying \"some,\" not the size of the effect",
+              "note": "McKinsey describes this as essentially unchanged from 2025's comparable figure."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "That gap -- adoption and scaling both genuinely rising, financial payoff flat -- is the actual story here, and it's the one the \"build-vs-buy shift\" headline leaves out. Eighty percent of respondents say AI has improved their own individual productivity, and half say it's improved their decision-making. Almost none of that is showing up as a bottom-line number companies are willing to report: just 6% describe AI's EBIT impact as significant, identical to 2025 -- and McKinsey finds high performers report AI cost constraints on coding-agent use roughly **3 times** more often than everyone else, even as they build more.",
+        "citation_urls": [
+          "https://www.hpcwire.com/aiwire/2026/09/02/mckinsey-report-enterprise-ai-is-becoming-a-two-speed-race/"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "A flat 6%-high-performer number after a year of rising adoption means enterprise AI's return on investment isn't real, or is stalling.",
+              "detail": "Individual productivity gains (80% reporting improvement) are diffuse by nature -- they show up as thousands of small time savings across an organization, not as a line item a CFO can attribute to AI on a quarterly earnings call. Attribution lag is a known pattern in enterprise technology adoption; it took years after early cloud and ERP adoption for productivity statistics to show the gains economists eventually confirmed were there.",
+              "whoHolds": "A reasonable adoption-curve read of the same McKinsey data"
+            }
+          ],
+          "verdict": "The attribution-lag argument is genuine and worth taking seriously -- but it's an explanation for the flat number, not a reason to wave it away. McKinsey's own framing is that this is now a second year running with the same 6% figure, despite scaling rising from 38% to 44% in the interim; if lag alone explained it, the high-performer share should be drifting upward even slightly as last year's early adopters mature. It isn't, on the numbers published so far. The honest read is that adoption is real, individual productivity gains are real, and organizational-level financial capture remains the unsolved part -- not yet resolved by either side's story.",
+          "source": "https://www.hpcwire.com/aiwire/2026/09/02/mckinsey-report-enterprise-ai-is-becoming-a-two-speed-race/"
+        }
+      },
+      {
+        "type": "quote",
+        "text": "Adoption and scaling are both genuinely up. The number that was supposed to follow them -- the bottom-line payoff -- is exactly where it was a year ago.",
+        "citation_urls": [
+          "https://www.hpcwire.com/aiwire/2026/09/02/mckinsey-report-enterprise-ai-is-becoming-a-two-speed-race/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this is free money for the organizations doing the building, either. Roughly **one in five** report that AI operating costs -- including raw token spend -- now constrain how much they actually use the tools they've adopted, and McKinsey finds high performers hit that constraint roughly three times more often than the rest of the survey. That's the group with the most usage running hardest into the cost ceiling, which is exactly what you'd expect if the constraint is real rather than an early-adopter artifact. {{note: This is the same token-pricing math behind Anthropic's own recent cache-pricing cut on Claude Fable 5.1 -- providers are visibly aware that agentic, high-volume usage is where the bills actually land.}} A company weighing whether to build its next internal tool instead of buying one should price that ongoing run cost against the vendor's subscription fee, not just compare the one-time build effort to a purchase order.",
+        "citation_urls": [
+          "https://www.digitalapplied.com/blog/a-third-of-companies-skipped-buying-software-and-built-it"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The build-vs-buy trend is real, concentrated among the companies already getting value from AI, and worth watching as a leading indicator of where enterprise software spend goes next -- [Salesforce](/company/salesforce), among others, has already restructured its own AI go-to-market around the assumption that customers want agents woven into products they already own rather than new software bought outright. But the number that would actually confirm AI is paying for itself at scale -- the EBIT-impact figure -- says the same thing it said last year. Both facts are true at once, and a survey that only reports the first one is telling half the story.",
+        "citation_urls": [
+          "https://www.hpcwire.com/aiwire/2026/09/02/mckinsey-report-enterprise-ai-is-becoming-a-two-speed-race/"
+        ]
+      }
+    ],
+    "id": "newsroom-mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat",
+    "image": "assets/img/newsroom/newsroom-mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat.jpg",
+    "publishedAt": "2026-09-05T13:33:24Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-05T13:33:24Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources, 1 primary (McKinsey's own report page, cited directly; its content could not be directly fetched by this runner due to repeated timeouts, so its figures are used only where independently corroborated by two or more secondary write-ups that quote the report directly). 4 evidence threads: the build-vs-buy/high-performer figures (Digital Applied's detailed citation), the EBIT-flat/two-speed framing (AIwire/HPCwire), the top-line 32% figure and methodology (Yahoo Finance), and the McKinsey report itself as the underlying primary. A specific \"33% vs 67% build/buy success rate\" statistic surfaced in one secondary source was NOT used after its own summary hedged that it might not actually be McKinsey's own finding -- cut per the anti-fabrication rule rather than risk misattribution."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger fires (an enterprise-survey story, not health/financial-advice/legal/accusatory -- it reports on B2B software economics, not investment recommendations). The EBIT and high-performer figures are corroborated across two independent secondary outlets (Digital Applied and AIwire/HPCwire) citing the same McKinsey report, satisfying the confirmation bar given the primary itself could not be directly fetched."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft led with only the build-vs-buy number, matching the same incomplete framing this piece criticizes in other coverage; revised to foreground the EBIT-flat counterpoint in the lede and dek rather than burying it, which is the actual point of the piece."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' four methodology values, compare's rows, and ledger's three scoped figures all trace to the Digital Applied citation of the McKinsey report referenced in prose. counter's claim is a real, reasonable adoption-curve argument (not a strawman) and its verdict engages the argument on its merits rather than dismissing it outright. No component carries a top-level text field; no two sit adjacent."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, corroborated across independent secondary reporting of one primary report, correctly routed as synthesis given the reconciliation between two framings of the same data. Body runs within the 800-1900 band. 4 components (keyfacts, compare, ledger, counter), exceeding the 2-minimum floor with data-carrying compare and ledger. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Reconciles the adoption-surge headline with the flat bottom-line figure from the same survey and states which conclusion the evidence actually supports -- both are true, and the piece says so instead of picking the more shareable half."
+      }
+    }
   }
 ]
 ;

@@ -4986,5 +4986,335 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "slug": "audit-what-your-ai-agent-is-actually-costing-you",
+    "title": "Find out what your AI habit actually costs before the bill does",
+    "dek": "Sticker prices per million tokens tell you almost nothing about your real bill. A 15-minute audit of your actual usage dashboard -- not the pricing page -- finds where the money is really going, and a hard budget alert stops the surprise before it happens.",
+    "persona": "jin-park",
+    "section": "Guide",
+    "format": "guide",
+    "readMins": 7,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Output tokens cost roughly 5x input tokens across every major vendor -- generation is the expensive part.",
+      "The number that matters is your usage dashboard's breakdown, not the per-million-token sticker price.",
+      "Agentic, multi-step tasks burn tokens fastest by resending the same growing context on every turn.",
+      "Set a hard budget alert before scaling up a workflow, not after an invoice surprises you.",
+      "This is a personal or small-team audit, not a substitute for real enterprise FinOps tooling."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The bill that surprises people almost never comes from the model they expected. It comes from the workflow nobody was watching -- an agent looping through the same file five times, a chatbot resending an entire conversation's history on every single turn, a batch job that quietly ran overnight. **The per-million-token price on a vendor's homepage answers a different question than the one that actually determines your bill.** Here's the 15-minute audit that finds where your money is actually going, and the one setting that stops it from happening again.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Why the sticker price is the wrong number to stare at",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Every major lab prices output tokens -- the words a model generates -- at roughly **five times** what it charges for input tokens, the words you send it. That ratio holds almost exactly across three otherwise very differently priced models: Anthropic's Claude Fable 5.1 ($10 input / $50 output per million tokens), OpenAI's GPT-5.6 Sol ($4 input / $20 output, after an August 21 price cut), and Google's Gemini 3.8 Flash ($0.75 input / $3.75 output). ==A workflow that makes a model write a lot -- long reports, generated code, multi-step reasoning traces -- costs far more per exchange than one where you paste in a document and ask a short question about it, even at the identical sticker price.==",
+        "citation_urls": [
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Three vendors, the same 5x pattern",
+          "columns": [
+            {
+              "label": "Claude Fable 5.1",
+              "sub": "Anthropic"
+            },
+            {
+              "label": "GPT-5.6 Sol",
+              "sub": "OpenAI"
+            },
+            {
+              "label": "Gemini 3.8 Flash",
+              "sub": "Google",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Input, per million tokens",
+              "values": [
+                "$10",
+                "$4",
+                "$0.75"
+              ]
+            },
+            {
+              "label": "Output, per million tokens",
+              "values": [
+                "$50",
+                "$20",
+                "$3.75"
+              ]
+            },
+            {
+              "label": "Output : input ratio",
+              "values": [
+                "5x",
+                "5x",
+                "5x"
+              ],
+              "note": "the pattern holds regardless of which model you pick"
+            },
+            {
+              "label": "Cached input, per million tokens",
+              "values": [
+                "$0.25",
+                "$0.40",
+                "Not published in this comparison"
+              ]
+            }
+          ],
+          "source": "Vendor pricing as of early September 2026: Anthropic's own Fable 5.1 announcement; OpenAI's model documentation, post its August 21, 2026 price cut."
+        }
+      },
+      {
+        "type": "p",
+        "text": "That last row is where agentic workflows actually get expensive or cheap. **Cache reads** -- reusing a chunk of context you already sent, instead of paying full input price to resend it -- cost a small fraction of a fresh input token. Anthropic cut its own cached-input price by 75% -- to $0.25 per million tokens -- when Fable 5.1 shipped (OpenAI's equivalent cached rate on GPT-5.6 Sol is $0.40 per million), specifically because agentic, multi-turn sessions were re-sending the same growing conversation history over and over, and that repetition was where the real cost sat. If your workflow doesn't structure its prompts to actually hit the cache -- a stable system prompt and history prefix, with only the new part changing -- you're paying full input price for content the model has already seen ten times in the same session.",
+        "citation_urls": [
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Here's what that looks like in practice. Say you point an agent at a mid-sized codebase and ask it to fix a failing test suite. A naive setup resends the entire relevant file tree as part of the prompt on every single tool call the agent makes -- read a file, resend everything; run a test, resend everything; edit a line, resend everything again. Forty tool calls into a real debugging session, you've paid full input price for the same unchanged files roughly forty times over, even though maybe three of those calls actually needed fresh information. None of that shows up as a warning anywhere. It shows up as a number on the dashboard that's ten times bigger than the task felt like it should have cost -- which is exactly why the audit below starts at the dashboard, not at the prompt."
+      },
+      {
+        "type": "p",
+        "text": "One more thing worth saying plainly before the steps: a flat-rate consumer subscription -- ChatGPT Plus, Claude Pro, Gemini Advanced -- doesn't expose any of this, because you're not paying per token. If that's the only way you use these tools, this audit doesn't apply to you yet, and that's a feature of the plan, not a gap in this guide. It becomes relevant the moment you, or a tool you've connected, starts calling a model through its API or building an agent on top of one -- which is precisely when a runaway loop stops being capped by a monthly subscription price and starts being capped only by whatever budget alert you did or didn't set."
+      },
+      {
+        "type": "h2",
+        "text": "The 15-minute audit",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Find out where your money is actually going",
+          "sub": "You need an account with API or agent usage, not just a chat subscription -- consumer chat apps don't expose this breakdown.",
+          "est": "15 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "An account on whichever provider's API or agent platform you actually use.",
+            "At least a few days of real usage to look back on."
+          ],
+          "steps": [
+            {
+              "do": "Open your provider's usage or billing dashboard -- not the pricing page.",
+              "detail": "Every major provider (Anthropic Console, OpenAI's usage dashboard, Google's Cloud Billing) has one. It shows what you actually spent, broken down by day and often by model.",
+              "verify": "You can see a day-by-day or session-by-session cost breakdown, not just a single running total.",
+              "ifnot": "If your account only shows a lump sum, you're likely on a flat consumer subscription rather than metered usage -- there's nothing to audit yet, but it also means you can't overspend unexpectedly."
+            },
+            {
+              "do": "Sort or filter by your highest-cost day or session.",
+              "detail": "Averages hide spikes. The workflow costing you money is usually one specific session, script, or feature -- not a uniform cost spread evenly across everything you did.",
+              "verify": "You've identified one specific day, job, or feature that accounts for a disproportionate share of total spend.",
+              "ifnot": "If cost really is spread evenly, the audit still isn't wasted -- skip to the budget-alert step, since there's no single culprit to fix."
+            },
+            {
+              "do": "Break that spike down into input, output, and cached tokens.",
+              "detail": "Most dashboards separate these. Given the roughly 5x output-vs-input price gap, a spike dominated by output tokens means generation-heavy work; a spike with low cache-hit numbers means you're re-paying for context you've already sent before.",
+              "verify": "You know which of the three -- fresh input, output, or cache misses -- actually drove the cost, not just the total.",
+              "ifnot": "If your dashboard doesn't break this down, check whether the platform has a separate 'token usage' or 'trace' view distinct from the billing view -- most agent frameworks log this even when the billing page doesn't show it."
+            },
+            {
+              "do": "If it's agentic or multi-step, check whether context is being resent from scratch each turn.",
+              "detail": "The single most common hidden cost in agent workflows: a growing conversation or tool-call history gets resent as fresh input on every single step, so a 20-step agent run can pay for the same early context twenty times over.",
+              "verify": "Your framework or code is structured so a stable prefix (system prompt, early context) can actually be served from cache, with only new content priced as fresh input.",
+              "ifnot": "If the history is rebuilt from scratch each call, that's your fix: restructure the prompt so the stable part comes first and stays byte-for-byte identical between calls, which is what lets a cache actually hit."
+            },
+            {
+              "do": "Set a hard budget alert at roughly 2x your current worst day.",
+              "hi": true,
+              "detail": "Not a soft warning -- an alert or, where the platform supports it, a hard spending cap. The goal isn't to prevent normal growth; it's to make a runaway loop or a bug fail loudly within hours instead of silently for a week.",
+              "verify": "You've received a test notification, or confirmed the cap actually stops requests, before you rely on it.",
+              "ifnot": "If the platform only offers an end-of-month email, that's not a budget alert -- check for a webhook or a third-party cost-monitoring tool that can page you same-day."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "That fourth step -- context resent from scratch -- is worth a concrete example, because it's the one that fools people who already know about token pricing in the abstract.",
+        "citation_urls": []
+      },
+      {
+        "type": "snippet",
+        "snippet": {
+          "kicker": "COPY THIS",
+          "title": "Ask the model to estimate the damage before you run it",
+          "lang": "prompt",
+          "body": "Before you answer, estimate roughly how many input and output tokens this task will use if I run it as {{N}} separate steps versus one combined request, and flag if any step would need to resend context from an earlier step.",
+          "fill": [
+            {
+              "token": "{{N}}",
+              "means": "the number of separate agent steps or tool calls your workflow is about to make",
+              "example": "12"
+            }
+          ],
+          "expects": "A rough order-of-magnitude estimate and a flag if the design resends growing context on every step -- not a precise bill, but enough to catch a design that's about to be expensive before you run it at scale.",
+          "note": "This won't be exact -- models estimate their own token usage imprecisely. It's a gut-check before a scaled run, not a substitute for reading the actual dashboard afterward."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Run that estimate before you scale a workflow up, not after -- it costs one exchange and it's the cheapest insurance against the fifth pitfall below: finding out at the invoice instead of before you hit run.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH FIX",
+          "title": "You found the spike. Now what?",
+          "question": "Which of the three cost drivers did your audit actually point to?",
+          "branches": [
+            {
+              "when": "Output tokens dominate the cost, and the task is genuinely generation-heavy (long reports, generated code).",
+              "then": "Cap the output length explicitly in the request, or route the task to a cheaper model tier for a first draft and reserve the expensive model for a final pass.",
+              "because": "At a 5x price gap, halving unnecessary output length saves more than almost any other single change.",
+              "hi": true
+            },
+            {
+              "when": "Fresh input tokens dominate, and cache-hit rate is low.",
+              "then": "Restructure the prompt so the stable part (system instructions, reference documents) is byte-for-byte identical across calls and sent first, so the provider's cache can actually match it.",
+              "because": "A single changed character at the start of a cached block invalidates the whole cache for that call on most providers."
+            },
+            {
+              "when": "Cost is spread evenly with no single culprit, and total spend is still within budget.",
+              "then": "Skip the redesign. Just set the budget alert from step five and move on.",
+              "because": "An audit with no fire to put out is a good outcome, not a wasted one -- the alert is the thing that pays off later."
+            },
+            {
+              "when": "The spike came from one specific agent loop that kept retrying or looping on failure.",
+              "then": "Add an explicit step or retry limit to that specific workflow before touching pricing or caching at all.",
+              "because": "A retry bug costs the same regardless of how well-priced or well-cached the underlying calls are -- fix the loop first."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Whichever branch applies, the fix is almost always smaller than the audit made it feel -- a length cap, a reordered prompt, or a retry limit, not a rewrite.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this audit gets skipped or fooled",
+          "items": [
+            {
+              "mistake": "Comparing vendors by sticker price alone.",
+              "looks": "Picking the model with the lowest listed input price and assuming that settles it.",
+              "why": "The 5x output premium means a cheap-input, expensive-output model can cost more than a pricier-looking one on a generation-heavy workload.",
+              "fix": "Estimate your actual input-to-output token ratio for your real workload before comparing prices, not after.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Reading the monthly total instead of the daily or per-session breakdown.",
+              "looks": "A bill that looks fine on average, with no idea a single bad day drove most of it.",
+              "why": "Spend concentrates in specific sessions or bugs far more often than it distributes evenly.",
+              "fix": "Always sort by day or session first; the average is the last number to look at, not the first.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming an estimate from the model itself is a real bill.",
+              "looks": "Trusting the copyable prompt above as a precise cost quote.",
+              "why": "A model estimating its own future token usage is guessing, not measuring -- it has no access to the actual tokenizer output or your provider's cache state.",
+              "fix": "Use the estimate as a gut-check before scaling up, then verify against the real dashboard afterward.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Setting a budget alert and never testing that it fires.",
+              "looks": "A configured alert that silently failed to send, discovered only when the invoice arrives anyway.",
+              "why": "Alert configuration is one of the most commonly misconfigured settings across every major cloud billing system, not just AI providers.",
+              "fix": "Trigger a small test charge or use the platform's test-notification feature before trusting the alert with real money.",
+              "cost": "high"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The four failure modes above share one root cause: treating the sticker price, or a rough estimate, as if it were the actual bill. The ledger below is the last piece -- what that sticker price does and doesn't include, stated plainly.",
+        "citation_urls": []
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What a \"$10 per million tokens\" headline price actually covers",
+          "items": [
+            {
+              "value": "$10 / $50",
+              "unit": "per million tokens",
+              "label": "Claude Fable 5.1 list price",
+              "includes": "Standard, uncached input and output tokens at the base API rate",
+              "excludes": "Cached input reads (priced separately, far lower), any seat-based or platform subscription fee layered on top by a reseller",
+              "note": "The number on a pricing page is the ceiling on a single token's cost, not a prediction of your bill."
+            },
+            {
+              "value": "$4 / $20",
+              "unit": "per million tokens",
+              "label": "GPT-5.6 Sol list price (post Aug. 21, 2026 cut)",
+              "includes": "Standard, uncached input and output tokens at the current promotional rate",
+              "excludes": "Surcharges on very large single requests and cache-write operations, both priced above the standard rate shown here",
+              "note": "OpenAI's own model documentation states this promotional pricing holds at least through November 21, 2026 -- not guaranteed to be permanent."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this requires enterprise FinOps software or a dedicated cost-management hire -- it's fifteen minutes with a dashboard you already have access to. What it buys you is the difference between finding a runaway workflow the day it starts and finding it on next month's invoice. The sticker price on the homepage was never going to tell you that; only your own usage was.",
+        "citation_urls": []
+      }
+    ],
+    "apply": [
+      {
+        "label": "Run the 15-minute audit this week, even if nothing feels wrong yet.",
+        "text": "The point isn't catching a current problem -- it's knowing what normal looks like on your dashboard before a spike makes it obvious."
+      },
+      {
+        "label": "Set the budget alert before you scale up any workflow, not after.",
+        "text": "A hard cap at roughly 2x your current worst day catches a runaway loop within hours instead of a billing cycle."
+      },
+      {
+        "label": "Restructure one agentic prompt this week so its stable prefix can actually be cached.",
+        "text": "This is usually a five-minute change -- move variable content to the end of the prompt -- and it's the single highest-leverage fix for repetitive agent workflows."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+      },
+      {
+        "label": "GPT-5.6 Sol Model | OpenAI API documentation",
+        "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+      },
+      {
+        "label": "RTFCLMGZN Scoreboard -- independently measured model scores and vendor list prices",
+        "url": "#/scoreboard"
+      }
+    ],
+    "corrections": [],
+    "id": "g19",
+    "image": "assets/img/newsroom/g19.jpg",
+    "publishedAt": "2026-09-05T13:36:44Z",
+    "applyType": "work"
   }
 ];

@@ -2608,7 +2608,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-04-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat",
+     "used_at": "2026-09-05"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-05",
@@ -2638,7 +2643,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-05-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "g19",
+     "used_at": "2026-09-05"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-06",
@@ -4195,7 +4205,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-51-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-claude-fermat-last-theorem-lean-formalization",
+     "used_at": "2026-09-05"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-02",

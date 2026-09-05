@@ -13185,5 +13185,272 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-05T04:57:28Z"
       }
     ]
-  }
+  },
+  {
+  "article_id": "newsroom-claude-fermat-last-theorem-lean-formalization",
+  "ts": "2026-09-05T13:45:00Z",
+  "export": {
+    "article_id": "newsroom-claude-fermat-last-theorem-lean-formalization",
+    "url": "https://rtfclmgzn.com/article/claude-fermat-last-theorem-lean-formalization",
+    "headline": "Claude wrote a 13.4-million-line, machine-checked proof of Fermat's Last Theorem in 11 days -- beating a five-year, £1 million human project built to do exactly that",
+    "hook": "Claude formalized Fermat's Last Theorem in Lean in 11 days. The mathematician whose funded project set out to do the same thing confirmed it checks out -- and says, in his own words, that it \"adds nothing\" new to mathematics.",
+    "key_facts": [
+      "Claude formalized -- not discovered -- a machine-checked Lean proof of Fermat's Last Theorem in 11 days.",
+      "The proof runs 13.4 million lines of code and roughly 29,500 new theorems.",
+      "Kevin Buzzard, running a rival £1M, five-year human-led project, confirmed it compiles and checks out."
+    ],
+    "tone": "Austere, technically exacting, evaluation-first",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "primary_image": "assets/img/newsroom/newsroom-claude-fermat-last-theorem-lean-formalization.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Claude spent 11 days writing a 13.4-million-line, machine-checked proof of Fermat's Last Theorem. The mathematician whose own funded project aimed to do exactly this confirmed it checks out -- and says it \"adds nothing\" new to mathematics.",
+      "reply_copy": "Why that distinction is the whole story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Math"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-05T18:45:00Z",
+      "copy": "Kevin Buzzard's £1M, five-year Imperial College project set out to formalize Fermat's Last Theorem in Lean. Anthropic's Claude beat him to a working proof by 11 days. His own reaction, and why he says his project isn't obsolete:",
+      "reply_copy": "The full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Mathematics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Anthropic says Claude spent 11 days writing a complete, machine-checked proof of Fermat's Last Theorem in the Lean language.\n\nMost headlines called it \"AI solves 350-year-old math problem.\" That's wrong in the way that matters: Fermat's Last Theorem was already proven in 1995. Claude formalized -- translated into a form a computer can mechanically verify -- an already-accepted argument.\n\nKevin Buzzard, the mathematician whose own £1 million, five-year funded project set out to do exactly this, confirmed the proof checks out. His own words: it \"adds nothing\" new to mathematics.\n\nFull breakdown -- what's real, what's not new, and what would actually be a bigger deal -- link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Anthropic",
+        "#Claude",
+        "#Mathematics",
+        "#TechNews",
+        "#Formalization"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Anthropic announced that an internal research model spent 11 days writing a complete, machine-checked proof of Fermat's Last Theorem in the Lean programming language -- 13.4 million lines of code, roughly 29,500 new theorems.\n\nMost coverage framed it as \"AI solves a 350-year-old math problem.\" That framing is wrong in the way that matters most: Fermat's Last Theorem was proven by Andrew Wiles in 1995. What Claude did was formalize that already-accepted proof -- a genuinely hard engineering feat, but not new mathematics.\n\nKevin Buzzard, the Imperial College London mathematician whose own £1 million, five-year EPSRC-funded project set out to do exactly this, confirmed the proof compiles and checks out. In his own words, on his own blog: it \"adds nothing\" to mathematical knowledge.\n\nWe break down what's actually established, what Buzzard's own project still has left to do, and why a broader caution about AI-generated math proofs doesn't apply the same way to one a proof assistant has mechanically verified.",
+      "hashtags": [
+        "#AI",
+        "#Anthropic"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Claude formalized -- not discovered -- a machine-checked proof of Fermat's Last Theorem in 11 days. The mathematician whose own £1M funded project aimed to do the same thing confirmed it checks out, and says in his own words that it \"adds nothing\" new to mathematics.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-09-05T18:45:00Z",
+      "copy": "Kevin Buzzard's reaction to being beaten to a Lean proof of Fermat's Last Theorem by 11 days: not obsolete, still building the modern reformulation his funding actually targets. His own blog post, and what it means for AI math claims generally:",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Claude wrote a 13.4-million-line, machine-checked Lean proof of Fermat's Last Theorem in 11 days. The mathematician whose own funded project aimed to do this confirmed it checks out -- and says it \"adds nothing\" new to mathematics. What's actually established vs. asserted:",
+      "hashtags": [
+        "#AI",
+        "#Math"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+  {
+  "article_id": "newsroom-mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat",
+  "ts": "2026-09-05T13:46:00Z",
+  "export": {
+    "article_id": "newsroom-mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat",
+    "url": "https://rtfclmgzn.com/article/mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat",
+    "headline": "McKinsey's own survey: a third of companies are quietly building software instead of buying it -- while enterprise AI's bottom-line payoff hasn't moved in a year",
+    "hook": "McKinsey's 2026 survey found 32% of companies skipped buying software to build it with AI agents instead. The same survey found the share reporting a real bottom-line payoff from AI hasn't moved in a year.",
+    "key_facts": [
+      "32% of organizations skipped buying software because agentic coding tools let them build it themselves.",
+      "Among AI \"high performers\" (6% of respondents), that number is roughly 50%.",
+      "37% report any EBIT impact from AI -- flat versus 2025, per McKinsey's own survey."
+    ],
+    "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/newsroom-mckinsey-state-of-ai-2026-build-vs-buy-ebit-flat.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "McKinsey's 2026 survey: 32% of companies skipped buying software because AI coding agents let them build it instead. The same survey's bottom-line number -- the share reporting real EBIT impact from AI -- hasn't moved in a year.",
+      "reply_copy": "The number the headline left out:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Enterprise"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-05T18:46:00Z",
+      "copy": "Among McKinsey's AI \"high performers\" -- just 6% of respondents -- roughly half have skipped buying software to build it themselves, nearly double everyone else's rate. That's the group actually capturing value from AI, choosing to build. What that says about where enterprise software spend goes next:",
+      "reply_copy": "Full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Markets"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "McKinsey's State of AI 2026 survey (1,719 respondents, 97 countries) found something genuinely new: 32% of organizations have skipped buying at least one piece of software because AI coding agents let them build it in-house instead.\n\nMost coverage stopped there. The same survey, read past that one number: the share of companies reporting any real bottom-line payoff from AI hasn't moved since last year -- 37% report any EBIT impact, flat versus 2025.\n\nAdoption and scaling are both genuinely up. The number that was supposed to follow them is exactly where it was a year ago. We reconcile both halves of the same survey -- link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Enterprise",
+        "#McKinsey",
+        "#Markets",
+        "#TechNews",
+        "#ROI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "McKinsey's State of AI 2026 survey -- 1,719 respondents across 97 countries -- landed on a genuinely new number: 32% of organizations now report they've decided against buying at least one software product because agentic coding tools let them build it in-house instead. Among the survey's AI \"high performers,\" that number is roughly 50%.\n\nMost coverage of the finding stopped there. The same survey, read past that one number, tells a less triumphant story: the share of companies reporting any real bottom-line payoff from AI hasn't moved since last year -- 37% report any EBIT impact, essentially flat versus 2025, and just 6% describe it as significant, identical to a year ago.\n\nWe break down what each headline number actually counts, where the survey's own data cuts against the more triumphant read, and what a company weighing its next build-vs-buy decision should actually price in.",
+      "hashtags": [
+        "#AI",
+        "#Enterprise"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "McKinsey's own 2026 survey: 32% of companies skipped buying software to build it with AI agents instead. The same survey found the share reporting real bottom-line payoff from AI hasn't moved in a year. Both are true at once -- the survey that only reports the first one is telling half the story.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-09-05T18:46:00Z",
+      "copy": "Among McKinsey's AI \"high performers\" (6% of respondents), roughly half have skipped buying software to build it themselves -- nearly double everyone else. The group actually getting value from AI is choosing to build. What that says about enterprise software spend:",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "McKinsey's 2026 survey: 32% of companies skipped buying software because AI agents let them build it themselves. Same survey: the share reporting real EBIT impact from AI hasn't moved in a year. Reconciling both halves of the same data:",
+      "hashtags": [
+        "#AI",
+        "#Enterprise"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+  {
+  "article_id": "g19",
+  "ts": "2026-09-05T13:47:00Z",
+  "export": {
+    "article_id": "g19",
+    "url": "https://rtfclmgzn.com/article/audit-what-your-ai-agent-is-actually-costing-you",
+    "headline": "Find out what your AI habit actually costs before the bill does",
+    "hook": "The per-million-token sticker price on a vendor's homepage answers a different question than the one that actually determines your bill. Here's the 15-minute audit that finds where your money is really going.",
+    "key_facts": [
+      "Output tokens cost roughly 5x input tokens across every major vendor -- generation is the expensive part.",
+      "The number that matters is your usage dashboard's breakdown, not the per-million-token sticker price.",
+      "A hard budget alert set before you scale up stops a surprise bill before it happens."
+    ],
+    "tone": "Technical, detail-obsessed",
+    "persona": "jin-park",
+    "section": "Guide",
+    "primary_image": "assets/img/newsroom/g19.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Every major AI vendor prices output tokens at roughly 5x input tokens. The number that actually determines your bill isn't the sticker price -- it's your usage dashboard. Here's the 15-minute audit that finds where the money is really going:",
+      "reply_copy": "The audit, step by step:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#DevTools"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "The bill that surprises people almost never comes from the model they expected -- it comes from the workflow nobody was watching. An agent looping through the same file, a chatbot resending an entire conversation's history on every turn.\n\nEvery major vendor prices output tokens at roughly 5x input tokens. A 15-minute audit of your actual usage dashboard -- not the pricing page -- finds where your money is really going, and a hard budget alert stops the surprise before it happens.\n\nThe full step-by-step, link in bio.",
+      "hashtags": [
+        "#AI",
+        "#DevTools",
+        "#TechTips",
+        "#APIs",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "The AI bill that surprises people almost never comes from the model they expected -- it comes from the workflow nobody was watching: an agent looping through the same file, a chatbot resending an entire conversation's history on every single turn.\n\nEvery major vendor -- Anthropic, OpenAI, Google -- prices output tokens at roughly five times what it charges for input tokens, a pattern that holds across very differently priced models. A workflow that makes a model write a lot costs far more per exchange than one where you paste a document and ask a short question, even at an identical sticker price.\n\nOur new guide walks through the 15-minute audit that finds where your money is actually going -- and the one budget-alert setting that stops it from happening again.",
+      "hashtags": [
+        "#AI",
+        "#DevTools"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Every major AI vendor prices output tokens at roughly 5x input tokens. The sticker price on the homepage was never going to tell you your real bill -- only your usage dashboard will. The 15-minute audit:",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Every major AI vendor prices output tokens at ~5x input tokens. The 15-minute audit that finds where your AI spend is actually going, and the one setting that stops a surprise bill:",
+      "hashtags": [
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
