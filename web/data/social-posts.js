@@ -13032,8 +13032,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117921913396947",
+        "remote_id": "1238977099292018_122117921913396947",
+        "posted_at": "2026-09-05T04:57:35Z"
       },
       {
         "platform": "threads",
@@ -13056,8 +13058,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#VC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muqp5mivxz2l",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muqp5mivxz2l",
+        "posted_at": "2026-09-05T05:01:30Z"
       }
     ]
   },
@@ -13091,8 +13095,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Microsoft"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096098100376998195",
+        "remote_id": "2096098100376998195",
+        "posted_at": "2026-09-05T04:48:25Z"
       },
       {
         "platform": "x",
@@ -13105,8 +13111,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Benchmarks"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096099109883048270",
+        "remote_id": "2096099109883048270",
+        "posted_at": "2026-09-05T04:52:26Z"
       },
       {
         "platform": "instagram",
@@ -13119,8 +13127,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#MachineLearning"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dc5JZWODfJ7/",
+        "remote_id": "18164214460479370",
+        "posted_at": "2026-09-05T04:52:47Z"
       },
       {
         "platform": "facebook",
@@ -13129,22 +13139,28 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Microsoft"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122117921589396947",
+        "remote_id": "1238977099292018_122117921589396947",
+        "posted_at": "2026-09-05T04:52:56Z"
       },
       {
         "platform": "threads",
         "copy": "Microsoft says its new MAI-Transcribe-2 is \"the fastest, most accurate, and cheapest\" speech model in the world. An independent leaderboard ranks it 2nd on accuracy and 2nd on speed. We checked the board directly instead of taking the press release's word for it.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc5Jc6iEVaU",
+        "remote_id": "18200429440374343",
+        "posted_at": "2026-09-05T04:53:10Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-09-05T00:14:10Z",
         "copy": "Same pattern as Google's Gemini 3.5 Transcribe last month: a vendor's own launch claim, checked against an independent board, lands a rank or two lower than the headline. Worth bookmarking the leaderboard, not just the press releases.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc5J7UEke5h",
+        "remote_id": "18096272198538647",
+        "posted_at": "2026-09-05T04:57:21Z"
       },
       {
         "platform": "bluesky",
@@ -13153,8 +13169,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Microsoft"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muqowftorm24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muqowftorm24",
+        "posted_at": "2026-09-05T04:57:28Z"
       }
     ]
   }
