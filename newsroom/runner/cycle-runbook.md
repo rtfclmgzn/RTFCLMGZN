@@ -638,6 +638,17 @@ this order, and mark it done here.
    regenerating `primer.json`, and the content-level diff once that's
    unblocked.
 
+   PARTIAL, checked (2026-09-05T23:39 cycle) -- re-checked before writing
+   anything, since no cycle earlier today (2026-09-05T13:33 or T18:10) had
+   touched §3e. Re-confirmed both blockers named above are unchanged:
+   `functions/` is still outside `verify_publish_surface.py`'s
+   `ALLOWED_PREFIXES` (`web/`, `docs/operations/releases/`,
+   `image-library/art/manifest.json`, read directly), and no `wrangler`
+   binary or Cloudflare credentials exist in this sandboxed runner's `PATH`
+   or env. No new candidate for a genuine `primer-issue.js`-only edit was
+   found on top of the ones already ruled out. Did not force one. Same two
+   next steps as above, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -729,6 +740,15 @@ Work the item, mark it done here in the same commit, stop. Do not batch two.
     corrected provenance line say so.
 11. **The Primer gets the same treatment** under §3e once 001 is closed. It is the free issue, the one
     most people read, and it is equally unsourced.
+
+**Status (2026-09-05T23:39 cycle, re-check):** still fully unexecutable from this sandboxed runner, per
+the 2026-08-18/08-30 living-notes findings — re-confirmed today rather than assumed: `functions/api/issue/
+_data/issue-001.json` does not exist in this checkout (`find` finds no file by that name anywhere in the
+repo; only `primer.json` lives under `functions/api/issue/_data/`), and no `wrangler` binary or Cloudflare
+credentials are available to read/write the Cloudflare KV namespace the payload actually lives in. No item
+worked this cycle. The 2026-08-30 pre-researched sourcing for item 1 ("Act II · The Number") is still
+sitting in living-notes.md, ready for whichever cycle gets KV access, and has not been re-verified as still
+current since it was written.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

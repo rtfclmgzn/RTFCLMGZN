@@ -359,3 +359,27 @@
   claim to re-check, not a fact -- the same pattern the entry right above
   this one flagged for a different SS3e sub-item, now confirmed for the
   cross-file drift question too.
+- **2026-09-05** (newsroom cycle, late): `site_guard.py`'s `check_scoreboard`
+  false-positives on all three of its current "scored but has no entities.js
+  entry" warnings (Gemini 3.1 Pro Preview, DeepSeek V4 Pro 0813, DeepSeek V4
+  Flash 0731). Each already has a working `entities.js` row whose `re` regex
+  matches the full scoreboard name via an optional trailing group (e.g.
+  `/\bGemini 3\.1 Pro(?: Preview)?\b/i`), so first-mention annotation in
+  article prose works correctly -- but the check tests
+  `str(model).lower() not in ent_names` (`ent_names` being every entity's
+  literal `name` field joined into one string), which only catches an exact
+  substring match and has no way to credit a regex-only match. Confirmed by
+  reading both the entity `re` patterns and `check_scoreboard` in
+  `site_guard.py` directly, not by inference. Did not touch
+  `newsroom/quality/site_guard.py` (Law 6) and did not add redundant
+  entities.js rows purely to satisfy the substring test (would duplicate an
+  already-correct entry for zero reader-facing benefit). The actual fix, for
+  whoever next touches this check, is to test the scored name against each
+  entity's own `re` pattern instead of against `name` substrings -- worth
+  doing once, since every future "Preview"/dated-suffix model name will
+  re-trigger this exact false positive otherwise. Also confirmed this cycle
+  (via a direct component-count sweep) that SS3c archive backfill is
+  currently at zero articles under their format's component floor -- the
+  backfill queue this section has worked two-at-a-time for weeks is empty as
+  of today; the next cycle to hit this should re-run the sweep rather than
+  assume old queue state, and can skip SS3c entirely if it's still empty.
