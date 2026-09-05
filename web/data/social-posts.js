@@ -12862,8 +12862,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Outage",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3murd3d4txp26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3murd3d4txp26",
+        "posted_at": "2026-09-05T10:58:08Z"
       }
     ]
   },
@@ -12959,8 +12961,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Tesla",
           "#Robotaxi"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3murcu3iilz25",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3murcu3iilz25",
+        "posted_at": "2026-09-05T10:54:05Z"
       }
     ]
   },
@@ -12994,8 +12998,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096189018497245687",
+        "remote_id": "2096189018497245687",
+        "posted_at": "2026-09-05T10:49:42Z"
       },
       {
         "platform": "x",
@@ -13008,8 +13014,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#DataCenters"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096190027206398396",
+        "remote_id": "2096190027206398396",
+        "posted_at": "2026-09-05T10:53:42Z"
       },
       {
         "platform": "instagram",
@@ -13040,8 +13048,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Crusoe reportedly raised $3B+ at a ~$30B valuation -- triple its $10B price ten months ago. Unlike that last round, Crusoe hasn't confirmed a single number in this one. Every figure traces to Bloomberg's sourcing, not the company.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc5yvSiG0EP",
+        "remote_id": "18113599735982791",
+        "posted_at": "2026-09-05T10:53:57Z"
       },
       {
         "platform": "threads",
