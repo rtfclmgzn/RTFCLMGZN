@@ -299,5 +299,17 @@ window.RTFC_BUZZ = [
     text:"Singapore's Hivebotics raised a $6 million Series A led by Vertex Ventures Southeast Asia & India, with Fareast Land Development and bathroom manufacturer Rigel participating, to scale production of Abluo, its AI-guided restroom-cleaning robot. Abluo has logged roughly 10,000 operating hours across 20 sites -- hospitals, airport terminals, shopping malls -- in Asia, Europe, the Middle East and North America over the past year.",
     why:"A narrow, unglamorous physical-AI application with 10,000 real operating hours logged across four continents is a useful counterweight to frontier-lab funding headlines -- it's a small, concrete data point that AI-guided robotics is already earning revenue in mundane commercial deployments, not just demos.",
     heat:27, topics:["hivebotics","robotics","funding","series a","facilities automation","singapore"],
-    url:"https://technode.global/2026/09/04/singapores-hivebotics-raises-6m-led-by-vertex-to-scale-restroom-cleaning-robots/" }
+    url:"https://technode.global/2026/09/04/singapores-hivebotics-raises-6m-led-by-vertex-to-scale-restroom-cleaning-robots/" },
+{ id:"bz-503", date:"2026-09-05",
+    source:{ name:"Waymo", handle:"Waymo", platform:"web", kind:"lab" },
+    text:"Waymo opened paid, fully driverless rides to the public in Denver, San Diego and Tampa on Sept. 1, bringing its US footprint to 14 cities and roughly 3,500-4,000 vehicles. Riders in Denver and San Diego are the first to get Waymo's new Zeekr-built minivan-style vehicle running its next-generation Driver software; the company is targeting 1 million paid rides a week by year-end.",
+    why:"Three simultaneous city launches, timed the same week Tesla brought Cybercab to Austin, is Waymo putting scale on the table as the concrete answer to a rival's launch headlines rather than responding in words.",
+    heat:44, topics:["waymo","robotaxi","autonomous vehicles","expansion","zeekr","fleet"],
+    url:"https://electrek.co/2026/09/01/waymo-public-robotaxi-denver-san-diego-tampa/" },
+{ id:"bz-504", date:"2026-09-05",
+    source:{ name:"Waymo", handle:"Waymo", platform:"web", kind:"lab" },
+    text:"Waymo VP of onboard software Srikanth Thirumalai told Axios the company tested pure end-to-end AI models -- raw sensor input to driving output, no separate perception/planning stages -- and concluded they \"are not able to meet our safety bar at the scale that we operate,\" citing hallucination risk and the inability to simply restart a physical system the way you can a crashed program. Waymo's production stack instead fuses camera, lidar and radar through multiple specialized models with an independent onboard validation layer.",
+    why:"The industry's two most-watched robotaxi programs are now on record with opposite architecture bets -- Tesla's camera-only, end-to-end approach versus Waymo's multi-sensor, multi-model one -- and Waymo is the party with 200+ million driverless miles making the safety argument against the simpler design.",
+    heat:47, topics:["waymo","tesla","autonomous vehicles","end-to-end ai","safety","sensor fusion"],
+    url:"https://www.axios.com/2026/08/26/waymo-ai-shortcut-self-driving" }
 ];
