@@ -175,6 +175,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"expired",
       note:"Tesla's August 31, 2026 internal target for first public (non-employee) Cybercab rides did not materialize. The official launch event is September 3, 2026, in Austin, with public Robotaxi app availability targeted for the following week. The end-of-August deadline has passed with no public rides confirmed.",
       label:"Tesla Cybercab end-of-August launch deadline - unmet",
-      url:"https://www.teslarati.com/tesla-cybercab-launch-official-date-austin/" }
+      url:"https://www.teslarati.com/tesla-cybercab-launch-official-date-austin/" },
+    { key:"ibm-preliminary-q2-2026-revenue-miss|w|0",
+      at:"2026-09-05T12:00:00Z",
+      outcome:"confirmed",
+      note:"IBM's July 22, 2026 Q2 2026 earnings announcement confirmed that while Infrastructure revenue declined 7% overall, Distributed Infrastructure delivered record growth of +37% year-over-year. The resolver's claim that 'Infrastructure down 7 percent' contained a distributed-infrastructure business up 37 percent is verified by IBM's official earnings breakdown.",
+      label:"IBM Q2 2026 earnings - Infrastructure segmentation (+37% distributed infrastructure vs. -7% overall)",
+      url:"https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS" }
   ]
 };
