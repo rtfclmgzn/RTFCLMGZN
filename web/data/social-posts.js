@@ -13490,7 +13490,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -13585,8 +13587,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#NVIDIA",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096336262160318526",
+        "remote_id": "2096336262160318526",
+        "posted_at": "2026-09-05T20:34:48Z"
       },
       {
         "platform": "x",
