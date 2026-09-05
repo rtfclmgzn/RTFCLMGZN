@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-08-17",
+  updated: "2026-09-05",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -195,6 +195,10 @@ window.RTFC_ENTITIES = {
       kind:"open-weights family", access:"open-weights" },
     { re:/\bMixtral\b/i, name:"Mixtral", maker:"Mistral AI", makerKey:"mistral",
       kind:"open-weights MoE family", access:"open-weights" },
+    { re:/\bNemotron-3-Ultra-CC\b/i, name:"Nemotron-3-Ultra-CC", maker:"NVIDIA", makerKey:"nvidia",
+      kind:"competitive-programming fine-tune (research variant)", access:"unknown" },
+    { re:/\bNemotron-3-Ultra\b/i, name:"Nemotron-3-Ultra", maker:"NVIDIA", makerKey:"nvidia",
+      kind:"open Mixture-of-Experts hybrid Mamba-Transformer model", access:"open-weights" },
 
     // --- Hardware / systems that read like products in prose ---
     { re:/\bDGX SuperPOD\b/i, name:"DGX SuperPOD", maker:"NVIDIA", makerKey:"nvidia",

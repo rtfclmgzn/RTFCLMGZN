@@ -13458,5 +13458,197 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-05T15:26:22Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-claude-fable-5-1-tops-intelligence-index-higher-cost",
+    "ts": "2026-09-05T18:10:22Z",
+    "export": {
+      "article_id": "newsroom-claude-fable-5-1-tops-intelligence-index-higher-cost",
+      "url": "https://rtfclmgzn.com/article/claude-fable-5-1-tops-intelligence-index-higher-cost",
+      "headline": "Claude Fable 5.1 tops the Artificial Analysis Intelligence Index -- and costs 20% more per task than Fable 5 despite a 75% cache-price cut",
+      "hook": "Anthropic's Claude Fable 5.1 just posted the highest score Artificial Analysis has measured on any model. Its own benchmark data also shows the model costs more per task to run than its predecessor, not less.",
+      "key_facts": [
+        "Claude Fable 5.1 scores 66 on the Artificial Analysis Intelligence Index (max effort), 4 points ahead of Claude Opus 5.",
+        "Cache-read pricing dropped 75%, cutting typical workloads ~25% and heavily agentic ones up to 45%.",
+        "Artificial Analysis measured Fable 5.1's actual cost per task at max effort as ~20% higher than Fable 5's, at $3.76 vs $3.14."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-claude-fable-5-1-tops-intelligence-index-higher-cost.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Claude Fable 5.1 just posted the highest score Artificial Analysis has ever measured on any model -- 66 on the Intelligence Index. The same benchmark's own cost data shows it's ~20% pricier per task than Fable 5, not cheaper, despite a 75% cache-price cut.",
+        "reply_copy": "The full pricing breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T23:10:22Z",
+        "copy": "Anthropic's headline: cache reads cost 75% less on Fable 5.1. Artificial Analysis's own measurement: the model costs 20% MORE per task at max effort than Fable 5, because it burns ~1.7x the output tokens. Both numbers are real -- they just answer different questions.",
+        "reply_copy": "What each number actually covers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#ClaudeAI",
+          "#LLM"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic's Claude Fable 5.1 just topped Artificial Analysis's Intelligence Index -- the highest score the independent benchmark has ever measured. Four points clear of Anthropic's own Claude Opus 5.\n\nThe pricing story is more complicated. Cache-read tokens dropped 75% in price. But Artificial Analysis's own task-level measurement found Fable 5.1 actually costs about 20% MORE per task at its top setting than Fable 5 -- because it spends roughly 1.7x the output tokens to get there.\n\nBoth things are true. We break down what \"75% cheaper\" actually covers, and what it doesn't -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic",
+          "#ClaudeAI",
+          "#MachineLearning",
+          "#TechNews",
+          "#Benchmark"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic's newest model, Claude Fable 5.1, just posted the highest score Artificial Analysis has measured on any model -- 66 on its Intelligence Index, four points ahead of Anthropic's own Claude Opus 5.\n\nThe pricing pitch is where it gets complicated. Anthropic cut the price of cached context by 75%, and says that saves typical workloads about 25% and heavily agentic ones up to 45%. But Artificial Analysis's own task-level cost measurement tells a different story at the model's top setting: Fable 5.1 actually costs about 20% more per task than Fable 5 did, because it uses roughly 1.7 times the output tokens to reach its higher score.\n\nWe break down what the 75% price cut actually covers, what it doesn't, and what a buyer choosing between the two models actually needs to know.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Claude Fable 5.1 tops Artificial Analysis's Intelligence Index at 66 -- the highest score yet measured. Its own cost data shows the model runs ~20% pricier per task than Fable 5 at max effort, despite a 75% cut to cache-read pricing. Both numbers are real; they measure different things.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T23:10:22Z",
+        "copy": "The model that tops the leaderboard and the model that costs less to run aren't the same model this time, on Anthropic's and Artificial Analysis's own numbers. Here's what a buyer actually needs to weigh between Fable 5.1 and Fable 5:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Claude Fable 5.1: highest score Artificial Analysis has ever measured (66). Also, per the same benchmark: ~20% pricier per task than Fable 5 at max effort, despite a 75% cache-price cut. Both true. What each number covers:",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nvidia-nemotron-ultra-cc-ioi-2026-human-score",
+    "ts": "2026-09-05T18:10:22Z",
+    "export": {
+      "article_id": "newsroom-nvidia-nemotron-ultra-cc-ioi-2026-human-score",
+      "url": "https://rtfclmgzn.com/article/nvidia-nemotron-ultra-cc-ioi-2026-human-score",
+      "headline": "NVIDIA says a specialized Nemotron system outscored every human at the 2026 coding olympiad -- but its own paper says the run wasn't an official entry",
+      "hook": "NVIDIA says its Nemotron-3-Ultra-CC scored higher than every human contestant at IOI 2026. Its own paper says the run wasn't an official IOI entry and wasn't supervised by IOI -- a caveat one outlet's coverage left out.",
+      "key_facts": [
+        "Nemotron-3-Ultra-CC scored 535.4 of 600 at IOI 2026, beating official gold medalist Xu Qiwen's 498.27 by 37+ points.",
+        "The system used GenCorrect: 200 candidates generated per problem, clustered, judged, and refined across 5 rounds.",
+        "NVIDIA's own paper: \"Our system was not an official IOI contestant and the run was not supervised by IOI.\""
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-nvidia-nemotron-ultra-cc-ioi-2026-human-score.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NVIDIA says its Nemotron-3-Ultra-CC scored 535.4/600 at IOI 2026, beating every human contestant -- including gold medalist Xu Qiwen's 498.27. NVIDIA's own paper: \"Our system was not an official IOI contestant and the run was not supervised by IOI.\"",
+        "reply_copy": "What that caveat actually means:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#NVIDIA",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T23:10:22Z",
+        "copy": "A year earlier, OpenAI officially entered IOI's online competition track and got graded by IOI's own judges in real time -- and still placed 6th among humans. NVIDIA's specialized system beat every human, but ran the evaluation on its own, afterward, unsupervised. Different claims.",
+        "reply_copy": "Full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nemotron",
+          "#Benchmark"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "NVIDIA researchers say their specialized Nemotron-3-Ultra-CC system scored 535.4 out of 600 at the 2026 International Olympiad in Informatics -- beating gold medalist Xu Qiwen's official 498.27 by more than 37 points, on the same problems, under the same time and submission limits.\n\nBut NVIDIA's own paper is blunt about what that number doesn't establish: \"Our system was not an official IOI contestant and the run was not supervised by IOI.\" One outlet's coverage of the same paper left that caveat out entirely.\n\nWe break down the GenCorrect technique behind the score, how it compares to OpenAI's officially-entered 2025 system, and what a real rematch would actually take -- link in bio.",
+        "hashtags": [
+          "#NVIDIA",
+          "#AI",
+          "#Nemotron",
+          "#MachineLearning",
+          "#Coding",
+          "#Benchmark"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "NVIDIA researchers say a specialized system built on their Nemotron architecture scored higher than every human contestant at the 2026 International Olympiad in Informatics -- 535.4 out of 600, more than 37 points clear of gold medalist Xu Qiwen's official 498.27, on the same problems under matching time and submission limits.\n\nNVIDIA's own paper is explicit about the limits of that claim, though: \"Our system was not an official IOI contestant and the run was not supervised by IOI.\" That's a meaningfully different thing than being graded by the competition's own judges in real time -- which is exactly the path OpenAI's system took a year earlier, when it officially entered IOI's online track and still placed sixth among humans.\n\nWe walk through how NVIDIA's system actually works, why the comparison is narrower than the headline, and what would settle the question for good.",
+        "hashtags": [
+          "#NVIDIA",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NVIDIA says its Nemotron-3-Ultra-CC beat every human at IOI 2026 -- 535.4 vs gold medalist Xu Qiwen's 498.27. NVIDIA's own paper: \"Our system was not an official IOI contestant and the run was not supervised by IOI.\" A caveat one outlet's coverage of the same paper dropped entirely.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-05T23:10:22Z",
+        "copy": "OpenAI's system officially entered IOI 2025's online track and got graded by real judges in real time -- and still placed 6th among humans. NVIDIA's system beat every human a year later, but the evaluation ran on NVIDIA's own terms, afterward, unsupervised. Worth sitting with both facts at once.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NVIDIA: our Nemotron-3-Ultra-CC beat every human at IOI 2026 (535.4 vs 498.27). Also NVIDIA's own paper: \"not an official IOI contestant... not supervised by IOI.\" One outlet's coverage dropped that line entirely. What it actually establishes:",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

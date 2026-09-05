@@ -2678,7 +2678,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-06-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-claude-fable-5-1-tops-intelligence-index-higher-cost",
+     "used_at": "2026-09-05"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-07",
@@ -2708,7 +2713,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-07-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-nemotron-ultra-cc-ioi-2026-human-score",
+     "used_at": "2026-09-05"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-08",

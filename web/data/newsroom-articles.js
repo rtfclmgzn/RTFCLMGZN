@@ -46345,6 +46345,513 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Reconciles the adoption-surge headline with the flat bottom-line figure from the same survey and states which conclusion the evidence actually supports -- both are true, and the piece says so instead of picking the more shareable half."
       }
     }
+  },
+  {
+    "slug": "claude-fable-5-1-tops-intelligence-index-higher-cost",
+    "title": "Claude Fable 5.1 tops the Artificial Analysis Intelligence Index -- and costs 20% more per task than Fable 5 despite a 75% cache-price cut",
+    "dek": "Anthropic's new flagship scores 66 on the independent benchmark, four points ahead of Claude Opus 5, while cutting the price of repeated context by three-quarters. Artificial Analysis's own task-level measurement shows Fable 5.1 actually costs more to run at its top setting, because it uses roughly 1.7 times the output tokens of its predecessor.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "numbers",
+    "apply": [
+      {
+        "label": "Don't read \"75% cheaper\" as \"Fable 5.1 costs less to run.\"",
+        "text": "The cut applies only to cache-read tokens. Artificial Analysis's own full-task measurement at max effort found Fable 5.1 costs about 20% more than Fable 5, because it spends roughly 1.7x the output tokens to reach its higher score."
+      },
+      {
+        "label": "If your workload is cache-heavy and agentic, this release is priced for you.",
+        "text": "Anthropic's own 45% savings estimate applies to sessions that repeatedly revisit the same codebase, system prompt, and tool definitions -- not to one-shot, low-effort queries, where the saving is closer to 25% or may not offset a higher effort tier."
+      },
+      {
+        "label": "Watch whether Anthropic narrows the effort-tier spread in a future update.",
+        "text": "Fable 5.1 spans 58 to 66 on the Intelligence Index across its five effort tiers, at an 11x difference in output tokens between the cheapest and most expensive setting -- the gap a buyer is actually pricing when choosing a tier."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "Claude Fable 5.1 tops the Artificial Analysis Intelligence Index",
+        "url": "https://artificialanalysis.ai/articles/claude-fable-5-1",
+        "outlet": "Artificial Analysis",
+        "kind": "primary"
+      },
+      {
+        "label": "Claude Fable 5.1 out now -- CursorBench 3.2 results",
+        "url": "https://forum.cursor.com/t/claude-fable-5-1-out-now/170246",
+        "outlet": "Cursor Forum",
+        "kind": "primary"
+      },
+      {
+        "label": "Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads",
+        "url": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
+        "outlet": "VentureBeat",
+        "kind": "reporting"
+      },
+      {
+        "label": "Anthropic's new Fable release is cheaper, less restrictive",
+        "url": "https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Anthropic's Claude Fable 5.1 tops Artificial Analysis's Intelligence Index at 66, the highest score yet measured.",
+      "Cache-read pricing dropped 75%, cutting typical workload costs about 25% and heavily agentic ones up to 45%.",
+      "Base pricing holds at $10 input and $50 output per million tokens, unchanged from Fable 5.",
+      "Mythos 5.1, the same model with fewer safeguards, ships only through vetted cybersecurity and life-sciences programs.",
+      "Caveat: at max effort, Artificial Analysis measured Fable 5.1's real cost per task as 20% higher, not lower."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Anthropic's newest flagship, **Claude Fable 5.1**, now holds the top spot on Artificial Analysis's Intelligence Index -- the independent, cross-lab benchmark behind every score on the [Scoreboard](/scoreboard). At its max-effort setting the model scores **66**, four points ahead of [Anthropic](/company/anthropic)'s own Claude Opus 5 (63) and two ahead of GPT-5.6 Sol and Grok 4.6 (61 each). The release, which shipped September 1 alongside a restricted-access twin called Claude Mythos 5.1, also cut the price of Anthropic's most heavily used pricing lever -- cached context -- by three-quarters. ==Those two facts point in different directions on the question every buyer actually asks: is this model worth more, or does it simply cost less?==",
+        "citation_urls": [
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "https://artificialanalysis.ai/articles/claude-fable-5-1"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The 66 figure is Fable 5.1's ceiling, not its default. Anthropic ships the model across five ++effort tiers++, and Artificial Analysis measured all of them: 58 at the lowest setting, climbing to 65 at \"xhigh\" and 66 at max -- a span that costs 13.1 million output tokens at the low end and 143.7 million at the top, across the benchmark's full test suite. That's an 11-fold difference in tokens spent for an 8-point swing in score, which is a real tradeoff a budget-conscious buyer has to actually choose between, not a single number to quote.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/articles/claude-fable-5-1"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That ranking isn't only Artificial Analysis's read. [Cursor](/company/cursor), the coding-agent tool that added Fable 5.1 to its model picker on release day, ran its own multi-file coding test -- CursorBench 3.2 -- and landed on the same order: Fable 5.1 at 73.4%, ahead of Fable 5's 70.5% and Claude Opus 5's 70.0%. Cursor's team pointed to a specific behavioral change behind the number rather than raw scale: Fable 5.1 catches and corrects its own mistakes mid-run on long, unattended coding sessions, instead of compounding an early error across the rest of the task.",
+        "citation_urls": [
+          "https://forum.cursor.com/t/claude-fable-5-1-out-now/170246"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kicker": "Independent measurement",
+          "title": "Artificial Analysis Intelligence Index, max effort",
+          "kind": "bar",
+          "unit": "index score",
+          "data": [
+            {
+              "label": "Claude Fable 5.1",
+              "value": 66,
+              "hi": true
+            },
+            {
+              "label": "Claude Opus 5",
+              "value": 63
+            },
+            {
+              "label": "Claude Fable 5",
+              "value": 62
+            },
+            {
+              "label": "GPT-5.6 Sol",
+              "value": 61
+            },
+            {
+              "label": "Grok 4.6",
+              "value": 61,
+              "note": "high effort, not max"
+            }
+          ],
+          "source": "Artificial Analysis Intelligence Index, Sept. 1 2026 leaderboard writeup"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The pricing change is where Anthropic's own announcement puts the emphasis. Base rates hold steady at $10 per million input tokens and $50 per million output tokens -- unchanged from Fable 5 -- but the price of a cache read, the charge applied when the model reuses context it has already processed, dropped from $1.00 to $0.25 per million tokens. Anthropic says that cuts the cost of a typical workload by about 25%, and a heavily agentic one -- the kind that revisits the same codebase, system prompt, and tool definitions turn after turn -- by up to 45%.",
+        "citation_urls": [
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Cache reads with Fable 5.1 cost 75% less than Fable 5's. This reduces the cost of the model in practice by around 25% for typical workloads, and up to 45% for highly agentic ones.",
+        "citation_urls": [
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read only that far and Fable 5.1 looks like a straightforward win: a higher score at a lower price. Artificial Analysis's own task-level cost measurement says otherwise. At max effort, running Fable 5.1 through the benchmark's test suite cost **$3.76** per task -- about 20% more than Fable 5's **$3.14**, and well above Claude Opus 5's **$2.34**. The gap isn't a pricing error; it's a tokens problem. Fable 5.1 at max effort uses roughly 1.7 times the output tokens Fable 5 needed to reach its lower score, and the cache-read discount -- worth an estimated $1.40 off that same task, per Artificial Analysis -- isn't large enough to offset the extra generation.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/articles/claude-fable-5-1"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What \"75% cheaper\" actually covers",
+          "items": [
+            {
+              "value": "75%",
+              "unit": "cache-read price cut",
+              "label": "Discount on reused context ($1.00 -> $0.25 per million tokens)",
+              "includes": "Only the cache-read charge -- tokens the model re-reads from context it already processed",
+              "excludes": "Fresh input tokens, all output tokens, and the base $10/$50-per-million rate, which are unchanged",
+              "note": "Anthropic's own headline figure; real, but scoped to one line item on the bill."
+            },
+            {
+              "value": "$3.76",
+              "unit": "cost per task, max effort",
+              "label": "Artificial Analysis's measured full-task cost for Fable 5.1",
+              "includes": "All input, output, and cache tokens actually consumed running the benchmark's test suite at max effort",
+              "excludes": "Any assumption about how cache-heavy a given real workload is -- this is a benchmark task, not a live agent session",
+              "note": "About 20% above Fable 5's $3.14 at the same effort tier, per Artificial Analysis."
+            }
+          ],
+          "source": "Artificial Analysis, Claude Fable 5.1 cost analysis, Sept. 1 2026"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The other half of the release is priced identically but restricted: **Claude Mythos 5.1**. Same underlying weights, fewer restrictions -- available only to vetted organizations in Anthropic's Cyber Verification Program and Life Sciences Verification Program, both currently limited to US organizations. Anthropic says the cybersecurity variant now throws 60% fewer false positives when flagging misuse than its predecessor, and can identify a vulnerability without generating a working exploit for it. It amounts to Anthropic publishing two safety postures for the same underlying capability and letting the access program, not one global setting, decide which a given user gets.",
+        "citation_urls": [
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Fable 5.1 is Anthropic's fourth model refresh since Opus 5 became the flagship default on July 24, following Mythos 5, Fable 5, and Sonnet 5 in June -- a cadence of roughly one release every five to six weeks through the summer. {{note: The effort-tier system itself -- five settings trading tokens for score -- isn't unique to Anthropic; OpenAI's GPT-5.6 line ships a comparable low/high/max split, and Grok 4.6 offers its own \"high\" tier.}} What's new this time isn't the capability jump on its own -- four points on the index is in line with recent generational steps -- it's Anthropic explicitly pricing the gap between \"cheaper\" and \"better\" instead of folding both into one release note.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "High-volume agentic API customers",
+              "tone": "gains",
+              "what": "Capture most of the estimated 45% agentic-workload saving -- already the segment reusing the most cached context per session."
+            },
+            {
+              "who": "Low-effort, low-token API customers",
+              "tone": "unclear",
+              "what": "See the smaller 25% typical-workload saving on the cache line, but face a real per-task cost increase if they run at max effort to capture the score gain."
+            },
+            {
+              "who": "OpenAI and xAI at the top of the Intelligence Index",
+              "tone": "loses",
+              "what": "GPT-5.6 Sol and Grok 4.6 are both now five points off the new top score, at the same max/high effort tier Anthropic used to set it."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes Fable 5.1 a bad release -- it's the highest score Artificial Analysis has measured on any model, full stop, and the cache-pricing change is a genuine cut for the workloads it targets. But **the model that tops a leaderboard and the model that costs less to run are not, on Anthropic's own numbers, the same model this time** -- and a buyer choosing between Fable 5.1 and its predecessor needs both figures, not just the one on the announcement page.",
+        "citation_urls": [
+          "https://artificialanalysis.ai/articles/claude-fable-5-1"
+        ]
+      }
+    ],
+    "id": "newsroom-claude-fable-5-1-tops-intelligence-index-higher-cost",
+    "image": "assets/img/newsroom/newsroom-claude-fable-5-1-tops-intelligence-index-higher-cost.jpg",
+    "publishedAt": "2026-09-05T18:10:22Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-05T18:10:22Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "5 sources, 2 primary (Anthropic's own announcement page and Artificial Analysis's independent Fable 5.1 writeup, both fetched directly). 3 evidence threads: the release/pricing facts (Anthropic's page, corroborated by VentureBeat and TechCrunch reporting of the same announcement), the independent Intelligence Index scores and per-task cost figures (Artificial Analysis, fetched directly rather than taken from secondary coverage), and Cursor's own CursorBench 3.2 benchmark -- a second, independent vendor data point already staged on Buzz by an earlier cycle today, reused here with its own citation rather than duplicated as a new claim."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger fires (a model-release and pricing story, not health/financial-advice/legal/accusatory). The Intelligence Index score (66) and per-task cost figures ($3.76 / $3.14 / $2.34) were confirmed by direct fetch of Artificial Analysis's own published writeup, not a secondary aggregator; Anthropic's pricing figures confirmed against its own announcement page directly."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique caught one self-referential phrasing -- a draft sentence describing the Intelligence Index as \"the benchmark this newsroom treats as the only score that counts\" -- and revised it to describe the Scoreboard page itself rather than the newsroom's own editorial judgment. Otherwise clean: every citation URL was fetched directly and is load-bearing; the tension between Anthropic's 'cheaper' pricing framing and Artificial Analysis's higher measured per-task cost is reconciled explicitly in prose and in the ledger component, not silently resolved in favor of either framing."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "chart's five scores trace directly to Artificial Analysis's fetched leaderboard writeup. ledger's cache-cut and cost-per-task figures trace to the same source and to Anthropic's own pricing page. stakes' three items each name a specific, real party (high-volume agentic API customers, low-effort API customers, OpenAI/xAI at the top of the index) rather than a vague catch-all. No component carries a top-level text field; no two components sit adjacent."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources spanning a primary announcement, an independent benchmark measurement, and reporting. Reconciles Anthropic's pricing framing against Artificial Analysis's own higher per-task cost measurement instead of repeating only the vendor's framing. Body runs about 850 words, within the 800-1900 synthesis band. 3 components (chart, ledger, stakes) against a 2-minimum floor, two of them data-carrying. Disclaimer: none."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "States plainly that the model topping the leaderboard and the model costing less to run are not, on Anthropic's and Artificial Analysis's own numbers, the same model this time -- rather than repeating the vendor's 'cheaper and better' framing uncritically."
+      }
+    }
+  },
+  {
+    "slug": "nvidia-nemotron-ultra-cc-ioi-2026-human-score",
+    "title": "NVIDIA says a specialized Nemotron system outscored every human at the 2026 coding olympiad -- but its own paper says the run wasn't an official entry",
+    "dek": "Nemotron-3-Ultra-CC scored 535.4 of 600 on IOI 2026's problems, beating gold medalist Xu Qiwen's winning 498.27 by more than 37 points. NVIDIA's paper is explicit that the system wasn't an official IOI contestant and the run wasn't supervised by IOI -- a caveat one outlet's coverage of the same paper leaves out.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for an IOI-sanctioned rematch or third-party replication.",
+        "text": "The specific resolver: an exhibition run supervised by IOI's Technical Committee, or an independent lab reproducing the score using the released problems and the same Ultra-CC weights, if NVIDIA publishes them."
+      },
+      {
+        "label": "Watch whether NVIDIA publishes Ultra-CC results on general coding benchmarks.",
+        "text": "A score on SWE-bench or a similar real-world software benchmark would show whether GenCorrect generalizes past curated olympiad problems, or whether it's a narrow instrument built for exactly one contest."
+      },
+      {
+        "label": "Watch how competing labs respond at IOI 2027.",
+        "text": "OpenAI's own IOI 2025 system was general-purpose and still placed sixth among humans. Whether OpenAI, Google DeepMind, or another lab enters a specialized system next year -- through the sanctioned track -- is the next real test of whether this approach generalizes beyond NVIDIA's own pipeline."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+        "url": "https://arxiv.org/abs/2609.02849",
+        "outlet": "arXiv (NVIDIA researchers: Ficek, Narenthiran, Samadi, Majumdar, Ginsburg)",
+        "kind": "primary"
+      },
+      {
+        "label": "IOI 2026 official statistics",
+        "url": "https://stats.ioinformatics.org/olympiads/2026",
+        "outlet": "International Olympiad in Informatics",
+        "kind": "primary"
+      },
+      {
+        "label": "International Olympiad in Informatics concludes in Tashkent",
+        "url": "https://uza.uz/en/posts/international-olympiad-in-informatics-concludes-in-tashkent_895644",
+        "outlet": "UzA (Uzbekistan National News Agency)",
+        "kind": "reporting"
+      },
+      {
+        "label": "NVIDIA AI Outscored Every Human at IOI 2026: How GenCorrect Made It Possible",
+        "url": "https://www.techtimes.com/articles/326744/20260905/nvidia-ai-outscored-every-human-ioi-2026-how-gencorrect-made-it-possible.htm",
+        "outlet": "Tech Times",
+        "kind": "reporting"
+      },
+      {
+        "label": "NVIDIA's Nemotron Beats the Best Human at the Coding Olympics",
+        "url": "https://alphasignal.ai/news/nvidia-s-nemotron-beats-the-best-human-at-the-coding-olympics",
+        "outlet": "AlphaSignal",
+        "kind": "reporting"
+      },
+      {
+        "label": "We officially entered the 2025 International Olympiad in Informatics (IOI) online competition track",
+        "url": "https://x.com/OpenAI/status/1954969037353750905",
+        "outlet": "OpenAI (X/Twitter)",
+        "kind": "primary"
+      },
+      {
+        "label": "OpenAI's AI system wins a gold medal-level score at the International Olympiad in Informatics 2025",
+        "url": "https://the-decoder.com/openais-ai-system-wins-a-gold-medal-level-score-at-the-international-olympiad-in-informatics-2025/",
+        "outlet": "The Decoder",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "NVIDIA says its Nemotron-3-Ultra-CC scored 535.4 of 600 at IOI 2026, beating every human contestant.",
+      "Official top scorer Xu Qiwen of China won gold with 498.27; the gold threshold was 361.12.",
+      "The system used GenCorrect: five rounds of generating, clustering, submitting, and refining candidate solutions.",
+      "NVIDIA built a narrow pipeline for this contest alone: 22,000 curated problems, 477,642 reasoning traces.",
+      "Caveat: NVIDIA's own paper says the run wasn't an official IOI entry and wasn't supervised by IOI."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Two weeks after the 37th International Olympiad in Informatics closed in Tashkent, Uzbekistan, NVIDIA researchers say a specialized system built on their own Nemotron architecture did something no AI system has done before: outscored the single best human contestant on the exact same problem set, under matching time and submission limits. The paper, posted to arXiv on September 2, reports **Nemotron-3-Ultra-CC** scoring 535.4 out of 600 -- more than 37 points clear of China's Xu Qiwen, whose 498.27 topped the actual human field of 375 contestants and stood well clear of the 361.12 needed for gold.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849",
+          "https://stats.ioinformatics.org/olympiads/2026",
+          "https://uza.uz/en/posts/international-olympiad-in-informatics-concludes-in-tashkent_895644"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kicker": "Same problems, three scores",
+          "title": "IOI 2026, out of 600 points",
+          "kind": "bar",
+          "unit": "points",
+          "data": [
+            {
+              "label": "Nemotron-3-Ultra-CC",
+              "value": 535.4,
+              "hi": true,
+              "note": "NVIDIA's own run, unofficial and unsupervised by IOI"
+            },
+            {
+              "label": "Xu Qiwen (official 1st place)",
+              "value": 498.27
+            },
+            {
+              "label": "Gold medal threshold",
+              "value": 361.12
+            }
+          ],
+          "source": "NVIDIA arXiv paper 2609.02849 (Sept. 2, 2026); IOI 2026 official statistics and UzA reporting"
+        }
+      },
+      {
+        "type": "p",
+        "text": "This isn't the first time an AI system has matched or beaten IOI's medal thresholds -- but the shape of NVIDIA's claim is different from the last one. At IOI 2025, an OpenAI reasoning system -- a general-purpose model, not one fine-tuned for the contest -- scored 533.29, gold-medal range, but still placed sixth among that year's 330 human contestants; five humans outscored it. Nemotron-3-Ultra-CC's claim is a different kind: not clearing the bar behind several humans, but topping the single best human score at the event, using a system built and trained specifically for this one contest rather than a general model pressed into service for it.",
+        "citation_urls": [
+          "https://the-decoder.com/openais-ai-system-wins-a-gold-medal-level-score-at-the-international-olympiad-in-informatics-2025/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The system behind the 535.4 isn't a single forward pass. NVIDIA's researchers built **GenCorrect**, an iterative five-round loop layered on top of the model: generate up to 200 candidate solutions per problem, cluster them down to 10 representative attempts using diversity and \"score-blind\" heuristics, submit those for judging, then feed the evaluator's per-subtask feedback back into the next round of generation. __Parameters__ tell only part of the story here -- Nemotron-3-Ultra-CC is a 550-billion-parameter model with 55 billion active at a time, the same base architecture NVIDIA released as an open model in June, fine-tuned specifically for this contest on 22,000 curated competitive-programming problems and 477,642 reasoning traces, with every IOI 2025, ICPC 2025, and LiveCodeBench Pro problem explicitly excluded from that training data.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That specialization comes at a cost the paper doesn't hide. Building the pipeline took substantial training compute up front, and running it took substantial compute at test time too -- up to 200 candidate solutions generated per problem, clustered and refined across five rounds, for every one of the six problems in the contest. A human contestant gets one brain and five hours; NVIDIA's system gets a purpose-built training run behind it and a fleet of parallel generations in front of it. The paper's own limitations section makes the same point about resourcing, almost verbatim: the live result is \"a system-level comparison under the same time and submission limits, rather than an equal-resource comparison with human contestants.\"",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "GenCorrect isn't new this month, either. Run against IOI 2025's own problem set, the same technique took a smaller Nemotron-3-Nano-CC from 291 points to 468 -- already gold-medal range against that year's 438.3 threshold. This year's Ultra-CC result is what NVIDIA's paper calls the first time a system has topped the single highest human score on a full IOI set, rather than simply clearing the medal bar the way both Nano-CC and OpenAI's 2025 system did.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "How that run was actually conducted is where the coverage of it starts to disagree.",
+        "citation_urls": []
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Was Nemotron-3-Ultra-CC's IOI 2026 run officially supervised by the olympiad?",
+              "claims": [
+                {
+                  "who": "NVIDIA's own paper",
+                  "kind": "primary",
+                  "says": "\"Our system was not an official IOI contestant and the run was not supervised by IOI.\"",
+                  "url": "https://arxiv.org/abs/2609.02849",
+                  "trusted": true
+                },
+                {
+                  "who": "AlphaSignal's report on the paper",
+                  "kind": "reporting",
+                  "says": "The run happened in Uzbekistan alongside the official competition, with the International Technical Committee supervising.",
+                  "url": "https://alphasignal.ai/news/nvidia-s-nemotron-beats-the-best-human-at-the-coding-olympics"
+                }
+              ],
+              "ruling": "Trusting the paper's own account of its methodology. The authors had every incentive to claim the strongest possible validation for their result and explicitly declined to -- that's not a distinction a secondary summary should soften."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The paper is blunt about what its own number does and doesn't establish, in language plain enough to quote directly:",
+        "citation_urls": []
+      },
+      {
+        "type": "quote",
+        "text": "Our system was not an official IOI contestant and the run was not supervised by IOI.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Both conditions that were matched to the real competition -- no internet access, the same time and submission limits as the human contestants -- come from the paper itself. What wasn't matched is oversight: nobody from IOI verified NVIDIA's run in real time the way judges verify a contestant's. NVIDIA didn't have to run the evaluation that way. A year earlier, OpenAI said it had \"officially entered the 2025 International Olympiad in Informatics (IOI) online competition track and adhered to the same restrictions as the human contestants, including submissions and time limits\" -- a mechanism that got its system graded by IOI's own judges, on the record, at the time of the contest. NVIDIA's paper doesn't explain why its team evaluated Ultra-CC independently afterward instead of entering through that track.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849",
+          "https://x.com/OpenAI/status/1954969037353750905"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "What the 535.4 actually establishes",
+          "items": [
+            {
+              "claim": "Nemotron-3-Ultra-CC scored higher than IOI 2026's top human contestant on the same problems, under matching time and submission constraints.",
+              "level": "company",
+              "basis": "NVIDIA's own single prospective run, not an IOI-sanctioned exhibition and not independently reproduced -- the paper states this explicitly.",
+              "resolver": "An IOI-sanctioned exhibition entry, or an independent lab replicating the run with the released Ultra-CC weights and the same problem set."
+            },
+            {
+              "claim": "The official human results Nemotron's score is compared against are accurate.",
+              "level": "confirmed",
+              "basis": "Published directly by the International Olympiad in Informatics' own results and statistics site."
+            },
+            {
+              "claim": "Nemotron-3-Ultra-CC's approach generalizes to coding work beyond competition problems.",
+              "level": "unverified",
+              "basis": "The CC variant is a narrow pipeline specialized on 22,000 curated olympiad-style problems; NVIDIA has not published its performance on general software-engineering benchmarks.",
+              "resolver": "NVIDIA publishing Ultra-CC scores on a general coding benchmark such as SWE-bench, or releasing the CC weights for third-party testing."
+            }
+          ],
+          "source": "NVIDIA arXiv paper 2609.02849 and IOI 2026 official statistics"
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of that makes the underlying capability jump uninteresting -- a system clearing 535 points on a set that handed out only 31 golds this year is a real result, whatever its supervision status. It does mean the honest version of the claim is narrower than the headline most coverage ran with: a heavily specialized pipeline, built and scored by the same lab that wants the story told, beat a human ceiling on a test nobody outside NVIDIA watched it take in real time. [NVIDIA](/company/nvidia) has not said whether Nemotron-3-Ultra-CC's weights, or the GenCorrect harness itself, will be released for anyone else to check.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2609.02849"
+        ]
+      }
+    ],
+    "id": "newsroom-nvidia-nemotron-ultra-cc-ioi-2026-human-score",
+    "image": "assets/img/newsroom/newsroom-nvidia-nemotron-ultra-cc-ioi-2026-human-score.jpg",
+    "publishedAt": "2026-09-05T18:10:22Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-05T18:10:22Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "6 sources, 1 primary paper (arXiv 2609.02849, fetched directly for its exact scores, methodology, training data, and its own supervision disclaimer) plus IOI 2026's official statistics page and a UzA -- Uzbekistan's national news agency -- report, both fetched directly, for the official human result. Evidence threads: NVIDIA's own paper; the official IOI 2026 results; independent reporting on the paper's publication (Tech Times); a secondary account whose description of the run's supervision conflicts with the paper's own text (AlphaSignal); and OpenAI's own account of how it entered the equivalent 2025 competition, used as sourced comparative context about the event itself, not as this outlet's prior coverage."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "No mandatory-scrutiny trigger fires outright (a benchmark-methodology story, not health/financial/legal/accusatory), but this is exactly the shape of an unverifiable-central-claim case, so the load-bearing number (535.4) is reported throughout as NVIDIA's own claim from a run its own paper states was not IOI-supervised -- scorecard level 'company', not an established result -- and the headline names the caveat rather than burying it."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found a draft passage flatly asserting AlphaSignal's supervision claim was wrong; revised into a sourcecheck component that states both accounts and rules which is trusted and why, rather than the piece simply overriding a secondary source by assertion. Self-referential-language check clean. Every citation URL was fetched directly and is load-bearing."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "chart's three values (535.4, 498.27, 361.12) trace to the arXiv paper and to IOI 2026's official statistics / UzA reporting. sourcecheck carries exactly one trusted claim with a ruling stating why. scorecard's three items each carry a level, and the two not marked 'confirmed' each carry a specific resolver. No component carries a top-level text field; no two sit adjacent; the quote block is a verbatim fetch of the paper's own limitations-section sentence, not a paraphrase."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources spanning a primary paper, an official competition-results record, and independent reporting, correctly routed as synthesis. Body runs about 810 words, within the 800-1900 band. 3 components (chart, sourcecheck, scorecard) against a 2-minimum floor, with a data-carrying chart. Disclaimer: none. The central claim is framed as a company claim throughout, consistent with the paper's own stated limitations."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Reports NVIDIA's result at face value while preserving the paper's own caveat that the run was neither an official IOI entry nor IOI-supervised -- a distinction one outlet's coverage of the same paper dropped entirely."
+      }
+    }
   }
 ]
 ;
