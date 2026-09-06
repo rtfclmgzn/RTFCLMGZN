@@ -13278,8 +13278,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Math"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mutuucmbag2n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mutuucmbag2n",
+        "posted_at": "2026-09-06T11:21:39Z"
       }
     ]
   },
@@ -13377,8 +13379,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Enterprise"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mutun475fq26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mutun475fq26",
+        "posted_at": "2026-09-06T11:17:37Z"
       }
     ]
   },
@@ -13489,10 +13493,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096557361154724180",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2096557361154724180",
+        "posted_at": "2026-09-06T11:13:22Z"
       },
       {
         "platform": "x",
@@ -13616,7 +13621,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Benchmark"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -13647,8 +13654,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "NVIDIA says its Nemotron-3-Ultra-CC beat every human at IOI 2026 -- 535.4 vs gold medalist Xu Qiwen's 498.27. NVIDIA's own paper: \"Our system was not an official IOI contestant and the run was not supervised by IOI.\" A caveat one outlet's coverage of the same paper dropped entirely.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc8aOymGzZF",
+        "remote_id": "18093467006544018",
+        "posted_at": "2026-09-06T11:17:30Z"
       },
       {
         "platform": "threads",
