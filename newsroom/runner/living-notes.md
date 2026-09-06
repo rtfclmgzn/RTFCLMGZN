@@ -383,3 +383,19 @@
   backfill queue this section has worked two-at-a-time for weeks is empty as
   of today; the next cycle to hit this should re-run the sweep rather than
   assume old queue state, and can skip SS3c entirely if it's still empty.
+- **2026-09-06** (newsroom cycle): Artificial Analysis published Intelligence
+  Index **v4.2** on Sept. 4 (harder tasks, more private held-out test sets,
+  explicitly to reduce benchmark gaming). Its scores are NOT on the same
+  scale as most of this board's existing rows -- e.g. v4.2 puts Claude Fable
+  5.1 at 57, while this board's Fable 5.1 row still shows 66 from the
+  pre-v4.2 index. Added GPT-6 Astra's first-ever score (55 max / 54 xhigh)
+  using v4.2 since that's its only independent measurement, and flagged the
+  scale mismatch directly on both new rows and in this scan's basisNote
+  rather than quietly mixing scales. Did NOT attempt a full board re-scan
+  against v4.2 -- that's a real, separate task (every existing row would
+  need re-checking against the new index) and doing it piecemeal risks
+  silently averaging two incompatible scales. Whoever next touches
+  scoreboard.js should either commit to a full v4.2 re-scan in one pass, or
+  add a per-row `indexVersion` field so mixed-scale rows stop looking
+  falsely comparable side by side -- the second is the more durable fix
+  and probably belongs in the schema, not in another prose note.
