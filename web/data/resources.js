@@ -1,6 +1,6 @@
 // RTFCLMGZN — Resources directory (window.RTFC_RESOURCES).
 // Curated links: official AI companies split by platform, plus podcasts.
-// Handles/URLs verified 2026-08-30.
+// Handles/URLs verified 2026-09-06.
 window.RTFC_RESOURCES = [
   {
     title:"Follow the primary sources",
@@ -8,7 +8,7 @@ window.RTFC_RESOURCES = [
     items:[
       { name:"Anthropic / Claude", key:"anthropic", desc:"Maker of the Claude family (Fable, Opus, Sonnet, Haiku).",
         links:[{label:"Site",url:"https://www.anthropic.com"},{label:"X",url:"https://x.com/AnthropicAI"},{label:"Claude on X",url:"https://x.com/claudeai"},{label:"YouTube",url:"https://www.youtube.com/@anthropic-ai"},{label:"LinkedIn",url:"https://www.linkedin.com/company/anthropicresearch"}] },
-      { name:"OpenAI / ChatGPT", key:"openai", desc:"Maker of the GPT family (Sol, Terra, Luna) and ChatGPT.",
+      { name:"OpenAI / ChatGPT", key:"openai", desc:"Maker of ChatGPT and the GPT family — GPT-6 Astra is the new flagship above the GPT-5.6 tier (Sol, Terra, Luna).",
         links:[{label:"Site",url:"https://openai.com"},{label:"X",url:"https://x.com/OpenAI"},{label:"ChatGPT on X",url:"https://x.com/ChatGPT"},{label:"Instagram",url:"https://www.instagram.com/openai"},{label:"YouTube",url:"https://www.youtube.com/@OpenAI"}] },
       { name:"SpaceXAI / Grok", key:"xai", desc:"Maker of the Grok models; merged into SpaceX in Feb 2026 and rebranded SpaceXAI that July.",
         links:[{label:"Site",url:"https://x.ai"},{label:"X",url:"https://x.com/SpaceXAI"},{label:"Grok on X",url:"https://x.com/grok"}] },
