@@ -13491,7 +13491,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -13505,8 +13505,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#ClaudeAI",
           "#LLM"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096462546865717475",
+        "remote_id": "2096462546865717475",
+        "posted_at": "2026-09-06T04:56:36Z"
       },
       {
         "platform": "instagram",
@@ -13519,8 +13521,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#Benchmark"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dc7uqxtjlmx/",
+        "remote_id": "18007286546973133",
+        "posted_at": "2026-09-06T04:56:54Z"
       },
       {
         "platform": "facebook",
@@ -13529,22 +13533,28 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122118189147396947",
+        "remote_id": "1238977099292018_122118189147396947",
+        "posted_at": "2026-09-06T04:57:04Z"
       },
       {
         "platform": "threads",
         "copy": "Claude Fable 5.1 tops Artificial Analysis's Intelligence Index at 66 -- the highest score yet measured. Its own cost data shows the model runs ~20% pricier per task than Fable 5 at max effort, despite a 75% cut to cache-read pricing. Both numbers are real; they measure different things.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc7uuKEGvr1",
+        "remote_id": "18147160714558916",
+        "posted_at": "2026-09-06T04:57:23Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-09-05T23:10:22Z",
         "copy": "The model that tops the leaderboard and the model that costs less to run aren't the same model this time, on Anthropic's and Artificial Analysis's own numbers. Here's what a buyer actually needs to weigh between Fable 5.1 and Fable 5:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc7vM_LlqLM",
+        "remote_id": "18195525277382712",
+        "posted_at": "2026-09-06T05:01:34Z"
       },
       {
         "platform": "bluesky",
@@ -13552,8 +13562,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mut7mucbgz24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mut7mucbgz24",
+        "posted_at": "2026-09-06T05:01:40Z"
       }
     ]
   },
@@ -13627,8 +13639,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#NVIDIA",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122118189555396947",
+        "remote_id": "1238977099292018_122118189555396947",
+        "posted_at": "2026-09-06T05:01:49Z"
       },
       {
         "platform": "threads",
@@ -13650,8 +13664,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mut7u2ldf425",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mut7u2ldf425",
+        "posted_at": "2026-09-06T05:05:42Z"
       }
     ]
   }
