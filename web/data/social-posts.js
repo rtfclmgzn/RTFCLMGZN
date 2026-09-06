@@ -13710,8 +13710,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096623864512192901",
+        "remote_id": "2096623864512192901",
+        "posted_at": "2026-09-06T15:37:37Z"
       },
       {
         "platform": "x",
@@ -13806,8 +13808,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIRegulation",
           "#Congress"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096624873389125706",
+        "remote_id": "2096624873389125706",
+        "posted_at": "2026-09-06T15:41:38Z"
       },
       {
         "platform": "x",
