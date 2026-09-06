@@ -13921,8 +13921,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAlignment",
           "#MachineLearning"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096699623331303789",
+        "remote_id": "2096699623331303789",
+        "posted_at": "2026-09-06T20:38:40Z"
       },
       {
         "platform": "instagram",
