@@ -329,5 +329,11 @@ window.RTFC_BUZZ = [
     text:"Meta shipped Muse Spark 1.3 on September 2 alongside a \"Contributor\" pricing tier that cuts the model's cost roughly 10-20x -- to $0.10/$0.20 per million input/output tokens, versus $1.25/$4.25 on the standard endpoint -- for developers who let Meta train on their prompts and completions. Meta says a \"meaningful double digit\" percentage of coders using Muse Code have opted in.",
     why:"Pricing a model 10-20x cheaper specifically in exchange for training data, rather than as a volume discount, puts a concrete number on what Meta thinks developers' coding data is worth to it -- and on how many developers will trade data rights for a cheaper API bill when the discount is that steep.",
     heat:38, topics:["meta","muse spark","pricing","data licensing","coding agents"],
-    url:"https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues" }
+    url:"https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues" },
+{ id:"bz-508", date:"2026-09-06",
+    source:{ name:"CNBC", handle:"CNBC News", platform:"web", kind:"news" },
+    text:"Anthropic, OpenAI, Meta and Google shipped new frontier models in a single week — Claude Fable 5.1 on Sept 1, Meta Muse Spark 1.3 on Sept 2, Google Gemini 3.8 Flash on Sept 2, and GPT-6 Astra on Sept 3 — compressing the median interval between major releases from 37.5 days in 2023 to 11 days so far in 2026. The blizzard of announcements has created what industry participants call 'model fatigue,' with IT managers spending disproportionate time tracking capabilities and pricing, over 1,100 lab employees having petitioned Washington to help pace frontier-AI development, and OpenAI CEO Sam Altman telling CNBC 'we're all moving to faster cadences.'",
+    why:"A market-wide compression of release intervals from months to weeks, coupled with explicit industry commentary that the pace itself has become a problem, is a concrete signal that labs are prioritizing speed-to-market over differentiation -- creating friction not just for adopters but also within the companies accelerating the cycle.",
+    heat:69, topics:["frontier models","model releases","release cadence","market dynamics","anthropic","openai","google","meta","fatigue","competition"],
+    url:"https://www.cnbc.com/2026/09/06/meta-google-openai-anthropic-ai-model-fatigue.html" }
 ];
