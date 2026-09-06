@@ -13902,8 +13902,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096599096689852711",
+        "posted_at": "2026-09-06T13:59:12Z"
       },
       {
         "platform": "x",
@@ -13963,8 +13964,9 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muu5oayjd42n",
+        "posted_at": "2026-09-06T13:59:12Z"
       }
     ]
   }
