@@ -14028,8 +14028,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AICopyright"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2097042257564045702",
+        "remote_id": "2097042257564045702",
+        "posted_at": "2026-09-07T19:20:10Z"
       },
       {
         "platform": "x",
@@ -14092,8 +14094,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Copyright",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muxabwj2dh2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muxabwj2dh2t",
+        "posted_at": "2026-09-07T19:24:06Z"
       }
     ]
   },
@@ -14127,7 +14131,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#GeminiAI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -14167,8 +14173,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#GeminiAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muxa2q74fy25",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muxa2q74fy25",
+        "posted_at": "2026-09-07T19:20:04Z"
       }
     ]
   }
