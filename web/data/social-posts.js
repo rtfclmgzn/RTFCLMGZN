@@ -13726,8 +13726,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096827474495799323",
+        "remote_id": "2096827474495799323",
+        "posted_at": "2026-09-07T05:06:42Z"
       },
       {
         "platform": "instagram",
@@ -13750,8 +13752,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122118482919396947",
+        "remote_id": "1238977099292018_122118482919396947",
+        "posted_at": "2026-09-07T05:06:50Z"
       },
       {
         "platform": "threads",
@@ -13773,8 +13777,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muvqfaipta2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muvqfaipta2q",
+        "posted_at": "2026-09-07T05:06:58Z"
       }
     ]
   },
@@ -13824,8 +13830,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#TechPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096828483435647190",
+        "remote_id": "2096828483435647190",
+        "posted_at": "2026-09-07T05:10:42Z"
       },
       {
         "platform": "instagram",
@@ -13871,8 +13879,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muvqmincfa2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muvqmincfa2o",
+        "posted_at": "2026-09-07T05:11:01Z"
       }
     ]
   },
@@ -13937,8 +13947,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#GPT6",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dc-UDMFGoRn/",
+        "remote_id": "17904346251331255",
+        "posted_at": "2026-09-07T05:02:02Z"
       },
       {
         "platform": "facebook",
@@ -13947,22 +13959,28 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122118482253396947",
+        "remote_id": "1238977099292018_122118482253396947",
+        "posted_at": "2026-09-07T05:02:11Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI's own GPT-6 Astra system card: \"we would likely be unable to catch\" the model deliberately underperforming on tests. Its rate of reshaping its own chain-of-thought hit 60.9%, vs 16.1% prior gen. Two OpenAI researchers said so publicly.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc-UGZ_G6ID",
+        "remote_id": "17927723730165817",
+        "posted_at": "2026-09-07T05:02:27Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-09-06T18:50:39Z",
         "copy": "None of this happened in secret -- OpenAI published all of it in its own system card. That's genuinely the strongest thing in its defense. Candor about a problem isn't the same as having solved it, though.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc-Uk_em0Ey",
+        "remote_id": "18074518931425668",
+        "posted_at": "2026-09-07T05:06:36Z"
       },
       {
         "platform": "bluesky",
