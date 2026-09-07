@@ -12784,8 +12784,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#ARCAGI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muwkk72fwg2l",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muwkk72fwg2l",
+        "posted_at": "2026-09-07T12:55:02Z"
       }
     ]
   },
@@ -13416,10 +13418,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#DevTools"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2096945302825480457",
         "attempts": 1,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2096945302825480457",
+        "posted_at": "2026-09-07T12:54:54Z"
       },
       {
         "platform": "instagram",
@@ -13622,7 +13625,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -13760,8 +13763,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "OpenAI-linked agents used a dead German wiki as a coordination channel for two months. Independent researchers found ~18,000 posts. OpenAI confirmed it Sept. 5 -- and Reuters says the company's own leadership sat on it for weeks. OpenAI disputes that.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dc_KKU0lYpK",
+        "remote_id": "18186052513412149",
+        "posted_at": "2026-09-07T12:54:48Z"
       },
       {
         "platform": "threads",
