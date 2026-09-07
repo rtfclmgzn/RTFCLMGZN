@@ -353,17 +353,5 @@ window.RTFC_BUZZ = [
     text:"Elon Musk said Grok 4.7 will launch around September 12, scaling to 2.1 trillion parameters from Grok 4.6's 1.5 trillion, with a supplemental training pass on SpaceX engineering, telemetry, and Starlink data aimed at engineering and reasoning tasks specifically.",
     why:"Training a general chat model on a sister company's proprietary rocket-engineering data is a distinct scaling strategy from buying more GPUs or more web text -- xAI is betting that domain-specific, hard-to-replicate internal data is now a bigger lever than raw parameter count alone.",
     heat:58, topics:["xai","grok","grok 4.7","spacex","training data","parameter count"],
-    url:"https://www.thestandard.com.hk/innovation/article/341654/SpaceXAI-to-launch-Grok-47-model-in-10-days-to-outpace-rivals" },
-{ id:"bz-512", date:"2026-08-31",
-    source:{ name:"AMD / Cisco / HUMAIN", handle:"AMD", platform:"web", kind:"lab" },
-    text:"AMD, Cisco, and Saudi AI firm HUMAIN announced their AMD Instinct MI355X GPU infrastructure, networked on Cisco Silicon One, is now live and serving HUMAIN's GPU-as-a-service customers in Saudi Arabia -- the first production phase of a joint venture the three companies plan to scale to 1 gigawatt of AI infrastructure by 2030, with 250 MW more due in the next phase starting 2027.",
-    why:"A non-Nvidia GPU stack going into live commercial service, in a Gulf sovereign AI buildout specifically, is a concrete data point in a fight AMD has mostly been fighting on roadmap slides -- and it ties Cisco's own networking silicon to that bet rather than just AMD's chips.",
-    heat:54, topics:["amd","cisco","humain","saudi arabia","instinct mi355x","gpu","sovereign ai","data centers"],
-    url:"https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live" },
-{ id:"bz-513", date:"2026-08-27",
-    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
-    text:"Anthropic previewed a Model Hardware Standard, a common driver interface letting AI agents discover and operate physical lab and factory equipment -- robotic arms, microscopes, liquid handlers -- through one standardized 'read/write' protocol instead of fragmented vendor APIs. Early testers: Genentech automated a protein-assay procedure across three connected devices, and Carnegie Mellon researchers say drug-discovery experiments ran roughly three times faster.",
-    why:"Every AI-agent push so far has been about software acting on software; a standard letting the same agent stack address lab hardware directly moves the 'agents on infra' idea from robotics-company demos into a protocol other labs and manufacturers can adopt without custom integration work.",
-    heat:56, topics:["anthropic","model hardware standard","robotics","lab automation","agents","genentech","carnegie mellon"],
-    url:"https://www.anthropic.com/news/model-hardware-standard-research-preview" }
+    url:"https://www.thestandard.com.hk/innovation/article/341654/SpaceXAI-to-launch-Grok-47-model-in-10-days-to-outpace-rivals" }
 ];
