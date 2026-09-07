@@ -101,6 +101,9 @@ window.RTFC_FIGURES = {
     { id:"inf-anthropic-nscale", kind:"infra-commitment-usd", value:45,
       label:"Anthropic / Nscale, West Virginia", slug:"anthropic-nscale-45-billion-compute-deal",
       note:"A 6-year compute lease at one campus, due online late 2027 — the identical headline number as the SpaceX figure above, over twice the term and roughly half the annual rate." },
+    { id:"inf-anthropic-fluidstack", kind:"infra-commitment-usd", value:50,
+      label:"Anthropic / Fluidstack, Texas + New York data centers", slug:"fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed",
+      note:"Anthropic's own confirmed investment figure for two custom-built sites, announced Nov. 12, 2025. How much of the $50B flows to Fluidstack itself versus land, power and construction elsewhere is not broken out." },
 
     // ---- closed raises (USD B) ----
     { id:"raise-cxmt-ipo", kind:"funding-raise-usd", value:8.6,

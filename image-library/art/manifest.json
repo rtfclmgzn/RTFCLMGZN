@@ -3151,7 +3151,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Luminous-Data-Tides-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed",
+     "used_at": "2026-09-07"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-prism-01",

@@ -14179,5 +14179,103 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-07T19:20:04Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed",
+    "ts": "2026-09-07T19:52:05Z",
+    "export": {
+      "article_id": "newsroom-fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed",
+      "url": "https://rtfclmgzn.com/article/fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed",
+      "headline": "Fluidstack reportedly closed $1.5 billion at an $18 billion valuation -- for a company that owns no chips of its own",
+      "hook": "Fluidstack reportedly closed $1.5B at an $18B valuation, doubling its price in two months -- for a company that owns none of the chips or most of the sites its business runs through.",
+      "key_facts": [
+        "Reported $1.5B round led by Jane Street values Fluidstack at $18B, unconfirmed by the company itself.",
+        "A TeraWulf SEC filing shows Fluidstack paid ~$450M for its stake in one Anthropic data-center site.",
+        "That site is part of Anthropic's confirmed $50 billion infrastructure commitment, announced Nov. 2025."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Fluidstack reportedly closed $1.5B at an $18B valuation -- more than double its price two months ago. The catch: the company owns no chips of its own, and hasn't confirmed a single number in the new round.",
+        "reply_copy": "The paper trail:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T00:42:55Z",
+        "copy": "An $18B price against Fluidstack's most reliably dated revenue figure -- $180M ARR in Dec. 2024 -- works out to roughly 100x revenue. A different, unexplained figure would cut that to 27x. Neither comes from the company itself.",
+        "reply_copy": "The numbers, scoped:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A company that owns none of its own chips, just priced at $18 billion.\n\nFluidstack -- the \"neocloud\" building Anthropic's newest data centers -- reportedly closed a $1.5B round led by Jane Street, more than doubling its price in two months.\n\nA SEC filing shows what one piece of that business actually costs: ~$450M for a majority stake in a Texas site. The $18B number itself? Still unconfirmed by the company.\n\nWe trace every number back to its source -- and find a real conflict in how big Fluidstack's revenue actually is.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters",
+          "#VentureCapital",
+          "#Anthropic",
+          "#TechNews",
+          "#Funding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Fluidstack, the AI-infrastructure company that builds and runs GPU data centers for Anthropic and other labs, has reportedly closed a $1.5 billion round led by Jane Street Capital at an $18 billion valuation -- more than double its price two months ago, according to Crunchbase News, Forbes and Tech Times.\n\nWhat makes the number notable: Fluidstack owns no chips of its own, and it doesn't own most of the data-center sites it operates through either -- it buys stakes in, or contracts into, sites other companies already built. A TeraWulf SEC filing shows exactly what that costs in one case: roughly $450 million for a majority stake in a Texas site tied to Anthropic's confirmed $50 billion infrastructure commitment.\n\nThe $18 billion figure itself, though, has no company confirmation behind it -- and the reporting on Fluidstack's actual revenue doesn't agree with itself either. We lay out what's confirmed, what's only reported, and where the sourcing conflicts.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Fluidstack reportedly closed $1.5B at an $18B valuation, doubling its price in two months -- for a company that owns no chips and little of the infrastructure it runs. A TeraWulf SEC filing shows what one piece of its Anthropic deal actually costs. The $18B figure itself? Still unconfirmed by Fluidstack.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T00:42:55Z",
+        "copy": "The revenue math on Fluidstack's new $18B price doesn't hold together cleanly: one dated research estimate puts ARR at $180M, implying ~100x revenue. A separate, unexplained figure would cut that to 27x. We ran the sourcecheck.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Fluidstack: $18B valuation, zero chips owned, and a funding round the company itself hasn't confirmed. A SEC filing on its Texas site is the clearest paper trail in the whole story.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
