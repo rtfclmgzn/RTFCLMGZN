@@ -97,6 +97,8 @@ window.RTFC_ENTITIES = {
       kind:"model family", access:"closed" },
 
     // --- Meta ---
+    { re:/\bMuse Spark 1\.3\b/i, name:"Muse Spark 1.3", maker:"Meta", makerKey:"meta",
+      kind:"frontier model", access:"partial" },
     { re:/\bMuse Spark 1\.2\b/i, name:"Muse Spark 1.2", maker:"Meta", makerKey:"meta",
       kind:"frontier model", access:"partial" },
     { re:/\bMuse Spark 1\.1\b/i, name:"Muse Spark 1.1", maker:"Meta", makerKey:"meta",
