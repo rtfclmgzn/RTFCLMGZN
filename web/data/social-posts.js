@@ -13998,5 +13998,178 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-06T13:59:12Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-microsoft-nyt-summary-judgment-verbatim-count",
+    "ts": "2026-09-07T15:41:06Z",
+    "export": {
+      "article_id": "newsroom-openai-microsoft-nyt-summary-judgment-verbatim-count",
+      "url": "https://rtfclmgzn.com/article/openai-microsoft-nyt-summary-judgment-verbatim-count",
+      "headline": "OpenAI counted 24 verbatim outputs in 20 million ChatGPT logs. The publishers suing it are counting 10.8 million infringed works.",
+      "hook": "OpenAI's own expert found 24 verbatim passages in a 20-million-chat sample; the publishers suing it count 10.8 million infringed works -- and both numbers are true at once, because they're not measuring the same thing.",
+      "key_facts": [
+        "OpenAI and Microsoft moved for summary judgment September 4 in the consolidated NYT-led copyright docket.",
+        "OpenAI's expert found 24 verbatim passages in 20 million sampled ChatGPT logs -- a 0.00012% rate.",
+        "Publishers count 10.8 million works copied across acquisition, training, and output stages."
+      ],
+      "tone": "composed, legally precise",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-openai-microsoft-nyt-summary-judgment-verbatim-count.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "copy": "OpenAI's own expert found 24 verbatim passages in 20 million sampled ChatGPT logs. The publishers suing it count 10.8 million infringed works. Same case, same filing day -- two very different definitions of \"copied.\"",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AICopyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-07T20:41:06Z",
+        "copy": "The Times' own count inside the case's 10.8M-works figure: 6,030,928 articles, including a 1.8M-piece corpus it says OpenAI used without a license. The other four plaintiffs make up the rest.",
+        "reply_copy": "What each number covers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AICopyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "24 verbatim passages. 10.8 million infringed works. Same lawsuit.\n\nOpenAI and Microsoft filed for summary judgment September 4 against The New York Times and four other publishers -- betting the case on how rarely ChatGPT reproduces text word-for-word. The publishers are betting on what went into training the model in the first place.\n\nWe broke down what each headline number in this case actually counts.",
+        "hashtags": [
+          "#OpenAI",
+          "#Microsoft",
+          "#NewYorkTimes",
+          "#AICopyright",
+          "#Copyright",
+          "#AILaw",
+          "#TechNews",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Same court case, two very different numbers.\n\nOpenAI's own expert sampled 20 million ChatGPT conversation logs and found 24 instances of verbatim text reproduction -- a rate of 0.00012%. The publishers suing OpenAI and Microsoft, led by The New York Times, say 10.8 million of their works were copied -- not at the moment a chatbot answers, but when the model was built.\n\nBoth sides filed for summary judgment September 4 in the consolidated copyright docket before Judge Sidney H. Stein. We laid out what each of those headline numbers actually covers, and what a ruling either way would change.",
+        "hashtags": [
+          "#OpenAI",
+          "#AICopyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Twenty-four sentences and ten million works are both real numbers in the same case file -- they just aren't measuring the same thing. OpenAI and the publishers suing it (NYT, Daily News, Ziff Davis, CIR, The Intercept) filed dueling summary judgment motions Sept 4. We scoped what each headline figure actually counts.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-07T20:41:06Z",
+        "copy": "OpenAI's market-harm argument: the Times' ad revenue rose 20.7% and subscribers passed 12M since ChatGPT launched. The Times' actual claim was never that it's losing money today -- it's that AI answers substitute for the visit itself, a harm a rising revenue number can't really prove or disprove either way.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI: our model reproduced text verbatim 24 times in 20M sampled chats. NYT et al: we count 10.8M works copied at training. Same case, same day (Sept 4), two different definitions of \"copied.\"",
+        "hashtags": [
+          "#AI",
+          "#Copyright",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-gemini-spark-google-photos-agent-control",
+    "ts": "2026-09-07T15:44:58Z",
+    "export": {
+      "article_id": "newsroom-gemini-spark-google-photos-agent-control",
+      "url": "https://rtfclmgzn.com/article/gemini-spark-google-photos-agent-control",
+      "headline": "Gemini Spark can now edit, organize, and share your Google Photos library on its own",
+      "hook": "Google's Gemini Spark agent can now search, edit, and organize your Google Photos library on its own -- rolling out to US Pro/Ultra subscribers now.",
+      "key_facts": [
+        "Gemini Spark can search, edit, curate, and share a Google Photos library from natural-language requests.",
+        "Announced September 3 by Google Photos lead Shimrit Ben-Yair; rolling out to US Gemini AI Pro/Ultra subscribers.",
+        "It can also turn photographed details, like a flyer, into a calendar entry."
+      ],
+      "tone": "energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-gemini-spark-google-photos-agent-control.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "copy": "Gemini Spark can now search, edit, and organize your Google Photos library on its own -- even turn a photographed concert flyer into a calendar event. Rolling out now to US Pro/Ultra subscribers.",
+        "reply_copy": "How it works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Google",
+          "#GeminiAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Your photo library, run by an agent.\n\nGoogle's Gemini Spark can now search, curate, and edit your Google Photos -- build a shared album, clean up duplicates, even turn a photographed flyer into a calendar event automatically.\n\nRolling out now to Gemini AI Pro/Ultra subscribers in the US. Here's what it can (and can't) do yet.",
+        "hashtags": [
+          "#Google",
+          "#GooglePhotos",
+          "#GeminiAI",
+          "#AIAgent",
+          "#TechNews",
+          "#ProductivityAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google is handing its Gemini Spark agent the keys to your Google Photos library.\n\nStarting this week, Gemini AI Pro and Ultra subscribers in the US can ask Spark to search their library, build and share albums, run quick edits, or turn a photographed flyer into a calendar entry -- all from a plain-language request. Edits save as new copies, new albums are private by default, and Spark asks before sharing anything.\n\nWe walk through what's actually new here, and why handing an agent standing access to one of the most personal datasets Google holds is a bigger ask than it looks.",
+        "hashtags": [
+          "#Google",
+          "#GeminiAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini Spark can now run your Google Photos library: search, curate, edit, build albums, even turn a flyer photo into a calendar event. Rolling out to US Pro/Ultra subscribers now, English only. One more app added to an agent's reach -- except this one holds your most personal dataset.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Google's Gemini Spark agent now gets Photos access: search, edit, album-building, and pulling calendar events out of a photographed flyer. US Pro/Ultra subscribers only for now.",
+        "hashtags": [
+          "#Google",
+          "#AI",
+          "#GeminiAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

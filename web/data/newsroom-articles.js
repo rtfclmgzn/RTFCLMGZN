@@ -47678,6 +47678,415 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Reports OpenAI's own system-card admission plainly, distinguishes it clearly from the separately-published Critical-tier cyber disclosure from the same launch, and states the candor-versus-unsolved-problem tension explicitly rather than resolving it one way."
       }
     }
+  },
+  {
+    "slug": "openai-microsoft-nyt-summary-judgment-verbatim-count",
+    "title": "OpenAI counted 24 verbatim outputs in 20 million ChatGPT logs. The publishers suing it are counting 10.8 million infringed works.",
+    "dek": "Dueling summary-judgment motions filed September 4 in the consolidated New York Times-led copyright docket don't really disagree on the underlying numbers so much as on what those numbers measure -- one side counting reproduction at the moment a chatbot answers, the other counting every article it says went into building the model in the first place. Both sides have asked for oral argument; Judge Sidney H. Stein hasn't scheduled one.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether Judge Stein grants oral argument on the summary judgment motions.",
+        "text": "Both OpenAI/Microsoft and the publisher plaintiffs asked for it in their filings; no date is set. A hearing would be the first public airing of how the judge is actually weighing the two framings against each other."
+      },
+      {
+        "label": "Watch for a ruling on training-stage copying specifically, separate from the output-reproduction question.",
+        "text": "OpenAI's 24-instance figure only answers whether ChatGPT's answers themselves infringe. It says nothing about whether the training run that built the model did -- the question Judge Stein's March 2025 order already let survive dismissal once."
+      },
+      {
+        "label": "Watch the roughly 400-publisher coalition suit filed in June 2026 for any sign it's pausing to see how this ruling lands.",
+        "text": "A docket-wide finding on fair use here would arrive before that case is anywhere near summary judgment, and would shape whether publishers who haven't sued yet see litigation or a licensing deal as the better bet."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI and Microsoft ask judge to end 10.8 million-article copyright case",
+        "url": "https://ppc.land/openai-and-microsoft-ask-judge-to-end-10-8-million-article-copyright-case/",
+        "outlet": "PPC Land",
+        "kind": "reporting"
+      },
+      {
+        "label": "OpenAI asks a judge to end the 10.8 million-article copyright case",
+        "url": "https://ppc.land/openai-asks-a-judge-to-end-the-10-8-million-article-copyright-case/",
+        "outlet": "PPC Land",
+        "kind": "reporting"
+      },
+      {
+        "label": "Summary judgment briefing starts in OpenAI MDL Litigation before Judge Stein",
+        "url": "https://chatgptiseatingtheworld.com/2026/09/04/summary-judgment-briefing-starts-in-openai-mdl-litigation-before-judge-stein/",
+        "outlet": "ChatGPT Is Eating The World",
+        "kind": "reporting"
+      },
+      {
+        "label": "In Re: OpenAI, Inc. Copyright Infringement Litigation, MDL No. 3143 -- docket",
+        "url": "https://www.courtlistener.com/docket/69879510/in-re-openai-inc-copyright-infringement-litigation/",
+        "outlet": "CourtListener",
+        "kind": "filing_or_official"
+      },
+      {
+        "label": "The New York Times v. Microsoft and OpenAI",
+        "url": "https://en.wikipedia.org/wiki/The_New_York_Times_v._Microsoft_and_OpenAI",
+        "outlet": "Wikipedia",
+        "kind": "historical_context"
+      },
+      {
+        "label": "Anthropic's landmark $1.5B copyright settlement is approved",
+        "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Northern District of California Judge Rules That Meta's Training of AI Models Is Fair Use",
+        "url": "https://www.goodwinlaw.com/en/insights/publications/2025/06/alerts-practices-aiml-northern-district-of-california-judge-rules",
+        "outlet": "Goodwin",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "OpenAI and Microsoft moved for summary judgment September 4 in the consolidated NYT-led copyright docket.",
+      "OpenAI's expert found 24 verbatim passages sampling 20 million ChatGPT logs -- a 0.00012% rate.",
+      "Publishers count 10.8 million works they say were copied across acquisition, training, and output stages.",
+      "The DOJ's September 2 fair-use brief already sits in the same case record.",
+      "Caveat: a low output-reproduction rate doesn't resolve whether training itself infringed -- that's still Judge Stein's call."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI and Microsoft asked a federal judge on September 4 to end, without a trial, the copyright case The New York Times filed against them in December 2023 -- and the number at the center of their argument is small enough to state in one sentence. Sampling 20 million ChatGPT conversation logs turned over in discovery, OpenAI's own expert found **24 instances** of verbatim reproduction of a plaintiff's article, the longest running 29 and 43 words -- a reproduction rate of 0.00012%. The publishers on the other side of the same filing are working from a very different number: they say **10.8 million** of their works were copied, not at the moment a chatbot answers, but earlier, when the model was built.",
+        "citation_urls": [
+          "https://ppc.land/openai-and-microsoft-ask-judge-to-end-10-8-million-article-copyright-case/",
+          "https://ppc.land/openai-asks-a-judge-to-end-the-10-8-million-article-copyright-case/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The motions land in __In re: OpenAI, Inc., Copyright Infringement Litigation__ (MDL No. 3143), the __multi-district litigation__ docket in the Southern District of New York that consolidates the Times' suit with more than a dozen others -- Daily News, Ziff Davis, the Center for Investigative Reporting, The Intercept -- all before U.S. District Judge Sidney H. Stein. It's the same docket [the Justice Department filed a statement of interest in](/article/doj-openai-fair-use-statement-nyt-copyright-mdl) two days earlier, arguing training itself is transformative __fair use__; the Friday deadline that piece flagged was this filing.",
+        "citation_urls": [
+          "https://www.courtlistener.com/docket/69879510/in-re-openai-inc-copyright-infringement-litigation/",
+          "https://ppc.land/openai-and-microsoft-ask-judge-to-end-10-8-million-article-copyright-case/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "title": "How the case reached a summary-judgment fight",
+          "items": [
+            {
+              "when": "Dec 27, 2023",
+              "what": "The Times sues OpenAI and Microsoft in the Southern District of New York.",
+              "source": "https://en.wikipedia.org/wiki/The_New_York_Times_v._Microsoft_and_OpenAI"
+            },
+            {
+              "when": "Mar 26, 2025",
+              "what": "Judge Stein denies most motions to dismiss, letting the core copying claims proceed.",
+              "source": "https://en.wikipedia.org/wiki/The_New_York_Times_v._Microsoft_and_OpenAI"
+            },
+            {
+              "when": "2025",
+              "what": "The Daily News, Ziff Davis, CIR, and Intercept suits are folded into the same docket as MDL No. 3143.",
+              "source": "https://www.courtlistener.com/docket/69879510/in-re-openai-inc-copyright-infringement-litigation/"
+            },
+            {
+              "when": "Sep 2, 2026",
+              "what": "The DOJ files a statement of interest backing OpenAI's fair-use defense.",
+              "source": "https://ppc.land/openai-and-microsoft-ask-judge-to-end-10-8-million-article-copyright-case/"
+            },
+            {
+              "when": "Sep 4, 2026",
+              "what": "OpenAI, Microsoft, and the publisher plaintiffs each file for summary judgment.",
+              "hi": true,
+              "source": "https://ppc.land/openai-and-microsoft-ask-judge-to-end-10-8-million-article-copyright-case/"
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "What OpenAI's own filing says it found"
+      },
+      {
+        "type": "p",
+        "text": "%%24|verbatim passages OpenAI's own expert found across 20 million sampled ChatGPT conversations%% is the entire evidentiary base for OpenAI's argument that the product itself doesn't infringe, whatever happened during training. Its motion argues that number is ==too small to support a claim that ChatGPT's outputs are the problem, whatever a court eventually decides about training itself==. The company also leans on timing: it says its ChatGPT-User crawler agent was disclosed in March 2023, more than a year before most plaintiff publishers moved to block it via robots.txt in April 2024, and argues the crawling before that point was impliedly licensed. On the separate DMCA claim, OpenAI's filing says 92.7% of the outputs publishers flagged as unauthorized reproductions have an obvious, traceable source rather than evidence of copyright-management-information stripping.",
+        "citation_urls": [
+          "https://ppc.land/openai-asks-a-judge-to-end-the-10-8-million-article-copyright-case/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What the publishers say a court should still weigh"
+      },
+      {
+        "type": "p",
+        "text": "The plaintiffs' motion starts from a different place entirely: not what a chatbot's answer looks like today, but what went into building it. Their filing asserts **10.8 million** works were copied across four stages they describe separately -- acquisition, training, \"grounding\" (retrieval at answer time), and output -- of which OpenAI's verbatim-count defense above addresses only the last. {{note: The Times' own count inside that combined figure is more specific: 6,030,928 individual articles, including a New York Times Annotated Corpus of 1.8 million pieces the paper says OpenAI used without a license. The remaining plaintiffs' works make up the rest of the 10.8 million.}} The publishers also point to conduct the reproduction-rate framing doesn't capture: custom GPTs built on the models -- named in the filing as News Summarizer, Ace, and NYTimesGPT, plus a separate paywall-bypass tool -- and a crawl-to-referral ratio they calculate at **1,500 to 1** by June 2025, meaning OpenAI's crawlers hit their sites roughly 1,500 times for every reader ChatGPT sent back.",
+        "citation_urls": [
+          "https://ppc.land/openai-asks-a-judge-to-end-the-10-8-million-article-copyright-case/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What each headline number in this case actually covers",
+          "items": [
+            {
+              "value": "10.8M",
+              "unit": "all five plaintiff groups",
+              "label": "Works the publisher coalition says were copied",
+              "includes": "Every article the five plaintiff groups assert was used at any of the four alleged infringement stages",
+              "excludes": "Any court finding -- this is the plaintiffs' own claimed count, not an adjudicated one",
+              "note": "Filed Sept. 4, 2026, in the plaintiffs' own summary judgment motion."
+            },
+            {
+              "value": "6,030,928",
+              "unit": "the Times alone",
+              "label": "The Times' own asserted article count inside that total",
+              "includes": "Times-only articles, including its 1.8M-piece Annotated Corpus",
+              "excludes": "Daily News, Ziff Davis, CIR, and Intercept works",
+              "note": "Part of, not additional to, the 10.8M figure."
+            },
+            {
+              "value": "24",
+              "unit": "OpenAI's discovery sample",
+              "label": "Verbatim passages OpenAI's expert found",
+              "includes": "Output-stage reproduction only, in a 20-million-conversation sample from discovery",
+              "excludes": "Any copying alleged at the acquisition or training stage",
+              "note": "Longest passages ran 29 and 43 words."
+            },
+            {
+              "value": "0.00012%",
+              "unit": "computed",
+              "label": "Reproduction rate implied by 24 in 20 million",
+              "includes": "The instances-per-sampled-conversation rate, expressed as a percentage",
+              "excludes": "Any weighting for how often a plaintiff's specific work appeared in the sample",
+              "note": "Arithmetic: the 24 instances divided by the 20 million sampled conversations. Plaintiffs' own experts found comparable rates for their own works, 0.00011% to 0.000002%, using the same sampling method."
+            }
+          ],
+          "source": "OpenAI/Microsoft and publisher-plaintiff summary judgment motions, Sept. 4, 2026, as reported by PPC Land"
+        }
+      },
+      {
+        "type": "p",
+        "text": "OpenAI's brief adds a market-harm argument the copyright statute treats as its own fair-use factor: the Times' digital advertising revenue rose 20.7% to $114 million in the second quarter of 2026, and subscriptions passed 12 million on the way to a stated target of 15 million by 2027 -- numbers OpenAI cites as evidence the paper isn't losing readers or revenue to ChatGPT, whatever the training-stage copying amounted to. The Times' suit was never built on a claim that it's losing money today, though; it argues AI-generated answers substitute for the visit itself, a harm that would show up as suppressed growth rather than an outright decline -- ==a claim a revenue number rising is unable to disprove or confirm from the outside==.",
+        "citation_urls": [
+          "https://ppc.land/openai-asks-a-judge-to-end-the-10-8-million-article-copyright-case/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "title": "What a ruling either way actually changes",
+          "items": [
+            {
+              "who": "The Times, Daily News, Ziff Davis, CIR, and Intercept",
+              "tone": "loses",
+              "what": "A ruling that training itself is fair use would end their strongest claim without a jury ever seeing the evidence compiled over two years of discovery."
+            },
+            {
+              "who": "OpenAI and Microsoft",
+              "tone": "gains",
+              "what": "Summary judgment on the core question would resolve the single largest legal exposure either company carries from its training data -- in this case, and as precedent for others."
+            },
+            {
+              "who": "Publishers who haven't sued yet",
+              "tone": "exposed",
+              "what": "A docket-wide fair-use finding here would settle the core legal question before any other case gets this far, shifting their leverage toward a licensing deal instead of a lawsuit."
+            },
+            {
+              "who": "Judge Stein himself",
+              "tone": "unclear",
+              "what": "His March 2025 order already found the Times' core copying claims strong enough to survive a motion to dismiss -- summary judgment is a different, more fact-dependent test than that was."
+            }
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "text": "Twenty-four sentences and ten million works are both real figures in the same case file -- they just aren't measuring the same thing."
+      },
+      {
+        "type": "p",
+        "text": "Both sides asked for oral argument; as of this filing, Judge Stein hasn't scheduled one. The two outcomes on record elsewhere in AI copyright litigation sit at opposite ends of what could happen next: in a separate authors' case, Judge Vince Chhabria granted Meta summary judgment on training-stage fair use in June 2025, largely because the plaintiffs there couldn't show market dilution -- the exact question OpenAI's revenue numbers above are aimed at. Anthropic chose not to test that question in court at all; it settled a related books-piracy claim for $1.5 billion, a deal a federal judge approved on July 20, 2026. A finding that ends the case, or a number large enough to make every other AI company's general counsel read this docket closely -- that's the range Stein is now working inside.",
+        "citation_urls": [
+          "https://www.goodwinlaw.com/en/insights/publications/2025/06/alerts-practices-aiml-northern-district-of-california-judge-rules",
+          "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+        ]
+      }
+    ],
+    "id": "newsroom-openai-microsoft-nyt-summary-judgment-verbatim-count",
+    "image": "assets/img/newsroom/newsroom-openai-microsoft-nyt-summary-judgment-verbatim-count.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-07T15:41:06Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "7 sources: 1 filing-class (CourtListener docket for MDL No. 3143), 1 historical background (Wikipedia case page, used only for pre-2026 procedural dates already independent of this filing), 5 independent reporting threads (PPC Land's two pieces on the Sept 4 motions -- treated as one outlet/one thread -- ChatGPT Is Eating The World's separate coverage of the same briefing, TechCrunch on the Anthropic settlement's approval date, and Goodwin's law-firm client alert on the Meta ruling). Deliberately did not re-cite the Sept 2 DOJ statement of interest as a fresh evidence thread since it's the subject of this newsroom's own prior article, cross-linked instead of re-sourced."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Checked the Anthropic settlement date directly rather than trusting PPC Land's 'September 2025' reference, which conflicts with TechCrunch/Marketplace/Courthouse News reporting on the actual sequence: agreed August 2025, court-approved July 20, 2026. Used the verified date and did not carry PPC Land's date into the piece. Checked the Meta ruling independently (Kadrey v. Meta, N.D. Cal., Judge Chhabria, June 25, 2025, summary judgment for Meta on training fair use, market-dilution failure dispositive) rather than relying on PPC Land's one-line characterization. Confirmed openai and microsoft both already have companies.js entries; no model launch in this piece, so no entities.js action. No dictionary term forced -- no existing entry covers 'fair use' or 'MDL'."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean, including the cross-link to the prior DOJ article (phrased as 'the same docket the Justice Department filed a statement of interest in', not 'the docket we covered'). Mandatory-scrutiny trigger (legal proceedings, compliance-rulebook.md #3) fires -- confirmed both sides' figures are attributed to their own filings, not adopted as this desk's findings, and the piece states what a ruling would change rather than predicting one. Critique found the first draft's market-harm paragraph read as endorsing OpenAI's no-harm argument; revised to state the Times' actual theory (substitution, not decline) alongside it so neither side's framing stands unanswered. TL;DR final bullet carries the load-bearing caveat -- a low output-reproduction rate doesn't resolve the training-stage question."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "timeline's 5 items each carry a real date and source, no vague 'recently'. ledger's 4 items (10.8M, 6,030,928, 24, 0.00012%) each appear in the prose above them, and the computed 0.00012% states its own arithmetic in its includes field. stakes' 4 items each name a specific party, not 'the industry' or 'consumers'; 'unclear' used honestly for Judge Stein's own position rather than guessed. No component carries a top-level text field (the quote block's text is the exempt body-block type). No two components sit adjacent -- each is preceded and followed by prose. First block is a p."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 7 sources across 5 independent threads plus filing and historical classes, clears the synthesis floor (3+) with a primary-adjacent filing citation (CourtListener docket) and real reconciliation work: the 10.8M-vs-24 framing conflict is resolved by ledger scoping rather than picking a side, and the market-harm paragraph states both readings. Body runs approximately 1,050 words, within the 800-1,900 synthesis band. 3 components (timeline, ledger, stakes) clear the synthesis minimum of 2, with ledger carrying the data. Mandatory-scrutiny trigger (legal proceedings) fires and is handled: both sides' claims are attributed to their own filings, not asserted as fact; disclaimer none (no health/financial claim present)."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A genuine follow-up to this newsroom's own Sept 3 DOJ-brief piece, not a restatement of it -- new filings, new numbers, and a reconciliation (what each headline figure in the case actually counts) a wire rewrite of either side's press statement wouldn't do. Legal-proceedings mandatory-scrutiny trigger handled: sourced-neutral throughout, both sides' figures attributed to their own filings."
+      }
+    },
+    "publishedAt": "2026-09-07T15:41:06Z"
+  },
+  {
+    "slug": "gemini-spark-google-photos-agent-control",
+    "title": "Gemini Spark can now edit, organize, and share your Google Photos library on its own",
+    "dek": "Google is rolling out Photos access for its Gemini Spark agent to Gemini AI Pro and Ultra subscribers in the US, starting September 3 -- letting it search a library, build and share albums, run quick edits, and turn details from a photographed flyer into a calendar entry, all from a natural-language request.",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether the rollout expands past US/English -- it's the only market live at launch.",
+        "text": "Google Photos runs in well over a hundred countries; a Spark feature that stays US-only for long would be unusual for a consumer AI push this broad."
+      },
+      {
+        "label": "Watch how Google handles the sharing-permission edge cases as more people connect Spark to years of private photos.",
+        "text": "The agent is built to ask before sending an album link or an email -- worth watching whether that confirmation step holds up once the feature is out of the announcement post and into daily use at scale."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Shimrit Ben-Yair (Google Photos lead) on X, announcing the rollout",
+        "url": "https://x.com/shimritby/status/2095620253585993826",
+        "outlet": "X / Shimrit Ben-Yair",
+        "kind": "primary_company"
+      },
+      {
+        "label": "Gemini Spark rolling out Google Photos control for automated editing, sharing, & more",
+        "url": "https://9to5google.com/2026/09/03/gemini-spark-google-photos/",
+        "outlet": "9to5Google",
+        "kind": "reporting"
+      },
+      {
+        "label": "Google's Gemini Spark can now manage your Google Photos library",
+        "url": "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Gemini Spark can now search, edit, organize, and share a user's Google Photos library.",
+      "Google Photos lead Shimrit Ben-Yair announced the rollout September 3 on X.",
+      "It can also turn photographed details, like a flyer, into a calendar entry.",
+      "Caveat: it's limited at launch to US-based Gemini AI Pro and Ultra subscribers, in English."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Google** is connecting its __Gemini Spark__ agent directly to Google Photos, giving it the ability to search, edit, curate, and share a user's library from a plain-language request instead of the app's manual tools. Google Photos lead Shimrit Ben-Yair announced the rollout September 3, framing it around her own library of 143,206 photos and videos as the kind of scale a person can't sort through by hand. The capability is rolling out gradually over the coming weeks to eligible **Gemini AI Pro and Ultra** subscribers in the US, in English only.",
+        "citation_urls": [
+          "https://x.com/shimritby/status/2095620253585993826",
+          "https://9to5google.com/2026/09/03/gemini-spark-google-photos/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "What Spark can do in Photos",
+          "items": [
+            {
+              "label": "Search & curate",
+              "value": "Find shots by subject, location, date, or event; filter duplicates"
+            },
+            {
+              "label": "Edit",
+              "value": "Quick fixes and stylized edits",
+              "note": "always saved as a new copy, never overwrites the original"
+            },
+            {
+              "label": "Organize",
+              "value": "Create and share albums",
+              "note": "new albums are private by default"
+            },
+            {
+              "label": "Cross-app actions",
+              "value": "e.g. turn a photographed flyer into a calendar entry"
+            },
+            {
+              "label": "Availability at launch",
+              "value": "US only, English only, Gemini AI Pro/Ultra"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The cross-app step is the part that goes past a smarter photo-search box: Ben-Yair's own example has Spark told to \"every weekend, find my top photos of food, build a collage, and add it to a new album called 'What my camera ate this week'\" -- a scheduled, multi-step, recurring instruction rather than a single query. Spark can also pull structured information out of an image and act on it elsewhere in Google's ecosystem, like reading a concert flyer's date and venue and creating the calendar event itself. Edits create a new copy rather than touching the original, new albums are private unless shared deliberately, and Google says Spark asks permission before sending a link or an email on the user's behalf.",
+        "citation_urls": [
+          "https://9to5google.com/2026/09/03/gemini-spark-google-photos/",
+          "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "It's a narrow expansion on paper -- one more app added to an existing agent's reach -- but Photos is one of the largest, most personal datasets Google holds on any given user, which is exactly why handing an agent standing access to curate and share it is a meaningfully different ask than doing the same for, say, a calendar or a document."
+      }
+    ],
+    "id": "newsroom-gemini-spark-google-photos-agent-control",
+    "image": "assets/img/newsroom/newsroom-gemini-spark-google-photos-agent-control.jpg",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-07T15:44:58Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "3 sources: 1 primary (Google Photos lead Shimrit Ben-Yair's own X announcement), 2 independent reporting confirmations (9to5Google, TechCrunch) covering the same September 3 rollout with consistent details. One event, one primary source plus confirmation -- clears the brief floor (1-2 threads), does not warrant synthesis."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Cross-checked the launch scope (US-only, English-only, Pro/Ultra tiers) and the privacy defaults (new copy on edit, private-by-default albums, permission-gated sharing) across both reporting sources -- consistent, no conflict to reconcile. No model launch in this piece (Spark and Gemini 3.x are already tracked elsewhere), so no entities.js/scoreboard action needed. companies.js already carries a google entry."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. No mandatory-scrutiny trigger fires (no health/financial/legal/accusatory/unverifiable-claim content). Critique found the first draft undersold the privacy defaults Google actually built in (new-copy edits, private albums, permission gate); revised the second paragraph to state them plainly rather than only listing capabilities. TL;DR final bullet carries the load-bearing caveat -- US/English-only at launch."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' 5 items each trace to the body text above and below it (search/curate, edit, organize, cross-app action, launch scope all stated in prose). No top-level text field on the component. Component is not adjacent to another component -- prose precedes and follows it. First block is a p."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 3 sources, 1 primary, clears the brief floor. Body runs approximately 330 words, within the 250-450 brief band. 1 component (keyfacts), meeting the brief minimum, chosen over a chart since this is a features/capabilities story with no measured series. No disclaimer needed."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Single clean brief: one primary announcement, two independent confirmations, no conflicting figures, no mandatory-scrutiny trigger. Component and apply block both earned rather than forced."
+      }
+    },
+    "publishedAt": "2026-09-07T15:44:58Z"
   }
 ]
 ;
