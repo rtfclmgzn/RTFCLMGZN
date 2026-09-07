@@ -649,6 +649,16 @@ this order, and mark it done here.
    found on top of the ones already ruled out. Did not force one. Same two
    next steps as above, still open.
 
+   PARTIAL, checked (2026-09-07T15:41 cycle) -- re-checked before writing
+   anything, since this cycle's own research/writing was already the
+   required news-side work; re-confirmed rather than assumed. Both
+   blockers unchanged: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` absent), and `which
+   wrangler` / `env | grep -i cloudflare` both return nothing on this
+   runner. No new `primer-issue.js`-only candidate found. Did not force
+   one. Same two next steps as the 2026-09-04/09-05 entries, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -749,6 +759,10 @@ credentials are available to read/write the Cloudflare KV namespace the payload 
 worked this cycle. The 2026-08-30 pre-researched sourcing for item 1 ("Act II · The Number") is still
 sitting in living-notes.md, ready for whichever cycle gets KV access, and has not been re-verified as still
 current since it was written.
+
+**Status (2026-09-07T15:41 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
+still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
