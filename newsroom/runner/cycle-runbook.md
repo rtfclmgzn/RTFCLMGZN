@@ -659,6 +659,17 @@ this order, and mark it done here.
    runner. No new `primer-issue.js`-only candidate found. Did not force
    one. Same two next steps as the 2026-09-04/09-05 entries, still open.
 
+   PARTIAL, checked (2026-09-08T00:32 cycle) -- re-checked before writing,
+   since this cycle's own two articles (Massachusetts AI-safety bill,
+   TCS/HyperVault India data center) were already the required news-side
+   work. Both blockers unchanged: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent), and `which wrangler` / `env | grep -i
+   cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found. Did not force one. Same two
+   next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -761,6 +772,10 @@ sitting in living-notes.md, ready for whichever cycle gets KV access, and has no
 current since it was written.
 
 **Status (2026-09-07T15:41 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
+still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
+
+**Status (2026-09-08T00:32 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
 still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
