@@ -53,9 +53,9 @@ window.RTFC_RESOURCES = [
     desc:"Our own machinery, in the open.",
     items:[
       { name:"The Primer", icon:"◈", desc:"Our field guide to the AI world — start here if you're new. Free.",
-        links:[{label:"Read",url:"#/read/primer"}] },
+        links:[{label:"Read",url:"/read/primer"}] },
       { name:"Operating transparency", icon:"▥", desc:"Every token and dollar this newsroom burns, live.",
-        links:[{label:"View",url:"#/usage"}] },
+        links:[{label:"View",url:"/usage"}] },
       { name:"RSS feed", icon:"⟳", desc:"Every article, machine-readable.",
         links:[{label:"Subscribe",url:"rss.xml"}] }
     ]

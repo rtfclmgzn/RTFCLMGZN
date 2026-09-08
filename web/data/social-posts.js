@@ -14671,5 +14671,183 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-08T16:47:09Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-nscale-3-5-billion-pre-ipo-financing-103-billion-backlog",
+    "ts": "2026-09-08T19:32:00Z",
+    "export": {
+      "article_id": "newsroom-nscale-3-5-billion-pre-ipo-financing-103-billion-backlog",
+      "url": "https://rtfclmgzn.com/article/nscale-3-5-billion-pre-ipo-financing-103-billion-backlog",
+      "headline": "Nscale is raising up to $3.5 billion before its IPO -- on a $103 billion number that isn't revenue",
+      "hook": "Nscale is pitching investors on a $103 billion backlog ahead of its IPO -- but the company's actual 2025 revenue was $33 million.",
+      "key_facts": [
+        "Nscale is in talks to raise up to $3.5 billion: $1.5B in convertible notes plus about $2B directly from Nvidia.",
+        "Its investor pitch cites a $103 billion contracted-revenue backlog, up from $51 billion a month earlier.",
+        "That backlog is future lease payments, not sales -- actual 2025 revenue was $33 million."
+      ],
+      "tone": "Brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/nscale-3-5-billion-pre-ipo-financing-103-billion-backlog.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nscale is pitching a $3.5B pre-IPO round on a $103B \"contracted revenue backlog.\" Its actual revenue for all of 2025: $33 million. That's not fraud -- it's what an infrastructure buildout looks like before the buildings exist. But it's not what $103B sounds like either.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-09T00:32:00Z",
+        "copy": "Nvidia's ~$2B stake in Nscale isn't unusual -- it's one line in a $99B AI-investment portfolio that was $7B a year ago, including the same $2B size at CoreWeave and Nebius. The chipmaker is financing a lot of the customers who buy its own GPUs.",
+        "reply_copy": "How that fits Nscale's own pitch:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nscale wants to raise $3.5 billion before its IPO.\n\nThe pitch leans on a $103 billion \"contracted revenue backlog\" -- up from $51 billion just a month earlier. Sounds enormous.\n\nHere's what it isn't: revenue. Nscale's actual 2025 revenue was $33 million. Its most recent quarter alone topped $100 million.\n\nThe gap is normal for a company selling multi-year leases on data centers that mostly don't exist yet. It's also not what \"$103 billion\" sounds like on an investor slide. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Nvidia",
+          "#IPO",
+          "#DataCenter",
+          "#TechNews",
+          "#Markets"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nscale, the British AI-infrastructure company behind Anthropic's $45 billion West Virginia compute lease, is now in talks to raise up to $3.5 billion ahead of a planned US listing -- $1.5B in convertible notes led by Third Point, plus roughly $2B directly from Nvidia.\n\nThe pitch to investors centers on one figure: a $103 billion contracted-revenue backlog, up from $51 billion just a month earlier. But that's future lease payments, not sales -- Nscale's actual revenue for all of 2025 was $33 million, and its most recent quarter topped $100 million. Recognizing well under 1% of a stated backlog per year is normal for a business selling leases on data centers still being built -- it's just not what the headline number implies.\n\nFull story:",
+        "hashtags": [
+          "#AI",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nscale is raising up to $3.5B before its IPO on a $103B backlog figure that isn't revenue -- actual 2025 revenue was $33M. The gap is normal for a data-center buildout still under construction. It's just not what the number sounds like on a pitch deck.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-09T00:32:00Z",
+        "copy": "Nvidia's ~$2B Nscale stake is one line in a $99B AI-investment portfolio, up from $7B a year ago. Same $2B size as its CoreWeave and Nebius stakes. Nvidia is increasingly financing the same customers buying its chips.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nscale wants $3.5B pre-IPO on a $103B \"backlog.\" Actual 2025 revenue: $33M. Not fraud -- just not what the number sounds like. Full reconciliation at the link.",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-baidu-xiaodu-super-agent-home-hardware-refresh",
+    "ts": "2026-09-08T19:32:30Z",
+    "export": {
+      "article_id": "newsroom-baidu-xiaodu-super-agent-home-hardware-refresh",
+      "url": "https://rtfclmgzn.com/article/baidu-xiaodu-super-agent-home-hardware-refresh",
+      "headline": "Baidu rebuilt its entire Xiaodu hardware line around one AI agent -- and gave the upgrade to owners who already bought in",
+      "hook": "Baidu just refreshed its whole Xiaodu smart-home lineup around one AI agent -- and is giving the upgrade to tens of millions of devices people already own, for free.",
+      "key_facts": [
+        "New smart display, camera, companion screen and speaker all run the upgraded Chaoneng ('Super') Xiaodu agent.",
+        "Tens of millions of already-sold Xiaodu devices get the same agent upgrade for free.",
+        "Pricing, detailed specs and any sales plan outside China were not disclosed at the event."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/baidu-xiaodu-super-agent-home-hardware-refresh.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Baidu just refreshed its entire Xiaodu smart-home lineup around one AI agent -- and is giving that same upgrade to tens of millions of devices people already own, for free. New displays, cameras and speakers are just the headline.",
+        "reply_copy": "What actually shipped:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#SmartHome"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Baidu's Xiaodu just refreshed its whole smart-home lineup: a new display, camera, companion screen and speaker, all running the upgraded \"Super Xiaodu\" agent.\n\nThe bigger move: tens of millions of devices people already own get the same agent upgrade for free -- not just the new hardware.\n\nWhat's still missing: pricing, full specs and any word on selling outside China. Full story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Baidu",
+          "#SmartHome",
+          "#China",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Baidu's Xiaodu unit used a Beijing event to refresh its entire home-hardware lineup around one upgraded AI agent, Chaoneng ('Super') Xiaodu: a new smart display, a home-monitoring camera, an updated companion screen for kids and elderly users, and a speaker.\n\nThe more interesting decision is what Baidu is doing for hardware it's already sold -- tens of millions of existing Xiaodu devices get the same agent upgrade for free, rather than confining it to the new lineup. Pricing, full specs and any plan to sell outside China weren't disclosed.\n\nFull story:",
+        "hashtags": [
+          "#AI",
+          "#SmartHome"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Baidu refreshed its whole Xiaodu smart-home lineup around one agent, Chaoneng Xiaodu -- and is pushing the same upgrade free to tens of millions of already-sold devices, not just the new hardware. Pricing and global availability: still undisclosed.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Baidu's Xiaodu refreshed its whole smart-home lineup around one AI agent, and is giving the same upgrade free to tens of millions of already-owned devices. New: display, camera, companion screen, speaker. Still missing: pricing, global availability.",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

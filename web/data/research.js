@@ -71,15 +71,15 @@ window.RTFC_RESEARCH = [
       {label:"Watch high-bandwidth memory like a market signal.", text:"HBM supply is the one variable that could put a floor under falling AI prices. If you're planning around cheap inference staying cheap, track memory output and the capex behind it — that's the leading indicator for whether the repricing continues or stalls."}
     ],
     links:[
-      {label:"The Scoreboard — live strength-vs-cost for every model", url:"#/scoreboard", note:"our own board, updated every edition"},
+      {label:"The Scoreboard — live strength-vs-cost for every model", url:"/scoreboard", note:"our own board, updated every edition"},
       {label:"Artificial Analysis — independent intelligence & price indices", url:"https://artificialanalysis.ai/", note:"the benchmark aggregator we anchor to"}
     ],
     sources:[
-      {label:"RTFCLMGZN Scoreboard — current strength/price board (Data Desk)", url:"#/scoreboard"},
+      {label:"RTFCLMGZN Scoreboard — current strength/price board (Data Desk)", url:"/scoreboard"},
       {label:"The Decoder — Grok 4.5 pricing vs. Fable 5 and GPT-5.5", url:"https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/"},
-      {label:"Our coverage — NVIDIA Rubin, the $650B capex wave, and the HBM crunch", url:"#/article/nvidia-rubin-early-capex-supercycle"},
-      {label:"Our coverage — the deployment war (labs pivot to services)", url:"#/article/the-deployment-war-eight-billion-dollar-admission"},
-      {label:"Our coverage — SK Hynix and the memory supercycle", url:"#/article/sk-hynix-nasdaq-memory-supercycle"}
+      {label:"Our coverage — NVIDIA Rubin, the $650B capex wave, and the HBM crunch", url:"/article/nvidia-rubin-early-capex-supercycle"},
+      {label:"Our coverage — the deployment war (labs pivot to services)", url:"/article/the-deployment-war-eight-billion-dollar-admission"},
+      {label:"Our coverage — SK Hynix and the memory supercycle", url:"/article/sk-hynix-nasdaq-memory-supercycle"}
     ],
     corrections:[],
     pipeline:{
