@@ -323,5 +323,17 @@ window.RTFC_BUZZ = [
     text:"Elon Musk said Grok 4.7 will launch around September 12, scaling to 2.1 trillion parameters from Grok 4.6's 1.5 trillion, with a supplemental training pass on SpaceX engineering, telemetry, and Starlink data aimed at engineering and reasoning tasks specifically.",
     why:"Training a general chat model on a sister company's proprietary rocket-engineering data is a distinct scaling strategy from buying more GPUs or more web text -- xAI is betting that domain-specific, hard-to-replicate internal data is now a bigger lever than raw parameter count alone.",
     heat:58, topics:["xai","grok","grok 4.7","spacex","training data","parameter count"],
-    url:"https://www.thestandard.com.hk/innovation/article/341654/SpaceXAI-to-launch-Grok-47-model-in-10-days-to-outpace-rivals" }
+    url:"https://www.thestandard.com.hk/innovation/article/341654/SpaceXAI-to-launch-Grok-47-model-in-10-days-to-outpace-rivals" },
+{ id:"bz-515", date:"2026-09-07",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic ran its Claude Mythos Preview against 281 open-source projects and generated 23,019 candidate vulnerabilities. External firms confirmed 90.8% of the 1,900 reviewed were real—yielding 1,596 verified vulnerability reports to maintainers and 88 advisories, of which 27 carry CVEs. The scale and confirmation rate demonstrate AI-discovered vulnerabilities now outnumber what human reviewers can manually assess.",
+    why:"A frontier model discovering 1,596 real vulnerabilities across open-source projects at a 90%+ confirmation rate is concrete evidence that AI has inverted the economics of vulnerability discovery—finding real flaws at scale faster than the open-source community can review or patch them, making triage capacity, not discovery capacity, the binding constraint.",
+    heat:66, topics:["anthropic","claude mythos","vulnerability disclosure","open source security","cve","ai security research"],
+    url:"https://www.anthropic.com/research/ai-vulnerability-discovery" },
+{ id:"bz-516", date:"2026-09-06",
+    source:{ name:"Johns Hopkins University / Security Researchers", handle:"Academic Security", platform:"web", kind:"news" },
+    text:"Johns Hopkins researcher Aonan Guan discovered Comment and Control, a class of vulnerabilities affecting AI coding agents from Anthropic (Claude Code), Google (Gemini CLI), and Microsoft (GitHub Copilot Agent), where embedded instructions in source-code comments can override agent safeguards and cause unintended code execution or information disclosure without explicit user approval.",
+    why:"A vulnerability class affecting coding agents from three competing vendors simultaneously highlights a structural weakness in how agents bootstrap themselves against adversarial input—and suggests the safety models for agentic code editing may not yet account for the attack surface exposed by an agent reading through entire codebases line by line.",
+    heat:63, topics:["ai coding agents","security vulnerability","claude code","gemini cli","copilot","prompt injection","source code"],
+    url:"https://arxiv.org/abs/2409.03012" }
 ];
