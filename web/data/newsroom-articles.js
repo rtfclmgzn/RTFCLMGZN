@@ -48988,6 +48988,465 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Distinguishes the $7.4B headline ceiling from the ~25% of it actually committed, flags rather than asserts the unconfirmed link to OpenAI's February capacity option, and scopes three superficially comparable India infrastructure numbers that measure genuinely different things."
       }
     }
+  },
+  {
+    "slug": "unitree-ipo-humanoid-robot-bubble-valuation-profit",
+    "title": "Unitree popped 629% on its Shanghai debut. By September, half that gain was gone -- and so was its profit growth.",
+    "dek": "China's top humanoid-robot maker priced shares at ¥150.80, watched them spike as much as 629% above that price on debut day, and closed up 460% -- two honestly-reported numbers describing the same afternoon. Three weeks later the stock has given back roughly half its post-debut value, and Unitree's own first-half 2026 filing shows adjusted profit falling even as revenue kept climbing.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch Unitree's Q3 2026 filing for whether the profit trend reversed again.",
+        "text": "Adjusted profit fell 53% year-over-year in Q1 2026, then the H1 figure (Q1+Q2 combined) improved to a smaller 19% decline -- meaning Q2 alone partly recovered. A third straight quarter of shrinking adjusted profit against still-growing revenue would confirm a margin problem rather than a one-quarter wobble."
+      },
+      {
+        "label": "Watch how much of Unitree's revenue the FCC's import rule actually reaches.",
+        "text": "The ban only blocks models not already authorized for US sale, and Unitree says its current lineup already cleared that bar. The real test is whether Unitree's next-generation models -- the ones that would actually need new authorization -- keep shipping to its largest disclosed export market on schedule."
+      },
+      {
+        "label": "Watch the next Chinese humanoid IPO's opening-day multiple against Unitree's.",
+        "text": "Agility Robotics and other humanoid makers have moved toward public listings this year. A debut priced at a fraction of Unitree's multiple would be the market's own verdict on whether August 19 was a company story or a sector story."
+      },
+      {
+        "label": "Watch which profit figure a company leads with.",
+        "text": "Unitree's own statutory 2025 net profit (¥278 million) is less than half the adjusted, non-recurring-items-excluded figure (¥600 million) that most coverage of the company actually quotes. Which number a report uses is itself a signal of how closely it checked the filing."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Chinese humanoid robot maker Unitree prices IPO at $9 billion valuation",
+        "url": "https://www.cnbc.com/2026/08/06/chinese-humanoid-robot-maker-unitree-prices-ipo-at-9-billion-valuation.html",
+        "outlet": "CNBC",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree Begins Trading Tomorrow In Shanghai After 8000 Times IPO Demand",
+        "url": "https://www.forbes.com/sites/jonmarkman/2026/08/18/unitree-starts-trading-tomorrow-in-shanghai-after-8000x-ipo-demand/",
+        "outlet": "Forbes",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree Robotics surges 629% to US$66 billion valuation in Shanghai share debut",
+        "url": "https://www.scmp.com/tech/tech-trends/article/3364499/unitree-robotics-surges-629-us66-billion-valuation-shanghai-share-debut",
+        "outlet": "South China Morning Post",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree, famous for its dancing robots, surges by 460% on its trading debut, lifting valuation to $66 billion, far ahead of U.S. competitors",
+        "url": "https://fortune.com/2026/08/19/unitree-china-dancing-robots-ipo-trading-surge-valuation/",
+        "outlet": "Fortune",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree Plunges 50% From Peak in Fast Reversal After Huge Debut Pop",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-02/unitree-plunges-50-from-peak-in-fast-reversal-after-huge-debut-pop",
+        "outlet": "Bloomberg",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree earns 600 million yuan a year, while Ubtech loses money",
+        "url": "https://eu.36kr.com/en/p/3780412419502851",
+        "outlet": "36Kr",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree Stock Price \"Halves\"",
+        "url": "https://autonews.gasgoo.com/articles/news/unitree-stock-price-halves-2095127594570960896",
+        "outlet": "Gasgoo",
+        "kind": "reporting"
+      },
+      {
+        "label": "US bans imports of new Chinese robots over security concerns",
+        "url": "https://www.aljazeera.com/economy/2026/7/29/us-bans-imports-of-new-chinese-robots-over-security-concerns",
+        "outlet": "Al Jazeera",
+        "kind": "reporting"
+      },
+      {
+        "label": "Unitree Robotics Loses Over 200 Billion Yuan in Market Value Just 8 Days After Listing",
+        "url": "https://finance.biggo.com/news/16adad1d-2f01-4902-870e-06c3882eb74a",
+        "outlet": "BigGo Finance",
+        "kind": "reporting"
+      },
+      {
+        "label": "UNITREE (688836.SH) Stock Price, Quote & News",
+        "url": "https://longbridge.com/en/quote/688836.SH",
+        "outlet": "Longbridge",
+        "kind": "dataset"
+      }
+    ],
+    "tldr": [
+      "Unitree's Shanghai shares spiked 629% above the IPO price at the open on August 19, then closed the day up 460% -- both real numbers, measuring different moments.",
+      "By September 2, the stock had lost about half its debut-day peak value; by September 8 it traded near ¥524, still far above the IPO price but well off the high.",
+      "2025 was a blowout year (revenue +335%, adjusted profit +674%), but adjusted profit fell in both Q1 and H1 2026 even as revenue kept growing.",
+      "A July FCC order already bars new, not-yet-authorized Chinese robot models from the US market, one of Unitree's largest disclosed export regions.",
+      "Caveat: nearly every steep number in this story -- the surge, the valuation, the decline -- depends on which single trading moment it's measured from."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Unitree**, the Hangzhou-based humanoid- and quadruped-robot maker, priced its Shanghai STAR Market initial public offering at ¥150.80 a share on August 6, 2026 -- valuing the company just above ¥61 billion (**about $9 billion**) before a single share traded. The retail portion of the deal drew the largest oversubscription in STAR Market history: more than **8,000 times** the shares on offer, leaving ordinary retail applicants roughly a 0.018% chance of an allocation. When trading opened August 19, shares immediately spiked to ¥1,100 -- **629% above the IPO price** -- before drifting down to close the day at ¥845, a **460% gain**. Both figures were reported accurately by different outlets measuring different moments of the same session, and that gap between a number's peak and its close turns out to be the pattern for the whole story that follows.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/08/06/chinese-humanoid-robot-maker-unitree-prices-ipo-at-9-billion-valuation.html",
+          "https://www.forbes.com/sites/jonmarkman/2026/08/18/unitree-starts-trading-tomorrow-in-shanghai-after-8000x-ipo-demand/",
+          "https://www.scmp.com/tech/tech-trends/article/3364499/unitree-robotics-surges-629-us66-billion-valuation-shanghai-share-debut"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The listing itself moved at a pace regulators don't usually allow. Unitree's IPO application was accepted by the Shanghai Stock Exchange on March 20, 2026, and approved by the listing committee on June 1 -- **73 days**, a record for the STAR Market's review process. The debut was also timed, whether by design or coincidence, to land during the World Robot Conference in Beijing, the industry's highest-visibility annual showcase in China. A fast-tracked review and a conference-week debut aren't evidence of anything improper on their own, but they're both facts about how badly Beijing's capital markets wanted this listing to succeed, on top of whatever ordinary investors wanted.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/jonmarkman/2026/08/18/unitree-starts-trading-tomorrow-in-shanghai-after-8000x-ipo-demand/",
+          "https://www.scmp.com/tech/tech-trends/article/3364499/unitree-robotics-surges-629-us66-billion-valuation-shanghai-share-debut"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "What was Unitree actually worth on its IPO day?",
+              "claims": [
+                {
+                  "who": "South China Morning Post / Fortune (opening-price basis)",
+                  "kind": "reporting",
+                  "says": "~$66 billion, based on the ¥1,100 opening spike (629% above the ¥150.80 IPO price)",
+                  "url": "https://www.scmp.com/tech/tech-trends/article/3364499/unitree-robotics-surges-629-us66-billion-valuation-shanghai-share-debut"
+                },
+                {
+                  "who": "Reuters, via Tech Times (closing-price basis)",
+                  "kind": "reporting",
+                  "says": "~$50 billion, based on the ¥845 closing price (460% above the IPO price)",
+                  "url": "https://www.techtimes.com/articles/325193/20260821/unitree-ipo-closes-460-valued-50-billion-first-real-price-humanoid-robotics.htm",
+                  "trusted": true
+                }
+              ],
+              "ruling": "Using the closing-price figure. A listed company's market capitalization is conventionally quoted from the close, not an intraday spike that lasted minutes before the price gave back a third of its gain the same afternoon. The $66 billion figure isn't wrong -- it's a real price the stock touched -- but it describes a moment the stock didn't hold even through its own debut day."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The debut landed three weeks after Washington had already made Unitree's largest overseas market more complicated to reach. On July 29, the FCC's Public Safety and Homeland Security Bureau added foreign-made humanoid and quadruped robots to its Covered List, blocking new US import authorizations for models not already cleared -- a national-security order that named the kind of hardware Unitree builds, alongside a separate Pentagon designation alleging the company has links to China's military. ++The rule isn't retroactive++: Unitree's currently shipping models had already secured US authorization and can keep selling. What the order actually blocks is Unitree's *next* generation of hardware from reaching the US specifically -- **18% of Unitree's 2025 revenue** by Fortune's count, within a broader **45% overseas share** that spans every market outside China.",
+        "citation_urls": [
+          "https://www.aljazeera.com/economy/2026/7/29/us-bans-imports-of-new-chinese-robots-over-security-concerns",
+          "https://fortune.com/2026/08/19/unitree-china-dancing-robots-ipo-trading-surge-valuation/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "title": "Six weeks, two very different stories",
+          "items": [
+            {
+              "when": "Jul 29, 2026",
+              "what": "FCC Covered List order blocks new US import authorizations for foreign humanoid/quadruped robots not already cleared -- Unitree is the order's clearest target.",
+              "source": "https://www.aljazeera.com/economy/2026/7/29/us-bans-imports-of-new-chinese-robots-over-security-concerns"
+            },
+            {
+              "when": "Aug 6, 2026",
+              "what": "IPO priced at ¥150.80/share, ~¥61B (~$9B) valuation.",
+              "source": "https://www.cnbc.com/2026/08/06/chinese-humanoid-robot-maker-unitree-prices-ipo-at-9-billion-valuation.html"
+            },
+            {
+              "when": "Aug 19, 2026",
+              "what": "Shanghai debut: opens up 629% (¥1,100, ~$66B), closes up 460% (¥845, ~$50B).",
+              "hi": true,
+              "source": "https://www.scmp.com/tech/tech-trends/article/3364499/unitree-robotics-surges-629-us66-billion-valuation-shanghai-share-debut"
+            },
+            {
+              "when": "Sep 2, 2026",
+              "what": "Stock falls below ¥550, roughly half its debut peak; H1 adjusted profit reported down 19% year-over-year.",
+              "source": "https://www.bloomberg.com/news/articles/2026-09-02/unitree-plunges-50-from-peak-in-fast-reversal-after-huge-debut-pop"
+            },
+            {
+              "when": "Sep 8, 2026",
+              "what": "Closes at ¥523.68 -- still ~247% above the IPO price, ~52% below the debut-day peak.",
+              "source": "https://longbridge.com/en/quote/688836.SH"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "By September 2 -- just 11 trading days after the debut -- the stock had fallen below ¥550, erasing more than ¥220 billion in market value from its opening-day peak. It closed September 8 at **¥523.68**, down roughly **52% from the ¥1,100 debut peak** but still up about **247% from the ¥150.80 IPO price** -- a reminder that 'crash' and 're-rating' can both be true descriptions of the same chart, depending which starting point is chosen.",
+        "citation_urls": [
+          "https://autonews.gasgoo.com/articles/news/unitree-stock-price-halves-2095127594570960896",
+          "https://longbridge.com/en/quote/688836.SH"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The financial picture behind the stock is genuinely two different stories depending which period is measured. Full-year 2025 was a breakout: revenue grew **335%** to ¥1.708 billion, and Unitree's preferred profit figure -- net profit **excluding non-recurring items** -- grew **674%** to ¥600 million. That excluded-items framing matters: Unitree's plain statutory net profit for the same year, the number after non-recurring gains and losses are left in rather than stripped out, was ¥278 million, less than half the figure the company and most coverage actually lead with. Both are real, audited numbers; they answer different questions, and a reader comparing this year's press coverage against last year's needs to know which one is being quoted.",
+        "citation_urls": [
+          "https://eu.36kr.com/en/p/3780412419502851"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "2026 broke that streak. Adjusted net profit fell **53% year-over-year in Q1**, to just ¥40 million. The first-half figure -- Q1 and Q2 combined -- came in less severe: revenue up **48.5%** to ¥1.152 billion, but adjusted profit still down **19.3%** to ¥244 million (net income attributable to shareholders, a related but separate line, was ¥274 million for the half). Read the two quarters together and Q2 clearly clawed back some of Q1's damage -- but two straight quarters of shrinking adjusted profit against accelerating revenue is a margin story, not a rounding error, and it's the number the IPO prospectus's growth narrative didn't have to reckon with yet.",
+        "citation_urls": [
+          "https://autonews.gasgoo.com/articles/news/unitree-stock-price-halves-2095127594570960896",
+          "https://finance.biggo.com/news/16adad1d-2f01-4902-870e-06c3882eb74a"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "Unitree's profit, by period and by definition",
+          "items": [
+            {
+              "value": "¥1.708B rev / ¥600M profit",
+              "unit": "Full year 2025",
+              "label": "Revenue +335% YoY; adjusted (non-recurring-excluded) net profit +674% YoY",
+              "includes": "Adjusted profit strips out one-time gains and losses",
+              "excludes": "Statutory net profit for the same year was ¥278M -- less than half the adjusted figure",
+              "note": "The blowout year that set the IPO narrative."
+            },
+            {
+              "value": "¥40M adjusted profit",
+              "unit": "Q1 2026",
+              "label": "Adjusted net profit down 53% year-over-year",
+              "note": "The sharpest single-quarter reversal in the trend."
+            },
+            {
+              "value": "¥1.152B rev / ¥244M profit",
+              "unit": "H1 2026 (Q1+Q2 combined)",
+              "label": "Revenue +48.5% YoY; adjusted net profit -19.3% YoY",
+              "includes": "Net income attributable to shareholders for H1 was ¥274M, a separate line from the ¥244M adjusted figure",
+              "note": "Q2 alone partly offset Q1's steeper decline -- the full-half figure understates how bad Q1 looked in isolation."
+            }
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "text": "\"The surge in shipments for robot makers could be illusionary.\" -- HSBC analyst note, mid-July 2026, on humanoid-robot order volumes ahead of Unitree's listing",
+        "citation_urls": [
+          "https://fortune.com/2026/08/19/unitree-china-dancing-robots-ipo-trading-surge-valuation/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Unitree is, for what it's worth, one of the only companies in this field that is profitable at all. **Ubtech**, its closest listed domestic rival, reported 2025 revenue of ¥2 billion against a **¥790 million loss** -- higher revenue than Unitree, and a nine-figure loss where Unitree posted a nine-figure profit. Nomura's own post-debut note credited Unitree's \"rapid product iteration and continuous innovation\" as the reason it, and not the sector broadly, earned the premium. {{note: A Morningstar analyst separately flagged the US import rule as the more durable risk to Unitree specifically, since its overseas sales strategy leaned on exactly the market the FCC order now complicates.}}",
+        "citation_urls": [
+          "https://eu.36kr.com/en/p/3780412419502851",
+          "https://fortune.com/2026/08/19/unitree-china-dancing-robots-ipo-trading-surge-valuation/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanics of who actually captured the debut-day pop are also worth separating from the headline gain. With retail investors facing roughly a **0.018% allocation** chance in an offering oversubscribed more than 8,000 times, the shares that caught the ¥1,100 opening spike were overwhelmingly institutional -- retail lottery winners who did get an allocation were still buying into a stock that had already run up before most of them could act on the pop at all. The 460%/629% and $50B/$66B figures describe the stock, not the typical investor's actual return, and conflating the two is a shorthand this coverage cycle has repeated without noting it.",
+        "citation_urls": [
+          "https://www.forbes.com/sites/jonmarkman/2026/08/18/unitree-starts-trading-tomorrow-in-shanghai-after-8000x-ipo-demand/"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "Even after giving back half its peak, the stock remains up roughly 247% over the IPO price -- this is a re-rating, not a collapse.",
+              "detail": "A stock that is still nearly three-and-a-half times its offer price six weeks after listing is not, on the numbers alone, evidence of a failed IPO. Most of the 'crash' framing compares the price to its own single-day spike, not to where it started.",
+              "whoHolds": "Nomura's post-debut analyst note"
+            },
+            {
+              "claim": "Unitree is profitable and growing revenue nearly 50% year-over-year, in a sector where the best-known domestic rival is losing money on higher revenue.",
+              "detail": "Ubtech's ¥790 million loss on ¥2 billion revenue is the more common shape in this industry right now. A company clearing that bar has a real claim to a premium, even if the multiple is debatable.",
+              "whoHolds": "Bulls citing the Ubtech comparison"
+            }
+          ],
+          "verdict": "Both points are real, and neither resolves the arithmetic problem: a company priced, even at its diminished close, at a steep multiple of a profit figure that just shrank for two straight quarters needs that profit line to reaccelerate hard, not merely stay positive. Revenue growth alone doesn't get there if margin keeps compressing -- and the FCC order removes exactly the export market Unitree would need to lean on to reaccelerate through hardware sales rather than pricing power at home.",
+          "source": "Fortune (Nomura quote); 36Kr (Ubtech comparison); Gasgoo and BigGo Finance (2026 quarterly figures)"
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes Unitree's business fake, and the FCC order alone doesn't explain the stock's retreat -- ==the profit deceleration started before the ban's practical effects could show up in a filing, and the stock gave back its peak faster than any single piece of news can fully account for==. What the last six weeks actually settled is narrower and more useful than a verdict on the whole humanoid-robot sector: Unitree entered its public life as the industry's clearest profitable company, priced at multiples that assumed the profit line would keep accelerating the way it did in 2025, and its first two quarters as a public company instead showed that line decelerating. The stock's math had to catch up to that, and by September 8, it largely had.",
+        "citation_urls": [
+          "https://autonews.gasgoo.com/articles/news/unitree-stock-price-halves-2095127594570960896",
+          "https://www.bloomberg.com/news/articles/2026-09-02/unitree-plunges-50-from-peak-in-fast-reversal-after-huge-debut-pop"
+        ]
+      }
+    ],
+    "id": "newsroom-unitree-ipo-humanoid-robot-bubble-valuation-profit",
+    "image": "assets/img/newsroom/unitree-ipo-humanoid-robot-bubble-valuation-profit.jpg",
+    "publishedAt": "2026-09-08T14:27:17Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-08T14:27:17Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "10 sources, 0 formal filings but multiple exchange-adjacent/primary-company-derived reports (CNBC and Forbes on the SSE pricing/subscription mechanics; MiniMax/Unitree figures throughout traced to company financial disclosures as reported by CNBC, SCMP, Fortune, Bloomberg, 36Kr, Gasgoo, and BigGo Finance). 8+ independent evidence threads: IPO pricing (CNBC), pre-debut subscription mechanics (Forbes), debut-day trading (SCMP/Fortune), the FCC import ban (Al Jazeera), 2025 annual financials + Ubtech comparison (36Kr), H1/Q1 2026 financials + stock decline (Gasgoo, BigGo, Bloomberg), and live Sept 8 pricing (Longbridge) -- clears the research-tier evidence bar, but kept at synthesis since a research piece (texas-ercot) already ran within the trailing 7 days and the material doesn't need research's extra length to land its point."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Financial/valuation trigger fires -- not-financial-advice disclaimer attached, no buy/sell framing anywhere in the piece. Found and reconciled a genuine conflict: outlets reported both $66B and $50B as 'the' IPO-day valuation, and both 460% and 629% as 'the' surge -- resolved via sourcecheck by identifying these as intraday-peak vs closing-price measurements of the same session, not a factual dispute. Also caught and corrected a same-cycle drafting error where an early pass conflated Unitree's 18% US revenue share with its 45% total-overseas share as if they were the same or an uncertain range -- fixed to state both precisely with their own denominators. The Pentagon's military-links allegation against Unitree is reported as an allegation, attributed to the designation itself, per compliance discipline on accusatory claims about a named company. No health or legal-proceeding triggers."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft was 664 words -- under the synthesis floor -- because it leaned on components to carry facts the prose hadn't earned yet; revised by adding the STAR Market fast-track/World Robot Conference paragraph, the Sept 2-8 decline paragraph, the Q1/H1 2026 paragraph, and the retail-allocation-mechanics paragraph, all genuine reporting rather than padding. Also found the counter component's '250%' rounding didn't match the prose's precise '247%' figure; aligned them."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "sourcecheck's four figures ($66B/629%/¥1,100, $50B/460%/¥845) all appear in the opening paragraph. timeline's six dated items are each echoed in body prose (FCC order, IPO pricing, debut, Sept 2 decline, Sept 8 close). ledger's five figures (FY2025 revenue/profit, Q1 adjusted profit, H1 revenue/profit) all appear in the two paragraphs preceding it. counter's Nomura quote and Ubtech comparison both appear in prose, not only in the component. No component carries a top-level text field. No two components sit adjacent -- prose or the pull quote separates every one."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 10 sources, correctly routed as synthesis (1,033 words, within the 800-1900 band) despite research-caliber sourcing, since the cadence didn't need another research piece this week. 4 components (sourcecheck, timeline, ledger, counter), within the 3-4-typical range, ledger and timeline both carrying data. Disclaimer: not-financial-advice, correctly -- valuation claims stated as reported facts throughout, no investment framing. Unitree already carries a companies.js entry; no entities.js action needed (this is a company/market story, not a model launch)."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Separates two honestly-different measurements (peak vs. close) that competing outlets each reported as 'the' surge and 'the' valuation, distinguishes adjusted from statutory profit throughout rather than only quoting the flattering figure, and states the Pentagon's allegation against Unitree as an attributed allegation rather than fact."
+      }
+    }
+  },
+  {
+    "slug": "minimax-sol-h3-inference-speed-video-generation",
+    "title": "MiniMax's Sol-H3 renders 5 seconds of AI video in 1.65 seconds -- using a quarter of the steps its own baseline runs",
+    "dek": "The new inference stack generates a 5-second, 1344x768 clip with stereo audio faster than the clip plays back, on an 8-GPU Nvidia B300 system -- up to 15.5x faster than MiniMax's unoptimized H3 baseline. The benchmark that produced that number also drops the diffusion process from 50 steps to 4, a quality tradeoff the speed figure alone doesn't disclose.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for an independent quality comparison between 4-step and 50-step output.",
+        "text": "Neither MiniMax's own writeup nor Nvidia's technical page publishes a visual-fidelity or audio-quality comparison between the fast and baseline settings -- the speed claim is measured, the quality cost isn't, yet."
+      },
+      {
+        "label": "Watch whether other video-model vendors adopt the same step-reduction framing for their own speed claims.",
+        "text": "If 'faster than playback' becomes the industry's preferred headline number, whether a vendor discloses its own step count -- the way Nvidia's page does here -- becomes the detail that separates a real infrastructure gain from a quietly lowered bar."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sol-H3: Speed-of-Light MiniMax-H3 on an 8x NVIDIA B300 Blackwell System",
+        "url": "https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3/",
+        "outlet": "NVIDIA Research",
+        "kind": "primary_company"
+      },
+      {
+        "label": "Enze Xie announcing Sol-H3",
+        "url": "https://x.com/xieenze_jr/status/2097000082927399012",
+        "outlet": "X / Enze Xie",
+        "kind": "primary_company"
+      },
+      {
+        "label": "MiniMax H3: An Open Model Breaking the Boundaries Between Tasks and Modalities",
+        "url": "https://www.minimax.io/blog/minimax-h3",
+        "outlet": "MiniMax (company blog)",
+        "kind": "primary_company"
+      },
+      {
+        "label": "MiniMaxAI/MiniMax-H3 model card",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+        "outlet": "Hugging Face",
+        "kind": "primary_company"
+      }
+    ],
+    "tldr": [
+      "MiniMax's new Sol-H3 inference stack generates a 5-second AI video with audio in 1.653 seconds on an 8x Nvidia B300 system.",
+      "That's faster than the clip's own runtime, and up to 15.54x faster than MiniMax's baseline H3 inference at longer lengths.",
+      "The underlying H3 model, released July 31, generates up to 15 seconds of 2K video with native stereo audio.",
+      "Caveat: the speed benchmark uses 4 denoising steps versus the baseline's 50 -- a real quality tradeoff neither party has published fidelity numbers for."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**MiniMax** and Nvidia researchers this week published **Sol-H3**, an inference stack that generates AI video faster than the resulting clip takes to play. On an 8x **Nvidia B300** Blackwell system, Sol-H3 renders 5 seconds of 1344x768 video with native stereo audio in **1.653 seconds** -- down from an 18.25-second unoptimized baseline, and roughly three times faster than the clip's own 5-second runtime. Researcher Enze Xie announced the results directly, and Nvidia's own research page carries the full benchmark: at 10 and 15 seconds of output, the speedup climbs to **13.57x** and **15.05x** respectively over MiniMax's unoptimized H3 baseline, with single-GPU configurations still landing between 9.45x and 14.29x.",
+        "citation_urls": [
+          "https://x.com/xieenze_jr/status/2097000082927399012",
+          "https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What 'faster than playback' actually measures",
+          "items": [
+            {
+              "value": "1.653s",
+              "unit": "5-second clip, 8x B300",
+              "label": "Sol-H3 end-to-end generation time",
+              "includes": "Text encoding, denoising, and VAE decoding, median of three runs after one warmup run",
+              "excludes": "Model loading, compilation warmup, and MP4 encoding -- infrastructure costs the headline number doesn't count",
+              "note": "18.25s baseline -> 1.653s Sol-H3 = 11.04x at this length; the 15.05x figure is at the 15-second length."
+            },
+            {
+              "value": "4 steps",
+              "unit": "Sol-H3 denoising",
+              "label": "Down from the baseline's 50 diffusion steps",
+              "excludes": "Any published visual-fidelity or audio-quality comparison between the two settings",
+              "note": "The speed multiple is real; whether output quality holds at a quarter of the steps is not addressed by either publication."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The step count is the detail a headline speed multiple leaves out, and it's a real design choice rather than a pure engineering optimization: fewer denoising passes generally trade some output fidelity for speed in diffusion-based generation, and neither MiniMax's announcement nor Nvidia's technical writeup publishes a side-by-side quality comparison between the 4-step fast path and the 50-step baseline. Nvidia's page is at least explicit that the numbers are a runtime measurement, not a quality claim -- the __Sol-Engine__ code itself is released under an Apache 2.0 license, while the underlying MiniMax-H3 model weights carry MiniMax's own, more restrictive community license.",
+        "citation_urls": [
+          "https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3/",
+          "https://huggingface.co/MiniMaxAI/MiniMax-H3"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sol-H3 is an optimization layer over MiniMax's underlying H3 model, which the company released July 31 as a general-purpose, omni-modal generator: up to 15 seconds of video at 2K resolution with native 32kHz stereo audio, built to follow multi-step instructions across text, image, video and audio inputs at once. MiniMax's own pricing claim -- less than a third of \"mainstream models'\" per-second cost at 2K, less than half at 768p -- was never independently verified at the time of that release and remains a company figure rather than a measured one; Sol-H3 is the first outside benchmark attached to the H3 line since.",
+        "citation_urls": [
+          "https://www.minimax.io/blog/minimax-h3"
+        ]
+      }
+    ],
+    "id": "newsroom-minimax-sol-h3-inference-speed-video-generation",
+    "image": "assets/img/newsroom/minimax-sol-h3-inference-speed-video-generation.jpg",
+    "publishedAt": "2026-09-08T14:27:40Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-08T14:27:40Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources, all primary/company-side (Nvidia Research's own technical writeup, the paper co-author's own announcement, MiniMax's own H3 blog post, the Hugging Face model card) -- no independent outlet has covered Sol-H3 yet as of this cycle. One event (a technical release), primary source plus a second primary confirmation from the collaborating research org -- clears the brief floor (1-2 threads), does not warrant synthesis. Flagged as SCOREBOARD: no -- this is an inference-speed optimization over an existing model, not a new model launch or an independent capability score, so no scoreboard.js or entities.js action applies."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Checked the headline speed claim against Nvidia's own methodology notes: confirmed the benchmark explicitly excludes model loading, compilation warmup and MP4 encoding, and explicitly reports 4 denoising steps against the baseline's 50 -- a real quality tradeoff the speed number alone doesn't disclose. This became the piece's central point rather than a footnote. No mandatory-scrutiny trigger fires."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft's ledger cited an 18.25-second baseline and 11.04x speedup that never appeared in body prose (only in the component's note field); revised the opening paragraph to state the baseline time directly, satisfying component provenance. TL;DR final bullet carries the load-bearing caveat -- the step-count tradeoff."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "ledger's two items (1.653s/18.25s baseline/11.04x, and the 4-vs-50-step tradeoff) both trace to the opening paragraph and the step-count paragraph respectively. No top-level text field on the component. Component is not adjacent to another component -- prose precedes and follows it. First block is a p."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, all primary, clears the brief floor (no independent reporting exists yet on a release this recent). Body runs approximately 311 words, within the 250-450 brief band. 1 component (ledger), meeting the brief minimum, chosen over a chart since the story's real value is the step-count caveat a bar chart of speedup multiples would flatten. No disclaimer needed."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "States the speed claim precisely as measured, then surfaces the 4-vs-50-diffusion-step tradeoff the source material discloses but doesn't foreground -- exactly the kind of caveat a wire rewrite of the announcement would drop."
+      }
+    }
   }
 ]
 ;

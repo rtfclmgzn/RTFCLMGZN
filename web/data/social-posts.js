@@ -14499,5 +14499,169 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-08T05:00:22Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-unitree-ipo-humanoid-robot-bubble-valuation-profit",
+    "ts": "2026-09-08T14:29:00Z",
+    "export": {
+      "article_id": "newsroom-unitree-ipo-humanoid-robot-bubble-valuation-profit",
+      "url": "https://rtfclmgzn.com/article/unitree-ipo-humanoid-robot-bubble-valuation-profit",
+      "headline": "Unitree popped 629% on its Shanghai debut. By September, half that gain was gone -- and so was its profit growth.",
+      "hook": "Unitree's Shanghai IPO spiked 629% at the open, closed up 460%, then gave back half its post-debut value in three weeks -- while adjusted profit fell in both Q1 and H1 2026.",
+      "key_facts": [
+        "Unitree's shares opened up 629% and closed up 460% above the IPO price on debut day -- two honest measurements of the same session.",
+        "By September 8 the stock was down ~52% from its debut peak, though still ~247% above the IPO price.",
+        "2025 adjusted profit grew 674%; Q1 2026 adjusted profit fell 53% year-over-year, H1 fell 19%."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/unitree-ipo-humanoid-robot-bubble-valuation-profit.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Unitree's Shanghai IPO opened up 629%, closed up 460% -- then the stock gave back half its post-debut value in three weeks. Its own filings show why: adjusted profit fell in both Q1 and H1 2026, even as revenue kept growing.",
+        "reply_copy": "The numbers, scoped:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Unitree",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T19:29:00Z",
+        "copy": "$66B or $50B? 629% or 460%? Every headline number on Unitree's IPO depends on whether you measure the opening spike or the closing price. We ran the sourcecheck on which one a market cap should actually use.",
+        "reply_copy": "How we resolved it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "China's top humanoid-robot maker just gave a masterclass in how one stock chart can support two opposite headlines.\n\nUnitree priced its Shanghai IPO at ¥150.80. Shares opened up 629% before closing the day up 460% -- both real numbers, describing different moments of the same afternoon.\n\nThree weeks later, the stock had lost half its debut-day peak. And Unitree's own numbers show adjusted profit fell in both Q1 and H1 2026, even as revenue kept climbing nearly 50%.\n\nWe trace the valuation, the profit trend, and the US import rule that already complicates Unitree's biggest export market.",
+        "hashtags": [
+          "#AI",
+          "#Robotics",
+          "#China",
+          "#IPO",
+          "#Unitree",
+          "#TechNews",
+          "#StockMarket"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Unitree, the Chinese humanoid-robot maker, priced its Shanghai STAR Market IPO at ¥150.80 a share on August 6 -- valuing the company at about $9 billion. When trading opened August 19, shares spiked 629% above that price before closing the day up 460%, a gap between two honestly-reported numbers that turns out to describe the whole story that followed.\n\nBy September 2, the stock had fallen below ¥550, erasing more than ¥220 billion in value from its debut peak. It closed September 8 at ¥523.68 -- still about 247% above the IPO price, but roughly 52% below where it opened.\n\nThe financial picture explains some of it: 2025 was a breakout year for Unitree (revenue +335%, adjusted profit +674%), but adjusted profit fell 53% in Q1 2026 and 19% across the first half, even as revenue kept growing. A July FCC order, meanwhile, already bars Unitree's next-generation robots -- though not its current lineup -- from new US authorization.\n\nWe walk through what's confirmed, what's disputed, and what the arithmetic actually requires for the current price to make sense.",
+        "hashtags": [
+          "#AI",
+          "#Robotics",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Unitree opened up 629%, closed up 460% on its Shanghai debut -- then gave back half its post-IPO value in three weeks. Adjusted profit fell in both Q1 and H1 2026 even as revenue grew nearly 50%. We scoped every number, including which valuation a market cap should actually use.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T19:29:00Z",
+        "copy": "Unitree is one of the only profitable humanoid-robot makers -- its closest listed rival, Ubtech, lost ¥790M on higher revenue. That's the real bull case. It just doesn't resolve the arithmetic on a stock still priced at a steep multiple of a shrinking profit line.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Unitree: +629% open, +460% close on its Shanghai debut, then -52% from peak by Sept. 8. Adjusted profit fell in Q1 and H1 2026 even as revenue grew ~50%. We scoped which valuation number a market cap should actually use.",
+        "hashtags": [
+          "#AI",
+          "#Robotics",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-minimax-sol-h3-inference-speed-video-generation",
+    "ts": "2026-09-08T14:29:10Z",
+    "export": {
+      "article_id": "newsroom-minimax-sol-h3-inference-speed-video-generation",
+      "url": "https://rtfclmgzn.com/article/minimax-sol-h3-inference-speed-video-generation",
+      "headline": "MiniMax's Sol-H3 renders 5 seconds of AI video in 1.65 seconds -- using a quarter of the steps its own baseline runs",
+      "hook": "MiniMax's new Sol-H3 stack generates AI video faster than it plays back on Nvidia B300 hardware -- but the benchmark also cuts diffusion steps by 92%, a tradeoff the speed number alone doesn't disclose.",
+      "key_facts": [
+        "Sol-H3 renders a 5-second, 1344x768 video with stereo audio in 1.653 seconds on an 8x Nvidia B300 system.",
+        "That's up to 15.54x faster than MiniMax's unoptimized H3 baseline at longer video lengths.",
+        "The benchmark uses 4 denoising steps versus the baseline's 50 -- no published quality comparison exists yet."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/minimax-sol-h3-inference-speed-video-generation.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "MiniMax's new Sol-H3 stack generates a 5-second AI video in 1.65 seconds on an 8x Nvidia B300 system -- faster than the clip plays back. The catch buried in the technical writeup: it uses 4 denoising steps instead of the baseline's 50.",
+        "reply_copy": "What that tradeoff means:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "MiniMax's new inference stack generates AI video faster than it plays back.\n\nSol-H3 renders 5 seconds of 1344x768 video with stereo audio in 1.653 seconds on an 8x Nvidia B300 system -- up to 15.5x faster than MiniMax's own unoptimized baseline.\n\nThe part the headline number leaves out: the benchmark uses 4 denoising steps instead of the baseline's 50. That's a real quality tradeoff neither MiniMax nor Nvidia has published a fidelity comparison for -- yet.",
+        "hashtags": [
+          "#AI",
+          "#Nvidia",
+          "#MiniMax",
+          "#VideoGeneration",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "MiniMax's Sol-H3 generates 5 seconds of AI video in 1.65 seconds on an 8x Nvidia B300 system -- faster than the clip plays back. The benchmark also cuts diffusion steps from 50 to 4, a quality tradeoff the speed number alone doesn't disclose.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "MiniMax's Sol-H3: 5 seconds of AI video in 1.65s on an 8x Nvidia B300 rig -- up to 15.5x faster than baseline. The fine print: 4 denoising steps instead of 50, a quality tradeoff with no published fidelity comparison yet.",
+        "hashtags": [
+          "#AI",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
