@@ -14309,7 +14309,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -14347,14 +14349,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122118760131396947",
+        "remote_id": "1238977099292018_122118760131396947",
+        "posted_at": "2026-09-08T05:04:03Z"
       },
       {
         "platform": "threads",
         "copy": "Massachusetts passed AI safety rules requiring frontier labs to submit to independent risk testing roughly every four months. Anthropic backed it in June, before that cadence tightened. OpenAI just hired its first Massachusetts lobbyist to fight the version that actually passed; Google opposes it too. Not law yet -- still needs the House and the Governor.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdA5H5vEdm9",
+        "remote_id": "18053331032638089",
+        "posted_at": "2026-09-08T05:04:25Z"
       },
       {
         "platform": "threads",
@@ -14372,8 +14378,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Massachusetts"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muyapsm2pf2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muyapsm2pf2q",
+        "posted_at": "2026-09-08T05:04:31Z"
       }
     ]
   },
@@ -14408,7 +14416,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -14436,8 +14446,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIInfrastructure",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdA4mYwF-mc/",
+        "remote_id": "17901979731561382",
+        "posted_at": "2026-09-08T04:59:52Z"
       },
       {
         "platform": "facebook",
@@ -14446,14 +14458,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#DataCenters"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122118759825396947",
+        "remote_id": "1238977099292018_122118759825396947",
+        "posted_at": "2026-09-08T05:00:00Z"
       },
       {
         "platform": "threads",
         "copy": "TCS's HyperVault says it'll spend up to $7.4B on a 1GW AI campus in India -- a ceiling matching OpenAI's own February capacity option exactly. Only about a quarter of that figure is signed; the rest is debt not yet raised, and no tenant is named. Smallest of India's three big AI-infra bets this year.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdA4pVtEU6w",
+        "remote_id": "17908546260531480",
+        "posted_at": "2026-09-08T05:00:16Z"
       },
       {
         "platform": "threads",
@@ -14471,10 +14487,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters",
           "#India"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muyaieqoxv2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muyaieqoxv2o",
+        "posted_at": "2026-09-08T05:00:22Z"
       }
     ]
   }
-]
-;
+];
