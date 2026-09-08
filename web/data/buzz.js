@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-514", date:"2026-09-08",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI's Sept. 6 post on 'research acceleration inside OpenAI' includes a chart showing its own researchers' median daily spend on coding-agent inference climbing roughly fourfold, from about $150 in June to around $600 by late August -- a jump independent commentators have linked to internal access to GPT-6 Astra starting in July.",
+    why:"A frontier lab publishing its own researchers' internal tool spend, not just a capability claim about what the model can do for someone else, is a rare direct data point on how fast AI-assisted research is actually accelerating inside the company building the models.",
+    heat:52, topics:["openai","research acceleration","coding agents","gpt-6 astra","internal tooling"],
+    url:"https://openai.com/index/research-acceleration-view-inside-openai/" },
 { id:"bz-512", date:"2026-09-07",
     source:{ name:"Reuters", handle:"Reuters", platform:"web", kind:"news" },
     text:"A Tata Consultancy Services subsidiary, HyperVault, will invest up to $7.41 billion to build a 1-gigawatt AI data-center campus on 264 acres in Hyderabad, India, aimed at hyperscalers and AI companies needing high-density GPU deployments. It's a sharp break from TCS's historically capex-light, organic-growth model.",

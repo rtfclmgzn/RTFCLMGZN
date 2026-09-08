@@ -14277,5 +14277,204 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-massachusetts-ai-safety-bill-openai-anthropic-google-split",
+    "ts": "2026-09-08T00:33:57Z",
+    "export": {
+      "article_id": "newsroom-massachusetts-ai-safety-bill-openai-anthropic-google-split",
+      "url": "https://rtfclmgzn.com/article/massachusetts-ai-safety-bill-openai-anthropic-google-split",
+      "headline": "Massachusetts would force AI safety audits every four months. Anthropic backs it; OpenAI and Google don't.",
+      "hook": "Massachusetts passed AI safety rules requiring frontier-lab audits roughly every four months -- Anthropic backs it, OpenAI and Google are fighting it.",
+      "key_facts": [
+        "The bill requires independent catastrophic-risk testing roughly every four months for AI developers over $500M in AI revenue.",
+        "OpenAI hired its first Massachusetts lobbyist to oppose the measure; Google opposes it too.",
+        "It isn't law yet -- still needs House reconciliation and the Governor's signature."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/massachusetts-ai-safety-bill-openai-anthropic-google-split.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Massachusetts passed AI safety rules requiring frontier-lab audits every ~4 months. Anthropic backed the bill; OpenAI just hired its first MA lobbyist to fight the version that passed, and Google opposes it too.",
+        "reply_copy": "The split, and what's actually in the bill:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T05:33:57Z",
+        "copy": "\"We don't think the industry should grade its own homework\" (Anthropic) vs \"Inconsistency doesn't mean safer. It just means confusion\" (OpenAI). Same bill, opposite conclusions -- neither side disputes AI needs scrutiny.",
+        "reply_copy": "Both sides, on the record:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A four-month audit clock is now the fight.\n\nMassachusetts' Senate passed AI safety rules that would make frontier labs submit to independent catastrophic-risk testing roughly every four months -- the strictest cadence of any state.\n\nAnthropic backed it. OpenAI hired its first Massachusetts lobbyist to fight it. Google opposes it too. It's not law yet.",
+        "hashtags": [
+          "#AI",
+          "#AIPolicy",
+          "#AISafety",
+          "#Massachusetts",
+          "#OpenAI",
+          "#Anthropic",
+          "#TechPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Massachusetts' state Senate passed an amendment in late July that would make it the strictest state regulator of frontier AI safety in the country -- and it split the three labs the rule would actually bind.\n\nThe bill would require the largest AI developers to submit to independent, third-party catastrophic-risk testing roughly every four months, with the state's Attorney General empowered to sue over violations. Anthropic endorsed the measure back in June, before that cadence tightened. OpenAI hired its first Massachusetts lobbyist to fight the version the Senate actually passed, arguing for the lighter, once-a-year audit model Illinois uses instead. Google opposes it too.\n\nWe trace how the bill's own testing cadence shifted while lawmakers argued, and what's still unresolved before anything becomes law.",
+        "hashtags": [
+          "#AIPolicy",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Massachusetts passed AI safety rules requiring frontier labs to submit to independent risk testing roughly every four months. Anthropic backed it in June, before that cadence tightened. OpenAI just hired its first Massachusetts lobbyist to fight the version that actually passed; Google opposes it too. Not law yet -- still needs the House and the Governor.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T05:33:57Z",
+        "copy": "Both sides agree state-by-state AI rules are a real cost. They disagree on which template to standardize -- Illinois's annual self-audit, or Massachusetts' outside evaluator every four months. That's the actual fight, not whether scrutiny happens at all.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "MA's Senate passed AI safety rules needing ~4-month independent audits of frontier labs. Anthropic backed it; OpenAI hired its first MA lobbyist to fight it, and Google opposes it too. Not law yet.",
+        "hashtags": [
+          "#AIPolicy",
+          "#AISafety",
+          "#Massachusetts"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-tcs-hypervault-7-4-billion-ai-data-center-india",
+    "ts": "2026-09-08T00:34:00Z",
+    "export": {
+      "article_id": "newsroom-tcs-hypervault-7-4-billion-ai-data-center-india",
+      "url": "https://rtfclmgzn.com/article/tcs-hypervault-7-4-billion-ai-data-center-india",
+      "headline": "TCS's HyperVault pledges up to $7.4 billion for a 1GW AI campus in India, matching OpenAI's own capacity ceiling",
+      "hook": "TCS's HyperVault will spend up to $7.4B on a 1GW AI campus in India -- a ceiling that matches the capacity option OpenAI secured from Tata in February.",
+      "key_facts": [
+        "HyperVault's $7.4B ceiling for a 1GW Hyderabad campus numerically matches OpenAI's February capacity option.",
+        "Only about a quarter of that figure -- a TCS-TPG equity round -- is a signed commitment; the rest is unraised debt.",
+        "Reliance and Adani have separately pledged far larger sums for India AI infrastructure: $110B and $100B."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/tcs-hypervault-7-4-billion-ai-data-center-india.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "TCS's HyperVault says it'll spend up to $7.4B on a 1GW AI campus in India -- a ceiling that matches OpenAI's own February capacity option exactly. Only ~25% of that number is actually signed.",
+        "reply_copy": "What's confirmed and what isn't:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T05:33:57Z",
+        "copy": "Reliance pledged $110B. Adani pledged $100B. TCS's HyperVault: $7.4B -- the smallest of India's three big AI-infrastructure bets, from the company least like a hyperscaler of the three.",
+        "reply_copy": "Scoping three numbers that aren't the same thing:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#India",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The $7.4 billion ceiling that matches a February option.\n\nTCS's data-center unit HyperVault says it'll spend up to $7.4B on a 1-gigawatt AI campus near Hyderabad -- a number that caps out exactly where OpenAI's own India capacity option does.\n\nOnly about a quarter of that figure is actually signed. The rest is debt still to be raised. No tenant is named.\n\nWe trace the money back to a $1B round from TPG last November.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters",
+          "#India",
+          "#OpenAI",
+          "#TCS",
+          "#AIInfrastructure",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Tata Consultancy Services' data-center unit, HyperVault, says it will invest up to $7.4 billion on a 1-gigawatt AI campus outside Hyderabad, India -- phased, with no construction timetable disclosed.\n\nThe ceiling on that number matches something specific: the 1GW option OpenAI secured from Tata Group in February, when it became HyperVault's first outside customer. Saturday's announcement doesn't name a tenant, though, and only about a quarter of the new figure -- a TCS-TPG equity round from last November -- is a signed commitment. The rest is debt HyperVault has not yet raised.\n\nSet against Reliance's roughly $110 billion and Adani's roughly $100 billion India AI-infrastructure pledges from the same February window, HyperVault's number is the smallest of the three -- from the company least like a hyperscaler of the three.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "TCS's HyperVault says it'll spend up to $7.4B on a 1GW AI campus in India -- a ceiling matching OpenAI's own February capacity option exactly. Only about a quarter of that figure is signed; the rest is debt not yet raised, and no tenant is named. Smallest of India's three big AI-infra bets this year.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-08T05:33:57Z",
+        "copy": "TCS bills clients for engineers' time. Now its data-center subsidiary is renting compute to outside AI labs, in the same year agentic tools started automating some of the work TCS itself sells. Reads less like a side bet, more like a hedge.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "TCS's HyperVault: up to $7.4B for a 1GW AI campus in India, capping out exactly at OpenAI's Feb. capacity option. Only ~25% signed so far; no tenant named. Smallest of India's three big AI-infra pledges this year.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters",
+          "#India"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
-];
+]
+;
