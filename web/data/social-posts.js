@@ -14273,8 +14273,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3muywjccmdd2z",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3muywjccmdd2z",
+        "posted_at": "2026-09-08T11:34:36Z"
       }
     ]
   },
@@ -14417,7 +14419,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -14431,8 +14433,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#India",
           "#AIInfrastructure"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2097287376033009833",
+        "remote_id": "2097287376033009833",
+        "posted_at": "2026-09-08T11:34:11Z"
       },
       {
         "platform": "instagram",
@@ -14476,8 +14480,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-08T05:33:57Z",
         "copy": "TCS bills clients for engineers' time. Now its data-center subsidiary is renting compute to outside AI labs, in the same year agentic tools started automating some of the work TCS itself sells. Reads less like a side bet, more like a hedge.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdBlwask-MM",
+        "remote_id": "18075018539416473",
+        "posted_at": "2026-09-08T11:34:28Z"
       },
       {
         "platform": "bluesky",
