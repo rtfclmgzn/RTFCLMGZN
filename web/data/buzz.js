@@ -293,5 +293,17 @@ window.RTFC_BUZZ = [
     text:"Nvidia's total AI equity investments reached $99 billion as of July 26, up from roughly $7 billion a year earlier -- including $30B in OpenAI, $5B in Intel, and $2B apiece in CoreWeave and Nebius. CCS Insight's Ian Fogg said the stakes 'give Nvidia a degree of control to encourage companies to take a Nvidia-related innovation path.'",
     why:"A fourteenfold jump in one year, spanning customers up and down the AI stack, is the clearest single number yet for how much of the industry's growth Nvidia is now directly bankrolling rather than just supplying.",
     heat:61, topics:["nvidia","equity investments","circular financing","openai","intel","coreweave","nebius"],
-    url:"https://finance.yahoo.com/technology/ai/articles/nvidia-ai-equity-investments-hit-132507088.html" }
+    url:"https://finance.yahoo.com/technology/ai/articles/nvidia-ai-equity-investments-hit-132507088.html" },
+{ id:"bz-527", date:"2026-09-08",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic walked away from a reported $6 billion acquisition of Israeli AI startup Decart AI after conducting due diligence, Bloomberg reported on September 8. Decart focuses on developing world models—simulations of the physical world—and software to improve hardware efficiency and reduce AI training costs. The decision came as Anthropic prepares for a potential public listing as early as September or October 2026; closing a $6 billion stock-based acquisition immediately before going public would create significant IPO complexity.",
+    why:"A frontier lab declining to acquire a startup focused on world models and training-efficiency optimization at a critical moment before going public is itself a signal about capital priorities: the acquirer is choosing IPO readiness and capital preservation over expanding in-house capabilities that would take years to commercialize.",
+    heat:49, topics:["anthropic","decart","acquisition","world models","ipo","capital allocation"],
+    url:"https://www.bloomberg.com/news/articles/2026-09-08/anthropic-said-to-walk-away-from-6-billion-decart-acquisition" },
+{ id:"bz-528", date:"2026-09-08",
+    source:{ name:"ASML/TSMC/Samsung/Intel", handle:"ASML", platform:"web", kind:"lab" },
+    text:"ASML, TSMC, Samsung Electronics, and Intel announced a joint industry initiative on September 8 to transition High NA EUV lithography from six-inch photomasks to 12-inch masks, targeting a pilot line by 2031 and full production readiness by 2033. The larger masks will increase fab productivity, lower chipmaking costs and eliminate stitching constraints. Separately, TSMC committed to deploying High NA EUV in advanced nodes starting in 2030, while Samsung plans DRAM products using the tech by 2028.",
+    why:"Moving to 12-inch masks from six-inch—a decades-old standard—is a concrete supply-side ceiling lift for AI chip manufacturing, and a multi-company commitment to both a roadmap and deployment timelines suggests the industry sees mask size as a binding constraint on fab efficiency and cost.",
+    heat:68, topics:["asml","tsmc","samsung","intel","euv lithography","photomask","chip manufacturing","ai chips","infrastructure"],
+    url:"https://www.bloomberg.com/news/articles/2026-09-08/asml-tsmc-samsung-intel-back-12-inch-masks-for-ai-chips" }
 ];
