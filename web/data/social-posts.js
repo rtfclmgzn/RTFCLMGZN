@@ -15205,7 +15205,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -15296,8 +15298,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Math"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2097770988620611614",
+        "remote_id": "2097770988620611614",
+        "posted_at": "2026-09-09T19:35:53Z"
       },
       {
         "platform": "instagram",
@@ -15339,8 +15343,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv4bv2gh4x26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv4bv2gh4x26",
+        "posted_at": "2026-09-09T19:36:01Z"
       }
     ]
   }
