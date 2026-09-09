@@ -399,3 +399,23 @@
   add a per-row `indexVersion` field so mixed-scale rows stop looking
   falsely comparable side by side -- the second is the more durable fix
   and probably belongs in the schema, not in another prose note.
+- **2026-09-09** (newsroom cycle): the runbook's §2 dedup check
+  (`grep -oE '"slug": *"[^"]+"|"title": *"[^"]+"|"publishedAt": *"[^"]+"'
+  web/data/newsroom-articles.js`) is not sufficient on its own when a story
+  has been covered under more than one slug -- grepping free-text mentions
+  of "hugging face" surfaced only the Aug 27 reported-deal article's own
+  body text (which repeatedly says "Hugging Face"), and missed that the
+  breaking-scan job had already published a SECOND, separately-slugged
+  article confirming the same deal on 2026-09-03 (`nvidia-hugging-face-12-9-
+  billion-acquisition`, no `-reported` suffix). Drafted a near-duplicate
+  synthesis before catching this -- found only while adding an RSS `<item>`
+  for the new draft and noticing an existing RSS entry already covered the
+  identical confirmed-price, identical-source story. Removed the duplicate
+  draft (article JSON, generated cover, RSS item) before it shipped and
+  replaced it with different research (Meta's Muse agent launch) rather than
+  patch around it. Lesson for future cycles: before drafting a follow-up to
+  a previously-reported-but-unconfirmed story, grep the CANDIDATE'S OWN
+  KEYWORDS across `slug` AND `title` fields specifically (not just prose
+  matches), and separately check `web/rss.xml`'s existing `<item>` titles --
+  the RSS feed is a flatter, faster cross-check than parsing the full
+  article store, and it caught what the grep missed.
