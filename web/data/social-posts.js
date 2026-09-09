@@ -14717,8 +14717,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2097550467689570799",
+        "remote_id": "2097550467689570799",
+        "posted_at": "2026-09-09T04:59:37Z"
       },
       {
         "platform": "instagram",
@@ -14746,14 +14748,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119041375396947",
+        "remote_id": "1238977099292018_122119041375396947",
+        "posted_at": "2026-09-09T05:03:12Z"
       },
       {
         "platform": "threads",
         "copy": "Nscale is raising up to $3.5B before its IPO on a $103B backlog figure that isn't revenue -- actual 2025 revenue was $33M. The gap is normal for a data-center buildout still under construction. It's just not what the number sounds like on a pitch deck.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdDd0ZkkYXV",
+        "remote_id": "17947596978269799",
+        "posted_at": "2026-09-09T05:03:32Z"
       },
       {
         "platform": "threads",
@@ -14769,8 +14775,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv2r55bvgg2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv2r55bvgg2m",
+        "posted_at": "2026-09-09T05:03:39Z"
       }
     ]
   },
@@ -14806,7 +14814,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -14824,8 +14832,10 @@ window.RTFC_SOCIAL_POSTS = [
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdDdTB6DSbH/",
+        "remote_id": "18092807669200628",
+        "posted_at": "2026-09-09T04:59:00Z"
       },
       {
         "platform": "facebook",
@@ -14834,14 +14844,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#SmartHome"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119040673396947",
+        "remote_id": "1238977099292018_122119040673396947",
+        "posted_at": "2026-09-09T04:59:10Z"
       },
       {
         "platform": "threads",
         "copy": "Baidu refreshed its whole Xiaodu smart-home lineup around one agent, Chaoneng Xiaodu -- and is pushing the same upgrade free to tens of millions of already-sold devices, not just the new hardware. Pricing and global availability: still undisclosed.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdDdV_Bkch5",
+        "remote_id": "17918020338429198",
+        "posted_at": "2026-09-09T04:59:24Z"
       },
       {
         "platform": "bluesky",
@@ -14849,8 +14863,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv2qvrdveo2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv2qvrdveo2t",
+        "posted_at": "2026-09-09T04:59:31Z"
       }
     ]
   }
