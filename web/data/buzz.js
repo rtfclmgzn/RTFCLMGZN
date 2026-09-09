@@ -305,5 +305,11 @@ window.RTFC_BUZZ = [
     text:"ASML, TSMC, Samsung Electronics, and Intel announced a joint industry initiative on September 8 to transition High NA EUV lithography from six-inch photomasks to 12-inch masks, targeting a pilot line by 2031 and full production readiness by 2033. The larger masks will increase fab productivity, lower chipmaking costs and eliminate stitching constraints. Separately, TSMC committed to deploying High NA EUV in advanced nodes starting in 2030, while Samsung plans DRAM products using the tech by 2028.",
     why:"Moving to 12-inch masks from six-inch—a decades-old standard—is a concrete supply-side ceiling lift for AI chip manufacturing, and a multi-company commitment to both a roadmap and deployment timelines suggests the industry sees mask size as a binding constraint on fab efficiency and cost.",
     heat:68, topics:["asml","tsmc","samsung","intel","euv lithography","photomask","chip manufacturing","ai chips","infrastructure"],
-    url:"https://www.bloomberg.com/news/articles/2026-09-08/asml-tsmc-samsung-intel-back-12-inch-masks-for-ai-chips" }
+    url:"https://www.bloomberg.com/news/articles/2026-09-08/asml-tsmc-samsung-intel-back-12-inch-masks-for-ai-chips" },
+{ id:"bz-529", date:"2026-09-09",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI published a proof that 3D Navier-Stokes equations can develop finite-time singularities, resolving one of the seven Millennium Prize Problems worth $1 million. The company deployed up to 10,000 AI agents in parallel over approximately 88 hours to formalize and verify the proof, working from September 1-9, 2026. The result, which AI-security experts have tracked as evidence of AI cross-disciplinary capability, represents the first time an AI system has solved a decades-old unsolved mathematical problem at scale.",
+    why:"A frontier lab's AI system solving a $1M unsolved math problem—not by brute force but through formal proof generation across 10,000 agents—is a concrete signal that AI capability is now broad enough to traverse entire mathematical disciplines autonomously, and that research-scale capability is reaching commercial labs' public models.",
+    heat:77, topics:["openai","navier-stokes","millennium prize problem","mathematics","ai research","formal verification","mathematical proof"],
+    url:"https://openai.com/index/navier-stokes-solution/" }
 ];
