@@ -15077,5 +15077,271 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-09T16:49:33Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal",
+    "ts": "2026-09-09T19:13:09Z",
+    "export": {
+      "article_id": "newsroom-qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal",
+      "url": "https://rtfclmgzn.com/article/qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal",
+      "headline": "Qualcomm and Amazon sign a multi-generation AI chip deal, with a warrant tied to $60 billion in future purchases",
+      "hook": "Qualcomm and Amazon will co-design custom AI chips across future generations -- financed by a warrant that only pays off if Amazon actually buys what it says it will.",
+      "key_facts": [
+        "Qualcomm issued Amazon a warrant for 25 million shares, worth about $4 billion at issuance.",
+        "Only 3.75 million of those shares vested immediately -- the rest depend on future purchase orders.",
+        "Vesting tracks up to $60 billion in AWS purchases over the warrant's 10-year term, not a signed order."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Qualcomm and Amazon just signed a multi-generation AI chip deal -- Qualcomm's first with a Western hyperscaler. The financing is the real story: a $4B stock warrant that only pays off as Amazon actually places orders, up to a $60B ceiling over 10 years.",
+        "reply_copy": "The warrant math, and what it doesn't guarantee:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Qualcomm",
+          "#Amazon",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T00:13:09Z",
+        "copy": "Qualcomm-Amazon joins a pattern: AMD gave OpenAI a warrant for up to 10% of the company; Nvidia committed $100B to fund OpenAI's own buildout. Chipmakers are increasingly financing the demand they're also selling into -- their stock now rides on whether the customer actually buys.",
+        "reply_copy": "Full breakdown of all three deals:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Chips"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Qualcomm and Amazon just signed a multi-generation deal to co-design custom AI inference chips and next-gen optical networking for AWS data centers -- Qualcomm's first deal with a Western hyperscaler, a year after it landed Saudi Arabia's Humain as its first customer.\n\nThe financing structure is the real story: Qualcomm issued Amazon a warrant for 25 million shares (~$4B), but only 3.75 million vested immediately. The rest only vest as Amazon places actual purchase orders, up to a $60 billion ceiling over the warrant's 10-year term.\n\nQualcomm's stock jumped as much as 10% on the news. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Qualcomm",
+          "#Amazon",
+          "#AWS",
+          "#AI",
+          "#Semiconductors",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Qualcomm and Amazon announced on Sept. 8 a multi-generation collaboration on custom AI inference silicon and optical connectivity for AWS data centers -- Qualcomm's first deal with a Western hyperscaler.\n\nThe financing is unusual: Qualcomm issued Amazon a warrant for 25 million shares (worth about $4 billion at issuance), but only 3.75 million vested immediately. The remaining shares vest only as Amazon places binding purchase orders, up to a $60 billion ceiling over the warrant's 10-year term -- not a signed order or guaranteed revenue.\n\nFull story:",
+        "hashtags": [
+          "#Qualcomm",
+          "#Amazon",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Qualcomm and Amazon signed a multi-generation AI chip deal -- Qualcomm's first with a Western hyperscaler. Financed by a $4B stock warrant that only fully vests if Amazon buys up to $60B over 10 years. Qualcomm's stock jumped as much as 10%.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Qualcomm and Amazon signed a multi-generation AI chip deal on Sept 8 -- Qualcomm's first with a Western hyperscaler. Financing: a warrant for 25M Qualcomm shares (~$4B), vesting as Amazon places orders, up to a $60B ceiling over 10 years. Only 3.75M shares vested so far.",
+        "hashtags": [
+          "#Qualcomm",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-sarah-friar-industrial-ai-outcome-based-pricing",
+    "ts": "2026-09-09T19:17:43Z",
+    "export": {
+      "article_id": "newsroom-openai-sarah-friar-industrial-ai-outcome-based-pricing",
+      "url": "https://rtfclmgzn.com/article/openai-sarah-friar-industrial-ai-outcome-based-pricing",
+      "headline": "OpenAI's CFO says it's pushing into chip design, health care and finance -- and testing pricing tied to results, not tokens",
+      "hook": "OpenAI's CFO says the company is testing pricing tied to business outcomes instead of tokens, and pushing into chip design, life sciences and financial services -- backed by real enterprise revenue growth, and one pricing claim that's narrower than it sounds.",
+      "key_facts": [
+        "Enterprise revenue grew 32% from June to July, versus 20% growth company-wide.",
+        "A July 30 Luna price cut of 80% (to $0.20/$1.20 per million tokens) drove roughly a 10x usage jump.",
+        "Friar said Luna beats Z.ai's GLM 5.3 on price -- true, but DeepSeek Flash and Xiaomi's MiMo are both cheaper still."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/openai-sarah-friar-industrial-ai-outcome-based-pricing.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI's CFO says it's testing pricing tied to business RESULTS instead of tokens, and pushing into chip design, health care and finance. She also said Luna beats Z.ai's GLM 5.3 on price -- true, but she skipped the two budget models that are actually cheaper than Luna.",
+        "reply_copy": "The numbers that check out, and the one that's narrower than it sounds:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T00:17:43Z",
+        "copy": "OpenAI's enterprise revenue grew 32% in one month, vs 20% overall. Enterprise and consumer revenue are now near parity -- ahead of OpenAI's own year-end target. The Luna price cut (80%, to $1.40 combined per million tokens) is the clearest number behind the whole pitch.",
+        "reply_copy": "Full breakdown of what's confirmed vs. what's still just a pitch:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI's CFO Sarah Friar told a Goldman Sachs conference the company is pushing into chip design, life sciences and financial services -- and testing pricing tied to business RESULTS instead of token usage.\n\nWhat actually checks out: enterprise revenue grew 32% in one month (vs 20% overall), and a July price cut to the Luna model (80% off, down to $1.40 combined per million tokens) drove roughly a 10x usage jump.\n\nWhat's narrower than it sounds: Friar said Luna is cheaper than Z.ai's GLM 5.3 -- true, but DeepSeek's Flash model and Xiaomi's MiMo-V2.5 Flash are both cheaper than Luna too. She just didn't compare it to those.\n\nFull breakdown at the link in bio. This article is for information only and is not financial advice.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#EnterpriseAI",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI CFO Sarah Friar told investors at a Goldman Sachs conference on Sept. 8 that the company is pushing into chip design, life sciences and financial services, and testing pricing tied to business outcomes rather than token usage.\n\nThe checkable numbers hold up: enterprise revenue grew 32% from June to July (vs. 20% company-wide), and a July 30 price cut to the Luna model (80% off) drove roughly a tenfold jump in usage. But one comparison is narrower than it sounds -- Friar said Luna beats Z.ai's GLM 5.3 on price, which is true, but two budget-tier Chinese models are actually cheaper than Luna itself.\n\nFull story (information only, not financial advice):",
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI's CFO says it's pushing into chip design, health care and finance, and testing pricing tied to results, not tokens. Enterprise revenue is up 32% in a month. The one pricing claim she made checks out -- but only against the model she named, not the cheapest ones out there.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's CFO says it's testing outcome-based pricing and pushing into chip design/health/finance. Enterprise revenue +32% in a month vs +20% overall. Her 'Luna is cheaper' claim checks out against GLM 5.3 specifically -- but not against DeepSeek Flash or Xiaomi's MiMo, both cheaper still.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-mathematical-ai-safety-institute-tsimerman-critch-launch",
+    "ts": "2026-09-09T19:19:51Z",
+    "export": {
+      "article_id": "newsroom-mathematical-ai-safety-institute-tsimerman-critch-launch",
+      "url": "https://rtfclmgzn.com/article/mathematical-ai-safety-institute-tsimerman-critch-launch",
+      "headline": "A Fields Medalist is launching an institute to build mathematical foundations for AI safety",
+      "hook": "A Fields Medalist just launched an institute to build rigorous mathematical definitions for AI safety -- while joining OpenAI's own safety team the same month.",
+      "key_facts": [
+        "Jacob Tsimerman (2026 Fields Medal) and Andrew Critch are launching the Mathematical AI Safety Institute.",
+        "MAISI aims to hire 10-30 mathematicians for a Bay Area semester starting January 2027.",
+        "Tsimerman is simultaneously joining OpenAI's safety team -- MAISI says it stays independent."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/mathematical-ai-safety-institute-tsimerman-critch-launch.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A Fields Medalist just launched an institute to build rigorous mathematical definitions for AI safety, modeled on Princeton's IAS. Notable tension: he's also joining OpenAI's safety team the same month, even as the institute calls itself independent.",
+        "reply_copy": "Who's involved, and the hiring plan:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#Math"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Jacob Tsimerman, winner of the 2026 Fields Medal, just launched the Mathematical AI Safety Institute (MAISI) -- an independent nonprofit aiming to build the kind of rigorous mathematical definitions for AI safety that statistics and physics already have.\n\nAndrew Critch is executive director. The plan: hire 10-30 mathematicians for a Bay Area semester starting January 2027, scaling to 30-100 for a September 2027 'Special Year.'\n\nThe tension worth noting: Tsimerman is also joining OpenAI's safety team this month, even as MAISI describes itself as independent of any lab.",
+        "hashtags": [
+          "#AISafety",
+          "#Mathematics",
+          "#FieldsMedal",
+          "#AI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Jacob Tsimerman, winner of the 2026 Fields Medal, announced the Mathematical AI Safety Institute (MAISI) on Sept. 8, alongside executive director Andrew Critch. The pitch: AI safety needs rigorous mathematical definitions, not just more red-teaming or policy work.\n\nMAISI aims to hire 10-30 mathematicians for a Bay Area semester starting January 2027. One tension worth flagging: Tsimerman is also joining OpenAI's own safety team this month, even as the institute calls itself independent.\n\nFull story:",
+        "hashtags": [
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A Fields Medalist just launched an institute to build rigorous mathematical foundations for AI safety -- while also joining OpenAI's safety team the same month. MAISI aims to hire 10-30 mathematicians starting January 2027.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Fields Medalist Jacob Tsimerman launched the Mathematical AI Safety Institute on Sept 8, aiming to hire 10-30 mathematicians for Jan 2027. He's also joining OpenAI's safety team the same month -- MAISI says it stays independent.",
+        "hashtags": [
+          "#AISafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

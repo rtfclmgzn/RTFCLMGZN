@@ -2923,7 +2923,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-13-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "openai-sarah-friar-industrial-ai-outcome-based-pricing",
+     "used_at": "2026-09-09"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-14",
@@ -2953,7 +2958,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-14-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "mathematical-ai-safety-institute-tsimerman-critch-launch",
+     "used_at": "2026-09-09"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-15",
@@ -3374,7 +3384,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-42-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal",
+     "used_at": "2026-09-09"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-04",

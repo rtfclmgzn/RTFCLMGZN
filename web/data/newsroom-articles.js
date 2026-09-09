@@ -50431,6 +50431,810 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "States what Muse actually does and how its approval mechanism works, attributes Amazon's own sales figures as self-reported rather than fact, and gives the trust question the specific historical basis (FTC penalty, Cambridge Analytica) it deserves rather than a vague gesture at \"privacy concerns.\""
       }
     }
+  },
+  {
+    "slug": "qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal",
+    "title": "Qualcomm and Amazon sign a multi-generation AI chip deal, with a warrant tied to $60 billion in future purchases",
+    "dek": "The Sept. 8 agreement covers custom inference silicon and 1.6-terabit optical connectivity for AWS data centers -- Qualcomm's first custom-silicon relationship with a Western hyperscaler, a year after it struck a similar pitch with Saudi Arabia's Humain. The financial structure is a warrant for 25 million Qualcomm shares, worth about $4 billion at issuance, that only fully vests if Amazon actually buys up to $60 billion of Qualcomm's chips over the next decade.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch Qualcomm's fiscal Q1 2027 earnings call.",
+        "text": "That's the first quarterly report after this deal, and the one where Qualcomm's own $5 billion fiscal 2027 data-center revenue target -- stated the same week, independent of AWS -- needs to start showing traction to look credible."
+      },
+      {
+        "label": "Watch whether Amazon places binding purchase orders, not just commercial arrangements.",
+        "text": "Only 3.75 million of the 25 million warrant shares vested on issuance. The remaining 21.25 million vest in tranches tied to specific purchase orders and milestones Amazon hasn't committed to yet -- the warrant rewards Qualcomm for sales it hasn't made."
+      },
+      {
+        "label": "Watch whether a second Western hyperscaler strikes a similar warrant-for-silicon deal.",
+        "text": "Broadcom and Marvell still handle the overwhelming majority of hyperscaler custom-chip co-design. Whether Google or Microsoft follows AWS's structure -- equity tied to future purchases, not just a supply contract -- would show whether this becomes a template or stays a one-off."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Qualcomm Announces Multi-Generational Product Collaboration with Amazon to Build Next-Generation AI Data Center Infrastructure",
+        "url": "https://www.qualcomm.com/news/releases/2026/09/qualcomm-announces-multi-generational-product-collaboration-with",
+        "outlet": "Qualcomm (company press release)",
+        "kind": "primary"
+      },
+      {
+        "label": "Qualcomm Inc/DE — Form 8-K, September 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000804328/000110465926105718/tm2623289d1_8k.htm",
+        "outlet": "SEC EDGAR (Qualcomm 8-K filing)",
+        "kind": "primary"
+      },
+      {
+        "label": "Qualcomm issues warrants to Amazon to acquire $4 billion worth of chipmaker's stock as part of AI infrastructure deal",
+        "url": "https://www.cnbc.com/2026/09/08/qualcomm-amazon-data-center-infrastructure-deal.html",
+        "outlet": "CNBC",
+        "kind": "reporting"
+      },
+      {
+        "label": "Qualcomm's new Amazon deal sent the stock soaring 9%",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomms-amazon-deal-sent-stock-140700972.html",
+        "outlet": "Yahoo Finance (via Bloomberg)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Qualcomm Wins First Western Hyperscaler: AWS Deal Pays Up to $60B for Inference Silicon",
+        "url": "https://www.techtimes.com/articles/326993/20260908/qualcomm-wins-first-western-hyperscaler-aws-deal-pays-60b-inference-silicon.htm",
+        "outlet": "Tech Times",
+        "kind": "reporting"
+      },
+      {
+        "label": "Qualcomm debuts AI200, AI250 data center AI chips",
+        "url": "https://siliconangle.com/2025/10/27/qualcomm-debuts-ai200-ai250-data-center-ai-chips/",
+        "outlet": "SiliconANGLE",
+        "kind": "reporting"
+      },
+      {
+        "label": "Saudi Arabia partners with Humain and Qualcomm to power next global AI frontier",
+        "url": "https://www.computerweekly.com/news/366633624/Saudi-Arabia-partners-with-Humain-and-Qualcomm-to-power-next-global-AI-frontier",
+        "outlet": "Computer Weekly",
+        "kind": "reporting"
+      },
+      {
+        "label": "Forget Smartphones: Qualcomm Just Landed a Massive AI Deal With Amazon",
+        "url": "https://www.fool.com/investing/2026/09/09/forget-smartphones-qualcomm-just-landed-a-massive-ai-deal-with-amazon/",
+        "outlet": "The Motley Fool",
+        "kind": "reporting"
+      },
+      {
+        "label": "Qualcomm at Goldman Sachs conference: Amazon deal boosts data center push",
+        "url": "https://www.investing.com/news/transcripts/qualcomm-at-goldman-sachs-conference-amazon-deal-boosts-data-center-push-93CH-4892129",
+        "outlet": "Investing.com",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Qualcomm and Amazon will co-design custom AI inference chips across multiple future generations.",
+      "Qualcomm issued Amazon a warrant for 25 million shares, worth about $4 billion at issuance.",
+      "Vesting ties to up to $60 billion in AWS purchases of Qualcomm chips over a 10-year term.",
+      "Qualcomm's stock jumped as much as 10% on the news, its biggest AI-driven pop yet.",
+      "The load-bearing caveat: $60 billion is a warrant ceiling, not a signed order or committed revenue."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Qualcomm** and **Amazon** announced on Sept. 8 a multi-generation collaboration to build custom AI inference silicon and high-speed optical connectivity for [AWS](/company/amazon) data centers -- Qualcomm's first custom-silicon relationship with a Western hyperscaler, a year after it struck a similar pitch with Saudi Arabia's PIF-backed Humain. \"As AI demand accelerates, data center infrastructure will require advances in both computing and connectivity to deliver greater performance with more efficiency,\" said Qualcomm CEO Cristiano Amon. AWS vice president Prasad Kalyanaraman framed it the other way around: \"By working together on customized silicon and advanced connectivity, we're delivering more performant, efficient, and cost-effective infrastructure.\" Financial terms went unmentioned in either company's own announcement.",
+        "citation_urls": [
+          "https://www.qualcomm.com/news/releases/2026/09/qualcomm-announces-multi-generational-product-collaboration-with"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The terms surfaced instead in a Securities and Exchange Commission filing the same day: Qualcomm issued Amazon a __warrant__ to acquire up to 25 million Qualcomm shares at $161.26 each -- a stake worth roughly $4 billion at issuance, cashless-exercisable, expiring Sept. 3, 2036. Of those shares, 3.75 million vested immediately, tied to Amazon's initial purchase commitments; ==the rest vest only as Amazon actually places binding purchase orders==, in tranches \"tied to the execution of certain commercial arrangements, the placement of binding purchase orders and actual purchases\" of Qualcomm server chips, technology and manufacturing services, up to a combined ceiling of %%$60B|warrant ceiling over 10 years, not a signed order%% in payments. The collaboration itself spans multiple future chip generations plus optical interconnects reaching 1.6 terabits per second and beyond, built on Qualcomm's SerDes and optical DSP technology.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000804328/000110465926105718/tm2623289d1_8k.htm",
+          "https://www.cnbc.com/2026/09/08/qualcomm-amazon-data-center-infrastructure-deal.html"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What the warrant actually promises, right now",
+          "items": [
+            {
+              "value": "3.75M shares",
+              "unit": "~$605M at $161.26",
+              "label": "Vested on issuance",
+              "includes": "Amazon's initial purchase commitments to Qualcomm",
+              "excludes": "Any purchase order Amazon hasn't placed yet",
+              "note": "The only part of this deal that is unconditionally Amazon's today."
+            },
+            {
+              "value": "21.25M shares",
+              "unit": "~$3.4B at $161.26",
+              "label": "Unvested, conditional",
+              "includes": "Future tranches tied to specific commercial arrangements and binding purchase orders",
+              "excludes": "Any guarantee those orders get placed",
+              "note": "This is the part of the '$4 billion deal' headline that hasn't happened yet."
+            },
+            {
+              "value": "$60B",
+              "unit": "10-year ceiling, to Sept. 2036",
+              "label": "Maximum warrant-triggering purchases",
+              "includes": "Server chips, technology, systems and manufacturing services QTI sells to Amazon",
+              "excludes": "A committed order, a delivery schedule, or Qualcomm's overall data-center revenue from other customers",
+              "note": "An upper bound the warrant tracks toward -- not a number either company has promised to hit."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Qualcomm shares jumped as much as 10% intraday and closed up roughly 6-9% depending on the measure, the stock's sharpest AI-driven move yet. CNBC's Jim Cramer said the deal gives Qualcomm's stalled stock \"something special\" to point to -- a nod to a smartphone-chip supplier that has spent two years trying to convince investors it has a second act. Speaking at Goldman Sachs' Communacopia + Technology Conference the same week, Qualcomm CFO Akash Palkhiwala backed that up with numbers: $5 billion in fiscal 2027 data-center revenue with \"very high confidence,\" a $15 billion target for fiscal 2029, and a 30% operating-margin goal within three years. \"We are a well-priced, highly diversified, and growing stock,\" Palkhiwala said. **None of those targets are AWS-specific** -- they're Qualcomm's whole data-center business, of which this deal is now the single largest disclosed piece.",
+        "citation_urls": [
+          "https://finance.yahoo.com/markets/stocks/articles/qualcomms-amazon-deal-sent-stock-140700972.html",
+          "https://www.investing.com/news/transcripts/qualcomm-at-goldman-sachs-conference-amazon-deal-boosts-data-center-push-93CH-4892129"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "A hundredfold gap between a warrant's ceiling and its vested value isn't a broken promise. It's what buying loyalty looks like before either side has actually bought anything.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This is Qualcomm's second attempt at AWS's neighborhood in under a year, and its first with an actual Western hyperscaler signed. Qualcomm unveiled the ++AI200++ and ++AI250++ inference chips on Oct. 27, 2025 -- its return to data-center silicon after exiting the server-CPU business years earlier -- built around its Hexagon NPU line and pitched on memory capacity (768GB on the AI200) rather than raw throughput. The very next day, Humain, the Saudi Public Investment Fund's AI arm, signed on for 200 megawatts of AI200/AI250 capacity starting in 2026. That deal proved demand existed somewhere; the AWS deal proves it exists among the companies that actually set the pace of the AI buildout.",
+        "citation_urls": [
+          "https://siliconangle.com/2025/10/27/qualcomm-debuts-ai200-ai250-data-center-ai-chips/",
+          "https://www.computerweekly.com/news/366633624/Saudi-Arabia-partners-with-Humain-and-Qualcomm-to-power-next-global-AI-frontier"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "items": [
+            {
+              "when": "Oct 27, 2025",
+              "what": "Qualcomm launches AI200 and AI250 inference chips, its return to data-center silicon.",
+              "source": "https://siliconangle.com/2025/10/27/qualcomm-debuts-ai200-ai250-data-center-ai-chips/"
+            },
+            {
+              "when": "Oct 28, 2025",
+              "what": "Humain (Saudi PIF) commits to 200MW of AI200/AI250 capacity -- Qualcomm's first customer.",
+              "source": "https://www.computerweekly.com/news/366633624/Saudi-Arabia-partners-with-Humain-and-Qualcomm-to-power-next-global-AI-frontier"
+            },
+            {
+              "when": "Sep 3, 2026",
+              "what": "Amazon's warrant is dated -- issued ahead of the public announcement.",
+              "source": "https://www.sec.gov/Archives/edgar/data/0000804328/000110465926105718/tm2623289d1_8k.htm"
+            },
+            {
+              "when": "Sep 8, 2026",
+              "what": "Qualcomm and AWS publicly announce the multi-generation silicon and optical deal.",
+              "hi": true,
+              "source": "https://www.qualcomm.com/news/releases/2026/09/qualcomm-announces-multi-generational-product-collaboration-with"
+            },
+            {
+              "when": "FY2027",
+              "what": "Qualcomm's own target: $5B in data-center revenue, company-wide, 'very high confidence.'",
+              "future": true,
+              "source": "https://www.investing.com/news/transcripts/qualcomm-at-goldman-sachs-conference-amazon-deal-boosts-data-center-push-93CH-4892129"
+            },
+            {
+              "when": "FY2029",
+              "what": "Qualcomm's own target: $15B in data-center revenue, company-wide.",
+              "future": true,
+              "source": "https://www.investing.com/news/transcripts/qualcomm-at-goldman-sachs-conference-amazon-deal-boosts-data-center-push-93CH-4892129"
+            },
+            {
+              "when": "Sep 3, 2036",
+              "what": "The warrant expires, whether or not the $60B ceiling was ever reached.",
+              "future": true,
+              "source": "https://www.sec.gov/Archives/edgar/data/0000804328/000110465926105718/tm2623289d1_8k.htm"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Tying a chip order to equity, rather than just a purchase contract, is now a pattern rather than a one-off. AMD granted [OpenAI](/company/openai) a warrant for up to 160 million shares -- roughly 10% of the company -- alongside a multi-gigawatt chip-supply agreement in October 2025. Nvidia separately committed up to $100 billion to help fund OpenAI's own infrastructure buildout. [Broadcom's](/company/broadcom) financing arrangements with Anthropic follow a related logic, even if the instrument differs. ==The common thread: the chipmaker's own stock price becomes a bet on whether its biggest customer actually buys what it says it will== -- which realigns incentives, and **blurs the line between a supplier and a shareholder**.",
+        "citation_urls": [
+          "https://finance.yahoo.com/markets/stocks/articles/qualcomms-amazon-deal-sent-stock-140700972.html",
+          "https://www.fool.com/investing/2026/09/09/forget-smartphones-qualcomm-just-landed-a-massive-ai-deal-with-amazon/"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Three ways a chipmaker has recently tied its stock to a customer's future orders",
+          "columns": [
+            {
+              "label": "Qualcomm → Amazon",
+              "sub": "warrant, Sep 2026",
+              "hi": true
+            },
+            {
+              "label": "AMD → OpenAI",
+              "sub": "warrant, Oct 2025"
+            },
+            {
+              "label": "Nvidia → OpenAI",
+              "sub": "direct funding, 2025"
+            }
+          ],
+          "rows": [
+            {
+              "label": "Instrument",
+              "values": [
+                "Warrant for 25M shares (~$4B)",
+                "Warrant for up to 160M shares (~10% of AMD)",
+                "Up to $100B in infrastructure funding commitments"
+              ]
+            },
+            {
+              "label": "Vesting trigger",
+              "values": [
+                "Amazon purchase orders and milestones, up to $60B ceiling",
+                "Chip-supply milestones tied to a multi-gigawatt deployment",
+                "Progressive infrastructure buildout stages"
+              ]
+            },
+            {
+              "label": "What Qualcomm/AMD/Nvidia gets",
+              "values": [
+                "A stake that only grows if AWS actually buys",
+                "A stake worth roughly 10% of AMD if OpenAI's deployment fully happens",
+                "A customer with enough capital to keep buying Nvidia GPUs"
+              ]
+            },
+            {
+              "label": "What the customer gets",
+              "values": [
+                "A discount lever and a supplier financially invested in its success",
+                "Warrant-linked pricing leverage on a huge GPU order",
+                "Guaranteed access to funding tied to Nvidia hardware"
+              ],
+              "note": "in each case, the chipmaker is financing the demand it is also trying to sell into"
+            }
+          ],
+          "source": "SEC 8-K (Qualcomm-Amazon); reported terms of the AMD-OpenAI and Nvidia-OpenAI arrangements, via Yahoo Finance/Bloomberg and The Motley Fool"
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this displaces the incumbents. **Broadcom and Marvell still handle the overwhelming majority of hyperscaler custom-silicon co-design**, and Amazon's own existing Trainium inference chips -- designed with Annapurna Labs, Amazon's in-house silicon team -- already rely on Marvell for manufacturing and interconnect components. Qualcomm's deal doesn't replace Trainium; it sits alongside it, which is itself notable -- AWS is now diversifying its custom-silicon bets rather than consolidating around one partner, the same hedge Microsoft and Google have each made with their own multi-vendor chip strategies.",
+        "citation_urls": [
+          "https://finance.yahoo.com/markets/stocks/articles/qualcomms-amazon-deal-sent-stock-140700972.html"
+        ]
+      },
+      {
+        "type": "model",
+        "model": {
+          "title": "What pace of AWS purchases would actually reach the $60B ceiling?",
+          "inputs": [
+            {
+              "key": "pace",
+              "label": "Assumed AWS annual purchases of Qualcomm chips",
+              "value": 6,
+              "min": 1,
+              "max": 20,
+              "step": 0.5,
+              "prefix": "$",
+              "unit": "B",
+              "dec": 1,
+              "note": "$60B ÷ 10-year warrant term is the even-pacing starting point"
+            }
+          ],
+          "outputs": [
+            {
+              "label": "Years to reach the $60B ceiling at that pace",
+              "expr": "60/pace",
+              "unit": "years",
+              "dec": 1,
+              "note": "The warrant expires in 2036 regardless of whether the ceiling is reached"
+            },
+            {
+              "label": "That pace as a share of Qualcomm's own FY2029 data-center target",
+              "expr": "pace/15*100",
+              "unit": "%",
+              "dec": 0,
+              "note": "Qualcomm's $15B FY2029 goal is company-wide, not AWS-specific -- this shows what share AWS alone would represent at that pace"
+            }
+          ],
+          "source": "$60B ceiling and 10-year term from the SEC 8-K; $15B FY2029 target from Qualcomm CFO Akash Palkhiwala's Goldman Sachs conference remarks"
+        }
+      },
+      {
+        "type": "p",
+        "text": "That arithmetic is the honest way to read a headline number that is, by design, unfalsifiable for a decade. At an even pace, AWS would need to buy about $6 billion of Qualcomm silicon a year to hit the ceiling on schedule -- alone, nearly 40% of Qualcomm's entire company-wide FY2029 data-center target. Nothing in the filing requires that pace; nothing prevents Amazon from buying nothing at all and letting the remaining 21.25 million shares simply never vest. **What actually happened on Sept. 8 is narrower than the $60 billion figure suggests**: two companies agreed to build chips together, and structured the incentive so that Qualcomm's upside grows exactly as fast as Amazon's orders do -- no faster.",
+        "citation_urls": [
+          "https://www.sec.gov/Archives/edgar/data/0000804328/000110465926105718/tm2623289d1_8k.htm"
+        ]
+      }
+    ],
+    "id": "newsroom-qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal",
+    "image": "assets/img/newsroom/qualcomm-amazon-aws-multi-generation-ai-chip-warrant-deal.jpg",
+    "publishedAt": "2026-09-09T19:13:09Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-09T19:13:09Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch that Qualcomm and Amazon announced a multi-generation AI chip/optical deal on Sept. 8, with SEC-disclosed warrant terms (25M shares, $161.26 strike, $60B ceiling, 2036 expiry) not mentioned in either company's own press release. Checked the archive first (grep on newsroom-articles.js/companies.js) -- Qualcomm has no prior article or companies.js entry despite genuine coverage today, Amazon does. 9 sources across 6-7 independent evidence threads: the warrant/deal terms (Qualcomm PR + SEC 8-K, primary), stock reaction (CNBC/Yahoo-Bloomberg), Qualcomm's own FY2027/FY2029 guidance (Investing.com conference transcript), the Oct 2025 AI200/AI250 launch (SiliconANGLE), the Humain/Saudi deal that preceded this one (Computer Weekly), and the AMD-OpenAI/Nvidia-OpenAI equity-deal comparison (Motley Fool). Clears the synthesis floor (3-7 threads) without stretching toward research. Flagged SCOREBOARD: no -- silicon deal, not a model launch."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Warrant mechanics (share count, strike price, vesting tranches, $60B ceiling, 2036 expiry) verified directly against the SEC 8-K filing rather than taken from secondary paraphrase -- this is the primary document and the only place the full vesting-tranche language appears. Amon and Kalyanaraman quotes verified verbatim against Qualcomm's own press release. Palkhiwala's revenue-target quote and figures verified against the Investing.com conference transcript. Cramer's 'something special' quote treated as a partial verbatim quote (only the quoted words are stated as his; the surrounding framing is this piece's own). No mandatory-scrutiny trigger fires: financial figures are attributed to the filing and the companies' own conference remarks, not stated as investment advice or price predictions."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique flagged that the initial draft repeated the $60B figure at face value in two places without the ceiling-vs-commitment distinction; added the ledger component and the closing paragraph's explicit reframing to fix this. Confirmed disclaimer: none (Compute section, matches house convention for hardware/data-center deals -- Markets section is where not-financial-advice applies). TL;DR final bullet carries the load-bearing caveat (ceiling vs. signed order). No self-referential language found on a re-read."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "ledger's three values (3.75M/21.25M vested split, $60B ceiling) trace to the SEC 8-K paragraph. timeline's seven dates trace to the SiliconANGLE, Computer Weekly, SEC 8-K, Qualcomm PR and Investing.com sources cited on each item. compare's rows trace to the Motley Fool/Yahoo-Bloomberg paragraph on equity-linked chip deals. model's two inputs (60, 10-year term, $15B FY2029 target) are both reported figures; the two output expressions (60/pace, pace/15*100) contain no bare number beyond the reported $60B/$15B and the 10-year term. No component carries a top-level text field. No two components sit adjacent; article opens on a p block."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 9 sources (2 primary: Qualcomm press release, SEC 8-K) across 6-7 independent evidence threads; 843-word body clears the synthesis floor. 4 components (ledger, timeline, compare, model) plus 1 pull quote -- above the 2-minimum/3-4-typical floor, justified because the story has three genuinely distinct data questions (what vested vs. what's promised; how Qualcomm got here; how this compares to other chipmakers' equity deals; what pace the ceiling actually implies). No compliance mandatory-scrutiny trigger; standard Compute-section disclaimer (none) applies."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Distinguishes a warrant's vested value from its ceiling in a dedicated ledger and a closing paragraph, rather than repeating the $60 billion headline number as committed revenue -- exactly the reconciliation work a wire rewrite of the SEC filing wouldn't do. Also adds Qualcomm to companies.js in this cycle given genuine standalone coverage."
+      }
+    }
+  },
+  {
+    "slug": "openai-sarah-friar-industrial-ai-outcome-based-pricing",
+    "title": "OpenAI's CFO says it's pushing into chip design, health care and finance -- and testing pricing tied to results, not tokens",
+    "dek": "Speaking at Goldman Sachs' Communacopia + Technology Conference on Sept. 8, Sarah Friar said OpenAI is targeting specialized industries beyond chatbots and coding, while experimenting with charging enterprise customers for outcomes rather than usage. She backed it with numbers: enterprise revenue grew 32% from June to July against 20% overall growth, and a July price cut to the Luna model drove roughly tenfold usage -- though the one direct comparison she offered leaves out cheaper Chinese models a rival CFO didn't have to mention.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for OpenAI to name an actual outcome-based pricing contract.",
+        "text": "Friar described the model as something OpenAI is 'testing' and 'exploring' -- no named customer, industry vertical, or contract structure has been disclosed yet. The first signed example would be the point where this stops being a pitch."
+      },
+      {
+        "label": "Watch Jalapeno's 2027 production ramp against the 'very small volumes' OpenAI itself has said to expect by the end of 2026.",
+        "text": "The nine-month tape-out is a design-cycle claim, not a shipping-volume one. Whether OpenAI's own models genuinely accelerated the design, versus a fast cycle other chipmakers have also hit without AI assistance, is not something either company has isolated with a comparison."
+      },
+      {
+        "label": "Watch whether life sciences and financial services get a named pilot the way chip design got Jalapeno.",
+        "text": "As of this conference, chip design has a concrete artifact (a taped-out chip); life sciences and financial services do not -- beyond OpenAI's own August EHR integration with Epic, which predates and doesn't confirm this specific pitch."
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI offers AI for chip design, touts cost advantage over open-source, CFO says",
+        "url": "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636",
+        "outlet": "Reuters (via Investing.com)",
+        "kind": "reporting"
+      },
+      {
+        "label": "OpenAI CFO Sarah Friar says Luna undercuts Chinese AI on price",
+        "url": "https://finance.yahoo.com/technology/ai/articles/openai-cfo-sarah-friar-says-123936035.html",
+        "outlet": "Yahoo Finance (via Reuters)",
+        "kind": "reporting"
+      },
+      {
+        "label": "AI price wars: OpenAI cuts GPT-5.6 Luna prices by 80% as model competition shifts toward cost",
+        "url": "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost",
+        "outlet": "VentureBeat",
+        "kind": "reporting"
+      },
+      {
+        "label": "Jalapeno's first results show industry-leading speed and efficiency in AI inference",
+        "url": "https://openai.com/index/jalapeno-first-results/",
+        "outlet": "OpenAI (company blog)",
+        "kind": "primary"
+      },
+      {
+        "label": "OpenAI Used Its Own AI Models to Design the Jalapeno Chip -- The Compute Landlord Thesis Just Went Recursive",
+        "url": "https://forkast.news/openai-used-its-own-ai-models-to-design-the-jalapeno-chip-the-compute-landlord-thesis-just-went-recursive/",
+        "outlet": "Forkast News",
+        "kind": "reporting"
+      },
+      {
+        "label": "PANews: OpenAI CFO says company expanding AI to vertical industries, exploring outcome-based pricing",
+        "url": "https://panews.io/articles/01a083ce-eb7d-7179-8cdb-f8306e7efb40",
+        "outlet": "PANews",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "OpenAI CFO Sarah Friar says the company is targeting chip design, life sciences and financial services.",
+      "OpenAI is testing pricing tied to business outcomes instead of per-token usage.",
+      "A July 30 Luna price cut of 80% drove roughly a tenfold jump in usage.",
+      "Enterprise revenue grew 32% from June to July, versus 20% growth company-wide.",
+      "Friar's 'cheaper' claim compared Luna to one Chinese rival -- not to cheaper options that exist."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[OpenAI](/company/openai) CFO Sarah Friar told investors at Goldman Sachs' Communacopia + Technology Conference on Sept. 8 that the company is pushing beyond chatbots and coding assistants into specialized industrial work -- chip design, life sciences and financial services -- while testing a pricing model tied to business results rather than how many tokens a customer consumes. It's a CFO's version of a product announcement: no new model, no launch, just a spending and pricing strategy laid out in front of the people who fund it. **Two of the numbers she offered are checkable against OpenAI's own business, and they hold up.** The third is a comparison that's accurate exactly as far as she took it, and no further.",
+        "citation_urls": [
+          "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Of the three verticals, only chip design has a concrete artifact behind it. Friar said OpenAI used its own frontier models to help design **Jalapeno**, the inference chip it has been co-developing with [Broadcom](/company/broadcom) since October 2025, and that the design cycle reached __tape-out__ -- the point where a chip's design is finalized and sent to a fab to be manufactured -- in under nine months. That's among the fastest publicly reported cycles for a chip of its class, and it sits on top of, not instead of, what OpenAI's own blog already disclosed in August: Jalapeno's early benchmark results against Nvidia's Blackwell systems, run on a public third-party suite and [reported here at the time](/article/ai-inference-chips-power-per-watt-pivot-nvidia-openai-broadcom). What's new in Friar's remarks isn't the chip's performance -- it's the claim that OpenAI's own models meaningfully sped up the human engineering work of designing it, a claim neither company has isolated with a before/after comparison against a design cycle done without AI assistance.",
+        "citation_urls": [
+          "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636",
+          "https://forkast.news/openai-used-its-own-ai-models-to-design-the-jalapeno-chip-the-compute-landlord-thesis-just-went-recursive/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Life sciences and financial services got no equivalent specifics -- no named pilot customer, no product, no contract, no figure resembling Jalapeno's nine-month number. The closest concrete anchor either vertical has is OpenAI's own August integration of ChatGPT with [Epic's](/article/chatgpt-health-epic-ehr-integration) electronic health record system, reported separately and not something Friar's Sept. 8 remarks connected back to this specific pitch. That gap matters for how much weight to put on the framing: 'chip design, life sciences and financial services' reads as three parallel bets, but **only one of the three currently has a shipped artifact attached to it.**",
+        "citation_urls": [
+          "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The clearest number in Friar's remarks was Luna's price. On July 30, OpenAI cut GPT-5.6 Luna from $1.00 per million input tokens and $6.00 per million output tokens down to $0.20 and $1.20 -- a combined rate of $1.40 versus $7.00 before, an 80% cut -- and Friar said usage rose roughly 10x afterward. The cut landed in the middle of a price war that Chinese open-weight labs mostly started, undercutting frontier US labs on a pure cost-per-token basis for much of 2026.",
+        "citation_urls": [
+          "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost",
+          "https://finance.yahoo.com/technology/ai/articles/openai-cfo-sarah-friar-says-123936035.html"
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "beforeafter": {
+          "title": "Luna's price cut, July 30, 2026",
+          "beforeLabel": "Before",
+          "afterLabel": "After",
+          "rows": [
+            {
+              "label": "Input tokens, per million",
+              "before": "$1.00",
+              "after": "$0.20"
+            },
+            {
+              "label": "Output tokens, per million",
+              "before": "$6.00",
+              "after": "$1.20"
+            },
+            {
+              "label": "Combined (1M in + 1M out)",
+              "before": "$7.00",
+              "after": "$1.40, an 80% cut"
+            },
+            {
+              "label": "Reported usage response",
+              "before": "Baseline",
+              "after": "~10x increase, per Friar"
+            }
+          ],
+          "source": "VentureBeat (pricing figures); Reuters via Investing.com (usage claim)"
+        }
+      },
+      {
+        "type": "p",
+        "text": "\"If you're deploying Luna and compare that to [Z.ai's] GLM 5.3, for example, on a cloud layer, we are cheaper,\" Friar said -- a specific, checkable comparison, and by VentureBeat's own reporting, an accurate one: GLM 5.3's standard API pricing runs $1.40 per million input tokens and $4.40 per million output tokens, a combined $5.80, more than four times Luna's post-cut rate. ==It is also a narrower claim than the framing suggests==, and the gap between the two is exactly the kind of thing a wire rewrite of the Reuters story wouldn't flag.",
+        "citation_urls": [
+          "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Luna's post-cut price against the models it was and wasn't compared to",
+          "columns": [
+            {
+              "label": "Luna",
+              "sub": "OpenAI, post-cut",
+              "hi": true
+            },
+            {
+              "label": "GLM 5.3",
+              "sub": "Z.ai, the model Friar named"
+            },
+            {
+              "label": "DeepSeek Flash",
+              "sub": "budget tier"
+            },
+            {
+              "label": "MiMo-V2.5 Flash",
+              "sub": "Xiaomi, budget tier"
+            }
+          ],
+          "rows": [
+            {
+              "label": "Combined price, 1M in + 1M out",
+              "values": [
+                "$1.40",
+                "$5.80",
+                "~$0.42",
+                "~$0.40"
+              ]
+            },
+            {
+              "label": "Market tier",
+              "values": [
+                "Flagship",
+                "Flagship",
+                "Budget/distilled",
+                "Budget/distilled"
+              ],
+              "note": "comparing Luna to a flagship model is not the same as comparing it to the market's cheapest tier"
+            }
+          ],
+          "source": "VentureBeat's September 2026 pricing survey; Reuters via Investing.com for Friar's GLM 5.3 comparison"
+        }
+      },
+      {
+        "type": "p",
+        "text": "That tier mismatch is the whole reconciliation: DeepSeek's Flash model runs about $0.42 combined per million tokens and Xiaomi's MiMo-V2.5 Flash about $0.40 -- both genuinely cheaper than Luna, but budget-tier models Friar wasn't comparing Luna to. Her comparison and VentureBeat's market survey are not actually in conflict; they're answering different questions.",
+        "citation_urls": []
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Is Luna actually the cheapest capable model available, or just cheaper than the one rival Friar named?",
+              "claims": [
+                {
+                  "who": "OpenAI CFO Sarah Friar, Sept. 8",
+                  "kind": "company",
+                  "says": "Luna is cheaper than Z.ai's GLM 5.3 when both are deployed through a cloud provider.",
+                  "url": "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636"
+                },
+                {
+                  "who": "VentureBeat's own pricing survey, same week",
+                  "kind": "reporting",
+                  "says": "DeepSeek's Flash model and Xiaomi's MiMo-V2.5 Flash both run cheaper than Luna's combined rate on a pure token basis.",
+                  "url": "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost",
+                  "trusted": true
+                }
+              ],
+              "ruling": "Using VentureBeat's fuller market survey for the general claim, and treating Friar's statement as accurate only for the specific comparison she made. Luna undercuts GLM 5.3, the flagship rival she named; it is not the cheapest model on the market on a pure token basis, a claim she did not literally make but which the framing invites a reader to assume."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The revenue numbers are less contestable, because they describe OpenAI's own business rather than a competitor's pricing page. Enterprise customer revenue climbed 32% between June and July, outpacing the company's 20% overall annualized growth rate over the same stretch, and enterprise and consumer revenue reached roughly even parity by mid-year -- ==ahead of OpenAI's own year-end target for that balance==. Codex, OpenAI's coding tool, has reached 25 million users. Put together, the pitch is coherent even where it's unproven: cut prices to win volume against cheaper open-weight rivals on the low end, then recover margin on the high end by selling outcomes -- a completed chip design, a processed diagnosis, a reviewed filing -- to enterprises who no longer want to pay for tokens they can't tie to a result.",
+        "citation_urls": [
+          "https://finance.yahoo.com/technology/ai/articles/openai-cfo-sarah-friar-says-123936035.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Outcome-based pricing is itself a bet that enterprise AI buyers have changed what they'll sign. A year of usage-based API bills that scaled with adoption but not always with measurable value has left procurement teams asking a harder question before renewal: what did this actually get us? Tying price to a completed result -- rather than a volume of tokens, seats, or API calls -- shifts that risk from the buyer to the seller, which is a much easier pitch to make from a position like OpenAI's, with enough enterprise revenue growth to absorb the experiment, than it would be for a smaller lab still trying to prove usage-based pricing works at all.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "Chinese open-weight labs selling on price alone (DeepSeek, Z.ai, Xiaomi)",
+              "tone": "exposed",
+              "what": "Lose their cleanest pitch -- being cheaper than a frontier US lab -- against the specific model OpenAI chose to compare itself to, even as some of their own models remain cheaper still."
+            },
+            {
+              "who": "Enterprise buyers currently paying per-token",
+              "tone": "gains",
+              "what": "Gain a lower Luna price immediately, and the option -- once outcome-based pricing exists as a real contract -- to pay for a completed task instead of metered usage."
+            },
+            {
+              "who": "Incumbent chip-design, health-records and fintech software vendors",
+              "tone": "unclear",
+              "what": "Face a well-funded new entrant with no shipped product in two of the three named verticals yet -- real competitive pressure eventually, but not this week."
+            },
+            {
+              "who": "Broadcom, as Jalapeno's co-designer",
+              "tone": "gains",
+              "what": "Gets its chip-design partnership positioned as proof AI can compress hardware timelines, a marketing asset independent of Jalapeno's actual 2027 production volume."
+            }
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "text": "A CFO's conference remarks are checkable in the parts that describe her own company's ledger, and unverifiable in the parts that describe what her company hopes to sell next year.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of this is a launch. It's a CFO narrating a strategy at a bank's investor conference, which is exactly the kind of statement that tends to get repeated as settled fact once enough outlets run the same wire copy. **The concrete parts -- the price cut, the enterprise revenue split, the taped-out chip -- are checkable and, so far, check out.** The parts that aren't yet concrete -- what an outcome-based contract actually looks like, and what OpenAI has actually shipped in life sciences or financial services beyond one hospital-records integration -- are still just the sentence a CFO said out loud, not a product a customer can buy.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-openai-sarah-friar-industrial-ai-outcome-based-pricing",
+    "image": "assets/img/newsroom/openai-sarah-friar-industrial-ai-outcome-based-pricing.jpg",
+    "publishedAt": "2026-09-09T19:17:43Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-09T19:17:43Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch that OpenAI CFO Sarah Friar made several distinct claims at Goldman Sachs' Communacopia + Technology Conference on Sept 8-9: vertical expansion (chip design/life sciences/financial services), outcome-based pricing experiments, and enterprise revenue growth figures. Cross-checked the archive first -- no prior article on this specific conference appearance; the Jalapeno chip and the ChatGPT/Epic integration were each covered separately in prior cycles (Aug 25 and Sept 3 respectively), so this piece treats those as context via cross-link rather than re-reporting them. 6 sources across 4 independent evidence threads: the CFO's conference remarks (Reuters, syndicated across Investing.com/Yahoo/PANews -- counted as one thread despite multiple source entries), the July 30 Luna price-cut mechanics and broader pricing-survey context (VentureBeat, independent of the Reuters piece), OpenAI's own Aug 25 Jalapeno benchmark blog post (primary), and the Forkast News angle specifically on OpenAI using its own models for chip design. Clears the synthesis floor. Flagged SCOREBOARD: no -- no model launch."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Friar's GLM 5.3 price-comparison quote verified verbatim across two independent Reuters syndications (Investing.com and Yahoo Finance) before use. Cross-checked her 'cheaper' framing against VentureBeat's own independent pricing survey the same week, which found DeepSeek's Flash model and Xiaomi's MiMo-V2.5 Flash both cheaper than Luna on a pure token basis -- this is the reconciliation that produced the sourcecheck component; it would have been easy to just repeat Friar's line as OpenAI is now the cheapest option, which the sourcing doesn't actually support. Luna price-cut figures ($1.00/$6.00 to $0.20/$1.20) verified against VentureBeat's specific numbers, not the rounder '80%' figure alone. Declined to include a specific claim about how much faster AI-assisted chip design was versus a human-only baseline, since neither OpenAI nor Broadcom has published that comparison -- flagged explicitly in the apply block instead of asserted in prose. No mandatory-scrutiny trigger fires: this is reported business strategy, not investment advice; not-financial-advice disclaimer applied per house convention for the Markets section."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft was 546 words in body prose -- below the 650-word threshold at which the site's own trueFormat() ruler relabels a synthesis as a brief regardless of declared format -- so it was rewritten with more substance (industry context on why outcome-based pricing is being tested now, and a fuller stakes analysis) rather than padded with repetition; final body is 854 words. Confirmed disclaimer: not-financial-advice (Markets/Kian Farzan, matches house convention for business-strategy and revenue stories). TL;DR final bullet carries the load-bearing caveat (the cheaper-than-what qualifier on Friar's pricing claim). No self-referential language found on re-read."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "beforeafter's four rows trace to the VentureBeat pricing paragraph. sourcecheck's two claims trace to the Reuters conference-remarks paragraph and the VentureBeat pricing-survey paragraph respectively, with exactly one trusted claim and a ruling stating why. stakes' four items each name a specific, non-generic party (three named Chinese labs, not 'the market'; Broadcom by name). No component carries a top-level text field. No two components sit adjacent -- prose or the pull quote separates every pair. Article opens on a p block."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources (1 primary: OpenAI's own Jalapeno blog post) across 4 independent evidence threads; 854-word body clears the synthesis floor. 3 components (beforeafter, sourcecheck, stakes) meet the 2-minimum/3-4-typical floor, with beforeafter and sourcecheck both carrying data. The sourcecheck component does real reconciliation work -- catching that Friar's 'cheaper' claim doesn't extend to the market's actual cheapest options -- rather than repeating the CFO's framing uncritically. Not-financial-advice disclaimer applied; no mandatory-scrutiny trigger otherwise."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "The piece's core value is distinguishing what's checkable in a CFO's conference remarks (the price cut, the revenue split, the taped-out chip) from what isn't yet (an actual outcome-based contract, a life-sciences or financial-services product) -- exactly the kind of scrutiny a wire rewrite of the Reuters story skips."
+      }
+    }
+  },
+  {
+    "slug": "mathematical-ai-safety-institute-tsimerman-critch-launch",
+    "title": "A Fields Medalist is launching an institute to build mathematical foundations for AI safety",
+    "dek": "Jacob Tsimerman, who won the 2026 Fields Medal, announced the Mathematical AI Safety Institute (MAISI) on Sept. 8 alongside executive director Andrew Critch, aiming to hire 10-30 mathematicians to relocate to the Bay Area for a first full semester starting January 2027. The pitch: AI safety needs the kind of rigorous mathematical definitions that statistics and physics already have, not just more red-teaming or policy work -- even as Tsimerman himself is also joining OpenAI's safety team the same month.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch January 2027 for MAISI's first cohort to actually convene.",
+        "text": "10-30 mathematicians relocating to the Bay Area is the first concrete test of whether the announcement converts into a working research program, versus a website and a founding team."
+      },
+      {
+        "label": "Watch whether MAISI publishes anything before its September 2027 'Special Year.'",
+        "text": "The institute says it favors rapid knowledge-sharing over traditional academic publishing timelines -- a claim that's easy to make at launch and easy to check a year in."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Mathematical AI Safety Institute -- mission, leadership and hiring plan",
+        "url": "https://maisi.org/",
+        "outlet": "MAISI (institute website)",
+        "kind": "primary"
+      },
+      {
+        "label": "Jacob Tsimerman announces the founding of MAISI",
+        "url": "https://x.com/Jacob_Tsimerman/status/2097282175636734444",
+        "outlet": "X / Jacob Tsimerman",
+        "kind": "primary"
+      },
+      {
+        "label": "Andrew Critch on joining Tsimerman to found MAISI",
+        "url": "https://x.com/AndrewCritchPhD/status/2097282634137096521",
+        "outlet": "X / Andrew Critch",
+        "kind": "primary"
+      },
+      {
+        "label": "Fields medalist Jacob Tsimerman launches institute for AI safety",
+        "url": "https://www.newsnationnow.com/business/tech/ai/mathematician-jacob-tsimerman-ai-safety-institute/",
+        "outlet": "NewsNation",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Fields Medalist Jacob Tsimerman launched the Mathematical AI Safety Institute (MAISI) on Sept. 8.",
+      "Andrew Critch, his 2025 co-author on catastrophic-AI-risk scenarios, is executive director.",
+      "MAISI aims to hire 10-30 mathematicians for a Bay Area semester starting January 2027.",
+      "The pitch is rigorous mathematical definitions for AI safety, modeled on Princeton's IAS.",
+      "Tsimerman is simultaneously joining OpenAI's safety team -- the institute says it stays independent."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Jacob Tsimerman**, winner of the 2026 Fields Medal, announced the founding of the ++Mathematical AI Safety Institute++ (MAISI) on Sept. 8, an independent nonprofit the group describes as \"developing mathematical foundations for the safety of powerful AI systems.\" Andrew Critch -- a mathematician and former researcher at Berkeley's Center for Human-Compatible AI, and Tsimerman's co-author on a 2025 paper about catastrophic AI scenarios -- will serve as executive director. The first cohort targets 10-30 mathematicians for a January 2027 semester, scaling to 30-100 researchers for a more ambitious \"Special Year\" in September 2027. The pitch, in the institute's own words: \"The foundations of statistics, physics, and even computer science are mathematical... Now, we need similar mathematical foundations for AI safety, not only to measure risk, but to mitigate it.\" The stated problem, per the institute's site: \"we lack a rigorous understanding of what it would mean to be safe, even in theory\" -- a gap MAISI wants to close with formal definitions and measurements, not additional red-teaming or policy work, which is where most AI safety funding currently goes.",
+        "citation_urls": [
+          "https://maisi.org/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "The launch, in short",
+          "items": [
+            {
+              "label": "Scientific Director",
+              "value": "Jacob Tsimerman",
+              "note": "2026 Fields Medalist, University of Toronto"
+            },
+            {
+              "label": "Executive Director",
+              "value": "Andrew Critch",
+              "note": "PhD, UC Berkeley; ex-Center for Human-Compatible AI"
+            },
+            {
+              "label": "Model",
+              "value": "Princeton's Institute for Advanced Study",
+              "note": "semester-long research stints, not a permanent faculty"
+            },
+            {
+              "label": "First cohort",
+              "value": "10-30 mathematicians",
+              "note": "targeted for a Bay Area semester starting January 2027"
+            },
+            {
+              "label": "Scale-up",
+              "value": "30-100 researchers",
+              "note": "planned 'Special Year' program, September 2027"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "__Independence__ is the institute's own framing, and it sits next to a real tension: Tsimerman is simultaneously joining OpenAI's safety research team this month, even as MAISI describes itself as operating independently of any lab. The institute's advisory panel leans toward names already inside frontier labs or their orbit -- Geoffrey Irving, chief scientist at Resolution and a former DeepMind and OpenAI alignment lead, and Paul Christiano, director of the Alignment Research Center -- alongside Stanford mathematician Ravi Vakil and 1998 Fields Medalist Timothy Gowers. MAISI's own materials do not disclose a funding source.",
+        "citation_urls": [
+          "https://maisi.org/",
+          "https://www.newsnationnow.com/business/tech/ai/mathematician-jacob-tsimerman-ai-safety-institute/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The launch lands the same week a dispute over credit for [an AI-assisted proof of a Navier-Stokes blowup problem](/article/openai-navier-stokes-buckmaster-alpoge-credit-dispute) was dominating mathematicians' attention online -- a coincidence of timing, not a connection either announcement makes, but a reminder that the same week AI's mathematical capabilities and its safety-research funding both made news through mathematicians rather than labs.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-mathematical-ai-safety-institute-tsimerman-critch-launch",
+    "image": "assets/img/newsroom/mathematical-ai-safety-institute-tsimerman-critch-launch.jpg",
+    "publishedAt": "2026-09-09T19:19:51Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-09T19:19:51Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "Found via WebSearch that Fields Medalist Jacob Tsimerman launched MAISI on Sept 8 -- already a Buzz card (bz-534) from a prior cycle, but not yet a full article. Checked the archive first; no prior article exists on this launch. Fetched MAISI's own website directly (primary) for mission, leadership and hiring-plan details beyond what fit in the Buzz card, plus one independent report (NewsNation) for context. X posts from Tsimerman and Critch are cited as the announcement's primary record but not quoted verbatim beyond what WebSearch's own result snippets confirmed, since direct X fetches were paywalled (402). One event, one launch -- correctly a brief, not stretched toward synthesis despite having 4 source entries, per format-routing.md's anti-gaming rule against adding sources merely to unlock a higher tier."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Both direct quotes ('The foundations of statistics...' and 'we lack a rigorous understanding...') verified against MAISI's own website text via WebFetch, not reconstructed from a secondary paraphrase. Leadership bios (Critch's Berkeley/CHAI background, the advisory panel names and their lab affiliations) verified against the same primary source. Did not quote Tsimerman's or Critch's X posts directly since the direct fetch was paywalled -- their announcement is described in paraphrase and cited to the posts, per the compliance rule that quotes attributed to a real person must be verbatim from a source actually confirmed, not reconstructed from a search-result snippet. No mandatory-scrutiny trigger fires."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Critique found the first draft was 256 words -- inside the 250-450 brief target but at the thin end -- and added one more verified quote from MAISI's own site (the 'even in theory' line) rather than padding with unsourced framing; final body is 306 words. Confirmed disclaimer: none (Frontier section, no health/financial/legal trigger). Confirmed the Tsimerman-joins-OpenAI independence tension is stated as a tension, not an accusation, satisfying compliance without needing mandatory-scrutiny routing. Cross-link to the same-day Navier-Stokes credit-dispute piece is framed around the shared subject (mathematicians and AI, this week) rather than as this newsroom's own coverage, per style.agent.md SS2a."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items (Tsimerman, Critch, IAS model, 10-30 cohort, 30-100 Special Year) all trace directly to MAISI's own website, cited in the paragraph immediately before the component. No component carries a top-level text field. keyfacts is the article's only component, immediately following the paragraph that introduces the launch -- not leading the piece, and not stacked against another component."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources (3 primary: MAISI's own site, Tsimerman's and Critch's announcement posts) for a single-event brief; 306-word body clears the format's target range. 1 component (keyfacts), meeting the brief floor. No mandatory-scrutiny trigger; disclaimer: none, matching Frontier-section convention."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Names the independence-vs-OpenAI-affiliation tension directly rather than repeating MAISI's own 'independent' framing uncritically, and declines to quote the founders' own posts verbatim where the primary text couldn't be directly confirmed -- both real, if modest, scrutiny for a single-event brief."
+      }
+    }
   }
 ]
 ;
