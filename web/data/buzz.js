@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-536", date:"2026-09-09",
+    source:{ name:"Nvidia", handle:"Nvidia", platform:"web", kind:"lab" },
+    text:"Nvidia announced a $12.93 billion acquisition of Hugging Face, the platform hosting 3 million models and used by 18 million developers, structured as $11.9 billion in cash plus $1 billion in equity retention for employees. The deal, expected to close in H1 2027, completes Nvidia's vertical integration from silicon through the marketplace where models are discovered and deployed, consolidating the AI value chain from data center infrastructure to model distribution.",
+    why:"A hyperscaler acquirer moving from chips and inference services into the model-repository layer itself is a signal that the competitive moat is shifting from hardware alone to control over the infrastructure that decides which models developers actually build on.",
+    heat:72, topics:["nvidia","hugging face","acquisition","consolidation","platform","model repository","ai infrastructure"],
+    url:"https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" },
+{ id:"bz-535", date:"2026-09-08",
+    source:{ name:"Google DeepMind", handle:"Google DeepMind", platform:"web", kind:"lab" },
+    text:"Google DeepMind released AlphaGenome Atlas on September 8, a 1-petabyte dataset containing molecular-effect predictions for all 9 billion possible single-letter DNA variants in the human genome, accessible for non-commercial research via an open portal alongside a new variant-ranking score (AVI). Commercial access via Google Cloud coming soon. The dataset is 30× larger than AlphaFold Database and comes with explicit disclaimers that it is a research tool for evidence chains only, not validated for clinical use.",
+    why:"A frontier lab precomputing predictions across the entire human genome and publishing the results openly is a concrete model for how AI research productivity is now measured in data-scale—a billion variants predicted once and cached, rather than predicted on-demand, signals a shift in how frontier capability gets operationalized for researchers beyond the lab.",
+    heat:61, topics:["google deepmind","genomics","alphagenome","molecular predictions","dna variants","dataset","research","biology"],
+    url:"https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/" },
 { id:"bz-532", date:"2026-09-09",
     source:{ name:"Google Cloud", handle:"Google Cloud", platform:"web", kind:"lab" },
     text:"Google announced a two-year, EUR13 billion (~$15.1B) AI-infrastructure investment in Finland covering data centers in Hamina, Kajaani, Muhos and Vaala, alongside its first nuclear power deal outside the US: a 22-year purchase agreement with Fortum for up to half the output of the Loviisa nuclear plant, which currently supplies 10% of Finland's electricity. Google says the deal gives the aging plant the revenue certainty to keep running past 2030.",
