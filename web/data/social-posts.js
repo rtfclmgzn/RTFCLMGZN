@@ -14873,5 +14873,201 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-09T04:59:31Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-navier-stokes-buckmaster-alpoge-credit-dispute",
+    "ts": "2026-09-09T14:28:53Z",
+    "export": {
+      "article_id": "newsroom-openai-navier-stokes-buckmaster-alpoge-credit-dispute",
+      "url": "https://rtfclmgzn.com/article/openai-navier-stokes-buckmaster-alpoge-credit-dispute",
+      "headline": "OpenAI says an unreleased model proved a Navier-Stokes blowup result. The mathematician racing it says OpenAI wouldn't say when its own effort started.",
+      "hook": "OpenAI says an unreleased model proved a Navier-Stokes blowup result -- hours later, the mathematician racing it published a statement accusing OpenAI of learning about his work first and pressuring him over credit.",
+      "key_facts": [
+        "OpenAI says its model ran ~10,000 agents over 88 hours to produce a Lean-verified proof.",
+        "NYU's Tristan Buckmaster says OpenAI wouldn't say when its own effort actually began.",
+        "OpenAI's Sebastien Bubeck denies using Buckmaster and Alpoge's work or seeing it before release."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/openai-navier-stokes-buckmaster-alpoge-credit-dispute.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI says an unreleased model proved a Navier-Stokes blowup result. Hours later, the NYU mathematician racing it published a statement: OpenAI learned of his work first, then pushed him to drop his co-author -- who works at Anthropic. OpenAI denies using their work.",
+        "reply_copy": "The full account, both sides:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-09T19:47:00Z",
+        "copy": "The one line from Tristan Buckmaster's statement that's hard to unread: after he said he'd go public, OpenAI's Sebastien Bubeck allegedly replied, \"If you don't want me to be nice, then I don't have to be nice.\"",
+        "reply_copy": "Full statement, quoted verbatim:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI says an unreleased, more-capable-than-GPT-6-Astra model just proved a forced Navier-Stokes blowup result -- ~10,000 AI agents, 88 hours, Lean-verified.\n\nHours later, NYU mathematician Tristan Buckmaster published his own account of the same week: he says OpenAI learned his and Levent Alpoge's related work first, then pressured him to drop Alpoge -- who works at Anthropic -- as a co-author.\n\nOpenAI's Sebastien Bubeck denies using their work or seeing it before it went public. Neither side's central claim has been independently reviewed yet. Full story at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Mathematics",
+          "#TechNews",
+          "#AIethics",
+          "#MachineLearning"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI says an unreleased internal model -- more capable than GPT-6 Astra -- produced a Lean-verified proof of a Navier-Stokes blowup result, using roughly 10,000 coordinating agents over 88 hours.\n\nHours after the announcement, NYU mathematician Tristan Buckmaster published his own account of the same story: he says OpenAI learned of his and Anthropic researcher Levent Alpoge's related work first, then proposed he drop Alpoge as a co-author because of where Alpoge works.\n\nOpenAI's Sebastien Bubeck has denied using or seeing their work before it was public. Full story:",
+        "hashtags": [
+          "#AI",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI says an unreleased model proved a Navier-Stokes blowup result. The NYU mathematician racing it says OpenAI learned of his work first and pushed him to drop his co-author over which lab she works at. OpenAI denies it. Neither side's central claim is independently verified yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-09T19:47:00Z",
+        "copy": "Buckmaster's own statement is careful about what he isn't claiming: \"I have not seen OpenAI's proof... I am not accusing anyone of anything. I am stating what I was told.\" Worth reading in full before picking a side.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI says an unreleased model proved a Navier-Stokes blowup result. Hours later, the mathematician racing it published his own account: OpenAI learned of his work first, then pressured him over co-author credit. OpenAI denies it. Unverified on both sides so far.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Math"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-meta-muse-personal-ai-agent-checkout-launch",
+    "ts": "2026-09-09T14:47:00Z",
+    "export": {
+      "article_id": "newsroom-meta-muse-personal-ai-agent-checkout-launch",
+      "url": "https://rtfclmgzn.com/article/meta-muse-personal-ai-agent-checkout-launch",
+      "headline": "Meta's new AI agent can email, book, and buy things on its own -- checking out through a card it can't actually see",
+      "hook": "Meta's new Muse agent can email, book travel, and complete purchases on its own -- through a one-time-use card it can't actually see, with a separate agent approving every action before it goes live.",
+      "key_facts": [
+        "Muse checks out through Stripe Link's one-time-use cards -- it has no visibility into real payment details.",
+        "A separate 'Sentinel' agent must approve every Muse action before it reaches the internet.",
+        "It's free for basic use, $20 or $100/month for more, US-only and 18-plus at launch."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/meta-muse-personal-ai-agent-checkout-launch.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Meta's new Muse agent can email, book, and buy things for you -- checkout runs through a one-time-use card it can't actually see, and a separate \"Sentinel\" agent has to approve every action before it goes live. The real question: does anyone trust Meta specifically with this?",
+        "reply_copy": "How it actually works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-09T19:47:00Z",
+        "copy": "Amazon's Rufus: 300M+ users, ~$12B in incremental sales (Amazon's own numbers). OpenAI's Instant Checkout: scaled back in March after in-chat purchases converted at 1/3 the rate of just sending people to the retailer's site. Meta's Muse just launched into that exact graveyard.",
+        "reply_copy": "The full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Meta launched Muse: an AI agent that emails, books travel, fills out forms, and buys things -- on its own.\n\nThe interesting part isn't the shopping. It's the architecture: Muse runs in an isolated \"Secure VM,\" and a separate \"Sentinel\" agent has to approve every single action before it reaches the internet. Checkout runs through a one-time-use card Muse itself can't see.\n\nFree tier, plus $20 and $100/month plans. US-only, 18+, for now.\n\nThe bigger question isn't whether the tech works -- it's whether people trust Meta specifically with it, two years after a $5B FTC privacy penalty. Full story at the link in bio.",
+        "hashtags": [
+          "#Meta",
+          "#AI",
+          "#AIAgent",
+          "#TechNews",
+          "#ConsumerTech",
+          "#Privacy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Meta launched Muse on September 8: a personal AI agent that can send emails, book travel, fill out forms, and complete purchases on its own, running on Meta's Muse Spark model.\n\nThe notable part is the architecture -- Muse operates inside an isolated \"Secure VM,\" and a separate \"Sentinel\" agent has to approve every outbound action before it happens. Checkout runs through a one-time-use Stripe Link card, so Muse itself never sees real payment details.\n\nFree for basic use, $20 or $100/month for more. US-only, 18-plus, for now. Full story:",
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Meta's new Muse agent emails, books, and buys things on its own -- checkout runs through a card it can't see, and a separate agent approves every action first. Free tier, $20/$100 plans, US-only, 18+. The real test isn't the tech, it's whether people trust Meta with it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Meta's Muse agent can email, book, and buy things on its own. Checkout: a one-time-use card Muse can't see. A separate 'Sentinel' agent approves every action first. Amazon's Rufus and OpenAI's Instant Checkout both had a rough go in this exact category.",
+        "hashtags": [
+          "#Meta",
+          "#AI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

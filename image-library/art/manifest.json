@@ -4283,7 +4283,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-52-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-openai-navier-stokes-buckmaster-alpoge-credit-dispute",
+     "used_at": "2026-09-09"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-03",
