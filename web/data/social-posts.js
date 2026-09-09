@@ -14634,10 +14634,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Nvidia"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2097652937363177556",
         "attempts": 1,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2097652937363177556",
+        "posted_at": "2026-09-09T11:46:48Z"
       },
       {
         "platform": "instagram",
@@ -14766,8 +14767,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-09T00:32:00Z",
         "copy": "Nvidia's ~$2B Nscale stake is one line in a $99B AI-investment portfolio, up from $7B a year ago. Same $2B size as its CoreWeave and Nebius stakes. Nvidia is increasingly financing the same customers buying its chips.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdELiLGlQZM",
+        "remote_id": "18118105880315338",
+        "posted_at": "2026-09-09T11:43:00Z"
       },
       {
         "platform": "bluesky",
@@ -14812,10 +14815,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#SmartHome"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2097651927781667295",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2097651927781667295",
+        "posted_at": "2026-09-09T11:42:47Z"
       },
       {
         "platform": "instagram",
