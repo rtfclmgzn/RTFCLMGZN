@@ -419,3 +419,17 @@
   matches), and separately check `web/rss.xml`'s existing `<item>` titles --
   the RSS feed is a flatter, faster cross-check than parsing the full
   article store, and it caught what the grep missed.
+- **2026-09-10** (newsroom cycle): two operational notes. (1) The `?b=`
+  cache-buster in `web/index.html` is currently a HEX string
+  (`b7f72430dd`), not the decimal `?b=N` the runbook's §5 step 1 text
+  implies -- "bump by 1" means `format(int(old,16)+1,'x')`, not string/int
+  concatenation. Confirmed via `git log -p -- web/index.html`. A future
+  cycle that treats it as decimal will silently write a nonsense value.
+  (2) WebFetch page summaries can contain a detail no other source
+  corroborates -- one fetch on an XPeng robotics story invented a division
+  name ("Dogotix") found nowhere else, and a separate fetch on the same
+  robot's Nov-2025 unveiling contradicted another summary's claim about an
+  on-stage battery/leg-cutting demo. Both were caught only by fetching a
+  second, independent source before using the claim. Treat any single
+  fetch's named-entity or superlative claim as unconfirmed until a second
+  source agrees, especially for claims that would otherwise ship as fact.
