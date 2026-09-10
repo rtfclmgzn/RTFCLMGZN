@@ -15263,8 +15263,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv5xxpu2hv2n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv5xxpu2hv2n",
+        "posted_at": "2026-09-10T11:43:52Z"
       }
     ]
   },
@@ -15447,8 +15449,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Mistral",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv5xqizjxm24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv5xqizjxm24",
+        "posted_at": "2026-09-10T11:39:50Z"
       }
     ]
   },
@@ -15594,7 +15598,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -15608,8 +15612,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cognition",
           "#Windsurf"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098013480901062673",
+        "remote_id": "2098013480901062673",
+        "posted_at": "2026-09-10T11:39:28Z"
       },
       {
         "platform": "instagram",
@@ -15657,8 +15663,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-10T05:28:06Z",
         "copy": "A $21M seed round in March 2024 sits behind a $48B valuation twenty-nine months later. That's the same coding-agent market where Cursor/Anysphere sold to SpaceX for $60B. Everyone's getting a lot more expensive, fast.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdGv8ypIPcC",
+        "remote_id": "17882434974506184",
+        "posted_at": "2026-09-10T11:39:43Z"
       },
       {
         "platform": "bluesky",
