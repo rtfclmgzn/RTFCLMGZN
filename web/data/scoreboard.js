@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 10, 2026",
-  scannedAt: "2026-09-10T14:28:42Z",
+  scannedAt: "2026-09-10T16:45:00Z",
   basisNote: "Newsroom cycle 2026-09-10T14:28:42Z: checked this cycle's three articles (Paul Christiano's OpenAI Foundation Board/Safety and Security Committee appointment, Anthropic's Econ Scenario Explorer economic-modeling tool, JD Cloud's 100,000-GPU cluster plan on Moore Threads chips) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- a governance appointment, an economic-forecasting tool, and a chip/infrastructure story, none a scored model. No row edits this cycle. Prior: newsroom cycle 2026-09-10T00:30:30Z found no launches or index movements either.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",

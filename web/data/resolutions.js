@@ -181,6 +181,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"IBM's July 22, 2026 Q2 2026 earnings announcement confirmed that while Infrastructure revenue declined 7% overall, Distributed Infrastructure delivered record growth of +37% year-over-year. The resolver's claim that 'Infrastructure down 7 percent' contained a distributed-infrastructure business up 37 percent is verified by IBM's official earnings breakdown.",
       label:"IBM Q2 2026 earnings - Infrastructure segmentation (+37% distributed infrastructure vs. -7% overall)",
-      url:"https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS" }
+      url:"https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS" },
+    { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
+      at:"2026-09-10T16:45:00Z",
+      outcome:"confirmed",
+      note:"Microsoft held its FY2026 Q4 earnings call on July 29, 2026 as scheduled. Nadella reported Azure revenue grew 43% YoY with customer demand continuing to exceed available capacity. Demand destruction (the 'bubble' scenario) has not materialized; AI capex-driven growth remains capacity-constrained rather than demand-constrained.",
+      label:"Microsoft July 29 2026 earnings call - strong Azure demand reported",
+      url:"https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4" }
   ]
 };
