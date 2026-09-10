@@ -15596,10 +15596,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cognition",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098089077396410686",
         "attempts": 2,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2098089077396410686",
+        "posted_at": "2026-09-10T16:39:51Z"
       },
       {
         "platform": "x",
@@ -15712,8 +15713,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098088068297207927",
+        "remote_id": "2098088068297207927",
+        "posted_at": "2026-09-10T16:35:51Z"
       },
       {
         "platform": "x",
