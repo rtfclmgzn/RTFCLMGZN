@@ -7,9 +7,9 @@
 // RULES: never substitute vendor self-reported benchmark claims for the independent index;
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "September 9, 2026",
-  scannedAt: "2026-09-09T19:15:00Z",
-  basisNote: "Pulse scan 2026-09-09T19:15:00Z: checked for new model launches and independent-score movements since the last full cycle (14:35 UTC earlier today). Found Nvidia/Hugging Face M&A (corporate consolidation, not a scored model) and Google DeepMind AlphaGenome Atlas (genomics dataset, not a model entry) in today's news. No model launches, no Artificial Analysis index updates, no list-price changes detected. Board state unchanged from 14:35 scan. Prior: Newsroom cycle 2026-09-09T14:35:00Z checked against Nvidia/Hugging Face acquisition and OpenAI Navier-Stokes claim, neither requiring row edits.",
+  updated: "September 10, 2026",
+  scannedAt: "2026-09-10T00:30:30Z",
+  basisNote: "Newsroom cycle 2026-09-10T00:30:30Z: checked this cycle's three articles (Mistral's Series D funding round, XPeng's IRON humanoid-robot production line, Cognition/Devin's Series E funding round) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- a funding round, a robot production milestone, and a coding-agent funding round, none a scored model. Also checked DeepSeek's V4.1 Flash test-endpoint signal (added to Buzz, not yet an official release) -- no GA release exists yet to add a row for. No row edits this cycle. Prior: pulse scan 2026-09-09T19:15:00Z found no launches or index movements either.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },

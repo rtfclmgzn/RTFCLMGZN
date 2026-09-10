@@ -2993,7 +2993,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-15-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "g20",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-16",
@@ -3023,7 +3028,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-16-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "mistral-samsung-3-billion-series-d-21-billion-valuation",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-17",
@@ -3053,7 +3063,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-17-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "cognition-devin-2-billion-series-e-48-billion-valuation",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-18",

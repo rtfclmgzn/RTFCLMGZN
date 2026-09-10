@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-541", date:"2026-09-09",
+    source:{ name:"DeepSeek", handle:"DeepSeek", platform:"web", kind:"lab" },
+    text:"DeepSeek posted in its official user community group on September 8 that an 'intermediate version' of V4.1 Flash was open for limited API testing under the model id deepseek-v4.1-flash-expires-on-0910, ahead of a planned official release around September 10. The company says internal and external testing shows V4.1 Flash surpassing V4 Pro on performance, cost and speed, with a new model structure and native multimodal support.",
+    why:"Announcing a live, expiring test endpoint through a community chat rather than the API changelog is DeepSeek moving faster than its own documentation -- worth checking once the official release lands and independent benchmarks can test the surpassing-V4-Pro claim.",
+    heat:41, topics:["deepseek","v4.1 flash","model release","china","llm"],
+    url:"https://panews.io/articles/01a0856e-2bce-75c8-bca5-2be6af74ffd9" },
+{ id:"bz-540", date:"2026-09-09",
+    source:{ name:"Amazon Pay", handle:"Amazon Pay", platform:"web", kind:"news" },
+    text:"Amazon Pay's Smart Wallet now lets Indian users set spending guardrails -- monthly and per-transaction limits -- for specific AI agents authorized to make UPI payments on their behalf, via a new agent-management page in the app, MediaNama reported.",
+    why:"A live, consumer-facing spending cap on agent payments, not just a developer API promise, is a concrete answer to the 'can an AI agent actually be trusted with my money' question the rest of the industry is still mostly gesturing at.",
+    heat:37, topics:["amazon pay","agentic commerce","india","upi","payments","ai agents"],
+    url:"https://www.medianama.com/2026/09/223-amazon-pay-smart-wallet-agentic-upi/" },
 { id:"bz-539", date:"2026-09-08",
     source:{ name:"Accenture", handle:"Accenture", platform:"web", kind:"news" },
     text:"Accenture and Google Cloud launched the Accenture Gemini Enterprise Business Group on September 8, a new unit inside their existing partnership aiming to build a 1,000-person forward-deployed engineer workforce, Google Cloud-trained to build bespoke agentic AI applications for enterprise clients on the Gemini Enterprise platform. It builds on Accenture's roughly 50,000 Google Cloud-skilled staff.",

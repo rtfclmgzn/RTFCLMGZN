@@ -15349,5 +15349,311 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-09T19:36:01Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-mistral-samsung-3-billion-series-d-21-billion-valuation",
+    "ts": "2026-09-10T00:11:26Z",
+    "export": {
+      "article_id": "newsroom-mistral-samsung-3-billion-series-d-21-billion-valuation",
+      "url": "https://rtfclmgzn.com/article/mistral-samsung-3-billion-series-d-21-billion-valuation",
+      "headline": "Mistral raised €3 billion in Europe's largest-ever tech funding round -- led by a South Korean conglomerate, not a French one",
+      "hook": "Mistral just raised Europe's largest-ever tech funding round at a €21B valuation -- led by Samsung, not a French investor, which complicates its own 'sovereign AI' pitch.",
+      "key_facts": [
+        "Samsung Electronics led Mistral's €3 billion ($3.5B) Series D, valuing it above €21 billion.",
+        "That's nearly double the €11.7 billion valuation Mistral set a year earlier.",
+        "Mistral's reported $400M ARR is roughly 160x smaller than Anthropic's disclosed $65B run rate."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/mistral-samsung-3-billion-series-d-21-billion-valuation.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Mistral just raised Europe's largest-ever tech funding round -- €3B at a €21B valuation. Led by Samsung, not a French investor. Macron calls it a \"third way in AI.\" The investor list tells a more complicated story than the sovereignty pitch does.",
+        "reply_copy": "The investor list, and the number nobody puts on a slide:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Mistral",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T05:11:26Z",
+        "copy": "Mistral's reported $400M ARR is about 160x smaller than what Anthropic told investors its own run rate hit in July ($65B). A €21B valuation doesn't close that gap -- it prices in the bet that it eventually will.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Mistral",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Mistral just closed Europe's largest-ever tech equity round: €3 billion ($3.5B), valuing the Paris AI lab above €21 billion -- nearly double its mark from a year ago.\n\nLed by Samsung Electronics, not a French investor. New backers include Luxembourg's own government. President Macron called it proof of a \"third way in AI.\"\n\nThe catch: Mistral's reported $400M in annual revenue is roughly 160x smaller than what Anthropic says its own run rate hit this year. The sovereignty pitch is real -- so is the gap.",
+        "hashtags": [
+          "#Mistral",
+          "#AI",
+          "#France",
+          "#Samsung",
+          "#StartupFunding",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Mistral AI closed a €3 billion Series D on Sept. 8, valuing the Paris lab above €21 billion -- Europe's largest-ever tech equity round, and nearly double what it was worth a year ago.\n\nThe twist: Samsung Electronics led the round, not a French investor, and new backers include Luxembourg's own government. President Macron framed it as proof of European AI \"sovereignty\" -- but a sovereignty pitch financed by a South Korean conglomerate and half of Silicon Valley's venture money is a more complicated claim than the headline suggests.\n\nFull story:",
+        "hashtags": [
+          "#Mistral",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Mistral raised €3B at a €21B valuation -- Europe's largest-ever tech round. Led by Samsung, not a French investor. The 'sovereign AI' pitch runs through a South Korean conglomerate, Luxembourg's government, and a lot of US venture money. Make of that what you will.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T05:11:26Z",
+        "copy": "The number Mistral's funding announcement doesn't mention: Anthropic's own disclosed revenue run rate ($65B) is about 160x Mistral's reported $400M. Scale is the part the sovereignty story leaves off the slide.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Mistral raised €3B at a €21B valuation -- Europe's largest-ever tech round, led by Samsung, not a French investor. Macron calls it a 'third way in AI.' Reported ARR ($400M) is ~160x smaller than Anthropic's disclosed run rate ($65B).",
+        "hashtags": [
+          "#Mistral",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-xpeng-iron-humanoid-robot-production-line-tesla-optimus",
+    "ts": "2026-09-10T00:19:34Z",
+    "export": {
+      "article_id": "newsroom-xpeng-iron-humanoid-robot-production-line-tesla-optimus",
+      "url": "https://rtfclmgzn.com/article/xpeng-iron-humanoid-robot-production-line-tesla-optimus",
+      "headline": "XPeng says its humanoid robot production line is running. Tesla's Optimus is still waiting on one.",
+      "hook": "XPeng's IRON humanoid robot just walked off a dedicated, automated production line -- while Tesla's Optimus is still stuck on a converted car line.",
+      "key_facts": [
+        "XPeng's IRON walked off a dedicated, 80%+ automated production line on Sept. 8 in Guangzhou.",
+        "It follows a $900M raise at a $6.3B valuation -- China's largest embodied-AI funding round.",
+        "Mass production is targeted for end of 2026; outside commercial deliveries aren't slated until 2027."
+      ],
+      "tone": "Curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/xpeng-iron-humanoid-robot-production-line-tesla-optimus.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "XPeng's humanoid robot just walked off a dedicated, automated production line in Guangzhou. Tesla's Optimus is still on a converted car line. Neither has sold a robot to a paying customer yet -- that's still a 2027 question for both.",
+        "reply_copy": "The full comparison, and the $900M bet behind it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#XPeng",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T05:19:34Z",
+        "copy": "Musk predicted ~10,000 Optimus units for 2026, then admitted in January none were doing useful work yet. XPeng entered humanoid robotics later and just activated a dedicated line first. Worth watching who actually ships.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#XPeng",
+          "#Tesla"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "XPeng's IRON humanoid robot walked off a dedicated production line under its own power on Sept. 8 in Guangzhou -- what the company calls the world's first automated line built specifically for advanced humanoid robots. Over 80% of core processes are automated.\n\nIt follows a $900 million raise at a $6.3 billion valuation, China's largest embodied-AI funding round on record.\n\nBut a line that works once isn't a factory that ships on schedule: mass production isn't targeted until end of 2026, and outside customers won't see one until 2027. Tesla's Optimus is chasing the same milestone, on a car line it's still converting.",
+        "hashtags": [
+          "#XPeng",
+          "#Robotics",
+          "#HumanoidRobot",
+          "#Tesla",
+          "#AI",
+          "#China"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "XPeng's IRON humanoid robot walked off a dedicated, automated production line in Guangzhou on Sept. 8 -- more than 80% of core assembly is automated, built to the same standards XPeng uses for its cars.\n\nIt comes on the back of a $900 million funding round at a $6.3 billion valuation for XPeng's robotics business, the largest of its kind in China so far.\n\nThe catch: a working line isn't a shipping product. Mass production is targeted for the end of 2026, and outside customers won't get one until 2027 -- the same gap Tesla's Optimus is still working through on its own, still-converting car line.\n\nFull story:",
+        "hashtags": [
+          "#XPeng",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "XPeng's IRON humanoid robot walked off a dedicated, 80%+ automated production line on Sept 8. Tesla's Optimus is still on a converted car line. Mass production isn't until end of 2026 for XPeng either, though -- a working line and a shipping product are two different claims.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T05:19:34Z",
+        "copy": "The $900M/$6.3B funding round behind XPeng's robot line is China's largest embodied-AI round on record. IDG Capital led; Tencent and Alibaba came in as strategic investors. The line is real. The production rate isn't disclosed yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "XPeng's IRON humanoid robot walked off a dedicated automated line Sept 8 in Guangzhou -- Tesla's Optimus is still on a converted car line. $900M/$6.3B funding behind it. Mass production: end of 2026. Outside customers: 2027.",
+        "hashtags": [
+          "#XPeng",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-cognition-devin-2-billion-series-e-48-billion-valuation",
+    "ts": "2026-09-10T00:28:06Z",
+    "export": {
+      "article_id": "newsroom-cognition-devin-2-billion-series-e-48-billion-valuation",
+      "url": "https://rtfclmgzn.com/article/cognition-devin-2-billion-series-e-48-billion-valuation",
+      "headline": "Cognition closed its Devin funding round at $48 billion -- $8 billion above the number reported a month ago",
+      "hook": "Cognition's Devin just closed a funding round at $48B -- $8B above the number Bloomberg reported a month ago, and nearly double its own valuation from May.",
+      "key_facts": [
+        "Cognition's Series E closed at $48B, above the $40B+ figure reported in mid-August talks.",
+        "That's nearly double the $26B valuation Cognition set just four months earlier, in May.",
+        "Cognition says annualized revenue is near $900M, up from $492M -- all self-reported, unaudited."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/cognition-devin-2-billion-series-e-48-billion-valuation.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Cognition (Devin) just closed its Series E at $48B -- $8B above the $40B+ figure Bloomberg reported a month ago, and nearly double its own $26B valuation from May. A $21M seed round in March 2024 sits behind that number now.",
+        "reply_copy": "The Windsurf origin story, and what the $48B actually assumes:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Cognition",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T05:28:06Z",
+        "copy": "Cognition exists in its current form because Google poached Windsurf's CEO in a $2.4B reverse-acquihire, hours after OpenAI's own $3B offer for Windsurf expired. Cognition picked up the pieces within about a day. Two months later it was worth $10.2B.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Cognition",
+          "#Windsurf"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Cognition, maker of the Devin AI coding agent, closed a $2B+ Series E on Sept. 8 at a $48 billion valuation -- $8B above the $40B+ figure Bloomberg reported the company was in early talks for just a month earlier, and nearly double its own $26B valuation from May.\n\nCognition says annualized revenue is near $900 million, up from $492 million -- though every one of those numbers is the company's own claim, not an audited figure.\n\nThe origin story: Cognition's current shape traces back to July 2025, when Google poached Windsurf's CEO in a $2.4B reverse-acquihire hours after OpenAI's own $3B offer for Windsurf expired. Cognition picked up Windsurf's IP, product and staff within about a day.",
+        "hashtags": [
+          "#Cognition",
+          "#Devin",
+          "#AI",
+          "#StartupFunding",
+          "#Windsurf",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Cognition, maker of the Devin AI coding agent, closed a Series E of more than $2 billion on Sept. 8 at a $48 billion valuation -- $8 billion above the $40 billion-plus figure Bloomberg reported in mid-August, and nearly double the $26 billion valuation it set just four months ago.\n\nCognition says its annualized revenue reached almost $900 million, up from $492 million in May -- though every figure here is the company's own claim, not a filed or audited number.\n\nThe company's current shape traces back to a scramble in July 2025: Google hired away Windsurf's CEO in a $2.4 billion reverse-acquihire, hours after a separate $3 billion OpenAI offer for Windsurf had expired. Cognition signed a deal to acquire what was left within about a day.\n\nFull story:",
+        "hashtags": [
+          "#Cognition",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Cognition's Devin funding round closed at $48B -- $8B above the $40B+ figure reported a month ago, and nearly double its own $26B valuation from May. Every revenue figure behind that number ($492M, then ~$900M) is self-reported, not audited.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-10T05:28:06Z",
+        "copy": "A $21M seed round in March 2024 sits behind a $48B valuation twenty-nine months later. That's the same coding-agent market where Cursor/Anysphere sold to SpaceX for $60B. Everyone's getting a lot more expensive, fast.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Cognition's Devin funding round closed at $48B -- $8B above the $40B+ figure reported a month ago, nearly double May's $26B. Revenue: ~$900M claimed, up from $492M, all self-reported. A $21M seed in March 2024 sits behind that number now.",
+        "hashtags": [
+          "#Cognition",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

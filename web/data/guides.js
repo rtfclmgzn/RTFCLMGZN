@@ -5316,5 +5316,187 @@ window.RTFC_GUIDES = [
     "image": "assets/img/newsroom/g19.jpg",
     "publishedAt": "2026-09-05T13:36:44Z",
     "applyType": "work"
+  },
+  {
+    "id": "g20",
+    "slug": "check-whether-an-ai-shopping-agents-payment-safeguard-is-real",
+    "image": "assets/img/newsroom/g20.jpg",
+    "title": "How to check whether an AI shopping agent can actually protect your money",
+    "dek": "Google, Perplexity, and Amazon are all wiring agents to buy things on your behalf, months after OpenAI quietly retired ChatGPT's own version of the same idea. The brand name isn't the safeguard -- here's the two-minute check that is.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-10T00:06:34Z",
+    "readMins": 3,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Google, Perplexity, and Amazon are all wiring AI agents to buy things on your behalf.",
+      "OpenAI's own Instant Checkout launched in 2025 and was quietly retired six months later.",
+      "The real safeguard is a scoped, single-use payment token bound to merchant, amount, and expiry.",
+      "Check for a spending cap and read every confirmation screen before you approve anything.",
+      "Caveat: safeguards vary by platform today -- some markets already offer stricter limits than others."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Do this before you save a card to any AI agent for the first time.",
+        "text": "Look for the specific terms -- \"scoped token,\" \"mandate,\" \"one-time,\" \"vault token\" -- in that agent's own help center before you trust it with a card at all. If the docs never use language like this, treat the integration as holding your full card."
+      },
+      {
+        "label": "Do this the first time an agent asks to complete a purchase.",
+        "text": "Read the confirmation screen for the exact merchant, item and price -- not just an \"approve?\" prompt -- before you tap yes. A real mandate or token is scoped to those three things; a vague prompt tells you nothing about what you actually authorized."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Delegated Payment Spec -- Agentic Commerce",
+        "url": "https://developers.openai.com/commerce/specs/payment",
+        "outlet": "OpenAI Developers",
+        "kind": "primary"
+      },
+      {
+        "label": "Key concepts -- Agentic Commerce",
+        "url": "https://developers.openai.com/commerce/guides/key-concepts",
+        "outlet": "OpenAI Developers",
+        "kind": "primary"
+      },
+      {
+        "label": "OpenAI revamps shopping experience in ChatGPT after struggling with Instant Checkout offering",
+        "url": "https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html",
+        "outlet": "CNBC",
+        "kind": "reporting"
+      },
+      {
+        "label": "Google Shopping introduces Universal Cart, agentic shopping",
+        "url": "https://blog.google/products-and-platforms/products/shopping/google-shopping-cart/",
+        "outlet": "Google",
+        "kind": "primary"
+      },
+      {
+        "label": "Secure Agent Commerce with AP2 and UCP",
+        "url": "https://codelabs.developers.google.com/next26/adk-agent-commerce",
+        "outlet": "Google Codelabs",
+        "kind": "primary"
+      },
+      {
+        "label": "Technical deep dive: AgentCore payments and innovation in agentic commerce",
+        "url": "https://aws.amazon.com/blogs/machine-learning/technical-deep-dive-agentcore-payments-and-innovation-in-agentic-commerce/",
+        "outlet": "Amazon Web Services",
+        "kind": "primary"
+      },
+      {
+        "label": "Amazon Pay Smart Wallet lets AI agents make UPI payments",
+        "url": "https://www.medianama.com/2026/09/223-amazon-pay-smart-wallet-agentic-upi/",
+        "outlet": "MediaNama",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Google's Universal Cart can now buy things across Search, Gemini and Gmail. Perplexity's Instant Buy checks out inside a chat. Amazon is wiring the same capability into Rufus and into the AgentCore infrastructure other companies build agents on. OpenAI got there first, launching Instant Checkout in ChatGPT in September 2025 -- then quietly retired it six months later, after [fewer than 15 of Shopify's millions of merchants ever went live with it](https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html). The lesson isn't that agentic shopping failed. It's that a brand name is not a safeguard -- and the actual safeguard is checkable in about two minutes.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The word to look for is \"scoped\"",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Every serious version of this now runs on the same underlying idea, under different names. OpenAI built the __Agentic Commerce Protocol__ with Stripe: the agent never touches your card number, only a single-use token restricted to one **merchant**, one **maximum amount**, and an **expiry timestamp**. Google's __AP2__ chains three cryptographically signed \"mandates\" -- Intent, Cart and Payment -- into a tamper-proof record of exactly what you approved and for how much. Amazon's AgentCore enforces the same idea at the infrastructure layer: a spend limit tied to a time-boxed session, reserved and released atomically so an agent cannot exceed it. None of that protects you if you never check whether it's actually switched on for the specific agent in front of you.",
+        "citation_urls": [
+          "https://developers.openai.com/commerce/specs/payment",
+          "https://blog.google/products-and-platforms/products/shopping/google-shopping-cart/",
+          "https://aws.amazon.com/blogs/machine-learning/technical-deep-dive-agentcore-payments-and-innovation-in-agentic-commerce/"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check an AI shopping agent's safeguard before you approve anything",
+          "sub": "About two minutes, one time per agent -- then a five-second habit on every purchase after.",
+          "est": "2 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "An AI assistant or app you've connected, or are considering connecting, to a payment method."
+          ],
+          "steps": [
+            {
+              "do": "Find out whether checkout uses a scoped, single-use token -- not your saved card directly.",
+              "detail": "Search that agent's own help center or settings for language like \"one-time,\" \"scoped,\" \"mandate,\" or \"vault token.\" That's the vocabulary of the Agentic Commerce Protocol and AP2, the two standards behind most of this.",
+              "verify": "You can name the specific mechanism the agent uses, not just \"it's connected to my card.\"",
+              "ifnot": "If the help docs never use language like this, assume the merchant integration sees your card as directly as a normal online checkout would, and don't save payment info you wouldn't hand a single merchant outright."
+            },
+            {
+              "do": "Set a spending cap before the agent's first purchase, not after.",
+              "detail": "Amazon Pay's Smart Wallet already lets users set monthly and per-transaction limits on a specific agent in India; other platforms surface this less plainly, but most have some form of a limit or an approval-required threshold in settings.",
+              "verify": "A number you chose, not a platform default, is the ceiling on what the agent can spend without asking you again.",
+              "ifnot": "If you can't find any spending-limit setting at all, don't leave a card connected between sessions -- add it fresh each time you intend to buy something."
+            },
+            {
+              "do": "Read the final confirmation screen for the exact merchant, item and price, every time.",
+              "detail": "A real mandate or token is only as good as what it actually authorizes. If the on-screen approval just says something like \"approve this purchase?\" without naming those three things, the safeguard isn't doing its job for you specifically.",
+              "verify": "The confirmation you tapped named the merchant, the item, and the price -- not a vague summary.",
+              "ifnot": "If the confirmation is vague, stop and check the order manually on the merchant's own site before it completes."
+            },
+            {
+              "do": "Find where to revoke the agent's payment access, and test it once.",
+              "detail": "The setting is usually under connected apps, payment methods, or agent permissions -- not always where you'd guess. Confirming it works now saves a panicked search later.",
+              "verify": "You disconnected the agent's payment access and confirmed, via the settings screen, that it now shows as removed.",
+              "ifnot": "If you can't find a revoke control at all, that's the strongest signal to not leave a card connected long-term."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of these checks take longer than reading a confirmation screen carefully. The order matters, though -- a spending cap set after your first purchase already missed the purchase it existed to catch.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Three ways this check gets skipped",
+          "items": [
+            {
+              "mistake": "Assuming \"my card is connected\" means the agent is safe.",
+              "looks": "A card is saved once, and every future purchase gets approved on autopilot without a second look.",
+              "why": "OpenAI's own Instant Checkout shipped from a major lab with every incentive to get this right, and was still pulled six months later -- brand and funding don't guarantee the safeguard is live or well-built.",
+              "fix": "Check for the scoped-token or mandate language specifically, per step 1, rather than trusting that a big name implies a safe default.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating a vague \"approve this purchase?\" prompt as sufficient.",
+              "looks": "Tapping yes on a generic confirmation without the merchant, item or price shown.",
+              "why": "A mandate or token is scoped to specific values -- if the screen in front of you doesn't show them, you have no way to confirm what you actually authorized matches what you intended.",
+              "fix": "Treat a confirmation screen missing merchant, item, or price as incomplete, and check the order elsewhere before it finalizes.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Never testing the revoke control until something has already gone wrong.",
+              "looks": "A connected agent sits with standing payment access for months, untouched.",
+              "why": "A revoke button that's broken, missing, or buried is much cheaper to discover during a calm two-minute check than during a dispute.",
+              "fix": "Test the disconnect flow once, right after connecting a payment method, per step 4.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Agentic checkout is still young enough that the safeguards vary more than the branding suggests -- [India's Amazon Pay Smart Wallet already lets a user set monthly and per-transaction limits on a specific agent](https://www.medianama.com/2026/09/223-amazon-pay-smart-wallet-agentic-upi/), a control most other markets don't yet surface as plainly. Check for the leash. Don't take the brand's word that one exists.",
+        "citation_urls": [
+          "https://www.medianama.com/2026/09/223-amazon-pay-smart-wallet-agentic-upi/"
+        ]
+      }
+    ],
+    "corrections": []
   }
 ];
