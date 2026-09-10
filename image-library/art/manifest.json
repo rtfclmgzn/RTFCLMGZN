@@ -3168,7 +3168,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-20-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "anthropic-fourth-cybersecurity-incident-alignment-assessment",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-data-tides-01",
@@ -3230,7 +3235,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-61-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "nsa-cisa-fbi-china-ai-distillation-advisory",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-prism-02",
@@ -3951,7 +3961,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-21-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "doj-nvidia-groq-reverse-acquihire-antitrust-probe",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-beyond-02",

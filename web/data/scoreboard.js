@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 10, 2026",
-  scannedAt: "2026-09-10T16:45:00Z",
-  basisNote: "Newsroom cycle 2026-09-10T14:28:42Z: checked this cycle's three articles (Paul Christiano's OpenAI Foundation Board/Safety and Security Committee appointment, Anthropic's Econ Scenario Explorer economic-modeling tool, JD Cloud's 100,000-GPU cluster plan on Moore Threads chips) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- a governance appointment, an economic-forecasting tool, and a chip/infrastructure story, none a scored model. No row edits this cycle. Prior: newsroom cycle 2026-09-10T00:30:30Z found no launches or index movements either.",
+  scannedAt: "2026-09-10T19:22:02Z",
+  basisNote: "Newsroom cycle 2026-09-10T19:22:02Z: checked this cycle's three articles (Anthropic's fourth cybersecurity-incident alignment assessment, the DOJ's Nvidia-Groq reverse-acquihire antitrust probe, the NSA/CISA/FBI joint distillation advisory) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- a model-safety retrospective, a chip-licensing antitrust story, and a government advisory naming companies rather than scoring models. No row edits this cycle. Prior: newsroom cycle 2026-09-10T14:28:42Z found the same.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },
