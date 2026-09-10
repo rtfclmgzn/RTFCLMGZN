@@ -3098,7 +3098,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-18-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-paul-christiano-openai-safety-security-committee",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-19",
@@ -3128,7 +3133,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-AI-Abstract-Wallpaper-19-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-econ-scenario-explorer-2030-gdp",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-flux-20",
@@ -3656,7 +3666,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-31-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-jd-cloud-moore-threads-100000-gpu-cluster",
+     "used_at": "2026-09-10"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-02",
