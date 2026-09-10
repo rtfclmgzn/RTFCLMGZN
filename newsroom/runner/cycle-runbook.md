@@ -707,6 +707,19 @@ this order, and mark it done here.
    found. Did not force one. Same two next steps as every entry since
    2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-10T00:34 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Mistral's €3B Series D, XPeng's
+   IRON production-line milestone, Cognition/Devin's $48B Series E) plus the
+   overdue-guide catch-up (guide cadence check read 5 days, over the 4-day
+   trigger, so a guide was written before anything else per SS3d) were
+   already the required work. Both blockers unchanged: `ALLOWED_PREFIXES`
+   in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent), and `which wrangler` / `env | grep -i cloudflare`
+   both return nothing on this runner. No new `primer-issue.js`-only
+   candidate found. Did not force one. Same two next steps as every entry
+   since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -825,6 +838,10 @@ still returns nothing in this checkout, and no `wrangler` binary or Cloudflare c
 runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
 **Status (2026-09-09T14:47 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
+still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
+
+**Status (2026-09-10T00:34 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
 still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
