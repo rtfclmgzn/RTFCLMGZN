@@ -15708,7 +15708,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "OpenAI named its harshest public safety critic to the committee overseeing its own safety practices. Paul Christiano's own words: the industry -- OpenAI included -- 'is not on track to reduce this risk to an acceptable level.'",
         "reply_copy": "Full story, and the 3-year trail across 4 institutions:",
         "link_in_reply": true,
-        "hashtags": ["#OpenAI", "#AISafety"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -15719,22 +15722,41 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Christiano's last 3 years: trustee on Anthropic's governance trust, senior advisor evaluating OpenAI for the US government, advisor to a safety institute that calls itself independent of every lab -- and now a seat on OpenAI's own board.",
         "reply_copy": "The full timeline:",
         "link_in_reply": true,
-        "hashtags": ["#OpenAI", "#AIGovernance"],
+        "hashtags": [
+          "#OpenAI",
+          "#AIGovernance"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "OpenAI just named Paul Christiano -- the researcher who led its own alignment team from 2017 to 2021 -- to the Foundation Board committee that oversees its safety practices.\n\nHis own statement the same day: \"I do not think that the AI industry in general, including OpenAI, is currently on track to reduce this risk to an acceptable level.\"\n\nIn the three years since leaving OpenAI, he's sat on Anthropic's governance trust, advised the US government's model evaluator, and joined a safety institute that calls itself independent of every lab. Now he's on OpenAI's board too.",
-        "hashtags": ["#OpenAI", "#AISafety", "#PaulChristiano", "#AIGovernance", "#Alignment", "#TechNews", "#AI", "#FrontierAI"],
-        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#PaulChristiano",
+          "#AIGovernance",
+          "#Alignment",
+          "#TechNews",
+          "#AI",
+          "#FrontierAI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "OpenAI named Paul Christiano -- who led its own alignment research team from 2017 to 2021 and co-developed RLHF -- to its Foundation Board and the Safety and Security Committee that oversees safety practices across the company, announced Sept. 9.\n\nChristiano didn't soften his public record for the occasion. His own statement: \"I do not think that the AI industry in general, including OpenAI, is currently on track to reduce this risk to an acceptable level.\"\n\nIn the three years since leaving OpenAI, he's been an initial trustee of Anthropic's own governance trust, advised the US government's frontier-model evaluator, and just joined the advisory panel of a safety institute that describes itself as independent of any lab. Read what the appointment does and doesn't establish:",
-        "hashtags": ["#OpenAI", "#AISafety"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -15755,7 +15777,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "OpenAI put its most public safety critic on the committee overseeing its own safety practices. Christiano's own words: the industry, OpenAI included, 'is not on track to reduce this risk to an acceptable level.'",
-        "hashtags": ["#OpenAI", "#AISafety", "#AI"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -15787,9 +15813,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Anthropic built a tool showing AI could add $10T to the US economy by 2030. In the scenario with the fastest growth, labor's share of that economy falls from 60% to 45.2% -- the company's own numbers, not a critic's.",
         "reply_copy": "The three scenarios, and what Anthropic itself says they require:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AIEconomy"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#Anthropic",
+          "#AIEconomy"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098057593394741535",
+        "remote_id": "2098057593394741535",
+        "posted_at": "2026-09-10T14:34:45Z"
       },
       {
         "platform": "x",
@@ -15798,22 +15829,41 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The lab modeling how much of your job AI could take is also the lab selling the AI. Anthropic's own scenario tool discloses its worst-case labor numbers anyway -- 10,980 Americans surveyed expect the middle path, not the extreme one.",
         "reply_copy": "The full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AI"],
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Anthropic published an interactive tool modeling three AI paths through 2030.\n\nModest: $34.1T GDP, barely different from no AI at all.\nSubstantial: $36.3T, AI doing about half of knowledge work.\nExtreme: $44.4T -- a 32.4% lift -- but labor's share of national income falls from 60% to 45.2%.\n\nThe fastest growth and the worst outcome for workers are the same scenario, not opposite ones. Anthropic calls these scenarios, not forecasts -- and it's also the company selling the technology being modeled.",
-        "hashtags": ["#Anthropic", "#AIEconomy", "#FutureOfWork", "#GDP", "#AI", "#Economics", "#TechNews", "#AIJobs"],
-        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "hashtags": [
+          "#Anthropic",
+          "#AIEconomy",
+          "#FutureOfWork",
+          "#GDP",
+          "#AI",
+          "#Economics",
+          "#TechNews",
+          "#AIJobs"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Anthropic published an interactive economic model on Sept. 9 mapping three AI paths through 2030: a modest scenario ($34.1T GDP, barely different from no AI), a substantial scenario ($36.3T, AI doing about half of knowledge work), and an extreme scenario ($44.4T, a 32.4% lift).\n\nThe catch Anthropic states plainly itself: in the extreme scenario, labor's share of national income falls from a 60% baseline to 45.2%, and knowledge-worker wages fall more than 10% even as non-AI-exposed workers see wages rise more than 33%.\n\nAnthropic calls these 'scenarios, not forecasts' -- and it's worth remembering the company running this model also sells the AI it's modeling. Read the full breakdown, including where the model's own assumptions do the most work:",
-        "hashtags": ["#Anthropic", "#AIEconomy"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIEconomy"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -15834,7 +15884,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Anthropic's own model: AI's fastest-growth 2030 scenario ($44.4T GDP) is also the one where labor's income share falls furthest, 60% to 45.2%. Company built the tool, company sells the product it's modeling.",
-        "hashtags": ["#Anthropic", "#AIEconomy", "#AI"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIEconomy",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -15866,9 +15920,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Moore Threads claims 95% scaling efficiency on a 100,000-GPU cluster with JD Cloud. OpenAI's GPT-4 training hit just 32-36% utilization on 25,000 more-mature Nvidia GPUs -- a quarter the scale. Nobody outside Moore Threads has checked the new number.",
         "reply_copy": "The claim vs. the precedent, side by side:",
         "link_in_reply": true,
-        "hashtags": ["#GPU", "#China"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#GPU",
+          "#China"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098056584316567874",
+        "remote_id": "2098056584316567874",
+        "posted_at": "2026-09-10T14:30:44Z"
       },
       {
         "platform": "x",
@@ -15877,22 +15936,41 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Moore Threads' 2025 revenue grew 243% and it just posted its first profitable quarter. All real, independently reported. Its 95% GPU-cluster efficiency claim is neither -- self-reported, on hardware and a cluster that don't fully exist yet.",
         "reply_copy": "What's confirmed and what isn't:",
         "link_in_reply": true,
-        "hashtags": ["#MooreThreads", "#Compute"],
+        "hashtags": [
+          "#MooreThreads",
+          "#Compute"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "JD Cloud announced plans for China's first 100,000-GPU cluster built on domestic chips -- Moore Threads silicon instead of Nvidia's.\n\nThe claim: 95% linear scaling efficiency, 60% model-FLOPs utilization.\n\nThe precedent: OpenAI's GPT-4 training hit just 32-36% utilization on 25,000 Nvidia A100s -- a quarter the scale, on far more mature hardware.\n\nMoore Threads' claim isn't impossible. It just isn't verified by anyone outside the company yet.",
-        "hashtags": ["#MooreThreads", "#JDCloud", "#GPU", "#China", "#AIChips", "#Compute", "#TechNews", "#Semiconductor"],
-        "image": { "prompt": null, "status": "none", "cost_usd": 0 },
+        "hashtags": [
+          "#MooreThreads",
+          "#JDCloud",
+          "#GPU",
+          "#China",
+          "#AIChips",
+          "#Compute",
+          "#TechNews",
+          "#Semiconductor"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "JD Cloud announced plans Sept. 9 for a 100,000-GPU computing cluster built on chips from Moore Threads, the Shanghai-listed Chinese GPU maker -- what JD Cloud calls the first deployment of domestic Chinese GPUs at that scale by a major cloud provider.\n\nMoore Threads is claiming 95% linear scaling efficiency and 60% model-FLOPs utilization for the cluster. Neither figure has been verified by anyone outside the company, and for good reason to be skeptical: when OpenAI trained GPT-4 on roughly 25,000 Nvidia A100 GPUs -- a quarter this cluster's size, on far more mature hardware -- utilization fell to just 32-36% because of communication overhead at scale.\n\nMoore Threads' underlying business is real and growing fast (revenue up 243% in 2025, first profitable quarter in Q1 2026). Whether its cluster claim holds up is a separate question nobody outside the company has answered yet. Full breakdown:",
-        "hashtags": ["#GPU", "#China"],
+        "hashtags": [
+          "#GPU",
+          "#China"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -15913,9 +15991,15 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Moore Threads claims 95% scaling efficiency on a 100,000-GPU cluster with JD Cloud. GPT-4's real training run hit 32-36% on a quarter the GPUs. The claim is self-reported, unverified, and would be a genuinely exceptional result if true.",
-        "hashtags": ["#GPU", "#China", "#AI"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#GPU",
+          "#China",
+          "#AI"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv6bcd7k5h2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv6bcd7k5h2t",
+        "posted_at": "2026-09-10T14:30:52Z"
       }
     ]
   }
