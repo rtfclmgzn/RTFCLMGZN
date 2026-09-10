@@ -16242,8 +16242,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098131490915905876",
+        "remote_id": "2098131490915905876",
+        "posted_at": "2026-09-10T19:28:23Z"
       },
       {
         "platform": "x",
