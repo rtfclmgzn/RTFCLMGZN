@@ -15483,7 +15483,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -15525,14 +15527,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#XPeng",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119365063396947",
+        "remote_id": "1238977099292018_122119365063396947",
+        "posted_at": "2026-09-10T05:07:05Z"
       },
       {
         "platform": "threads",
         "copy": "XPeng's IRON humanoid robot walked off a dedicated, 80%+ automated production line on Sept 8. Tesla's Optimus is still on a converted car line. Mass production isn't until end of 2026 for XPeng either, though -- a working line and a shipping product are two different claims.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdGDDsnlQR4",
+        "remote_id": "17905311090551313",
+        "posted_at": "2026-09-10T05:07:25Z"
       },
       {
         "platform": "threads",
@@ -15549,8 +15555,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#XPeng",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv5bt6hvau2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv5bt6hvau2y",
+        "posted_at": "2026-09-10T05:07:37Z"
       }
     ]
   },
@@ -15585,7 +15593,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -15617,8 +15627,10 @@ window.RTFC_SOCIAL_POSTS = [
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdGCh0ziWO1/",
+        "remote_id": "18114651854072662",
+        "posted_at": "2026-09-10T05:02:53Z"
       },
       {
         "platform": "facebook",
@@ -15627,14 +15639,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cognition",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119364343396947",
+        "remote_id": "1238977099292018_122119364343396947",
+        "posted_at": "2026-09-10T05:03:02Z"
       },
       {
         "platform": "threads",
         "copy": "Cognition's Devin funding round closed at $48B -- $8B above the $40B+ figure reported a month ago, and nearly double its own $26B valuation from May. Every revenue figure behind that number ($492M, then ~$900M) is self-reported, not audited.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdGClPnFSp1",
+        "remote_id": "18341575909250598",
+        "posted_at": "2026-09-10T05:03:17Z"
       },
       {
         "platform": "threads",
@@ -15651,8 +15667,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cognition",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv5bln3xee2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv5bln3xee2t",
+        "posted_at": "2026-09-10T05:03:24Z"
       }
     ]
   }
