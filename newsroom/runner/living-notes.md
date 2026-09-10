@@ -433,3 +433,28 @@
   second, independent source before using the claim. Treat any single
   fetch's named-entity or superlative claim as unconfirmed until a second
   source agrees, especially for claims that would otherwise ship as fact.
+- **2026-09-10** (newsroom cycle, afternoon): caught myself committing exactly
+  the `publishedAt`-ahead-of-actual-time failure §3a's own runbook text
+  and this file's 2026-08-31/09-06 entries already warn about, on this
+  cycle's own 2nd and 3rd articles. Ran `date -u` once for the first article
+  (correctly), then, while drafting articles 2 and 3 back-to-back without
+  re-running `date -u`, typed round-looking placeholder timestamps
+  (`14:45:00Z`, `15:10:00Z`) that "felt" like reasonable spacing after the
+  first article's real time -- both turned out to be **ahead of actual
+  wall-clock time** when checked later (`date -u` read 14:28:xx at the point
+  I finally re-verified, well before either fabricated value). Caught it only
+  because I happened to run `date -u` again for an unrelated reason (a
+  runbook log timestamp) and noticed the mismatch, not because of any
+  deliberate check. Fixed by re-running `date -u` for real, then propagating
+  the corrected timestamps everywhere they'd already been written: the
+  article's own `publishedAt` AND `pipeline.run`, the RSS `pubDate` AND
+  `lastBuildDate`, and social-posts.js's `ts` AND every `not_before` (which
+  had been computed as "+5h" off the fabricated base, so fixing only the
+  base and not the derived fields would have left a second, quieter version
+  of the same bug). **Lesson: `date -u` is cheap -- call it fresh immediately
+  before writing each article's `publishedAt`, never once per cycle and then
+  reason forward from it**, and grep every file touched that cycle for the
+  old value before considering a timestamp fix complete, since a single
+  fabricated timestamp tends to propagate into multiple derived fields
+  (RSS dates, social `not_before` offsets) that don't announce themselves
+  as copies of the original mistake.
