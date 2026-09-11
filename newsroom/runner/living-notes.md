@@ -458,3 +458,24 @@
   fabricated timestamp tends to propagate into multiple derived fields
   (RSS dates, social `not_before` offsets) that don't announce themselves
   as copies of the original mistake.
+- **2026-09-11** (newsroom cycle): generalizing the WebFetch bot-block pattern already
+  logged for `*.gov`, `openai.com`, and `npr.org` (2026-08-18/08-22/08-23/08-24) -- confirmed
+  two more domains join the list this cycle: `anthropic.com` (direct fetch of
+  `anthropic.com/threat-intelligence-report-september-2026` returned a hard 403) and
+  `cnbc.com` (also 403, both on a direct article URL and on an `openai.com` product page
+  fetched via a CNBC mirror). The same workaround holds: WebSearch's own snippets and
+  independent secondary outlets that did fetch cleanly (TechCrunch, Yahoo Finance,
+  TechStartups, The News Minute all worked) still surface real, quotable, verifiable
+  content from the blocked primary -- cite the primary URL once its content is
+  corroborated by an independent source that fetched successfully, rather than treating
+  a 403 as "no primary source exists." This is now confirmed across five+ major domains
+  (`*.gov`, `openai.com`, `npr.org`, `anthropic.com`, `cnbc.com`) -- worth assuming most
+  major outlets' own domains will 403 WebFetch and planning research accordingly (search
+  first for who successfully mirrors/quotes the primary, rather than attempting a direct
+  fetch first and losing time to a predictable failure).
+- **2026-09-11** (newsroom cycle): re-confirmed the §3e/§3f blockers unchanged from every
+  cycle since 2026-08-30 -- `verify_publish_surface.py`'s `ALLOWED_PREFIXES` still excludes
+  `functions/`, and no `wrangler`/Cloudflare credentials or `issue-001.json` exist on this
+  runner. No new work attempted on either section this cycle (three new articles plus the
+  §4b/4c/4d desk-maintenance work was the full scope); noting the re-check here rather than
+  silently skipping it, per the established pattern in cycle-runbook.md §3e/§3f.
