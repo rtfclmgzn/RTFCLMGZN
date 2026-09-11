@@ -15892,8 +15892,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIEconomy",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvaiouuk3h2l",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvaiouuk3h2l",
+        "posted_at": "2026-09-11T11:48:28Z"
       }
     ]
   },
@@ -16036,8 +16038,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098377088386342932",
+        "remote_id": "2098377088386342932",
+        "posted_at": "2026-09-11T11:44:18Z"
       },
       {
         "platform": "x",
@@ -16104,8 +16108,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Claude"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvaihnfegj2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvaihnfegj2x",
+        "posted_at": "2026-09-11T11:44:26Z"
       }
     ]
   },
@@ -16155,8 +16161,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIChips",
           "#FTC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098376079408816484",
+        "remote_id": "2098376079408816484",
+        "posted_at": "2026-09-11T11:40:18Z"
       },
       {
         "platform": "instagram",
@@ -16192,8 +16200,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "DOJ has quietly investigated Nvidia's $20B Groq deal since December. Public found out this week. Also new this week: the deal's own price tag doesn't match itself anymore -- $17B vs. $20B, unexplained.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdJU1w9IJhE",
+        "remote_id": "18376617796232294",
+        "posted_at": "2026-09-11T11:40:34Z"
       },
       {
         "platform": "threads",
