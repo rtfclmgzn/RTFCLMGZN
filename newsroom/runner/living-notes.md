@@ -479,3 +479,27 @@
   runner. No new work attempted on either section this cycle (three new articles plus the
   §4b/4c/4d desk-maintenance work was the full scope); noting the re-check here rather than
   silently skipping it, per the established pattern in cycle-runbook.md §3e/§3f.
+- **2026-09-11** (newsroom cycle, evening): two tooling notes from this cycle's §4/§4b work.
+  (1) `verify_covers.py pick --exclude` takes ONE comma-separated string, not repeated
+  `--exclude` flags -- passing `--exclude a --exclude b` silently keeps only the last flag's
+  value (argparse overwrites, doesn't accumulate), so the tool kept re-suggesting the same
+  already-rejected top pick until the flags were combined into `--exclude "a,b,c"`. Worth
+  remembering before concluding a section's whole image category is exhausted. (2) `buzz.js`
+  is now at 61 cards against the file's own header comment target of "~48 items" -- not a
+  bug, since the runbook's retirement rule is strictly age-based (>7 days) and nothing in the
+  file is currently older than 5 days, so there was nothing eligible to retire even though
+  the count is already well past the soft cap. If this keeps growing cycle over cycle without
+  anything aging out, a future cycle should check whether the ~48 target needs a companion
+  count-based trim rule, or whether the target itself is stale.
+- **2026-09-11** (newsroom cycle, evening): `newsroom.cli generate-image` (the §4 step-2
+  fallback when no library cover fits) does NOT write anything to
+  `image-library/art/manifest.json` -- confirmed by reading `generate_cover_image`'s call
+  path, which only writes the jpg. The manifest's own policy note says the 90-day no-reuse
+  rule applies to "library or generated" images alike and instructs recording every use in
+  `used_in`, but the tool that generates images doesn't do this bookkeeping itself, and nothing
+  else does it after the fact either. In practice this is low-risk (each generated image is a
+  fresh prompt, not a reused file, so there's nothing to accidentally reuse within 90 days) but
+  it means the manifest's coverage claim is currently incomplete for anything generated
+  per-article rather than pulled from the library. Not fixed this cycle -- out of scope for a
+  content cycle to change tool behavior -- but worth a dedicated pass if the manifest is ever
+  relied on as a complete inventory.
