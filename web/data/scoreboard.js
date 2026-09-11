@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 11, 2026",
-  scannedAt: "2026-09-11T14:32:03Z",
+  scannedAt: "2026-09-11T16:48:46Z",
   basisNote: "Newsroom cycle 2026-09-11T14:32:03Z: checked this cycle's three articles (Anthropic's fourth threat-intelligence report on distillation/espionage/bioweapons misuse, OpenAI's ChatGPT for Financial Services launch, Microsoft's reported 38GW data-center plan) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- ChatGPT for Financial Services runs on GPT-6 Astra, already a scored row, with no new capability claim to measure. No row edits this cycle. Prior: newsroom cycle 2026-09-10T19:22:02Z found the same.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
