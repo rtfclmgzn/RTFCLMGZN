@@ -16139,8 +16139,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#Antitrust"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098276373026467858",
+        "remote_id": "2098276373026467858",
+        "posted_at": "2026-09-11T05:04:06Z"
       },
       {
         "platform": "x",
@@ -16182,8 +16184,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#Antitrust"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119644675396947",
+        "remote_id": "1238977099292018_122119644675396947",
+        "posted_at": "2026-09-11T05:04:14Z"
       },
       {
         "platform": "threads",
@@ -16207,8 +16211,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Antitrust",
           "#AIChips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv7sctzz5w2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv7sctzz5w2o",
+        "posted_at": "2026-09-11T05:08:03Z"
       }
     ]
   },
@@ -16258,8 +16264,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#CyberSecurity",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098275070464467412",
+        "remote_id": "2098275070464467412",
+        "posted_at": "2026-09-11T04:58:55Z"
       },
       {
         "platform": "instagram",
@@ -16278,8 +16286,10 @@ window.RTFC_SOCIAL_POSTS = [
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdIm6KWjGya/",
+        "remote_id": "18463554175137756",
+        "posted_at": "2026-09-11T04:59:14Z"
       },
       {
         "platform": "facebook",
@@ -16288,22 +16298,28 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119644177396947",
+        "remote_id": "1238977099292018_122119644177396947",
+        "posted_at": "2026-09-11T04:59:26Z"
       },
       {
         "platform": "threads",
         "copy": "NSA, CISA and FBI just named 6 Chinese AI companies in a joint advisory over alleged large-scale extraction from US models. First formal multi-agency document on a claim that's been building since February.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdIm9rlnN4O",
+        "remote_id": "18155503612508123",
+        "posted_at": "2026-09-11T04:59:40Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-09-11T00:15:38Z",
         "copy": "The advisory's own recommended defense: don't block suspect accounts, just quietly make their answers worse and vary how much. Undetectable by design -- which also means unverifiable by design.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdIncG3nI-R",
+        "remote_id": "18126669797509515",
+        "posted_at": "2026-09-11T05:03:53Z"
       },
       {
         "platform": "bluesky",
@@ -16313,8 +16329,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#China",
           "#CyberSecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mv7s3n6lpx25",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mv7s3n6lpx25",
+        "posted_at": "2026-09-11T05:04:00Z"
       }
     ]
   }
