@@ -16345,5 +16345,270 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-11T05:04:00Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-september-threat-report-russia-bioweapons-distillation",
+    "ts": "2026-09-11T14:19:18Z",
+    "export": {
+      "article_id": "newsroom-anthropic-september-threat-report-russia-bioweapons-distillation",
+      "url": "https://rtfclmgzn.com/article/anthropic-september-threat-report-russia-bioweapons-distillation",
+      "headline": "Two days after the US government's distillation advisory, Anthropic put a number on it: 151 million exchanges -- plus a Russian espionage campaign and a bioweapons-adjacent disruption in the same report",
+      "hook": "Anthropic's own new threat report says Alibaba ran a 151-million-exchange campaign to copy Claude -- and in the same document, disrupted a Russian espionage operation and a bioweapons-adjacent research case.",
+      "key_facts": [
+        "Alibaba-linked accounts ran 151M+ exchanges with Claude, May-July 2026, to train Qwen -- Anthropic's largest measured distillation campaign.",
+        "A Russia-linked group (GTG-20006) used Claude across recon, phishing, and malware evasion against 20+ Ukrainian and European targets.",
+        "None of the three named Chinese labs -- Alibaba, Moonshot, DeepSeek -- has responded on the record."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-anthropic-september-threat-report-russia-bioweapons-distillation.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic's own threat report: Alibaba ran a 151M-exchange campaign to copy Claude. Same report: a Russian espionage group used Claude against Ukraine, and 5 cases of bioweapons-adjacent research use. None of the 3 accused labs has responded.",
+        "reply_copy": "The full breakdown, including what's confirmed vs. company-only evidence:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-11T19:19:18Z",
+        "copy": "The odd number in Anthropic's new report: Moonshot used MORE fake accounts than Alibaba (5,380 vs 3,500) to produce a tiny fraction of the traffic. Anthropic doesn't say why -- tighter rate-limiting, or just caught faster.",
+        "reply_copy": "Full report breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic's fourth threat-intelligence report, in one document: the largest Claude-copying campaign it's ever measured (Alibaba, 151M+ exchanges) -- plus a Russian state-linked espionage group and a bioweapons-adjacent research disruption.\n\nNone of the three accused Chinese labs has responded on the record. Every number here is Anthropic's own account.\n\nFull breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#AIPolicy",
+          "#Anthropic",
+          "#Cybersecurity",
+          "#TechNews",
+          "#China"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Two days after the US government formally accused six Chinese AI companies of copying US models, Anthropic published its own account -- with real numbers attached.\n\nThe company says operators affiliated with Alibaba ran 151 million exchanges with Claude between May and July to train its Qwen models, using 3,500+ fraudulent accounts -- the largest such campaign Anthropic has ever measured. Moonshot and DeepSeek ran smaller campaigns of their own, using different techniques.\n\nThe same report discloses two things the government's advisory never touched: a Russia-linked group that used Claude across a sustained espionage campaign against Ukrainian and European targets, and five cases where working scientists used Claude in ways that could plausibly support biological-weapons research -- with Anthropic explicit that it isn't accusing anyone of intent to cause harm.\n\nNone of the three named Chinese labs has responded on the record. Full story:",
+        "hashtags": [
+          "#AIPolicy",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's new threat report: Alibaba ran the largest Claude-copying campaign the company has ever measured (151M+ exchanges). Same report also caught a Russian espionage group and a bioweapons-adjacent research case. None of the accused labs has responded.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-11T19:19:18Z",
+        "copy": "Every number in Anthropic's new threat report is the company's own account -- the labs it accuses haven't confirmed or denied anything. That doesn't make it wrong. It does mean 'Anthropic says' is doing a lot of work in this story.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic's 4th threat report: Alibaba ran 151M+ exchanges to copy Claude, its biggest campaign yet. Same report caught a Russian espionage group and a bioweapons-adjacent research case. None of the 3 accused labs has responded.",
+        "hashtags": [
+          "#AIPolicy",
+          "#Anthropic",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-chatgpt-financial-services-gpt-6-astra",
+    "ts": "2026-09-11T14:25:24Z",
+    "export": {
+      "article_id": "newsroom-openai-chatgpt-financial-services-gpt-6-astra",
+      "url": "https://rtfclmgzn.com/article/openai-chatgpt-financial-services-gpt-6-astra",
+      "headline": "OpenAI launches ChatGPT for Financial Services, aiming GPT-6 Astra at the work junior bankers do today",
+      "hook": "OpenAI just launched a ChatGPT built for Wall Street -- and its own exec compared the effect to Excel, not to headcount cuts, while declining to name a single paying customer.",
+      "key_facts": [
+        "Built with Morgan Stanley and Evercore as design partners, running on GPT-6 Astra.",
+        "Pulls in data from Daloopa, PitchBook, LSEG News, Crunchbase and Quartr, with granular source citations.",
+        "OpenAI's Nick Turley: \"you will see technology like this\" do what Excel did for banking -- but named no paying customer beyond the two design partners."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-openai-chatgpt-financial-services-gpt-6-astra.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI launched ChatGPT for Financial Services, aimed at the research and pitchbook work junior bankers do today. Built with Morgan Stanley and Evercore. OpenAI's own exec compares it to Excel, not to cutting headcount -- and won't name a single paying customer yet.",
+        "reply_copy": "What it does, and what OpenAI won't say:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#Fintech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI's new ChatGPT for Financial Services runs on GPT-6 Astra, pulls data from Daloopa, PitchBook, LSEG and Crunchbase, and drafts bank-template pitchbooks.\n\nBuilt with Morgan Stanley and Evercore. OpenAI compares the likely effect to Excel's on banking -- not to cutting junior roles. No pricing published, no named customer beyond the two design partners.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#Fintech",
+          "#WallStreet",
+          "#TechNews",
+          "#Finance"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI launched ChatGPT for Financial Services on September 10 -- built with Morgan Stanley and Evercore as design partners, running on GPT-6 Astra, and pulling in data from Daloopa, PitchBook, LSEG News, Crunchbase and Quartr.\n\nAsked if the tool is designed to cut headcount, OpenAI's Nick Turley compared its likely effect to Microsoft Excel's on banking rather than a replacement. He declined to name a single paying customer beyond the two design partners, and OpenAI hasn't published pricing.\n\nFull story:",
+        "hashtags": [
+          "#OpenAI",
+          "#Fintech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI launched ChatGPT for Financial Services, aimed at junior-banker work -- built with Morgan Stanley and Evercore, running on GPT-6 Astra. OpenAI's own comparison is to Excel, not to headcount cuts. No pricing, no named customer beyond the two partners.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI launched ChatGPT for Financial Services (GPT-6 Astra, built with Morgan Stanley + Evercore). Turley compares it to Excel's effect on banking, not to cutting roles -- but won't name a paying customer beyond the two partners.",
+        "hashtags": [
+          "#OpenAI",
+          "#Fintech",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-microsoft-38-gigawatt-data-center-plan-2032-capacity-crunch",
+    "ts": "2026-09-11T14:26:56Z",
+    "export": {
+      "article_id": "newsroom-microsoft-38-gigawatt-data-center-plan-2032-capacity-crunch",
+      "url": "https://rtfclmgzn.com/article/microsoft-38-gigawatt-data-center-plan-2032-capacity-crunch",
+      "headline": "Microsoft reportedly plans to triple data-center capacity to 38+ gigawatts by 2032 -- while turning away cloud customers today",
+      "hook": "Microsoft is reportedly planning to triple its data-center capacity by 2032 -- but the shortage behind that plan is already costing it customers today.",
+      "key_facts": [
+        "Bloomberg: Microsoft aims to grow capacity from ~12 GW today to 38+ GW by 2032; Microsoft hasn't confirmed it.",
+        "E-commerce firm Temu signed with Oracle instead after Microsoft couldn't supply capacity; GitHub had an August outage tied to server constraints.",
+        "Satya Nadella, on the shortage: \"I don't have warm shells to plug into.\""
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-microsoft-38-gigawatt-data-center-plan-2032-capacity-crunch.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Bloomberg: Microsoft plans to triple data-center capacity to 38+ GW by 2032. Unconfirmed by Microsoft -- but the shortage behind it is real today: Temu signed with Oracle instead, GitHub had an outage, and Nadella says \"I don't have warm shells to plug into.\"",
+        "reply_copy": "The reported plan, and the crunch behind it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Microsoft",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Bloomberg reports Microsoft plans to triple its data-center capacity to 38+ gigawatts by 2032, with AI-specific capacity rising roughly sixfold.\n\nMicrosoft hasn't confirmed the target -- but the shortage behind it is already visible: e-commerce firm Temu signed with Oracle instead, GitHub had an August outage, and CEO Satya Nadella put it plainly: \"I don't have warm shells to plug into.\"",
+        "hashtags": [
+          "#Microsoft",
+          "#AI",
+          "#DataCenters",
+          "#CloudComputing",
+          "#TechNews",
+          "#Azure"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Microsoft is reportedly planning to more than triple its global data-center capacity -- from about 12 gigawatts today to more than 38 by 2032 -- according to Bloomberg News, citing people familiar with the plans. Microsoft hasn't confirmed the figure.\n\nBut the shortage the plan would address is already visible: e-commerce company Temu signed with Oracle instead of Microsoft after Microsoft couldn't supply the capacity it needed, GitHub had an eight-hour outage in August tied to server constraints, and CEO Satya Nadella has said plainly, \"I don't have warm shells to plug into.\"\n\nFull story:",
+        "hashtags": [
+          "#Microsoft",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Bloomberg: Microsoft plans to triple data-center capacity to 38+ GW by 2032 (unconfirmed). Today's shortage is already real though -- Temu signed with Oracle instead, GitHub had an outage, and Nadella says \"I don't have warm shells to plug into.\"",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Microsoft reportedly plans to triple data-center capacity to 38+ GW by 2032 (Bloomberg, unconfirmed). Meanwhile Temu switched to Oracle after a Microsoft shortage, and Nadella says: 'I don't have warm shells to plug into.'",
+        "hashtags": [
+          "#Microsoft",
+          "#DataCenters",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
