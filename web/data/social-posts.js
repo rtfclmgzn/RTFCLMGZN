@@ -16833,8 +16833,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098492531541512268",
+        "remote_id": "2098492531541512268",
+        "posted_at": "2026-09-11T19:23:02Z"
       },
       {
         "platform": "x",
