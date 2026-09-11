@@ -7,8 +7,8 @@
 // RULES: never substitute vendor self-reported benchmark claims for the independent index;
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "September 10, 2026",
-  scannedAt: "2026-09-10T21:30:00Z",
+  updated: "September 11, 2026",
+  scannedAt: "2026-09-11T11:51:06Z",
   basisNote: "Newsroom cycle 2026-09-10T19:22:02Z: checked this cycle's three articles (Anthropic's fourth cybersecurity-incident alignment assessment, the DOJ's Nvidia-Groq reverse-acquihire antitrust probe, the NSA/CISA/FBI joint distillation advisory) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- a model-safety retrospective, a chip-licensing antitrust story, and a government advisory naming companies rather than scoring models. No row edits this cycle. Prior: newsroom cycle 2026-09-10T14:28:42Z found the same.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
