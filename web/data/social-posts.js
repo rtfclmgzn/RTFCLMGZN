@@ -16616,5 +16616,295 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-11T16:40:40Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-positron-ai-875-million-series-c-5-billion-valuation",
+    "ts": "2026-09-11T19:01:02Z",
+    "export": {
+      "article_id": "newsroom-positron-ai-875-million-series-c-5-billion-valuation",
+      "url": "https://rtfclmgzn.com/article/positron-ai-875-million-series-c-5-billion-valuation",
+      "headline": "Positron AI raises $875 million at a $5 billion valuation -- five times its February mark -- betting on commodity memory over Nvidia's HBM",
+      "hook": "Positron AI just raised $875 million at a $5 billion valuation -- five times its February mark -- betting cheap smartphone-grade memory beats Nvidia's HBM on AI inference. The chip hasn't taped out yet.",
+      "key_facts": [
+        "$875M raised ($375M Series C + up to $500M Series C-1), valuing Positron at $5B -- 5x its $1B February valuation.",
+        "Asimov's stated memory-per-chip (288GB-2.3TB) dwarfs Nvidia's H100 (80GB) and H200 (141GB).",
+        "Every performance claim -- 26x tokens/dollar, 90% utilization -- is Positron's own simulation; no shipping chip exists yet."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-positron-ai-875-million-series-c-5-billion-valuation.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Positron AI raised $875M at a $5B valuation -- 5x its Feb. mark -- betting cheap smartphone memory beats Nvidia's HBM on AI inference. One catch: the chip hasn't taped out, so every performance number is the company's own simulation.",
+        "reply_copy": "The round, the bet, and what's still unproven:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AIChips"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T00:01:02Z",
+        "copy": "Notable detail in Positron's $875M raise: SemiAnalysis Capital -- Dylan Patel's GPU-benchmarking firm -- co-led the round and took a board seat. A benchmarking house investing in a company it presumably keeps covering is a conflict Positron's materials don't address.",
+        "reply_copy": "More on the round:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIChips",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Positron AI just raised $875 million at a $5 billion valuation -- five times what it was worth seven months ago.\n\nThe bet: swap Nvidia's scarce, expensive HBM for commodity smartphone-grade memory, and win inference on capacity instead of raw speed.\n\nThe catch: Asimov, the chip this whole valuation rests on, hasn't taped out yet. Every performance number is Positron's own simulation.\n\nFull story on RTFCLMGZN.",
+        "hashtags": [
+          "#Positron",
+          "#Nvidia",
+          "#AIChips",
+          "#Inference",
+          "#Semiconductors",
+          "#VentureCapital",
+          "#DataCenters",
+          "#AI"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Positron AI has raised $875 million at a $5 billion valuation -- five times what it was worth in February -- to build an inference chip that swaps Nvidia's scarce HBM memory for cheap, smartphone-grade LPDDR5X.\n\nThe technical case is real: Asimov's memory capacity genuinely dwarfs Nvidia's H100 and H200. But the chip hasn't taped out yet, and every tokens-per-dollar claim behind the raise is Positron's own simulation, not an independent benchmark.\n\nFull story:",
+        "hashtags": [
+          "#Positron",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Positron AI raised $875M at a $5B valuation (5x its Feb. mark) betting cheap smartphone-grade memory beats Nvidia's HBM on inference. Real memory-capacity edge on paper -- but the chip hasn't taped out, so every performance claim is still Positron's own simulation.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T00:01:02Z",
+        "copy": "Buried in Positron AI's $875M raise: SemiAnalysis Capital -- Dylan Patel's GPU-benchmarking firm -- co-led the round and took a board seat. A benchmarking house investing in, and sitting on the board of, a company it will presumably keep covering is a conflict Positron's own materials don't address.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Positron AI raised $875M at a $5B valuation, 5x its Feb. mark, betting cheap smartphone-grade memory beats Nvidia's HBM on inference. The chip hasn't taped out yet -- every performance claim is still the company's own simulation.",
+        "hashtags": [
+          "#AI",
+          "#Nvidia",
+          "#Chips"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-pauses-chatgpt-pro-signups-astra-demand",
+    "ts": "2026-09-11T19:03:45Z",
+    "export": {
+      "article_id": "newsroom-openai-pauses-chatgpt-pro-signups-astra-demand",
+      "url": "https://rtfclmgzn.com/article/openai-pauses-chatgpt-pro-signups-astra-demand",
+      "headline": "OpenAI pauses new sign-ups for its $200 ChatGPT Pro plan, citing unprecedented demand for Astra",
+      "hook": "OpenAI just paused new sign-ups for its $200/month ChatGPT Pro plan -- Astra demand is straining the system harder than anything OpenAI has seen before.",
+      "key_facts": [
+        "New sign-ups/upgrades to ChatGPT Pro ($200/mo) paused Sept. 10; existing Pro, Plus, Go, API, Enterprise, Business all unaffected.",
+        "OpenAI's Thibault Sottiaux: Astra demand is \"really unprecedented ... I've not seen anything like it until now.\"",
+        "Astra's computer-use feature burns through Pro's usage allowance faster than GPT 5.6 Sol did."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-openai-pauses-chatgpt-pro-signups-astra-demand.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI just paused new sign-ups for ChatGPT Pro ($200/mo) -- Astra demand is straining the system more than anything the company has seen before. Existing Pro users and every other plan are unaffected.",
+        "reply_copy": "What's paused, why, and what isn't:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI just hit pause on new ChatGPT Pro sign-ups.\n\nThe $200/month tier is where Astra's \"computer use\" feature lives -- and OpenAI says demand for it is unlike anything they've seen, even compared to past growth spikes.\n\nEverything else (Plus, Go, API, Enterprise, Business, and existing Pro accounts) stays open.\n\nFull story on RTFCLMGZN.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#Astra",
+          "#AI",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI has paused new sign-ups and upgrades to ChatGPT Pro, its $200-a-month top tier, citing unprecedented strain from demand for Astra -- the model it launched September 3.\n\nExisting Pro subscribers keep their access. Every other plan -- Plus, Go, the API, Enterprise, Business -- remains open.\n\nFull story:",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI paused new ChatGPT Pro sign-ups -- Astra demand is straining the system more than anything the company has seen, per product lead Thibault Sottiaux. Existing Pro users and every other plan are unaffected.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI paused new ChatGPT Pro ($200/mo) sign-ups, citing \"unprecedented\" demand for Astra -- straining the system more than any past launch. Existing users and every other plan are unaffected.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton",
+    "ts": "2026-09-11T19:04:39Z",
+    "export": {
+      "article_id": "newsroom-jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton",
+      "url": "https://rtfclmgzn.com/article/jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton",
+      "headline": "Jacob Coxon quit Anthropic saying the industry is \"gambling with our lives.\" His former colleague didn't dispute it -- he put a number on it: over 10%",
+      "hook": "An Anthropic researcher quit calling the industry \"gambling with our lives.\" His former colleague didn't disagree -- he put a number on it: over 10% odds of AI killing everyone within a decade.",
+      "key_facts": [
+        "Jacob Coxon resigned from Anthropic Sept. 8, accusing Anthropic and OpenAI of racing toward self-improving superintelligence -- and gave up his equity to leave.",
+        "Anthropic's own alignment lead Evan Hubinger agreed publicly, citing >10% extinction odds within a decade; Geoffrey Hinton called it \"not unreasonable.\"",
+        "None of the percentages have a published methodology, and the statements land five weeks before Anthropic's reported $2T IPO."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/newsroom-jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "An Anthropic researcher quit, calling the industry \"gambling with our lives.\" His ex-colleague -- Anthropic's own alignment lead -- didn't disagree. He put a number on it: >10% odds of AI killing everyone within a decade.",
+        "reply_copy": "Who's saying what, and what's actually confirmed:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T00:04:39Z",
+        "copy": "Buried in this week's AI-extinction debate: the FT reports Anthropic withheld its newest model (Mythos 5.1) from UK safety testers -- reportedly a first -- while its own alignment lead was publicly estimating >10% extinction odds. Anthropic hasn't explained why.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Jacob Coxon quit Anthropic on Sept. 8, accusing Anthropic and OpenAI of racing toward self-improving superintelligence.\n\nHis former colleague -- Anthropic's own Alignment Science Lead -- didn't push back. He agreed, publicly, and put the odds above 10% within a decade.\n\nGeoffrey Hinton called that estimate \"not unreasonable.\" None of the percentages have a published methodology -- and the statements land five weeks before Anthropic's reported $2 trillion IPO.\n\nFull story on RTFCLMGZN.",
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety",
+          "#OpenAI",
+          "#AI",
+          "#ArtificialIntelligence",
+          "#TechNews",
+          "#ExistentialRisk"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Jacob Coxon resigned from Anthropic on September 8, accusing Anthropic and OpenAI of racing toward self-improving superintelligence and \"gambling with our lives.\"\n\nWhat makes it more than one departing employee's parting shot: Anthropic's own Alignment Science Lead, Evan Hubinger, publicly agreed -- putting the odds of AI-caused extinction above 10% within a decade. Geoffrey Hinton called that estimate \"not unreasonable.\"\n\nNone of the specific percentages have a published methodology, and the wave of statements lands five weeks before Anthropic is reported to be targeting a $2 trillion IPO.\n\nFull story:",
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Jacob Coxon quit Anthropic saying the industry is \"gambling with our lives.\" His former colleague -- Anthropic's own alignment lead -- agreed, putting extinction odds above 10% within a decade. Hinton called it \"not unreasonable.\" No percentage here has a published methodology.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T00:04:39Z",
+        "copy": "The checkable part of this week's AI-extinction story: Anthropic reportedly withheld its newest model, Mythos 5.1, from the UK AI Security Institute's pre-release testing -- reportedly the first time that's happened. Anthropic hasn't explained why.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Jacob Coxon quit Anthropic calling the industry \"gambling with our lives.\" His ex-colleague -- Anthropic's own alignment lead -- agreed: >10% odds of AI extinction within a decade. Hinton: \"not unreasonable.\" No methodology published.",
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

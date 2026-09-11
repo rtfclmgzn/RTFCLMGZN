@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 11, 2026",
-  scannedAt: "2026-09-11T16:48:46Z",
-  basisNote: "Newsroom cycle 2026-09-11T14:32:03Z: checked this cycle's three articles (Anthropic's fourth threat-intelligence report on distillation/espionage/bioweapons misuse, OpenAI's ChatGPT for Financial Services launch, Microsoft's reported 38GW data-center plan) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- ChatGPT for Financial Services runs on GPT-6 Astra, already a scored row, with no new capability claim to measure. No row edits this cycle. Prior: newsroom cycle 2026-09-10T19:22:02Z found the same.",
+  scannedAt: "2026-09-11T19:15:56Z",
+  basisNote: "Newsroom cycle 2026-09-11T19:04:39Z: checked this cycle's three articles (Positron AI's $875M inference-chip funding round, OpenAI's ChatGPT Pro sign-up pause for Astra demand, the Jacob Coxon/Anthropic AI-extinction-risk debate) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- Positron is chip hardware, not a scored model; the Astra Pro pause is an access/capacity story about an already-scored model (GPT-6 Astra, max 55 / xhigh 54 above) with no new capability claim; the Coxon/Hubinger/Hinton story is about safety-risk statements, not a benchmark. No row edits this cycle. Prior: newsroom cycle 2026-09-11T14:32:03Z found the same.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },

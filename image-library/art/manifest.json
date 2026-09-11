@@ -3452,7 +3452,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-43-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-positron-ai-875-million-series-c-5-billion-valuation",
+     "used_at": "2026-09-11"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-05",
@@ -4376,7 +4381,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-53-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton",
+     "used_at": "2026-09-11"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-04",
