@@ -3729,7 +3729,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-32-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "sakana-fugu-max-ultra-v2-orchestrator",
+     "used_at": "2026-09-12"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-03",

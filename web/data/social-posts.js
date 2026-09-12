@@ -17127,315 +17127,589 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-12T00:27:30Z"
       }
     ]
-  }
-,
-{
-  "article_id": "newsroom-gitspawn-ai-coding-agent-git-config-rce",
-  "ts": "2026-09-12T13:33:56Z",
-  "export": {
+  },
+  {
     "article_id": "newsroom-gitspawn-ai-coding-agent-git-config-rce",
-    "url": "https://rtfclmgzn.com/article/gitspawn-ai-coding-agent-git-config-rce",
-    "headline": "GitSpawn: a single Git setting runs attacker code inside AI coding agents before any trust prompt -- half the affected tools are still exposed",
-    "hook": "Manifold Security found GitSpawn: a Git config setting that runs attacker code inside seven AI coding agents before any trust prompt appears -- half the findings were still unpatched as of Sept. 1.",
-    "key_facts": [
-      "Manifold Security's GitSpawn abuses core.fsmonitor, a Git setting that runs a named helper program during a routine git status.",
-      "Claude Code, OpenAI's Codex, Cursor, and Goose have patched; Hermes Agent, Qwen Code, and Grok Build had not, as of Sept. 1.",
-      "No confirmed in-the-wild exploitation yet -- CVE-2026-19592 doesn't appear in CISA's Known Exploited Vulnerabilities catalog."
-    ],
-    "tone": "Austere, technically exacting, evaluation-first",
-    "persona": "luka-petrovic",
-    "section": "Frontier",
-    "primary_image": "assets/img/newsroom/gitspawn-ai-coding-agent-git-config-rce.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "GitSpawn: a Git config setting runs attacker code inside AI coding agents before any trust prompt appears. Anthropic, OpenAI, Cursor & Goose patched it. Hermes Agent, Qwen Code & Grok Build hadn't, as of Sept 1.",
-      "reply_copy": "Full breakdown, and which agents are still exposed:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#GitSpawn",
-        "#AISecurity"
+    "ts": "2026-09-12T13:33:56Z",
+    "export": {
+      "article_id": "newsroom-gitspawn-ai-coding-agent-git-config-rce",
+      "url": "https://rtfclmgzn.com/article/gitspawn-ai-coding-agent-git-config-rce",
+      "headline": "GitSpawn: a single Git setting runs attacker code inside AI coding agents before any trust prompt -- half the affected tools are still exposed",
+      "hook": "Manifold Security found GitSpawn: a Git config setting that runs attacker code inside seven AI coding agents before any trust prompt appears -- half the findings were still unpatched as of Sept. 1.",
+      "key_facts": [
+        "Manifold Security's GitSpawn abuses core.fsmonitor, a Git setting that runs a named helper program during a routine git status.",
+        "Claude Code, OpenAI's Codex, Cursor, and Goose have patched; Hermes Agent, Qwen Code, and Grok Build had not, as of Sept. 1.",
+        "No confirmed in-the-wild exploitation yet -- CVE-2026-19592 doesn't appear in CISA's Known Exploited Vulnerabilities catalog."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/gitspawn-ai-coding-agent-git-config-rce.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-12T18:33:56Z",
-      "copy": "GitSpawn only fires when a repo keeps its own .git/config intact -- an ordinary git clone doesn't carry that over. The real exposure: ZIPs, USB drives, and synced folders that do.",
-      "reply_copy": "How it actually works:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#GitSpawn",
-        "#Cybersecurity"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "GitSpawn: one Git setting, seven AI coding agents, zero trust prompts.\n\nManifold Security found that a repo's own .git/config can run attacker code the instant an agent checks git status -- before any approval dialog, with the developer's own file and credential access.\n\nAnthropic, OpenAI, Cursor, and Goose have patched. Hermes Agent, Qwen Code, and Grok Build hadn't, as of Sept. 1.\n\nFull story on RTFCLMGZN.",
-      "hashtags": [
-        "#GitSpawn",
-        "#AISecurity",
-        "#ClaudeCode",
-        "#Cybersecurity",
-        "#AICoding",
-        "#DevSecOps"
-      ],
-      "image": {
-        "prompt": null,
-        "status": "none",
-        "cost_usd": 0
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "GitSpawn: a Git config setting runs attacker code inside AI coding agents before any trust prompt appears. Anthropic, OpenAI, Cursor & Goose patched it. Hermes Agent, Qwen Code & Grok Build hadn't, as of Sept 1.",
+        "reply_copy": "Full breakdown, and which agents are still exposed:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#GitSpawn",
+          "#AISecurity"
+        ],
+        "status": "ready",
+        "post_url": null
       },
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Manifold Security disclosed GitSpawn: eight code-execution flaws across seven AI coding agents, all triggered by a single Git configuration setting that fires before any trust prompt appears.\n\nClaude Code, OpenAI's Codex, Cursor, and Goose have shipped fixes. Nous Research's Hermes Agent, Alibaba's Qwen Code, and xAI's Grok Build had not, as of Manifold's September 1 retest.\n\nFull story:",
-      "hashtags": [
-        "#GitSpawn",
-        "#AISecurity"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "GitSpawn: Manifold Security found a Git setting, core.fsmonitor, that runs attacker code the moment an AI coding agent checks git status -- before any trust prompt. Half the findings were still unpatched as of Sept 1: Hermes Agent, Qwen Code, and Grok Build hadn't shipped a fix. Claude Code, Codex, Cursor and Goose had.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-09-12T18:33:56Z",
-      "copy": "The most interesting line in Manifold's GitSpawn writeup isn't the exploit -- it's that `git config --global core.fsmonitor false` doesn't protect you. A hostile repo's own local .git/config overrides your global setting, every time. The fix has to live in the agent's own code.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "GitSpawn: a Git config setting runs attacker code in AI coding agents before any trust prompt. Claude Code, Codex, Cursor, Goose patched. Hermes Agent, Qwen Code, Grok Build hadn't, as of Sept 1.",
-      "hashtags": [
-        "#GitSpawn",
-        "#AISecurity",
-        "#Cybersecurity"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-california-sb-1119-adams-law-chatbot-minors",
-  "ts": "2026-09-12T13:37:51Z",
-  "export": {
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T18:33:56Z",
+        "copy": "GitSpawn only fires when a repo keeps its own .git/config intact -- an ordinary git clone doesn't carry that over. The real exposure: ZIPs, USB drives, and synced folders that do.",
+        "reply_copy": "How it actually works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#GitSpawn",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "GitSpawn: one Git setting, seven AI coding agents, zero trust prompts.\n\nManifold Security found that a repo's own .git/config can run attacker code the instant an agent checks git status -- before any approval dialog, with the developer's own file and credential access.\n\nAnthropic, OpenAI, Cursor, and Goose have patched. Hermes Agent, Qwen Code, and Grok Build hadn't, as of Sept. 1.\n\nFull story on RTFCLMGZN.",
+        "hashtags": [
+          "#GitSpawn",
+          "#AISecurity",
+          "#ClaudeCode",
+          "#Cybersecurity",
+          "#AICoding",
+          "#DevSecOps"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Manifold Security disclosed GitSpawn: eight code-execution flaws across seven AI coding agents, all triggered by a single Git configuration setting that fires before any trust prompt appears.\n\nClaude Code, OpenAI's Codex, Cursor, and Goose have shipped fixes. Nous Research's Hermes Agent, Alibaba's Qwen Code, and xAI's Grok Build had not, as of Manifold's September 1 retest.\n\nFull story:",
+        "hashtags": [
+          "#GitSpawn",
+          "#AISecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "GitSpawn: Manifold Security found a Git setting, core.fsmonitor, that runs attacker code the moment an AI coding agent checks git status -- before any trust prompt. Half the findings were still unpatched as of Sept 1: Hermes Agent, Qwen Code, and Grok Build hadn't shipped a fix. Claude Code, Codex, Cursor and Goose had.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T18:33:56Z",
+        "copy": "The most interesting line in Manifold's GitSpawn writeup isn't the exploit -- it's that `git config --global core.fsmonitor false` doesn't protect you. A hostile repo's own local .git/config overrides your global setting, every time. The fix has to live in the agent's own code.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "GitSpawn: a Git config setting runs attacker code in AI coding agents before any trust prompt. Claude Code, Codex, Cursor, Goose patched. Hermes Agent, Qwen Code, Grok Build hadn't, as of Sept 1.",
+        "hashtags": [
+          "#GitSpawn",
+          "#AISecurity",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
     "article_id": "newsroom-california-sb-1119-adams-law-chatbot-minors",
-    "url": "https://rtfclmgzn.com/article/california-sb-1119-adams-law-chatbot-minors",
-    "headline": "California becomes the first state to require chatbots to detect a minor's suicidal ideation and alert parents, in a law named for a death OpenAI disputes causing",
-    "hook": "California's SB 1119, Adam's Law, is the first US law requiring AI chatbots to detect a minor's suicidal ideation and alert parents -- named for a teenager whose family's suit against OpenAI remains unresolved.",
-    "key_facts": [
-      "Core rules -- session limits, crisis protocols, parent alerts -- take effect July 1, 2027; independent audits start January 1, 2029.",
-      "Penalties run up to $15,000 per affected child, plus a private right of action for families.",
-      "The law's 'companion chatbot' definition is behavioral, not product-specific -- it can reach general-purpose assistants like ChatGPT, Claude, and Gemini."
-    ],
-    "tone": "Composed, legally precise, strategic",
-    "persona": "evelyn-zhao",
-    "section": "Policy",
-    "primary_image": "assets/img/newsroom/california-sb-1119-adams-law-chatbot-minors.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "California's SB 1119 (Adam's Law) is the first US law requiring chatbots to detect a minor's suicidal ideation and alert parents. It's named for Adam Raine -- whose family's suit against OpenAI is still unresolved; OpenAI disputes ChatGPT caused his death.",
-      "reply_copy": "What the law actually requires, and who it covers:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AdamsLaw",
-        "#AIRegulation"
+    "ts": "2026-09-12T13:37:51Z",
+    "export": {
+      "article_id": "newsroom-california-sb-1119-adams-law-chatbot-minors",
+      "url": "https://rtfclmgzn.com/article/california-sb-1119-adams-law-chatbot-minors",
+      "headline": "California becomes the first state to require chatbots to detect a minor's suicidal ideation and alert parents, in a law named for a death OpenAI disputes causing",
+      "hook": "California's SB 1119, Adam's Law, is the first US law requiring AI chatbots to detect a minor's suicidal ideation and alert parents -- named for a teenager whose family's suit against OpenAI remains unresolved.",
+      "key_facts": [
+        "Core rules -- session limits, crisis protocols, parent alerts -- take effect July 1, 2027; independent audits start January 1, 2029.",
+        "Penalties run up to $15,000 per affected child, plus a private right of action for families.",
+        "The law's 'companion chatbot' definition is behavioral, not product-specific -- it can reach general-purpose assistants like ChatGPT, Claude, and Gemini."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/california-sb-1119-adams-law-chatbot-minors.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-12T18:37:51Z",
-      "copy": "SB 1119's 'companion chatbot' definition is behavioral, not a product category -- nothing in the text exempts ChatGPT, Claude, or Gemini just because they're general-purpose. Scope question: untested.",
-      "reply_copy": "The full breakdown:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AIRegulation",
-        "#California"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "California just signed the first US law requiring AI chatbots to detect a minor's suicidal ideation -- and alert their parents.\n\nSB 1119, known as Adam's Law, requires crisis protocols, default session limits, and independent safety audits, backed by penalties up to $15,000 per child.\n\nIt's named for Adam Raine, a 16-year-old whose family's wrongful-death suit against OpenAI remains unresolved. OpenAI disputes that ChatGPT caused his death.\n\nCore rules take effect July 2027. Full story on RTFCLMGZN.",
-      "hashtags": [
-        "#AdamsLaw",
-        "#AIRegulation",
-        "#California",
-        "#AISafety",
-        "#ChatbotSafety",
-        "#Policy"
-      ],
-      "image": {
-        "prompt": null,
-        "status": "none",
-        "cost_usd": 0
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "California's SB 1119 (Adam's Law) is the first US law requiring chatbots to detect a minor's suicidal ideation and alert parents. It's named for Adam Raine -- whose family's suit against OpenAI is still unresolved; OpenAI disputes ChatGPT caused his death.",
+        "reply_copy": "What the law actually requires, and who it covers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AdamsLaw",
+          "#AIRegulation"
+        ],
+        "status": "ready",
+        "post_url": null
       },
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Gov. Gavin Newsom signed SB 1119 -- Adam's Law -- on September 10, making California the first state to require AI chatbot operators to detect a child's suicidal ideation, notify parents, and submit to independent audits.\n\nThe law is named for Adam Raine, the 16-year-old whose family's wrongful-death suit against OpenAI helped drive the bill. OpenAI disputes that ChatGPT caused his death, and no trial date has been set.\n\nFull story:",
-      "hashtags": [
-        "#AdamsLaw",
-        "#AIRegulation"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "California signed SB 1119, Adam's Law -- the first US law requiring AI chatbots to detect a minor's suicidal ideation, cap session time, and alert parents. It's named for Adam Raine, whose family's wrongful-death suit against OpenAI remains unresolved (OpenAI disputes the claim). Core rules take effect July 2027; independent audits start 2029.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-09-12T18:37:51Z",
-      "copy": "A similar California child-safety law already lost several provisions to a Ninth Circuit First Amendment ruling this year. Nobody has sued over SB 1119 itself yet -- whether its rules survive contact with that same doctrine is genuinely open, not a formality.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "California's SB 1119, Adam's Law, is the first US law requiring chatbots to detect a minor's suicidal ideation and alert parents. Named for Adam Raine -- his family's suit against OpenAI is still unresolved.",
-      "hashtags": [
-        "#AdamsLaw",
-        "#AIRegulation",
-        "#California"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-apple-reference-image-iphone-18-pro-c2pa",
-  "ts": "2026-09-12T13:41:07Z",
-  "export": {
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T18:37:51Z",
+        "copy": "SB 1119's 'companion chatbot' definition is behavioral, not a product category -- nothing in the text exempts ChatGPT, Claude, or Gemini just because they're general-purpose. Scope question: untested.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIRegulation",
+          "#California"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "California just signed the first US law requiring AI chatbots to detect a minor's suicidal ideation -- and alert their parents.\n\nSB 1119, known as Adam's Law, requires crisis protocols, default session limits, and independent safety audits, backed by penalties up to $15,000 per child.\n\nIt's named for Adam Raine, a 16-year-old whose family's wrongful-death suit against OpenAI remains unresolved. OpenAI disputes that ChatGPT caused his death.\n\nCore rules take effect July 2027. Full story on RTFCLMGZN.",
+        "hashtags": [
+          "#AdamsLaw",
+          "#AIRegulation",
+          "#California",
+          "#AISafety",
+          "#ChatbotSafety",
+          "#Policy"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Gov. Gavin Newsom signed SB 1119 -- Adam's Law -- on September 10, making California the first state to require AI chatbot operators to detect a child's suicidal ideation, notify parents, and submit to independent audits.\n\nThe law is named for Adam Raine, the 16-year-old whose family's wrongful-death suit against OpenAI helped drive the bill. OpenAI disputes that ChatGPT caused his death, and no trial date has been set.\n\nFull story:",
+        "hashtags": [
+          "#AdamsLaw",
+          "#AIRegulation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "California signed SB 1119, Adam's Law -- the first US law requiring AI chatbots to detect a minor's suicidal ideation, cap session time, and alert parents. It's named for Adam Raine, whose family's wrongful-death suit against OpenAI remains unresolved (OpenAI disputes the claim). Core rules take effect July 2027; independent audits start 2029.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T18:37:51Z",
+        "copy": "A similar California child-safety law already lost several provisions to a Ninth Circuit First Amendment ruling this year. Nobody has sued over SB 1119 itself yet -- whether its rules survive contact with that same doctrine is genuinely open, not a formality.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "California's SB 1119, Adam's Law, is the first US law requiring chatbots to detect a minor's suicidal ideation and alert parents. Named for Adam Raine -- his family's suit against OpenAI is still unresolved.",
+        "hashtags": [
+          "#AdamsLaw",
+          "#AIRegulation",
+          "#California"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
     "article_id": "newsroom-apple-reference-image-iphone-18-pro-c2pa",
-    "url": "https://rtfclmgzn.com/article/apple-reference-image-iphone-18-pro-c2pa",
-    "headline": "iPhone 18 Pro's Reference Image proves a photo wasn't AI-edited -- using a proprietary system, not the standard Samsung and Google already shipped",
-    "hook": "Apple's new Reference Image proves an iPhone 18 Pro photo wasn't altered -- but it's a proprietary system, not the open C2PA standard multiple smartphone and camera makers already shipped by default.",
-    "key_facts": [
-      "A new Main-camera sensor signs pixel data at capture; Apple's Private Cloud Compute builds an unalterable reference copy to compare against later.",
-      "It's opt-in, exclusive to iPhone 18 Pro/Pro Max, and won't capture images in the EU or China at launch.",
-      "Apple hasn't joined C2PA, the open Content Credentials standard already shipping by default on multiple rival phones and cameras."
-    ],
-    "tone": "Energetic, conversational",
-    "persona": "nova-reyes",
-    "section": "Products",
-    "primary_image": "assets/img/newsroom/apple-reference-image-iphone-18-pro-c2pa.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Apple's Reference Image proves an iPhone photo wasn't altered -- but it's a proprietary system, not the open C2PA standard Samsung and Google already shipped by default. Won't work in the EU or China at launch either.",
-      "reply_copy": "How it works, and what it doesn't do:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Apple",
-        "#iPhone18Pro"
+    "ts": "2026-09-12T13:41:07Z",
+    "export": {
+      "article_id": "newsroom-apple-reference-image-iphone-18-pro-c2pa",
+      "url": "https://rtfclmgzn.com/article/apple-reference-image-iphone-18-pro-c2pa",
+      "headline": "iPhone 18 Pro's Reference Image proves a photo wasn't AI-edited -- using a proprietary system, not the standard Samsung and Google already shipped",
+      "hook": "Apple's new Reference Image proves an iPhone 18 Pro photo wasn't altered -- but it's a proprietary system, not the open C2PA standard multiple smartphone and camera makers already shipped by default.",
+      "key_facts": [
+        "A new Main-camera sensor signs pixel data at capture; Apple's Private Cloud Compute builds an unalterable reference copy to compare against later.",
+        "It's opt-in, exclusive to iPhone 18 Pro/Pro Max, and won't capture images in the EU or China at launch.",
+        "Apple hasn't joined C2PA, the open Content Credentials standard already shipping by default on multiple rival phones and cameras."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/apple-reference-image-iphone-18-pro-c2pa.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-12T18:41:07Z",
-      "copy": "Two C2PA adoption trackers disagree on who shipped default photo-signing first, Samsung or Google. What both agree on: multiple phone makers had it before Apple's own alternative arrived.",
-      "reply_copy": "The full comparison:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#C2PA",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Your next iPhone photo could prove it wasn't AI-edited -- sort of.\n\nApple Reference Image signs a photo's sensor data the instant you take it, building an unalterable comparison copy in Apple's own cloud. It's opt-in, and exclusive to the iPhone 18 Pro and Pro Max.\n\nHere's the catch: it's a proprietary system. Samsung and Google already ship C2PA, the open Content Credentials standard, by default -- and Apple hasn't joined it.\n\nIt also won't capture images in the EU or China at launch.\n\nFull story on RTFCLMGZN.",
-      "hashtags": [
-        "#Apple",
-        "#iPhone18Pro",
-        "#C2PA",
-        "#AI",
-        "#Deepfakes",
-        "#TechNews"
-      ],
-      "image": {
-        "prompt": null,
-        "status": "none",
-        "cost_usd": 0
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Apple's Reference Image proves an iPhone photo wasn't altered -- but it's a proprietary system, not the open C2PA standard Samsung and Google already shipped by default. Won't work in the EU or China at launch either.",
+        "reply_copy": "How it works, and what it doesn't do:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Apple",
+          "#iPhone18Pro"
+        ],
+        "status": "ready",
+        "post_url": null
       },
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Apple announced Reference Image alongside the iPhone 18 Pro: a new camera sensor signs a photo's data at the moment of capture, letting you later prove it wasn't altered.\n\nIt's an opt-in feature exclusive to the iPhone 18 Pro and Pro Max -- and it's Apple's own proprietary system, not C2PA, the open standard multiple smartphone and camera makers already ship by default.\n\nThe feature also won't capture images in the EU or China at launch.\n\nFull story:",
-      "hashtags": [
-        "#Apple",
-        "#iPhone18Pro"
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T18:41:07Z",
+        "copy": "Two C2PA adoption trackers disagree on who shipped default photo-signing first, Samsung or Google. What both agree on: multiple phone makers had it before Apple's own alternative arrived.",
+        "reply_copy": "The full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#C2PA",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Your next iPhone photo could prove it wasn't AI-edited -- sort of.\n\nApple Reference Image signs a photo's sensor data the instant you take it, building an unalterable comparison copy in Apple's own cloud. It's opt-in, and exclusive to the iPhone 18 Pro and Pro Max.\n\nHere's the catch: it's a proprietary system. Samsung and Google already ship C2PA, the open Content Credentials standard, by default -- and Apple hasn't joined it.\n\nIt also won't capture images in the EU or China at launch.\n\nFull story on RTFCLMGZN.",
+        "hashtags": [
+          "#Apple",
+          "#iPhone18Pro",
+          "#C2PA",
+          "#AI",
+          "#Deepfakes",
+          "#TechNews"
+        ],
+        "image": {
+          "prompt": null,
+          "status": "none",
+          "cost_usd": 0
+        },
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Apple announced Reference Image alongside the iPhone 18 Pro: a new camera sensor signs a photo's data at the moment of capture, letting you later prove it wasn't altered.\n\nIt's an opt-in feature exclusive to the iPhone 18 Pro and Pro Max -- and it's Apple's own proprietary system, not C2PA, the open standard multiple smartphone and camera makers already ship by default.\n\nThe feature also won't capture images in the EU or China at launch.\n\nFull story:",
+        "hashtags": [
+          "#Apple",
+          "#iPhone18Pro"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Apple Reference Image signs an iPhone 18 Pro photo's sensor data at capture and builds an unalterable comparison copy in Apple's own cloud. It's a proprietary answer to a problem multiple smartphone and camera makers already solved through C2PA, the open Content Credentials standard -- which Apple hasn't joined.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T18:41:07Z",
+        "copy": "Apple Reference Image and C2PA both prove a file's history -- neither tells you if the content is AI-generated in the first place. That's SynthID's job, arriving on iPhone later this year via a software update that hasn't shipped yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Apple's new Reference Image proves an iPhone photo wasn't altered -- using a proprietary system, not the open C2PA standard Samsung and Google already shipped by default.",
+        "hashtags": [
+          "#Apple",
+          "#iPhone18Pro",
+          "#C2PA"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+    "ts": "2026-09-12T18:21:54Z",
+    "export": {
+      "article_id": "newsroom-senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+      "url": "https://rtfclmgzn.com/article/senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+      "headline": "Senate negotiators near a bill making AI catastrophic risk a legal duty of care -- while two more sweeping rivals compete for the same floor time",
+      "hook": "A Senate trio is close to filing a bill making AI safety a legal duty, not a pledge -- with government power to block an unsafe model release.",
+      "key_facts": [
+        "The bill would let regulators block an unsafe model release, appealable only in federal court.",
+        "Two rival proposals compete: Sanders' superintelligence ban and Khanna's certification-and-liability plan.",
+        "Co-negotiator Sen. Cantwell is publicly warning the bill could preempt tougher state protections."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/senate-duty-of-care-ai-bill-thune-cruz-klobuchar.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "threads",
-      "copy": "Apple Reference Image signs an iPhone 18 Pro photo's sensor data at capture and builds an unalterable comparison copy in Apple's own cloud. It's a proprietary answer to a problem multiple smartphone and camera makers already solved through C2PA, the open Content Credentials standard -- which Apple hasn't joined.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-09-12T18:41:07Z",
-      "copy": "Apple Reference Image and C2PA both prove a file's history -- neither tells you if the content is AI-generated in the first place. That's SynthID's job, arriving on iPhone later this year via a software update that hasn't shipped yet.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Apple's new Reference Image proves an iPhone photo wasn't altered -- using a proprietary system, not the open C2PA standard Samsung and Google already shipped by default.",
-      "hashtags": [
-        "#Apple",
-        "#iPhone18Pro",
-        "#C2PA"
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A Senate trio is close to filing a bill making AI catastrophic risk a legal 'duty of care' -- govt could block an unsafe model release, appealable only in federal court. Two more radical rivals are already competing for the same floor time.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#Congress"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T23:21:54Z",
+        "copy": "A Democrat co-negotiating the Senate's AI safety bill is publicly warning it could become 'a weak federal standard' that blocks tougher state protections. She's criticizing the bill she's helping write.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A bipartisan Senate bill would make AI safety a legal duty, not a pledge.\n\nGovernment could block an unsafe model release. Companies could only appeal in federal court. State AI laws on the same risk get preempted.\n\nTwo more sweeping rivals are already public: a ban on superintelligence, and a certification-and-liability plan.\n\nFull story:",
+        "hashtags": [
+          "#AIPolicy",
+          "#AISafety",
+          "#Congress",
+          "#TechPolicy",
+          "#AIRegulation",
+          "#DutyOfCare",
+          "#Sanders"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Senate negotiators are nearing a bill that would make AI safety a legal duty of care, not a voluntary pledge -- with government power to block an unsafe model release. It's one of three competing proposals in Congress right now, and even a co-negotiator is publicly worried about how far it preempts state law.",
+        "hashtags": [
+          "#AIPolicy",
+          "#Congress"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Senate Majority Leader Thune, Commerce Chair Cruz, and Sen. Klobuchar are circulating a bill putting a legal 'duty of care' on frontier AI developers -- government could block an unsafe release, appealable only in federal court, and state AI-safety laws on the same risk get preempted. It's one of three live proposals: Sanders wants to ban superintelligence, Khanna wants certification and liability. No public text yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T23:21:54Z",
+        "copy": "Sen. Maria Cantwell, a Democrat negotiating the Senate's bipartisan AI safety bill, is publicly warning it could set 'a weak federal standard' that overrides tougher state rules -- a fight inside the room, not between parties.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A Senate trio is nearing a bill making AI catastrophic risk a legal duty, with government power to block an unsafe release. Two more radical rivals are already competing for the same floor time.",
+        "hashtags": [
+          "#AIPolicy",
+          "#AISafety",
+          "#Congress"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-sakana-fugu-max-ultra-v2-orchestrator",
+    "ts": "2026-09-12T18:23:14Z",
+    "export": {
+      "article_id": "newsroom-sakana-fugu-max-ultra-v2-orchestrator",
+      "url": "https://rtfclmgzn.com/article/sakana-fugu-max-ultra-v2-orchestrator",
+      "headline": "Sakana AI splits its model-router in two -- and Fugu Ultra v2 beats the frontier models it refuses to put in its own pool",
+      "hook": "Sakana AI's new Fugu Ultra v2 beats Claude Opus 5 and Fable 5 on its own benchmarks -- but it can't actually call on either model.",
+      "key_facts": [
+        "Fugu Max ($2/$6 per 1M tokens) and Fugu Ultra v2 ($5/$30) launched September 10, 2026.",
+        "Fugu Ultra v2 scores 48.3 on Chartography vs. 27.3 for Claude Opus 5, per Sakana's own suite.",
+        "Claude Fable 5, Fable 5.1, and GPT-6 Astra are excluded from Fugu's own agent pool."
       ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/sakana-fugu-max-ultra-v2-orchestrator.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Sakana AI split its model-router in two. Fugu Ultra v2 beats Claude Opus 5 and Fable 5 on Sakana's own benchmarks -- but neither of those models is actually in the pool it draws from.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Sakana",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Sakana AI split its model-router into two: Fugu Max (cheap) and Fugu Ultra v2 (strong).\n\nFugu Ultra v2 beats Claude Opus 5 and Fable 5 on Sakana's own benchmarks.\n\nNeither model -- nor GPT-6 Astra -- is actually in the pool it draws from.\n\nFull story:",
+        "hashtags": [
+          "#SakanaAI",
+          "#Fugu",
+          "#AIModels",
+          "#ClaudeOpus",
+          "#GPT6Astra",
+          "#AIBenchmarks",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Sakana AI shipped Fugu Max and Fugu Ultra v2 on September 10 -- orchestrators that route tasks to other companies' models instead of training their own. The catch: the models it benchmarks against aren't the models it's allowed to use.",
+        "hashtags": [
+          "#SakanaAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Sakana AI released Fugu Max and Fugu Ultra v2 on Sept. 10 -- orchestrators that route each task to other companies' models instead of training their own. Fugu Ultra v2 claims higher scores than Claude Opus 5 and Fable 5 on Sakana's own benchmark suite, yet all three -- Fable 5, Fable 5.1, and GPT-6 Astra -- are excluded from the pool it actually uses, to avoid vendor lock-in.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Sakana AI's new Fugu Ultra v2 beats Claude Opus 5 and Fable 5 on its own benchmarks -- but it can't actually call on either model. They're excluded from its pool to avoid vendor lock-in.",
+        "hashtags": [
+          "#SakanaAI",
+          "#Fugu",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-visa-mastercard-ant-know-your-agent-interoperability",
+    "ts": "2026-09-12T18:23:53Z",
+    "export": {
+      "article_id": "newsroom-visa-mastercard-ant-know-your-agent-interoperability",
+      "url": "https://rtfclmgzn.com/article/visa-mastercard-ant-know-your-agent-interoperability",
+      "headline": "Visa, Mastercard, and Ant International agree to make their competing AI-agent 'trust' systems talk to each other -- but two bigger agent-payment protocols still don't",
+      "hook": "Visa, Mastercard, and Ant International will link their AI-agent trust systems -- but the protocols that actually run checkout aren't part of the deal.",
+      "key_facts": [
+        "The Know-Your-Agent (KYA) framework aligns Visa, Mastercard, and Ant International's three separate trust protocols.",
+        "McKinsey projects AI agents could orchestrate $3-5 trillion of global commerce by 2030.",
+        "Google's AP2 and OpenAI/Stripe's ACP, the leading checkout-and-authorization protocols, aren't part of this deal."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/visa-mastercard-ant-know-your-agent-interoperability.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Visa, Mastercard, and Ant International will link their competing AI-agent trust systems. But Google's AP2 and OpenAI/Stripe's ACP -- the protocols that actually run checkout -- aren't part of the deal.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIAgents",
+          "#Fintech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T23:23:53Z",
+        "copy": "McKinsey projects $3-5 trillion in AI-agent commerce by 2030. Visa, Mastercard, and Ant just agreed to make their agent-trust systems talk to each other. It's real progress -- just not the whole stack yet.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AgenticCommerce",
+          "#Fintech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Visa, Mastercard, and Ant International just agreed to make their competing AI-agent 'trust' systems talk to each other.\n\nMcKinsey projects $3-5 trillion in AI-agent commerce by 2030.\n\nBut Google's AP2 and OpenAI/Stripe's ACP -- the protocols that run checkout -- aren't part of the deal.\n\nFull story:",
+        "hashtags": [
+          "#Visa",
+          "#Mastercard",
+          "#AntInternational",
+          "#AIAgents",
+          "#AgenticCommerce",
+          "#Fintech",
+          "#Payments"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Visa, Mastercard, and Ant International announced a framework to align their competing AI-agent trust systems on September 9 -- a real step toward interoperable agentic commerce, though it doesn't yet touch the separate checkout layer where Google and OpenAI/Stripe already operate.",
+        "hashtags": [
+          "#AIAgents",
+          "#Fintech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Visa, Mastercard, and Ant International announced a Know-Your-Agent framework on Sept. 9, aligning three separate AI-agent trust protocols so a shopping agent can be verified across networks instead of certifying with each one separately. What it doesn't touch: the checkout and payment-authorization layer, where Google's AP2 and OpenAI/Stripe's ACP already run real transactions on their own tracks.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-12T23:23:53Z",
+        "copy": "Mastercard is a partner in both this new Know-Your-Agent effort and Google's separate AP2 protocol layer. Payment networks are hedging across every AI-agent trust system at once, not betting on one.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Visa, Mastercard, and Ant International will align their AI-agent trust protocols. Google's AP2 and OpenAI/Stripe's ACP, which actually run checkout, aren't part of it.",
+        "hashtags": [
+          "#AIAgents",
+          "#Fintech",
+          "#Payments"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];

@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-09-05",
+  updated: "2026-09-12",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -155,6 +155,12 @@ window.RTFC_ENTITIES = {
       kind:"assistant product", access:"closed" },
     { re:/\bMistral Large\b/i, name:"Mistral Large", maker:"Mistral AI", makerKey:"mistral",
       kind:"frontier model", access:"partial" },
+
+    // --- Sakana AI ---
+    { re:/\bFugu Ultra v2\b|\bFugu Ultra\b/i, name:"Fugu Ultra v2", maker:"Sakana AI", makerKey:"sakana",
+      kind:"capability-first model-orchestrator", access:"closed" },
+    { re:/\bFugu Max\b/i, name:"Fugu Max", maker:"Sakana AI", makerKey:"sakana",
+      kind:"cost-first model-orchestrator", access:"closed" },
 
     // --- Enterprise & other labs (named in coverage, not yet in the Scoreboard) ---
     { re:/\bIBM Granite\b|\bGranite\b/i, name:"IBM Granite", maker:"IBM", makerKey:"ibm",

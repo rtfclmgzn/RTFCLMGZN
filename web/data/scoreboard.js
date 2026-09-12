@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 12, 2026",
-  scannedAt: "2026-09-12T15:34:45Z",
-  basisNote: "Newsroom cycle 2026-09-12 ~13:47 UTC: this cycle's three articles (GitSpawn coding-agent vulnerability, California's SB 1119/Adam's Law, Apple Reference Image) established no new model launch, vendor price, or independent-index movement -- none of the three is about a model release. Re-scanned anyway per publishing.agent.md's every-publish rule; no row edits this pass.",
+  scannedAt: "2026-09-12T18:26:20Z",
+  basisNote: "Newsroom cycle 2026-09-12 ~18:26 UTC: added Fugu Ultra v2 and Fugu Max (Sakana AI's orchestrator pair, released Sept. 10) with score:null pending an independent Intelligence Index measurement -- Sakana's own benchmark suite is not adopted as a substitute score. The cycle's other two articles (a Senate AI bill and a payment-network agent-trust framework) established no model launch, vendor price, or independent-index movement.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },
@@ -76,7 +76,11 @@ window.RTFC_SCOREBOARD = {
     { model:"Qwen3.8-27B", mode:"default",      lab:"Alibaba",   score:41, pin:null, pout:null, status:"released",
       note:"Updated to v4.2: 52→41. 27.8B-parameter dense vision-language model, weights released August 14 2026 on Hugging Face under Apache 2.0 -- the locally-runnable half of the Qwen3.8 generation alongside the larger Qwen3.8-Max above. Third-party inference resellers list per-token rates, but none confirmed as Alibaba's own official list price, so pin/pout stay unset." },
     { model:"Qwen3.8-Flash-Next", mode:"default", lab:"Alibaba",  score:56, pin:0.16, pout:0.47, status:"released",
-      note:"Score unchanged at 56 (v4.1 scale) -- AA no longer tracks this model on its v4.2 leaderboard or it was never rescored. Open-sourced August 26 2026 as an early architecture preview of the next-generation Qwen4 family -- 125B parameters (176B including embedding table) but only 6B active per token, a 512-expert MoE with natively 262,144-token context. Weights on Hugging Face under qwen-community-1.0. pin/pout are Alibaba's own published QwenCloud API list price." }
+      note:"Score unchanged at 56 (v4.1 scale) -- AA no longer tracks this model on its v4.2 leaderboard or it was never rescored. Open-sourced August 26 2026 as an early architecture preview of the next-generation Qwen4 family -- 125B parameters (176B including embedding table) but only 6B active per token, a 512-expert MoE with natively 262,144-token context. Weights on Hugging Face under qwen-community-1.0. pin/pout are Alibaba's own published QwenCloud API list price." },
+    { model:"Fugu Ultra v2",       mode:"default",       lab:"Sakana AI", score:null, pin:5,    pout:30, status:"released",
+      note:"Row added this cycle. Released Sept. 10 2026, the capability-first half of Sakana's Fugu orchestrator pair -- it isn't a foundation model but routes each task to other companies' models and stitches the results together. Sakana's own benchmark suite claims scores above Claude Opus 5 and Claude Fable 5 on several tasks, but no independent Artificial Analysis Intelligence Index measurement exists for an orchestrator product like this, so score stays null rather than adopting the vendor's own suite as a substitute. pin/pout are Sakana's published API list price; a long-context surcharge applies above 272,000 tokens at an amount Sakana hasn't disclosed." },
+    { model:"Fugu Max",            mode:"default",       lab:"Sakana AI", score:null, pin:2,    pout:6, status:"released",
+      note:"Row added this cycle. Released alongside Fugu Ultra v2 on Sept. 10 2026 as the cost-first tier of the same orchestrator pair. Same caveat as the row above: Sakana's own benchmark suite claims the best overall score on six tasks, but no independent measurement exists yet. pin/pout are Sakana's published API list price." }
   ],
   sources: [
     { label:"Artificial Analysis — live LLM leaderboard", url:"https://artificialanalysis.ai/leaderboards/models" },
@@ -91,6 +95,8 @@ window.RTFC_SCOREBOARD = {
     { label:"DeepSeek API — pricing documentation", url:"https://api-docs.deepseek.com/quick_start/pricing" },
     { label:"Our coverage: DeepSeek V4 Pro 0813 leaves preview, prices rise up to 12x", url:"/article/deepseek-v4-pro-0813-price-increase" },
     { label:"Our coverage: DeepSeek-V4-Flash-0731 beats its own flagship on benchmarks", url:"/article/deepseek-v4-flash-0731-beats-own-flagship" },
-    { label:"Qwen3.8-27B — official Hugging Face model card", url:"https://huggingface.co/Qwen/Qwen3.8-27B" }
+    { label:"Qwen3.8-27B — official Hugging Face model card", url:"https://huggingface.co/Qwen/Qwen3.8-27B" },
+    { label:"Sakana AI — Fugu: One Model to Command Them All (release page)", url:"https://sakana.ai/fugu-release/" },
+    { label:"Our coverage: Sakana AI's Fugu Max and Fugu Ultra v2 launch", url:"/article/sakana-fugu-max-ultra-v2-orchestrator" }
   ]
 };

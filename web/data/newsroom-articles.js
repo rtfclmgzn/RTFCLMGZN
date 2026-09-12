@@ -56750,6 +56750,722 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "The piece does the structural work a straight product-announcement rewrite wouldn't: it places Apple's new feature against the C2PA landscape that predates it, catches and discloses a real disagreement between two adoption trackers rather than silently picking one, and keeps a company's stated regulatory reason (China) separate from an unstated one it's tempting to assume (the EU) but that Apple never actually gave for this specific feature."
       }
     }
+  },
+  {
+    "slug": "senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+    "title": "Senate negotiators near a bill making AI catastrophic risk a legal duty of care -- while two more sweeping rivals compete for the same floor time",
+    "dek": "Senate Majority Leader John Thune, Commerce Chair Ted Cruz, and Sen. Amy Klobuchar are circulating draft text that would require the most advanced AI developers to design against catastrophic biological and nuclear risks, let the federal government block an unsafe release, and preempt state laws covering that same narrow risk category -- with introduction possible as soon as the week of September 14. It's one of three competing answers Congress is weighing: Sen. Bernie Sanders and Rep. Greg Casar want to permanently ban superintelligent AI outright, and Rep. Ro Khanna has floated a certification-and-liability regime built like nuclear or aviation oversight. None of the three has cleared a markup, a floor vote, or -- in the bipartisan bill's case -- even public release of its own text.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for the bill's actual introduction",
+        "text": "Negotiators could file text as soon as the week of September 14, per Semafor's reporting -- nothing is public yet, and Cruz's committee already postponed one AI markup this year for lack of bipartisan buy-in."
+      },
+      {
+        "label": "Watch the compute threshold, once real text exists",
+        "text": "Only one outlet has reported a specific cutoff (10^25 floating-point operations, the figure the EU's AI Act uses); confirm against the introduced bill rather than this early framing."
+      },
+      {
+        "label": "Watch how far preemption reaches",
+        "text": "Sen. Cantwell, a Democrat working the same bill, is publicly warning it could set 'a weak federal standard' that blocks tougher state rules -- a fight inside the negotiating room, not just between parties."
+      },
+      {
+        "label": "Watch whether any of the three proposals gets floor time before recess",
+        "text": "The House sits one week and the Senate three before the November 3 midterms -- a narrow window for any version to move."
+      }
+    ],
+    "sources": [
+      {
+        "label": "NEWS: Sanders, Casar Introduce Legislation to Ban Artificial Superintelligence and Temporarily Pause Advanced AI Development",
+        "url": "https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/",
+        "outlet": "Office of Sen. Bernie Sanders",
+        "kind": "primary"
+      },
+      {
+        "label": "Exclusive: Bipartisan AI safety bill gains momentum on the Hill",
+        "url": "https://www.semafor.com/article/09/10/2026/bipartisan-ai-safety-bill-gains-momentum-on-the-hill",
+        "outlet": "Semafor",
+        "kind": "reporting"
+      },
+      {
+        "label": "U.S. Senate negotiators consider requiring AI firms to mitigate known major risks",
+        "url": "https://www.spokesman.com/stories/2026/sep/11/us-senate-negotiators-consider-requiring-ai-firms-/",
+        "outlet": "The Spokesman-Review (AP)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Senate bill would make frontier-AI safety a legal duty, not a pledge",
+        "url": "https://www.cryptopolitan.com/senate-bill-frontier-ai-safety-legal-pledge/",
+        "outlet": "Cryptopolitan",
+        "kind": "analysis"
+      },
+      {
+        "label": "Congress Is Starting To Argue About A Potential AI Apocalypse",
+        "url": "https://www.huffpost.com/entry/ai-ted-cruz-amy-klobuchar-maria-cantwell_n_6aa439e7e4b09fd4319eb703",
+        "outlet": "HuffPost",
+        "kind": "reporting"
+      },
+      {
+        "label": "Cruz Postpones AI Markup, Advances Kids Online Safety Act",
+        "url": "https://www.newsmax.com/politics/ted-cruz-kosa-senate/2026/07/29/id/1264451/",
+        "outlet": "Newsmax",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Senate negotiators are nearing a bipartisan bill that would impose a legal AI 'duty of care.'",
+      "It would let the government block a risky model's release, appealable only in federal court.",
+      "Two more sweeping rivals compete: Sanders' superintelligence ban and Khanna's certification plan.",
+      "Co-negotiator Cantwell is already warning the bill could preempt tougher state protections.",
+      "Caveat: the bill's actual text isn't public, and Cruz himself says passage 'ain't easy.'"
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Senate Majority Leader John Thune**, Commerce Committee Chair **Ted Cruz**, and Sen. Amy Klobuchar are circulating draft legislation that would put a legally enforceable __duty of care__ on the handful of companies building the most advanced AI models -- replacing the voluntary safety pledges [OpenAI](/company/openai), [Anthropic](/company/anthropic), and [Google](/company/google) have operated under until now. ==\"We need to act now and not wait\"== on what she called commonsense guardrails, Klobuchar told reporters this week. Negotiators could file text as soon as the week of September 14, though as of this writing nothing has actually been made public.",
+        "citation_urls": [
+          "https://www.semafor.com/article/09/10/2026/bipartisan-ai-safety-bill-gains-momentum-on-the-hill"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanism described by aides briefed on the draft is narrower than the rhetoric around it. Developers of the largest models would have to design their systems to prevent **catastrophic risks** -- specifically, AI being used to help someone build a biological or nuclear weapon -- and work with government scientists to test for it before release. If a model fails that test, federal regulators could block it from shipping; the company's only recourse would be a challenge in federal court, not an internal appeal. States that have passed their own AI-safety laws covering that same narrow risk category would see them preempted, the kind of single-national-standard argument the current administration has pushed all year.",
+        "citation_urls": [
+          "https://www.spokesman.com/stories/2026/sep/11/us-senate-negotiators-consider-requiring-ai-firms-/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That's a different design than the most-cited comparison point, the EU's AI Act, uses. One analysis of the draft reports a specific compute cutoff -- 10^25 floating-point operations, the same figure Brussels uses to decide which models count as general-purpose AI with systemic risk -- but that figure appears in exactly one outlet's account. Every other report of the same negotiations, including wire reporting, describes a bill whose actual coverage threshold isn't public yet, because the bill's text isn't public yet. Worth treating the FLOP number as a plausible guess at what the finished bill might borrow, not a confirmed provision.",
+        "citation_urls": [
+          "https://www.cryptopolitan.com/senate-bill-frontier-ai-safety-legal-pledge/",
+          "https://www.spokesman.com/stories/2026/sep/11/us-senate-negotiators-consider-requiring-ai-firms-/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The push has momentum for a reason: Cruz's own committee already tried and failed to move AI legislation once this year. A planned July markup of a package of AI bills was postponed so the committee could focus instead on the Kids Online Safety Act, after negotiators couldn't lock down bipartisan support in time. The catastrophic-risk bill now being floated is what came out of the extra two months -- and its chief sponsor is still hedging in public. {{note: Cruz has separately called the risks AI poses \"frightening\" in television interviews this month, a notably different register from his usual deregulatory framing on tech policy.}}",
+        "citation_urls": [
+          "https://www.newsmax.com/politics/ted-cruz-kosa-senate/2026/07/29/id/1264451/"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "What's established, and what's still a guess",
+          "items": [
+            {
+              "claim": "The bill sets a specific compute threshold -- 10^25 floating-point operations, the same cutoff the EU's AI Act uses -- to define which models are covered.",
+              "level": "unverified",
+              "basis": "One analysis outlet reports this figure; multiple other accounts of the same negotiations, including wire reporting, describe no specific U.S. threshold at all, because the text itself isn't public yet.",
+              "resolver": "The bill's actual introduced text, once filed."
+            },
+            {
+              "claim": "Negotiators will introduce the bill during the week of September 14, 2026.",
+              "level": "partial",
+              "basis": "Reported as a live possibility by one outlet citing people familiar with the timeline; Cruz's own public comments this week stopped short of confirming a date, and his committee already missed a planned July markup for lack of bipartisan support.",
+              "resolver": "An actual bill filing or a Senate floor calendar entry."
+            },
+            {
+              "claim": "The bill's preemption clause would replace state AI-safety laws only in the narrow catastrophic-risk category, not more broadly.",
+              "level": "contested",
+              "basis": "That is the negotiators' own stated scope. Sen. Maria Cantwell, a Democrat working the same bill, has separately and publicly warned it could still end up 'a weak federal standard' that blocks tougher state protections -- a disagreement inside the negotiating room, not just between parties.",
+              "resolver": "The preemption language in the bill actually introduced."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The bipartisan draft is also not the only answer on the table. Two more sweeping proposals are already public, and neither has anything like the same institutional backing.",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "Three approaches, three different reaches",
+          "title": "What each proposal actually does",
+          "columns": [
+            {
+              "label": "Thune-Cruz-Klobuchar draft",
+              "sub": "bipartisan, not yet introduced"
+            },
+            {
+              "label": "Sanders-Casar bill",
+              "sub": "introduced Sept. 3, 2026"
+            },
+            {
+              "label": "Khanna's plan",
+              "sub": "proposed, not introduced"
+            }
+          ],
+          "rows": [
+            {
+              "label": "Core mechanism",
+              "values": [
+                "Legal duty of care; government can block an unsafe release",
+                "Permanent ban on superintelligent AI, plus a temporary pause on advanced development",
+                "Pre-certification -- kill switches and human sign-off before a model can rewrite itself"
+              ]
+            },
+            {
+              "label": "New federal agency?",
+              "values": [
+                "No -- uses existing agencies and national-lab testing",
+                "Yes -- a new cabinet-level agency plus an AI Advisory Board",
+                "Yes -- modeled on nuclear and aviation regulators"
+              ]
+            },
+            {
+              "label": "Penalty for violating it",
+              "values": [
+                "Not detailed; enforcement runs through blocking a release, appealable in court",
+                "\"Corporate death penalty\" for companies; up to 20 years in prison for individuals",
+                "Criminal penalties for releasing an uncertified model; mandatory liability insurance"
+              ]
+            },
+            {
+              "label": "Status as of Sept. 12",
+              "values": [
+                "Draft circulating; possible introduction week of Sept. 14",
+                "Introduced Sept. 3, 2026",
+                "Posted publicly by Khanna; not introduced as bill text"
+              ]
+            }
+          ],
+          "source": "Senate negotiators' aides via Semafor and the Associated Press (bipartisan draft); Sen. Sanders' Sept. 3, 2026 press release (Ban Artificial Superintelligence Act); Rep. Khanna's public proposal as reported by Semafor."
+        }
+      },
+      {
+        "type": "p",
+        "text": "Sanders and Rep. Greg Casar introduced the more radical of the two, the **Ban Artificial Superintelligence Act**, on September 3. It would permanently prohibit building or deploying superintelligent AI, temporarily pause advanced development until a new cabinet-level agency sets safety rules, and punish violations with what the senator's own office calls a corporate death penalty for companies and up to 20 years in prison for individuals -- a penalty structure the release explicitly compares to unlawful nuclear-weapons development. ++\"The future of humanity cannot be left in the hands of a handful of Big Tech oligarchs,\"++ Sanders said announcing it.",
+        "citation_urls": [
+          "https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Khanna's plan is less a bill than a proposal he posted publicly rather than filed: a new regulator modeled on nuclear and aviation oversight, mandatory pre-certification, criminal penalties for releasing an uncertified model, mandatory liability insurance for agentic systems, and whistleblower protections for the engineers who build them. Unlike the bipartisan draft or Sanders' bill, it hasn't been introduced as legislative text at all.",
+        "citation_urls": [
+          "https://www.semafor.com/article/09/10/2026/bipartisan-ai-safety-bill-gains-momentum-on-the-hill"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Industry's posture toward the three is not uniform, which is itself informative. OpenAI's head of global affairs, Chris Lehane, has said the company wants to work with Congress on a national framework rather than fight one. No [frontier model](/dictionary) lab has said anything comparable about Sanders' bill, which several members of Congress have already described as having no realistic path in a Republican-controlled chamber this session.",
+        "citation_urls": [
+          "https://www.semafor.com/article/09/10/2026/bipartisan-ai-safety-bill-gains-momentum-on-the-hill"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“It is possible, but it ain't easy.” — Sen. Ted Cruz, on the bipartisan bill's chances",
+        "citation_urls": [
+          "https://www.washingtontimes.com/news/2026/sep/11/congressional-interest-regulating-ai-grows-whistleblower-warnings/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The clearest fault line, though, runs inside the bipartisan coalition itself. Sen. Maria Cantwell, the top Democrat on the Commerce Committee and a negotiator on the same bill, has publicly warned that the emerging draft risks becoming ==\"a weak federal standard\"== that blocks states from enforcing tougher protections of their own -- the exact preemption tradeoff the bill's own backers describe as one of its selling points. That's a Democrat criticizing the bill she's helping write, not an outside objection, and it's the strongest sign yet that the preemption language is genuinely unsettled rather than a done deal dressed up as a negotiation.",
+        "citation_urls": [
+          "https://www.huffpost.com/entry/ai-ted-cruz-amy-klobuchar-maria-cantwell_n_6aa439e7e4b09fd4319eb703"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "kicker": "Who this actually lands on",
+          "items": [
+            {
+              "who": "Google, Anthropic, and OpenAI",
+              "tone": "exposed",
+              "what": "Trade a voluntary-pledge system for an enforceable legal duty and a government release-block power that doesn't exist today, in exchange for one federal standard instead of a state-by-state patchwork."
+            },
+            {
+              "who": "State legislators who've passed their own AI-safety laws",
+              "tone": "loses",
+              "what": "Any state law addressing the same bio/nuclear catastrophic-risk category would be preempted under the bipartisan draft, though which existing laws would actually qualify isn't spelled out in public text yet."
+            },
+            {
+              "who": "Sen. Maria Cantwell and preemption-wary Democrats",
+              "tone": "unclear",
+              "what": "Are negotiating the bill from inside while publicly warning it could set a weaker floor than some states have already built."
+            },
+            {
+              "who": "Sanders, Casar, and the superintelligence-ban camp",
+              "tone": "unclear",
+              "what": "Get real attention on the underlying risk, but no visible path to a floor vote for their far more sweeping bill this session."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Nothing here is fixed until a bill is actually filed, and the calendar isn't generous: the House sits for one week and the Senate for three before members leave town ahead of the November 3 midterms. Cruz's own assessment -- it is possible, but it ain't easy -- reads less like confidence than like a chairman who has already watched one AI markup collapse this year and knows exactly how the second one could too.",
+        "citation_urls": [
+          "https://www.spokesman.com/stories/2026/sep/11/us-senate-negotiators-consider-requiring-ai-firms-/"
+        ]
+      }
+    ],
+    "id": "newsroom-senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+    "image": "assets/img/newsroom/senate-duty-of-care-ai-bill-thune-cruz-klobuchar.jpg",
+    "publishedAt": "2026-09-12T18:21:54Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-12T18:21:54Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "6 sources across 6 independent evidence threads: (1) Sen. Sanders' own Sept. 3 press release (primary) for the Ban Artificial Superintelligence Act's mechanics and direct quotes, (2) Semafor's exclusive on the bipartisan draft's momentum and Khanna's separate proposal, (3) AP wire reporting (via The Spokesman-Review) on the duty-of-care mechanism and preemption, (4) Cryptopolitan's analysis surfacing a specific FLOP threshold no other outlet corroborated, (5) HuffPost's Sept. 12 reporting carrying Cantwell's on-record warning about the bill she's helping negotiate, (6) Newsmax's July 29 report of Cruz's committee postponing its first AI markup attempt. Routed as synthesis: reconciling three live, differently-sourced legislative proposals into one honest picture of what's confirmed versus reported versus speculative is real analysis no single wire story does."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Found a genuine, unresolved factual gap: only Cryptopolitan's analysis names a specific 10^25 FLOP compute threshold, while AP wire reporting and Semafor both describe a bill whose coverage threshold isn't public because the text itself isn't public. Did not silently adopt the more specific-sounding number -- scored it 'unverified' in a scorecard component and said so again in prose. Confirmed the Cantwell quote and its HuffPost sourcing independently rather than assuming it matched the AP account's framing of her as simply a co-negotiator. Did not state the bill would definitely be introduced next week -- Semafor reports it as a live possibility, not a confirmed filing, and scored it 'partial' accordingly (compliance trigger 6: unverifiable central claim, remediated by hedging rather than asserting)."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft treated Cantwell's warning as a minor aside; revised into its own paragraph plus a dedicated scorecard item and a stakes entry, since a co-negotiator publicly criticizing her own bill's preemption scope is the piece's most genuinely reportable tension. Critique also flagged that citing only the bipartisan bill would understate how contested this space actually is -- added the compare table covering all three live proposals rather than treating Sanders' and Khanna's as a footnote. TL;DR final bullet carries the load-bearing caveat: the text isn't public, and Cruz himself calls passage uncertain."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "scorecard's three items each carry a resolver naming a specific real document or filing, not 'time will tell.' compare's four rows all trace to the sources cited in the component's own source line, and every row's values array has exactly three entries matching the three columns. stakes' four items each name a specific real party -- no generic 'consumers' or 'the industry' -- and use 'unclear' honestly where the outcome genuinely isn't settled. No component carries a top-level text field, and no two components sit back to back (the Cruz pull quote, a body block rather than a component, separates the last two)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources, 6 independent evidence threads, correctly routed as synthesis (~1,050 words). 3 components (scorecard, compare, stakes) plus a pull quote, compare is data-carrying, meeting the synthesis floor without padding. No health or financial-advice content; the piece describes proposed legislation, not active litigation, so no legal-proceedings disclaimer applies; no accusatory claim about a named party (describing three senators' and a representative's own public proposals factually is not an accusation). The one unverifiable-central-claim risk -- the FLOP threshold and the introduction date -- is remediated by scoring both explicitly hedged rather than asserted as fact."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "The piece does real reconciliation work three separate wire stories don't: it catches a specific-sounding number that only one outlet actually reports and refuses to launder it into fact, it treats a co-negotiator's public criticism of her own bill as the real news it is rather than a footnote, and it places three genuinely different legislative approaches side by side instead of covering the bipartisan draft in isolation."
+      }
+    }
+  },
+  {
+    "slug": "sakana-fugu-max-ultra-v2-orchestrator",
+    "title": "Sakana AI splits its model-router in two -- and Fugu Ultra v2 beats the frontier models it refuses to put in its own pool",
+    "dek": "Sakana AI shipped Fugu Max and Fugu Ultra v2 on September 10 -- a cost-first and a capability-first version of Fugu, an orchestrator that routes each task to other companies' models and stitches the results into one answer through a single API. Fugu Ultra v2 posts higher scores than Claude Opus 5 and Claude Fable 5 on Sakana's own benchmark suite, yet neither of those models -- nor GPT-6 Astra -- is actually in the pool it draws from, a deliberate exclusion Sakana says is about avoiding vendor lock-in.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for an independent measurement",
+        "text": "Every score cited so far is Sakana's own benchmark suite, not an outside aggregator -- no measurement like the Artificial Analysis Intelligence Index exists yet for Fugu Ultra v2."
+      },
+      {
+        "label": "Watch whether the excluded models change",
+        "text": "Sakana keeps Fable 5, Fable 5.1, and GPT-6 Astra out of the pool specifically because it can't access them on terms it controls -- that calculus could shift if any of the three opens wider API access."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Fugu: One Model to Command Them All",
+        "url": "https://sakana.ai/fugu-release/",
+        "outlet": "Sakana AI",
+        "kind": "primary"
+      },
+      {
+        "label": "Sakana AI Launches Fugu Max and Fugu Ultra v2 for Cheaper, Stronger Multi-Agent Orchestration",
+        "url": "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/",
+        "outlet": "MarkTechPost",
+        "kind": "reporting"
+      },
+      {
+        "label": "Sakana AI Fugu Max and Fugu Ultra v2: $2 per 1M tokens",
+        "url": "https://datanorth.ai/news/sakana-ai-launches-fugu-max-and-fugu-ultra-v2",
+        "outlet": "DataNorth",
+        "kind": "analysis"
+      }
+    ],
+    "tldr": [
+      "Sakana AI released Fugu Max (cheaper) and Fugu Ultra v2 (stronger) on September 10, 2026.",
+      "Both route tasks across a pool of other companies' models through one API, not train from scratch.",
+      "Fugu Ultra v2 outscores Claude Opus 5 and Fable 5 on Sakana's own benchmarks, not an independent index.",
+      "Claude Fable 5, 5.1, and GPT-6 Astra are excluded from the pool, to avoid vendor lock-in.",
+      "Caveat: hosted API only, no EU/EEA availability yet, and no independent benchmark exists so far."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Sakana AI released two new models on September 10 -- **Fugu Max** and **Fugu Ultra v2** -- built around a different idea than most model launches: neither is a foundation model Sakana trained itself. Both are __orchestrators__, systems that take a single request, decide which of several other companies' models is best suited to each part of it, and stitch the results into one answer through one [API](/dictionary).",
+        "citation_urls": [
+          "https://sakana.ai/fugu-release/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Fugu Max is the cost-first version -- $2 per million input tokens, $6 per million output tokens -- and Sakana says it posts the best overall score on six of its own benchmarks, including Terminal Bench 2.1 and GPQA Diamond. Fugu Ultra v2, the capability-first version, costs more ($5/$30 per million tokens, plus an undisclosed long-context surcharge above 272,000 tokens) and claims the best or joint-best score on five of eight benchmarks -- among them a 48.3 on a visual-reasoning test called Chartography against 27.3 for **Claude Opus 5** and 29.5 for Claude Fable 5, and a 74.3 on a software-engineering benchmark Sakana says beats models priced three to five times higher per token.",
+        "citation_urls": [
+          "https://datanorth.ai/news/sakana-ai-launches-fugu-max-and-fugu-ultra-v2",
+          "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "==Every one of those numbers is Sakana's own benchmark suite, run by Sakana==, not an independent aggregator -- worth remembering before treating a self-reported score as equivalent to a measured one.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The stranger detail is which models Fugu Ultra v2 is actually allowed to call on. Claude Fable 5, Fable 5.1, and GPT-6 Astra are all **excluded from its agent pool** -- the same models it's benchmarked against -- because, per Sakana, they aren't models it can access on terms it controls, and depending on a rival's API exposes Fugu to **vendor lock-in**, API revocations, and sudden service cutoffs. It's an unusual position for a product whose entire pitch is stitching together other companies' models: independence from the very labs it's trying to beat.",
+        "citation_urls": [
+          "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "Fugu Max vs. Fugu Ultra v2, at a glance",
+          "items": [
+            {
+              "label": "Released",
+              "value": "September 10, 2026"
+            },
+            {
+              "label": "Fugu Max price",
+              "value": "$2 / $6 per 1M tokens",
+              "note": "input / output"
+            },
+            {
+              "label": "Fugu Ultra v2 price",
+              "value": "$5 / $30 per 1M tokens",
+              "note": "input / output, plus long-context surcharge above 272K tokens"
+            },
+            {
+              "label": "Excluded from the pool",
+              "value": "Claude Fable 5, Fable 5.1, GPT-6 Astra"
+            },
+            {
+              "label": "Availability",
+              "value": "Hosted API only; not yet in EU/EEA"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Both models are live now through an OpenAI-compatible hosted API -- there's no open-weights version to self-host. Neither is available in the EU or EEA yet; Sakana attributes that to ongoing GDPR compliance work rather than a permanent decision.",
+        "citation_urls": [
+          "https://datanorth.ai/news/sakana-ai-launches-fugu-max-and-fugu-ultra-v2"
+        ]
+      }
+    ],
+    "id": "newsroom-sakana-fugu-max-ultra-v2-orchestrator",
+    "image": "assets/img/newsroom/sakana-fugu-max-ultra-v2-orchestrator.jpg",
+    "publishedAt": "2026-09-12T18:23:14Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-12T18:23:14Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "3 sources across 3 independent evidence threads: Sakana's own release page (primary, for the orchestrator concept and pool-exclusion rationale), MarkTechPost's writeup (independent reporting with corroborating pricing and benchmark detail), and DataNorth's analysis (independent confirmation of exact pricing and the GDPR-based EU/EEA rationale). Routed as brief: one clear claim (a new model-router pair with real benchmark and pricing numbers), no comparative reconciliation deep enough to warrant synthesis."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Found a real discrepancy between an initial, unfetched search summary (claiming a $0.50/1M cached-input price and a $10/$45/$1.00 premium tier for Fugu Ultra v2) and a directly fetched source (DataNorth), which states the long-context surcharge amount is undisclosed and gives $0.25/1M cached input only for Fugu Max, not Ultra v2. Dropped the unconfirmed specific numbers rather than publishing them -- the article states the surcharge exists without a fabricated amount. Labeled all benchmark scores explicitly as Sakana's own suite, not an independent measurement (compliance/Scoreboard rule: never substitute a vendor's self-reported benchmark for an independent index)."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft stated Fugu Ultra v2 numbers as if independently verified; revised every benchmark mention to name Sakana as the source and added a dedicated sentence flagging the self-reported nature explicitly. Critique also surfaced the genuinely interesting tension -- Fugu benchmarks against models it refuses to route to -- and pulled it into the headline and a full paragraph rather than a passing mention. TL;DR final bullet carries the load-bearing caveat: no independent benchmark exists yet."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items all trace to the article's own cited sources (release date, both price pairs, the three excluded models, and availability). No top-level text field on the component. Only one component present, matching the brief floor exactly -- a keyfacts box, not a chart, per the house rule that briefs don't carry charts."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 3 sources, 3 independent evidence threads, correctly routed as brief (~380 words). 1 component (keyfacts), meeting the brief floor. No health, financial, legal, or accusatory content. Added Fugu Max and Fugu Ultra v2 to entities.js in this cycle with a Scoreboard row carrying score:null and an explicit note that the cited numbers are vendor-reported, not independently measured -- consistent with Law 4."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A clean, well-sourced brief that does the one thing a straight product-announcement rewrite wouldn't: it catches and states plainly that Fugu Ultra v2 is benchmarked against models it structurally can't use, and it corrects a sourcing discrepancy (an unconfirmed premium-tier price) rather than publishing an unverified number for the sake of completeness."
+      }
+    }
+  },
+  {
+    "slug": "visa-mastercard-ant-know-your-agent-interoperability",
+    "title": "Visa, Mastercard, and Ant International agree to make their competing AI-agent 'trust' systems talk to each other -- but two bigger agent-payment protocols still don't",
+    "dek": "The three companies announced a Know-Your-Agent (KYA) interoperability framework on September 9, aligning Visa's Trusted Agent Protocol, Mastercard's Verifiable Intent, and Ant International's Agentic Mobile Protocol so a shopping agent can be identified and trusted across networks instead of certifying separately with each. It's a real step toward the $3 trillion to $5 trillion in AI-agent commerce McKinsey projects by 2030 -- but it solves identity and trust, not the separate checkout and payment-authorization layer where Google's AP2 and OpenAI/Stripe's ACP already operate, on their own tracks.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch BuildFin.ai for the first concrete deliverable",
+        "text": "The three companies say collaboration advances next through this Monetary Authority of Singapore-convened platform -- no technical spec or date has been named yet."
+      },
+      {
+        "label": "Watch whether Google's AP2 or OpenAI/Stripe's ACP join",
+        "text": "Both already move real transaction volume on the checkout and authorization side; KYA doesn't touch either yet, so an agent could still need to satisfy two unrelated trust systems depending which rail it uses."
+      },
+      {
+        "label": "Watch the $100 billion fraud figure's own scope",
+        "text": "PYMNTS Intelligence attributes that annual cost to outdated identity controls broadly, not to AI agents specifically -- confirm what fraction is actually agent-driven once someone measures it."
+      },
+      {
+        "label": "Watch for the first named use of KYA outside a press release",
+        "text": "An interoperability framework is only real once a wallet or merchant actually checks an agent's credentials against it in production."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ant International, Mastercard and Visa Initiate Collaboration on Know-Your-Agent Interoperability to Scale Agentic Commerce",
+        "url": "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/",
+        "outlet": "Ant International, Mastercard, and Visa (joint announcement)",
+        "kind": "primary"
+      },
+      {
+        "label": "Visa and Mastercard Team With Ant on Know Your Agent Framework",
+        "url": "https://www.pymnts.com/cybersecurity/2026/visa-mastercard-team-with-ant-know-your-agent-framework",
+        "outlet": "PYMNTS",
+        "kind": "reporting"
+      },
+      {
+        "label": "Agentic payments protocols compared: Which is best for your AI agents?",
+        "url": "https://www.crossmint.com/learn/agentic-payments-protocols-compared",
+        "outlet": "Crossmint",
+        "kind": "analysis"
+      },
+      {
+        "label": "McKinsey forecasts up to $5 trillion in agentic commerce sales by 2030",
+        "url": "https://www.digitalcommerce360.com/2025/10/20/mckinsey-forecast-5-trillion-agentic-commerce-sales-2030/",
+        "outlet": "Digital Commerce 360",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Visa, Mastercard, and Ant International will align their three separate AI-agent trust protocols.",
+      "The Know-Your-Agent (KYA) framework checks an agent's operator, certification, and behavior across networks.",
+      "McKinsey projects AI agents could orchestrate $3-5 trillion of global commerce by 2030.",
+      "Google's AP2 and OpenAI/Stripe's ACP, the leading checkout-and-authorization protocols, aren't part of this deal.",
+      "Caveat: KYA has no public technical spec yet -- it advances next through a Singapore-based industry platform."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "**Visa**, **Mastercard**, and **Ant International** announced on September 9 that they'll work to make their three separate AI-agent trust systems interoperable -- a **Know-Your-Agent (KYA)** framework meant to let a card network, wallet, or agent platform recognize and verify a shopping [agent](/dictionary) no matter which company's protocol it originally certified against. Until now each ran its own closed system: Visa's Trusted Agent Protocol, Mastercard's Verifiable Intent, and Ant's Agentic Mobile Protocol.",
+        "citation_urls": [
+          "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That fragmentation was a real cost, not just an inconvenience: an agent capable of shopping across multiple networks would otherwise have needed separate certification with each one, duplicating the same security and identity checks three times over.",
+        "citation_urls": []
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "Three protocols, now aligning",
+          "title": "What each one was built to verify",
+          "columns": [
+            {
+              "label": "Visa",
+              "sub": "Trusted Agent Protocol"
+            },
+            {
+              "label": "Mastercard",
+              "sub": "Verifiable Intent"
+            },
+            {
+              "label": "Ant International",
+              "sub": "Agentic Mobile Protocol"
+            }
+          ],
+          "rows": [
+            {
+              "label": "What it verifies",
+              "values": [
+                "Trust for agent-initiated purchases on Visa's network",
+                "Consent-grounded intent for agentic transactions in open ecosystems",
+                "Secure agent operations across Ant's payment and wallet network"
+              ]
+            },
+            {
+              "label": "Primary reach",
+              "values": [
+                "Global card network",
+                "Global card network",
+                "Wallets and merchants via Alipay+"
+              ]
+            },
+            {
+              "label": "Now aligned under KYA?",
+              "values": [
+                "Yes",
+                "Yes",
+                "Yes"
+              ]
+            },
+            {
+              "label": "Covers checkout or payment authorization (AP2/ACP's job)?",
+              "values": [
+                "No",
+                "No",
+                "No"
+              ]
+            }
+          ],
+          "source": "Company protocol descriptions per Ant International, Mastercard, and Visa's joint announcement, Sept. 9, 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "The mechanics, per that announcement, run through three pillars: __operator traceability__ (every agent is linked back to a validated operator, cardholder, or business, so its activity can be attributed to a real party), shared certification requirements (a common security-and-behavior bar an agent has to clear across all three networks), and continuous transaction monitoring (ongoing checks using identity and risk signals, not just a one-time credential).",
+        "citation_urls": [
+          "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
+        ]
+      },
+      {
+        "type": "flow",
+        "flow": {
+          "kicker": "How a KYA check is supposed to work",
+          "steps": [
+            {
+              "actor": "Agent",
+              "what": "Acts on behalf of a validated operator, cardholder, or business"
+            },
+            {
+              "actor": "KYA framework",
+              "what": "Checks the agent against certification standards shared across all three networks",
+              "hi": true
+            },
+            {
+              "actor": "Network or wallet",
+              "what": "Monitors the transaction continuously using identity and risk signals"
+            },
+            {
+              "actor": "An uncertified or misbehaving agent",
+              "what": "Can't have its activity attributed to a validated party, and its trust doesn't carry across networks",
+              "blocked": true
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Each company frames the deal around the same anxiety: an agent making purchases has to be trusted by systems it never directly deals with. \"As AI agents become a bigger part of how people discover and buy, trust must scale with them,\" said Rubail Birwadker, Visa's global head of growth products. Mastercard's chief digital officer, Pablo Fourez, put the stakes more bluntly: interoperability across KYA frameworks, he said, ==is essential to making agentic commerce work at scale== -- an admission that none of the three protocols was going to get there alone.",
+        "citation_urls": [
+          "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That scale is real money, at least on paper. McKinsey has projected AI agents could orchestrate **$3 trillion to $5 trillion** of global consumer commerce by 2030 -- the figure the three companies cite to describe the market they're building toward. Separate PYMNTS Intelligence research from March found nearly 90% of enterprises already call bot management a major challenge, and put the annual cost of outdated digital-identity controls -- fraud, false declines, lost customers -- at roughly $100 billion. None of those three numbers describes AI agents specifically; the ledger below states what each one actually covers.",
+        "citation_urls": [
+          "https://www.digitalcommerce360.com/2025/10/20/mckinsey-forecast-5-trillion-agentic-commerce-sales-2030/",
+          "https://www.pymnts.com/cybersecurity/2026/visa-mastercard-team-with-ant-know-your-agent-framework"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "kicker": "The numbers everyone's citing, scoped",
+          "title": "What each figure actually measures",
+          "items": [
+            {
+              "value": "$3T-$5T",
+              "unit": "McKinsey, by 2030",
+              "label": "Projected global AI-agent commerce",
+              "includes": "McKinsey's own modeled estimate of consumer purchases an AI agent orchestrates end-to-end, published October 2025",
+              "excludes": "Any confirmed transaction volume today -- this is a 2030 projection, not a current figure",
+              "note": "The companies cite this to describe the market their framework targets, not something KYA has itself produced."
+            },
+            {
+              "value": "~90%",
+              "unit": "PYMNTS Intelligence, March 2026",
+              "label": "Enterprises citing bot management as a major challenge",
+              "includes": "General bot-traffic and identity-verification difficulty across enterprise survey respondents",
+              "excludes": "Anything specific to AI shopping agents -- the survey predates most of today's agent-commerce protocols"
+            },
+            {
+              "value": "$100B",
+              "unit": "annual, PYMNTS Intelligence",
+              "label": "Cost attributed to outdated digital-identity controls",
+              "includes": "Fraud, false declines, and lost customers from identity friction broadly",
+              "excludes": "Any breakdown of how much is caused by AI agents specifically, as opposed to bots, fraud rings, or ordinary friction"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "What KYA doesn't do is touch the other half of an agentic purchase: actually checking out and proving a payment was authorized. Two other protocols already handle that layer, with real deployments behind them. [Google](/company/google)'s **Agent Payments Protocol (AP2)** -- built with more than 60 partners, including Mastercard itself -- issues a cryptographically signed \"mandate\" as proof a user actually authorized a purchase. OpenAI and Stripe's **Agentic Commerce Protocol (ACP)**, an Apache-licensed spec first released in September 2025, standardizes the actual agent-to-merchant checkout conversation and powered ChatGPT's Instant Checkout with Etsy sellers starting in February 2026. The two are built to work together, not compete -- and neither is part of this announcement. {{note: Mastercard is a listed partner in both this KYA effort and Google's separate AP2 layer -- payment networks appear to be hedging across every agent-trust effort at once, not betting on one.}}",
+        "citation_urls": [
+          "https://www.crossmint.com/learn/agentic-payments-protocols-compared"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“We look forward to expanding collaboration as the industry draws on richer signals -- capabilities, behavior, execution performance and risk data -- to enhance trust.” — Jiang-Ming Yang, Ant International Chief Innovation Officer",
+        "citation_urls": [
+          "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The three companies say the collaboration advances next through BuildFin.ai, an industry platform in Singapore convened by the Monetary Authority of Singapore. No technical specification, timeline, or pilot has been named yet. An interoperability framework between three trust systems is real progress over three closed ones; ==it is not yet the same thing as an agent actually clearing one credential check and being trusted everywhere==.",
+        "citation_urls": [
+          "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
+        ]
+      }
+    ],
+    "id": "newsroom-visa-mastercard-ant-know-your-agent-interoperability",
+    "image": "assets/img/newsroom/visa-mastercard-ant-know-your-agent-interoperability.jpg",
+    "publishedAt": "2026-09-12T18:23:53Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-12T18:23:53Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources across 4 independent evidence threads: (1) the companies' own joint announcement as reprinted by Investing News Network (primary), (2) PYMNTS's independent reporting adding its own March 2026 Intelligence survey data, (3) Crossmint's independent technical comparison of the unrelated AP2/ACP protocol layer, (4) Digital Commerce 360's Oct. 2025 coverage of the original McKinsey forecast the companies cite secondhand. Elevated from a Buzz-card-only story (already logged Sept. 10) to a full synthesis because reconciling KYA against the separate, more mature AP2/ACP layer is real analysis a straight repost of the press release wouldn't do."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Traced the widely-repeated '$3-5 trillion by 2030' figure back to its actual origin (McKinsey, Oct. 2025) rather than crediting the PYMNTS or press-release framing that merely repeats it -- corrected attribution rather than citing the nearest outlet. Confirmed AP2's mechanics and partner list, and ACP's release date and Etsy deployment, against an independent technical comparison rather than an unverified initial search summary, which had claimed an unconfirmed FIDO Alliance donation date for AP2 that a direct source check did not support -- dropped that specific claim rather than publish it. Scoped all three headline statistics ($3-5T, ~90%, $100B) in a ledger component rather than letting them read as agent-specific measurements when none of the three actually is."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft implied KYA was the whole agent-payments story; revised to add the AP2/ACP paragraph making clear KYA covers identity and trust, not checkout or authorization -- a distinction easy to miss when all four terms get called 'agent payment protocols' interchangeably in coverage. Added the margin note on Mastercard's dual involvement in both KYA and AP2 as a genuine, non-obvious observation. TL;DR final bullet carries the load-bearing caveat: no public technical spec exists yet."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "compare's four rows all have exactly three values matching three columns, each tracing to the source line's cited announcement. flow's four steps map directly to the three pillars named in the announcement plus the explicit blocked-agent case. ledger's three items each carry both an includes and excludes field naming what the headline figure does and doesn't measure, sourced to the specific report that produced it. No component carries a top-level text field, and no two components sit back to back (prose or the Yang pull quote separates each)."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, 4 independent evidence threads, correctly routed as synthesis (~950 words). 3 components (compare, flow, ledger) plus a pull quote, compare and ledger both data-carrying, exceeding the synthesis floor on genuinely non-redundant material. Filed under Markets with the standard not-financial-advice disclaimer per section convention; no claim here functions as investment guidance. No health, legal, or accusatory content."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "The piece does the structural work a press-release rewrite wouldn't: it places KYA against the separate AP2/ACP layer the announcement never mentions, traces a widely-repeated market figure back to its actual source instead of the outlet nearest at hand, and scopes three headline statistics so a reader can see none of them actually measures AI-agent activity yet."
+      }
+    }
   }
 ]
 ;
