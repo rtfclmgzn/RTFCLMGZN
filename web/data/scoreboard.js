@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 12, 2026",
-  scannedAt: "2026-09-12T07:15:00Z",
-  basisNote: "Pulse scan 2026-09-12 07:15 UTC: re-scanned for Artificial Analysis leaderboard changes and major model launches in the past 3 hours (Sept 11 21:00-Sept 12 00:00). No new launches or independent score movements found; Sakana Fugu Ultra v2 (Sept 11) and other recent releases already on board. No row edits this pass.",
+  scannedAt: "2026-09-12T13:47:00Z",
+  basisNote: "Newsroom cycle 2026-09-12 ~13:47 UTC: this cycle's three articles (GitSpawn coding-agent vulnerability, California's SB 1119/Adam's Law, Apple Reference Image) established no new model launch, vendor price, or independent-index movement -- none of the three is about a model release. Re-scanned anyway per publishing.agent.md's every-publish rule; no row edits this pass.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },

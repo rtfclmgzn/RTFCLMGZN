@@ -3303,7 +3303,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-63-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "gitspawn-ai-coding-agent-git-config-rce",
+     "used_at": "2026-09-12"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-prism-04",
@@ -3332,7 +3337,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-64-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "california-sb-1119-adams-law-chatbot-minors",
+     "used_at": "2026-09-12"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-01",
