@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 12, 2026",
-  scannedAt: "2026-09-12T13:47:00Z",
+  scannedAt: "2026-09-12T15:34:45Z",
   basisNote: "Newsroom cycle 2026-09-12 ~13:47 UTC: this cycle's three articles (GitSpawn coding-agent vulnerability, California's SB 1119/Adam's Law, Apple Reference Image) established no new model launch, vendor price, or independent-index movement -- none of the three is about a model release. Re-scanned anyway per publishing.agent.md's every-publish rule; no row edits this pass.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
