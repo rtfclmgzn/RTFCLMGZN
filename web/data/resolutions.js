@@ -41,7 +41,7 @@
 //                real finding and worth logging, not a gap)
 // ============================================================================
 window.RTFC_RESOLUTIONS = {
-  updated: "2026-08-27",
+  updated: "2026-09-12",
   note: "Resolutions are append-only and dated. Articles are never rewritten; every resolution renders beneath the original piece and on the Claims Ledger.",
   items: [
     { key:"agibot-overtakes-unitree-h1-2026-shipments|w|0",
@@ -187,6 +187,18 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Microsoft held its FY2026 Q4 earnings call on July 29, 2026 as scheduled. Nadella reported Azure revenue grew 43% YoY with customer demand continuing to exceed available capacity. Demand destruction (the 'bubble' scenario) has not materialized; AI capex-driven growth remains capacity-constrained rather than demand-constrained.",
       label:"Microsoft July 29 2026 earnings call - strong Azure demand reported",
-      url:"https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4" }
+      url:"https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4" },
+    { key:"moonshot-ai-50-billion-pre-ipo-valuation|w|2",
+      at:"2026-09-12T00:30:00Z",
+      outcome:"confirmed",
+      note:"Moonshot AI filed confidentially for a $3 billion Hong Kong IPO at $50 billion valuation in September 2026, and disclosed the pre-IPO funding round targets $50 billion pre-money valuation with Goldman Sachs and CICC underwriting. The Hong Kong filing provides the audited numbers that settle this watch item.",
+      label:"Moonshot AI Hong Kong IPO filing at $50 billion valuation",
+      url:"https://techstartups.com/2026/09/03/chinese-ai-startup-moonshot-files-for-3-billion-hong-kong-ipo-at-50-billion-valuation/" },
+    { key:"white-house-moonshot-fable-distillation-accusation|w|2",
+      at:"2026-09-12T00:35:00Z",
+      outcome:"confirmed",
+      note:"The NSA, CISA, and FBI jointly published cybersecurity advisory AA26-251A on September 8, 2026, formally naming Moonshot AI and five other China-based AI companies as conducting industrial-scale distillation campaigns against US frontier models including Claude. This is the first formal multi-agency US government document on the claim and settles the watch item's requirement for an NDAA-level policy or equivalent formal response.",
+      label:"NSA/CISA/FBI advisory AA26-251A confirms distillation campaign claims",
+      url:"https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a" }
   ]
 };

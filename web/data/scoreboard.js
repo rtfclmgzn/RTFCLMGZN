@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 12, 2026",
-  scannedAt: "2026-09-12T05:09:43Z",
-  basisNote: "Newsroom cycle 2026-09-12T00:07:07Z: checked this cycle's two articles (the GreyNoise/Blackpoint-documented AI-agent campaign against PaperCut, and Meta's acquisition of Stilla.ai) against scoreboard-relevant facts. Neither involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- the PaperCut campaign names OpenAI's Codex and a DeepSeek model as the attacker's tooling, not a new release or capability claim about either; the Stilla acquisition is an M&A/product story with no model attached. No row edits this cycle. Prior: newsroom cycle 2026-09-11T19:04:39Z found the same.",
+  scannedAt: "2026-09-12T07:15:00Z",
+  basisNote: "Pulse scan 2026-09-12 07:15 UTC: re-scanned for Artificial Analysis leaderboard changes and major model launches in the past 3 hours (Sept 11 21:00-Sept 12 00:00). No new launches or independent score movements found; Sakana Fugu Ultra v2 (Sept 11) and other recent releases already on board. No row edits this pass.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },
