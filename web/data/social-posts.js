@@ -16939,8 +16939,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents",
           "#Cybersecurity"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098569933278027821",
+        "remote_id": "2098569933278027821",
+        "posted_at": "2026-09-12T00:30:36Z"
       },
       {
         "platform": "x",
@@ -16984,14 +16986,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cybersecurity",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119819719396947",
+        "remote_id": "1238977099292018_122119819719396947",
+        "posted_at": "2026-09-12T00:31:09Z"
       },
       {
         "platform": "threads",
         "copy": "Hundreds of AI agents (OpenAI's Codex + a DeepSeek model) breached 395 organizations across 48 countries through one PaperCut bug -- empty workspace to real RCE in under 4 hours. The attacker's own instructions told the agents to skip 28 countries. Some got hit anyway. Nobody knows why.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdKtEpYkjlY",
+        "remote_id": "18126623638695683",
+        "posted_at": "2026-09-12T00:31:33Z"
       },
       {
         "platform": "threads",
@@ -17009,8 +17015,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cybersecurity",
           "#InfoSec"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvbtdl6s2g2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvbtdl6s2g2t",
+        "posted_at": "2026-09-12T00:31:40Z"
       }
     ]
   },
@@ -17044,8 +17052,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Meta",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098568924506079646",
+        "remote_id": "2098568924506079646",
+        "posted_at": "2026-09-12T00:26:36Z"
       },
       {
         "platform": "instagram",
@@ -17063,8 +17073,10 @@ window.RTFC_SOCIAL_POSTS = [
           "status": "none",
           "cost_usd": 0
         },
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdKsia7jQjv/",
+        "remote_id": "18340151827281378",
+        "posted_at": "2026-09-12T00:26:56Z"
       },
       {
         "platform": "facebook",
@@ -17073,14 +17085,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Meta",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122119819359396947",
+        "remote_id": "1238977099292018_122119819359396947",
+        "posted_at": "2026-09-12T00:27:06Z"
       },
       {
         "platform": "threads",
         "copy": "Meta is acquiring Stilla, an 8-month-old Stockholm AI-agent startup that raised just $5M in pre-seed funding, folding it into Meta Business Agent (1M+ merchants already). Co-founder Siavash Ghorbani's last startup, Tictail, became the seed for Shop Pay after Shopify bought it. Price undisclosed.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdKsmAOjrKw",
+        "remote_id": "17905893567474266",
+        "posted_at": "2026-09-12T00:27:22Z"
       },
       {
         "platform": "bluesky",
@@ -17089,8 +17105,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Meta",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvbt44eep32n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvbt44eep32n",
+        "posted_at": "2026-09-12T00:27:30Z"
       }
     ]
   }
