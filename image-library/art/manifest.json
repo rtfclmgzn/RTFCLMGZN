@@ -3269,7 +3269,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/01_Abstract_AI_Art/RTFCLMGZN-Peak-Artistry-Wallpaper-62-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-meta-acquires-stilla-ai-business-agent",
+     "used_at": "2026-09-12"
+    }
+   ]
   },
   {
    "id": "art-wp-abstract-prism-03",

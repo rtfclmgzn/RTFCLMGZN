@@ -7,9 +7,9 @@
 // RULES: never substitute vendor self-reported benchmark claims for the independent index;
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "September 11, 2026",
-  scannedAt: "2026-09-11T19:15:56Z",
-  basisNote: "Newsroom cycle 2026-09-11T19:04:39Z: checked this cycle's three articles (Positron AI's $875M inference-chip funding round, OpenAI's ChatGPT Pro sign-up pause for Astra demand, the Jacob Coxon/Anthropic AI-extinction-risk debate) against scoreboard-relevant facts. None involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- Positron is chip hardware, not a scored model; the Astra Pro pause is an access/capacity story about an already-scored model (GPT-6 Astra, max 55 / xhigh 54 above) with no new capability claim; the Coxon/Hubinger/Hinton story is about safety-risk statements, not a benchmark. No row edits this cycle. Prior: newsroom cycle 2026-09-11T14:32:03Z found the same.",
+  updated: "September 12, 2026",
+  scannedAt: "2026-09-12T00:07:07Z",
+  basisNote: "Newsroom cycle 2026-09-12T00:07:07Z: checked this cycle's two articles (the GreyNoise/Blackpoint-documented AI-agent campaign against PaperCut, and Meta's acquisition of Stilla.ai) against scoreboard-relevant facts. Neither involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- the PaperCut campaign names OpenAI's Codex and a DeepSeek model as the attacker's tooling, not a new release or capability claim about either; the Stilla acquisition is an M&A/product story with no model attached. No row edits this cycle. Prior: newsroom cycle 2026-09-11T19:04:39Z found the same.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },
