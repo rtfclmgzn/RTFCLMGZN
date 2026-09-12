@@ -16752,8 +16752,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#ChatGPT"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098636683030016189",
+        "remote_id": "2098636683030016189",
+        "posted_at": "2026-09-12T04:55:51Z"
       },
       {
         "platform": "instagram",
@@ -16798,8 +16800,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#ChatGPT",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvcc4mzfqm2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvcc4mzfqm2t",
+        "posted_at": "2026-09-12T04:56:13Z"
       }
     ]
   },
@@ -16849,8 +16853,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098635674450895068",
+        "remote_id": "2098635674450895068",
+        "posted_at": "2026-09-12T04:51:50Z"
       },
       {
         "platform": "instagram",
@@ -16885,8 +16891,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Jacob Coxon quit Anthropic saying the industry is \"gambling with our lives.\" His former colleague -- Anthropic's own alignment lead -- agreed, putting extinction odds above 10% within a decade. Hinton called it \"not unreasonable.\" No percentage here has a published methodology.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdLK4-QEanm",
+        "remote_id": "18107005217179743",
+        "posted_at": "2026-09-12T04:52:04Z"
       },
       {
         "platform": "threads",
@@ -16904,8 +16912,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvcbvgovol2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvcbvgovol2m",
+        "posted_at": "2026-09-12T04:52:12Z"
       }
     ]
   },
