@@ -503,3 +503,18 @@
   per-article rather than pulled from the library. Not fixed this cycle -- out of scope for a
   content cycle to change tool behavior -- but worth a dedicated pass if the manifest is ever
   relied on as a complete inventory.
+- **2026-09-12** (newsroom cycle, ~00:07 UTC): found `web/data/buzz.js` carries two pairs of
+  duplicate `bz-NNN` ids -- `bz-550` and `bz-551` each appear twice, with different dates and
+  different content (`grep -n 'id:"bz-550"\|id:"bz-551"'` shows both at lines 15/285 and 9/291
+  respectively). 61 cards, only 59 unique ids before this cycle. Some prior cycle picked a "next
+  id" without scanning the whole file for the true max, and a later cycle independently reused
+  the same numbers. Did not renumber the existing duplicates (out of scope for a content cycle,
+  and renumbering risks breaking any external reference to a specific `bz-NNN`) -- instead
+  computed the true max id (565) across the whole file before assigning this cycle's three new
+  cards (566-568), rather than trusting the highest id near the top of the array. Future cycles
+  adding Buzz cards should grep the *whole file* for the max `bz-` number, not just the first few
+  entries, until someone does a dedicated pass to dedupe the existing pairs.
+- **2026-09-12** (newsroom cycle, ~00:07 UTC): re-confirmed the §3e/§3f blockers are unchanged --
+  `functions/` is still outside `verify_publish_surface.py`'s `ALLOWED_PREFIXES`, and no
+  `wrangler`/Cloudflare credentials or `issue-001.json` exist on this runner. Noting only to keep
+  the re-check trail continuous; no new information this cycle.
