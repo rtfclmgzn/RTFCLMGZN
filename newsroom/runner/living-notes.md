@@ -518,3 +518,17 @@
   `functions/` is still outside `verify_publish_surface.py`'s `ALLOWED_PREFIXES`, and no
   `wrangler`/Cloudflare credentials or `issue-001.json` exist on this runner. Noting only to keep
   the re-check trail continuous; no new information this cycle.
+- **2026-09-12** (newsroom cycle, ~18:35 UTC): two tooling notes from this cycle. (1) `web/data/
+  social-posts.js`'s own header comment contains the literal substring `posts[]` (documenting the
+  schema), so a naive `s.index('[')` / `s.rindex(']')` parse of the file to find the top-level
+  array's bounds grabs the bracket inside that comment instead of the real array start, producing
+  a `JSONDecodeError: Extra data` that looks like a corrupt file but isn't -- anchor on
+  `re.search(r'window\.RTFC_SOCIAL_POSTS\s*=\s*\[', s)` (or the equivalent for whichever `window.*`
+  file you're touching) instead of a bare bracket search. `web/data/newsroom-articles.js` doesn't
+  have this problem (its header comment carries no stray brackets), but check before assuming any
+  given data file is safe for the naive approach. (2) Generalizing the WebFetch bot-block list
+  already tracked here (`*.gov`, `openai.com`, `npr.org`, `anthropic.com`, `cnbc.com`):
+  `businesswire.com` and `washingtontimes.com` also returned hard 403s this cycle on direct
+  fetches, while independent secondary coverage (PYMNTS, Investing News's press-release reprint,
+  HuffPost) fetched the same underlying content cleanly -- same workaround as always, cite the
+  primary once an independent source corroborates it rather than treating the 403 as "no source."
