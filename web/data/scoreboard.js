@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 12, 2026",
-  scannedAt: "2026-09-12T00:07:07Z",
+  scannedAt: "2026-09-12T05:09:43Z",
   basisNote: "Newsroom cycle 2026-09-12T00:07:07Z: checked this cycle's two articles (the GreyNoise/Blackpoint-documented AI-agent campaign against PaperCut, and Meta's acquisition of Stilla.ai) against scoreboard-relevant facts. Neither involves a model launch, a status change, a vendor list-price change, or an independent-index movement -- the PaperCut campaign names OpenAI's Codex and a DeepSeek model as the attacker's tooling, not a new release or capability claim about either; the Stilla acquisition is an M&A/product story with no model attached. No row edits this cycle. Prior: newsroom cycle 2026-09-11T19:04:39Z found the same.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
