@@ -16647,8 +16647,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#AIChips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098730431654908282",
+        "remote_id": "2098730431654908282",
+        "posted_at": "2026-09-12T11:08:22Z"
       },
       {
         "platform": "x",
@@ -16717,8 +16719,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#Chips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvcwwbv5fp2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvcwwbv5fp2t",
+        "posted_at": "2026-09-12T11:08:29Z"
       }
     ]
   },
@@ -16965,8 +16969,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents",
           "#GreyNoise"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098729421943304624",
+        "remote_id": "2098729421943304624",
+        "posted_at": "2026-09-12T11:04:21Z"
       },
       {
         "platform": "instagram",
