@@ -57040,7 +57040,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         {
           "name": "Gate",
           "agent": "claude-runner",
-          "note": "Approved. 6 sources, 6 independent evidence threads, correctly routed as synthesis (~1,050 words). 3 components (scorecard, compare, stakes) plus a pull quote, compare is data-carrying, meeting the synthesis floor without padding. No health or financial-advice content; the piece describes proposed legislation, not active litigation, so no legal-proceedings disclaimer applies; no accusatory claim about a named party (describing three senators' and a representative's own public proposals factually is not an accusation). The one unverifiable-central-claim risk -- the FLOP threshold and the introduction date -- is remediated by scoring both explicitly hedged rather than asserted as fact."
+          "note": "Approved. 6 sources, 6 independent evidence threads, correctly routed as synthesis (~870 words). 3 components (scorecard, compare, stakes) plus a pull quote, compare is data-carrying, meeting the synthesis floor without padding. No health or financial-advice content; the piece describes proposed legislation, not active litigation, so no legal-proceedings disclaimer applies; no accusatory claim about a named party (describing three senators' and a representative's own public proposals factually is not an accusation). The one unverifiable-central-claim risk -- the FLOP threshold and the introduction date -- is remediated by scoring both explicitly hedged rather than asserted as fact."
         }
       ],
       "gate": {
@@ -57190,7 +57190,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         {
           "name": "Gate",
           "agent": "claude-runner",
-          "note": "Approved. 3 sources, 3 independent evidence threads, correctly routed as brief (~380 words). 1 component (keyfacts), meeting the brief floor. No health, financial, legal, or accusatory content. Added Fugu Max and Fugu Ultra v2 to entities.js in this cycle with a Scoreboard row carrying score:null and an explicit note that the cited numbers are vendor-reported, not independently measured -- consistent with Law 4."
+          "note": "Approved. 3 sources, 3 independent evidence threads, correctly routed as brief (~345 words). 1 component (keyfacts), meeting the brief floor. No health, financial, legal, or accusatory content. Added Fugu Max and Fugu Ultra v2 to entities.js in this cycle with a Scoreboard row carrying score:null and an explicit note that the cited numbers are vendor-reported, not independently measured -- consistent with Law 4."
         }
       ],
       "gate": {
@@ -57269,7 +57269,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "That fragmentation was a real cost, not just an inconvenience: an agent capable of shopping across multiple networks would otherwise have needed separate certification with each one, duplicating the same security and identity checks three times over.",
+        "text": "That fragmentation was a real cost, not just an inconvenience: an agent capable of shopping across multiple networks would otherwise have needed separate certification with each one, duplicating the same security and identity checks three times over -- a tax on exactly the kind of cross-network agent the $3-5 trillion projection below assumes will exist by 2030. A wallet or merchant integrating all three protocols separately also had to maintain three different definitions of what a \"trusted agent\" even is, with no guarantee the definitions agreed.",
         "citation_urls": []
       },
       {
@@ -57409,6 +57409,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
+        "text": "It's also worth being skeptical of what \"aligning\" three protocols actually commits anyone to on day one. Each network still owns its own certification bar -- Visa still decides what clears Trusted Agent Protocol, Mastercard still decides what clears Verifiable Intent -- and Tuesday's announcement describes shared principles the three will build toward, not a single unified spec replacing all three today. The gap between announcing an alignment effort and a merchant actually being able to accept one credential across all three networks is exactly the gap BuildFin.ai is supposed to close, and it hasn't closed it yet.",
+        "citation_urls": [
+          "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
+        ]
+      },
+      {
+        "type": "p",
         "text": "What KYA doesn't do is touch the other half of an agentic purchase: actually checking out and proving a payment was authorized. Two other protocols already handle that layer, with real deployments behind them. [Google](/company/google)'s **Agent Payments Protocol (AP2)** -- built with more than 60 partners, including Mastercard itself -- issues a cryptographically signed \"mandate\" as proof a user actually authorized a purchase. OpenAI and Stripe's **Agentic Commerce Protocol (ACP)**, an Apache-licensed spec first released in September 2025, standardizes the actual agent-to-merchant checkout conversation and powered ChatGPT's Instant Checkout with Etsy sellers starting in February 2026. The two are built to work together, not compete -- and neither is part of this announcement. {{note: Mastercard is a listed partner in both this KYA effort and Google's separate AP2 layer -- payment networks appear to be hedging across every agent-trust effort at once, not betting on one.}}",
         "citation_urls": [
           "https://www.crossmint.com/learn/agentic-payments-protocols-compared"
@@ -57423,7 +57430,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "The three companies say the collaboration advances next through BuildFin.ai, an industry platform in Singapore convened by the Monetary Authority of Singapore. No technical specification, timeline, or pilot has been named yet. An interoperability framework between three trust systems is real progress over three closed ones; ==it is not yet the same thing as an agent actually clearing one credential check and being trusted everywhere==.",
+        "text": "The three companies say the collaboration advances next through BuildFin.ai, an industry platform in Singapore convened by the Monetary Authority of Singapore. No technical specification, timeline, or pilot has been named yet. An interoperability framework between three trust systems is real progress over three closed ones; ==it is not yet the same thing as an agent actually clearing one credential check and being trusted everywhere==. Whether that timeline is fast or slow depends on a comparison this announcement doesn't invite but the reader should make anyway: ACP went from its September 2025 release to a live checkout deployment with real merchants in about five months. KYA's own three companies have not yet said when -- or whether -- the same pace applies here.",
         "citation_urls": [
           "https://investingnews.com/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce/"
         ]
@@ -57458,7 +57465,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
         {
           "name": "Gate",
           "agent": "claude-runner",
-          "note": "Approved. 4 sources, 4 independent evidence threads, correctly routed as synthesis (~950 words). 3 components (compare, flow, ledger) plus a pull quote, compare and ledger both data-carrying, exceeding the synthesis floor on genuinely non-redundant material. Filed under Markets with the standard not-financial-advice disclaimer per section convention; no claim here functions as investment guidance. No health, legal, or accusatory content."
+          "note": "Approved. 4 sources, 4 independent evidence threads, correctly routed as synthesis (~810 words). 3 components (compare, flow, ledger) plus a pull quote, compare and ledger both data-carrying, exceeding the synthesis floor on genuinely non-redundant material. Filed under Markets with the standard not-financial-advice disclaimer per section convention; no claim here functions as investment guidance. No health, legal, or accusatory content."
         }
       ],
       "gate": {
