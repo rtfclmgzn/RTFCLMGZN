@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 12, 2026",
-  scannedAt: "2026-09-12T18:26:20Z",
+  scannedAt: "2026-09-12T23:45:00Z",
   basisNote: "Newsroom cycle 2026-09-12 ~18:26 UTC: added Fugu Ultra v2 and Fugu Max (Sakana AI's orchestrator pair, released Sept. 10) with score:null pending an independent Intelligence Index measurement -- Sakana's own benchmark suite is not adopted as a substitute score. The cycle's other two articles (a Senate AI bill and a payment-network agent-trust framework) established no model launch, vendor price, or independent-index movement.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
