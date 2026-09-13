@@ -17840,8 +17840,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DeepSeek",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098931104996553121",
+        "remote_id": "2098931104996553121",
+        "posted_at": "2026-09-13T00:25:46Z"
       },
       {
         "platform": "instagram",
@@ -17865,14 +17867,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#DeepSeek",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120027091396947",
+        "remote_id": "1238977099292018_122120027091396947",
+        "posted_at": "2026-09-13T00:26:16Z"
       },
       {
         "platform": "threads",
         "copy": "DeepSeek released V4.1 Flash on Sept. 10 -- 552B parameters, MIT license, 1M-token context, aggressive off-peak pricing. Its own agentic benchmarks put it ahead of GPT-5.6 Sol and level with Claude Opus 5. The independent Artificial Analysis Intelligence Index scores it 40, well behind both.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdNRTifEVCZ",
+        "remote_id": "18014701622947718",
+        "posted_at": "2026-09-13T00:26:36Z"
       },
       {
         "platform": "bluesky",
@@ -17881,8 +17887,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DeepSeek",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvedjn7zn42z",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvedjn7zn42z",
+        "posted_at": "2026-09-13T00:26:43Z"
       }
     ]
   },
@@ -17916,8 +17924,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Yelp"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2098930095964541348",
+        "remote_id": "2098930095964541348",
+        "posted_at": "2026-09-13T00:21:46Z"
       },
       {
         "platform": "instagram",
@@ -17931,8 +17941,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdNQx24FIJm/",
+        "remote_id": "17955452046213797",
+        "posted_at": "2026-09-13T00:22:03Z"
       },
       {
         "platform": "facebook",
@@ -17941,14 +17953,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Yelp"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120026101396947",
+        "remote_id": "1238977099292018_122120026101396947",
+        "posted_at": "2026-09-13T00:22:13Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI's GPT-Live-1 launched in the API on Sept. 10 -- a voice model that can listen and speak at the same time instead of waiting its turn. Yelp Host and Hatch integrated it that same day. Yelp says testing showed better call-handling; no published number yet on how much.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdNQ1EbkWwv",
+        "remote_id": "18049340345803183",
+        "posted_at": "2026-09-13T00:22:27Z"
       },
       {
         "platform": "bluesky",
@@ -17957,8 +17973,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Yelp"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvedc7vksq24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvedc7vksq24",
+        "posted_at": "2026-09-13T00:22:35Z"
       }
     ]
   }
