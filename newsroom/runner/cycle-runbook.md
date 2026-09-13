@@ -973,6 +973,13 @@ runner. No item worked. Same blocker, same next step (KV access) as every re-che
 still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
+**Status (2026-09-13T19:06 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Nvidia's reported second $10B Anthropic bet, a NYT investigation into an Nvidia chip export
+loophole ahead of a US-China AI summit, and a UBTech/1X companion-robot claims comparison) plus the full
+§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns nothing,
+and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next
+steps as every entry since 2026-08-30, still open.
+
 ### Standing rule for every FUTURE issue (effective immediately)
 
 **No issue ships without sources per spread.** Every spread carrying a factual or numeric claim carries

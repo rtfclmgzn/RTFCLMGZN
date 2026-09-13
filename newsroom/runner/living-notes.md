@@ -532,3 +532,14 @@
   fetches, while independent secondary coverage (PYMNTS, Investing News's press-release reprint,
   HuffPost) fetched the same underlying content cleanly -- same workaround as always, cite the
   primary once an independent source corroborates it rather than treating the 403 as "no source."
+- **2026-09-13** (newsroom cycle, ~19:06 UTC): `newsroom/schemas/article-draft.json` caps a
+  `compare` component's per-row `note` field at 140 characters (`"maxLength": 140`) -- not
+  documented anywhere in `agents/_shared/visual-components.md`'s own `compare` spec, which shows
+  a short example note but states no limit. `component_audit` catches an over-length note as a
+  hard schema FAIL (`$.compare.rows[N].note is too long`), not a warning, so this cycle's own
+  draft failed the audit on first run and had to be shortened before shipping. Worth knowing
+  before writing a `compare` row note with a full clause of context -- keep it to roughly one
+  short sentence, not the two-clause explanations that fit fine in a `ledger` item's `note`.
+  Also reconfirmed the §3e/§3f blockers unchanged: `ALLOWED_PREFIXES` in
+  `verify_publish_surface.py` still excludes `functions/`, and no `wrangler`/Cloudflare
+  credentials or `issue-001.json` exist on this runner.
