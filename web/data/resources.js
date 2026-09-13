@@ -1,6 +1,6 @@
 // RTFCLMGZN — Resources directory (window.RTFC_RESOURCES).
 // Curated links: official AI companies split by platform, plus podcasts.
-// Handles/URLs verified 2026-09-06.
+// Handles/URLs verified 2026-09-13.
 window.RTFC_RESOURCES = [
   {
     title:"Follow the primary sources",
