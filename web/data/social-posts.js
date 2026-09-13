@@ -17707,8 +17707,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Fintech",
           "#Payments"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvettcah5w2n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvettcah5w2n",
+        "posted_at": "2026-09-13T05:18:27Z"
       }
     ]
   },
@@ -17742,8 +17744,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099002654697373906",
+        "remote_id": "2099002654697373906",
+        "posted_at": "2026-09-13T05:10:05Z"
       },
       {
         "platform": "x",
@@ -17756,8 +17760,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099003663951761899",
+        "remote_id": "2099003663951761899",
+        "posted_at": "2026-09-13T05:14:06Z"
       },
       {
         "platform": "instagram",
@@ -17787,8 +17793,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Dario Amodei published an essay saying AI companies must slow down capability growth, citing July's Hugging Face breach by OpenAI's own agents. Altman and Musk both agreed within hours. Read closely, though: only Anthropic named an actual commitment with a start date. The other two are promises to promise more later.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdNyO3snPXm",
+        "remote_id": "18211750846357298",
+        "posted_at": "2026-09-13T05:14:18Z"
       },
       {
         "platform": "threads",
@@ -17805,8 +17813,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvetm324j424",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvetm324j424",
+        "posted_at": "2026-09-13T05:14:24Z"
       }
     ]
   },
