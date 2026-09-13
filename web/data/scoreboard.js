@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 13, 2026",
-  scannedAt: "2026-09-13T14:34:25Z",
+  scannedAt: "2026-09-13T16:41:58Z",
   basisNote: "Newsroom cycle 2026-09-13 ~14:31 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's three articles (a reported $5B Pentagon loan to Fluidstack, Grok 4.7's third missed target date, and OpenAI's 2026 IPO delay) concern financing, a still-unshipped model, and corporate strategy respectively -- none establish a new score. Grok 4.6 remains unmoved at 51 pending an independent measurement of the unreleased Grok 4.7; Musk's own 'better in every way' claim is not adopted as a substitute score per this board's standing rule. Scan recorded per Law 8 even though nothing moved.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
