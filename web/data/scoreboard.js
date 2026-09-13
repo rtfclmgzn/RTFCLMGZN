@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 13, 2026",
-  scannedAt: "2026-09-13T00:11:34Z",
+  scannedAt: "2026-09-13T05:27:15Z",
   basisNote: "Newsroom cycle 2026-09-13 ~00:07 UTC: added DeepSeek V4.1 Flash (released Sept. 10, 552B-parameter MoE) with score:40 from Artificial Analysis's independent Intelligence Index -- 11-14 points behind Claude Opus 5 (54) and GPT-5.6 Sol (51), despite DeepSeek's own agentic-benchmark claims putting it ahead of both; the vendor suite is not adopted as a substitute score. The cycle's other two articles (Dario Amodei's pacing essay and a Yelp/OpenAI voice-AI rollout) established no further model launch, vendor price, or independent-index movement.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
