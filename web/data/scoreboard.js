@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 13, 2026",
-  scannedAt: "2026-09-13T19:01:46Z",
+  scannedAt: "2026-09-13T21:11:37Z",
   basisNote: "Newsroom cycle 2026-09-13 ~19:00 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's three articles (Nvidia's reported anchor-investment talks for Anthropic's IPO, a New York Times investigation into Nvidia Blackwell chip exports via a blacklisted Chinese server maker's US subsidiary, and a comparison of UBTech's and 1X's consumer companion-robot claims) concern financing, export-control policy, and hardware respectively -- none establish a new independently-measured score. Scan recorded per Law 8 even though nothing moved.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
