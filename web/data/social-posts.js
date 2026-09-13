@@ -18210,5 +18210,299 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-nvidia-anthropic-ipo-anchor-second-10-billion",
+    "ts": "2026-09-13T18:49:00Z",
+    "export": {
+      "article_id": "newsroom-nvidia-anthropic-ipo-anchor-second-10-billion",
+      "url": "https://rtfclmgzn.com/article/nvidia-anthropic-ipo-anchor-second-10-billion",
+      "headline": "Nvidia is in talks for a second $10 billion bet on Anthropic -- this time as an IPO anchor, not just its chip supplier",
+      "hook": "Nvidia is negotiating a second $10 billion check to Anthropic in 13 months -- this one to anchor its IPO, not to buy compute-partnership terms.",
+      "key_facts": [
+        "Reuters: Nvidia in talks for an anchor stake of up to $10B in Anthropic's IPO, targeting ~$2T.",
+        "Nvidia already committed $10B to Anthropic in Nov. 2025, paired with Anthropic's $30B Azure purchase pledge.",
+        "Anthropic's own disclosed annualized revenue run rate hit $65B in July, up from $9B at the end of 2025."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/nvidia-anthropic-ipo-anchor-second-10-billion.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nvidia is negotiating a second $10B check to Anthropic in 13 months -- this one to anchor its IPO, not to buy compute-partnership terms. Reported target: ~$2T valuation.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T23:49:00Z",
+        "copy": "At Anthropic's $65B run rate, a $2T IPO prices it at ~31x revenue. If it hits the $120B investors are modeling for year-end, that's under 17x on the identical headline price. Same number, very different story depending on the denominator.",
+        "reply_copy": "The math:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nvidia is in talks for a second $10 billion bet on Anthropic.\n\nThe first, in Nov. 2025, bought compute-partnership terms -- paired with Anthropic committing to $30B of Nvidia-powered Azure capacity.\n\nThis one would anchor Anthropic's IPO, reportedly targeting a $2 trillion valuation -- the largest listing in history, if it happens.\n\nIs this independent confidence, or a supplier financing its own customer's demand? Full breakdown at the link.",
+        "hashtags": [
+          "#Nvidia",
+          "#Anthropic",
+          "#AI",
+          "#IPO",
+          "#Markets",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nvidia is reportedly negotiating a second $10 billion commitment to Anthropic -- this time to anchor its IPO, on top of the $10 billion it already put in as part of a November 2025 chip-and-compute deal. Anthropic's own disclosed revenue run rate hit $65 billion in July. We break down what's confirmed, what's still just reported, and what multiple of revenue a $2 trillion valuation actually implies.",
+        "hashtags": [
+          "#Nvidia",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nvidia in talks for a second $10B Anthropic bet, this one an IPO anchor stake -- on top of the $10B it already committed in Nov. 2025 alongside Anthropic's $30B Azure purchase pledge. Worth asking: is a supplier's stake in a company contractually tied to buying its hardware really an independent vote of confidence?",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T23:49:00Z",
+        "copy": "The valuation figure itself is contested: most coverage says $2T, some says $2.3T. Neither is from a filing yet -- Anthropic's actual S-1 will settle it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia in talks for a second $10B Anthropic bet -- this one an IPO anchor, after already committing $10B in Nov. 2025 tied to a $30B Azure purchase pledge. Reported target: ~$2T valuation on $65B run-rate revenue.",
+        "hashtags": [
+          "#Nvidia",
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-inspur-aivres-nvidia-blackwell-export-loophole-china-summit",
+    "ts": "2026-09-13T18:55:00Z",
+    "export": {
+      "article_id": "newsroom-inspur-aivres-nvidia-blackwell-export-loophole-china-summit",
+      "url": "https://rtfclmgzn.com/article/inspur-aivres-nvidia-blackwell-export-loophole-china-summit",
+      "headline": "A blacklisted Chinese server maker renamed itself, kept buying Nvidia's most advanced chips -- and the gap that let it happen was suspended on purpose",
+      "hook": "A blacklisted Chinese firm renamed its US subsidiary and kept buying Nvidia's most advanced chips. The rule built to stop that was suspended on purpose, as part of a separate trade deal.",
+      "key_facts": [
+        "NYT: Aivres (renamed from Inspur Systems in 2023) shipped $5.6B in tech, $3B+ Blackwell-equipped, 2024-2026.",
+        "Aivres is 33% Inspur-owned -- just under the 50% threshold that triggers automatic Entity List restrictions.",
+        "The rule closing that exact gap was suspended for a year in Nov. 2025, as part of a US-China rare-earths trade deal."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/inspur-aivres-nvidia-blackwell-export-loophole-china-summit.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A blacklisted Chinese firm renamed its US subsidiary and kept buying Nvidia's most advanced chips, per a NYT investigation. The US rule built to stop exactly this was suspended on purpose, as part of a separate trade deal.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#ExportControls"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T23:55:00Z",
+        "copy": "The twist: BIS adopted a rule in Sept. 2025 specifically to catch subsidiary-renaming workarounds like this one. Six weeks later, it suspended that same rule for a year -- as the price of a US-China rare-earths deal.",
+        "reply_copy": "The timeline:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#ExportControls",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A New York Times investigation traces $5.6 billion in advanced US tech -- including $3B+ in Nvidia Blackwell-equipped servers -- from a California subsidiary of blacklisted Inspur Group toward Chinese customers.\n\nThe subsidiary, renamed Aivres months after the 2023 blacklisting, sits at 33% Inspur ownership -- just under the 50% threshold that would trigger automatic restrictions.\n\nThe rule built to close that gap was suspended for a year, on purpose, as part of a separate US-China trade deal -- right as AI safety talks between the two countries are reportedly set to begin.",
+        "hashtags": [
+          "#Nvidia",
+          "#China",
+          "#ExportControls",
+          "#AI",
+          "#Policy",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A New York Times investigation found that a blacklisted Chinese server maker's US subsidiary shipped $5.6 billion in advanced tech -- more than $3 billion of it Nvidia Blackwell-equipped -- toward Chinese customers including ByteDance and Alibaba. The US rule that would close this exact ownership-structure gap was suspended for a year in November 2025, as part of a separate trade agreement with China. We lay out the timeline and what's actually confirmed versus alleged.",
+        "hashtags": [
+          "#Nvidia",
+          "#ExportControls"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NYT investigation: a blacklisted Chinese firm renamed its US subsidiary, stayed under the 50% ownership threshold, and kept buying Nvidia's most advanced chips. The US rule built to catch this was suspended for a year on purpose -- part of a trade deal, not an enforcement failure.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T23:55:00Z",
+        "copy": "Worth separating: the export pattern is well-documented reporting. The regulatory gap that let it happen is fully on the public record, and it's a policy choice with a specific expiration date -- Nov. 9, 2026.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NYT: a blacklisted Chinese server maker renamed its US subsidiary, stayed under the 50% Entity List ownership threshold, kept buying Nvidia's advanced chips. The US rule built to stop this was suspended for a year -- on purpose, as part of a trade deal.",
+        "hashtags": [
+          "#Nvidia",
+          "#China",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-ubtech-uworld-u1-1x-neo-companion-robot-claims",
+    "ts": "2026-09-13T19:06:00Z",
+    "export": {
+      "article_id": "newsroom-ubtech-uworld-u1-1x-neo-companion-robot-claims",
+      "url": "https://rtfclmgzn.com/article/ubtech-uworld-u1-1x-neo-companion-robot-claims",
+      "headline": "UBTech says its $16,500 companion robot understands your mood. Deliveries start this week, and no outside test has checked either claim.",
+      "hook": "UBTech's new companion robot claims it can read your mood. Deliveries start this week. No outside party has tested the claim -- and the closest US rival's same pitch turned out to be a human in a VR headset.",
+      "key_facts": [
+        "UWORLD U1: 119,800-990,000 yuan (~$16,500-$136,000), 13,000+ pre-orders, deliveries by Sept. 15.",
+        "UBTech has published no architecture, benchmark, or third-party test of its 'emotional AI' mood-detection claim.",
+        "1X's Neo made the same 'autonomous companion' pitch; outside reporters found home demos run by a remote human operator."
+      ],
+      "tone": "Curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/ubtech-uworld-u1-1x-neo-companion-robot-claims.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "UBTech's new $16,500+ companion robot claims it can read your mood. Deliveries start this week. No outside test has checked the claim -- and the closest US rival's identical pitch turned out to be a human in a VR headset.",
+        "reply_copy": "Full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-14T00:06:00Z",
+        "copy": "1X's own CEO on Neo's teleoperation: \"We hope to ship a mostly fully autonomous robot in 2026, but chose to not promise anything that does not already work today.\" UBTech hasn't been asked the equivalent question yet.",
+        "reply_copy": "The quote, in context:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#Humanoid"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "UBTech's UWORLD brand starts shipping its U1 companion robot this week.\n\nPrice: $16,500 to $136,000. Pitch: an \"emotional AI\" that reads your tone, expression and speaking pace.\n\nWhat's missing: any outside test of that claim.\n\nThe comparison UBTech doesn't volunteer -- 1X's Neo made the same \"autonomous companion\" pitch, and when outside reporters actually watched a demo, it was a person in a VR headset running it.\n\nFull comparison at the link.",
+        "hashtags": [
+          "#Robotics",
+          "#Humanoid",
+          "#AI",
+          "#UBTech",
+          "#TechNews",
+          "#ConsumerTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "UBTech's new UWORLD brand begins delivering its U1 companion robot this week, priced from $16,500 to $136,000 and pitched on 'emotional companionship' -- an AI that reads your mood. No outside party has tested that claim. We compare it directly to 1X's Neo, the closest thing the US has to a rival, whose own 'autonomous' home demos turned out to be run by a remote human operator in a VR headset.",
+        "hashtags": [
+          "#Robotics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "UBTech's $16,500+ companion robot starts shipping this week on an unverified 'emotional AI' pitch. The one real precedent the industry has for this kind of claim: 1X's Neo, whose 'autonomous' demos turned out to be a person in a VR headset.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-14T00:06:00Z",
+        "copy": "Neither company's product is worthless because of this -- a robot a human quietly helps operate can still be useful. But the gap between the marketing and the tested reality is unusually wide for a category this expensive.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "UBTech's $16,500+ 'emotional AI' companion robot ships this week. Untested claim. The one precedent: 1X's Neo made the same pitch, and outside reporters found its demos run by a human in a VR headset.",
+        "hashtags": [
+          "#Robotics",
+          "#AI",
+          "#Humanoid"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

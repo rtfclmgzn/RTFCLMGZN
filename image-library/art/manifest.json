@@ -3505,7 +3505,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-44-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-anthropic-ipo-anchor-second-10-billion",
+     "used_at": "2026-09-13"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-06",
@@ -3533,7 +3538,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-45-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-inspur-aivres-nvidia-blackwell-export-loophole-china-summit",
+     "used_at": "2026-09-13"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-07",

@@ -8,8 +8,8 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 13, 2026",
-  scannedAt: "2026-09-13T16:41:58Z",
-  basisNote: "Newsroom cycle 2026-09-13 ~14:31 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's three articles (a reported $5B Pentagon loan to Fluidstack, Grok 4.7's third missed target date, and OpenAI's 2026 IPO delay) concern financing, a still-unshipped model, and corporate strategy respectively -- none establish a new score. Grok 4.6 remains unmoved at 51 pending an independent measurement of the unreleased Grok 4.7; Musk's own 'better in every way' claim is not adopted as a substitute score per this board's standing rule. Scan recorded per Law 8 even though nothing moved.",
+  scannedAt: "2026-09-13T19:01:46Z",
+  basisNote: "Newsroom cycle 2026-09-13 ~19:00 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's three articles (Nvidia's reported anchor-investment talks for Anthropic's IPO, a New York Times investigation into Nvidia Blackwell chip exports via a blacklisted Chinese server maker's US subsidiary, and a comparison of UBTech's and 1X's consumer companion-robot claims) concern financing, export-control policy, and hardware respectively -- none establish a new independently-measured score. Scan recorded per Law 8 even though nothing moved.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },

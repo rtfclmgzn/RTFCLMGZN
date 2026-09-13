@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-586", date:"2026-09-13",
+    source:{ name:"Harvey", handle:"harvey_ai", platform:"web", kind:"lab" },
+    text:"Legal AI startup Harvey raised a $550 million round co-led by Lightspeed Venture Partners and Diffusion, reaching a $15.5-15.6 billion valuation -- up roughly 40% from the $11 billion it hit in March. Harvey says 80% of Am Law 100 firms and five Fortune 10 companies use its tools, with annualized revenue around $400 million, and frames the raise as funding a move toward building its own AI models rather than relying entirely on outside labs.",
+    why:"An application-layer AI company explicitly funding its own model-building, rather than just prompting someone else's, is a pattern worth tracking beyond legal AI -- Harvey's ~39x revenue multiple is also a real data point for how the market is currently pricing vertical AI software.",
+    heat:44, topics:["harvey","legal ai","funding","valuation","lightspeed","vertical ai"],
+    url:"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence" },
+{ id:"bz-585", date:"2026-09-13",
+    source:{ name:"Salesforce", handle:"salesforce", platform:"web", kind:"lab" },
+    text:"Salesforce launched seven named Agentforce agents -- Casey, Paige, Carter, Hunter, Marshall, Piper and Fin -- each built for one business function (customer service, employee IT/HR requests, commerce, sales pipeline, back-office orchestration, lead conversion, and complex CX workflows). Six are generally available now; Hunter, working a sales pipeline over weeks rather than a single chat session, is the first to run on a new long-horizon agent runtime and remains in pilot.",
+    why:"Naming individual agents by job function, rather than shipping one general assistant, is Salesforce betting enterprise buyers want something that reads like hiring a role -- and Hunter's long-horizon runtime is the more consequential technical claim worth checking once it exits pilot.",
+    heat:41, topics:["salesforce","agentforce","ai agents","enterprise software","long-horizon runtime"],
+    url:"https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents/" },
 { id:"bz-584", date:"2026-09-13",
     source:{ name:"Morphisec", handle:"Morphisec", platform:"web", kind:"news" },
     text:"Security firm Morphisec disclosed that a trojanized Electron app calling itself \"Claude Opus 5 Free Desktop\" -- using Anthropic's own branding to offer free access to a paid model -- is spreading RevStealer, Windows malware that targets more than 50 crypto wallets and 12 password managers. The same payload previously circulated disguised as video-game cheats on GitHub before being rebranded around Claude.",
