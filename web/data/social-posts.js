@@ -17995,5 +17995,220 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-13T00:22:35Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-pentagon-fluidstack-5-billion-loan-office-strategic-capital",
+    "ts": "2026-09-13T14:24:00Z",
+    "export": {
+      "article_id": "newsroom-pentagon-fluidstack-5-billion-loan-office-strategic-capital",
+      "url": "https://rtfclmgzn.com/article/pentagon-fluidstack-5-billion-loan-office-strategic-capital",
+      "headline": "The Pentagon is in talks to lend Fluidstack $5 billion -- eight times the largest loan its startup-financing office has ever made",
+      "hook": "The Pentagon is reportedly in talks to lend an AI-infrastructure startup $5 billion -- about eight times the largest loan its financing office has ever made.",
+      "key_facts": [
+        "The Office of Strategic Capital's current record loan is $620 million; ~$5B for Fluidstack would be nearly 8x that.",
+        "Fluidstack builds Anthropic's $50 billion custom U.S. data centers and was valued near $18 billion in September.",
+        "Neither the Pentagon nor Fluidstack has confirmed the reported talks."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/pentagon-fluidstack-5-billion-loan-office-strategic-capital.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "The Pentagon is reportedly in talks to lend Fluidstack ~$5B -- about 8x the largest loan its startup-financing office has ever made. Neither side has confirmed it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Fluidstack", "#AIInfrastructure"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T19:24:00Z",
+        "copy": "The Pentagon's current record loan for its startup-financing office is $620M, to a rare-earth magnet maker. The Fluidstack number reportedly on the table now: $5B.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#Fluidstack", "#Pentagon"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The Pentagon is reportedly in talks to lend $5 billion to Fluidstack.\n\nThat's the AI-infrastructure startup building Anthropic's custom U.S. data centers.\n\nIt would be about 8x the largest loan the Pentagon's startup-financing office has ever made -- and neither side has confirmed it.\n\nFull story:",
+        "hashtags": ["#Fluidstack", "#Pentagon", "#AIInfrastructure", "#DataCenters", "#Anthropic", "#AI", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The Pentagon is reportedly in talks to lend roughly $5 billion to Fluidstack, the neocloud building Anthropic's custom U.S. data centers -- about eight times the largest loan its startup-financing office has ever made. Neither party has confirmed the talks.",
+        "hashtags": ["#Fluidstack", "#Pentagon"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "The Pentagon is reportedly in talks to lend $5B to Fluidstack -- the AI-infrastructure startup building Anthropic's US data centers -- through an office whose current record loan is $620M. Neither side has confirmed it, and the stated purpose is domestic manufacturing capacity, not a specific AI facility.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T19:24:00Z",
+        "copy": "Worth sitting with the scale jump: the Office of Strategic Capital's loan cap used to be $150M per project. Then $620M to Vulcan Elements became the record. Now reportedly $5B to Fluidstack -- consistent with the office's own new $1-5B focus, but still the biggest single loan by far.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Pentagon reportedly in talks to lend Fluidstack ~$5B -- 8x its financing office's largest loan yet. Fluidstack builds Anthropic's US data centers. Neither side has confirmed it.",
+        "hashtags": ["#Fluidstack", "#AI", "#Pentagon"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-grok-4-7-third-delay-musk-reinforcement-learning",
+    "ts": "2026-09-13T14:25:00Z",
+    "export": {
+      "article_id": "newsroom-grok-4-7-third-delay-musk-reinforcement-learning",
+      "url": "https://rtfclmgzn.com/article/grok-4-7-third-delay-musk-reinforcement-learning",
+      "headline": "Grok 4.7 misses a third deadline -- and this time Musk names the specific training defect",
+      "hook": "Grok 4.7 just missed its third deadline -- and for once, Musk said exactly why.",
+      "key_facts": [
+        "Musk says reinforcement learning penalized response length too heavily, so the model quits solvable problems early.",
+        "The 2.1-trillion-parameter figure and added SpaceX training data remain Musk's claims alone.",
+        "Grok 4.6 currently scores 51 on the independent Artificial Analysis Intelligence Index."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/grok-4-7-third-delay-musk-reinforcement-learning.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Grok 4.7 just missed its third target date. This time Musk actually said why: RL training penalized response length so hard the model quits solvable problems early.",
+        "reply_copy": "Full timeline:",
+        "link_in_reply": true,
+        "hashtags": ["#Grok", "#xAI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Grok 4.7 was supposed to ship \"in 10 days,\" per Musk's own count.\n\nThat window closed. Third missed deadline.\n\nThis time he said exactly why: training penalized short answers so heavily the model gives up on hard problems it can actually solve.\n\nFull timeline:",
+        "hashtags": ["#Grok", "#xAI", "#ElonMusk", "#AI", "#MachineLearning", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Grok 4.7 missed its third target date on September 11. Elon Musk said reinforcement learning had penalized response length so heavily that the model quits solvable hard problems too early -- an unusually specific admission for a release pattern that's otherwise just gone quiet past each deadline.",
+        "hashtags": ["#Grok", "#xAI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Third missed date for Grok 4.7. Musk's own explanation this time: RL rewarded short answers so hard the model started giving up on problems it could actually solve. Grok 4.6 sits at 51 on the independent index in the meantime -- unmoved by anything claimed about 4.7.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Grok 4.7 misses a third deadline. Musk's own explanation: RL penalized response length so hard the model quits solvable problems early. Grok 4.6 still sits at 51 on the independent index.",
+        "hashtags": ["#Grok", "#xAI", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-ipo-delay-extinction-risk-anthropic-contrast",
+    "ts": "2026-09-13T14:31:00Z",
+    "export": {
+      "article_id": "newsroom-openai-ipo-delay-extinction-risk-anthropic-contrast",
+      "url": "https://rtfclmgzn.com/article/openai-ipo-delay-extinction-risk-anthropic-contrast",
+      "headline": "Sam Altman rules out an OpenAI IPO in 2026, calling AI extinction risk 'unacceptable' -- while Anthropic pushes ahead on a $2 trillion listing",
+      "hook": "Altman says even a single-digit chance AI causes human extinction is 'unacceptable' -- so OpenAI's IPO waits until 2027. Anthropic is still eyeing a $2T listing in October.",
+      "key_facts": [
+        "OpenAI had confidentially filed in June for a ~$850B IPO, targeting September; that's now pushed to 2027.",
+        "OpenAI's own CFO told employees in August the timeline was already '2027 or sooner' -- before this week's safety framing.",
+        "Anthropic, whose CEO wrote this week's essay urging AI companies to slow down, reportedly still targets an October IPO near $2 trillion."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/openai-ipo-delay-extinction-risk-anthropic-contrast.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Altman: even a single-digit chance AI causes human extinction is 'unacceptable' -- so OpenAI's IPO waits until 2027. Anthropic, meanwhile, is still eyeing a $2T listing in October.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T19:31:00Z",
+        "copy": "The tension nobody's naming: OpenAI delays its IPO citing AI extinction risk. Anthropic -- whose CEO wrote this week's essay on slowing down -- is still reportedly chasing a record $2T listing in October.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Sam Altman says OpenAI won't go public in 2026.\n\nHis reason: even a single-digit chance AI causes human extinction is \"unacceptable.\"\n\nBut OpenAI's own CFO had already told staff in August the timeline was \"2027 or sooner\" -- before any of this week's safety framing.\n\nAnd Anthropic, whose CEO wrote this week's essay urging the industry to slow down? Still reportedly eyeing a $2 trillion IPO in October.\n\nFull story:",
+        "hashtags": ["#OpenAI", "#Anthropic", "#SamAltman", "#AISafety", "#IPO", "#AI", "#TechNews", "#Markets"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Sam Altman told Fortune OpenAI won't go public in 2026, citing AI extinction risk as 'unacceptable' even at low odds. But OpenAI's own CFO had already signaled the same 2027 timeline to staff in August, and Anthropic -- whose CEO wrote this week's essay urging AI companies to slow down -- is reportedly still on track for a record $2 trillion IPO in October.",
+        "hashtags": ["#OpenAI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Altman rules out a 2026 OpenAI IPO, says even single-digit extinction odds are 'unacceptable.' Real story's messier: OpenAI's CFO flagged the same 2027 timeline in August, before any safety framing, and market conditions (Iran war, oil prices) are also in the mix. Meanwhile Anthropic -- essay-writing skeptic of the industry's pace -- is still eyeing a $2T October IPO.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T19:31:00Z",
+        "copy": "Worth sitting with: Amodei's essay committed Anthropic to outside evaluators, not to pausing its own IPO. If a $2T October listing actually happens while OpenAI waits until 2027, the two companies' words and actions will have visibly split.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Altman: OpenAI won't IPO in 2026, even single-digit extinction odds are 'unacceptable.' His own CFO flagged the same 2027 timeline in August, pre-safety-framing. Anthropic, meanwhile, still reportedly eyes a $2T October IPO.",
+        "hashtags": ["#OpenAI", "#Anthropic", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
