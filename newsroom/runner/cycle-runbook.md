@@ -802,6 +802,24 @@ this order, and mark it done here.
    new `primer-issue.js`-only candidate found. Did not force one. Same two
    next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-13T14:37 cycle) -- re-checked before writing,
+   since this cycle's own three articles (a reported $5B Pentagon loan to
+   Fluidstack, Grok 4.7's third missed target date, and OpenAI's 2026 IPO
+   delay over AI extinction-risk framing) plus the full §3c/§4b/§4c/§4d
+   passes were already the required work; guide cadence read 3 days (a
+   guide published 2026-09-10), so §3d needed no action. §3c backfill
+   search (the `component_audit`-style script over the whole archive)
+   found zero articles below their format's component floor -- the
+   archive backfill queue is now empty; noting this explicitly rather than
+   silently dropping the step, per its own step-4 instruction. Both §3e/§3f
+   blockers unchanged: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` absent), and `which
+   wrangler` / `env | grep -i cloudflare` both return nothing on this
+   runner; `find . -iname "issue-001.json"` also still returns nothing. No
+   new `primer-issue.js`-only candidate found. Did not force one. Same two
+   next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -948,6 +966,10 @@ still returns nothing in this checkout, and no `wrangler` binary or Cloudflare c
 runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
 **Status (2026-09-12T18:35 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
+still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
+
+**Status (2026-09-13T14:37 cycle, re-check):** re-confirmed, unchanged: `find . -iname "issue-001.json"`
 still returns nothing in this checkout, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same blocker, same next step (KV access) as every re-check since 2026-08-18.
 
