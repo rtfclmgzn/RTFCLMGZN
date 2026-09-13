@@ -7,9 +7,9 @@
 // RULES: never substitute vendor self-reported benchmark claims for the independent index;
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "September 12, 2026",
-  scannedAt: "2026-09-12T23:45:00Z",
-  basisNote: "Newsroom cycle 2026-09-12 ~18:26 UTC: added Fugu Ultra v2 and Fugu Max (Sakana AI's orchestrator pair, released Sept. 10) with score:null pending an independent Intelligence Index measurement -- Sakana's own benchmark suite is not adopted as a substitute score. The cycle's other two articles (a Senate AI bill and a payment-network agent-trust framework) established no model launch, vendor price, or independent-index movement.",
+  updated: "September 13, 2026",
+  scannedAt: "2026-09-13T00:11:34Z",
+  basisNote: "Newsroom cycle 2026-09-13 ~00:07 UTC: added DeepSeek V4.1 Flash (released Sept. 10, 552B-parameter MoE) with score:40 from Artificial Analysis's independent Intelligence Index -- 11-14 points behind Claude Opus 5 (54) and GPT-5.6 Sol (51), despite DeepSeek's own agentic-benchmark claims putting it ahead of both; the vendor suite is not adopted as a substitute score. The cycle's other two articles (Dario Amodei's pacing essay and a Yelp/OpenAI voice-AI rollout) established no further model launch, vendor price, or independent-index movement.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },
@@ -61,6 +61,8 @@ window.RTFC_SCOREBOARD = {
       note:"Updated to v4.2: 48→37. Pricing is omitted until the exact public API rate used by the benchmark provider is verified." },
     { model:"DeepSeek V4 Pro 0813", mode:"max",          lab:"DeepSeek",  score:42, pin:0.435, pout:0.87, status:"released",
       note:"Updated to v4.2: 53→42. The 0813 build graduated from preview August 13 2026. pin/pout are DeepSeek's flat-rate cache-miss list price; peak/off-peak billing now applies with rates varying by time of day." },
+    { model:"DeepSeek V4.1 Flash", mode:"max",          lab:"DeepSeek",  score:40, pin:0.15, pout:0.60, status:"released",
+      note:"Row added this cycle. Released Sept. 10 2026, a 552B-parameter MoE succeeding V4 Flash 0731 (284B) -- MIT-licensed open weights, 1,048,576-token context, native image understanding trained in from pretraining. DeepSeek's own agentic benchmarks (run at the same max-effort setting as this score) claim wins over GPT-5.6 Sol and near-parity with Claude Opus 5 on four of five agentic tasks; this independent Intelligence Index score -- 11 to 14 points behind both -- is what the board shows, not the vendor's own suite. pin/pout are DeepSeek's off-peak cache-miss list price; peak hours (01:00-04:00 and 06:00-10:00 UTC weekdays) double both, and a cache-hit input rate as low as $0.003 applies to repeated context." },
     { model:"DeepSeek V4 Flash 0731", mode:"max",         lab:"DeepSeek",  score:41, pin:0.14, pout:0.28, status:"released",
       note:"Updated to v4.2: 52→41. Retrained release (July 31 2026) with 284B total / 13B active parameters. DeepSeek's own agentic-benchmark claims are not adopted as the independent score shown here." },
     { model:"DeepSeek V4 Flash Vision Exp", mode:"default", lab:"DeepSeek", score:null, pin:0.22, pout:0.66, status:"preview",
@@ -97,6 +99,8 @@ window.RTFC_SCOREBOARD = {
     { label:"Our coverage: DeepSeek-V4-Flash-0731 beats its own flagship on benchmarks", url:"/article/deepseek-v4-flash-0731-beats-own-flagship" },
     { label:"Qwen3.8-27B — official Hugging Face model card", url:"https://huggingface.co/Qwen/Qwen3.8-27B" },
     { label:"Sakana AI — Fugu: One Model to Command Them All (release page)", url:"https://sakana.ai/fugu-release/" },
-    { label:"Our coverage: Sakana AI's Fugu Max and Fugu Ultra v2 launch", url:"/article/sakana-fugu-max-ultra-v2-orchestrator" }
+    { label:"Our coverage: Sakana AI's Fugu Max and Fugu Ultra v2 launch", url:"/article/sakana-fugu-max-ultra-v2-orchestrator" },
+    { label:"DeepSeek V4.1 Flash — Artificial Analysis model page", url:"https://artificialanalysis.ai/models/deepseek-v4-1-flash" },
+    { label:"Our coverage: DeepSeek's V4.1 Flash and the benchmark gap", url:"/article/deepseek-v4-1-flash-benchmark-gap" }
   ]
 };

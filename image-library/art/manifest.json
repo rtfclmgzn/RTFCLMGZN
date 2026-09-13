@@ -3762,7 +3762,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-33-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "deepseek-v4-1-flash-benchmark-gap",
+     "used_at": "2026-09-13"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-04",

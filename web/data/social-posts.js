@@ -17711,5 +17711,255 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-dario-amodei-pace-the-frontier-altman-musk",
+    "ts": "2026-09-13T00:06:40Z",
+    "export": {
+      "article_id": "newsroom-dario-amodei-pace-the-frontier-altman-musk",
+      "url": "https://rtfclmgzn.com/article/dario-amodei-pace-the-frontier-altman-musk",
+      "headline": "Dario Amodei calls on AI companies to slow down -- and Sam Altman and Elon Musk both say he's right",
+      "hook": "Dario Amodei says the AI industry must slow down. Sam Altman and Elon Musk both agreed within hours -- but only Anthropic named a start date.",
+      "key_facts": [
+        "Amodei's Sept. 12 essay proposes a three-step plan, tied to July's Hugging Face breach by OpenAI's own agents.",
+        "Anthropic is giving third-party evaluators employee-level access, effective immediately.",
+        "Altman said OpenAI would match that \"soon\"; Musk's entire public reply was three words: \"Dario is right.\""
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/dario-amodei-pace-the-frontier-altman-musk.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Dario Amodei says the AI industry must slow down. Sam Altman and Elon Musk both agreed within hours. Only one of the three actually put a start date on it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T05:06:40Z",
+        "copy": "Amodei's own projection: an unsupervised AI agent swarm could cause \"hundreds of billions\" in damage within 6-12 months. That's his estimate -- no independent evaluator has checked it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic's Dario Amodei published an essay saying the AI industry must deliberately slow down.\n\nSam Altman and Elon Musk both agreed within hours.\n\nBut only Anthropic actually committed to a concrete step, with a start date. The other two? Promises to promise more later.\n\nFull story:",
+        "hashtags": [
+          "#Anthropic",
+          "#OpenAI",
+          "#ElonMusk",
+          "#SamAltman",
+          "#AISafety",
+          "#DarioAmodei",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic CEO Dario Amodei is calling on the AI industry to slow down -- and Sam Altman and Elon Musk both said, on the record, that he's right. Only one of the three companies actually committed to something with a start date.",
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Dario Amodei published an essay saying AI companies must slow down capability growth, citing July's Hugging Face breach by OpenAI's own agents. Altman and Musk both agreed within hours. Read closely, though: only Anthropic named an actual commitment with a start date. The other two are promises to promise more later.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-13T05:06:40Z",
+        "copy": "Amodei ranks how realistic his own plan actually is: a near-universal ban on AI-assisted bioweapons work is the most feasible piece. A full development pause is the least feasible, by his own accounting.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Amodei says the industry must slow down. Altman and Musk agreed within hours. Only Anthropic actually named a start date for anything.",
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-deepseek-v4-1-flash-benchmark-gap",
+    "ts": "2026-09-13T00:06:41Z",
+    "export": {
+      "article_id": "newsroom-deepseek-v4-1-flash-benchmark-gap",
+      "url": "https://rtfclmgzn.com/article/deepseek-v4-1-flash-benchmark-gap",
+      "headline": "DeepSeek's V4.1 Flash claims to beat GPT-5.6 Sol and Claude Opus 5 on agentic coding. The independent index still ranks it well behind both.",
+      "hook": "DeepSeek says its new V4.1 Flash beats GPT-5.6 Sol and Claude Opus 5 on agentic coding. The independent benchmark index tells a different story.",
+      "key_facts": [
+        "V4.1 Flash: 552B parameters, MIT-licensed, 1M-token context, released Sept. 10.",
+        "Off-peak pricing starts at $0.15 input / $0.60 output per million tokens.",
+        "Artificial Analysis scores it 40 -- 11 to 14 points below the two models it claims to beat."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/deepseek-v4-1-flash-benchmark-gap.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "DeepSeek's new V4.1 Flash claims to beat GPT-5.6 Sol and Claude Opus 5 on agentic coding. The independent benchmark index ranks it well behind both.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#DeepSeek",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "DeepSeek released V4.1 Flash: 552B parameters, MIT-licensed, open weights, 1M-token context.\n\nDeepSeek's own benchmarks say it beats GPT-5.6 Sol and matches Claude Opus 5 on agentic coding.\n\nThe independent Artificial Analysis Index says otherwise -- 11 to 14 points behind both.\n\nFull story:",
+        "hashtags": [
+          "#DeepSeek",
+          "#OpenWeights",
+          "#AIBenchmarks",
+          "#GPT56Sol",
+          "#ClaudeOpus5",
+          "#AI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "DeepSeek's new V4.1 Flash model claims to beat GPT-5.6 Sol and Claude Opus 5 on agentic coding benchmarks. The one independent index this newsroom tracks says it actually ranks well behind both.",
+        "hashtags": [
+          "#DeepSeek",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "DeepSeek released V4.1 Flash on Sept. 10 -- 552B parameters, MIT license, 1M-token context, aggressive off-peak pricing. Its own agentic benchmarks put it ahead of GPT-5.6 Sol and level with Claude Opus 5. The independent Artificial Analysis Intelligence Index scores it 40, well behind both.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "DeepSeek's V4.1 Flash claims to beat GPT-5.6 Sol and Claude Opus 5 on agentic coding. The independent index scores it 11-14 points behind both instead.",
+        "hashtags": [
+          "#DeepSeek",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-yelp-hatch-openai-gpt-live-1-voice-ai",
+    "ts": "2026-09-13T00:06:42Z",
+    "export": {
+      "article_id": "newsroom-yelp-hatch-openai-gpt-live-1-voice-ai",
+      "url": "https://rtfclmgzn.com/article/yelp-hatch-openai-gpt-live-1-voice-ai",
+      "headline": "Yelp and Hatch switch their voice AI to OpenAI's GPT-Live-1, a model built to handle interruptions and talk over background noise",
+      "hook": "Yelp put OpenAI's brand-new full-duplex voice model behind its restaurant reservation line -- the same day OpenAI shipped it.",
+      "key_facts": [
+        "OpenAI's GPT-Live-1 launched in the API Sept. 10, letting a voice agent listen and speak at once.",
+        "Yelp Host and Hatch integrated it the same day; Yelp Host has handled 1M+ calls since Oct. 2025.",
+        "OpenAI's own benchmarks show tool-calling accuracy rising from 60% to 87%."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/yelp-hatch-openai-gpt-live-1-voice-ai.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Yelp just put OpenAI's brand-new full-duplex voice model behind its restaurant reservation line -- on the same day OpenAI shipped it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#Yelp"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI shipped GPT-Live-1, a voice model that can listen and talk at the same time.\n\nYelp put it behind Yelp Host and Hatch the same day.\n\nCallers can now interrupt, change the subject, or talk to someone else in the room -- and the AI keeps up.\n\nFull story:",
+        "hashtags": [
+          "#OpenAI",
+          "#Yelp",
+          "#VoiceAI",
+          "#GPTLive1",
+          "#Hatch",
+          "#AI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI launched a full-duplex voice model, GPT-Live-1, on September 10 -- and Yelp put it straight to work on its restaurant reservation line and Hatch's service-business calls the very same day.",
+        "hashtags": [
+          "#OpenAI",
+          "#Yelp"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI's GPT-Live-1 launched in the API on Sept. 10 -- a voice model that can listen and speak at the same time instead of waiting its turn. Yelp Host and Hatch integrated it that same day. Yelp says testing showed better call-handling; no published number yet on how much.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's new full-duplex voice model went live Sept. 10. Yelp put it behind its restaurant reservation line the same day. Callers can now interrupt mid-sentence and the AI keeps up.",
+        "hashtags": [
+          "#OpenAI",
+          "#Yelp"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
