@@ -17608,8 +17608,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Fugu",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvfl5w3zlh24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvfl5w3zlh24",
+        "posted_at": "2026-09-13T12:15:59Z"
       }
     ]
   },
@@ -17643,8 +17645,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents",
           "#Fintech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099108787768758374",
+        "remote_id": "2099108787768758374",
+        "posted_at": "2026-09-13T12:11:49Z"
       },
       {
         "platform": "x",
@@ -17657,8 +17661,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AgenticCommerce",
           "#Fintech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099109796813406521",
+        "remote_id": "2099109796813406521",
+        "posted_at": "2026-09-13T12:15:51Z"
       },
       {
         "platform": "instagram",
