@@ -18632,8 +18632,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120290065396947",
+        "remote_id": "1238977099292018_122120290065396947",
+        "posted_at": "2026-09-14T05:21:52Z"
       },
       {
         "platform": "threads",
@@ -18656,8 +18658,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvhepd76fb2n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvhepd76fb2n",
+        "posted_at": "2026-09-14T05:25:47Z"
       }
     ]
   },
@@ -18692,7 +18696,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Salesforce"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -18705,8 +18711,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Agentforce",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099366707936854137",
+        "remote_id": "2099366707936854137",
+        "posted_at": "2026-09-14T05:16:42Z"
       },
       {
         "platform": "instagram",
@@ -18718,8 +18726,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#EnterpriseAI",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdQXVC7G0kK/",
+        "remote_id": "18104375144195308",
+        "posted_at": "2026-09-14T05:17:03Z"
       },
       {
         "platform": "facebook",
@@ -18728,22 +18738,28 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Salesforce"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120289429396947",
+        "remote_id": "1238977099292018_122120289429396947",
+        "posted_at": "2026-09-14T05:17:13Z"
       },
       {
         "platform": "threads",
         "copy": "Salesforce priced Fin at roughly 3x Agentforce's own annual revenue, then folded it into a seven-agent lineup as its own named agent. The governance layer announced the same week isn't even first to market -- Microsoft and AWS beat it there.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdQXYoHmw9x",
+        "remote_id": "18178185037437739",
+        "posted_at": "2026-09-14T05:17:29Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-09-14T05:11:48Z",
         "copy": "The harder question: can a vendor that sells its own agents credibly govern its rivals' agents in the same control plane? Microsoft and AWS face the identical conflict. We lay out the strongest case against all three.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdQX3M6G72g",
+        "remote_id": "17901520839594798",
+        "posted_at": "2026-09-14T05:21:38Z"
       },
       {
         "platform": "bluesky",
@@ -18752,9 +18768,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Salesforce"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvhei4smks2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvhei4smks2y",
+        "posted_at": "2026-09-14T05:21:45Z"
       }
     ]
   }
-]
+];
