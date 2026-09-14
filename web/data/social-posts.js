@@ -18499,8 +18499,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099587681361563849",
+        "remote_id": "2099587681361563849",
+        "posted_at": "2026-09-14T19:54:47Z"
       },
       {
         "platform": "x",
@@ -18818,7 +18820,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not permitted to perform this action.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
