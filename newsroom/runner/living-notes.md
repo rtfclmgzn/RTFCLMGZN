@@ -543,3 +543,26 @@
   Also reconfirmed the §3e/§3f blockers unchanged: `ALLOWED_PREFIXES` in
   `verify_publish_surface.py` still excludes `functions/`, and no `wrangler`/Cloudflare
   credentials or `issue-001.json` exist on this runner.
+- **2026-09-14** (reference-desk cycle): two notes. (1) WebSearch's synthesized answer text is not
+  the same reliability tier as the page it's summarizing, and a WebFetch of the actual page can
+  disagree with it: a first WebFetch of arxiv.org/abs/2307.09009 (the Stanford/Berkeley
+  ChatGPT-drift paper) returned "84% to 51%" for GPT-4's prime-number-check accuracy drop, while
+  the real, widely-cited figure is 97.6% to 2.4% -- confirmed only by fetching a second, independent
+  write-up (VentureBeat) that quoted the paper directly. Separately, a WebSearch synthesis claimed
+  Google had pushed Gemini 2.5 Pro/Flash/Flash-Lite retirement to "October 16, 2026"; a direct
+  WebFetch of Google's own live deprecations page (ai.google.dev/gemini-api/docs/deprecations)
+  showed "No shutdown date announced" for all three as of this run. Both wrong numbers were caught
+  only because a second fact was checked before publishing, not because either wrong answer looked
+  implausible on its own -- worth treating any single WebSearch-synthesized figure as unverified
+  until either a direct WebFetch of the primary page or a second independent source confirms it,
+  especially for anything with a specific percentage or date. (2) Found and fixed five more live
+  `#/masthead`, `#/corrections`, and `#/scoreboard` links sitting in `guides.js`'s own `sources[].url`
+  fields, across three different guide records (`brief-an-ai-like-a-pro`, `catch-an-ai-making-things-up`,
+  `which-ai-for-which-job`, plus a `#/scoreboard` repeated in `check-whether-an-ai-shopping-agents-payment-safeguard-is-real`)
+  -- the same blind spot already logged four times for `citation_urls`/`sources[].url` in
+  `newsroom-articles.js`, `guides.js`'s own body sources, and `scoreboard.js` (2026-08-19/21/24
+  entries above). `check_no_hash_links` still only matches `href="#/...`, never a bare `#/...`
+  sitting in a plain `url` field, so these had been invisible to the guard since whichever cycle
+  first wrote them. Fixed in place; still no dedicated sweep-and-check pass exists for this pattern
+  across all files at once, and one keeps being worth doing given how many times it's recurred one
+  file at a time.
