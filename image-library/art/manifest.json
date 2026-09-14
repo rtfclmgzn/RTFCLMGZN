@@ -3810,7 +3810,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-34-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-anthropic-claude-code-weekly-limit-25-percent-17-percent-cut",
+     "used_at": "2026-09-14"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-05",

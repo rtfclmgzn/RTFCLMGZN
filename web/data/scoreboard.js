@@ -7,9 +7,9 @@
 // RULES: never substitute vendor self-reported benchmark claims for the independent index;
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
-  updated: "September 13, 2026",
-  scannedAt: "2026-09-13T21:11:37Z",
-  basisNote: "Newsroom cycle 2026-09-13 ~19:00 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's three articles (Nvidia's reported anchor-investment talks for Anthropic's IPO, a New York Times investigation into Nvidia Blackwell chip exports via a blacklisted Chinese server maker's US subsidiary, and a comparison of UBTech's and 1X's consumer companion-robot claims) concern financing, export-control policy, and hardware respectively -- none establish a new independently-measured score. Scan recorded per Law 8 even though nothing moved.",
+  updated: "September 14, 2026",
+  scannedAt: "2026-09-14T00:20:43Z",
+  basisNote: "Newsroom cycle 2026-09-14 ~00:20 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's two articles (Anthropic's Claude Code weekly-usage-limit change and Salesforce's Fin acquisition plus seven-agent Agentforce launch) concern product usage policy and enterprise-agent business strategy respectively -- neither introduces a new independently-measured model. Scan recorded per Law 8 even though nothing moved.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
       note:"Updated to v4.2: 66→57. Still leads the v4.2 leaderboard, 3 points ahead of GPT-6 Astra (max, 54) and Claude Opus 5 (max, 54). The 9-point drop reflects v4.2's recalibration to harder tasks and more private test data, not a capability regression. List pricing unchanged at $10/$50 per million tokens." },

@@ -18022,7 +18022,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The Pentagon is reportedly in talks to lend Fluidstack ~$5B -- about 8x the largest loan its startup-financing office has ever made. Neither side has confirmed it.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#Fluidstack", "#AIInfrastructure"],
+        "hashtags": [
+          "#Fluidstack",
+          "#AIInfrastructure"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -18033,21 +18036,35 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The Pentagon's current record loan for its startup-financing office is $620M, to a rare-earth magnet maker. The Fluidstack number reportedly on the table now: $5B.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#Fluidstack", "#Pentagon"],
+        "hashtags": [
+          "#Fluidstack",
+          "#Pentagon"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "The Pentagon is reportedly in talks to lend $5 billion to Fluidstack.\n\nThat's the AI-infrastructure startup building Anthropic's custom U.S. data centers.\n\nIt would be about 8x the largest loan the Pentagon's startup-financing office has ever made -- and neither side has confirmed it.\n\nFull story:",
-        "hashtags": ["#Fluidstack", "#Pentagon", "#AIInfrastructure", "#DataCenters", "#Anthropic", "#AI", "#TechNews"],
+        "hashtags": [
+          "#Fluidstack",
+          "#Pentagon",
+          "#AIInfrastructure",
+          "#DataCenters",
+          "#Anthropic",
+          "#AI",
+          "#TechNews"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "The Pentagon is reportedly in talks to lend roughly $5 billion to Fluidstack, the neocloud building Anthropic's custom U.S. data centers -- about eight times the largest loan its startup-financing office has ever made. Neither party has confirmed the talks.",
-        "hashtags": ["#Fluidstack", "#Pentagon"],
+        "hashtags": [
+          "#Fluidstack",
+          "#Pentagon"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -18068,7 +18085,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Pentagon reportedly in talks to lend Fluidstack ~$5B -- 8x its financing office's largest loan yet. Fluidstack builds Anthropic's US data centers. Neither side has confirmed it.",
-        "hashtags": ["#Fluidstack", "#AI", "#Pentagon"],
+        "hashtags": [
+          "#Fluidstack",
+          "#AI",
+          "#Pentagon"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -18100,21 +18121,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Grok 4.7 just missed its third target date. This time Musk actually said why: RL training penalized response length so hard the model quits solvable problems early.",
         "reply_copy": "Full timeline:",
         "link_in_reply": true,
-        "hashtags": ["#Grok", "#xAI"],
+        "hashtags": [
+          "#Grok",
+          "#xAI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Grok 4.7 was supposed to ship \"in 10 days,\" per Musk's own count.\n\nThat window closed. Third missed deadline.\n\nThis time he said exactly why: training penalized short answers so heavily the model gives up on hard problems it can actually solve.\n\nFull timeline:",
-        "hashtags": ["#Grok", "#xAI", "#ElonMusk", "#AI", "#MachineLearning", "#TechNews"],
+        "hashtags": [
+          "#Grok",
+          "#xAI",
+          "#ElonMusk",
+          "#AI",
+          "#MachineLearning",
+          "#TechNews"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Grok 4.7 missed its third target date on September 11. Elon Musk said reinforcement learning had penalized response length so heavily that the model quits solvable hard problems too early -- an unusually specific admission for a release pattern that's otherwise just gone quiet past each deadline.",
-        "hashtags": ["#Grok", "#xAI"],
+        "hashtags": [
+          "#Grok",
+          "#xAI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -18127,7 +18161,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Grok 4.7 misses a third deadline. Musk's own explanation: RL penalized response length so hard the model quits solvable problems early. Grok 4.6 still sits at 51 on the independent index.",
-        "hashtags": ["#Grok", "#xAI", "#AI"],
+        "hashtags": [
+          "#Grok",
+          "#xAI",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -18159,7 +18197,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Altman: even a single-digit chance AI causes human extinction is 'unacceptable' -- so OpenAI's IPO waits until 2027. Anthropic, meanwhile, is still eyeing a $2T listing in October.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#OpenAI", "#Anthropic"],
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -18170,21 +18211,36 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The tension nobody's naming: OpenAI delays its IPO citing AI extinction risk. Anthropic -- whose CEO wrote this week's essay on slowing down -- is still reportedly chasing a record $2T listing in October.",
         "reply_copy": "Full story:",
         "link_in_reply": true,
-        "hashtags": ["#OpenAI", "#Anthropic"],
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Sam Altman says OpenAI won't go public in 2026.\n\nHis reason: even a single-digit chance AI causes human extinction is \"unacceptable.\"\n\nBut OpenAI's own CFO had already told staff in August the timeline was \"2027 or sooner\" -- before any of this week's safety framing.\n\nAnd Anthropic, whose CEO wrote this week's essay urging the industry to slow down? Still reportedly eyeing a $2 trillion IPO in October.\n\nFull story:",
-        "hashtags": ["#OpenAI", "#Anthropic", "#SamAltman", "#AISafety", "#IPO", "#AI", "#TechNews", "#Markets"],
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic",
+          "#SamAltman",
+          "#AISafety",
+          "#IPO",
+          "#AI",
+          "#TechNews",
+          "#Markets"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Sam Altman told Fortune OpenAI won't go public in 2026, citing AI extinction risk as 'unacceptable' even at low odds. But OpenAI's own CFO had already signaled the same 2027 timeline to staff in August, and Anthropic -- whose CEO wrote this week's essay urging AI companies to slow down -- is reportedly still on track for a record $2 trillion IPO in October.",
-        "hashtags": ["#OpenAI", "#Anthropic"],
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -18205,7 +18261,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Altman: OpenAI won't IPO in 2026, even single-digit extinction odds are 'unacceptable.' His own CFO flagged the same 2027 timeline in August, pre-safety-framing. Anthropic, meanwhile, still reportedly eyes a $2T October IPO.",
-        "hashtags": ["#OpenAI", "#Anthropic", "#AI"],
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -18504,5 +18564,197 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-claude-code-weekly-limit-25-percent-17-percent-cut",
+    "ts": "2026-09-14T00:09:05Z",
+    "export": {
+      "article_id": "newsroom-anthropic-claude-code-weekly-limit-25-percent-17-percent-cut",
+      "url": "https://rtfclmgzn.com/article/anthropic-claude-code-weekly-limit-25-percent-17-percent-cut",
+      "headline": "Claude Code's weekly limit rises 25% on September 14 -- and falls 17%, by Anthropic's own arithmetic, from what users have today",
+      "hook": "Anthropic says Claude Code's weekly limit is rising 25% on September 14. Its own follow-up post says the same change is a 17% cut. Both numbers are Anthropic's own math.",
+      "key_facts": [
+        "Standard weekly limit rises 25% over the original baseline, starting Sept. 14.",
+        "Against the +50% temporary boost users have had since May, that's a 17% cut.",
+        "The boost was extended four times before Anthropic let it lapse Sept. 13."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/anthropic-claude-code-weekly-limit-25-percent-17-percent-cut.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic says Claude Code's weekly limit is rising 25% on Sept. 14. Its own follow-up post says the same change is a 17% cut from what users have today. Both numbers are Anthropic's own math, not a critic's.",
+        "reply_copy": "The full reconciliation:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#ClaudeCode"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-14T05:09:05Z",
+        "copy": "The +50% Claude Code boost this cut replaces was extended four separate times -- July, then August twice, then again -- before Anthropic finally let it lapse. Four extensions before a cut is its own signal.",
+        "reply_copy": "The full timeline:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic is raising Claude Code's standard weekly limit 25% starting September 14.\n\nIt's also a 17% cut -- from the +50% temporary boost users have had since May, which Anthropic extended four times before letting it expire.\n\nBoth numbers are Anthropic's own. We break down what each one actually measures, and what changes for auto mode the same day.",
+        "hashtags": [
+          "#AI",
+          "#ClaudeCode",
+          "#Anthropic",
+          "#DeveloperTools",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Starting September 14, Anthropic is permanently raising Claude Code's weekly usage limit 25% over its original baseline. Measured against the temporary +50% boost users have had since May -- a promotion Anthropic extended four times before letting it lapse -- the same change is a 17% cut. Anthropic posted both numbers itself. We reconcile what each one actually measures.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's Claude Code limit is rising 25% and falling 17% at the same time -- both numbers are Anthropic's own, measured against two different baselines. We break down which is which.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-14T05:09:05Z",
+        "copy": "Anthropic paired the cut with real offsets: auto mode's permission-classifier calls no longer count against the weekly limit at all, and sessions can now auto-continue at reset. Doesn't change the arithmetic, but it does change how much a heavy user actually feels it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Claude Code's weekly limit rises 25% and falls 17% on the same day -- both numbers straight from Anthropic's own announcement thread, measured against two different baselines. We reconcile them.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-salesforce-fin-acquisition-agentforce-seven-agents-trusted-harness",
+    "ts": "2026-09-14T00:11:48Z",
+    "export": {
+      "article_id": "newsroom-salesforce-fin-acquisition-agentforce-seven-agents-trusted-harness",
+      "url": "https://rtfclmgzn.com/article/salesforce-fin-acquisition-agentforce-seven-agents-trusted-harness",
+      "headline": "In five days, Salesforce closes a $3.6 billion deal for Fin, launches seven named Agentforce agents, and previews a governance layer built to manage its rivals' agents too",
+      "hook": "Salesforce closed a $3.6B acquisition, launched seven named AI agents, and previewed a governance layer for its rivals' agents too -- all in five days.",
+      "key_facts": [
+        "Fin (formerly Intercom) acquisition closed Sept. 10 at roughly 3x Agentforce's own ARR.",
+        "Seven named agents launched Sept. 11; six are GA, Hunter stays in pilot until November.",
+        "Salesforce's new governance layer is previewed to manage Microsoft and OpenAI agents too -- arriving after both."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/salesforce-fin-acquisition-agentforce-seven-agents-trusted-harness.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Salesforce closed a $3.6B acquisition, launched seven named AI agents, and previewed a governance layer pitched to manage its rivals' agents too -- all in five days. Microsoft and AWS shipped the same idea months earlier.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Salesforce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-14T05:11:48Z",
+        "copy": "$3.6B for Fin works out to roughly 3x Agentforce's own annual revenue -- for a product line only about 12% of Salesforce's customers have adopted so far. Not necessarily an overpay. Still the number worth sitting with.",
+        "reply_copy": "The math, in full:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Agentforce",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Five days, three announcements:\n\n-- Salesforce closes its $3.6B acquisition of Fin (formerly Intercom)\n-- Seven named Agentforce agents launch, one of them wearing Fin's own name\n-- A new \"Trusted Enterprise AI Harness\" previews governance for Microsoft and OpenAI's agents too\n\nMicrosoft and AWS shipped comparable governance layers in May and June. We price the deal and place the pitch against its rivals.",
+        "hashtags": [
+          "#AI",
+          "#Salesforce",
+          "#Agentforce",
+          "#EnterpriseAI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Salesforce closed its $3.6 billion acquisition of Fin (formerly Intercom) on September 10, then a day later launched seven named Agentforce agents and previewed a governance layer pitched to manage agents built on Microsoft, Google and OpenAI's platforms too. Microsoft's Agent 365 and AWS's Bedrock AgentCore got there first, in May and June. We break down the deal economics and the competitive landscape.",
+        "hashtags": [
+          "#AI",
+          "#Salesforce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Salesforce priced Fin at roughly 3x Agentforce's own annual revenue, then folded it into a seven-agent lineup as its own named agent. The governance layer announced the same week isn't even first to market -- Microsoft and AWS beat it there.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-14T05:11:48Z",
+        "copy": "The harder question: can a vendor that sells its own agents credibly govern its rivals' agents in the same control plane? Microsoft and AWS face the identical conflict. We lay out the strongest case against all three.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Salesforce: $3.6B Fin acquisition closes, seven named Agentforce agents launch, a cross-vendor governance layer previews -- all in five days. Microsoft and AWS shipped the governance idea first, in May and June.",
+        "hashtags": [
+          "#AI",
+          "#Salesforce"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
-];
+]
