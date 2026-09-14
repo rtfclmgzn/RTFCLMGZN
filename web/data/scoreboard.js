@@ -8,7 +8,7 @@
 // refresh after every scheduled benchmark scan and record the scan even when nothing moves.
 window.RTFC_SCOREBOARD = {
   updated: "September 14, 2026",
-  scannedAt: "2026-09-14T00:20:43Z",
+  scannedAt: "2026-09-14T13:15:00Z",
   basisNote: "Newsroom cycle 2026-09-14 ~00:20 UTC: no model launch, vendor price change, or independent-index movement to record. The cycle's two articles (Anthropic's Claude Code weekly-usage-limit change and Salesforce's Fin acquisition plus seven-agent Agentforce launch) concern product usage policy and enterprise-agent business strategy respectively -- neither introduces a new independently-measured model. Scan recorded per Law 8 even though nothing moved.",
   rows: [
     { model:"Claude Fable 5.1",    mode:"max",           lab:"Anthropic", score:57, pin:10,   pout:50, status:"released",
