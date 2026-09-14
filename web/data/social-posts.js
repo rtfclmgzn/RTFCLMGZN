@@ -18462,8 +18462,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#China",
           "#Policy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvi745voao24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvi745voao24",
+        "posted_at": "2026-09-14T13:18:15Z"
       }
     ]
   },
@@ -18560,8 +18562,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Humanoid"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvi6uwoyad2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvi6uwoyad2o",
+        "posted_at": "2026-09-14T13:14:12Z"
       }
     ]
   },
@@ -18595,8 +18599,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#ClaudeCode"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099486775689265238",
+        "remote_id": "2099486775689265238",
+        "posted_at": "2026-09-14T13:13:49Z"
       },
       {
         "platform": "x",
@@ -18640,8 +18646,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Anthropic's Claude Code limit is rising 25% and falling 17% at the same time -- both numbers are Anthropic's own, measured against two different baselines. We break down which is which.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdRN7TNEQC6",
+        "remote_id": "18367111861246045",
+        "posted_at": "2026-09-14T13:14:05Z"
       },
       {
         "platform": "threads",
@@ -18695,10 +18703,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Salesforce"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099485766170677518",
         "attempts": 1,
-        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+        "remote_id": "2099485766170677518",
+        "posted_at": "2026-09-14T13:09:48Z"
       },
       {
         "platform": "x",
