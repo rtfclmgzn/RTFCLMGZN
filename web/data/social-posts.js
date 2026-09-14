@@ -18986,8 +18986,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Microsoft",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099597610847760848",
+        "remote_id": "2099597610847760848",
+        "posted_at": "2026-09-14T20:34:14Z"
       },
       {
         "platform": "x",
