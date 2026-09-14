@@ -18783,5 +18783,78 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-14T05:21:45Z"
       }
     ]
+  },
+  {
+    "article_id": "g21",
+    "ts": "2026-09-14T18:24:00Z",
+    "export": {
+      "article_id": "g21",
+      "url": "https://rtfclmgzn.com/article/check-whether-an-ai-chatbot-got-quietly-downgraded",
+      "headline": "How to check whether your AI chatbot actually got quietly downgraded",
+      "hook": "A 2023 study caught GPT-4's accuracy on a basic math check fall from 97.6% to 2.4% under one unchanged model name. Here's the two-minute check for whether that's happening to you right now.",
+      "key_facts": [
+        "OpenAI retires GPT-3.5-turbo and GPT-4 outright on October 23, 2026 -- its widest cutoff yet.",
+        "Anthropic promises at least 60 days' notice before a model retires; Google states no fixed minimum.",
+        "The same Claude Opus 4.1 retirement carried 61 days' notice on Anthropic's API and 184 on AWS Bedrock."
+      ],
+      "tone": "Consumer-facing, plainspoken, checklist-driven",
+      "persona": "nova-reyes",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g21.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A 2023 Stanford/Berkeley study caught GPT-4's accuracy on a basic math check fall from 97.6% to 2.4% -- same model name, no announcement. OpenAI is also retiring GPT-3.5-turbo and GPT-4 outright on Oct 23, 2026. Two different problems, one two-minute check for which one you're looking at:",
+        "reply_copy": "The two-minute check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "\"It feels dumber lately\" is either of two very different things.\n\nOne is real: a 2023 Stanford/Berkeley study caught GPT-4's accuracy on a basic math check fall from 97.6% to 2.4% -- same model name, no announcement, ever.\n\nThe other is routine: OpenAI is retiring GPT-3.5-turbo and GPT-4 outright on October 23, 2026, its widest cutoff yet -- a scheduled, disclosed change, not a quality drop.\n\nOur new guide walks through the two-minute check for telling which one you're actually looking at. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#ChatGPT",
+          "#TechTips",
+          "#Claude",
+          "#Gemini"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Every AI user hits this complaint eventually: \"it feels worse than it used to.\" There are two genuinely different things that can cause that feeling, and they call for different responses.\n\nThe first is real, documented model drift -- a 2023 Stanford and UC Berkeley study caught GPT-4's accuracy on a basic prime-number check fall from 97.6% to 2.4% between two versions carrying the exact same model name, with nothing announced. The second is ordinary vendor housekeeping: OpenAI is retiring GPT-3.5-turbo and GPT-4 outright on October 23, 2026, its widest scheduled cutoff yet, with months of notice already given.\n\nOur new guide covers the two-minute check for telling which one is actually happening to you, plus what OpenAI, Anthropic, and Google each promise about how much notice you get before a model changes under you.",
+        "hashtags": [
+          "#AI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A 2023 study caught GPT-4 dropping from 97.6% to 2.4% accuracy on a basic math check -- same model name, no announcement. OpenAI is also retiring GPT-3.5-turbo and GPT-4 outright this October. Two different problems, one two-minute check:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A 2023 study caught GPT-4 fall from 97.6% to 2.4% accuracy on a basic math check, under one unchanged model name. OpenAI is separately retiring GPT-3.5-turbo and GPT-4 outright on Oct 23, 2026. The two-minute check for telling which is happening to you:",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

@@ -199,7 +199,7 @@ window.RTFC_GUIDES = [
     "sources": [
       {
         "label": "RTFCLMGZN masthead — the editorial personas and how this newsroom works",
-        "url": "#/masthead"
+        "url": "/masthead"
       }
     ],
     "corrections": []
@@ -532,11 +532,11 @@ window.RTFC_GUIDES = [
     "sources": [
       {
         "label": "RTFCLMGZN masthead — how this newsroom's verification stage works",
-        "url": "#/masthead"
+        "url": "/masthead"
       },
       {
         "label": "RTFCLMGZN corrections log — every error this publication has logged against itself",
-        "url": "#/corrections"
+        "url": "/corrections"
       }
     ],
     "corrections": []
@@ -876,7 +876,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "Two limits on everything above. The prices and scores are a snapshot — ours was updated July 29, 2026 — and the whole point of this beat is that they move; treat the ordering as current rather than permanent, and re-read the board rather than remembering it. And the independent score is a single aggregate over a set of benchmarks, which means it is a decent proxy for general capability and a poor proxy for your particular job. A model two points lower on the index can be plainly better at the specific thing you do all day. Several rows on our own board carry no score at all, because the only figures their vendors published were self-reported, and self-reported numbers are not established capability.",
+        "text": "Two limits on everything above. The prices and scores are a snapshot — ours was updated July 29, 2026 — and the whole point of this beat is that they move; treat the ordering as current rather than permanent, and re-read the board rather than remembering it. And the independent score is a single aggregate over a set of benchmarks, which means it is a decent proxy for general capability and a poor proxy for your particular job. A model two points lower on the index can be plainly better at the specific thing you do all day. Several rows on our own board carry no score at all, because the only figures their vendors published were self-reported, and self-reported numbers are not established capability. It's not just the board that moves, either — the model sitting behind a name you picked last month can change on its own, and [our guide to checking whether an AI chatbot got quietly downgraded](/article/check-whether-an-ai-chatbot-got-quietly-downgraded) covers how to tell a real, silent change from a scheduled one.",
         "citation_urls": []
       },
       {
@@ -910,7 +910,7 @@ window.RTFC_GUIDES = [
       },
       {
         "label": "RTFCLMGZN Scoreboard — vendor list prices beside independent scores",
-        "url": "#/scoreboard"
+        "url": "/scoreboard"
       }
     ],
     "corrections": []
@@ -1151,7 +1151,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "One more wrinkle worth naming: this decision isn't really a one-time fork, because the model landscape underneath it keeps moving. [Matching a job to a model tier](/article/which-ai-for-which-job) assumes you're choosing between API-hosted options; open weights add a genuine fourth branch to that framework, not just a cheaper version of the same choice. A team that self-hosts locks in a specific model's capability level until it re-runs this procedure, while a team on an API rides each vendor's improvements automatically — DeepSeek's own V4-Flash retraining this week is exactly the kind of free upgrade an API user gets for nothing and a self-hosting team has to redeploy for manually. That's a real cost of self-hosting that step four's hardware quote doesn't capture, and it belongs in the decision alongside the dollar figures.",
+        "text": "One more wrinkle worth naming: this decision isn't really a one-time fork, because the model landscape underneath it keeps moving. [Matching a job to a model tier](/article/which-ai-for-which-job) assumes you're choosing between API-hosted options; open weights add a genuine fourth branch to that framework, not just a cheaper version of the same choice. A team that self-hosts locks in a specific model's capability level until it re-runs this procedure, while a team on an API rides each vendor's improvements automatically — DeepSeek's own V4-Flash retraining this week is exactly the kind of free upgrade an API user gets for nothing and a self-hosting team has to redeploy for manually. That's a real cost of self-hosting that step four's hardware quote doesn't capture, and it belongs in the decision alongside the dollar figures. The same automatic-update path an API rides for free also carries the risk in the other direction — [our guide to checking whether your AI chatbot got quietly downgraded](/article/check-whether-an-ai-chatbot-got-quietly-downgraded) covers what to do when that direction feels like it reversed.",
         "citation_urls": []
       },
       {
@@ -5308,7 +5308,7 @@ window.RTFC_GUIDES = [
       },
       {
         "label": "RTFCLMGZN Scoreboard -- independently measured model scores and vendor list prices",
-        "url": "#/scoreboard"
+        "url": "/scoreboard"
       }
     ],
     "corrections": [],
@@ -5495,6 +5495,253 @@ window.RTFC_GUIDES = [
         "citation_urls": [
           "https://www.medianama.com/2026/09/223-amazon-pay-smart-wallet-agentic-upi/"
         ]
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g21",
+    "slug": "check-whether-an-ai-chatbot-got-quietly-downgraded",
+    "image": "assets/img/newsroom/g21.jpg",
+    "title": "How to check whether your AI chatbot actually got quietly downgraded",
+    "dek": "OpenAI is retiring GPT-3.5-turbo and GPT-4 outright on October 23, 2026 -- its widest cutoff yet -- while a 2023 Stanford and UC Berkeley study already caught GPT-4 losing 95 points of accuracy on a basic math check between two versions nobody announced. Two different problems, one two-minute way to tell which one you're dealing with.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-14T18:24:00Z",
+    "readMins": 5,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "A 2023 study caught GPT-4's math accuracy fall from 97.6% to 2.4% with no name change.",
+      "OpenAI retires GPT-3.5-turbo and GPT-4 outright on October 23, 2026 -- its widest cutoff yet.",
+      "OpenAI, Anthropic, and Google each publish deprecation dates, but on different minimum-notice schedules.",
+      "Check whether your app calls a pinned snapshot or a moving 'latest' alias first.",
+      "Caveat: a documented, scheduled retirement isn't the same problem as undisclosed quality drift."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Find out whether you're on a pinned model or a moving default, today.",
+        "text": "Check your app's settings or your API integration's model field for a dated snapshot name versus a bare 'latest' or default alias. That single fact decides whether change can reach you without warning."
+      },
+      {
+        "label": "Bookmark your vendor's actual deprecations page, not a rumor thread.",
+        "text": "OpenAI, Anthropic, and Google each publish a real deprecations or release-notes page, linked in this guide's sources. Check it before assuming a felt slowdown is either of the two documented causes below."
+      }
+    ],
+    "sources": [
+      {
+        "label": "How is ChatGPT's behavior changing over time?",
+        "url": "https://arxiv.org/abs/2307.09009",
+        "outlet": "arXiv (Stanford & UC Berkeley)",
+        "kind": "primary"
+      },
+      {
+        "label": "Not just in your head: ChatGPT's behavior is changing, say AI researchers",
+        "url": "https://venturebeat.com/ai/not-just-in-your-head-chatgpts-behavior-is-changing-say-ai-researchers",
+        "outlet": "VentureBeat",
+        "kind": "reporting"
+      },
+      {
+        "label": "ChatGPT's 'winter break' is the latest sign of model drift",
+        "url": "https://www.ciodive.com/news/chatgpt-lazy-winter-break-LLM-behavior-drifts/703165/",
+        "outlet": "CIO Dive",
+        "kind": "reporting"
+      },
+      {
+        "label": "Deprecations -- OpenAI API",
+        "url": "https://developers.openai.com/api/docs/deprecations",
+        "outlet": "OpenAI Developers",
+        "kind": "primary"
+      },
+      {
+        "label": "Model deprecations -- Claude Platform Docs",
+        "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "Gemini deprecations -- Gemini API",
+        "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+        "outlet": "Google AI for Developers",
+        "kind": "primary"
+      },
+      {
+        "label": "The same Claude model gives you 60 days notice on one platform and 184 on another",
+        "url": "https://dev.to/ai_changewatch/the-same-claude-model-gives-you-60-days-notice-on-one-platform-and-184-on-another-347p",
+        "outlet": "DEV Community",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI's own deprecations page lists October 23, 2026 as the date GPT-3.5-turbo, GPT-4, and a wave of other legacy model snapshots stop answering entirely -- the widest single cutoff the company has scheduled to date. That's not a downgrade. It's a disclosed retirement, announced months ahead, with a named replacement. The actual downgrade already has a documented case, and it's older: in 2023, Stanford and UC Berkeley researchers found GPT-4's accuracy on a basic \"is this number prime?\" check fall from 97.6% to 2.4% between two versions carrying the exact same model name, change announced nowhere. Two different problems produce the identical complaint -- \"my AI got worse\" -- and there's a fast, checkable way to tell which one is actually happening to you.",
+        "citation_urls": [
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://arxiv.org/abs/2307.09009",
+          "https://venturebeat.com/ai/not-just-in-your-head-chatgpts-behavior-is-changing-say-ai-researchers"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two different things hide behind the same complaint",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The first is real, measured model drift: the same product name producing different output over time, with no version bump a user would ever see. The Stanford/Berkeley study is still the clearest public evidence of it. Comparing GPT-3.5 and GPT-4 snapshots three months apart in 2023, the researchers found GPT-4 grew less willing to answer sensitive questions, made more formatting mistakes generating code, and, most sharply, went from 97.6% to 2.4% accuracy on the prime-number check above -- all under one unchanged model name. OpenAI's own account of a related, separate episode that December put the underlying problem plainly: after users reported ChatGPT giving shorter, lazier answers, the company said the model \"hadn't been updated since November 11\" and called chat-model training \"not a clean industrial process.\" Read together, both point at the same fact: quality can move without anything telling you it moved.",
+        "citation_urls": [
+          "https://arxiv.org/abs/2307.09009",
+          "https://venturebeat.com/ai/not-just-in-your-head-chatgpts-behavior-is-changing-say-ai-researchers",
+          "https://www.ciodive.com/news/chatgpt-lazy-winter-break-LLM-behavior-drifts/703165/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The second is ordinary vendor housekeeping that looks identical from the outside if you never check the calendar: a scheduled, disclosed retirement with a named replacement and a real lead time. None of the three deprecation pages behind this guide read like a [model card](/dictionary) explaining what changed in an update -- they're lifecycle calendars, dates and replacement names, nothing about behavior. But a calendar is checkable, and a feeling isn't.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What each vendor actually promises, and where to check it",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "OpenAI, Anthropic, and Google Gemini all publish real deprecation schedules now. The guarantees underneath them differ enough to matter: Anthropic promises at least 60 days' notice before a publicly released Claude model retires, while Google's own gemini-2.0-flash and other 2.0-series models are already scheduled to retire June 1, 2026, with no fixed minimum notice period stated at all.",
+        "citation_urls": [
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://ai.google.dev/gemini-api/docs/deprecations"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THREE VENDORS, THREE CLOCKS",
+          "title": "Model deprecation policy: OpenAI vs. Anthropic vs. Google Gemini",
+          "columns": [
+            {"label": "OpenAI"},
+            {"label": "Anthropic"},
+            {"label": "Google Gemini"}
+          ],
+          "rows": [
+            {
+              "label": "Minimum notice for a released model",
+              "values": [
+                "At least 6 months (GA); as little as 2 weeks for preview models",
+                "At least 60 days",
+                "No fixed minimum -- listed dates are 'earliest possible'"
+              ]
+            },
+            {
+              "label": "Where to check your exact model",
+              "values": [
+                "developers.openai.com deprecations page",
+                "platform.claude.com deprecations page + Console usage export",
+                "ai.google.dev deprecations + release notes pages"
+              ]
+            },
+            {
+              "label": "A confirmed 2026 example",
+              "values": [
+                "GPT-3.5-turbo and GPT-4 legacy snapshots retire October 23, 2026",
+                "Opus 4.1 retired August 5, 2026 -- 61 days after notice",
+                "gemini-2.0-flash and variants retire June 1, 2026"
+              ],
+              "note": "The same Anthropic model can carry a longer notice period on a partner platform -- see the row below."
+            }
+          ],
+          "source": "OpenAI, Anthropic, and Google's own deprecation documentation, current as of September 2026."
+        }
+      },
+      {
+        "type": "p",
+        "text": "That gap holds even within one vendor. An independent developer audit of Anthropic's own published numbers found the same Claude Opus 4.1 retirement carrying 61 days' notice on Anthropic's direct API and 184 days on AWS Bedrock -- same model, same retirement date, because the two platforms start the notice clock at a different moment. The platform you're actually calling can matter as much as which model you picked.",
+        "citation_urls": [
+          "https://dev.to/ai_changewatch/the-same-claude-model-gives-you-60-days-notice-on-one-platform-and-184-on-another-347p"
+        ]
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check whether your AI chatbot actually got downgraded",
+          "sub": "About five minutes -- longer only if you're digging through an unfamiliar settings menu for the first time.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The app or API you're using, and five minutes to check its settings or a vendor documentation page."
+          ],
+          "steps": [
+            {
+              "do": "Find out whether you're calling a pinned, dated model or a moving default.",
+              "detail": "Check your API integration's model field, or the app's model-selector setting, for a dated snapshot name versus a bare 'latest' or default label.",
+              "verify": "You can say definitively whether you're pinned to a snapshot or riding a moving alias.",
+              "ifnot": "If it's a moving alias, expect behavior to change without warning -- that's what 'latest' means, not a malfunction."
+            },
+            {
+              "do": "Check the vendor's own deprecations page for your exact model name.",
+              "detail": "OpenAI, Anthropic, and Google each list every model's current lifecycle stage and retirement date on the pages in this guide's sources -- not a forum thread, the vendor's own documentation.",
+              "verify": "Your model shows up as active, legacy, deprecated, or retired -- not a guess based on how the answers feel.",
+              "ifnot": "If your model isn't listed at all, you're likely on the consumer app rather than the API -- check that product's own release notes instead."
+            },
+            {
+              "do": "Check whether the product documents tiered or routed responses for your account.",
+              "detail": "Some products openly route free-tier or high-demand users to a lighter model under load -- a real, disclosed practice, and not the same problem as undisclosed drift.",
+              "verify": "You found the product's own statement on how it assigns which model answers you, if one exists.",
+              "ifnot": "If you can't find any such statement, don't assume routing explains what you're seeing -- move to the next step."
+            },
+            {
+              "do": "Test it, rather than trusting your memory of how it used to feel.",
+              "detail": "Save a fixed prompt and its answer, then re-run the same prompt later and compare against that saved baseline -- not against a general impression of last month.",
+              "verify": "You have a saved, timestamped comparison, not a feeling that this week is worse than last week.",
+              "ifnot": "Without a saved baseline, you genuinely can't tell drift from a bad day -- start saving one now, for next time."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this requires taking a vendor's word over your own experience. It requires checking a specific page instead of a general impression -- the same discipline [our guide to verifying an AI benchmark claim](/article/how-to-verify-an-ai-benchmark-claim) applies to a company's own performance claims holds up just as well pointed at your own account. And the underlying tradeoff is the same one [our guide to deciding between self-hosting and an API](/article/self-host-or-api-how-to-decide) covers at a larger scale: an API user gets every improvement a vendor ships for free, and inherits every change for free too, with no more warning than that vendor's own deprecations page provides.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Three ways this gets misdiagnosed",
+          "items": [
+            {
+              "mistake": "Assuming a same-named model can't have changed.",
+              "looks": "\"It's still called GPT-4 / Claude / Gemini, so it can't be any different than before.\"",
+              "why": "The 2023 Stanford/Berkeley study is the documented counterexample: one unchanged model name, a measured drop from 97.6% to 2.4% on a basic math check.",
+              "fix": "Check for a pinned snapshot versus a moving default, per step 1, rather than trusting the label.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Confusing a scheduled retirement with quality drift.",
+              "looks": "A model stops answering entirely on a specific date, and it reads as the AI 'getting worse' rather than being retired on schedule.",
+              "why": "Vendors publish these dates months out -- OpenAI's October 23, 2026 wave was announced back in June, not sprung without warning.",
+              "fix": "Check the vendor's actual deprecations page, per step 2, before concluding anything about quality.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Treating a personal impression as measurement.",
+              "looks": "\"It just feels dumber this week\" becomes the entire case.",
+              "why": "[Matching a job to a model tier](/article/which-ai-for-which-job) leans on an independent leaderboard for exactly this reason -- vendor claims and personal impressions both drift, and only a dated, external comparison settles which one moved.",
+              "fix": "Save a baseline and compare against a dated source, per step 4, instead of trusting memory.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The larger shift here is structural, not a conspiracy: three vendors are now retiring models on a real, published cadence, at a scale and specificity that wasn't public two years ago. That's progress -- a checkable calendar beats a vibe. Check it before concluding a model got worse. Often the honest answer is that it didn't change at all, and neither did you -- the model just kept doing exactly what an unpinned 'latest' alias always promised it might.",
+        "citation_urls": []
       }
     ],
     "corrections": []

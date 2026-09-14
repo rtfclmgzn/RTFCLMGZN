@@ -22890,7 +22890,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
       },
       {
         "type": "p",
-        "text": "Goldman Sachs and Morgan Stanley served as financial advisors on the transaction. OpenRouter's founding team will operate as a distinct business unit within Stripe, according to the company's announcement — a common structure for infrastructure acquisitions where the integrated product's existing user base and operational culture are assets themselves, not liabilities to be absorbed.",
+        "text": "Goldman Sachs and Morgan Stanley served as financial advisors on the transaction. OpenRouter's founding team will operate as a distinct business unit within Stripe, according to the company's announcement — a common structure for infrastructure acquisitions where the integrated product's existing user base and operational culture are assets themselves, not liabilities to be absorbed. A routing layer changing hands is also a reminder that the model answering a given request can change underneath a user without any announcement at all — [our guide to checking whether an AI chatbot got quietly downgraded](/article/check-whether-an-ai-chatbot-got-quietly-downgraded) covers how to tell the difference between that and a disclosed vendor retirement.",
         "citation_urls": [
           "https://dataconomy.com/2026/08/17/stripe-acquire-openrouter-deal-7-billion/",
           "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion"
