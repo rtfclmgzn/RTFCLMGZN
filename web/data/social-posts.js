@@ -19075,7 +19075,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Trump called Dario Amodei's AI-slowdown warning a 'SICK conspiracy.' His own AI czar, David Sacks, had a sharper answer: stop pretending you need our permission -- just do it.",
         "reply_copy": "The full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AISafety"],
+        "hashtags": [
+          "#Anthropic",
+          "#AISafety"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -19086,21 +19089,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The same week Trump dismissed AI-slowdown warnings as fake, a poll found 70% of adults worry more about AI than feel excited by it. Public sentiment may be closer to the warning than to either official response.",
         "reply_copy": "The numbers:",
         "link_in_reply": true,
-        "hashtags": ["#AI"],
+        "hashtags": [
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Trump called the AI industry's own warning about itself a 'SICK conspiracy.'\n\nHis AI czar David Sacks disagreed with him too -- just from a completely different angle: stop asking permission, and prove the slowdown is really about safety, not liability.\n\nFull breakdown at the link in bio.",
-        "hashtags": ["#AI", "#AISafety", "#Anthropic", "#OpenAI", "#TechPolicy", "#ArtificialIntelligence"],
+        "hashtags": [
+          "#AI",
+          "#AISafety",
+          "#Anthropic",
+          "#OpenAI",
+          "#TechPolicy",
+          "#ArtificialIntelligence"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Two days after Anthropic's Dario Amodei called for AI companies to deliberately slow down, President Trump dismissed the warning as a 'SICK conspiracy' benefiting China. But the sharper pushback came from inside his own administration: AI czar David Sacks told Amodei and Sam Altman they don't need government permission to pace themselves -- and suggested the real motive is dodging liability, not safety.",
-        "hashtags": ["#AI", "#AIPolicy"],
+        "hashtags": [
+          "#AI",
+          "#AIPolicy"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -19152,9 +19167,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "A startup will sell you an open AI model with its safety refusals surgically removed -- $5/million tokens, no ID required. TechCrunch got it to write malware and a pathogen-culturing protocol on a free account.",
         "reply_copy": "How it works:",
         "link_in_reply": true,
-        "hashtags": ["#AISafety", "#Cybersecurity"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AISafety",
+          "#Cybersecurity"
+        ],
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099727220755308812",
+        "remote_id": "2099727220755308812",
+        "posted_at": "2026-09-15T05:09:15Z"
       },
       {
         "platform": "x",
@@ -19163,29 +19183,45 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The company's own site says it keeps zero logs. Independent reporting says it actually retains billing metadata -- token counts, timestamps, the stuff a metered API can't run without. The two claims don't match.",
         "reply_copy": "The conflict:",
         "link_in_reply": true,
-        "hashtags": ["#AI"],
+        "hashtags": [
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Abliteration.ai sells a version of a real open-weight AI model with its safety refusals surgically removed. $5 a million tokens. No ID required.\n\nTechCrunch tested it on a free account and got malware code and a pathogen-culturing protocol out of it.\n\nThe company says it keeps zero logs. Independent reporting says that's not quite true.\n\nFull story at the link in bio.",
-        "hashtags": ["#AI", "#AISafety", "#Cybersecurity", "#TechNews", "#OpenSource", "#ArtificialIntelligence"],
+        "hashtags": [
+          "#AI",
+          "#AISafety",
+          "#Cybersecurity",
+          "#TechNews",
+          "#OpenSource",
+          "#ArtificialIntelligence"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "A startup called Abliteration.ai is selling modified versions of open-weight AI models with their safety training stripped out -- no identity check required. TechCrunch's own testing got the service to write password-stealing code and a dangerous pathogen-culturing protocol on a free account. The company says it keeps no logs of what users do with it; independent reporting says that's not quite accurate.",
-        "hashtags": ["#AI", "#AISafety"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#AISafety"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120546907396947",
+        "remote_id": "1238977099292018_122120546907396947",
+        "posted_at": "2026-09-15T05:12:50Z"
       },
       {
         "platform": "threads",
         "copy": "A startup will sell you GLM-5.3 with its safety refusals surgically removed for $5 a million tokens, no ID required. TechCrunch got it to write malware and a pathogen-culturing protocol on a free account. The company's own 'zero logging' claim doesn't match what reporters found.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdS7sUPkdN2",
+        "remote_id": "18177434896428480",
+        "posted_at": "2026-09-15T05:13:12Z"
       },
       {
         "platform": "threads",
@@ -19198,8 +19234,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "A startup sells AI models with their safety refusals stripped out, $5/million tokens, no ID required. TechCrunch got malware code and a pathogen protocol out of it on a free account.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvjuhyb4d725",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvjuhyb4d725",
+        "posted_at": "2026-09-15T05:13:20Z"
       }
     ]
   },
@@ -19229,35 +19267,58 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "A handheld device that pairs AI with ultrasound just won a federal tech-transfer award -- built to let a combat medic, not a vascular specialist, place a catheter in a patient's deep vein.",
         "reply_copy": "How it works:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#HealthTech"],
+        "hashtags": [
+          "#AI",
+          "#HealthTech"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
         "copy": "AI-GUIDE pairs a handheld ultrasound probe with AI software that helps a combat medic -- not a trained specialist -- place a catheter in a patient's deep artery or vein.\n\nBuilt by MIT Lincoln Laboratory and Mass General Hospital. Just won a federal tech-transfer award.\n\nStill a prototype -- not on the market yet. Not medical advice.",
-        "hashtags": ["#AI", "#HealthTech", "#MedTech", "#MIT", "#Innovation", "#ArtificialIntelligence"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#HealthTech",
+          "#MedTech",
+          "#MIT",
+          "#Innovation",
+          "#ArtificialIntelligence"
+        ],
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdS7Kd4jq1L/",
+        "remote_id": "18070482962739077",
+        "posted_at": "2026-09-15T05:08:36Z"
       },
       {
         "platform": "facebook",
         "copy": "A handheld device that pairs AI software with a commercial ultrasound probe just won the Federal Laboratory Consortium's 2026 Excellence in Technology Transfer Award. AI-GUIDE, built by MIT Lincoln Laboratory and Massachusetts General Hospital with US Army funding, is designed to help a minimally trained user -- a combat medic, not a vascular specialist -- place a catheter in a patient's deep artery or vein. It holds FDA Breakthrough Device Designation but isn't a shipping product yet.",
-        "hashtags": ["#AI", "#HealthTech"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#HealthTech"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120546571396947",
+        "remote_id": "1238977099292018_122120546571396947",
+        "posted_at": "2026-09-15T05:08:47Z"
       },
       {
         "platform": "threads",
         "copy": "A handheld device pairing AI with ultrasound just won a federal tech-transfer award -- built to let a combat medic, not a specialist, place a catheter in a deep vein or artery. MIT Lincoln Lab + Mass General, funded by the Army. Still a prototype, not a shipping product yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdS7NsXEeHE",
+        "remote_id": "18129092422780575",
+        "posted_at": "2026-09-15T05:09:03Z"
       },
       {
         "platform": "bluesky",
         "copy": "A handheld AI + ultrasound device just won a federal tech-transfer award -- built to let a combat medic, not a specialist, place a catheter in a deep vein. Still a prototype.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvjuak4itd2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvjuak4itd2o",
+        "posted_at": "2026-09-15T05:09:09Z"
       }
     ]
   }
