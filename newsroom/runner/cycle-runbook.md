@@ -820,6 +820,19 @@ this order, and mark it done here.
    new `primer-issue.js`-only candidate found. Did not force one. Same two
    next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-15T00:46 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Trump and David Sacks' dueling
+   rejections of the Amodei/Altman/Musk AI-slowdown call, Abliteration.ai's
+   commercial guardrail-stripped GLM-5.3 resale, and the AI-GUIDE battlefield
+   catheter device's federal tech-transfer award) plus the full §4b/§4c/§4d
+   passes were already the required work; guide cadence read 1 day (a guide
+   published 2026-09-14), so §3d needed no action. §3c backfill search found
+   zero articles below their format's component floor -- still empty. The
+   `ALLOWED_PREFIXES` blocker is unchanged (confirmed by reading
+   `verify_publish_surface.py` directly). No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Same next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -979,6 +992,12 @@ loophole ahead of a US-China AI summit, and a UBTech/1X companion-robot claims c
 §4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns nothing,
 and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next
 steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-15T00:46 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Trump/Sacks vs. the Amodei pacing call, Abliteration.ai's guardrail-stripped model resale, and
+the AI-GUIDE tech-transfer award) plus the full §4b/§4c/§4d passes were already the required work:
+`find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials
+exist on this runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
