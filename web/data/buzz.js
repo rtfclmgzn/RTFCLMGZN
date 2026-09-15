@@ -389,5 +389,11 @@ window.RTFC_BUZZ = [
     text:"Netflix premiered 'The AI Doc: Or How I Became an Apocaloptimist' on September 15, 2026, a documentary by Oscar-winner Daniel Roher that explores AI's existential threats and promises through interviews with leading experts, including OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei. The 95-minute film frames the conversation around Roher's own impending fatherhood, balancing existential anxiety with optimism about what his child's world might become.",
     why:"A mainstream-platform documentary centering on frontier-lab CEOs discussing AI safety anxieties, arriving the same week multiple safety researchers resigned from major labs citing internal-external gaps on risk, reflects how the gap between public framing and private concern has become visible enough for general-audience media to center a feature on it.",
     heat:48, topics:["netflix","ai safety","sam altman","dario amodei","documentary","existential risk","frontier labs"],
-    url:"https://variety.com/feature/whats-on-netflix-movies-shows-1203517873/" }
+    url:"https://variety.com/feature/whats-on-netflix-movies-shows-1203517873/" },
+{ id:"bz-603", date:"2026-09-15",
+    source:{ name:"Agility Robotics", handle:"agilityrobotics", platform:"web", kind:"lab" },
+    text:"Agility Robotics unveiled Digit 5, its fifth-generation humanoid, engineered for cooperatively safe work at scale without physical barriers -- using AI and multiple sensors to detect nearby people and either steer around them, stop, or sit down. The hardware upgrade includes 40% higher payload capacity (up to 50 lb per lift), a 90-minute battery fast-charging in 9 minutes for a 10:1 run-to-charge ratio, and swappable ISO-standard end-effectors. Agility has reported $300+ million in multi-year customer orders, expects early access in H1 2027 and general availability by end of 2027, and plans European market expansion.",
+    why:"A funded humanoid shipping cooperatively-safe work mechanisms without safety cages—and claiming $300M+ in pre-orders for a product still 6-9 months from availability—is the clearest signal yet that industrial robots are moving from prototype demonstration to actual customer commitment at scale.",
+    heat:61, topics:["agility robotics","digit 5","humanoid robots","industrial automation","safety","ai sensors"],
+    url:"https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/" }
 ];
