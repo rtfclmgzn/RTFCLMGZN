@@ -503,5 +503,11 @@ window.RTFC_BUZZ = [
     text:"Microsoft published the Humanist AI Code of Conduct in public comment, a principles document meant to govern how AI models should operate—the first major lab's governance framework to come with actual prose, not just pledge language. The Code covers fairness, accountability, transparency, and safety, and is explicitly positioned as a draft open for feedback before Microsoft embeds it as a binding internal standard.",
     why:"A frontier lab publishing an actual governance document for public feedback—not just a press release about having values—is the concrete machinery behind the week's broader AI-safety pledges from OpenAI, Anthropic and Elon Musk. Whether the community comment period produces binding changes is the next measure of whether this was document-washing or actual deliberation.",
     heat:52, topics:["microsoft","ai ethics","governance","code of conduct","humanist","ai safety","policy"],
-    url:"https://www.microsoft.com/en-us/research/publication/the-humanist-ai-code-of-conduct/" }
+    url:"https://www.microsoft.com/en-us/research/publication/the-humanist-ai-code-of-conduct/" },
+{ id:"bz-600", date:"2026-09-15",
+    source:{ name:"Netflix", handle:"Netflix", platform:"web", kind:"news" },
+    text:"Netflix premiered 'The AI Doc: Or How I Became an Apocaloptimist' on September 15, 2026, a documentary by Oscar-winner Daniel Roher that explores AI's existential threats and promises through interviews with leading experts, including OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei. The 95-minute film frames the conversation around Roher's own impending fatherhood, balancing existential anxiety with optimism about what his child's world might become.",
+    why:"A mainstream-platform documentary centering on frontier-lab CEOs discussing AI safety anxieties, arriving the same week multiple safety researchers resigned from major labs citing internal-external gaps on risk, reflects how the gap between public framing and private concern has become visible enough for general-audience media to center a feature on it.",
+    heat:48, topics:["netflix","ai safety","sam altman","dario amodei","documentary","existential risk","frontier labs"],
+    url:"https://variety.com/feature/whats-on-netflix-movies-shows-1203517873/" }
 ];
