@@ -566,3 +566,22 @@
   first wrote them. Fixed in place; still no dedicated sweep-and-check pass exists for this pattern
   across all files at once, and one keeps being worth doing given how many times it's recurred one
   file at a time.
+- **2026-09-15** (newsroom cycle, ~15:xx UTC): three notes from this cycle. (1)
+  `component_audit`'s numeric-provenance check is a literal substring match -- a `beforeafter`/
+  `ledger` value like `"3-5x"` is NOT satisfied by prose that spells it out as "three to five
+  times"; the digits have to appear in the body text in the same form the component uses them
+  (`"3-5x"`, not the words). Cost one avoidable audit failure this cycle before the prose was
+  changed to match. (2) `verify_covers.py pick` had zero eligible library images for two of three
+  stories this cycle (a Policy/AI-crawler story, a Robotics/humanoid story) -- every image tagged
+  to those sections had been used within the last 90 days, so the tool's scoring fell back to
+  irrelevant, never-used images (a surgical-robot photo, silicon-die macros) that technically
+  scored highest only because nothing else was eligible. Checking the raw candidate pool (`used_in`
+  dates vs. `best_for_sections`/`subjects`) before trusting the tool's own top `PICK` line would
+  have caught this faster -- it doesn't warn when its top pick is a semantic non-match, only when
+  there are zero candidates at all. Generated fresh art for both per the runbook's own fallback
+  path rather than shipping a mismatched cover. (3) When adding a new `companies.js` entry whose
+  name is a common English word ("Digit"), a naive `\bdigit\b` regex will false-positive-match on
+  any article using the word literally (page counts, phone numbers, benchmark scores). Anchored the
+  pattern to the specific product names instead (`digit 4\b|digit 5\b|digit humanoid`) -- worth
+  checking any new company/product regex against common-word collision before shipping it, not just
+  against whether it matches the story that prompted adding the entry.
