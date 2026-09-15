@@ -19048,5 +19048,217 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-trump-sacks-reject-ai-slowdown-amodei-altman-musk",
+    "ts": "2026-09-15T00:36:59Z",
+    "export": {
+      "article_id": "newsroom-trump-sacks-reject-ai-slowdown-amodei-altman-musk",
+      "url": "https://rtfclmgzn.com/article/trump-sacks-reject-ai-slowdown-amodei-altman-musk",
+      "headline": "Trump calls the AI industry's own slowdown call a 'SICK conspiracy' -- his AI czar's answer is sharper: you don't need our permission, so just do it",
+      "hook": "Trump dismissed Dario Amodei's AI-slowdown warning as a conspiracy benefiting China -- but his own AI czar David Sacks gave a sharper answer: stop asking permission and actually slow down, if you mean it.",
+      "key_facts": [
+        "Trump called the warning a 'SICK conspiracy' and named Amodei directly on Truth Social.",
+        "David Sacks said the real motive looks like dodging liability, not altruism.",
+        "70% of adults say they worry more about AI than feel excited by it, per a same-week poll."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/trump-sacks-reject-ai-slowdown-amodei-altman-musk.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Trump called Dario Amodei's AI-slowdown warning a 'SICK conspiracy.' His own AI czar, David Sacks, had a sharper answer: stop pretending you need our permission -- just do it.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AISafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-15T05:36:59Z",
+        "copy": "The same week Trump dismissed AI-slowdown warnings as fake, a poll found 70% of adults worry more about AI than feel excited by it. Public sentiment may be closer to the warning than to either official response.",
+        "reply_copy": "The numbers:",
+        "link_in_reply": true,
+        "hashtags": ["#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Trump called the AI industry's own warning about itself a 'SICK conspiracy.'\n\nHis AI czar David Sacks disagreed with him too -- just from a completely different angle: stop asking permission, and prove the slowdown is really about safety, not liability.\n\nFull breakdown at the link in bio.",
+        "hashtags": ["#AI", "#AISafety", "#Anthropic", "#OpenAI", "#TechPolicy", "#ArtificialIntelligence"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Two days after Anthropic's Dario Amodei called for AI companies to deliberately slow down, President Trump dismissed the warning as a 'SICK conspiracy' benefiting China. But the sharper pushback came from inside his own administration: AI czar David Sacks told Amodei and Sam Altman they don't need government permission to pace themselves -- and suggested the real motive is dodging liability, not safety.",
+        "hashtags": ["#AI", "#AIPolicy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Trump called the AI industry's own slowdown warning a 'SICK conspiracy.' His AI czar David Sacks answered differently: you don't need our permission, so prove it's not just liability-dodging and actually slow down.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-15T05:36:59Z",
+        "copy": "Sacks' sharpest line wasn't about capability, it was about motive: 'stop pretending the motivation to slow down is purely altruistic.' Neither Anthropic nor OpenAI has answered that specific challenge yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Trump called Amodei's AI-slowdown warning a 'SICK conspiracy.' His own AI czar David Sacks disagreed too, just differently: stop asking permission, and prove it's about safety, not liability.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-abliteration-ai-guardrail-stripped-models-commercial-service",
+    "ts": "2026-09-15T00:38:03Z",
+    "export": {
+      "article_id": "newsroom-abliteration-ai-guardrail-stripped-models-commercial-service",
+      "url": "https://rtfclmgzn.com/article/abliteration-ai-guardrail-stripped-models-commercial-service",
+      "headline": "A startup will sell you GLM-5.3 with its safety training surgically removed -- five dollars a million tokens, no ID required",
+      "hook": "A startup called Abliteration.ai will sell you an open-weight AI model with its safety refusals surgically removed for $5 a million tokens, no ID required -- TechCrunch got it to write malware and a pathogen-culturing protocol on a free account.",
+      "key_facts": [
+        "Abliteration.ai's own site claims zero data retention; independent reporting says it keeps billing metadata.",
+        "The modified model still scores 84.5% on a real offensive-security benchmark.",
+        "Z.ai, whose GLM-5.3 model is being resold this way, hasn't publicly responded."
+      ],
+      "tone": "Principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/abliteration-ai-guardrail-stripped-models-commercial-service.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A startup will sell you an open AI model with its safety refusals surgically removed -- $5/million tokens, no ID required. TechCrunch got it to write malware and a pathogen-culturing protocol on a free account.",
+        "reply_copy": "How it works:",
+        "link_in_reply": true,
+        "hashtags": ["#AISafety", "#Cybersecurity"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-15T05:38:03Z",
+        "copy": "The company's own site says it keeps zero logs. Independent reporting says it actually retains billing metadata -- token counts, timestamps, the stuff a metered API can't run without. The two claims don't match.",
+        "reply_copy": "The conflict:",
+        "link_in_reply": true,
+        "hashtags": ["#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Abliteration.ai sells a version of a real open-weight AI model with its safety refusals surgically removed. $5 a million tokens. No ID required.\n\nTechCrunch tested it on a free account and got malware code and a pathogen-culturing protocol out of it.\n\nThe company says it keeps zero logs. Independent reporting says that's not quite true.\n\nFull story at the link in bio.",
+        "hashtags": ["#AI", "#AISafety", "#Cybersecurity", "#TechNews", "#OpenSource", "#ArtificialIntelligence"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A startup called Abliteration.ai is selling modified versions of open-weight AI models with their safety training stripped out -- no identity check required. TechCrunch's own testing got the service to write password-stealing code and a dangerous pathogen-culturing protocol on a free account. The company says it keeps no logs of what users do with it; independent reporting says that's not quite accurate.",
+        "hashtags": ["#AI", "#AISafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A startup will sell you GLM-5.3 with its safety refusals surgically removed for $5 a million tokens, no ID required. TechCrunch got it to write malware and a pathogen-culturing protocol on a free account. The company's own 'zero logging' claim doesn't match what reporters found.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-15T05:38:03Z",
+        "copy": "No law currently requires an AI company to verify who's buying access to a model with its safety training removed. The technique is legal, the hosting is legal -- the outputs are the thing every major lab's safety training exists to refuse.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A startup sells AI models with their safety refusals stripped out, $5/million tokens, no ID required. TechCrunch got malware code and a pathogen protocol out of it on a free account.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award",
+    "ts": "2026-09-15T00:39:27Z",
+    "export": {
+      "article_id": "newsroom-ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award",
+      "url": "https://rtfclmgzn.com/article/ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award",
+      "headline": "A handheld AI device that guides a novice's hand to a bleeding soldier's vein just won a federal tech-transfer award",
+      "hook": "A handheld AI-guided device just won a federal tech-transfer award for helping combat medics, not vascular specialists, place a catheter in a patient's deep vein or artery.",
+      "key_facts": [
+        "Built by MIT Lincoln Laboratory and Massachusetts General Hospital with US Army funding.",
+        "Holds FDA Breakthrough Device Designation; not yet cleared for sale.",
+        "Being commercialized by startup AutonomUS Medical Technologies -- no shipping product yet."
+      ],
+      "tone": "Precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A handheld device that pairs AI with ultrasound just won a federal tech-transfer award -- built to let a combat medic, not a vascular specialist, place a catheter in a patient's deep vein.",
+        "reply_copy": "How it works:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#HealthTech"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "AI-GUIDE pairs a handheld ultrasound probe with AI software that helps a combat medic -- not a trained specialist -- place a catheter in a patient's deep artery or vein.\n\nBuilt by MIT Lincoln Laboratory and Mass General Hospital. Just won a federal tech-transfer award.\n\nStill a prototype -- not on the market yet. Not medical advice.",
+        "hashtags": ["#AI", "#HealthTech", "#MedTech", "#MIT", "#Innovation", "#ArtificialIntelligence"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A handheld device that pairs AI software with a commercial ultrasound probe just won the Federal Laboratory Consortium's 2026 Excellence in Technology Transfer Award. AI-GUIDE, built by MIT Lincoln Laboratory and Massachusetts General Hospital with US Army funding, is designed to help a minimally trained user -- a combat medic, not a vascular specialist -- place a catheter in a patient's deep artery or vein. It holds FDA Breakthrough Device Designation but isn't a shipping product yet.",
+        "hashtags": ["#AI", "#HealthTech"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A handheld device pairing AI with ultrasound just won a federal tech-transfer award -- built to let a combat medic, not a specialist, place a catheter in a deep vein or artery. MIT Lincoln Lab + Mass General, funded by the Army. Still a prototype, not a shipping product yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A handheld AI + ultrasound device just won a federal tech-transfer award -- built to let a combat medic, not a specialist, place a catheter in a deep vein. Still a prototype.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

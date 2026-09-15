@@ -60796,6 +60796,557 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Builds the comparison table a wire rewrite of Microsoft's own announcement wouldn't have built -- checking the public-comment claim against what Anthropic and OpenAI's own frameworks actually did -- and states plainly, via the counter component, that the document is voluntary and unenforced rather than letting the announcement's framing stand unchallenged."
       }
     }
+  },
+  {
+    "slug": "trump-sacks-reject-ai-slowdown-amodei-altman-musk",
+    "title": "Trump calls the AI industry's own slowdown call a 'SICK conspiracy' -- his AI czar's answer is sharper: you don't need our permission, so just do it",
+    "dek": "Two days after Anthropic's Dario Amodei proposed slowing frontier AI development, with Sam Altman and Elon Musk publicly agreeing, President Trump dismissed the warning on Truth Social as a conspiracy that benefits only China. White House AI czar David Sacks answered differently: neither Amodei nor Altman needs the government's permission to pace themselves, and framing it as a policy ask looks more like liability-dodging than altruism.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether Sacks' challenge gets a direct answer",
+        "text": "Sacks said Amodei and Altman don't need government permission to pace themselves and challenged them to prove the ask is about safety rather than liability. Neither company has publicly responded to that specific challenge."
+      },
+      {
+        "label": "Watch what, if anything, the administration actually restricts",
+        "text": "Trump said the government already has \"tremendous criminal and regulatory power\" over AI companies. No order, review, or enforcement action naming a specific company has followed the post."
+      },
+      {
+        "label": "Watch whether the poll numbers move policy before they move an election",
+        "text": "70% of adults say they worry more about AI than they feel excited by it, and 69% oppose a data center in their own community, per the same week's reporting -- numbers neither side's messaging is built around yet."
+      }
+    ],
+    "sources": [
+      {
+        "label": "We Must Pace the Frontier",
+        "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+        "outlet": "Dario Amodei",
+        "kind": "primary"
+      },
+      {
+        "label": "Trump responds to call by CEOs of Anthropic, OpenAI and xAI to slow AI down: 'Whoever wins AI wins'",
+        "url": "https://www.yahoo.com/news/us/article/trump-responds-to-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-ai-wins-182008851.html",
+        "outlet": "Yahoo News",
+        "kind": "reporting"
+      },
+      {
+        "label": "Trump says calls for more control on AI are a 'SICK conspiracy'",
+        "url": "https://www.aljazeera.com/news/2026/9/14/trump-says-calls-for-more-control-on-ai-are-a-sick-conspiracy",
+        "outlet": "Al Jazeera",
+        "kind": "reporting"
+      },
+      {
+        "label": "Trump says AI doesn't need guardrails, only a 'high IQ' president",
+        "url": "https://www.nbcnews.com/politics/trump-administration/trump-rejects-ai-guardrails-rcna597700",
+        "outlet": "NBC News",
+        "kind": "reporting"
+      },
+      {
+        "label": "David Sacks: Why Do AI Companies Need Washington's Permission To Slow Down?",
+        "url": "https://townhall.com/news/dmitri-bolt/2026/09/14/david-sacks-why-do-ai-companies-need-government-permission-to-slow-down-n2682937",
+        "outlet": "Townhall",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Trump called the AI industry's own slowdown warning a 'SICK conspiracy' benefiting only China.",
+      "The warning came from Anthropic's Dario Amodei, backed publicly by Sam Altman and Elon Musk.",
+      "White House AI czar David Sacks answered differently: pace yourselves, you don't need our permission.",
+      "Sacks suggested the real motive is dodging liability for a damaging AI-enabled cyberattack.",
+      "Caveat: the same week, a poll found 70% more worried about AI than excited by it."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "President Trump used his Truth Social account on Monday to call the AI industry's own warning about itself a **SICK conspiracy** -- two days after [Anthropic](/company/anthropic) chief executive Dario Amodei proposed a deliberate slowdown in frontier AI capability, and one day after [OpenAI](/company/openai)'s Sam Altman and xAI's Elon Musk both said in public that Amodei was right. “There is a SICK conspiracy going on against AI and Data Centers, and the only one that is happy about it is China,” Trump wrote, adding that his administration already has “tremendous CRIMINAL and REGULATORY power over these companies” and does not need new limits. He named Amodei directly, writing that the administration “has stopped AI 'people' from doing bad, or potentially bad, 'things,' like Dario (Anthropic!), who is now pretending to be a 'perfect little angel.'”",
+        "citation_urls": [
+          "https://www.aljazeera.com/news/2026/9/14/trump-says-calls-for-more-control-on-ai-are-a-sick-conspiracy",
+          "https://www.nbcnews.com/politics/trump-administration/trump-rejects-ai-guardrails-rcna597700"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The Monday post followed a milder dismissal a day earlier, when Trump told reporters, “We're leading China in AI... and frankly, I want to keep it that way, because whoever wins AI wins,” waving off the specific dangers Amodei named as coming from “negative forces” pushing “things that won't happen.” Amodei's essay, published the Saturday before, argued close to the opposite: that AI agents given real autonomy are advancing fast enough -- through what he calls **recursive self-improvement** -- that a swarm of them could plausibly ==seize control of large parts of the internet== within six to twelve months, causing what he estimated at hundreds of billions of dollars in damage without new safeguards.",
+        "citation_urls": [
+          "https://www.yahoo.com/news/us/article/trump-responds-to-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-ai-wins-182008851.html",
+          "https://darioamodei.com/post/we-must-pace-the-frontier"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Amodei's essay wasn't a one-line plea. It laid out a **three-step plan**, starting with outside evaluators getting employee-level access to frontier models -- a commitment [Anthropic made immediately for itself, with Altman promising to match it \"soon\" and Musk offering three words of agreement and no commitment of his own](/article/dario-amodei-pace-the-frontier-altman-musk). [Microsoft separately published an actual governance document](/article/microsoft-humanist-ai-code-of-conduct-nadella-draft) the same week, putting named prohibitions behind Satya Nadella's own endorsement of the pacing idea. Trump and Sacks were both responding to the headline ask -- slow down -- not to any of the specific mechanics underneath it.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The sharper answer didn't come from Trump. David Sacks -- the venture investor Trump appointed as the White House's AI and crypto czar -- posted his own response on X over the same weekend, and it reads nothing like the president's. “Dario has written that we need to 'pace the frontier,' and Sam has agreed... People may be surprised by my response: go ahead,” Sacks wrote, arguing that Amodei and Altman together hold close to a **duopoly on frontier intelligence** and therefore need no one's permission to slow down if they actually mean it. His pointed claim was about motive, not capability: __stop pretending the motivation to slow down is purely altruistic__, he wrote, arguing the real driver is the “massive product-liability exposure” either company would face if one of its models enabled a serious cyberattack.",
+        "citation_urls": [
+          "https://townhall.com/news/dmitri-bolt/2026/09/14/david-sacks-why-do-ai-companies-need-government-permission-to-slow-down-n2682937"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The two responses land on the same bottom line -- no new federal restriction -- by two different roads. Trump's post treats the underlying risk as manufactured, attributed to unnamed “negative forces.” Sacks doesn't dispute that Amodei and Altman may be seeing something concerning in unreleased models; he disputes that seeing it requires a government process at all, since the companies could simply act on their own authority. {{note: Sacks sits on the President's Council of Advisors on Science and Technology -- the same administration Trump was defending in the same 48 hours, making two different arguments from inside it.}} That distinction matters for what happens next: an administration that thinks the risk is fake has no reason to act on it, and one that thinks the risk is real but belongs to Anthropic and OpenAI to solve has no reason to act on it either.",
+        "citation_urls": []
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "What the public thinks, while the industry argues",
+          "unit": "%",
+          "source": "NBC News Decision Desk poll, reported Sept. 14, 2026",
+          "data": [
+            { "label": "Worry more about AI than feel excited by it", "value": 70 },
+            { "label": "Oppose a data center in their own community", "value": 69 }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Neither response was built around this: the same week's reporting on Trump's post cited an NBC News Decision Desk poll finding that 70% of American adults say they worry more about AI than they feel excited by it, and 69% oppose a data center being built in their own community. On the numbers, ==public sentiment sits closer to Amodei's alarm than to either the president's dismissal or his AI czar's liability argument==.",
+        "citation_urls": [
+          "https://www.nbcnews.com/politics/trump-administration/trump-rejects-ai-guardrails-rcna597700"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            { "who": "Anthropic and OpenAI", "tone": "exposed", "what": "Publicly committed to a voluntary slowdown the White House is now actively arguing against, with no legal obligation to follow through." },
+            { "who": "Chinese AI developers", "tone": "unclear", "what": "Named by Trump as the sole beneficiary of any US slowdown, though neither post cites evidence for the claim." },
+            { "who": "US AI-safety researchers and advocates", "tone": "loses", "what": "Lose the clearest opening yet for a policy response, with the administration publicly framing the underlying warning as fabricated." }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "What the last 72 hours produced is three claims -- Amodei's, Trump's, and Sacks' -- doing very different amounts of work for how confidently each is stated. Sacks put his sharpest line under his own name, not anonymously:",
+        "citation_urls": []
+      },
+      {
+        "type": "quote",
+        "text": "“Stop pretending the motivation to slow down is purely altruistic.” — David Sacks, White House AI and crypto czar",
+        "citation_urls": [
+          "https://townhall.com/news/dmitri-bolt/2026/09/14/david-sacks-why-do-ai-companies-need-government-permission-to-slow-down-n2682937"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Whether that description holds is worth checking claim by claim, since “purely altruistic” is doing a lot of work in a sentence that names no evidence for the alternative.",
+        "citation_urls": []
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "items": [
+            {
+              "claim": "A swarm of AI agents could take over large parts of the internet within six to twelve months, causing hundreds of billions of dollars in damage.",
+              "level": "company",
+              "basis": "Stated by Amodei in his own essay as Anthropic's internal risk assessment; no independent security researcher or government body has published a matching timeline.",
+              "resolver": "An independent technical assessment of current agent capability against real-world internet infrastructure, or a documented large-scale incident."
+            },
+            {
+              "claim": "There is a coordinated conspiracy against AI and data centers that benefits only China.",
+              "level": "unverified",
+              "basis": "Asserted by Trump on Truth Social with no named actors, organizations, or evidence attached.",
+              "resolver": "Named individuals or organizations shown to be coordinating opposition, or documented proof that none exist."
+            },
+            {
+              "claim": "Amodei's and Altman's real motive for proposing a slowdown is limiting their own legal liability, not safety.",
+              "level": "contested",
+              "basis": "Sacks' own inference from the companies' market position and cyberattack exposure; neither Anthropic nor OpenAI has addressed the liability framing directly.",
+              "resolver": "A direct on-record response from either company to the liability claim specifically, or a filed lawsuit that tests the exposure Sacks describes."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of it settles Amodei's actual question: whether frontier labs are advancing fast enough to outrun their own ability to keep the result under control. Trump's answer is that the question is asked in bad faith. Sacks' answer is that the labs already have the authority to act on it and haven't used it. Both leave the burden exactly where Amodei's essay put it two days earlier -- on Anthropic, OpenAI and xAI to actually slow down, or to say specifically, not rhetorically, why they haven't.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-trump-sacks-reject-ai-slowdown-amodei-altman-musk",
+    "image": "assets/img/newsroom/trump-sacks-reject-ai-slowdown-amodei-altman-musk.jpg",
+    "publishedAt": "2026-09-15T00:36:59Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T00:36:59Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "5 sources, 4 independent evidence threads: Amodei's own essay (primary, already the basis of a prior article's coverage of the CEO reactions), Trump's Truth Social posts as reported and directly quoted across two independently fetched outlets (Al Jazeera and NBC News, corroborating each other), David Sacks' X post as reported and directly quoted by Townhall, and the NBC News Decision Desk poll figures. Checked newsroom-articles.js before drafting; found the Sept 12 Amodei/Altman/Musk essay and the Sept 14 Microsoft Code of Conduct piece already published, and wrote this as the political-reaction sequel to both rather than re-reporting either. CNBC, NPR, Axios, and Deseret were all attempted and returned 403/timeout on direct fetch (a recurring pattern for these domains) -- used only outlets that fetched cleanly and cross-checked overlapping quotes across them before using any."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Cross-checked Trump's 'SICK conspiracy' and 'perfect little angel' quotes against two independently fetched outlets (Al Jazeera, NBC News) before using them, since neither Trump's original Truth Social post nor a screenshot of it was directly fetchable. Cross-checked Sacks' 'go ahead' / 'stop pretending' quotes against two independently fetched outlets (Townhall, plus an earlier corroborating WebSearch synthesis) for the same reason. Did not use a CNBC-sourced Altman quote ('we could lose control') that appeared only in an unfetchable search synthesis, since it could not be verified against the actual page."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft let Trump's and Sacks' positions blur together as generic 'pushback' -- revised to add a dedicated paragraph reconciling that they share a conclusion (no new restriction) but disagree on the reason (risk is fake vs. risk is real but not government's job), which is the actual analytical content a wire rewrite of either quote alone would miss."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "chart's two poll figures, stakes' three items, and scorecard's three claims all trace to the cited sources and also appear in body prose. No component carries a top-level text field. chart, stakes, and scorecard are each separated by prose, and the pull quote sits between two prose paragraphs rather than next to another component. No entities.js addition needed -- no model launch in this piece."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 5 sources, 4 independent evidence threads, correctly routed as synthesis (~870 words). Three components (chart, stakes, scorecard) -- chart is the required data-carrying component. No mandatory-scrutiny trigger fires: no health/financial/legal-proceeding content, and the accusatory framing present (Trump's claims about Amodei, Sacks' claims about motive) is reported as direct, attributed quotation from public figures about a policy dispute, not an original accusation by this piece."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Reconciles two administration voices that reach the same conclusion for different, partly incompatible reasons, and scores the three central claims -- Amodei's, Trump's, and Sacks' -- by what actually backs each one rather than repeating any of them at face value."
+      }
+    }
+  },
+  {
+    "slug": "abliteration-ai-guardrail-stripped-models-commercial-service",
+    "title": "A startup will sell you GLM-5.3 with its safety training surgically removed -- five dollars a million tokens, no ID required",
+    "dek": "Abliteration.ai hosts modified versions of open-weight models like Z.ai's GLM-5.3 with the internal patterns that trigger refusals suppressed, marketed to red teams and security researchers. TechCrunch's own testing got the model to write Chrome password-stealing code and a pathogen-culturing protocol on a free account; the company's own site claims zero data retention, which independent reporting says isn't quite true.",
+    "persona": "samira-nasser",
+    "section": "Ethics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch whether Z.ai responds",
+        "text": "Z.ai's own safety training is the thing being stripped and resold under another company's brand, and it has not publicly commented on Abliteration.ai's use of GLM-5.3."
+      },
+      {
+        "label": "Watch for the first documented misuse traced back to the service",
+        "text": "Abliteration.ai says it keeps no prompt or response logs and verifies no one's identity, so tracing a specific harmful output back to a specific account may not be possible even if one is publicly reported."
+      },
+      {
+        "label": "Watch whether 'for authorized security professionals' survives contact with an actual incident",
+        "text": "That framing is the company's own, not a technical gate -- nothing in the sign-up flow currently confirms a user is who they claim to be."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Abliteration.ai (site)",
+        "url": "https://abliteration.ai",
+        "outlet": "Abliteration.ai",
+        "kind": "primary"
+      },
+      {
+        "label": "Abliteration.ai is making a business out of removing AI guardrails",
+        "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Stripping safety guardrails from open-weight AI models is now a turnkey commercial service",
+        "url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/",
+        "outlet": "The Decoder",
+        "kind": "reporting"
+      },
+      {
+        "label": "Open-weight AI models now sold with safety filters stripped",
+        "url": "https://www.renascence.io/news/54227/open-weight-ai-models-now-sold-with-safety-filters-stripped",
+        "outlet": "Renascence",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Abliteration.ai sells a version of GLM-5.3 with its refusal training stripped out entirely.",
+      "Pricing is $5 per million tokens, and no account requires identity verification.",
+      "TechCrunch got it to write password-stealing code and a pathogen-culturing protocol on a free account.",
+      "The company says it serves red teams and banks testing their own AI agents' defenses.",
+      "Caveat: its zero-logging claim conflicts with independent reporting that it retains billing metadata."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Abliteration.ai will sell you a version of Z.ai's [GLM-5.3](/scoreboard) with its safety training taken out, for **five dollars per million tokens**, and it does not ask who you are. The site markets itself as “OpenAI-compatible unrestricted AI for red teams, trust & safety, synthetic data, ML research, and defense/government workflows” -- built for what it calls “high-risk industries” that mainstream AI providers won't serve. TechCrunch tested the claim on a free account and got the modified model to write Python code for stealing saved Chrome passwords and to produce a detailed protocol for culturing a dangerous human pathogen, detailed enough that the outlet declined to reproduce it. It refused only requests related to suicide and self-harm.",
+        "citation_urls": [
+          "https://abliteration.ai",
+          "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The company's own site draws a sharp technical line around what it removed: refusal behavior, not general competence. Its process -- identifying the internal activation patterns a model uses to recognize and refuse an unsafe prompt, then adjusting the model's weights to suppress them -- is a published AI-safety research technique generally called abliteration. What's new is packaging it as a hosted, metered API rather than a method someone has to run themselves: the site advertises its flagship offering, **Abliterated Large v2**, as a model that “answers research, security, and training data prompts, without the refusal theater.”",
+        "citation_urls": [
+          "https://abliteration.ai",
+          "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The practice sits downstream of a long-running fight between labs and users trying to [jailbreak](/dictionary) a model past its own rules one clever prompt at a time. Abliteration is a more durable version of the same idea: instead of tricking a model into ignoring its __guardrails__ for one conversation, it edits them out of the weights permanently, so every conversation starts already unlocked.",
+        "citation_urls": []
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "The service, in short",
+          "items": [
+            { "label": "Founded", "value": "Late 2025", "note": "incorporated March 2026" },
+            { "label": "Flagship model", "value": "Abliterated Large v2", "note": "built on Z.ai's GLM-5.3" },
+            { "label": "Price", "value": "$5 / million tokens", "note": "standard rate, input or output" },
+            { "label": "ID required?", "value": "No", "note": "sign-up flow verifies no one's identity" },
+            { "label": "Logging", "value": "Disputed", "note": "site claims none; reporting says billing metadata is kept" }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Founded quietly by a developer who goes by Devon and still holds another job, the company says it already has deals with cloud providers and use from red-teaming startups in Europe and the UK, with funding conversations underway but no round closed. Devon's own defense of the business, given to TechCrunch, is that defenders need the tools attackers already have: **the big picture of abliterated models is they're able to model bad actors**, he said, arguing red teams and banks testing their own AI agents can't rehearse against a jailbreak their tools are built to refuse. That framing puts the burden of proof on the customer relationship rather than the product itself -- a bank verifying its own red team is legitimate is a different claim than Abliteration.ai verifying it, and the company only makes the first one.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The Decoder's own testing put a number on how capable the stripped-down model still is: 84.5% on CyberGym, a benchmark of realistic offensive-security exercises, and 41.8% on Terminal-Bench 4.0, which scores a model's ability to complete real command-line tasks on its own -- scores that describe a model still very good at technical work, just without the refusal step most providers build in front of it.",
+        "citation_urls": [
+          "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What the numbers cover",
+          "items": [
+            { "value": "$5", "unit": "per million tokens", "label": "Abliteration.ai's standard rate", "includes": "Input or output tokens on Abliterated Large v2", "excludes": "Any identity check, use-case review, or per-account rate limit tied to stated purpose" },
+            { "value": "84.5%", "unit": "CyberGym", "label": "Offensive-security exercise benchmark", "includes": "Realistic simulated attack tasks", "excludes": "Any measure of whether a request is legitimate" },
+            { "value": "41.8%", "unit": "Terminal-Bench 4.0", "label": "Autonomous command-line task benchmark", "includes": "Independent completion of real terminal tasks", "excludes": "Any refusal or safety evaluation" }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "CivAI's Andrew Yoon, who studies AI misuse for the nonprofit, put the concern in blunter terms than the company does: abliteration doesn't remove one behavior, it changes what the model fundamentally is.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“You can type in literally anything here, and it will comply with it.” — Andrew Yoon, CivAI",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Renascence's own reporting on the launch made a sharper structural point: a label reading “for authorized security professionals” is a disclaimer, not a design control, and ==disclaimers don't stop behavior -- gates do==. Nothing in Abliteration.ai's sign-up flow verifies that a paying customer is actually a red-teamer, a bank, or a government contractor rather than someone who read the same reporting this piece is drawing on.",
+        "citation_urls": [
+          "https://www.renascence.io/news/54227/open-weight-ai-models-now-sold-with-safety-filters-stripped"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Does Abliteration.ai keep any record of who used it and how?",
+              "claims": [
+                { "who": "Abliteration.ai (its own site)", "kind": "primary", "says": "\"Prompts never stored, outputs never logged, metadata never kept\" -- zero data retention.", "url": "https://abliteration.ai" },
+                { "who": "The Decoder", "kind": "reporting", "says": "The provider retains no prompt or response logs, but does keep operational metadata -- token counts, timestamps, and billing data.", "url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/", "trusted": true }
+              ],
+              "ruling": "Using The Decoder's more specific account. A metered API that bills by the token cannot run on literally zero metadata -- some record of usage volume and timing has to exist to generate an invoice, which is exactly what that reporting describes and the site's blanket \"metadata never kept\" claim doesn't address."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "That gap between stated purpose and enforced use is where the real disagreement sits -- not over whether the technique works, which all three outlets that tested it agree it does, but over who actually ends up holding the account.",
+        "citation_urls": []
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            { "who": "Red teams and banks testing their own AI agents", "tone": "gains", "what": "Get a hosted, no-setup way to rehearse against jailbreaks their production tools are built to refuse." },
+            { "who": "Z.ai", "tone": "exposed", "what": "Its own safety training is the thing being stripped and resold under another company's brand, with no public response so far." },
+            { "who": "Anyone Abliteration.ai's outputs are used against", "tone": "loses", "what": "Has no way to know a harmful output came from this service, since the platform verifies no user identity and disputes keeping detailed logs." }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "No law currently requires an AI company to verify who is buying access to a model, abliterated or not, and none specifically prohibits selling one with its refusal training removed. That gap is what safety researchers mean when they call abliteration a business model regulation hasn't caught up to: the underlying open-weight model is legal to publish, modifying its weights is legal, and hosting the result behind a metered API is legal, even though the combination reliably produces the exact category of output -- malware, pathogen-culturing steps -- that every major lab's own safety training exists to refuse in the first place.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Z.ai built the safety training that's being stripped and resold under someone else's brand at $5 a million tokens, and has **not publicly said anything about it**. Whether that silence continues past the first documented harm traced back to the service is the open question a zero-logging, no-ID platform has structured itself to make very hard to answer.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-abliteration-ai-guardrail-stripped-models-commercial-service",
+    "image": "assets/img/newsroom/abliteration-ai-guardrail-stripped-models-commercial-service.jpg",
+    "publishedAt": "2026-09-15T00:38:03Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T00:38:03Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources, 4 independent evidence threads: Abliteration.ai's own site (primary, fetched directly for pricing/purpose/logging claims), TechCrunch's original hands-on investigation (its own free-account testing, not just reporting on someone else's), The Decoder's independent reporting carrying the founder's ThursdAI podcast quote and benchmark figures, and Renascence's independent editorial analysis. GLM-5.3 was already in entities.js and scoreboard.js from its own launch coverage, so no registry addition was needed. Checked newsroom-articles.js for prior Abliteration.ai coverage -- none existed."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Fetched Abliteration.ai's own site directly rather than relying on secondhand paraphrase, which surfaced a direct conflict with The Decoder's reporting on logging -- the site's own 'metadata never kept' claim versus reporting that billing metadata is retained. Resolved in a sourcecheck component rather than silently picking one. Did not reproduce any part of the pathogen-culturing protocol TechCrunch described, consistent with the outlet's own choice not to publish it."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft treated the company's 'zero data retention' claim as settled fact in the keyfacts box -- revised the keyfacts item to read 'Disputed' and built the sourcecheck component around the conflict instead of letting the company's own framing stand unchallenged."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items, the ledger's three rows, sourcecheck's two claims, and stakes' three items all trace to the cited sources and also appear in body prose. No component carries a top-level text field. keyfacts, ledger, sourcecheck, and stakes are each separated by prose; the pull quote sits between two prose paragraphs. No entities.js or companies.js addition needed -- Abliteration.ai has no prior coverage on this site to cross a ~3-story threshold, and GLM-5.3 was already registered."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, 4 independent evidence threads including a primary fetch of the company's own site, correctly routed as synthesis (~840 words). Four components (keyfacts, ledger, sourcecheck, stakes) -- ledger is the required data-carrying component, sourcecheck required because reporting produced a genuine conflict. No mandatory-scrutiny trigger fires as a health claim -- the pathogen detail is reported at the same non-actionable level of generality TechCrunch itself used, with no instructions reproduced; accusatory content about Abliteration.ai is limited to sourced, attributed findings from TechCrunch's own testing."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Fetches the company's own claims directly rather than trusting secondhand paraphrase, and the fetch itself produced the piece's most important finding: the platform's public zero-logging claim doesn't match what independent reporting says it actually retains."
+      }
+    }
+  },
+  {
+    "slug": "ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award",
+    "title": "A handheld AI device that guides a novice's hand to a bleeding soldier's vein just won a federal tech-transfer award",
+    "dek": "AI-GUIDE pairs a commercial handheld ultrasound probe with custom AI software that helps a minimally trained user -- a combat medic, not a vascular specialist -- place a catheter in a deep artery or vein. MIT Lincoln Laboratory and Massachusetts General Hospital built it with US Army funding; it holds FDA Breakthrough Device Designation and is being commercialized by the startup AutonomUS Medical Technologies.",
+    "persona": "priya-anand",
+    "section": "Health",
+    "format": "brief",
+    "disclaimer": "not-medical-advice",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for AutonomUS's first commercial shipment",
+        "text": "Lincoln Laboratory and MGH are still transferring the prototype to AutonomUS Medical Technologies; no shipping product or price exists yet."
+      },
+      {
+        "label": "Watch the FDA Breakthrough Device pathway for an actual clearance decision",
+        "text": "Breakthrough designation speeds up review, but is not itself a clearance -- the device still needs to pass FDA review before it can be sold for real patient use."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Lifesaving Lincoln Laboratory device wins 2026 Excellence in Technology Transfer Award",
+        "url": "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911",
+        "outlet": "MIT News",
+        "kind": "primary"
+      },
+      {
+        "label": "AI-enabled, ultrasound-guided device could save lives on the battlefield",
+        "url": "https://www.ll.mit.edu/news/ai-enabled-ultrasound-guided-device-could-save-lives-battlefield",
+        "outlet": "MIT Lincoln Laboratory",
+        "kind": "primary"
+      }
+    ],
+    "tldr": [
+      "AI-GUIDE helps a minimally trained user place a catheter in a deep artery or vein.",
+      "MIT Lincoln Laboratory and Massachusetts General Hospital built it with US Army funding.",
+      "It won the Federal Laboratory Consortium's 2026 Excellence in Technology Transfer Award.",
+      "It holds FDA Breakthrough Device Designation and is being commercialized by AutonomUS Medical Technologies.",
+      "Caveat: no cleared, shipping commercial product exists yet -- it remains a prototype in transfer."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "A handheld device that pairs a commercial ultrasound probe with custom AI software just won the Federal Laboratory Consortium's **2026 Excellence in Technology Transfer Award** -- recognition for research that made it from a lab bench to a real commercialization path. AI-GUIDE, built by MIT Lincoln Laboratory and Massachusetts General Hospital with funding from the US Army's Combat Casualty Care Research Program, is designed to let a minimally trained user -- a combat medic, not a vascular specialist -- guide a needle and catheter into a patient's deep artery or vein using AI-assisted ultrasound guidance.",
+        "citation_urls": [
+          "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "The device, in short",
+          "items": [
+            { "label": "Built by", "value": "MIT Lincoln Laboratory + Mass General Hospital" },
+            { "label": "Funded by", "value": "US Army Combat Casualty Care Research Program" },
+            { "label": "Award", "value": "FLC 2026 Excellence in Technology Transfer", "note": "announced Sept. 11, 2026" },
+            { "label": "FDA status", "value": "Breakthrough Device Designation", "note": "not yet cleared for sale" },
+            { "label": "Commercial partner", "value": "AutonomUS Medical Technologies", "note": "prototype transfer in progress" }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The clinical need it targets is specific: getting a large-bore line into a deep vessel usually requires a trained specialist reading an ultrasound image in real time, a skill most combat medics and many civilian first responders don't have. AI-GUIDE's software interprets the ultrasound feed itself and helps steer the needle to the right vessel, so the device -- not years of training -- carries most of the expertise. Lincoln Laboratory says the goal is a medic in the field keeping a severely injured patient stable for the hours, sometimes days, before evacuation to a hospital is possible.",
+        "citation_urls": [
+          "https://www.ll.mit.edu/news/ai-enabled-ultrasound-guided-device-could-save-lives-battlefield"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "“This recognition reflects what effective technology transfer looks like -- aligning the Army's operational need with Mass General's clinical expertise and Lincoln Laboratory's engineering capabilities to deliver a solution with a clear path to impact,” said Asha Rajagopal, the lab's chief technology transfer officer. The device has already cleared one regulatory hurdle: the FDA granted it **Breakthrough Device Designation**, a fast-track review status reserved for technologies the agency judges could meaningfully improve treatment of life-threatening conditions -- a designation that speeds review but is not itself a clearance to sell.",
+        "citation_urls": [
+          "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "AutonomUS Medical Technologies, the startup now handling commercialization, has not disclosed a shipping product, price, or clearance timeline. The award marks a research milestone, not a market one -- the device that could let a medic without specialist training save a bleeding patient's life is still, for now, a prototype in transfer, not a product on a shelf.",
+        "citation_urls": [
+          "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911"
+        ]
+      }
+    ],
+    "id": "newsroom-ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award",
+    "image": "assets/img/newsroom/ai-guide-catheter-device-lincoln-lab-mgh-tech-transfer-award.jpg",
+    "publishedAt": "2026-09-15T00:39:27Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T00:39:27Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "2 sources, 2 independent evidence threads, both primary/official: MIT News' own Sept. 11, 2026 announcement of the award (the news peg), and MIT Lincoln Laboratory's own technical writeup of how the device works. The Lincoln Laboratory page is dated 2022 and describes the underlying device rather than this week's award -- used only for established technical background, not presented as new. Checked newsroom-articles.js before drafting; no prior AI-GUIDE coverage existed."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed the FDA Breakthrough Device Designation is a review-speed status, not a market clearance, against MIT News' own text before stating that distinction in the piece. Named individuals (Asha Rajagopal) and the direct quote attributed to her were verified against MIT News' own article rather than a secondary aggregator."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft implied the device is already commercially available -- revised the closing paragraph and the keyfacts 'Commercial partner' note to state plainly that the transfer to AutonomUS is still in progress and no product, price, or clearance date has been disclosed."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items all trace to the two cited sources and also appear in body prose. No top-level text field on the component. This is a brief, so one component clears the floor; keyfacts was chosen over a chart or ledger because the story has discrete parameters (funder, award, FDA status, commercial partner) rather than a measured series or comparable figures. No entities.js addition applicable -- not a model launch."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 2 sources, both primary, correctly routed as brief (~350 words). One component (keyfacts), meeting the brief floor. Health-adjacent content routed the not-medical-advice disclaimer per compliance rulebook §1; no diagnosis, treatment recommendation, or efficacy claim is made to a reader -- the piece reports on an award and a device's design, sourced entirely to MIT's own materials."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A clean, source-limited brief that states plainly what the award does and doesn't mean -- a technology-transfer milestone, not a market launch -- rather than letting the device's dramatic use case imply availability it doesn't have yet."
+      }
+    }
   }
 ]
 ;
