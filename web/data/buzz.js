@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-605", date:"2026-09-15",
+    source:{ name:"Global Times", handle:"globaltimesnews", platform:"web", kind:"news" },
+    text:"China's state-run Global Times published an editorial calling Anthropic CEO Dario Amodei's weekend call to slow frontier AI development \"hostile\" and part of a \"Cold War playbook\" aimed at containing China's AI industry, quoting tech policy commentator Xiang Ligang accusing Amodei of portraying China's development as a threat to fuel confrontation. Chinese Foreign Ministry spokesperson Guo Jiakun added separately that \"fearmongering, confrontation and malicious competition will only disrupt the process of global AI governance.\"",
+    why:"This is the Chinese government/state-media half of the same AI-slowdown fight this newsroom covered from the US political side this morning -- Trump and David Sacks rejected Amodei's call as domestic politics, while Beijing's read is that it's a competitiveness play aimed outward. Both reactions land on the same conclusion (don't slow down) from opposite premises.",
+    heat:44, topics:["china","global times","dario amodei","anthropic","ai slowdown","geopolitics"],
+    url:"https://www.nbcnews.com/world/china/china-ai-slowdown-trump-amodei-altman-threat-cold-war-rcna597631" },
+{ id:"bz-604", date:"2026-09-15",
+    source:{ name:"Google DeepMind", handle:"GoogleDeepMind", platform:"web", kind:"lab" },
+    text:"Google DeepMind released the AlphaGenome Atlas, precomputed predictions for the molecular effects of all roughly 9 billion possible single-letter DNA changes across the human genome -- about a petabyte of data, more than 30 times the size of the AlphaFold Database. A new combined score, AlphaGenome Variant Impact (AVI), folds AlphaGenome's own predictions together with AlphaMissense's protein-variant model into one number so researchers can prioritize which of billions of variants to investigate first. Free for noncommercial research via a web portal, the existing API, and a Google Antigravity skill; commercial access is planned through Google Cloud.",
+    why:"A precomputed, queryable map of every possible human genetic point mutation turns a computationally expensive prediction into a free lookup for genetics researchers -- infrastructure rather than a headline, and a natural companion to AlphaFold's earlier reshaping of structural biology.",
+    heat:42, topics:["google deepmind","alphagenome","genomics","biotech","health ai"],
+    url:"https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/" },
 { id:"bz-602", date:"2026-09-15",
     source:{ name:"Cornelis Networks", handle:"CornelisNetworks", platform:"web", kind:"lab" },
     text:"Cornelis Networks raised a $205 million round led by IAG Capital Partners and unveiled Active Compute Fabric, an open-architecture networking layer combining programmable compute, lossless transport, and in-fabric acceleration across scale-up and scale-out AI clusters, built on open standards (UALink, ESUN, Ultra Ethernet) rather than a proprietary interconnect. The company is also collaborating with Qualcomm on rack-scale AI infrastructure; its CN5000 chip ships today, with CN6000 sampling ahead of a Q4 2026 wider release.",

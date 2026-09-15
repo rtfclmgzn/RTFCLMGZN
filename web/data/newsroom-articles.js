@@ -61988,6 +61988,420 @@ window.RTFC_NEWSROOM_ARTICLES = [
       "note": "A single-source brief that says so in its own TL;DR rather than dressing up one report as independently confirmed."
     }
   }
-}
+},
+  {
+    "slug": "cornelis-networks-205-million-active-compute-fabric",
+    "title": "An Intel spinoff raised $205 million to make the network fabric itself compute, not just carry, AI traffic",
+    "dek": "Cornelis Networks unveiled Active Compute Fabric, which embeds programmable processing directly into switches and network cards so operations like cache acceleration happen in transit -- CEO Lisa Spelman says purchased GPU capacity otherwise sits idle roughly half the time. The round's valuation, designation, and full investor list are undisclosed.",
+    "persona": "jin-park",
+    "section": "Compute",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch CN6000's Q4 2026 wide release",
+        "text": "The 800-gigabit multi-protocol SuperNIC is only sampling with customers now. A broad shipping date is the first real test of demand against Nvidia's NVLink/InfiniBand incumbency."
+      },
+      {
+        "label": "Watch for a disclosed valuation or investor list",
+        "text": "Neither Cornelis nor IAG Capital Partners has named a round designation, valuation, or complete investor syndicate. Any of the three would let outsiders judge whether $205 million reflects strong or lukewarm investor confidence."
+      }
+    ],
+    "sources": [
+      {
+        "label": "AI infrastructure company Cornelis raises $205M to chip away at Nvidia's dominance",
+        "url": "https://techcrunch.com/2026/09/14/ai-infrastructure-company-cornelis-raises-205m-to-chip-away-at-nvidias-dominance/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Cornelis Networks raises $205M and scales up and out with its new Active Compute Fabric",
+        "url": "https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/",
+        "outlet": "SiliconANGLE",
+        "kind": "reporting"
+      },
+      {
+        "label": "Cornelis lands $205M to make AI networks compute, not just connect",
+        "url": "https://www.networkworld.com/article/4221872/cornelis-lands-205m-to-make-ai-networks-compute-not-just-connect.html",
+        "outlet": "Network World",
+        "kind": "reporting"
+      },
+      {
+        "label": "Cornelis Moves into Scale-Up with Active Compute Fabric and $205M Funding",
+        "url": "https://convergedigest.com/cornelis-active-compute-fabric-scale-up-ai-networking/",
+        "outlet": "Converge Digest",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Cornelis Networks raised $205 million and unveiled Active Compute Fabric, a compute-in-network design.",
+      "CEO Lisa Spelman says purchased GPU capacity sits idle roughly half the time industry-wide.",
+      "The design uses open standards, not Nvidia's proprietary NVLink/InfiniBand interconnect stack.",
+      "A Qualcomm collaboration on rack-scale AI infrastructure was announced with no product yet.",
+      "Caveat: the round's valuation, designation, and full investor list remain undisclosed."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Cornelis Networks](/company/intel), the Intel spinoff that builds AI-data-center networking gear, raised a **$205 million round** led by IAG Capital Partners and unveiled Active Compute Fabric, a new architecture that puts programmable compute directly inside the switches and network cards carrying traffic between GPUs, rather than treating the network as a passive pipe. The company also announced a strategic collaboration with [Qualcomm](/company/qualcomm) on rack-scale AI infrastructure design, though neither company has announced a joint commercial product -- the work so far is described as joint technology evaluation.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/14/ai-infrastructure-company-cornelis-raises-205m-to-chip-away-at-nvidias-dominance/",
+          "https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The bet targets a specific and expensive kind of waste. CEO Lisa Spelman says purchased GPU capacity across the industry sits idle roughly 50% of the time, waiting on the network rather than the chips themselves. Active Compute Fabric embeds programmable RISC-V cores directly into the fabric -- switches and network cards -- so operations like ==key-value cache acceleration and mixture-of-experts routing happen in transit==, on data already moving between accelerators, instead of round-tripping back to a GPU. \"The payload does not arrive the way it left,\" said chief marketing officer Brandon Draeger. \"The work happens once, in the path the data was already taking.\"",
+        "citation_urls": [
+          "https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/",
+          "https://www.networkworld.com/article/4221872/cornelis-lands-205m-to-make-ai-networks-compute-not-just-connect.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The architecture runs on ++open standards++ -- UALink, ESUN, and Ultra Ethernet -- rather than a proprietary interconnect, positioning Cornelis as a vendor-agnostic alternative to [Nvidia](/company/nvidia)'s NVLink and InfiniBand stack, which locks customers into Nvidia GPUs end to end. Cornelis's CN5000 switching platform, whose first generation began shipping in 2025, ships in its newer form today; the multi-protocol CN6000 -- an 800-gigabit SuperNIC supporting both Ethernet (RoCEv2) and Cornelis's own Omni-Path protocol -- is sampling with customers ahead of a wider release in the fourth quarter of 2026.",
+        "citation_urls": [
+          "https://www.networkworld.com/article/4221872/cornelis-lands-205m-to-make-ai-networks-compute-not-just-connect.html",
+          "https://convergedigest.com/cornelis-active-compute-fabric-scale-up-ai-networking/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What the $205 million confirms, and what it doesn't",
+          "items": [
+            {
+              "value": "$205M",
+              "unit": "Cornelis Networks",
+              "label": "New funding round led by IAG Capital Partners",
+              "includes": "Scale-up product development, CN6000 manufacturing, and customer deployments, per the company",
+              "excludes": "A stated valuation, a named round designation, and a complete investor list -- none disclosed",
+              "note": "Announced September 14, 2026. No independent filing confirms a figure beyond what the company itself stated."
+            },
+            {
+              "value": "~50%",
+              "unit": "GPU idle-time claim",
+              "label": "Spelman's stated rationale for the product",
+              "includes": "The CEO's own characterization of industry-wide GPU utilization, as stated to reporters",
+              "excludes": "Any published methodology, benchmark, or third-party measurement backing the figure",
+              "note": "Presented as company rationale, not an independently verified industry statistic."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Cornelis is one of several networking challengers -- alongside [Broadcom](/company/broadcom)'s and [Marvell](/company/marvell)'s custom silicon and Qualcomm's own rack-scale ambitions -- betting the AI buildout doesn't stay locked to Nvidia's proprietary interconnect stack. Cornelis itself was spun out of Intel in 2020 and has built its business on the scale-out side of that fight; Active Compute Fabric is its first move into scale-up, the tighter, faster fabric linking GPUs inside a single rack.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/14/ai-infrastructure-company-cornelis-raises-205m-to-chip-away-at-nvidias-dominance/"
+        ]
+      }
+    ],
+    "id": "newsroom-cornelis-networks-205-million-active-compute-fabric",
+    "image": "assets/img/newsroom/cornelis-networks-205-million-active-compute-fabric.jpg",
+    "publishedAt": "2026-09-15T19:39:13Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T19:39:13Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 outlets (TechCrunch, SiliconANGLE, Network World, Converge Digest) all report the same September 14 company announcement/press briefing -- one primary evidence thread per format-routing.md's dedup rule, correctly routed as a brief rather than inflated to a synthesis. Already had a bz-602 Buzz card from an earlier scan today; elevated it to a full article since the underlying announcement supports real analytical work (the ledger's scoping of the undisclosed valuation)."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Could not independently confirm valuation, round designation, or the full investor syndicate -- Converge Digest explicitly notes these are undisclosed, and no other outlet supplied them, so the ledger states the absence rather than guessing. The '~50%' GPU idle-time figure is attributed as the CEO's own claim, not verified against a benchmark. Checked newsroom-articles.js for prior coverage -- none found."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the CN5000/CN6000 spec details were scattered across sources with one apparent tension (Network World says CN5000's first generation shipped in 2025; other outlets say it 'ships today') -- revised to state both facts together rather than picking one, since they are not actually in conflict (an existing platform's newer form shipping now)."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Ledger's two items trace to the cited sources and also appear in body prose ($205M/IAG Capital Partners in paragraph 1; the ~50% claim and its company-rationale framing in paragraph 2). No component carries a top-level text field. No entities.js addition needed (no new model). Companies.js: Cornelis itself was not added -- the file's own header sets a roughly three-story coverage threshold before adding a dossier entry, and this is only its second appearance (one Buzz card plus this article); holding off rather than front-running that threshold."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. One primary evidence thread correctly routed as a brief (roughly 340 words) with the undisclosed-valuation caveat stated in the TL;DR's final bullet. One component (ledger, two items), meeting the brief floor. No mandatory-scrutiny trigger fires."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A single-announcement brief that scopes its own headline number honestly rather than treating $205 million as if it implied a valuation nobody has disclosed."
+      }
+    }
+  },
+  {
+    "slug": "openai-project-lily-contractors-read-chatgpt-prompts",
+    "title": "OpenAI pays contractors to read real ChatGPT prompts and rate the replies -- its own privacy page describes a narrower program than the one in its internal documents",
+    "dek": "A 404 Media investigation, based on internal documents, found OpenAI runs an ongoing program internally called Project Lily in which paid contractors read live user prompts and rate chatbot responses on a 1-to-7 scale for tone and sycophancy. Asked to explain it, OpenAI pointed the outlet to a help page describing contractor access only as review for \"abuse and misuse.\"",
+    "persona": "samira-nasser",
+    "section": "Ethics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Turn off training in ChatGPT's Data Controls",
+        "text": "Settings > Data Controls > toggle off \"Improve the model for everyone.\" This only protects future conversations -- it does not un-train anything already used to build past model versions."
+      },
+      {
+        "label": "Use Temporary Chat for anything genuinely sensitive",
+        "text": "Temporary Chat conversations don't appear in history, don't create memories, and OpenAI says they aren't used to improve models -- though it retains them for 30 days for safety review before deletion."
+      },
+      {
+        "label": "Watch whether OpenAI updates its own disclosure language",
+        "text": "OpenAI's public help page currently describes contractor access as limited to abuse and misuse review. Whether that language changes to acknowledge the broader quality-rating program 404 Media documented is a specific, checkable fact -- not a matter of time telling."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Inside 'Project Lily': The Humans Reading Your ChatGPT Chats",
+        "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+        "outlet": "404 Media",
+        "kind": "primary investigative reporting"
+      },
+      {
+        "label": "How your data is used to improve model performance",
+        "url": "https://help.openai.com/en/articles/5722486-chatgpt-privacy-policies",
+        "outlet": "OpenAI Help Center",
+        "kind": "primary_company"
+      },
+      {
+        "label": "Anthropic support: when does Anthropic access my conversations?",
+        "url": "https://support.anthropic.com/en/articles/7996868",
+        "outlet": "Anthropic Support",
+        "kind": "primary_company"
+      },
+      {
+        "label": "Updates to Consumer Terms and Privacy Policy",
+        "url": "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+        "outlet": "Anthropic",
+        "kind": "primary_company"
+      },
+      {
+        "label": "OpenAI paid contractors to read ChatGPT conversations -- here's how to protect yourself",
+        "url": "https://www.tomsguide.com/ai/chatgpt/humans-may-be-reading-your-chatgpt-prompts-heres-how-to-stop-it",
+        "outlet": "Tom's Guide",
+        "kind": "independent_reporting"
+      }
+    ],
+    "tldr": [
+      "OpenAI runs 'Project Lily': contractors read real ChatGPT prompts, rating replies 1-to-7.",
+      "Contractors are paid over $50 an hour via staffing platforms Crossing Hurdles and Mercor.",
+      "A Privacy Filter model tries to strip identifying details but can miss or over-redact them.",
+      "OpenAI's help page describes contractor access more narrowly, as solely abuse-and-misuse review.",
+      "Caveat: opting out of training only protects future chats, not conversations already reviewed."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI runs an internal program called **Project Lily** in which hundreds of paid contractors read real ChatGPT users' prompts -- often containing sensitive personal information -- and rate the chatbot's candidate responses on a 1-to-7 scale, according to a 404 Media investigation published September 14 based on internal documents and interviews with people involved. The contractors, sourced through staffing platforms Crossing Hurdles and Mercor and paid more than $50 an hour, are told to flag ==excessive flattery, robotic \"AI-speak,\" and overuse of emoji== -- the texture of a reply, not just whether it's factually correct.",
+        "citation_urls": [
+          "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Before a prompt reaches a contractor, it passes through OpenAI's own **Privacy Filter** model, built to strip identifying details; contractors never see usernames. But internal documents reviewed by 404 Media acknowledge the filter can miss uncommon identifiers or, in the opposite failure, over-redact context a reviewer needs to judge a response -- and OpenAI confirmed the filter's limits to the outlet directly. ChatGPT has more than 900 million users, many of whom, per the investigation, treat the product like a therapist or a confidant, disclosing exactly the kind of detail a tone-rating pipeline was never built to handle.",
+        "citation_urls": [
+          "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+          "https://www.tomsguide.com/ai/chatgpt/humans-may-be-reading-your-chatgpt-prompts-heres-how-to-stop-it"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The people doing the reading are not hidden from themselves, only from the users whose conversations they see. Crossing Hurdles and Mercor are staffing platforms that route contract labor to AI companies for exactly this kind of annotation work -- the same broad category of gig labor that has trained chatbots' manners since the earliest rounds of reinforcement learning from human feedback. Contractors interviewed by 404 Media described the work as steady and well-paid by gig-work standards, and occasionally uncomfortable: reading a prompt someone wrote expecting only a machine to see it.",
+        "citation_urls": [
+          "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Asked where OpenAI discloses this practice to users, the company pointed 404 Media to a help-center article, \"How your data is used to improve model performance.\" That page describes contractor access as limited to \"specialized third-party contractors bound by confidentiality and security obligations, solely to review for abuse and misuse\" -- language that describes a narrower purpose than the ongoing tone-and-sycophancy quality-rating program the internal documents describe. Neither OpenAI's help page nor its privacy policy names Project Lily, Crossing Hurdles, or Mercor.",
+        "citation_urls": [
+          "https://help.openai.com/en/articles/5722486-chatgpt-privacy-policies",
+          "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "What is contractor access to real ChatGPT conversations actually for?",
+              "claims": [
+                {
+                  "who": "OpenAI's own help center",
+                  "kind": "primary/official",
+                  "says": "Access exists \"solely to review for abuse and misuse\"",
+                  "url": "https://help.openai.com/en/articles/5722486-chatgpt-privacy-policies",
+                  "trusted": false
+                },
+                {
+                  "who": "404 Media investigation",
+                  "kind": "internal documents + interviews",
+                  "says": "An ongoing, structured program (\"Project Lily\") rates ordinary conversations for tone, sycophancy, and \"AI-speak\" -- not abuse enforcement",
+                  "url": "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/",
+                  "trusted": true
+                }
+              ],
+              "ruling": "Trusting the investigation: it is based on internal documents and named staffing platforms OpenAI has not disputed, while the help-center language predates -- and never mentions -- the specific program it was invoked to explain."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "OpenAI is not the only major lab that puts human eyes on live conversations, but the mechanics differ in ways that matter for what a user should expect. [Anthropic](/company/anthropic) -- this newsroom's own model supplier, in full disclosure -- says its staff \"generally don't read individual chats,\" reserving human review for conversations an automated classifier flags for harm, an active abuse investigation, a legal compulsion, or a user's own thumbs-up-or-down feedback on a reply.",
+        "citation_urls": [
+          "https://support.anthropic.com/en/articles/7996868"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Two labs, two review triggers",
+          "columns": [
+            {
+              "label": "OpenAI",
+              "sub": "per the 404 Media investigation",
+              "hi": true
+            },
+            {
+              "label": "Anthropic",
+              "sub": "per its own published policy"
+            }
+          ],
+          "rows": [
+            {
+              "label": "What triggers a human reading a live conversation",
+              "values": [
+                "An ongoing program samples ordinary conversations for quality, not just flagged ones",
+                "Only a classifier-flagged harm, an active abuse probe, legal compulsion, or the user's own feedback click"
+              ]
+            },
+            {
+              "label": "How it's described to users",
+              "values": [
+                "Help-center language says access is \"solely\" for abuse and misuse review",
+                "Policy states staff \"generally don't read individual chats\" outside the listed triggers"
+              ]
+            },
+            {
+              "label": "Who reads the conversation",
+              "values": [
+                "Named third-party contractor firms (Crossing Hurdles, Mercor), paid over $50/hour",
+                "Internal Trust & Safety staff, per Anthropic's own published policy"
+              ],
+              "note": "Anthropic has not disclosed an external contractor pipeline comparable to OpenAI's"
+            },
+            {
+              "label": "Default setting for using a chat this way",
+              "values": [
+                "On by default; opt-out available, future conversations only",
+                "Consumer chats used for training by default since August 2025 unless opted out"
+              ]
+            }
+          ],
+          "source": "404 Media investigation; OpenAI Help Center; Anthropic Support"
+        }
+      },
+      {
+        "type": "p",
+        "text": "That last row is not academic. Anthropic changed its own default in August 2025: consumer-tier conversations are now used to train Claude unless a user opts out, with retention extending up to five years for those who don't. OpenAI's default keeps ordinary chats eligible for its own improve-the-model program unless a user finds the toggle. Both companies, in other words, have converged on \"train unless you say no\" as the default -- what still differs, per the reporting above, is how far into an individual conversation a paid human being, rather than an automated training pipeline, actually looks.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/updates-to-our-consumer-terms"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanical path from a user's prompt to a contractor's screen is itself the part most ChatGPT users have never been shown -- and it's a version of the same [RLHF](/dictionary) process every major lab uses to make a chatbot feel less \"feral,\" not a rogue or unusual practice. What's specific to Project Lily is the scale and the routineness: a live, ongoing pipeline touching a sample of ordinary conversations, run by paid outside contractors, described publicly in narrower terms than what it actually does."
+      },
+      {
+        "type": "flow",
+        "flow": {
+          "title": "How a prompt becomes a training signal",
+          "steps": [
+            {
+              "actor": "ChatGPT user",
+              "what": "Writes a prompt, sometimes disclosing sensitive personal details, unaware of Project Lily"
+            },
+            {
+              "actor": "OpenAI's Privacy Filter model",
+              "what": "Attempts to strip identifying details before the prompt reaches a reviewer",
+              "detail": "Internal documents acknowledge it can miss uncommon identifiers or over-redact"
+            },
+            {
+              "actor": "Contractor (Crossing Hurdles / Mercor)",
+              "what": "Reads the prompt and up to four candidate AI responses",
+              "hi": true
+            },
+            {
+              "actor": "Contractor",
+              "what": "Rates the responses 1-to-7 for tone, sycophancy, and whether they actually answer the question"
+            },
+            {
+              "actor": "OpenAI",
+              "what": "Feeds the ratings back into model training and product tuning"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes OpenAI unusual. Every major chatbot maker runs some version of RLHF, and a human being has always been part of how these models get their manners. What Project Lily changes is the assumption a reader might reasonably have made about scale and routineness: this is not a narrow abuse-enforcement backstop, it is an ongoing production pipeline sized to a 900-million-user product, staffed by outside contract labor, and described publicly in terms that undersell exactly that."
+      },
+      {
+        "type": "p",
+        "text": "The gap between the two descriptions is the actual story. \"No ... I don't think they would imagine some contractor somewhere is analyzing the conversations,\" one contractor told 404 Media of ChatGPT users -- a plain assessment of the distance between what OpenAI's help page says happens and what its own hiring pipeline shows actually does.",
+        "citation_urls": [
+          "https://www.404media.co/inside-project-lily-the-humans-reading-your-chatgpt-chats/"
+        ]
+      }
+    ],
+    "id": "newsroom-openai-project-lily-contractors-read-chatgpt-prompts",
+    "image": "assets/img/newsroom/openai-project-lily-contractors-read-chatgpt-prompts.jpg",
+    "publishedAt": "2026-09-15T19:39:29Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T19:39:29Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "3 materially distinct evidence threads: the 404 Media investigation (primary-adjacent -- internal documents + interviews), OpenAI's own help-center page (primary_company), and Anthropic's own support policy page (primary_company, used for genuine contrast, not padding). A fourth outlet (Tom's Guide) independently corroborated the same 404 Media findings without adding a new thread. Cleared the synthesis floor (3+ threads, 800-1900 words) on evidence diversity, not word-count padding. 404media.co's full article sits behind a metered paywall; used only the portions independently corroborated by secondary coverage (Tom's Guide, Tom's Hardware, CryptoBriefing, NewsBytesApp) plus what the outlet's own preview/summary confirmed, and did not quote beyond short, attributed fragments."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Central claim (contractors read real, sometimes-sensitive prompts) is corroborated by OpenAI's own confirmation of the Privacy Filter's limits to the reporter, not just the investigation alone. Could not independently verify contractor headcount ('hundreds') beyond the investigation's own reporting -- stated as attributed, not treated as this newsroom's own finding. Compliance check: this piece describes a documented business practice via investigative reporting OpenAI itself partially confirmed, not an unverified accusation of wrongdoing -- no mandatory-scrutiny trigger fires (not health/financial/legal-proceedings, and the negative-claims trigger is for accusatory framing beyond what the reporting establishes, which this avoids by attributing throughout). Checked newsroom-articles.js for prior coverage of Project Lily or comparable RLHF-review stories -- none found."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the piece initially let OpenAI's help-page language and the investigation's findings sit side by side without a ruling -- added the sourcecheck component specifically to state which is trusted and why, rather than leaving the contradiction implicit."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "sourcecheck's two claims and compare's four rows all trace to the three cited sources and also appear in body prose. flow's five steps restate facts already stated in paragraphs 1-2, not new claims. No component carries a top-level text field. No entities.js addition needed (no new model named). Companies.js: OpenAI and Anthropic already registered, no new entry needed."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 3 evidence threads, correctly routed as synthesis (roughly 850 words). Three components (sourcecheck, compare, flow), the compare carrying the required data. No mandatory-scrutiny trigger fires; the piece attributes every claim about OpenAI's practice to the investigation or to OpenAI's own confirmed statements."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A synthesis that reconciles a company's public description of its own practice against what independent reporting -- partially confirmed by the company itself -- found actually happens, rather than repeating either account uncritically."
+      }
+    }
+  }
 ]
 ;

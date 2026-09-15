@@ -19574,5 +19574,169 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-15T17:11:36Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-cornelis-networks-205-million-active-compute-fabric",
+    "ts": "2026-09-15T19:39:13Z",
+    "export": {
+      "article_id": "newsroom-cornelis-networks-205-million-active-compute-fabric",
+      "url": "https://rtfclmgzn.com/article/cornelis-networks-205-million-active-compute-fabric",
+      "headline": "An Intel spinoff raised $205 million to make the network fabric itself compute, not just carry, AI traffic",
+      "hook": "An AI-networking startup just raised $205 million for hardware that processes data mid-transit instead of just moving it between GPUs.",
+      "key_facts": [
+        "Cornelis Networks raised $205 million led by IAG Capital Partners.",
+        "CEO Lisa Spelman says purchased GPU capacity sits idle roughly 50% of the time.",
+        "The design uses open standards, not Nvidia's proprietary NVLink/InfiniBand stack."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/cornelis-networks-205-million-active-compute-fabric.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "An Intel spinoff just raised $205 million to make the network itself compute -- not just carry -- data between AI chips. The pitch: purchased GPU capacity sits idle roughly 50% of the time waiting on the network.",
+        "reply_copy": "The scoped numbers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "An Intel spinoff wants to put a computer inside the network cable.\n\nCornelis Networks raised $205 million for Active Compute Fabric -- hardware that processes AI traffic in transit instead of just carrying it. CEO Lisa Spelman says purchased GPU capacity sits idle roughly 50% of the time, waiting on the network.\n\nBuilt on open standards, not Nvidia's proprietary interconnect stack.",
+        "hashtags": [
+          "#AI",
+          "#AIInfrastructure",
+          "#Nvidia",
+          "#DataCenter",
+          "#Networking",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Half of the GPU capacity companies have already bought sits idle -- not because the chips are slow, but because the network can't keep up. Cornelis Networks just raised $205 million betting the fix is compute embedded in the network fabric itself, not another chip.",
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "An Intel spinoff raised $205 million for network hardware that computes on data as it moves between GPUs, instead of just carrying it. The CEO's pitch: purchased GPU capacity sits idle roughly 50% of the time waiting on the network, not the chips. Built on open standards, positioned against Nvidia's NVLink/InfiniBand lock-in.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Cornelis Networks raised $205M for a network fabric that computes on AI traffic mid-transit -- a bet that idle GPU time, not GPU speed, is the real bottleneck. Open standards, not Nvidia's stack.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-project-lily-contractors-read-chatgpt-prompts",
+    "ts": "2026-09-15T19:39:29Z",
+    "export": {
+      "article_id": "newsroom-openai-project-lily-contractors-read-chatgpt-prompts",
+      "url": "https://rtfclmgzn.com/article/openai-project-lily-contractors-read-chatgpt-prompts",
+      "headline": "OpenAI pays contractors to read real ChatGPT prompts and rate the replies -- its own privacy page describes a narrower program than the one in its internal documents",
+      "hook": "OpenAI's own help page says contractor access to your chats is only for abuse enforcement. Internal documents describe an ongoing quality-rating program that reads far more than that.",
+      "key_facts": [
+        "Contractors are paid over $50/hour via staffing platforms Crossing Hurdles and Mercor.",
+        "A Privacy Filter model tries to strip identifying details but can miss or over-redact them.",
+        "Anthropic, by contrast, reviews chats only when flagged, investigated, or fed back via thumbs."
+      ],
+      "tone": "Principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/openai-project-lily-contractors-read-chatgpt-prompts.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI's help page says contractor access to your ChatGPT conversations is \"solely\" for abuse and misuse review. Internal documents describe an ongoing program that rates ordinary conversations for tone and sycophancy -- paid contractors, $50+/hour.",
+        "reply_copy": "The mechanics, and how to opt out:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AIPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Humans are reading real ChatGPT conversations -- and it's more routine than OpenAI's own privacy page suggests.\n\nA 404 Media investigation found OpenAI runs \"Project Lily\": contractors paid $50+/hour rate real user prompts on a 1-to-7 scale for tone and sycophancy. OpenAI's help page describes contractor access more narrowly, as review \"solely\" for abuse and misuse.\n\nHow to protect yourself: turn off \"Improve the model for everyone\" in Data Controls, or use Temporary Chat for anything sensitive.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#AIPrivacy",
+          "#DataPrivacy",
+          "#AIEthics",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Did you know a paid contractor might read your ChatGPT conversation and rate the reply on a 1-to-7 scale? OpenAI's own help page describes that access narrowly, as abuse-and-misuse review -- but internal documents describe an ongoing quality-rating program that reads far more than flagged conversations.",
+        "hashtags": [
+          "#OpenAI",
+          "#Privacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI's help page says contractors only see your ChatGPT chats to review for abuse and misuse. A 404 Media investigation, based on internal documents, found an ongoing program -- \"Project Lily\" -- where paid contractors ($50+/hour) rate ordinary conversations for tone and sycophancy. Anthropic's stated policy is narrower: review only when flagged, investigated, or fed back via thumbs.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's help page says contractor access to your chats is for abuse review only. Internal documents describe a routine quality-rating program that reads far more than that -- paid contractors, a Privacy Filter that can miss or over-redact.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T00:39:29Z",
+        "copy": "The gap that matters here isn't that humans review AI chats -- every lab does that. It's that OpenAI's own disclosure describes a narrower program (abuse review) than the ongoing one its internal documents show (routine tone/sycophancy rating of ordinary conversations).",
+        "reply_copy": "How OpenAI's approach compares to Anthropic's:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#RLHF"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T00:39:29Z",
+        "copy": "The most interesting fact in the Project Lily story isn't that OpenAI has contractors reading conversations -- every major AI lab runs some version of RLHF. It's the gap between what OpenAI's help page says that access is for (abuse and misuse review) and what its own internal documents describe (an ongoing program rating ordinary conversations for tone and sycophancy).",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
