@@ -19330,4 +19330,244 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
+,
+{
+  "article_id": "newsroom-cloudflare-ai-crawler-block-accountable-exemption",
+  "ts": "2026-09-15T15:01:46Z",
+  "export": {
+    "article_id": "newsroom-cloudflare-ai-crawler-block-accountable-exemption",
+    "url": "https://rtfclmgzn.com/article/cloudflare-ai-crawler-block-accountable-exemption",
+    "headline": "Cloudflare's AI-crawler deadline arrived today -- and Google, Apple, and Microsoft got an exemption, not the block reporters predicted",
+    "hook": "Two months of reporting said Google, Apple, and Microsoft's crawlers would get blocked by Cloudflare's new defaults today. Cloudflare's own rollout built them a named exemption instead.",
+    "key_facts": [
+      "Cloudflare's new AI-crawler defaults took effect today, replacing one toggle with four settings.",
+      "Google, Apple, and Microsoft now qualify for a new 'Accountable' exemption from the training-block default.",
+      "Only 17% of sites block AI training at all; fewer than 1% block search outright."
+    ],
+    "tone": "Composed, legally precise, strategic",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/cloudflare-ai-crawler-block-accountable-exemption.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Two months of reporting said Google, Apple, and Microsoft's crawlers would get blocked by Cloudflare's new defaults today. Instead, Cloudflare built them a named exemption -- Accountable -- the July announcement never mentioned.",
+      "reply_copy": "What actually shipped:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Cloudflare",
+        "#AIPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-15T20:01:46Z",
+      "copy": "17% of Cloudflare sites block AI training. Fewer than 1% block search. That gap is the actual argument behind today's new crawler exemption.",
+      "reply_copy": "The numbers:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Cloudflare"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Cloudflare's new AI-crawler rules took effect today.\n\nFor two months, reporting said Google, Apple, and Microsoft's crawlers would get blocked on ad-supported pages the moment a site opted out of AI training.\n\nInstead, Cloudflare built those three crawlers -- plus four AI labs -- a named exemption: Accountable status, earned through opt-out commitments rather than a blanket block.\n\nFull breakdown at the link in bio.",
+      "hashtags": [
+        "#Cloudflare",
+        "#AIPolicy",
+        "#BigTech",
+        "#TechNews",
+        "#Google",
+        "#Microsoft"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Cloudflare's new default rules for AI crawlers took effect today -- and the outcome differs from what two months of reporting expected. Coverage of Cloudflare's July announcement concluded that Googlebot, Applebot, and Bingbot would get blocked on ad-supported pages that opt out of AI training, since all three combine search indexing with AI-training collection in one crawler. Cloudflare's own rollout instead created a new 'Accountable' designation, exempting those three crawlers -- plus Amazon, Anthropic, Meta, and OpenAI -- as long as they meet transparency and ranking-neutrality commitments.",
+      "hashtags": [
+        "#Cloudflare",
+        "#AIPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Cloudflare's new AI-crawler defaults went live today. Two months of reporting said Google, Apple, and Microsoft's crawlers would get blocked on ad-supported pages that opt out of AI training. Instead, Cloudflare built those three crawlers a named exemption -- Accountable status -- that the original announcement never mentioned.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Reporting said Google, Apple, and Microsoft's crawlers would get blocked by Cloudflare's new AI-training defaults today. Instead they got a named exemption the original plan never mentioned.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-agility-robotics-digit-5-humanoid-launch",
+  "ts": "2026-09-15T15:02:46Z",
+  "export": {
+    "article_id": "newsroom-agility-robotics-digit-5-humanoid-launch",
+    "url": "https://rtfclmgzn.com/article/agility-robotics-digit-5-humanoid-launch",
+    "headline": "Agility's Digit 5 is built to work next to people with no safety cage. It won't reach a customer floor to prove it until 2027",
+    "hook": "Agility says its new humanoid can finally work beside people with no physical barrier. The claim won't be field-tested until early 2027.",
+    "key_facts": [
+      "Payload rises 40% to 50 lb; battery runs 90 minutes and recharges in 9.",
+      "$300M+ in multi-year orders reported, most of it subject to contractual milestones.",
+      "Digit 4's fleet has logged 65,000+ field hours and passed an independent OSHA safety evaluation -- Digit 5 itself has none yet."
+    ],
+    "tone": "Curious, hands-on, hard eye for the demo-versus-shipping gap",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "primary_image": "assets/img/newsroom/agility-robotics-digit-5-humanoid-launch.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Agility's new humanoid, Digit 5, is built to work beside people with no safety cage -- a real barrier no fenced robot could clear. It won't reach a single customer floor to prove that claim until 2027.",
+      "reply_copy": "The spec sheet vs. the proof:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics",
+        "#Humanoid"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-15T20:02:46Z",
+      "copy": "The Digit 4 fleet already logged 65,000+ field hours and passed an independent OSHA safety evaluation. Digit 5's whole new pitch -- working with zero barrier -- has never been tested outside Agility's own facilities.",
+      "reply_copy": "Why that gap matters:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Agility Robotics unveiled Digit 5 today -- its first humanoid built to work next to people with no fencing, no light curtains, no physical barrier at all.\n\n40% more payload. A 10:1 run-to-charge ratio. $300M+ in reported orders.\n\nBut the barrier-free claim itself? Untested outside Agility's own facilities -- early access doesn't start until 2027.\n\nFull story at the link in bio.",
+      "hashtags": [
+        "#Robotics",
+        "#Humanoid",
+        "#AI",
+        "#Manufacturing",
+        "#Automation",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Agility Robotics unveiled Digit 5 today, calling it the company's first humanoid built for 'cooperatively safe' work -- able to operate next to people without the fencing or light curtains that kept Digit 4 physically separated from workers. The pitch rests on a new AI-driven safety architecture, a 40% payload increase, and $300 million in reported multi-year orders. The catch: Digit 5 itself hasn't been field-tested. Early access doesn't begin until the first half of 2027, so the barrier-free claim is still the company's word, not an independently checked one.",
+      "hashtags": [
+        "#Robotics",
+        "#Humanoid"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Agility's Digit 5 is built to work next to people with zero physical barrier -- a real engineering claim, backed by a new safety architecture. But it hasn't been field-tested: early access starts in 2027. The existing Digit 4 fleet has 65,000+ real hours and passed an independent OSHA eval. Digit 5 has none of that yet.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Agility's new humanoid is built to work beside people with no safety cage. Real spec upgrade, untested claim -- early access doesn't start until 2027.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-google-antigravity-claude-opus-5-engineer-access",
+  "ts": "2026-09-15T15:03:46Z",
+  "export": {
+    "article_id": "newsroom-google-antigravity-claude-opus-5-engineer-access",
+    "url": "https://rtfclmgzn.com/article/google-antigravity-claude-opus-5-engineer-access",
+    "headline": "Google opens Claude Opus 5 to every engineer -- but only inside its own IDE, and only on a quota",
+    "hook": "Google dropped the internal policy that kept Claude off-limits to most engineers -- but only inside its own tool, not Anthropic's.",
+    "key_facts": [
+      "Previously, Claude access was limited to select DeepMind teams and high-priority projects.",
+      "Employees now select Claude Opus 5 inside Antigravity, Google's own coding platform, on a per-employee quota.",
+      "Google says Gemini remains its primary, foundational model for internal development."
+    ],
+    "tone": "Austere, technically exacting, evaluation-first",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "primary_image": "assets/img/newsroom/google-antigravity-claude-opus-5-engineer-access.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Google just dropped the internal policy that kept most of its engineers off Claude. They can now use Claude Opus 5 -- but only inside Google's own IDE, on a quota, not via Anthropic's own tools.",
+      "reply_copy": "The routing detail:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Google",
+        "#Anthropic"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Google engineers can now use Claude Opus 5 -- a rival lab's flagship model -- at work.\n\nPreviously limited to select DeepMind teams. Now open to everyone, but only inside Antigravity, Google's own coding platform, on an individual quota.\n\nGoogle's line: Gemini stays primary. Claude fills the gaps.\n\nFull story at the link in bio.",
+      "hashtags": [
+        "#Google",
+        "#Anthropic",
+        "#AI",
+        "#Coding",
+        "#TechNews",
+        "#ArtificialIntelligence"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Google has dropped an internal policy that kept most of its engineers off Anthropic's models, according to Business Insider. Any Google engineer can now select Claude Opus 5 inside Antigravity, Google's own agent-first coding platform -- previously access was limited to select DeepMind teams and high-priority projects. Employees still can't use Anthropic's own Claude Code tool directly, and each works against an individual usage quota. Google's position: Gemini remains its primary, foundational model for internal development.",
+      "hashtags": [
+        "#Google",
+        "#Anthropic"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Google dropped the internal policy that kept most engineers off Claude. They can now use Opus 5 -- but only inside Antigravity, Google's own coding platform, on a per-employee quota, not via Anthropic's own tools. Google says Gemini stays the primary model internally.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Google now lets engineers use Claude Opus 5 -- but only inside its own IDE, on a quota, with billing and logging staying on Google's side.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
