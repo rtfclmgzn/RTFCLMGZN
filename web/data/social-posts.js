@@ -19044,8 +19044,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Microsoft published a draft Code of Conduct banning its AI models from resisting shutdown or running cyberattacks, open for 6 weeks of public comment. First of this week's AI-safety pledges with an actual document behind it.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvklefllkb26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvklefllkb26",
+        "posted_at": "2026-09-15T12:02:56Z"
       }
     ]
   },
@@ -19136,8 +19138,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Trump called Amodei's AI-slowdown warning a 'SICK conspiracy.' His own AI czar David Sacks disagreed too, just differently: stop asking permission, and prove it's about safety, not liability.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvkl56rhed2n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvkl56rhed2n",
+        "posted_at": "2026-09-15T11:58:54Z"
       }
     ]
   },
@@ -19186,8 +19190,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2099830212691149016",
+        "remote_id": "2099830212691149016",
+        "posted_at": "2026-09-15T11:58:30Z"
       },
       {
         "platform": "instagram",
@@ -19228,8 +19234,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-15T05:38:03Z",
         "copy": "No law currently requires an AI company to verify who's buying access to a model with its safety training removed. The technique is legal, the hosting is legal -- the outputs are the thing every major lab's safety training exists to refuse.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdTqGoEEc2R",
+        "remote_id": "17966841246173776",
+        "posted_at": "2026-09-15T11:58:46Z"
       },
       {
         "platform": "bluesky",
@@ -19273,7 +19281,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
