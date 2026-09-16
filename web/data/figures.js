@@ -104,6 +104,9 @@ window.RTFC_FIGURES = {
     { id:"inf-anthropic-fluidstack", kind:"infra-commitment-usd", value:50,
       label:"Anthropic / Fluidstack, Texas + New York data centers", slug:"fluidstack-1-5-billion-raise-18-billion-valuation-unconfirmed",
       note:"Anthropic's own confirmed investment figure for two custom-built sites, announced Nov. 12, 2025. How much of the $50B flows to Fluidstack itself versus land, power and construction elsewhere is not broken out." },
+    { id:"inf-bytedance-loan", kind:"infra-commitment-usd", value:29.6,
+      label:"ByteDance, unsecured syndicated loan", slug:"bytedance-29-6-billion-syndicated-loan-ai-capex",
+      note:"A signed, priced credit facility from ~30 banks -- not a spend target or a nonbinding MOU like most other figures in this register. ByteDance has not confirmed the terms; reported by Bloomberg, Sept. 14, 2026." },
 
     // ---- closed raises (USD B) ----
     { id:"raise-cxmt-ipo", kind:"funding-raise-usd", value:8.6,
