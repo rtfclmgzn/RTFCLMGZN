@@ -19962,5 +19962,265 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-anthropic-google-ai-safety-standards-body-talks",
+    "ts": "2026-09-16T14:50:28Z",
+    "export": {
+      "article_id": "newsroom-openai-anthropic-google-ai-safety-standards-body-talks",
+      "url": "https://rtfclmgzn.com/article/openai-anthropic-google-ai-safety-standards-body-talks",
+      "headline": "OpenAI, Anthropic and Google have been negotiating an AI safety standards body since July -- and Meta told the White House not to join",
+      "hook": "OpenAI's own policy chief just confirmed months of AI-safety talks with Anthropic and Google -- and the industry's own safety index scores none of them above a C+.",
+      "key_facts": [
+        "OpenAI, Anthropic and Google DeepMind have coordinated on a voluntary AI safety standards body since July.",
+        "Meta advised the White House against joining; the idea traces to Google DeepMind's Demis Hassabis.",
+        "The Future of Life Institute's Safety Index graded every lab now negotiating it C+ or below."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/openai-anthropic-google-ai-safety-standards-body-talks.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI, Anthropic and Google DeepMind have been negotiating an AI safety standards body since July. Meta told the White House not to join. Their own industry safety index scores none of them above a C+.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#TechPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "They've been talking since July.\n\nOpenAI, Anthropic and Google DeepMind have quietly negotiated an AI safety standards body for months -- confirmed on the record this week. Meta told the White House to stay out.\n\nThe twist: the industry's own safety index, published weeks before any of this was proposed, scores every one of the three labs C+ or below.",
+        "hashtags": [
+          "#AI",
+          "#AISafety",
+          "#OpenAI",
+          "#Anthropic",
+          "#GoogleDeepMind",
+          "#TechPolicy",
+          "#AIRegulation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Should AI companies get to grade their own safety homework? OpenAI, Anthropic and Google DeepMind have been negotiating a voluntary safety standards body since July -- modeled on Wall Street's FINRA. Meta declined to join. Critics call it a conflict of interest; the industry's own safety index backs them up, scoring every lab involved C+ or lower.",
+        "hashtags": [
+          "#AISafety",
+          "#TechPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Confirmed this week: OpenAI, Anthropic and Google DeepMind have been talking since July about a voluntary AI safety standards body modeled on FINRA. Meta counseled the White House against it. The irony: the industry's own safety index scores none of the three above a C+ -- published weeks before any of this was proposed.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI, Anthropic and Google DeepMind have quietly negotiated an AI safety standards body since July. Meta opted out. Their own industry safety index scores none of them above a C+.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T19:50:28Z",
+        "copy": "Zuckerberg reportedly told Trump not to join the AI industry's own safety-standards talks. The other three labs in the room? Their own safety index scores all of them C+ or below too.",
+        "reply_copy": "Context:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Meta",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T19:50:28Z",
+        "copy": "The FINRA-for-AI idea traces to a July essay by Google DeepMind's Demis Hassabis. Two months later, three labs are negotiating it and one -- Meta -- is lobbying against it. None of the participants' own safety grades are above a C+, per an index published before any of this was proposed.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
+    "ts": "2026-09-16T14:52:30Z",
+    "export": {
+      "article_id": "newsroom-zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
+      "url": "https://rtfclmgzn.com/article/zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
+      "headline": "Z.ai raised $5 billion for the second time in two months. Its stock has fallen 73% since June, and Washington just named it in a federal distillation warning",
+      "hook": "Z.ai's stock is down 73% since June. It just raised $5 billion anyway -- eight days after US agencies named it in a federal AI-distillation warning.",
+      "key_facts": [
+        "Z.ai priced a combined $5B raise this week: $2B in discounted shares, $3B in zero-coupon bonds.",
+        "Z.ai's Hong Kong shares have fallen 73%, from June 22's HK$2,980 peak to this week's HK$714 placement price.",
+        "NSA, CISA and FBI named Z.ai among six Chinese firms accused of distilling billions of tokens from Claude, GPT, Gemini and Grok -- eight days before the raise priced."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Z.ai's stock is down 73% since June. This week it raised $5 billion anyway -- eight days after the US government named it in a federal AI-distillation warning.",
+        "reply_copy": "The numbers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIFunding",
+          "#ChinaAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "$5 billion. Down 73%. Named by the feds.\n\nZ.ai (formerly Zhipu) just closed its second major raise in two months -- $2B in discounted shares, $3B in zero-coupon bonds -- even as its Hong Kong stock sits 73% below June's peak.\n\nThe timing: eight days after NSA, CISA and FBI named Z.ai in a joint advisory accusing it of distilling billions of tokens from Claude, GPT, Gemini and Grok.",
+        "hashtags": [
+          "#AI",
+          "#Zhipu",
+          "#ChinaAI",
+          "#TechFunding",
+          "#StockMarket",
+          "#AISecurity",
+          "#Finance"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A company's stock falls 73% and investors still hand it $5 billion. That's Z.ai this week -- China's GLM maker, and one of six firms the NSA, CISA and FBI just named in a federal AI-distillation warning. The raise priced eight days after the advisory. Investors are betting on the revenue growth; the distillation question stays open.",
+        "hashtags": [
+          "#AIFunding",
+          "#ChinaAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Z.ai's Hong Kong shares are down 73% from June's peak. This week it raised $5 billion anyway -- $2B in discounted shares, $3B in zero-coupon bonds -- eight days after NSA, CISA and FBI named it among six Chinese firms accused of distilling billions of tokens from US models. Revenue is up nearly 400% YoY, which is probably why investors showed up regardless.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Z.ai's stock is down 73% since June. It raised $5B anyway, 8 days after the NSA/CISA/FBI named it in a distillation warning alongside DeepSeek, Alibaba and others. Revenue's up ~400% YoY -- likely why investors didn't blink.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T19:52:30Z",
+        "copy": "A zero-coupon bond priced at a 25% premium on a stock that just fell 73% is a specific bet: that Z.ai's worst quarter is already behind it. Bondholders collect nothing if they're wrong -- these notes pay no interest at all.",
+        "reply_copy": "How the bonds work:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Zhipu",
+          "#Bonds"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T19:52:30Z",
+        "copy": "The distillation advisory doesn't name Z.ai alone -- DeepSeek, Alibaba, Moonshot AI, MiniMax and StepFun are on the same list. What's notable is that being named cost Z.ai nothing in the market that actually funds it: $5 billion found buyers within the week.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-gemini-3-8-live-voice-benchmark-top-ranking",
+    "ts": "2026-09-16T14:57:12Z",
+    "export": {
+      "article_id": "newsroom-gemini-3-8-live-voice-benchmark-top-ranking",
+      "url": "https://rtfclmgzn.com/article/gemini-3-8-live-voice-benchmark-top-ranking",
+      "headline": "Gemini 3.8 Live debuts atop an independent voice-AI benchmark, two weeks after Gemini 3.8 Flash",
+      "hook": "Google says its new Gemini 3.8 Live models just took the #1 spot on an independent voice-AI benchmark -- two weeks after its last Gemini 3.8 release.",
+      "key_facts": [
+        "Gemini 3.8 Live and Live Extended Thinking launched Sept. 15, Google's second Gemini 3.8-family release in two weeks.",
+        "Google says the models rank #1 on Artificial Analysis' Speech to Speech Quality Index at 82.6.",
+        "Pricing: $0.005/minute audio input, $0.018/minute audio output; rollout spans Search Live, Gemini Live and the API today."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/gemini-3-8-live-voice-benchmark-top-ranking.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google's new Gemini 3.8 Live models claim #1 on an independent voice-AI benchmark (82.6), rolling out today across Search Live and the Gemini API. One catch: that ranking comes from Google's own post, not outside verification.",
+        "reply_copy": "The details:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google's newest voice model comes with a claim.\n\nGemini 3.8 Live and a higher-effort 'Extended Thinking' version launched this week -- Google says they rank #1 on an independent voice-AI benchmark, 82.6 on Artificial Analysis' Speech to Speech Quality Index.\n\nRolling out now across Search Live, Gemini Live and the Gemini API. 97 languages, mid-conversation switching, background tool use.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI",
+          "#VoiceAI",
+          "#AI",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google's second Gemini 3.8 release in two weeks: Gemini 3.8 Live, a real-time voice model Google says tops an independent voice-AI benchmark. It's rolling out today across Search Live, Gemini Live and the Gemini API, with 97 languages supported. Worth noting: the #1 ranking comes from Google's own announcement, not an outside check.",
+        "hashtags": [
+          "#Gemini",
+          "#GoogleAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini 3.8 Live launched this week -- Google's second 3.8-family release in two weeks, and its highest-scoring model yet on Artificial Analysis' voice benchmark (82.6, #1 per Google). Rolling out across Search Live, Gemini Live, Workspace and the API today. The ranking is Google's own claim so far, not independently re-checked.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Google's Gemini 3.8 Live launched Monday -- claims #1 on an independent voice-AI benchmark at 82.6. Rolling out across Search Live, Gemini Live and the API today. 97 languages. The ranking is Google's own post so far, not outside-verified.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
-];
+]
+;

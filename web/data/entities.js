@@ -75,6 +75,10 @@ window.RTFC_ENTITIES = {
       kind:"consumer assistant product", access:"closed" },
 
     // --- Google ---
+    { re:/\bGemini 3\.8 Live Extended Thinking\b/i, name:"Gemini 3.8 Live Extended Thinking", maker:"Google DeepMind", makerKey:"google",
+      kind:"live voice-dialogue model", access:"closed" },
+    { re:/\bGemini 3\.8 Live\b/i, name:"Gemini 3.8 Live", maker:"Google DeepMind", makerKey:"google",
+      kind:"live voice-dialogue model", access:"closed" },
     { re:/\bGemini 3\.8 Flash\b/i, name:"Gemini 3.8 Flash", maker:"Google DeepMind", makerKey:"google",
       kind:"fast low-cost model", access:"closed" },
     { re:/\bGemini 3\.7 Flash\b/i, name:"Gemini 3.7 Flash", maker:"Google DeepMind", makerKey:"google",

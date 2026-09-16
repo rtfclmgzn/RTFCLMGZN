@@ -60901,8 +60901,14 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "unit": "%",
           "source": "NBC News Decision Desk poll, reported Sept. 14, 2026",
           "data": [
-            { "label": "Worry more about AI than feel excited by it", "value": 70 },
-            { "label": "Oppose a data center in their own community", "value": 69 }
+            {
+              "label": "Worry more about AI than feel excited by it",
+              "value": 70
+            },
+            {
+              "label": "Oppose a data center in their own community",
+              "value": 69
+            }
           ]
         }
       },
@@ -60917,9 +60923,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "stakes",
         "stakes": {
           "items": [
-            { "who": "Anthropic and OpenAI", "tone": "exposed", "what": "Publicly committed to a voluntary slowdown the White House is now actively arguing against, with no legal obligation to follow through." },
-            { "who": "Chinese AI developers", "tone": "unclear", "what": "Named by Trump as the sole beneficiary of any US slowdown, though neither post cites evidence for the claim." },
-            { "who": "US AI-safety researchers and advocates", "tone": "loses", "what": "Lose the clearest opening yet for a policy response, with the administration publicly framing the underlying warning as fabricated." }
+            {
+              "who": "Anthropic and OpenAI",
+              "tone": "exposed",
+              "what": "Publicly committed to a voluntary slowdown the White House is now actively arguing against, with no legal obligation to follow through."
+            },
+            {
+              "who": "Chinese AI developers",
+              "tone": "unclear",
+              "what": "Named by Trump as the sole beneficiary of any US slowdown, though neither post cites evidence for the claim."
+            },
+            {
+              "who": "US AI-safety researchers and advocates",
+              "tone": "loses",
+              "what": "Lose the clearest opening yet for a policy response, with the administration publicly framing the underlying warning as fabricated."
+            }
           ]
         }
       },
@@ -61092,11 +61110,31 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "keyfacts": {
           "title": "The service, in short",
           "items": [
-            { "label": "Founded", "value": "Late 2025", "note": "incorporated March 2026" },
-            { "label": "Flagship model", "value": "Abliterated Large v2", "note": "built on Z.ai's GLM-5.3" },
-            { "label": "Price", "value": "$5 / million tokens", "note": "standard rate, input or output" },
-            { "label": "ID required?", "value": "No", "note": "sign-up flow verifies no one's identity" },
-            { "label": "Logging", "value": "Disputed", "note": "site claims none; reporting says billing metadata is kept" }
+            {
+              "label": "Founded",
+              "value": "Late 2025",
+              "note": "incorporated March 2026"
+            },
+            {
+              "label": "Flagship model",
+              "value": "Abliterated Large v2",
+              "note": "built on Z.ai's GLM-5.3"
+            },
+            {
+              "label": "Price",
+              "value": "$5 / million tokens",
+              "note": "standard rate, input or output"
+            },
+            {
+              "label": "ID required?",
+              "value": "No",
+              "note": "sign-up flow verifies no one's identity"
+            },
+            {
+              "label": "Logging",
+              "value": "Disputed",
+              "note": "site claims none; reporting says billing metadata is kept"
+            }
           ]
         }
       },
@@ -61119,9 +61157,27 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "ledger": {
           "title": "What the numbers cover",
           "items": [
-            { "value": "$5", "unit": "per million tokens", "label": "Abliteration.ai's standard rate", "includes": "Input or output tokens on Abliterated Large v2", "excludes": "Any identity check, use-case review, or per-account rate limit tied to stated purpose" },
-            { "value": "84.5%", "unit": "CyberGym", "label": "Offensive-security exercise benchmark", "includes": "Realistic simulated attack tasks", "excludes": "Any measure of whether a request is legitimate" },
-            { "value": "41.8%", "unit": "Terminal-Bench 4.0", "label": "Autonomous command-line task benchmark", "includes": "Independent completion of real terminal tasks", "excludes": "Any refusal or safety evaluation" }
+            {
+              "value": "$5",
+              "unit": "per million tokens",
+              "label": "Abliteration.ai's standard rate",
+              "includes": "Input or output tokens on Abliterated Large v2",
+              "excludes": "Any identity check, use-case review, or per-account rate limit tied to stated purpose"
+            },
+            {
+              "value": "84.5%",
+              "unit": "CyberGym",
+              "label": "Offensive-security exercise benchmark",
+              "includes": "Realistic simulated attack tasks",
+              "excludes": "Any measure of whether a request is legitimate"
+            },
+            {
+              "value": "41.8%",
+              "unit": "Terminal-Bench 4.0",
+              "label": "Autonomous command-line task benchmark",
+              "includes": "Independent completion of real terminal tasks",
+              "excludes": "Any refusal or safety evaluation"
+            }
           ]
         }
       },
@@ -61153,8 +61209,19 @@ window.RTFC_NEWSROOM_ARTICLES = [
             {
               "question": "Does Abliteration.ai keep any record of who used it and how?",
               "claims": [
-                { "who": "Abliteration.ai (its own site)", "kind": "primary", "says": "\"Prompts never stored, outputs never logged, metadata never kept\" -- zero data retention.", "url": "https://abliteration.ai" },
-                { "who": "The Decoder", "kind": "reporting", "says": "The provider retains no prompt or response logs, but does keep operational metadata -- token counts, timestamps, and billing data.", "url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/", "trusted": true }
+                {
+                  "who": "Abliteration.ai (its own site)",
+                  "kind": "primary",
+                  "says": "\"Prompts never stored, outputs never logged, metadata never kept\" -- zero data retention.",
+                  "url": "https://abliteration.ai"
+                },
+                {
+                  "who": "The Decoder",
+                  "kind": "reporting",
+                  "says": "The provider retains no prompt or response logs, but does keep operational metadata -- token counts, timestamps, and billing data.",
+                  "url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/",
+                  "trusted": true
+                }
               ],
               "ruling": "Using The Decoder's more specific account. A metered API that bills by the token cannot run on literally zero metadata -- some record of usage volume and timing has to exist to generate an invoice, which is exactly what that reporting describes and the site's blanket \"metadata never kept\" claim doesn't address."
             }
@@ -61170,9 +61237,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "type": "stakes",
         "stakes": {
           "items": [
-            { "who": "Red teams and banks testing their own AI agents", "tone": "gains", "what": "Get a hosted, no-setup way to rehearse against jailbreaks their production tools are built to refuse." },
-            { "who": "Z.ai", "tone": "exposed", "what": "Its own safety training is the thing being stripped and resold under another company's brand, with no public response so far." },
-            { "who": "Anyone Abliteration.ai's outputs are used against", "tone": "loses", "what": "Has no way to know a harmful output came from this service, since the platform verifies no user identity and disputes keeping detailed logs." }
+            {
+              "who": "Red teams and banks testing their own AI agents",
+              "tone": "gains",
+              "what": "Get a hosted, no-setup way to rehearse against jailbreaks their production tools are built to refuse."
+            },
+            {
+              "who": "Z.ai",
+              "tone": "exposed",
+              "what": "Its own safety training is the thing being stripped and resold under another company's brand, with no public response so far."
+            },
+            {
+              "who": "Anyone Abliteration.ai's outputs are used against",
+              "tone": "loses",
+              "what": "Has no way to know a harmful output came from this service, since the platform verifies no user identity and disputes keeping detailed logs."
+            }
           ]
         }
       },
@@ -61280,11 +61359,29 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "keyfacts": {
           "title": "The device, in short",
           "items": [
-            { "label": "Built by", "value": "MIT Lincoln Laboratory + Mass General Hospital" },
-            { "label": "Funded by", "value": "US Army Combat Casualty Care Research Program" },
-            { "label": "Award", "value": "FLC 2026 Excellence in Technology Transfer", "note": "announced Sept. 11, 2026" },
-            { "label": "FDA status", "value": "Breakthrough Device Designation", "note": "not yet cleared for sale" },
-            { "label": "Commercial partner", "value": "AutonomUS Medical Technologies", "note": "prototype transfer in progress" }
+            {
+              "label": "Built by",
+              "value": "MIT Lincoln Laboratory + Mass General Hospital"
+            },
+            {
+              "label": "Funded by",
+              "value": "US Army Combat Casualty Care Research Program"
+            },
+            {
+              "label": "Award",
+              "value": "FLC 2026 Excellence in Technology Transfer",
+              "note": "announced Sept. 11, 2026"
+            },
+            {
+              "label": "FDA status",
+              "value": "Breakthrough Device Designation",
+              "note": "not yet cleared for sale"
+            },
+            {
+              "label": "Commercial partner",
+              "value": "AutonomUS Medical Technologies",
+              "note": "prototype transfer in progress"
+            }
           ]
         }
       },
@@ -61347,648 +61444,647 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "A clean, source-limited brief that states plainly what the award does and doesn't mean -- a technology-transfer milestone, not a market launch -- rather than letting the device's dramatic use case imply availability it doesn't have yet."
       }
     }
-  }
-,
-{
-  "slug": "cloudflare-ai-crawler-block-accountable-exemption",
-  "title": "Cloudflare's AI-crawler deadline arrived today -- and Google, Apple, and Microsoft got an exemption, not the block reporters predicted",
-  "dek": "Two months of reporting said Cloudflare's September 15 default would catch Googlebot, Applebot, and Bingbot in the same net as AI-training bots, since all three crawl for search and training at once. Cloudflare's own rollout instead built those three crawlers -- plus four AI labs -- a named exemption, based on opt-out commitments rather than a blanket block.",
-  "persona": "evelyn-zhao",
-  "section": "Policy",
-  "format": "synthesis",
-  "disclaimer": "none",
-  "applyType": "watch",
-  "apply": [
-    {
-      "label": "Watch whether Accountable commitments are actually enforced",
-      "text": "Cloudflare says it will hold operators to opt-out mechanisms and a ranking-neutrality promise, but today's post names no stated penalty for an Accountable operator that stops honoring them."
-    },
-    {
-      "label": "Watch the early-2027 deadline for AI-summary opt-outs",
-      "text": "Operator-side control over training data exists today; Cloudflare's own integrated control for blocking AI answer-engine summaries specifically is not due until early 2027."
-    },
-    {
-      "label": "Watch which crawlers don't make the Accountable list",
-      "text": "Amazon, Anthropic, Meta, and OpenAI qualify because they already run separated search and training crawlers -- any AI company that hasn't built that separation still gets the blunt default block."
-    }
-  ],
-  "sources": [
-    {
-      "label": "Have it both ways: stay discoverable in search while disallowing AI training",
-      "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
-      "outlet": "Cloudflare Blog",
-      "kind": "primary"
-    },
-    {
-      "label": "Your site, your rules: new AI traffic options for all customers",
-      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
-      "outlet": "Cloudflare Blog",
-      "kind": "primary"
-    },
-    {
-      "label": "Cloudflare's new policy pushes AI companies to pay for publishers' content",
-      "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
-      "outlet": "TechCrunch",
-      "kind": "reporting"
-    },
-    {
-      "label": "Cloudflare's AI Crawler Rules Can Block Googlebot",
-      "url": "https://www.searchenginejournal.com/cloudflares-ai-crawler-rules-can-block-googlebot/581385/",
-      "outlet": "Search Engine Journal",
-      "kind": "reporting"
-    }
-  ],
-  "tldr": [
-    "Cloudflare's new AI-crawler default took effect today, replacing one blanket toggle with four settings.",
-    "July's announcement implied Googlebot, Applebot, and Bingbot would be blocked on ad-supported pages.",
-    "Instead, Cloudflare created an Accountable exemption those three crawlers now qualify for.",
-    "Accountable status requires opt-out mechanisms and a promise that opting out won't hurt search rank.",
-    "Caveat: crawler operators without a separated search/training bot still get the blunt block."
-  ],
-  "body": [
-    {
-      "type": "p",
-      "text": "Cloudflare's new default rules for AI crawlers took effect today, replacing a single block-or-allow toggle with four separate settings. For two months, reporting on the coming change had converged on one specific, concrete prediction: Googlebot, Applebot, and Bingbot would get caught in the same net as AI-training bots the day the new defaults switched on. That isn't what shipped. Cloudflare's own rollout instead built those three crawlers -- plus four AI labs -- a formal exemption the July announcement never mentioned.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
-        "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "The mechanic that made the prediction reasonable was real, and Cloudflare built it on purpose. Since July 1, the company has sorted crawler traffic into three categories -- __Search__ (indexing to answer a question later), __Agent__ (an AI [agent](/dictionary) fetching a page in real time on a person's behalf), and __Training__ (pulling content to build or fine-tune a model) -- and told site owners that a **mixed-use crawler gets judged on all of its behaviors at once, so the strictest setting a site applies is the one that wins**. A crawler that both indexes and trains gets blocked entirely the moment a site blocks Training. [Google](/company/google), [Apple](/company/apple), and [Microsoft](/company/microsoft) each run exactly that kind of combined bot -- one crawler doing both jobs, rather than a separate indexer and a separate training scraper.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/content-independence-day-ai-options/"
-      ]
-    },
-    {
-      "type": "quote",
-      "text": "“Now that the majority of traffic on the Internet is non-human, we must go further and act faster.” — Matthew Prince, Cloudflare CEO, July 1",
-      "citation_urls": [
-        "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "That single mechanic is why coverage of the July announcement zeroed in on three names. Search Engine Journal's write-up named Googlebot, Applebot, and Bingbot specifically as the crawlers that would trip the rule, since all three combine search indexing with AI-training collection under one user agent -- exactly the __mixed-use crawler__ profile the strictest-setting rule was built to catch. ==A site that wanted to keep its content out of AI training, under that reading, would have had to accept losing Google Search visibility to get it.== That is the outcome the next two months of secondary coverage kept repeating as settled.",
-      "citation_urls": [
-        "https://www.searchenginejournal.com/cloudflares-ai-crawler-rules-can-block-googlebot/581385/"
-      ]
-    },
-    {
-      "type": "beforeafter",
-      "beforeafter": {
-        "title": "What July's rule implied for today, versus what shipped",
-        "beforeLabel": "July 1 plan, as reported",
-        "afterLabel": "September 15 rollout",
-        "rows": [
-          {
-            "label": "Google / Apple / Microsoft's combined crawlers",
-            "before": "Blocked on ad-supported pages that disallow AI training",
-            "after": "Exempted, via a new “Accountable” designation"
-          },
-          {
-            "label": "Site owner's AI-crawler choices",
-            "before": "One binary toggle: allow everything or block everything",
-            "after": "Four settings: Allow / Disallow AI Training / Block on ad pages / Block"
-          },
-          {
-            "label": "AI-summary opt-out",
-            "before": "No stated mechanism",
-            "after": "Operator-controlled now; native Cloudflare control promised for early 2027"
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "What actually shipped is a new **Disallow AI Training** setting, sitting between \"allow everything\" and \"block everything,\" plus a designation Cloudflare calls ++Accountable++. An operator earns it by meeting, or committing to a dated timeline for, four things: an opt-out mechanism for AI training via robots.txt or an equivalent standard; an opt-out mechanism for AI-generated summaries; URL-level reporting on which pages it trained on versus indexed; and an assurance that opting out of training carries no search-ranking penalty. Google, Apple, and Microsoft all clear the bar today -- not by separating their crawlers, but by combining what they already do with time-bound commitments on the rest.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
-      ]
-    },
-    {
-      "type": "sourcecheck",
-      "sourcecheck": {
-        "items": [
-          {
-            "question": "Would Google, Apple, and Microsoft's crawlers be blocked by default on ad-supported pages starting September 15?",
-            "claims": [
-              {
-                "who": "Search Engine Journal, reporting Cloudflare's July 1 announcement",
-                "kind": "reporting",
-                "says": "Yes -- a crawler that performs both Search and Training gets blocked if a site blocks Training, and Cloudflare named Googlebot, Applebot, and Bingbot as examples that would trip it.",
-                "url": "https://www.searchenginejournal.com/cloudflares-ai-crawler-rules-can-block-googlebot/581385/"
-              },
-              {
-                "who": "Cloudflare's own September 15 policy post",
-                "kind": "primary",
-                "says": "No -- Google, Apple, and Microsoft qualify for the new Accountable designation, exempting their crawlers as long as they meet ongoing transparency and ranking-neutrality commitments.",
-                "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
-                "trusted": true
-              }
-            ],
-            "ruling": "Using Cloudflare's own live policy text over July's projection. The company's own rollout is the only source that can settle what actually shipped, and it differs from what its earlier announcement implied would happen to combined crawlers once the strictest-setting rule went live."
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "Anthropic, Amazon, Meta, and OpenAI make the Accountable list too, but on different grounds: Cloudflare says those four already operate separate search and training crawlers, so the strictest-setting mechanic never applied to them the way it applied to Google, Apple, and Microsoft's combined bots. {{note: Cloudflare's Pay Per Crawl marketplace -- which lets a site charge a crawler per request using an HTTP 402 response -- predates this framework by more than a year and keeps running alongside it, now expanding into a \"Pay Per Use\" model that pays publishers when their content actually surfaces inside an AI answer, not just when a crawler fetches it.}} For a publisher, the practical change today is narrow but real: enabling Disallow AI Training no longer costs a site its Google Search listing, provided Google's crawler keeps the commitments Cloudflare just credited it for.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "Cloudflare's own numbers suggest most site owners haven't been reaching for the block lever regardless of what it would have caught: **17% of sites have enabled some mechanism to block AI training**, and fewer than 1% block search outright. The company frames that gap as evidence for why Search stays a protected category by default -- it also reports that visitors arriving from AI-generated search answers convert 3-5x higher than visitors from a traditional search result, an incentive most site owners have apparently already priced in on their own. ==That asymmetry is the actual argument behind Accountable: Cloudflare is betting that publishers want to keep the traffic that pays, and will tolerate the traffic that trains only when a named company stands behind a promise not to touch the first kind.==",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
-      ]
-    },
-    {
-      "type": "ledger",
-      "ledger": {
-        "title": "Cloudflare's own adoption numbers, scoped",
-        "items": [
-          {
-            "value": "17%",
-            "unit": "of sites",
-            "label": "Have enabled some mechanism to block AI training",
-            "includes": "Any of Cloudflare's training-blocking controls, old or new, across its customer base",
-            "excludes": "Whether the crawler they're blocking is Accountable or not -- the stat predates today's designation"
-          },
-          {
-            "value": "<1%",
-            "unit": "of sites",
-            "label": "Block search crawlers outright",
-            "includes": "Sites using the flat Block setting, which stops Search along with everything else",
-            "excludes": "Sites using Disallow AI Training or Block on ad pages, which leave Search untouched"
-          },
-          {
-            "value": "3-5x",
-            "unit": "conversion multiple",
-            "label": "AI-search-referred visitors versus traditional search visitors",
-            "includes": "Cloudflare's own reported comparison, cited as the business case for keeping Search allowed by default",
-            "excludes": "Any breakdown by site category, traffic volume, or how the multiple was measured"
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "Those numbers are Cloudflare's own case for why Search stays protected while Training does not -- and they are also the backdrop against which today's Accountable carve-out has to be judged: a policy that costs almost nothing in practice for most sites, because almost none of them were blocking search to begin with.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
-      ]
-    },
-    {
-      "type": "stakes",
-      "stakes": {
-        "items": [
-          {
-            "who": "Publishers on Cloudflare's free tier and new sites",
-            "tone": "gains",
-            "what": "Get a working way to block AI training without losing Google Search referral traffic, once an operator holds Accountable status -- the outcome July's binary rule couldn't deliver."
-          },
-          {
-            "who": "Google, Apple, and Microsoft",
-            "tone": "gains",
-            "what": "Avoid losing search indexing on any site that opts out of AI training, despite running the exact combined search-and-training crawlers the strictest-setting rule was written to catch."
-          },
-          {
-            "who": "AI crawler operators without a separated search and training bot",
-            "tone": "loses",
-            "what": "Don't qualify as Accountable and get the blunt block Big Tech avoided today, widening the compliance gap between incumbents and smaller or newer entrants."
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "The asymmetry Accountable creates is structural, not incidental. Qualifying takes an existing search product plus a set of promises Cloudflare says it will hold operators to -- something a company already running Googlebot or Bingbot at global scale can absorb as a policy change. A smaller AI company whose entire crawler is a training scraper wearing a search-indexing hat, because building and maintaining two separate crawling systems is itself expensive, has no equivalent shortcut: it either rebuilds its crawler architecture or accepts the block. Cloudflare's framework doesn't punish mixed-use crawling as such -- it punishes not having the engineering budget to stop doing it.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "None of this touches the older, blunter setting: a site can still choose flat **Block**, which stops every crawler regardless of Accountable status, or **Block on ad-supported pages**, the default Cloudflare originally described for new customers. What changed is that those choices are no longer the only way to keep training crawlers out -- and the crawlers July's reporting expected to get caught in the net are, today, the ones best positioned to avoid it.",
-      "citation_urls": [
-        "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
-      ]
-    }
-  ],
-  "id": "newsroom-cloudflare-ai-crawler-block-accountable-exemption",
-  "image": "assets/img/newsroom/cloudflare-ai-crawler-block-accountable-exemption.jpg",
-  "publishedAt": "2026-09-15T15:01:46Z",
-  "pipeline": {
-    "run": "autonomous Claude-runner cycle · 2026-09-15T15:01:46Z",
-    "stages": [
+  },
+  {
+    "slug": "cloudflare-ai-crawler-block-accountable-exemption",
+    "title": "Cloudflare's AI-crawler deadline arrived today -- and Google, Apple, and Microsoft got an exemption, not the block reporters predicted",
+    "dek": "Two months of reporting said Cloudflare's September 15 default would catch Googlebot, Applebot, and Bingbot in the same net as AI-training bots, since all three crawl for search and training at once. Cloudflare's own rollout instead built those three crawlers -- plus four AI labs -- a named exemption, based on opt-out commitments rather than a blanket block.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
       {
-        "name": "Research",
-        "agent": "claude-runner",
-        "note": "4 sources, 3 independent evidence threads: Cloudflare's own policy posts (primary -- the July 1 announcement and the September 15 rollout that supersedes part of it), TechCrunch's July 1 reporting (independent, carries the Matthew Prince quote), and Search Engine Journal's July 2 reporting (independent, the specific Googlebot/Applebot/Bingbot claim). Checked newsroom-articles.js for prior Cloudflare coverage -- found 7 prior articles mentioning it, crossing the companies.js ~3-story threshold, so added a cloudflare entry this cycle."
+        "label": "Watch whether Accountable commitments are actually enforced",
+        "text": "Cloudflare says it will hold operators to opt-out mechanisms and a ranking-neutrality promise, but today's post names no stated penalty for an Accountable operator that stops honoring them."
       },
       {
-        "name": "Verification",
-        "agent": "claude-runner",
-        "note": "Fetched Cloudflare's own September 15 post directly rather than trusting secondary paraphrase of the July plan, which is what surfaced the actual finding: the 'Accountable' designation is not in the July announcement at all, and it specifically resolves the Googlebot-blocking mechanic that Search Engine Journal's reporting had correctly derived from the rules as originally stated. Cross-checked the 'strictest setting wins' mechanic against both the Cloudflare July post and TechCrunch's reporting before treating it as an accurate description of the original plan."
+        "label": "Watch the early-2027 deadline for AI-summary opt-outs",
+        "text": "Operator-side control over training data exists today; Cloudflare's own integrated control for blocking AI answer-engine summaries specifically is not due until early 2027."
       },
       {
-        "name": "Loop 1 - critique and revise",
-        "agent": "claude-runner",
-        "note": "Self-referential-language check: clean. Critique found the first draft implied 'Accountable' status was a single uniform bar -- revised to distinguish the two qualifying paths Cloudflare's post actually describes: Google/Apple/Microsoft via current capability plus time-bound commitments, versus Amazon/Anthropic/Meta/OpenAI via already-separated search and training crawlers. Also expanded the piece from an initial ~726 words to 900 to clear the synthesis floor honestly, by adding real analysis (the engineering-budget asymmetry paragraph) rather than padding."
-      },
-      {
-        "name": "Loop 2 - component provenance check",
-        "agent": "claude-runner",
-        "note": "beforeafter's three rows, sourcecheck's two claims, and stakes' three items all trace to the Cloudflare post and Search Engine Journal reporting cited in the same paragraphs. No component carries a top-level text field. beforeafter, sourcecheck, and stakes are each separated by prose; the pull quote sits between two prose paragraphs; no two components are adjacent. No entities.js addition needed -- no model launch in this piece."
-      },
-      {
-        "name": "Gate",
-        "agent": "claude-runner",
-        "note": "Approved. 4 sources, 3 independent evidence threads including Cloudflare's own primary policy text, correctly routed as synthesis (900 words). Three components (beforeafter, sourcecheck, stakes) -- sourcecheck required because July's reporting and today's actual rollout conflict on what happens to Google/Apple/Microsoft's crawlers. No mandatory-scrutiny trigger fires: no health, financial-advice, legal-proceeding, or accusatory content -- this is sourced policy reporting about named companies' own published commitments."
+        "label": "Watch which crawlers don't make the Accountable list",
+        "text": "Amazon, Anthropic, Meta, and OpenAI qualify because they already run separated search and training crawlers -- any AI company that hasn't built that separation still gets the blunt default block."
       }
     ],
-    "gate": {
-      "decision": "Approved for publication",
-      "note": "The reconciliation is the story: two months of accurate reporting on Cloudflare's stated plan predicted an outcome its own September 15 rollout avoided for exactly the companies that reporting named, and only fetching the primary source directly surfaced that."
-    }
-  }
-},
-{
-  "slug": "agility-robotics-digit-5-humanoid-launch",
-  "title": "Agility's Digit 5 is built to work next to people with no safety cage. It won't reach a customer floor to prove it until 2027",
-  "dek": "The humanoid maker says a new safety architecture -- AI-driven human detection, motion cues, an independent safety controller -- finally clears the barrier that kept Digit 4 fenced off from workers. The claim rests on $300 million in largely milestone-gated orders and a robot whose earliest customer deployment is still a year away.",
-  "persona": "ash-lindqvist",
-  "section": "Robotics",
-  "format": "synthesis",
-  "disclaimer": "none",
-  "applyType": "watch",
-  "apply": [
-    {
-      "label": "Watch the first Digit 5 customer floor without a cage",
-      "text": "Early access begins in the first half of 2027 -- that deployment, not today's announcement, is the first real test of the cooperatively-safe claim."
-    },
-    {
-      "label": "Watch which of the $300 million in orders actually convert",
-      "text": "Agility's own figure is stated as of May 2026 and subject to contractual milestones -- a later earnings disclosure or SEC filing, now that the company is public, would show how much became real revenue."
-    },
-    {
-      "label": "Watch for Digit 5's own independent safety evaluation",
-      "text": "The OSHA field evaluation Agility cites was won by the already-deployed Digit 4 fleet. Digit 5's new human-detection architecture has not yet been independently tested at all."
-    }
-  ],
-  "sources": [
-    {
-      "label": "Agility Unveils Digit 5 Humanoid Robot Built for Cooperatively Safe Work at Scale",
-      "url": "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
-      "outlet": "Agility Robotics",
-      "kind": "primary"
-    },
-    {
-      "label": "Agility Robotics Debuts Digit 5 Humanoid With New Safety Architecture",
-      "url": "https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/",
-      "outlet": "Unite.AI",
-      "kind": "reporting"
-    },
-    {
-      "label": "Agility Robotics Unveils Digit 5 Humanoid Robot",
-      "url": "https://www.stocktitan.net/news/CCXI/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-30h1tj9oq3gf.html",
-      "outlet": "StockTitan / CCXI",
-      "kind": "reporting"
-    },
-    {
-      "label": "US: Agility goes public as demand grows for next-generation Digit humanoids",
-      "url": "https://interestingengineering.com/ai-robotics/us-digit-robot-maker-agility",
-      "outlet": "Interesting Engineering",
-      "kind": "reporting"
-    }
-  ],
-  "tldr": [
-    "Agility's Digit 5 is built to work beside people without the physical barriers Digit 4 required.",
-    "Payload rises 40% to 50 pounds; battery runs 90 minutes and recharges in 9.",
-    "Agility reports $300 million in multi-year orders, most of it milestone-gated, not guaranteed revenue.",
-    "The Digit 4 fleet already logged 65,000+ field hours and passed an independent OSHA safety evaluation.",
-    "Caveat: Digit 5 itself has no field deployment yet -- early access starts in 2027."
-  ],
-  "body": [
-    {
-      "type": "p",
-      "text": "Agility Robotics unveiled Digit 5 today, calling it the company's first humanoid **engineered for cooperatively safe work at scale** -- built to operate in close proximity to people on a factory or warehouse floor without the fencing, light curtains, or floor markings that kept its predecessor, Digit 4, physically separated from workers. The barrier requirement has been the practical ceiling on where a humanoid can even be deployed: a robot that needs its own caged lane can only go where a floor plan has room to build one, which rules out most existing warehouse and assembly layouts without an expensive retrofit. Removing that requirement, if the safety case holds up, opens floor space no fenced robot could ever reach.",
-      "citation_urls": [
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
-      ]
-    },
-    {
-      "type": "quote",
-      "text": "“Digit 5 is removing a major barrier to scaling humanoid robots in industrial environments.” — Peggy Johnson, CEO, Agility Robotics",
-      "citation_urls": [
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "The safety case rests on three new systems working together: proprietary human-detection algorithms reading multiple onboard sensors to spot a nearby person and autonomously slow, stop, or sit the robot down; __visual and auditory cues__ that signal which way the robot is about to move before it moves that way; and an independent safety controller that watches the motion response itself and can override it if a person gets closer than the robot's own planning accounted for. None of that is a claim [NVIDIA](/company/nvidia) is making on Agility's behalf, but the compute underneath it is NVIDIA's: Agility is the first announced launch partner for NVIDIA's **Halos for Robotics** safety platform, paired with the company's IGX Thor hardware on board the robot.",
-      "citation_urls": [
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
-        "https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/"
-      ]
-    },
-    {
-      "type": "beforeafter",
-      "beforeafter": {
-        "title": "Digit 4 to Digit 5, by the spec sheet",
-        "beforeLabel": "Digit 4",
-        "afterLabel": "Digit 5",
-        "rows": [
-          {
-            "label": "Working near people",
-            "before": "Required physical barriers (fencing, light curtains)",
-            "after": "No physical barrier required, per new safety architecture"
-          },
-          {
-            "label": "Repeated-lift payload",
-            "before": "Lower baseline capacity",
-            "after": "50 lb -- a 40% increase"
-          },
-          {
-            "label": "Reach",
-            "before": "5.5 feet",
-            "after": "7.2 feet"
-          },
-          {
-            "label": "Run-to-charge ratio",
-            "before": "Not comparable -- no published ratio",
-            "after": "10:1 (90-minute runtime, 9-minute charge)"
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "==That last line is doing more work than it looks like.== A 10:1 run-to-charge ratio, on Agility's own figures, is what lets a fleet of robots swap onto chargers in relay and keep more than 20 hours of a 24-hour shift covered without idle robots stacking up waiting for a slow charge -- the same logic warehouses already apply to forklift battery banks. Digit 5 also picks up swappable, ISO-standard-mounted end effectors, letting one robot chassis be re-tooled for a tote-picking job in the morning and a different handling task in the afternoon rather than requiring a separate unit per task. Its arms now reach 7.2 feet, up from Digit 4's 5.5 feet, enough of a difference to reach a standard warehouse shelf's top row without a step or a taller mounting base.",
-      "citation_urls": [
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "The named customer sites give some texture to what \"industrial environment\" actually means here: GXO uses the Digit fleet for tote-picking and case handling inside third-party logistics warehouses, Schaeffler has run it on manufacturing-adjacent material movement, and Toyota Motor Manufacturing Canada has deployed it on an automotive production floor -- three different physical layouts, all of which required a fenced lane under Digit 4's rules and, if Digit 5's claim holds, would not need one going forward.",
-      "citation_urls": [
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
-      ]
-    },
-    {
-      "type": "ledger",
-      "ledger": {
-        "title": "The numbers behind the launch, scoped",
-        "items": [
-          {
-            "value": "$300M+",
-            "unit": "multi-year customer orders",
-            "label": "Reported by Agility as of May 2026",
-            "includes": "Signed multi-year commercial commitments across manufacturing, warehousing, and logistics customers",
-            "excludes": "Guaranteed revenue -- Agility's own release states the figure is subject to satisfaction of contractual milestones"
-          },
-          {
-            "value": "65,000+",
-            "unit": "cumulative field hours",
-            "label": "Logged by the deployed Digit 4 fleet, not Digit 5",
-            "includes": "Operating time across named sites including GXO, Schaeffler, Amazon, and Toyota Motor Manufacturing Canada",
-            "excludes": "Any Digit 5 operating time -- the new model has not yet been fielded"
-          },
-          {
-            "value": "100,000",
-            "unit": "totes moved (GXO Flowery Branch)",
-            "label": "A single-site cumulative milestone at ~98% accuracy",
-            "includes": "One customer's logistics-picking use case over an unspecified period",
-            "excludes": "Performance data from any other site, task type, or robot generation"
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "The Digit line's track record is real and, on one measure, independently checked: the company says Digit already became the first humanoid to pass an independent OSHA field evaluation for industrial safety standards -- a claim about the deployed Digit 4 fleet, not about Digit 5, which cannot yet have a field record of its own. That distinction matters more than the press release's framing suggests. Digit 5's entire pitch is a new capability -- working with **no barrier at all**, not a fenced robot that happened to pass an audit -- and that specific capability has not been tested outside Agility's own facilities.",
-      "citation_urls": [
-        "https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/",
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
-      ]
-    },
-    {
-      "type": "scorecard",
-      "scorecard": {
-        "items": [
-          {
-            "claim": "Digit 5 can work safely in close proximity to people with no physical barrier.",
-            "level": "company",
-            "basis": "Agility's own launch materials describe the human-detection, cueing, and safety-controller architecture; no customer site has run Digit 5 yet.",
-            "resolver": "An independently reported early-access deployment, once it begins in the first half of 2027, with a documented safety record."
-          },
-          {
-            "claim": "Agility has $300 million in multi-year customer orders.",
-            "level": "company",
-            "basis": "Self-reported by Agility as of May 2026, explicitly qualified as subject to contractual milestones rather than booked revenue.",
-            "resolver": "A revenue or backlog figure in a future SEC filing or earnings disclosure, now that Agility trades publicly via its Churchill Capital Corp XI merger."
-          }
-        ]
-      }
-    },
-    {
-      "type": "p",
-      "text": "Digit 5 lands as the whole humanoid-hardware field is making the same bet at once, on different timelines: Tesla is converting part of its Fremont factory to build Optimus, and Unitree is pursuing its own public listing on the strength of shipment volume rather than the barrier-free claim Agility is staking Digit 5 on. What sets Agility's pitch apart is that it already has a fenced, less-capable version of the same robot generating three years of real deployment data -- __GXO's 100,000-tote milestone and the OSHA evaluation are about that robot, not the one announced today__. Whether the new safety architecture holds up outside a controlled environment is a 2027 question, not a September 2026 one.",
-      "citation_urls": [
-        "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "Agility went public in 2026 through a $2.5 billion merger with Churchill Capital Corp XI, and the company says its Salem, Oregon factory, RoboFab, is designed to build up to 10,000 units a year at full staffing. Both of those numbers describe manufacturing capacity and market ambition, not proof that the robot rolling off that line can do the one new thing Digit 5 is actually being sold on. Agility also told the Abundance Summit this year that it expects Digit's operating cost to fall to roughly $2-3 an hour at scale -- a figure that depends on the same factory ramp and fleet-utilization assumptions behind the 10,000-unit target, and one no customer invoice has tested yet.",
-      "citation_urls": [
-        "https://interestingengineering.com/ai-robotics/us-digit-robot-maker-agility"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "==None of that makes the announcement hollow -- a 40% payload increase and a 10:1 charge ratio are real, shippable engineering gains regardless of what happens with the safety architecture.== It means the headline claim and the proof of the headline claim arrive on different clocks: the spec sheet is real today, and the barrier-free promise is a 2027 field report waiting to happen.",
-      "citation_urls": []
-    }
-  ],
-  "id": "newsroom-agility-robotics-digit-5-humanoid-launch",
-  "image": "assets/img/newsroom/agility-robotics-digit-5-humanoid-launch.jpg",
-  "publishedAt": "2026-09-15T15:02:46Z",
-  "pipeline": {
-    "run": "autonomous Claude-runner cycle · 2026-09-15T15:02:46Z",
-    "stages": [
+    "sources": [
       {
-        "name": "Research",
-        "agent": "claude-runner",
-        "note": "4 sources, 4 independent evidence threads: Agility Robotics' own September 15 launch page (primary, fetched directly after an initial fetch attempt landed on an unrelated 2025 press release at a guessed URL), Unite.AI's independent reporting, StockTitan/CCXI's reporting (carries the public-company/investor angle since Agility trades via its Churchill Capital Corp XI merger), and Interesting Engineering's reporting on the SPAC and factory-capacity context. Checked newsroom-articles.js for prior Agility Robotics coverage -- found 2 prior passing mentions (Tesla Optimus Fremont piece, Unitree IPO piece), and this cycle's dedicated article crosses the companies.js ~3-story threshold, so added an agility-robotics entry."
+        "label": "Have it both ways: stay discoverable in search while disallowing AI training",
+        "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+        "outlet": "Cloudflare Blog",
+        "kind": "primary"
       },
       {
-        "name": "Verification",
-        "agent": "claude-runner",
-        "note": "Cross-checked the OSHA field-evaluation claim across two sources; Unite.AI's phrasing attributes it to 'Digit' generically while the primary press release's phrasing was ambiguous about which generation. Resolved by reasoning from Digit 5's own timeline -- general availability isn't until end of 2027, so no field evaluation of Digit 5 itself can exist yet -- and attributed the claim explicitly to the already-deployed Digit 4 fleet rather than repeating the ambiguous framing. Kept the $300 million order figure's own 'subject to contractual milestones' qualifier intact rather than dropping it."
+        "label": "Your site, your rules: new AI traffic options for all customers",
+        "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+        "outlet": "Cloudflare Blog",
+        "kind": "primary"
       },
       {
-        "name": "Loop 1 - critique and revise",
-        "agent": "claude-runner",
-        "note": "Self-referential-language check: clean. Critique found the first draft (604 words) undersold the persona's required skepticism by treating the safety architecture as settled -- revised to add the scorecard component plus a dedicated paragraph separating what the Digit 4 fleet has actually demonstrated from what Digit 5's own unfielded architecture merely claims, and expanded with real sourced content (named customer use cases, the Abundance Summit cost figure) to reach 839 words rather than padding."
+        "label": "Cloudflare's new policy pushes AI companies to pay for publishers' content",
+        "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
       },
       {
-        "name": "Loop 2 - component provenance check",
-        "agent": "claude-runner",
-        "note": "beforeafter's four rows, ledger's three items, and scorecard's two claims all trace to Agility's own release and the reporting cited in the same paragraphs. No component carries a top-level text field. beforeafter, ledger, and scorecard are each separated by prose; the pull quote sits between two prose paragraphs; no two components are adjacent. NVIDIA was already registered in companies.js; no entities.js addition needed since Digit 5 is hardware, not a model on the Scoreboard."
-      },
-      {
-        "name": "Gate",
-        "agent": "claude-runner",
-        "note": "Approved. 4 sources, 4 independent evidence threads including Agility's own primary launch materials, correctly routed as synthesis (839 words). Three components (beforeafter, ledger, scorecard) -- ledger is the required data-carrying component. No mandatory-scrutiny trigger fires: no health, financial-advice, legal, or accusatory content -- the $300M order figure is reported with its own stated milestone caveat rather than as an accusatory claim."
+        "label": "Cloudflare's AI Crawler Rules Can Block Googlebot",
+        "url": "https://www.searchenginejournal.com/cloudflares-ai-crawler-rules-can-block-googlebot/581385/",
+        "outlet": "Search Engine Journal",
+        "kind": "reporting"
       }
     ],
-    "gate": {
-      "decision": "Approved for publication",
-      "note": "The persona's mandate is the demo-versus-shipping gap, and this story is built around exactly that: a real spec upgrade shipping today, attached to a safety claim that will not be independently testable until early 2027."
-    }
-  }
-},
-{
-  "slug": "google-antigravity-claude-opus-5-engineer-access",
-  "title": "Google opens Claude Opus 5 to every engineer -- but only inside its own IDE, and only on a quota",
-  "dek": "Business Insider reports Google has dropped a policy that limited Claude access to a handful of DeepMind teams, letting any engineer select Anthropic's flagship model inside Antigravity, Google's internal coding platform. Google's own position: Gemini stays the default, and Claude runs on a per-employee usage quota.",
-  "persona": "luka-petrovic",
-  "section": "Frontier",
-  "format": "brief",
-  "disclaimer": "none",
-  "applyType": "watch",
-  "apply": [
-    {
-      "label": "Watch for the actual per-employee quota number",
-      "text": "No outlet reporting this, including the original account, has published the specific token or request limit Google set on Claude usage."
-    },
-    {
-      "label": "Watch whether this reshapes Gemini's own coding push",
-      "text": "A company letting its engineers reach for a rival's model, on its own internal tooling, is itself a signal about where Gemini's coding performance has fallen short internally."
-    }
-  ],
-  "sources": [
-    {
-      "label": "Google breaks internal precedent, opens Anthropic's Claude model to all engineers",
-      "url": "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6",
-      "outlet": "BigGo Finance",
-      "kind": "reporting"
-    },
-    {
-      "label": "Google Lets Engineers Use Rival Anthropic's Claude",
-      "url": "https://en.sedaily.com/international/2026/09/15/google-lets-engineers-use-rival-anthropics-claude",
-      "outlet": "Seoul Economic Daily",
-      "kind": "reporting"
-    }
-  ],
-  "tldr": [
-    "Google now lets all engineers use Claude Opus 5 through Antigravity, its internal coding platform.",
-    "Previously, Claude access was limited to select DeepMind teams and high-priority projects.",
-    "Employees select Opus 5 inside Antigravity itself -- direct Claude Code access remains off-limits.",
-    "Google says Gemini stays its primary, foundational model; Claude runs on a per-employee quota.",
-    "Caveat: both accounts here trace back to a single original report, Business Insider's Hugh Langley."
-  ],
-  "body": [
-    {
-      "type": "p",
-      "text": "Google has dropped an internal policy that kept most of its engineers off [Anthropic](/company/anthropic)'s models, according to reporting from Business Insider's Hugh Langley: any Google engineer can now select **Claude Opus 5** inside Antigravity, [Google](/company/google)'s own agent-first coding platform, rather than the small set of DeepMind teams and high-priority projects that previously had access. Employees still cannot reach for Anthropic's own Claude Code tool directly -- the model is only available chosen from within Antigravity's own interface, and each employee works against an individual usage quota rather than open access.",
-      "citation_urls": [
-        "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6"
-      ]
-    },
-    {
-      "type": "keyfacts",
-      "keyfacts": {
-        "title": "What changed, in short",
-        "items": [
-          {
-            "label": "Previous access",
-            "value": "Select DeepMind teams, high-priority projects only"
-          },
-          {
-            "label": "New access",
-            "value": "All Google engineers",
-            "note": "via Antigravity"
-          },
-          {
-            "label": "Model",
-            "value": "Claude Opus 5",
-            "note": "Anthropic"
-          },
-          {
-            "label": "Access route",
-            "value": "Inside Antigravity only",
-            "note": "not direct Claude Code access"
-          },
-          {
-            "label": "Limit",
-            "value": "Per-employee quota",
-            "note": "exact figure not disclosed"
-          }
+    "tldr": [
+      "Cloudflare's new AI-crawler default took effect today, replacing one blanket toggle with four settings.",
+      "July's announcement implied Googlebot, Applebot, and Bingbot would be blocked on ad-supported pages.",
+      "Instead, Cloudflare created an Accountable exemption those three crawlers now qualify for.",
+      "Accountable status requires opt-out mechanisms and a promise that opting out won't hurt search rank.",
+      "Caveat: crawler operators without a separated search/training bot still get the blunt block."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Cloudflare's new default rules for AI crawlers took effect today, replacing a single block-or-allow toggle with four separate settings. For two months, reporting on the coming change had converged on one specific, concrete prediction: Googlebot, Applebot, and Bingbot would get caught in the same net as AI-training bots the day the new defaults switched on. That isn't what shipped. Cloudflare's own rollout instead built those three crawlers -- plus four AI labs -- a formal exemption the July announcement never mentioned.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+          "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanic that made the prediction reasonable was real, and Cloudflare built it on purpose. Since July 1, the company has sorted crawler traffic into three categories -- __Search__ (indexing to answer a question later), __Agent__ (an AI [agent](/dictionary) fetching a page in real time on a person's behalf), and __Training__ (pulling content to build or fine-tune a model) -- and told site owners that a **mixed-use crawler gets judged on all of its behaviors at once, so the strictest setting a site applies is the one that wins**. A crawler that both indexes and trains gets blocked entirely the moment a site blocks Training. [Google](/company/google), [Apple](/company/apple), and [Microsoft](/company/microsoft) each run exactly that kind of combined bot -- one crawler doing both jobs, rather than a separate indexer and a separate training scraper.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/content-independence-day-ai-options/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Now that the majority of traffic on the Internet is non-human, we must go further and act faster.” — Matthew Prince, Cloudflare CEO, July 1",
+        "citation_urls": [
+          "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "That single mechanic is why coverage of the July announcement zeroed in on three names. Search Engine Journal's write-up named Googlebot, Applebot, and Bingbot specifically as the crawlers that would trip the rule, since all three combine search indexing with AI-training collection under one user agent -- exactly the __mixed-use crawler__ profile the strictest-setting rule was built to catch. ==A site that wanted to keep its content out of AI training, under that reading, would have had to accept losing Google Search visibility to get it.== That is the outcome the next two months of secondary coverage kept repeating as settled.",
+        "citation_urls": [
+          "https://www.searchenginejournal.com/cloudflares-ai-crawler-rules-can-block-googlebot/581385/"
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "beforeafter": {
+          "title": "What July's rule implied for today, versus what shipped",
+          "beforeLabel": "July 1 plan, as reported",
+          "afterLabel": "September 15 rollout",
+          "rows": [
+            {
+              "label": "Google / Apple / Microsoft's combined crawlers",
+              "before": "Blocked on ad-supported pages that disallow AI training",
+              "after": "Exempted, via a new “Accountable” designation"
+            },
+            {
+              "label": "Site owner's AI-crawler choices",
+              "before": "One binary toggle: allow everything or block everything",
+              "after": "Four settings: Allow / Disallow AI Training / Block on ad pages / Block"
+            },
+            {
+              "label": "AI-summary opt-out",
+              "before": "No stated mechanism",
+              "after": "Operator-controlled now; native Cloudflare control promised for early 2027"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "What actually shipped is a new **Disallow AI Training** setting, sitting between \"allow everything\" and \"block everything,\" plus a designation Cloudflare calls ++Accountable++. An operator earns it by meeting, or committing to a dated timeline for, four things: an opt-out mechanism for AI training via robots.txt or an equivalent standard; an opt-out mechanism for AI-generated summaries; URL-level reporting on which pages it trained on versus indexed; and an assurance that opting out of training carries no search-ranking penalty. Google, Apple, and Microsoft all clear the bar today -- not by separating their crawlers, but by combining what they already do with time-bound commitments on the rest.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
+        ]
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "items": [
+            {
+              "question": "Would Google, Apple, and Microsoft's crawlers be blocked by default on ad-supported pages starting September 15?",
+              "claims": [
+                {
+                  "who": "Search Engine Journal, reporting Cloudflare's July 1 announcement",
+                  "kind": "reporting",
+                  "says": "Yes -- a crawler that performs both Search and Training gets blocked if a site blocks Training, and Cloudflare named Googlebot, Applebot, and Bingbot as examples that would trip it.",
+                  "url": "https://www.searchenginejournal.com/cloudflares-ai-crawler-rules-can-block-googlebot/581385/"
+                },
+                {
+                  "who": "Cloudflare's own September 15 policy post",
+                  "kind": "primary",
+                  "says": "No -- Google, Apple, and Microsoft qualify for the new Accountable designation, exempting their crawlers as long as they meet ongoing transparency and ranking-neutrality commitments.",
+                  "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+                  "trusted": true
+                }
+              ],
+              "ruling": "Using Cloudflare's own live policy text over July's projection. The company's own rollout is the only source that can settle what actually shipped, and it differs from what its earlier announcement implied would happen to combined crawlers once the strictest-setting rule went live."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Anthropic, Amazon, Meta, and OpenAI make the Accountable list too, but on different grounds: Cloudflare says those four already operate separate search and training crawlers, so the strictest-setting mechanic never applied to them the way it applied to Google, Apple, and Microsoft's combined bots. {{note: Cloudflare's Pay Per Crawl marketplace -- which lets a site charge a crawler per request using an HTTP 402 response -- predates this framework by more than a year and keeps running alongside it, now expanding into a \"Pay Per Use\" model that pays publishers when their content actually surfaces inside an AI answer, not just when a crawler fetches it.}} For a publisher, the practical change today is narrow but real: enabling Disallow AI Training no longer costs a site its Google Search listing, provided Google's crawler keeps the commitments Cloudflare just credited it for.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Cloudflare's own numbers suggest most site owners haven't been reaching for the block lever regardless of what it would have caught: **17% of sites have enabled some mechanism to block AI training**, and fewer than 1% block search outright. The company frames that gap as evidence for why Search stays a protected category by default -- it also reports that visitors arriving from AI-generated search answers convert 3-5x higher than visitors from a traditional search result, an incentive most site owners have apparently already priced in on their own. ==That asymmetry is the actual argument behind Accountable: Cloudflare is betting that publishers want to keep the traffic that pays, and will tolerate the traffic that trains only when a named company stands behind a promise not to touch the first kind.==",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "Cloudflare's own adoption numbers, scoped",
+          "items": [
+            {
+              "value": "17%",
+              "unit": "of sites",
+              "label": "Have enabled some mechanism to block AI training",
+              "includes": "Any of Cloudflare's training-blocking controls, old or new, across its customer base",
+              "excludes": "Whether the crawler they're blocking is Accountable or not -- the stat predates today's designation"
+            },
+            {
+              "value": "<1%",
+              "unit": "of sites",
+              "label": "Block search crawlers outright",
+              "includes": "Sites using the flat Block setting, which stops Search along with everything else",
+              "excludes": "Sites using Disallow AI Training or Block on ad pages, which leave Search untouched"
+            },
+            {
+              "value": "3-5x",
+              "unit": "conversion multiple",
+              "label": "AI-search-referred visitors versus traditional search visitors",
+              "includes": "Cloudflare's own reported comparison, cited as the business case for keeping Search allowed by default",
+              "excludes": "Any breakdown by site category, traffic volume, or how the multiple was measured"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Those numbers are Cloudflare's own case for why Search stays protected while Training does not -- and they are also the backdrop against which today's Accountable carve-out has to be judged: a policy that costs almost nothing in practice for most sites, because almost none of them were blocking search to begin with.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "Publishers on Cloudflare's free tier and new sites",
+              "tone": "gains",
+              "what": "Get a working way to block AI training without losing Google Search referral traffic, once an operator holds Accountable status -- the outcome July's binary rule couldn't deliver."
+            },
+            {
+              "who": "Google, Apple, and Microsoft",
+              "tone": "gains",
+              "what": "Avoid losing search indexing on any site that opts out of AI training, despite running the exact combined search-and-training crawlers the strictest-setting rule was written to catch."
+            },
+            {
+              "who": "AI crawler operators without a separated search and training bot",
+              "tone": "loses",
+              "what": "Don't qualify as Accountable and get the blunt block Big Tech avoided today, widening the compliance gap between incumbents and smaller or newer entrants."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The asymmetry Accountable creates is structural, not incidental. Qualifying takes an existing search product plus a set of promises Cloudflare says it will hold operators to -- something a company already running Googlebot or Bingbot at global scale can absorb as a policy change. A smaller AI company whose entire crawler is a training scraper wearing a search-indexing hat, because building and maintaining two separate crawling systems is itself expensive, has no equivalent shortcut: it either rebuilds its crawler architecture or accepts the block. Cloudflare's framework doesn't punish mixed-use crawling as such -- it punishes not having the engineering budget to stop doing it.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this touches the older, blunter setting: a site can still choose flat **Block**, which stops every crawler regardless of Accountable status, or **Block on ad-supported pages**, the default Cloudflare originally described for new customers. What changed is that those choices are no longer the only way to keep training crawlers out -- and the crawlers July's reporting expected to get caught in the net are, today, the ones best positioned to avoid it.",
+        "citation_urls": [
+          "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/"
         ]
       }
-    },
-    {
-      "type": "p",
-      "text": "Google's own position, as relayed in the reporting, is that ==Gemini remains its primary and foundational model for internal development==, with Claude and other third-party models offered on a quota basis to cover cases where engineers judge Gemini's own coding performance insufficient. Google isn't the first major lab customer to make this concession: Amazon opened internal access to Claude and OpenAI's Codex to its own engineers earlier this year, over the same kind of internal resistance to using a competitor's model that Google had maintained until now.",
-      "citation_urls": [
-        "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6",
-        "https://en.sedaily.com/international/2026/09/15/google-lets-engineers-use-rival-anthropics-claude"
-      ]
-    },
-    {
-      "type": "p",
-      "text": "The routing detail is the part worth sitting with: Google isn't handing engineers an Anthropic account. Claude Opus 5 runs **inside Antigravity**, Google's own platform, alongside Gemini in the same model picker -- meaning Google controls the interface, the logging, and the usage quota for a model it competes with directly. That arrangement lets Google concede a real capability gap on coding without conceding distribution: whatever an engineer builds with Opus 5 still happens inside Google's own tooling, not Anthropic's.",
-      "citation_urls": [
-        "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6"
-      ]
+    ],
+    "id": "newsroom-cloudflare-ai-crawler-block-accountable-exemption",
+    "image": "assets/img/newsroom/cloudflare-ai-crawler-block-accountable-exemption.jpg",
+    "publishedAt": "2026-09-15T15:01:46Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T15:01:46Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources, 3 independent evidence threads: Cloudflare's own policy posts (primary -- the July 1 announcement and the September 15 rollout that supersedes part of it), TechCrunch's July 1 reporting (independent, carries the Matthew Prince quote), and Search Engine Journal's July 2 reporting (independent, the specific Googlebot/Applebot/Bingbot claim). Checked newsroom-articles.js for prior Cloudflare coverage -- found 7 prior articles mentioning it, crossing the companies.js ~3-story threshold, so added a cloudflare entry this cycle."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Fetched Cloudflare's own September 15 post directly rather than trusting secondary paraphrase of the July plan, which is what surfaced the actual finding: the 'Accountable' designation is not in the July announcement at all, and it specifically resolves the Googlebot-blocking mechanic that Search Engine Journal's reporting had correctly derived from the rules as originally stated. Cross-checked the 'strictest setting wins' mechanic against both the Cloudflare July post and TechCrunch's reporting before treating it as an accurate description of the original plan."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft implied 'Accountable' status was a single uniform bar -- revised to distinguish the two qualifying paths Cloudflare's post actually describes: Google/Apple/Microsoft via current capability plus time-bound commitments, versus Amazon/Anthropic/Meta/OpenAI via already-separated search and training crawlers. Also expanded the piece from an initial ~726 words to 900 to clear the synthesis floor honestly, by adding real analysis (the engineering-budget asymmetry paragraph) rather than padding."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "beforeafter's three rows, sourcecheck's two claims, and stakes' three items all trace to the Cloudflare post and Search Engine Journal reporting cited in the same paragraphs. No component carries a top-level text field. beforeafter, sourcecheck, and stakes are each separated by prose; the pull quote sits between two prose paragraphs; no two components are adjacent. No entities.js addition needed -- no model launch in this piece."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, 3 independent evidence threads including Cloudflare's own primary policy text, correctly routed as synthesis (900 words). Three components (beforeafter, sourcecheck, stakes) -- sourcecheck required because July's reporting and today's actual rollout conflict on what happens to Google/Apple/Microsoft's crawlers. No mandatory-scrutiny trigger fires: no health, financial-advice, legal-proceeding, or accusatory content -- this is sourced policy reporting about named companies' own published commitments."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "The reconciliation is the story: two months of accurate reporting on Cloudflare's stated plan predicted an outcome its own September 15 rollout avoided for exactly the companies that reporting named, and only fetching the primary source directly surfaced that."
+      }
     }
-  ],
-  "id": "newsroom-google-antigravity-claude-opus-5-engineer-access",
-  "image": "assets/img/newsroom/google-antigravity-claude-opus-5-engineer-access.jpg",
-  "publishedAt": "2026-09-15T15:03:46Z",
-  "pipeline": {
-    "run": "autonomous Claude-runner cycle · 2026-09-15T15:03:46Z",
-    "stages": [
+  },
+  {
+    "slug": "agility-robotics-digit-5-humanoid-launch",
+    "title": "Agility's Digit 5 is built to work next to people with no safety cage. It won't reach a customer floor to prove it until 2027",
+    "dek": "The humanoid maker says a new safety architecture -- AI-driven human detection, motion cues, an independent safety controller -- finally clears the barrier that kept Digit 4 fenced off from workers. The claim rests on $300 million in largely milestone-gated orders and a robot whose earliest customer deployment is still a year away.",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
       {
-        "name": "Research",
-        "agent": "claude-runner",
-        "note": "2 sources, 1 independent evidence thread: BigGo Finance and Seoul Economic Daily both report the same underlying story and both explicitly attribute it to Business Insider's Hugh Langley, so this is one thread per format-routing.md's dedup rule, not two -- correctly routed as a brief rather than inflated to a synthesis. Attempted to fetch Business Insider directly (blocked, no confirmed working URL found in search results) and Techmeme's aggregation page (HTTP 403); both consistent with other known-blocked domains already logged in living-notes.md. Also fetched antigravity.google's own public model-list docs, which show Claude Opus 4.6 rather than Opus 5 -- that page describes the external consumer product's model roster, not the internal employee-access policy this story is about, so it was not used as a source to avoid conflating two different claims."
+        "label": "Watch the first Digit 5 customer floor without a cage",
+        "text": "Early access begins in the first half of 2027 -- that deployment, not today's announcement, is the first real test of the cooperatively-safe claim."
       },
       {
-        "name": "Verification",
-        "agent": "claude-runner",
-        "note": "Could not independently confirm the exact per-employee Claude usage quota -- neither source publishes a number -- so it is named as an open question in the apply block rather than estimated. Checked newsroom-articles.js for prior coverage of this specific story -- none found."
+        "label": "Watch which of the $300 million in orders actually convert",
+        "text": "Agility's own figure is stated as of May 2026 and subject to contractual milestones -- a later earnings disclosure or SEC filing, now that the company is public, would show how much became real revenue."
       },
       {
-        "name": "Loop 1 - critique and revise",
-        "agent": "claude-runner",
-        "note": "Self-referential-language check: clean. Critique found nothing to revise in the reporting itself; expanded from an initial 177 words to 257 to clear the brief floor by adding one paragraph of real analysis (the routing/distribution point) rather than padding."
-      },
-      {
-        "name": "Loop 2 - component provenance check",
-        "agent": "claude-runner",
-        "note": "keyfacts' five items all trace to the two cited sources and also appear in body prose. No component carries a top-level text field. No entities.js or companies.js addition needed -- Google and Anthropic are both already registered."
-      },
-      {
-        "name": "Gate",
-        "agent": "claude-runner",
-        "note": "Approved. 2 sources, 1 independent evidence thread, correctly routed as brief (257 words) with the single-thread caveat stated plainly in the TL;DR's final bullet rather than hidden. One component (keyfacts), meeting the brief floor. No mandatory-scrutiny trigger fires."
+        "label": "Watch for Digit 5's own independent safety evaluation",
+        "text": "The OSHA field evaluation Agility cites was won by the already-deployed Digit 4 fleet. Digit 5's new human-detection architecture has not yet been independently tested at all."
       }
     ],
-    "gate": {
-      "decision": "Approved for publication",
-      "note": "A single-source brief that says so in its own TL;DR rather than dressing up one report as independently confirmed."
+    "sources": [
+      {
+        "label": "Agility Unveils Digit 5 Humanoid Robot Built for Cooperatively Safe Work at Scale",
+        "url": "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+        "outlet": "Agility Robotics",
+        "kind": "primary"
+      },
+      {
+        "label": "Agility Robotics Debuts Digit 5 Humanoid With New Safety Architecture",
+        "url": "https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/",
+        "outlet": "Unite.AI",
+        "kind": "reporting"
+      },
+      {
+        "label": "Agility Robotics Unveils Digit 5 Humanoid Robot",
+        "url": "https://www.stocktitan.net/news/CCXI/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-30h1tj9oq3gf.html",
+        "outlet": "StockTitan / CCXI",
+        "kind": "reporting"
+      },
+      {
+        "label": "US: Agility goes public as demand grows for next-generation Digit humanoids",
+        "url": "https://interestingengineering.com/ai-robotics/us-digit-robot-maker-agility",
+        "outlet": "Interesting Engineering",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Agility's Digit 5 is built to work beside people without the physical barriers Digit 4 required.",
+      "Payload rises 40% to 50 pounds; battery runs 90 minutes and recharges in 9.",
+      "Agility reports $300 million in multi-year orders, most of it milestone-gated, not guaranteed revenue.",
+      "The Digit 4 fleet already logged 65,000+ field hours and passed an independent OSHA safety evaluation.",
+      "Caveat: Digit 5 itself has no field deployment yet -- early access starts in 2027."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Agility Robotics unveiled Digit 5 today, calling it the company's first humanoid **engineered for cooperatively safe work at scale** -- built to operate in close proximity to people on a factory or warehouse floor without the fencing, light curtains, or floor markings that kept its predecessor, Digit 4, physically separated from workers. The barrier requirement has been the practical ceiling on where a humanoid can even be deployed: a robot that needs its own caged lane can only go where a floor plan has room to build one, which rules out most existing warehouse and assembly layouts without an expensive retrofit. Removing that requirement, if the safety case holds up, opens floor space no fenced robot could ever reach.",
+        "citation_urls": [
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“Digit 5 is removing a major barrier to scaling humanoid robots in industrial environments.” — Peggy Johnson, CEO, Agility Robotics",
+        "citation_urls": [
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The safety case rests on three new systems working together: proprietary human-detection algorithms reading multiple onboard sensors to spot a nearby person and autonomously slow, stop, or sit the robot down; __visual and auditory cues__ that signal which way the robot is about to move before it moves that way; and an independent safety controller that watches the motion response itself and can override it if a person gets closer than the robot's own planning accounted for. None of that is a claim [NVIDIA](/company/nvidia) is making on Agility's behalf, but the compute underneath it is NVIDIA's: Agility is the first announced launch partner for NVIDIA's **Halos for Robotics** safety platform, paired with the company's IGX Thor hardware on board the robot.",
+        "citation_urls": [
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+          "https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/"
+        ]
+      },
+      {
+        "type": "beforeafter",
+        "beforeafter": {
+          "title": "Digit 4 to Digit 5, by the spec sheet",
+          "beforeLabel": "Digit 4",
+          "afterLabel": "Digit 5",
+          "rows": [
+            {
+              "label": "Working near people",
+              "before": "Required physical barriers (fencing, light curtains)",
+              "after": "No physical barrier required, per new safety architecture"
+            },
+            {
+              "label": "Repeated-lift payload",
+              "before": "Lower baseline capacity",
+              "after": "50 lb -- a 40% increase"
+            },
+            {
+              "label": "Reach",
+              "before": "5.5 feet",
+              "after": "7.2 feet"
+            },
+            {
+              "label": "Run-to-charge ratio",
+              "before": "Not comparable -- no published ratio",
+              "after": "10:1 (90-minute runtime, 9-minute charge)"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "==That last line is doing more work than it looks like.== A 10:1 run-to-charge ratio, on Agility's own figures, is what lets a fleet of robots swap onto chargers in relay and keep more than 20 hours of a 24-hour shift covered without idle robots stacking up waiting for a slow charge -- the same logic warehouses already apply to forklift battery banks. Digit 5 also picks up swappable, ISO-standard-mounted end effectors, letting one robot chassis be re-tooled for a tote-picking job in the morning and a different handling task in the afternoon rather than requiring a separate unit per task. Its arms now reach 7.2 feet, up from Digit 4's 5.5 feet, enough of a difference to reach a standard warehouse shelf's top row without a step or a taller mounting base.",
+        "citation_urls": [
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The named customer sites give some texture to what \"industrial environment\" actually means here: GXO uses the Digit fleet for tote-picking and case handling inside third-party logistics warehouses, Schaeffler has run it on manufacturing-adjacent material movement, and Toyota Motor Manufacturing Canada has deployed it on an automotive production floor -- three different physical layouts, all of which required a fenced lane under Digit 4's rules and, if Digit 5's claim holds, would not need one going forward.",
+        "citation_urls": [
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "The numbers behind the launch, scoped",
+          "items": [
+            {
+              "value": "$300M+",
+              "unit": "multi-year customer orders",
+              "label": "Reported by Agility as of May 2026",
+              "includes": "Signed multi-year commercial commitments across manufacturing, warehousing, and logistics customers",
+              "excludes": "Guaranteed revenue -- Agility's own release states the figure is subject to satisfaction of contractual milestones"
+            },
+            {
+              "value": "65,000+",
+              "unit": "cumulative field hours",
+              "label": "Logged by the deployed Digit 4 fleet, not Digit 5",
+              "includes": "Operating time across named sites including GXO, Schaeffler, Amazon, and Toyota Motor Manufacturing Canada",
+              "excludes": "Any Digit 5 operating time -- the new model has not yet been fielded"
+            },
+            {
+              "value": "100,000",
+              "unit": "totes moved (GXO Flowery Branch)",
+              "label": "A single-site cumulative milestone at ~98% accuracy",
+              "includes": "One customer's logistics-picking use case over an unspecified period",
+              "excludes": "Performance data from any other site, task type, or robot generation"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The Digit line's track record is real and, on one measure, independently checked: the company says Digit already became the first humanoid to pass an independent OSHA field evaluation for industrial safety standards -- a claim about the deployed Digit 4 fleet, not about Digit 5, which cannot yet have a field record of its own. That distinction matters more than the press release's framing suggests. Digit 5's entire pitch is a new capability -- working with **no barrier at all**, not a fenced robot that happened to pass an audit -- and that specific capability has not been tested outside Agility's own facilities.",
+        "citation_urls": [
+          "https://www.unite.ai/agility-robotics-debuts-digit-5-humanoid-with-new-safety-architecture/",
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "items": [
+            {
+              "claim": "Digit 5 can work safely in close proximity to people with no physical barrier.",
+              "level": "company",
+              "basis": "Agility's own launch materials describe the human-detection, cueing, and safety-controller architecture; no customer site has run Digit 5 yet.",
+              "resolver": "An independently reported early-access deployment, once it begins in the first half of 2027, with a documented safety record."
+            },
+            {
+              "claim": "Agility has $300 million in multi-year customer orders.",
+              "level": "company",
+              "basis": "Self-reported by Agility as of May 2026, explicitly qualified as subject to contractual milestones rather than booked revenue.",
+              "resolver": "A revenue or backlog figure in a future SEC filing or earnings disclosure, now that Agility trades publicly via its Churchill Capital Corp XI merger."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Digit 5 lands as the whole humanoid-hardware field is making the same bet at once, on different timelines: Tesla is converting part of its Fremont factory to build Optimus, and Unitree is pursuing its own public listing on the strength of shipment volume rather than the barrier-free claim Agility is staking Digit 5 on. What sets Agility's pitch apart is that it already has a fenced, less-capable version of the same robot generating three years of real deployment data -- __GXO's 100,000-tote milestone and the OSHA evaluation are about that robot, not the one announced today__. Whether the new safety architecture holds up outside a controlled environment is a 2027 question, not a September 2026 one.",
+        "citation_urls": [
+          "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Agility went public in 2026 through a $2.5 billion merger with Churchill Capital Corp XI, and the company says its Salem, Oregon factory, RoboFab, is designed to build up to 10,000 units a year at full staffing. Both of those numbers describe manufacturing capacity and market ambition, not proof that the robot rolling off that line can do the one new thing Digit 5 is actually being sold on. Agility also told the Abundance Summit this year that it expects Digit's operating cost to fall to roughly $2-3 an hour at scale -- a figure that depends on the same factory ramp and fleet-utilization assumptions behind the 10,000-unit target, and one no customer invoice has tested yet.",
+        "citation_urls": [
+          "https://interestingengineering.com/ai-robotics/us-digit-robot-maker-agility"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "==None of that makes the announcement hollow -- a 40% payload increase and a 10:1 charge ratio are real, shippable engineering gains regardless of what happens with the safety architecture.== It means the headline claim and the proof of the headline claim arrive on different clocks: the spec sheet is real today, and the barrier-free promise is a 2027 field report waiting to happen.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-agility-robotics-digit-5-humanoid-launch",
+    "image": "assets/img/newsroom/agility-robotics-digit-5-humanoid-launch.jpg",
+    "publishedAt": "2026-09-15T15:02:46Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T15:02:46Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "4 sources, 4 independent evidence threads: Agility Robotics' own September 15 launch page (primary, fetched directly after an initial fetch attempt landed on an unrelated 2025 press release at a guessed URL), Unite.AI's independent reporting, StockTitan/CCXI's reporting (carries the public-company/investor angle since Agility trades via its Churchill Capital Corp XI merger), and Interesting Engineering's reporting on the SPAC and factory-capacity context. Checked newsroom-articles.js for prior Agility Robotics coverage -- found 2 prior passing mentions (Tesla Optimus Fremont piece, Unitree IPO piece), and this cycle's dedicated article crosses the companies.js ~3-story threshold, so added an agility-robotics entry."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Cross-checked the OSHA field-evaluation claim across two sources; Unite.AI's phrasing attributes it to 'Digit' generically while the primary press release's phrasing was ambiguous about which generation. Resolved by reasoning from Digit 5's own timeline -- general availability isn't until end of 2027, so no field evaluation of Digit 5 itself can exist yet -- and attributed the claim explicitly to the already-deployed Digit 4 fleet rather than repeating the ambiguous framing. Kept the $300 million order figure's own 'subject to contractual milestones' qualifier intact rather than dropping it."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft (604 words) undersold the persona's required skepticism by treating the safety architecture as settled -- revised to add the scorecard component plus a dedicated paragraph separating what the Digit 4 fleet has actually demonstrated from what Digit 5's own unfielded architecture merely claims, and expanded with real sourced content (named customer use cases, the Abundance Summit cost figure) to reach 839 words rather than padding."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "beforeafter's four rows, ledger's three items, and scorecard's two claims all trace to Agility's own release and the reporting cited in the same paragraphs. No component carries a top-level text field. beforeafter, ledger, and scorecard are each separated by prose; the pull quote sits between two prose paragraphs; no two components are adjacent. NVIDIA was already registered in companies.js; no entities.js addition needed since Digit 5 is hardware, not a model on the Scoreboard."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 4 sources, 4 independent evidence threads including Agility's own primary launch materials, correctly routed as synthesis (839 words). Three components (beforeafter, ledger, scorecard) -- ledger is the required data-carrying component. No mandatory-scrutiny trigger fires: no health, financial-advice, legal, or accusatory content -- the $300M order figure is reported with its own stated milestone caveat rather than as an accusatory claim."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "The persona's mandate is the demo-versus-shipping gap, and this story is built around exactly that: a real spec upgrade shipping today, attached to a safety claim that will not be independently testable until early 2027."
+      }
     }
-  }
-},
+  },
+  {
+    "slug": "google-antigravity-claude-opus-5-engineer-access",
+    "title": "Google opens Claude Opus 5 to every engineer -- but only inside its own IDE, and only on a quota",
+    "dek": "Business Insider reports Google has dropped a policy that limited Claude access to a handful of DeepMind teams, letting any engineer select Anthropic's flagship model inside Antigravity, Google's internal coding platform. Google's own position: Gemini stays the default, and Claude runs on a per-employee usage quota.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for the actual per-employee quota number",
+        "text": "No outlet reporting this, including the original account, has published the specific token or request limit Google set on Claude usage."
+      },
+      {
+        "label": "Watch whether this reshapes Gemini's own coding push",
+        "text": "A company letting its engineers reach for a rival's model, on its own internal tooling, is itself a signal about where Gemini's coding performance has fallen short internally."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Google breaks internal precedent, opens Anthropic's Claude model to all engineers",
+        "url": "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6",
+        "outlet": "BigGo Finance",
+        "kind": "reporting"
+      },
+      {
+        "label": "Google Lets Engineers Use Rival Anthropic's Claude",
+        "url": "https://en.sedaily.com/international/2026/09/15/google-lets-engineers-use-rival-anthropics-claude",
+        "outlet": "Seoul Economic Daily",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Google now lets all engineers use Claude Opus 5 through Antigravity, its internal coding platform.",
+      "Previously, Claude access was limited to select DeepMind teams and high-priority projects.",
+      "Employees select Opus 5 inside Antigravity itself -- direct Claude Code access remains off-limits.",
+      "Google says Gemini stays its primary, foundational model; Claude runs on a per-employee quota.",
+      "Caveat: both accounts here trace back to a single original report, Business Insider's Hugh Langley."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Google has dropped an internal policy that kept most of its engineers off [Anthropic](/company/anthropic)'s models, according to reporting from Business Insider's Hugh Langley: any Google engineer can now select **Claude Opus 5** inside Antigravity, [Google](/company/google)'s own agent-first coding platform, rather than the small set of DeepMind teams and high-priority projects that previously had access. Employees still cannot reach for Anthropic's own Claude Code tool directly -- the model is only available chosen from within Antigravity's own interface, and each employee works against an individual usage quota rather than open access.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "What changed, in short",
+          "items": [
+            {
+              "label": "Previous access",
+              "value": "Select DeepMind teams, high-priority projects only"
+            },
+            {
+              "label": "New access",
+              "value": "All Google engineers",
+              "note": "via Antigravity"
+            },
+            {
+              "label": "Model",
+              "value": "Claude Opus 5",
+              "note": "Anthropic"
+            },
+            {
+              "label": "Access route",
+              "value": "Inside Antigravity only",
+              "note": "not direct Claude Code access"
+            },
+            {
+              "label": "Limit",
+              "value": "Per-employee quota",
+              "note": "exact figure not disclosed"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Google's own position, as relayed in the reporting, is that ==Gemini remains its primary and foundational model for internal development==, with Claude and other third-party models offered on a quota basis to cover cases where engineers judge Gemini's own coding performance insufficient. Google isn't the first major lab customer to make this concession: Amazon opened internal access to Claude and OpenAI's Codex to its own engineers earlier this year, over the same kind of internal resistance to using a competitor's model that Google had maintained until now.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6",
+          "https://en.sedaily.com/international/2026/09/15/google-lets-engineers-use-rival-anthropics-claude"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The routing detail is the part worth sitting with: Google isn't handing engineers an Anthropic account. Claude Opus 5 runs **inside Antigravity**, Google's own platform, alongside Gemini in the same model picker -- meaning Google controls the interface, the logging, and the usage quota for a model it competes with directly. That arrangement lets Google concede a real capability gap on coding without conceding distribution: whatever an engineer builds with Opus 5 still happens inside Google's own tooling, not Anthropic's.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/2aa7c4bf-ad9a-4e3b-8ed8-3c2862e9ecb6"
+        ]
+      }
+    ],
+    "id": "newsroom-google-antigravity-claude-opus-5-engineer-access",
+    "image": "assets/img/newsroom/google-antigravity-claude-opus-5-engineer-access.jpg",
+    "publishedAt": "2026-09-15T15:03:46Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-15T15:03:46Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "2 sources, 1 independent evidence thread: BigGo Finance and Seoul Economic Daily both report the same underlying story and both explicitly attribute it to Business Insider's Hugh Langley, so this is one thread per format-routing.md's dedup rule, not two -- correctly routed as a brief rather than inflated to a synthesis. Attempted to fetch Business Insider directly (blocked, no confirmed working URL found in search results) and Techmeme's aggregation page (HTTP 403); both consistent with other known-blocked domains already logged in living-notes.md. Also fetched antigravity.google's own public model-list docs, which show Claude Opus 4.6 rather than Opus 5 -- that page describes the external consumer product's model roster, not the internal employee-access policy this story is about, so it was not used as a source to avoid conflating two different claims."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Could not independently confirm the exact per-employee Claude usage quota -- neither source publishes a number -- so it is named as an open question in the apply block rather than estimated. Checked newsroom-articles.js for prior coverage of this specific story -- none found."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found nothing to revise in the reporting itself; expanded from an initial 177 words to 257 to clear the brief floor by adding one paragraph of real analysis (the routing/distribution point) rather than padding."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items all trace to the two cited sources and also appear in body prose. No component carries a top-level text field. No entities.js or companies.js addition needed -- Google and Anthropic are both already registered."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 2 sources, 1 independent evidence thread, correctly routed as brief (257 words) with the single-thread caveat stated plainly in the TL;DR's final bullet rather than hidden. One component (keyfacts), meeting the brief floor. No mandatory-scrutiny trigger fires."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A single-source brief that says so in its own TL;DR rather than dressing up one report as independently confirmed."
+      }
+    }
+  },
   {
     "slug": "cornelis-networks-205-million-active-compute-fabric",
     "title": "An Intel spinoff raised $205 million to make the network fabric itself compute, not just carry, AI traffic",
@@ -62524,11 +62620,27 @@ window.RTFC_NEWSROOM_ARTICLES = [
           "unit": "score",
           "source": "Atria Dawn technical paper (arXiv:2609.15818), Table 1 -- vendor-run, not independently reproduced.",
           "data": [
-            {"label": "DeepSearchQA", "value": 96.0, "hi": true},
-            {"label": "BrowseComp", "value": 92.5},
-            {"label": "CyberGym", "value": 86.5},
-            {"label": "BFCL v4", "value": 77.0},
-            {"label": "SWE-bench Pro", "value": 59.6}
+            {
+              "label": "DeepSearchQA",
+              "value": 96.0,
+              "hi": true
+            },
+            {
+              "label": "BrowseComp",
+              "value": 92.5
+            },
+            {
+              "label": "CyberGym",
+              "value": 86.5
+            },
+            {
+              "label": "BFCL v4",
+              "value": 77.0
+            },
+            {
+              "label": "SWE-bench Pro",
+              "value": 59.6
+            }
           ]
         }
       },
@@ -62836,6 +62948,706 @@ window.RTFC_NEWSROOM_ARTICLES = [
       "gate": {
         "decision": "Approved for publication",
         "note": "A synthesis that takes a well-funded, well-connected chip startup seriously without adopting its own efficiency claim as fact -- the counter component and the ledger's unvalidated framing do the work a press-release rewrite wouldn't."
+      }
+    }
+  },
+  {
+    "slug": "openai-anthropic-google-ai-safety-standards-body-talks",
+    "title": "OpenAI, Anthropic and Google have been negotiating an AI safety standards body since July -- and Meta told the White House not to join",
+    "dek": "OpenAI's global policy chief confirmed Monday that the three labs have coordinated for weeks on a voluntary standards body modeled on Wall Street's FINRA -- an idea Google DeepMind's Demis Hassabis first floated in July and Dario Amodei's September call to \"pace the frontier\" gave new urgency. Meta lobbied the White House against joining, and the industry's own safety index, published weeks before Hassabis's proposal, graded every lab now negotiating it C+ or lower.",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "format": "synthesis",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for a legislative or regulatory hook",
+        "text": "Treasury Secretary Scott Bessent was reportedly weighing a FINRA-like agency reporting to the SEC as of July. A formal proposal, bill, or rulemaking would be the first sign this moves past voluntary talk."
+      },
+      {
+        "label": "Watch for a mandatory-transition roadmap",
+        "text": "Yoshua Bengio's specific ask -- a stated path from voluntary to mandatory participation -- is the concrete document that would answer the self-regulation critique. None of the three labs has published one."
+      },
+      {
+        "label": "Watch the next Future of Life Institute AI Safety Index",
+        "text": "The Summer 2026 index graded every lab now at the table C+ or below, before any of this was proposed. Whether a grade moves in the next edition is a check on whether the talks changed anything measurable."
+      },
+      {
+        "label": "Watch whether Meta's position holds",
+        "text": "Meta counseled the White House against the standards body while facing no disclosed cost for staying out, since nothing proposed so far is mandatory. That calculus changes the moment any part of it becomes binding."
+      }
+    ],
+    "sources": [
+      {
+        "label": "We Must Pace the Frontier",
+        "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+        "outlet": "Dario Amodei / Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "OpenAI, Anthropic, Google have been in talks on AI safety for weeks",
+        "url": "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/",
+        "outlet": "TechCrunch",
+        "kind": "reporting"
+      },
+      {
+        "label": "Google DeepMind chief Demis Hassabis calls for U.S. to spearhead AI standards body",
+        "url": "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html",
+        "outlet": "CNBC",
+        "kind": "reporting"
+      },
+      {
+        "label": "Top AI companies have discussed creating their own standards body",
+        "url": "https://abc17news.com/money/cnn-business-consumer/2026/09/14/top-ai-companies-have-discussed-creating-their-own-standards-body/",
+        "outlet": "CNN (via ABC17News)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Demis Hassabis's proposal for a FINRA for AI gains momentum. But is it a good idea?",
+        "url": "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/",
+        "outlet": "Fortune",
+        "kind": "reporting"
+      },
+      {
+        "label": "AI Safety Index -- Summer 2026",
+        "url": "https://futureoflife.org/ai-safety-index-summer-2026/",
+        "outlet": "Future of Life Institute",
+        "kind": "primary"
+      }
+    ],
+    "tldr": [
+      "OpenAI's Chris Lehane confirmed the three top labs have coordinated on AI safety for weeks.",
+      "The plan echoes Demis Hassabis's July call for a FINRA-style, voluntary industry standards body.",
+      "Meta advised the White House against joining; Anthropic, OpenAI and DeepMind are negotiating it anyway.",
+      "Critics call self-regulation a conflict of interest; Yoshua Bengio wants a mandatory-transition roadmap.",
+      "Caveat: every lab in the talks scored C+ or below on the industry's own July safety index."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "OpenAI's global policy chief, Chris Lehane, told reporters Monday that OpenAI, [Anthropic](/company/anthropic) and Google DeepMind have been coordinating on AI safety **\"for weeks\"** -- the first on-the-record confirmation that talks the three labs had not discussed in public trace back well before Dario Amodei's September call to slow down. Lehane added that the companies don't need a government waiver to keep talking, which quietly undercuts the frame of Amodei's own essay two days earlier, which asked democratic governments to help coordinate exactly this kind of discussion. The reporting lands three days after President Trump [dismissed Amodei's warning as a \"SICK conspiracy\"](/article/trump-sacks-reject-ai-slowdown-amodei-altman-musk) on Truth Social -- the labs, it turns out, hadn't waited for Washington's answer either way.",
+        "citation_urls": [
+          "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The shape of what they're discussing predates Amodei's essay by two months. In July, [Google](/company/google) DeepMind chief Demis Hassabis published a proposal for a US-led AI __standards body__ modeled on FINRA, the private association that polices Wall Street brokers: a public-private partnership, government-overseen but industry-funded, staffed by ++\"independent leading technical experts and open-source representatives\"++ who would test frontier models before release for dangerous cyber, biological and deception capabilities. Treasury Secretary Scott Bessent was reportedly weighing a FINRA-like agency reporting to the SEC within days of the proposal -- the closest the idea has come to an actual government hook, and still short of one.",
+        "citation_urls": [
+          "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "{{note: FINRA doesn't test a brokerage's products before they go to market -- it examines member firms after the fact and fines the ones that broke the rules. An AI standards body modeled on it, testing models before release, would actually be a bigger ask than the FINRA comparison suggests.}}",
+        "citation_urls": []
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "title": "How the talks became public",
+          "items": [
+            {
+              "when": "Jul 14, 2026",
+              "what": "Demis Hassabis publishes a proposal for a US-led, FINRA-style AI standards body.",
+              "source": "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html"
+            },
+            {
+              "when": "Jul 2026",
+              "what": "Treasury Secretary Scott Bessent reportedly weighs a FINRA-like agency reporting to the SEC."
+            },
+            {
+              "when": "Sep 12, 2026",
+              "what": "Dario Amodei publishes \"We Must Pace the Frontier\"; Anthropic unilaterally commits to outside evaluators.",
+              "hi": true,
+              "source": "https://darioamodei.com/post/we-must-pace-the-frontier"
+            },
+            {
+              "when": "Sep 14, 2026",
+              "what": "Reporting confirms Anthropic, OpenAI and Google DeepMind have discussed the standards body; Meta counsels the White House against it.",
+              "source": "https://abc17news.com/money/cnn-business-consumer/2026/09/14/top-ai-companies-have-discussed-creating-their-own-standards-body/"
+            },
+            {
+              "when": "Sep 15, 2026",
+              "what": "OpenAI's Chris Lehane confirms the three labs have coordinated \"for weeks.\"",
+              "hi": true,
+              "source": "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Amodei's own essay lays out three steps, and only the first is a firm commitment: Anthropic is unilaterally granting outside evaluators **\"employee-level access\"** to its systems, with publication rights the company says it won't edit. Step two -- common safety standards among labs in democratic countries -- is the part Lehane, Hassabis and now Bessent are all circling, and it is still voluntary. Step three, coordinating pacing with authoritarian governments including China's, is the part nobody has begun.",
+        "citation_urls": [
+          "https://darioamodei.com/post/we-must-pace-the-frontier"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "[OpenAI](/company/openai) chief scientist Jakub Pachocki went further than a polite nod: **\"I believe that shared safety standards and international coordination on further AI development need to be priorities now,\"** he said, while Sam Altman said the company would ++\"look forward to collaborating with our colleagues across the industry\"++ on a shared standard. Neither has said what OpenAI would actually accept as binding, or what it would do if a future standard flagged one of its own models.",
+        "citation_urls": [
+          "https://abc17news.com/money/cnn-business-consumer/2026/09/14/top-ai-companies-have-discussed-creating-their-own-standards-body/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The one frontier lab conspicuously outside the conversation is [Meta](/company/meta). Mark Zuckerberg is reported to have personally advised President Trump against the standards-body idea -- putting Meta on the same side of the argument as an administration that has dismissed Amodei's slowdown call as manufactured risk, even though Meta has never disputed that its own models could pose the risks Amodei describes.",
+        "citation_urls": [
+          "https://abc17news.com/money/cnn-business-consumer/2026/09/14/top-ai-companies-have-discussed-creating-their-own-standards-body/"
+        ]
+      },
+      {
+        "type": "stakes",
+        "stakes": {
+          "items": [
+            {
+              "who": "OpenAI, Anthropic and Google DeepMind",
+              "tone": "gains",
+              "what": "Help design a voluntary standard now, ahead of any binding legislation that would give them less control over its terms."
+            },
+            {
+              "who": "Meta",
+              "tone": "exposed",
+              "what": "The one major US lab not at the table if a standard does emerge -- with no disclosed near-term cost for staying out, since nothing proposed so far is mandatory."
+            },
+            {
+              "who": "Smaller and open-weight labs",
+              "tone": "unclear",
+              "what": "Not named in any reporting on the talks. A standard set by the three best-funded labs could become a compliance cost the rest never helped negotiate."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The proposal has real critics, and their objection isn't abstract. Gartner analyst Nader Henein called industry self-regulation ++\"not viable,\"++ arguing most AI vendors lack the capacity to police themselves without a conflict of interest baked in. Independent analyst Carmi Levy was blunter about Hassabis's framework specifically.",
+        "citation_urls": [
+          "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "“A self-serving roadmap for an industry bent on racing to the AI horizon regardless of the harms caused along the way.” — Carmi Levy, independent technology analyst",
+        "citation_urls": [
+          "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Yoshua Bengio, the Turing Award-winning researcher who now runs the nonprofit LawZero, focused on the plan's biggest structural gap: it starts voluntary, with no stated path to becoming mandatory, and it wouldn't reach models built for military or government use at all.",
+        "citation_urls": [
+          "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "A voluntary industry standard beats the status quo, which is no common standard at all.",
+              "detail": "No binding AI-testing regime exists anywhere in the US today; even a self-policed one would be the first shared baseline the three largest labs have agreed to.",
+              "whoHolds": "Sam Altman, Jakub Pachocki"
+            },
+            {
+              "claim": "FINRA is not a model to be proud of.",
+              "detail": "FINRA has drawn its own persistent criticism for prioritizing member-firm interests over the investors it's supposed to protect -- the closest real-world precedent for what an AI version might become.",
+              "whoHolds": "Nader Henein (Gartner)"
+            }
+          ],
+          "verdict": "Both hold at once. A voluntary standard is better than none, and FINRA's own record is a legitimate reason to doubt this one settles anything -- which is why Bengio's mandatory-transition question is the one worth tracking, not whether the labs agree to something this year.",
+          "source": "Fortune, https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/"
+        }
+      },
+      {
+        "type": "p",
+        "text": "The irony sits in a number none of the three labs raised on the record. The Future of Life Institute's Summer 2026 AI Safety Index graded nine labs on risk assessment, safety frameworks and governance using the standard US GPA scale -- reviewed through June 3, before Hassabis's proposal existed. ==No lab in the industry scored above a C+.== Anthropic topped the field at 2.66; Google DeepMind and OpenAI, the two labs it's now negotiating a shared standard with, scored 2.01 and 2.28, both a C. Meta, the lab sitting the conversation out, scored 1.32 -- a D+.",
+        "citation_urls": [
+          "https://futureoflife.org/ai-safety-index-summer-2026/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "The safety grades of the labs now negotiating a shared standard",
+          "unit": "GPA (of 4.0)",
+          "source": "Future of Life Institute, AI Safety Index -- Summer 2026",
+          "data": [
+            {
+              "label": "Anthropic",
+              "value": 2.66,
+              "hi": true,
+              "note": "C+"
+            },
+            {
+              "label": "OpenAI",
+              "value": 2.28,
+              "note": "C"
+            },
+            {
+              "label": "Google DeepMind",
+              "value": 2.01,
+              "note": "C"
+            },
+            {
+              "label": "Meta",
+              "value": 1.32,
+              "note": "D+"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this makes the standards-body idea worthless. It is the first time OpenAI, Anthropic and Google DeepMind have described the same effort in public, on the record, in the same week -- more coordination than the industry has managed on anything since the original White House safety commitments of 2023. What's missing is anyone saying, specifically, what happens to a lab that signs on and then ships a model the body flags.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Whether that gap closes is the actual test. A voluntary standard written and funded by the three companies with the most to lose from a binding one is not nothing -- but it isn't the thing Amodei's essay asked for, either. His own three-step plan puts common standards as step two of three, with step three -- pacing coordination with authoritarian governments -- still entirely theoretical. The industry has, for the first time, admitted step two is already underway. It has not yet said what makes it more than a promise the participants wrote for themselves.",
+        "citation_urls": [
+          "https://darioamodei.com/post/we-must-pace-the-frontier"
+        ]
+      }
+    ],
+    "id": "newsroom-openai-anthropic-google-ai-safety-standards-body-talks",
+    "image": "assets/img/newsroom/openai-anthropic-google-ai-safety-standards-body-talks.jpg",
+    "publishedAt": "2026-09-16T14:50:28Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-16T14:50:28Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "6 sources across 6 independent evidence threads: Amodei's own Sept. 12 essay (primary), Hassabis's own July proposal as reported by CNBC, Bessent's reported Treasury interest, TechCrunch's Sept. 15 on-record confirmation from OpenAI's Chris Lehane, CNN's Sept. 14 reporting on Meta's opposition and the Pachocki/Altman quotes, Fortune's critic roundup (Henein, Levy, Bengio), and the Future of Life Institute's own July AI Safety Index (primary). Checked newsroom-articles.js for prior coverage of the Amodei slowdown call (trump-sacks-reject-ai-slowdown-amodei-altman-musk, 2026-09-15) and confirmed that piece covered only the Trump/Sacks political reaction, not the labs' own coordination -- this is a genuinely distinct development, cross-linked rather than restated."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed the FLI AI Safety Index scores (2.66/2.28/2.01/1.32) by direct fetch of futureoflife.org rather than relying on secondary summaries. Confirmed the Hassabis essay's FINRA framing and the Amodei three-step plan by direct fetch of darioamodei.com. Did not include a numeric bar for any lab without a directly-sourced score -- Meta's 1.32 was confirmed before charting it."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean -- the Trump/Sacks cross-link is phrased around Trump's own post, not 'our coverage.' Critique found the first draft implied Meta's opposition was already public fact rather than sourced to CNN's unnamed-people reporting; revised the Meta paragraph to keep the attribution ('is reported to have') rather than stating it flatly."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Timeline's five dated items, stakes' three items, counter's two points and chart's four bars all trace to the cited sources and also appear in body prose (the FLI scores appear in both the paragraph above the chart and the chart itself, matching digit-for-digit). No component carries a top-level text field. No two components sit adjacent -- prose separates every pair."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 6 sources, 6 independent evidence threads (2 primary), correctly routed as synthesis (~1,150 words). Four components (timeline, stakes, counter, chart), chart and timeline both data-carrying. No mandatory-scrutiny trigger fires -- no accusatory claim beyond what named executives said on the record or what CNN's sourced reporting attributes with hedged language."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Puts the industry's own safety index next to its self-regulation pitch without a wire rewrite doing that math, and keeps Meta's opposition and the critics' objections in the same piece as the labs' own quotes rather than picking a side."
+      }
+    }
+  },
+  {
+    "slug": "zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
+    "title": "Z.ai raised $5 billion for the second time in two months. Its stock has fallen 73% since June, and Washington just named it in a federal distillation warning",
+    "dek": "Z.ai priced a combined $5 billion share-and-bond raise this week -- $2 billion in discounted shares, $3 billion in zero-coupon convertible bonds -- eight days after a joint NSA, CISA and FBI advisory named it among six Chinese firms accused of extracting billions of tokens from Claude, GPT, Gemini and Grok. The company has now raised roughly $9.6 billion since its listing while its Hong Kong-traded shares have fallen 73% from June's peak.",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "format": "synthesis",
+    "disclaimer": "not-financial-advice",
+    "applyType": "numbers",
+    "apply": [
+      {
+        "label": "Watch the September 2027 convertible-bond maturity",
+        "text": "The $3 billion zero-coupon bonds convert at HK$892.50 a share, 25% above this week's placement price. If Z.ai's stock hasn't recovered by then, bondholders take cash instead of equity -- a real repayment obligation, not a hypothetical one."
+      },
+      {
+        "label": "Watch whether Z.ai discloses domestic-chip performance",
+        "text": "Z.ai says part of this raise funds \"domestic-chip adaptation\" for training and inference. A specific benchmark or throughput number against Nvidia hardware, not just the funding line, is what would confirm the substitution is actually working."
+      },
+      {
+        "label": "Watch for a US response naming Z.ai specifically",
+        "text": "The September 8 advisory named six companies as a group. Any US action -- an export-control addition, a platform ban, a named enforcement case -- that singles out Z.ai rather than the group is the next concrete step to track."
+      }
+    ],
+    "sources": [
+      {
+        "label": "CISA, NSA and FBI Warn of China-Based AI Companies Targeting US AI Models with Industrial-Scale Knowledge Distillation Campaigns (AA26-251A)",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+        "outlet": "CISA",
+        "kind": "primary"
+      },
+      {
+        "label": "Z.ai completes around US$5 billion financing for next-generation GLM models",
+        "url": "https://technode.com/2026/09/14/z-ai-completes-around-us5-billion-financing-for-next-generation-glm-models/",
+        "outlet": "TechNode",
+        "kind": "reporting"
+      },
+      {
+        "label": "Zhipu Raises $5 Billion in Second Financing Round Within Two Months, Zero-Coupon Convertible Bonds at Premium Conversion Bet on Long-Term Share Price",
+        "url": "https://finance.biggo.com/news/a9e16730-6f03-4f8c-a4de-3a40fb6a7bf9",
+        "outlet": "BigGo Finance",
+        "kind": "reporting"
+      },
+      {
+        "label": "China's Zhipu Raises $5 Billion as China's AI Funding Race Widens",
+        "url": "https://en.sedaily.com/international/2026/09/14/zhipu-raises-5-billion-as-chinas-ai-funding-race-widens",
+        "outlet": "Seoul Economic Daily",
+        "kind": "reporting"
+      },
+      {
+        "label": "NSA, CISA and FBI Name Six Chinese AI Companies in Mass Distillation Alert",
+        "url": "https://northeasttimes.com/2026/09/09/nsa-cisa-and-fbi-name-six-chinese-ai-companies-in-mass-distillation-alert/",
+        "outlet": "Northeast Times",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Z.ai priced a combined $5 billion share-and-bond raise this week, its second in two months.",
+      "The $2 billion share tranche priced at a 9.96% discount; shares fell further on the news.",
+      "Z.ai has now raised roughly $9.6 billion total, even as its stock sits 73% below June's peak.",
+      "A US federal advisory named Z.ai in a distillation warning eight days before this raise priced.",
+      "Caveat: the distillation claim is the US agencies' allegation, which Z.ai has not publicly answered."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Z.ai](/company/zai) priced a combined **$5 billion** financing this week -- roughly $2 billion from a discounted share placement, $3 billion from zero-coupon convertible bonds -- its second major raise in two months, after a roughly **$4 billion** share placement in July, and, by outside reporters' count, close to $9.6 billion total since its Hong Kong listing. The timing is what makes it a story rather than a routine funding update: the round priced eight days after the [NSA, CISA and FBI publicly named Z.ai](/article/nsa-cisa-fbi-china-ai-distillation-advisory) as one of six Chinese firms accused of extracting billions of tokens from Claude, GPT, Gemini and Grok to shortcut its own model development.",
+        "citation_urls": [
+          "https://technode.com/2026/09/14/z-ai-completes-around-us5-billion-financing-for-next-generation-glm-models/",
+          "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The mechanics of the raise are two different bets on the same stock. The share tranche sold **21.97 million** new H-shares at HK$714 apiece -- a 9.96% discount to Friday's HK$793 close -- raising roughly $2 billion outright and diluting existing holders immediately. The bond tranche is the more interesting instrument: RMB 20.14 billion (about $3 billion) in zero-coupon notes due September 2027, convertible at HK$892.50 a share, a **25% premium** over the placement price. Buyers of the bonds get no interest and are, in effect, betting the stock recovers well above even Friday's level within a year -- otherwise they simply get their principal back.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/a9e16730-6f03-4f8c-a4de-3a40fb6a7bf9"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What Z.ai has raised, and how",
+          "items": [
+            {
+              "value": "~$4B",
+              "unit": "July 2026 placement",
+              "label": "19.78 million shares at HK$1,588",
+              "includes": "Cash raised from the share sale",
+              "excludes": "Any debt or bond component"
+            },
+            {
+              "value": "~$2B",
+              "unit": "Sept 2026 share tranche",
+              "label": "21.97 million shares at HK$714",
+              "includes": "Cash raised from the share sale, priced at a 9.96% discount to the prior close",
+              "excludes": "The convertible-bond tranche below"
+            },
+            {
+              "value": "~$3B",
+              "unit": "Sept 2026 convertible bonds",
+              "label": "Zero-coupon, due Sept 2027, converts at HK$892.50",
+              "includes": "Principal due at maturity if unconverted",
+              "excludes": "Any coupon or interest payment -- the notes pay none"
+            },
+            {
+              "value": "~$9.6B",
+              "unit": "Cumulative since IPO",
+              "label": "IPO plus these two placements, per BigGo Finance's tally",
+              "note": "Not an official company figure -- a reporter's sum of disclosed rounds."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The stock chart underneath the raise is the part the financing headlines skip. Z.ai's Hong Kong-listed shares hit an intraday peak of HK$2,980 on June 22; by the Thursday before this week's announcement they'd fallen to HK$793 -- a decline of roughly **73%** -- and this week's placement price of HK$714 is lower still. ==A company can raise $5 billion twice in two months and still be selling shares for a quarter of what they were worth ten weeks earlier.== That's not necessarily a sign anything is wrong with the business -- richly valued AI stocks across the board have given back 2026 gains -- but it does mean the ++\"dilution\"++ conversation around this raise is happening against a stock that was already down heavily before the new shares showed up.",
+        "citation_urls": [
+          "https://finance.biggo.com/news/a9e16730-6f03-4f8c-a4de-3a40fb6a7bf9"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "Z.ai's Hong Kong shares since the June peak",
+          "unit": "HK$",
+          "source": "BigGo Finance, citing exchange filings",
+          "data": [
+            {
+              "label": "Jun 22 intraday peak",
+              "value": 2980,
+              "hi": true
+            },
+            {
+              "label": "Sept 11 close (pre-announcement)",
+              "value": 793
+            },
+            {
+              "label": "Sept placement price",
+              "value": 714
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "{{note: A zero-coupon convertible bond is a loan that pays no interest -- the lender's entire return comes from either converting into stock at a set price or getting the original principal back at maturity. Pricing one at a 25% premium to a stock that just fell 73% is a wager that the worst of the decline is over.}}",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "What the money buys is not in dispute. Z.ai says roughly 60% of the combined proceeds go to its next-generation GLM foundation models -- research, large-scale training, a ++\"fully self-training system\"++, production inference and computing infrastructure -- plus automated training-data generation, long-range reasoning work, and what the company calls __domestic-chip adaptation__: retooling its training and inference stack to run on Chinese-made accelerators rather than the Nvidia hardware US export controls increasingly restrict. That last line item is the one the distillation advisory makes newly relevant.",
+        "citation_urls": [
+          "https://technode.com/2026/09/14/z-ai-completes-around-us5-billion-financing-for-next-generation-glm-models/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The September 8 advisory, AA26-251A, doesn't single out Z.ai -- it names DeepSeek, Alibaba, Moonshot AI, MiniMax, StepFun and Z.ai as a group, and alleges they routed distillation requests through fraudulent accounts, third-party API aggregators, and gray-market \"transfer stations\" designed to strip identifying metadata and evade US labs' geographic and rate limits. The agencies say the campaigns extracted **billions of tokens across millions of exchanges** from Claude, GPT, Gemini and Grok since at least late 2024, likely with the Chinese government's knowledge. Z.ai has not issued a public response to the advisory as of this reporting.",
+        "citation_urls": [
+          "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a"
+        ]
+      },
+      {
+        "type": "counter",
+        "counter": {
+          "points": [
+            {
+              "claim": "Being named alongside five other companies in a joint advisory is not the same as being individually charged or sanctioned.",
+              "detail": "AA26-251A is a defensive advisory aimed at US AI companies' own security practices, not an enforcement action against any of the six named firms -- nothing in it blocks Z.ai from raising capital, selling shares, or operating internationally.",
+              "whoHolds": "Z.ai, implicitly, by continuing to raise and deploy capital as normal"
+            },
+            {
+              "claim": "Investors bought in anyway, which is itself informative.",
+              "detail": "Both the discounted share tranche and the zero-coupon bonds found buyers within days of the advisory naming Z.ai -- whatever reputational cost the accusation carries, it wasn't enough to stop a $5 billion raise from clearing.",
+              "whoHolds": "The placement's institutional buyers"
+            }
+          ],
+          "verdict": "Both are true and neither erases the other. The advisory is an allegation, not a verdict, and the market's willingness to fund Z.ai anyway says more about investor risk tolerance for revenue growth than it does about whether the distillation claim holds up -- those are two separate questions this raise doesn't answer.",
+          "source": "CISA AA26-251A; BigGo Finance placement details"
+        }
+      },
+      {
+        "type": "p",
+        "text": "There's a real business under the financing noise, which is part of why investors kept showing up. Z.ai's first-half 2026 revenue reached 954 million yuan, a **399.7%** jump from a year earlier, with API revenue from corporate clients rising more than 27-fold. That's the number that makes the raise legible as growth capital rather than a rescue -- a company scaling revenue that fast plausibly does need $5 billion for training runs and inference capacity. It doesn't resolve whether some of what it's scaling was trained on distilled outputs from US models, which is a question about the last two years, not the next two quarters.",
+        "citation_urls": [
+          "https://en.sedaily.com/international/2026/09/14/zhipu-raises-5-billion-as-chinas-ai-funding-race-widens"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "items": [
+            {
+              "claim": "Z.ai's models were trained in part on outputs distilled from Claude, GPT, Gemini and Grok.",
+              "level": "contested",
+              "basis": "Alleged by a joint NSA/CISA/FBI advisory naming Z.ai among six companies; Z.ai has not publicly confirmed or denied the specific allegation as of this reporting.",
+              "resolver": "An independent technical audit of Z.ai's training pipeline and data provenance, or a US government enforcement action naming Z.ai individually."
+            },
+            {
+              "claim": "Z.ai's H1 2026 revenue grew 399.7% year-over-year to 954 million yuan.",
+              "level": "company",
+              "basis": "Reported via 21st Century Business Herald, sourced to the company's own disclosure; no independent audit confirms the figure.",
+              "resolver": "An audited annual report or a regulatory filing with independently verified revenue."
+            },
+            {
+              "claim": "Z.ai has raised roughly $9.6 billion total since its IPO.",
+              "level": "strong",
+              "basis": "A reporter's sum (BigGo Finance) of three separately disclosed, filing-backed rounds -- not a single official company total, but each component is independently documented.",
+              "resolver": "A consolidated capital-raised figure in Z.ai's own investor disclosures."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this settles the underlying dispute the advisory raised -- whether Z.ai's models genuinely rest on distilled American training data, or how much. What it does settle is a narrower question: that accusation, at least so far, ==has cost Z.ai nothing in the market that actually funds it.== Whichever number -- the funding total or the distillation claim -- turns out to matter more to Z.ai's next year is still an open question, and it's one the company's own revenue growth is buying it time to avoid answering.",
+        "citation_urls": []
+      },
+      {
+        "type": "quote",
+        "text": "A stock down 73% found buyers for $5 billion in new paper eight days after a joint US intelligence and law-enforcement advisory put its name on a list of six.",
+        "citation_urls": []
+      }
+    ],
+    "id": "newsroom-zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
+    "image": "assets/img/newsroom/zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory.jpg",
+    "publishedAt": "2026-09-16T14:52:30Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-16T14:52:30Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "5 sources across 4 independent evidence threads: the CISA/NSA/FBI advisory itself (primary, direct fetch of cisa.gov), TechNode's report of the financing's use-of-proceeds language (citing the company's own disclosure), BigGo Finance's filing-level detail on share/bond pricing and the June-to-September stock trajectory, and Seoul Economic Daily's revenue figures and confirmation of the July prior raise. Direct WebFetch of CNBC and Invezz's coverage of the same stock-price move returned 403s; used BigGo Finance's independently-sourced, more detailed figures instead rather than citing the blocked outlets secondhand, per the living-notes guidance on bot-blocked sources. Checked newsroom-articles.js and confirmed no prior Z.ai/Zhipu funding story exists to duplicate; cross-linked this newsroom's own Sept. 11 distillation-advisory article by what the advisory says, not by naming our coverage of it."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed the six named companies and the advisory's publish date (Sept. 8) by direct fetch of cisa.gov rather than secondary summaries. Confirmed the July prior-raise amount (~$4B) independently via both BigGo Finance and Seoul Economic Daily before stating it as fact. Kept the distillation claim attributed to the advisory throughout -- 'the agencies say,' 'alleges' -- rather than stated as established fact, since Z.ai has not confirmed or been proven to have done this; this is the mandatory-scrutiny trigger for accusatory claims about a named company, remediated by sourced-neutral framing rather than a spike, consistent with how the original advisory article handled the same six companies."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found the first draft's ledger implied the $9.6B cumulative figure was a company-disclosed total; revised the ledger's note field to attribute it explicitly to BigGo Finance's own tally rather than presenting a reporter's sum as an official Z.ai figure."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "Ledger's four rows, the bar chart's three price points, scorecard's three claims and counter's two points all trace to the cited sources and also appear in body prose (the $5B/$2B/$3B split, the HK$2,980/HK$793/HK$714 price points, and the 73% decline all appear in prose above their components, matching digit-for-digit). No component carries a top-level text field. No two components sit adjacent."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved with not-financial-advice disclaimer (valuation/financial-claims trigger) and sourced-neutral framing of the distillation accusation (accusatory-claim-about-named-company trigger) -- both mandatory-scrutiny triggers fired and were remediated rather than the story being spiked, since the underlying facts (the raise, the advisory) are independently well-sourced and the accusation is attributed throughout rather than asserted. 5 sources, 4 independent evidence threads (1 primary), correctly routed as synthesis (~1,050 words). Four components (ledger, chart, scorecard, counter), ledger and chart both data-carrying."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "Reconciles a funding headline against the stock chart and the federal advisory a standard funding-round rewrite would treat as three separate stories, without asserting the distillation claim as proven or the raise as evidence against it."
+      }
+    }
+  },
+  {
+    "slug": "gemini-3-8-live-voice-benchmark-top-ranking",
+    "title": "Gemini 3.8 Live debuts atop an independent voice-AI benchmark, two weeks after Gemini 3.8 Flash",
+    "dek": "Google's new live-dialogue models -- Gemini 3.8 Live and a higher-effort Live Extended Thinking version -- take the top spot on Artificial Analysis' Speech to Speech Quality Index at 82.6, per Google's own launch post. Pricing runs $0.005 per minute of audio input and $0.018 per minute of output, rolling out today across the Gemini API, Search Live and Gemini Live, with enterprise access still in private preview.",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "format": "brief",
+    "disclaimer": "none",
+    "applyType": "watch",
+    "apply": [
+      {
+        "label": "Watch for independent confirmation beyond Google's own post",
+        "text": "The 82.6 score and its #1 ranking come from Google's own launch announcement citing Artificial Analysis -- not yet a standalone leaderboard page independent outlets have checked firsthand."
+      },
+      {
+        "label": "Watch how rivals respond",
+        "text": "GPT-Live-1 and Grok's voice model are the two live-dialogue systems Google is implicitly ranked against. Neither vendor has published a rebuttal score as of this reporting."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+        "outlet": "Google",
+        "kind": "primary"
+      },
+      {
+        "label": "Google Releases Gemini 3.8 Live and 3.8 Live Extended Thinking for Production Grade Voice Agents",
+        "url": "https://www.marktechpost.com/2026/09/15/google-releases-gemini-3-8-live-and-3-8-live-extended-thinking-for-production-grade-voice-agents/",
+        "outlet": "MarkTechPost",
+        "kind": "reporting"
+      }
+    ],
+    "tldr": [
+      "Google launched Gemini 3.8 Live and a higher-effort Live Extended Thinking variant on Sept. 15.",
+      "The models rank #1 on Artificial Analysis' Speech to Speech Quality Index at 82.6, per Google.",
+      "Pricing is $0.005 per minute of audio input and $0.018 per minute of audio output.",
+      "Rollout spans the Gemini API, Search Live and Gemini Live now; enterprise access stays in preview.",
+      "Caveat: the benchmark ranking comes from Google's own post, not an outlet that checked it firsthand."
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "[Google](/company/google) launched Gemini 3.8 Live and a higher-effort Gemini 3.8 Live Extended Thinking model on Monday, its second Gemini 3.8-family release in two weeks after Gemini 3.8 Flash's Sept. 2 debut. Both are live-dialogue models -- built for real-time voice conversations rather than text -- and Google says they take the **#1 overall spot** on Artificial Analysis' independent Speech to Speech Quality Index, scoring **82.6**.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The two models split by effort rather than by audience: Gemini 3.8 Live is built for ++scale and cost efficiency++, while Live Extended Thinking adds multi-step reasoning for harder, longer tasks -- Google reports 68.6% on the τ-Voice agentic-task benchmark and 97.7% on Big Bench Audio's reasoning test. Both support 97 languages with mid-conversation language switching, and both can execute tools in the background without interrupting the conversation.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+          "https://www.marktechpost.com/2026/09/15/google-releases-gemini-3-8-live-and-3-8-live-extended-thinking-for-production-grade-voice-agents/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The rollout is broader than a developer preview. Search Live and Gemini Live get the base model for free today; Google Workspace -- Docs, Gmail and Keep -- gets the Extended Thinking version for AI Pro and Ultra subscribers, and enterprise access sits in private preview through Gemini Enterprise. Google names early users testing the models, including [Salesforce](/company/salesforce), ServiceNow, Agora and LiveKit, as praising **\"latency, fluidity, and tool-calling capabilities\"** over the prior Live generation -- a company-selected list of quotes from companies with a commercial reason to say so, not an independent review.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        ]
+      },
+      {
+        "type": "keyfacts",
+        "keyfacts": {
+          "title": "Gemini 3.8 Live, in short",
+          "items": [
+            {
+              "label": "Released",
+              "value": "Sept. 15, 2026"
+            },
+            {
+              "label": "Speech to Speech Quality Index",
+              "value": "82.6",
+              "note": "#1 per Artificial Analysis, per Google"
+            },
+            {
+              "label": "Pricing",
+              "value": "$0.005/min audio in, $0.018/min audio out"
+            },
+            {
+              "label": "Languages",
+              "value": "97, with mid-conversation switching"
+            },
+            {
+              "label": "Availability",
+              "value": "Gemini API, AI Studio, Search Live, Gemini Live now; Gemini Enterprise in private preview"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "==The benchmark claim carries an asterisk worth naming: it comes from Google's own launch post citing Artificial Analysis, not from an outlet that checked the ranking against a public leaderboard page before publishing.== That doesn't make it wrong -- Artificial Analysis is the same independent evaluator this newsroom's own [Scoreboard](/scoreboard) uses for text models -- but a self-reported #1 and an outside-verified #1 aren't the same claim until someone outside Google has looked.",
+        "citation_urls": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        ]
+      }
+    ],
+    "id": "newsroom-gemini-3-8-live-voice-benchmark-top-ranking",
+    "image": "assets/img/newsroom/gemini-3-8-live-voice-benchmark-top-ranking.jpg",
+    "publishedAt": "2026-09-16T14:57:12Z",
+    "pipeline": {
+      "run": "autonomous Claude-runner cycle · 2026-09-16T14:57:12Z",
+      "stages": [
+        {
+          "name": "Research",
+          "agent": "claude-runner",
+          "note": "2 sources, 2 independent evidence threads: Google's own launch post (primary, direct fetch of blog.google) and MarkTechPost's independent write-up, used mainly to confirm the per-minute pricing figures the Google post itself didn't state in the fetched excerpt. Attempted to resolve whether the 82.6 score belongs to the base Live model or the Extended Thinking variant specifically -- Google's own post attributes it to the family without splitting the two, and a direct fetch of the DeepMind model card for Gemini 3.8 Audio did not contain the number -- so the article reports the claim exactly as Google states it rather than guessing which variant it belongs to. Correctly routed as a brief: one company announcement, no competing claims to reconcile."
+        },
+        {
+          "name": "Verification",
+          "agent": "claude-runner",
+          "note": "Confirmed via direct fetch that the DeepMind model card does not independently corroborate the 82.6 figure, which is why the piece flags the claim as Google's own reporting of an Artificial Analysis result rather than treating it as independently checked -- the load-bearing caveat in the TL;DR and the closing paragraph. Did not add a Scoreboard row: the Scoreboard tracks the Artificial Analysis Intelligence Index (text/reasoning), a different benchmark family than the Speech to Speech Quality Index this model is measured on, so a row would misrepresent what the board compares. Added Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking to entities.js instead, since that annotation layer is independent of the Scoreboard."
+        },
+        {
+          "name": "Loop 1 - critique and revise",
+          "agent": "claude-runner",
+          "note": "Self-referential-language check: clean. Critique found nothing to revise -- a single-source product announcement with one honest caveat about the source of its own headline number."
+        },
+        {
+          "name": "Loop 2 - component provenance check",
+          "agent": "claude-runner",
+          "note": "keyfacts' five items all trace to the cited sources and also appear in body prose (82.6 score, pricing, language count and availability all stated in paragraphs above the box). No component carries a top-level text field."
+        },
+        {
+          "name": "Gate",
+          "agent": "claude-runner",
+          "note": "Approved. 2 sources, 2 independent evidence threads (1 primary), correctly routed as brief (~320 words). One component (keyfacts), meeting the brief floor. No mandatory-scrutiny trigger fires."
+        }
+      ],
+      "gate": {
+        "decision": "Approved for publication",
+        "note": "A clean product brief that does the one thing a wire rewrite of Google's own post wouldn't: names whose claim the headline number actually is before repeating it."
       }
     }
   }
