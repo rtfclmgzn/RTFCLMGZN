@@ -20252,7 +20252,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Meta just launched 8 paid AI tiers across Instagram, Facebook and WhatsApp -- $2.99 to $499/month. It's Meta's clearest answer yet to the $130-145B AI-capex question that got the stock downgraded in April.",
         "reply_copy": "The breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#MetaOne"],
+        "hashtags": [
+          "#Meta",
+          "#MetaOne"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -20263,21 +20266,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "One analyst says Meta's new subscription tiers could add $13.5B by 2028. Meta's own 2026 AI capex guidance is $130-145B. Run the math and a modest 1% conversion of Meta's 3.6B daily users clears about $3.4B a year -- real money, a rounding error against the spend it's supposed to justify.",
         "reply_copy": "We built a slider for it:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#AI"],
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Meta wants you to pay for AI now.\n\nMeta One launched this week: 8 paid tiers, $2.99 to $499 a month, unlocking AI image/video generation and a 24/7 business agent across Instagram, Facebook, WhatsApp and Meta AI.\n\nMeta says 15 million subscriptions and trials are already active. The real question: does it move the needle against $130-145 BILLION in AI spending this year?",
-        "hashtags": ["#Meta", "#MetaAI", "#Instagram", "#WhatsApp", "#AI", "#TechNews"],
+        "hashtags": [
+          "#Meta",
+          "#MetaAI",
+          "#Instagram",
+          "#WhatsApp",
+          "#AI",
+          "#TechNews"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Meta One is live: eight paid subscription tiers across Instagram, Facebook, WhatsApp and Meta AI, from $2.99 to $499 a month, gating AI image/video generation and a round-the-clock business agent. Meta says 15 million subscriptions and trials are already active -- but it's arriving against $130-145 billion in 2026 AI spending, the same figure that got the stock downgraded back in April.",
-        "hashtags": ["#Meta", "#MetaOne"],
+        "hashtags": [
+          "#Meta",
+          "#MetaOne"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -20321,21 +20337,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "ByteDance signed a $29.6B unsecured loan -- Asia's 2nd-largest dollar borrowing of 2026 -- upsized from a $20B ask after banks offered $30B+. Priced cheaper than its 2024 loan, even as it weighs tripling AI capex to $70B this year.",
         "reply_copy": "The numbers:",
         "link_in_reply": true,
-        "hashtags": ["#ByteDance", "#AI"],
+        "hashtags": [
+          "#ByteDance",
+          "#AI"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
         "copy": "ByteDance just signed a $29.6 BILLION loan.\n\nAsia's second-largest dollar borrowing of 2026, upsized from a $20B target after banks offered more than $30B. Priced cheaper than its 2024 loan -- even as ByteDance weighs nearly tripling AI capex to as much as $70B this year.\n\nNeither ByteDance nor the arranging banks have commented on the terms.",
-        "hashtags": ["#ByteDance", "#AI", "#TechNews", "#Finance"],
+        "hashtags": [
+          "#ByteDance",
+          "#AI",
+          "#TechNews",
+          "#Finance"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "ByteDance signed a $29.6 billion unsecured syndicated loan, Bloomberg reported Sept. 14 -- Asia's second-largest dollar-denominated borrowing of 2026, upsized from an initial $20 billion target after banks offered back more than $30 billion. It comes as ByteDance is separately weighing raising 2026 AI capex to as much as $70 billion, up from roughly $25 billion in 2025.",
-        "hashtags": ["#ByteDance", "#AI"],
+        "hashtags": [
+          "#ByteDance",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -20379,9 +20408,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "ByteDance spun off its AI-biology unit and reportedly raised $290M at a $1.5B valuation. Its real product isn't a drug -- it's Protenix, a free, open-source model whose own paper claims it beats DeepMind's AlphaFold3.",
         "reply_copy": "The details:",
         "link_in_reply": true,
-        "hashtags": ["#AlphaFold", "#AIforScience"],
+        "hashtags": [
+          "#AlphaFold",
+          "#AIforScience"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -20390,21 +20424,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Anew Labs (ByteDance's AI-drug spinoff) is reportedly valued at $1.5B. Isomorphic Labs (Alphabet's) raised $2.1B alone in May, at a $2.6B total. Same Big Tech AI-biology playbook, a very different scale bet -- and Anew is giving its model away for free instead of signing pharma partners.",
         "reply_copy": "The comparison:",
         "link_in_reply": true,
-        "hashtags": ["#AIforScience", "#Biotech"],
+        "hashtags": [
+          "#AIforScience",
+          "#Biotech"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "ByteDance spun off an AI-biology unit. Its real product might surprise you.\n\nAnew Labs reportedly raised $290M at a $1.5B valuation -- but its concrete output so far is Protenix, a FREE, open-source protein-structure model whose own paper claims it beats Google DeepMind's AlphaFold3.\n\nA follow-on model, PXDesign, reports up to 73% success designing new protein binders -- 2-6x prior methods.\n\nThe funding numbers are still unconfirmed. The open-source code isn't.",
-        "hashtags": ["#AI", "#Biotech", "#AlphaFold", "#DrugDiscovery", "#ByteDance", "#AIforScience"],
+        "hashtags": [
+          "#AI",
+          "#Biotech",
+          "#AlphaFold",
+          "#DrugDiscovery",
+          "#ByteDance",
+          "#AIforScience"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Reuters reported Sept. 16 that Anew Labs, ByteDance's newly independent AI-for-biology unit, closed a $290 million Series A at a $1.5 billion valuation. But the company's most concrete output isn't a drug -- it's Protenix, a free, open-source protein-structure model whose own preprint claims it beats Google DeepMind's AlphaFold3 on several benchmarks. Neither ByteDance nor Anew Labs has confirmed the funding terms on the record.",
-        "hashtags": ["#AI", "#Biotech"],
+        "hashtags": [
+          "#AI",
+          "#Biotech"
+        ],
         "status": "ready",
         "post_url": null
       },
