@@ -19742,5 +19742,193 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-shanghai-ai-lab-atria-dawn-preview-quiet-744b-release",
+    "ts": "2026-09-16T00:12:22Z",
+    "export": {
+      "article_id": "newsroom-shanghai-ai-lab-atria-dawn-preview-quiet-744b-release",
+      "url": "https://rtfclmgzn.com/article/shanghai-ai-lab-atria-dawn-preview-quiet-744b-release",
+      "headline": "A 744-billion-parameter open model shipped with no announcement -- and vendor benchmarks claiming it beats GPT-6 Astra and Claude Opus 5 on five tasks",
+      "hook": "A Chinese lab released a 744-billion-parameter, MIT-licensed model with zero fanfare -- just a Hugging Face page and a paper claiming it beats GPT-6 Astra and Claude Opus 5 on five benchmarks.",
+      "key_facts": [
+        "Atria Dawn Preview shipped September 11 with no blog post, pricing, or press release.",
+        "It claims the top score on 5 of 16 agentic benchmarks, including a 92.5 on BrowseComp.",
+        "No independent Artificial Analysis score exists yet -- every benchmark number is the lab's own."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/shanghai-ai-lab-atria-dawn-preview-quiet-744b-release.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A 744-billion-parameter open model just shipped with zero fanfare -- no blog post, no pricing, no press release. Just an MIT license and a paper claiming it beats GPT-6 Astra and Claude Opus 5 on 5 of 16 agentic benchmarks.",
+        "reply_copy": "What's actually confirmed vs. still just a vendor claim:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenSource",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "No blog post. No pricing page. No press release.\n\nShanghai AI Laboratory just released Atria Dawn Preview -- a 744-billion-parameter open-weight model -- with a Hugging Face page as the ONLY announcement.\n\nIts own 143-author paper claims the top score on 5 of 16 agentic benchmarks, ahead of DeepSeek, GLM, GPT-5.6 Sol, and Claude Opus 5. Every number is vendor-reported. No independent lab has measured it yet.",
+        "hashtags": [
+          "#AI",
+          "#OpenSource",
+          "#MachineLearning",
+          "#LLM",
+          "#OpenWeights",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "What does it mean when a lab ships a frontier-scale AI model with literally no announcement? Shanghai AI Laboratory's Atria Dawn Preview -- 744 billion parameters, MIT-licensed, free for anyone to self-host -- appeared on Hugging Face on September 11 with no press outreach at all. Its own paper claims it beats named rivals on 5 of 16 benchmarks. None of those numbers have been independently checked yet.",
+        "hashtags": [
+          "#AI",
+          "#OpenSource"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Shanghai AI Laboratory shipped a 744-billion-parameter, MIT-licensed agentic model on September 11 with no blog post, pricing, or press release -- the Hugging Face page was the entire announcement. Its own paper claims the top score on 5 of 16 agentic benchmarks against DeepSeek V4 Pro, GLM 5.3, GPT-5.6 Sol, and Claude Opus 5. Every number is the lab's own; no independent lab has reproduced them, and Artificial Analysis hasn't measured it yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "744B-parameter, MIT-licensed model shipped with literally no announcement -- just a Hugging Face page. Its own paper claims wins over GPT-6 Astra and Claude Opus 5 on 5 of 16 benchmarks. Vendor-reported, unverified.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T05:12:22Z",
+        "copy": "One of Atria Dawn's five claimed strengths is finding and patching real software vulnerabilities. It's also released under an MIT license with zero usage restriction. Neither the paper nor the model card addresses that combination directly.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#OpenSource"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T05:12:22Z",
+        "copy": "The most interesting finding in Atria Dawn's own paper isn't a benchmark score -- it's the process behind it. 143 authors analyzed 769 tasks where human researchers worked alongside an earlier version of the model, and found participants rated roughly a third of the AI-assisted work infeasible without it. The paper frames this as agents shifting from executing tasks to being genuine project partners.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-euclyd-series-a-231-million-samsung-wennink-ai-inference-chips",
+    "ts": "2026-09-16T00:24:00Z",
+    "export": {
+      "article_id": "newsroom-euclyd-series-a-231-million-samsung-wennink-ai-inference-chips",
+      "url": "https://rtfclmgzn.com/article/euclyd-series-a-231-million-samsung-wennink-ai-inference-chips",
+      "headline": "A Dutch startup with no shipped silicon raised $231 million to replace GPUs with memory-centric chips -- and put ASML's former CEO in the chairman's seat",
+      "hook": "A Dutch chip startup with zero shipped silicon just raised $231 million -- co-led by Samsung -- to replace GPUs with memory-centric AI chips, and put ASML's former 11-year CEO in the chairman's seat.",
+      "key_facts": [
+        "Euclyd closed a $231M Series A co-led by Samsung, the largest European AI-inference-chip round of 2026.",
+        "Former ASML CEO Peter Wennink, who grew the company from €27B to €333B in market value, chairs the board.",
+        "Euclyd's own '100x more efficient' claim is internal modeling -- first silicon doesn't ship until 2028."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/euclyd-series-a-231-million-samsung-wennink-ai-inference-chips.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A Dutch chip startup with zero shipped silicon just raised $231 million, co-led by Samsung, to replace GPUs with memory-centric AI chips -- and put ASML's former 11-year CEO in the chairman's seat.",
+        "reply_copy": "What the raise actually confirms, and what's still just a claim:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Semiconductors",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "No shipped chips. $231 million raised anyway.\n\nEuclyd, a Dutch startup betting GPUs are the wrong architecture for AI inference, just closed Europe's largest AI-chip round of 2026 -- co-led by Samsung. ASML's former CEO, who grew that company from €27B to €333B in market value, now chairs the board.\n\nEuclyd's claimed '100x more efficient than GPUs' is its own modeling, not a measurement. First silicon isn't due until 2028.",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors",
+          "#Startup",
+          "#Samsung",
+          "#TechNews",
+          "#DataCenter",
+          "#ChipDesign"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Would you back a chip company before it's shipped a single chip? Samsung and ASML's former CEO just did. Euclyd, a Dutch startup building memory-centric AI-inference chips instead of GPUs, raised $231 million -- Europe's largest AI-chip round this year. Its headline claim of 100x better efficiency is the company's own modeling; first real silicon isn't due until 2028.",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Euclyd closed a $231 million Series A co-led by Samsung on September 15 -- Europe's largest AI-inference-chip round of 2026, and the company hasn't shipped a single chip yet. Peter Wennink, who ran ASML for eleven years and grew its market value from €27B to €333B, chairs the board. The company's '100x better power efficiency' claim is its own internal modeling against Meta's Llama 4 Maverick -- unvalidated until first silicon ships in 2028.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Dutch chip startup Euclyd raised $231M (Samsung co-led) to replace GPUs with memory-centric chips. Ex-ASML CEO chairs the board. The '100x more efficient' claim is Euclyd's own modeling -- no chip has shipped to test it against.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T05:24:00Z",
+        "copy": "Why would Samsung, one of the world's largest memory makers, co-lead a $231M round for an unproven chip startup? Because a company whose entire pitch is 'memory closer to compute' is either a future customer or a threat, depending which way it goes.",
+        "reply_copy": "The full picture:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Samsung",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-16T05:24:00Z",
+        "copy": "European AI-chip startups raised roughly $800M combined in 2026, against $4.7B for their US counterparts -- and Nvidia alone spends over $18B a year on R&D. Euclyd's $231M raise is genuinely the biggest in that European cohort. Whether that's enough to close a gap that size is the actual open question here, not the spec sheet.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

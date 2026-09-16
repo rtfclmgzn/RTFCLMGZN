@@ -3604,7 +3604,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-47-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "euclyd-series-a-231-million-samsung-wennink-ai-inference-chips",
+     "used_at": "2026-09-16"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-09",
@@ -4469,7 +4474,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-54-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "shanghai-ai-lab-atria-dawn-preview-quiet-744b-release",
+     "used_at": "2026-09-16"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-05",

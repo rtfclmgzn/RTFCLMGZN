@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-09-12",
+  updated: "2026-09-16",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -151,6 +151,8 @@ window.RTFC_ENTITIES = {
       kind:"open-weights model", access:"open-weights" },
     { re:/\bDoubao(?: 2\.1 Pro)?\b/i, name:"Doubao 2.1 Pro", maker:"ByteDance", makerKey:"bytedance",
       kind:"frontier model", access:"unknown" },
+    { re:/\bAtria Dawn(?: Preview)?\b/i, name:"Atria Dawn Preview", maker:"Shanghai AI Laboratory", makerKey:"shanghai-ai-lab",
+      kind:"open-weights agentic model", access:"open-weights" },
 
     // --- Europe ---
     { re:/\bLe Chat\b/i, name:"Le Chat", maker:"Mistral AI", makerKey:"mistral",

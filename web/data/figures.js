@@ -24,7 +24,7 @@
 //     `slug` must be a real published article.
 // ============================================================================
 window.RTFC_FIGURES = {
-  updated: "2026-08-12",
+  updated: "2026-09-16",
 
   // Per-kind display metadata. `unit` is the normalized unit every value in
   // that kind must already be expressed in.
@@ -121,6 +121,9 @@ window.RTFC_FIGURES = {
     { id:"raise-wonderful-c", kind:"funding-raise-usd", value:0.55,
       label:"Wonderful, Series C (primary)", slug:"wonderful-ai-550-million-series-c-5-billion-valuation",
       note:"The $550M raised by the company. A separate $170M secondary sale to early employees and angels brought the full transaction to $720M, but that tranche paid departing shareholders, not the company — excluded here as a different kind of money." },
+    { id:"raise-euclyd-series-a", kind:"funding-raise-usd", value:0.231,
+      label:"Euclyd, Series A", slug:"euclyd-series-a-231-million-samsung-wennink-ai-inference-chips",
+      note:"Over €200M, converted at report-date rates. The smallest raise in this register, but the largest European AI-inference-chip round of 2026 — a different, narrower comparison than the global figures above it." },
 
     // ---- valuations (USD B) ----
     { id:"val-cxmt", kind:"valuation-usd", value:489,
