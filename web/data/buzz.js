@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-610", date:"2026-09-15",
+    source:{ name:"Business Insider", handle:"businessinsider", platform:"web", kind:"news" },
+    text:"Google granted all engineers company-wide access to Anthropic's Claude Opus 5 through Antigravity, its internal development platform, ending a previous policy that restricted most staff from using external coding tools like Claude Code and OpenAI Codex. The shift reflects engineer complaints that Anthropic and OpenAI models outperform Gemini on coding tasks; a company spokesperson stated Gemini remains primary for internal development, with third-party models available on a per-user quota for specialized use cases.",
+    why:"A tech giant quietly admitting its own models aren't good enough for coding, then opening a competitor's tool to millions of employees, is a concrete market signal about the gap between Gemini and frontier capabilities — worth tracking whether this becomes visible in Google's public competitive positioning.",
+    heat:52, topics:["google","anthropic","claude opus 5","coding ai","internal policy","gemini","developer tools"],
+    url:"https://www.businessinsider.com/google-engineers-access-anthropic-claude-2026-09" },
 { id:"bz-609", date:"2026-09-15",
     source:{ name:"Fortaegis", handle:"Fortaegis", platform:"web", kind:"lab" },
     text:"Amsterdam-based Fortaegis closed an oversubscribed $50 million Series A led by Singapore's Serendipity Capital, with TEL Venture Capital (Tokyo Electron's venture arm), Dutch research org TNO, and Prodrive Technologies also participating. The company's 'Secure Compute' technology uses the unique physical properties of individual silicon chips to generate encryption keys; it's working with ASML and Eindhoven University of Technology on a security framework for autonomous AI systems, and plans commercial production of its FPGA and ASIC security products in 2027.",
