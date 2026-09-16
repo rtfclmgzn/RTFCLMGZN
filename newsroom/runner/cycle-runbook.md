@@ -847,6 +847,17 @@ this order, and mark it done here.
    candidate found this cycle; did not force one. Same next steps as every
    entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-16T00:24 cycle) -- re-checked before writing,
+   since this cycle's own two articles (Shanghai AI Lab's quiet 744B-parameter
+   Atria Dawn Preview release and Euclyd's $231M Series A for memory-centric
+   inference chips) plus the full §4b/§4c/§4d passes were already the required
+   work; guide cadence read 2 days (a guide published 2026-09-14), so §3d
+   needed no action. §3c backfill search re-ran and found zero articles below
+   their format's component floor -- still empty. The `ALLOWED_PREFIXES`
+   blocker is unchanged (confirmed by reading `verify_publish_surface.py`
+   directly). No new `primer-issue.js`-only candidate found this cycle; did
+   not force one. Same next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1019,6 +1030,12 @@ opening Claude Opus 5 to engineers via Antigravity) plus the full §4b/§4c/§4d
 required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
 Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
 2026-08-30, still open.
+
+**Status (2026-09-16T00:24 cycle, re-check):** re-confirmed, unchanged, since this cycle's own two
+articles (Shanghai AI Lab's Atria Dawn Preview quiet release and Euclyd's $231M Series A) plus the full
+§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same
+two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
