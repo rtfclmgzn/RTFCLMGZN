@@ -19773,8 +19773,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenSource",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2100019908838854697",
+        "remote_id": "2100019908838854697",
+        "posted_at": "2026-09-16T00:32:17Z"
       },
       {
         "platform": "instagram",
@@ -19798,20 +19800,26 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#OpenSource"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120825721396947",
+        "remote_id": "1238977099292018_122120825721396947",
+        "posted_at": "2026-09-16T00:33:01Z"
       },
       {
         "platform": "threads",
         "copy": "Shanghai AI Laboratory shipped a 744-billion-parameter, MIT-licensed agentic model on September 11 with no blog post, pricing, or press release -- the Hugging Face page was the entire announcement. Its own paper claims the top score on 5 of 16 agentic benchmarks against DeepSeek V4 Pro, GLM 5.3, GPT-5.6 Sol, and Claude Opus 5. Every number is the lab's own; no independent lab has reproduced them, and Artificial Analysis hasn't measured it yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdVAdg8DJ8c",
+        "remote_id": "17899253508377904",
+        "posted_at": "2026-09-16T00:33:20Z"
       },
       {
         "platform": "bluesky",
         "copy": "744B-parameter, MIT-licensed model shipped with literally no announcement -- just a Hugging Face page. Its own paper claims wins over GPT-6 Astra and Claude Opus 5 on 5 of 16 benchmarks. Vendor-reported, unverified.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvlvchcp2d26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvlvchcp2d26",
+        "posted_at": "2026-09-16T00:33:27Z"
       },
       {
         "platform": "x",
@@ -19867,8 +19875,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Semiconductors",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2100018899592913044",
+        "remote_id": "2100018899592913044",
+        "posted_at": "2026-09-16T00:28:17Z"
       },
       {
         "platform": "instagram",
@@ -19882,8 +19892,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenter",
           "#ChipDesign"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdU_6hximN3/",
+        "remote_id": "18390279511202519",
+        "posted_at": "2026-09-16T00:28:42Z"
       },
       {
         "platform": "facebook",
@@ -19892,20 +19904,26 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122120825505396947",
+        "remote_id": "1238977099292018_122120825505396947",
+        "posted_at": "2026-09-16T00:28:57Z"
       },
       {
         "platform": "threads",
         "copy": "Euclyd closed a $231 million Series A co-led by Samsung on September 15 -- Europe's largest AI-inference-chip round of 2026, and the company hasn't shipped a single chip yet. Peter Wennink, who ran ASML for eleven years and grew its market value from €27B to €333B, chairs the board. The company's '100x better power efficiency' claim is its own internal modeling against Meta's Llama 4 Maverick -- unvalidated until first silicon ships in 2028.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdU_-_ODvpa",
+        "remote_id": "17883602118685974",
+        "posted_at": "2026-09-16T00:29:12Z"
       },
       {
         "platform": "bluesky",
         "copy": "Dutch chip startup Euclyd raised $231M (Samsung co-led) to replace GPUs with memory-centric chips. Ex-ASML CEO chairs the board. The '100x more efficient' claim is Euclyd's own modeling -- no chip has shipped to test it against.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvlv325xvw24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvlv325xvw24",
+        "posted_at": "2026-09-16T00:29:19Z"
       },
       {
         "platform": "x",
