@@ -199,6 +199,24 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"The NSA, CISA, and FBI jointly published cybersecurity advisory AA26-251A on September 8, 2026, formally naming Moonshot AI and five other China-based AI companies as conducting industrial-scale distillation campaigns against US frontier models including Claude. This is the first formal multi-agency US government document on the claim and settles the watch item's requirement for an NDAA-level policy or equivalent formal response.",
       label:"NSA/CISA/FBI advisory AA26-251A confirms distillation campaign claims",
-      url:"https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a" }
+      url:"https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a" },
+    { key:"manus-returns-independent-meta-acquisition-unwind|w|0",
+      at:"2026-09-16T03:15:00Z",
+      outcome:"confirmed",
+      note:"Manus data handoff completed on schedule August 23-24, 2026, with backup window closed August 22 and restoration available August 25. No major incidents reported during the data deletion and handoff process.",
+      label:"Manus Meta acquisition unwind data handoff completed",
+      url:"https://explainx.ai/blog/manus-meta-separation-data-deletion-backup-guide-august-2026" },
+    { key:"openai-apple-trade-secrets-motion-to-dismiss|w|1",
+      at:"2026-09-16T03:20:00Z",
+      outcome:"confirmed",
+      note:"Apple filed opposition brief to OpenAI's motion to dismiss on August 20, 2026, arguing that OpenAI relied on improper extrinsic evidence and that Apple should not be required to publicly disclose trade secret details this early in litigation.",
+      label:"Apple opposition brief filed August 20, 2026",
+      url:"https://www.macrumors.com/2026/08/20/apple-fires-back-openai-bid-toss-lawsuit/" },
+    { key:"revelio-labs-ai-labor-market-tracker-july-2026|w|0",
+      at:"2026-09-16T03:25:00Z",
+      outcome:"confirmed",
+      note:"Revelio Labs published mid-August 2026 tracker update showing employment gap between youngest workers (ages 22-25) in AI-exposed vs non-exposed occupations reached 19%, compared to prior June measurement point, indicating widening disparity for junior workforce.",
+      label:"Revelio Labs August 2026 tracker: 19% junior worker gap",
+      url:"https://www.prnewswire.com/news-releases/revelio-labs-reports-36-5k-us-jobs-added-in-august-employment-in-ai-exposed-jobs-19-lower-for-workers-under-25--302869005.html" }
   ]
 };
