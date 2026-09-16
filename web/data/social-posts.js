@@ -19495,8 +19495,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Agility's new humanoid is built to work beside people with no safety cage. Real spec upgrade, untested claim -- early access doesn't start until 2027.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvn3n42toz26",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvn3n42toz26",
+        "posted_at": "2026-09-16T11:59:26Z"
       }
     ]
   },
@@ -19841,7 +19843,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenSource"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "threads",
@@ -19944,8 +19948,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Samsung",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2100191824597979551",
+        "remote_id": "2100191824597979551",
+        "posted_at": "2026-09-16T11:55:25Z"
       },
       {
         "platform": "threads",
