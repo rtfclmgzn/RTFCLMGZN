@@ -19643,8 +19643,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Cornelis Networks raised $205M for a network fabric that computes on AI traffic mid-transit -- a bet that idle GPU time, not GPU speed, is the real bottleneck. Open standards, not Nvidia's stack.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvmenvvath24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvmenvvath24",
+        "posted_at": "2026-09-16T05:08:18Z"
       }
     ]
   },
@@ -19680,7 +19682,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"You are not allowed to create a Tweet with duplicate content.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -19710,14 +19712,18 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "OpenAI's help page says contractors only see your ChatGPT chats to review for abuse and misuse. A 404 Media investigation, based on internal documents, found an ongoing program -- \"Project Lily\" -- where paid contractors ($50+/hour) rate ordinary conversations for tone and sycophancy. Anthropic's stated policy is narrower: review only when flagged, investigated, or fed back via thumbs.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdVfc29IEYA",
+        "remote_id": "18010500086997142",
+        "posted_at": "2026-09-16T05:04:09Z"
       },
       {
         "platform": "bluesky",
         "copy": "OpenAI's help page says contractor access to your chats is for abuse review only. Internal documents describe a routine quality-rating program that reads far more than that -- paid contractors, a Privacy Filter that can miss or over-redact.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvmegoyaj526",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvmegoyaj526",
+        "posted_at": "2026-09-16T05:04:16Z"
       },
       {
         "platform": "x",
@@ -19730,8 +19736,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#RLHF"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://x.com/i/web/status/2100088376451895710",
+        "remote_id": "2100088376451895710",
+        "posted_at": "2026-09-16T05:04:21Z"
       },
       {
         "platform": "threads",
