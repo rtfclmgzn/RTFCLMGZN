@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-624", date:"2026-09-17",
+    source:{ name:"Mistral AI", handle:"MistralAI", platform:"web", kind:"lab" },
+    text:"Mistral AI partnered with Mozilla to power Firefox's Smart Window, a new AI browsing assistant built directly into Firefox that helps users navigate the web. The partnership brings Mistral models into Mozilla's privacy-first browser environment, offering Firefox users AI assistance without the data-collection overhead of other browser-integrated AI tools. Smart Window is rolling out to Firefox Beta users.",
+    why:"A frontier lab embedding its models inside one of the web's largest independently-managed browsers is a concrete bet that the AI layer will sit between the user and the web itself — worth watching whether this becomes a Firefox-wide feature or remains a niche pilot.",
+    heat:48, topics:["mistral ai","mozilla","firefox","smart window","browser ai","privacy"],
+    url:"https://www.mozilla.org/en-US/firefox/firefox-ai/" },
 { id:"bz-623", date:"2026-09-17",
     source:{ name:"TestingCatalog", handle:"testingcatalog", platform:"web", kind:"news" },
     text:"Screenshots shared by a leaker on X and confirmed by TestingCatalog show Google internally testing 'Deep Think Mathematica,' an experimental build on top of DeepThink V3 carrying the internal ID 'deepthink-mathematica-tf-raw-thoughts,' tuned for heavy symbolic math with a 1M-token context window. It's labeled 'Teamfood' (Google's internal-employee-testing tier) and 'UNSTABLE_EXPERIMENTAL'; Google has not confirmed the model publicly.",
