@@ -20750,5 +20750,189 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-17T05:07:47Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-lawzero-canada-germany-scientist-ai-funding",
+    "ts": "2026-09-17T15:04:52Z",
+    "export": {
+      "article_id": "newsroom-lawzero-canada-germany-scientist-ai-funding",
+      "url": "https://rtfclmgzn.com/article/lawzero-canada-germany-scientist-ai-funding",
+      "headline": "Canada and Germany put CAD 150 million and EUR 100 million behind Yoshua Bengio's non-racing AI nonprofit",
+      "hook": "Canada and Germany are funding a nonprofit betting AI safety and capability aren't actually in tension -- with money that's a rounding error next to what OpenAI, Anthropic and Google's backers spend on compute.",
+      "key_facts": [
+        "Canada pledged CAD 150 million and Germany EUR 100 million to Yoshua Bengio's LawZero on Sept. 16.",
+        "The money funds Scientist AI, a model designed to reason honestly without pursuing goals of its own.",
+        "The big four hyperscalers are on pace for $725 billion in 2026 AI capex alone, per Goldman Sachs."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/lawzero-canada-germany-scientist-ai-funding.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Canada just pledged CAD 150M and Germany EUR 100M to a nonprofit betting AI safety and capability aren't in tension. The catch: it's a rounding error next to the $725B big tech plans to spend on AI compute this year alone.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#LawZero"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-17T20:04:52Z",
+        "copy": "“Safety is itself a core capability,” says Yoshua Bengio -- as Canada and Germany back his bet that a model can reason honestly without ever trying to please you. Germany's share still needs EU sign-off first.",
+        "reply_copy": "The story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#LawZero"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Canada + Germany just put CAD 150M and EUR 100M behind an AI nonprofit that refuses to race.\n\nThe bet: Yoshua Bengio's LawZero is building \"Scientist AI\" -- a model designed to reason honestly instead of chasing capability.\n\nThe reality check: that's a rounding error next to the $725B big tech plans to spend on AI compute in 2026 alone.",
+        "hashtags": [
+          "#AI",
+          "#AISafety",
+          "#LawZero",
+          "#YoshuaBengio",
+          "#Canada",
+          "#Germany",
+          "#TechNews",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Canada and Germany are putting CAD 150 million and EUR 100 million behind Yoshua Bengio's LawZero, a Montreal nonprofit betting that AI safety and capability aren't actually in tension. The money funds \"Scientist AI,\" a model designed to reason honestly rather than chase capability -- but it's a rounding error next to the $725 billion the industry's own backers plan to spend on AI compute this year.",
+        "hashtags": [
+          "#AISafety",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Canada and Germany just backed Yoshua Bengio's anti-race AI nonprofit LawZero with CAD 150M + EUR 100M. The bet: safety and capability aren't actually in tension. The scale check: that's nothing next to the $725B big tech plans to spend on AI compute in 2026.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Canada + Germany just funded an AI nonprofit that refuses to race: CAD 150M + EUR 100M to Yoshua Bengio's LawZero. Next to $725B in 2026 big-tech AI capex, it's a rounding error -- but a real bet on a different architecture.",
+        "hashtags": [
+          "#AI",
+          "#AISafety",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-foundation-public-data-for-health-125-million",
+    "ts": "2026-09-17T15:04:54Z",
+    "export": {
+      "article_id": "newsroom-openai-foundation-public-data-for-health-125-million",
+      "url": "https://rtfclmgzn.com/article/openai-foundation-public-data-for-health-125-million",
+      "headline": "OpenAI's nonprofit is paying scientists to build the biology datasets its own AI models don't have",
+      "hook": "The OpenAI Foundation just put $125 million into open biology datasets -- a small first tranche of a $25 billion pledge from a foundation sitting on a $130 billion OpenAI stake.",
+      "key_facts": [
+        "The Foundation announced $125M+ for Public Data for Health on Sept. 15, its second science program.",
+        "Grants fund open datasets on drug absorption (OpenADMET), failed-trial records (CTD Commons), and cancer vaccines (UNC).",
+        "None of the three grantees has published a dataset yet -- the money is committed, not delivered."
+      ],
+      "tone": "Precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/openai-foundation-public-data-for-health-125-million.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI's nonprofit just put $125M into open biology datasets -- drug-absorption data, failed-trial records, cancer-vaccine data. It's a small first tranche of a $25B pledge from a foundation sitting on a $130B OpenAI stake.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIHealth",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-17T20:04:54Z",
+        "copy": "The real bottleneck in AI-for-biology isn't model size -- it's data. That's the pitch behind CTD Commons, an OpenAI Foundation-funded effort to preserve failed drug trials' regulatory records before they vanish into a bankruptcy auction.",
+        "reply_copy": "The story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIHealth",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI's nonprofit just funded the biology data its own AI models don't have.\n\n$125M+ for open datasets: drug absorption (OpenADMET), failed-trial records (CTD Commons), personalized cancer vaccines (UNC).\n\nThe scale check: it's a first tranche of a $25B pledge -- from a foundation sitting on a $130B OpenAI stake.",
+        "hashtags": [
+          "#AI",
+          "#AIHealth",
+          "#OpenAI",
+          "#DrugDiscovery",
+          "#OpenData",
+          "#HealthTech",
+          "#Biotech",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The OpenAI Foundation committed more than $125 million on September 15 to Public Data for Health, funding open datasets on drug absorption, failed-trial regulatory records, and personalized cancer vaccines. The pitch: AI-in-biology is bottlenecked on data, not model size. The scale check: it's a small first tranche of a $25 billion pledge from a foundation holding a $130 billion OpenAI stake.",
+        "hashtags": [
+          "#AIHealth",
+          "#OpenData"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI's nonprofit put $125M+ into open biology datasets Sept. 15 -- drug absorption, failed-trial records, cancer-vaccine data. None of the three grantees has published a dataset yet. It's also a small slice of a $25B pledge from a foundation sitting on a $130B OpenAI stake.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's nonprofit just funded open biology datasets -- $125M+ for drug-absorption data, failed-trial records, and cancer-vaccine research. Real infrastructure, or a rounding error against its $130B OpenAI stake? Both, probably.",
+        "hashtags": [
+          "#AIHealth",
+          "#OpenAI",
+          "#Biotech"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
