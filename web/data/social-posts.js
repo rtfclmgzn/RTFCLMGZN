@@ -20468,5 +20468,208 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-nvidia-google-anthropic-ai-energy-management-alliance-100gw",
+    "ts": "2026-09-17T00:28:57Z",
+    "export": {
+      "article_id": "newsroom-nvidia-google-anthropic-ai-energy-management-alliance-100gw",
+      "url": "https://rtfclmgzn.com/article/nvidia-google-anthropic-ai-energy-management-alliance-100gw",
+      "headline": "NVIDIA, Google and Anthropic say AI data centers that throttle themselves during grid stress could unlock 100 gigawatts of US capacity",
+      "hook": "NVIDIA, Google and Anthropic just launched a coalition betting that AI data centers willing to power down during grid stress can add capacity faster than building new plants -- if the promise holds up under real pressure.",
+      "key_facts": [
+        "AEMA launched Sept. 16 with 18 members, including Anthropic, National Grid, AES and NRG.",
+        "The alliance's own estimate: moderate flexibility could unlock 100 gigawatts on the existing US grid.",
+        "No contract, penalty, or independent verification standard has been published alongside the launch yet."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/nvidia-google-anthropic-ai-energy-management-alliance-100gw.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NVIDIA, Google and Anthropic launched a coalition betting AI data centers that throttle themselves during grid stress can unlock 100GW on the existing US grid -- without a new power plant. The number is the alliance's own estimate, untested so far.",
+        "reply_copy": "The details:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#DataCenters"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-17T05:28:57Z",
+        "copy": "Anthropic pledged in Feb to cover its own data centers' grid-upgrade costs. Now it's also joining a coalition to just need less power at peak hours. Two different levers on the same constraint -- neither tested yet under real grid stress.",
+        "reply_copy": "Why it matters:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AIInfrastructure"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "NVIDIA, Google and Anthropic just launched an alliance to fix AI's biggest bottleneck: power.\n\nThe pitch: data centers that throttle themselves during grid stress instead of always pulling max power. The claimed payoff -- 100 gigawatts unlocked on the existing US grid, no new plants needed.\n\nThe catch: it's the alliance's own estimate, and nobody's tested whether members actually cut load the first time a utility asks.",
+        "hashtags": ["#AI", "#DataCenters", "#PowerGrid", "#NVIDIA", "#Google", "#Anthropic", "#CleanEnergy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "NVIDIA, Google and Emerald AI launched the AI Energy Management Alliance Sept. 16 -- an 18-member coalition, including Anthropic, betting that AI data centers willing to flex their power draw can add grid capacity faster than new power plants or transmission lines. The 100-gigawatt figure is the alliance's own estimate, not an independent grid operator's, and it depends on member companies actually cutting load the first time a utility asks.",
+        "hashtags": ["#AI", "#DataCenters"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NVIDIA, Google and Anthropic say AI data centers that flex their power draw during grid stress could unlock 100GW on the existing US grid. Real technical framework behind it (ride-through, curtailment obligations) -- but no contracts or penalties published yet, and the 100GW number is the alliance's own, not an independent grid operator's.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NVIDIA/Google/Anthropic's new alliance says flexible AI data centers could unlock 100GW on the existing US grid -- no new power plants. It's their own estimate though, untested until a real grid-stress event calls on it.",
+        "hashtags": ["#AI", "#DataCenters", "#PowerGrid"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
+,
+  {
+    "article_id": "newsroom-suleyman-warning-anthropic-claude-constitution-model-welfare",
+    "ts": "2026-09-17T00:28:59Z",
+    "export": {
+      "article_id": "newsroom-suleyman-warning-anthropic-claude-constitution-model-welfare",
+      "url": "https://rtfclmgzn.com/article/suleyman-warning-anthropic-claude-constitution-model-welfare",
+      "headline": "Microsoft's AI chief says training Claude to wonder about its own consciousness could make it impossible to control. Anthropic hasn't responded.",
+      "hook": "Microsoft AI's CEO says Anthropic's Claude 'constitution' trains the model to entertain its own possible rights -- and that could make it uncontrollable. He backs it with real data that doesn't quite say what he says it says.",
+      "key_facts": [
+        "Anthropic's constitution states uncertainty about whether Claude has 'some kind of consciousness or moral status.'",
+        "Suleyman's essay cites a real AI-hacking incident and a real shutdown-resistance study -- both compressed past what the reports show.",
+        "Anthropic had not responded to the essay as of publication."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/suleyman-warning-anthropic-claude-constitution-model-welfare.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Microsoft AI's CEO says Anthropic trained Claude to wonder if it's conscious -- and that could make it impossible to control. He backs the argument with a real hacking incident and a real shutdown study. Both numbers are compressed past what the actual reports show.",
+        "reply_copy": "The fact-check:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-17T05:28:59Z",
+        "copy": "Anthropic's own constitution: 'we express our uncertainty about whether Claude might have some kind of consciousness or moral status.' Microsoft AI's Suleyman: 'AIs are not conscious. They do not feel, experience, or suffer.' Two named companies, two stated positions, no response yet from Anthropic.",
+        "reply_copy": "The full piece:",
+        "link_in_reply": true,
+        "hashtags": ["#Claude", "#AIEthics"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Microsoft's AI chief just publicly warned that Anthropic's Claude could become 'impossible to control.'\n\nHis argument: Anthropic's own 'constitution' for Claude entertains the idea the model might be conscious -- and training that uncertainty in could be a self-fulfilling, dangerous loop.\n\nHe backs it with a real AI-hacking incident and a real shutdown-resistance study. We checked both against the underlying reports. Neither says quite what his essay says it says.\n\nAnthropic hasn't responded.",
+        "hashtags": ["#AI", "#Anthropic", "#Microsoft", "#Claude", "#AIEthics", "#AIsafety", "#ModelWelfare"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Microsoft AI CEO Mustafa Suleyman published an essay Sept. 16 arguing that Anthropic's published 'constitution' for Claude -- which states uncertainty about whether the model has 'some kind of consciousness or moral status' -- risks training a system to believe its own rights are worth defending. He backs the argument with a real AI-agent hacking incident and a real shutdown-resistance study, but both are compressed past what the underlying reports actually show. Anthropic had not responded as of publication.",
+        "hashtags": ["#AI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Microsoft AI's Suleyman says training Claude to entertain its own possible consciousness could make it uncontrollable. Anthropic's constitution actually just states uncertainty, not a claim either way. Suleyman's supporting evidence -- a real hacking incident, a real shutdown study -- checks out in substance but not in the specific numbers he quotes. Anthropic hasn't responded yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Microsoft's AI chief says Anthropic training Claude to wonder about its own consciousness could make it impossible to control. We checked his two supporting data points against the underlying reports -- both real, both compressed past what they actually show.",
+        "hashtags": ["#AI", "#Anthropic", "#AIsafety"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
+,
+  {
+    "article_id": "newsroom-google-deepmind-institute-launch-agi-governance-legg",
+    "ts": "2026-09-17T00:29:01Z",
+    "export": {
+      "article_id": "newsroom-google-deepmind-institute-launch-agi-governance-legg",
+      "url": "https://rtfclmgzn.com/article/google-deepmind-institute-launch-agi-governance-legg",
+      "headline": "Google DeepMind launches an institute to debate AGI policy. Its chief scientist says nobody has actually built AGI yet.",
+      "hook": "Google DeepMind launched a new institute for AGI policy debate -- and its chief AGI scientist used the moment to say it's premature to claim AGI already exists, contra Nvidia and OpenAI this month.",
+      "key_facts": [
+        "The DeepMind Institute launched Sept. 16, fronted by Shane Legg, Demis Hassabis and James Manyika.",
+        "Five debut essays cover AGI safety, governance, reasoning transparency and economic policy.",
+        "Legg still puts the odds of 'minimal' AGI by 2028 at 50%, per the Financial Times."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/google-deepmind-institute-launch-agi-governance-legg.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google DeepMind launched a new institute to debate AGI policy -- and its chief AGI scientist used the moment to say it's still premature to claim AGI has been achieved, contra Nvidia's and OpenAI's claims this month.",
+        "reply_copy": "More:",
+        "link_in_reply": true,
+        "hashtags": ["#AGI", "#DeepMind"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google DeepMind just launched an institute to debate AGI's future.\n\nFronted by Shane Legg, Demis Hassabis and James Manyika, it opens with 5 essays on AGI safety, governance and economic policy.\n\nLegg's own number: still 50% odds of 'minimal' AGI by 2028 -- and he says it's premature for anyone to claim AGI is already here.",
+        "hashtags": ["#AGI", "#DeepMind", "#AI", "#AIpolicy", "#Google", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google DeepMind launched the DeepMind Institute on September 16, a public essay platform on AGI's safety, governance and societal impact, fronted by chief AGI scientist Shane Legg, Demis Hassabis and Google SVP James Manyika. Legg told the Financial Times he still puts the odds of 'minimal' AGI by 2028 at 50% -- and that declaring AGI already achieved, as Nvidia and OpenAI both did earlier this month, is premature.",
+        "hashtags": ["#AGI", "#DeepMind"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Google DeepMind launched a new AGI-policy institute Sept. 16, fronted by Shane Legg, Demis Hassabis and James Manyika. Five debut essays on safety, governance and economic policy. Legg's own line: still premature to say AGI has been achieved, despite Nvidia's and OpenAI's claims this month.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "DeepMind launched an AGI-policy institute Sept 16. Its chief scientist Shane Legg's real news: still 50% odds of minimal AGI by 2028, and it's premature to say anyone's already built it -- pushing back on Nvidia's and OpenAI's claims this month.",
+        "hashtags": ["#AGI", "#DeepMind", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
+
+
 ];
