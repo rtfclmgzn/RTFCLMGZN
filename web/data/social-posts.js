@@ -20495,7 +20495,10 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "NVIDIA, Google and Anthropic launched a coalition betting AI data centers that throttle themselves during grid stress can unlock 100GW on the existing US grid -- without a new power plant. The number is the alliance's own estimate, untested so far.",
         "reply_copy": "The details:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#DataCenters"],
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -20506,21 +20509,35 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Anthropic pledged in Feb to cover its own data centers' grid-upgrade costs. Now it's also joining a coalition to just need less power at peak hours. Two different levers on the same constraint -- neither tested yet under real grid stress.",
         "reply_copy": "Why it matters:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AIInfrastructure"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIInfrastructure"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "NVIDIA, Google and Anthropic just launched an alliance to fix AI's biggest bottleneck: power.\n\nThe pitch: data centers that throttle themselves during grid stress instead of always pulling max power. The claimed payoff -- 100 gigawatts unlocked on the existing US grid, no new plants needed.\n\nThe catch: it's the alliance's own estimate, and nobody's tested whether members actually cut load the first time a utility asks.",
-        "hashtags": ["#AI", "#DataCenters", "#PowerGrid", "#NVIDIA", "#Google", "#Anthropic", "#CleanEnergy"],
+        "hashtags": [
+          "#AI",
+          "#DataCenters",
+          "#PowerGrid",
+          "#NVIDIA",
+          "#Google",
+          "#Anthropic",
+          "#CleanEnergy"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "NVIDIA, Google and Emerald AI launched the AI Energy Management Alliance Sept. 16 -- an 18-member coalition, including Anthropic, betting that AI data centers willing to flex their power draw can add grid capacity faster than new power plants or transmission lines. The 100-gigawatt figure is the alliance's own estimate, not an independent grid operator's, and it depends on member companies actually cutting load the first time a utility asks.",
-        "hashtags": ["#AI", "#DataCenters"],
+        "hashtags": [
+          "#AI",
+          "#DataCenters"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -20533,13 +20550,16 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "NVIDIA/Google/Anthropic's new alliance says flexible AI data centers could unlock 100GW on the existing US grid -- no new power plants. It's their own estimate though, untested until a real grid-stress event calls on it.",
-        "hashtags": ["#AI", "#DataCenters", "#PowerGrid"],
+        "hashtags": [
+          "#AI",
+          "#DataCenters",
+          "#PowerGrid"
+        ],
         "status": "ready",
         "post_url": null
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-suleyman-warning-anthropic-claude-constitution-model-welfare",
     "ts": "2026-09-17T00:28:59Z",
@@ -20566,9 +20586,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Microsoft AI's CEO says Anthropic trained Claude to wonder if it's conscious -- and that could make it impossible to control. He backs the argument with a real hacking incident and a real shutdown study. Both numbers are compressed past what the actual reports show.",
         "reply_copy": "The fact-check:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Anthropic"],
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -20577,40 +20602,63 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Anthropic's own constitution: 'we express our uncertainty about whether Claude might have some kind of consciousness or moral status.' Microsoft AI's Suleyman: 'AIs are not conscious. They do not feel, experience, or suffer.' Two named companies, two stated positions, no response yet from Anthropic.",
         "reply_copy": "The full piece:",
         "link_in_reply": true,
-        "hashtags": ["#Claude", "#AIEthics"],
+        "hashtags": [
+          "#Claude",
+          "#AIEthics"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Microsoft's AI chief just publicly warned that Anthropic's Claude could become 'impossible to control.'\n\nHis argument: Anthropic's own 'constitution' for Claude entertains the idea the model might be conscious -- and training that uncertainty in could be a self-fulfilling, dangerous loop.\n\nHe backs it with a real AI-hacking incident and a real shutdown-resistance study. We checked both against the underlying reports. Neither says quite what his essay says it says.\n\nAnthropic hasn't responded.",
-        "hashtags": ["#AI", "#Anthropic", "#Microsoft", "#Claude", "#AIEthics", "#AIsafety", "#ModelWelfare"],
+        "hashtags": [
+          "#AI",
+          "#Anthropic",
+          "#Microsoft",
+          "#Claude",
+          "#AIEthics",
+          "#AIsafety",
+          "#ModelWelfare"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Microsoft AI CEO Mustafa Suleyman published an essay Sept. 16 arguing that Anthropic's published 'constitution' for Claude -- which states uncertainty about whether the model has 'some kind of consciousness or moral status' -- risks training a system to believe its own rights are worth defending. He backs the argument with a real AI-agent hacking incident and a real shutdown-resistance study, but both are compressed past what the underlying reports actually show. Anthropic had not responded as of publication.",
-        "hashtags": ["#AI", "#Anthropic"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122121143715396947",
+        "remote_id": "1238977099292018_122121143715396947",
+        "posted_at": "2026-09-17T05:11:27Z"
       },
       {
         "platform": "threads",
         "copy": "Microsoft AI's Suleyman says training Claude to entertain its own possible consciousness could make it uncontrollable. Anthropic's constitution actually just states uncertainty, not a claim either way. Suleyman's supporting evidence -- a real hacking incident, a real shutdown study -- checks out in substance but not in the specific numbers he quotes. Anthropic hasn't responded yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdYFH9zFXhM",
+        "remote_id": "18115678165964870",
+        "posted_at": "2026-09-17T05:11:49Z"
       },
       {
         "platform": "bluesky",
         "copy": "Microsoft's AI chief says Anthropic training Claude to wonder about its own consciousness could make it impossible to control. We checked his two supporting data points against the underlying reports -- both real, both compressed past what they actually show.",
-        "hashtags": ["#AI", "#Anthropic", "#AIsafety"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Anthropic",
+          "#AIsafety"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvovddk25g2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvovddk25g2x",
+        "posted_at": "2026-09-17T05:11:56Z"
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-google-deepmind-institute-launch-agi-governance-legg",
     "ts": "2026-09-17T00:29:01Z",
@@ -20637,39 +20685,64 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Google DeepMind launched a new institute to debate AGI policy -- and its chief AGI scientist used the moment to say it's still premature to claim AGI has been achieved, contra Nvidia's and OpenAI's claims this month.",
         "reply_copy": "More:",
         "link_in_reply": true,
-        "hashtags": ["#AGI", "#DeepMind"],
+        "hashtags": [
+          "#AGI",
+          "#DeepMind"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
         "copy": "Google DeepMind just launched an institute to debate AGI's future.\n\nFronted by Shane Legg, Demis Hassabis and James Manyika, it opens with 5 essays on AGI safety, governance and economic policy.\n\nLegg's own number: still 50% odds of 'minimal' AGI by 2028 -- and he says it's premature for anyone to claim AGI is already here.",
-        "hashtags": ["#AGI", "#DeepMind", "#AI", "#AIpolicy", "#Google", "#TechNews"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AGI",
+          "#DeepMind",
+          "#AI",
+          "#AIpolicy",
+          "#Google",
+          "#TechNews"
+        ],
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdYEmVtl3nv/",
+        "remote_id": "18092065010418249",
+        "posted_at": "2026-09-17T05:07:15Z"
       },
       {
         "platform": "facebook",
         "copy": "Google DeepMind launched the DeepMind Institute on September 16, a public essay platform on AGI's safety, governance and societal impact, fronted by chief AGI scientist Shane Legg, Demis Hassabis and Google SVP James Manyika. Legg told the Financial Times he still puts the odds of 'minimal' AGI by 2028 at 50% -- and that declaring AGI already achieved, as Nvidia and OpenAI both did earlier this month, is premature.",
-        "hashtags": ["#AGI", "#DeepMind"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AGI",
+          "#DeepMind"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122121143241396947",
+        "remote_id": "1238977099292018_122121143241396947",
+        "posted_at": "2026-09-17T05:07:24Z"
       },
       {
         "platform": "threads",
         "copy": "Google DeepMind launched a new AGI-policy institute Sept. 16, fronted by Shane Legg, Demis Hassabis and James Manyika. Five debut essays on safety, governance and economic policy. Legg's own line: still premature to say AGI has been achieved, despite Nvidia's and OpenAI's claims this month.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdYEpWNlW8O",
+        "remote_id": "18099847103377129",
+        "posted_at": "2026-09-17T05:07:40Z"
       },
       {
         "platform": "bluesky",
         "copy": "DeepMind launched an AGI-policy institute Sept 16. Its chief scientist Shane Legg's real news: still 50% odds of minimal AGI by 2028, and it's premature to say anyone's already built it -- pushing back on Nvidia's and OpenAI's claims this month.",
-        "hashtags": ["#AGI", "#DeepMind", "#AI"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AGI",
+          "#DeepMind",
+          "#AI"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvov3w475k2z",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvov3w475k2z",
+        "posted_at": "2026-09-17T05:07:47Z"
       }
     ]
   }
-
-
 ];
