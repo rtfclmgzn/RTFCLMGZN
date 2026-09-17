@@ -4507,7 +4507,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-55-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "openai-misalignment-reporting-framework-six-incidents",
+     "used_at": "2026-09-17"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-06",
