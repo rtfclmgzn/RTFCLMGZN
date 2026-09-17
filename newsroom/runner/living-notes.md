@@ -588,8 +588,8 @@
 - **2026-09-17** (newsroom cycle, ~00:29 UTC): `/article/<slug>` SSR verification (runbook §5
   step 7) took noticeably longer than the "~30-90s" the runbook states -- all three of this
   cycle's new articles 404'd (`cf-cache-status: DYNAMIC`, so the Function itself was returning
-  the 404, not a stale edge cache) for several minutes after push, while `https://rtfclmgzn.com/`
-  and `https://rtfclmgzn.com/data/newsroom-articles.js` both already reflected the new content
+  the 404, not a stale edge cache) for several minutes after push, while the homepage (from `engine.config.json::web.site_url`)
+  and `/data/newsroom-articles.js` both already reflected the new content
   and cache-buster immediately. Confirmed the deployed data file was byte-identical to the local
   one the whole time (`diff` clean), so this was not a bad push or a parse failure in
   `functions/article/[slug].js`'s tolerant store parser -- purely a slower-than-documented
