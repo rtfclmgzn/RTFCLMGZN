@@ -585,3 +585,16 @@
   pattern to the specific product names instead (`digit 4\b|digit 5\b|digit humanoid`) -- worth
   checking any new company/product regex against common-word collision before shipping it, not just
   against whether it matches the story that prompted adding the entry.
+- **2026-09-17** (newsroom cycle, ~00:29 UTC): `/article/<slug>` SSR verification (runbook §5
+  step 7) took noticeably longer than the "~30-90s" the runbook states -- all three of this
+  cycle's new articles 404'd (`cf-cache-status: DYNAMIC`, so the Function itself was returning
+  the 404, not a stale edge cache) for several minutes after push, while `https://rtfclmgzn.com/`
+  and `https://rtfclmgzn.com/data/newsroom-articles.js` both already reflected the new content
+  and cache-buster immediately. Confirmed the deployed data file was byte-identical to the local
+  one the whole time (`diff` clean), so this was not a bad push or a parse failure in
+  `functions/article/[slug].js`'s tolerant store parser -- purely a slower-than-documented
+  rollout of the Function/Worker for the `/article/*` route specifically, on top of its own
+  60-second in-isolate `CACHE` TTL. Polled every 20s rather than trusting the first 404; all
+  three came up within about 5-6 minutes of the push. Worth budgeting more than 90s before
+  treating an `/article/<slug>` 404 right after a push as a real failure -- check that the raw
+  data store already has the new content (as this cycle did) before assuming something broke.
