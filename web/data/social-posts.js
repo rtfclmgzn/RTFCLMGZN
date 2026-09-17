@@ -20464,8 +20464,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "ByteDance's AI-biology spinoff Anew Labs reportedly raised $290M/$1.5B valuation (unconfirmed). Its real output: Protenix, free + open-source, claims in its own paper to beat AlphaFold3. PXDesign claims up to 73% success on protein-binder design. Code's on GitHub if you want to check.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvpmapvnur2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvpmapvnur2x",
+        "posted_at": "2026-09-17T12:02:04Z"
       }
     ]
   },
@@ -20544,8 +20546,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "NVIDIA, Google and Anthropic say AI data centers that flex their power draw during grid stress could unlock 100GW on the existing US grid. Real technical framework behind it (ride-through, curtailment obligations) -- but no contracts or penalties published yet, and the 100GW number is the alliance's own, not an independent grid operator's.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdYzmdHnL-l",
+        "remote_id": "17914535724265012",
+        "posted_at": "2026-09-17T11:57:55Z"
       },
       {
         "platform": "bluesky",
@@ -20555,8 +20559,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters",
           "#PowerGrid"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvplzj26tn24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvplzj26tn24",
+        "posted_at": "2026-09-17T11:58:03Z"
       }
     ]
   },
@@ -20592,7 +20598,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -20691,7 +20697,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
