@@ -876,6 +876,27 @@ this order, and mark it done here.
    candidate found this cycle; did not force one. Same next steps as every
    entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-18T19:11 cycle) -- re-checked before writing,
+   since this cycle's own three articles (California Gov. Newsom's AI
+   kill-switch executive order, Figure AI's Helix 2.5 zero-shot 30-home
+   demo, OpenAI's Astra for Law legal-research launch) plus the full
+   §4b/§4c/§4d passes were already the required work; guide cadence read 4
+   days exactly (a guide published 2026-09-14, the check's own `n>4`
+   threshold not tripped), so §3d needed no action. §3c backfill search
+   re-ran and found zero articles below their format's component floor --
+   still empty. Both blockers unchanged: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent, confirmed by reading the file directly), and
+   `which wrangler` / `env | grep -i cloudflare` both return nothing on
+   this runner; `find . -iname "issue-001.json"` also still returns
+   nothing. Separately discovered this same `ALLOWED_PREFIXES` gap also
+   blocks `newsroom/runner/living-notes.md` itself -- logged in
+   `living-notes.md` directly rather than here, since it's a guard finding
+   about this cycle's own operational mechanics, not a Primer content item.
+   No new `primer-issue.js`-only candidate found this cycle; did not force
+   one. Same next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1061,6 +1082,13 @@ Shapiro's guardrails push, and OpenAI's reported $1.2-1.5T valuation talks) plus
 passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
 `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps
 as every entry since 2026-08-30, still open.
+
+**Status (2026-09-18T19:11 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (California Gov. Newsom's AI kill-switch executive order, Figure AI's Helix 2.5 zero-shot
+30-home demo, and OpenAI's Astra for Law legal-research launch) plus the full §4b/§4c/§4d passes were
+already the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
+binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as every
+entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
