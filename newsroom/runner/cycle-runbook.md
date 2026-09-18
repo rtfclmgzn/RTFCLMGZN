@@ -858,6 +858,24 @@ this order, and mark it done here.
    directly). No new `primer-issue.js`-only candidate found this cycle; did
    not force one. Same next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-18T14:42 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Huawei's accelerated Ascend 960
+   chip roadmap; Congress leaving 10 committee-passed AI bills without a
+   floor vote, alongside Gov. Shapiro's federal-guardrails push; OpenAI's
+   reported $1.2-1.5T pre-IPO valuation talks) plus the full §4b/§4c/§4d
+   passes were already the required work; guide cadence read 4 days exactly
+   (a guide published 2026-09-14, the check's own `n>4` threshold not
+   tripped), so §3d needed no action. §3c backfill search re-ran and found
+   zero articles below their format's component floor -- still empty. Both
+   blockers unchanged: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` absent, confirmed by
+   reading the file directly), and `which wrangler` / `env | grep -i
+   cloudflare` both return nothing on this runner; `find . -iname
+   "issue-001.json"` also still returns nothing. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Same next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1036,6 +1054,13 @@ articles (Shanghai AI Lab's Atria Dawn Preview quiet release and Euclyd's $231M 
 §4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same
 two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-18T14:42 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Huawei's Ascend 960 chip-roadmap acceleration, Congress's stalled AI bills alongside Gov.
+Shapiro's guardrails push, and OpenAI's reported $1.2-1.5T valuation talks) plus the full §4b/§4c/§4d
+passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
+`wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps
+as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
