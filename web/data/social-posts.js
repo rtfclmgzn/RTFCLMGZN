@@ -20221,8 +20221,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Google's Gemini 3.8 Live launched Monday -- claims #1 on an independent voice-AI benchmark at 82.6. Rolling out across Search Live, Gemini Live and the API today. 97 languages. The ranking is Google's own post so far, not outside-verified.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvs3klha2o2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvs3klha2o2t",
+        "posted_at": "2026-09-18T11:41:21Z"
       }
     ]
   },
@@ -20306,8 +20308,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Meta One is live: 8 paid AI tiers, $2.99-$499/month, across IG/FB/WhatsApp. 15M subscriptions/trials already. Meta's own 2026 AI capex guidance: $130-145B. One analyst's 2028 subscription estimate: $13.5B. Do the math yourself.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvs3dd4ghg2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvs3dd4ghg2t",
+        "posted_at": "2026-09-18T11:37:19Z"
       }
     ]
   },
@@ -20460,8 +20464,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "ByteDance's AI-drug spinoff Anew Labs reportedly raised $290M at a $1.5B valuation. More interesting than the funding: Protenix, its free open-source structure-prediction model, claims in its own paper to beat AlphaFold3. PXDesign, built on it, claims up to 73% success designing protein binders. Funding unconfirmed; the code is public and checkable right now.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdbWBSRm-69",
+        "remote_id": "18125009608640312",
+        "posted_at": "2026-09-18T11:37:10Z"
       },
       {
         "platform": "bluesky",
@@ -20883,9 +20889,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIHealth",
           "#OpenAI"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -20901,7 +20907,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
