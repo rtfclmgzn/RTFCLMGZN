@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-09-16",
+  updated: "2026-09-18",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -282,6 +282,8 @@ window.RTFC_ENTITIES = {
       backers:null, hq:"US / France" },
     { key:"unitree",   name:"Unitree",         parent:null, structure:"Private Chinese robotics maker",
       backers:null, hq:"Hangzhou, China", needsVerify:true },
+    { key:"figure",    name:"Figure AI",       parent:null, structure:"Private US humanoid-robotics startup",
+      backers:"Nvidia, Microsoft, Brookfield Asset Management, OpenAI Startup Fund", hq:"US", needsVerify:true },
     { key:"ibm",       name:"IBM",             parent:null, structure:"Public company (NYSE: IBM)",
       backers:null, hq:"US" },
     { key:"broadcom",  name:"Broadcom",        parent:null, structure:"Public company (NASDAQ: AVGO)",

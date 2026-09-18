@@ -66930,6 +66930,778 @@ window.RTFC_NEWSROOM_ARTICLES = [
         "note": "Lets the reader do the arithmetic instead of asserting a verdict -- the model component computes the multiple live from the story's own sourced numbers, the compare table puts OpenAI's ask next to a faster-growing rival asking for less per dollar of revenue, and the counter component states the skeptic's case in a named analyst framework's own terms rather than the newsroom's."
       }
     }
+  },
+{
+  "slug": "california-newsom-ai-kill-switch-executive-order",
+  "title": "California will study a mandatory AI \"kill switch\" -- the idea Newsom vetoed as SB 1047 two years ago",
+  "dek": "Governor Gavin Newsom signed an executive order on September 18 directing California agencies to accelerate two 2026 AI-oversight laws and convene outside experts -- due November 16 -- to recommend a frontier-model shutoff mechanism and onsite safety auditors. Newsom vetoed a similar kill-switch mandate, SB 1047, in September 2024; this order arrives days after a Senate Republican blocked a federal kill-switch bill, and it may collide with a Trump executive order built specifically to preempt state AI laws like it.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+    {
+      "label": "Watch the November 16 deadline",
+      "text": "That's when state officials and the outside panel must deliver specific recommendations -- including whether a kill-switch mandate survives the same industry pushback that killed SB 1047 in 2024."
+    },
+    {
+      "label": "Watch for a federal preemption fight",
+      "text": "The DOJ's litigation task force against state AI laws, created by a December 2025 Trump order, has 90 days to flag 'onerous' state rules -- watch whether California's new order or SB 813/AB 1405 themselves become targets."
+    },
+    {
+      "label": "Watch how OpenAI, Anthropic, Google DeepMind, Meta and xAI respond",
+      "text": "All operate frontier models from California and would be first in line if the onsite-auditor and verified-safety-framework proposals become law."
+    },
+    {
+      "label": "Watch whether other states copy the executive-order route",
+      "text": "With Congress producing zero floor votes on AI this year, an order is faster than a bill -- watch whether other governors use the same mechanism Newsom just did, and whether Washington tries to stop them too."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Governor Newsom Issues Executive Order to Accelerate Independent Oversight and Advance the Creation of an AI Kill Switch",
+      "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/",
+      "outlet": "Office of Governor Gavin Newsom",
+      "kind": "filing_or_official"
+    },
+    {
+      "label": "Newsom order forms California AI panel to study \"kill switch\" creation, new safety regulations",
+      "url": "https://www.cbsnews.com/sacramento/news/california-newsom-ai-safety-kill-switch/",
+      "outlet": "CBS Sacramento",
+      "kind": "reporting"
+    },
+    {
+      "label": "Newsom advances AI 'kill switch' mandate under new California executive order",
+      "url": "https://www.foxbusiness.com/politics/newsom-advances-ai-kill-switch-mandate-under-new-california-executive-order",
+      "outlet": "Fox Business",
+      "kind": "reporting"
+    },
+    {
+      "label": "Newsom signs executive order to consider AI regulation, including proposal for 'kill switch'",
+      "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2026/09/18/newsom-signs-executive-order-to-consider-ai-regulation-including-proposal-for-kill-switch/",
+      "outlet": "CNN (via ABC17News)",
+      "kind": "reporting"
+    },
+    {
+      "label": "Newsom vetoes controversial AI safety bill SB 1047",
+      "url": "https://sfstandard.com/2024/09/29/gavin-newsom-vetoes-controversial-ai-safety-bill/",
+      "outlet": "The San Francisco Standard",
+      "kind": "historical_context"
+    },
+    {
+      "label": "New Executive Order aims to preempt state AI regulation: Top points",
+      "url": "https://www.dlapiper.com/en-us/insights/publications/2025/12/new-executive-order-aims-to-preempt-state-ai-regulation",
+      "outlet": "DLA Piper",
+      "kind": "expert_or_stakeholder"
+    }
+  ],
+  "tldr": [
+    "Newsom signed an executive order Sept. 18 to study a mandatory AI \"kill switch.\"",
+    "State officials and outside experts must recommend law changes by November 16.",
+    "The order revisits SB 1047, the kill-switch bill Newsom vetoed in September 2024.",
+    "Days earlier, Sen. Rand Paul blocked a Republican colleague's federal kill-switch bill.",
+    "Caveat: a December 2025 Trump order already targets state AI laws like this one for preemption."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "On September 18, California Governor **Gavin Newsom** signed an executive order directing the state's Government Operations Agency to accelerate two AI-oversight laws already on the books -- SB 813 and AB 1405 -- and to convene a panel of outside experts with a hard deadline: recommendations for strengthening California's AI safety law by **November 16, 2026**. Chief among the ideas the panel will study is a mandatory emergency shutoff, or \"kill switch,\" for [frontier](/dictionary) AI models -- an idea with a specific history in Sacramento, because Newsom vetoed a bill built around exactly that mechanism two years ago.",
+      "citation_urls": [
+        "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/",
+        "https://www.cbsnews.com/sacramento/news/california-newsom-ai-safety-kill-switch/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "\"We're not waiting to act -- we're going to speed up our work on substantial and responsible AI oversight before it's too late,\" Newsom said in the statement announcing the order, adding that the industry itself was \"begging for regulation.\" The order itself doesn't mandate a kill switch or any other new safeguard; it directs officials and the outside panel to propose specific changes to state law, due in less than two months.",
+      "citation_urls": [
+        "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/",
+        "https://abc17news.com/politics/national-politics/cnn-us-politics/2026/09/18/newsom-signs-executive-order-to-consider-ai-regulation-including-proposal-for-kill-switch/"
+      ]
+    },
+    {
+      "type": "timeline",
+      "timeline": {
+        "title": "From SB 1047 to an executive order",
+        "items": [
+          {
+            "when": "Sept 29, 2024",
+            "what": "Newsom vetoes SB 1047, which would have required a kill switch for models trained above a $100M compute threshold."
+          },
+          {
+            "when": "Dec 11, 2025",
+            "what": "Trump signs a federal order to preempt state AI laws, directing the Attorney General to build a litigation task force against them."
+          },
+          {
+            "when": "2026",
+            "what": "California enacts SB 813 (independent AI-verification framework) and AB 1405 (state registry of AI auditors)."
+          },
+          {
+            "when": "Sept 18, 2026",
+            "what": "Newsom signs an executive order to accelerate both laws and study a kill switch again.",
+            "hi": true
+          },
+          {
+            "when": "Nov 16, 2026",
+            "what": "Deadline for the outside panel's recommendations on changes to state AI law.",
+            "future": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "SB 1047, from state Sen. Scott Wiener, would have applied to AI companies spending more than $100 million to train a model and required them to maintain a working shutdown capability. Newsom called the bill \"well-intentioned\" but vetoed it, arguing it applied \"stringent standards to even the most basic functions\" while ignoring risk from smaller models deployed in high-stakes settings. The veto split the industry rather than uniting it against regulation: [Anthropic](/company/anthropic) and Elon Musk backed the bill; [OpenAI](/company/openai), [Meta](/company/meta), and then-House Speaker Nancy Pelosi opposed it. Two years later, OpenAI, Anthropic, [Google](/company/google) DeepMind, Meta and [xAI](/company/xai) are exactly the companies whose frontier models the new order's onsite-auditor and kill-switch proposals would reach first -- most of them headquartered in the state doing the studying.",
+      "citation_urls": [
+        "https://sfstandard.com/2024/09/29/gavin-newsom-vetoes-controversial-ai-safety-bill/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Beyond the kill switch, the order directs the panel to weigh requiring independent verification organizations -- the category SB 813 already created -- to place auditors onsite at frontier labs, to mandate that companies' own safety frameworks and risk assessments get independently verified rather than self-attested, and to widen the legal definition of a reportable \"critical safety incident\" to cover loss-of-control events. The order names one example directly: the kind of incident behind a recent AI-agent security breach at [Hugging Face](/company/huggingface).",
+      "citation_urls": [
+        "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The order lands into a federal vacuum, not one California is creating alone. Days earlier, Sen. Rand Paul blocked a fellow Republican, Sen. John Kennedy, from bringing a federal AI kill-switch bill to the floor, calling a blanket regulatory approach \"crazy\" without direct industry input. Newsom didn't let the contrast go unstated.",
+      "citation_urls": [
+        "https://www.foxbusiness.com/politics/newsom-advances-ai-kill-switch-mandate-under-new-california-executive-order"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "\"There's still no comprehensive federal law... requiring AI companies to report dangerous incidents when they happen, and President Trump has rejected calls for new regulation. He's dead wrong.\"",
+      "citation_urls": [
+        "https://www.foxbusiness.com/politics/newsom-advances-ai-kill-switch-mandate-under-new-california-executive-order"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Newsom's order is the third distinct AI-oversight move out of a U.S. state or state-adjacent official in barely 48 hours, and each took a different route precisely because the fastest one -- federal legislation -- isn't available. Pennsylvania Governor Josh Shapiro used a September 17 keynote to demand federal guardrails while Congress adjourned early for the midterms with ten AI bills stuck in committee. California, a day later, skipped the legislature altogether and used the executive authority Newsom already had.",
+      "citation_urls": []
+    },
+    {
+      "type": "compare",
+      "compare": {
+        "title": "Three tracks, one week, no federal floor vote",
+        "columns": [
+          {
+            "label": "California",
+            "sub": "executive order"
+          },
+          {
+            "label": "Congress",
+            "sub": "10 bills, stalled",
+            "hi": true
+          },
+          {
+            "label": "Pennsylvania",
+            "sub": "governor's keynote"
+          }
+        ],
+        "rows": [
+          {
+            "label": "Binding today",
+            "values": [
+              "No -- a study was ordered",
+              "No -- stuck in committee",
+              "No -- a speech, not a bill"
+            ]
+          },
+          {
+            "label": "Mechanism",
+            "values": [
+              "Governor's own authority under existing law",
+              "Requires a House floor vote, then the Senate",
+              "Requires the legislature to act on the governor's ask"
+            ]
+          },
+          {
+            "label": "Concrete deadline set",
+            "values": [
+              "Nov 16, 2026 panel report",
+              "None set",
+              "None set"
+            ],
+            "note": "Only California's route has forced a date onto the calendar"
+          },
+          {
+            "label": "Actual bottleneck",
+            "values": [
+              "Turning a study into law next session",
+              "Leadership won't create a dedicated AI committee",
+              "No comparable order or bill signed yet"
+            ]
+          }
+        ],
+        "source": "Governor's office announcement; CNN/Inquirer reporting on Shapiro's Sept. 17 speech"
+      }
+    },
+    {
+      "type": "p",
+      "text": "The pattern across all three: the branch of government built to move fastest -- the executive, acting alone -- is the only one currently producing a hard deadline. But \"fastest\" doesn't mean \"final,\" and there's a complication neither Newsom's order nor Shapiro's speech addresses.",
+      "citation_urls": []
+    },
+    {
+      "type": "p",
+      "text": "On December 11, 2025, President Trump signed his own executive order, \"Ensuring a National Policy Framework for Artificial Intelligence,\" directing the Attorney General to stand up a litigation task force against state AI laws within 30 days and empowering the Commerce Department to identify \"onerous\" state AI rules and threaten their federal broadband funding over them. That order carves out exceptions for child-safety and state-procurement rules; a mandatory kill switch and onsite auditors for frontier labs is not on the exempted list. Whatever California's panel recommends by November 16, the more consequential fight may be whether Washington tries to preempt it before the legislature ever gets a bill to vote on.",
+      "citation_urls": [
+        "https://www.dlapiper.com/en-us/insights/publications/2025/12/new-executive-order-aims-to-preempt-state-ai-regulation"
+      ]
+    },
+    {
+      "type": "counter",
+      "counter": {
+        "points": [
+          {
+            "claim": "California's executive order can't produce binding state law on frontier AI if the federal government preempts it first.",
+            "detail": "A December 2025 Trump executive order already directs the Attorney General to build a litigation task force specifically to challenge state AI laws, and empowers Commerce to cut broadband funding to states with 'onerous' AI rules.",
+            "whoHolds": "The Trump administration's own framework, and law firms like DLA Piper, which flagged this collision months before Newsom's order existed."
+          }
+        ],
+        "verdict": "The counter is real but untested against this specific order: the December 2025 EO targets 'onerous' state AI laws in general terms, and no litigation naming SB 813, AB 1405, or Newsom's new order has actually been filed. Newsom's own framing -- calling Trump 'dead wrong' -- reads as a state expecting that fight, not one that has already lost it.",
+        "source": "DLA Piper client alert, Dec. 2025; governor's office statement, Sept. 18, 2026"
+      }
+    },
+    {
+      "type": "p",
+      "text": "Set the preemption fight aside for a moment, though, because it doesn't change who the order names as its actual subject.",
+      "citation_urls": []
+    },
+    {
+      "type": "stakes",
+      "stakes": {
+        "title": "Who the order actually reaches",
+        "items": [
+          {
+            "who": "OpenAI, Anthropic, Google DeepMind, Meta and xAI",
+            "tone": "exposed",
+            "what": "All operate frontier models from California and would be first in line for onsite auditors and a verified safety-framework requirement, if the panel's recommendations become law and survive federal preemption."
+          },
+          {
+            "who": "California's SB 813-registered verification organizations",
+            "tone": "gains",
+            "what": "Gain a mandate to actually go onsite rather than just review paperwork after the fact -- if the panel recommends it and the legislature follows through."
+          },
+          {
+            "who": "Other states without a comparable AI law",
+            "tone": "unclear",
+            "what": "Get a template to copy via executive order rather than waiting on their own legislature, but only if California's version survives the federal challenge first."
+          },
+          {
+            "who": "Congressional Republicans favoring a federal \"light touch\"",
+            "tone": "gains",
+            "what": "See California act alone while their own administration builds the legal case to stop it -- for now, the state and federal tracks are on a collision course, not parallel ones."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "None of this requires an AI company operating in California to do anything different today. What it produces, if the panel meets its own deadline, is a concrete document on November 16 that either turns into 2027 legislation, gets challenged in court under Trump's preemption order, or joins SB 1047 on the list of California AI bills that didn't survive contact with the industry it targeted.",
+      "citation_urls": []
+    }
+  ],
+  "id": "newsroom-california-newsom-ai-kill-switch-executive-order",
+  "image": "assets/img/newsroom/california-newsom-ai-kill-switch-executive-order.jpg",
+  "publishedAt": "2026-09-18T19:08:05Z",
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-09-18T19:08:05Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "6 sources across 6 independent evidence threads: the governor's own office statement (fetched successfully via WebFetch; a bare curl request to the same URL returned HTTP 403, the same bot-blocking pattern already logged for other .gov domains -- treated as corroborated primary, not discarded), three independently staffed outlets (CBS Sacramento, Fox Business, CNN via an ABC17News affiliate mirror after CNN's own domain was inaccessible), the San Francisco Standard's 2024 SB 1047 veto coverage for historical context, and a DLA Piper client alert confirming the December 2025 Trump preemption order -- found while checking whether California's authority to act was actually as clean as the initial framing suggested, which changed the piece materially. Confirmed via newsroom-articles.js that this executive order has no prior coverage; the same-day Congress/Shapiro piece is a related but distinct story, referenced in prose for context rather than duplicated."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "Newsom, Rand Paul quotes are reported, on-the-record statements each sourced to a directly-fetched outlet. The Trump preemption order's provisions (litigation task force, broadband-funding threat, carve-outs) are confirmed against a law-firm client alert describing the order's actual text, not a secondary paraphrase. Naming OpenAI, Anthropic, Meta, Google DeepMind and xAI as companies the order would reach is factual description, not an accusatory claim. No health/financial trigger applies."
+      },
+      {
+        "name": "Loop 1 - critique and revise",
+        "agent": "claude-runner",
+        "note": "Self-referential-language check: clean. Critique found the first draft treated California's order as unopposed; revised to add the December 2025 federal preemption order as a counter-case once found, plus a dedicated counter component, rather than letting the piece imply state action proceeds unchallenged."
+      },
+      {
+        "name": "Loop 2 - component provenance check",
+        "agent": "claude-runner",
+        "note": "Timeline's five dates, the compare table's rows, the counter's claim/detail, and the stakes' four named parties all trace to the adjacent sourced prose. No component carries a top-level text field. Prose separates every pair of adjacent components."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Approved. 6 sources, 6 independent evidence threads, correctly routed as synthesis. Four components (timeline, compare, counter, stakes), compare and timeline both data-carrying. No mandatory-scrutiny trigger fired."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "Places Newsom's order against the two other AI-oversight moves the same week via a compare table, names the SB 1047 history so the reversal reads as a reversal, and -- found only by checking further -- surfaces the federal preemption order that complicates the piece's own initial framing rather than leaving it out."
+    }
   }
+},
+{
+  "slug": "figure-ai-helix-2-5-zero-shot-30-homes",
+  "title": "Figure says pretraining alone took its humanoid from 9% to 56% success in homes it had never seen",
+  "dek": "Figure AI evaluated its new Helix 2.5 policy zero-shot in 30 Bay Area homes it had never trained on, tidying rooms, folding towels and making beds with no environment-specific fine-tuning. The company's own comparison found that pretraining on its Index dataset -- not new task data -- raised whole-task success from 9% to 56%, a claim no outside lab has yet replicated, while Tesla pursues a different bet the same week: ordering roughly 5,000 Optimus units toward a 50,000-unit 2026 target.",
+  "persona": "ash-lindqvist",
+  "section": "Robotics",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+    {
+      "label": "Watch for outside replication",
+      "text": "No university lab or competitor has run Figure's exact 30-home zero-shot test yet -- that's the check that would confirm or puncture the 9%-to-56% claim."
+    },
+    {
+      "label": "Watch Tesla's mass-production audits",
+      "text": "Tesla's 50,000-unit 2026 target depends on factory audits that only started this month; watch whether the unit count materializes or slips, the way humanoid-production timelines often have."
+    },
+    {
+      "label": "Watch what Figure does with $3.5B in committed compute",
+      "text": "That's compute committed, not necessarily all spent yet -- watch Figure's next model update for whether the scaling curve it's describing actually holds at several times more pretraining data."
+    },
+    {
+      "label": "Watch for a real head-to-head",
+      "text": "Neither company has published a result on the exact same unscripted task -- the first one to invite an outside evaluator to run both machines through the same home would settle more than either company's own numbers can."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Helix 2.5: Zero-Shot 30-Home Generalization",
+      "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+      "outlet": "Figure AI",
+      "kind": "primary_company"
+    },
+    {
+      "label": "Figure Introduces Helix 2.5, Tested Zero-Shot in 30 Unseen Homes",
+      "url": "https://www.unite.ai/figure-introduces-helix-2-5-tested-zero-shot-in-30-unseen-homes/",
+      "outlet": "Unite.AI",
+      "kind": "independent_reporting"
+    },
+    {
+      "label": "Figure Unveils Helix 2.5 With Zero-Shot Humanoid Generalization Across 30 Homes",
+      "url": "https://theaiinsider.tech/2026/09/17/figure-unveils-helix-2-5-with-zero-shot-humanoid-generalization-across-30-homes/",
+      "outlet": "The AI Insider",
+      "kind": "independent_reporting"
+    },
+    {
+      "label": "[Market Movement Analysis] Tesla Surges on September 17: Optimus Orders and Mass Production of Robots",
+      "url": "https://www.bitget.com/news/detail/12560605843215",
+      "outlet": "Bitget News",
+      "kind": "independent_reporting"
+    },
+    {
+      "label": "Figure AI's Helix-02 Robots Complete Full 8-Hour Autonomous Shifts as Humanoid Race Intensifies",
+      "url": "https://www.techtimes.com/articles/316632/20260514/figure-ais-helix-ais-helix-02-robots-complete-full-8-hour-autonomous-shifts-humanoid-race-intensifies.htm",
+      "outlet": "Tech Times",
+      "kind": "historical_context"
+    }
+  ],
+  "tldr": [
+    "Figure tested Helix 2.5 zero-shot in 30 Bay Area homes it had never seen before.",
+    "Index pretraining raised whole-task success from 9% to 56%, Figure's own comparison found.",
+    "Figure has committed $3.5 billion in compute with Nscale to keep training on Index data.",
+    "Tesla, the same week, ordered about 5,000 Optimus units toward a 50,000-unit 2026 goal.",
+    "Caveat: every Helix 2.5 number is Figure's own measurement -- no outside lab has replicated it."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "On September 17, Figure AI put its newest humanoid policy, **Helix 2.5**, into 30 homes across the Bay Area that no Figure robot or dataset had ever touched, and asked it to do three ordinary chores: tidy a living room, fold towels into a basket, and make a bed -- pillows placed, comforter corners squared. No home got environment-specific fine-tuning, and no data was collected there beforehand. Figure calls the result the first demonstration, to its knowledge, of [zero-shot](/dictionary) whole-body generalization at this scope on a humanoid.",
+      "citation_urls": [
+        "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "\"To our knowledge, [this is] the first demonstration of zero-shot whole-body generalization at this scope on a humanoid.\"",
+      "citation_urls": [
+        "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The company's own comparison isolates what pretraining actually bought. Holding task-specific data and network architecture fixed, a policy pretrained on Figure's **Index** dataset succeeded at the entire task -- no partial credit given -- in **56%** of attempts, against **9%** for an otherwise identical policy trained from scratch. A human safety intervention during a run counted the attempt as a failure, not a pass. That's Figure's evidence its approach scales; it is also, so far, evidence only Figure has measured.",
+      "citation_urls": [
+        "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+        "https://www.unite.ai/figure-introduces-helix-2-5-tested-zero-shot-in-30-unseen-homes/"
+      ]
+    },
+    {
+      "type": "beforeafter",
+      "beforeafter": {
+        "title": "What Index pretraining changed",
+        "beforeLabel": "Trained from scratch",
+        "afterLabel": "Index-pretrained",
+        "rows": [
+          {
+            "label": "Whole-task zero-shot success, 30 unseen homes",
+            "before": "9%",
+            "after": "56%"
+          },
+          {
+            "label": "Task-specific adaptation data needed to match Helix 02's success rate",
+            "before": "Full dataset",
+            "after": "About half"
+          },
+          {
+            "label": "Environment-specific fine-tuning used",
+            "before": "None",
+            "after": "None"
+          }
+        ],
+        "source": "Figure AI, Sept. 17, 2026 announcement"
+      }
+    },
+    {
+      "type": "p",
+      "text": "Three tasks and 30 homes is a real test, not an exhaustive one. Tidying toys, folding towels and making a bed all involve soft, forgiving objects and generous success windows -- one minute per toy-tidy attempt, three minutes for towels, a minute per side of the bed. Figure hasn't published a zero-shot result yet on harder categories: cooking, anything involving liquids, or tasks with a real safety cost to a mistake. The 9%-to-56% jump is evidence of a real capability gain on the tasks tested, not proof the same multiple holds everywhere a home might need a robot.",
+      "citation_urls": [
+        "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The dataset behind that gain is growing fast: Figure says Index now generates roughly **35 minutes** of new human-behavior data every second, and the company has committed **$3.5 billion** in compute, arranged with cloud provider Nscale, to keep training Helix on it. No single one of the three evaluation tasks makes up more than **1.9%** of that pretraining set -- Figure's own answer to the obvious follow-up question, which is whether the model simply memorized the test.",
+      "citation_urls": [
+        "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+      ]
+    },
+    {
+      "type": "timeline",
+      "timeline": {
+        "title": "Helix's model lineage",
+        "items": [
+          {
+            "when": "Feb 2025",
+            "what": "Figure introduces the original Helix VLA model, controlling a humanoid's upper body from one network."
+          },
+          {
+            "when": "Jan 27, 2026",
+            "what": "Helix 02 extends control to the full body, replacing what Figure says was 109,504 lines of hand-engineered control code."
+          },
+          {
+            "when": "May 2026",
+            "what": "Figure reports Helix 02 units completing full 8-hour autonomous shifts."
+          },
+          {
+            "when": "Sept 17, 2026",
+            "what": "Helix 2.5 is evaluated zero-shot across 30 unseen homes.",
+            "hi": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "The bet is well-capitalized. Figure raised more than $1 billion in a September 2025 Series C at a **$39 billion** post-money valuation, with [Nvidia](/company/nvidia), [Microsoft](/company/microsoft), Brookfield Asset Management and the [OpenAI](/company/openai) Startup Fund among the backers -- money that funds exactly the kind of large-scale data collection and compute commitment Index and the Nscale deal represent. A demo this well-funded still has to answer to the same standard as a scrappier one: does the number replicate outside the company that measured it.",
+      "citation_urls": []
+    },
+    {
+      "type": "p",
+      "text": "Every number above is Figure's own measurement, on its own benchmark, reported in its own announcement. That doesn't make it false, but it puts it in the same category as most humanoid-robotics claims made this year: a company's word about its own demo, ahead of any outside replication.",
+      "citation_urls": []
+    },
+    {
+      "type": "scorecard",
+      "scorecard": {
+        "items": [
+          {
+            "claim": "Index pretraining raised zero-shot success from 9% to 56% across 30 unseen homes",
+            "level": "company",
+            "basis": "Figure's own September 17 announcement; no independent lab has run the same 30-home evaluation.",
+            "resolver": "An independent replication of the zero-shot home test by a university robotics lab or a competing company, using Figure's stated protocol."
+          },
+          {
+            "claim": "Figure's software-first bet will out-compete Tesla's hardware-first bet in the same category",
+            "level": "unverified",
+            "basis": "Both companies are pursuing different strategies at the same time; neither has shipped humanoid robots at meaningful volume to a paying customer base yet.",
+            "resolver": "Comparable, independent third-party evaluations of Figure and Optimus units performing the same unscripted household tasks."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Figure's bet is that a smarter model, trained on more of the right data, gets a humanoid further than more hardware does. Tesla is running a different experiment at the same time: on September 17, the same day as Figure's announcement, Tesla placed an order for roughly **5,000** Optimus units with its supply chain and reiterated a target of about **50,000** units rolled out by the end of 2026, moving the program from lab demos toward mass-production audits at its factories. Tesla hasn't published a zero-shot generalization test comparable to Figure's; Figure hasn't disclosed a comparable production or unit-shipment number. Whether a model-first or a hardware-first approach reaches a paying household first is exactly the comparison neither company's own numbers can currently answer.",
+      "citation_urls": [
+        "https://www.bitget.com/news/detail/12560605843215"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What Figure's test does establish, if it holds up under outside scrutiny, is a specific mechanism: a humanoid that gets better at homes it's never seen mainly by watching more human behavior, not by being shown that exact home first. If that scales the way Figure's pretraining curve already suggests, the bottleneck for a robot competent in your specific kitchen stops being your kitchen.",
+      "citation_urls": []
+    }
+  ],
+  "id": "newsroom-figure-ai-helix-2-5-zero-shot-30-homes",
+  "image": "assets/img/newsroom/figure-ai-helix-2-5-zero-shot-30-homes.jpg",
+  "publishedAt": "2026-09-18T19:08:45Z",
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-09-18T19:08:45Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "5 sources across 4 independent evidence threads: Figure's own announcement (primary, directly fetched), two independent outlets corroborating the same event (Unite.AI, The AI Insider), Bitget's reporting on Tesla's same-week Optimus order (a separate thread), and Tech Times' May 2026 coverage of Helix 02's 8-hour shifts for lineage context. An earlier WebSearch synthesis had surfaced a specific '237 of 420 trials' figure attributed to this announcement; two separate direct WebFetches of the actual source articles (Unite.AI and The AI Insider) could not confirm that figure, so it was dropped rather than published on an unverified synthesis -- only the 9%/56% rates both direct fetches actually support are used. Confirmed via newsroom-articles.js that Figure AI has appeared only as a passing comparison in one prior article (a Unitree export-control piece), never as its own subject."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "No health/financial/legal trigger applies. Every Figure-sourced number is explicitly attributed to Figure's own announcement in prose, not stated as independently confirmed fact -- the scorecard's 'level: company' rating matches that. The Tesla figures are attributed to Tesla's own supply-chain order and stated target, sourced independently of Figure's claims."
+      },
+      {
+        "name": "Loop 1 - critique and revise",
+        "agent": "claude-runner",
+        "note": "Self-referential-language check: clean. Critique found the first draft implied the 9%-to-56% gain was an established fact rather than a company claim; revised the framing paragraph and added the scorecard's second item explicitly naming the Figure-vs-Tesla comparison as unverified rather than letting the piece pick a winner."
+      },
+      {
+        "name": "Loop 2 - component provenance check",
+        "agent": "claude-runner",
+        "note": "The beforeafter's three rows, the timeline's four dates, and the scorecard's two claims all trace to sourced prose immediately adjacent. No component carries a top-level text field. No two components sit adjacent."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Approved. 5 sources, 4 independent evidence threads, correctly routed as synthesis. Three components (beforeafter, timeline, scorecard), beforeafter data-carrying. No mandatory-scrutiny trigger fired."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "Reports Figure's own numbers as Figure's own numbers throughout, adds the Tesla contrast from independently sourced reporting rather than Figure's framing, and catches and drops one unverified figure a search synthesis introduced before it could reach print."
+    }
+  }
+},
+{
+  "slug": "openai-astra-for-law-legal-research-index-launch",
+  "title": "OpenAI launches Astra for Law with a 230-million-document legal index and a 54% benchmark pass rate",
+  "dek": "Astra for Law pairs GPT-6 Astra with a legal search index spanning US case law, statutes and court rules, updated daily, and launches through a Trusted Access program for large firms plus API access for legal-tech vendors Harvey, Legora and Thomson Reuters. On Vals AI's Legal Research Bench, it passed 54% of correctness checks against 38.7% for GPT-6 Astra with web search alone -- a real gain that still leaves close to half the questions not fully correct, launching as courts worldwide have logged more than 1,598 cases of AI-fabricated citations.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "numbers",
+  "apply": [
+    {
+      "label": "54%",
+      "text": "Read as OpenAI's own best case against its own prior baseline (web search alone) -- not against a rival legal-AI product or a human associate's research."
+    },
+    {
+      "label": "46%",
+      "text": "The share of the benchmark's own validation questions Astra for Law still didn't answer with full correctness -- the number worth remembering before citing its output in a filing."
+    },
+    {
+      "label": "1,598",
+      "text": "Documented court cases worldwide involving AI-fabricated citations as of June 2026, growing by roughly 8 a day -- the backdrop every legal-AI launch enters now."
+    },
+    {
+      "label": "230 million",
+      "text": "The index size OpenAI is actually selling: daily-refreshed coverage of US case law and regulations, not a claim that the underlying model got smarter."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Introducing Astra for Law",
+      "url": "https://openai.com/index/astra-for-law/",
+      "outlet": "OpenAI",
+      "kind": "primary_company"
+    },
+    {
+      "label": "OpenAI launches Astra for Law, a GPT-6 configuration for legal research",
+      "url": "https://siliconangle.com/2026/09/17/openai-launches-astra-for-law-a-gpt-6-configuration-for-legal-research/",
+      "outlet": "SiliconANGLE",
+      "kind": "independent_reporting"
+    },
+    {
+      "label": "OpenAI Releases Astra for Law, A GPT-6 Model Tailored for Legal Work, Targeting Large Firms and Tech Vendors",
+      "url": "https://www.lawnext.com/2026/09/openai-releases-astra-for-law-a-gpt-6-model-configured-for-legal-work.html",
+      "outlet": "LawNext",
+      "kind": "independent_reporting"
+    },
+    {
+      "label": "AI Hallucination Cases: The 1,598-Case Sanctions Tracker",
+      "url": "https://www.haqq.ai/blog/ai-legal-hallucination-audit",
+      "outlet": "HAQQ (citing Damien Charlotin's tracker, HEC Paris)",
+      "kind": "dataset"
+    }
+  ],
+  "tldr": [
+    "OpenAI launched Astra for Law Sept. 17: GPT-6 Astra plus a 230M-document legal index.",
+    "It passed 54% of Vals AI's Legal Research Bench, versus 38.7% for web search alone.",
+    "Harvey, Legora and Thomson Reuters get API access; select firms get Trusted Access in ChatGPT.",
+    "Zero data retention and no human review are built into the enterprise access tier.",
+    "Caveat: 46% of benchmark questions still weren't fully correct, and courts already track 1,598 AI-hallucination cases."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "OpenAI introduced **Astra for Law** on September 17: a configuration of its GPT-6 Astra model wrapped in a dedicated legal search index -- more than **230 million** URLs of US case law, statutes, regulations and court rules, refreshed daily -- plus instructions tuned for legal research and writing. It is not a new model; it is [GPT-6 Astra](/dictionary) pointed at a purpose-built corpus, offered first to law firms and the software vendors that sell to them.",
+      "citation_urls": [
+        "https://openai.com/index/astra-for-law/",
+        "https://siliconangle.com/2026/09/17/openai-launches-astra-for-law-a-gpt-6-configuration-for-legal-research/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Access rolls out in two tracks. **Harvey**, **Legora** and **Thomson Reuters** get API access to build their own products on top of it; a smaller group of Am Law 200 firms gets a **Trusted Access** program inside ChatGPT and Codex directly, with zero data retention on the API and enterprise usage excluded from OpenAI's human review by default. OpenAI is working with law firm **Latham & Watkins** specifically on the permissions layer -- ethical walls, client instructions, firm-level oversight -- that a tool touching privileged material needs before a firm will run it on a live matter.",
+      "citation_urls": [
+        "https://siliconangle.com/2026/09/17/openai-launches-astra-for-law-a-gpt-6-configuration-for-legal-research/",
+        "https://www.lawnext.com/2026/09/openai-releases-astra-for-law-a-gpt-6-model-configured-for-legal-work.html"
+      ]
+    },
+    {
+      "type": "keyfacts",
+      "keyfacts": {
+        "title": "Astra for Law, in short",
+        "items": [
+          {
+            "label": "Base model",
+            "value": "GPT-6 Astra",
+            "note": "same model; legal-specific index and instructions"
+          },
+          {
+            "label": "Index size",
+            "value": "230M+ URLs",
+            "note": "US case law, statutes, regulations, court rules; updated daily"
+          },
+          {
+            "label": "API partners",
+            "value": "Harvey, Legora, Thomson Reuters"
+          },
+          {
+            "label": "Firm access",
+            "value": "Trusted Access program",
+            "note": "targets Am Law 200 firms"
+          },
+          {
+            "label": "Pricing",
+            "value": "Not yet announced",
+            "note": "API version has no public price or date"
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Legal research is a deliberate proving ground, not an easy first vertical. Billable-hour economics mean firms will pay well for genuine accuracy gains, but the same economics mean a wrong citation reaches a judge, not just a customer-support ticket -- malpractice exposure is real and immediate in a way it isn't for most chatbot use cases. That's the case for building the permissions layer first: a tool this easy to misuse in a filing has to earn trust on confidentiality before it gets judged on capability at all.",
+      "citation_urls": []
+    },
+    {
+      "type": "p",
+      "text": "On Vals AI's Legal Research Bench -- 200 validation questions the firm keeps private specifically so vendors can't train against it -- Astra for Law passed the overall correctness check on **54%** of questions, against **38.7%** for GPT-6 Astra using plain web search: a 15.3-point gain, or about 40% better in relative terms. On case-law questions specifically, it surfaced **24%** more relevant case references than the web-search baseline.",
+      "citation_urls": [
+        "https://www.lawnext.com/2026/09/openai-releases-astra-for-law-a-gpt-6-model-configured-for-legal-work.html"
+      ]
+    },
+    {
+      "type": "chart",
+      "chart": {
+        "kind": "bar",
+        "title": "Legal Research Bench correctness",
+        "unit": "%",
+        "source": "Vals AI Legal Research Bench, via OpenAI's Sept. 17, 2026 announcement",
+        "data": [
+          {
+            "label": "GPT-6 Astra + web search",
+            "value": 38.7
+          },
+          {
+            "label": "Astra for Law",
+            "value": 54,
+            "hi": true,
+            "note": "dedicated legal index"
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Read the other direction, 54% correctness means Astra for Law still didn't fully pass the correctness check on **46%** of the benchmark's own validation questions -- a real improvement over ad hoc web search, not a solved problem. {{note: Vals AI's private, rotating question set is a deliberate anti-gaming design -- a public benchmark invites a vendor to quietly optimize for the test rather than the underlying task.}} Vals AI keeps its methodology and question set private, which means the 54% figure can't currently be checked against the underlying questions by anyone outside the benchmark's own operator and OpenAI.",
+      "citation_urls": [
+        "https://www.lawnext.com/2026/09/openai-releases-astra-for-law-a-gpt-6-model-configured-for-legal-work.html"
+      ]
+    },
+    {
+      "type": "scorecard",
+      "scorecard": {
+        "items": [
+          {
+            "claim": "Astra for Law passes 54% of Vals AI's Legal Research Bench correctness check, versus 38.7% for web search alone",
+            "level": "partial",
+            "basis": "Reported by OpenAI and independently corroborated by legal-trade outlets, but the benchmark's own 200-question validation set and grading methodology are not public.",
+            "resolver": "Vals AI publishing its methodology or question set, or a second benchmark operator replicating the comparison independently."
+          },
+          {
+            "claim": "Enterprise Trusted Access usage is excluded from OpenAI's human review by default, with zero data retention on the API",
+            "level": "company",
+            "basis": "Stated in OpenAI's own launch announcement and corroborated by legal-trade reporting; no independent security audit of the pipeline has been published.",
+            "resolver": "A published SOC 2 report or independent security audit of the Astra for Law data-handling pipeline."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "The stakes for that remaining 46% aren't abstract. As of June 9, 2026, a tracker maintained by Damien Charlotin at HEC Paris had logged **1,598** court cases worldwide where a judge found or clearly implied a party had relied on [hallucinated](/dictionary) AI-generated citations or quotes -- adding roughly 8 new cases a day. Penalties have escalated well past embarrassment: one federal case closed in December 2025 with about **$109,700** in combined sanctions and fees, and a federal judge went further in June 2026, canceling a trial outright and suspending both lead attorneys from the district for two years. None of those cases involve Astra for Law, which didn't exist yet when they were filed -- but they're the backdrop any legal-AI tool launches into now, and the likely reason OpenAI's Trusted Access program leads with confidentiality controls and firm oversight rather than raw capability.",
+      "citation_urls": [
+        "https://www.haqq.ai/blog/ai-legal-hallucination-audit"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Astra for Law doesn't compete with Harvey or Legora so much as sit underneath them -- both are named API customers, not rivals being disintermediated, and Thomson Reuters is previewing its own CoCounsel connector into the same index rather than building a competing one. The bet OpenAI is making is that the legal industry's bottleneck was never model quality alone; it was a search index good enough, and access controls strict enough, that a firm would trust either one with a real client matter.",
+      "citation_urls": [
+        "https://www.lawnext.com/2026/09/openai-releases-astra-for-law-a-gpt-6-model-configured-for-legal-work.html"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "That framing also explains why OpenAI shipped this as an index and a permissions layer rather than a smarter model: the 15-point benchmark gain came entirely from better retrieval over a better corpus, using the same underlying GPT-6 Astra the web-search baseline also ran on. The next real jump for legal AI, on this evidence, is more likely to come from whoever builds the next better index than from whoever trains the next bigger model.",
+      "citation_urls": []
+    }
+  ],
+  "id": "newsroom-openai-astra-for-law-legal-research-index-launch",
+  "image": "assets/img/newsroom/openai-astra-for-law-legal-research-index-launch.jpg",
+  "publishedAt": "2026-09-18T19:10:10Z",
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-09-18T19:10:10Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "4 sources across 4 independent evidence threads: OpenAI's own announcement (a direct WebFetch of openai.com returned HTTP 403, the same bot-blocking pattern already logged for this domain -- corroborated instead via two independently staffed legal-trade outlets, SiliconANGLE and LawNext, both of which quote the same benchmark numbers and partner list directly from the source), plus a fifth, separately sourced thread on documented AI-hallucination court sanctions (HAQQ, citing an HEC Paris tracker), added specifically to give the 54% figure a real-world stake rather than reporting it as an isolated product spec. Confirmed via newsroom-articles.js that Astra for Law has no prior coverage; GPT-6 Astra itself is already covered and already on the Scoreboard, referenced here only as already-established context."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "Benchmark numbers (54%, 38.7%, 24%) were confirmed against two independent direct fetches (SiliconANGLE, LawNext) before use, matching house style's primary-plus-confirmation standard for a secondary product claim. The hallucination-sanctions cases are described only by court, outcome, and date -- no named individual attorney or litigant is identified, since the point is the industry backdrop, not any specific case's parties. No health/financial trigger applies; this is not litigation involving OpenAI or Astra for Law itself."
+      },
+      {
+        "name": "Loop 1 - critique and revise",
+        "agent": "claude-runner",
+        "note": "Self-referential-language check: clean. Critique found the first draft let the 54% figure stand as an unambiguous win; revised to add the 46%-unresolved framing and the scorecard's 'partial' rating explicitly, plus the closing paragraph reframing the gain as a retrieval improvement rather than a model improvement, since that is what the evidence actually supports."
+      },
+      {
+        "name": "Loop 2 - component provenance check",
+        "agent": "claude-runner",
+        "note": "The keyfacts items, the chart's two values, and the scorecard's claim all trace to sourced prose immediately adjacent. No component carries a top-level text field. No two components sit adjacent."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Approved. 4 sources, 4 independent evidence threads, correctly routed as synthesis. Three components (keyfacts, chart, scorecard), chart data-carrying. No mandatory-scrutiny trigger fired."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "States the benchmark gain in both directions (54% up from 38.7%, and 46% still wrong), sources the hallucination-sanctions backdrop independently rather than taking OpenAI's framing at face value, and reframes the actual mechanism of the improvement (retrieval over a better index, not a smarter model) rather than repeating the launch's own framing uncritically."
+    }
+  }
+}
 ]
 ;

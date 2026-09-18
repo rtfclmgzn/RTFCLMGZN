@@ -21263,5 +21263,302 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-18T14:46:58Z"
       }
     ]
-  }
+  },
+{
+  "article_id": "newsroom-california-newsom-ai-kill-switch-executive-order",
+  "ts": "2026-09-18T19:08:05Z",
+  "export": {
+    "article_id": "newsroom-california-newsom-ai-kill-switch-executive-order",
+    "url": "https://rtfclmgzn.com/article/california-newsom-ai-kill-switch-executive-order",
+    "headline": "California will study a mandatory AI \"kill switch\" -- the idea Newsom vetoed as SB 1047 two years ago",
+    "hook": "Newsom just ordered a study of the AI kill switch he vetoed two years ago -- while a Trump order already exists to preempt state AI laws like it.",
+    "key_facts": [
+      "Newsom's Sept. 18 executive order gives a panel until Nov. 16 to recommend AI-oversight changes.",
+      "Newsom vetoed SB 1047, a near-identical kill-switch bill, in September 2024.",
+      "A December 2025 Trump order already targets state AI laws like this one for preemption."
+    ],
+    "tone": "Composed, legally precise, strategic",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/california-newsom-ai-kill-switch-executive-order.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "California just ordered a study of the AI \"kill switch\" Newsom vetoed as SB 1047 two years ago. Days earlier, a GOP senator blocked the federal version on the Senate floor. A Trump order already exists to preempt state AI laws like it.",
+      "reply_copy": "Full analysis:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AIRegulation",
+        "#California"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-19T00:08:05Z",
+      "copy": "Two years ago California vetoed a mandatory AI kill switch. On Sept. 18 it ordered a study of... the same idea. The twist nobody's framing mentions: a Dec. 2025 Trump order already exists to preempt state AI laws exactly like this one.",
+      "reply_copy": "The full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AIPolicy",
+        "#Newsom"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "California just did an about-face on AI.\n\nTwo years after vetoing a mandatory \"kill switch\" for frontier AI models, Gov. Newsom signed an executive order Sept. 18 ordering a study of... basically the same idea.\n\nThe panel has until Nov. 16 to recommend changes.\n\nThe catch: a Trump order already exists to preempt state AI laws like this one.\n\nFull story at the link.",
+      "hashtags": [
+        "#AIRegulation",
+        "#California",
+        "#Newsom",
+        "#AIPolicy",
+        "#FrontierAI",
+        "#TechPolicy",
+        "#KillSwitch",
+        "#AISafety"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Gov. Gavin Newsom signed an executive order Sept. 18 ordering California agencies to study a mandatory AI \"kill switch\" -- the same mechanism he vetoed as SB 1047 back in September 2024. The panel has until Nov. 16 to recommend changes to state law. Complicating things: a December 2025 Trump executive order already directs the Justice Department to build a legal case against state AI laws like this one.",
+      "hashtags": [
+        "#AIRegulation",
+        "#California"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Newsom vetoed California's AI \"kill switch\" bill in 2024. On Sept. 18 he ordered a study of... basically the same idea, due back Nov. 16. Two days earlier a Republican senator blocked the federal version on the Senate floor. And there's already a Trump order aimed at preempting state AI rules like this one. Nobody's move here is final.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-09-19T00:08:05Z",
+      "copy": "The part of the Newsom AI order most coverage is skipping: a December 2025 Trump executive order already set up a DOJ task force specifically to challenge state AI laws. California's new order might not survive contact with it -- and Newsom's own \"he's dead wrong\" line suggests the state expects that fight.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Newsom vetoed a mandatory AI kill switch in 2024. He just ordered a study of... the same idea, due Nov. 16. A federal version died on the Senate floor two days earlier. A Trump order already exists to preempt state AI rules like this one.",
+      "hashtags": [
+        "#AIRegulation",
+        "#California",
+        "#Newsom"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-figure-ai-helix-2-5-zero-shot-30-homes",
+  "ts": "2026-09-18T19:08:45Z",
+  "export": {
+    "article_id": "newsroom-figure-ai-helix-2-5-zero-shot-30-homes",
+    "url": "https://rtfclmgzn.com/article/figure-ai-helix-2-5-zero-shot-30-homes",
+    "headline": "Figure says pretraining alone took its humanoid from 9% to 56% success in homes it had never seen",
+    "hook": "Figure's humanoid hit 56% success in 30 homes it had never seen, up from 9% without pretraining -- all Figure's own numbers, unreplicated so far.",
+    "key_facts": [
+      "Index pretraining raised Helix 2.5's zero-shot success from 9% to 56% across 30 unseen homes.",
+      "Figure committed $3.5 billion in compute with Nscale to keep training on Index data.",
+      "Tesla, the same week, ordered about 5,000 Optimus units toward a 50,000-unit 2026 target."
+    ],
+    "tone": "Curious, hands-on",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "primary_image": "assets/img/newsroom/figure-ai-helix-2-5-zero-shot-30-homes.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Figure says pretraining alone took its humanoid from 9% to 56% success -- in 30 homes it had never seen. Every number is Figure's own; no outside lab has repeated it. Tesla, same week, ordered 5,000 Optimus units toward a 50,000-unit 2026 goal.",
+      "reply_copy": "Full analysis:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#FigureAI",
+        "#Robotics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-19T00:08:45Z",
+      "copy": "A search summary claimed Figure's home test hit exactly 237 of 420 trials. Direct fetches of the source articles don't confirm that number. Only the 9%-to-56% rates hold up. Worth checking a stat twice before repeating it.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#FigureAI",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "A humanoid robot walked into 30 homes it had never seen...\n\nand succeeded at whole chores 56% of the time -- up from 9% for the same robot without pretraining.\n\nEvery one of those numbers is Figure's own. No outside lab has replicated it yet.\n\nMeanwhile Tesla, same week, ordered 5,000 Optimus units toward a 50,000-unit 2026 goal -- betting on hardware scale instead.\n\nFull breakdown at the link.",
+      "hashtags": [
+        "#FigureAI",
+        "#Robotics",
+        "#Humanoid",
+        "#TeslaOptimus",
+        "#AI",
+        "#ZeroShot",
+        "#Automation"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Figure AI says its Helix 2.5 policy succeeded at whole household chores 56% of the time across 30 homes it had never seen -- up from 9% for an identical model without Index pretraining. The company also committed $3.5 billion in compute to keep training on that data. Every number is Figure's own; no outside lab has repeated the test yet.",
+      "hashtags": [
+        "#FigureAI",
+        "#Robotics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Figure put its new Helix 2.5 policy into 30 homes it had never touched -- zero fine-tuning per home. Result: 56% whole-task success, up from 9% for the same model without pretraining on Figure's Index dataset. All Figure's own numbers; nobody's replicated it yet. Tesla, same week, bet differently: ordered 5,000 Optimus units toward 50,000 by year's end.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-09-19T00:08:45Z",
+      "copy": "Worth flagging: an earlier search summary put Figure's result at \"237 of 420 trials.\" Direct fetches of the actual coverage don't back that number up -- only the 9%-to-56% success rates do. We dropped the unconfirmed figure rather than publish it. Verify twice before repeating a stat.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Figure's humanoid hit 56% success in 30 homes it had never seen -- up from 9% without pretraining. All Figure's own numbers. Tesla, same week, ordered 5,000 Optimus units toward 50,000 by 2026.",
+      "hashtags": [
+        "#FigureAI",
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-openai-astra-for-law-legal-research-index-launch",
+  "ts": "2026-09-18T19:10:10Z",
+  "export": {
+    "article_id": "newsroom-openai-astra-for-law-legal-research-index-launch",
+    "url": "https://rtfclmgzn.com/article/openai-astra-for-law-legal-research-index-launch",
+    "headline": "OpenAI launches Astra for Law with a 230-million-document legal index and a 54% benchmark pass rate",
+    "hook": "OpenAI's Astra for Law scored 54% on a legal-research benchmark, up from 38.7% with plain web search -- and 46% still wasn't fully correct.",
+    "key_facts": [
+      "Astra for Law passed 54% of Vals AI's Legal Research Bench, vs. 38.7% for web search alone.",
+      "The index spans 230M+ URLs of US case law, statutes and court rules, refreshed daily.",
+      "Courts worldwide had logged 1,598 AI-hallucination-citation cases as of June 2026."
+    ],
+    "tone": "Austere, technically exacting, evaluation-first",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "primary_image": "assets/img/newsroom/openai-astra-for-law-legal-research-index-launch.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "OpenAI's new Astra for Law passed 54% of a legal-research benchmark, up from 38.7% with plain web search. Read the other way: 46% still wasn't fully correct. Courts have already logged 1,598 AI-hallucination cases worldwide.",
+      "reply_copy": "Full analysis:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#OpenAI",
+        "#LegalAI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-19T00:10:10Z",
+      "copy": "The real story in OpenAI's Astra for Law launch isn't a smarter model -- it's a better index. Same GPT-6 Astra, same weights. The whole 15-point benchmark gain came from retrieval over 230M legal documents, not from the model getting smarter.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#OpenAI",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "OpenAI just launched an AI built specifically for legal research.\n\nAstra for Law pairs GPT-6 Astra with a 230-million-document legal index, updated daily.\n\nOn an independent benchmark: 54% correct, up from 38.7% with plain web search.\n\nThe catch: that's still 46% not fully right -- and courts worldwide have already logged 1,598 cases of AI-fabricated citations.\n\nFull story at the link.",
+      "hashtags": [
+        "#OpenAI",
+        "#LegalAI",
+        "#LegalTech",
+        "#AIHallucination",
+        "#GPT6",
+        "#Law",
+        "#ArtificialIntelligence"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "OpenAI launched Astra for Law on September 17: its GPT-6 Astra model wrapped in a 230-million-document legal search index, offered to law firms and vendors including Harvey, Legora and Thomson Reuters. On an independent legal-research benchmark, it scored 54% correct, up from 38.7% with plain web search -- a real gain, though still short of full reliability.",
+      "hashtags": [
+        "#OpenAI",
+        "#LegalAI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "OpenAI's new Astra for Law scored 54% on an independent legal-research benchmark, up from 38.7% for the same model doing plain web search. That's a real 15-point gain -- and also means 46% of questions still weren't fully right. Courts worldwide had logged 1,598 cases of AI-fabricated citations as of June. That's the backdrop this launches into.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-09-19T00:10:10Z",
+      "copy": "OpenAI shipped Astra for Law as an index and a permissions layer, not a smarter model -- same GPT-6 Astra underneath. Worth remembering next time a benchmark jump gets credited to \"the model got better\": sometimes the model didn't change at all, and the corpus around it did all the work.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "OpenAI's Astra for Law scored 54% on a legal-research benchmark, up from 38.7% with plain web search. Real gain. Also means 46% still wasn't fully right -- and courts have already logged 1,598 AI-hallucination cases worldwide.",
+      "hashtags": [
+        "#OpenAI",
+        "#LegalAI"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
