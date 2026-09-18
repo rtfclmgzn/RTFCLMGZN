@@ -20962,5 +20962,239 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-17T15:16:31Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-huawei-ascend-960-chip-roadmap-nvidia",
+    "ts": "2026-09-18T14:23:03Z",
+    "export": {
+      "article_id": "newsroom-huawei-ascend-960-chip-roadmap-nvidia",
+      "url": "https://rtfclmgzn.com/article/huawei-ascend-960-chip-roadmap-nvidia",
+      "headline": "Huawei moved its next AI chip up by nine months. It still can't build enough of the current one.",
+      "hook": "Huawei moved its next AI chip's launch up by three quarters -- and in the same keynote admitted it can't build enough of the current one to meet demand.",
+      "key_facts": [
+        "The Ascend 960DT (training) now targets Q1 2027, moved up three quarters from Q4 2027.",
+        "DeepSeek alone reportedly wants more Ascend 950DT chips than Huawei can currently supply.",
+        "No independent lab has benchmarked any of the new chip's performance claims."
+      ],
+      "tone": "Technical, detail-obsessed, skeptical of unverified specs",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/huawei-ascend-960-chip-roadmap-nvidia.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Huawei just moved its next AI chip's launch up by 3 quarters -- timed a week before Trump meets Xi on trade. Same keynote: its own chairman admits Huawei can't build enough of the CURRENT chip to meet demand. Real roadmap, real capacity gap.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": ["#Huawei", "#AIChips"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-18T19:23:03Z",
+        "copy": "The number buried in Huawei's chip-roadmap announcement: DeepSeek alone reportedly wants more Ascend 950DT chips than Huawei says it can currently produce. A faster chip on paper doesn't help if you can't build more of the one you already sell.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": ["#Huawei", "#DeepSeek"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Huawei just moved its next AI chip up by three quarters.\n\nSame keynote: its own rotating chairman admitted the company can't build enough of its CURRENT chip to meet Chinese demand -- DeepSeek's own order alone reportedly exceeds supply.\n\nThe roadmap is real. So is the shortfall.",
+        "hashtags": ["#Huawei", "#Nvidia", "#AIChips", "#SemiconductorNews", "#ChinaTech", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Huawei used its Sept. 17 Connect conference to move its next AI chip's launch up by as much as three quarters -- timed a week before a planned Trump-Xi meeting on trade. But in the same keynote, rotating chairman Eric Xu admitted Huawei can't currently build enough of its existing chip to meet domestic demand; DeepSeek's own order alone reportedly exceeds available supply.",
+        "hashtags": ["#Huawei", "#AIChips"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Huawei moved its next AI chip's launch up by three quarters, timed a week before Trump meets Xi. The SuperPoD specs sound impressive -- but no outside lab has verified any of them, and Huawei's own chairman says the company can't build enough of its CURRENT chip to meet demand. Real acceleration, real capacity ceiling.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-18T19:23:03Z",
+        "copy": "Everyone's talking about Huawei's accelerated Ascend 960 roadmap. The quieter number: DeepSeek's own chip order reportedly exceeds what Huawei can currently supply -- for the CURRENT generation. That's the real ceiling on the acceleration story.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Huawei moved its next AI chip up by 3 quarters -- then admitted in the same breath it can't build enough of the current one to meet demand. Real roadmap, real shortfall.",
+        "hashtags": ["#Huawei", "#AIChips", "#China"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-congress-ai-regulation-inaction-shapiro-guardrails",
+    "ts": "2026-09-18T14:26:18Z",
+    "export": {
+      "article_id": "newsroom-congress-ai-regulation-inaction-shapiro-guardrails",
+      "url": "https://rtfclmgzn.com/article/congress-ai-regulation-inaction-shapiro-guardrails",
+      "headline": "Congress passed 10 AI bills out of committee this year. Not one reached a floor vote before the House left for the midterms.",
+      "hook": "The same week Congress left town without a floor vote on any of 10 AI bills, Pennsylvania's governor used a Pittsburgh keynote to demand the federal guardrails Washington hasn't built.",
+      "key_facts": [
+        "10 AI-related bills passed House committee in June 2026; none has reached a floor vote.",
+        "A bipartisan task force issued 85 AI policy recommendations in December 2024 -- none binding.",
+        "Only 1 AI-related law has actually been enacted since: a 2024 bill on nonconsensual explicit images."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/congress-ai-regulation-inaction-shapiro-guardrails.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "10 AI bills cleared a House committee in June. Not one got a floor vote before Congress left for the midterms. Same week, PA Gov. Shapiro used a Pittsburgh keynote to demand federal guardrails Washington still hasn't built.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": ["#AIPolicy", "#Congress"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-18T19:26:18Z",
+        "copy": "The task force that studied AI policy for a year delivered 85 recommendations in Dec 2024. Eighteen months later: 1 has become law (on deepfake images), and 10 more bills sit stuck in committee. That's the actual scorecard on federal AI regulation.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": ["#AIPolicy", "#Congress"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Congress passed 10 AI bills out of committee in June.\n\nNot one reached a floor vote before the House adjourned early for the midterms.\n\nSame week: PA Governor Josh Shapiro stood in Pittsburgh and demanded the federal guardrails Washington still hasn't built.\n\n\"I am not a doomer,\" he said. \"But we cannot ignore the warning signs.\"",
+        "hashtags": ["#AIRegulation", "#Congress", "#JoshShapiro", "#AIPolicy", "#TechPolicy", "#Pennsylvania"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "On September 17, Pennsylvania Governor Josh Shapiro used a Pittsburgh keynote to demand federal AI guardrails -- the same week House Speaker Mike Johnson sent lawmakers home a day early to campaign, leaving 10 AI-related bills that cleared committee in June without a floor vote. A bipartisan task force issued 85 recommendations back in December 2024; none has become binding law since.",
+        "hashtags": ["#AIPolicy", "#Congress"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Congress passed 10 AI bills out of committee in June. Not one got a floor vote before the House left for the midterms. Same week, PA's governor stood in Pittsburgh and asked why -- naming Speaker Johnson directly for adjourning early. The gap between task force recommendations (85, from Dec 2024) and actual law (1) is the real story here.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-18T19:26:18Z",
+        "copy": "The real number in this story isn't Shapiro's speech -- it's the ledger underneath it. 85 recommendations from a bipartisan task force. 10 bills passed committee. 1 became binding law. Do the math on how much of \"AI regulation\" is actually regulation.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "10 AI bills cleared committee in June. Zero got a floor vote before Congress left for the midterms. A Democratic governor used the same week to ask Washington why.",
+        "hashtags": ["#AIPolicy", "#Congress", "#Pennsylvania"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-1-2-trillion-valuation-funding-talks",
+    "ts": "2026-09-18T14:30:18Z",
+    "export": {
+      "article_id": "newsroom-openai-1-2-trillion-valuation-funding-talks",
+      "url": "https://rtfclmgzn.com/article/openai-1-2-trillion-valuation-funding-talks",
+      "headline": "Investors have pitched OpenAI a $1.2 trillion valuation. OpenAI wants $1.5 trillion. Neither number comes with a public IPO date.",
+      "hook": "Investors floated OpenAI a $1.2 trillion valuation -- up to 76% above March's $852B mark -- on revenue growing slower than Anthropic's, which is asking for a comparable price.",
+      "key_facts": [
+        "OpenAI's annualized revenue topped $40B in August; Anthropic's reached $65B by end of July.",
+        "PitchBook rates OpenAI's business quality 4.8/10, the lowest of the major AI labs it scores.",
+        "OpenAI isn't projected to be cash-flow positive until 2029, per PitchBook's own analysis."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/openai-1-2-trillion-valuation-funding-talks.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Investors have pitched OpenAI a $1.2T valuation. OpenAI wants $1.5T. That's up to 76% above March's $852B mark -- on revenue growing HALF as fast as Anthropic's, which is asking for less.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#Anthropic"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-18T19:30:18Z",
+        "copy": "PitchBook's scorecard: OpenAI 4.8/10 on business quality. Anthropic 7.4. Databricks 8.7. The gap traces to specifics -- ~85% of OpenAI's users are on free tiers, and it's not projected cash-flow positive until 2029.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": ["#OpenAI", "#PitchBook"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Investors pitched OpenAI a $1.2 trillion valuation.\n\nOpenAI wants $1.5 trillion.\n\nEither way, that's up to 76% above March's $852B mark -- on ~$40B revenue.\n\nAnthropic's revenue? $65B, and growing faster, at a comparable valuation ask.\n\nPitchBook's own scorecard rates OpenAI's business quality the lowest of the major labs.",
+        "hashtags": ["#OpenAI", "#Anthropic", "#AIValuation", "#TechIPO", "#VentureCapital", "#SamAltman", "#AIBusiness"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The Financial Times reports OpenAI is in early talks with investors over a private round that could value the company between $1.2 trillion and $1.5 trillion -- up from March's $852 billion. OpenAI's own annualized revenue has topped $40 billion, but Anthropic, the rival OpenAI's new valuation would still exceed, is growing faster off a $65 billion base. Neither company has a confirmed public listing date.",
+        "hashtags": ["#OpenAI", "#AIValuation"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "$1.2 trillion is what investors are floating OpenAI. $1.5 trillion is what OpenAI wants. Both numbers sit next to Anthropic's -- which is growing revenue faster, off a bigger base, asking for a comparable price. PitchBook's own scorecard puts OpenAI's business quality lowest of the major labs it rates. The math is checkable; we built a slider so you can check it yourself.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-18T19:30:18Z",
+        "copy": "The skeptic's case for OpenAI's $1.2T ask, in one number: PitchBook rates its business quality 4.8/10, the lowest of the major AI labs it scores. Anthropic: 7.4. Not because of weak growth -- because of free-tier concentration and a 2029 cash-flow-positive timeline.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Investors floated OpenAI $1.2T. OpenAI wants $1.5T. Its own revenue growth trails Anthropic's, which is asking for a similar price on more revenue. Neither has a public listing date.",
+        "hashtags": ["#OpenAI", "#Anthropic", "#AIValuation"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
