@@ -20377,8 +20377,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "ByteDance signed a $29.6B syndicated loan -- Asia's 2nd-largest dollar deal of 2026, priced at 68bps over SOFR (vs 85bps in 2024). Weighing $70B in 2026 AI capex, up from ~$25B in 2025. ByteDance hasn't confirmed either figure.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvrfmbm2uu2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvrfmbm2uu2y",
+        "posted_at": "2026-09-18T05:08:36Z"
       }
     ]
   },
@@ -20823,14 +20825,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122121329085396947",
+        "remote_id": "1238977099292018_122121329085396947",
+        "posted_at": "2026-09-18T05:04:01Z"
       },
       {
         "platform": "threads",
         "copy": "Canada and Germany just backed Yoshua Bengio's anti-race AI nonprofit LawZero with CAD 150M + EUR 100M. The bet: safety and capability aren't actually in tension. The scale check: that's nothing next to the $725B big tech plans to spend on AI compute in 2026.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdapEbJkao4",
+        "remote_id": "17891623062612246",
+        "posted_at": "2026-09-18T05:04:25Z"
       },
       {
         "platform": "bluesky",
@@ -20840,8 +20846,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvrff2ezc52y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvrff2ezc52y",
+        "posted_at": "2026-09-18T05:04:33Z"
       }
     ]
   },
@@ -20877,7 +20885,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -20892,7 +20900,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -20907,8 +20917,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Biotech",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Ddaoim-j_0C/",
+        "remote_id": "17934576780384073",
+        "posted_at": "2026-09-18T04:59:50Z"
       },
       {
         "platform": "facebook",
@@ -20917,14 +20929,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIHealth",
           "#OpenData"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122121328455396947",
+        "remote_id": "1238977099292018_122121328455396947",
+        "posted_at": "2026-09-18T04:59:58Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI's nonprofit put $125M+ into open biology datasets Sept. 15 -- drug absorption, failed-trial records, cancer-vaccine data. None of the three grantees has published a dataset yet. It's also a small slice of a $25B pledge from a foundation sitting on a $130B OpenAI stake.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddaol1iEemE",
+        "remote_id": "18095942156636666",
+        "posted_at": "2026-09-18T05:00:14Z"
       },
       {
         "platform": "bluesky",
