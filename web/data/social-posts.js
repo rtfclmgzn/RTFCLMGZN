@@ -21435,8 +21435,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#FigureAI",
           "#Robotics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122121567357396947",
+        "remote_id": "1238977099292018_122121567357396947",
+        "posted_at": "2026-09-19T04:57:28Z"
       },
       {
         "platform": "threads",
@@ -21460,8 +21462,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvtvobnuwb2l",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvtvobnuwb2l",
+        "posted_at": "2026-09-19T05:01:23Z"
       }
     ]
   },
@@ -21497,7 +21501,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -21512,7 +21516,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -21526,8 +21532,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Law",
           "#ArtificialIntelligence"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DddMfOtD8D5/",
+        "remote_id": "17879562354626529",
+        "posted_at": "2026-09-19T04:52:34Z"
       },
       {
         "platform": "facebook",
@@ -21536,22 +21544,28 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#LegalAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122121566469396947",
+        "remote_id": "1238977099292018_122121566469396947",
+        "posted_at": "2026-09-19T04:52:43Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI's new Astra for Law scored 54% on an independent legal-research benchmark, up from 38.7% for the same model doing plain web search. That's a real 15-point gain -- and also means 46% of questions still weren't fully right. Courts worldwide had logged 1,598 cases of AI-fabricated citations as of June. That's the backdrop this launches into.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DddMjo5Dq7G",
+        "remote_id": "18026656373909592",
+        "posted_at": "2026-09-19T04:53:01Z"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-09-19T00:10:10Z",
         "copy": "OpenAI shipped Astra for Law as an index and a permissions layer, not a smarter model -- same GPT-6 Astra underneath. Worth remembering next time a benchmark jump gets credited to \"the model got better\": sometimes the model didn't change at all, and the corpus around it did all the work.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DddNCcJDrYk",
+        "remote_id": "18032166095850741",
+        "posted_at": "2026-09-19T04:57:12Z"
       },
       {
         "platform": "bluesky",
@@ -21560,8 +21574,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#LegalAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvtvh2jyby2n",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvtvh2jyby2n",
+        "posted_at": "2026-09-19T04:57:20Z"
       }
     ]
   }
