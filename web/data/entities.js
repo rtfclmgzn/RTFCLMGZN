@@ -145,6 +145,8 @@ window.RTFC_ENTITIES = {
       kind:"vision-language model", access:"open-weights" },
     { re:/\bQwen3\.8-Flash(?:-Next)?\b/i, name:"Qwen3.8-Flash-Next", maker:"Alibaba", makerKey:"alibaba",
       kind:"open-weights model", access:"open-weights" },
+    { re:/\bQwen3\.8-Omni-Flash\b/i, name:"Qwen3.8-Omni-Flash", maker:"Alibaba", makerKey:"alibaba",
+      kind:"omni-modal model", access:"closed" },
     { re:/\bQwen\b/i, name:"Qwen", maker:"Alibaba", makerKey:"alibaba",
       kind:"model family", access:"open-weights" },
     { re:/\bERNIE\b/i, name:"ERNIE", maker:"Baidu", makerKey:"baidu",

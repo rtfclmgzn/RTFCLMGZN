@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-647", date:"2026-09-19",
+    source:{ name:"Mantic", handle:"manticAI", platform:"web", kind:"lab" },
+    text:"Mantic, a London forecasting startup co-founded by ex-Google DeepMind researcher Toby Shevlane, raised a $25 million seed round led by Radical Ventures (with Microsoft's M12, Thinking Machines Lab and Balderton Capital also in), after its AI system outscored human forecasters at the summer 2026 Metaculus Cup -- specializing frontier models from other labs specifically for predicting real-world events.",
+    why:"An AI system beating human forecasters at their own competition, then immediately raising venture money to commercialize it, is a concrete data point in the 'can AI predict the future better than experts' debate this newsroom's own coverage keeps circling back to.",
+    heat:34, topics:["mantic","forecasting","toby shevlane","metaculus","radical ventures","seed funding"],
+    url:"https://finance.yahoo.com/technology/ai/articles/ai-startup-mantic-raises-25-101010662.html" },
+{ id:"bz-648", date:"2026-09-19",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI added Chrome extension support to the built-in browser inside the ChatGPT desktop app on September 18, letting users install and pin extensions like 1Password to autofill credentials while ChatGPT works across websites. Enterprise admins can centrally deploy and manage extensions across a workforce. The in-app browser keeps its own state -- it does not inherit a user's existing Chrome profile, cookies or signed-in sessions.",
+    why:"Extension support turns ChatGPT's in-app browser from a sandboxed novelty into something closer to a real daily browser, which is exactly the kind of infrastructure bet that decides whether an agent actually gets used for everyday tasks or stays a demo.",
+    heat:29, topics:["openai","chatgpt","chrome extensions","browser","1password","enterprise"],
+    url:"https://runtimewire.com/article/openai-chatgpt-desktop-browser-chrome-extensions" },
 { id:"bz-626", date:"2026-09-19",
     source:{ name:"Fingerprint", handle:"fingerprintjs", platform:"web", kind:"lab" },
     text:"Fingerprint launched Bot Directory, a public, continuously updated, searchable catalog of AI agents, bots and crawlers detectable by its Bot Detection product -- letting site owners look up a given bot's identity and purpose, test their own AI agents for Web Bot Auth compliance, and submit new agents for inclusion.",
