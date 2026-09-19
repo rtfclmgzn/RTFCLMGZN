@@ -626,3 +626,17 @@
   that's arguably too narrow is still not mine to silence). The owner should decide whether to
   widen `ALLOWED_PREFIXES` to cover `newsroom/runner/*.md` explicitly, given Law 10 depends on
   this file being writable every cycle.
+- **2026-09-19** (newsroom cycle, ~00:30 UTC): `git pull --rebase origin main` hit a real,
+  structural CONFLICT in `web/index.html` -- not the "same number twice" collision SS5 step 7
+  already anticipates, but a genuinely different one: a breaking-scan run that landed mid-cycle
+  bumped the cache-buster's trailing hex suffix (`1450cabe82` -> `1450cabe83`), while this cycle's
+  own step-1 edit bumped the leading integer (`1450cabe82` -> `1451cabe82`) -- both are valid,
+  non-overlapping bumps to the same literal string, so every one of the ~39 occurrences conflicted.
+  Followed SS5's own instruction exactly: did not resolve it, did not take either side wholesale,
+  ran `git rebase --abort` and left the cycle's commit sitting local and unpushed rather than
+  guessing at a merge. This is a first-hand instance of the runbook's own point number 1450 -- a
+  scan overlapping a longer cycle is normal, not rare -- but it shows the cache-buster's actual
+  format (`<int><suffix>`) makes even a clean rebase land on a real conflict, not just a same-value
+  collision, whenever two runs touch the string in different places at once. Worth a future pass
+  considering a cache-buster scheme that doesn't multi-encode two independent counters into one
+  string a naive full-file bump has to touch on every line.
