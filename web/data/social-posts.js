@@ -21586,5 +21586,268 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-19T04:57:20Z"
       }
     ]
+  },
+  {
+    "article_id": "g22",
+    "ts": "2026-09-19T13:54:46Z",
+    "export": {
+      "article_id": "g22",
+      "url": "https://rtfclmgzn.com/article/give-an-ai-agent-email-calendar-access-safely",
+      "headline": "How to give an AI agent access to your email and calendar without handing it everything",
+      "hook": "Connecting Claude or ChatGPT to Gmail looks like one click. It's actually several settings bundled together, and one of them -- who can turn off approval prompts -- most people never check.",
+      "key_facts": [
+        "Gmail, Calendar and Drive connect as separate toggles on both Claude and ChatGPT, never one switch.",
+        "Both ask for approval before sending an email or deleting a file -- by default.",
+        "Team and Enterprise plan owners can switch that approval off without an individual member seeing it."
+      ],
+      "tone": "Consumer-facing, plainspoken, checklist-driven",
+      "persona": "nova-reyes",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g22.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Connecting an AI agent to Gmail and Calendar looks like one click. It's actually 3-4 separate decisions -- which app, whether writes need your OK, and who controls that setting. Here's the 5-step way to do it without over-granting:",
+        "reply_copy": "The 5-step workflow:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Connecting Claude or ChatGPT to your Gmail and Calendar looks like one decision: click Allow, sign in, done.\n\nIt's actually several settings bundled together -- which specific app gets access, whether sending or deleting needs your OK first, and whether your workplace already switched that approval off for you.\n\nOur new guide walks through the 5-step way to connect an AI agent without quietly handing it more than the task needs -- Calendar first, Gmail last, and how to actually check what it did. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#ChatGPT",
+          "#TechTips",
+          "#Claude",
+          "#Productivity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Connecting an AI assistant to your email and calendar is fast becoming routine -- and most people click through the setup without realizing how many separate decisions are bundled into it.\n\nGmail, Calendar and Drive connect as separate toggles on both Claude and ChatGPT. Both ask for approval before sending an email or deleting a file, by default -- but Team and Enterprise plan owners can switch that approval off, and an individual user might never see it happen.\n\nOur new guide walks through the safe order to connect an agent -- start with Calendar, test with a low-stakes task, check the actual action log -- before you ever add Gmail.",
+        "hashtags": [
+          "#AI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Connecting an AI agent to Gmail and Calendar bundles 3-4 decisions into one click -- which app, whether writes need approval, who controls that setting. Our new guide: connect Calendar first, test low-stakes, check the log, add Gmail last.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Connecting an AI agent to Gmail/Calendar looks like one click but bundles several decisions -- which app, whether writes need your OK, who controls that setting. The safe order to do it, and the one setting worth testing before you trust it:",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-king-charles-ai-summit-huang-hold-it-back-chip-doubling",
+    "ts": "2026-09-19T14:03:33Z",
+    "export": {
+      "article_id": "newsroom-king-charles-ai-summit-huang-hold-it-back-chip-doubling",
+      "url": "https://rtfclmgzn.com/article/king-charles-ai-summit-huang-hold-it-back-chip-doubling",
+      "headline": "Jensen Huang tells King Charles's AI summit 'hold it back' -- then repeats a forecast to double chip sales",
+      "hook": "At a private AI summit hosted by King Charles III, Nvidia's Jensen Huang said 'if it's not ready, just hold it back' -- then, same afternoon, restated his forecast to sell twice as many chips next year.",
+      "key_facts": [
+        "~30 executives and policymakers met King Charles III at Dumfries House, Scotland, on Sept. 17.",
+        "Huang: \"If it's not ready, just hold it back... no faster than\" that.",
+        "The chip-doubling forecast restates Nvidia's own Aug. 26 guidance -- 70% FY2028 revenue growth."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/king-charles-ai-summit-huang-hold-it-back-chip-doubling.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "At King Charles III's private AI summit, Nvidia's Jensen Huang said \"if it's not ready, just hold it back.\" Same afternoon, he restated his forecast to sell twice as many chips next year. Both things happened in one conversation:",
+        "reply_copy": "The full read:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-19T19:03:33Z",
+        "copy": "The gap worth naming in Jensen Huang's 'hold it back' line from Scotland: he named no product Nvidia has actually held back, and no metric for 'ready.' The growth forecast he repeated in the same breath was unhedged. One of those is checkable. One isn't yet.",
+        "reply_copy": "Full piece:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "King Charles III hosted a private AI summit at Dumfries House on September 17 -- around 30 executives and policymakers from OpenAI, Anthropic, Google DeepMind and Nvidia, while protesters spray-painted anti-AI slogans on nearby beaches.\n\nNvidia's Jensen Huang delivered two messages in the same afternoon: \"If it's not ready, just hold it back\" -- and a restated forecast to sell twice as many chips next year.\n\nOne of those is a new position. The other is guidance Nvidia already gave Wall Street three weeks earlier. Full breakdown at the link.",
+        "hashtags": [
+          "#Nvidia",
+          "#AI",
+          "#JensenHuang",
+          "#TechNews",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "King Charles III convened roughly 30 AI executives and policymakers -- including leaders from OpenAI, Anthropic, Google DeepMind and Nvidia -- at Dumfries House in Scotland on September 17, amid mounting public concern over unchecked AI development.\n\nNvidia CEO Jensen Huang delivered the most quotable remarks of the day, on both sides of the industry's central tension: \"If it's not ready, just hold it back\" on safety, and a restated forecast to sell twice as many chips next year on growth -- the same 70% fiscal-2028 guidance his CFO gave investors three weeks earlier.\n\nNo joint statement or binding commitment came out of the summit. Our analysis digs into what that gap actually means.",
+        "hashtags": [
+          "#Nvidia",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "King Charles III's private AI summit produced one memorable split: Jensen Huang saying \"if it's not ready, just hold it back\" on safety, then restating his own forecast to double chip sales next year in the same breath. No agreement came out of it -- just quotes.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-19T19:03:33Z",
+        "copy": "Worth separating at King Charles's AI summit: Huang's safety line names no product actually held back and no metric for \"ready.\" His growth forecast, repeated the same afternoon, is unhedged and already public. One of those is a real commitment. Watch which one changes first.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "At King Charles III's private AI summit, Nvidia's Jensen Huang said \"if it's not ready, just hold it back\" -- then, same afternoon, restated his forecast to sell twice as many chips next year. No agreement came out of Dumfries House. Just quotes, pulling two directions:",
+        "hashtags": [
+          "#Nvidia",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-temporal-550-million-series-e-12-55-billion-valuation",
+    "ts": "2026-09-19T14:07:16Z",
+    "export": {
+      "article_id": "newsroom-temporal-550-million-series-e-12-55-billion-valuation",
+      "url": "https://rtfclmgzn.com/article/temporal-550-million-series-e-12-55-billion-valuation",
+      "headline": "Temporal raises $550M at a $12.55B valuation -- 2.5x higher than seven months ago",
+      "hook": "Temporal's valuation more than doubled in seven months, to $12.55 billion -- pricing the workflow-reliability company at roughly 50x its own disclosed $250M revenue run rate.",
+      "key_facts": [
+        "$550M Series E closed Sept. 14 at $12.55B, up from $5B in February and $1.72B in March 2025.",
+        "Temporal says its revenue run rate tops $250M, up 200%+ year-over-year -- a ~50x multiple.",
+        "OpenAI's usage of the platform reportedly grew 60-fold in under a year, per Temporal's own account."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/temporal-550-million-series-e-12-55-billion-valuation.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Temporal just raised $550M at a $12.55B valuation -- 2.5x what it was worth seven months ago. That prices the round at roughly 50x its own disclosed $250M revenue run rate. The math, and what \"run rate\" doesn't tell you:",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIFunding",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-19T19:07:16Z",
+        "copy": "Temporal's valuation, round by round: $1.72B (Mar '25) -> $2.5B (Oct '25) -> $5B (Feb '26) -> $12.55B (Sept '26). A 7x climb in 18 months, on infrastructure that gets more valuable as AI agents get longer and more failure-prone. Real bet or just a hot narrative? Both, so far.",
+        "reply_copy": "Full analysis:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Temporal -- the \"durable execution\" company that lets software resume from a failure instead of restarting -- just closed a $550M Series E at a $12.55 billion valuation.\n\nThat's 2.5x what it was worth seven months ago, and roughly 50x its own disclosed $250M revenue run rate.\n\nOpenAI, Snap and Nvidia are named customers -- OpenAI's usage reportedly grew 60-fold in under a year. Real infrastructure demand, or a hot narrative riding the AI-agent wave? Our breakdown at the link.",
+        "hashtags": [
+          "#AIFunding",
+          "#VentureCapital",
+          "#OpenAI",
+          "#TechNews",
+          "#StartupFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Temporal, the open-source \"durable execution\" infrastructure company, closed a $550 million Series E on September 14 at a $12.55 billion valuation -- more than doubling the $5 billion it was worth just seven months ago.\n\nThe company says its annualized revenue run rate now tops $250 million, growing over 200% year-over-year, with OpenAI's usage of the platform reportedly growing 60-fold in under a year. That prices the round at roughly 50 times revenue -- simple arithmetic on Temporal's own disclosed numbers.\n\nOur analysis lays out the four-round valuation climb and what \"run rate\" does and doesn't tell you about a company growing this fast.",
+        "hashtags": [
+          "#AIFunding",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Temporal raised $550M at a $12.55B valuation -- 2.5x higher than seven months ago, and roughly 50x its own disclosed $250M revenue run rate. OpenAI's usage reportedly grew 60-fold in under a year. Structural demand or hot narrative? The numbers, both ways:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-19T19:07:16Z",
+        "copy": "Temporal's valuation climbed 7x in 18 months: $1.72B to $2.5B to $5B to $12.55B. The pace itself is the story -- the last doubling took under 8 months. Infrastructure that gets more valuable as AI agents get longer is a real bet. It's also, so far, unaudited.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Temporal raised $550M at a $12.55B valuation -- 2.5x higher than seven months ago. That prices the round at roughly 50x its own disclosed $250M revenue run rate. OpenAI's usage reportedly grew 60-fold in a year. The math, both ways:",
+        "hashtags": [
+          "#AIFunding"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

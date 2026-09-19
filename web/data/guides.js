@@ -5745,5 +5745,307 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g22",
+    "slug": "give-an-ai-agent-email-calendar-access-safely",
+    "image": "assets/img/newsroom/g22.jpg",
+    "title": "How to give an AI agent access to your email and calendar without handing it everything",
+    "dek": "Connecting Claude or ChatGPT to Gmail and Calendar looks like one click. It's actually three separate decisions -- which specific app, whether each write action needs your OK, and who controls that setting for your account. Here's the workflow that keeps an agent useful without quietly granting more than the task needs.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-19T13:54:46Z",
+    "readMins": 6,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Gmail, Calendar, and Drive connect as separate switches, never one bundled Google toggle.",
+      "Claude and ChatGPT both ask approval before sending an email or deleting a file, by default.",
+      "Team and Enterprise admins can turn that approval step off without an individual user seeing it happen.",
+      "Connect one low-stakes app first, then check the actual action log, not just the reply.",
+      "Caveat: revoking access later doesn't unsend anything -- the approval prompt is the only real safety net."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Connect Calendar before Gmail, and test with a real but low-stakes task first.",
+        "text": "A read-then-suggest task like finding a meeting slot exercises the connector without risking anything that leaves your control if it goes wrong."
+      },
+      {
+        "label": "Confirm per-send approval is actually on -- don't assume the default holds.",
+        "text": "Team and Enterprise plan owners can switch off per-action approval for their members; test with a real send before trusting documentation alone."
+      },
+      {
+        "label": "Check the connector's own action log for your first few sessions.",
+        "text": "A confident, correct-sounding reply can still be reading the wrong account or calendar -- the log is the only place that shows what actually happened."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Use Google Workspace connectors",
+        "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+        "outlet": "Claude Help Center",
+        "kind": "primary"
+      },
+      {
+        "label": "ChatGPT Can Now Connect Multiple Google Accounts for Gmail, Calendar, and Contacts",
+        "url": "https://www.datastudios.org/post/chatgpt-can-now-connect-multiple-google-accounts-for-gmail-calendar-and-contacts",
+        "outlet": "Data Studios",
+        "kind": "reporting"
+      },
+      {
+        "label": "Can ChatGPT Send Emails? The Honest Answer (2026)",
+        "url": "https://www.usecarly.com/blog/can-chatgpt-send-emails/",
+        "outlet": "usecarly.com",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Connect Claude or ChatGPT to Gmail and Calendar and the setup screen makes it look like one decision: click Allow, sign in with Google, done. **It is actually three or four separate decisions bundled into a single click** -- which specific apps get access, whether each action that writes something needs your sign-off first, and whether your organization has already switched that sign-off off on your behalf. None of that shows up on the consent screen. Here's the workflow that keeps an agent useful for what you actually wanted -- drafting a reply, finding an open slot -- without quietly handing it more than that.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This isn't hypothetical. Gmail and Calendar connectors now live inside both companies' standard chat interface, not buried in a developer console -- and OpenAI's own connector lineup expanded again on August 28, 2026, adding support for multiple Google accounts in the same conversation. ==The capability arrived fast; the habits for using it safely haven't caught up at the same pace.==",
+        "citation_urls": [
+          "https://www.datastudios.org/post/chatgpt-can-now-connect-multiple-google-accounts-for-gmail-calendar-and-contacts"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two connectors that look like one",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Both vendors build the connection the same basic way underneath. Gmail, Calendar, Drive, and (for ChatGPT) Contacts are **separate connectors, not one Google switch** -- [Anthropic](/company/anthropic)'s own support documentation says Claude \"only accesses your data when you explicitly ask a question or request an action requiring this information, and retrieves the minimum information needed,\" and each app toggles on its own. [OpenAI](/company/openai)'s version works the same way: each Google identity is connected separately, so a user can add Calendar and leave the inbox out entirely, and since the August 28 update the same ChatGPT conversation can even hold two separate Google identities at once -- a work account and a personal one, kept apart rather than merged.",
+        "citation_urls": [
+          "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+          "https://www.datastudios.org/post/chatgpt-can-now-connect-multiple-google-accounts-for-gmail-calendar-and-contacts"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Two vendors, the same basic shape",
+          "columns": [
+            {
+              "label": "Claude",
+              "sub": "Anthropic"
+            },
+            {
+              "label": "ChatGPT",
+              "sub": "OpenAI",
+              "hi": true
+            }
+          ],
+          "rows": [
+            {
+              "label": "Gmail, Calendar, Drive connect as separate toggles",
+              "values": [
+                "Yes",
+                "Yes"
+              ]
+            },
+            {
+              "label": "Sending an email asks for approval each time, by default",
+              "values": [
+                "Yes",
+                "Yes -- Allow/Deny prompt"
+              ]
+            },
+            {
+              "label": "An admin can pre-approve actions so members aren't asked",
+              "values": [
+                "Yes, on Team and Enterprise plans",
+                "Not documented in vendor help pages"
+              ],
+              "note": "absence of documentation isn't proof the override doesn't exist -- test your own account"
+            },
+            {
+              "label": "Multiple Google accounts connected at once",
+              "values": [
+                "Not documented either way",
+                "Yes, since Aug 28, 2026"
+              ]
+            },
+            {
+              "label": "Gmail attachment content readable (not just metadata)",
+              "values": [
+                "No -- metadata and file names only",
+                "Not documented in the same explicit terms"
+              ]
+            }
+          ],
+          "source": "Claude Help Center, \"Use Google Workspace connectors\"; ChatGPT's Aug 28, 2026 multi-account update and usecarly.com's send-flow reporting."
+        }
+      },
+      {
+        "type": "p",
+        "text": "That third row is worth sitting with. Anthropic states outright that Team and Enterprise plan owners can let their members skip the approval prompt entirely -- a setting an individual user might never see get flipped. OpenAI's own help pages don't spell out an equivalent override, but that's a gap in what's publicly documented, not proof the behavior can't exist. ==The honest move is to test your own account rather than assume either direction.==",
+        "citation_urls": [
+          "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors"
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "\"Claude only accesses your data when you explicitly ask a question or request an action requiring this information, and retrieves the minimum information needed.\" -- Claude Help Center, on Google Workspace connectors",
+        "citation_urls": [
+          "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sending is the one action worth treating differently from the rest. ChatGPT's send capability is restricted to paid plans and requires an explicit Allow on every single message. {{note: It has also been geofenced out of the EU and UK entirely since mid-2026 -- connecting the account still works there, just not the send action itself.}} **A connector that's active is not the same thing as a connector that can act without you watching.**",
+        "citation_urls": [
+          "https://www.usecarly.com/blog/can-chatgpt-send-emails/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The workflow: connect, test, then trust",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of this is an argument against connecting an agent to your inbox -- it's an argument for doing it in an order that shows you what you actually granted before you find out the hard way. The underlying idea has a name security teams already use: __least privilege__, give access to only what the task in front of you needs, not what might be convenient six months from now. Five steps, about ten minutes:",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Connect an AI agent to email and calendar without over-granting",
+          "sub": "Maps to either Claude's Google Workspace connectors or ChatGPT's Google apps -- the steps are the same shape on both.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "A Google account you're comfortable connecting -- use a secondary or work account first if you have one.",
+            "About 10 minutes with no urgent email or calendar event pending."
+          ],
+          "steps": [
+            {
+              "do": "Connect exactly one app first -- Calendar, not Gmail.",
+              "detail": "Calendar carries far less sensitive content than an inbox, and it's the easiest place to see whether the connector actually behaves the way its documentation says it will.",
+              "verify": "Only Calendar shows as connected in your settings; Gmail and Drive stay off.",
+              "ifnot": "If the connector screen only offers one bundled 'Google' switch instead of per-app toggles, that vendor doesn't support granular connection here -- decide whether to proceed knowing it's all-or-nothing."
+            },
+            {
+              "do": "Leave the default approval setting alone -- don't turn on auto-allow yet.",
+              "detail": "Both vendors ask before an action that writes anything -- sending, deleting, creating an event -- by default. That's the setting doing its job.",
+              "verify": "Ask the agent to create a test calendar event and confirm you see an explicit approval prompt before it appears on your calendar.",
+              "ifnot": "If the event appears with no prompt, an admin-level override is already active on your account -- find out who set it before connecting anything more sensitive."
+            },
+            {
+              "do": "Run one real but low-stakes task -- find a meeting slot, don't send anything yet.",
+              "detail": "A read-then-suggest task exercises the connector's read access without touching anything that leaves your control if it goes wrong.",
+              "verify": "The agent's answer matches what you'd find checking your calendar yourself.",
+              "ifnot": "If the answer is wrong or stale, the connector may be reading a different calendar than you expect -- confirm which one before trusting an answer that touches other people's time."
+            },
+            {
+              "do": "Check the connector's own action log, not just the reply you got.",
+              "detail": "Claude and ChatGPT both keep a record of what a connector actually read or wrote, separate from the summary shown in the chat.",
+              "verify": "The log shows only the action you expected -- one calendar read, nothing from Gmail or Drive.",
+              "ifnot": "If the log shows access to an app you didn't intend to connect, disconnect immediately and treat every reply from that session as unverified."
+            },
+            {
+              "do": "Add Gmail only once Calendar has held up, and keep per-send approval on.",
+              "hi": true,
+              "detail": "Sending is the one action with no undo. Once approval is switched off, it stays off for every message going forward, not just the ones you happened to be watching.",
+              "verify": "You've sent at least one agent-drafted email through the visible approval prompt, and the draft matched what actually went out.",
+              "ifnot": "If your workspace already has approval switched off by an admin, ask for a personal exception or a way to route agent-drafted mail through your own review first."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Step five points at the real question every team runs into eventually: should per-action approval ever come off? The honest answer depends on what the agent is actually doing, not on how much you trust it in the abstract.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH MODE",
+          "title": "Should you turn off per-action approval?",
+          "question": "What is the connector actually doing?",
+          "branches": [
+            {
+              "when": "Reading calendars or inboxes to answer questions -- never sending or deleting.",
+              "then": "Leave it as-is. There's no write action to gate, so this is already the safest mode available.",
+              "because": "A read-only task has no action to approve; the risk this whole guide is about doesn't exist yet."
+            },
+            {
+              "when": "Drafting emails or events for one person to review and send themselves.",
+              "then": "Keep per-send approval on indefinitely -- don't graduate this one.",
+              "because": "The entire value of the workflow is a human reading the draft before it becomes a message; removing that step removes the only check in the system."
+            },
+            {
+              "when": "Running a bounded, repetitive task -- like auto-declining conflicting meeting invites -- that a team has actually reviewed.",
+              "then": "A narrowly-scoped auto-allow, set by an admin for that one task, is reasonable here.",
+              "because": "The task is bounded and reviewed in advance, which is a different risk profile than open-ended access to whatever's useful.",
+              "hi": true
+            },
+            {
+              "when": "You're not sure which of the above applies yet.",
+              "then": "Default to per-action approval and revisit once the actual usage pattern is clear.",
+              "because": "Turning approval off is reversible in name only -- anything sent while it was off can't be unsent, so the default should hold until you can name the specific task that needs it removed."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Whichever branch applies, notice that three of the four keep approval on. That's not caution for its own sake -- the failure mode here (an email that goes out, a meeting that gets moved) **has no undo**, so the bar to remove the one check that catches it should be a specific, reviewed task, not a general sense that things have been going fine.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this goes sideways",
+          "items": [
+            {
+              "mistake": "Connecting Gmail first because it feels like the real use case.",
+              "looks": "Realizing days later you never actually checked what the calendar or Drive connector was doing in the background.",
+              "why": "Inbox access is the most sensitive grant and the hardest to audit after the fact -- starting there makes your first real test also your highest-stakes one.",
+              "fix": "Start with Calendar, confirm the approval prompts behave as documented, and add Gmail last.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming per-send approval is on because the vendor's docs say it's the default.",
+              "looks": "An agent-sent email nobody remembers approving.",
+              "why": "Team and Enterprise plans can have that default switched off by an admin, and an individual member may never see the setting that changed.",
+              "fix": "Test with a real send before trusting the documented default -- don't infer it.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating 'disconnect the connector' as if it undoes what already happened.",
+              "looks": "Revoking access after a bad send, expecting the email to come back.",
+              "why": "Disconnecting stops future access. It does nothing to a message already sitting in someone else's inbox.",
+              "fix": "Treat the approval prompt itself as the actual point of no return, not the disconnect button.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Never checking the action log because the chat reply looked right.",
+              "looks": "Trusting a confident summary without knowing which account or calendar it actually came from.",
+              "why": "A reply can be accurate about the wrong calendar, or drawn from an account you didn't mean to connect, and still read as correct.",
+              "fix": "Check the connector's own log for at least your first few sessions, until its behavior matches its documentation.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this asks for more trust in the agent -- it asks for the same habit you'd use handing a new hire their first set of keys: **the smallest useful set first, a way to check what they actually did with it, and no illusion that taking the keys back undoes what's already been done.**",
+        "citation_urls": []
+      }
+    ],
+    "corrections": []
   }
 ];

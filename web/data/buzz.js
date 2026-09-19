@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-626", date:"2026-09-19",
+    source:{ name:"Fingerprint", handle:"fingerprintjs", platform:"web", kind:"lab" },
+    text:"Fingerprint launched Bot Directory, a public, continuously updated, searchable catalog of AI agents, bots and crawlers detectable by its Bot Detection product -- letting site owners look up a given bot's identity and purpose, test their own AI agents for Web Bot Auth compliance, and submit new agents for inclusion.",
+    why:"A device-intelligence vendor building a public reference registry for AI bots is the same instinct behind this newsroom's own Scoreboard and Grid -- an attempt to make an otherwise invisible category of traffic checkable rather than just claimed.",
+    heat:22, topics:["fingerprint","bot directory","ai agents","web bot auth","crawlers"],
+    url:"https://fingerprint.com/bot-directory/" },
+{ id:"bz-625", date:"2026-09-14",
+    source:{ name:"Demis Hassabis", handle:"demishassabis", platform:"web", kind:"person" },
+    text:"Responding to Dario Amodei's call to pace frontier AI development, Google DeepMind's Demis Hassabis said \"the details need working through, but the direction is correct for meeting this critical moment\" -- adding his name alongside Sam Altman's and Elon Musk's qualified support the same week, a rare three-way alignment among rival lab leaders.",
+    why:"Hassabis hadn't weighed in publicly when this newsroom covered Altman's and Musk's reactions to the pacing call -- his endorsement completes the picture of every major US frontier lab's CEO responding to Amodei's proposal within the same week, even as Trump and David Sacks rejected it days later.",
+    heat:31, topics:["demis hassabis","google deepmind","dario amodei","ai pacing","ai safety"],
+    url:"https://www.nation.com.pk/14-Sep-2026/openai-boss-elon-musk-back-calls-put-brakes-reckless-ai-development" },
 { id:"bz-624", date:"2026-09-17",
     source:{ name:"Mistral AI", handle:"MistralAI", platform:"web", kind:"lab" },
     text:"Mistral AI partnered with Mozilla to power Firefox's Smart Window, a new AI browsing assistant built directly into Firefox that helps users navigate the web. The partnership brings Mistral models into Mozilla's privacy-first browser environment, offering Firefox users AI assistance without the data-collection overhead of other browser-integrated AI tools. Smart Window is rolling out to Firefox Beta users.",
