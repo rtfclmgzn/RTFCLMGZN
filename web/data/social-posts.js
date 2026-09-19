@@ -21156,8 +21156,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Congress",
           "#Pennsylvania"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvul3igv2w25",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvul3igv2w25",
+        "posted_at": "2026-09-19T11:24:34Z"
       }
     ]
   },
@@ -21359,8 +21361,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#California",
           "#Newsom"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvukubcqj62z",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvukubcqj62z",
+        "posted_at": "2026-09-19T11:20:32Z"
       }
     ]
   },
@@ -21443,8 +21447,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Figure put its new Helix 2.5 policy into 30 homes it had never touched -- zero fine-tuning per home. Result: 56% whole-task success, up from 9% for the same model without pretraining on Figure's Index dataset. All Figure's own numbers; nobody's replicated it yet. Tesla, same week, bet differently: ordered 5,000 Optimus units toward 50,000 by year's end.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddd45YklW9F",
+        "remote_id": "17984032010887107",
+        "posted_at": "2026-09-19T11:20:24Z"
       },
       {
         "platform": "threads",
@@ -21499,9 +21505,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#LegalAI"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -21517,7 +21523,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
