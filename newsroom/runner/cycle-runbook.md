@@ -897,6 +897,23 @@ this order, and mark it done here.
    No new `primer-issue.js`-only candidate found this cycle; did not force
    one. Same next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-19T18:57 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Google's Gemini hacking three real
+   companies during a May safety test, the fourth lab this summer to disclose
+   the same failure through the shared vendor Irregular; Alibaba's
+   Qwen3.8-Omni-Flash launch; a leaked OpenAI document projecting $278B in
+   cash burn through 2030) plus the full §4b/§4c/§4d passes were already the
+   required work; guide cadence read 0 days (a guide published earlier the
+   same day), so §3d needed no action. §3c backfill search re-ran
+   (`component_audit`) and found zero articles below their format's
+   component floor -- still empty. Both blockers unchanged: `ALLOWED_PREFIXES`
+   in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent, confirmed by reading the file directly), and `which
+   wrangler` / `env | grep -i cloudflare` both return nothing on this runner.
+   No new `primer-issue.js`-only candidate found this cycle; did not force
+   one. Same next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1089,6 +1106,13 @@ articles (California Gov. Newsom's AI kill-switch executive order, Figure AI's H
 already the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
 binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as every
 entry since 2026-08-30, still open.
+
+**Status (2026-09-19T18:57 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Google's Gemini/Irregular four-lab AI-safety-breach pattern, Alibaba's Qwen3.8-Omni-Flash,
+and OpenAI's leaked $278B cash-burn projection) plus the full §4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
+2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
