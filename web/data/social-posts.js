@@ -21691,7 +21691,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -21787,7 +21789,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#VentureCapital"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -21845,8 +21849,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvuuwmgh3t25",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvuuwmgh3t25",
+        "posted_at": "2026-09-19T14:20:48Z"
       }
     ]
   }
