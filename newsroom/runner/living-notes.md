@@ -640,3 +640,22 @@
   collision, whenever two runs touch the string in different places at once. Worth a future pass
   considering a cache-buster scheme that doesn't multi-encode two independent counters into one
   string a naive full-file bump has to touch on every line.
+- **2026-09-19** (newsroom cycle, ~14:20 UTC): two findings from writing a guide plus two articles
+  this cycle. (1) The `pick` tool in `verify_covers.py` is now returning chip/silicon/wafer imagery
+  as its top-scored candidate for almost any non-hardware story (tried: an agent-permissions guide,
+  a government-summit policy piece) -- every "clean" (outside the 90-day cooldown) image tagged for
+  abstract/office/software/governance themes has been used up across the last several weeks of
+  cycles, so the scorer falls back to whatever's least-recently-used regardless of fit. Per §4's own
+  instruction this was correctly caught by reading the top pick's description rather than trusting
+  the score, and both pieces shipped with generated covers instead (`generate-image`, ~$0.06 each) --
+  but future cycles covering a non-hardware story should expect `pick` to need at least one
+  `--exclude` round or an outright fall to generation, not treat a hardware-image top-pick as
+  plausible for a policy/consumer piece just because the tool returned it first. (2) Two component
+  field names are easy to get wrong by plausible guessing rather than checking
+  `agents/_shared/visual-components.md` directly: `chart` takes a `data` array (not `series`), and
+  `keyfacts` items use `label`/`value` (not `k`/`v`, which resembles the `ledger` component's own
+  field-naming instinct). Both mistakes were caught this cycle by re-reading the spec file and
+  `grep`-checking a live example before shipping, not by any automated check -- `component_audit.py`
+  validates against the schema but a wrong-but-well-formed key name for a nested-array item may not
+  be its own named check. Worth a future pass confirming the audit actually catches a misnamed
+  `chart.series` vs `chart.data` rather than silently accepting an empty/ignored field.
