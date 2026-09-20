@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-649", date:"2026-09-19",
+    source:{ name:"White House", handle:"WhiteHouse", platform:"web", kind:"gov" },
+    text:"President Trump announced on September 19 that he will create an 'AI Force' modeled on the Space Force and appoint a new 'AI czar' to oversee the nation's artificial intelligence industry. Trump called AI 'the next Industrial Revolution' key to US economic growth and competitiveness with China, stating 'only High I.Q. individuals need apply' for the czar role but naming no appointee at the announcement. The move represents Trump's push to accelerate AI development with limited regulation, following David Sacks' earlier departure from a similar role.",
+    why:"A sitting president creating a dedicated federal agency structure for AI—distinct from prior czar-only frameworks—is a concrete signal of how central AI has become to US strategic planning. The emphasis on competitiveness over safety constraints, and the institutional machinery being stood up, matters for tracking what the US government actually does versus what it says about AI development pace.",
+    heat:62, topics:["trump","ai force","ai czar","government policy","ai regulation","competitiveness","us strategy"],
+    url:"https://www.aljazeera.com/news/2026/9/19/trump-says-he-will-create-ai-force-with-new-ai-czar" },
+{ id:"bz-650", date:"2026-09-18",
+    source:{ name:"Bloomberg / NYT", handle:"Bloomberg", platform:"web", kind:"news" },
+    text:"Anthropic is pacing toward $100 billion in annualized revenue as of mid-September, The New York Times reported, up more than 50% from the $65 billion run rate in July. The company is accelerating its planned November IPO timeline in response, with confidential filing already submitted and transition to public sequence planned for mid-October. Investors are pushing for a $2 trillion valuation ahead of the listing, which aims to complete before the November 3, 2026 US midterm elections. The revenue surge is driven by Claude Code adoption and enterprise customers using Claude for coding and workplace tasks.",
+    why:"A frontier lab's annualized revenue climbing from $65B to $100B in two months—a faster re-rate than OpenAI experienced in comparable windows—signals where actual customer demand is landing and at what pace. The deliberate November election-date IPO timing is distinct from normal capital markets logic and reveals institutional confidence in avoiding regulatory headwinds.",
+    heat:58, topics:["anthropic","revenue","ipo","claude code","valuation","business growth","enterprise adoption"],
+    url:"https://www.bloomberg.com/news/articles/2026-09-18/anthropic-s-annualized-revenue-to-top-100-billion-in-2026-nyt" },
 { id:"bz-647", date:"2026-09-19",
     source:{ name:"Mantic", handle:"manticAI", platform:"web", kind:"lab" },
     text:"Mantic, a London forecasting startup co-founded by ex-Google DeepMind researcher Toby Shevlane, raised a $25 million seed round led by Radical Ventures (with Microsoft's M12, Thinking Machines Lab and Balderton Capital also in), after its AI system outscored human forecasters at the summer 2026 Metaculus Cup -- specializing frontier models from other labs specifically for predicting real-world events.",

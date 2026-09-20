@@ -217,6 +217,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Revelio Labs published mid-August 2026 tracker update showing employment gap between youngest workers (ages 22-25) in AI-exposed vs non-exposed occupations reached 19%, compared to prior June measurement point, indicating widening disparity for junior workforce.",
       label:"Revelio Labs August 2026 tracker: 19% junior worker gap",
-      url:"https://www.prnewswire.com/news-releases/revelio-labs-reports-36-5k-us-jobs-added-in-august-employment-in-ai-exposed-jobs-19-lower-for-workers-under-25--302869005.html" }
+      url:"https://www.prnewswire.com/news-releases/revelio-labs-reports-36-5k-us-jobs-added-in-august-employment-in-ai-exposed-jobs-19-lower-for-workers-under-25--302869005.html" },
+    { key:"microsoft-nadella-ai-bubble-compute-rationing|w|0",
+      at:"2026-09-20T12:00:00Z",
+      outcome:"confirmed",
+      note:"Microsoft's July 29, 2026 fiscal Q4 earnings call reported Azure growth of 43% (exceeding the article's 40% watch threshold) and FY2027 capex guidance of $255-260 billion (significantly raised from prior guidance). Both conditions the watch item tracked have been settled by the earnings report.",
+      label:"Microsoft Q4 FY2026 earnings: Azure 43%, FY27 capex $255-260B",
+      url:"https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html" }
   ]
 };

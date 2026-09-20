@@ -13,7 +13,7 @@ window.RTFC_EVENTS = {
   items: [
     { name:"Meta Connect", org:"Meta", when:"Sept 23-24, 2026", sort:"2026-09-23",
       type:"Keynote", place:"Menlo Park + streamed", tag:"products",
-      status:"soon", checkedAt:"2026-09-17T00:00:00Z",
+      status:"soon", checkedAt:"2026-09-20T00:00:00Z",
       url:"https://www.meta.com/connect/", blurb:"Llama, AI glasses and the next hardware push — usually livestreamed." },
     { name:"OpenAI DevDay", org:"OpenAI", when:"Expected Fall 2026", sort:"2026-10-15",
       type:"Developer", place:"San Francisco + streamed", tag:"labs",
