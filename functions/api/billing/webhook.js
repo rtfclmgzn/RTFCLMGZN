@@ -177,10 +177,33 @@ async function handle(env, event) {
   if (event.type === "invoice.payment_failed") {
     const uid = await userIdFor(env, { customerId: obj.customer });
     if (!uid) return;
-    if (obj.subscription) {
+
+    // WHERE THE SUBSCRIPTION ID LIVES (fixed 2026-09-20).
+    // This read `obj.subscription` only. That field was removed from the Invoice
+    // object in the 2025-xx API versions — this account's webhook is pinned at
+    // 2026-07-29.dahlia — and moved under `parent`. So the id was always
+    // undefined, the UPDATE never ran, and no subscription in this database
+    // could ever reach 'past_due': cards would fail, Stripe would retry for a
+    // fortnight, and the only visible sign would be a reader quietly vanishing.
+    // Same class of bug as the period-end move handled in the subscription
+    // branch above. All three shapes are read, newest first, so this survives
+    // both an older event replayed from the dashboard and the next move.
+    const line = (obj.lines && obj.lines.data && obj.lines.data[0]) || {};
+    const subId =
+      (obj.parent && obj.parent.subscription_details && obj.parent.subscription_details.subscription) ||
+      (line.parent && line.parent.subscription_item_details && line.parent.subscription_item_details.subscription) ||
+      obj.subscription ||
+      null;
+
+    if (subId) {
       await env.DB.prepare(
         "UPDATE subscriptions SET status='past_due', updated_at=datetime('now') WHERE id=?"
-      ).bind(obj.subscription).run();
+      ).bind(subId).run();
+    } else {
+      // Not fatal: a one-off invoice has no subscription. Logged because a
+      // subscription invoice arriving with no id findable means Stripe moved it
+      // again, and silence is what made the first version of this bug invisible.
+      console.log("payment_failed with no subscription id", obj.id);
     }
     return;   // access intentionally untouched — see the note above
   }

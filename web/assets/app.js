@@ -3299,16 +3299,50 @@
         (x.tagline?'<span class="spon-sub">'+esc(x.tagline)+'</span>':'')+'</span>'+
         '<span class="spon-cta">'+esc(x.cta||"Visit")+' \u2192</span></a>';
     }
+    // No reach claim here. The slot is seen by readers as well as buyers, and an
+    // unverifiable "seen in N countries" in a house ad is exactly the kind of line
+    // this publication exists not to print. The real numbers live on /advertise.
     return '<a class="spon spon-open spon-'+slot+'" href="/advertise">'+
       '<span class="spon-k">Sponsor</span>'+
       '<span class="spon-body"><b>This space is reserved for one brand.</b>'+
-      '<span class="spon-sub">A single founding sponsor, on every page of a newsroom that runs itself. Seen in '+
-      sponCountries()+' countries and counting.</span></span>'+
-      '<span class="spon-cta">Claim it \u2192</span></a>';
+      '<span class="spon-sub">A single founding sponsor, on every page of a newsroom that runs itself. '+
+      'Early, cheap, and the numbers are on the table.</span></span>'+
+      '<span class="spon-cta">See the numbers \u2192</span></a>';
   }
+  /* SPONSOR STATS (fixed 2026-09-14).
+     This used to read window.RTFC_WORLDMAP -- which is the map GEOMETRY file, is
+     lazily loaded, and is undefined on every page except the Reader Map. So the
+     length check almost always failed and the function returned the literal
+     "40+", which was printed to every reader in the open sponsor slot and to
+     every prospective sponsor on /advertise. The site had reached 4 countries.
+     Inventing an audience number is the one thing a publication that sells
+     honesty cannot do, so there is no longer a fallback: unknown prints nothing
+     and the sentence that would have carried it is dropped by the caller.
+     The real figures come from /api/geo, the same counter the Reader Map uses. */
+  var SPONSTAT=null, SPONSTAT_REQ=false;
+  function sponStatsLoad(){
+    if(SPONSTAT || SPONSTAT_REQ) return;
+    SPONSTAT_REQ=true;
+    if(typeof fetch!=="function"){ SPONSTAT={known:false}; return; }
+    // The Reader Map may already hold this response -- reuse it rather than re-ask.
+    if(RM && RM.mode==="live" && RM.data){ SPONSTAT=sponStatsFrom(RM.data); return; }
+    fetch("/api/geo").then(function(r){ return r.ok?r.json():null; }).then(function(j){
+      SPONSTAT = (j&&j.ok) ? sponStatsFrom(j) : {known:false};
+      route();
+    }).catch(function(){ SPONSTAT={known:false}; route(); });
+  }
+  function sponStatsFrom(j){
+    var c=j.countries||{}, n=0;
+    for(var k in c){ if(Object.prototype.hasOwnProperty.call(c,k)) n++; }
+    return { known:true, countries:n,
+             total:Number(j.total)||0, recent:Number(j.recentTotal)||0,
+             windowDays:Number(j.windowDays)||30, since:j.firstDay||j.since||"" };
+  }
+  function sponStats(){ sponStatsLoad(); return SPONSTAT||{known:false}; }
+  // Returns "" when the real number is not in hand. Callers must handle "".
   function sponCountries(){
-    try{ var wm=window.RTFC_WORLDMAP||{}; var n=Object.keys(wm.countries||wm.byCountry||{}).length; return n>5?String(n):"40+"; }
-    catch(e){ return "40+"; }
+    var st=sponStats();
+    return (st.known && st.countries>0) ? String(st.countries) : "";
   }
 
   function pwPanelHTML(){
@@ -3440,34 +3474,78 @@
     return h;
   }
 
-  /* ---------- /advertise: the sponsor pitch (2026-08-20) ---------- */
+  /* ---------- /advertise: the sponsor pitch (rewritten 2026-09-14) ----------
+     The previous version sold exclusivity and a $150/month founding rate against
+     an audience figure that was invented ("40+ countries") because sponCountries()
+     was reading the wrong global. With the real counter wired up, the page now
+     leads with the actual numbers -- small ones -- because a buyer who can see
+     the denominator and buys anyway is a sponsor who stays, and a buyer who finds
+     out later is a refund and a story. The rate is set to what the traffic is
+     worth today, with the upside written into the deal instead of into the copy. */
   function viewAdvertise(){
+    var st=sponStats();
     var h='<div class="container" style="max-width:880px">';
     h+='<div class="mast-hero" style="padding-bottom:8px"><div class="over">Newsroom</div>'+
       '<h1>One sponsor. Every page.</h1>'+
       '<p>'+SITE_NAME+' is a newsroom with no staff: it researches, writes, illustrates, fact-checks and publishes '+SUBJECT+' coverage around the clock, and it shows its work \u2014 per-paragraph sources, a public cost ledger, a corrections log. Your brand sits inside that story, alone.</p></div>';
-    h+='<div class="adm-grid">'+
-      '<div class="adm-tile"><b>'+fmtNum(ARTICLES.length)+'</b><span>stories live</span></div>'+
-      '<div class="adm-tile"><b>'+sponCountries()+'</b><span>reader countries</span></div>'+
-      '<div class="adm-tile"><b>5</b><span>social platforms</span></div>'+
-      '<div class="adm-tile"><b>24/7</b><span>publishing, no humans</span></div>'+
-      '</div>';
+
+    /* The numbers, unspun. If the counter is unreachable we say so rather than
+       print a figure we cannot stand behind -- the same rule the Reader Map follows. */
+    if(st.known){
+      h+='<div class="adm-grid">'+
+        '<div class="adm-tile"><b>'+fmtNum(st.recent)+'</b><span>visits, last '+st.windowDays+' days</span></div>'+
+        '<div class="adm-tile"><b>'+fmtNum(st.total)+'</b><span>visits, all time</span></div>'+
+        '<div class="adm-tile"><b>'+String(st.countries)+'</b><span>reader countries</span></div>'+
+        '<div class="adm-tile"><b>'+fmtNum(ARTICLES.length)+'</b><span>stories live</span></div>'+
+        '</div>';
+      h+='<p class="adv-note" style="margin-top:12px"><b>Those are the real numbers, and they are small.</b> '+
+        'This publication started counting on '+esc(st.since||"launch")+'. We are not going to dress that up: '+
+        'if you need reach today, buy reach somewhere else and come back to us in six months. '+
+        'What is on sale here is the founding position on a newsroom that publishes '+fmtNum(articlesLast7())+' stories a week by itself, '+
+        'at a price that only makes sense before the audience arrives.</p>';
+    } else {
+      h+='<div class="adm-grid">'+
+        '<div class="adm-tile"><b>'+fmtNum(ARTICLES.length)+'</b><span>stories live</span></div>'+
+        '<div class="adm-tile"><b>'+fmtNum(articlesLast7())+'</b><span>published this week</span></div>'+
+        '<div class="adm-tile"><b>5</b><span>social platforms</span></div>'+
+        '<div class="adm-tile"><b>24/7</b><span>publishing, no humans</span></div>'+
+        '</div>';
+      h+='<p class="adv-note" style="margin-top:12px">The traffic counter isn\u2019t reachable from this page right now, '+
+        'so rather than quote a number we can\u2019t verify, we\u2019ll send you the current figures directly. Ask and they arrive the same day.</p>';
+    }
+
     h+='<div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent)"></span>What the founding sponsor gets</div>'+
       '<div class="adv-list">'+
-      '<div class="adv-item"><b>Exclusivity.</b> One sponsor at a time, sitewide. Your brand is never stacked in a gutter of ads \u2014 there are no other ads.</div>'+
+      '<div class="adv-item"><b>Exclusivity.</b> One sponsor at a time, sitewide. Your brand is never stacked in a gutter of ads \u2014 there are no other ads, and there is no ad network on this site.</div>'+
       '<div class="adv-item"><b>Three placements.</b> The homepage, the foot of every article, and the Resources hub \u2014 designed placements in the site\u2019s own visual language, not banner boxes.</div>'+
-      '<div class="adv-item"><b>The story.</b> "Sponsor of the autonomous newsroom" is a line your own marketing can run with. We\u2019ll publish a short piece introducing the partnership.</div>'+
-      '<div class="adv-item"><b>Radical measurement.</b> This site publishes its running costs; your placement report is just as honest. Real numbers, monthly.</div>'+
+      '<div class="adv-item"><b>The rate is frozen.</b> Whatever the audience does over your term, you pay the founding rate you signed, and you get first refusal on renewal at it. That is the entire trade: you take the risk now, you keep the price later.</div>'+
+      '<div class="adv-item"><b>The story.</b> \u201cSponsor of the autonomous newsroom\u201d is a line your own marketing can run with. We\u2019ll publish a short piece introducing the partnership.</div>'+
+      '<div class="adv-item"><b>Radical measurement.</b> This site publishes its running costs; your placement report is just as honest. Real numbers, monthly, including the bad months.</div>'+
       '</div>';
+
     h+='<div class="kicker" style="margin-top:24px"><span class="dotc" style="background:var(--accent2)"></span>Founding rate</div>'+
       '<div class="adv-tiers">'+
-      '<div class="adv-tier"><span class="pp-name">Monthly</span><div class="pp-price">$150<small>/month</small></div><span class="pp-note">Locked for a year. Cancel any month.</span></div>'+
-      '<div class="adv-tier adv-best"><span class="pp-badge">Founding</span><span class="pp-name">Quarter</span><div class="pp-price">$400<small>/quarter</small></div><span class="pp-note">Locked for a year, first refusal on renewal.</span></div>'+
-      '<div class="adv-tier"><span class="pp-name">Custom</span><div class="pp-price">Let\u2019s talk</div><span class="pp-note">A section takeover, the daily briefing, the magazine \u2014 name it.</span></div>'+
+      '<div class="adv-tier"><span class="pp-name">Monthly</span><div class="pp-price">$50<small>/month</small></div><span class="pp-note">Cancel any month, no notice.</span></div>'+
+      '<div class="adv-tier adv-best"><span class="pp-badge">Founding</span><span class="pp-name">Six months</span><div class="pp-price">$240<small>/6 months</small></div><span class="pp-note">$40/month. Rate frozen for two years, first refusal on renewal.</span></div>'+
+      '<div class="adv-tier"><span class="pp-name">Custom</span><div class="pp-price">Let\u2019s talk</div><span class="pp-note">A section takeover, the magazine, a co-published series \u2014 name it.</span></div>'+
       '</div>';
-    h+='<p class="adv-note">Honest note: this publication is young and its audience is still compounding. That is exactly why the founding rate exists \u2014 it is priced for what the site is becoming, locked in before it gets there.</p>';
-    h+='<a class="cta" style="margin-top:8px" href="/contact">Talk to the newsroom \u2192</a>';
-    h+='<p class="adm-mut" style="margin-top:14px">Sponsored placements are always labelled, always separated from coverage, and never influence what the newsroom writes. That is non-negotiable and it is also the point.</p>';
+
+    /* One click to a real conversation. The old page pointed at /contact, which is a
+       page of mailto cards -- a buyer had to find the right address and compose from
+       nothing. This opens their mail client with the subject and the questions already
+       written, which is the difference between an enquiry and an intention. */
+    var subj="Founding sponsor \u2014 "+SITE_NAME;
+    var body=
+      "I\u2019d like the founding sponsor slot.\n\n"+
+      "Company:\n"+
+      "Website:\n"+
+      "Which term (monthly / six months / custom):\n"+
+      "Anything you want the newsroom to know:\n\n"+
+      "\u2014 sent from "+SITE_DOMAIN+"/advertise";
+    h+='<a class="cta" style="margin-top:8px" href="mailto:'+escAttr(CONTACT_SPONSORS)+
+       '?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body)+'">Claim the slot \u2192</a>';
+    h+='<p class="adm-mut" style="margin-top:14px">Writes to <a href="mailto:'+escAttr(CONTACT_SPONSORS)+'">'+esc(CONTACT_SPONSORS)+'</a> with the details already filled in. A human founder reads it, and answers whether the answer is yes or no.</p>';
+    h+='<p class="adm-mut" style="margin-top:10px">Sponsored placements are always labelled, always separated from coverage, and never influence what the newsroom writes. That is non-negotiable and it is also the point.</p>';
     h+='</div>';
     return h;
   }
@@ -6663,7 +6741,7 @@
       '<div class="prose" style="font-size:15px">'+inner+'</div></div>';
   }
   function viewPrivacy(){
-    return legalShell("Privacy","How we handle your data","July 18, 2026",
+    return legalShell("Privacy","How we handle your data","September 20, 2026",
       '<p>'+SITE_NAME+' is built to need as little of your data as possible. This page says plainly what we collect, what we don’t, and what third parties are involved. No legalese padding — if anything here is unclear, email us.</p>'+
       '<h2>What we collect today: almost nothing</h2>'+
       '<p>Reading this site requires no account and sends us no personal information. Bookmarks, read-later items, reactions, and theme choice are stored in <b>your browser’s local storage, on your device</b> — they never leave it and we cannot see them. If you create a free account, your email address is stored server-side (on Cloudflare D1) so you can sign back in and keep your library across devices. Sign-in uses a one-time emailed link rather than a password — that link is single-use and expires in 15 minutes. Staying signed in uses one <code>HttpOnly</code> session cookie, which page scripts can’t read and which isn’t used for tracking. We run no advertising trackers, no fingerprinting, and no third-party ad networks.</p>'+
@@ -6674,6 +6752,14 @@
       '<p>To stop one person reloading from inflating the count, we hold a one-way fingerprint for <b>two days</b> and then delete it: <code>sha256(date + salt + IP + user agent)</code>, truncated. It cannot be reversed into an address, and because the date is inside the hash it changes at every midnight UTC, so it cannot follow anyone from one day to the next. If the counter is ever unreachable, the map says so and shows your own browser’s history instead of pretending to know more than it does.</p>'+
       '<h2>The language switcher &amp; other third parties</h2>'+
       '<p>If you choose a language from the globe menu, the page loads <b>Google Translate</b>, and Google’s privacy policy applies to that translation traffic; choosing English again stops it. Flag icons load from flagcdn.com (a standard image CDN). Fonts load from Google Fonts. External links throughout the site (sources, resources, Buzz originals) go to sites we don’t control.</p>'+
+      // PAYMENTS (added 2026-09-20). Plus went live in August and this page still
+      // described a site that took no money — it even promised it would change
+      // "when real accounts and payments launch", which by then had happened.
+      // A privacy policy that is behind the product is not a small thing when
+      // the product takes cards.
+      '<h2>Payments</h2>'+
+      '<p>Paid subscriptions are handled by <b>Stripe</b>, and card details go straight to Stripe — they are never sent to us, and we could not see or store them if we wanted to. What we keep on our side is the minimum needed to know what you bought: a Stripe customer reference, which plan you are on, and when it renews or lapses. Stripe holds the payment data itself under its own privacy policy, and its billing portal (where you change a card or cancel) is Stripe\u2019s page, not ours.</p>'+
+      '<p>We do not use payment data for advertising, we do not sell it, and being a paying reader changes nothing about what is tracked while you read — the reader map still stores a country and a date and nothing else.</p>'+
       '<h2>The newsletter (when it launches)</h2>'+
       '<p>When our daily email launches, subscribing means giving us your email address, which we will use for <b>one morning digest per day and nothing else</b>. Every email will contain a working unsubscribe link that takes effect immediately. We will never sell, rent, or share the list, and we don’t buy lists.</p>'+
       '<h2>Cookies</h2>'+
@@ -6681,10 +6767,10 @@
       '<h2>Your choices</h2>'+
       '<p>Clearing your browser’s site data removes everything we’ve stored on your device. Unsubscribe links will handle email. For account deletion, questions, or concerns — email <a href="mailto:'+CONTACT_GENERAL+'">'+esc(CONTACT_GENERAL)+'</a> and a decision-capable part of this operation (the founder — a human) will answer.</p>'+
       '<h2>Changes</h2>'+
-      '<p>If our practices change (for example, when real accounts and payments launch), this page changes first, with a new effective date. Material changes to the newsletter’s handling of your address will be announced in the email itself.</p>');
+      '<p>If our practices change, this page changes first, with a new effective date. Material changes to the newsletter’s handling of your address will be announced in the email itself.</p>');
   }
   function viewTerms(){
-    return legalShell("Terms of Use","The deal, in plain language","July 18, 2026",
+    return legalShell("Terms of Use","The deal, in plain language","September 20, 2026",
       '<p>Welcome to '+SITE_NAME+' (“artificial magazine”). Using this site means you accept these terms. They are short because our obligations are simple: we publish, you read, and we’re honest about what this is.</p>'+
       '<h2>1. This publication is written by AI — and that matters legally</h2>'+
       '<p>Every article, guide, and magazine page here is researched, written, illustrated, edited, and published by a fully autonomous AI system — there is no human approval step before public release. We work hard on accuracy — sourcing standards, fact-checking against primary sources, a public corrections log — but AI systems make mistakes, and <b>content is provided “as is,” without warranty of accuracy, completeness, or fitness for any purpose</b>. Always verify anything you intend to rely on against the primary sources we link.</p>'+
@@ -6700,13 +6786,23 @@
         ? ''+SITE_NAME+' Plus is a real paid subscription: payments are taken by Stripe, who handle the card details — we never see them. Monthly and annual plans renew until you cancel, which you can do at any time from your account page; a founding lifetime purchase is a single payment and does not renew. Anything else labeled preview or prototype is still a demonstration.'
         : '“Plus” and anything else labeled preview or prototype are still demonstrations — no payments are collected and no subscription exists yet. When real paid features launch, they’ll come with their own clear terms before any money changes hands.')+
       '</p>'+
-      '<h2>5. Third-party links</h2>'+
+      // PAYMENTS AND REFUNDS (added 2026-09-20). Until now the terms said what
+      // Plus IS but never what happens when someone wants their money back —
+      // and a paid product advertised to strangers needs a refund line that is
+      // written down before the first person asks for one, not after.
+      // Deliberately generous and deliberately short: 14 days, no interrogation.
+      '<h2>5. Paying for Plus, renewals, and refunds</h2>'+
+      '<p><b>What you pay.</b> Prices are shown before you pay and are charged in US dollars by Stripe. Monthly and annual plans renew automatically at the same price until you cancel; a founding lifetime purchase is a single payment that never renews.</p>'+
+      '<p><b>Cancelling.</b> You can cancel any time from your account page, which opens Stripe\u2019s billing portal. Cancelling stops the next renewal — it does not cut off the time you already paid for, so you keep Plus until the end of the period you are in.</p>'+
+      '<p><b>Refunds.</b> If you want your money back within <b>14 days</b> of any charge, email <a href=\"mailto:'+CONTACT_GENERAL+'\">'+esc(CONTACT_GENERAL)+'</a> and we refund it in full. No reason needed, no questions, no form. After 14 days we will not normally refund a period already under way, but we would rather sort out a genuine problem than keep money from someone who is unhappy, so ask anyway.</p>'+
+      '<p><b>If prices change.</b> An existing subscription keeps the price it was signed at for as long as it stays active. If we ever change what a renewal costs, you get notice by email before it happens, with time to cancel.</p>'+
+      '<h2>6. Third-party links</h2>'+
       '<p>We link out constantly — sources, resources, original posts. Those sites are not ours; their content and policies are their own responsibility.</p>'+
-      '<h2>6. Corrections &amp; complaints</h2>'+
+      '<h2>7. Corrections &amp; complaints</h2>'+
       '<p>Wrong fact? Tell us: <a href="mailto:'+CONTACT_GENERAL+'">'+esc(CONTACT_GENERAL)+'</a>. Corrections are made in the article and logged. If you believe content infringes your rights, the same address reaches a human founder with authority to act.</p>'+
-      '<h2>7. Liability, in one sentence</h2>'+
+      '<h2>8. Liability, in one sentence</h2>'+
       '<p>To the fullest extent permitted by law, '+SITE_NAME+' and its operator are not liable for damages arising from use of this site or reliance on its content.</p>'+
-      '<h2>8. Changes</h2>'+
+      '<h2>9. Changes</h2>'+
       '<p>We may update these terms; the effective date above changes when we do. Continuing to use the site after changes means you accept them.</p>');
   }
 

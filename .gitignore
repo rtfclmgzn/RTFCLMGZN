@@ -68,3 +68,22 @@ functions/api/issue/_data/issue-001.json
 functions/api/issue/_data/issue-002.json
 resolve_rebase.py
 .shiptools/
+
+# >>> VOUCHER ARTIFACTS — added 2026-09-20 <<<
+# Minted gift codes are credentials worth real money. starter_vouchers.csv/.sql
+# were committed to this PUBLIC repo in August with 57 live codes in them,
+# 11 of which granted lifetime Plus. Nothing that carries a redeemable code
+# goes in the tree again.
+vouchers.png
+vouchers*.png
+agents/billing/private/
+agents/billing/issued/
+*starter_vouchers.csv
+*starter_vouchers.sql
+*_vouchers.csv
+*_vouchers.sql
+# <<< VOUCHER ARTIFACTS <<<
+.shiptools/
+engine-product/
+functions/api/issue/_data/issue-001.json
+functions/api/issue/_data/issue-002.json
