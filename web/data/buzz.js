@@ -407,5 +407,17 @@ window.RTFC_BUZZ = [
     text:"Clinicians are pushing back on medical AI deployment beyond diagnostics, citing thin performance data and three specific concerns: deskilling (flagged by 74% of clinicians surveyed), hallucinations in summarization and recommendation tasks, and unclear governance chains for liability when AI recommendations cause harm. Professional medical societies are framing expanded AI use as a safety risk rather than an efficiency gain.",
     why:"Frontline clinicians explicitly naming deskilling as a risk, with hard survey numbers, moves the medical-AI conversation away from capability claims toward institutional safety -- a pattern worth watching against whether hospitals actually pause AI rollouts or accelerate them anyway despite the warnings.",
     heat:43, topics:["medical ai","healthcare","deskilling","hallucinations","clinical safety","professional medicine"],
-    url:"https://aiweekly.co/ai-news-today" }
+    url:"https://aiweekly.co/ai-news-today" },
+{ id:"bz-654", date:"2026-09-20",
+    source:{ name:"StepFun", handle:"stepfun_ai", platform:"web", kind:"lab" },
+    text:"StepFun officially announced Step 5 Preview on September 20, 2026, a 600 billion-parameter sparse mixture-of-experts model with 27 billion parameters active per token, a 1 million-token context window, and API access launched the same day. The model trades raw inference speed for dense reasoning, competing with OpenAI's o1 and DeepSeek-R1 in the reasoning-model category.",
+    why:"A major Chinese AI lab shipping a frontier-class reasoning model with a public preview release and immediate API access marks another frontier-lab capability parity checkpoint -- worth tracking against how quickly Step 5 shifts market positioning for reasoning models versus o1 and DeepSeek-R1, and whether frontier models remain dominated by Western labs.",
+    heat:45, topics:["stepfun","step 5","reasoning models","frontier lab","sparse moe","china","ai models"],
+    url:"https://aiweekly.co/ai-news-today" },
+{ id:"bz-655", date:"2026-09-20",
+    source:{ name:"Naive AI / TechCrunch", handle:"nativeai", platform:"web", kind:"lab" },
+    text:"Tencent-backed Naive AI, founded in February 2026 by Tsinghua associate professor Dai Jifeng, raised a total of $400 million across three funding rounds, achieving a $1.42 billion valuation in its latest round with participation from Tencent, IDG Capital and Sequoia China. The startup plans to release its first open-weight language model in September 2026, betting on open-source weights and mid/post-training to compete in LLMs.",
+    why:"A startup reaching $1.4B+ valuation in seven months after founding, backed by Tencent and Sequoia, signals venture confidence in Chinese AI labs clearing frontier-adjacent capability thresholds fast enough to justify billion-dollar bets even before shipping a flagship model -- worth watching whether the open-weight release validates the runway.",
+    heat:39, topics:["naive ai","funding","tencent","china","open weight models","startup valuation","tsinghua"],
+    url:"https://www.implicator.ai/naive-ai-1-4-billion-valuation-400-million-raise/" }
 ];
