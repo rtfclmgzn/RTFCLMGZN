@@ -21655,8 +21655,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvxm6eoami2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvxm6eoami2y",
+        "posted_at": "2026-09-20T16:22:04Z"
       }
     ]
   },
@@ -21903,9 +21905,9 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AISafety"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -21999,7 +22001,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
