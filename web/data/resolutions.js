@@ -223,6 +223,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"Microsoft's July 29, 2026 fiscal Q4 earnings call reported Azure growth of 43% (exceeding the article's 40% watch threshold) and FY2027 capex guidance of $255-260 billion (significantly raised from prior guidance). Both conditions the watch item tracked have been settled by the earnings report.",
       label:"Microsoft Q4 FY2026 earnings: Azure 43%, FY27 capex $255-260B",
-      url:"https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html" }
+      url:"https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html" },
+    { key:"moonshot-ai-50-billion-pre-ipo-valuation|w|0",
+      at:"2026-09-20T14:15:00Z",
+      outcome:"refuted",
+      note:"Moonshot AI's Series F round closed on July 29, 2026 at $35 billion valuation, falling short of the August $50 billion target the watch item tracked. The watch stated 'Watch whether the August round actually prices at $50 billion'; instead the round priced at $35 billion, a $3.5 billion raise that valued the company below the target.",
+      label:"Moonshot AI Series F closed at $35B, not $50B",
+      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" }
   ]
 };
