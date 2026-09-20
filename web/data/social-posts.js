@@ -21753,8 +21753,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvx4qh2j7d2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvx4qh2j7d2o",
+        "posted_at": "2026-09-20T11:45:50Z"
       }
     ]
   },
@@ -21886,9 +21888,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Google"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -21903,7 +21905,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -22027,8 +22029,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Alibaba's Qwen3.8-Omni-Flash: 1M-token context, beats Gemini 3.8 Flash on audio, trails it on video. The '98% cheaper' headline number is a per-hour extrapolation that also quietly lowers the video sampling rate. No independent score exists yet -- every number here is Alibaba's own.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdggIGnFop9",
+        "remote_id": "17907362055478748",
+        "posted_at": "2026-09-20T11:41:41Z"
       },
       {
         "platform": "bluesky",
@@ -22131,8 +22135,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvx4jaeqj22t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvx4jaeqj22t",
+        "posted_at": "2026-09-20T11:41:48Z"
       }
     ]
   }
