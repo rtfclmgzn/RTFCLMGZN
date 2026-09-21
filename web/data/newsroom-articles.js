@@ -35962,7 +35962,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "The API prices at **$5.00 per 1,000 minutes** of audio on Artificial Analysis' listing, though Google hasn't published a consumer rate card of its own for the feature. For most people the model will show up invisibly either way -- as the engine quietly running behind a keyboard's dictation button or a video call's live captions, not as a product anyone chooses by name.",
+    "text": "The API prices at **$5.00 per 1,000 minutes** of audio on Artificial Analysis' listing, though Google hasn't published a consumer rate card of its own for the feature. For most people the model will show up invisibly either way -- as the engine quietly running behind a keyboard's dictation button or a video call's live captions, not as a product anyone chooses by name. When that video-call use case is a meeting rather than dictation to yourself, [whether everyone else on the call actually agreed to being transcribed](/article/check-whether-your-ai-notetaker-needs-consent) is a separate question the model itself has no say in.",
     "citation_urls": [
      "https://artificialanalysis.ai/speech-to-text/non-streaming",
      "https://9to5google.com/2026/08/26/gemini-3-5-transcribe/"

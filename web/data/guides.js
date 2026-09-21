@@ -4981,7 +4981,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this makes an AI transcript untrustworthy -- **2.6%** is a genuine improvement over what shipped even a year ago. It just means the number on the announcement and the number that matters for your specific recording are two different things, and only one of them is checkable from a chair.",
+        "text": "None of this makes an AI transcript untrustworthy -- **2.6%** is a genuine improvement over what shipped even a year ago. It just means the number on the announcement and the number that matters for your specific recording are two different things, and only one of them is checkable from a chair. Accuracy is one half of the AI-notetaker question; [whether everyone on the call actually agreed to being recorded](/article/check-whether-your-ai-notetaker-needs-consent) is the other, and it's the half with an actual lawsuit attached.",
         "citation_urls": []
       }
     ],
@@ -6042,7 +6042,356 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this asks for more trust in the agent -- it asks for the same habit you'd use handing a new hire their first set of keys: **the smallest useful set first, a way to check what they actually did with it, and no illusion that taking the keys back undoes what's already been done.**",
+        "text": "None of this asks for more trust in the agent -- it asks for the same habit you'd use handing a new hire their first set of keys: **the smallest useful set first, a way to check what they actually did with it, and no illusion that taking the keys back undoes what's already been done.** The same discipline applies to the other AI tool now sitting in your meetings: an [AI notetaker recording a call raises the same access question](/article/check-whether-your-ai-notetaker-needs-consent), except the person whose consent it needs isn't you -- it's everyone else on the line.",
+        "citation_urls": []
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g23",
+    "slug": "check-whether-your-ai-notetaker-needs-consent",
+    "image": "assets/img/newsroom/g23.jpg",
+    "title": "How to tell whether your AI meeting notetaker actually needs everyone's consent",
+    "dek": "A bot's icon in the participant list is not the same thing as legal consent to record the call -- and a federal judge is right now deciding exactly that question, with the core wiretap and biometric claims against one major notetaker surviving into discovery. Here's the actual consent floor, state by state, and the five-minute check to run before your next call.",
+    "persona": "evelyn-zhao",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-21T16:30:19Z",
+    "readMins": 7,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Federal law needs just one call participant's consent to record; states can require more.",
+      "At least eleven states require every participant's consent, and interstate calls default to the strictest one.",
+      "A federal judge let core wiretap and biometric claims against Otter.ai proceed on August 13, 2026.",
+      "Otter argued a visible bot icon counts as notice; no ruling has actually accepted that yet.",
+      "State consent-law counts (11-13) vary by source -- verify your own state's statute, not a list."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Check where every participant on your next recorded call actually is before hitting record.",
+        "text": "An interstate call defaults to the strictest state's consent rule, and 'everyone can see the bot' is not itself an answer -- it's the exact argument a company made in federal court and hasn't won yet."
+      },
+      {
+        "label": "Get a spoken or typed yes before the notetaker starts, not just a name in the participant list.",
+        "text": "No ruling has held that a visible bot icon satisfies a consent requirement on its own -- ask, and you're covered regardless of how that question eventually gets decided."
+      },
+      {
+        "label": "Read your notetaker's retention and training policy once, today.",
+        "text": "Whether the vendor keeps your calls to train its own models is the exact fact a federal judge cited in August 2026 to let claims against Otter.ai proceed -- check yours before assuming it doesn't apply to you."
+      }
+    ],
+    "sources": [
+      {
+        "label": "One-Party Consent States (2026): Complete List",
+        "url": "https://www.recordinglaw.com/united-states-recording-laws/one-party-consent-states/",
+        "outlet": "Recording Law",
+        "kind": "reference"
+      },
+      {
+        "label": "Two-Party Consent States for Recording (2026 Guide)",
+        "url": "https://www.recordinglaw.com/party-two-party-consent-states/",
+        "outlet": "Recording Law",
+        "kind": "reference"
+      },
+      {
+        "label": "AI Notetakers and The Legal Exposure Hiding in Plain Sight",
+        "url": "https://www.datagrail.io/blog/data-privacy/ai-notetakers-and-the-legal-exposure-hiding-in-plain-sight/",
+        "outlet": "DataGrail",
+        "kind": "reporting"
+      },
+      {
+        "label": "AI Notetakers: What Must Lawyers Do To Use Them?",
+        "url": "https://bostonbar.org/news/ai-notetakers-what-must-lawyers-do-to-use-them/",
+        "outlet": "Boston Bar Association",
+        "kind": "reporting"
+      },
+      {
+        "label": "TAKE NOTE: New Wave of Privacy Litigation Targets AI Notetaker, Otter.ai",
+        "url": "https://natlawreview.com/article/take-note-new-wave-privacy-litigation-targets-ai-notetaker-otterai",
+        "outlet": "National Law Review",
+        "kind": "reporting"
+      },
+      {
+        "label": "In re Otter.AI Privacy Litigation: What the May 2026 Hearing Means",
+        "url": "https://basilai.app/articles/2026-06-21-in-re-otter-ai-privacy-litigation-may-2026-hearing-explained.html",
+        "outlet": "Basil AI",
+        "kind": "reporting"
+      },
+      {
+        "label": "Otter.ai Wiretap Lawsuit Explained",
+        "url": "https://www.recordinglaw.com/news/otter-ai-wiretap-lawsuit-explained/",
+        "outlet": "Recording Law",
+        "kind": "reporting"
+      },
+      {
+        "label": "Otter.ai Fails to Dismiss Core Privacy Claims in U.S. Court",
+        "url": "https://www.uctoday.com/productivity-automation/otter-ai-fails-to-dismiss-core-privacy-claims-in-u-s-court/",
+        "outlet": "UC Today",
+        "kind": "reporting"
+      },
+      {
+        "label": "The AI Notetaker Lawsuits Aren't About AI, They're About Consent Design",
+        "url": "https://www.socialtalent.com/blog/latest-news/ai-notetaker-lawsuits-consent-design-hiring",
+        "outlet": "SocialTalent",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "An AI notetaker joining your call is not automatically legal to run. Federal law sets a low floor -- one participant's consent is enough to record almost anywhere in the country -- but at least a dozen states require every participant's consent, and a federal judge is right now deciding whether a bot's icon in the meeting window even counts as notice. Whether you need to ask before your next call depends on where the people on it actually are, not on what the notetaker's default settings assume.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This isn't a hypothetical compliance exercise. In re Otter.AI Privacy Litigation -- four consolidated federal class actions accusing one of the most widely used AI notetakers of recording and training on calls without every participant's consent -- had its core wiretap and biometric-privacy claims survive Otter's motion to dismiss on August 13, 2026. A second notetaker, Granola, was sued on nearly identical grounds five weeks earlier, over marketing that told users other call participants \"won't know it's there.\" ==A tool built to make meetings easier to remember is now the subject of the same wiretap statutes written for phone taps.==",
+        "citation_urls": [
+          "https://www.recordinglaw.com/news/otter-ai-wiretap-lawsuit-explained/",
+          "https://www.socialtalent.com/blog/latest-news/ai-notetaker-lawsuits-consent-design-hiring"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "This applies whether the notetaker is a dedicated app like Otter or Granola, or a feature built into the platform itself -- [Google](/company/google)'s Gemini in Meet and [Microsoft](/company/microsoft)'s Copilot in Teams face the same underlying consent question, even though neither has been sued over it yet.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "The federal floor, and the states that raise it",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Federal law requires only one participant to consent before a call can be recorded -- under 18 U.S.C. § 2511(2)(d), that participant can be you, the host, recording your own meeting. That's the entire national baseline. States are free to require more, and at least a dozen do: everyone on the call has to agree, not just the person who started the recording. When a call crosses state lines -- which most video meetings do -- courts applying the federal Wiretap Act have generally held that ==the strictest state involved controls the whole call==, not just the participants physically located there.",
+        "citation_urls": [
+          "https://www.recordinglaw.com/united-states-recording-laws/one-party-consent-states/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "How many states actually require all-party consent depends on which list you read, and that's worth knowing before you trust one. A widely cited count names twelve states, including Oregon -- except Oregon's own all-party rule applies only to in-person conversations; a phone or video call there is one-party consent, the same as the federal floor, which means that list is describing the wrong scenario for the exact case this guide is about. A more conservative legal-industry count lands on eleven: California, Connecticut, Delaware, Florida, Illinois, Maryland, Massachusetts, Montana, New Hampshire, Pennsylvania, and Washington, with Michigan and Nevada sometimes added as a twelfth and thirteenth. **The number to trust is your own state's current wiretap statute, not any listicle's tally -- including this one.**",
+        "citation_urls": [
+          "https://www.recordinglaw.com/party-two-party-consent-states/",
+          "https://www.datagrail.io/blog/data-privacy/ai-notetakers-and-the-legal-exposure-hiding-in-plain-sight/",
+          "https://bostonbar.org/news/ai-notetakers-what-must-lawyers-do-to-use-them/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Is the bot's icon in the meeting enough?",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Otter.ai's own defense, argued before Judge Eumi K. Lee on May 20, 2026, was that a bot's visible presence in the participant list is itself sufficient notice -- that anyone who sees \"Otter Notetaker\" join the call has been told everything the law requires. It was, by that point, the first time a federal judge had been asked to decide whether a decades-old wiretap statute reaches an AI bot at all.",
+        "citation_urls": [
+          "https://basilai.app/articles/2026-06-21-in-re-otter-ai-privacy-litigation-may-2026-hearing-explained.html"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "WHAT'S ACTUALLY ESTABLISHED",
+          "title": "Does a visible notetaker bot count as consent?",
+          "items": [
+            {
+              "claim": "A bot's presence in the meeting's participant list is sufficient legal notice to record.",
+              "level": "contested",
+              "basis": "This is Otter.ai's own litigation position, argued at a May 20, 2026 motion-to-dismiss hearing. No court has ruled that visibility alone satisfies a wiretap statute's consent requirement.",
+              "resolver": "A ruling that squarely addresses notice sufficiency, rather than the narrower question -- whether Otter itself acts as a third-party eavesdropper -- that Judge Lee's August 13, 2026 order actually turned on."
+            },
+            {
+              "claim": "The core wiretap, California, and Illinois biometric claims against Otter.ai are legally sound enough to proceed.",
+              "level": "strong",
+              "basis": "Judge Lee denied Otter's motion to dismiss the federal wiretap, California CIPA, and Illinois BIPA claims on August 13, 2026, finding the complaint plausibly alleges Otter retains and uses call data for its own commercial purposes.",
+              "resolver": "A trial verdict or settlement -- a survived motion to dismiss means the claims can proceed, not that they've been proven."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "That distinction -- what a court actually decided versus what a company argued and hasn't yet won -- is the one worth holding onto for your own calls. The ruling that let those claims proceed rested on a narrower theory: that Otter is not simply a tool acting on the host's behalf, but a company that keeps and uses conversations for its own model training, which makes it look more like an eavesdropper than a neutral recorder in the eyes of the law. Whether your notetaker crosses that same line depends on its own data-retention terms, not its icon.",
+        "citation_urls": [
+          "https://www.recordinglaw.com/news/otter-ai-wiretap-lawsuit-explained/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "HOW WE GOT HERE",
+          "title": "The AI-notetaker consent fight, so far",
+          "items": [
+            {
+              "when": "Aug 15, 2025",
+              "what": "Brewer v. Otter.ai filed, the first of four suits accusing the notetaker of recording calls without every participant's consent.",
+              "source": "https://natlawreview.com/article/take-note-new-wave-privacy-litigation-targets-ai-notetaker-otterai"
+            },
+            {
+              "when": "Oct 22, 2025",
+              "what": "Judge Eumi K. Lee consolidates the four suits into In re Otter.AI Privacy Litigation.",
+              "source": "https://www.uctoday.com/productivity-automation/otter-ai-fails-to-dismiss-core-privacy-claims-in-u-s-court/"
+            },
+            {
+              "when": "May 20, 2026",
+              "what": "Otter argues in court that a visible bot in the participant list is sufficient notice.",
+              "source": "https://basilai.app/articles/2026-06-21-in-re-otter-ai-privacy-litigation-may-2026-hearing-explained.html"
+            },
+            {
+              "when": "Jul 30, 2026",
+              "what": "A second notetaker, Granola, is sued on nearly identical grounds in Chamberlain v. Granola.",
+              "source": "https://www.socialtalent.com/blog/latest-news/ai-notetaker-lawsuits-consent-design-hiring"
+            },
+            {
+              "when": "Aug 13, 2026",
+              "what": "Judge Lee lets the core wiretap and biometric claims against Otter proceed -- the case is not resolved.",
+              "hi": true,
+              "source": "https://www.recordinglaw.com/news/otter-ai-wiretap-lawsuit-explained/"
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The five-minute check before your next recorded call",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of this requires becoming a wiretap lawyer before your next standup. It requires answering one question honestly -- who's actually on this call, and where -- before you let a notetaker join it silently. The same access-first habit applies to any AI tool with a standing line into your work: it's the same instinct behind [connecting an agent to your email and calendar](/article/give-an-ai-agent-email-calendar-access-safely) without over-granting. Five steps, about five minutes the first time:",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check whether your next call needs everyone's consent",
+          "sub": "Works for any notetaker -- Otter, Granola, Fireflies, Zoom AI Companion, Gemini in Meet, Copilot in Teams.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The meeting invite or participant list for your next recorded call."
+          ],
+          "steps": [
+            {
+              "do": "List every participant's location, not just the host's.",
+              "detail": "An interstate or international call is governed by the strictest state or country involved, not the one you're dialing in from.",
+              "verify": "You can name a state (or country) for each person on the call, not just guess.",
+              "ifnot": "If you genuinely don't know where someone is dialing in from, treat the call as if an all-party-consent state is involved."
+            },
+            {
+              "do": "Check whether any participant is in an all-party-consent state.",
+              "detail": "California, Connecticut, Delaware, Florida, Illinois, Maryland, Massachusetts, Montana, New Hampshire, Pennsylvania, and Washington require it every time; treat Michigan, Nevada, and Oregon (phone and video calls only) as maybes worth checking directly.",
+              "verify": "You've checked the actual current statute for any state you're unsure of, not a blog's list.",
+              "ifnot": "If even one participant is in a state you can't confirm, default to asking everyone -- the downside of asking is a moment of awkwardness; the downside of not asking is a wiretap claim."
+            },
+            {
+              "do": "Get affirmative consent out loud, at the start of the call -- not just a bot in the window.",
+              "hi": true,
+              "detail": "No ruling has held that a notetaker's icon alone satisfies a consent requirement, and it's exactly the argument currently before a federal court.",
+              "verify": "A participant said or typed something that shows they understood recording was happening, before it started.",
+              "ifnot": "If the platform only offers a passive on-screen indicator, say the notice out loud yourself: 'This call is being recorded and transcribed by [tool] -- is everyone OK with that?'"
+            },
+            {
+              "do": "Check whether the notetaker captures voiceprints, not just words.",
+              "detail": "Speaker-identification features that fingerprint a voice can trigger biometric privacy laws, like Illinois's BIPA, separately from -- and in addition to -- ordinary recording-consent rules.",
+              "verify": "You've read the notetaker's own privacy policy for the words 'voiceprint,' 'biometric,' or 'speaker identification.'",
+              "ifnot": "If the policy is silent on this, ask the vendor directly before using the feature on a call with anyone in a biometric-privacy state."
+            },
+            {
+              "do": "Check what the tool does with the recording afterward.",
+              "detail": "A notetaker that retains calls to train its own models is acting more like an independent party to the conversation than a tool working on your behalf -- the exact distinction a federal judge cited in August 2026 to let claims against Otter proceed.",
+              "verify": "The vendor's policy states, in plain language, whether your calls train its models and how to opt out.",
+              "ifnot": "If you can't find a clear answer, assume they do and decide whether that's acceptable for the calls you plan to record."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The five checks above assume you're the one running the call. If you're just a participant who spots a notetaker bot and isn't sure it's been cleared with everyone, the response depends on what you actually know:",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "IF YOU'RE ON SOMEONE ELSE'S CALL",
+          "title": "A notetaker joins a call you didn't set up -- what now?",
+          "question": "What do you actually know about how it's being used?",
+          "branches": [
+            {
+              "when": "The host announced it and asked if that's OK, out loud or in the invite.",
+              "then": "You've been asked. Answering the question is enough -- there's nothing further to check here.",
+              "because": "Affirmative, informed consent is exactly what every state's law -- one-party or all-party -- is designed to produce."
+            },
+            {
+              "when": "You see a bot's name in the participant list but nobody said anything about it.",
+              "then": "Ask what it is and what happens to the recording before the call gets substantive.",
+              "because": "A visible icon is the exact form of notice a company is currently arguing, unsuccessfully so far, is sufficient on its own -- don't treat it as settled just because a vendor treats it that way.",
+              "hi": true
+            },
+            {
+              "when": "The call involves health, legal, or other sensitive information and you don't know the notetaker's retention policy.",
+              "then": "Ask for the recording to be paused or the notetaker removed until you get a straight answer on retention and training use.",
+              "because": "This is the exact fact pattern -- a medical-provider conversation -- that produced one of the surviving privacy claims in the Otter litigation."
+            },
+            {
+              "when": "You're not comfortable being recorded at all, for any reason.",
+              "then": "Say so and ask for the tool to be disabled, or decline to join with it running.",
+              "because": "Discomfort with being recorded doesn't need a legal citation to be a valid reason to ask -- and in an all-party state, your refusal is legally dispositive."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Whichever situation applies, notice that none of the four branches treat the bot's presence alone as an answer -- because right now, in the one case that's actually tested that argument, it hasn't been one.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this goes sideways",
+          "items": [
+            {
+              "mistake": "Assuming a visible bot icon satisfies your consent obligation.",
+              "looks": "Treating 'well, they could see it join' as the same thing as asking.",
+              "why": "This is Otter.ai's own defense, made in federal court, and it has not won there -- the notetaker's core wiretap claims survived a motion to dismiss instead of being thrown out on that basis.",
+              "fix": "Get a verbal or written yes before the recording starts, every time.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Trusting a vendor's default settings on auto-join or auto-record.",
+              "looks": "A notetaker that joins and starts recording the instant a meeting begins, with no prompt.",
+              "why": "Granola was sued in part over marketing that told users other participants 'won't know it's there' -- a default built around not being noticed is a default built against consent.",
+              "fix": "Turn off auto-join; require an explicit action before a notetaker enters any call.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Only thinking about the recording, not the voiceprint.",
+              "looks": "Clearing 'is it OK if I record this' and stopping there.",
+              "why": "Speaker-identification features capture biometric data that triggers separate laws like Illinois's BIPA, independent of ordinary wiretap consent -- one of the claims that survived against Otter is exactly this.",
+              "fix": "Check the notetaker's privacy policy for voiceprint or biometric language before using speaker-ID features across state lines.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Using the loosest applicable state's rule for a multi-state call.",
+              "looks": "Reasoning 'I'm in a one-party state, so I'm fine' while dialing in three other states.",
+              "why": "Courts applying the federal Wiretap Act to interstate calls have generally applied the strictest state's rule to the whole call, not just to the participants physically there.",
+              "fix": "Identify every participant's state before the call, and default to the strictest one if any is in doubt.",
+              "cost": "high"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is an argument against using an AI notetaker -- transcripts genuinely help, and getting the words right matters too (our [companion guide on catching a bad AI transcript](/article/catch-a-bad-ai-transcript-before-you-send-it) covers the accuracy side of the same tools). It's an argument for treating the consent question with the same seriousness you'd give an actual audio recorder in your pocket, because legally, an AI notetaker is exactly that -- with the added twist that nobody has yet decided in court whether its own on-screen presence is enough to ask on your behalf.",
         "citation_urls": []
       }
     ],

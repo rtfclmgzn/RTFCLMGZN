@@ -22407,5 +22407,77 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-21T05:21:12Z"
       }
     ]
+  },
+  {
+    "article_id": "g23",
+    "ts": "2026-09-21T16:30:19Z",
+    "export": {
+      "article_id": "g23",
+      "url": "https://rtfclmgzn.com/article/check-whether-your-ai-notetaker-needs-consent",
+      "headline": "How to tell whether your AI meeting notetaker actually needs everyone's consent",
+      "hook": "A bot's icon in the participant list is not the same thing as legal consent to record the call -- and a federal judge is right now deciding exactly that, with core wiretap and biometric claims against one major notetaker surviving into discovery.",
+      "key_facts": [
+        "Federal law needs one participant's consent; at least 11 states require everyone's, and the strictest state wins on interstate calls.",
+        "A judge let core wiretap and biometric claims against Otter.ai proceed on August 13, 2026 -- the case isn't resolved.",
+        "Otter's own defense -- a visible bot counts as notice -- has not won in court."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g23.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A bot's icon in your meeting's participant list is not the same thing as legal consent to record the call. A federal judge is deciding that exact question right now -- and the core wiretap/biometric claims against one major AI notetaker already survived a motion to dismiss:",
+        "reply_copy": "The 5-minute check before your next call:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#PrivacyLaw"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Your AI notetaker joining a call is not automatically legal to run.\n\nFederal law needs just one participant's consent to record -- but at least 11 states require everyone's, and courts generally apply the strictest state's rule to the whole call when it crosses state lines.\n\nOtter.ai's own defense in federal court: a bot's icon in the participant list is sufficient notice on its own. That argument hasn't won -- the core wiretap and biometric claims against it survived a motion to dismiss on August 13, 2026, and the case continues.\n\nOur new guide: the actual consent floor, state by state, and the 5-minute check to run before your next recorded call. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#PrivacyLaw",
+          "#TechTips",
+          "#RemoteWork"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI meeting notetakers -- Otter, Granola, and the built-in versions inside Zoom, Teams, and Google Meet -- have quietly become a legal question, not just a convenience.\n\nFederal law requires only one call participant's consent to record. At least 11 states require everyone's, and when a call crosses state lines, courts have generally applied the strictest state's rule to the whole thing.\n\nOtter.ai argued in federal court that a bot's visible presence in the meeting is itself sufficient notice. That defense hasn't won: a judge let the core wiretap and biometric-privacy claims against the company proceed on August 13, 2026, and a second notetaker, Granola, was sued on nearly identical grounds weeks earlier.\n\nOur new guide walks through the actual consent floor and a five-minute check to run before your next recorded call.",
+        "hashtags": [
+          "#AI",
+          "#PrivacyLaw"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A visible bot in your meeting's participant list is not the same thing as legal consent to record. Otter.ai argued it is in federal court -- and lost that argument for now: core wiretap/biometric claims against it survived a motion to dismiss on Aug 13, 2026. Our new guide has the 5-minute check.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Otter.ai argued in federal court that a bot's icon in a meeting's participant list is sufficient consent to record it. That hasn't won -- the core wiretap and biometric claims against it survived a motion to dismiss on Aug 13, 2026. The actual consent floor, state by state:",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
