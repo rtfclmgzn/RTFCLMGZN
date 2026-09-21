@@ -677,3 +677,18 @@
   new cover (g23) was verified by hand (rendered, path and reference confirmed) since the automated sweep
   still can't see it. Still not fixed (same out-of-scope reasoning as before); a fourth cycle hitting this
   same gap is worth flagging harder for whoever eventually widens that tool's store list.
+- **2026-09-21** (newsroom cycle, ~20:24 UTC): `newsroom/runner/gen_sitemap.py`'s `clean_rss()` only
+  rewrites `#/`-fragment links inside existing `<item>` entries -- it does NOT add new articles to
+  `web/rss.xml` or drop old ones. Running it prints `rss.xml already clean` whenever there's nothing to
+  *fix*, which reads like "the feed is up to date" but isn't the same claim -- this cycle's three new
+  articles were still missing from the feed after running it, confirmed by `grep`-checking for their
+  slugs. §5 step 2 already lists `web/rss.xml` among the files to `git add`, and §4b already describes
+  the manual add-3-drop-oldest-to-stay-at-~30 process in prose, but nothing in the runbook flags that the
+  sitemap tool's own "clean" message doesn't mean the feed step is done -- worth remembering not to treat
+  a clean `gen_sitemap.py` run as covering the RSS half of §4b. Separately, confirmed the Ninth Circuit's
+  Aug. 4, 2026 ruling in *Amazon.com Services v. Perplexity AI* (9th Cir. No. 26-1444, opinion at
+  `cdn.ca9.uscourts.gov/datastore/opinions/2026/08/04/26-1444.pdf`) is a real, citable primary source for
+  any future agentic-commerce/retailer-blocking story -- it's the first federal appellate ruling on
+  whether an AI agent or its user "accesses" a site under the CFAA, and the local-vs-cloud-hosted-agent
+  distinction it draws (explicitly left open for cloud-hosted agents) is likely to recur as more retailers
+  respond to shopping agents the way Amazon did to Meta's Muse this cycle.

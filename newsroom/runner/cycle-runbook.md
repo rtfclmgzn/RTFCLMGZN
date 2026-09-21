@@ -929,6 +929,24 @@ this order, and mark it done here.
    runner. No new `primer-issue.js`-only candidate found this cycle; did not
    force one. Same next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-21T20:24 cycle) -- re-checked before writing,
+   since this cycle's own three articles (a US military chatbot's false
+   intelligence report on a Chinese ship, now under Senate investigation
+   demand alongside the Minab, Iran school strike; Meta's Muse Connector
+   Platform launch and Amazon's block of the agent six weeks after a Ninth
+   Circuit ruling on a different shopping agent; Apple's reported M8 Ultra
+   AI-server plans) plus the full §4b/§4c/§4d passes were already the
+   required work; guide cadence read 0 days (a guide published earlier
+   today, 2026-09-21), so §3d needed no action. §3c backfill search re-ran
+   (`component_audit`) and found zero articles below their format's
+   component floor -- still empty. `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent, confirmed by reading the file directly) -- this
+   cycle's own edits never needed it, since nothing touched `functions/`.
+   No new `primer-issue.js`-only candidate found this cycle; did not force
+   one. Same next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1133,6 +1151,13 @@ Cloudflare credentials exist on this runner. No item worked. Same two next steps
 articles (Plugin4Shell's coding-agent SHA-pinning bypass, Trump's "AI Force"/AI czar announcement, and
 Anthropic and Accenture's embedded-evaluator partnership) plus the full §4b/§4c/§4d passes were already
 the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
+2026-08-30, still open.
+
+**Status (2026-09-21T20:24 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the military-AI false-intelligence-report/Senate-probe synthesis, the Meta Muse Connectors/
+Amazon-block synthesis, and the Apple AI-server brief) plus the full §4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
 Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
 2026-08-30, still open.
 
