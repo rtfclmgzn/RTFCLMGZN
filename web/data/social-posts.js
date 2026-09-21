@@ -21056,8 +21056,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIChips",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvzs3bt4ts2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvzs3bt4ts2o",
+        "posted_at": "2026-09-21T13:13:02Z"
       }
     ]
   },
@@ -22213,8 +22215,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AppSec"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mvzru2hz7q2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mvzru2hz7q2t",
+        "posted_at": "2026-09-21T13:09:00Z"
       }
     ]
   },
@@ -22277,8 +22281,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Trump: forming an 'AI Force,' naming a new AI czar soon. No structure, budget or candidate given. Called AI-extinction warnings a 'hoax.' The czar seat's been empty since March, when David Sacks' term ran out.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdjO5boGyvN",
+        "remote_id": "18472521769119582",
+        "posted_at": "2026-09-21T13:08:52Z"
       },
       {
         "platform": "bluesky",
@@ -22325,7 +22331,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -22340,7 +22346,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
