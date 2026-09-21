@@ -659,3 +659,21 @@
   validates against the schema but a wrong-but-well-formed key name for a nested-array item may not
   be its own named check. Worth a future pass confirming the audit actually catches a misnamed
   `chart.series` vs `chart.data` rather than silently accepting an empty/ignored field.
+
+- **2026-09-21** (reference-desk cycle): researching a guide on AI-notetaker recording-consent law,
+  every one of nine WebFetch calls to law-firm CLE blogs and legal-tech trade press (natlawreview.com,
+  bostonbar.org, mclane.com, coblentzlaw.com, mslawgroup.com, recordinglaw.com, uctoday.com, basilai.app,
+  socialtalent.com, datagrail.io) succeeded cleanly -- zero 403s, zero timeouts. Worth contrasting with
+  the growing standing-block list already tracked here (`*.gov`, `openai.com`, `npr.org`, `anthropic.com`,
+  `cnbc.com`, `businesswire.com`, `washingtontimes.com`, all 2026-08-18 through 09-12): major-outlet and
+  vendor-PR domains are the unreliable tier, but law-firm insight pages and smaller legal/SaaS trade blogs
+  have been consistently fetchable across every research-heavy cycle so far. When a story needs a legal
+  or regulatory primary source and the obvious `.gov`/big-media citation is likely to 403, search for the
+  law-firm write-up first rather than attempting the primary directly and losing time to a predictable
+  failure -- the same source class also tends to name exact case numbers, filing dates and judges that a
+  vendor blog or news aggregator summary leaves out. Separately: re-confirmed the 2026-08-21 finding that
+  `verify_covers.py check`'s `STORES` list still only scans `newsroom-articles.js` (`checked=313` against
+  336 total published articles this cycle, a gap of exactly the 23 records in `guides.js`) -- this cycle's
+  new cover (g23) was verified by hand (rendered, path and reference confirmed) since the automated sweep
+  still can't see it. Still not fixed (same out-of-scope reasoning as before); a fourth cycle hitting this
+  same gap is worth flagging harder for whoever eventually widens that tool's store list.
