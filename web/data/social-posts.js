@@ -22483,5 +22483,268 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-21T16:42:04Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-military-ai-chatbot-false-report-china-ship-senate-investigation",
+    "ts": "2026-09-21T20:24:10Z",
+    "export": {
+      "article_id": "newsroom-military-ai-chatbot-false-report-china-ship-senate-investigation",
+      "url": "https://rtfclmgzn.com/article/military-ai-chatbot-false-report-china-ship-senate-investigation",
+      "headline": "A US military chatbot wrongly flagged a Chinese ship as nuclear cargo, nearly triggering a clash -- senators now want it investigated alongside the Minab strike",
+      "hook": "A chatbot-drafted US intel report wrongly flagged a Chinese ship as nuclear-weapons cargo this spring, pushing the military to the brink of an interception before officials caught the error. 3 senators now want it investigated alongside the Minab, Iran school strike.",
+      "key_facts": [
+        "A special-ops analyst used a chatbot twice -- to interpret intel, then to draft the report -- before it circulated as fact.",
+        "Sens. Warner, Reed and Coons demand an IG probe into this incident and the Feb. 2026 Minab strike, which killed 150+.",
+        "Pentagon's own unreleased review ties Minab to overreliance on Palantir's Maven AI and 90% cuts to harm-mitigation staff."
+      ],
+      "tone": "composed, legally precise, sourced-neutral on accusatory claims",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/military-ai-chatbot-false-report-china-ship-senate-investigation.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A US military chatbot wrongly flagged a Chinese ship's cargo as nuclear-weapons components this spring -- the military moved toward intercepting it before officials caught the error. 3 senators now want it investigated alongside February's deadly Minab, Iran school strike.",
+        "reply_copy": "What's established, what's contested, and what's still unanswered:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#NationalSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T01:24:10Z",
+        "copy": "The Pentagon's own unreleased review of the Minab school strike cites overreliance on Palantir's Maven AI tool and a 90% cut to civilian-harm-mitigation staffing. A UN fact-finding mission went further, calling it a likely violation of the laws of war.",
+        "reply_copy": "Full piece:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "This spring, a US military analyst asked a chatbot to review intelligence on a Chinese cargo ship -- then used AI again to write up the findings as a formal report.\n\nThe chatbot got it wrong: it flagged the ship's cargo as nuclear-weapons components. The report circulated. The military moved toward intercepting the vessel -- armed service members ready to board, aircraft in the air -- before officials caught the error just before the operation began.\n\nThree senators (Warner, Reed, Coons) are now demanding an Inspector General investigation, and they're pairing this incident with a deadlier one: February's strike on a school in Minab, Iran, which the Pentagon's own unreleased review ties to overreliance on an AI targeting tool.\n\nWe lay out what's established, what's still contested, and what a Senate letter is actually asking for.",
+        "hashtags": [
+          "#AI",
+          "#MilitaryAI",
+          "#NationalSecurity",
+          "#AISafety",
+          "#Pentagon",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A US special-operations analyst this spring asked a chatbot to review intelligence on a Chinese cargo ship, then used AI a second time to turn the findings into a formal report. The chatbot had wrongly identified the ship's cargo as nuclear-weapons-program components -- and once the report circulated, it pushed the US military to the brink of an interception before officials caught the error.\n\nThree Senate Armed Services Democrats -- Mark Warner, Jack Reed and Chris Coons -- are now demanding an Inspector General investigation, explicitly pairing this incident with February's strike on a school in Minab, Iran, which killed more than 150 people. The Pentagon's own unreleased internal review of that strike cites overreliance on Palantir's Maven AI system alongside a roughly 90% cut to civilian-harm-mitigation staffing.\n\nOur piece traces both incidents, states plainly what's established versus contested, and lays out what the senators are actually asking for.",
+        "hashtags": [
+          "#AI",
+          "#NationalSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A chatbot-drafted intel report wrongly flagged a Chinese ship's cargo as nuclear-weapons components this spring -- the US military moved toward intercepting it before the error was caught. 3 senators now want it investigated alongside the deadlier Minab, Iran strike.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T01:24:10Z",
+        "copy": "The Pentagon's own unreleased review of the Minab strike cites overreliance on Palantir's Maven AI and a 90% staffing cut to civilian-harm teams. A UN mission went further, calling it a likely violation of the laws of war.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A US military chatbot wrongly flagged a Chinese ship as carrying nuclear-weapons cargo, nearly triggering an interception. 3 senators now want it investigated alongside the deadlier Minab, Iran strike, which the Pentagon's own review ties to AI overreliance.",
+        "hashtags": [
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-meta-muse-connectors-stripe-amazon-blocks-agent",
+    "ts": "2026-09-21T20:27:40Z",
+    "export": {
+      "article_id": "newsroom-meta-muse-connectors-stripe-amazon-blocks-agent",
+      "url": "https://rtfclmgzn.com/article/meta-muse-connectors-stripe-amazon-blocks-agent",
+      "headline": "Meta opened Muse to outside developers and Stripe payments -- 12 days later, Amazon blocked the agent from shopping on Amazon.com",
+      "hook": "Meta opened its Muse Connector Platform to developers and added Stripe payments on Sept. 18. By Sunday, Amazon was blocking Muse checkouts -- and a Ninth Circuit ruling from six weeks earlier explains exactly why Amazon has more legal room to do it this time.",
+      "key_facts": [
+        "Meta's Muse Connector Platform lets developers plug products into Muse; Notion and Granola went live as connectors.",
+        "Amazon began blocking Muse purchases Sunday evening, citing undisclosed agent activity and stored credentials.",
+        "A Ninth Circuit ruling (Aug. 4) protected Perplexity's locally-run agent from an Amazon injunction -- Muse runs the opposite way."
+      ],
+      "tone": "analytical, reconciles dueling company claims, legally grounded",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/meta-muse-connectors-stripe-amazon-blocks-agent.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Meta opened Muse to outside developers and Stripe payments on Sept. 18. 12 days later, Amazon started blocking Muse from checking out on Amazon.com -- citing undisclosed agent activity and stored credentials. Meta says Muse never sees passwords. Neither claim is independently tested.",
+        "reply_copy": "Why Amazon has more legal room this time than it did against Perplexity:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#AgenticCommerce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T01:27:40Z",
+        "copy": "A Ninth Circuit ruling 6 weeks ago vacated Amazon's injunction against Perplexity's shopping agent -- because it runs locally on the user's machine. Meta's Muse runs the opposite way: cloud-hosted, holding stored logins. That's exactly the distinction the court left open.",
+        "reply_copy": "Full piece:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AgenticAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Sept. 18: Meta opens its Muse Connector Platform to outside developers, adds Stripe Link payments, and expands to Canada -- a real push to turn its personal AI agent into a shopping agent.\n\nSept. 20: Amazon starts showing Muse users a popup blocking checkout, citing undisclosed agent activity and stored credentials. Meta says Muse never sees passwords -- credentials sit in encrypted storage it can use but not view. Neither company's claim has been independently tested.\n\nHere's the twist: a Ninth Circuit ruling six weeks earlier protected a rival shopping agent (Perplexity's Comet) from this exact kind of block -- because it runs locally on the user's own device. Muse runs the opposite way, cloud-hosted with stored logins. That's precisely the distinction the court left open.\n\nWe trace both companies' claims and the legal ruling that explains why this fight looks different from the last one.",
+        "hashtags": [
+          "#AI",
+          "#Meta",
+          "#Amazon",
+          "#AgenticCommerce",
+          "#TechNews",
+          "#AIAgents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Meta opened its Muse Connector Platform to outside developers on Sept. 18, letting anyone plug a product into its personal AI agent, and partnered with Stripe so Muse can check out using Stripe Link. Notion and Granola went live as the first new connectors.\n\nTwelve days later, Amazon began blocking Muse from completing purchases on Amazon.com, showing users a popup that reads: 'Continued access by an unauthorized AI agent violates Amazon's Conditions of Use.' Amazon says Muse doesn't identify itself and captures user credentials; Meta says Muse never sees passwords, only encrypted tokens.\n\nA Ninth Circuit ruling from six weeks earlier, in a case about a different shopping agent, explains why Amazon has firmer legal ground this time. Our piece reads Amazon's block against that ruling's own reasoning.",
+        "hashtags": [
+          "#AI",
+          "#AgenticCommerce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Meta opened Muse to outside developers and Stripe payments Sept. 18. 12 days later, Amazon blocked Muse from checkout, citing stored credentials. Meta disputes it. A Ninth Circuit ruling 6 weeks ago explains why Amazon has more legal room this time than it did against Perplexity.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T01:27:40Z",
+        "copy": "Perplexity's shopping agent runs locally on your device -- a court protected it from Amazon's injunction because of that. Meta's Muse runs on Meta's own cloud servers with your stored logins. That's the exact distinction the same ruling left open for a future case.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Meta opened Muse to outside developers + Stripe payments Sept. 18. Amazon blocked it from checkout 12 days later, citing stored credentials -- Meta disputes it. A Ninth Circuit ruling 6 weeks ago is why Amazon has firmer legal ground this time than against Perplexity.",
+        "hashtags": [
+          "#AgenticAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-apple-m8-ultra-ai-servers-nvidia-nvlink-2029",
+    "ts": "2026-09-21T20:29:05Z",
+    "export": {
+      "article_id": "newsroom-apple-m8-ultra-ai-servers-nvidia-nvlink-2029",
+      "url": "https://rtfclmgzn.com/article/apple-m8-ultra-ai-servers-nvidia-nvlink-2029",
+      "headline": "Apple is reportedly building AI servers again, for the first time since 2011 -- and talking to Nvidia about the chip-to-chip link that would run them",
+      "hook": "Apple is reportedly developing AI inference servers around future M8 Ultra chips -- and has discussed using rival Nvidia's NVLink Fusion to connect them, ending a near two-decade freeze between the companies. Nothing ships before 2029, if it ships at all.",
+      "key_facts": [
+        "Two configurations reportedly planned: 2 M8 Ultra chips per unit, or 4.",
+        "Apple and Nvidia haven't shared silicon in a Mac in nearly 20 years, since MacBook GPU reliability problems.",
+        "Neither company has commented; The Information's report has not been independently verified."
+      ],
+      "tone": "measured, consistently hedged given single-source reporting",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/apple-m8-ultra-ai-servers-nvidia-nvlink-2029.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Apple is reportedly building AI servers again -- first time since it killed Xserve in 2011 -- around future M8 Ultra chips, and has discussed using rival Nvidia's NVLink Fusion to connect them. Neither company has commented. Nothing ships before 2029, if at all.",
+        "reply_copy": "The nearly 20-year Apple/Nvidia freeze, and what could still derail this:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Apple",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Apple is reportedly getting back into server hardware -- for the first time since it killed the Xserve in 2011.\n\nThe plan: rack-mounted AI inference servers built around future M8 Ultra chips, in 2-chip or 4-chip configurations, aimed at businesses and governments that want to run AI on their own hardware instead of the public cloud.\n\nThe bigger surprise is who Apple's reportedly talking to about connecting those chips: Nvidia. The two companies have barely spoken in nearly two decades, since GPU reliability problems in early MacBooks soured the relationship.\n\nNeither company has commented, and nothing ships before 2029 -- if it ships at all.",
+        "hashtags": [
+          "#Apple",
+          "#Nvidia",
+          "#AIServers",
+          "#TechNews",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Apple is developing rack-mounted AI inference servers built around future M8 Ultra chips, according to a report from The Information -- a potential return to server hardware for the first time since Apple retired the Xserve in 2011. Two configurations are reportedly in the works, with two or four M8 Ultra processors per unit, targeting businesses and governments that want to run AI models on hardware they own instead of the public cloud.\n\nThe more striking detail: Apple has reportedly discussed using rival Nvidia's NVLink Fusion interconnect to connect those chips. The two companies have kept each other at arm's length for nearly two decades, after GPU reliability problems in early-2010s MacBooks soured the relationship.\n\nNeither Apple nor Nvidia has commented, and nothing would ship before 2029.",
+        "hashtags": [
+          "#Apple",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Apple is reportedly building AI servers again -- first time since 2011 -- around future M8 Ultra chips, and has discussed using rival Nvidia's NVLink Fusion to connect them. Neither company has commented. Nothing ships before 2029, if at all.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Apple is reportedly building AI servers again -- first time since 2011 -- around future M8 Ultra chips, discussing rival Nvidia's NVLink Fusion to connect them. Neither company has commented. Nothing ships before 2029, if at all.",
+        "hashtags": [
+          "#Apple"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

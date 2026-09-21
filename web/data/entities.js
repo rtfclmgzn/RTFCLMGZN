@@ -115,6 +115,8 @@ window.RTFC_ENTITIES = {
       kind:"open-weights model family", access:"open-weights" },
 
     // --- China labs ---
+    { re:/\bStep 5 Preview\b/i, name:"Step 5 Preview", maker:"StepFun", makerKey:"stepfun",
+      kind:"open-weights-pending MoE model", access:"closed" },
     { re:/\bKimi K3\b/i, name:"Kimi K3", maker:"Moonshot AI", makerKey:"moonshot",
       kind:"open-weights frontier model", access:"open-weights" },
     { re:/\bKimi K2\b/i, name:"Kimi K2", maker:"Moonshot AI", makerKey:"moonshot",

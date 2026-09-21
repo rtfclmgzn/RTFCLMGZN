@@ -383,5 +383,17 @@ window.RTFC_BUZZ = [
     text:"Treasury Secretary Scott Bessent proposed a bilateral AI incident notification mechanism during talks with Chinese officials on September 21, establishing a new US-China AI Dialogue working group. The proposal includes real-time incident disclosure protocols for frontier model breaches, agent escape scenarios, and supply-chain disruptions -- modeled on Cold War-era nuclear-incident communication but applied to AI safety events. Both sides committed to quarterly check-ins starting October 2026.",
     why:"The US and China creating a dedicated diplomatic channel specifically for AI safety incidents -- rather than folding it into general tech cooperation -- signals both governments now treat frontier AI as a national-security category distinct from cybersecurity or trade, and worth a separate crisis infrastructure.",
     heat:57, topics:["us-china","ai diplomacy","incident notification","bilateral working group","scott bessent","frontier ai","geopolitics"],
-    url:"https://aiweekly.co/ai-news-today" }
+    url:"https://aiweekly.co/ai-news-today" },
+{ id:"bz-663", date:"2026-09-21",
+    source:{ name:"StepFun", handle:"StepFun", platform:"web", kind:"lab" },
+    text:"Chinese lab StepFun shipped Step 5 Preview on September 20, a 600-billion-parameter sparse mixture-of-experts model (about 27B active per token) with a 1M-token context window, targeting long-horizon coding and agentic work. API pricing is $1.00/M input tokens ($0.05 on a cache hit) and $2.70/M output; it scored 44 on the Artificial Analysis Intelligence Index. Open weights are scheduled for October 15.",
+    why:"A 600B open-weight model with a measured Intelligence Index score and a set weights-release date, from a lab outside the usual US/Chinese-frontier-lab shortlist, is exactly the kind of mid-tier entrant the Scoreboard exists to track before it either breaks out or fades.",
+    heat:36, topics:["stepfun","step 5","open weights","mixture of experts","china","artificial analysis","long context"],
+    url:"https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/" },
+{ id:"bz-664", date:"2026-09-21",
+    source:{ name:"Independent security research", handle:"buchodi", platform:"web", kind:"news" },
+    text:"A security researcher's reverse-engineering of OpenAI's ad platform (internal name \"bazaar\") found ChatGPT sets a year-long, cross-site cookie called __obi once a user encounters an OpenAI ad pixel -- reproduced across 936 advertiser pixels on 1,029 hostnames, including sites like Chewy, Wayfair and HelloFresh. The cookie is filed under OpenAI's \"Data Analysis\" privacy toggle rather than \"Advertising & Marketing,\" so disabling ad tracking in ChatGPT's settings does not appear to stop it, per the researcher's writeup.",
+    why:"A cross-site ad-tracking cookie tied to a ChatGPT account, sitting under a privacy toggle a user wouldn't think to check, is the kind of concrete, reproducible finding worth watching for an OpenAI response -- distinct from the platform-policy debates most AI privacy stories are.",
+    heat:44, topics:["openai","chatgpt","advertising","tracking","privacy","cookies","security research"],
+    url:"https://cybersecuritynews.com/chatgpt-ad-tracking-cookie-follows-users/" }
 ];
