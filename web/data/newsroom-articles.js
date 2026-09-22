@@ -69846,11 +69846,30 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "kicker": "How two AI-targeting failures reached the same Senate letter",
      "title": "The sequence, dated",
      "items": [
-      {"when": "Jan 2026", "what": "The War Department (formerly DoD) releases its \"AI Acceleration Strategy,\" pledging to integrate AI \"across every mission area\" to secure \"American Military AI Dominance.\"", "source": "https://www.cto.mil/release-of-the-war-departments-ai-acceleration-strategy/"},
-      {"when": "Feb 28, 2026", "what": "US Tomahawk missiles strike Shajareh Tayyebeh Elementary School in Minab, Iran, killing more than 150 people, including over 120 children.", "hi": true},
-      {"when": "Spring 2026", "what": "A chatbot-drafted report wrongly flags a Chinese ship's cargo as nuclear-weapons components; the US military moves toward intercepting it before the error is caught.", "hi": true},
-      {"when": "Sept 18, 2026", "what": "CNN reveals the ship incident, quoting a source who called the report \"entirely false.\""},
-      {"when": "Sept 19, 2026", "what": "Sens. Warner, Reed and Coons send Hegseth and DNI Jay Clayton a letter demanding an Inspector General investigation into both incidents.", "hi": true}
+      {
+       "when": "Jan 2026",
+       "what": "The War Department (formerly DoD) releases its \"AI Acceleration Strategy,\" pledging to integrate AI \"across every mission area\" to secure \"American Military AI Dominance.\"",
+       "source": "https://www.cto.mil/release-of-the-war-departments-ai-acceleration-strategy/"
+      },
+      {
+       "when": "Feb 28, 2026",
+       "what": "US Tomahawk missiles strike Shajareh Tayyebeh Elementary School in Minab, Iran, killing more than 150 people, including over 120 children.",
+       "hi": true
+      },
+      {
+       "when": "Spring 2026",
+       "what": "A chatbot-drafted report wrongly flags a Chinese ship's cargo as nuclear-weapons components; the US military moves toward intercepting it before the error is caught.",
+       "hi": true
+      },
+      {
+       "when": "Sept 18, 2026",
+       "what": "CNN reveals the ship incident, quoting a source who called the report \"entirely false.\""
+      },
+      {
+       "when": "Sept 19, 2026",
+       "what": "Sens. Warner, Reed and Coons send Hegseth and DNI Jay Clayton a letter demanding an Inspector General investigation into both incidents.",
+       "hi": true
+      }
      ]
     }
    },
@@ -69922,9 +69941,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "stakes": {
      "kicker": "Who this actually lands on",
      "items": [
-      {"who": "Sens. Warner, Reed and Coons", "tone": "gains", "what": "Gain a concrete, dated pair of incidents to force an Inspector General review and push for a public, unified AI-verification standard."},
-      {"who": "US Special Operations Command and the Pentagon", "tone": "exposed", "what": "Face investigation demands over two separate incidents in one year, having not publicly responded to either as of this writing."},
-      {"who": "Analysts using AI-assisted intelligence tools day to day", "tone": "unclear", "what": "Keep working without a public, common standard for verifying AI-generated targeting or intelligence output before it's acted on."}
+      {
+       "who": "Sens. Warner, Reed and Coons",
+       "tone": "gains",
+       "what": "Gain a concrete, dated pair of incidents to force an Inspector General review and push for a public, unified AI-verification standard."
+      },
+      {
+       "who": "US Special Operations Command and the Pentagon",
+       "tone": "exposed",
+       "what": "Face investigation demands over two separate incidents in one year, having not publicly responded to either as of this writing."
+      },
+      {
+       "who": "Analysts using AI-assisted intelligence tools day to day",
+       "tone": "unclear",
+       "what": "Keep working without a public, common standard for verifying AI-generated targeting or intelligence output before it's acted on."
+      }
      ]
     }
    },
@@ -69971,8 +70002,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    "run": "autonomous Claude-runner cycle · 2026-09-21T20:24:10Z"
   }
- }
-,
+ },
  {
   "slug": "meta-muse-connectors-stripe-amazon-blocks-agent",
   "title": "Meta opened Muse to outside developers and Stripe payments -- 12 days later, Amazon blocked the agent from shopping on Amazon.com",
@@ -70080,10 +70110,23 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "kicker": "How a connector reaches a Muse user",
      "title": "From a submitted API to a completed purchase",
      "steps": [
-      {"actor": "Developer", "what": "Describes the product and submits it through muse.ai/platform."},
-      {"actor": "Meta", "what": "Reviews for functional, security and legal requirements, plus end-to-end testing.", "hi": true},
-      {"actor": "Muse", "what": "Lists the connector in the user-facing directory, with optional editorial featuring."},
-      {"actor": "Muse, at checkout", "what": "Pays through Stripe Link using credentials Meta says sit in encrypted storage Muse can use but not see."}
+      {
+       "actor": "Developer",
+       "what": "Describes the product and submits it through muse.ai/platform."
+      },
+      {
+       "actor": "Meta",
+       "what": "Reviews for functional, security and legal requirements, plus end-to-end testing.",
+       "hi": true
+      },
+      {
+       "actor": "Muse",
+       "what": "Lists the connector in the user-facing directory, with optional editorial featuring."
+      },
+      {
+       "actor": "Muse, at checkout",
+       "what": "Pays through Stripe Link using credentials Meta says sit in encrypted storage Muse can use but not see."
+      }
      ]
     }
    },
@@ -70115,10 +70158,25 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "kicker": "Six weeks from ruling to blocked checkout",
      "title": "How agentic shopping got its first tollgate",
      "items": [
-      {"when": "Aug 4, 2026", "what": "Ninth Circuit vacates Amazon's CFAA injunction against Perplexity's locally-run Comet browser -- but explicitly leaves cloud-hosted agents and contract claims unresolved.", "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/04/26-1444.pdf"},
-      {"when": "Sept 8, 2026", "what": "Meta launches Muse; Wang names its first batch of connectors, including Amazon-adjacent services like Plaid and OpenTable."},
-      {"when": "Sept 18, 2026", "what": "Meta opens the Muse Connector Platform to outside developers, adds Stripe Link payments, and expands Muse to Canada.", "hi": true},
-      {"when": "Sept 20, 2026 (Sun.)", "what": "Amazon begins blocking Muse checkouts with a Conditions-of-Use popup.", "hi": true}
+      {
+       "when": "Aug 4, 2026",
+       "what": "Ninth Circuit vacates Amazon's CFAA injunction against Perplexity's locally-run Comet browser -- but explicitly leaves cloud-hosted agents and contract claims unresolved.",
+       "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/04/26-1444.pdf"
+      },
+      {
+       "when": "Sept 8, 2026",
+       "what": "Meta launches Muse; Wang names its first batch of connectors, including Amazon-adjacent services like Plaid and OpenTable."
+      },
+      {
+       "when": "Sept 18, 2026",
+       "what": "Meta opens the Muse Connector Platform to outside developers, adds Stripe Link payments, and expands Muse to Canada.",
+       "hi": true
+      },
+      {
+       "when": "Sept 20, 2026 (Sun.)",
+       "what": "Amazon begins blocking Muse checkouts with a Conditions-of-Use popup.",
+       "hi": true
+      }
      ]
     }
    },
@@ -70132,10 +70190,26 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "stakes": {
      "kicker": "Who this actually lands on",
      "items": [
-      {"who": "Meta's agentic-commerce push", "tone": "exposed", "what": "Its biggest connector ambitions depend on retailers' cooperation, and its largest one just said no at checkout."},
-      {"who": "Amazon's storefront", "tone": "gains", "what": "Sets a public precedent -- block first, litigate later if needed -- that other retailers can copy without going to court."},
-      {"who": "Stripe", "tone": "gains", "what": "Gets paid on a Muse purchase regardless of which merchant it completes on, Amazon or otherwise."},
-      {"who": "Merchants deciding whether to build a connector", "tone": "unclear", "what": "Have no published fee or revenue-share terms from Meta, and no independent read on whether Muse's credential handling is as safe as Meta says."}
+      {
+       "who": "Meta's agentic-commerce push",
+       "tone": "exposed",
+       "what": "Its biggest connector ambitions depend on retailers' cooperation, and its largest one just said no at checkout."
+      },
+      {
+       "who": "Amazon's storefront",
+       "tone": "gains",
+       "what": "Sets a public precedent -- block first, litigate later if needed -- that other retailers can copy without going to court."
+      },
+      {
+       "who": "Stripe",
+       "tone": "gains",
+       "what": "Gets paid on a Muse purchase regardless of which merchant it completes on, Amazon or otherwise."
+      },
+      {
+       "who": "Merchants deciding whether to build a connector",
+       "tone": "unclear",
+       "what": "Have no published fee or revenue-share terms from Meta, and no independent read on whether Muse's credential handling is as safe as Meta says."
+      }
      ]
     }
    },
@@ -70182,8 +70256,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    "run": "autonomous Claude-runner cycle · 2026-09-21T20:27:40Z"
   }
- }
-,
+ },
  {
   "slug": "apple-m8-ultra-ai-servers-nvidia-nvlink-2029",
   "title": "Apple is reportedly building AI servers again, for the first time since 2011 -- and talking to Nvidia about the chip-to-chip link that would run them",
@@ -70251,12 +70324,31 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "keyfacts": {
      "title": "The reported plan, in short",
      "items": [
-      {"label": "Chip", "value": "M8 Ultra", "note": "not yet released"},
-      {"label": "Configurations", "value": "Two-chip or four-chip units"},
-      {"label": "Interconnect talks", "value": "Nvidia NVLink Fusion"},
-      {"label": "Workload", "value": "AI inference, not training"},
-      {"label": "Target ship date", "value": "Not before 2029"},
-      {"label": "Confirmed by Apple or Nvidia", "value": "No"}
+      {
+       "label": "Chip",
+       "value": "M8 Ultra",
+       "note": "not yet released"
+      },
+      {
+       "label": "Configurations",
+       "value": "Two-chip or four-chip units"
+      },
+      {
+       "label": "Interconnect talks",
+       "value": "Nvidia NVLink Fusion"
+      },
+      {
+       "label": "Workload",
+       "value": "AI inference, not training"
+      },
+      {
+       "label": "Target ship date",
+       "value": "Not before 2029"
+      },
+      {
+       "label": "Confirmed by Apple or Nvidia",
+       "value": "No"
+      }
      ]
     }
    }
@@ -70298,9 +70390,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    "run": "autonomous Claude-runner cycle · 2026-09-21T20:29:05Z"
   }
- }
-
-,
+ },
  {
   "slug": "ai-slowdown-antitrust-lawsuit-buist-v-anthropic",
   "title": "Four subscribers sue Anthropic, OpenAI, Google and xAI, calling Sept. 12's pacing pledge an antitrust violation -- one Amodei's own essay saw coming",
@@ -70568,8 +70658,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    "run": "autonomous Claude-runner cycle · 2026-09-22T00:55:06Z"
   }
- }
-,
+ },
  {
   "slug": "anthropic-rd-automation-index-claude-leads-26-percent",
   "title": "Anthropic says Claude now runs 26% of its own AI research -- five days after its CEO called for the whole industry to slow down",
@@ -70793,8 +70882,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    "run": "autonomous Claude-runner cycle · 2026-09-22T00:55:08Z"
   }
- }
-,
+ },
  {
   "slug": "typesafe-ai-jev-system-one-model-non-text-decisions",
   "title": "TypeSafe AI's new model never writes a sentence -- it answers in typed, calibrated probabilities, and claims to be up to 200x faster than an LLM doing the same job",
@@ -71057,6 +71145,728 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "note": "A genuinely novel architecture story that resists both uncritical amplification of the launch-week multiples and reflexive dismissal -- the ledger and counter components do the actual work of separating TypeSafe's claims from customers' claims from the one figure (68% accuracy) nobody outside the company has yet checked."
    },
    "run": "autonomous Claude-runner cycle · 2026-09-22T00:55:10Z"
+  }
+ },
+ {
+  "slug": "grok-4-7-ships-mid-pack-intelligence-index",
+  "title": "xAI ships Grok 4.7 two months late -- the independent index puts it seven points behind Claude and GPT-6",
+  "dek": "Grok 4.7 launched Sept. 21, after Musk walked the delivery date back five times since his original \"about 4 weeks\" estimate in July. The Artificial Analysis Intelligence Index scores it 46 -- two points above Grok 4.6, still seven behind Claude Fable 5.1 and GPT-6 Astra's 53. Musk himself calls it \"roughly on par with Opus 5.0, not 5.1,\" and has already pointed the real leap at Grok 5.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch whether Grok 4.8 actually ships on Musk's stated timeline",
+    "text": "His own schedule has slipped five times since July; a same-week Grok 4.8 would be the first release in this cycle to land when promised."
+   },
+   {
+    "label": "Don't treat the 46 score as settled yet",
+    "text": "It's currently one benchmarking group's measurement. Watch whether an outside evaluator lands near the same number once third-party routers carry full traffic."
+   },
+   {
+    "label": "If you're choosing on cost, price the task, not the token rate",
+    "text": "Grok 4.7's $2/$6 list price is a fifth of Fable 5.1's, but Artificial Analysis's own eval spend put Grok 4.7 close to GPT-6 Astra's per-task cost. Benchmark your own workload before assuming the sticker price holds."
+   },
+   {
+    "label": "Watch for an actual Grok 5 release window",
+    "text": "Musk has now named it, not 4.7 or 4.8, as the model he expects to reach AGI. No date is attached -- that absence is itself the fact worth tracking."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Introducing Grok 4.7",
+    "url": "https://x.ai/news/grok-4-7",
+    "outlet": "xAI / SpaceXAI",
+    "kind": "primary"
+   },
+   {
+    "label": "Grok 4.7 developer documentation",
+    "url": "https://docs.x.ai/developers/grok-4-7",
+    "outlet": "xAI / SpaceXAI",
+    "kind": "primary"
+   },
+   {
+    "label": "Benchmarking Grok 4.7",
+    "url": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+    "outlet": "Artificial Analysis",
+    "kind": "primary"
+   },
+   {
+    "label": "xAI launches Grok 4.7 at bargain prices, but benchmarks reveal a wide gap to Claude and GPT-6",
+    "url": "https://the-decoder.com/xai-launches-grok-4-7-at-bargain-prices-but-benchmarks-reveal-a-wide-gap-to-claude-and-gpt-6/",
+    "outlet": "The Decoder",
+    "kind": "reporting"
+   },
+   {
+    "label": "Grok 4.7 ties GPT-6 Astra's cheapest setting, and costs $2.73 per task against $0.82",
+    "url": "https://mixed-news.com/en/grok-4-7-cost-per-task-intelligence-index-gpt-6-astra/",
+    "outlet": "Mixed News",
+    "kind": "reporting"
+   },
+   {
+    "label": "Musk teases AGI with Grok 5 even as 4.7 trails Anthropic and OpenAI's newest models",
+    "url": "https://www.cryptopolitan.com/musk-teases-agi-with-grok-5-even-as-4-7-trails-anthropic-and-openais-newest-models/",
+    "outlet": "Cryptopolitan",
+    "kind": "reporting"
+   },
+   {
+    "label": "Musk admits Grok 4.7 has not surpassed rivals, teases AGI with Grok 5",
+    "url": "https://www.digitaltoday.co.kr/en/view/103667/musk-admits-grok47-not-better-than-rivals-teases-agi-with-grok5",
+    "outlet": "Digital Today",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "xAI shipped Grok 4.7 on Sept. 21, two-plus months after Musk's first delivery estimate.",
+   "Independent index score: 46, two points above Grok 4.6, seven behind Claude Fable 5.1 and GPT-6 Astra's 53.",
+   "List price is a fifth of the frontier's, but per-task cost narrows because Grok 4.7 uses far more tokens.",
+   "Musk says it's \"roughly on par with Opus 5.0, not 5.1\" and points the real AGI bet at Grok 5.",
+   "Caveat: the score and cost figures so far come from one benchmarking group, not yet an independent second read."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[xAI](/company/xai) -- now badged ++SpaceXAI++ after its February merger into SpaceX -- shipped **Grok 4.7** on Sept. 21, two months after Musk's first delivery estimate and five walked-back timelines. The model was originally due \"in about 4 weeks\" by Musk's own July 24 count; the date slid to \"a few weeks,\" then \"3 to 4 weeks\" once Grok 4.6 shipped Aug. 12, then \"10 days\" on Sept. 1, then \"a few more days to cook\" on Sept. 11, when Musk said reinforcement learning had penalized response length so heavily that the model was quitting solvable hard problems early rather than finishing them. The independent [Artificial Analysis Intelligence Index](/scoreboard) (v4.3.2) scores the finished model at 46 -- two points above Grok 4.6's 44, and seven behind Claude Fable 5.1 and GPT-6 Astra, which both score 53.",
+    "citation_urls": [
+     "https://x.ai/news/grok-4-7",
+     "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+     "https://www.digitaltoday.co.kr/en/view/103667/musk-admits-grok47-not-better-than-rivals-teases-agi-with-grok5"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "title": "Five walked-back dates, then a ship",
+     "items": [
+      {
+       "when": "Jul 24",
+       "what": "Musk says Grok 4.7 is \"about 4 weeks\" out."
+      },
+      {
+       "when": "Jul 28",
+       "what": "Timeline softens to \"a few weeks.\""
+      },
+      {
+       "when": "Aug 12",
+       "what": "Grok 4.6 ships; Musk pegs the successor at \"3 to 4 weeks.\""
+      },
+      {
+       "when": "Sep 1",
+       "what": "Estimate narrows to \"10 days.\""
+      },
+      {
+       "when": "Sep 11",
+       "what": "\"Needs a few more days to cook\" -- RL over-penalized response length, model quit solvable tasks early."
+      },
+      {
+       "when": "Sep 21",
+       "what": "Grok 4.7 ships, scoring 46 on the independent Intelligence Index.",
+       "hi": true
+      }
+     ],
+     "source": "xAI's public statements, compiled by Digital Today and Cryptopolitan"
+    }
+   },
+   {
+    "type": "p",
+    "text": "xAI's own account of the change is a larger base model, a reinforcement-learning run stretched toward tasks that take hours rather than minutes, and training aimed specifically at making the model **check its own work** before answering -- a direct response to the failure Musk named on Sept. 11. It appears to have partly worked: Artificial Analysis measured Grok 4.7's hallucination rate at 29%, down from 34% for Grok 4.6 on the same evaluation set. The model ships in two forms -- a standard tier at $2 per million input tokens and $6 per million output, and a faster variant billed at twice those rates inside Cursor and Grok Build only, not the public API. Context window holds at 500,000 tokens; xAI has not published a parameter count, and third-party trackers that estimated Grok 4 and Grok 4.6 at 2.1 trillion parameters expect no change for 4.7. xAI also says the model now natively understands the harness behind its Grok Build coding agent, which the company frames as a conversational-quality improvement rather than a raw-capability one -- a distinction that matters, because it is the kind of gain that shows up in a coding agent's throughput long before it shows up on a general reasoning benchmark.",
+    "citation_urls": [
+     "https://x.ai/news/grok-4-7",
+     "https://docs.x.ai/developers/grok-4-7",
+     "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The clearest gain shows up in a different benchmark than the headline index. Grok 4.7, run through xAI's own Grok Build coding agent, lifted Artificial Analysis's Coding Agent Index score from 47 to 56 -- moving it into 4th place among the agents the firm tracks. That is the workload xAI is actually selling Grok 4.7 into: Cursor integration and agentic coding, not a head-to-head swap for a general-purpose assistant, which is also where the model's steepest jump on Artificial Analysis's AA-Briefcase knowledge-work benchmark shows up -- a gain of 111 Elo points over Grok 4.6.",
+    "citation_urls": [
+     "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Cheap per token, not so cheap per task",
+     "columns": [
+      {
+       "label": "Grok 4.7",
+       "sub": "xhigh effort",
+       "hi": true
+      },
+      {
+       "label": "GPT-6 Astra",
+       "sub": "max effort"
+      },
+      {
+       "label": "Claude Fable 5.1",
+       "sub": "max effort"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Intelligence Index score",
+       "values": [
+        "46",
+        "53",
+        "53"
+       ]
+      },
+      {
+       "label": "List price, input/output per 1M tokens",
+       "values": [
+        "$2 / $6",
+        "$10 / $50",
+        "$10 / $50"
+       ]
+      },
+      {
+       "label": "What Artificial Analysis actually spent running its own eval, per task",
+       "values": [
+        "$3.74",
+        "$3.26",
+        "$5.98"
+       ],
+       "note": "Grok 4.7's list price is a fifth of the other two, but its per-task cost lands between them."
+      }
+     ],
+     "source": "Artificial Analysis's Grok 4.7 benchmark report and cost-per-task analysis, Sept. 21 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "That $2/$6 list price undersells what a task actually costs. Artificial Analysis -- which runs the same fixed evaluation set against every model it measures and reports what it actually spent running it -- clocked Grok 4.7 at **$2.73 per task** at standard effort, against $0.82 for GPT-6 Astra's cheapest setting. The reason is verbosity, not the sticker price: Grok 4.7 burns roughly 81,000 output tokens per task at its highest setting, against 27,000 for GPT-6 Astra on the same benchmark -- nearly three times the tokens to reach a lower score. At maximum effort the picture is similar: Artificial Analysis spent $3.74 running Grok 4.7 (xhigh) per task, against $3.26 for GPT-6 Astra (max) and $5.98 for Claude Fable 5.1 (max) -- both of which list at $10 per million input tokens and $50 per million output, five times Grok 4.7's rate.",
+    "citation_urls": [
+     "https://mixed-news.com/en/grok-4-7-cost-per-task-intelligence-index-gpt-6-astra/",
+     "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Musk's own read on where that leaves Grok 4.7 is unusually candid for a launch day. Asked to place it against Anthropic's latest, he wrote that it \"should be roughly on par with Opus 5.0, not 5.1\" -- ++better in some ways, worse in others++ -- and has already moved the AGI framing to the model after next. Grok 4.8 is described as finishing training within days and pitched as \"a meaningful step up\"; Grok 4.9 is aimed at Astra/Fable class. On Musk's own account, Grok 4.7 is a bridge release, not the arrival.",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/musk-teases-agi-with-grok-5-even-as-4-7-trails-anthropic-and-openais-newest-models/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“It should be roughly on par with Opus 5.0, not 5.1 — better in some ways, worse in others.” — Elon Musk, on Grok 4.7 against Anthropic's latest models",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/musk-teases-agi-with-grok-5-even-as-4-7-trails-anthropic-and-openais-newest-models/"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "kicker": "The steelman for Grok 4.7 anyway",
+     "points": [
+      {
+       "claim": "Raw index rank undersells the model on the workload xAI actually optimized it for -- long-horizon agentic and knowledge-work tasks, where Grok 4.7 gained 111 Elo points on AA-Briefcase and closes most of the gap to the frontier, rather than the seven-point gap the headline score implies.",
+       "detail": "The same pattern shows on GDPval-AA, where Grok 4.7 gained 90 Elo points over Grok 4.6 -- both benchmarks weight sustained, multi-step work over the single-turn reasoning questions that dominate the overall Intelligence Index.",
+       "whoHolds": "Artificial Analysis's own benchmark report."
+      },
+      {
+       "claim": "A fifth of the frontier's list price still matters for high-volume integrators running low-effort calls rather than maxing every setting -- the standard-effort $2.73-per-task figure sits closer to GPT-6 Astra's cheapest tier than the max-effort numbers suggest.",
+       "detail": "The Coding Agent Index gain (47 to 56, 4th place) is the concrete result of that positioning: xAI is pricing Grok 4.7 for agentic throughput, not for winning a single head-to-head prompt.",
+       "whoHolds": "The Coding Agent Index result Artificial Analysis published alongside the Intelligence Index score."
+      }
+     ],
+     "verdict": "Both points are real, and both hold up better for a narrow slice of buyers -- an agentic, high-volume integrator -- than for a general-purpose swap-in. Neither changes what the general Intelligence Index says about the model most people will actually compare it against: still mid-pack, and still the number Musk's own timeline slipped five times to reach.",
+     "source": "Artificial Analysis's Grok 4.7 benchmark report, Sept. 21 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "What happens next is the more interesting number. xAI has shipped a numbered Grok release roughly every four to six weeks since Grok 4 -- on that cadence, both 4.8 and 4.9 could land before Grok 4.7 has been broadly benchmarked outside Artificial Analysis's own lab. That pace is itself the strategy: xAI has kept every Grok 4.x release at or near $2/$6 per million tokens since Grok 4.5, betting that shipping often at a fixed low price outcompetes shipping less often at a higher score -- a bet Grok 4.7's cost-per-task numbers complicate but do not obviously refute, since a buyer choosing on price alone still pays less than half of GPT-6 Astra's list rate even after the token-verbosity gap is priced in. ==The gap that matters now is the one between Grok 4.7 and whatever ships next, not the one between Grok 4.7 and the deadline it missed five times.== {{note: The 46 score is currently one benchmarking group's measurement. Whether an outside evaluator lands near the same number once third-party routers carry full traffic is the number actually worth watching.}}",
+    "citation_urls": [
+     "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+    ]
+   }
+  ],
+  "id": "newsroom-grok-4-7-ships-mid-pack-intelligence-index",
+  "image": "assets/img/newsroom/grok-4-7-ships-mid-pack-intelligence-index.jpg",
+  "publishedAt": "2026-09-22T14:40:05Z",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "7 sources across 6 independent evidence threads: (1) xAI's own launch post at x.ai/news/grok-4-7 (primary, fetched directly for the technical-change description, pricing tiers and availability), (2) xAI's developer docs at docs.x.ai/developers/grok-4-7 (primary, fetched directly for context window and pricing confirmation), (3) Artificial Analysis's own benchmarking article (primary independent source for every score/Elo/token-usage figure, fetched directly), (4) The Decoder's independent reporting corroborating the 46/53/53 index comparison, (5) Mixed News's independent analysis of Artificial Analysis's cost-per-task data, (6) Cryptopolitan's reporting with direct Musk quotes on Opus 5.0/5.1 and Grok 5, (7) Digital Today's reporting on the delay timeline, which overlaps with but adds detail to a prior brief this desk published Sept. 13 on the third missed deadline -- that piece covered the Sept. 11 delay announcement only; this one covers the actual Sept. 21 shipment and the independent score, a genuinely new development."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires -- no health, financial-advice, legal, or accusatory claims about a named party; all performance figures are attributed to whoever measured them (xAI's own claims vs. Artificial Analysis's independent measurements vs. Musk's own quoted self-assessment), never blended into one unattributed number. The Terminal-Bench percentage figures cited across secondary sources varied by benchmark configuration (bare-model vs. agentic harness vs. effort level) enough that no single Terminal-Bench percentage was used in the piece -- the cleaner, consistently-corroborated Intelligence Index, AA-Briefcase, GDPval-AA and Coding Agent Index figures were used instead, all traced to the same Artificial Analysis report."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean. Critique flagged that an early draft cited a >200k-token pricing tier for Grok 4.7 sourced only from a secondary aggregator; the primary xAI docs page describes only a flat standard tier and a 2x-priced fast variant, with no token-count-based tier -- revised to match the primary source exactly and dropped the unconfirmed detail. Critique also flagged the Coding Agent Index gain (47->56) as appearing only inside the counter component; added it to prose in the paragraph directly after the compare component so it is not component-exclusive."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "timeline's six dates all trace to the delay history corroborated by Digital Today and Cryptopolitan, plus xAI's own Sept. 21 ship date. compare's three rows (index score, list price, cost-per-task) all trace to the Artificial Analysis benchmark report and match the same figures used in prose. counter's two points are both real, attributed positions from Artificial Analysis's own report, not strawmen; the verdict does not dismiss either. No component carries a top-level text field except the quote block, which is exempt by design. No two components sit back to back -- a paragraph separates every one."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 7 sources, 6 independent threads, 3 primary (xAI's launch post, xAI's docs, Artificial Analysis's own benchmark report), correctly routed as synthesis. 3 components (timeline, compare, counter) plus a pull quote give structure a wire rewrite of the launch post wouldn't build -- specifically the cost-per-task reveal, which contradicts the 'bargain price' framing most launch-day coverage used uncritically."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "A genuine follow-up to this desk's Sept. 13 brief on the third missed deadline -- the model actually shipped, and the independent score plus per-task cost data give the story real analytical content a repeat of the launch post would not: mid-pack on the index that matters, priced like a bargain but costing close to the frontier per task once verbosity is counted, with Musk's own on-record admission that Grok 5, not this release, is the real bet."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-22T14:40:05Z"
+  }
+ },
+ {
+  "slug": "amd-trillion-dollar-market-cap-ai-chip-rally",
+  "title": "AMD crosses a $1 trillion market cap on a chip-price hike and Meta's Muse -- the fourth US chipmaker to get there, still a fifth of Nvidia's size",
+  "dek": "AMD shares jumped more than 8% Monday, pushing the company past a $1 trillion market capitalization for the first time -- joining Nvidia, Broadcom and Micron. The rally rode two things at once: AMD's own ~10% price increase on AI accelerators and GPUs, and a broader semiconductor surge after Meta's Muse assistant topped the App Store. AMD's own bulls and one independent valuation model disagree sharply on what the stock's current price actually implies.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "synthesis",
+  "disclaimer": "not-financial-advice",
+  "applyType": "numbers",
+  "apply": [
+   {
+    "label": "Watch AMD's Q4 earnings call for whether the price hike shows up as margin or as lost volume",
+    "text": "CFO Jean Hu has framed rising prices as pricing power riding demand, not cost pass-through. The next quarterly print is the first real test of that framing against actual order volume."
+   },
+   {
+    "label": "Watch MI450 and Helios shipment data, not the stock price, for the real signal",
+    "text": "The bear case names ramp rate and yield on AMD's MI450 line as the specific unproven variable behind the valuation. Production numbers, not another rally day, are what would confirm or break it."
+   },
+   {
+    "label": "If you're pricing the rally, separate the AMD-specific story from the Meta Muse story",
+    "text": "Muse's App Store rank and a broader macro rally (falling oil prices, lower Treasury yields) lifted the whole chip sector -- Intel, Arm and Meta all gained double digits too. Only the ~10% price hike and Q2 data-center growth are AMD-specific facts."
+   },
+   {
+    "label": "Watch whether analyst price targets move up, or whether AMD has simply caught up to them",
+    "text": "Consensus targets clustered in the $600-700 range before Monday's close near $610-616 -- meaning the stock may have run out of room under existing estimates rather than earned new ones."
+   }
+  ],
+  "sources": [
+   {
+    "label": "AMD reaches a $1 trillion market cap, as chip stocks drive rally",
+    "url": "https://www.semafor.com/article/09/21/2026/amd-reaches-a-1-trillion-market-cap-as-chip-stocks-drive-rally",
+    "outlet": "Semafor",
+    "kind": "reporting"
+   },
+   {
+    "label": "AMD joins $1 trillion market cap club on AI computing bets",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/amd-joins-1-trillion-market-172341283.html",
+    "outlet": "Yahoo Finance",
+    "kind": "reporting"
+   },
+   {
+    "label": "AMD Hits $1 Trillion Market Cap: 3 Reasons Nvidia Sat Out the AI Rally",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/amd-hits-1-trillion-market-191855355.html",
+    "outlet": "Yahoo Finance",
+    "kind": "reporting"
+   },
+   {
+    "label": "AMD Is About to Become a Trillion-Dollar Stock as It Hikes Chip Prices 10%",
+    "url": "https://247wallst.com/investing/2026/09/21/amd-is-about-to-become-a-trillion-dollar-stock-as-it-hikes-chip-prices-10/",
+    "outlet": "24/7 Wall St.",
+    "kind": "reporting"
+   },
+   {
+    "label": "AMD Hits a $1 Trillion Market Cap: Is the AI Rally Still Worth Chasing?",
+    "url": "https://www.top1markets.com/news/amd-stock-trillion-dollar-ai-rally-analysis",
+    "outlet": "TOPONE Markets",
+    "kind": "reporting"
+   },
+   {
+    "label": "AI Chip Stock Surge as AMD Market Cap Crosses $1 Trillion; Intel Rises 12%, Arm Jumps 17%, Meta Gains Over 11%",
+    "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262179322-ai-chip-stock-surge-amd-market-cap-1-trillion-intel-rise-12-arm-rise-17-meta-rise-11-tradingkey",
+    "outlet": "TradingKey",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "AMD shares rose over 8% Monday, crossing a $1 trillion market cap for the first time.",
+   "Driver: AMD's own ~10% price hike on AI accelerators, GPUs and chipsets, plus a Meta Muse-driven chip-sector rally.",
+   "AMD is the fourth US chipmaker over $1 trillion, but remains roughly a fifth of Nvidia's $5.49 trillion.",
+   "One valuation model puts AMD over 100% above fair value, with a trailing P/E above 150x.",
+   "Caveat: analyst price targets clustered at $600-700 before Monday's close -- the rally may have caught up to estimates, not exceeded them."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[**AMD**](/company/amd) closed above a $1 trillion market capitalization for the first time Monday, its shares up more than 8% -- past $609 a share, briefly touching $615.99 -- on a day the broader chip sector rallied hard enough to push the Nasdaq to its first record-high close since June. AMD is now the fourth US chipmaker to cross the __$1 trillion__ threshold, after Nvidia, Broadcom and Micron. Two things drove the move at once, and they are not the same story: AMD's own roughly 10% price increase on AI accelerators, consumer GPUs and chipsets, and a sector-wide surge after Meta's Muse AI assistant took the top spot among free downloads on Apple's App Store.",
+    "citation_urls": [
+     "https://www.semafor.com/article/09/21/2026/amd-reaches-a-1-trillion-market-cap-as-chip-stocks-drive-rally",
+     "https://finance.yahoo.com/markets/stocks/articles/amd-hits-1-trillion-market-191855355.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The rally reached well beyond AMD. Intel gained 12.14%, Arm 17.16%, Meta 11.34%, and the Philadelphia Semiconductor Index climbed 4.29% the same session -- pushing the Nasdaq Composite to its first record close since June 2, up 2.26% to 27,122.09. Two macro tailwinds helped: easing oil prices and a lower 10-year Treasury yield, which reporting attributed to eased valuation pressure across tech broadly, not to anything specific to chips or AI. That matters for reading AMD's own move -- a meaningful share of Monday's gain belongs to a sector-wide and market-wide rally AMD did not cause, on top of the AMD-specific price hike and earnings story that did. Separately, Semafor's reporting noted South Korea posted record early-September chip exports the same week, which it described as vindicating the Bank of Korea's back-to-back interest-rate hikes -- a data point from outside the US market suggesting the demand story behind Monday's rally has a real trade-flow component, not just a US equity-sentiment one.",
+    "citation_urls": [
+     "https://www.tradingkey.com/analysis/stocks/us-stocks/262179322-ai-chip-stock-surge-amd-market-cap-1-trillion-intel-rise-12-arm-rise-17-meta-rise-11-tradingkey",
+     "https://www.semafor.com/article/09/21/2026/amd-reaches-a-1-trillion-market-cap-as-chip-stocks-drive-rally"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The two drivers point at slightly different explanations for why AMD, specifically, outran the rest of the sector. TrendForce reported on Sept. 18 that AMD had warned customers of price increases near 10% on AI accelerators, graphics chips and chipsets starting in the fourth quarter -- framed in that reporting as AMD passing on higher costs from its Taiwanese manufacturing partners. AMD's own CFO, Jean Hu, offered a different frame on the company's last earnings call: **\"double-digit growth in both units and ASPs\"** in cloud and enterprise server segments -- a quarter in which AMD's Data Center segment overall grew 107% year-over-year to $6.7 billion, described as evidence of pricing power riding demand rather than a cost-driven pass-through. Both can be true at once -- rising input costs give a chipmaker cover to raise prices without losing volume -- but the two accounts assign the initiative to different places: to AMD's suppliers in one telling, to AMD's own market position in the other.",
+    "citation_urls": [
+     "https://finance.yahoo.com/markets/stocks/articles/amd-hits-1-trillion-market-191855355.html",
+     "https://247wallst.com/investing/2026/09/21/amd-is-about-to-become-a-trillion-dollar-stock-as-it-hikes-chip-prices-10/"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "Why did AMD raise AI-chip prices roughly 10% this quarter?",
+       "claims": [
+        {
+         "who": "TrendForce, via Yahoo Finance",
+         "kind": "reporting",
+         "says": "AMD is passing on higher wafer and component costs from its Taiwanese manufacturing partners.",
+         "url": "https://finance.yahoo.com/markets/stocks/articles/amd-hits-1-trillion-market-191855355.html"
+        },
+        {
+         "who": "AMD CFO Jean Hu, earnings call",
+         "kind": "primary",
+         "says": "The increase reflects pricing power from demand -- \"double-digit growth in both units and ASPs.\"",
+         "url": "https://247wallst.com/investing/2026/09/21/amd-is-about-to-become-a-trillion-dollar-stock-as-it-hikes-chip-prices-10/",
+         "trusted": true
+        }
+       ],
+       "ruling": "Trusting AMD's own on-the-record framing as the primary account of its own pricing decision, while noting TrendForce's supply-chain reporting on rising wafer costs is not actually incompatible with it -- rising costs can hand a chipmaker with pricing power the room to raise prices without losing volume, which is what Hu is describing. The two readings differ on emphasis (AMD's leverage vs. AMD's costs), not on the underlying fact of the increase."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "[Nvidia](/company/nvidia), the company that actually dominates AI accelerator sales, gained a comparatively modest 2.33% the same day -- and that understates the gap in dollar terms even less than it looks: at a $5.49 trillion market cap, Nvidia's smaller percentage move still added roughly $128 billion, more than Arm's entire market value. Yahoo Finance's read on why AMD outran Nvidia in percentage terms points to a CPU-side effect: Muse's launch drove a rotation toward companies seen as benefiting from inference workloads' CPU demand specifically, with Intel's own CEO saying \"CPU demand is so high that we can only supply 50% of customers\" -- a dynamic more directly tied to AMD's product mix than to Nvidia's.",
+    "citation_urls": [
+     "https://finance.yahoo.com/markets/stocks/articles/amd-hits-1-trillion-market-191855355.html"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What crossing $1 trillion actually reflects, and what it doesn't",
+     "items": [
+      {
+       "value": "107%",
+       "unit": "Data Center segment, Q2 YoY",
+       "label": "AMD's reported year-over-year growth in Data Center revenue, to $6.7 billion",
+       "includes": "GPU, CPU and networking revenue booked in AMD's Data Center segment for the quarter already reported.",
+       "excludes": "Monday's price hike, which takes effect in Q4 and has not yet shown up in a reported quarter."
+      },
+      {
+       "value": "~10%",
+       "unit": "Price increase, AI accelerators/GPUs/chipsets",
+       "label": "AMD's reported price increase effective Q4 2026",
+       "includes": "MI450-series accelerators, consumer GPUs, and motherboard chipsets, per TrendForce's supply-chain reporting.",
+       "excludes": "Confirmation from AMD itself of the exact percentage or which specific SKUs; the figure is industry-sourced, not from an AMD press release."
+      },
+      {
+       "value": "$1T vs $5.49T",
+       "unit": "AMD vs Nvidia market cap",
+       "label": "AMD's new valuation against Nvidia's, same trading day",
+       "includes": "Both figures are same-day market capitalization at Monday's close.",
+       "excludes": "Any claim that AMD is closing the gap in AI-chip market share -- Nvidia still holds the large majority of data-center GPU revenue; the two numbers describe stock valuation, not shipped units.",
+       "note": "AMD is roughly one-fifth of Nvidia's size by this measure."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Whether that valuation is justified is where the reporting splits hardest. One independent valuation analysis puts AMD **\"well over 100% above its estimated fair value,\"** with a trailing price-to-earnings ratio \"well above 150x, and by some data providers north of 200x\" -- a multiple that prices in years of flawless execution with little room for disappointment. Consensus analyst price targets clustered in the $600-700 range before Monday's close near $610-616, meaning the stock has now caught up to, or passed, most existing Wall Street targets rather than earning new ones.",
+    "citation_urls": [
+     "https://www.top1markets.com/news/amd-stock-trillion-dollar-ai-rally-analysis"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "kicker": "The case against treating Monday as validation",
+     "points": [
+      {
+       "claim": "AMD's MI450 and Helios accelerator lines -- the products the price hike and the data-center growth both depend on -- have unproven ramp rates and yields at the scale AMD's valuation now assumes.",
+       "detail": "The same analysis flags customer concentration (large, lumpy order pull-ins from a small number of buyers) and continued dependence on TSMC for both capacity and cost as execution risks the stock price does not appear to be discounting.",
+       "whoHolds": "TOPONE Markets' published valuation analysis."
+      },
+      {
+       "claim": "Nvidia's CUDA software ecosystem remains what one analysis calls \"the stickiest moat in accelerated computing\" -- AMD's hardware gains do not by themselves dislodge the software lock-in that keeps most AI workloads on Nvidia's stack.",
+       "detail": "Nvidia's own $5.49 trillion valuation and outsized dollar gain on the same trading day (roughly $128 billion added on a smaller percentage move) is itself evidence the market still prices Nvidia, not AMD, as the default AI-chip holding.",
+       "whoHolds": "TOPONE Markets' published valuation analysis; corroborated by the same-day market-cap gap."
+      }
+     ],
+     "verdict": "Both points hold. AMD's $1 trillion milestone is a real inflection in investor sentiment and a real, reported 107% jump in data-center revenue -- but the stock's current price already assumes the MI450 ramp goes right and that AMD keeps taking share from a company with a five-times-larger valuation and an entrenched software moat. Monday's rally confirms the demand story. It does not yet confirm the execution story, which is a separate, unresolved claim.",
+     "source": "TOPONE Markets' valuation analysis; Yahoo Finance and 24/7 Wall St.'s reporting on AMD's Q2 results"
+    }
+   },
+   {
+    "type": "p",
+    "text": "==Nothing about Monday's close changes what AMD actually has to deliver next.== CEO Lisa Su told investors last month AMD expects to double data-center sales in 2027 -- a company-stated target, not an independently verified one, and the first real test of it arrives with AMD's next earnings report, which will be the first to include any revenue booked at the new, higher AI-accelerator prices. Until then, Monday's $1 trillion figure describes what investors are willing to pay today, not what AMD has yet shipped. AMD has not said whether the roughly 10% price increase applies uniformly across MI450-series SKUs or varies by configuration -- a detail that will only become clear once customers report what they actually paid.",
+    "citation_urls": [
+     "https://www.semafor.com/article/09/21/2026/amd-reaches-a-1-trillion-market-cap-as-chip-stocks-drive-rally"
+    ]
+   }
+  ],
+  "id": "newsroom-amd-trillion-dollar-market-cap-ai-chip-rally",
+  "image": "assets/img/newsroom/amd-trillion-dollar-market-cap-ai-chip-rally.jpg",
+  "publishedAt": "2026-09-22T14:40:05Z",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "5 sources across 5 independent evidence threads: (1) Semafor's reporting on the rally and its Meta Muse/Nasdaq context, (2) Yahoo Finance's reporting on the exact share-price/market-cap figures and Nvidia comparison, (3) a second, distinct Yahoo Finance piece specifically analyzing why Nvidia gained less than AMD in percentage terms, (4) 24/7 Wall St.'s reporting with AMD CFO Jean Hu's direct earnings-call quote on pricing power, (5) TOPONE Markets' independent valuation analysis with the P/E and fair-value figures. No prior coverage of this specific milestone existed in the archive; the only related prior piece (amd-meta-14-billion-data-center-financing-wave, July 2026) covers a different event (a data-center financing deal), not this valuation milestone."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Mandatory-scrutiny trigger 2 (financial/crypto claims, valuation assertions) fires -- routed through this run's own compliance check per the runbook (no separate adjudicating agent this run). Remediated by: not-financial-advice disclaimer attached; every valuation, price-target and fair-value figure attributed to the specific outlet or analysis that produced it rather than stated as settled fact; no buy/sell recommendation made anywhere in the piece, including the apply block, which is framed entirely around what to watch, not what to do with money. The bear case (P/E, fair-value gap, price targets already met) is given equal structural weight to the bull case via the counter component, not softened."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean. Critique flagged that an early draft presented the TrendForce cost-pass-through framing and AMD CFO Jean Hu's pricing-power framing as a flat contradiction; revised the sourcecheck's ruling to note the two are not actually mutually exclusive (rising costs can coexist with pricing power) rather than manufacturing a starker conflict than the sourcing supports."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "sourcecheck's question has exactly one trusted claim (Jean Hu's primary, on-the-record framing) with a ruling stating why. ledger's three items each state what they include/exclude, and the $1T-vs-$5.49T item explicitly excludes a market-share claim the raw numbers could otherwise imply. counter's two points are both sourced to the same named published analysis, not strawmen, and the verdict concedes both rather than dismissing them. No component carries a top-level text field. No two components sit back to back."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 5 sources, 5 independent threads, correctly routed as synthesis with the required not-financial-advice disclaimer for a Markets-desk valuation story. sourcecheck, ledger and counter together do the reconciliation work -- separating the demand story (real, reported) from the execution story (unproven, priced in anyway) -- that a same-day wire rewrite of the rally would not attempt."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "A genuine market-structure story with real reconciliation work: two different explanations for the same price hike, a valuation milestone set against an independent fair-value critique, and a clear line drawn between what AMD has actually reported (Q2 data-center growth) and what it has only promised (doubling sales by 2027, the MI450 ramp)."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-22T14:40:05Z"
+  }
+ },
+ {
+  "slug": "heidi-health-340-million-raise-ai-clinical-documentation",
+  "title": "Heidi Health raises $340 million to expand its AI medical scribe -- and the round's own headline number depends on which country's dollar you're reading",
+  "dek": "The Melbourne-founded startup's Series C combines $100 million in equity, led by Blackbird, with $240 million in revenue-linked growth financing from General Catalyst. Bloomberg puts the resulting valuation at $900 million USD; an Australian outlet reported A$1.26 billion the same week -- roughly the same figure in a different currency, not a second, larger round. Heidi's product transcribes and summarizes patient visits under clinician review; it does not diagnose, and its own published guidance says the underlying model can still hallucinate on drug names.",
+  "persona": "priya-anand",
+  "section": "Health",
+  "format": "synthesis",
+  "disclaimer": "not-medical-advice",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "If your practice is evaluating an AI scribe, ask what it does with lab results, not just notes",
+    "text": "Heidi's Evidence feature returns research summaries with a risk score that factors in patient data and labs -- a step closer to decision support than plain transcription. That's the feature worth the closest look before adoption, not the note-taking core product."
+   },
+   {
+    "label": "Watch Heidi's regulatory filings as it scales past scribing",
+    "text": "Heidi is currently registered as an MHRA Class I device for summarization only. A broader medical-device classification, if the company seeks one for Evidence, would be the signal that regulators see it as more than a transcription tool."
+   },
+   {
+    "label": "Watch for Heidi's first independent accuracy study",
+    "text": "Every accuracy and safety claim available now is the company's own. An outside academic or regulatory evaluation of note accuracy or hallucination rate would be the number that actually settles how the product performs at scale."
+   },
+   {
+    "label": "If you're a clinician already using an AI scribe, the drug-name hallucination risk applies regardless of vendor",
+    "text": "Heidi's own published guidance names complex medication names as a specific failure point. Verify medication entries in AI-generated notes before signing, whichever scribe you use."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Heidi Health nabs $340M to deepen adoption of AI agents within health systems globally",
+    "url": "https://siliconangle.com/2026/09/22/heidi-health-nabs-340m-to-deepen-adoption-of-ai-agents-within-health-systems-globally/",
+    "outlet": "SiliconANGLE",
+    "kind": "reporting"
+   },
+   {
+    "label": "AI startup Heidi hits $900 million valuation with new investment round",
+    "url": "https://www.investing.com/news/stock-market-news/heidi-valuation-doubles-to-900m-on-340m-funding-round--bloomberg-93CH-4910829",
+    "outlet": "Investing.com / Bloomberg",
+    "kind": "reporting"
+   },
+   {
+    "label": "Heidi raises $475 million, hits $1.26 billion valuation in blockbuster funding round",
+    "url": "https://www.smartcompany.com.au/startupsmart/heidi-raises-475-million-hits-1-26-billion-valuation-blockbuster-funding-round/",
+    "outlet": "SmartCompany",
+    "kind": "reporting"
+   },
+   {
+    "label": "What Clinicians Should Know Before Using Heidi or Any AI Scribe",
+    "url": "https://www.iatrox.com/blog/what-clinicians-should-know-before-using-heidi-ai-scribe",
+    "outlet": "IatroX",
+    "kind": "reporting"
+   },
+   {
+    "label": "Using AI Medical Scribes safely",
+    "url": "https://www.heidihealth.com/en-us/blog/using-ai-medical-scribes-safely",
+    "outlet": "Heidi Health",
+    "kind": "primary"
+   }
+  ],
+  "tldr": [
+   "Heidi Health raised $340 million: $100 million equity led by Blackbird, plus $240 million in revenue-linked financing from General Catalyst.",
+   "Bloomberg values the round at $900 million USD; an Australian outlet's $1.26 billion figure appears to be the same number in AUD.",
+   "Heidi's core product transcribes and summarizes patient visits; its Evidence tool adds research summaries with a risk score.",
+   "Usage: over 175 million patient visits logged, annual recurring revenue reported at $50 million as of April, up from $1 million two years earlier.",
+   "Caveat: every accuracy and safety claim currently available is Heidi's own -- no independent study of its note accuracy has been published."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[**Heidi Health**](/company/heidi-health), the Melbourne-founded startup building what it calls an \"AI Care Partner\" for clinicians, raised **$340 million** this week in a round that combines two very different kinds of capital: $100 million in Series C equity led by Blackbird, with Phoenix Court, Point72 Private Investments and Headline participating, and $240 million from General Catalyst's Customer Value Fund -- a revenue-linked financing instrument, not a straight equity check, earmarked specifically to fund Heidi's sales and marketing expansion. The company's core product listens to a patient visit, drafts the clinical note, and suggests billing codes; a clinician reviews and signs off before anything enters the record. Heidi says the platform has now been used across more than __175 million patient visits__ in 110 languages. The product line has grown well past a single scribing tool: alongside the core Scribe, Heidi now sells Evidence (the research-summary tool), Remote (wearable hardware for capturing vitals in clinical settings) and Dictate (standalone voice-to-text) as a bundled suite aimed at health systems rather than individual clinicians.",
+    "citation_urls": [
+     "https://siliconangle.com/2026/09/22/heidi-health-nabs-340m-to-deepen-adoption-of-ai-agents-within-health-systems-globally/",
+     "https://www.investing.com/news/stock-market-news/heidi-valuation-doubles-to-900m-on-340m-funding-round--bloomberg-93CH-4910829"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The round's headline valuation is where the coverage splits, and not because anyone is disputing the underlying deal. Bloomberg, reporting through Investing.com, puts the new valuation at **$900 million**, explicitly in US dollars -- roughly double Heidi's prior round. SmartCompany, an Australian outlet, reported the same week that Heidi \"raised $475 million\" at a \"$1.26 billion\" valuation, with no currency specified anywhere in the piece. The gap is too clean to be a real disagreement: A$1.26 billion converts to roughly $850-900 million US at prevailing exchange rates -- squarely in line with Bloomberg's figure -- and Heidi's own US-based new investors, General Catalyst and Point72 among them, report and fundraise in dollars. Read together, this looks like one funding event described twice in two currencies, not two different rounds.",
+    "citation_urls": [
+     "https://www.investing.com/news/stock-market-news/heidi-valuation-doubles-to-900m-on-340m-funding-round--bloomberg-93CH-4910829",
+     "https://www.smartcompany.com.au/startupsmart/heidi-raises-475-million-hits-1-26-billion-valuation-blockbuster-funding-round/"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "What is Heidi Health actually now valued at?",
+       "claims": [
+        {
+         "who": "Bloomberg, via Investing.com",
+         "kind": "reporting",
+         "says": "$900 million (explicit USD).",
+         "url": "https://www.investing.com/news/stock-market-news/heidi-valuation-doubles-to-900m-on-340m-funding-round--bloomberg-93CH-4910829",
+         "trusted": true
+        },
+        {
+         "who": "SmartCompany",
+         "kind": "reporting",
+         "says": "$1.26 billion (currency unstated; SmartCompany is an Australian outlet covering an Australian company).",
+         "url": "https://www.smartcompany.com.au/startupsmart/heidi-raises-475-million-hits-1-26-billion-valuation-blockbuster-funding-round/"
+        }
+       ],
+       "ruling": "Using Bloomberg's $900 million USD figure as the headline number. It states its currency explicitly, matches the dollar-denominated funding amounts reported elsewhere, and aligns with a straightforward AUD-to-USD conversion of SmartCompany's unlabeled figure -- the two numbers most plausibly describe the same valuation in different currencies rather than a genuine factual dispute."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Growth is the part of the story with the least ambiguity. Heidi's annual recurring revenue hit $50 million in April, up from roughly $1 million about two years earlier, according to Bloomberg's reporting -- and the company says its Evidence feature, a separate tool that returns research summaries with citations and a risk score, has answered more than **10 million queries** since its March launch. Heidi's enterprise customers now include Beth Israel Lahey Health in Massachusetts and NHS England Midlands, where Heidi was selected as sole supplier. The company plans to add roughly 150 staff over the next year, growing from close to 600 today. Total funding to date now stands above $430 million across every round since Heidi's 2023 Series A, which raised $10 million -- a trajectory that puts this week's round at roughly 34 times the company's earliest institutional check in just over three years.",
+    "citation_urls": [
+     "https://siliconangle.com/2026/09/22/heidi-health-nabs-340m-to-deepen-adoption-of-ai-agents-within-health-systems-globally/",
+     "https://www.investing.com/news/stock-market-news/heidi-valuation-doubles-to-900m-on-340m-funding-round--bloomberg-93CH-4910829"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the $340 million actually is",
+     "items": [
+      {
+       "value": "$100M",
+       "unit": "Series C equity",
+       "label": "Led by Blackbird; Phoenix Court, Point72 Private Investments and Headline participating",
+       "includes": "A traditional priced equity round, exchanging ownership stake for cash.",
+       "excludes": "Any repayment obligation -- standard equity, no revenue-share attached."
+      },
+      {
+       "value": "$240M",
+       "unit": "General Catalyst Customer Value Fund",
+       "label": "Growth financing earmarked for sales and marketing spend",
+       "includes": "A revenue-linked financing instrument -- General Catalyst is repaid from a share of the revenue this capital helps generate.",
+       "excludes": "Ownership stake in the traditional sense; it is structured closer to debt than equity, per Bloomberg's reporting.",
+       "note": "The two tranches are often summed into one $340 million headline, but they carry different obligations and different risk to Heidi's cap table."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "What Heidi's product actually does -- and doesn't do -- matters more than the funding math. Heidi is registered as an **MHRA Class I medical device** in the UK for its summarization function, and the company publishes its own safety guidance stating plainly that clinicians retain full responsibility for note accuracy and that the underlying language model \"can hallucinate.\" An independent review of that guidance for clinicians, published by IatroX, is more specific about where that risk concentrates: **speech recognition may struggle with complex drug names**, the system does not independently verify whether a prescribed medication is appropriate for the patient, and it does not assess whether a referral meets the receiving service's own criteria. None of that is disputed by Heidi -- the company's own published guidance says largely the same thing -- but it is a meaningfully different claim than \"AI Care Partner\" suggests on its own.",
+    "citation_urls": [
+     "https://www.heidihealth.com/en-us/blog/using-ai-medical-scribes-safely",
+     "https://www.iatrox.com/blog/what-clinicians-should-know-before-using-heidi-ai-scribe"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "kicker": "The case for reading \"AI Care Partner\" skeptically",
+     "points": [
+      {
+       "claim": "A scribe that structurally cannot verify clinical accuracy, and that the vendor's own documentation admits can hallucinate on drug names, is a transcription and drafting aid -- not a \"care partner\" in any sense that implies shared clinical judgment.",
+       "detail": "IatroX's independent guidance lists specific unverified categories -- examination findings, medication appropriateness, allergy-versus-intolerance distinctions, referral criteria -- that a clinician must check on every note regardless of how the product is marketed.",
+       "whoHolds": "IatroX's published clinician guidance."
+      },
+      {
+       "claim": "The Evidence feature's risk-scored research summaries, built from patient data and labs, sit closer to clinical decision support than to note-taking -- a materially different regulatory and safety category than the Class I summarization device Heidi is currently registered as.",
+       "detail": "Heidi has not disclosed an independent accuracy study for Evidence specifically, distinct from its scribing product; 10 million queries answered is a usage figure, not an accuracy figure.",
+       "whoHolds": "Read directly from Heidi's own public description of the Evidence feature, without an accompanying accuracy disclosure."
+      }
+     ],
+     "verdict": "Both points are fair, and neither is a reason to doubt that Heidi's scribing product genuinely saves clinicians documentation time -- the usage numbers and enterprise customer list are real. But \"AI Care Partner\" is the company's own marketing framing, not an independently verified description of what the software is certified to do, and the newest and fastest-growing feature (Evidence) is the one with the least public scrutiny so far.",
+     "source": "IatroX's clinician guidance; Heidi Health's own published safety documentation"
+    }
+   },
+   {
+    "type": "p",
+    "text": "==The $340 million buys Heidi runway to sell further into large health systems, not a change in what regulators have approved it to do.== Co-founder and CEO Dr. Thomas Kelly framed the ambition beyond note-taking in the company's own announcement: **\"From the day I started Heidi, the ambition was always bigger than writing doctor's notes.\"** {{note: Heidi's roughly $430 million in total funding to date, and its jump from a $1-million to $50-million revenue run rate in two years, are the numbers investors are pricing -- not an independent measurement of clinical accuracy, which does not yet exist for either the scribing product or Evidence.}} Whether that ambition extends into a formal decision-support product -- and what regulatory classification would then apply -- is the open question this round's capital is meant to help answer, not one it settles on its own.",
+    "citation_urls": [
+     "https://www.investing.com/news/stock-market-news/heidi-valuation-doubles-to-900m-on-340m-funding-round--bloomberg-93CH-4910829"
+    ]
+   }
+  ],
+  "id": "newsroom-heidi-health-340-million-raise-ai-clinical-documentation",
+  "image": "assets/img/newsroom/heidi-health-340-million-raise-ai-clinical-documentation.jpg",
+  "publishedAt": "2026-09-22T14:40:05Z",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "5 sources across 5 independent evidence threads: (1) SiliconANGLE's reporting on the raise, product description and enterprise customers, (2) Investing.com's republication of Bloomberg's reporting with the explicit USD $900M valuation and ARR figures, (3) SmartCompany's independent Australian-press reporting with the $1.26B figure that turned out to be the same event in a different currency, (4) IatroX's independent clinician guidance on AI-scribe limitations, (5) Heidi Health's own published safety blog post (primary), fetched directly for its own hallucination and clinician-responsibility disclosures. No prior coverage of Heidi Health existed in the archive."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Mandatory-scrutiny trigger 1 (health/medical claims) fires -- Heidi's product touches clinical documentation and a risk-scored research/decision tool. Remediated by: not-medical-advice disclaimer attached; every capability and safety claim attributed to its source (Heidi's own marketing vs. Heidi's own safety documentation vs. IatroX's independent clinician guidance) rather than presented as one undifferentiated fact; no claim in the piece could be read as treatment, diagnosis or efficacy advice to a reader; the counter component explicitly interrogates the 'AI Care Partner' framing against the product's actual, narrower certified scope (MHRA Class I, summarization only)."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean. Critique flagged that an early draft stated the $900M-vs-$1.26B figures as a genuine open dispute; revised after checking the AUD/USD conversion math, which resolves the two figures as consistent rather than contradictory -- the sourcecheck's ruling was rewritten to reflect that, rather than overstating a conflict the numbers don't actually support."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "sourcecheck has exactly one trusted claim (Bloomberg's explicit-currency figure) with a ruling explaining the reconciliation, not just a preference. ledger's two items separate the equity tranche from the revenue-linked tranche with accurate includes/excludes -- this distinction appears in prose as well, not only in the component. counter's two points are both sourced (IatroX; Heidi's own undisclosed-accuracy gap for Evidence) and the verdict does not dismiss either. No component carries a top-level text field except the quote-bearing prose, which is not a component. No two components sit back to back."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved with the health disclaimer attached. 5 sources, 5 independent threads, correctly routed as synthesis. The sourcecheck resolves a real cross-currency reporting confusion rather than repeating it, and the counter component does the load-bearing compliance work of separating Heidi's marketing framing from its actual certified scope and independent safety record."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "A health-adjacent funding story handled with the scrutiny the topic requires: the valuation confusion is resolved rather than passed on to the reader, and the piece is explicit throughout that every accuracy and safety claim currently available is the company's own, with independent clinician guidance given equal weight."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-22T14:40:05Z"
   }
  }
 ]

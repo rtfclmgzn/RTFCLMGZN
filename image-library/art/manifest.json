@@ -3670,7 +3670,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-49-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "amd-trillion-dollar-market-cap-ai-chip-rally",
+     "used_at": "2026-09-22"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-architecture-11",
@@ -3942,7 +3947,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-38-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "grok-4-7-ships-mid-pack-intelligence-index",
+     "used_at": "2026-09-22"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-09",

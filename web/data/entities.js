@@ -93,6 +93,8 @@ window.RTFC_ENTITIES = {
       kind:"video generation model", access:"closed" },
 
     // --- xAI ---
+    { re:/\bGrok 4\.7\b/i, name:"Grok 4.7", maker:"xAI", makerKey:"xai",
+      kind:"frontier model", access:"closed" },
     { re:/\bGrok 4\.6\b/i, name:"Grok 4.6", maker:"xAI", makerKey:"xai",
       kind:"frontier model", access:"closed" },
     { re:/\bGrok 4\.5\b/i, name:"Grok 4.5", maker:"xAI", makerKey:"xai",
