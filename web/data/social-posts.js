@@ -23327,276 +23327,280 @@ window.RTFC_SOCIAL_POSTS = [
     ]
   },
   {
-  "article_id": "newsroom-claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
-  "ts": "2026-09-22T20:03:06Z",
-  "export": {
     "article_id": "newsroom-claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
-    "url": "https://rtfclmgzn.com/article/claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
-    "headline": "Claude Opus 5.5 takes the independent top spot as OpenAI cuts GPT-6 Sol and Luna prices in half",
-    "hook": "Anthropic and OpenAI both shipped model updates the same day. Claude Opus 5.5 scores 58 on the independent Intelligence Index -- a new #1, 5 points clear of the prior tie. GPT-6 Sol and Luna barely moved on capability, but OpenAI cut both prices roughly in half.",
-    "key_facts": [
-      "Opus 5.5: score 58 (new #1), price cut 20% to $4/$20 per million tokens.",
-      "GPT-6 Sol: score 48 (vs 47), price cut 50% to $2/$10; Luna: score unchanged at 37, price cut ~58%.",
-      "OpenAI's own 'beats Opus 5 at 9% of the cost' claim used a model Anthropic superseded the same day."
-    ],
-    "tone": "evaluation-first, austere, comparative",
-    "persona": "luka-petrovic",
-    "section": "Frontier",
-    "primary_image": "assets/img/newsroom/claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts.jpg",
-    "disclaimer": "none"
+    "ts": "2026-09-22T20:03:06Z",
+    "export": {
+      "article_id": "newsroom-claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
+      "url": "https://rtfclmgzn.com/article/claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
+      "headline": "Claude Opus 5.5 takes the independent top spot as OpenAI cuts GPT-6 Sol and Luna prices in half",
+      "hook": "Anthropic and OpenAI both shipped model updates the same day. Claude Opus 5.5 scores 58 on the independent Intelligence Index -- a new #1, 5 points clear of the prior tie. GPT-6 Sol and Luna barely moved on capability, but OpenAI cut both prices roughly in half.",
+      "key_facts": [
+        "Opus 5.5: score 58 (new #1), price cut 20% to $4/$20 per million tokens.",
+        "GPT-6 Sol: score 48 (vs 47), price cut 50% to $2/$10; Luna: score unchanged at 37, price cut ~58%.",
+        "OpenAI's own 'beats Opus 5 at 9% of the cost' claim used a model Anthropic superseded the same day."
+      ],
+      "tone": "evaluation-first, austere, comparative",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic and OpenAI both shipped updates today. Only one moved the leaderboard: Claude Opus 5.5 scores 58 on the independent index, a new #1. GPT-6 Sol and Luna barely gained on capability -- but got roughly 50% cheaper.",
+        "reply_copy": "The reconciliation neither company's own press release makes:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Claude",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-23T01:03:06Z",
+        "copy": "OpenAI says GPT-6 Sol beats Claude Opus 5 at 9% of the cost. True -- except Opus 5 stopped being Anthropic's flagship the same day, superseded by Opus 5.5. Nobody's published that comparison yet.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Two frontier labs, one day, two different stories. Claude Opus 5.5 just took the #1 spot on the independent Intelligence Index -- a real 5-point jump -- at a 20% lower price. OpenAI's GPT-6 Sol and Luna barely moved on capability, but got roughly half as expensive. Full breakdown at the link.",
+        "hashtags": [
+          "#Claude",
+          "#OpenAI",
+          "#AI",
+          "#ArtificialIntelligence",
+          "#Anthropic",
+          "#GPT6",
+          "#TechNews",
+          "#AIbenchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic and OpenAI both shipped model updates on the same day this week -- and the two releases tell almost opposite stories. Claude Opus 5.5 scored 58 on the independent Artificial Analysis Intelligence Index, a genuine capability jump to a new #1, five points clear of the prior leaders, at a 20% lower price. OpenAI's GPT-6 Sol and Luna, by contrast, barely moved the needle on capability -- but both got roughly half as expensive. One lab shipped a better model; the other shipped a cheaper one.",
+        "hashtags": [
+          "#AI",
+          "#Claude",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Claude Opus 5.5 just took #1 on the independent Intelligence Index (58, +5 over the prior tie), at a 20% lower price. OpenAI's same-day GPT-6 Sol/Luna release is a different story: flat capability, prices cut roughly in half.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Same-day releases, opposite stories: Claude Opus 5.5 jumps to #1 on the independent index (58, new record). OpenAI's GPT-6 Sol/Luna hold capability flat but cut prices roughly in half.",
+        "hashtags": [
+          "#AI",
+          "#Claude",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Anthropic and OpenAI both shipped updates today. Only one moved the leaderboard: Claude Opus 5.5 scores 58 on the independent index, a new #1. GPT-6 Sol and Luna barely gained on capability -- but got roughly 50% cheaper.",
-      "reply_copy": "The reconciliation neither company's own press release makes:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Claude",
-        "#OpenAI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-23T01:03:06Z",
-      "copy": "OpenAI says GPT-6 Sol beats Claude Opus 5 at 9% of the cost. True -- except Opus 5 stopped being Anthropic's flagship the same day, superseded by Opus 5.5. Nobody's published that comparison yet.",
-      "reply_copy": "Full breakdown:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#Anthropic"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Two frontier labs, one day, two different stories. Claude Opus 5.5 just took the #1 spot on the independent Intelligence Index -- a real 5-point jump -- at a 20% lower price. OpenAI's GPT-6 Sol and Luna barely moved on capability, but got roughly half as expensive. Full breakdown at the link.",
-      "hashtags": [
-        "#Claude",
-        "#OpenAI",
-        "#AI",
-        "#ArtificialIntelligence",
-        "#Anthropic",
-        "#GPT6",
-        "#TechNews",
-        "#AIbenchmarks"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Anthropic and OpenAI both shipped model updates on the same day this week -- and the two releases tell almost opposite stories. Claude Opus 5.5 scored 58 on the independent Artificial Analysis Intelligence Index, a genuine capability jump to a new #1, five points clear of the prior leaders, at a 20% lower price. OpenAI's GPT-6 Sol and Luna, by contrast, barely moved the needle on capability -- but both got roughly half as expensive. One lab shipped a better model; the other shipped a cheaper one.",
-      "hashtags": [
-        "#AI",
-        "#Claude",
-        "#OpenAI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Claude Opus 5.5 just took #1 on the independent Intelligence Index (58, +5 over the prior tie), at a 20% lower price. OpenAI's same-day GPT-6 Sol/Luna release is a different story: flat capability, prices cut roughly in half.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Same-day releases, opposite stories: Claude Opus 5.5 jumps to #1 on the independent index (58, new record). OpenAI's GPT-6 Sol/Luna hold capability flat but cut prices roughly in half.",
-      "hashtags": [
-        "#AI",
-        "#Claude",
-        "#OpenAI"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
   {
-  "article_id": "newsroom-six-banks-ai-shopping-agent-principles-building-trust",
-  "ts": "2026-09-22T20:03:06Z",
-  "export": {
     "article_id": "newsroom-six-banks-ai-shopping-agent-principles-building-trust",
-    "url": "https://rtfclmgzn.com/article/six-banks-ai-shopping-agent-principles-building-trust",
-    "headline": "Six banks propose disclosure and audit-trail rules for AI shopping agents, ahead of any regulator",
-    "hook": "NatWest, Bank of America and four other banks published a voluntary framework for AI shopping agents on Sept. 22 -- disclosure, safety, privacy, choice and interoperability. Their own escalation ladder shows most agents today still stop for a human review before paying.",
-    "key_facts": [
-      "Five principles: transparency, safety, privacy & data, choice, interoperability -- all voluntary.",
-      "John Lewis: AI-originated shopping searches rose from 0.3% to 2.5% of traffic in a year.",
-      "A pending federal bill (the AI AGENT Act) would give the FTC binding enforcement the banks' paper lacks."
-    ],
-    "tone": "composed, legally precise, strategic",
-    "persona": "evelyn-zhao",
-    "section": "Policy",
-    "primary_image": "assets/img/newsroom/six-banks-ai-shopping-agent-principles-building-trust.jpg",
-    "disclaimer": "none"
+    "ts": "2026-09-22T20:03:06Z",
+    "export": {
+      "article_id": "newsroom-six-banks-ai-shopping-agent-principles-building-trust",
+      "url": "https://rtfclmgzn.com/article/six-banks-ai-shopping-agent-principles-building-trust",
+      "headline": "Six banks propose disclosure and audit-trail rules for AI shopping agents, ahead of any regulator",
+      "hook": "NatWest, Bank of America and four other banks published a voluntary framework for AI shopping agents on Sept. 22 -- disclosure, safety, privacy, choice and interoperability. Their own escalation ladder shows most agents today still stop for a human review before paying.",
+      "key_facts": [
+        "Five principles: transparency, safety, privacy & data, choice, interoperability -- all voluntary.",
+        "John Lewis: AI-originated shopping searches rose from 0.3% to 2.5% of traffic in a year.",
+        "A pending federal bill (the AI AGENT Act) would give the FTC binding enforcement the banks' paper lacks."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/six-banks-ai-shopping-agent-principles-building-trust.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Six banks -- NatWest, Bank of America, Capital One and three others -- just published voluntary rules for AI shopping agents. Their own paper: \"Consumers are unclear if AI agents will act in their interests.\"",
+        "reply_copy": "What the paper actually proposes, and what it doesn't have:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#FinTech"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-23T01:03:06Z",
+        "copy": "The banks' AI-shopping-agent framework is voluntary and non-binding. A separate federal bill, the AI AGENT Act, would make the FTC the actual enforcer. Neither document mentions the other.",
+        "reply_copy": "Full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIpolicy",
+          "#FTC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Six major banks just published voluntary principles for AI shopping agents -- before any regulator did. The paper names real risks already happening: agents entering your card details directly, steering you toward weaker payment protections. John Lewis says AI-originated shopping searches are up 8x in a year. Full breakdown at the link.",
+        "hashtags": [
+          "#AI",
+          "#FinTech",
+          "#Banking",
+          "#ArtificialIntelligence",
+          "#ConsumerProtection",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "ASB Bank, Bank of America, Capital One, Commonwealth Bank of Australia, ING and NatWest published a joint paper this week proposing five voluntary principles for AI shopping agents: transparency, safety, privacy, choice and interoperability. Their own paper names real risks already happening -- agents entering customer card details directly, steering purchases toward weaker payment protections. It's voluntary and non-binding, and arrives without any federal enforcement behind it, unlike a separate bill in Congress that would give the FTC real teeth.",
+        "hashtags": [
+          "#AI",
+          "#Banking",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Six banks just proposed voluntary rules for AI shopping agents: disclosure, safety, privacy, choice, interoperability. Their own paper says consumers don't trust these agents to act in their interest yet. No regulator required this -- they got ahead of it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Six banks (NatWest, BofA, Capital One + 3 more) published voluntary AI-shopping-agent principles this week. Their own escalation ladder shows most agents today still stop for human review before paying -- this is preemptive, not reactive.",
+        "hashtags": [
+          "#AI",
+          "#FinTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Six banks -- NatWest, Bank of America, Capital One and three others -- just published voluntary rules for AI shopping agents. Their own paper: \"Consumers are unclear if AI agents will act in their interests.\"",
-      "reply_copy": "What the paper actually proposes, and what it doesn't have:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#FinTech"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-23T01:03:06Z",
-      "copy": "The banks' AI-shopping-agent framework is voluntary and non-binding. A separate federal bill, the AI AGENT Act, would make the FTC the actual enforcer. Neither document mentions the other.",
-      "reply_copy": "Full comparison:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AIpolicy",
-        "#FTC"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Six major banks just published voluntary principles for AI shopping agents -- before any regulator did. The paper names real risks already happening: agents entering your card details directly, steering you toward weaker payment protections. John Lewis says AI-originated shopping searches are up 8x in a year. Full breakdown at the link.",
-      "hashtags": [
-        "#AI",
-        "#FinTech",
-        "#Banking",
-        "#ArtificialIntelligence",
-        "#ConsumerProtection",
-        "#TechNews"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "ASB Bank, Bank of America, Capital One, Commonwealth Bank of Australia, ING and NatWest published a joint paper this week proposing five voluntary principles for AI shopping agents: transparency, safety, privacy, choice and interoperability. Their own paper names real risks already happening -- agents entering customer card details directly, steering purchases toward weaker payment protections. It's voluntary and non-binding, and arrives without any federal enforcement behind it, unlike a separate bill in Congress that would give the FTC real teeth.",
-      "hashtags": [
-        "#AI",
-        "#Banking",
-        "#Policy"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Six banks just proposed voluntary rules for AI shopping agents: disclosure, safety, privacy, choice, interoperability. Their own paper says consumers don't trust these agents to act in their interest yet. No regulator required this -- they got ahead of it.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Six banks (NatWest, BofA, Capital One + 3 more) published voluntary AI-shopping-agent principles this week. Their own escalation ladder shows most agents today still stop for human review before paying -- this is preemptive, not reactive.",
-      "hashtags": [
-        "#AI",
-        "#FinTech"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
   {
-  "article_id": "newsroom-mathieu-group-m23-galois-theory-ai-telescope",
-  "ts": "2026-09-22T20:03:06Z",
-  "export": {
     "article_id": "newsroom-mathieu-group-m23-galois-theory-ai-telescope",
-    "url": "https://rtfclmgzn.com/article/mathieu-group-m23-galois-theory-ai-telescope",
-    "headline": "Mathematicians closed a 40-year gap in Galois theory in three months -- using AI as \"a telescope,\" not a solver",
-    "hook": "Six mathematicians proved the Mathieu group M23 is a Galois group over Q, closing a program open since the 1980s. They used Claude and GPT-5.6 Sol for code and search -- but co-author Shaowu Zhang says fully autonomous AI attempts made no progress at all.",
-    "key_facts": [
-      "M23 was the last of the 26 sporadic simple groups to resist this kind of proof.",
-      "Project ran ~3 months, from a May Caltech workshop to the Aug. 9 arXiv paper.",
-      "Co-author: \"AI gave us a powerful and precise telescope\" -- but every strategic decision was human."
-    ],
-    "tone": "austere, technically exacting, evaluation-first",
-    "persona": "luka-petrovic",
-    "section": "Frontier",
-    "primary_image": "assets/img/newsroom/mathieu-group-m23-galois-theory-ai-telescope.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Six mathematicians just closed a 40-year-old gap in Galois theory using Claude and GPT-5.6 Sol. A co-author's own account: \"AI gave us a powerful and precise telescope\" -- but every strategic call was human, and autonomous AI attempts went nowhere.",
-      "reply_copy": "What AI actually did (and didn't do):",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#Mathematics"
+    "ts": "2026-09-22T20:03:06Z",
+    "export": {
+      "article_id": "newsroom-mathieu-group-m23-galois-theory-ai-telescope",
+      "url": "https://rtfclmgzn.com/article/mathieu-group-m23-galois-theory-ai-telescope",
+      "headline": "Mathematicians closed a 40-year gap in Galois theory in three months -- using AI as \"a telescope,\" not a solver",
+      "hook": "Six mathematicians proved the Mathieu group M23 is a Galois group over Q, closing a program open since the 1980s. They used Claude and GPT-5.6 Sol for code and search -- but co-author Shaowu Zhang says fully autonomous AI attempts made no progress at all.",
+      "key_facts": [
+        "M23 was the last of the 26 sporadic simple groups to resist this kind of proof.",
+        "Project ran ~3 months, from a May Caltech workshop to the Aug. 9 arXiv paper.",
+        "Co-author: \"AI gave us a powerful and precise telescope\" -- but every strategic decision was human."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/mathieu-group-m23-galois-theory-ai-telescope.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-23T01:03:06Z",
-      "copy": "\"We also tried more autonomous approaches at the beginning of the project. These attempts did not make meaningful progress.\" -- a co-author's own honest account of where AI actually helped, and where it didn't.",
-      "reply_copy": "Full story:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#Math"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "The last of 26 \"sporadic\" symmetry groups, open since the 1980s, just got solved -- using Claude and GPT-5.6 Sol for code and search. But the mathematicians who did it are the first to caution against overselling it: fully autonomous AI attempts made zero progress. Every real decision was human. \"AI gave us a telescope; we still had to know where to point it.\" Full story at the link.",
-      "hashtags": [
-        "#AI",
-        "#Mathematics",
-        "#Claude",
-        "#ArtificialIntelligence",
-        "#Science",
-        "#TechNews"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "In August, six mathematicians closed a gap in Galois theory that had sat open since the 1980s -- proving the Mathieu group M23, the last of the 26 sporadic simple groups, occurs as a Galois group over the rational numbers. They used Claude Fable 5, Claude Opus 4.8 and GPT-5.6 Sol for code, search and computation. But co-author Shaowu Zhang's own account is refreshingly honest: the team's attempts to let AI work fully autonomously made no real progress, and every decisive mathematical judgment -- what to compute, when to stop, how to interpret the results -- was human.",
-      "hashtags": [
-        "#AI",
-        "#Mathematics",
-        "#Science"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "40-year math gap closed using Claude + GPT-5.6 Sol for code and search. The honest part: a co-author says autonomous AI attempts went nowhere. Every real decision -- what to compute, when to stop -- was human. \"AI gave us a telescope, not the answer.\"",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Six mathematicians closed a 40-year-old Galois theory gap in ~3 months using AI for code and search. Co-author's own account: autonomous AI attempts made zero progress. Every strategic call was human. Real, honest AI-and-math story.",
-      "hashtags": [
-        "#AI",
-        "#Mathematics"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Six mathematicians just closed a 40-year-old gap in Galois theory using Claude and GPT-5.6 Sol. A co-author's own account: \"AI gave us a powerful and precise telescope\" -- but every strategic call was human, and autonomous AI attempts went nowhere.",
+        "reply_copy": "What AI actually did (and didn't do):",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Mathematics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-23T01:03:06Z",
+        "copy": "\"We also tried more autonomous approaches at the beginning of the project. These attempts did not make meaningful progress.\" -- a co-author's own honest account of where AI actually helped, and where it didn't.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Math"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The last of 26 \"sporadic\" symmetry groups, open since the 1980s, just got solved -- using Claude and GPT-5.6 Sol for code and search. But the mathematicians who did it are the first to caution against overselling it: fully autonomous AI attempts made zero progress. Every real decision was human. \"AI gave us a telescope; we still had to know where to point it.\" Full story at the link.",
+        "hashtags": [
+          "#AI",
+          "#Mathematics",
+          "#Claude",
+          "#ArtificialIntelligence",
+          "#Science",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "In August, six mathematicians closed a gap in Galois theory that had sat open since the 1980s -- proving the Mathieu group M23, the last of the 26 sporadic simple groups, occurs as a Galois group over the rational numbers. They used Claude Fable 5, Claude Opus 4.8 and GPT-5.6 Sol for code, search and computation. But co-author Shaowu Zhang's own account is refreshingly honest: the team's attempts to let AI work fully autonomously made no real progress, and every decisive mathematical judgment -- what to compute, when to stop, how to interpret the results -- was human.",
+        "hashtags": [
+          "#AI",
+          "#Mathematics",
+          "#Science"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "40-year math gap closed using Claude + GPT-5.6 Sol for code and search. The honest part: a co-author says autonomous AI attempts went nowhere. Every real decision -- what to compute, when to stop -- was human. \"AI gave us a telescope, not the answer.\"",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Six mathematicians closed a 40-year-old Galois theory gap in ~3 months using AI for code and search. Co-author's own account: autonomous AI attempts made zero progress. Every strategic call was human. Real, honest AI-and-math story.",
+        "hashtags": [
+          "#AI",
+          "#Mathematics"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
