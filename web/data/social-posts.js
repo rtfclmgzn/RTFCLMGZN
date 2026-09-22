@@ -22885,7 +22885,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Claude"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -22938,8 +22940,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mw3i36m3bu2q",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mw3i36m3bu2q",
+        "posted_at": "2026-09-22T05:19:21Z"
       }
     ]
   },
@@ -22974,7 +22978,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#MachineLearning"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -23017,8 +23023,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "TypeSafe AI's Jev never writes a sentence -- it answers in typed, calibrated probabilities instead of text. Claims up to 444x cheaper than an LLM on the same task. The one public accuracy number, 68%, is still the company's own internal benchmark.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddk9fOLln9N",
+        "remote_id": "18095821364642152",
+        "posted_at": "2026-09-22T05:15:12Z"
       },
       {
         "platform": "bluesky",
@@ -23027,8 +23035,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#MachineLearning"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mw3hty3j4w2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mw3hty3j4w2o",
+        "posted_at": "2026-09-22T05:15:18Z"
       }
     ]
   }
