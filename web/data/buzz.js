@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-661", date:"2026-09-22",
+    source:{ name:"Amazon", handle:"amazon", platform:"web", kind:"news" },
+    text:"Amazon blocked Meta's Muse AI agent from its shopping experience after Meta declined Amazon's request to remove Amazon from Muse's interactive browsing scope. Meta launched Muse on September 1 as an autonomous shopping and task agent; Amazon's move is the first major platform exclusion of an AI agent from a frontier lab and reflects escalating friction over which AI systems can operate independently across e-commerce surfaces.",
+    why:"A major platform (Amazon) explicitly blocking a frontier lab's (Meta's) autonomous agent from its retail surface is a structural conflict between AI autonomy and platform control -- the first concrete platform-level pushback on agent autonomy after months of labs claiming unrestricted agent access is inevitable.",
+    heat:52, topics:["meta","muse","amazon","ai agents","e-commerce","platform control","autonomy"],
+    url:"https://www.storyboard18.com/brand-marketing/amazon-blocks-metas-muse-ai-agent-opens-new-battle-over-who-controls-ai-shopping-ws-klo-111123.htm" },
+{ id:"bz-660", date:"2026-09-21",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic released a major research update on September 21 showing Claude autonomously optimized 30+ open-source biomolecular modeling frameworks, achieving an average 4x speedup and introducing a low-memory mode enabling single-GPU inference on systems exceeding 10,000 tokens (amino acids, nucleotides). The work is paired with a $1 million prize competition co-sponsored with Adaptyv Bio offering both Claude credits and wet-lab validation for over 5,000 de novo protein designs, with open-source releases of all optimized code.",
+    why:"A frontier lab using its own model to accelerate scientific tooling, then validating designs in wet lab and open-sourcing the results, is the rare case where 'AI for research' moves from claim to measurable acceleration in a bounded scientific domain -- worth tracking whether protein design timelines actually shift as a result.",
+    heat:68, topics:["anthropic","claude","biomolecular modeling","protein design","adaptyv bio","scientific research","wet lab"],
+    url:"https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling" },
 { id:"bz-659", date:"2026-09-20",
     source:{ name:"CXMT", handle:"cxmt", platform:"web", kind:"lab" },
     text:"China's CXMT said its fifth-generation DRAM platform, G5, entered mass production at the World Manufacturing Convention in Hefei on September 20 -- two 24Gb LPDDR5X products are already shipping in Chinese flagship phones. Counterpoint Research puts CXMT's global DRAM share at 10% in Q2 2026, more than double a year earlier, pushing Samsung/SK Hynix/Micron's combined share below 90% for the first time in over a decade.",
