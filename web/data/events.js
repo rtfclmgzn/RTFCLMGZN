@@ -9,6 +9,7 @@
    ============================================================ */
 window.RTFC_EVENTS = {
   updated: "2026-09-22",
+  checkedAt: "2026-09-22T17:20:50Z",
   note: "Curated by the newsroom. Dates are approximate windows — confirm exact times on each official page.",
   items: [
     { name:"Meta Connect", org:"Meta", when:"Sept 23-24, 2026", sort:"2026-09-23",
