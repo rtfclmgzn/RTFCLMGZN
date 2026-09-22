@@ -22611,7 +22611,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -22648,14 +22648,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#AgenticCommerce"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122122285737396947",
+        "remote_id": "1238977099292018_122122285737396947",
+        "posted_at": "2026-09-22T00:17:37Z"
       },
       {
         "platform": "threads",
         "copy": "Meta opened Muse to outside developers and Stripe payments Sept. 18. 12 days later, Amazon blocked Muse from checkout, citing stored credentials. Meta disputes it. A Ninth Circuit ruling 6 weeks ago explains why Amazon has more legal room this time than it did against Perplexity.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddkbermo3KW",
+        "remote_id": "18128703400697800",
+        "posted_at": "2026-09-22T00:18:04Z"
       },
       {
         "platform": "threads",
@@ -22671,8 +22675,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AgenticAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mw2xanybtr2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mw2xanybtr2o",
+        "posted_at": "2026-09-22T00:18:11Z"
       }
     ]
   },
@@ -22708,7 +22714,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -22721,8 +22727,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Ddka8dZlF6P/",
+        "remote_id": "17896472259393207",
+        "posted_at": "2026-09-22T00:13:25Z"
       },
       {
         "platform": "facebook",
@@ -22731,14 +22739,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Apple",
           "#Nvidia"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122122285131396947",
+        "remote_id": "1238977099292018_122122285131396947",
+        "posted_at": "2026-09-22T00:13:34Z"
       },
       {
         "platform": "threads",
         "copy": "Apple is reportedly building AI servers again -- first time since 2011 -- around future M8 Ultra chips, and has discussed using rival Nvidia's NVLink Fusion to connect them. Neither company has commented. Nothing ships before 2029, if at all.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddka_wGo9VT",
+        "remote_id": "18146757916561434",
+        "posted_at": "2026-09-22T00:13:53Z"
       },
       {
         "platform": "bluesky",
@@ -22746,8 +22758,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#Apple"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mw2wz6xdai2o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mw2wz6xdai2o",
+        "posted_at": "2026-09-22T00:14:00Z"
       }
     ]
   }
