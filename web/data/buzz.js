@@ -263,5 +263,11 @@ window.RTFC_BUZZ = [
     text:"Data-security firm Cyera raised a $400 million Series G extension from Goldman Sachs Alternatives (led by Evolution Equity) at a valuation over $12 billion, to build what it calls a \"trust layer for the agentic enterprise\" -- unified data-access and identity governance covering humans, machines and AI agents, including tools (Agent Guardian, Cyera Endpoint) that monitor what an autonomous agent actually does once granted access.",
     why:"A $12B-plus valuation for a company whose entire pitch is governing what AI agents are allowed to touch inside a company's systems is a concrete market signal that enterprise buyers see agent access control as a distinct, fundable security category -- not a feature bolted onto existing identity tools.",
     heat:31, topics:["cyera","funding","ai agents","data security","identity management","goldman sachs"],
-    url:"https://theaiinsider.tech/2026/09/22/cyera-announces-400m-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise/" }
+    url:"https://theaiinsider.tech/2026/09/22/cyera-announces-400m-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise/" },
+{ id:"bz-678", date:"2026-09-22",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic released Claude Opus 5.5 on September 22, 2026, performing at Fable-level quality while costing 40% less than Opus 5 to run and generating output 30% faster. Anthropic set Opus 5.5 prices at $4 per million input tokens and $20 per million output tokens (20% below Opus 5), with prompt-cache reads at $0.20 per million tokens (60% below Opus 5). Anthropic plans to release Claude Sonnet 5.5 and Haiku 5.5 within weeks.",
+    why:"A frontier lab shipping a new model family with both lower cost and faster output, while matching premium-tier quality on most benchmarks, reshapes the economic floor for AI-powered products overnight -- worth tracking whether the competitive response from OpenAI or Google shifts their own pricing or launches countervailing capability claims.",
+    heat:74, topics:["anthropic","claude opus","model release","pricing","frontier lab","ai economics"],
+    url:"https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/" }
 ];
