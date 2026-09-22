@@ -71868,6 +71868,825 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    "run": "autonomous Claude-runner cycle · 2026-09-22T14:40:05Z"
   }
+ },
+ {
+  "slug": "six-banks-ai-shopping-agent-principles-building-trust",
+  "title": "Six banks propose disclosure and audit-trail rules for AI shopping agents, ahead of any regulator",
+  "dek": "ASB Bank, Bank of America, Capital One, Commonwealth Bank of Australia, ING and NatWest published \"Building Trust in Agentic Commerce\" on Sept. 22, a voluntary five-principle framework for AI agents that shop and pay on a customer's behalf. The paper's own escalation ladder shows most of today's agents still stop for a human review before paying -- and it is written specifically to get ahead of the point where they don't.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for the banks' follow-up implementation paper",
+    "text": "The six banks say a second paper will translate these five principles into actual protocols and standards -- that document, not this one, is where liability and enforcement specifics will actually show up."
+   },
+   {
+    "label": "Watch the AI AGENT Act discussion draft",
+    "text": "Sen. Mark Warner's June 29 draft would make the FTC the principal enforcer of agent-platform access rules and require non-waivable fiduciary-style duties -- a federal backstop this voluntary bank framework doesn't have."
+   },
+   {
+    "label": "If you use a shopping agent today, check who it discloses itself to",
+    "text": "The paper's own transparency principle asks whether you're told when an AI agent is acting on your behalf and how it's prioritizing options -- most consumer agents shipped so far don't surface this clearly."
+   },
+   {
+    "label": "Watch whether card networks or the agent providers themselves adopt any of this first",
+    "text": "A voluntary bank framework has no teeth without payment-rail or platform buy-in; whether Visa, Mastercard or the agent builders (OpenAI, Anthropic, Google, Meta) publicly respond is the next concrete marker."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Building Trust in Agentic Commerce",
+    "url": "https://www.natwestgroup.com/content/dam/natwestgroup_com/natwestgroup/Docs/articles/2026/NWG-Principles-Paper-Final.pdf",
+    "outlet": "ASB Bank, Bank of America, Capital One, Commonwealth Bank of Australia, ING & NatWest",
+    "kind": "primary"
+   },
+   {
+    "label": "Banks warn AI shopping bots raise scam, fraud and data-privacy risks",
+    "url": "https://www.investing.com/news/stock-market-news/banks-warn-ai-shopping-bots-raise-scam-fraud-and-dataprivacy-risks-4910257",
+    "outlet": "Reuters (via Investing.com)",
+    "kind": "reporting"
+   },
+   {
+    "label": "Banks Say Consumers Unsure AI Agents Are on Their Side",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/banks-say-consumers-unsure-ai-agents-are-on-their-side/",
+    "outlet": "PYMNTS",
+    "kind": "reporting"
+   },
+   {
+    "label": "AI shopping agents should declare themselves whenever they pay, six banks propose",
+    "url": "https://www.cryptopolitan.com/ai-shopping-agents-declare-pay-six-banks/",
+    "outlet": "Cryptopolitan",
+    "kind": "reporting"
+   },
+   {
+    "label": "Banks Warn AI Shopping Bots Raise Scam, Fraud & Data Privacy",
+    "url": "https://www.globalbankingandfinance.com/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy/",
+    "outlet": "Global Banking & Finance Review",
+    "kind": "reporting"
+   },
+   {
+    "label": "The Federal AI AGENT Act: Consumer Protection in AI Clothing?",
+    "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2026/07/ai-agent-act-consumer-ai-regulation",
+    "outlet": "Davis Wright Tremaine",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Six banks published \"Building Trust in Agentic Commerce,\" a voluntary framework for AI shopping agents, on Sept. 22.",
+   "Five principles: transparency, safety, privacy & data, choice, and interoperability -- none are binding.",
+   "NatWest's Mark Brant: customers must \"trust that they remain in control of how payments are made.\"",
+   "John Lewis says AI-originated shopping searches rose from 0.3% to 2.5% of its traffic in a year.",
+   "Caveat: a pending federal bill would give the FTC binding enforcement power the banks' own paper lacks."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Six banks -- ASB Bank, Bank of America, Capital One, Commonwealth Bank of Australia, ING and NatWest -- published a joint paper on Sept. 22 called **\"Building Trust in Agentic Commerce,\"** proposing five voluntary principles for the AI agents now shopping and paying on customers' behalf. The paper defines [agentic commerce](/dictionary) as \"the use of AI agents to help make or facilitate payments between a consumer and a merchant,\" and is explicit that it \"does not prescribe conduct, any commercial position or any particular method or timetable for implementation\" -- this is a position paper, not a standard, and the banks say a second, more technical paper is coming to translate it into actual protocols.",
+    "citation_urls": [
+     "https://www.natwestgroup.com/content/dam/natwestgroup_com/natwestgroup/Docs/articles/2026/NWG-Principles-Paper-Final.pdf"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "title": "The paper, in short",
+     "items": [
+      {
+       "label": "Authors",
+       "value": "Six banks",
+       "note": "ASB, BofA, Capital One, CommBank Australia, ING, NatWest"
+      },
+      {
+       "label": "Published",
+       "value": "Sept. 22, 2026"
+      },
+      {
+       "label": "Principles",
+       "value": "5",
+       "note": "transparency, safety, privacy & data, choice, interoperability"
+      },
+      {
+       "label": "Status",
+       "value": "Voluntary, non-binding",
+       "note": "banks' own wording"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The paper's own account of why it exists is unusually candid for a financial-industry document. \"Consumers are unclear if AI agents will act in their interests,\" it says. \"They are concerned that AI agents may buy the wrong thing or spend too much -- or even worse, lose their money to scams and fraud.\" ==It names specific unsafe practices already happening==: agents that request a customer's card details and enter them directly into websites, and agents that steer purchases toward payment methods carrying weaker fraud protections. Merchants get a matching worry -- rising disputes and chargebacks \"for reasons outside their control,\" with no clear line on who is liable when an agent, not a person, made the purchase decision.",
+    "citation_urls": [
+     "https://www.natwestgroup.com/content/dam/natwestgroup_com/natwestgroup/Docs/articles/2026/NWG-Principles-Paper-Final.pdf",
+     "https://www.investing.com/news/stock-market-news/banks-warn-ai-shopping-bots-raise-scam-fraud-and-dataprivacy-risks-4910257"
+    ]
+   },
+   {
+    "type": "document",
+    "document": {
+     "docTitle": "Building Trust in Agentic Commerce",
+     "docMeta": "ASB Bank, Bank of America, Capital One, Commonwealth Bank of Australia, ING & NatWest, Sept. 22, 2026",
+     "url": "https://www.natwestgroup.com/content/dam/natwestgroup_com/natwestgroup/Docs/articles/2026/NWG-Principles-Paper-Final.pdf",
+     "lines": [
+      {
+       "n": "p.3",
+       "text": "Consumers are unclear if AI agents will act in their interests. They are concerned that AI agents may buy the wrong thing or spend too much – or even worse, lose their money to scams and fraud.",
+       "mark": true
+      },
+      {
+       "n": "p.4",
+       "text": "We define agentic commerce as the “use of AI agents to help make or facilitate payments between a consumer and a merchant for a product or service.”"
+      }
+     ],
+     "reading": "This is the banks' own framing of the problem, not a regulator's or a critic's -- the institutions writing the rules are describing what their own customers reportedly already distrust.",
+     "source": "\"Building Trust in Agentic Commerce,\" p.3"
+    }
+   },
+   {
+    "type": "p",
+    "text": "That distrust already shows up in usage data from both sides of the transaction. British retailer John Lewis reported that AI-originated shopping searches grew from 0.3% to 2.5% of its traffic over the past year -- an eightfold rise, and one the retailer says is accelerating. On the willingness side, a separate PYMNTS Intelligence survey found just 24% of Americans say they'd let an AI agent both shop *and* pay, against 22% who'd let one merely start the research and roughly half who report using AI assistance in a purchase in some form. **That's a genuinely different data point from the banks' own paper** -- PYMNTS's survey measures consumer willingness, the banks' paper describes provider risk -- and the gap between them is itself the story: usage is climbing while trust to hand over the actual payment step is not.",
+    "citation_urls": [
+     "https://www.globalbankingandfinance.com/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy/",
+     "https://www.pymnts.com/news/artificial-intelligence/2026/banks-say-consumers-unsure-ai-agents-are-on-their-side/"
+    ]
+   },
+   {
+    "type": "spectrum",
+    "spectrum": {
+     "leftLabel": "Human executes every step",
+     "rightLabel": "Agent acts, no review",
+     "markers": [
+      {
+       "label": "Standard online purchase",
+       "at": 5
+      },
+      {
+       "label": "Agent searches, human executes",
+       "at": 25
+      },
+      {
+       "label": "Human reviews the final purchase",
+       "at": 50,
+       "hi": true
+      },
+      {
+       "label": "Human pre-approves a specific purchase",
+       "at": 70
+      },
+      {
+       "label": "Agent executes, no review",
+       "at": 90
+      },
+      {
+       "label": "Agent identifies the need and buys on its own",
+       "at": 100
+      }
+     ],
+     "source": "The banks' own escalation-of-autonomy diagram, \"Building Trust in Agentic Commerce,\" p.4"
+    }
+   },
+   {
+    "type": "p",
+    "text": "That ladder, drawn directly from the paper, is **the clearest evidence that this document is preemptive rather than reactive**: the banks place most of today's actual shopping agents at or before the \"human reviews the final purchase\" stage, with the fully autonomous end of the scale still mostly theoretical. The five principles -- __transparency__, __safety__, privacy & data, choice, and interoperability -- are each written as a hedge against the risks that specifically appear as autonomy increases, not the risks of AI shopping tools as they exist today.",
+    "citation_urls": [
+     "https://www.natwestgroup.com/content/dam/natwestgroup_com/natwestgroup/Docs/articles/2026/NWG-Principles-Paper-Final.pdf"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“Customers need to trust that they remain in control of how payments are made and that their money is safe.” — Mark Brant, Chief Payments Officer, NatWest",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/ai-shopping-agents-declare-pay-six-banks/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Brant's framing is also a fair description of who actually carries the risk while these principles remain voluntary and the follow-up implementation paper is still unwritten.",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/ai-shopping-agents-declare-pay-six-banks/"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "Consumers using autonomous shopping agents",
+       "tone": "exposed",
+       "what": "Carry scam and fraud risk today, before any of the paper's proposed audit-trail or liability standards exist anywhere."
+      },
+      {
+       "who": "Merchants accepting agent-initiated purchases",
+       "tone": "exposed",
+       "what": "Face rising disputes and chargebacks with no established process for contesting a purchase an AI agent, not a person, decided to make."
+      },
+      {
+       "who": "The six co-authoring banks",
+       "tone": "gains",
+       "what": "Position themselves to shape the liability and disclosure rules before regulators or the agent-building platforms write their own."
+      },
+      {
+       "who": "OpenAI, Anthropic, Google and Meta's shopping-agent products",
+       "tone": "unclear",
+       "what": "Would need to adopt disclosure and audit-trail standards they had no hand in authoring, if the banks succeed in getting payment rails to require them."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The paper arrives without any binding force behind it, which is exactly what distinguishes it from the one piece of US federal legislation aimed at the same problem. Sen. Mark Warner's discussion draft of the **AI AGENT Act** -- released June 29, not yet formally introduced -- would go considerably further: it would require platforms to let authorized AI agents connect on functionally equal terms to a human user, impose non-waivable fiduciary-style duties on agent providers (safeguard data, avoid conflicts of interest, follow instructions), and make the FTC the principal enforcer, including a registration framework for agent providers and civil penalties for violations. Where the banks' paper is voluntary and industry-authored, Warner's draft would be federal, mandatory, and enforced -- and it explicitly names agentic commerce and account management as covered activity. Neither document references the other, but they're answering the same gap from opposite directions: one from the institutions that move the money, one from the government that could compel them.",
+    "citation_urls": [
+     "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2026/07/ai-agent-act-consumer-ai-regulation"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The immediate test of whether \"Building Trust in Agentic Commerce\" amounts to more than a position paper is the promised follow-up: a second document meant to turn these five principles into actual protocols and industry standards, with no date yet attached. Until that lands, the paper's own conflict-of-interest warning is worth sitting with on its own terms -- it flags, as a live risk, that an AI agent \"may prioritize products, payment methods or other services that deliver the best financial outcomes for their providers\" over what's actually best for the customer. ==That is a risk the paper names in its own agents, built by its own industry, without yet proposing a mechanism to catch it.== This newsroom's earlier coverage of [Meta's Muse Connector Platform](/article/meta-muse-connectors-stripe-amazon-blocks-agent) -- and Amazon's decision to block that agent from its own storefront -- is the live version of exactly the access dispute the banks' \"Choice\" principle is trying to get ahead of.",
+    "citation_urls": [
+     "https://www.natwestgroup.com/content/dam/natwestgroup_com/natwestgroup/Docs/articles/2026/NWG-Principles-Paper-Final.pdf"
+    ]
+   }
+  ],
+  "id": "newsroom-six-banks-ai-shopping-agent-principles-building-trust",
+  "image": "assets/img/newsroom/six-banks-ai-shopping-agent-principles-building-trust.jpg",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "6 sources across 5 independent evidence threads: (1) the banks' own 13-page paper, downloaded and text-extracted directly from natwestgroup.com (primary -- the actual document, not reporting about it), (2) Reuters' wire report via Investing.com (independent reporting, source of the John Lewis reporting chain and general risk framing), (3) PYMNTS's own separate consumer survey ('Will the 2026 Shopping Season Go Agentic?', independent primary research distinct from the banks' paper -- kept clearly separated in prose per the source-reconciliation requirement rather than blended as if one dataset), (4) Cryptopolitan's reporting with the on-record Mark Brant/NatWest quote, (5) Global Banking & Finance Review's reporting corroborating the John Lewis figure, (6) Davis Wright Tremaine's legal-blog summary of Sen. Warner's AI AGENT Act discussion draft, providing the regulatory contrast. Verified the PDF resolves as a genuine, downloadable 4MB document before citing it, and extracted its text directly rather than relying on secondary paraphrase for any quoted passage."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires -- this is an industry position paper and pending legislation, not litigation, and no accusatory claim is made against a named company (the Meta/Amazon cross-reference restates this desk's own prior, separately verified reporting). The PYMNTS survey statistics (50%/22%/24%) are kept explicitly attributed to PYMNTS's own research and not folded into the banks' paper's claims -- these are two different organizations measuring two different things (provider risk vs. consumer willingness), and conflating them would have been a real reconciliation failure."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean, including the cross-link to the Meta Muse/Amazon piece, which is phrased about the event (\"the live version of exactly the access dispute\") rather than about this desk's coverage of it. Critique flagged an early draft that implied the AI AGENT Act was a response to the banks' paper; revised to state plainly that neither document references the other, since no source supports a causal link between them."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "keyfacts values trace directly to the paper's own front matter. document's excerpt is verbatim, confirmed against the extracted PDF text with the exact page reference. spectrum's six markers and their ordering come directly from the paper's own autonomy-escalation diagram on p.4, not an editorial judgment call. stakes names four specific parties, none generic ('consumers' is scoped to 'Consumers using autonomous shopping agents,' not left broad). No component carries a top-level text field. No two components sit back to back."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 6 sources, 5 independent threads, 1 direct primary document (verified as a real, resolvable file, not just described by reporting) plus a second primary-adjacent legislative source. Genuinely new development, not previously covered by this desk; the John Lewis/PYMNTS usage data and the AI AGENT Act contrast both add real analytical content beyond a repost of the banks' own framing."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "A real industry document with genuine teeth-vs-no-teeth tension against pending federal legislation, plus a natural, substantive cross-link to this desk's own Meta Muse/Amazon coverage -- exactly the kind of connected-node treatment the visual layer and cross-link rules are meant to produce."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-22T20:03:06Z"
+  },
+  "publishedAt": "2026-09-22T20:03:06Z"
+ },
+ {
+  "slug": "mathieu-group-m23-galois-theory-ai-telescope",
+  "title": "Mathematicians closed a 40-year gap in Galois theory in three months -- using AI as \"a telescope,\" not a solver",
+  "dek": "A six-person team including Bjorn Poonen and Kyu-Hwan Lee proved in August that the Mathieu group M23 -- the last of the 26 sporadic simple groups -- occurs as a Galois group over the rational numbers, completing a program begun in the 1980s. The project, launched at a Caltech workshop in May, used Claude Fable 5, Claude Opus 4.8 and GPT-5.6 Sol for code and computation. Co-author Shaowu Zhang's own account is blunt about the limits: autonomous AI attempts went nowhere, and every decisive mathematical judgment was human.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Read the actual claim, not the headline about it",
+    "text": "The paper (arXiv:2608.08538) proves one specific, checkable statement: a named degree-23 polynomial's splitting field has Galois group M23 over Q. That's narrower and more verifiable than \"AI solved a math problem.\""
+   },
+   {
+    "label": "Watch for the SAIR competition's second stage",
+    "text": "The parallel crowdsourced inverse Galois challenge finished its first stage in August with all 25,000 signatures found; a second stage focused on the genuinely hard, conceptual remaining cases is planned with no date yet set."
+   },
+   {
+    "label": "Don't extrapolate a general AI-does-math capability from this result",
+    "text": "Zhang's own account says autonomous AI approaches were tried first and made no meaningful progress within the project's AI budget -- the result came from human-directed use of AI for code generation, search and computation, not from AI reasoning on its own."
+   },
+   {
+    "label": "Watch whether this workflow gets reused on other long-open problems",
+    "text": "The team names no specific next target, but the \"AI as telescope, mathematician decides where to point it\" division of labor is now a documented, repeatable template for other decades-old, computation-heavy conjectures."
+   }
+  ],
+  "sources": [
+   {
+    "label": "The Mathieu group M23 is a Galois group over Q",
+    "url": "https://arxiv.org/abs/2608.08538",
+    "outlet": "arXiv",
+    "kind": "primary"
+   },
+   {
+    "label": "Where to Point the Telescope",
+    "url": "https://proofsandprompts.com/2026/08/21/where-to-point-the-telescope/",
+    "outlet": "Proofs and Prompts (Shaowu Zhang)",
+    "kind": "primary"
+   },
+   {
+    "label": "Third SAIR competition: inverse Galois challenge",
+    "url": "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
+    "outlet": "Terence Tao",
+    "kind": "primary"
+   },
+   {
+    "label": "Kyu-Hwan Lee and collaborators solve outstanding problem in Galois theory",
+    "url": "https://math.uconn.edu/2026/08/12/kyu-hwan-lee-and-collaborators-solve-outstanding-problem-in-galois-theory/",
+    "outlet": "UConn Department of Mathematics",
+    "kind": "primary"
+   },
+   {
+    "label": "Mathematicians use AI to find mysterious symmetries, solving decades-old problem",
+    "url": "https://www.scientificamerican.com/article/mathematicians-use-ai-to-find-mysterious-symmetries-solving-decades-old-problem/",
+    "outlet": "Scientific American",
+    "kind": "reporting"
+   },
+   {
+    "label": "Mathematicians use AI to find mysterious symmetries, solving decades-old problem",
+    "url": "https://www.yahoo.com/news/science/articles/mathematicians-ai-mysterious-symmetries-solving-110000349.html",
+    "outlet": "Yahoo News",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "A six-mathematician team proved the Mathieu group M23 is a Galois group over Q, completing a 1980s-launched program.",
+   "M23 was the last of the 26 sporadic simple groups to resist this kind of proof for decades.",
+   "The team used Claude Fable 5, Claude Opus 4.8 and GPT-5.6 Sol for code, search and hypothesis testing.",
+   "Co-author Shaowu Zhang says fully autonomous AI attempts made no real progress -- humans made every strategic call.",
+   "Caveat: this is human-directed, AI-accelerated computation on one specific problem, not evidence AI can do mathematical research unsupervised."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "In August, six mathematicians -- Xiaoyu Huang, Blake Jackson, Kyu-Hwan Lee, Bjorn Poonen, Rachel Pries and Shaowu Zhang -- closed a gap in Galois theory that had sat open since the 1980s. Their paper (arXiv:2608.08538), posted on Aug. 9, proves that the **Mathieu group M23** occurs as a Galois group over the rational numbers -- the last of the 26 \"sporadic\" simple groups to be realized this way, after mathematicians nailed down the other 25 between 1984 and 1989. ==The team didn't just prove existence -- they built the object itself==: an explicit degree-23 polynomial with rational coefficients whose splitting field has Galois group M23 over Q, using computed Belyi maps to construct the extension directly.",
+    "citation_urls": [
+     "https://arxiv.org/abs/2608.08538",
+     "https://math.uconn.edu/2026/08/12/kyu-hwan-lee-and-collaborators-solve-outstanding-problem-in-galois-theory/"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "title": "The result, in short",
+     "items": [
+      {
+       "label": "What was proved",
+       "value": "M23 is a Galois group over Q",
+       "note": "last of the 26 sporadic simple groups"
+      },
+      {
+       "label": "Construction",
+       "value": "An explicit degree-23 polynomial"
+      },
+      {
+       "label": "Time to solve",
+       "value": "~3 months",
+       "note": "May workshop to Aug. 9 submission"
+      },
+      {
+       "label": "Paper",
+       "value": "arXiv:2608.08538"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The __inverse Galois problem__ asks a deceptively simple question: given a group of symmetries, can you find a polynomial whose roots have exactly that symmetry structure? For most groups, yes -- but ==the 26 sporadic groups are exceptions to every known pattern== in the classification of finite simple groups, which made each one its own standalone puzzle rather than an instance of a general method. M23, one of the smallest sporadic groups, turned out to be the hardest of the 26, resisting repeated attempts across four decades. The project that finally cracked it took about 3 months from start to finish, beginning at a Caltech workshop in late May, where the American Institute of Mathematics had gathered mathematicians specifically to identify problems suited to AI-assisted computation -- Rachel Pries brought M23 to that room as a candidate.",
+    "citation_urls": [
+     "https://www.scientificamerican.com/article/mathematicians-use-ai-to-find-mysterious-symmetries-solving-decades-old-problem/",
+     "https://www.yahoo.com/news/science/articles/mathematicians-ai-mysterious-symmetries-solving-110000349.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That same workshop season produced a second, parallel result on a related but distinct question. Fields Medalist Terence Tao's Foundation for Science and AI Research ran a crowdsourced competition -- open to \"unrestricted use of any sort of computational tool, including AI\" -- asking teams to find polynomials for all 25,000 transitive permutation groups acting on 24 points. That challenge concluded in late August with every one of the 25,000 signatures found, won by a German team that Yahoo's reporting says used AI only for a minor script-writing task, not for the mathematics itself. The two efforts ran on overlapping timelines and the same underlying problem family, but they are not the same project: Tao's competition breadth-searched a huge grid of easier cases with a scoring system that rewarded difficulty, while the Huang-Jackson-Lee-Poonen-Pries-Zhang paper went deep on the single hardest holdout.",
+    "citation_urls": [
+     "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
+     "https://www.yahoo.com/news/science/articles/mathematicians-ai-mysterious-symmetries-solving-110000349.html"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "title": "Closing a 42-year-old gap",
+     "items": [
+      {
+       "when": "1984–1989",
+       "what": "25 of the 26 sporadic simple groups realized as Galois groups over Q; M23 resists."
+      },
+      {
+       "when": "May 27–30, 2026",
+       "what": "AIM/Caltech workshop convenes on AI-assisted number theory; Pries proposes M23."
+      },
+      {
+       "when": "Aug. 9, 2026",
+       "what": "Paper proving M23 is a Galois group over Q submitted to arXiv.",
+       "hi": true
+      },
+      {
+       "when": "Late Aug. 2026",
+       "what": "Tao's parallel SAIR competition concludes; all 25,000 degree-24 signatures found."
+      }
+     ],
+     "source": "arXiv:2608.08538; Terence Tao's blog; Scientific American"
+    }
+   },
+   {
+    "type": "p",
+    "text": "What AI actually did inside the M23 project is the part worth reading past the headline. The team used **Claude Fable 5, Claude Opus 4.8 and GPT-5.6 Sol** -- generating and testing code, organizing large computations, working with existing mathematical software packages, and monitoring and recovering from failed runs. Kyu-Hwan Lee's own description is unglamorous and specific: \"We could do it very efficiently. That wasn't really possible five years ago.\" At one point, an AI agent testing a coordinate transformation reported back \"this might work\" -- and, per the team's account, it did; Scientific American's reporting describes what followed as feeling \"miraculous\" to the mathematicians watching it unfold.",
+    "citation_urls": [
+     "https://www.scientificamerican.com/article/mathematicians-use-ai-to-find-mysterious-symmetries-solving-decades-old-problem/"
+    ]
+   },
+   {
+    "type": "document",
+    "document": {
+     "docTitle": "The Mathieu group M23 is a Galois group over Q",
+     "docMeta": "arXiv:2608.08538, submitted Aug. 9, 2026",
+     "url": "https://arxiv.org/abs/2608.08538",
+     "lines": [
+      {
+       "n": "Abstract",
+       "text": "We complete this program by proving that the last remaining sporadic group, the Mathieu group M23, occurs as a Galois group over Q.",
+       "mark": true
+      },
+      {
+       "n": "Abstract",
+       "text": "In fact, we produce an explicit degree 23 polynomial with rational coefficients whose splitting field has Galois group M23 over Q."
+      }
+     ],
+     "reading": "This sentence is the entire formal claim -- a specific, checkable statement about one group and one explicit polynomial, not a general claim about what AI can do in mathematics.",
+     "source": "arXiv:2608.08538, abstract"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Co-author Shaowu Zhang wrote his own account of the AI's role afterward, and it reads as a deliberate correction against overstatement rather than a victory lap. \"We also tried more autonomous approaches at the beginning of the project,\" Zhang writes. \"Within our limited AI-usage budget, these attempts did not make meaningful progress.\" The decisive moves, in his telling, were entirely human: **\"deciding what to compute, stopping an increasingly expensive calculation, changing the strategies, interpreting the numerical evidence, and deciding where to direct our limited resources.\"** No text in the manuscript itself was written by AI.",
+    "citation_urls": [
+     "https://proofsandprompts.com/2026/08/21/where-to-point-the-telescope/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“AI gave us a powerful and precise telescope, but the team's mathematical knowledge told us where to point it, when further magnification would not help and how to interpret what came into view.” — Shaowu Zhang, co-author, on Proofs and Prompts",
+    "citation_urls": [
+     "https://proofsandprompts.com/2026/08/21/where-to-point-the-telescope/"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "kicker": "The case against reading too much AI into this",
+     "points": [
+      {
+       "claim": "Fully autonomous AI approaches were tried first, specifically to see if the model could drive the search itself, and made no meaningful progress within the project's AI-usage budget before the team switched to human-directed use.",
+       "detail": "This is the team's own account of what didn't work, published voluntarily rather than surfaced by an outside critic.",
+       "whoHolds": "Shaowu Zhang, paper co-author, writing on Proofs and Prompts"
+      },
+      {
+       "claim": "Every strategically decisive step -- what to compute, when to abandon an expensive calculation, how to read the numerical output, where to spend the team's limited compute budget -- was a human judgment call, not an AI one.",
+       "detail": "The paper's manuscript text itself was entirely human-written; AI's role was confined to code generation, search and computation under human direction.",
+       "whoHolds": "Shaowu Zhang, in the same account"
+      }
+     ],
+     "verdict": "Both points come from inside the project, which makes them more credible than outside skepticism would be -- this is the team most invested in an AI-assisted framing choosing to undercut the more dramatic version of it. The honest description is neither \"AI proved a theorem\" nor \"AI was irrelevant\": AI compressed months of code-writing, package wrangling and failure recovery into a timeline that let human mathematical judgment run through many more cycles of trial and correction than it could have otherwise, on a problem that had already beaten that same human judgment, unassisted, for four decades.",
+     "source": "Proofs and Prompts, Aug. 21 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Nothing about the M23 result names a specific next target -- with all 26 sporadic groups now realized, that particular open list is closed. But Tao's SAIR competition has a second stage planned, explicitly aimed at the harder, more conceptual cases the first stage's breadth-first scoring system was designed to skip over, with no date yet announced. {{note: The three models used were all already general-purpose assistants, not math-specialized systems -- the team's account credits the workflow and human direction, not a purpose-built research tool, which is part of why Zhang's telescope framing has landed with other mathematicians rather than being dismissed as lab-specific hype.}} What actually traveled out of this project is the division of labor itself: AI for the code, the search, the failure recovery and the grunt computation; humans for every decision about where to look and when to stop looking. That template has no expiration date tied to M23 being solved, which is exactly why the mathematicians who ran it are the same ones cautioning against reading it as a bigger result than it is.",
+    "citation_urls": [
+     "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
+     "https://proofsandprompts.com/2026/08/21/where-to-point-the-telescope/"
+    ]
+   }
+  ],
+  "id": "newsroom-mathieu-group-m23-galois-theory-ai-telescope",
+  "image": "assets/img/newsroom/mathieu-group-m23-galois-theory-ai-telescope.jpg",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "6 sources across 5 independent evidence threads, 4 primary: (1) the arXiv paper itself (2608.08538, primary -- fetched the abstract page directly for the verbatim claim), (2) Shaowu Zhang's own first-person account of the AI methodology on Proofs and Prompts (primary -- a paper co-author's own reflection, not third-party reporting), (3) Terence Tao's own blog post announcing the parallel SAIR competition (primary, organizer's own words), (4) UConn's institutional press release on co-author Kyu-Hwan Lee (primary/institutional), (5) Scientific American's independent reporting (the Lee quote and 'miraculous' framing), (6) Yahoo News's independent reporting (the SAIR competition's German-team conclusion and the 'this might work' detail). Deliberately did not elevate to research format despite the depth: a research piece (Google's Gemini/Irregular investigation) already ran this week (Sept. 19), so the trailing-7-day elevation trigger wasn't required, and a well-sourced synthesis covers this story's actual shape without padding."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires. The one central claim that could read as an overstatement -- 'AI solved the problem' -- is exactly what the piece spends its back half correcting, sourced to the project's own co-author rather than to this desk's own hedge. All model names (Claude Fable 5, Claude Opus 4.8, GPT-5.6 Sol) are attributed to the specific reporting that named them and are already registered in entities.js and the Scoreboard, so no new registry entries were needed."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean. Critique flagged that an early draft led with the AI-assistance framing before establishing what was actually proved -- reordered so the mathematical result comes first and the AI's specific, limited role is explained afterward, avoiding the exact overclaiming pattern Zhang's own account warns against. Critique also flagged the SAIR competition and the M23 paper needed clearer separation as two distinct projects sharing a workshop season, not one story -- added an explicit paragraph distinguishing them."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "keyfacts and timeline dates/facts all trace to the arXiv abstract, the UConn release and Scientific American. document's excerpt is the verbatim arXiv abstract sentence, confirmed word-for-word against the fetched abstract page. counter's two points are both real, sourced, first-person statements from a paper co-author, not a strawman -- the verdict doesn't dismiss either point, consistent with the rule that a counter dismissing everything means the points were too weak. No component carries a top-level text field except the two quote blocks, exempt by design. No two components sit back to back -- prose separates every one, including between document/quote and counter."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 6 sources, 5 threads, 4 primary including a paper co-author's own first-person methodology account -- an unusually strong source for the exact question (how much did AI actually do here?) that most coverage of AI-and-math stories glosses over. Genuinely new to this desk; no prior coverage of this story or the SAIR competition exists in the archive."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "The rare AI-and-science story where the most valuable source is the research team's own explicit caution against overreading its significance -- built the whole back half of the piece around that, rather than defaulting to an uncomplicated 'AI cracks 40-year math problem' framing the source material itself argues against."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-22T20:03:06Z"
+  },
+  "publishedAt": "2026-09-22T20:03:06Z"
+ },
+ {
+  "slug": "claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
+  "title": "Claude Opus 5.5 takes the independent top spot as OpenAI cuts GPT-6 Sol and Luna prices in half",
+  "dek": "Anthropic and OpenAI both shipped model updates on Sept. 22. Only one changed the leaderboard: Claude Opus 5.5 scores 58 on Artificial Analysis's Intelligence Index, five points clear of the prior GPT-6 Astra/Claude Fable 5.1 tie, at a 20% lower list price. GPT-6 Sol and Luna barely moved the needle on capability -- but OpenAI cut both models' prices roughly in half, with Artificial Analysis's own measurements confirming the cost side of that claim.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for Sonnet 5.5 and Haiku 5.5",
+    "text": "Anthropic says both are coming \"in the coming weeks\" with similar gains -- that's when the price/performance shift actually reaches most production workloads, not this flagship-only release."
+   },
+   {
+    "label": "Don't buy \"beats Opus 5 at 9% of the cost\" without checking which Opus",
+    "text": "OpenAI's own comparison for GPT-6 Sol was against Claude Opus 5 -- already superseded by Opus 5.5 the same day. Re-run any cost comparison against the current top model, not the one it just replaced."
+   },
+   {
+    "label": "If you're on GPT-5.6 Sol or Luna today, check the breaking-changes note before you re-point traffic",
+    "text": "Anthropic's Opus 5.5 release carries real breaking changes (forced tool-use error handling, a discontinued computer-use tool on some platforms) -- confirm your integration against the migration notes before assuming a drop-in upgrade."
+   },
+   {
+    "label": "Watch whether GPT-6 Sol's agentic-benchmark gains hold outside OpenAI's own comparison set",
+    "text": "The one comparison OpenAI has published (beating Opus 5 on AutomationBench at a fraction of the cost) uses a now-superseded Anthropic model; a same-day comparison against Opus 5.5 doesn't yet exist from either side."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Claude Opus 5.5",
+    "url": "https://www.anthropic.com/news/claude-opus-5-5",
+    "outlet": "Anthropic",
+    "kind": "primary"
+   },
+   {
+    "label": "Artificial Analysis on Claude Opus 5.5",
+    "url": "https://x.com/ArtificialAnlys/status/2102438210798514391",
+    "outlet": "Artificial Analysis",
+    "kind": "primary"
+   },
+   {
+    "label": "Artificial Analysis on GPT-6 Sol and Luna",
+    "url": "https://x.com/ArtificialAnlys/status/2102462962758033624",
+    "outlet": "Artificial Analysis",
+    "kind": "primary"
+   },
+   {
+    "label": "Anthropic releases Claude Opus 5.5, beating Fable 5.1 on key agentic benchmarks at 60% cheaper API price",
+    "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price",
+    "outlet": "VentureBeat",
+    "kind": "reporting"
+   },
+   {
+    "label": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+    "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+    "outlet": "TechCrunch",
+    "kind": "reporting"
+   },
+   {
+    "label": "GPT 6 Sol Shows Modest Gain Over GPT 5.6 Sol On Artificial Analysis Intelligence Index, But At A Much Cheaper Price",
+    "url": "https://officechai.com/ai/gpt-6-sol-shows-modest-gain-over-gpt-5-6-sol-on-artificial-analysis-intelligence-index-but-at-a-much-cheaper-price/",
+    "outlet": "OfficeChai",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol/Luna both shipped Sept. 22.",
+   "Opus 5.5 scores 58 on Artificial Analysis's index, a new #1, 5 points clear of the prior tie.",
+   "GPT-6 Sol and Luna barely moved on capability but cut list prices roughly in half.",
+   "Independent cost-per-task data confirms OpenAI's price story; Anthropic's is a real score jump.",
+   "Caveat: OpenAI's own cost comparison used Claude Opus 5, already superseded hours later by 5.5."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[Anthropic](/company/anthropic) and [OpenAI](/company/openai) both shipped model updates on Sept. 22, and the two releases tell almost opposite stories. **Claude Opus 5.5** scores 58 on [Artificial Analysis](/scoreboard)'s Intelligence Index -- a genuine capability jump that puts it outright first, five points clear of the prior tie between GPT-6 Astra and Claude Fable 5.1 (53 each) and seven ahead of the Opus 5 it replaces, which scored 51, at a 20% lower list price. **GPT-6 Sol and Luna**, by contrast, barely moved the capability needle -- Sol gained one point over GPT-5.6 Sol, Luna gained none -- while both models' list prices roughly halved. ==One lab shipped a better model; the other shipped a cheaper one.== Both are real results, and neither headline works as a substitute for the other.",
+    "citation_urls": [
+     "https://www.anthropic.com/news/claude-opus-5-5",
+     "https://x.com/ArtificialAnlys/status/2102438210798514391",
+     "https://x.com/ArtificialAnlys/status/2102462962758033624"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Opus 5.5 launched at 12:05pm PT with a **$4/$20** per-million-token price (input/output), down 20% from Opus 5's $5/$25, and cache reads cut 60% to $0.20 per million tokens. Anthropic's own benchmark table shows the jump is broad, not a single-metric artifact: Terminal-Bench 4.0 up to 66.4% from 52.3%, CursorBench 4.0 up to 57.8% from 46.6%, GDPval-AA to 1846 Elo from 1708. Anthropic separately claims Opus 5.5 runs about 30% faster than Opus 5 and costs roughly 40% less on typical workloads once its lower token usage is counted alongside the list-price cut -- both company figures, not independently measured here. The release carries real breaking changes, not just a version bump -- forced tool use can now return errors under new conditions, and the older `computer_20251124` computer-use tool is discontinued on the API and Google Cloud -- and it ships alongside an expanded Cyber Verification Program and a Life Sciences Verification Program, part of the same dual-use-safeguard apparatus Anthropic has attached to every frontier release since Fable 5.1.",
+    "citation_urls": [
+     "https://www.anthropic.com/news/claude-opus-5-5"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Anthropic also reports an 85% reduction in boundary-circumvention attempts succeeding against Opus 5.5 versus prior models on its own automated behavioral audit -- a 1,900-plus-scenario internal test, not an outside evaluation -- alongside EU AI Act watermarking compliance and a zero-data-retention option for enterprise customers. None of that is new machinery invented for this release; it is the same verification-program structure Anthropic built for Fable 5.1 and Opus 5, now extended to the model that just became the company's most capable. The pattern is consistent even if the specific numbers aren't independently checked here: capability keeps climbing on Anthropic's releases, and the safety-testing apparatus attached to each one keeps growing alongside it rather than lagging behind.",
+    "citation_urls": [
+     "https://www.anthropic.com/news/claude-opus-5-5"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "The Intelligence Index, before and after",
+     "columns": [
+      {
+       "label": "Claude Opus 5.5",
+       "sub": "max, new",
+       "hi": true
+      },
+      {
+       "label": "GPT-6 Astra",
+       "sub": "max"
+      },
+      {
+       "label": "Claude Fable 5.1",
+       "sub": "max"
+      },
+      {
+       "label": "Claude Opus 5",
+       "sub": "max, superseded"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Intelligence Index score",
+       "values": [
+        "58",
+        "53",
+        "53",
+        "51"
+       ]
+      },
+      {
+       "label": "List price, input/output per 1M tokens",
+       "values": [
+        "$4 / $20",
+        "$10 / $50",
+        "$10 / $50",
+        "$5 / $25"
+       ]
+      }
+     ],
+     "source": "Artificial Analysis, Sept. 22 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "GPT-6 Sol and Luna are a different kind of release entirely. Artificial Analysis's own published comparison states plainly that \"Intelligence Index and Coding Agent Index scores remain level with GPT-5.6, with progress in some evaluations and regressions in others\" -- Sol moved from 47 to 48, Luna held at 37. OpenAI's own framing matches that -- not claiming a capability leap, but an efficiency one. What actually changed is the bill: Sol's list price fell from $4/$20 to $2/$10 per million tokens, and Luna's fell from $0.20/$1.20 to $0.10/$0.50 -- roughly a 50-58% cut on both. Artificial Analysis's own measured cost to run its fixed evaluation set fell to match: **$1.06 per task for Sol, down from $1.99**, and **$0.07 per task for Luna, down from $0.18**.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+     "https://x.com/ArtificialAnlys/status/2102462962758033624"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“GPT-6 Astra introduced a new generation of intelligence; these models extend its benefits by making that intelligence more efficient and accessible.” — OpenAI, announcing GPT-6 Sol and GPT-6 Luna",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "OpenAI's own factuality claim for Sol -- roughly half as many mistakes as GPT-5.6 Sol, measured on the company's internal evaluation -- is worth flagging as exactly that: a __company-reported__ figure, not one Artificial Analysis or any other independent evaluator has confirmed. It sits alongside the independently measured Intelligence Index score rather than inside it, and the two shouldn't be read as the same kind of evidence just because they arrived in the same announcement.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"
+    ]
+   },
+   {
+    "type": "beforeafter",
+    "beforeafter": {
+     "beforeLabel": "GPT-5.6 generation",
+     "afterLabel": "GPT-6 generation",
+     "rows": [
+      {
+       "label": "Sol -- Intelligence Index score",
+       "before": "47",
+       "after": "48"
+      },
+      {
+       "label": "Sol -- price per 1M tokens (in/out)",
+       "before": "$4 / $20",
+       "after": "$2 / $10"
+      },
+      {
+       "label": "Sol -- Artificial Analysis's own cost per task",
+       "before": "$1.99",
+       "after": "$1.06"
+      },
+      {
+       "label": "Luna -- Intelligence Index score",
+       "before": "37",
+       "after": "37"
+      },
+      {
+       "label": "Luna -- price per 1M tokens (in/out)",
+       "before": "$0.20 / $1.20",
+       "after": "$0.10 / $0.50"
+      },
+      {
+       "label": "Luna -- Artificial Analysis's own cost per task",
+       "before": "$0.18",
+       "after": "$0.07"
+      }
+     ],
+     "source": "Artificial Analysis, Sept. 22 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "OpenAI's own comparative claim -- that GPT-6 Sol at xhigh effort beats Claude Opus 5 at max effort on AutomationBench for 9% of Opus 5's cost per task -- is real as far as it goes, but it was already dated the moment it published: **Claude Opus 5 stopped being Anthropic's flagship the same day**, superseded by Opus 5.5 hours after both companies' announcements landed. Neither company has yet published a same-day comparison of GPT-6 Sol against Opus 5.5 specifically, which is the actually current top-tier model this new pricing would have to compete against on capability, whatever it costs.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+     "https://www.anthropic.com/news/claude-opus-5-5"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What each headline claim actually covers",
+     "items": [
+      {
+       "value": "58",
+       "unit": "Intelligence Index score",
+       "label": "Claude Opus 5.5's new #1 position",
+       "includes": "An independent, third-party measurement (Artificial Analysis) against the same fixed evaluation set every other model on this board is scored against",
+       "excludes": "Anthropic's own \"40% cheaper on typical workloads\" and \"30% faster\" claims, which are the company's own figures, not independently verified here"
+      },
+      {
+       "value": "$1.06 vs $1.99",
+       "unit": "measured cost per Intelligence Index task",
+       "label": "GPT-6 Sol's real, confirmed price advantage",
+       "includes": "Artificial Analysis's own metered spend running its fixed evaluation set on both GPT-6 Sol and GPT-5.6 Sol",
+       "excludes": "OpenAI's own factuality claim (\"about half as many mistakes\"), which comes from OpenAI's internal evaluation, not an independent one"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "==Read together, the two releases are the clearest one-day snapshot yet of how the frontier-model market is actually competing right now.== Anthropic is competing on raw capability at the top of the board and using the resulting headline to also justify a price cut; OpenAI is competing on cost at the tiers below the flagship, holding capability flat and selling the savings directly. Both are legitimate strategies, and this same week has already produced two more data points in the same pattern -- xAI shipping Grok 4.7 mid-pack on score but priced a fifth of the frontier, and a StepFun model this desk found while researching this piece tying Kimi K3's score at roughly a third the measured cost per task. {{note: None of this year's price cuts have come with a corresponding cut in what a real task actually costs to complete end-to-end once a real agent's tool calls, retries and context are counted -- the per-million-token rate and the per-task rate can move in different directions, which is exactly why Artificial Analysis publishes both.}} The number worth tracking next isn't a fresh score -- it's whether Sonnet 5.5 and Haiku 5.5, still \"coming weeks\" out per Anthropic, extend the same capability-per-dollar gain down into the tiers most production traffic actually runs on.",
+    "citation_urls": [
+     "https://www.anthropic.com/news/claude-opus-5-5",
+     "https://x.com/ArtificialAnlys/status/2102462962758033624"
+    ]
+   }
+  ],
+  "id": "newsroom-claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
+  "image": "assets/img/newsroom/claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts.jpg",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "6 sources across 5 independent evidence threads, 3 primary: (1) Anthropic's own Claude Opus 5.5 announcement (primary, fetched directly for pricing, benchmarks, breaking changes and safety-program details), (2) Artificial Analysis's own X post on Opus 5.5 (primary independent measurement, the source of the 58 score and the 5-point-lead framing), (3) Artificial Analysis's own X post on GPT-6 Sol/Luna (primary independent measurement, source of the 'remains level with GPT-5.6' finding), (4) VentureBeat's reporting on Opus 5.5 (corroborating benchmark table), (5) TechCrunch's reporting on GPT-6 Sol/Luna (source of OpenAI's own on-record quote), (6) OfficeChai's reporting (source of confirmed exact GPT-6 Sol/Luna pricing and Artificial Analysis's cost-per-task figures, cross-checked against the AA post). OpenAI's own blog post (openai.com/index/introducing-gpt-6-sol-and-luna) returned HTTP 403 to direct fetch; relied on the GitHub Changelog plus two independent reporting outlets instead, consistent with this desk's known experience that openai.com blocks automated fetches."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires. Every capability and cost figure is attributed to whoever measured it -- Anthropic's own claims (40% cheaper overall, 30% faster) are explicitly separated in the ledger component from Artificial Analysis's independently measured Intelligence Index score and cost-per-task figures, never blended into one unattributed number. Flagged and corrected in prose, not silently: OpenAI's own 'beats Opus 5 at 9% of cost' comparison uses an Anthropic model that was superseded by Opus 5.5 the same day, which the piece states explicitly rather than repeating the comparison as if still current."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean, including the StepFun cross-reference, phrased as 'a StepFun model this desk found while researching this piece' rather than naming a prior RTFCLMGZN story. Critique flagged an early draft that implied GPT-6 Sol/Luna was a disappointing release; revised to state OpenAI's own framing (efficiency, not capability) accurately rather than judging the release against a capability bar OpenAI never claimed to clear."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "compare's four columns and two rows all trace to Anthropic's own release page and Artificial Analysis's post. beforeafter's six rows all trace to Artificial Analysis's own comparison and OfficeChai's corroborating figures, cross-checked against each other. ledger's two items each scope a claim already made in prose, with includes/excludes fields stating exactly what's independently verified versus company-claimed. No component carries a top-level text field. No two components sit back to back -- prose separates every one."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved, and substituted in as this cycle's lead article in place of a smaller StepFun Step 5 Preview piece originally drafted this cycle -- two same-day frontier-lab releases from Anthropic and OpenAI, one of them moving the top of the independent leaderboard, is more current and more significant AI-industry news than a single mid-tier Chinese lab release, which this desk instead folded into a one-line Scoreboard date correction rather than a full article. 6 sources, 5 threads, 3 primary, including direct access to Anthropic's own release page."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "The reconciliation point -- that OpenAI's own comparative claim already used a superseded Anthropic model by the time it published -- is exactly the kind of same-day cross-check a wire rewrite of either company's press release would not catch."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-22T20:03:06Z"
+  },
+  "publishedAt": "2026-09-22T20:03:06Z"
  }
 ]
 ;
