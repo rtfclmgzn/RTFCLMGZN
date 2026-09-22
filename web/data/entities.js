@@ -221,6 +221,8 @@ window.RTFC_ENTITIES = {
       kind:"competitive-programming fine-tune (research variant)", access:"unknown" },
     { re:/\bNemotron-3-Ultra\b/i, name:"Nemotron-3-Ultra", maker:"NVIDIA", makerKey:"nvidia",
       kind:"open Mixture-of-Experts hybrid Mamba-Transformer model", access:"open-weights" },
+    { re:/\bJev\b/, name:"Jev", maker:"TypeSafe AI", makerKey:"typesafe-ai",
+      kind:"non-autoregressive \"System One\" decision model, no text output", access:"closed" },
 
     // --- Hardware / systems that read like products in prose ---
     { re:/\bDGX SuperPOD\b/i, name:"DGX SuperPOD", maker:"NVIDIA", makerKey:"nvidia",

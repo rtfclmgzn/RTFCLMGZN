@@ -22764,5 +22764,272 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-22T00:14:00Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-ai-slowdown-antitrust-lawsuit-buist-v-anthropic",
+    "ts": "2026-09-22T00:55:06Z",
+    "export": {
+      "article_id": "newsroom-ai-slowdown-antitrust-lawsuit-buist-v-anthropic",
+      "url": "https://rtfclmgzn.com/article/ai-slowdown-antitrust-lawsuit-buist-v-anthropic",
+      "headline": "Four subscribers sue Anthropic, OpenAI, Google and xAI, calling Sept. 12's pacing pledge an antitrust violation -- one Amodei's own essay saw coming",
+      "hook": "Four paid AI subscribers are suing Anthropic, OpenAI, Google and xAI, arguing their same-day, same-hour endorsements of Amodei's 'pace the frontier' call was an illegal agreement to restrict output -- and Amodei's own essay had already flagged the antitrust risk in writing.",
+      "key_facts": [
+        "Filed Sept. 18 in N.D. Cal. as Buist v. Anthropic, No. 3:26-cv-10693, seeking treble damages.",
+        "Amodei's essay itself called coordination 'legally challenging' and asked for a government waiver.",
+        "No court has ruled on whether public safety coordination counts as an illegal Sherman Act agreement."
+      ],
+      "tone": "legally precise, sourced-neutral, presents both the complaint's theory and a real defense",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/ai-slowdown-antitrust-lawsuit-buist-v-anthropic.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Four paid AI subscribers are suing Anthropic, OpenAI, Google and xAI -- arguing Sept. 12's same-hour pacing pledge was an illegal antitrust agreement, not four independent safety calls. Amodei's own essay had flagged that exact legal risk first.",
+        "reply_copy": "The case, the essay that saw it coming, and the defense nobody's filed yet:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T05:55:06Z",
+        "copy": "Buried in the antitrust complaint's own timeline: Dario Amodei wrote 'some forms of coordination... are legally challenging' and asked Washington for a waiver -- five days before publishing the essay plaintiffs now call an illegal cartel.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Four paid ChatGPT, Claude, Grok and Gemini subscribers are suing Anthropic, OpenAI, Google and xAI.\n\nThe claim: Sept. 12's same-hour, same-day pledge to 'pace the frontier' wasn't four independent safety calls -- it was an illegal agreement to slow down competing products.\n\nThe twist: Anthropic CEO Dario Amodei's own essay had already flagged the exact antitrust risk in writing, and asked the government for a waiver first. He published anyway.\n\nFiled Sept. 18 as Buist v. Anthropic, seeking treble damages. No court has ruled on any of it yet.",
+        "hashtags": [
+          "#Anthropic",
+          "#OpenAI",
+          "#Antitrust",
+          "#AIPolicy",
+          "#AINews",
+          "#AILaw"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Four paid subscribers to ChatGPT, Claude, Grok and Gemini filed a proposed class-action antitrust suit Sept. 18, arguing that a single day of coordinated public statements -- Anthropic CEO Dario Amodei's 'pace the frontier' essay, endorsed within the hour by OpenAI, xAI and Google DeepMind's CEOs -- amounted to an illegal agreement to restrict how fast their products improve.\n\nWhat the complaint doesn't fully grapple with: Amodei's own essay had already named this exact legal risk and asked the US government to bless the coordination with a waiver. That request was never granted. He published anyway.\n\nThe case, Buist v. Anthropic (N.D. Cal. No. 3:26-cv-10693), seeks treble damages. None of the four companies has formally responded.",
+        "hashtags": [
+          "#Anthropic",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A lawsuit says four AI companies' same-day safety pledge was actually an illegal antitrust agreement. The twist: the CEO who wrote the pledge had already flagged that exact legal risk in the essay itself, and asked the government for a waiver before publishing anyway.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Buist v. Anthropic: four subscribers say Sept. 12's coordinated AI-pacing pledge was an illegal Sherman Act agreement. Amodei's own essay had flagged that exact antitrust risk first and asked for a government waiver. Filed anyway. No ruling yet.",
+        "hashtags": [
+          "#AI",
+          "#Antitrust"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-rd-automation-index-claude-leads-26-percent",
+    "ts": "2026-09-22T00:55:08Z",
+    "export": {
+      "article_id": "newsroom-anthropic-rd-automation-index-claude-leads-26-percent",
+      "url": "https://rtfclmgzn.com/article/anthropic-rd-automation-index-claude-leads-26-percent",
+      "headline": "Anthropic says Claude now runs 26% of its own AI research -- five days after its CEO called for the whole industry to slow down",
+      "hook": "Anthropic's new R&D Automation Index says Claude now leads 26% of the company's own AI research, up from under 1% in February -- published five days after CEO Dario Amodei called on the industry to slow down, and a day before Reuters reported Anthropic is weighing a new model launch.",
+      "key_facts": [
+        "26% of R&D work at 'AL4 leads' in August, up from under 1% in February; 0% at full autonomy (AL5).",
+        "~30,000 agents run research and engineering work concurrently on Anthropic's internal platform.",
+        "Two human raters agreed on the same task's automation level only 35% of the time -- a real noise floor."
+      ],
+      "tone": "evaluation-first, holds a favorable self-report to its own disclosed limitations",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/anthropic-rd-automation-index-claude-leads-26-percent.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic says Claude now 'leads' 26% of its own AI R&D, up from under 1% in February. Published 5 days after Amodei's essay calling for an industry-wide slowdown -- and a day before Reuters reported Anthropic is weighing a new model launch anyway.",
+        "reply_copy": "The numbers, and the fine print Anthropic put right in the methodology:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T05:55:08Z",
+        "copy": "The caveat buried in Anthropic's own Index: two human raters agreed on the same task's automation level only 35% of the time. The model agreed with a human rater 59% of the time. The categories are genuinely fuzzy -- the 26% headline is noisier than it looks.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIResearch",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic just published its first R&D Automation Index: Claude now 'leads' 26% of the company's own AI research, up from under 1% in February.\n\nAbout 30,000 agents are running research and engineering work at any given moment. Zero of it reached full autonomy.\n\nThe timing: this came out 5 days after CEO Dario Amodei called on the whole industry to slow down -- and a day before Reuters reported Anthropic is weighing a new model launch to compete with GPT-6 Astra.\n\nAnthropic's own numbers include a real caveat: two human raters agreed on the same task's automation level only 35% of the time.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude",
+          "#AIResearch",
+          "#AINews",
+          "#MachineLearning",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic's research arm published its first R&D Automation Index on Sept. 17: Claude now operates at 'AL4 -- leads' for 26% of the company's own AI research and development, up from under 1% in February. Roughly 30,000 agents run research and engineering work at any given moment, though none reached full autonomy on any measured task.\n\nThe timing is notable: the Index came out five days after CEO Dario Amodei's essay calling on the industry to slow down, and a day before Reuters reported Anthropic is weighing a new frontier model launch to counter OpenAI's GPT-6 Astra.\n\nAnthropic's own disclosed limitation: two human raters agreed on the same task's automation-level classification only 35% of the time -- a real noise floor behind the headline number.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic says Claude now leads 26% of its own AI research, up from under 1% in February -- published 5 days after its CEO called for an industry-wide slowdown. The company's own fine print: two human raters agreed on the same automation rating only 35% of the time.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic's new R&D Automation Index: Claude leads 26% of the company's own AI research, up from <1% in Feb. Published 5 days after Amodei's slowdown essay. Caveat buried in the methodology: human raters only agreed with each other 35% of the time.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-typesafe-ai-jev-system-one-model-non-text-decisions",
+    "ts": "2026-09-22T00:55:10Z",
+    "export": {
+      "article_id": "newsroom-typesafe-ai-jev-system-one-model-non-text-decisions",
+      "url": "https://rtfclmgzn.com/article/typesafe-ai-jev-system-one-model-non-text-decisions",
+      "headline": "TypeSafe AI's new model never writes a sentence -- it answers in typed, calibrated probabilities, and claims to be up to 200x faster than an LLM doing the same job",
+      "hook": "TypeSafe AI's Jev, from a startup founded by ChatGPT/RLHF co-inventor Diogo Almeida, never generates text -- it returns typed, structured decisions with confidence scores in one parallel pass. The company claims up to 444x lower cost than an LLM on the same task; the one public accuracy number, 68%, is still TypeSafe's own.",
+      "key_facts": [
+        "70-500ms response time; TypeSafe's own benchmark claims up to 193.6x faster, 444.6x cheaper.",
+        "Early customers Vercel and Bryo AI report 5-18x and 10-20x gains on their own classification workloads.",
+        "The only public accuracy figure, 68%, is TypeSafe's internal benchmark, not independently verified."
+      ],
+      "tone": "technically curious, skeptical of launch-week multiples, fair to the real architecture innovation",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/typesafe-ai-jev-system-one-model-non-text-decisions.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "TypeSafe AI's new model, Jev, never generates a sentence -- it returns typed, calibrated probabilities in one parallel pass. Claims up to 444x cheaper than an LLM on the same task. The one public accuracy number (68%) is still the company's own.",
+        "reply_copy": "What it actually is, and what's still unverified:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#MachineLearning"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-22T05:55:10Z",
+        "copy": "\"Cannot hallucinate\" is doing a lot of work in TypeSafe's Jev launch. It really means zero out-of-schema outputs -- not zero wrong answers. The only accuracy number public so far, 68%, is the company's own internal benchmark.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#TypeSafeAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Meet Jev: a new AI model that never writes a sentence.\n\nBuilt by TypeSafe AI -- founded by Diogo Almeida, who helped invent ChatGPT and RLHF at OpenAI -- Jev answers in typed, structured values with confidence scores, computed in one parallel pass instead of generating text token by token.\n\nThe claims: 70-500ms response time, up to 444x cheaper than a general LLM on the same task.\n\nThe catch: TypeSafe's own launch post calls that figure an \"upper bound.\" And the only public accuracy number -- 68% -- is the company's own internal benchmark, not independently verified.",
+        "hashtags": [
+          "#AI",
+          "#MachineLearning",
+          "#TechNews",
+          "#Startups",
+          "#AIresearch",
+          "#Innovation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "TypeSafe AI, founded by ChatGPT and RLHF co-inventor Diogo Almeida, launched a genuinely different kind of AI model in early access on Sept. 15. Jev never generates text -- given a program's state and a set of typed questions, it answers all of them in a single parallel pass, returning structured values with calibrated probability scores instead of prose.\n\nTypeSafe's own numbers: 70-500 millisecond response time, and up to 193.6x faster / 444.6x cheaper than a comparable frontier LLM call on the company's internal benchmark -- which its own launch post describes as an upper bound, not a typical result.\n\nThe one number that matters most for trust, accuracy, is still unverified outside the company: TypeSafe reports 68%, scored against reference answers frontier models generated, not confirmed ground truth.",
+        "hashtags": [
+          "#AI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "TypeSafe AI's Jev never writes a sentence -- it answers in typed, calibrated probabilities instead of text. Claims up to 444x cheaper than an LLM on the same task. The one public accuracy number, 68%, is still the company's own internal benchmark.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "TypeSafe AI's Jev: a model that never generates text, only typed decisions with confidence scores. Built by a ChatGPT/RLHF co-inventor. Claims up to 444x cheaper than an LLM. The only accuracy number so far (68%) is the company's own.",
+        "hashtags": [
+          "#AI",
+          "#MachineLearning"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
