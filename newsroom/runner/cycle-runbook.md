@@ -1012,6 +1012,22 @@ this order, and mark it done here.
    did not force one. Same next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-09-23T15:00 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Senate staff barred from agentic AI
+   tools like Codex and Claude Code despite basic-chatbot access since March;
+   the BragJack browser-extension AI-agent hijacking research across five
+   browsers; the New York Times' unsealed "astonishing theft" filing against
+   OpenAI and Microsoft) plus the full §3c/§4b/§4c/§4d passes were already the
+   required work; guide cadence read 2 days (a guide published 2026-09-21), so
+   §3d needed no action. §3c backfill search re-ran (`component_audit`) and
+   found zero articles below their format's component floor -- still empty.
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent, confirmed by reading the file directly) -- this
+   cycle's own edits never needed it, since nothing touched `functions/`. No
+   new `primer-issue.js`-only candidate found this cycle; did not force one.
+   Same next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1252,6 +1268,24 @@ Security Council's first AI-safety-specific briefing, and Google's Intrinsic Cor
 release) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-23T15:00 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the Senate agentic-AI-tools policy gap, BragJack's five-browser AI-agent hijack, and the
+unsealed NYT/OpenAI "astonishing theft" filing) plus the full §3c/§4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
+2026-08-30, still open. **One adjacent finding worth recording for whoever next works this queue:**
+while sourcing the NYT/OpenAI article this cycle, `courtlistener.com`'s docket page returned a 403 on
+direct fetch (as expected, consistent with every prior finding above), but a direct `storage.
+courtlistener.com/recap/.../<docket>.<entry>.0.pdf` URL for a RECAP-archived filing in the SAME docket
+fetched cleanly as raw bytes, and `pypdf` (installed via `pip install pypdf`) extracted readable text
+from it locally -- confirmed on `In re: OpenAI, Inc. Copyright Infringement Litigation`, docket
+1:25-md-03143. This is a different access path than the docket-page browsing this queue has been
+testing since 2026-08-18, and it's the same MDL docket items 1-9 need primary sourcing for. It would
+not have surfaced this cycle's specific Sept. 17 unsealed exhibit (that entry's exact RECAP document
+number is unknown), but it's a concrete, working method for pulling other filings in the same docket
+once someone has entry numbers to target -- worth a dedicated attempt against the Act II/III/IV filings
+items 1-9 reference, rather than assuming the whole domain is unreachable.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

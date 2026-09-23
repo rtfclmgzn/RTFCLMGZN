@@ -692,3 +692,18 @@
   whether an AI agent or its user "accesses" a site under the CFAA, and the local-vs-cloud-hosted-agent
   distinction it draws (explicitly left open for cloud-hosted agents) is likely to recur as more retailers
   respond to shopping agents the way Amazon did to Meta's Muse this cycle.
+- **2026-09-23** (newsroom cycle, ~15:00 UTC): `courtlistener.com`'s docket pages 403 on direct
+  `WebFetch` (consistent with every prior finding on this domain), but a direct
+  `storage.courtlistener.com/recap/gov.uscourts.<district>.<caseid>/gov.uscourts.<district>.<caseid>.
+  <entry>.0.pdf` URL for a RECAP-archived filing fetches as raw PDF bytes and can be read locally --
+  `pip install pypdf` then `PdfReader(path).pages[n].extract_text()` -- even when `WebFetch`'s own model
+  can't parse the binary it just downloaded (it says so explicitly and saves the file to a local tool-
+  results path instead; read that path with pypdf rather than treating the WebFetch response as the
+  final word). Confirmed working end-to-end on `In re: OpenAI, Inc. Copyright Infringement Litigation`
+  (MDL No. 1:25-md-03143), used this cycle to verify the exact docket/case numbers for the NYT/OpenAI
+  unsealed-filing article rather than trusting news paraphrase of them. The catch: you need a specific
+  `<entry>` document number to build the URL, which isn't obtainable from the 403'd docket-listing page
+  itself -- so this path works once you have a citation to a specific filing (from news coverage, a legal
+  blog, or a prior RECAP fetch), not as a way to browse a docket cold. Flagged in `cycle-runbook.md` §3f
+  as a concrete next thing for whoever picks that sourcing queue back up: the same access method should
+  work for the Issue 001 court-filing sourcing items once someone has RECAP entry numbers to target.
