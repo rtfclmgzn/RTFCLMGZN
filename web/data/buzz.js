@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-685", date:"2026-09-22",
+    source:{ name:"OpenAI", handle:"OpenAI", platform:"web", kind:"lab" },
+    text:"OpenAI released GPT-6 Sol and Luna models on September 22, with cost cuts of up to 50% versus prior versions. GPT-6 Sol ($2/$10 per million input/output tokens) keeps Astra's reasoning and coding performance while cutting error rates roughly in half compared to GPT-5.6 Sol; GPT-6 Luna ($0.10/$0.50 per million tokens) handles high-volume, latency-sensitive tasks. Both models use methods similar to Astra's architecture but at cheaper price tiers, available across Free, Pro, and Enterprise ChatGPT plans.",
+    why:"A frontier lab cutting API costs in half while claiming performance parity with costlier prior versions reshapes the economics of AI-powered products overnight -- worth tracking whether the competitive response from Anthropic or Google matches the price move or responds on capability instead.",
+    heat:61, topics:["openai","gpt-6","pricing","models","api economics","frontier lab"],
+    url:"https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" },
 { id:"bz-682", date:"2026-09-22",
     source:{ name:"Verda", handle:"verda", platform:"web", kind:"lab" },
     text:"Helsinki-based AI cloud provider Verda raised $189 million in an oversubscribed Series B led by Emergence Capital, with MUFG Innovation Partners, Supermicro, Varma Mutual Pension Insurance, Lifeline Ventures and others participating -- pushing its valuation past $1 billion and total funding above $450 million. The company says it reached a $165 million annualized revenue run rate in July and will use the round to expand GPU capacity across Europe, the US and Asia.",
