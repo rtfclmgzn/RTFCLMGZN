@@ -23416,8 +23416,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Claude",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mw6oy2tjs72t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mw6oy2tjs72t",
+        "posted_at": "2026-09-23T12:00:51Z"
       }
     ]
   },
@@ -23635,7 +23637,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -23650,7 +23652,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Comscore"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -23874,8 +23878,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Intrinsic (Google's robotics unit) open-sourced its real-time control + pose estimation + grasp planning stack, free under Apache 2.0. Paid layer stays paid: AI models, cloud services, Flowstate. Arms only for now -- no humanoids. Basically Android's playbook, for robots.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdoQOq7lo54",
+        "remote_id": "17949099696300025",
+        "posted_at": "2026-09-23T11:56:42Z"
       },
       {
         "platform": "bluesky",
@@ -23884,8 +23890,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mw6oqu4juv24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mw6oqu4juv24",
+        "posted_at": "2026-09-23T11:56:49Z"
       }
     ]
   }
