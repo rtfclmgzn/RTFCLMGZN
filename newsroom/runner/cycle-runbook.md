@@ -994,6 +994,24 @@ this order, and mark it done here.
    new `primer-issue.js`-only candidate found this cycle; did not force one.
    Same next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-23T00:37 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Comscore's Q2 2026 AI-assistant
+   market-share report reconciled against Similarweb's independent traffic
+   tracker; the UN Security Council's first AI-safety-specific briefing;
+   Google's Intrinsic Core open-source robotics release) plus the full
+   §3c/§4b/§4c/§4d passes were already the required work; guide cadence read
+   2 days (a guide published 2026-09-21), so §3d needed no action. §3c
+   backfill search re-ran (`component_audit`) and found zero articles below
+   their format's component floor -- still empty. `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent, confirmed by reading the file directly), and `which
+   wrangler` / `env | grep -i cloudflare` both return nothing on this runner
+   -- this cycle's own edits never needed it, since nothing touched
+   `functions/`. No new `primer-issue.js`-only candidate found this cycle;
+   did not force one. Same next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1227,6 +1245,13 @@ commerce disclosure principles, and the M23 Galois-theory AI-assisted proof) plu
 passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
 `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as
 every entry since 2026-08-30, still open.
+
+**Status (2026-09-23T00:37 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Comscore's Q2 2026 AI-assistant market-share report vs. Similarweb's traffic tracker, the UN
+Security Council's first AI-safety-specific briefing, and Google's Intrinsic Core open-source robotics
+release) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
