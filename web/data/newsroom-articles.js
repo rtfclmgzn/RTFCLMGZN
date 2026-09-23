@@ -72687,6 +72687,817 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "run": "autonomous Claude-runner cycle · 2026-09-22T20:03:06Z"
   },
   "publishedAt": "2026-09-22T20:03:06Z"
+ },
+ {
+  "slug": "chatgpt-ai-prompt-share-falls-comscore-gemini-claude",
+  "title": "ChatGPT's share of AI prompt volume fell from 70% to 50% in six months, Comscore says -- Gemini and Claude are absorbing nearly all of what it lost",
+  "dek": "Comscore's Q2 2026 panel data shows ChatGPT's share of AI-assistant prompt volume dropping from 70% to 50% between January and June, while Gemini rose from 17% to 30% and Claude from 2% to 11%. A separately measured website-traffic tracker shows the same direction on different numbers -- and neither measurement captures where Anthropic's own reported growth is actually concentrated.",
+  "persona": "nova-reyes",
+  "section": "Products",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch Comscore's next quarterly report",
+    "text": "The Q3 2026 AI Intelligence Report, expected around December, will show whether June's trend held through the summer or whether GPT-6 Sol and Luna's Sept. 22 price cuts pulled share back."
+   },
+   {
+    "label": "Check Similarweb's monthly tracker for July through September",
+    "text": "Its website-traffic numbers update monthly and would show whether a panel-based trend and a traffic-based trend are still moving in the same direction months later."
+   },
+   {
+    "label": "Watch for the next OpenAI or Anthropic usage disclosure",
+    "text": "Both companies tend to attach these to funding or earnings news, not routine updates -- the next one will be the first real signal of whether June's share numbers changed absolute scale, not just relative share."
+   },
+   {
+    "label": "If judging Claude's actual reach, look past chat share",
+    "text": "Comscore and Similarweb both measure chatbot website or app usage; Claude Code's own reported growth runs through a command line and API calls neither tracker counts."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Comscore's Latest AI Intelligence Report Shows Competition Intensifying as Claude and Gemini Gain Ground on ChatGPT",
+    "url": "https://www.globenewswire.com/news-release/2026/09/22/3366231/0/en/comscore-s-latest-ai-intelligence-report-shows-competition-intensifying-as-claude-and-gemini-gain-ground-on-chatgpt.html",
+    "outlet": "Comscore (GlobeNewswire)",
+    "kind": "primary"
+   },
+   {
+    "label": "Comscore says ChatGPT's LLM market share is shrinking as Google Gemini advances",
+    "url": "https://www.tubefilter.com/2026/09/22/comscore-ai-intelligence-report-q2-2026-chatgpt-gemini/",
+    "outlet": "Tubefilter",
+    "kind": "reporting"
+   },
+   {
+    "label": "ChatGPT drops to 52.7% as Claude triples its AI traffic share",
+    "url": "https://ppc.land/chatgpt-drops-to-52-7-as-claude-triples-its-ai-traffic-share/",
+    "outlet": "PPC Land (citing Similarweb)",
+    "kind": "reporting"
+   },
+   {
+    "label": "OpenAI Hits 900 Million Weekly Users, Raises $110B in Fresh Funding",
+    "url": "https://www.newsweek.com/openai-hits-900-million-weekly-users-raises-110b-in-fresh-funding-11596631",
+    "outlet": "Newsweek",
+    "kind": "reporting"
+   },
+   {
+    "label": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+    "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+    "outlet": "VentureBeat",
+    "kind": "reporting"
+   },
+   {
+    "label": "Similarweb: First Global AI Tracker of 2026",
+    "url": "https://x.com/Similarweb/status/2008805674893939041",
+    "outlet": "Similarweb",
+    "kind": "primary"
+   },
+   {
+    "label": "Similarweb: Gen AI website traffic share update, August 2026",
+    "url": "https://x.com/Similarweb/status/2096878021378466096",
+    "outlet": "Similarweb",
+    "kind": "primary"
+   }
+  ],
+  "tldr": [
+   "Comscore: ChatGPT's share of AI prompt volume fell from 70% to 50% in six months.",
+   "Gemini rose from 17% to 30%; Claude rose from 2% to 11% over the same span.",
+   "Similarweb's separate website-traffic tracker shows the same direction, different numbers.",
+   "OpenAI still reports 900M+ weekly users -- shrinking share, not shrinking scale.",
+   "Caveat: neither measurement counts Claude Code or API usage, where Anthropic's growth concentrates."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[OpenAI](/company/openai)'s ChatGPT held **70%** of all AI-assistant prompt volume in January 2026, according to Comscore's panel-based tracking. By June, that share had fallen to **50%** -- while [Google](/company/google)'s Gemini nearly doubled, from 17% to 30%, and [Anthropic](/company/anthropic)'s Claude grew more than fivefold, from 2% to 11%. A second, differently built measurement -- Similarweb's website-traffic tracker -- shows the identical direction on different numbers, which is the more interesting fact than either headline percentage: ==two measurements that count completely different things agree ChatGPT is losing relative ground, even as OpenAI's own disclosed user numbers keep climbing in absolute terms.==",
+    "citation_urls": [
+     "https://www.globenewswire.com/news-release/2026/09/22/3366231/0/en/comscore-s-latest-ai-intelligence-report-shows-competition-intensifying-as-claude-and-gemini-gain-ground-on-chatgpt.html",
+     "https://www.tubefilter.com/2026/09/22/comscore-ai-intelligence-report-q2-2026-chatgpt-gemini/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The decline didn't start in January. Similarweb's own tracker put ChatGPT above **86%** of worldwide AI-platform traffic as recently as early 2025, and still above 73% last August -- meaning the fall toward the low 50s has been running for well over a year, not six months, and Comscore's Q2 report captures the most recent, steepest stretch of a longer slide rather than the whole story.",
+    "citation_urls": [
+     "https://x.com/Similarweb/status/2008805674893939041",
+     "https://x.com/Similarweb/status/2096878021378466096"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Comscore's Q2 2026 AI Intelligence Report is built from an opt-in panel of 500,000 to 1 million internet users whose browsing and app activity is tracked with consent, then weighted to represent the broader population -- the same methodology Comscore has used for TV and web ratings for two decades, applied here to what it calls 'AI prompt volume,' its term for messages sent to a chatbot. ChatGPT's slide happened while overall AI usage was still growing fast: ChatGPT's own desktop conversations rose to 168 million in June, and its multiplatform visitation grew from 59 million to 99 million over the prior year, per the report -- meaning the 20-point share loss reflects rivals growing faster, not ChatGPT shrinking.",
+    "citation_urls": [
+     "https://www.tubefilter.com/2026/09/22/comscore-ai-intelligence-report-q2-2026-chatgpt-gemini/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The month-by-month split shows the shift wasn't a single event but a steady six-month slide, with Gemini and Claude both gaining share in every measured month rather than in one sudden jump:"
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Share of AI prompt volume, Comscore's panel",
+     "columns": [
+      {
+       "label": "January 2026"
+      },
+      {
+       "label": "June 2026",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "ChatGPT (OpenAI)",
+       "values": [
+        "70%",
+        "50%"
+       ]
+      },
+      {
+       "label": "Gemini (Google)",
+       "values": [
+        "17%",
+        "30%"
+       ]
+      },
+      {
+       "label": "Claude (Anthropic)",
+       "values": [
+        "2%",
+        "11%"
+       ]
+      }
+     ],
+     "source": "Comscore Q2 2026 AI Intelligence Report"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Similarweb's own tracker, which counts direct visits to each assistant's website rather than sampling a user panel, put ChatGPT at 52.7% of worldwide AI-platform traffic as of late May 2026, with Gemini at 27.3% and Claude at 8.9% -- down from a January baseline in the mid-60s for ChatGPT. The remaining players are smaller and mostly flat on this tracker: DeepSeek at 4.0%, Grok at 2.8%, Microsoft's Copilot at 2.0% and Perplexity at 1.3%, none of them moving meaningfully in either direction this year. The two trackers don't agree on ChatGPT's exact share -- 50% versus 52.7%, measured about a month apart -- because they aren't counting the same thing: Comscore's panel captures prompts sent inside native apps and browser extensions a website-traffic count would miss entirely, while Similarweb can't see a query typed into a mobile app that never touches a browser. ++What they agree on++ is the trend line, measured two different ways: ChatGPT down, Gemini up sharply, Claude up from a small base.",
+    "citation_urls": [
+     "https://ppc.land/chatgpt-drops-to-52-7-as-claude-triples-its-ai-traffic-share/"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What each usage number actually counts",
+     "items": [
+      {
+       "value": "50%",
+       "unit": "share of prompt volume",
+       "label": "Comscore's ChatGPT figure",
+       "includes": "Messages sent through ChatGPT's website, mobile apps and browser extensions, sampled via a 500,000 to 1 million person opt-in panel",
+       "excludes": "API calls, and any assistant usage outside the panel's tracked apps"
+      },
+      {
+       "value": "52.7%",
+       "unit": "share of website traffic",
+       "label": "Similarweb's ChatGPT figure",
+       "includes": "Direct visits to chatgpt.com and equivalent domains, worldwide, all devices",
+       "excludes": "Native-app-only sessions that never load the website, and any API or embedded usage"
+      },
+      {
+       "value": "900M+",
+       "unit": "weekly active users",
+       "label": "OpenAI's own reported ChatGPT scale",
+       "includes": "OpenAI's internal count across every surface it operates, self-reported alongside its Feb. 27 funding announcement",
+       "excludes": "Independent verification -- no outside measurement of this specific figure exists"
+      },
+      {
+       "value": "$30B",
+       "unit": "annualized revenue run-rate",
+       "label": "Anthropic's own reported scale",
+       "includes": "Company-disclosed run-rate as of April 2026, driven heavily by Claude Code and enterprise API usage",
+       "excludes": "Consumer chat-app usage, which is the only thing the two trackers above actually measure"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "None of this means ChatGPT is shrinking. OpenAI has said it crossed **900 million weekly active users** in February, alongside a $110 billion funding round -- up from 400 million a year earlier. {{note: A shrinking share of a fast-growing category can still mean more total users than a year ago; the two trends aren't in conflict, they're describing different things.}} What Comscore and Similarweb are actually tracking is a widening field, not a shrinking company: users who once had ChatGPT as their only real option are trying Gemini, bundled free into Android and Search, and Claude -- and some of that trying is sticking.",
+    "citation_urls": [
+     "https://www.newsweek.com/openai-hits-900-million-weekly-users-raises-110b-in-fresh-funding-11596631"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“Publishers should stop asking 'how do we show up in ChatGPT' and start asking 'where is our audience actually asking questions.'” — Michael King, iPullRank, on Comscore's findings",
+    "citation_urls": [
+     "https://www.tubefilter.com/2026/09/22/comscore-ai-intelligence-report-q2-2026-chatgpt-gemini/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Claude's 11% share (or 8.9% on Similarweb's count) is real, but it undersells where Anthropic's actual growth is happening. In Anthropic's own account of its business, presented alongside an April run-rate of **$30 billion** -- eight times the growth rate the company says it had planned for -- the fastest-growing piece isn't the Claude.ai chat website at all. It's Claude Code, whose weekly active users doubled in the first two months of 2026 and whose business subscriptions quadrupled over the same stretch, according to CEO Dario Amodei. None of that shows up in either tracker above, because Claude Code runs through a command line and API calls, not a browser tab or a chat window. __Prompt-volume share__ and __revenue share__ are simply not the same market.",
+    "citation_urls": [
+     "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "Publishers and marketers optimizing for AI visibility",
+       "tone": "exposed",
+       "what": "A strategy built entirely around ChatGPT's citation behavior now covers half the market it used to, not most of it."
+      },
+      {
+       "who": "Google",
+       "tone": "gains",
+       "what": "Gemini's share gain lines up with free bundling into Android, Search and Workspace -- distribution ChatGPT doesn't have."
+      },
+      {
+       "who": "Anthropic",
+       "tone": "unclear",
+       "what": "Its consumer chat share stays smallest of the three, even as the company's own disclosed revenue growth outpaces both rivals -- the two measures pull in different directions."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "==The same two reports support three different winning stories, one for each company.== OpenAI can point to 900 million weekly users and call the field bigger, not smaller, for ChatGPT. Google can point to Gemini's climb from 17% to 30% as proof its bundling strategy is converting. Anthropic can point past the chat-share numbers entirely to a revenue line neither tracker was built to see. All three claims are compatible with the same data -- which is the actual finding here: a category growing fast enough that every major player can tell a true story about winning it, using a different metric each time.",
+    "citation_urls": [
+     "https://www.globenewswire.com/news-release/2026/09/22/3366231/0/en/comscore-s-latest-ai-intelligence-report-shows-competition-intensifying-as-claude-and-gemini-gain-ground-on-chatgpt.html"
+    ]
+   }
+  ],
+  "id": "newsroom-chatgpt-ai-prompt-share-falls-comscore-gemini-claude",
+  "image": "assets/img/newsroom/chatgpt-ai-prompt-share-falls-comscore-gemini-claude.jpg",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "7 sources across 4 independent evidence threads, 3 directly primary: (1) Comscore's own Q2 2026 press release (fetched via its GlobeNewswire mirror after ir.comscore.com timed out on direct fetch), (2) Similarweb's own independent website-traffic tracker -- its own two X posts fetched directly for the August-2026 and early-2025 baseline figures, cross-checked against PPC Land's reporting of its May 2026 update, (3) OpenAI's own Feb. 27 disclosure of 900M+ weekly active users (via Newsweek, OpenAI's own blog returned no direct-fetch access), (4) Anthropic's own $30B run-rate and Claude Code growth disclosure (via VentureBeat, with direct Amodei quotes). Tubefilter is the same Comscore thread, used for methodology and per-platform detail, not counted as a separate thread."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires -- no health, financial-advice, legal, or accusatory content. Every percentage is attributed to whichever tracker measured it; Comscore's panel-based numbers and Similarweb's traffic-based numbers are never blended into one unattributed figure. The ledger component states explicitly what each of the four cited numbers includes and excludes, rather than letting a reader assume they measure the same thing."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean. Critique flagged an early draft that treated Comscore's 50% and Similarweb's 52.7% as if they should match; revised to state plainly why they don't (different methodologies, roughly a month apart) rather than presenting the gap as an unexplained discrepancy."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "compare's two columns and three rows trace directly to Comscore's report. ledger's four items each state their own includes/excludes rather than asserting comparability. stakes's three entries name specific, non-generic parties. No component carries a top-level text field. No two components sit back to back -- prose separates every one."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 7 sources, 4 threads, 3 primary. The reconciliation across two differently-built measurements, plus the observation that neither one captures Anthropic's actual growth (Claude Code/API), is the analytical work a same-day wire rewrite of the Comscore press release would not do."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Reconciles a panel-based measurement against a traffic-based one honestly, without picking a false winner between them, and surfaces that Anthropic's real growth story runs through a channel neither tracker counts."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-23T00:23:07Z"
+  },
+  "publishedAt": "2026-09-23T00:23:07Z"
+ },
+ {
+  "slug": "un-security-council-ai-safety-briefing-altman-amodei",
+  "title": "Altman and Amodei brief the UN Security Council on AI risk today, in its first meeting devoted specifically to AI safety",
+  "dek": "France convened the session during the UN General Assembly's high-level week. Sam Altman attends in person; Anthropic's Dario Amodei is expected to join and renew the industry-pacing proposal he published Sept. 12 -- the same one China's state media has already called a 'Cold War playbook,' and the same one four subscribers are now suing four AI labs over.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch what, if anything, the Council actually agrees to",
+    "text": "Security Council briefings are non-binding; the real test is whether France's four guiding questions produce a resolution, a working group, or nothing more than a transcript."
+   },
+   {
+    "label": "Watch whether China's delegation responds inside the chamber",
+    "text": "Beijing's Foreign Ministry has answered Amodei's essay in press statements so far, not at the Council table -- an on-record response today would be a real escalation from two weeks of sideline sparring."
+   },
+   {
+    "label": "Check whether the SALT comparison survives contact with actual arms-control mechanics",
+    "text": "Cold War missile treaties had mutual verification regimes built by two state governments over years; nothing said so far describes who would verify an AI capability speed limit or how."
+   },
+   {
+    "label": "Watch the Buist v. Anthropic docket",
+    "text": "The antitrust suit over the same Sept. 12 pledge is now in federal court; a UN stage doesn't pause that case, and discovery could surface how coordinated the pledge actually was among the four defendant labs."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Artificial Intelligence: High-level Briefing",
+    "url": "https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php",
+    "outlet": "Security Council Report",
+    "kind": "primary"
+   },
+   {
+    "label": "UN Security Council Brings DeepSeek, Sam Altman To Talk About AI Risks",
+    "url": "https://thedeepdive.ca/un-security-council-brings-deepseek-sam-altman-to-talk-about-ai-risks/",
+    "outlet": "The Deep Dive",
+    "kind": "reporting"
+   },
+   {
+    "label": "Dario Amodei will ask the UN Security Council to slow down the AI race this week",
+    "url": "https://startupfortune.com/dario-amodei-will-ask-the-un-security-council-to-slow-down-the-ai-race-this-week/",
+    "outlet": "Startup Fortune",
+    "kind": "reporting"
+   },
+   {
+    "label": "Targeting China's AI: US 'tech right' unfolds Cold War playbook",
+    "url": "https://www.globaltimes.cn/page/202609/1370436.shtml",
+    "outlet": "Global Times",
+    "kind": "primary"
+   },
+   {
+    "label": "China hits back at AI development criticism",
+    "url": "https://www.npr.org/2026/09/14/nx-s1-5968456/china-hits-back-ai-development",
+    "outlet": "NPR",
+    "kind": "reporting"
+   },
+   {
+    "label": "France Gathers the Security Council to Try to Come to Grips With AI",
+    "url": "https://passblue.com/2026/09/03/france-gathers-the-security-council-to-try-to-come-to-grips-with-ai/",
+    "outlet": "PassBlue",
+    "kind": "reporting"
+   },
+   {
+    "label": "We Must Pace the Frontier",
+    "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+    "outlet": "Dario Amodei / Anthropic",
+    "kind": "primary"
+   }
+  ],
+  "tldr": [
+   "France convenes the UN Security Council's first briefing devoted specifically to AI-safety risk, Sept. 23.",
+   "Sam Altman attends in person; Dario Amodei is expected to join and renew his pacing proposal.",
+   "DeepSeek and Moonshot were invited; DeepSeek's own founder isn't expected to attend.",
+   "China's Global Times already called Amodei's plan a 'Cold War playbook' targeting Chinese labs.",
+   "Caveat: Russia has questioned whether the Council is even the right forum for this at all."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "The UN Security Council holds its first meeting devoted specifically to AI-safety risk today, convened by France during the UN General Assembly's high-level week. [OpenAI](/company/openai)'s Sam Altman is confirmed to attend in person; [Anthropic](/company/anthropic)'s Dario Amodei is expected to join and press the same argument as his Sept. 12 essay, ++We Must Pace the Frontier++ -- the one that, with same-day endorsements from Altman, Elon Musk and Demis Hassabis attached, is now the subject of [a federal antitrust lawsuit](/article/ai-slowdown-antitrust-lawsuit-buist-v-anthropic) accusing the four labs of an illegal agreement to slow their own products. China's DeepSeek and Moonshot were also invited to brief the Council; DeepSeek's own founder, Liang Wenfeng, is not expected to show.",
+    "citation_urls": [
+     "https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php",
+     "https://thedeepdive.ca/un-security-council-brings-deepseek-sam-altman-to-talk-about-ai-risks/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "This is the Council's seventh meeting engaging AI's connection to international security since its first formal debate in July 2023, but the first one built specifically around the risk of losing control of increasingly capable systems rather than AI's broader effects on conflict, disinformation or cyber operations. France's own concept note names the shift directly, warning that 'autonomous AI systems could undertake actions with serious international security consequences, such as attacks on critical infrastructure,' and pointing specifically at the danger of a system capable of recursive self-improvement outrunning any human's ability to supervise it. The note poses four guiding questions rather than a proposal: what risks rapid AI advances pose to peace and security, how governments and companies can address them, what diplomatic tools exist, and how evaluation and verification can keep pace with development. [Yoshua Bengio](https://en.wikipedia.org/wiki/Yoshua_Bengio), co-chair of the UN's Independent International Scientific Panel on AI, and Hugging Face CEO Clement Delangue are also confirmed to brief the 15-member Council -- voices from research and open-source software alongside the two companies actually building the frontier systems the meeting is about.",
+    "citation_urls": [
+     "https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Three positions walking into the same room",
+     "columns": [
+      {
+       "label": "OpenAI"
+      },
+      {
+       "label": "Anthropic",
+       "hi": true
+      },
+      {
+       "label": "China (DeepSeek/Moonshot/Beijing)"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Who's attending",
+       "values": [
+        "Altman, in person",
+        "Amodei, expected remotely",
+        "DeepSeek and Moonshot invited; DeepSeek's founder not expected"
+       ]
+      },
+      {
+       "label": "Stated ask",
+       "values": [
+        "International coordination on 'common safety standards'",
+        "A verified, industry-wide speed limit on frontier capability gains",
+        "No public proposal; disputes the Council is even the right forum"
+       ]
+      },
+      {
+       "label": "On the record about the other's proposal",
+       "values": [
+        "No public position on Amodei's plan",
+        "N/A -- it's Anthropic's own proposal",
+        "Global Times: a 'Cold War playbook' to lock in a US advantage"
+       ]
+      }
+     ],
+     "source": "OpenAI's, Anthropic's and Global Times' own public statements, Sept. 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Amodei's own proposal is more specific than France's questions. It asks that outside evaluators get employee-level facility access at frontier labs -- a step Anthropic says it has already taken unilaterally -- that the arrangement spread through binding international rules rather than company-by-company goodwill, and that labs accept a verified __speed limit__ on how fast their models' own self-improvement capability grows, explicitly modeled on Cold War-era SALT missile treaties between the US and Soviet Union. Two days after the essay published, China's state-run Global Times called it exactly that kind of geopolitics wearing a safety label.",
+    "citation_urls": [
+     "https://startupfortune.com/dario-amodei-will-ask-the-un-security-council-to-slow-down-the-ai-race-this-week/",
+     "https://darioamodei.com/post/we-must-pace-the-frontier"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“The article is packed with containment provisions targeting China and is, in essence, a 'Cold War playbook' for the AI sector.” — Global Times editorial, Sept. 14 2026",
+    "citation_urls": [
+     "https://www.globaltimes.cn/page/202609/1370436.shtml"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Beijing's Foreign Ministry followed with a more measured version of the same objection days later: fearmongering and confrontation, it said, 'will only disrupt the process of global AI governance which serves no one's interest.' The sequence is now five events in eleven days, and today's briefing is the first one happening on a stage neither company controls. [Anthropic disclosed](/article/anthropic-rd-automation-index-claude-leads-26-percent) this week that Claude now automates 26% of its own AI research and development -- a genuine acceleration metric, published the same stretch its CEO is asking the industry, and now a UN body, to agree to slow down. Anthropic's own framing treats the 26% figure as evidence its safety infrastructure can keep pace with its own capability growth, not as a contradiction of the pacing argument -- but it is the argument's obvious pressure point.",
+    "citation_urls": [
+     "https://www.npr.org/2026/09/14/nx-s1-5968456/china-hits-back-ai-development"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "A voluntary industry pace limit, proposed by the company racing fastest, is a way to lock in today's leaders' advantage under the cover of safety.",
+       "detail": "China's Global Times argument: the loudest calls for a slowdown come from the labs already ahead, and a rule adopted now would freeze the current ranking in place before challengers can close the gap.",
+       "whoHolds": "China's state-run Global Times and, more moderately, Beijing's Foreign Ministry"
+      },
+      {
+       "claim": "A company disclosing a 26% self-automation figure the same week it asks for a pace limit is not obviously acting like it wants to slow down.",
+       "detail": "Anthropic's R&D Automation Index measures how much of Anthropic's own research Claude now performs without a human -- a metric that only rises if the underlying models keep getting more capable, fast.",
+       "whoHolds": "Skeptical readers of Amodei's essay, not any single named critic"
+      }
+     ],
+     "verdict": "Neither point defeats the safety case on its own terms -- an evaluator-access regime and a self-improvement speed limit are genuinely different asks than 'stop making better models,' and Anthropic has never claimed to have paused its own R&D pending international agreement. But both identify a real asymmetry: the proposal asks every lab to accept a rule only one geography's regulators would likely enforce, from a company whose own week-of-announcement metrics show it accelerating, not pacing.",
+     "source": "Global Times, Sept. 14 2026; Anthropic's R&D Automation Index disclosure, this week"
+    }
+   },
+   {
+    "type": "p",
+    "text": "What's different about today isn't the argument -- it's the venue. Amodei has been making this case in essays and interviews for weeks; China has been rejecting it in press statements for just as long. A Security Council briefing doesn't bind anyone -- these sessions produce statements and transcripts, not enforceable resolutions, absent a formal vote nobody has scheduled -- but it puts both sides' arguments on a diplomatic record for the first time, in front of the body that would have to authorize any binding international measure. Russia has already signaled it doesn't think that record belongs here at all, arguing AI security risk is a matter for 'more specialized forums' like the Global Dialogue on AI Governance -- a procedural objection that, if it gains support from other members, could keep this from becoming more than today's one meeting.",
+    "citation_urls": [
+     "https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php",
+     "https://passblue.com/2026/09/03/france-gathers-the-security-council-to-try-to-come-to-grips-with-ai/"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "OpenAI and Anthropic",
+       "tone": "gains",
+       "what": "Get to present their own proposed governance framework directly to the world's premier security body, ahead of any binding rule being written by someone else."
+      },
+      {
+       "who": "DeepSeek and Moonshot",
+       "tone": "exposed",
+       "what": "Invited to a forum built around a proposal their own government's state media has framed as designed to box Chinese labs out of the rules."
+      },
+      {
+       "who": "Smaller AI-developing nations",
+       "tone": "unclear",
+       "what": "Absent from both the briefer list and the essay that prompted it -- any resulting framework is being negotiated entirely between the US labs and China."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "None of today's briefers can bind the Council to anything by talking. What they can do is start the paper trail a future resolution, sanctions regime or verification treaty would eventually cite -- and after two weeks of dueling essays and editorials, today is the first time either side has had to make its case in the same room, on the record, in front of the body that would actually have to enforce whatever comes next. {{note: The last time the Council spent this long working through a new technology's security implications -- nuclear non-proliferation in the 1960s -- the gap between first transcript and first treaty ran more than a decade. Nobody involved today is promising AI governance will move faster than that.}}",
+    "citation_urls": [
+     "https://www.securitycouncilreport.org/whatsinblue/2026/09/artificial-intelligence-high-level-briefing-2.php"
+    ]
+   }
+  ],
+  "id": "newsroom-un-security-council-ai-safety-briefing-altman-amodei",
+  "image": "assets/img/newsroom/un-security-council-ai-safety-briefing-altman-amodei.jpg",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "7 sources across 6 independent evidence threads, 3 primary: (1) Security Council Report's 'What's In Blue' (the authoritative independent record of Council proceedings, fetched directly for briefer list, concept note and prior-meeting count), (2) Global Times' own editorial (fetched directly and verified verbatim for the pull quote), (3) Dario Amodei's own Sept. 12 essay (already verified in a prior cycle's piece, re-cited here for the SALT-comparison specifics), plus reporting threads from The Deep Dive (attendee detail), Startup Fortune (Amodei's remote-appearance framing), NPR (Beijing's Foreign Ministry statement) and PassBlue (specialist UN reporting on the Council's AI engagement history)."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Compliance check: legal-proceedings trigger considered for the Buist v. Anthropic reference -- resolved by stating it as an existing, already-adjudicated-elsewhere fact ('accusing the four labs of', not asserting guilt) rather than a fresh claim. Accusatory-claims trigger considered for China's characterization of Amodei's proposal -- resolved by quoting Global Times and Beijing's Foreign Ministry directly and attributing the characterization to them, never adopting it as the newsroom's own claim. No health or financial-advice content. The Global Times quote was verified verbatim against a direct fetch of the editorial before use, per the compliance rule on quotes attributed to a real source."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean -- prior developments (the antitrust suit, the R&D automation index) are phrased about the events themselves with inline links, not as 'this desk's coverage.' Critique flagged an early draft that stated the briefing 'will produce' diplomatic pressure as if certain; revised to state plainly that Security Council briefings are non-binding and that Russia has already questioned the venue."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "compare's three columns and rows trace to each party's own public statements cited in prose. counter's two points each trace to a named source (Global Times; Anthropic's own disclosed index) with a verdict that doesn't dismiss either. stakes names specific parties, none as broad as 'the industry.' No component carries a top-level text field. No two components sit back to back."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 7 sources, 6 threads, 3 primary, including a direct, verbatim-verified fetch of China's own editorial rather than relying on secondhand paraphrase. Ties today's briefing to two already-published stories (the antitrust suit, the R&D automation index) by event, not by self-reference."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "The counter component putting Anthropic's own 26% automation disclosure next to its CEO's slowdown pitch is exactly the kind of same-week cross-check a same-day wire rewrite of either company's statement would not make."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-23T00:23:07Z"
+  },
+  "publishedAt": "2026-09-23T00:23:07Z"
+ },
+ {
+  "slug": "google-intrinsic-open-sources-robotics-core-roscon",
+  "title": "Google's robotics unit Intrinsic open-sources its core software stack -- real-time control, pose estimation and grasp planning, free under Apache 2.0",
+  "dek": "Intrinsic Core, released at ROSCon 2026 in Toronto, gives any developer the hardware-agnostic control framework, Nvidia FoundationPose-based pose estimation, motion and grasp planning, and ROS drivers that used to be Intrinsic's own paid-platform advantage. Its enterprise cloud services, advanced AI models and no-code Flowstate tool stay proprietary -- the free layer is the on-ramp to them, not a replacement.",
+  "persona": "ash-lindqvist",
+  "section": "Robotics",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "work",
+  "apply": [
+   {
+    "label": "Try the reference build before writing custom code",
+    "text": "Intrinsic shipped an Open Machine Tending Solution alongside Core -- a working CNC-tending reference on Universal Robots and FANUC hardware -- a faster starting point than assembling the stack from scratch."
+   },
+   {
+    "label": "Check hardware support before committing",
+    "text": "Core's ROS drivers currently list Universal Robots and FANUC arms; a different arm brand means writing your own driver against the framework, not a drop-in swap."
+   },
+   {
+    "label": "Don't expect mobile or humanoid support yet",
+    "text": "Gerkey's own comments confine this release to robotic arms in commercial deployment -- a legged or wheeled platform isn't the target today, whatever future roadmap Intrinsic hints at."
+   },
+   {
+    "label": "Watch what stays paid",
+    "text": "Advanced AI models, Flowstate's no-code layer and Intrinsic's cloud services are the funnel this free release feeds -- the real test of the bet is how many Core users convert to those paid tiers over the next year."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Introducing Intrinsic Core: An open source approach to Physical AI",
+    "url": "https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core",
+    "outlet": "Intrinsic",
+    "kind": "primary"
+   },
+   {
+    "label": "intrinsic-ai/intrinsic-core",
+    "url": "https://github.com/intrinsic-ai/intrinsic-core",
+    "outlet": "GitHub",
+    "kind": "primary"
+   },
+   {
+    "label": "Intrinsic open sources key parts of its platform for easier development",
+    "url": "https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/",
+    "outlet": "The Robot Report",
+    "kind": "reporting"
+   },
+   {
+    "label": "Google's robotics unit Intrinsic open-sources its foundational infrastructure for intelligent robots",
+    "url": "https://siliconangle.com/2026/09/22/googles-robotics-unit-intrinsic-open-sources-its-foundational-infrastructure-for-intelligent-robots/",
+    "outlet": "SiliconANGLE",
+    "kind": "reporting"
+   },
+   {
+    "label": "Intrinsic is joining Google to advance physical AI in robotics",
+    "url": "https://www.therobotreport.com/intrinsic-is-joining-google-to-advance-physical-ai-in-robotics/",
+    "outlet": "The Robot Report",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Intrinsic, Alphabet's robotics unit, open-sourced Intrinsic Core at ROSCon 2026 under Apache 2.0.",
+   "The release covers real-time control, pose estimation, motion and grasp planning, and ROS drivers.",
+   "It currently supports robotic arms only -- no mobile robots or humanoids yet.",
+   "Intrinsic's paid cloud services and AI models stay proprietary; Core is the on-ramp to them.",
+   "Caveat: Intrinsic folded into Google directly in February, ending its run as an independent Alphabet unit."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[Google](/company/google)'s robotics unit Intrinsic open-sourced the core of its own industrial robotics platform at ROSCon 2026 in Toronto, under a permissive Apache 2.0 license. **Intrinsic Core** hands any developer the pieces that used to be Intrinsic's paid-platform advantage: a hardware-agnostic real-time control framework, pose estimation built on Nvidia's FoundationPose, motion and grasp planning, a Gazebo-based simulator, camera calibration, and pre-configured ROS drivers for Universal Robots and FANUC arms. ==None of it requires an Intrinsic account, a cloud subscription, or a fee.==",
+    "citation_urls": [
+     "https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core",
+     "https://github.com/intrinsic-ai/intrinsic-core"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Intrinsic's own framing is specific about what this is and isn't: a gap-filler inside the existing ROS ecosystem, not a replacement for it. CTO Brian Gerkey -- who also co-founded and chairs the Open Source Robotics Foundation -- describes that ecosystem as strong but incomplete, particularly for the sensor-driven, mid-motion path correction that real industrial pick-and-place work actually needs, rather than the scripted, fixture-dependent motions most existing open tooling assumes. Most factory-floor robot programming today still works the way it did a decade ago: an engineer teaches an arm a fixed sequence of joint positions for one exact part in one exact spot, and the program breaks the moment a part is a few millimeters off or a supplier changes a bin's layout. The specific gap Intrinsic Core targets is that brittleness -- code that adapts to where a part actually is, sensed in real time, instead of code written for where a part is supposed to be.",
+    "citation_urls": [
+     "https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“This is not us coming by and dropping off some code and saying, 'Have fun.'” — Brian Gerkey, Intrinsic CTO, on the Intrinsic Core release",
+    "citation_urls": [
+     "https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Geoffrey Biggs, CTO of the Open Source Robotics Foundation, called the release ++'both a first step and a demonstration of where robotics is going.'++ For a developer starting from a bare robot arm, the stack chains together in a specific order:",
+    "citation_urls": [
+     "https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/"
+    ]
+   },
+   {
+    "type": "flow",
+    "flow": {
+     "steps": [
+      {
+       "actor": "Developer",
+       "what": "Connects a Universal Robots or FANUC arm via Intrinsic's pre-configured ROS drivers"
+      },
+      {
+       "actor": "Pose estimation",
+       "what": "Nvidia FoundationPose locates the part in 3D without a rigid fixture"
+      },
+      {
+       "actor": "Motion planning",
+       "what": "Auto-generates a collision-free path to the part",
+       "hi": true
+      },
+      {
+       "actor": "Grasp planning",
+       "what": "Adapts the gripper's approach to how the part is actually sitting"
+      },
+      {
+       "actor": "Intrinsic Control",
+       "what": "Runs the real-time, sensor-corrected execution across whichever arm is attached"
+      },
+      {
+       "actor": "Gazebo simulation",
+       "what": "Tests the whole chain virtually before it touches a real part"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The gap between free and paid is deliberate, not accidental. Intrinsic's own announcement states that anything built on Core 'automatically work[s] with other Intrinsic offerings, including our enterprise services which include advanced AI models, Intrinsic Flowstate, and industrial-grade cloud services' -- Flowstate is the no-code application-building layer Intrinsic has sold since its Alphabet 'Other Bets' days, and it stays proprietary. **Core is the on-ramp, not the destination.** That is, not coincidentally, close to the playbook Google ran with Android: give away the operating layer, keep the services stack, and let the free layer's adoption become the moat.",
+    "citation_urls": [
+     "https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "What's free now, and what still isn't",
+     "columns": [
+      {
+       "label": "Intrinsic Core",
+       "sub": "Apache 2.0, new",
+       "hi": true
+      },
+      {
+       "label": "Intrinsic's paid platform"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Real-time control, motion & grasp planning",
+       "values": [
+        "Included",
+        "Included"
+       ]
+      },
+      {
+       "label": "Pose estimation, calibration, ROS drivers",
+       "values": [
+        "Included",
+        "Included"
+       ]
+      },
+      {
+       "label": "No-code app building (Flowstate)",
+       "values": [
+        "Not included",
+        "Included"
+       ]
+      },
+      {
+       "label": "Advanced AI models",
+       "values": [
+        "Not included",
+        "Included"
+       ]
+      },
+      {
+       "label": "Industrial-grade cloud services",
+       "values": [
+        "Not included",
+        "Included"
+       ]
+      },
+      {
+       "label": "Supported hardware today",
+       "values": [
+        "Robotic arms only (UR, FANUC)",
+        "Same, plus Intrinsic's broader partner list"
+       ]
+      }
+     ],
+     "source": "Intrinsic's own Intrinsic Core announcement, Sept. 22 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "The release comes seven months after Intrinsic's own status inside Alphabet changed. The company spent five and a half years developing its technology inside Alphabet's X moonshot factory before spinning out as an independent 'Other Bets' company in July 2021; in February 2026, Alphabet folded it directly into Google, with CEO Wendy Tan White now reporting to Google's chief product officer for Other Bets rather than running an independent subsidiary. An open-source release seven months into that integration reads like Google applying a familiar playbook -- give away the platform layer, keep the AI models and cloud services -- to a robotics business it now runs directly instead of at arm's length.",
+    "citation_urls": [
+     "https://www.therobotreport.com/intrinsic-is-joining-google-to-advance-physical-ai-in-robotics/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "What Intrinsic Core doesn't yet reach matters as much as what it does. Gerkey's own comments confine this release to robotic arms in commercial deployment -- no mobile robots, no legged or wheeled platforms, no humanoids, at a moment when [Figure](/company/figure), [Unitree](/company/unitree) and a half-dozen other companies are racing to ship exactly those. __Physical AI__, the framing Intrinsic uses for its own mission, still means something narrower in this release than the industry-wide term has come to imply: a robot arm that can see, plan and adapt on a factory floor, not a general-purpose body doing the same in a home or a warehouse aisle. Alongside Core, Intrinsic also published a reference design called the Open Machine Tending Solution -- a working, customizable starting point for the specific job of loading and unloading parts on a CNC machine -- built on the same stack and running on the same two supported arm brands, meant to give a shop-floor integrator something to copy rather than a blank framework to fill in alone.",
+    "citation_urls": [
+     "https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development/"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "Small integrators and robotics startups",
+       "tone": "gains",
+       "what": "Get a free, production-tested control, perception and planning stack that would otherwise cost months of in-house engineering to replicate."
+      },
+      {
+       "who": "Competing robotics-software vendors",
+       "tone": "exposed",
+       "what": "Compete against a free, Apache-licensed alternative backed by Google's own engineering and distribution."
+      },
+      {
+       "who": "Nvidia",
+       "tone": "gains",
+       "what": "Its FoundationPose model is now the pose-estimation engine inside a widely distributed open-source stack, extending its reach into every project that adopts Core."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "==The comparison to Android is Intrinsic's own to invite, and it's also the honest risk inside it.== Android's give-the-platform-away bet paid off because enough of the world's phone makers needed exactly what Google was giving away for free. Intrinsic Core is betting the same is true of robotic-arm integrators -- companies that don't want to build a control stack from scratch and would rather pay for the AI models and cloud services layered on top. Whether that bet plays out the way Android's did depends on something this release alone can't show: how many of Core's future users actually convert to the paid layer, versus how many take the free stack and never come back.",
+    "citation_urls": [
+     "https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core"
+    ]
+   }
+  ],
+  "id": "newsroom-google-intrinsic-open-sources-robotics-core-roscon",
+  "image": "assets/img/newsroom/google-intrinsic-open-sources-robotics-core-roscon.jpg",
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "5 sources across 4 independent evidence threads, 2 primary: (1) Intrinsic's own announcement blog post, fetched directly for the component list, license and what stays proprietary, (2) Intrinsic's own GitHub repository confirming the Apache 2.0 license and public availability, (3) The Robot Report's reporting, fetched directly for on-record Gerkey/Biggs quotes, (4) SiliconANGLE's reporting for corroborating detail, plus a separate Robot Report piece from February 2026 for the Intrinsic-folds-into-Google history. Forbes' own coverage returned HTTP 403 to direct fetch and was not used for any claim in the piece."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires. The Android comparison is explicitly framed as Intrinsic's own invited framing and this piece's own analytical read, not stated as fact about Intrinsic's business strategy. Both direct quotes (Gerkey, Biggs) are used exactly as reported by The Robot Report, with no paraphrase inside quotation marks."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean. Critique flagged an early draft that implied Intrinsic Core matches ROS 2's full feature set; revised to state Gerkey's own, narrower claim -- that it fills specific gaps -- rather than an unsupported broader one."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "flow's six steps all trace to the component list in Intrinsic's own announcement. compare's six rows all trace to the same announcement's stated inclusions/exclusions. stakes names specific, non-generic parties (small integrators, competing vendors, Nvidia by name). No component carries a top-level text field. No two components sit back to back -- prose separates every one."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved. 5 sources, 4 threads, 2 primary. The free/paid compare table and the flow diagram of the actual developer workflow are exactly the structure-at-scale work a rewritten press release wouldn't build."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Grounds the Android comparison in Intrinsic's own words rather than asserting it as this desk's claim, and states plainly what the release does not yet cover (mobile and humanoid robots) rather than letting the 'Physical AI' framing imply more than the actual product supports."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-23T00:23:07Z"
+  },
+  "publishedAt": "2026-09-23T00:23:07Z"
  }
 ]
 ;

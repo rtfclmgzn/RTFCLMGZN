@@ -23603,4 +23603,273 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
+,
+{
+  "article_id": "newsroom-chatgpt-ai-prompt-share-falls-comscore-gemini-claude",
+  "ts": "2026-09-23T00:23:07Z",
+  "export": {
+    "article_id": "newsroom-chatgpt-ai-prompt-share-falls-comscore-gemini-claude",
+    "url": "https://rtfclmgzn.com/article/chatgpt-ai-prompt-share-falls-comscore-gemini-claude",
+    "headline": "ChatGPT's share of AI prompt volume fell from 70% to 50% in six months, Comscore says -- Gemini and Claude are absorbing nearly all of what it lost",
+    "hook": "Comscore's panel data shows ChatGPT's share of AI-assistant prompt volume sliding from 70% to 50% in six months, while Gemini and Claude both gained -- and a separately built traffic tracker agrees on the direction, not the number.",
+    "key_facts": [
+      "Comscore: ChatGPT 70%->50%, Gemini 17%->30%, Claude 2%->11%, Jan-June 2026.",
+      "Similarweb's website-traffic tracker shows the same direction on different numbers.",
+      "OpenAI still reports 900M+ weekly users -- a shrinking share, not a shrinking company."
+    ],
+    "tone": "energetic, conversational",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "primary_image": "assets/img/newsroom/chatgpt-ai-prompt-share-falls-comscore-gemini-claude.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "ChatGPT's share of AI prompt volume fell from 70% to 50% in six months, per Comscore. Gemini nearly doubled (17%->30%). Claude grew 5x (2%->11%). A separate traffic tracker shows the same direction on different numbers.",
+      "reply_copy": "Full breakdown, including what OpenAI and Anthropic's own numbers actually show:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#ChatGPT"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-23T05:23:07Z",
+      "copy": "Two differently-built measurements (a usage panel, a website-traffic tracker) agree ChatGPT's relative share is shrinking. OpenAI's own reported user count keeps climbing at the same time. Both are true -- here's why they don't contradict each other.",
+      "reply_copy": "The reconciliation:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Comscore"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "ChatGPT's share of AI prompt volume dropped from 70% to 50% in just six months, according to Comscore -- while Gemini nearly doubled and Claude grew more than fivefold. A second, differently-built measurement (website traffic, not a usage panel) shows the same trend on different numbers. But OpenAI still says it crossed 900 million weekly users. Shrinking share, not a shrinking company. Full breakdown at the link.",
+      "hashtags": [
+        "#AI",
+        "#ChatGPT",
+        "#Gemini",
+        "#Claude",
+        "#ArtificialIntelligence",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Comscore's Q2 2026 AI Intelligence Report shows ChatGPT's share of AI-assistant prompt volume falling from 70% to 50% between January and June, while Google's Gemini rose from 17% to 30% and Anthropic's Claude grew from 2% to 11%. A separately built measurement -- Similarweb's website-traffic tracker -- shows the identical direction on different numbers. None of this means ChatGPT is shrinking: OpenAI has said it crossed 900 million weekly active users in February. What's actually happening is a widening field, and Anthropic's real growth (Claude Code, enterprise API use) doesn't even show up in either measurement.",
+      "hashtags": [
+        "#AI",
+        "#ChatGPT",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "ChatGPT's share of AI prompt volume: 70% in January, 50% in June, per Comscore. Gemini and Claude split most of the difference. A second tracker (website traffic, not a panel) shows the same direction, different numbers. OpenAI's own user count is still climbing though -- shrinking share, not a shrinking company.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Comscore: ChatGPT's AI-prompt-volume share fell 70%->50% in six months. Gemini 17%->30%, Claude 2%->11%. Similarweb's separate traffic tracker agrees on direction, not exact numbers. Neither one counts Claude Code, which is where Anthropic's real growth actually is.",
+      "hashtags": [
+        "#AI",
+        "#ChatGPT"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-un-security-council-ai-safety-briefing-altman-amodei",
+  "ts": "2026-09-23T00:23:07Z",
+  "export": {
+    "article_id": "newsroom-un-security-council-ai-safety-briefing-altman-amodei",
+    "url": "https://rtfclmgzn.com/article/un-security-council-ai-safety-briefing-altman-amodei",
+    "headline": "Altman and Amodei brief the UN Security Council on AI risk today, in its first meeting devoted specifically to AI safety",
+    "hook": "France convened the UN Security Council's first meeting built specifically around AI-safety risk. Altman attends in person; Amodei is expected to renew his Sept. 12 pacing proposal -- the one China's state media already called a 'Cold War playbook.'",
+    "key_facts": [
+      "Altman attends in person; Amodei expected to join remotely to press his pacing proposal.",
+      "DeepSeek and Moonshot invited; DeepSeek's own founder isn't expected to attend.",
+      "Anthropic disclosed Claude does 26% of its own R&D the same week its CEO asks the industry to slow down."
+    ],
+    "tone": "composed, legally precise, strategic",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/un-security-council-ai-safety-briefing-altman-amodei.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "The UN Security Council holds its first meeting built specifically around AI-safety risk today. Altman attends in person; Amodei is expected to renew his Sept. 12 pacing proposal -- the one China's state media already called a 'Cold War playbook.'",
+      "reply_copy": "What's actually being asked for, and who's pushing back:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#UN"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-23T05:23:07Z",
+      "copy": "Anthropic disclosed this week that Claude now automates 26% of its own AI R&D -- the same week its CEO is asking the industry, and now the UN, to agree to slow down. Worth sitting with that tension.",
+      "reply_copy": "Full piece:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Anthropic"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Today the UN Security Council holds its first meeting devoted specifically to AI-safety risk. Sam Altman attends in person. Anthropic's Dario Amodei is expected to renew the industry pacing proposal he published two weeks ago -- one China's state media has already called a 'Cold War playbook' designed to lock in a US lead. DeepSeek and Moonshot were invited too; DeepSeek's own founder isn't expected to show. Full story at the link.",
+      "hashtags": [
+        "#AI",
+        "#UnitedNations",
+        "#AISafety",
+        "#Geopolitics",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "The UN Security Council holds its first high-level meeting built specifically around AI-safety risk today, convened by France. OpenAI's Sam Altman attends in person; Anthropic's Dario Amodei is expected to join and press the pacing proposal he published Sept. 12 -- the same proposal China's state-run Global Times has called a 'Cold War playbook' designed to box Chinese labs out of the rules. China's DeepSeek and Moonshot were also invited to brief the Council. The twist: Anthropic disclosed this week that Claude already automates 26% of its own research and development -- the same week its CEO is asking the industry to slow down.",
+      "hashtags": [
+        "#AI",
+        "#Policy",
+        "#UnitedNations"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "UN Security Council's first AI-safety-specific meeting is today. Altman in person, Amodei expected remotely to push his pacing plan. China already called it a Cold War playbook. Meanwhile Anthropic just said Claude does 26% of its own R&D -- not exactly slowing down.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "UN Security Council's first AI-safety-specific briefing is today. Altman in person, Amodei expected to push his Sept 12 pacing proposal. China's Global Times already called it a 'Cold War playbook.' Non-binding, but it's the first time both sides make the case in the same room.",
+      "hashtags": [
+        "#AI",
+        "#UN"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-google-intrinsic-open-sources-robotics-core-roscon",
+  "ts": "2026-09-23T00:23:07Z",
+  "export": {
+    "article_id": "newsroom-google-intrinsic-open-sources-robotics-core-roscon",
+    "url": "https://rtfclmgzn.com/article/google-intrinsic-open-sources-robotics-core-roscon",
+    "headline": "Google's robotics unit Intrinsic open-sources its core software stack -- real-time control, pose estimation and grasp planning, free under Apache 2.0",
+    "hook": "Google's robotics unit Intrinsic open-sourced its real-time control, pose estimation, motion and grasp planning stack under Apache 2.0 -- free for any developer, while its AI models and cloud services stay paid.",
+    "key_facts": [
+      "Intrinsic Core: real-time control, Nvidia FoundationPose-based pose estimation, motion/grasp planning, ROS drivers.",
+      "Supports robotic arms only today (Universal Robots, FANUC) -- no mobile robots or humanoids yet.",
+      "Released 7 months after Intrinsic folded directly into Google, ending its run as an independent Alphabet unit."
+    ],
+    "tone": "curious, hands-on",
+    "persona": "ash-lindqvist",
+    "section": "Robotics",
+    "primary_image": "assets/img/newsroom/google-intrinsic-open-sources-robotics-core-roscon.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Google's robotics unit just open-sourced its core control/perception/planning stack -- real-time control, pose estimation, motion + grasp planning -- free under Apache 2.0. The paid layer (AI models, cloud services) stays proprietary.",
+      "reply_copy": "What's free, what's not, and why it looks like Android's old playbook:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-23T05:23:07Z",
+      "copy": "\"This is not us coming by and dropping off some code and saying, 'Have fun.'\" -- Intrinsic's CTO on why its new open-source robotics stack targets a real gap in ROS, not just a PR release.",
+      "reply_copy": "Full story:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics",
+        "#OpenSource"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Google's robotics unit Intrinsic just gave away the software stack that used to be its paid-platform advantage: real-time control, pose estimation, motion and grasp planning, free under Apache 2.0. What stays paid? The AI models, the no-code app builder, and the cloud services layered on top -- sound familiar? It's close to the playbook Google ran with Android. Today it only covers robotic arms -- no humanoids, no mobile robots, yet. Full story at the link.",
+      "hashtags": [
+        "#Robotics",
+        "#AI",
+        "#OpenSource",
+        "#Google",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Google's robotics unit Intrinsic open-sourced the core of its industrial robotics platform at ROSCon 2026 under Apache 2.0: a hardware-agnostic real-time control framework, Nvidia FoundationPose-based pose estimation, motion and grasp planning, and ROS drivers for Universal Robots and FANUC arms. What stays proprietary -- Intrinsic's advanced AI models, its no-code Flowstate builder, and its cloud services -- is the actual business. The release lands seven months after Intrinsic folded directly into Google, ending its run as an independent Alphabet 'Other Bets' company, and reads like Google applying its Android playbook to robotics: give away the platform, keep the services.",
+      "hashtags": [
+        "#Robotics",
+        "#Google",
+        "#OpenSource"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Intrinsic (Google's robotics unit) open-sourced its real-time control + pose estimation + grasp planning stack, free under Apache 2.0. Paid layer stays paid: AI models, cloud services, Flowstate. Arms only for now -- no humanoids. Basically Android's playbook, for robots.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Google's Intrinsic open-sourced its robot control/perception/planning stack under Apache 2.0. Free layer: control, pose estimation, motion + grasp planning. Paid layer: AI models, cloud services. Arms only today, no humanoids. Android's playbook, applied to robotics.",
+      "hashtags": [
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
