@@ -23896,5 +23896,272 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-23T11:56:49Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-senate-staff-barred-agentic-ai-tools-codex-claude-code",
+    "ts": "2026-09-23T15:00:38Z",
+    "export": {
+      "article_id": "newsroom-senate-staff-barred-agentic-ai-tools-codex-claude-code",
+      "url": "https://rtfclmgzn.com/article/senate-staff-barred-agentic-ai-tools-codex-claude-code",
+      "headline": "The Senate approved ChatGPT, Gemini and Copilot for staff work in March -- the agentic tools now central to Washington's own AI debate are still off-limits",
+      "hook": "The Senate has had ChatGPT, Gemini and Copilot for six months -- but not Codex or Claude Code, the agentic tools now central to the AI debate its own staff can't touch.",
+      "key_facts": [
+        "Senate staff got ChatGPT, Gemini and Copilot in March 2026 -- still the only tools approved.",
+        "Agentic tools like OpenAI's Codex and Anthropic's Claude Code remain unapproved, no timeline given.",
+        "The House's own oversight body already approves a broader, multi-vendor tool set."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/senate-staff-barred-agentic-ai-tools-codex-claude-code.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "The Senate has had ChatGPT, Gemini and Copilot for six months. Not approved: Codex, Claude Code, or any agentic tool -- the exact category of AI it's now writing legislation about.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Congress"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-23T20:00:38Z",
+        "copy": "\"Lawmakers are writing the rules for a technology most of them have never actually used.\" -- Adam Kovacevich, Chamber of Progress, on why Senate staff still can't touch agentic AI tools.",
+        "reply_copy": "The full comparison with the House's policy:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#Senate"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "The Senate has had three AI chatbots approved for staff work since March: ChatGPT, Gemini, Copilot. What's still off-limits? Anything agentic -- OpenAI's Codex, Anthropic's Claude Code, any tool that can act on its own rather than just answer a question. No public timeline exists for when that changes. Meanwhile, the House's separate oversight office already approves a wider set of tools across more vendors. Full story at the link.",
+        "hashtags": [
+          "#AI",
+          "#Congress",
+          "#AIPolicy",
+          "#Senate",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "An NPR investigation finds Senate staff have had exactly three AI chat tools approved for official work since March -- ChatGPT Enterprise, Gemini Chat and Copilot Chat -- while anything agentic (OpenAI's Codex, Anthropic's Claude Code) remains unauthorized, with the Sergeant at Arms declining to give reporters a timeline. Critics call the security rationale pretextual; the office's own tiering system points to a real data-exfiltration concern instead. The House, under a separate oversight body, already approves a broader multi-vendor set. One senator described using an AI research tool personally while calling his own chamber's rules \"crazy.\"",
+        "hashtags": [
+          "#AI",
+          "#Congress",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Senate staff have had ChatGPT, Gemini and Copilot since March. Still not approved: Codex, Claude Code, anything agentic -- the exact tools at the center of the AI debate the Senate is supposedly having. No timeline given. The House already allows more.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Senate staff have had ChatGPT, Gemini and Copilot since March. Agentic tools -- Codex, Claude Code -- still aren't approved, no timeline given. The body writing AI law is, by its own IT policy, working from less hands-on agent experience than a mid-sized law firm.",
+        "hashtags": [
+          "#AI",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-bragjack-ai-browser-agent-hijack-five-browsers",
+    "ts": "2026-09-23T15:00:38Z",
+    "export": {
+      "article_id": "newsroom-bragjack-ai-browser-agent-hijack-five-browsers",
+      "url": "https://rtfclmgzn.com/article/bragjack-ai-browser-agent-hijack-five-browsers",
+      "headline": "One malicious browser extension could hijack the built-in AI agents in Chrome, Edge, Opera, Comet and Claude for Chrome -- researcher Gal Weizman calls the technique 'prompt forcing'",
+      "hook": "One already-installed browser extension could seize control of the built-in AI agent in Chrome, Edge, Comet, Opera and Claude for Chrome -- reaching files, camera and mic in some cases, with zero clicks.",
+      "key_facts": [
+        "BragJack let one extension force a complete attacker prompt into five browsers' AI agents.",
+        "Google (CVE-2026-0628, severity 8.8) and Microsoft (CVE-2026-55945) shipped fixes and paid bounties.",
+        "No confirmed in-the-wild exploitation -- disclosed as proof-of-concept research, now patched."
+      ],
+      "tone": "austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/bragjack-ai-browser-agent-hijack-five-browsers.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "One already-installed browser extension could hijack the built-in AI agent in Chrome, Edge, Comet, Opera and Claude for Chrome -- files, camera, mic, zero clicks. Researcher calls it 'prompt forcing.' All five now patched.",
+        "reply_copy": "How it worked, browser by browser:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Security"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-23T20:00:38Z",
+        "copy": "\"This is not the same bug five times. It's the same design mistake made five separate times by five separate teams.\" -- Gal Weizman, Forever Security, on BragJack hitting Chrome, Edge, Comet, Opera and Claude for Chrome at once.",
+        "reply_copy": "Full technical breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Cybersecurity",
+          "#AIAgents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "BragJack: one already-installed browser extension, and it could seize control of the built-in AI agent in five major browsers at once -- Chrome's Gemini Live, Edge's Copilot Actions, Perplexity's Comet, Opera Neon and Anthropic's Claude for Chrome. Researcher Gal Weizman calls it \"prompt forcing\": the extension abuses a legitimate browser API to feed the agent a complete, attacker-written prompt. Reach ranged up to camera, mic, files and screenshots. Google and Microsoft assigned CVEs and shipped fixes; all five vendors have now patched. No confirmed real-world attack -- this was disclosed as proof-of-concept research. Full story at the link.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#Browser",
+          "#TechNews",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Security researcher Gal Weizman disclosed BragJack this month: a technique where one already-installed, trusted browser extension can hijack the built-in AI agent in five major browsers -- Chrome's Gemini Live, Microsoft Edge's Copilot-powered Actions, Perplexity's Comet, Opera Neon and Anthropic's Claude for Chrome -- forcing a complete attacker-written prompt with reach up to local files, camera, microphone and screenshots in some cases, with zero further clicks. Google rated its flaw High severity (8.8) and Microsoft assigned its own CVE; combined bounties across all five browsers ran to roughly $20,000. Every named vendor has shipped a fix, and no outlet has reported a real-world attack -- this was disclosed as proof-of-concept research. The real finding: five separate engineering teams converged on variations of the same design mistake.",
+        "hashtags": [
+          "#Cybersecurity",
+          "#AI",
+          "#InfoSec"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "BragJack: one browser extension could hijack the built-in AI agent in Chrome, Edge, Comet, Opera and Claude for Chrome at once -- files, camera, mic, zero clicks in some cases. Google and Microsoft patched and paid bounties. No real-world attack reported. Five teams, same design mistake.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "BragJack: one extension, five hijacked browser AI agents -- Chrome, Edge, Comet, Opera, Claude for Chrome. Files, camera, mic reachable in some cases. Google/Microsoft patched, paid ~$20K in bounties combined. No in-the-wild exploitation. Same design mistake, five separate teams.",
+        "hashtags": [
+          "#Security",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nyt-openai-unsealed-filing-astonishing-theft-summary-judgment",
+    "ts": "2026-09-23T15:00:38Z",
+    "export": {
+      "article_id": "newsroom-nyt-openai-unsealed-filing-astonishing-theft-summary-judgment",
+      "url": "https://rtfclmgzn.com/article/nyt-openai-unsealed-filing-astonishing-theft-summary-judgment",
+      "headline": "An unsealed filing quotes a Microsoft director calling AI training 'the largest theft of labor in human history' -- the New York Times cites it in its own summary-judgment motion against OpenAI and Microsoft",
+      "hook": "A newly unsealed court filing quotes a Microsoft director calling AI training 'an astonishing theft' -- the Times' own evidence in its summary-judgment push against OpenAI and Microsoft; Microsoft calls it one employee's opinion.",
+      "key_facts": [
+        "Unsealed Sept. 17 filing quotes Microsoft's Brent Hecht: AI training is 'an astonishing theft.'",
+        "The Times says OpenAI's training data held 91,000+ copies of its and partner outlets' work.",
+        "Microsoft says the memo reflects one employee's view, not company policy; judge hasn't ruled."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/nyt-openai-unsealed-filing-astonishing-theft-summary-judgment.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Unsealed filing: a Microsoft director privately called AI training \"an astonishing theft of unprecedented proportions.\" It's the NYT's own evidence in its summary-judgment motion against OpenAI and Microsoft. Microsoft says it's one employee's opinion.",
+        "reply_copy": "The numbers, the quotes, and what's still unproven:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-23T20:00:38Z",
+        "copy": "The same Microsoft internal document: \"It is highly unusual that an end-product threatens the economic foundations of its essential suppliers.\" Judge Stein hasn't ruled on either side's summary-judgment motion yet.",
+        "reply_copy": "Full breakdown of the unsealed filing:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Copyright",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A newly unsealed court filing quotes Microsoft's own director of applied science calling AI training \"an astonishing theft of unprecedented proportions\" and \"the largest theft of labor in human history.\" It's the New York Times' own evidence, filed in support of its motion asking a federal judge to rule on liability before trial. The Times also cites internal estimates: 91,000+ copies of its own articles inside OpenAI's training data, 2 million+ pages from a separate dataset. Microsoft's response: the quote reflects one employee's opinion, not company policy. Judge Sidney Stein hasn't ruled. Full story at the link.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Copyright",
+          "#Microsoft",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "An unredacted version of The New York Times' summary-judgment filing, unsealed September 17 in the consolidated MDL copyright docket against OpenAI and Microsoft, quotes a January 2024 internal memo from Microsoft's director of applied science, Brent Hecht, describing AI training on publishers' content as \"an astonishing theft of unprecedented proportions\" and \"the largest theft of labor in human history.\" The filing also cites internal estimates that OpenAI's training data held more than 91,692 copies of Times, Daily News and Center for Investigative Reporting articles, plus a separate dataset with over 2 million nytimes.com pages. Microsoft's response: Hecht's memo reflects his personal view, not company policy. This is the plaintiff's own characterization of the evidence -- Judge Sidney H. Stein has not yet ruled on either side's summary-judgment motion.",
+        "hashtags": [
+          "#AI",
+          "#Copyright",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Unsealed filing: Microsoft's own director called AI training \"an astonishing theft of unprecedented proportions\" in a private 2024 memo. It's the NYT's evidence in its summary-judgment push against OpenAI and Microsoft. Microsoft says it's one employee's opinion. Judge hasn't ruled.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Unsealed NYT filing quotes a Microsoft director calling AI training \"an astonishing theft of unprecedented proportions\" -- the Times' own evidence for summary judgment against OpenAI and Microsoft. Microsoft: one employee's opinion, not policy. Judge Stein hasn't ruled yet.",
+        "hashtags": [
+          "#AI",
+          "#Copyright"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
