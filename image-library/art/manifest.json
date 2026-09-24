@@ -3703,7 +3703,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-CPU-Architecture-Wallpaper-50-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "alibaba-zhenwu-v900-ai-chip-china-export-controls",
+     "used_at": "2026-09-24"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-01",
@@ -4560,7 +4565,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-56-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "mirendil-ai-research-startup-5-billion-valuation-talks",
+     "used_at": "2026-09-24"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-07",
