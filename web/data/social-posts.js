@@ -24258,8 +24258,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Geopolitics",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwb7uvp6g42t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwb7uvp6g42t",
+        "posted_at": "2026-09-24T12:08:38Z"
       }
     ]
   },
@@ -24476,7 +24478,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -24491,7 +24493,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#VentureCapital"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -24717,8 +24721,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "NHTSA's opening filing on comma.ai is worth reading directly: preliminary data suggests the aftermarket driving-assist system may not have adequately detected stopped vehicles in 5 crashes, 2 of them fatal. One crash involved a modified third-party fork of the software. This is the first federal test of driver-installed (not automaker-shipped) driving-assist hardware.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddq16jdGxKI",
+        "remote_id": "18107292968350468",
+        "posted_at": "2026-09-24T12:04:29Z"
       },
       {
         "platform": "bluesky",
@@ -24727,8 +24733,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#NHTSA",
           "#AutoSafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwb7not4h42t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwb7not4h42t",
+        "posted_at": "2026-09-24T12:04:36Z"
       }
     ]
   }
