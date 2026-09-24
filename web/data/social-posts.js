@@ -24766,9 +24766,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Gallup's first 37-country AI survey: the US is one of only 3 countries (with Egypt and the State of Palestine) where worry about AI outweighs hope. 74% of AI-aware Americans feel worried. Singapore: 77% optimistic. China: 93%.",
         "reply_copy": "The part that surprised us -- worry doesn't rise with daily use:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Gallup"],
+        "hashtags": [
+          "#AI",
+          "#Gallup"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -24777,21 +24782,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The non-obvious part of Gallup's new AI survey: American worry about AI is actually LOWEST among daily users (68%) and highest among occasional users (80%). Familiarity doesn't cleanly breed comfort -- or dread.",
         "reply_copy": "Full breakdown, including the Gallup-Microsoft funding note most coverage skipped:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#DataViz"],
+        "hashtags": [
+          "#AI",
+          "#DataViz"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Gallup and Microsoft published the first results of a planned 140-country AI survey on Sept. 22. The US is one of only three countries -- alongside Egypt and the State of Palestine -- where worry about AI outweighs hope. 74% of AI-aware Americans feel worried; only 35% expect AI to mostly help the country. Compare that to Singapore (77% optimistic) and China (93%). The twist: American worry doesn't rise with use -- it's actually lowest among daily users (68%) and highest among occasional ones (80%).",
-        "hashtags": ["#AI", "#Gallup", "#Survey", "#DataViz", "#TechNews", "#PublicOpinion"],
+        "hashtags": [
+          "#AI",
+          "#Gallup",
+          "#Survey",
+          "#DataViz",
+          "#TechNews",
+          "#PublicOpinion"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "A new Gallup/Microsoft survey of 37 countries found the US is one of only three where worry about AI outweighs hope. 74% of AI-aware Americans feel worried; just 35% expect AI to mostly help the country -- versus 77% in Singapore and 93% in China. The most interesting wrinkle: worry among Americans doesn't climb with daily use, it's actually lowest there.",
-        "hashtags": ["#AI", "#Survey"],
+        "hashtags": [
+          "#AI",
+          "#Survey"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -24804,9 +24822,14 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "New Gallup/Microsoft survey, 37 countries: the US is one of only 3 where AI worry outweighs hope. 74% of AI-aware Americans worried, only 35% optimistic -- vs. 77% in Singapore, 93% in China. Oddly, worry is lowest among daily US users, highest among occasional ones.",
-        "hashtags": ["#AI", "#Gallup"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Gallup"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwbkwoueu222",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwbkwoueu222",
+        "posted_at": "2026-09-24T15:26:30Z"
       }
     ]
   },
@@ -24836,9 +24859,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Anthropic will now let vetted biology labs turn off Claude's safety refusals -- for up to 6 months at a time, on a single project. Real-time blocking is replaced by 30-day after-the-fact monitoring. Anthropic still decides who's \"vetted.\"",
         "reply_copy": "Why this follows a Sept. 15 disclosure that split biosecurity researchers:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#AIsafety"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIsafety"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -24847,21 +24875,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "A biosecurity researcher's actual complaint: even comparing two Ebola genomes -- routine virology -- got blocked by Claude's blanket safeguards. Anthropic's new program fixes exactly that case. It doesn't answer who checks Anthropic's own vetting calls.",
         "reply_copy": "Full story, incl. Anthropic's own Mythos export-control history:",
         "link_in_reply": true,
-        "hashtags": ["#Anthropic", "#Biosecurity"],
+        "hashtags": [
+          "#Anthropic",
+          "#Biosecurity"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Anthropic opened its Life Sciences Verification Program to beta applicants on Sept. 17. Vetted teams get a Standard grant (whole team, a year, refined-but-present safeguards) or a High-risk grant (one project, 6 months, every life-science safeguard removed on Opus 5 and Sonnet 5). Real-time blocking is replaced by 30-day offline monitoring. It follows a Sept. 15 disclosure of 5 misuse attempts that split biosecurity experts -- some said blanket safeguards were also blocking routine virology, like comparing two Ebola genomes. This program answers that complaint. It doesn't answer who checks Anthropic's own calls about who's trustworthy.",
-        "hashtags": ["#Anthropic", "#AIsafety", "#Biosecurity", "#Biotech", "#AIpolicy"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIsafety",
+          "#Biosecurity",
+          "#Biotech",
+          "#AIpolicy"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Anthropic's new Life Sciences Verification Program lets vetted biology researchers get past Claude's standard safety refusals -- a Standard grant for a whole team (annual), or a High-risk grant for one project (6 months, every biology safeguard removed on Opus 5 and Sonnet 5). Real-time blocking becomes 30-day after-the-fact monitoring instead. It's a real fix for legitimate labs that got blocked doing routine virology -- but Anthropic alone still decides who counts as vetted.",
-        "hashtags": ["#Anthropic", "#AIsafety"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIsafety"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -24874,7 +24914,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Anthropic will let vetted biology labs turn off Claude's safety refusals for up to 6 months per project. Real-time blocking -> 30-day after-the-fact monitoring. Fixes a real complaint (routine virology getting blocked) but Anthropic alone still decides who's vetted.",
-        "hashtags": ["#Anthropic", "#AIsafety"],
+        "hashtags": [
+          "#Anthropic",
+          "#AIsafety"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -24906,21 +24949,34 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Meta's Muse agent added PayPal checkout worldwide on Sept. 22 -- a day after Shopify's Shop Pay, a week after Amazon blocked it from buying on Amazon.com. Third payment rail in 2 weeks. Still no usage numbers from Meta.",
         "reply_copy": "The timeline:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#PayPal"],
+        "hashtags": [
+          "#Meta",
+          "#PayPal"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Meta's Muse AI agent can now check out through PayPal across its entire global merchant network -- announced Sept. 22, a day after Shopify's Shop Pay integration, and a week after Amazon started blocking Muse from Amazon.com over undisclosed concerns. It's Muse's third payment rail in two weeks, after launching on Stripe Link Sept. 8. PayPal shares remain down over 20% this year -- analysts call this a small positive, not a turning point. Meta still hasn't published any completion or usage numbers.",
-        "hashtags": ["#Meta", "#PayPal", "#AIagents", "#Shopify", "#Amazon", "#Fintech"],
+        "hashtags": [
+          "#Meta",
+          "#PayPal",
+          "#AIagents",
+          "#Shopify",
+          "#Amazon",
+          "#Fintech"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Meta's Muse AI shopping agent added PayPal checkout across PayPal's global merchant network on Sept. 22 -- a day after Shopify and a week after Amazon blocked the agent from buying on Amazon.com. It's Muse's third payment rail in two weeks. Meta still hasn't said how many people actually complete a purchase through Muse.",
-        "hashtags": ["#Meta", "#AI"],
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -24933,11 +24989,13 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Meta's Muse added PayPal checkout worldwide Sept. 22 -- a day after Shopify, a week after Amazon blocked it. Third payment rail in 2 weeks. Meta still hasn't shared a single usage number for any of them.",
-        "hashtags": ["#Meta", "#PayPal"],
+        "hashtags": [
+          "#Meta",
+          "#PayPal"
+        ],
         "status": "ready",
         "post_url": null
       }
     ]
   }
-
 ];
