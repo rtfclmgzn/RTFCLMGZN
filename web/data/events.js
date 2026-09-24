@@ -8,13 +8,13 @@
    anything past. `sort` is an approximate ISO start for ordering only.
    ============================================================ */
 window.RTFC_EVENTS = {
-  updated: "2026-09-23",
-  checkedAt: "2026-09-23T00:00:00Z",
+  updated: "2026-09-24",
+  checkedAt: "2026-09-24T00:00:00Z",
   note: "Curated by the newsroom. Dates are approximate windows — confirm exact times on each official page.",
   items: [
     { name:"Meta Connect", org:"Meta", when:"Sept 23-24, 2026", sort:"2026-09-23",
       type:"Keynote", place:"Menlo Park + streamed", tag:"products",
-      status:"soon", checkedAt:"2026-09-20T00:00:00Z",
+      status:"live", checkedAt:"2026-09-24T00:00:00Z", liveUrl:"https://www.meta.com/connect/",
       url:"https://www.meta.com/connect/", blurb:"Llama, AI glasses and the next hardware push — usually livestreamed." },
     { name:"OpenAI DevDay", org:"OpenAI", when:"Sept 29, 2026", sort:"2026-09-29",
       type:"Developer", place:"San Francisco + streamed", tag:"labs",
