@@ -1045,6 +1045,18 @@ this order, and mark it done here.
    runner. No new `primer-issue.js`-only candidate found this cycle; did not
    force one. Same next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-24T00:33 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Mirendil's $1B/$5B-valuation
+   funding talks, Alibaba's Zhenwu V900 chip unveiling, and NHTSA's
+   PE26007 investigation into comma.ai's aftermarket driving-assist
+   devices) plus the full §4b/§4c/§4d passes were already the required
+   work; guide cadence read 3 days (a guide published 2026-09-21), so §3d
+   needed no action. §3c backfill search re-ran (`component_audit`) and
+   found zero articles below their format's component floor -- still
+   empty. No new `primer-issue.js`-only candidate found this cycle; did
+   not force one. Same next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1309,6 +1321,12 @@ articles (the US-China AI dialogue proposal ahead of the Trump-Xi summit, OpenAI
 safety-review expansion vs. Anthropic's Accenture deal, and a16z's Horowitz Andreessen Academy) plus
 the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still
 returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item
+worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-24T00:33 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Mirendil's funding talks, Alibaba's Zhenwu V900 chip, and the comma.ai NHTSA investigation)
+plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"`
+still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item
 worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
