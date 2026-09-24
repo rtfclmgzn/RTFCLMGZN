@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-706", date:"2026-09-24",
+    source:{ name:"Amazon", handle:"amazon", platform:"web", kind:"lab" },
+    text:"Amazon opened Seller Central APIs to outside AI agents this week, launching a US beta plugin that lets sellers manage inventory, prices, listings and analytics through Anthropic's Claude or Amazon's own Quick assistant running on Amazon Bedrock, combining Amazon Nova and Claude. The move comes the same week Amazon blocked Meta's Muse from accessing its shopping experience -- marking a contrast between opening APIs to Claude while excluding Meta's agent, reflecting broader tensions over which autonomous systems get platform access.",
+    why:"A major retailer explicitly choosing to grant one frontier lab's agent (Claude) deep business-system access while simultaneously blocking another's (Meta's Muse) signals that AI-agent platform governance is now a deliberate, competitive choice rather than a universal technical boundary -- worth tracking how other platforms navigate the same choice.",
+    heat:44, topics:["amazon","claude","ai agents","seller central","e-commerce","platform access","anthropic"],
+    url:"https://www.aboutamazon.com/news/retail/amazon-seller-central-ai-agents" },
 { id:"bz-705", date:"2026-09-24",
     source:{ name:"Patrick Wardle / Meta", handle:"Meta", platform:"web", kind:"lab" },
     text:"Security researcher Patrick Wardle published proof-of-concept code for a Muse-for-Mac zero-day he dubbed 'not-a-mused': an undocumented setting could be redirected by any unprivileged local process, sending a user's dictated audio to an attacker's server instead of Meta's and enabling prompt injection and credential theft. Wardle's research shows an attacker could trigger over 50 sensitive agent commands this way. Meta shipped a hot-fix within 24 hours, just before its Connect 2026 keynote.",
