@@ -24739,5 +24739,205 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-24T12:04:36Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-gallup-ai-survey-us-worry-global-optimism-gap",
+    "ts": "2026-09-24T15:04:11Z",
+    "export": {
+      "article_id": "newsroom-gallup-ai-survey-us-worry-global-optimism-gap",
+      "url": "https://rtfclmgzn.com/article/gallup-ai-survey-us-worry-global-optimism-gap",
+      "headline": "The US is one of only three countries where Gallup's new global AI survey found more worry than hope",
+      "hook": "Gallup's first 37-country AI survey found the US, Egypt and the State of Palestine are the only countries where worry about AI outweighs hope -- and American worry actually peaks among occasional users, not daily ones.",
+      "key_facts": [
+        "74% of AI-aware Americans feel worried about AI; only 35% expect it to mostly help the country.",
+        "Singapore (77%) and China (93%) report far higher optimism than the US in the same survey.",
+        "US worry peaks among occasional users (80%), not daily users (68%) or people who've never tried AI (74%)."
+      ],
+      "tone": "data-led, reconciles conflicting framings",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/gallup-ai-survey-us-worry-global-optimism-gap.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Gallup's first 37-country AI survey: the US is one of only 3 countries (with Egypt and the State of Palestine) where worry about AI outweighs hope. 74% of AI-aware Americans feel worried. Singapore: 77% optimistic. China: 93%.",
+        "reply_copy": "The part that surprised us -- worry doesn't rise with daily use:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#Gallup"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-24T20:04:11Z",
+        "copy": "The non-obvious part of Gallup's new AI survey: American worry about AI is actually LOWEST among daily users (68%) and highest among occasional users (80%). Familiarity doesn't cleanly breed comfort -- or dread.",
+        "reply_copy": "Full breakdown, including the Gallup-Microsoft funding note most coverage skipped:",
+        "link_in_reply": true,
+        "hashtags": ["#AI", "#DataViz"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Gallup and Microsoft published the first results of a planned 140-country AI survey on Sept. 22. The US is one of only three countries -- alongside Egypt and the State of Palestine -- where worry about AI outweighs hope. 74% of AI-aware Americans feel worried; only 35% expect AI to mostly help the country. Compare that to Singapore (77% optimistic) and China (93%). The twist: American worry doesn't rise with use -- it's actually lowest among daily users (68%) and highest among occasional ones (80%).",
+        "hashtags": ["#AI", "#Gallup", "#Survey", "#DataViz", "#TechNews", "#PublicOpinion"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A new Gallup/Microsoft survey of 37 countries found the US is one of only three where worry about AI outweighs hope. 74% of AI-aware Americans feel worried; just 35% expect AI to mostly help the country -- versus 77% in Singapore and 93% in China. The most interesting wrinkle: worry among Americans doesn't climb with daily use, it's actually lowest there.",
+        "hashtags": ["#AI", "#Survey"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gallup and Microsoft's first 37-country AI survey: the US, Egypt and the State of Palestine are the only countries where worry outweighs hope. 74% of AI-aware Americans are worried; 35% think AI will mostly help the country. Singapore's at 77%, China's at 93%. And American worry is lowest among daily users, not highest.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "New Gallup/Microsoft survey, 37 countries: the US is one of only 3 where AI worry outweighs hope. 74% of AI-aware Americans worried, only 35% optimistic -- vs. 77% in Singapore, 93% in China. Oddly, worry is lowest among daily US users, highest among occasional ones.",
+        "hashtags": ["#AI", "#Gallup"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-life-sciences-verification-program-biosafety",
+    "ts": "2026-09-24T15:04:11Z",
+    "export": {
+      "article_id": "newsroom-anthropic-life-sciences-verification-program-biosafety",
+      "url": "https://rtfclmgzn.com/article/anthropic-life-sciences-verification-program-biosafety",
+      "headline": "Anthropic will let vetted biology researchers turn off Claude's safety refusals for up to six months at a time",
+      "hook": "Anthropic's new Life Sciences Verification Program swaps real-time refusals for after-the-fact monitoring -- but the company, not a regulator, still decides who counts as vetted.",
+      "key_facts": [
+        "Standard grants: team-wide, annual, refined-but-present biology classifiers.",
+        "High-risk grants: single project, 6-month, all life-science safeguards removed on Opus 5 and Sonnet 5.",
+        "Real-time blocking is replaced by 30-day offline monitoring for misuse patterns."
+      ],
+      "tone": "sourced-neutral, includes a real counter-argument",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/anthropic-life-sciences-verification-program-biosafety.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic will now let vetted biology labs turn off Claude's safety refusals -- for up to 6 months at a time, on a single project. Real-time blocking is replaced by 30-day after-the-fact monitoring. Anthropic still decides who's \"vetted.\"",
+        "reply_copy": "Why this follows a Sept. 15 disclosure that split biosecurity researchers:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#AIsafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-24T20:04:11Z",
+        "copy": "A biosecurity researcher's actual complaint: even comparing two Ebola genomes -- routine virology -- got blocked by Claude's blanket safeguards. Anthropic's new program fixes exactly that case. It doesn't answer who checks Anthropic's own vetting calls.",
+        "reply_copy": "Full story, incl. Anthropic's own Mythos export-control history:",
+        "link_in_reply": true,
+        "hashtags": ["#Anthropic", "#Biosecurity"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic opened its Life Sciences Verification Program to beta applicants on Sept. 17. Vetted teams get a Standard grant (whole team, a year, refined-but-present safeguards) or a High-risk grant (one project, 6 months, every life-science safeguard removed on Opus 5 and Sonnet 5). Real-time blocking is replaced by 30-day offline monitoring. It follows a Sept. 15 disclosure of 5 misuse attempts that split biosecurity experts -- some said blanket safeguards were also blocking routine virology, like comparing two Ebola genomes. This program answers that complaint. It doesn't answer who checks Anthropic's own calls about who's trustworthy.",
+        "hashtags": ["#Anthropic", "#AIsafety", "#Biosecurity", "#Biotech", "#AIpolicy"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic's new Life Sciences Verification Program lets vetted biology researchers get past Claude's standard safety refusals -- a Standard grant for a whole team (annual), or a High-risk grant for one project (6 months, every biology safeguard removed on Opus 5 and Sonnet 5). Real-time blocking becomes 30-day after-the-fact monitoring instead. It's a real fix for legitimate labs that got blocked doing routine virology -- but Anthropic alone still decides who counts as vetted.",
+        "hashtags": ["#Anthropic", "#AIsafety"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's Life Sciences Verification Program: vetted labs can now get a 6-month grant that removes every biology safeguard on Opus 5 and Sonnet 5 for one project, or a team-wide annual grant with lighter restrictions. Real-time refusals become 30-day offline monitoring. Follows a Sept. 15 disclosure that split biosecurity experts -- some said the old blanket safeguards were blocking routine virology too.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic will let vetted biology labs turn off Claude's safety refusals for up to 6 months per project. Real-time blocking -> 30-day after-the-fact monitoring. Fixes a real complaint (routine virology getting blocked) but Anthropic alone still decides who's vetted.",
+        "hashtags": ["#Anthropic", "#AIsafety"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-meta-muse-paypal-checkout-global-merchants",
+    "ts": "2026-09-24T15:04:11Z",
+    "export": {
+      "article_id": "newsroom-meta-muse-paypal-checkout-global-merchants",
+      "url": "https://rtfclmgzn.com/article/meta-muse-paypal-checkout-global-merchants",
+      "headline": "Meta's Muse agent added PayPal checkout worldwide -- a day after Shopify, a week after Amazon blocked it",
+      "hook": "Muse added its third checkout rail in two weeks -- PayPal, worldwide -- one day after Shopify and one week after Amazon shut the agent out entirely.",
+      "key_facts": [
+        "PayPal added checkout for Meta's Muse across its global merchant network on Sept. 22.",
+        "Shopify added Muse checkout Sept. 21, the same day Amazon blocked Muse purchases.",
+        "Meta hasn't disclosed how many Muse users actually complete a checkout on any platform."
+      ],
+      "tone": "brisk, skeptical of the scale narrative",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/meta-muse-paypal-checkout-global-merchants.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Meta's Muse agent added PayPal checkout worldwide on Sept. 22 -- a day after Shopify's Shop Pay, a week after Amazon blocked it from buying on Amazon.com. Third payment rail in 2 weeks. Still no usage numbers from Meta.",
+        "reply_copy": "The timeline:",
+        "link_in_reply": true,
+        "hashtags": ["#Meta", "#PayPal"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Meta's Muse AI agent can now check out through PayPal across its entire global merchant network -- announced Sept. 22, a day after Shopify's Shop Pay integration, and a week after Amazon started blocking Muse from Amazon.com over undisclosed concerns. It's Muse's third payment rail in two weeks, after launching on Stripe Link Sept. 8. PayPal shares remain down over 20% this year -- analysts call this a small positive, not a turning point. Meta still hasn't published any completion or usage numbers.",
+        "hashtags": ["#Meta", "#PayPal", "#AIagents", "#Shopify", "#Amazon", "#Fintech"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Meta's Muse AI shopping agent added PayPal checkout across PayPal's global merchant network on Sept. 22 -- a day after Shopify and a week after Amazon blocked the agent from buying on Amazon.com. It's Muse's third payment rail in two weeks. Meta still hasn't said how many people actually complete a purchase through Muse.",
+        "hashtags": ["#Meta", "#AI"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Muse's checkout build-out, dated: Sept. 8 Stripe Link launch, Sept. 18 Connector Platform opens, Sept. 21 Shopify's Shop Pay AND Amazon's block (same day), Sept. 22 PayPal goes global. Three rails in two weeks. Meta has published zero usage numbers for any of them.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Meta's Muse added PayPal checkout worldwide Sept. 22 -- a day after Shopify, a week after Amazon blocked it. Third payment rail in 2 weeks. Meta still hasn't shared a single usage number for any of them.",
+        "hashtags": ["#Meta", "#PayPal"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
+
 ];

@@ -4598,7 +4598,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-57-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "anthropic-life-sciences-verification-program-biosafety",
+     "used_at": "2026-09-24"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-08",
