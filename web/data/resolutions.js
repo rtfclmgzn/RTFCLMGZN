@@ -229,6 +229,18 @@ window.RTFC_RESOLUTIONS = {
       outcome:"refuted",
       note:"Moonshot AI's Series F round closed on July 29, 2026 at $35 billion valuation, falling short of the August $50 billion target the watch item tracked. The watch stated 'Watch whether the August round actually prices at $50 billion'; instead the round priced at $35 billion, a $3.5 billion raise that valued the company below the target.",
       label:"Moonshot AI Series F closed at $35B, not $50B",
-      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" }
+      url:"https://www.bloomberg.com/news/articles/2026-07-29/china-s-moonshot-ai-passes-funding-goal-to-hit-35-billion-value" },
+    { key:"papercut-ai-agent-orchestrated-attack-campaign|w|3",
+      at:"2026-09-24T18:00:00Z",
+      outcome:"confirmed",
+      note:"CISA added both PaperCut vulnerabilities (CVE-2026-81578 and CVE-2026-82078) to its Known Exploited Vulnerabilities (KEV) catalog on August 31, 2026, exactly as predicted by the watch item. Both vulnerabilities were actively being exploited in the wild and CISA set a remediation deadline of September 14, 2026 for U.S. federal civilian agencies.",
+      label:"CISA adds PaperCut CVEs to KEV catalog (August 31, 2026)",
+      url:"https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog" },
+    { key:"grok-4-7-ships-mid-pack-intelligence-index|w|0",
+      at:"2026-09-24T18:30:00Z",
+      outcome:"expired",
+      note:"Grok 4.8's release deadline has passed with no official launch. Elon Musk stated on September 13 that training would finish 'this week' (September 13-19), with historical release patterns suggesting October-November 2026 window. As of September 24, 2026, no Grok 4.8 release or API availability has been announced, and xAI's newest released model remains Grok 4.7 (September 21). The watch item's resolver 'Whether Grok 4.8 actually ships on Musk's stated timeline' has expired without positive resolution.",
+      label:"Grok 4.8 release deadline expired (no announcement as of Sept 24)",
+      url:"https://x.ai/news" }
   ]
 };

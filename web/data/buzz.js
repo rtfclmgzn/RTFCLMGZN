@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-698", date:"2026-09-24",
+    source:{ name:"Anthropic", handle:"Anthropic", platform:"web", kind:"lab" },
+    text:"Anthropic reported on September 18 that Claude is now leading 26 percent of the company's model research and development, completing most tasks 'end-to-end from a high-level prompt' while remaining under human supervision. About 90 percent of Anthropic's R&D is done in collaboration with Claude, handling 'large chunks of work under close human direction.' The benchmark of Claude leading a quarter of R&D was reached in August 2026, up from zero percent in February -- a six-month progression. The company also disclosed ~30,000 agents doing research and engineering work as of August.",
+    why:"A frontier lab's own model becoming the primary engine for developing its successor -- reaching 26% autonomy in six months, starting from zero -- is a concrete data point on the pace of recursive capability improvement. The structured disclosure of percentages and supervision levels provides a measurable baseline for tracking this progression.",
+    heat:52, topics:["anthropic","claude","model development","recursive improvement","autonomous agents","research"],
+    url:"https://www.nbcnews.com/tech/tech-news/anthropic-says-model-claude-helping-build-next-version-rcna598494" },
+{ id:"bz-697", date:"2026-09-24",
+    source:{ name:"Cisco Talos", handle:"talosintelligence", platform:"web", kind:"news" },
+    text:"Cisco Talos disclosed CLOSEDQUORUM, a 16.4MB Windows implant that delegates tactical command-and-control decisions to a consensus vote of four commercial LLMs (DeepSeek, Qwen, Mistral, Google Gemini). The implant requires no human operator: an attacker deploys it once and the LLM panel manages the campaign autonomously, avoiding human working-hours limitations. Talos released CAIRN, an open-source toolkit for hunting AI-integrated malware, and describes the progression as an 'autonomy escalation arc' from LLM as feature to fully autonomous multi-model orchestrator within a single calendar year.",
+    why:"An autonomous AI-powered command-and-control implant that actually exists in the wild represents a concrete cross-over moment: frontier LLM capabilities are now being operationalized by attackers as fully autonomous infrastructure, not just acceleration for human-driven campaigns. The multi-model consensus design specifically avoids single-LLM failure modes.",
+    heat:71, topics:["cisco talos","malware","ai autonomous systems","cybersecurity","command and control","closedquorum"],
+    url:"https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/" },
 { id:"bz-696", date:"2026-09-23",
     source:{ name:"Qualcomm", handle:"Qualcomm", platform:"web", kind:"lab" },
     text:"Qualcomm launched the Snapdragon 8 Elite Gen 6 and Extreme Gen 6 at its Snapdragon Summit on Sept. 23 -- its first 2nm mobile chips, both hitting 5GHz. The Extreme tier can run a mixture-of-experts model exceeding 30 billion total parameters entirely on-device, activating roughly 3 billion per inference step while the rest sits on flash storage.",
