@@ -24443,276 +24443,293 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
-  }
-,
+  },
   {
-  "article_id": "newsroom-mirendil-ai-research-startup-5-billion-valuation-talks",
-  "ts": "2026-09-24T00:33:50Z",
-  "export": {
     "article_id": "newsroom-mirendil-ai-research-startup-5-billion-valuation-talks",
-    "url": "https://rtfclmgzn.com/article/mirendil-ai-research-startup-5-billion-valuation-talks",
-    "headline": "Mirendil is in talks to raise up to $1 billion at a $5 billion valuation -- the AI-research startup still has no product, three months after its $200 million seed",
-    "hook": "A 20-person startup with zero shipped product is reportedly negotiating to 5x its valuation to $5B in three months, on two ex-Anthropic researchers' AI-research thesis alone.",
-    "key_facts": [
-      "Mirendil raised $200M at a $1B valuation in June 2026; talks now target up to $1B more at a $5B valuation.",
-      "Founders Behnam Neyshabur and Harsh Mehta left Anthropic in December 2025 to build it.",
-      "The company has no shipped product and no disclosed revenue as of this round."
-    ],
-    "tone": "skeptical, numbers-first",
-    "persona": "kian-farzan",
-    "section": "Markets",
-    "primary_image": "assets/img/newsroom/mirendil-ai-research-startup-5-billion-valuation-talks.jpg",
-    "disclaimer": "not-financial-advice"
+    "ts": "2026-09-24T00:33:50Z",
+    "export": {
+      "article_id": "newsroom-mirendil-ai-research-startup-5-billion-valuation-talks",
+      "url": "https://rtfclmgzn.com/article/mirendil-ai-research-startup-5-billion-valuation-talks",
+      "headline": "Mirendil is in talks to raise up to $1 billion at a $5 billion valuation -- the AI-research startup still has no product, three months after its $200 million seed",
+      "hook": "A 20-person startup with zero shipped product is reportedly negotiating to 5x its valuation to $5B in three months, on two ex-Anthropic researchers' AI-research thesis alone.",
+      "key_facts": [
+        "Mirendil raised $200M at a $1B valuation in June 2026; talks now target up to $1B more at a $5B valuation.",
+        "Founders Behnam Neyshabur and Harsh Mehta left Anthropic in December 2025 to build it.",
+        "The company has no shipped product and no disclosed revenue as of this round."
+      ],
+      "tone": "skeptical, numbers-first",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/mirendil-ai-research-startup-5-billion-valuation-talks.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A 20-person AI startup with zero shipped product is reportedly in talks to 5x its valuation to $5B in 3 months. The pitch: AI that does AI research. The résumé: two ex-Anthropic researchers.",
+        "reply_copy": "The math, the mission, and what's still unconfirmed:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Mirendil",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-24T05:33:50Z",
+        "copy": "$5,000,000,000 valuation ÷ 20 employees = $250M per person -- before a dollar of revenue. That's the round Mirendil is reportedly negotiating right now.",
+        "reply_copy": "The full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Mirendil",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Mirendil is in talks to raise up to $1 billion at a $5 billion valuation -- five times what it was worth three months ago. The catch: the 20-person startup has no shipped product and no disclosed revenue. Founders Behnam Neyshabur and Harsh Mehta left Anthropic in December 2025 to build AI systems that plan, run and iterate on their own AI research. Kleiner Perkins is negotiating to lead; Andreessen Horowitz, which co-led the June seed, is in talks to join again. The whole valuation rests on two résumés and a thesis.",
+        "hashtags": [
+          "#Mirendil",
+          "#AI",
+          "#VentureCapital",
+          "#Anthropic",
+          "#Startup",
+          "#SiliconValley",
+          "#AIResearch"
+        ],
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdqGiB8lGAx/",
+        "remote_id": "18626962108030640",
+        "posted_at": "2026-09-24T05:10:28Z"
+      },
+      {
+        "platform": "facebook",
+        "copy": "Mirendil, founded by two ex-Anthropic researchers, is reportedly in talks to raise up to $1 billion at a $5 billion valuation -- five times its price three months ago. The startup still has no shipped product and no disclosed revenue; the bet is entirely on a thesis that AI can do its own research.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122122843059396947",
+        "remote_id": "1238977099292018_122122843059396947",
+        "posted_at": "2026-09-24T05:10:36Z"
+      },
+      {
+        "platform": "threads",
+        "copy": "Mirendil: $200M seed at $1B in June, now reportedly negotiating up to $1B more at $5B -- three months later, still no product, still no revenue. The pitch is AI systems that do AI research. Whether that's an early correct bet or a valuation priced on two résumés is the actual open question.",
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdqGk7OkUiB",
+        "remote_id": "18186332473413334",
+        "posted_at": "2026-09-24T05:10:50Z"
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Mirendil: no product, no revenue, reportedly 5x-ing its valuation to $5B in three months on two ex-Anthropic researchers' AI-research thesis. Kleiner Perkins is negotiating to lead.",
+        "hashtags": [
+          "#Mirendil",
+          "#AI",
+          "#VC"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwaik2hfzm2r",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwaik2hfzm2r",
+        "posted_at": "2026-09-24T05:10:58Z"
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "A 20-person AI startup with zero shipped product is reportedly in talks to 5x its valuation to $5B in 3 months. The pitch: AI that does AI research. The résumé: two ex-Anthropic researchers.",
-      "reply_copy": "The math, the mission, and what's still unconfirmed:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Mirendil",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-24T05:33:50Z",
-      "copy": "$5,000,000,000 valuation ÷ 20 employees = $250M per person -- before a dollar of revenue. That's the round Mirendil is reportedly negotiating right now.",
-      "reply_copy": "The full story:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Mirendil",
-        "#VentureCapital"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Mirendil is in talks to raise up to $1 billion at a $5 billion valuation -- five times what it was worth three months ago. The catch: the 20-person startup has no shipped product and no disclosed revenue. Founders Behnam Neyshabur and Harsh Mehta left Anthropic in December 2025 to build AI systems that plan, run and iterate on their own AI research. Kleiner Perkins is negotiating to lead; Andreessen Horowitz, which co-led the June seed, is in talks to join again. The whole valuation rests on two résumés and a thesis.",
-      "hashtags": [
-        "#Mirendil",
-        "#AI",
-        "#VentureCapital",
-        "#Anthropic",
-        "#Startup",
-        "#SiliconValley",
-        "#AIResearch"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Mirendil, founded by two ex-Anthropic researchers, is reportedly in talks to raise up to $1 billion at a $5 billion valuation -- five times its price three months ago. The startup still has no shipped product and no disclosed revenue; the bet is entirely on a thesis that AI can do its own research.",
-      "hashtags": [
-        "#AI",
-        "#VentureCapital"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Mirendil: $200M seed at $1B in June, now reportedly negotiating up to $1B more at $5B -- three months later, still no product, still no revenue. The pitch is AI systems that do AI research. Whether that's an early correct bet or a valuation priced on two résumés is the actual open question.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Mirendil: no product, no revenue, reportedly 5x-ing its valuation to $5B in three months on two ex-Anthropic researchers' AI-research thesis. Kleiner Perkins is negotiating to lead.",
-      "hashtags": [
-        "#Mirendil",
-        "#AI",
-        "#VC"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
   {
-  "article_id": "newsroom-alibaba-zhenwu-v900-ai-chip-china-export-controls",
-  "ts": "2026-09-24T00:33:50Z",
-  "export": {
     "article_id": "newsroom-alibaba-zhenwu-v900-ai-chip-china-export-controls",
-    "url": "https://rtfclmgzn.com/article/alibaba-zhenwu-v900-ai-chip-china-export-controls",
-    "headline": "Alibaba unveils the chip it calls China's most powerful -- built entirely around the gap Washington's export controls left open",
-    "hook": "Alibaba just unveiled a chip built entirely around the gap US export controls left in China's access to Nvidia -- claiming 3x the performance and clusters up to 500,000 chips.",
-    "key_facts": [
-      "The Zhenwu V900 claims 3x the performance of its predecessor; mass production targets Q1 2027.",
-      "Alibaba also plans 20 gigawatts of AI data-center capacity by 2032 and Qwen models up to 10 trillion parameters.",
-      "Alibaba shares jumped 4% on the news; rival Baidu's stock barely moved."
-    ],
-    "tone": "analytical, specs-vs-claims skeptical",
-    "persona": "jin-park",
-    "section": "Compute",
-    "primary_image": "assets/img/newsroom/alibaba-zhenwu-v900-ai-chip-china-export-controls.jpg",
-    "disclaimer": "none"
+    "ts": "2026-09-24T00:33:50Z",
+    "export": {
+      "article_id": "newsroom-alibaba-zhenwu-v900-ai-chip-china-export-controls",
+      "url": "https://rtfclmgzn.com/article/alibaba-zhenwu-v900-ai-chip-china-export-controls",
+      "headline": "Alibaba unveils the chip it calls China's most powerful -- built entirely around the gap Washington's export controls left open",
+      "hook": "Alibaba just unveiled a chip built entirely around the gap US export controls left in China's access to Nvidia -- claiming 3x the performance and clusters up to 500,000 chips.",
+      "key_facts": [
+        "The Zhenwu V900 claims 3x the performance of its predecessor; mass production targets Q1 2027.",
+        "Alibaba also plans 20 gigawatts of AI data-center capacity by 2032 and Qwen models up to 10 trillion parameters.",
+        "Alibaba shares jumped 4% on the news; rival Baidu's stock barely moved."
+      ],
+      "tone": "analytical, specs-vs-claims skeptical",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/alibaba-zhenwu-v900-ai-chip-china-export-controls.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Alibaba just unveiled the chip it calls China's most powerful AI accelerator -- built entirely around the gap US export controls left in its access to Nvidia. 3x claimed performance, clusters up to 500,000 chips. Mass production: Q1 2027.",
+        "reply_copy": "The specs, the market reaction, and what's still unverified:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Alibaba",
+          "#AIchips"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-24T05:33:50Z",
+        "copy": "Alibaba shares jumped 4% on its new AI chip reveal. Baidu, which also builds its own chips, moved just 0.3%. One analyst's read: 'a bet on a spec sheet, not shipments.'",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Alibaba",
+          "#Baidu"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Alibaba unveiled the Zhenwu V900 on Sept. 22 -- the chip it calls China's most powerful AI accelerator, claiming 3x the performance of its predecessor and clusters scaling up to 500,000 chips. Alongside it: a plan for 20 gigawatts of AI data-center capacity by 2032, and Qwen models scaling past 10 trillion parameters. The chip exists because US export controls keep Nvidia's most advanced accelerators out of China -- it's Alibaba's answer to a gap Washington created. Mass production isn't due until Q1 2027, and none of the performance claims are independently verified yet.",
+        "hashtags": [
+          "#Alibaba",
+          "#AIchips",
+          "#China",
+          "#Nvidia",
+          "#ExportControls",
+          "#Semiconductors",
+          "#Qwen"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Alibaba unveiled the Zhenwu V900 -- the chip it's calling China's most powerful AI accelerator -- claiming 3x the performance of its predecessor and built entirely around the gap left by US export controls on Nvidia's chips. Shares jumped 4%; rival Baidu's barely moved. Mass production is targeted for Q1 2027, and the performance claims are Alibaba's own, not yet independently verified.",
+        "hashtags": [
+          "#AI",
+          "#Semiconductors"
+        ],
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122122843617396947",
+        "remote_id": "1238977099292018_122122843617396947",
+        "posted_at": "2026-09-24T05:14:39Z"
+      },
+      {
+        "platform": "threads",
+        "copy": "Alibaba's new Zhenwu V900 chip is a direct answer to a policy Washington made: cut off Nvidia's best accelerators, and China builds its own. 3x claimed performance, 500K-chip cluster scaling, mass production Q1 2027. Markets treated it as an Alibaba-specific win -- Baidu's stock barely moved.",
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdqHDTTEaZ1",
+        "remote_id": "18443922112120234",
+        "posted_at": "2026-09-24T05:14:58Z"
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Alibaba's Zhenwu V900: China's answer to the Nvidia gap US export controls created. 3x claimed performance, 500K-chip clusters, Q1 2027 production target. Unverified by anyone but Alibaba so far.",
+        "hashtags": [
+          "#Alibaba",
+          "#AIchips"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwairgb32n2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwairgb32n2t",
+        "posted_at": "2026-09-24T05:15:06Z"
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Alibaba just unveiled the chip it calls China's most powerful AI accelerator -- built entirely around the gap US export controls left in its access to Nvidia. 3x claimed performance, clusters up to 500,000 chips. Mass production: Q1 2027.",
-      "reply_copy": "The specs, the market reaction, and what's still unverified:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Alibaba",
-        "#AIchips"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-24T05:33:50Z",
-      "copy": "Alibaba shares jumped 4% on its new AI chip reveal. Baidu, which also builds its own chips, moved just 0.3%. One analyst's read: 'a bet on a spec sheet, not shipments.'",
-      "reply_copy": "Full breakdown:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Alibaba",
-        "#Baidu"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Alibaba unveiled the Zhenwu V900 on Sept. 22 -- the chip it calls China's most powerful AI accelerator, claiming 3x the performance of its predecessor and clusters scaling up to 500,000 chips. Alongside it: a plan for 20 gigawatts of AI data-center capacity by 2032, and Qwen models scaling past 10 trillion parameters. The chip exists because US export controls keep Nvidia's most advanced accelerators out of China -- it's Alibaba's answer to a gap Washington created. Mass production isn't due until Q1 2027, and none of the performance claims are independently verified yet.",
-      "hashtags": [
-        "#Alibaba",
-        "#AIchips",
-        "#China",
-        "#Nvidia",
-        "#ExportControls",
-        "#Semiconductors",
-        "#Qwen"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Alibaba unveiled the Zhenwu V900 -- the chip it's calling China's most powerful AI accelerator -- claiming 3x the performance of its predecessor and built entirely around the gap left by US export controls on Nvidia's chips. Shares jumped 4%; rival Baidu's barely moved. Mass production is targeted for Q1 2027, and the performance claims are Alibaba's own, not yet independently verified.",
-      "hashtags": [
-        "#AI",
-        "#Semiconductors"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Alibaba's new Zhenwu V900 chip is a direct answer to a policy Washington made: cut off Nvidia's best accelerators, and China builds its own. 3x claimed performance, 500K-chip cluster scaling, mass production Q1 2027. Markets treated it as an Alibaba-specific win -- Baidu's stock barely moved.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Alibaba's Zhenwu V900: China's answer to the Nvidia gap US export controls created. 3x claimed performance, 500K-chip clusters, Q1 2027 production target. Unverified by anyone but Alibaba so far.",
-      "hashtags": [
-        "#Alibaba",
-        "#AIchips"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
   {
-  "article_id": "newsroom-comma-ai-nhtsa-investigation-openpilot-fatal-crashes",
-  "ts": "2026-09-24T00:33:50Z",
-  "export": {
     "article_id": "newsroom-comma-ai-nhtsa-investigation-openpilot-fatal-crashes",
-    "url": "https://rtfclmgzn.com/article/comma-ai-nhtsa-investigation-openpilot-fatal-crashes",
-    "headline": "NHTSA opens a federal investigation into comma.ai's aftermarket driving-assist devices after five crashes killed three people",
-    "hook": "NHTSA's own filing says comma.ai's hands-off driving devices 'may not have adequately detected or responded' to stopped cars in five crashes that killed three people.",
-    "key_facts": [
-      "NHTSA opened Investigation PE26007 on Sept. 21 after five crashes, two fatal, killing three people.",
-      "An estimated 30,000 vehicles carry comma.ai's devices running openpilot.",
-      "At least one fatal crash involved FrogPilot, a modified third-party fork of comma's software."
-    ],
-    "tone": "sourced-neutral, primary-document-led",
-    "persona": "evelyn-zhao",
-    "section": "Policy",
-    "primary_image": "assets/img/newsroom/comma-ai-nhtsa-investigation-openpilot-fatal-crashes.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "NHTSA's own opening filing: comma.ai's hands-off driving devices \"may not have adequately detected or responded\" to stopped cars in 5 crashes that killed 3 people. First federal probe of aftermarket driver-assist hardware drivers install themselves.",
-      "reply_copy": "What NHTSA's filing actually says:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#NHTSA",
-        "#AI"
+    "ts": "2026-09-24T00:33:50Z",
+    "export": {
+      "article_id": "newsroom-comma-ai-nhtsa-investigation-openpilot-fatal-crashes",
+      "url": "https://rtfclmgzn.com/article/comma-ai-nhtsa-investigation-openpilot-fatal-crashes",
+      "headline": "NHTSA opens a federal investigation into comma.ai's aftermarket driving-assist devices after five crashes killed three people",
+      "hook": "NHTSA's own filing says comma.ai's hands-off driving devices 'may not have adequately detected or responded' to stopped cars in five crashes that killed three people.",
+      "key_facts": [
+        "NHTSA opened Investigation PE26007 on Sept. 21 after five crashes, two fatal, killing three people.",
+        "An estimated 30,000 vehicles carry comma.ai's devices running openpilot.",
+        "At least one fatal crash involved FrogPilot, a modified third-party fork of comma's software."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "sourced-neutral, primary-document-led",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/comma-ai-nhtsa-investigation-openpilot-fatal-crashes.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-24T05:33:50Z",
-      "copy": "One of the fatal crashes NHTSA is investigating involved FrogPilot -- a modified third-party fork of comma.ai's own software. The agency says it will evaluate the shared code between the two.",
-      "reply_copy": "Full story:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#NHTSA",
-        "#SelfDriving"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "NHTSA opened a federal investigation into comma.ai's aftermarket driving-assist devices on Sept. 21, after five crashes -- two fatal, killing three people. The agency's own filing says preliminary data suggests the openpilot system may not have adequately detected stopped vehicles in the same lane. An estimated 30,000 vehicles carry these consumer-installed devices. One fatal crash involved FrogPilot, a modified third-party fork of comma's software -- NHTSA says it will evaluate the shared code. It's the first real federal test of hardware a driver buys and installs themselves, rather than something an automaker ships under its own name.",
-      "hashtags": [
-        "#NHTSA",
-        "#AI",
-        "#SelfDriving",
-        "#AutoSafety",
-        "#Regulation",
-        "#CarTech"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "NHTSA has opened a federal investigation into comma.ai's aftermarket hands-off driving devices after five crashes -- two of them fatal -- killed three people. The agency's own filing says the devices may not have adequately detected stopped vehicles in the same lane. An estimated 30,000 vehicles carry the technology.",
-      "hashtags": [
-        "#AutoSafety",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "NHTSA's opening filing on comma.ai is worth reading directly: preliminary data suggests the aftermarket driving-assist system may not have adequately detected stopped vehicles in 5 crashes, 2 of them fatal. One crash involved a modified third-party fork of the software. This is the first federal test of driver-installed (not automaker-shipped) driving-assist hardware.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "NHTSA opened a federal probe into comma.ai's driving-assist devices after 5 crashes killed 3 people. The agency's own words: the system 'may not have adequately detected or responded' to stopped cars.",
-      "hashtags": [
-        "#NHTSA",
-        "#AutoSafety"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NHTSA's own opening filing: comma.ai's hands-off driving devices \"may not have adequately detected or responded\" to stopped cars in 5 crashes that killed 3 people. First federal probe of aftermarket driver-assist hardware drivers install themselves.",
+        "reply_copy": "What NHTSA's filing actually says:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#NHTSA",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-24T05:33:50Z",
+        "copy": "One of the fatal crashes NHTSA is investigating involved FrogPilot -- a modified third-party fork of comma.ai's own software. The agency says it will evaluate the shared code between the two.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#NHTSA",
+          "#SelfDriving"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "NHTSA opened a federal investigation into comma.ai's aftermarket driving-assist devices on Sept. 21, after five crashes -- two fatal, killing three people. The agency's own filing says preliminary data suggests the openpilot system may not have adequately detected stopped vehicles in the same lane. An estimated 30,000 vehicles carry these consumer-installed devices. One fatal crash involved FrogPilot, a modified third-party fork of comma's software -- NHTSA says it will evaluate the shared code. It's the first real federal test of hardware a driver buys and installs themselves, rather than something an automaker ships under its own name.",
+        "hashtags": [
+          "#NHTSA",
+          "#AI",
+          "#SelfDriving",
+          "#AutoSafety",
+          "#Regulation",
+          "#CarTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "NHTSA has opened a federal investigation into comma.ai's aftermarket hands-off driving devices after five crashes -- two of them fatal -- killed three people. The agency's own filing says the devices may not have adequately detected stopped vehicles in the same lane. An estimated 30,000 vehicles carry the technology.",
+        "hashtags": [
+          "#AutoSafety",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NHTSA's opening filing on comma.ai is worth reading directly: preliminary data suggests the aftermarket driving-assist system may not have adequately detected stopped vehicles in 5 crashes, 2 of them fatal. One crash involved a modified third-party fork of the software. This is the first federal test of driver-installed (not automaker-shipped) driving-assist hardware.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NHTSA opened a federal probe into comma.ai's driving-assist devices after 5 crashes killed 3 people. The agency's own words: the system 'may not have adequately detected or responded' to stopped cars.",
+        "hashtags": [
+          "#NHTSA",
+          "#AutoSafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
