@@ -1057,6 +1057,30 @@ this order, and mark it done here.
    not force one. Same next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-09-24T15:21 cycle) -- re-checked before writing,
+   since this cycle's own three articles (a 37-country Gallup/Microsoft
+   AI-sentiment survey finding the US among the most worried and least
+   optimistic countries polled; Anthropic's Life Sciences Verification
+   Program relaxing biology safeguards for vetted researchers; Meta's
+   Muse agent adding PayPal checkout worldwide) plus the full §4b/§4c/§4d
+   passes were already the required work; guide cadence read 3 days (a
+   guide published 2026-09-21), so §3d needed no action. §3c backfill
+   search re-ran (`component_audit`) and found zero articles below their
+   format's component floor -- still empty. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Same next steps as
+   every entry since 2026-08-30, still open. Separately re-confirmed both
+   §3e/§3f blockers unchanged by reading the files directly:
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads
+   `("web/", "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`newsroom/` -- and therefore this very runbook file and
+   `living-notes.md` -- is ALSO outside that surface, confirmed by reading
+   the check directly; this cycle's own runbook/living-notes edits are
+   being pushed as a separate commit from the article content, matching
+   the pattern already visible in git history for every `runbook:`-prefixed
+   commit since at least 2026-09-16), and `which wrangler` / `env | grep -i
+   cloudflare` both return nothing on this runner; `find . -iname
+   "issue-001.json"` also still returns nothing.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1328,6 +1352,13 @@ articles (Mirendil's funding talks, Alibaba's Zhenwu V900 chip, and the comma.ai
 plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"`
 still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item
 worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-24T15:21 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the Gallup/Microsoft global AI-sentiment survey, Anthropic's Life Sciences Verification
+Program, and Meta Muse's PayPal checkout expansion) plus the full §3c/§4b/§4c/§4d passes were already
+the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
+2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

@@ -707,3 +707,25 @@
   blog, or a prior RECAP fetch), not as a way to browse a docket cold. Flagged in `cycle-runbook.md` §3f
   as a concrete next thing for whoever picks that sourcing queue back up: the same access method should
   work for the Issue 001 court-filing sourcing items once someone has RECAP entry numbers to target.
+- **2026-09-24** (newsroom cycle, ~15:04 UTC): `python3 newsroom/quality/render_smoke.py` (Playwright
+  installed fresh this cycle, `pip install playwright && playwright install chromium`, since it wasn't
+  present) reproducibly failed on two things, both PRE-EXISTING and NOT touched by this cycle's own three
+  new articles (confirmed clean of these two failures both before and after this cycle's edits, ran twice
+  identically): (1) `article jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton — crash
+  screen rendered` (that article was published in an earlier cycle, ~2026-09-11, and has a complete
+  pipeline+gate block, so it isn't the known missing-gate failure mode); (2) `HOSTILE minimal record —
+  still empty after 6200ms` plus `did not render its own headline` -- this is render_smoke's own synthetic
+  fixture that is supposed to prove a minimal record (only the schema's truly-required fields) can't kill
+  the article route, and it's now failing, which is a direct hit against OPERATING_LAW's Law 2 guarantee.
+  Attempted to root-cause both by hand (spinning up the same `SPAHandler` + Playwright directly, bypassing
+  the full `render_smoke.py` run) but the standalone repro was NOT faithful to the real tool: it reported
+  the *same* empty `#app` (27 chars, just the `<!-- rendered by app.js -->` shell comment) for a
+  known-good, currently-passing article (`comma-ai-nhtsa-investigation-openpilot-fatal-crashes`) as well,
+  proving my quick reimplementation was missing some bootstrap step `render_smoke.py`'s actual `main()`
+  does (possibly something route- or navigation-order-dependent, since the real tool visits `/` and other
+  routes before individual articles in one long-lived page session). Do not trust a quick standalone
+  Playwright repro of this tool without first confirming it reproduces a *known-passing* article
+  identically to the full run -- mine didn't, so I stopped rather than report a false root cause. This is
+  a real, twice-reproduced finding via the actual tool, just without a diagnosed cause; worth a dedicated
+  cycle with more browser-debugging time, since the HOSTILE-record failure specifically threatens the
+  exact "one bad record degrades to a placeholder" guarantee the whole guard system exists to provide.
