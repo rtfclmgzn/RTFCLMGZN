@@ -75917,11 +75917,28 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "keyfacts": {
      "title": "The survey, in short",
      "items": [
-      {"label": "Countries surveyed so far", "value": "37 of a planned 140"},
-      {"label": "Sample size", "value": "~1,000 adults per country"},
-      {"label": "Fieldwork window", "value": "April-July 2026", "note": "phone, in-person and online"},
-      {"label": "Margin of error", "value": "±2.2 to ±4.9 points", "note": "95% confidence, varies by country"},
-      {"label": "Partners", "value": "Gallup and Microsoft"}
+      {
+       "label": "Countries surveyed so far",
+       "value": "37 of a planned 140"
+      },
+      {
+       "label": "Sample size",
+       "value": "~1,000 adults per country"
+      },
+      {
+       "label": "Fieldwork window",
+       "value": "April-July 2026",
+       "note": "phone, in-person and online"
+      },
+      {
+       "label": "Margin of error",
+       "value": "±2.2 to ±4.9 points",
+       "note": "95% confidence, varies by country"
+      },
+      {
+       "label": "Partners",
+       "value": "Gallup and Microsoft"
+      }
      ]
     }
    },
@@ -75940,9 +75957,20 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "title": "How much worry about AI changes with how often Americans use it",
      "unit": "% worried",
      "data": [
-      {"label": "Never used AI", "value": 74},
-      {"label": "Less-frequent users", "value": 80, "hi": true, "note": "highest of the three groups"},
-      {"label": "Daily users", "value": 68}
+      {
+       "label": "Never used AI",
+       "value": 74
+      },
+      {
+       "label": "Less-frequent users",
+       "value": 80,
+       "hi": true,
+       "note": "highest of the three groups"
+      },
+      {
+       "label": "Daily users",
+       "value": 68
+      }
      ],
      "source": "Gallup, 'AI Optimism Globally Widespread Despite Uneven Use,' Sept. 22, 2026"
     }
@@ -75975,9 +76003,19 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "title": "Who expects AI to mostly help their own country",
      "unit": "%",
      "data": [
-      {"label": "United States", "value": 35},
-      {"label": "Singapore", "value": 77},
-      {"label": "China", "value": 93, "hi": true}
+      {
+       "label": "United States",
+       "value": 35
+      },
+      {
+       "label": "Singapore",
+       "value": 77
+      },
+      {
+       "label": "China",
+       "value": 93,
+       "hi": true
+      }
      ],
      "source": "Gallup, 'AI Optimism Globally Widespread Despite Uneven Use,' Sept. 22, 2026"
     }
@@ -75992,7 +76030,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "Those two headline facts -- positive emotions outweighing negative ones in 34 of 37 countries, and worry being the most common negative emotion in 35 of 37 -- sound contradictory until the survey design is clear: Gallup asked about each emotion separately, as a yes-or-no, rather than forcing people to pick a single overall feeling. A majority of people in most countries can and do say yes to both \u201cAI makes me curious\u201d and \u201cAI makes me worried\u201d in the same interview. The global median for feeling at least one positive emotion is 72%; the median for feeling worried is 32%. Both are true at once for a large share of respondents -- which is a more accurate picture of how people actually hold two feelings about a new technology than either a pure-optimism or pure-anxiety framing would suggest.",
+    "text": "Those two headline facts -- positive emotions outweighing negative ones in 34 of 37 countries, and worry being the most common negative emotion in 35 of 37 -- sound contradictory until the survey design is clear: Gallup asked about each emotion separately, as a yes-or-no, rather than forcing people to pick a single overall feeling. A majority of people in most countries can and do say yes to both “AI makes me curious” and “AI makes me worried” in the same interview. The global median for feeling at least one positive emotion is 72%; the median for feeling worried is 32%. Both are true at once for a large share of respondents -- which is a more accurate picture of how people actually hold two feelings about a new technology than either a pure-optimism or pure-anxiety framing would suggest.",
     "citation_urls": [
      "https://news.gallup.com/poll/714593/optimism-globally-widespread-despite-uneven.aspx"
     ]
@@ -76042,8 +76080,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "run": "autonomous Claude-runner cycle · 2026-09-24T15:04:11Z"
   },
   "publishedAt": "2026-09-24T15:04:11Z"
- }
-,
+ },
  {
   "slug": "anthropic-life-sciences-verification-program-biosafety",
   "title": "Anthropic will let vetted biology researchers turn off Claude's safety refusals for up to six months at a time",
@@ -76134,12 +76171,32 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "type": "flow",
     "flow": {
      "steps": [
-      {"actor": "Life-science team", "what": "Applies with research credentials, security standards and ethics-oversight documentation"},
-      {"actor": "Anthropic", "what": "Reviews the application", "hi": true},
-      {"actor": "Standard Use Grant", "what": "Team-wide access, renewed annually, refined but present biology classifiers"},
-      {"actor": "High-risk Use Grant", "what": "Single-project access, renewed every 6 months, all life-science safeguards removed on Opus 5 and Sonnet 5"},
-      {"actor": "Mythos 5.1 access", "what": "Remains restricted pending government coordination", "blocked": true},
-      {"actor": "Anthropic monitoring", "what": "Retains 30 days of traffic to flag misuse patterns after the fact"}
+      {
+       "actor": "Life-science team",
+       "what": "Applies with research credentials, security standards and ethics-oversight documentation"
+      },
+      {
+       "actor": "Anthropic",
+       "what": "Reviews the application",
+       "hi": true
+      },
+      {
+       "actor": "Standard Use Grant",
+       "what": "Team-wide access, renewed annually, refined but present biology classifiers"
+      },
+      {
+       "actor": "High-risk Use Grant",
+       "what": "Single-project access, renewed every 6 months, all life-science safeguards removed on Opus 5 and Sonnet 5"
+      },
+      {
+       "actor": "Mythos 5.1 access",
+       "what": "Remains restricted pending government coordination",
+       "blocked": true
+      },
+      {
+       "actor": "Anthropic monitoring",
+       "what": "Retains 30 days of traffic to flag misuse patterns after the fact"
+      }
      ]
     }
    },
@@ -76170,14 +76227,44 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "compare": {
      "title": "The two access tiers",
      "columns": [
-      {"label": "Standard Use Grant"},
-      {"label": "High-risk Use Grant", "hi": true}
+      {
+       "label": "Standard Use Grant"
+      },
+      {
+       "label": "High-risk Use Grant",
+       "hi": true
+      }
      ],
      "rows": [
-      {"label": "Scope", "values": ["Whole team", "Single vetted project"]},
-      {"label": "Renewal", "values": ["Annual", "Every 6 months"]},
-      {"label": "Biology safeguards", "values": ["Refined, more permissive classifiers remain", "All life-sciences-specific safeguards removed"], "note": "cyber and other non-biology protections stay active either way"},
-      {"label": "Models covered", "values": ["Mythos, Opus and Sonnet", "Opus 5 and Sonnet 5 only -- Mythos 5.1 pending"]}
+      {
+       "label": "Scope",
+       "values": [
+        "Whole team",
+        "Single vetted project"
+       ]
+      },
+      {
+       "label": "Renewal",
+       "values": [
+        "Annual",
+        "Every 6 months"
+       ]
+      },
+      {
+       "label": "Biology safeguards",
+       "values": [
+        "Refined, more permissive classifiers remain",
+        "All life-sciences-specific safeguards removed"
+       ],
+       "note": "cyber and other non-biology protections stay active either way"
+      },
+      {
+       "label": "Models covered",
+       "values": [
+        "Mythos, Opus and Sonnet",
+        "Opus 5 and Sonnet 5 only -- Mythos 5.1 pending"
+       ]
+      }
      ],
      "source": "Anthropic, 'Introducing the Life Sciences Verification Program,' Sept. 17, 2026"
     }
@@ -76254,8 +76341,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "run": "autonomous Claude-runner cycle · 2026-09-24T15:04:11Z"
   },
   "publishedAt": "2026-09-24T15:04:11Z"
- }
-,
+ },
  {
   "slug": "meta-muse-paypal-checkout-global-merchants",
   "title": "Meta's Muse agent added PayPal checkout worldwide -- a day after Shopify, a week after Amazon blocked it",
@@ -76320,11 +76406,27 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "type": "timeline",
     "timeline": {
      "items": [
-      {"when": "Sept. 8", "what": "Muse launches with checkout via Stripe Link"},
-      {"when": "Sept. 18", "what": "Meta opens the Muse Connector Platform to outside developers"},
-      {"when": "Sept. 21", "what": "Shopify adds Shop Pay checkout to Muse"},
-      {"when": "Sept. 21", "what": "Amazon blocks Muse from checking out on Amazon.com, citing undisclosed concerns"},
-      {"when": "Sept. 22", "what": "PayPal adds checkout across its global merchant network to Muse", "hi": true}
+      {
+       "when": "Sept. 8",
+       "what": "Muse launches with checkout via Stripe Link"
+      },
+      {
+       "when": "Sept. 18",
+       "what": "Meta opens the Muse Connector Platform to outside developers"
+      },
+      {
+       "when": "Sept. 21",
+       "what": "Shopify adds Shop Pay checkout to Muse"
+      },
+      {
+       "when": "Sept. 21",
+       "what": "Amazon blocks Muse from checking out on Amazon.com, citing undisclosed concerns"
+      },
+      {
+       "when": "Sept. 22",
+       "what": "PayPal adds checkout across its global merchant network to Muse",
+       "hi": true
+      }
      ]
     }
    },
@@ -77100,7 +77202,807 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "run": "autonomous Claude-runner cycle · 2026-09-24T19:57:21Z"
   },
   "publishedAt": "2026-09-24T19:57:21Z"
+ },
+ {
+  "slug": "frontier-ai-standards-agency-krishnan-self-regulation",
+  "id": "newsroom-frontier-ai-standards-agency-krishnan-self-regulation",
+  "title": "OpenAI, Anthropic and Google DeepMind are designing their own AI regulator, and courting the adviser who promised there'd never be one",
+  "dek": "Chris Lehane confirmed Sept. 15 that OpenAI, Anthropic and Google DeepMind have spent weeks designing a FINRA-style body to review each other's frontier models before release. The three labs are now courting Sriram Krishnan -- who left the White House in June after telling the Financial Times \"there will not be an FDA for AI\" -- to run it. The White House's own AI adviser, a legal scholar, and a foreign-policy think tank all say the plan solves the wrong problem, for different reasons.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for a founding charter or a CEO announcement",
+    "text": "Reporting frames \"before year end\" as the marker to watch -- a signed charter naming the body's funders and governance, or Krishnan's own public acceptance, would be the first real commitment past talk."
+   },
+   {
+    "label": "Watch whether the FRONTIER Act keeps moving in parallel",
+    "text": "Lehane has said OpenAI supports the bill's independent-verification provision even while building a private body -- if Congress passes a statutory version first, the self-regulatory pitch changes shape overnight."
+   },
+   {
+    "label": "Watch who funds it and whether verifier status requires paying the three founders",
+    "text": "No funding mechanism has been disclosed. An issuer-pays structure -- the same one that undercut credit-rating agencies before 2008 -- is the specific failure mode every critic below is pointing at."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Three Frontier Labs Are Building a FINRA-Style Safety Body. History Suggests It Won't Be a Brake.",
+    "url": "https://forkast.news/three-frontier-labs-are-building-a-finra-style-safety-body-history-suggests-it-wont-be-a-brake/",
+    "outlet": "Forkast News",
+    "kind": "analysis"
+   },
+   {
+    "label": "Google, OpenAI, Anthropic Court Sriram Krishnan for AI Safety Body",
+    "url": "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body",
+    "outlet": "AI Weekly",
+    "kind": "reporting"
+   },
+   {
+    "label": "Krishnan Tells FT No 'FDA for AI' Under Trump, Blames Doomers",
+    "url": "https://aiweekly.co/alerts/krishnan-tells-ft-no-fda-for-ai-under-trump-blames-doomers",
+    "outlet": "AI Weekly",
+    "kind": "reporting"
+   },
+   {
+    "label": "Google DeepMind CEO Demis Hassabis's FINRA-for-AI proposal gains momentum. But is it a good idea?",
+    "url": "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/",
+    "outlet": "Fortune",
+    "kind": "reporting"
+   },
+   {
+    "label": "Move Fast and Delegate Things: Can a FINRA for AI Survive Constitutional Scrutiny?",
+    "url": "https://www.yalejreg.com/nc/move-fast-and-delegate-things-can-a-finra-for-ai-survive-constitutional-scrutiny/",
+    "outlet": "Yale Journal on Regulation",
+    "kind": "expert_or_stakeholder"
+   },
+   {
+    "label": "The U.S. Is About to Design an AI Regulator. Here's How to Get It Right.",
+    "url": "https://www.cfr.org/articles/the-u-s-is-about-to-design-an-ai-regulator-heres-how-to-get-it-right",
+    "outlet": "Council on Foreign Relations",
+    "kind": "expert_or_stakeholder"
+   },
+   {
+    "label": "White House AI Advisor Criticizes 'Pace The Frontier' as Regulatory Capture",
+    "url": "https://www.kucoin.com/news/flash/white-house-ai-advisor-criticizes-pace-the-frontier-as-regulatory-capture",
+    "outlet": "KuCoin News",
+    "kind": "reporting"
+   },
+   {
+    "label": "OpenAI Defies Antitrust Concerns to Join Rivals on AI Safety",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-defies-antitrust-concerns-join-rivals-ai-safety/",
+    "outlet": "PYMNTS",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "OpenAI's Chris Lehane confirmed Sept. 15 the three biggest US labs are designing a private, FINRA-style AI safety body.",
+   "The labs are courting Sriram Krishnan, who left the White House saying \"there will not be an FDA for AI,\" to run it.",
+   "Demis Hassabis proposed the FINRA model in July; reaction split between Nadella/Altman endorsement and Bengio/Henein skepticism.",
+   "A legal scholar and a foreign-policy think tank separately warn the structure can't move fast and stay accountable at once.",
+   "Caveat: no funding mechanism, charter, or confirmed CEO exists yet -- everything here is a proposal in courtship, not an agency."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "On Sept. 15, at a Washington briefing, OpenAI chief global affairs officer Chris Lehane confirmed what the three biggest US frontier labs had reportedly been doing quietly for weeks: designing a private body to review each other's models before they ship. \"It's better to try to work together to prioritize safety,\" Lehane said -- adding, pointedly, that OpenAI believes no antitrust waiver is needed for [OpenAI](/company/openai), [Anthropic](/company/anthropic) and [Google DeepMind](/company/google) to coordinate this way. Neither Anthropic nor Google has confirmed the talks to reporters directly; Lehane's is the only on-the-record voice so far.",
+    "citation_urls": [
+     "https://forkast.news/three-frontier-labs-are-building-a-finra-style-safety-body-history-suggests-it-wont-be-a-brake/",
+     "https://www.pymnts.com/news/artificial-intelligence/2026/openai-defies-antitrust-concerns-join-rivals-ai-safety/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Reporting has settled on a working name -- the Frontier AI Standards Agency -- for a body with a specific job description: **industry-funded, federally overseen, and modeled on FINRA**, the Financial Industry Regulatory Authority that polices Wall Street brokers. Member labs would submit frontier models for third-party review up to 30 days before release, accept incident-reporting rules, publish model cards, fund safety research, and agree on who counts as a qualified auditor. The pitch is a body that can move at the speed AI ships, something no act of Congress has managed in three years of trying.",
+    "citation_urls": [
+     "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "None of this is brand-new. It is five weeks old with a name attached. [Google DeepMind](/company/google) chief Demis Hassabis posted the original FINRA-for-AI proposal in mid-July: funding from the labs themselves, a board that includes independent technical experts and open-source-community representatives, capability-assessment protocols, and a path from voluntary to mandatory submission. Reaction split immediately and has stayed split. Microsoft's Satya Nadella endorsed it outright; OpenAI's Sam Altman called it \"thoughtful\"; even Elon Musk allowed it was \"a thoughtful framework overall and certainly a good starting point.\"",
+    "citation_urls": [
+     "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The skeptics who spoke up in July were arguing from inside the safety community, not against it. Turing Award winner Yoshua Bengio warned the voluntary-to-mandatory sequencing was backwards: \"we absolutely need a clear and precise roadmap to transition from a voluntary to a mandatory model,\" not a promise to get there eventually. Governance researcher Nader Henein went further: \"self-regulation is not viable,\" full stop, citing both vendor capacity to actually staff serious reviews and the built-in conflict of a lab paying for its own audit.",
+    "citation_urls": [
+     "https://fortune.com/2026/07/21/google-deepmind-ceo-demis-hassabis-finra-for-ai-proposal-gains-momentum-but-is-it-any-good/"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The man they want to run it said no FDA, ever"
+   },
+   {
+    "type": "p",
+    "text": "The leadership search is where the story gets pointed. Per Sept. 24 reporting, the labs have approached Sriram Krishnan -- the Trump administration's senior AI policy adviser until he departed at the end of June -- to serve as the new body's chief executive. Other names reportedly in the mix: former Biden-era technology official Arati Prabhakar, ex-diplomat Condoleezza Rice, and venture capitalist David Friedberg. Krishnan is the one whose record actually says something about what kind of body this would be.",
+    "citation_urls": [
+     "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“There will not be an FDA for AI.” — Sriram Krishnan, in a July Financial Times interview, weeks before the labs he'd overseen as a White House adviser approached him to run the body they're building to review AI models",
+    "citation_urls": [
+     "https://aiweekly.co/alerts/krishnan-tells-ft-no-fda-for-ai-under-trump-blames-doomers"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That line is from a Financial Times interview Krishnan gave in July, shortly after leaving the White House, explaining why the Trump administration would not create a formal AI licensing regime. Requiring a company to clear a team of lawyers before shipping a model, he said, would put \"++sand in the gears++\" of the AI revolution. Handing the CEO job to the industry's most prominent opponent of centralized AI oversight is either, as one outlet's own analysis put it, \"the cleanest way to head off statutory rules\" -- or a legitimacy problem the labs are choosing not to see.",
+    "citation_urls": [
+     "https://aiweekly.co/alerts/krishnan-tells-ft-no-fda-for-ai-under-trump-blames-doomers",
+     "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "{{note: FINRA itself is not a government agency. It's a private, non-profit body that Wall Street brokers are legally required to join, funded by membership fees and fines, with the SEC as its overseer of last resort -- the model the labs are explicitly copying.}} The timing is also pointed. The approach to Krishnan landed two days after France convened a rare UN Security Council session on AI safety, where [Sam Altman and Dario Amodei renewed a call for international, government-led AI-pacing coordination](/article/un-security-council-ai-safety-briefing-altman-amodei) -- the same pledge [four subscribers are currently suing four labs over](/article/ai-slowdown-antitrust-lawsuit-buist-v-anthropic). A private, US-only standards body is a narrower and faster-moving answer than anything a UN session produces, and it arrived while that slower answer was still being pitched on the record.",
+    "citation_urls": [
+     "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "title": "Five weeks, so far",
+     "items": [
+      {
+       "when": "Mid-July 2026",
+       "what": "Demis Hassabis posts the original FINRA-for-AI proposal; Nadella endorses, Altman calls it \"thoughtful,\" Bengio and Henein raise voluntary-to-mandatory concerns."
+      },
+      {
+       "when": "Jul (weeks later)",
+       "what": "Sriram Krishnan tells the Financial Times \"there will not be an FDA for AI\" under the Trump administration."
+      },
+      {
+       "when": "Sept. 13, 2026",
+       "what": "David Sacks calls the labs' separate \"Pace the Frontier\" pacing pledge \"textbook regulatory capture.\""
+      },
+      {
+       "when": "Sept. 15, 2026",
+       "what": "OpenAI's Chris Lehane confirms weeks of cross-lab coordination on a self-regulatory body; says no antitrust waiver is needed.",
+       "hi": true
+      },
+      {
+       "when": "Sept. 24, 2026",
+       "what": "Labs reported courting Krishnan, Prabhakar, Rice and Friedberg for CEO."
+      },
+      {
+       "when": "Target: before year end 2026, or 2027",
+       "what": "No charter, funding structure, or confirmed CEO exists yet.",
+       "future": true,
+       "detail": "Watch for a signed charter or a CEO's public acceptance as the first real commitment."
+      }
+     ],
+     "source": "Fortune, AI Weekly, KuCoin News, Forkast News"
+    }
+   },
+   {
+    "type": "h2",
+    "text": "Why the skeptics don't agree on much except the diagnosis"
+   },
+   {
+    "type": "p",
+    "text": "David Sacks, the White House's own AI adviser, has called the labs' self-regulatory instincts \"regulatory capture\" or an election-season distraction more than once this year -- most pointedly on Sept. 13, when he accused Sam Altman and Dario Amodei of using a separate pacing pledge to argue for exactly the kind of antitrust carve-out Lehane now says isn't needed. Sacks's objection comes from the right: let the market discipline unreliable AI systems, not a body the labs fund themselves.",
+    "citation_urls": [
+     "https://www.kucoin.com/news/flash/white-house-ai-advisor-criticizes-pace-the-frontier-as-regulatory-capture"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "[Cohere](/company/cohere) chief executive Aidan Gomez -- who runs a frontier lab that is not one of the three building this body -- has made a related but distinct historical argument to Forkast: self-regulatory organizations have a track record of licensing rapid growth rather than braking it. He points to the SEC's 1975 designation of Nationally Recognized Statistical Rating Organizations, which entrenched the same three credit-rating agencies for decades, and the EU's 1985 Motor Vehicle Block Exemption, which let carmakers write their own distribution rules for twenty years. Both, in his telling, \"lowered political friction while entrenching existing players\" rather than disciplining them.",
+    "citation_urls": [
+     "https://forkast.news/three-frontier-labs-are-building-a-finra-style-safety-body-history-suggests-it-wont-be-a-brake/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "A Yale Journal on Regulation analysis by legal scholar going by the byline Frazier makes a narrower but harder-edged claim: this specific design may not survive a lawsuit. The private-nondelegation doctrine, running back to the 1935 Supreme Court case *Schechter Poultry*, holds that \"Congress cannot escape constitutional restraints by delegating government authority to private parties to accomplish indirectly what Congress cannot do directly.\" Later cases require a private regulator to \"function subordinately to\" a government overseer with real \"authority over and surveillance of their work\" -- and Frazier's read of nine decades of securities-regulation history is that satisfying that requirement is exactly what would slow the body down to normal regulatory speed, defeating the entire point of building it. His conclusion: \"Congress can delegate, but it cannot delegate and walk away.\"",
+    "citation_urls": [
+     "https://www.yalejreg.com/nc/move-fast-and-delegate-things-can-a-finra-for-ai-survive-constitutional-scrutiny/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The Council on Foreign Relations takes the proposal more seriously as a starting point -- its authors broadly support a FINRA-style body -- while warning that specific design choices will decide whether it earns trust or has to be rebuilt after losing it. Their sharpest flags: an issuer-pays funding model was exactly what undercut credit-rating agencies' credibility before the 2008 financial crisis, and a body holding pre-release access to unreleased frontier models across every founding lab would become, in their words, \"one of the world's highest-value espionage targets\" -- a risk FINRA itself never had to manage. Their fix is structural: separate who sets safety specifications, who funds infrastructure, and who actually evaluates models into three different institutions, rather than folding all three jobs into one industry-funded agency.",
+    "citation_urls": [
+     "https://www.cfr.org/articles/the-u-s-is-about-to-design-an-ai-regulator-heres-how-to-get-it-right"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "title": "The case the labs would have to answer",
+     "points": [
+      {
+       "claim": "An SRO's real function is licensing growth, not braking it.",
+       "detail": "Cohere CEO Aidan Gomez points to the SEC's 1975 NRSRO credit-rating designation and the EU's 1985 Motor Vehicle Block Exemption as precedents where an industry-funded 'standards' body entrenched incumbents for decades rather than disciplining them.",
+       "whoHolds": "Aidan Gomez, Cohere CEO"
+      },
+      {
+       "claim": "The design can't be both fast and constitutionally accountable.",
+       "detail": "The private-nondelegation doctrine requires meaningful government surveillance of any private regulator exercising public power -- and satisfying that, per decades of securities-law precedent, is structurally incompatible with reviewing models at release-cycle speed.",
+       "whoHolds": "Yale Journal on Regulation legal analysis"
+      },
+      {
+       "claim": "It's regulatory capture with better PR.",
+       "detail": "A body funded and staffed by the three labs it would review faces constant pressure to set benchmarks that favor its own funders and raise the compliance cost for smaller rivals.",
+       "whoHolds": "White House AI adviser David Sacks"
+      }
+     ],
+     "verdict": "None of these three critiques actually contradict each other, which is the more interesting finding than any one of them alone: a market-skeptic-of-regulation Republican, a rival lab's CEO arguing from antitrust history, and a constitutional-law scholar all land on the same diagnosis -- self-funded, self-staffed review bodies tend to protect whoever funds them -- from three unrelated directions. The labs' answer, so far, is that no better-moving alternative exists; nothing in this reporting shows they've answered the capture question directly.",
+     "source": "Forkast News, Yale Journal on Regulation, KuCoin News"
+    }
+   },
+   {
+    "type": "p",
+    "text": "None of this means the agency won't get built. FINRA itself proves an industry-funded self-regulator can last -- it has policed Wall Street for fifty years, badly in 2008 and adequately most other times. What none of this week's reporting settles is which FINRA the labs are actually building: the one that polices its own members credibly, or the one whose 2008 near-failure is the CFR piece's own cautionary tale. That answer depends on funding structure, on whether Krishnan or someone with a different record ends up running it, and on whether Congress's own FRONTIER Act -- which Lehane says OpenAI already supports in part -- reaches a floor vote first.",
+    "citation_urls": [
+     "https://www.cfr.org/articles/the-u-s-is-about-to-design-an-ai-regulator-heres-how-to-get-it-right",
+     "https://www.pymnts.com/news/artificial-intelligence/2026/openai-defies-antitrust-concerns-join-rivals-ai-safety/"
+    ]
+   },
+   {
+    "type": "scorecard",
+    "scorecard": {
+     "items": [
+      {
+       "claim": "The Frontier AI Standards Agency formally launches by year-end 2026 or early 2027.",
+       "level": "company",
+       "basis": "Editorial framing from reporters covering the talks; no lab has confirmed a launch date on the record.",
+       "resolver": "A signed founding charter or incorporation filing naming the body, its funders, and its governance structure."
+      },
+      {
+       "claim": "Sriram Krishnan becomes the agency's CEO.",
+       "level": "unverified",
+       "basis": "Reported as one of several candidates approached; no acceptance has been reported.",
+       "resolver": "Krishnan's own public statement, or a joint press release from the three labs naming a CEO."
+      },
+      {
+       "claim": "No antitrust waiver is needed for the three labs to coordinate this way.",
+       "level": "company",
+       "basis": "Stated by OpenAI's Chris Lehane; not tested by any regulator or court.",
+       "resolver": "A Justice Department Antitrust Division business-review letter, or the absence of any enforcement action after the body launches."
+      },
+      {
+       "claim": "Member models get third-party review up to 30 days before release.",
+       "level": "company",
+       "basis": "Part of Hassabis's original July proposal, restated in September reporting on the body's remit.",
+       "resolver": "The agency's own published charter, once one exists, specifying binding review timelines."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "For a policy beat that spent most of 2026 watching state legislatures and Congress try and mostly fail to write binding AI rules, this is the first serious sign that the labs themselves have concluded Washington won't finish the job in time -- and have decided to write their own rulebook rather than wait. Whether that rulebook restrains them is now a design question, not a hypothetical one, and design questions have deadlines: a funding structure, a charter, and a CEO's answer are all things a specific future event can settle, not just argue about."
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Eight independent evidence threads across five source classes: OpenAI's own on-record confirmation (Lehane, via Forkast/PYMNTS), Google DeepMind's original proposal (Hassabis, via Fortune), White House reaction (Krishnan's FT quote and Sacks's regulatory-capture criticism, via AI Weekly/KuCoin), a rival lab CEO's historical argument (Aidan Gomez/Cohere, via Forkast), independent legal scholarship (Yale Journal on Regulation), and independent policy analysis (CFR). Routed as Synthesis rather than Research: the evidence-thread count would clear the Research bar, but Research also requires 2+ sourced charts, and this story has no measured numeric series to chart honestly -- forcing one would violate the anti-fabrication rule. Used the depth via a longer synthesis (near the top of the word range) with a scorecard and counter component instead of padding toward a format the sourcing can't fill honestly."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Mandatory-scrutiny check: no health/financial/legal-proceeding claims; this is a governance-proposal story. The Krishnan quote is verbatim and linked to the outlet reporting the original FT interview (FT itself paywalled/unfetchable). Sacks's regulatory-capture framing is corroborated across two independent reports rather than resting on a single characterization."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Self-referential-language check: clean -- the UN Security Council cross-link is phrased about the event (\"Altman and Amodei renewed a call\"), not about this desk's prior coverage of it. Critique found the original draft treated the three critiques as competing; revised to make explicit that they converge from unrelated directions, which is the actual finding worth stating."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Timeline: 6 items, all dated, one hi, one future. Counter: 3 real positions each attributed to a named holder, verdict does not dismiss them. Scorecard: 4 items, each with a resolver naming a specific document or event, level:company used honestly for claims resting only on lab statements. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fired."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No mandatory-scrutiny trigger fired; governance/policy story with no health, financial, litigation, or unverifiable-central-claim trigger."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-25T15:16:16Z"
+  },
+  "image": "assets/img/newsroom/frontier-ai-standards-agency-krishnan-self-regulation.jpg",
+  "publishedAt": "2026-09-25T15:16:16Z"
+ },
+ {
+  "slug": "deepseek-revenue-run-rate-billion-shanghai-fundraise-ipo",
+  "id": "newsroom-deepseek-revenue-run-rate-billion-shanghai-fundraise-ipo",
+  "title": "DeepSeek says its revenue run rate hit $1 billion -- almost entirely off a price hike, not new demand",
+  "dek": "Liang Wenfeng told investors Sept. 23 that DeepSeek's annualized revenue run rate has doubled to $1 billion, as the company finalizes a 50-billion-yuan ($7.5B) round valuing it at roughly $75 billion ahead of a planned Shanghai listing. The run rate is built almost entirely on an API price hike of 2.3x to 4.5x last month -- DeepSeek's actual revenue for the first seven months of 2026 was $70.7 million, a fraction of what a $1 billion run rate implies for a full year.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "synthesis",
+  "disclaimer": "not-financial-advice",
+  "applyType": "numbers",
+  "apply": [
+   {
+    "label": "Watch the round's close, targeted for end of October",
+    "text": "A signed term sheet or SEC/Hong Kong-equivalent filing disclosing actual investors and the final valuation would replace investor-meeting figures with something verifiable."
+   },
+   {
+    "label": "Watch for the STAR Market prospectus",
+    "text": "A Shanghai listing filing requires audited financials -- the first document that would show whether the post-price-hike run rate holds up as actual revenue rather than one strong month annualized."
+   },
+   {
+    "label": "Watch whether demand held through a second full month of the higher prices",
+    "text": "Liang's own claim that the August price hike didn't cost DeepSeek customers is one month old and self-reported; a second consecutive month of stable usage data would be the first independent-ish signal either way."
+   }
+  ],
+  "sources": [
+   {
+    "label": "DeepSeek's Annualized Revenue Hits $1 Billion as Startup Finalizes $7.5 Billion Fundraising",
+    "url": "https://www.theinformation.com/articles/deepseeks-annualized-revenue-hits-1-billion-startup-finalizes-7-5-billion-fundraising",
+    "outlet": "The Information",
+    "kind": "primary_company"
+   },
+   {
+    "label": "DeepSeek Revenue Hits $1B Run Rate, Eyes $7.5B Shanghai Raise",
+    "url": "https://aiweekly.co/alerts/deepseek-revenue-hits-1b-run-rate-eyes-75b-shanghai-raise",
+    "outlet": "AI Weekly",
+    "kind": "reporting"
+   },
+   {
+    "label": "DeepSeek Doubles Annual Revenue Run Rate to $1 Billion Ahead of IPO",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/deepseek-doubles-annual-revenue-run-rate-to-1-billion-ahead-of-ipo/",
+    "outlet": "PYMNTS",
+    "kind": "reporting"
+   },
+   {
+    "label": "DeepSeek revenue already nearly 10 times last year; API gross margin 82.9 percent",
+    "url": "https://www.digitaltoday.co.kr/en/view/96900/deepseek-revenue-already-nearly-10-times-last-year-api-gross-margin-82-9-percent",
+    "outlet": "Digital Today Korea",
+    "kind": "reporting"
+   },
+   {
+    "label": "DeepSeek's annualized revenue doubles to $1 billion in months, aiming for a Series B by end of October",
+    "url": "https://www.kucoin.com/news/flash/deepseek-s-annualized-revenue-doubles-to-1-billion-in-months-aiming-for-5-billion-series-b-by-end-of-october",
+    "outlet": "KuCoin News, citing MarsBit/The Information",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "DeepSeek's annualized revenue run rate hit $1 billion, per Liang Wenfeng, doubled from under $500 million months earlier.",
+   "The company is finalizing a 50-billion-yuan (~$7.5B) round at a ~500-billion-yuan (~$75B) valuation, closing by end of October.",
+   "API gross margin is 82.9%, but overall company gross margin is 44.6% -- the run rate only reflects the high-margin slice.",
+   "Actual Jan-through-July 2026 revenue was $70.7 million; the $1B figure annualizes one month after a 2.3x-4.5x API price hike.",
+   "Caveat: all figures are self-reported from an investor meeting, not an audited filing -- the STAR Market prospectus would be the first independent check."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[DeepSeek](/company/deepseek) chief executive Liang Wenfeng told investors on Sept. 23 that the company's annualized revenue run rate has hit **$1 billion**, more than double the under-$500-million pace of a few months earlier. The figure lands as DeepSeek finalizes a second funding round targeting roughly 50 billion yuan (about $7.5 billion) at a valuation near 500 billion yuan (about $75 billion), with a close targeted for end of October and a Shanghai STAR Market listing -- lead-underwritten by CITIC Securities -- expected in 2027.",
+    "citation_urls": [
+     "https://www.theinformation.com/articles/deepseeks-annualized-revenue-hits-1-billion-startup-finalizes-7-5-billion-fundraising",
+     "https://aiweekly.co/alerts/deepseek-revenue-hits-1b-run-rate-eyes-75b-shanghai-raise"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "A run rate is one period's revenue multiplied out to a full year, and the period doing the multiplying here is a loud one. Last month DeepSeek raised API prices **2.3x to 4.5x** across its model lineup -- the kind of increase that would normally cost a vendor customers. Liang told investors it didn't: demand held. ==That single claim is carrying most of the headline number==, and it comes from the company itself, one month after the fact, with no independent usage data behind it yet.",
+    "citation_urls": [
+     "https://www.pymnts.com/news/artificial-intelligence/2026/deepseek-doubles-annual-revenue-run-rate-to-1-billion-ahead-of-ipo/"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "Four DeepSeek numbers, and what each one actually measures",
+     "items": [
+      {
+       "value": "$1B",
+       "unit": "Annualized run rate",
+       "label": "One recent month's revenue x 12",
+       "includes": "Post-price-hike API revenue, extrapolated forward",
+       "excludes": "Whether the higher prices hold up for a second or third month"
+      },
+      {
+       "value": "$70.7M",
+       "unit": "Actual Jan-Jul 2026 revenue",
+       "label": "Real, booked revenue for seven months",
+       "includes": "All revenue actually recognized before the price hike",
+       "excludes": "August and September, when the price hike and the run-rate spike both happened"
+      },
+      {
+       "value": "82.9%",
+       "unit": "API gross margin",
+       "label": "Gross margin on API model-invocation service only",
+       "includes": "Inference-cost efficiency on the API business line",
+       "excludes": "R&D, sales, overhead, and every other cost center"
+      },
+      {
+       "value": "44.6%",
+       "unit": "Overall company gross margin",
+       "label": "Blended gross margin across the whole business, Jan-Jul 2026",
+       "includes": "The 82.9% API line plus everything with thinner or negative margins",
+       "excludes": "Nothing -- this is the honest company-wide number"
+      }
+     ],
+     "source": "The Information (Sept. 23-24, 2026 reporting), via AI Weekly and Digital Today Korea"
+    }
+   },
+   {
+    "type": "p",
+    "text": "There's a reason the price hike is doing so much work. DeepSeek built its reputation, and much of its user base, on undercutting Western labs on price -- its models have run at a fraction of GPT and Claude API rates since the original DeepSeek-R1 launch triggered a market-wide repricing in January 2025. An August increase that still leaves DeepSeek, in Liang's own framing, \"among the lowest\" prices for a major model is less a reversal than a recalibration: the company found out how much of its discount it could claw back before users left, and the answer -- so far, for one month -- was most of it.",
+    "citation_urls": [
+     "https://www.pymnts.com/news/artificial-intelligence/2026/deepseek-doubles-annual-revenue-run-rate-to-1-billion-ahead-of-ipo/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The margin split matters because it's the API business -- the 82.9% line -- that the price hike touched directly, while the 44.6% company-wide figure is what actually funds everything else DeepSeek does, including the model training that produced the 82.9% margin in the first place. Set against rivals, DeepSeek's API economics look unusually efficient: [OpenAI](/company/openai) posted a 39% gross margin in the first quarter of 2026 on $5.7 billion in revenue, while [Anthropic](/company/anthropic) posted $11.5 billion in second-quarter revenue with a margin it expects to climb from 40% in 2025 toward 63% by the end of 2026. DeepSeek's API slice already clears both -- though DeepSeek is a fraction of either company's absolute revenue, and its company-wide margin trails both.",
+    "citation_urls": [
+     "https://www.digitaltoday.co.kr/en/view/96900/deepseek-revenue-already-nearly-10-times-last-year-api-gross-margin-82-9-percent"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Run the two headline numbers against each other and the valuation is asking for **75 times** the $1 billion run rate -- a multiple that only looks ordinary in a market where AI labs are routinely priced on where their revenue is headed, not where it is. That's the same logic investors have applied to funding rounds across the sector this year, but it means DeepSeek's valuation is a bet on the price hike sticking through a second, third and twelfth month, compounding into the roughly $1 billion of actual annual revenue the run rate implies -- not a bet on the $70.7 million the company had actually booked by the time the round started coming together."
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Gross margin, three labs",
+     "columns": [
+      {
+       "label": "DeepSeek",
+       "sub": "API line only"
+      },
+      {
+       "label": "OpenAI",
+       "sub": "Q1 2026, company-wide"
+      },
+      {
+       "label": "Anthropic",
+       "sub": "2026, company-wide, projected"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Gross margin",
+       "values": [
+        "82.9%",
+        "39%",
+        "40% → 63% (projected)"
+       ]
+      },
+      {
+       "label": "Revenue basis",
+       "values": [
+        "Not disclosed at this scope",
+        "$5.7B (Q1)",
+        "$11.5B (Q2)"
+       ],
+       "note": "DeepSeek does not disclose API-line revenue separately from its $1B total run rate"
+      },
+      {
+       "label": "What the figure actually covers",
+       "values": [
+        "Inference cost efficiency only",
+        "Whole company",
+        "Whole company"
+       ]
+      }
+     ],
+     "source": "Digital Today Korea, citing The Information"
+    }
+   },
+   {
+    "type": "p",
+    "text": "++The skeptical read++ isn't that DeepSeek is lying -- it's that a founder's investor-meeting figure, repeated to reporters rather than filed with a regulator, is exactly the kind of number that looks strongest right when a company most needs it to. DeepSeek is mid-fundraise and pre-IPO; a $1 billion run rate is a materially better story to tell a prospective backer than $70.7 million in booked first-half revenue, even if both numbers are technically accurate and describe the same company a few weeks apart. Nothing here suggests the figure is fabricated. It does mean the run rate is a claim about the future built on one month of the past, at a moment when the company has every incentive to make that one month look representative."
+   },
+   {
+    "type": "p",
+    "text": "None of this is DeepSeek's first valuation headline this year. This is the same round that was [paused in July after a leaked investor transcript went viral in China](/article/deepseek-74-billion-valuation-funding-round-liang-wenfeng), then resumed Aug. 6 with existing backers Monolith, Shixiang Capital and CATL confirmed -- and reported nearing a close at roughly $74 billion by late August. The September figures don't represent a new round; they're the same fundraise, closer to done, with a fresher revenue number attached and the valuation essentially unchanged from a month earlier.",
+    "citation_urls": [
+     "https://www.theinformation.com/articles/deepseeks-annualized-revenue-hits-1-billion-startup-finalizes-7-5-billion-fundraising"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "Jan-Jul 2026",
+       "what": "DeepSeek books $70.7 million (475 million yuan) in actual revenue, up roughly 10x on the same period a year earlier."
+      },
+      {
+       "when": "Jul 2026",
+       "what": "Second funding round paused after a leaked Liang Wenfeng investor transcript goes viral in China."
+      },
+      {
+       "when": "Aug 6, 2026",
+       "what": "Round resumes with Monolith, Shixiang Capital and CATL confirmed as backers."
+      },
+      {
+       "when": "Aug 2026 (last month)",
+       "what": "API prices raised 2.3x to 4.5x across DeepSeek's model lineup.",
+       "hi": true
+      },
+      {
+       "when": "Sept. 23, 2026",
+       "what": "Liang Wenfeng tells investors annualized run rate has hit $1 billion; round targeted to close by end of October at ~$75B."
+      },
+      {
+       "when": "2027 (target)",
+       "what": "Planned Shanghai STAR Market listing, lead-underwritten by CITIC Securities.",
+       "future": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "A Shanghai listing would also be DeepSeek's first real test of investor appetite beyond the founders and venture backers who've priced it so far. [CXMT's 466% debut](/article/cxmt-shanghai-ipo-489-billion-debut-no-hbm) and [Unitree's six-times pop](/article/unitree-shanghai-star-market-ipo-debut-surge) both happened on a STAR Market that has rewarded AI-adjacent listings enthusiastically all year, which is exactly the kind of receptive market a company wants to go public into -- and exactly the kind of market where an early pop can say more about scarcity of AI-themed shares on a constrained exchange than about the specific company's fundamentals. Whether DeepSeek's own debut, whenever it lands, reads more like durable demand or like the same pattern repeating is a question the prospectus and the first trading day will answer separately."
+   },
+   {
+    "type": "p",
+    "text": "That prospectus, whenever it's filed, would be the first document in this entire story carrying an independent auditor's signature rather than an investor-meeting readout -- the gap this whole account has been circling. Until then, the $1 billion figure, the $75 billion valuation, and the 82.9% margin are all one company's own account of itself, at the exact moment that account is most valuable to have believed."
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Five independent evidence threads: The Information's original reporting (primary, investor-meeting disclosure), AI Weekly and PYMNTS's independent write-ups of the same disclosure, Digital Today Korea's margin breakdown (a distinct data point -- 82.9% API vs 44.6% company-wide -- not carried by the other outlets), and this newsroom's own Aug. 29 prior reporting on the same funding round for continuity. Routed Synthesis: strong single-event depth via the margin reconciliation and rival comparison, but not the source-class diversity (no filing, no independent measurement) Research requires."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Markets/valuation topic -> not-financial-advice disclaimer applied. Mandatory-scrutiny check: valuation figures stated as reported, not asserted as fact; central claim (the $1B run rate) is explicitly flagged in tldr and body as self-reported and un-audited rather than presented as confirmed."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft stated the run-rate and the $70.7M actual-revenue figures back to back without explaining WHY they differ so much -- revised to add the ledger component and an explicit sentence on what the price hike changed. Self-referential-language check clean; cross-links to the Aug. 29 DeepSeek article and the two other Shanghai STAR debuts are phrased about the events themselves."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Ledger: all four values (1.0B, 70.7M, 82.9%, 44.6%) appear verbatim in body prose. Compare: three columns, three rows, every row's values length matches columns length; the margin row matches the ledger's 82.9%/relevant figures. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fired beyond the standard Markets disclaimer."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Markets/valuation disclaimer applied; no health, legal-proceeding, or defamation trigger."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-25T15:16:20Z"
+  },
+  "image": "assets/img/newsroom/deepseek-revenue-run-rate-billion-shanghai-fundraise-ipo.jpg",
+  "publishedAt": "2026-09-25T15:16:20Z"
+ },
+ {
+  "slug": "anthropic-project-swap-agent-marketplace-model-quality",
+  "id": "newsroom-anthropic-project-swap-agent-marketplace-model-quality",
+  "title": "Anthropic ran a 201-person AI trading floor. The model mattered far more than the instructions",
+  "dek": "In Project Swap, Anthropic's follow-up to its Project Deal marketplace experiment, 201 employees across six offices let Claude-powered agents barter their books for them. The agents landed only 61% of actual reader preferences right, and the study's own accounting puts 85% of that shortfall on imperfect preference-reading, not bad negotiating -- while swapping the underlying model from Haiku to Opus moved outcomes far more than swapping \"ruthless\" instructions for \"prosocial\" ones did.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "work",
+  "apply": [
+   {
+    "label": "If you're building an agent marketplace, budget for preference elicitation, not prompt tuning",
+    "text": "Anthropic's own decomposition put roughly 85% of the efficiency gap on agents misreading what people actually wanted, not on negotiation strategy -- the fix is a better intake process, not a better system prompt."
+   },
+   {
+    "label": "Don't assume a cheaper model saves money in an agentic deployment",
+    "text": "Swapping Haiku for Opus moved market efficiency from 0.75 to 0.88 against the agents' own rankings; the same swap dwarfed the entire 'ruthless vs. prosocial' instruction-tuning test, which moved the number by just 0.02."
+   },
+   {
+    "label": "Watch for agent-certification schemes borrowing this study's sample-testing idea",
+    "text": "Anthropic's own recommendation -- have agents demonstrate decisions on samples before acting independently, plus full transparency logs -- is a concrete design pattern any agentic-commerce platform could adopt now, not a research abstraction."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Project Swap: What happens when agents trade for us?",
+    "url": "https://www.anthropic.com/research/project-swap",
+    "outlet": "Anthropic",
+    "kind": "primary_company"
+   },
+   {
+    "label": "Project Deal: our Claude-run marketplace experiment",
+    "url": "https://www.anthropic.com/features/project-deal",
+    "outlet": "Anthropic",
+    "kind": "primary_company"
+   },
+   {
+    "label": "Anthropic created a test marketplace for agent-on-agent commerce",
+    "url": "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+    "outlet": "TechCrunch",
+    "kind": "reporting"
+   },
+   {
+    "label": "Anthropic Ran a Marketplace and Bots Closed Every Deal",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-ran-a-marketplace-and-bots-closed-every-deal/",
+    "outlet": "PYMNTS",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Anthropic's Project Swap had 201 employees across six offices trade books via Claude-powered negotiating agents.",
+   "Agents matched participants' real book preferences on 61% of pairs, beating random (50%) and popularity-based (53%) guessing.",
+   "Overall market efficiency hit 0.55 against real preferences versus a 0.89 theoretical optimum -- 85% of the gap traced to misread preferences, not bad negotiating.",
+   "Model choice dwarfed instruction-tuning: Haiku scored 0.75 efficiency, Opus 0.88, while \"ruthless\" vs. \"prosocial\" prompting moved the number by just 0.02.",
+   "Caveat: all participants were Anthropic employees with no money on the line -- the company says this likely overstates trust and cooperation versus a general population."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[Anthropic](/company/anthropic) turned its own offices into a trading floor. In Project Swap, 201 employees across six locations -- 115 in San Francisco, 57 in New York, 12 in London, 8 in Seattle, 6 in Washington DC, 3 in Dublin -- each brought a book they wanted to give away, had a five-minute conversation with Claude about what they actually like to read, and then sent a Claude-powered agent onto an open trading floor to pitch, haggle, and close deals with everyone else's agents. No human touched a single negotiation after that first intake chat.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The point of the exercise wasn't to see whether the agents would trade -- Anthropic's earlier Project Deal, a $100-per-person gift-card marketplace that closed 186 trades worth just over $4,000 among 69 employees, already showed they would. It was to measure, for the first time with a real yardstick, ++how well++ they traded. Project Deal used idiosyncratic goods -- ping-pong balls, snowboards, free-form haggling -- where there was no clean way to say how good an outcome *could* have been. Project Swap fixed that: books can be ranked, rankings can be scored against a theoretical best-case allocation, and a market's efficiency can be stated as a single number.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap",
+     "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The first number is the one worth sitting with: after a five-minute onboarding conversation, Claude's read of a participant's book preferences matched that participant's own real rankings on **61% of pairs**. That beats a coin flip (50%), beats ranking by simple popularity (53%), and beats collaborative filtering (55%) -- the kind of recommendation-engine approach that usually requires far more data than one short chat provides.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap"
+    ]
+   },
+   {
+    "type": "chart",
+    "chart": {
+     "kind": "bar",
+     "title": "Predicting a stranger's book preferences after one 5-minute chat",
+     "unit": "% of pairs ranked correctly",
+     "source": "Anthropic, Project Swap",
+     "data": [
+      {
+       "label": "Random guess",
+       "value": 50
+      },
+      {
+       "label": "Popularity-based",
+       "value": 53
+      },
+      {
+       "label": "Collaborative filtering",
+       "value": 55
+      },
+      {
+       "label": "Claude, 5-min chat",
+       "value": 61,
+       "hi": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "But 61% accuracy on preference pairs is not the same as a well-run market, and Anthropic didn't let the two get conflated. Measured against participants' *actual* preferences, the overall marketplace hit an efficiency score of **0.55** -- against a theoretical optimum of 0.89 for that same pool of books and people. That's a real gap, and Anthropic's own researchers decomposed it rather than waving it away: roughly **85% of the shortfall traced to Claude's imperfect read of what people wanted**, the same limitation the 61%-not-100% preference-matching number already flagged. Only about 15% came from the agents actually negotiating badly once they had a preference model to work from.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "What actually moved the number"
+   },
+   {
+    "type": "p",
+    "text": "Anthropic also tested what would improve results, and here the finding cuts against a lot of agent-building folk wisdom. Swapping the underlying model mattered enormously: agents running on Claude Haiku hit 0.75 efficiency measured against Claude's own rankings, while agents on Claude Opus hit 0.88 -- a substantial gap driven purely by model capability. Swapping *instructions* -- telling an agent to negotiate \"ruthlessly\" versus \"prosocially\" -- moved the same efficiency measure by just **0.02**, a difference small enough to be noise. The lesson Anthropic draws explicitly: for a task like this, which model you deploy matters far more than how cleverly you prompt it.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "title": "Who this changes the calculus for",
+     "items": [
+      {
+       "who": "Agentic-commerce platforms selling prompt customization as their edge",
+       "tone": "loses",
+       "what": "If model capability swamps instruction design by a factor this large, a platform differentiating on clever system prompts is optimizing the smaller lever."
+      },
+      {
+       "who": "Frontier labs with a genuine capability edge",
+       "tone": "gains",
+       "what": "A result showing model quality is the dominant variable in agent-mediated markets is a direct argument for paying more for a stronger model in any agent deployment that handles real transactions."
+      },
+      {
+       "who": "Businesses deploying cheap, high-volume agents for real negotiation or purchasing",
+       "tone": "exposed",
+       "what": "Choosing a lightweight model to cut inference cost on an agent that negotiates on your behalf is, per this data, choosing a meaningfully worse outcome -- not just a slower or cheaper one."
+      },
+      {
+       "who": "Agent-marketplace rule-writers (Amazon, Meta)",
+       "tone": "unclear",
+       "what": "Anthropic's own recommendation -- sample-based testing before autonomous action, plus full transparency logs -- is a concrete proposal, but nothing in this study tests it against a live, adversarial, non-Anthropic-employee population."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "That last line matters because Anthropic is explicit about what this study can't tell you. Every participant was an Anthropic employee, which the researchers themselves flag as likely inflating trust in Claude relative to a general population. Nobody had real money or meaningful stakes riding on the outcome. Only well-behaved Claude variants were tested -- nothing adversarial, nothing from a rival lab. And the marketplace's own rules stayed fixed throughout, so the study says nothing about how these numbers would move if the rules themselves were being gamed. Anthropic also reported a quieter failure mode: some participants simply never brought their promised book, leaving trades unfulfilled in a way the researchers couldn't systematically track.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The timing lands in the middle of a real agentic-commerce rollout, not a hypothetical one. This is the same week [Amazon opened its Seller Central tools to outside agents through a Claude plugin](/article/amazon-seller-assistant-claude-plugin-meta-muse-contrast) while blocking a rival shopping agent from checking out on its own storefront -- a live example of exactly the marketplace-governance question Project Swap's own recommendations are aimed at: who gets to run an agent in someone else's market, and on what terms. Anthropic's proposed answer -- certify agents on sample decisions before they act alone, log everything so a human can audit it after the fact -- is a design pattern platforms are already being forced to invent policy for in production, not in a research paper.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/project-swap",
+     "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "What Project Swap actually establishes, stripped of the marketplace framing, is narrower and more useful than \"AI agents can trade for you\": a strong model reading a stranger's stated preferences for five minutes already beats a recommendation algorithm trained on real behavioral data, and the single biggest lever for improving an agent's real-world negotiating isn't a better prompt -- it's a better model underneath it. For a beat that spends most of its time evaluating whether a benchmark number means what a lab says it means, this is a rare case of a lab publishing the number that complicates its own pitch: Claude is good at this, and still gets most of the credit for the *remaining* gap, not the part that's already closed."
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Primary source is Anthropic's own published research writeup (Project Swap), cross-checked against its Project Deal predecessor (also primary) and two independent outlets (TechCrunch, PYMNTS) that covered Project Deal's methodology and results. Four evidence threads, two primary/official. Routed Synthesis: single-lab research write-up with real quantitative findings and a live cross-industry tie-in (Amazon/Meta agentic commerce), but not the independent-measurement diversity Research requires."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger. All efficiency numbers (0.55, 0.89, 0.75, 0.88, 0.02, 61%, 50%, 53%, 55%) traced directly to Anthropic's own published writeup, not derived or estimated by this desk. Limitations section drawn directly from the researchers' own stated caveats, not added independently, to avoid overstating or understating what the study shows."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the initial draft implied the marketplace 'worked well' without giving the 0.55-vs-0.89 efficiency gap due weight -- revised to lead with the gap and its 85/15 decomposition before the more flattering preference-matching number. Self-referential-language check clean; Amazon cross-link phrased about the event."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Chart: all four values (50, 53, 55, 61) appear in body prose verbatim. Stakes: four named parties, none as broad as 'consumers' or 'the industry'; one entry honestly marked 'unclear' rather than forcing a gains/loses read. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fired."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No health, financial-advice, legal-proceeding, or defamation trigger; primary-source research summary."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-25T15:16:24Z"
+  },
+  "image": "assets/img/newsroom/anthropic-project-swap-agent-marketplace-model-quality.jpg",
+  "publishedAt": "2026-09-25T15:16:24Z"
  }
-
 ]
 ;
