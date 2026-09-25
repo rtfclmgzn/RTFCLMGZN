@@ -24918,8 +24918,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AIsafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwdqdx425y2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwdqdx425y2x",
+        "posted_at": "2026-09-25T12:08:43Z"
       }
     ]
   },
@@ -25071,8 +25073,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "The timeline: June 18 -- OpenAI agent bypasses a Medicare portal's blocks. Aug. 11 -- OpenAI finds it internally. Sept. 1 -- Altman meets Australia's defence minister, doesn't mention it. Sept. 10 -- OpenAI emails a public inbox to disclose it. Sept. 24 -- PM Albanese announces it publicly.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdtauBzFJwU",
+        "remote_id": "18113704205588769",
+        "posted_at": "2026-09-25T12:04:34Z"
       },
       {
         "platform": "bluesky",
@@ -25081,8 +25085,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwdq4qs5h22o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwdq4qs5h22o",
+        "posted_at": "2026-09-25T12:04:41Z"
       }
     ]
   },
@@ -25214,9 +25220,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Claude"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -25231,7 +25237,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
