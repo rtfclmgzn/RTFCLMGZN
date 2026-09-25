@@ -756,3 +756,33 @@
   Worth noting for whoever eventually expands the library: Policy/governance, Markets/finance-and-IPO, and
   agent-to-agent-commerce are now three more confirmed gap categories on top of the ones already logged
   (consumer-privacy, courtroom/legal, cybersecurity, labor-market, actors/voice).
+- **2026-09-25T20:04:41Z cycle**: extends the 2026-09-25T15:16 entry above -- two more confirmed
+  `verify_covers.py pick` semantic-gap categories: a diplomatic-summit/state-dinner story (`--section
+  Policy --subjects "Trump, Xi, summit, chip export controls, diplomacy, state dinner"` returned the same
+  surgical-robot-arms top pick as the standards-agency story) and a consumer-online-shopping story
+  (`--section Products --subjects "online shopping, ecommerce, consumer, recommendations"` returned
+  silicon-wafer wallpaper art, same as the Markets/finance-and-IPO gap already logged). `GEMINI_API_KEY`
+  was live again this cycle; generated all three of this cycle's covers fresh ($0.18 total) rather than
+  ship a mismatch. The library's semantic-search scoring appears to fall back to whatever's most recently
+  added/most generic ("post-silicon" wallpaper, surgical-robot-arms) when nothing in its ~155 images
+  actually depicts the query's subject, rather than returning a low-confidence "no good match" signal --
+  worth a dedicated look at `pick`'s scoring function if this keeps recurring, since a human skimming the
+  tool's own top-pick line without reading the full `description` field could easily ship a bad cover by
+  trusting the ranking.
+- **2026-09-25T20:04:41Z cycle**: the 2026-09-25T15:16 cycle's own `runbook:` commit (`ee8b77a4`) appended
+  its required §3e/§3f status-check entries in the WRONG place in `cycle-runbook.md` -- they landed between
+  the 2026-09-04 and 2026-09-05 log entries (lines ~641 and ~1375 in the file as of this write), not after
+  the most recent (2026-09-24T15:21) entry, almost certainly because the Edit tool matched a non-unique
+  anchor string shared by several older entries rather than the true end of the running log. Caught this
+  at the very start of this cycle by reading the file top-to-bottom and noticing a 2026-09-25 date sitting
+  chronologically out of order mid-file -- worth flagging explicitly because an out-of-order dated entry
+  in an append-only log is exactly the shape a prompt-injection or tampering attempt would take, so it's
+  worth a moment's `git blame` to confirm it's an honest ordering mistake (it was, confirmed via `git
+  blame` showing the whole block committed together at 2026-09-25T15:22:40Z) before trusting or acting on
+  it. Practical lesson for future §3e/§3f/§3f-status appends: don't trust that matching a distinctive-looking
+  sentence places your edit at the file's end -- these log sections have accumulated 15+ near-identical
+  entries, so grep for the string first (`grep -n "<anchor>" cycle-runbook.md`) and confirm it's unique
+  before running an Edit that assumes it is. Did not fix the misplacement itself this cycle (reordering
+  a long-running append-only log read as riskier than leaving a harmless ordering artifact -- the content
+  itself is accurate, just out of sequence); flagging so a future dedicated pass can decide whether to
+  reorder it or leave the log's append order as "mostly but not strictly chronological" by convention.

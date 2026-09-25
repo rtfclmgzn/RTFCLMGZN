@@ -1093,6 +1093,27 @@ this order, and mark it done here.
    cloudflare` both return nothing on this runner; `find . -iname
    "issue-001.json"` also still returns nothing.
 
+   PARTIAL, checked (2026-09-25T20:04:41 cycle) -- re-checked before writing,
+   since this cycle's own three articles (the Trump-Xi summit's dinner/AI-dialogue
+   outcome set against the three chip-export bills stuck in the Senate's FY2027
+   NDAA amendment; Micro1's $4B training-data-startup valuation; NIQ's Agentic
+   Commerce Tracker crossing 51% AI-shopping adoption) plus the full §3c/§4b/§4c/§4d
+   passes were already the required work; guide cadence read exactly 4 days (a
+   guide published 2026-09-21, the check's own `n>4` threshold not tripped), so
+   §3d needed no action. §3c backfill search re-ran (`component_audit`) and found
+   zero articles below their format's component floor -- still empty. Both
+   blockers unchanged, re-confirmed by reading the files directly:
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")` (`functions/`
+   and `newsroom/` both absent), and `which wrangler` / `env | grep -i cloudflare`
+   both return nothing on this runner. No new `primer-issue.js`-only candidate
+   found this cycle; did not force one. This entry and the §3f entry below are
+   themselves being committed to a `newsroom/` path outside `ALLOWED_PREFIXES` --
+   pushed as their own separate `runbook:`-prefixed commit, after the article/data
+   commit that already cleared the full §5 gate sequence, matching the pattern
+   established since at least 2026-09-16. Same two next steps as every entry
+   since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1378,6 +1399,13 @@ and Shanghai fundraise, and Anthropic's Project Swap agent-marketplace study) pl
 passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
 `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as
 every entry since 2026-08-30, still open.
+
+**Status (2026-09-25T20:04:41 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the Trump-Xi summit's dinner/AI-dialogue outcome and the stalled chip-export bills, Micro1's
+$4B valuation, and NIQ's 51% AI-shopping tracker) plus the full §3c/§4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
+2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
