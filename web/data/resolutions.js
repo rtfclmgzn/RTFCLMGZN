@@ -241,6 +241,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"expired",
       note:"Grok 4.8's release deadline has passed with no official launch. Elon Musk stated on September 13 that training would finish 'this week' (September 13-19), with historical release patterns suggesting October-November 2026 window. As of September 24, 2026, no Grok 4.8 release or API availability has been announced, and xAI's newest released model remains Grok 4.7 (September 21). The watch item's resolver 'Whether Grok 4.8 actually ships on Musk's stated timeline' has expired without positive resolution.",
       label:"Grok 4.8 release deadline expired (no announcement as of Sept 24)",
-      url:"https://x.ai/news" }
+      url:"https://x.ai/news" },
+    { key:"salesforce-anthropic-claudeforce-investment-gain-earnings|w|2",
+      at:"2026-09-25T10:00:00Z",
+      outcome:"confirmed",
+      note:"Salesforce in Claude open beta launched on September 15, 2026, as announced on August 26 in the Claudeforce partnership with Anthropic. The beta shipped with 37 prebuilt sales skills for accounts, opportunities and pipeline, requiring latest Sales Cloud enterprise edition and paid Claude plans. The resolver's requirement to 'watch the September 2026 open beta of Salesforce in Claude for real usage data' has been confirmed by the beta launch; usage data will accumulate during the September-October window.",
+      label:"Salesforce in Claude open beta launch (September 15, 2026)",
+      url:"https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/" }
   ]
 };
