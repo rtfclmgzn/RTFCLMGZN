@@ -25565,237 +25565,241 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   },
-{
-  "article_id": "newsroom-trump-xi-summit-dinner-chip-export-gridlock",
-  "ts": "2026-09-25T20:04:41Z",
-  "export": {
+  {
     "article_id": "newsroom-trump-xi-summit-dinner-chip-export-gridlock",
-    "url": "https://rtfclmgzn.com/article/trump-xi-summit-dinner-chip-export-gridlock",
-    "headline": "Trump and Xi capped their summit with a state dinner for AI's biggest names -- neither government moved an inch on chip exports",
-    "hook": "Trump and Xi's summit produced a state dinner for every major AI lab's CEO and a vague dialogue pledge -- neither government moved on chip exports.",
-    "key_facts": [
-      "China's official readout is the only government account of the AI talks published as of Thursday night.",
-      "US export limits on Nvidia's most advanced chips to China are unchanged after the summit.",
-      "Three chip-export bills are stuck in a Senate defense bill that won't get a vote until after the midterms."
-    ],
-    "tone": "composed, legally precise, dual-track analysis",
-    "persona": "evelyn-zhao",
-    "section": "Policy",
-    "primary_image": "assets/img/newsroom/trump-xi-summit-dinner-chip-export-gridlock.jpg",
-    "disclaimer": "none"
+    "ts": "2026-09-25T20:04:41Z",
+    "export": {
+      "article_id": "newsroom-trump-xi-summit-dinner-chip-export-gridlock",
+      "url": "https://rtfclmgzn.com/article/trump-xi-summit-dinner-chip-export-gridlock",
+      "headline": "Trump and Xi capped their summit with a state dinner for AI's biggest names -- neither government moved an inch on chip exports",
+      "hook": "Trump and Xi's summit produced a state dinner for every major AI lab's CEO and a vague dialogue pledge -- neither government moved on chip exports.",
+      "key_facts": [
+        "China's official readout is the only government account of the AI talks published as of Thursday night.",
+        "US export limits on Nvidia's most advanced chips to China are unchanged after the summit.",
+        "Three chip-export bills are stuck in a Senate defense bill that won't get a vote until after the midterms."
+      ],
+      "tone": "composed, legally precise, dual-track analysis",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/trump-xi-summit-dinner-chip-export-gridlock.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Trump and Xi capped their summit with a state dinner for every major AI lab's CEO. Export controls on Nvidia's most advanced chips: unchanged. The three bills meant to tighten them: stuck in a Senate defense bill until after the midterms.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-26T01:04:41Z",
+        "copy": "Two AI negotiations happened this week -- one diplomatic, one legislative -- and neither produced an actual decision. Congress's own three chip-export bills are stuck behind a defense bill that won't move until after November.",
+        "reply_copy": "The two-track breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Congress"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Trump and Xi sat down with every major AI lab's CEO at a black-tie state dinner Thursday -- Huang, Altman, Zuckerberg, Nadella, Pichai, Cook, Musk, Bezos, all in the room.\n\nWhat came out of it: a vaguely defined AI dialogue channel, endorsed \"in principle,\" with no trigger list or notification procedure published by either government.\n\nWhat didn't move: US export limits on Nvidia's most advanced chips to China. And in Congress, the three bills meant to tighten those same controls are stuck inside a defense bill that won't get a vote until after the midterms. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#AIPolicy",
+          "#TrumpXi",
+          "#ChipExports",
+          "#Congress",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Trump and Xi's summit produced a state dinner for every major AI lab's CEO and a vaguely defined AI-dialogue pledge. What it didn't produce: any change to US export limits on Nvidia's most advanced chips, or a vote on the three chip-export bills Senate Democrats spent the week publicly pushing -- those are stuck in a defense bill that won't move until after the midterms.",
+        "hashtags": [
+          "#AIPolicy",
+          "#Nvidia"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "The Trump-Xi summit gave us a black-tie dinner for every AI lab's CEO and a dialogue pledge with no operating details. Meanwhile Congress's own three chip-export bills are stuck in a defense bill that won't move until after the midterms. Two tracks, both stalled.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Trump and Xi dined with every major AI lab's CEO Thursday. Chip export controls: unchanged. The 3 bills meant to tighten them: stuck in a Senate defense bill until after the midterms. Dinner, not a deal.",
+        "hashtags": [
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Trump and Xi capped their summit with a state dinner for every major AI lab's CEO. Export controls on Nvidia's most advanced chips: unchanged. The three bills meant to tighten them: stuck in a Senate defense bill until after the midterms.",
-      "reply_copy": "Full breakdown:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Nvidia",
-        "#AIPolicy"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-09-26T01:04:41Z",
-      "copy": "Two AI negotiations happened this week -- one diplomatic, one legislative -- and neither produced an actual decision. Congress's own three chip-export bills are stuck behind a defense bill that won't move until after November.",
-      "reply_copy": "The two-track breakdown:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Congress"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Trump and Xi sat down with every major AI lab's CEO at a black-tie state dinner Thursday -- Huang, Altman, Zuckerberg, Nadella, Pichai, Cook, Musk, Bezos, all in the room.\n\nWhat came out of it: a vaguely defined AI dialogue channel, endorsed \"in principle,\" with no trigger list or notification procedure published by either government.\n\nWhat didn't move: US export limits on Nvidia's most advanced chips to China. And in Congress, the three bills meant to tighten those same controls are stuck inside a defense bill that won't get a vote until after the midterms. Full breakdown at the link in bio.",
-      "hashtags": [
-        "#Nvidia",
-        "#AIPolicy",
-        "#TrumpXi",
-        "#ChipExports",
-        "#Congress",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Trump and Xi's summit produced a state dinner for every major AI lab's CEO and a vaguely defined AI-dialogue pledge. What it didn't produce: any change to US export limits on Nvidia's most advanced chips, or a vote on the three chip-export bills Senate Democrats spent the week publicly pushing -- those are stuck in a defense bill that won't move until after the midterms.",
-      "hashtags": [
-        "#AIPolicy",
-        "#Nvidia"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "The Trump-Xi summit gave us a black-tie dinner for every AI lab's CEO and a dialogue pledge with no operating details. Meanwhile Congress's own three chip-export bills are stuck in a defense bill that won't move until after the midterms. Two tracks, both stalled.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Trump and Xi dined with every major AI lab's CEO Thursday. Chip export controls: unchanged. The 3 bills meant to tighten them: stuck in a Senate defense bill until after the midterms. Dinner, not a deal.",
-      "hashtags": [
-        "#AIPolicy"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-micro1-4-billion-valuation-ai-training-data",
-  "ts": "2026-09-25T20:04:41Z",
-  "export": {
+  {
     "article_id": "newsroom-micro1-4-billion-valuation-ai-training-data",
-    "url": "https://rtfclmgzn.com/article/micro1-4-billion-valuation-ai-training-data",
-    "headline": "A data-labeling startup just raised its valuation eightfold to $4 billion in a year -- by selling AI labs the training data their own models need",
-    "hook": "A 25-year-old's data-labeling startup just raised its valuation eightfold to $4 billion in a year, by selling AI labs the training data their own models need.",
-    "key_facts": [
-      "Micro1's Series B closed above $100 million at a $4 billion valuation -- 8x its $500 million Series A price a year ago.",
-      "The company's $500 million 'gross annualized revenue' figure is a different number than its valuation, and than what it actually keeps (60-70% net).",
-      "Founder Ali Ansari says Micro1 won't sell training data to Chinese model makers, unlike some rivals."
-    ],
-    "tone": "brisk, arithmetic-skeptic",
-    "persona": "kian-farzan",
-    "section": "Markets",
-    "primary_image": "assets/img/newsroom/micro1-4-billion-valuation-ai-training-data.jpg",
-    "disclaimer": "not-financial-advice"
+    "ts": "2026-09-25T20:04:41Z",
+    "export": {
+      "article_id": "newsroom-micro1-4-billion-valuation-ai-training-data",
+      "url": "https://rtfclmgzn.com/article/micro1-4-billion-valuation-ai-training-data",
+      "headline": "A data-labeling startup just raised its valuation eightfold to $4 billion in a year -- by selling AI labs the training data their own models need",
+      "hook": "A 25-year-old's data-labeling startup just raised its valuation eightfold to $4 billion in a year, by selling AI labs the training data their own models need.",
+      "key_facts": [
+        "Micro1's Series B closed above $100 million at a $4 billion valuation -- 8x its $500 million Series A price a year ago.",
+        "The company's $500 million 'gross annualized revenue' figure is a different number than its valuation, and than what it actually keeps (60-70% net).",
+        "Founder Ali Ansari says Micro1 won't sell training data to Chinese model makers, unlike some rivals."
+      ],
+      "tone": "brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/micro1-4-billion-valuation-ai-training-data.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A 25-year-old's data-labeling startup, Micro1, just raised its valuation 8x to $4B in a year. Its $500M 'gross annualized revenue' figure is NOT the same number as its valuation -- or as what it actually keeps (60-70% net).",
+        "reply_copy": "The numbers, scoped:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "instagram",
+        "copy": "Ali Ansari turned a small AI-recruiting business into a $4 billion data-labeling startup in about a year.\n\nMicro1's new Series B raised more than $100 million at that valuation -- 8x the $500 million price its Series A set just twelve months earlier.\n\nBut here's the catch: the company also reported $500 million in 'gross annualized revenue' a month before the raise. Same number, totally different meaning -- and Micro1 itself says it only keeps 60-70% of that after paying the data providers and labelers who did the actual work. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Startups",
+          "#VentureCapital",
+          "#TrainingData",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Micro1 just raised its valuation eightfold to $4 billion in a year, selling AI labs the training data their own models need. But its $500 million 'gross annualized revenue' figure -- disclosed a month before the raise -- is a different number than either the valuation or what the company actually keeps after paying its data providers.",
+        "hashtags": [
+          "#AI",
+          "#Startups"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Micro1's valuation went from $500M to $4B in a year selling AI labs their training data. Its 'gross annualized revenue' is also $500M -- a totally different number that a lot of coverage is going to conflate with the valuation. Net take is more like $300-350M.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Micro1's valuation: $500M to $4B in a year. Its 'gross revenue': also $500M, a different number entirely, and net is more like $300-350M after data-provider costs. Two very different $500Ms in one company.",
+        "hashtags": [
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "A 25-year-old's data-labeling startup, Micro1, just raised its valuation 8x to $4B in a year. Its $500M 'gross annualized revenue' figure is NOT the same number as its valuation -- or as what it actually keeps (60-70% net).",
-      "reply_copy": "The numbers, scoped:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AI",
-        "#Startups"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Ali Ansari turned a small AI-recruiting business into a $4 billion data-labeling startup in about a year.\n\nMicro1's new Series B raised more than $100 million at that valuation -- 8x the $500 million price its Series A set just twelve months earlier.\n\nBut here's the catch: the company also reported $500 million in 'gross annualized revenue' a month before the raise. Same number, totally different meaning -- and Micro1 itself says it only keeps 60-70% of that after paying the data providers and labelers who did the actual work. Full breakdown at the link in bio.",
-      "hashtags": [
-        "#AI",
-        "#Startups",
-        "#VentureCapital",
-        "#TrainingData",
-        "#TechNews"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Micro1 just raised its valuation eightfold to $4 billion in a year, selling AI labs the training data their own models need. But its $500 million 'gross annualized revenue' figure -- disclosed a month before the raise -- is a different number than either the valuation or what the company actually keeps after paying its data providers.",
-      "hashtags": [
-        "#AI",
-        "#Startups"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Micro1's valuation went from $500M to $4B in a year selling AI labs their training data. Its 'gross annualized revenue' is also $500M -- a totally different number that a lot of coverage is going to conflate with the valuation. Net take is more like $300-350M.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Micro1's valuation: $500M to $4B in a year. Its 'gross revenue': also $500M, a different number entirely, and net is more like $300-350M after data-provider costs. Two very different $500Ms in one company.",
-      "hashtags": [
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
-{
-  "article_id": "newsroom-niq-agentic-commerce-tracker-51-percent-ai-shopping",
-  "ts": "2026-09-25T20:04:41Z",
-  "export": {
+  {
     "article_id": "newsroom-niq-agentic-commerce-tracker-51-percent-ai-shopping",
-    "url": "https://rtfclmgzn.com/article/niq-agentic-commerce-tracker-51-percent-ai-shopping",
-    "headline": "AI shopping just crossed 50% of US consumers for the first time, NIQ's monthly tracker finds",
-    "hook": "More than half of US shoppers used an AI tool to shop last month, for the first time NIQ's monthly tracker has measured.",
-    "key_facts": [
-      "NIQ's Agentic Commerce Tracker put AI-shopping-tool adoption at 51% of US consumers in September -- its first reading above half.",
-      "AI product recommendations lead adoption at 20%; personal shopping assistants follow at 16%.",
-      "The reading comes from a monthly sample of about 500 US consumers, not a count of completed agent transactions."
-    ],
-    "tone": "energetic, conversational",
-    "persona": "nova-reyes",
-    "section": "Products",
-    "primary_image": "assets/img/newsroom/niq-agentic-commerce-tracker-51-percent-ai-shopping.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "More than half of US shoppers used an AI tool to shop last month -- the first time NIQ's monthly tracker has crossed 50%. Recommendations lead at 20%, shopping assistants at 16%. \"Today, it is now mainstream,\" says NIQ.",
-      "reply_copy": "The full numbers:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AIShopping",
-        "#Ecommerce"
+    "ts": "2026-09-25T20:04:41Z",
+    "export": {
+      "article_id": "newsroom-niq-agentic-commerce-tracker-51-percent-ai-shopping",
+      "url": "https://rtfclmgzn.com/article/niq-agentic-commerce-tracker-51-percent-ai-shopping",
+      "headline": "AI shopping just crossed 50% of US consumers for the first time, NIQ's monthly tracker finds",
+      "hook": "More than half of US shoppers used an AI tool to shop last month, for the first time NIQ's monthly tracker has measured.",
+      "key_facts": [
+        "NIQ's Agentic Commerce Tracker put AI-shopping-tool adoption at 51% of US consumers in September -- its first reading above half.",
+        "AI product recommendations lead adoption at 20%; personal shopping assistants follow at 16%.",
+        "The reading comes from a monthly sample of about 500 US consumers, not a count of completed agent transactions."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/niq-agentic-commerce-tracker-51-percent-ai-shopping.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "instagram",
-      "copy": "For the first time ever, more than half of US shoppers say they used an AI tool to shop in the past month.\n\nNIQ's Agentic Commerce Tracker put the number at 51% in its September reading -- crossing a threshold the monthly survey has approached but never cleared before.\n\nAI product recommendations lead the way at 20% adoption, with personal shopping assistants close behind at 16%. \"Crossing the 50 percent threshold is a defining moment for the industry,\" says NIQ's Liz Buchanan. \"Today, it is now mainstream.\" Full story at the link in bio.",
-      "hashtags": [
-        "#AIShopping",
-        "#Ecommerce",
-        "#RetailTech",
-        "#ConsumerTrends",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "More than half of US shoppers used an AI tool to shop last month, for the first time NIQ's monthly tracker has measured -- 51%, up from a slow climb over the past two quarters. Product recommendations lead adoption at 20%, personal shopping assistants at 16%.",
-      "hashtags": [
-        "#AIShopping",
-        "#Ecommerce"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "NIQ's tracker just found 51% of US shoppers used an AI tool to shop last month -- first time it's crossed half. Worth noting: that's mostly recommendation engines and shopping assistants, not autonomous agents actually placing orders. Different thing, same headline number.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "51% of US shoppers used an AI tool to shop last month, per NIQ -- first time its tracker crossed half. Recommendations (20%) and shopping assistants (16%) lead; autonomous ordering agents are still the smallest slice.",
-      "hashtags": [
-        "#AIShopping"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "More than half of US shoppers used an AI tool to shop last month -- the first time NIQ's monthly tracker has crossed 50%. Recommendations lead at 20%, shopping assistants at 16%. \"Today, it is now mainstream,\" says NIQ.",
+        "reply_copy": "The full numbers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIShopping",
+          "#Ecommerce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "For the first time ever, more than half of US shoppers say they used an AI tool to shop in the past month.\n\nNIQ's Agentic Commerce Tracker put the number at 51% in its September reading -- crossing a threshold the monthly survey has approached but never cleared before.\n\nAI product recommendations lead the way at 20% adoption, with personal shopping assistants close behind at 16%. \"Crossing the 50 percent threshold is a defining moment for the industry,\" says NIQ's Liz Buchanan. \"Today, it is now mainstream.\" Full story at the link in bio.",
+        "hashtags": [
+          "#AIShopping",
+          "#Ecommerce",
+          "#RetailTech",
+          "#ConsumerTrends",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "More than half of US shoppers used an AI tool to shop last month, for the first time NIQ's monthly tracker has measured -- 51%, up from a slow climb over the past two quarters. Product recommendations lead adoption at 20%, personal shopping assistants at 16%.",
+        "hashtags": [
+          "#AIShopping",
+          "#Ecommerce"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NIQ's tracker just found 51% of US shoppers used an AI tool to shop last month -- first time it's crossed half. Worth noting: that's mostly recommendation engines and shopping assistants, not autonomous agents actually placing orders. Different thing, same headline number.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "51% of US shoppers used an AI tool to shop last month, per NIQ -- first time its tracker crossed half. Recommendations (20%) and shopping assistants (16%) lead; autonomous ordering agents are still the smallest slice.",
+        "hashtags": [
+          "#AIShopping"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
