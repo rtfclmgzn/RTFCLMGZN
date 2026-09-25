@@ -7,6 +7,18 @@
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
 
+{ id:"bz-716", date:"2026-09-25",
+    source:{ name:"OpenAI / Google / Anthropic", handle:"openai", platform:"web", kind:"lab" },
+    text:"Google, OpenAI and Anthropic announced plans to form the Frontier AI Standards Agency, a FINRA-style self-regulator for frontier AI labs with no government oversight, targeting a launch by end of 2026 or early 2027. The labs approached Sriram Krishnan, the Trump White House's senior AI policy adviser until June, to run the organization.",
+    why:"Three dominant frontier labs agreeing to mutual self-regulation instead of waiting for government mandates represents a strategic move to shape AI governance before regulators do -- worth watching whether this actually constrains their behavior or becomes window dressing for autonomy.",
+    heat:65, topics:["ai governance","self-regulation","frontier labs","standards","policy"],
+    url:"https://www.cnbc.com/2026/09/25/google-openai-and-anthropic-announce-frontier-ai-standards-agency/" },
+{ id:"bz-715", date:"2026-09-25",
+    source:{ name:"US Court of Appeals / Pentagon", handle:"dod", platform:"web", kind:"gov" },
+    text:"A 2-1 decision by the DC Circuit Court of Appeals upheld the Department of Defense's designation of Anthropic as a supply-chain risk, barring the military and its contractors from using Claude models. Circuit Judge Gregory Katsas and Neomi Rao ruled against Anthropic's challenge; Judge Karen LeCraft Henderson dissented. Anthropic said it disagreed and is considering further appeals, including to the Supreme Court.",
+    why:"A federal appeals court backing Pentagon authority to blacklist an AI lab over deployment disagreements on weapons and surveillance use sets precedent for government ability to restrict frontier lab access -- compounded by a parallel California ruling in Anthropic's favor, creating conflicting judicial guidance on the same designation.",
+    heat:67, topics:["anthropic","pentagon","supply chain","policy","weapons","surveillance","court ruling"],
+    url:"https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html" },
 { id:"bz-712", date:"2026-09-25",
     source:{ name:"ASML", handle:"asml", platform:"web", kind:"person" },
     text:"ASML's EVP for global public affairs, Frank Heemskerk, said at Amsterdam's De Balie on Sept. 21 that the lithography giant is \"selling absolutely nothing in Europe\" -- zero European revenue in each of the first two quarters of 2026 -- because the continent isn't building the chip fabs that would buy its machines, subsidies or not.",
