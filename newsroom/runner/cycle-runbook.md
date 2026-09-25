@@ -638,6 +638,18 @@ this order, and mark it done here.
    regenerating `primer.json`, and the content-level diff once that's
    unblocked.
 
+   PARTIAL, checked (2026-09-25T15:16 cycle) -- re-checked before writing,
+   since this cycle's own three articles (OpenAI/Anthropic/Google DeepMind
+   courting Sriram Krishnan for a Frontier AI Standards Agency; DeepSeek's
+   $1B revenue run rate and pending Shanghai fundraise; Anthropic's Project
+   Swap agent-marketplace study) plus the full §3c/§4b/§4c/§4d passes were
+   already the required work. `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` absent, confirmed by
+   reading the file directly). No new `primer-issue.js`-only candidate found
+   this cycle; did not force one. Same next steps as every entry since
+   2026-08-30, still open.
+
    PARTIAL, checked (2026-09-05T23:39 cycle) -- re-checked before writing
    anything, since no cycle earlier today (2026-09-05T13:33 or T18:10) had
    touched §3e. Re-confirmed both blockers named above are unchanged:
@@ -1359,6 +1371,13 @@ Program, and Meta Muse's PayPal checkout expansion) plus the full §3c/§4b/§4c
 the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
 Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
 2026-08-30, still open.
+
+**Status (2026-09-25T15:16 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the Frontier AI Standards Agency/Sriram Krishnan synthesis, DeepSeek's $1B revenue run rate
+and Shanghai fundraise, and Anthropic's Project Swap agent-marketplace study) plus the full §3c/§4b/§4c/§4d
+passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
+`wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as
+every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

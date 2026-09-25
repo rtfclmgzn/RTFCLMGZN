@@ -729,3 +729,30 @@
   a real, twice-reproduced finding via the actual tool, just without a diagnosed cause; worth a dedicated
   cycle with more browser-debugging time, since the HOSTILE-record failure specifically threatens the
   exact "one bad record degrades to a placeholder" guarantee the whole guard system exists to provide.
+- **2026-09-25T15:16 cycle**: `newsroom/schemas/article-draft.json` enforces three component-shape
+  constraints not spelled out in `agents/_shared/visual-components.md`'s own worked examples, all three
+  caught by `component_audit.py` on this cycle's first draft: (1) a `timeline` item's `source` field must
+  match `^https?://` -- a plain outlet name like `"source":"Fortune"` fails the schema; put attribution in
+  the timeline block's top-level `source` string instead (free text, no pattern) and drop per-item source
+  unless it's a real URL. (2) `compare` row objects only allow `label`/`note`/`values` -- a row-level `hi`
+  (which the worked example in visual-components.md implies is a column-only field) fails with
+  `additionalProperties: false`; only `columns[].hi` is real. (3) `stakes` item `who` is capped at 100
+  characters -- a descriptive multi-clause `who` ("Anyone designing agent-to-agent marketplace rules,
+  including Amazon's and Meta's live agentic-commerce rollouts") fails; keep it to a short named party and
+  put the elaboration in `what`. None of these are hard to fix once found, but all three only surface at
+  `component_audit.py` time, not by re-reading the spec doc -- worth checking the actual JSON Schema
+  (`newsroom/schemas/article-draft.json`) directly for any new or unfamiliar component type rather than
+  trusting the markdown spec's examples to be exhaustive.
+- **2026-09-25T15:16 cycle**: confirmed the `verify_covers.py pick` semantic-mismatch problem already
+  logged 2026-08-18/25/26/27/28/31 extends to three more topic categories this library has no real
+  imagery for: AI self-regulation/governance-body stories (`pick --section Policy` returned surgical
+  robot arms and abstract "post-silicon" wallpaper art for a standards-agency story), Chinese-company
+  revenue/IPO stories (`pick --section Markets` returned silicon-wafer wallpaper art for a DeepSeek
+  earnings/fundraise story), and AI-agent-marketplace/negotiation stories (`pick --section Frontier`
+  returned the same post-silicon wallpaper art for an Anthropic agent-negotiation study). `GEMINI_API_KEY`
+  was live and working on this runner today (unlike several prior cycles' 429 quota-exhaustion reports) --
+  generated all three covers fresh via `newsroom.cli generate-image` at $0.06 each ($0.18 total) rather
+  than force a semantic mismatch or spend an `--allow-lru-exception` pick on a still-in-cooldown image.
+  Worth noting for whoever eventually expands the library: Policy/governance, Markets/finance-and-IPO, and
+  agent-to-agent-commerce are now three more confirmed gap categories on top of the ones already logged
+  (consumer-privacy, courtroom/legal, cybersecurity, labor-market, actors/voice).
