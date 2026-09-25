@@ -25156,14 +25156,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122123135871396947",
+        "remote_id": "1238977099292018_122123135871396947",
+        "posted_at": "2026-09-25T05:16:55Z"
       },
       {
         "platform": "threads",
         "copy": "950 agents. 21 hours. 210M tokens. 200,000+ candidate enzymes screened, narrowed to 20, one named: ART. Its layout resembles CRISPR's guide-RNA array. Function: still unknown. That's the honest state of Anthropic's first life-sciences result.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdssHMOkQmw",
+        "remote_id": "18231280096323980",
+        "posted_at": "2026-09-25T05:17:20Z"
       },
       {
         "platform": "bluesky",
@@ -25172,8 +25176,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwczeknwds2f",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwczeknwds2f",
+        "posted_at": "2026-09-25T05:17:26Z"
       }
     ]
   },
@@ -25210,7 +25216,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -25224,7 +25230,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -25237,8 +25245,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIagents",
           "#Ecommerce"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdsrlMuF7jV/",
+        "remote_id": "17875051347573647",
+        "posted_at": "2026-09-25T05:12:42Z"
       },
       {
         "platform": "facebook",
@@ -25247,14 +25257,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Amazon",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122123134995396947",
+        "remote_id": "1238977099292018_122123134995396947",
+        "posted_at": "2026-09-25T05:12:52Z"
       },
       {
         "platform": "threads",
         "copy": "Sept. 21: Amazon blocks Meta's Muse from shopping on Amazon.com. Sept. 23: Amazon gives Claude direct seller-account access via a new plugin. Same week, same company, two very different answers -- and Amazon has invested up to $33B in Claude's maker.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdsrocVEarZ",
+        "remote_id": "18434464435194107",
+        "posted_at": "2026-09-25T05:13:09Z"
       },
       {
         "platform": "bluesky",
@@ -25263,8 +25277,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Amazon",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwcz53lfws2f",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwcz53lfws2f",
+        "posted_at": "2026-09-25T05:13:16Z"
       }
     ]
   }
