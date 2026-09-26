@@ -7,6 +7,18 @@
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
 
+{ id:"bz-723", date:"2026-09-24",
+    source:{ name:"Docker", handle:"docker", platform:"web", kind:"lab" },
+    text:"Docker launched Cloud Sandboxes on Sept. 24, extending secure AI agent isolation beyond developers' laptops. The service runs AI coding agents such as Claude Code, Copilot and Codex inside hosted microVMs billed per second ($0.07 per hour minimum), with pricing controlled through Kits — OCI images that package an agent's environment and access rules.",
+    why:"A vendor offering pay-as-you-go cloud execution for agentic workloads, rather than forcing developers to provision their own infrastructure or tie up local hardware, is a concrete answer to enterprises running long-lived agent workflows — and a test of whether this workload tier becomes a separable cost center.",
+    heat:32, topics:["docker","ai agents","cloud infrastructure","sandboxing","developer tools"],
+    url:"https://www.docker.com/press-release/cloud-sandboxes-extending-secure-ai-agent-isolation-beyond-the-laptop/" },
+{ id:"bz-722", date:"2026-09-22",
+    source:{ name:"White House", handle:"WhiteHouse", platform:"web", kind:"gov" },
+    text:"President Trump announced on Sept. 22 at the UN General Assembly that the US federal government will rename 'artificial intelligence' to 'super intelligence' in official government documents and communications. Trump argued that the term 'artificial' makes the technology sound fake, saying 'it is not fake. It's actually amazing.' Xi Jinping reportedly 'seemed to like' the idea.",
+    why:"A sitting US president using a UN floor address to reframe AI's linguistic identity as 'super' rather than 'artificial' is a messaging move that borrows language research has warned about for years — and signals a deliberate rhetorical pivot away from safety-adjacent framing at the moment the industry is building the largest compute infrastructure in history.",
+    heat:46, topics:["ai policy","white house","trump","terminology","messaging","geopolitics"],
+    url:"https://www.washingtonpost.com/technology/2026/09/22/trump-says-hes-renaming-ai-super-intelligence/" },
 { id:"bz-721", date:"2026-09-26",
     source:{ name:"Huawei", handle:"Huawei", platform:"web", kind:"lab" },
     text:"Huawei unveiled the Atlas 960E SuperPoD at HUAWEI CONNECT 2026 in Shanghai on Sept. 24-25 -- the first SuperPoD built on near-packaged optics, scaling to 4,096 Ascend 960 NPUs via a 7.2-Tbit/s optical interconnect called Hi-ONE. A full configuration delivers 8 EFLOPS at FP8 and up to 1 petabyte of high-bandwidth memory; linked SuperPoDs can form a SuperCluster of up to 1 million NPUs.",
