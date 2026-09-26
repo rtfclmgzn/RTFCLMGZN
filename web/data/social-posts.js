@@ -25833,7 +25833,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Akamai"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -25860,8 +25862,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DdvQ7D5ILcV/",
+        "remote_id": "18371521861209400",
+        "posted_at": "2026-09-26T05:17:31Z"
       },
       {
         "platform": "facebook",
@@ -25870,14 +25874,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Akamai"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122123421927396947",
+        "remote_id": "1238977099292018_122123421927396947",
+        "posted_at": "2026-09-26T05:17:41Z"
       },
       {
         "platform": "threads",
         "copy": "Akamai's $11.6B Anthropic deal is its biggest ever -- and the vendor is paying the customer in stock, not the usual direction these deals run. 2% of Akamai vests now, another 1% per extra $3B Anthropic spends, capped at 5%. Stock popped 14%, but 13.5% of the float was short going in.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdvQ-kolRt5",
+        "remote_id": "17941721952347429",
+        "posted_at": "2026-09-26T05:17:56Z"
       },
       {
         "platform": "bluesky",
@@ -25887,8 +25895,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Akamai",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwfjujweqh2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwfjujweqh2p",
+        "posted_at": "2026-09-26T05:18:02Z"
       }
     ]
   },
@@ -25923,7 +25933,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Markets"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -25944,14 +25956,18 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AIInfrastructure"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122123422545396947",
+        "remote_id": "1238977099292018_122123422545396947",
+        "posted_at": "2026-09-26T05:21:46Z"
       },
       {
         "platform": "threads",
         "copy": "$613.5M in power-equipment orders, an AI lab nobody will name, and a stock that jumped 15% anyway. Atlas Energy Solutions' pivot from oilfield services to AI data-center power is now big enough to move markets on an anonymous customer alone.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DdvRc_9ldDd",
+        "remote_id": "18028796381904685",
+        "posted_at": "2026-09-26T05:22:04Z"
       },
       {
         "platform": "bluesky",
@@ -25960,8 +25976,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIInfrastructure",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwfk3wombg2r",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwfk3wombg2r",
+        "posted_at": "2026-09-26T05:22:10Z"
       }
     ]
   }
