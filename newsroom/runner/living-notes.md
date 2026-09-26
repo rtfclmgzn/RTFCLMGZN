@@ -786,3 +786,16 @@
   a long-running append-only log read as riskier than leaving a harmless ordering artifact -- the content
   itself is accurate, just out of sequence); flagging so a future dedicated pass can decide whether to
   reorder it or leave the log's append order as "mostly but not strictly chronological" by convention.
+- **2026-09-26T00:43:07Z cycle**: `axios.com` returns a hard 403 to WebFetch (confirmed on an article
+  URL cited by a WebSearch result), joining the already-tracked list of major-outlet domains that block
+  direct fetch (`*.gov`, `openai.com`, `npr.org`, `anthropic.com`, `cnbc.com`, `businesswire.com`,
+  `washingtontimes.com`). Same workaround as always: a different outlet's independent write-up of the same
+  primary fact (here, The Motley Fool, fetched cleanly) corroborates it instead of giving up on the claim.
+  Separately, `verify_covers.py pick` reproduced the already-documented never-used-image bug (2026-08-26/27)
+  on two more topic categories this cycle -- a CDN/edge-compute story and a power-generation-equipment
+  story both returned the same generic silicon-wafer/post-silicon-substrate wallpaper art regardless of
+  `--subjects` phrasing or `--exclude` chains. Generated fresh covers for both ($0.06 each) rather than
+  ship a mismatch, per §4 step 2 -- consistent with the growing list of subject categories (courtroom/legal,
+  cybersecurity, consumer-privacy, diplomatic-summit, online-shopping, and now CDN/edge-compute and
+  power-generation) where the ~155-image library has no real semantic fit and the tool's scoring can't
+  say so.
