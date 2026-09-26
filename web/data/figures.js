@@ -24,7 +24,7 @@
 //     `slug` must be a real published article.
 // ============================================================================
 window.RTFC_FIGURES = {
-  updated: "2026-09-16",
+  updated: "2026-09-26",
 
   // Per-kind display metadata. `unit` is the normalized unit every value in
   // that kind must already be expressed in.
@@ -127,6 +127,9 @@ window.RTFC_FIGURES = {
     { id:"raise-euclyd-series-a", kind:"funding-raise-usd", value:0.231,
       label:"Euclyd, Series A", slug:"euclyd-series-a-231-million-samsung-wennink-ai-inference-chips",
       note:"Over €200M, converted at report-date rates. The smallest raise in this register, but the largest European AI-inference-chip round of 2026 — a different, narrower comparison than the global figures above it." },
+    { id:"raise-island-f", kind:"funding-raise-usd", value:0.4,
+      label:"Island, Series F", slug:"island-400-million-series-f-ai-agent-browser-governance",
+      note:"Led by Evolution Equity Partners. Total raised to date now exceeds $900M across all rounds." },
 
     // ---- valuations (USD B) ----
     { id:"val-cxmt", kind:"valuation-usd", value:489,
@@ -137,6 +140,9 @@ window.RTFC_FIGURES = {
       note:"A closed price. A separate $50B pre-money figure is an ask in active talks and is deliberately not listed here." },
     { id:"val-firmus", kind:"valuation-usd", value:10.5,
       label:"Firmus, post-money (Aug 2026 round)", slug:"firmus-2-billion-nvidia-blackstone-ai-factory-raise",
-      note:"Up from $5.5B in April 2026 and roughly $1.4B a year earlier. A private round price, not a public market valuation." }
+      note:"Up from $5.5B in April 2026 and roughly $1.4B a year earlier. A private round price, not a public market valuation." },
+    { id:"val-island", kind:"valuation-usd", value:6.4,
+      label:"Island, post-money (Series F)", slug:"island-400-million-series-f-ai-agent-browser-governance",
+      note:"Up from $4.8B in March 2025 and $3B after its 2024 Series D. ARR is reported to have doubled yearly since 2022 but no dollar figure has been disclosed." }
   ]
 };
