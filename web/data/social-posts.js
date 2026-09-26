@@ -25640,8 +25640,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "The Trump-Xi summit gave us a black-tie dinner for every AI lab's CEO and a dialogue pledge with no operating details. Meanwhile Congress's own three chip-export bills are stuck in a defense bill that won't move until after the midterms. Two tracks, both stalled.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddv8wcOlW8R",
+        "remote_id": "17923592997202247",
+        "posted_at": "2026-09-26T11:40:27Z"
       },
       {
         "platform": "bluesky",
@@ -25649,8 +25651,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwg7all3ut2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwg7all3ut2t",
+        "posted_at": "2026-09-26T11:40:35Z"
       }
     ]
   },
@@ -25724,8 +25728,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwg7ht57732c",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwg7ht57732c",
+        "posted_at": "2026-09-26T11:44:38Z"
       }
     ]
   },
@@ -25834,7 +25840,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -25849,7 +25855,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIInfrastructure"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
