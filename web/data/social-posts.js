@@ -25990,5 +25990,248 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-26T05:22:10Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-illinois-oregon-ai-executive-orders-state-patchwork",
+    "ts": "2026-09-26T14:47:00Z",
+    "export": {
+      "article_id": "newsroom-illinois-oregon-ai-executive-orders-state-patchwork",
+      "url": "https://rtfclmgzn.com/article/illinois-oregon-ai-executive-orders-state-patchwork",
+      "headline": "Illinois and Oregon signed AI executive orders a day apart -- and neither one can tell a private AI lab what to do",
+      "hook": "Three governors moved on AI in one week with three different tools -- and none of them can bind a private AI company.",
+      "key_facts": [
+        "Illinois's Sept. 22 order creates an advisory AI Cabinet, built from 8 state agencies plus outside experts -- no enforcement power.",
+        "Oregon's Sept. 23 order studies a kill-switch requirement for the state's own AI contracts only, due in 90 days.",
+        "Both follow California's Sept. 18 order, whose kill-switch recommendation is due Nov. 16."
+      ],
+      "tone": "composed, legally precise",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/illinois-oregon-ai-executive-orders-state-patchwork.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Three governors, three AI executive orders, one week. Illinois built an advisory Cabinet. Oregon ordered a kill-switch feasibility study. California wants an actual mechanism by Nov. 16. None of them can touch a private AI lab.",
+        "reply_copy": "How the three orders actually differ, side by side:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#StateGovernment"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-26T19:47:00Z",
+        "copy": "29+ states have now passed their own AI laws. The White House wants Congress to preempt all of it as a \"fragmented patchwork.\" This week Illinois and Oregon just added two more pieces.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIRegulation"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three states. Three AI executive orders. One week.\n\nIllinois (Sept. 22): an advisory AI Cabinet -- 8 state agencies plus outside experts, no binding power yet.\nOregon (Sept. 23): studies a kill-switch requirement for the state's own AI contracts.\nCalifornia (Sept. 18): an outside panel must recommend an actual shutoff mechanism by Nov. 16.\n\nNone of the three can tell a private AI company what to do. Full comparison at the link in bio.",
+        "hashtags": [
+          "#AIPolicy",
+          "#StateGovernment",
+          "#ArtificialIntelligence",
+          "#Illinois",
+          "#Oregon",
+          "#California"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Illinois Gov. JB Pritzker and Oregon Gov. Tina Kotek signed AI executive orders a day apart this week, following California's Gavin Newsom five days earlier. All three cite the same gap: no federal AI law exists. But the three orders reach for different tools -- an advisory cabinet, a procurement standards study, and a kill-switch recommendation -- and none of them regulates a private AI company directly.",
+        "hashtags": [
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Illinois, Oregon and California all signed AI executive orders within one week of each other. Same excuse (Congress hasn't acted), three completely different levers -- and not one of them can bind a frontier AI lab that isn't selling to that state's own government.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Illinois (Sept 22): advisory AI Cabinet, no enforcement power. Oregon (Sept 23): kill-switch feasibility study for state contracts, due in 90 days. California (Sept 18): actual kill-switch recommendation due Nov 16. Three states, three different levers, zero reach into private AI labs.",
+        "hashtags": [
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nscale-3-36-billion-convertible-financing-closes",
+    "ts": "2026-09-26T14:47:00Z",
+    "export": {
+      "article_id": "newsroom-nscale-3-36-billion-convertible-financing-closes",
+      "url": "https://rtfclmgzn.com/article/nscale-3-36-billion-convertible-financing-closes",
+      "headline": "Nscale's pre-IPO round closed at $3.36 billion, all convertible debt -- Nvidia's piece shrank from a $2 billion equity check to a $1 billion note",
+      "hook": "Nscale's own IPO filing shows a $1.02 billion net loss against $140.6 million of revenue -- which is exactly why its pre-IPO round ended up all debt, not equity.",
+      "key_facts": [
+        "Nscale closed $3.36 billion in convertible-note financing Sept. 25, led by Third Point, with $1 billion from Nvidia arriving mid-November.",
+        "Its own S-1 shows H1 2026 revenue of $140.6 million against a $1.02 billion net loss.",
+        "Of its $103.4 billion 'active and contracted' backlog, only $2.6 billion is actually active today."
+      ],
+      "tone": "brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/nscale-3-36-billion-convertible-financing-closes.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nscale's pre-IPO round closed at $3.36B -- all convertible debt. Nvidia's piece shrank from a ~$2B equity check to a $1B note. Its own S-1 shows why: a $1.02B net loss against $140.6M of six-month revenue.",
+        "reply_copy": "What the $103.4B backlog number actually covers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nscale",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-26T19:47:00Z",
+        "copy": "Nscale's S-1 splits its own backlog number for the first time: $103.4B \"active and contracted\" -- but only $2.6B of that is actually active and billing today. The rest is future promises.",
+        "reply_copy": "Full numbers:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nscale closed $3.36 billion in pre-IPO financing Sept. 25 -- all convertible debt, led by Third Point, with $1 billion from Nvidia arriving mid-November.\n\nThree weeks earlier the same round was reported as $1.5B in notes plus a ~$2B direct Nvidia equity investment. What actually closed dropped the equity entirely.\n\nWhy? Nscale's own IPO filing shows a $1.02 billion net loss against $140.6 million of six-month revenue. Full breakdown at the link in bio. Not financial advice.",
+        "hashtags": [
+          "#Nscale",
+          "#AIInfrastructure",
+          "#IPO",
+          "#Nvidia",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "British AI-infrastructure company Nscale closed $3.36 billion in pre-IPO convertible-note financing on Sept. 25, led by Third Point. Its own SEC filing, released a week earlier, shows why investors chose debt over equity this time: a $1.02 billion net loss against $140.6 million in six-month revenue, and a $103.4 billion contracted backlog of which only $2.6 billion is actually active today. Not financial advice.",
+        "hashtags": [
+          "#Nscale"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nscale's pre-IPO financing closed at $3.36B, all convertible debt -- the direct-equity piece Nvidia was reportedly planning three weeks ago just... isn't there anymore. The company's own S-1 has the answer: a $1.02B net loss against $140.6M of revenue.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nscale closed its pre-IPO round at $3.36B (all convertible debt) instead of the ~$3.5B equity+debt mix reported three weeks ago. Its own S-1: $140.6M six-month revenue, $1.02B net loss, and only $2.6B of its $103.4B backlog is actually active. Not financial advice.",
+        "hashtags": [
+          "#Nscale",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-softbank-robotics-ai-institute-acquisition-reported",
+    "ts": "2026-09-26T14:47:00Z",
+    "export": {
+      "article_id": "newsroom-softbank-robotics-ai-institute-acquisition-reported",
+      "url": "https://rtfclmgzn.com/article/softbank-robotics-ai-institute-acquisition-reported",
+      "headline": "SoftBank has reportedly agreed to buy the research lab that taught Boston Dynamics' Atlas to do backflips",
+      "hook": "Trade press says SoftBank is buying the lab behind Atlas's backflips -- but the lab itself won't confirm it, and that gap matters.",
+      "key_facts": [
+        "The Robotics and AI Institute (RAI), founded 2022 by Boston Dynamics' Marc Raibert, built the whole-body learning framework behind Atlas's acrobatics.",
+        "Price is undisclosed and the deal needs CFIUS national-security clearance, which isn't guaranteed.",
+        "When asked directly, RAI told The Robot Report only: \"we don't have anything to share on this topic right now.\""
+      ],
+      "tone": "curious, hands-on, skeptical of the demo-vs-shipping gap",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/softbank-robotics-ai-institute-acquisition-reported.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "SoftBank has reportedly agreed to buy the Robotics and AI Institute -- the lab that taught Boston Dynamics' Atlas to backflip. Undisclosed price, CFIUS review pending. When asked, RAI itself said: \"nothing to share right now.\"",
+        "reply_copy": "Why that quote matters more than the reporting:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#SoftBank"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "SoftBank has reportedly agreed to buy the Robotics and AI Institute (RAI) -- the Cambridge, MA lab founded by Boston Dynamics' Marc Raibert, whose whole-body learning framework is the software behind Atlas's acrobatics.\n\nPrice: undisclosed. Status: pending CFIUS national-security review. RAI's own on-record comment: \"we don't have anything to share on this topic right now.\"\n\nWe're treating this as reported, not confirmed. Full context at the link in bio.",
+        "hashtags": [
+          "#Robotics",
+          "#SoftBank",
+          "#BostonDynamics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Trade outlets report SoftBank has agreed to acquire the Robotics and AI Institute -- the Cambridge, Mass. lab that built the software behind Boston Dynamics' Atlas doing backflips. The price is undisclosed, the deal needs to clear a CFIUS review, and RAI itself told one outlet only that it had \"nothing to share on this topic right now.\" Neither company has made its own statement.",
+        "hashtags": [
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "SoftBank reportedly buying the RAI Institute (Atlas's brains, basically) two months after selling its last Boston Dynamics stake for $325M. Neither company has confirmed it on the record -- RAI's own quote is a non-denial, not a yes.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "SoftBank reportedly buying the Robotics and AI Institute (built Atlas's acrobatics software) from Hyundai's orbit, undisclosed price, CFIUS review pending. RAI's own comment when asked: \"nothing to share right now.\" Treating this as reported, not confirmed.",
+        "hashtags": [
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

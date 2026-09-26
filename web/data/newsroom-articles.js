@@ -79109,6 +79109,696 @@ window.RTFC_NEWSROOM_ARTICLES = [
   },
   "image": "assets/img/newsroom/atlas-energy-solutions-frontier-ai-lab-power-deal.jpg",
   "publishedAt": "2026-09-26T00:43:07Z"
+ },
+ {
+  "slug": "illinois-oregon-ai-executive-orders-state-patchwork",
+  "id": "newsroom-illinois-oregon-ai-executive-orders-state-patchwork",
+  "title": "Illinois and Oregon signed AI executive orders a day apart -- and neither one can tell a private AI lab what to do",
+  "dek": "Gov. JB Pritzker created an advisory Illinois AI Cabinet on Sept. 22 and Gov. Tina Kotek ordered a kill-switch feasibility study for Oregon's own state contracts on Sept. 23 -- the second and third state executive actions on AI in five days, after California's Gavin Newsom acted Sept. 18. All three governors cite the same excuse, federal inaction, but the three orders bind at three different depths, and none of them reaches a frontier AI company that isn't selling to that state's own government.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch who Pritzker names to the Illinois AI Cabinet",
+    "text": "Executive Order 2026-07 sets the mandate but not the roster -- members are due to be announced in the coming weeks. Whether outside academics and ethicists get real seats alongside the eight state-agency heads is the difference between an advisory board and a rubber stamp."
+   },
+   {
+    "label": "Watch Oregon's CIO proposal, due within 90 days of Sept. 23",
+    "text": "That's roughly Dec. 22. The order asks for a kill-switch feasibility assessment, not a kill switch -- the proposal itself is the first checkable output, and Kotek has to decide whether to act on it or let the review lapse at her own three-month reassessment mark."
+   },
+   {
+    "label": "Watch California's Nov. 16 kill-switch recommendation",
+    "text": "Newsom's outside panel reports first. If California's panel recommends a concrete shutoff mechanism and Newsom acts on it, Oregon's slower-moving, procurement-only version will look timid by comparison within a month of shipping."
+   },
+   {
+    "label": "Watch whether a federal preemption order reaches any of the three",
+    "text": "A separate White House push to preempt state AI law is already in the record. None of these three orders creates a statute -- they're easier to argue around in court than a bill the state legislature actually passed."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Gov. Pritzker Establishes Illinois Artificial Intelligence (AI) Cabinet",
+    "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet",
+    "outlet": "Office of Governor JB Pritzker",
+    "kind": "primary"
+   },
+   {
+    "label": "Governor Kotek Issues Executive Order to Advance AI Safety and Oversight",
+    "url": "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-issues-executive-order-to-advance-ai-safety-and-oversight",
+    "outlet": "Office of Governor Tina Kotek",
+    "kind": "primary"
+   },
+   {
+    "label": "Gov. JB Pritzker assembling Illinois Artificial Intelligence Cabinet to assess AI threats",
+    "url": "https://chicago.suntimes.com/politics/2026/09/22/illinois-ai-cabinet-artificial-intelligence-pritzker",
+    "outlet": "Chicago Sun-Times",
+    "kind": "reporting"
+   },
+   {
+    "label": "Oregon Is Latest State to Move on Frontier AI Regulation",
+    "url": "https://www.govtech.com/artificial-intelligence/oregon-is-latest-state-to-move-on-frontier-ai-regulation",
+    "outlet": "Government Technology",
+    "kind": "reporting"
+   },
+   {
+    "label": "Governor Newsom Issues Executive Order to Accelerate Independent Oversight and Advance the Creation of an AI Kill Switch",
+    "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/",
+    "outlet": "Office of Governor Gavin Newsom",
+    "kind": "historical_context"
+   },
+   {
+    "label": "New Executive Order aims to preempt state AI regulation: Top points",
+    "url": "https://www.dlapiper.com/en-us/insights/publications/2025/12/new-executive-order-aims-to-preempt-state-ai-regulation",
+    "outlet": "DLA Piper",
+    "kind": "expert_or_stakeholder"
+   },
+   {
+    "label": "Where State AI Legislation Stands Half Way Into 2026",
+    "url": "https://www.techpolicy.press/where-state-ai-legislation-stands-half-way-into-2026/",
+    "outlet": "Tech Policy Press",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Illinois's Sept. 22 order creates an advisory AI Cabinet -- no new binding rules yet.",
+   "Oregon's Sept. 23 order studies a kill-switch requirement for the state's own AI contracts only.",
+   "Both follow California's Sept. 18 order, whose kill-switch recommendation is due Nov. 16.",
+   "None of the three orders can compel a private AI company to do anything.",
+   "Caveat: Illinois hasn't named its Cabinet members yet, so its real influence is still unproven."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Three governors reached for executive power over AI within a single week, and all three named the same gap: no comprehensive federal AI law exists to fill it. **Illinois Gov. JB Pritzker signed Executive Order 2026-07 on Sept. 22**, creating an advisory AI Cabinet inside state government. **Oregon Gov. Tina Kotek followed a day later with Executive Order 26-26**, directing her own technology office to study a kill-switch requirement for the AI systems Oregon buys. Both arrived four days after **California's Gavin Newsom** set a kill-switch review of his own in motion. None of the three can compel a private AI company to do anything -- each one binds only its own state government, and at a different depth.",
+    "citation_urls": [
+     "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet",
+     "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-issues-executive-order-to-advance-ai-safety-and-oversight"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Illinois's Cabinet pairs outside experts in academia, law, ethics and governance with senior leaders from eight state agencies -- Innovation and Technology, Emergency Management, Financial and Professional Regulation, the Commerce Commission, State Police, Commerce and Economic Opportunity, Environmental Protection, and Public Health. Its mandate: prepare for and respond to AI-related incidents, safeguard public water systems, education systems and infrastructure, and evaluate future regulatory mechanisms including data-center incentive conditions, energy-burden rules, procurement standards and strict-liability frameworks. __Members themselves haven't been named yet__ -- Pritzker's office says an announcement is coming in the weeks ahead. The order builds on Illinois's own AI Safety Measures Act, passed this summer, which already mandates annual independent audits and worker protections; the Cabinet's job is to find what that law didn't reach.",
+    "citation_urls": [
+     "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet",
+     "https://chicago.suntimes.com/politics/2026/09/22/illinois-ai-cabinet-artificial-intelligence-pritzker"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "\"AI has enormous potential, but when experts sound alarm bells and ask for guardrails, we should listen.\" -- Gov. JB Pritzker",
+    "citation_urls": [
+     "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "This isn't a fringe pattern. By July 2026, at least **29 states** had enacted their own AI-specific statutes -- 109 AI laws in total, according to a TechPolicy Press count -- and that tally doesn't include executive orders like these three, which don't require a legislature's vote at all. The White House has separately pushed a national framework asking Congress to preempt what it calls a \"fragmented patchwork\" of state rules. Illinois, Oregon and California just added three more pieces to the patchwork the framework is trying to dissolve.",
+    "citation_urls": [
+     "https://www.techpolicy.press/where-state-ai-legislation-stands-half-way-into-2026/"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Three different levers, not one law",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "Put side by side, the three orders aren't versions of the same idea moving at different speeds -- they reach for different tools entirely, and only one of them touches a kill switch directly.",
+    "citation_urls": []
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Three states, three different orders",
+     "columns": [
+      {
+       "label": "Illinois",
+       "sub": "EO 2026-07, Sept. 22"
+      },
+      {
+       "label": "Oregon",
+       "sub": "EO 26-26, Sept. 23"
+      },
+      {
+       "label": "California",
+       "sub": "Sept. 18",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "What it creates",
+       "values": [
+        "An advisory Cabinet: outside experts + eight agency heads",
+        "A CIO-led standards process for state procurement",
+        "An outside-expert panel reporting to the governor"
+       ]
+      },
+      {
+       "label": "Binds a private AI company?",
+       "values": [
+        "No -- advisory only",
+        "No -- covers Oregon's own contracts only",
+        "No -- study and acceleration of existing law"
+       ]
+      },
+      {
+       "label": "Kill-switch component?",
+       "values": [
+        "Not part of this order",
+        "Assess feasibility, report due ~Dec. 22",
+        "Recommend a mechanism, due Nov. 16"
+       ],
+       "note": "Oregon studies feasibility; California's panel is asked to recommend an actual mechanism."
+      },
+      {
+       "label": "Built on prior state AI law?",
+       "values": [
+        "Yes -- this summer's AI Safety Measures Act",
+        "No AI-specific statute cited in the order",
+        "Yes -- accelerates two 2026 oversight laws"
+       ]
+      }
+     ],
+     "source": "Illinois and Oregon governors' offices; California order per Sept. 18 coverage."
+    }
+   },
+   {
+    "type": "p",
+    "text": "Oregon's order is the narrowest and the most concrete. It directs the state's chief information officer to develop, within 90 days, standards for third-party review of AI systems the state procures, and separately to assess -- not implement -- the viability of a kill-switch requirement for frontier models used in state government. ==The order takes effect immediately, applies only to what Oregon itself buys, and Kotek has committed to reassessing its necessity every three months.== It builds on existing statewide AI-use rules around risk management and transparency rather than a single named prior statute.",
+    "citation_urls": [
+     "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-issues-executive-order-to-advance-ai-safety-and-oversight",
+     "https://www.govtech.com/artificial-intelligence/oregon-is-latest-state-to-move-on-frontier-ai-regulation"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "\"We must act with urgency to address this issue, and I am committed to doing everything in my executive authority to put safeguards in place until the Oregon Legislature and Congress can pass comprehensive standards.\" -- Gov. Tina Kotek",
+    "citation_urls": [
+     "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-issues-executive-order-to-advance-ai-safety-and-oversight"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "California's order, signed by Newsom on Sept. 18, runs on a different clock. It directs state agencies to accelerate two 2026 AI-oversight laws already on the books and convenes outside experts, due Nov. 16, to recommend both a frontier-model shutoff mechanism and onsite safety auditors -- a version of the idea Newsom vetoed in narrower form as SB 1047 back in September 2024. Of the three, California's is the only one asking its panel to recommend an actual mechanism rather than study whether one is feasible.",
+    "citation_urls": [
+     "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "title": "Five days, three states",
+     "items": [
+      {
+       "when": "Sept. 18",
+       "what": "Newsom signs California's order; outside panel convened",
+       "hi": true,
+       "source": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+      },
+      {
+       "when": "Sept. 22",
+       "what": "Pritzker signs Illinois EO 2026-07, creating the AI Cabinet",
+       "source": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet"
+      },
+      {
+       "when": "Sept. 23",
+       "what": "Kotek signs Oregon EO 26-26, ordering the kill-switch feasibility study",
+       "source": "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-issues-executive-order-to-advance-ai-safety-and-oversight"
+      },
+      {
+       "when": "~Dec. 22",
+       "what": "Oregon's CIO proposal is due, 90 days after EO 26-26",
+       "future": true
+      },
+      {
+       "when": "Nov. 16",
+       "what": "California's outside panel must recommend a kill-switch mechanism",
+       "future": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "h2",
+    "text": "What actually changes, and for whom",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "None of the three orders regulates a frontier AI lab directly. Each one governs only what its own state government buys, uses or studies -- the enforcement gap that makes an executive order a weaker instrument than a statute a legislature actually passed. Oregon's is the only one with any near-term teeth: a vendor selling AI tools to Oregon agencies could plausibly face new review standards once the CIO's proposal lands. Illinois's Cabinet, by contrast, has no enforcement authority at all -- its entire job, per the order's own text, is to recommend, not require. And all three sit against a separate federal push, reported in trade coverage of a White House order, to preempt state-level AI regulation outright -- a fight that could moot some of this before any of the three deadlines arrive.",
+    "citation_urls": [
+     "https://www.dlapiper.com/en-us/insights/publications/2025/12/new-executive-order-aims-to-preempt-state-ai-regulation"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "Vendors selling AI to Oregon agencies",
+       "tone": "exposed",
+       "what": "Face new third-party safety-review standards once Oregon's CIO delivers its proposal, expected around Dec. 22."
+      },
+      {
+       "who": "Illinois AI Cabinet's future appointees",
+       "tone": "unclear",
+       "what": "Hold advisory power only -- the order creates no enforcement authority, just a mandate to study and recommend."
+      },
+      {
+       "who": "Frontier AI labs like OpenAI and Anthropic",
+       "tone": "unclear",
+       "what": "None of the three orders regulates them directly; each targets only what its own state government buys or uses."
+      },
+      {
+       "who": "Illinois residents served by public water and school systems",
+       "tone": "unclear",
+       "what": "Named explicitly in the order's mandate as systems to safeguard, but nothing requires action until the Cabinet reports."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The pattern across all three is the same: study now, decide later, and let the state's own procurement or advisory power stand in for a law none of these legislatures has passed. {{note: Illinois's own AI Safety Measures Act is the exception here -- it's a real statute, already in force, with audit and worker-protection requirements this new Cabinet is layered on top of rather than replacing.}} Whether any of the three converts from advisory or study status into something with real force before Congress acts -- or before a federal preemption fight settles the question first -- is the actual story to watch, not the signing ceremony.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "5 independent evidence threads: Illinois governor's own press release (primary), Oregon governor's own press release (primary), Chicago Sun-Times reporting on the Illinois order (independent_reporting), Government Technology's reporting on Oregon (independent_reporting), and California's Sept. 18 order (historical_context, previously verified in this newsroom's own coverage and re-confirmed against the governor's own release). Plus DLA Piper's expert read on federal preemption (expert_or_stakeholder). Spans 4 source classes. Routed synthesis: three distinct state actions requiring reconciliation of what each one actually binds, not a single-event brief."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No health, financial, legal-proceeding, or accusatory-claim trigger fires. Every EO number, date, and quote traces to the issuing governor's own office. California recap facts re-verified against gov.ca.gov directly rather than trusted from memory of prior coverage."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft implied Illinois's order includes a kill-switch element; revised after re-reading the primary source, which confines Illinois to incident response and regulatory evaluation with no kill-switch mandate. Self-referential-language check clean -- California's order is described by its own facts, not as 'coverage we published.'"
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Compare: all 4 rows populated for all 3 columns from body prose. Timeline: 5 dated items, 2 marked future, each source a real government URL. Stakes: all 4 'who' values under 100 characters, tones justified in prose. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fires; every claim traces to a governor's office or independently reported coverage."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Policy piece sourced to two governors' own executive orders plus independent reporting; no financial, health, legal, or defamation trigger."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-26T14:47:00Z"
+  },
+  "image": "assets/img/newsroom/illinois-oregon-ai-executive-orders-state-patchwork.jpg",
+  "publishedAt": "2026-09-26T14:47:00Z"
+ },
+ {
+  "slug": "nscale-3-36-billion-convertible-financing-closes",
+  "id": "newsroom-nscale-3-36-billion-convertible-financing-closes",
+  "title": "Nscale's pre-IPO round closed at $3.36 billion, all convertible debt -- Nvidia's piece shrank from a $2 billion equity check to a $1 billion note",
+  "dek": "The British AI-infrastructure company's Sept. 25 financing, led by Third Point, keeps the same lead investor Bloomberg named three weeks earlier but drops the direct-equity structure entirely. Nscale's own S-1, filed a week before the raise closed, shows why investors preferred debt: a $1.02 billion net loss against $140.6 million of six-month revenue, and a $103.4 billion backlog of which only $2.6 billion is actually active today.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "synthesis",
+  "disclaimer": "not-financial-advice",
+  "applyType": "numbers",
+  "apply": [
+   {
+    "label": "Watch whether the ~$35 billion IPO valuation target survives the roadshow",
+    "text": "Nscale's S-1 hasn't set a share price or share count yet -- the $35 billion figure is a reported target, not a filed number, and it's the first thing likely to move once underwriters start pricing conversations with investors."
+   },
+   {
+    "label": "Watch Nvidia's $1 billion tranche actually fund in mid-November",
+    "text": "That's a dated, checkable event distinct from Sept. 25's announcement -- the money isn't in Nscale's accounts yet, and Nvidia's own quarterly disclosures would show the commitment if it slips."
+   },
+   {
+    "label": "Watch the gap between active and contracted-but-not-active TCV close, or not",
+    "text": "Nscale's S-1 states $103.4 billion of 'active and contracted' backlog against just $2.6 billion actually active as of Aug. 31 -- the ratio that determines whether this is a real revenue pipeline or mostly future promises."
+   },
+   {
+    "label": "Watch the next quarterly net-loss figure against the $1.02 billion first-half number",
+    "text": "Whether the loss narrows as contracted capacity comes online, or keeps pace with new debt-funded construction, is the single number that will tell you if the financing structure was the right call."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+    "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+    "outlet": "TechCrunch",
+    "kind": "reporting"
+   },
+   {
+    "label": "NSCALE Ltd -- Form S-1",
+    "url": "https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm",
+    "outlet": "U.S. Securities and Exchange Commission",
+    "kind": "filing_or_official"
+   },
+   {
+    "label": "Nscale Files Registration Statement for Proposed Initial Public Offering",
+    "url": "https://www.nscale.com/press-releases/nscale-files-initial-public-offering",
+    "outlet": "Nscale (company press release)",
+    "kind": "primary"
+   },
+   {
+    "label": "Nscale Files For U.S. IPO On NYSE Under NSCL Ticker",
+    "url": "https://pulse2.com/nscale-files-for-ipo/",
+    "outlet": "Pulse2",
+    "kind": "reporting"
+   },
+   {
+    "label": "AI compute provider Nscale is looking for $3.5B in pre-IPO financing",
+    "url": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
+    "outlet": "TechCrunch",
+    "kind": "historical_context"
+   }
+  ],
+  "tldr": [
+   "Nscale closed $3.36 billion in pre-IPO convertible-note financing on Sept. 25, led by Third Point.",
+   "Nvidia's piece shrank from a ~$2 billion direct-equity plan to a $1 billion convertible tranche.",
+   "Nscale's own S-1 shows a $1.02 billion net loss against $140.6 million of H1 2026 revenue.",
+   "Only $2.6 billion of its $103.4 billion contracted backlog is active business today.",
+   "Caveat: Nscale hasn't set an IPO share price or count yet -- $35 billion is a reported target."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "**Nscale** closed **$3.36 billion** in pre-IPO convertible-note financing on Sept. 25, led by ++Third Point++, Daniel Loeb's hedge fund -- **$2.36 billion** available immediately and a further **$1 billion** from [Nvidia](/company/nvidia), Nscale's existing investor, arriving mid-November. That's the same financing process Bloomberg first reported in talks three weeks earlier, on Sept. 4, but the structure changed on the way to closing: the original pitch split roughly $1.5 billion in convertible notes from Third Point and about $2 billion in a *direct equity investment* from Nvidia. What actually closed is $3.36 billion, all of it convertible debt, with Nvidia's share cut to $1 billion and converting into non-voting shares automatically once Nscale's planned NYSE listing completes.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+     "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Other participants in the round include funds managed by Apollo, Citadel, Hudson Bay, the Abu Dhabi Investment Council and 8090 Industries. The financing lands a week after Nscale filed its **Form S-1** with the SEC on Sept. 18, proposing to list on the NYSE under the ticker __NSCL__, with Goldman Sachs, J.P. Morgan and Morgan Stanley leading the offering. Neither the share price range nor the share count has been set.",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm",
+     "https://pulse2.com/nscale-files-for-ipo/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Nscale itself is barely four years old in its current form -- spun out of Arkon Energy, an Australian crypto-mining operation, and rebuilt as a UK-based \"neocloud\": a data-center operator selling dedicated GPU capacity under long-term, take-or-pay contracts rather than renting spot compute by the hour. That structure is exactly why its backlog and its revenue can move so far apart -- a signed, multi-year contract counts toward TCV the day it's signed, long before the capacity it promises is built and billing.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Why debt, not equity, this time",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "==The shift from equity to debt is the tell.== Nscale's own S-1 discloses, for the first time, the numbers behind its pitch: revenue for the six months ended June 30, 2026 reached **$140.6 million**, up from $10.4 million in the same period a year earlier -- a 1,252% jump. Over that same six months, Nscale's net loss widened to **$1,020.1 million**, from $368.9 million a year prior. A company burning more than seven dollars for every dollar of revenue it books is a harder sell for a fresh equity check at a fixed price than for convertible debt that lets investors defer the valuation question to the IPO itself.",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm"
+    ]
+   },
+   {
+    "type": "beforeafter",
+    "beforeafter": {
+     "title": "Nscale's own numbers, six months apart",
+     "beforeLabel": "H1 2025 (six months to June 30)",
+     "afterLabel": "H1 2026",
+     "rows": [
+      {
+       "label": "Revenue",
+       "before": "$10.4 million",
+       "after": "$140.6 million"
+      },
+      {
+       "label": "Net loss",
+       "before": "$368.9 million",
+       "after": "$1,020.1 million"
+      },
+      {
+       "label": "Contracted backlog (TCV), year/period end",
+       "before": "$38.0 billion (Dec. 31, 2025)",
+       "after": "$103.4 billion (Aug. 31, 2026)"
+      }
+     ],
+     "source": "Nscale's Form S-1, filed with the SEC Sept. 18, 2026."
+    }
+   },
+   {
+    "type": "p",
+    "text": "The backlog figure needs its own scope note, because the S-1 splits it in a way a headline number doesn't. Nscale reports $103.4 billion of \"active and contracted\" total contract value as of Aug. 31 -- up from **$38.0 billion** at the end of 2025 -- but only **$2.6 billion** of that current total is actually *active*, meaning capacity that's live and billing today. The rest is contracted future capacity, much of it tied to builds like the West Virginia campus that isn't due online until late 2027.",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the $3.36 billion round, and the $103.4 billion backlog, each actually cover",
+     "items": [
+      {
+       "value": "$2.36B",
+       "unit": "available now",
+       "label": "Funded portion of the convertible note, closed Sept. 25",
+       "includes": "Cash Nscale can draw immediately, led by Third Point.",
+       "excludes": "Nvidia's $1 billion tranche, which funds separately."
+      },
+      {
+       "value": "$1B",
+       "unit": "Nvidia's tranche",
+       "label": "Convertible note commitment from Nscale's existing investor Nvidia",
+       "includes": "Converts automatically into non-voting shares at IPO.",
+       "excludes": "Cash before mid-November 2026 -- it isn't available yet."
+      },
+      {
+       "value": "$103.4B",
+       "unit": "active + contracted TCV",
+       "label": "Total contract value Nscale reports as of Aug. 31, 2026",
+       "includes": "Long-term take-or-pay compute contracts spanning years, most not yet delivering.",
+       "excludes": "The $2.6 billion actually active today, and any of the $140.6 million in six-month revenue already booked."
+      },
+      {
+       "value": "~$35B",
+       "unit": "reported IPO target",
+       "label": "Valuation underwriters are reportedly targeting for the NYSE listing",
+       "includes": "A target figure from reporting on the roadshow.",
+       "excludes": "A confirmed share price or share count -- neither is set in the S-1 itself."
+      }
+     ],
+     "source": "Nscale's Form S-1 (SEC, Sept. 18, 2026) and TechCrunch's Sept. 25 reporting on the closed round."
+    }
+   },
+   {
+    "type": "h2",
+    "text": "The number that's actually new here",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "The backlog figure isn't new -- it's been the centerpiece of Nscale's pitch since at least early September, when it stood close to this same level. What's new in this S-1 is the loss. A $1.02 billion net loss in six months, against $140.6 million of revenue, is the number investors were actually pricing when they chose a convertible note over a priced equity round: debt gets repaid or converts at a discount either way, while a fixed-price equity check assumes today's valuation is right. Nscale isn't unusual among AI-infrastructure builders in running a loss this size while capacity is still under construction -- it is unusual in how precisely its own filing now lets an outsider see the ratio.",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0002110365/000119312526395475/ck0002110365-20260918.htm",
+     "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The shift toward debt- and equity-linked AI-infrastructure financing isn't unique to Nscale. [Akamai's own $11.6 billion compute deal with Anthropic the same week](/article/anthropic-akamai-11-6-billion-cpu-compute-warrant) paid its customer in vendor stock rather than a cash discount -- a different mechanism aimed at a similar problem: structuring a massive, multi-year AI commitment without every party having to agree on a single valuation today.",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "{{note: A convertible note is, structurally, a bet that the IPO happens and prices well -- if it doesn't, noteholders typically have repayment rights an equity investor wouldn't. That's part of why the instrument shifted even as the total raise shrank only slightly, from a $3.5 billion target to $3.36 billion closed.}} None of this means Nscale's business is failing -- its own revenue grew more than twelvefold year over year, and $2.6 billion of genuinely active, billing capacity is a real number, not a projection. It means the $103.4 billion figure and the $1.02 billion loss are both true at once, and only one of them is money Nscale has actually collected.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "5 independent evidence threads: Nscale's own Form S-1 (filing_or_official, fetched and figures verified directly against the SEC document), Nscale's own IPO press release (primary), TechCrunch's Sept. 25 reporting on the closed financing (reporting), TechCrunch's Sept. 4 reporting on the earlier in-talks structure (historical_context, used to source the equity-to-debt structural comparison), and Pulse2's reporting on the S-1 filing details (reporting). Routed synthesis: reconciling a structural change between two dated reports on the same financing process, plus new S-1 financials, is more than a single-event brief."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Financial/valuation trigger fired -- not-financial-advice disclaimer applied. Every dollar figure traces to the S-1 itself (fetched directly, not taken secondhand) or to TechCrunch's own reporting; the $35B valuation is explicitly labeled a reported target, not a filed fact, since the S-1 does not set a price or share count."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the draft risked implying the $103.4B backlog was newly inflated; revised to state plainly that the backlog level itself isn't new, and to isolate the actually-new disclosure (the net-loss figure) as the piece's real finding. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Beforeafter: all 6 values trace to the S-1 and appear in body prose. Ledger: all 4 values (2.36B, 1B, 103.4B, ~35B) trace to body prose and cited sources; the $2.6B active-TCV figure and $140.6M revenue figure appear in prose as the 'excludes' basis. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. Financial/valuation trigger reviewed and cleared with disclaimer; no health, legal, or defamation trigger; central claims verified directly against the primary SEC filing rather than secondary paraphrase."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Financial claims sourced to Nscale's own SEC filing (fetched and figures confirmed directly) plus independent reporting; not-financial-advice disclaimer applied; the IPO valuation target is explicitly labeled reported, not filed."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-26T14:47:00Z"
+  },
+  "image": "assets/img/newsroom/nscale-3-36-billion-convertible-financing-closes.jpg",
+  "publishedAt": "2026-09-26T14:47:00Z"
+ },
+ {
+  "slug": "softbank-robotics-ai-institute-acquisition-reported",
+  "id": "newsroom-softbank-robotics-ai-institute-acquisition-reported",
+  "title": "SoftBank has reportedly agreed to buy the research lab that taught Boston Dynamics' Atlas to do backflips",
+  "dek": "Trade outlets say SoftBank and the Robotics and AI Institute have confirmed a deal that would move Marc Raibert's Cambridge, Mass. lab out of Hyundai's orbit and into a CFIUS national-security review -- but when a reporter asked RAI directly, the institute said only that it had \"nothing to share on this topic right now.\" Neither company has issued its own statement, and this piece treats the reporting as reported, not established.",
+  "persona": "ash-lindqvist",
+  "section": "Robotics",
+  "format": "brief",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for either company's own statement",
+    "text": "SoftBank and RAI haven't issued a joint or individual press release; a real confirmation, or denial, would come from one of those, not another trade-press rewrite of the same anonymous sourcing."
+   },
+   {
+    "label": "Watch the CFIUS review outcome",
+    "text": "Clearance is not guaranteed for a foreign buyer -- SoftBank is Japanese -- acquiring a US research lab with defense-adjacent robotics work; a blocked or delayed review is the concrete event that would settle whether this deal happens at all."
+   }
+  ],
+  "sources": [
+   {
+    "label": "SoftBank agrees to acquire Robotics and AI Institute",
+    "url": "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/",
+    "outlet": "The Robot Report",
+    "kind": "reporting"
+   },
+   {
+    "label": "SoftBank to acquire Robotics and AI Institute, deal under US review",
+    "url": "https://dealroom.co/news/154603-softbank-to-acquire-robotics-and-ai-institute-deal-under-us-review/",
+    "outlet": "Dealroom",
+    "kind": "reporting"
+   },
+   {
+    "label": "Hyundai takes full control of Boston Dynamics as SoftBank exits for $325 million",
+    "url": "https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/",
+    "outlet": "Startup Fortune",
+    "kind": "historical_context"
+   }
+  ],
+  "tldr": [
+   "Trade press reports SoftBank has agreed to buy the Robotics and AI Institute (RAI) from Hyundai's orbit.",
+   "RAI's own on-record response was a non-denial, not a confirmation: \"nothing to share right now.\"",
+   "The deal's price is undisclosed and it must still clear a CFIUS national-security review.",
+   "It follows SoftBank's July exit from its last Boston Dynamics stake, for $325 million.",
+   "Caveat: neither SoftBank nor RAI has issued its own statement confirming the deal."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "SoftBank has agreed to acquire the **Robotics and AI Institute (RAI)**, according to trade-press reporting from The Robot Report and Dealroom, both describing the deal as confirmed by the two parties this month. ==Neither company has actually issued its own press release or public statement saying so.== When The Robot Report contacted RAI directly, the institute would only say: \"We don't have anything to share on this topic right now. We'd still love to stay in touch and keep you in the loop when we have news to share.\" That's a non-denial, not a confirmation -- and this piece is explicit about the difference rather than treating trade-press sourcing as settled fact.",
+    "citation_urls": [
+     "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/",
+     "https://dealroom.co/news/154603-softbank-to-acquire-robotics-and-ai-institute-deal-under-us-review/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "RAI is a Cambridge, Massachusetts research lab founded in 2022 by ++Marc Raibert++, who also founded Boston Dynamics, with more than **$400 million** committed by Hyundai and Boston Dynamics to work on robot control, perception, manipulation and navigation. Its whole-body learning framework is the software behind Boston Dynamics' Atlas humanoid performing acrobatics. Financial terms of the reported SoftBank deal are undisclosed, and it's now under review by the __Committee on Foreign Investment in the United States (CFIUS)__, which vets foreign acquisitions of US assets for national-security risk -- clearance, per the reporting, is not guaranteed.",
+    "citation_urls": [
+     "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "title": "The reported RAI deal, in short",
+     "items": [
+      {
+       "label": "Reported buyer",
+       "value": "SoftBank",
+       "note": "trade-press sourcing, not a company statement"
+      },
+      {
+       "label": "Price",
+       "value": "Not disclosed"
+      },
+      {
+       "label": "Regulatory hurdle",
+       "value": "CFIUS review",
+       "note": "clearance not guaranteed"
+      },
+      {
+       "label": "What RAI is",
+       "value": "Cambridge, MA robotics-research lab",
+       "note": "founded 2022, $400M+ from Hyundai and Boston Dynamics"
+      },
+      {
+       "label": "RAI's own comment",
+       "value": "\"Nothing to share right now\"",
+       "note": "a non-denial, not a confirmation"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The reported move follows SoftBank's own exit from Boston Dynamics itself: in July, SoftBank sold its remaining 9.65% stake in the humanoid maker to Hyundai for **$325 million**, leaving Hyundai in full control of the commercial robot business. If the RAI acquisition closes, it would put SoftBank on the research side of the same lineage it just sold out of on the commercial side -- separating Raibert's long-horizon lab work from the increasingly product-focused Atlas program Hyundai now owns outright.",
+    "citation_urls": [
+     "https://startupfortune.com/hyundai-takes-full-control-of-boston-dynamics-as-softbank-exits-for-325-million/",
+     "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/"
+    ]
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "2 independent evidence threads: The Robot Report's reporting (a dedicated robotics trade publication, treated as independent_reporting) and Dealroom's separate writeup (independent_reporting), both describing the same reported deal terms and CFIUS review. Plus historical_context on SoftBank's July Boston Dynamics stake sale. Routed brief: one discrete reported development, no reconciliation of competing claims needed since both accounts agree."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Unverifiable-central-claim trigger considered directly: neither SoftBank nor RAI has issued an on-record confirmation, and RAI's own quoted response is a non-denial rather than a confirmation. Remediated by stating this gap explicitly in the title, dek, and lede rather than reporting the deal as settled fact -- the same honesty-about-uncertainty approach this desk uses when a company won't confirm a customer's identity or a deal's terms."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found an early draft's headline read as a flat confirmation; revised to 'reportedly agreed' and added the RAI quote higher in the piece so the uncertainty is visible before the reader commits to the story. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Keyfacts: all 5 items trace to body prose and cited sources. No top-level text field on the component."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication with the unverifiable-claim caveat stated prominently rather than the deal reported as confirmed fact. No health, financial, or legal-proceeding trigger; no accusatory claim about a named party."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Unverifiable-central-claim trigger reviewed: reported by two independent trade outlets, but explicitly labeled as reported rather than company-confirmed throughout the piece, since RAI's own on-record response was a non-denial, not a confirmation."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-26T14:47:00Z"
+  },
+  "image": "assets/img/newsroom/softbank-robotics-ai-institute-acquisition-reported.jpg",
+  "publishedAt": "2026-09-26T14:47:00Z"
  }
 ]
 ;

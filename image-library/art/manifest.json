@@ -4140,7 +4140,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-24-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "nscale-3-36-billion-convertible-financing-closes",
+     "used_at": "2026-09-26"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-beyond-05",
@@ -4631,7 +4636,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-58-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "softbank-robotics-ai-institute-acquisition-reported",
+     "used_at": "2026-09-26"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-09",
