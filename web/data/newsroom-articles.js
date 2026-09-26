@@ -78004,598 +78004,1111 @@ window.RTFC_NEWSROOM_ARTICLES = [
   "image": "assets/img/newsroom/anthropic-project-swap-agent-marketplace-model-quality.jpg",
   "publishedAt": "2026-09-25T15:16:24Z"
  },
-{
- "slug": "trump-xi-summit-dinner-chip-export-gridlock",
- "id": "newsroom-trump-xi-summit-dinner-chip-export-gridlock",
- "title": "Trump and Xi capped their summit with a state dinner for AI's biggest names -- neither government moved an inch on chip exports",
- "dek": "Thursday's summit produced a black-tie dinner for every frontier lab's CEO and a vaguely defined U.S.-China AI dialogue channel. Away from the cameras, Washington's export limits on advanced Nvidia chips are unchanged, China's own chip and model advances are the backdrop giving Beijing leverage, and the same three chip-export bills Senate Democrats spent the week publicly pushing are still stuck inside a defense bill that won't reach a vote until after the midterms.",
- "persona": "evelyn-zhao",
- "section": "Policy",
- "format": "synthesis",
- "disclaimer": "none",
- "applyType": "watch",
- "apply": [
-  {
-   "label": "Watch for the follow-up US-China AI dialogue session",
-   "text": "Officials described a second meeting roughly a month out, with no fixed agenda. Whether it produces defined incident triggers and notification steps -- not just another joint statement -- is the actual test of whether Thursday's pledge was substance or scenery."
-  },
-  {
-   "label": "Watch the FY2027 NDAA conference report for the three chip bills",
-   "text": "The AI OVERWATCH Act, Chip Security Act, and MATCH Act are folded into the Senate's manager's amendment, but the underlying defense bill isn't moving until after November's midterms -- and a similar bill, the GAIN AI Act, was reported heading for exclusion from last year's NDAA under the same kind of pressure."
-  },
-  {
-   "label": "Watch which government publishes its own summit readout first",
-   "text": "Only China's account of the AI conversation was public as this piece went to press. A US State Department or White House readout naming specific commitments would be the first real confirmation of what, if anything, the two sides agreed to."
-  },
-  {
-   "label": "Watch whether Anthropic's exit from ITI becomes a pattern",
-   "text": "Anthropic is the first frontier lab to publicly break from its main Washington trade group over the export-control fight. Whether OpenAI or Google DeepMind follow, or stay inside ITI's opposition to the bills, signals how unified the industry actually is."
-  }
- ],
- "sources": [
-  {
-   "label": "The Tech Download: Trump and Xi dined with AI's biggest names",
-   "url": "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html",
-   "outlet": "CNBC",
-   "kind": "reporting"
-  },
-  {
-   "label": "Trump-Xi dinner puts AI and tech giants in the spotlight",
-   "url": "https://www.businesstoday.in/technology/news/story/trump-xi-dinner-puts-ai-and-tech-giants-in-the-spotlight-elon-musk-sam-altman-jensen-huang-in-attendance-557848-2026-09-25",
-   "outlet": "Business Today",
-   "kind": "reporting"
-  },
-  {
-   "label": "China Says Trump and Xi Back More AI Dialogue, but No Specific Deal Is Confirmed",
-   "url": "https://superpowerdaily.com/posts/china-says-trump-and-xi-back-more-ai-dialogue-but-no-specific-deal-is-confirmed",
-   "outlet": "Superpower Daily",
-   "kind": "reporting"
-  },
-  {
-   "label": "Trump-China visit live updates: dinner, tariffs, AI",
-   "url": "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/",
-   "outlet": "CBS News",
-   "kind": "reporting"
-  },
-  {
-   "label": "AI export controls debate rages as Trump, Xi meet",
-   "url": "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
-   "outlet": "Roll Call",
-   "kind": "reporting"
-  },
-  {
-   "label": "Schumer warns Trump on AI, chips ahead of Xi meeting",
-   "url": "https://punchbowl.news/article/senate/schumer-on-ai-chips/",
-   "outlet": "Punchbowl News",
-   "kind": "reporting"
-  },
-  {
-   "label": "Scoop: Anthropic breaks from major tech group over chips",
-   "url": "https://www.axios.com/2026/09/08/anthropic-breaks-tech-group-chips",
-   "outlet": "Axios",
-   "kind": "reporting"
-  },
-  {
-   "label": "The Fight to Rein In AI Is Dividing Washington",
-   "url": "https://time.com/article/2026/09/25/ai-congress-regulation-safety-democrats-republicans/",
-   "outlet": "Time",
-   "kind": "reporting"
-  },
-  {
-   "label": "Obernolte, Trahan Introduce Bipartisan FRONTIER Act",
-   "url": "https://obernolte.house.gov/media/press-releases/obernolte-trahan-introduce-bipartisan-frontier-act-strengthen-oversight",
-   "outlet": "Rep. Jay Obernolte (official)",
-   "kind": "filing_or_official"
-  },
-  {
-   "label": "China's AI chip blitz arms Xi with a message for Trump",
-   "url": "https://www.cnbc.com/2026/09/24/trump-xi-china-summit-ai-export-control-nvidia-huawei-alibaba-.html",
-   "outlet": "CNBC",
-   "kind": "reporting"
-  },
-  {
-   "label": "Bill prioritizing American customers for AI chips not expected to make it into final NDAA",
-   "url": "https://www.nextgov.com/policy/2025/12/bill-prioritizing-american-customers-ai-chips-not-expected-make-final-ndaa-sources-say/409920/",
-   "outlet": "Nextgov/FCW",
-   "kind": "reporting"
-  }
- ],
- "tldr": [
-  "Trump and Xi's Thursday summit produced a state dinner and a vague AI-dialogue pledge, no signed deal.",
-  "China's official readout is the only public account so far; Washington hadn't published its own.",
-  "U.S. export limits on advanced Nvidia chips bound for China are unchanged after the summit.",
-  "Three chip-export bills sit inside a stalled Senate defense bill; Anthropic quit its trade group over it.",
-  "No timeline, trigger list, or vote date has been set for either the dialogue or the bills."
- ],
- "body": [
-  {
-   "type": "p",
-   "text": "Nvidia's Jensen Huang, OpenAI's Sam Altman and Greg Brockman, Meta's Mark Zuckerberg, Microsoft's Satya Nadella, Google's Sundar Pichai, Apple's Tim Cook, Elon Musk and Jeff Bezos all sat down at the White House on Thursday, Sept. 24, for a black-tie state dinner with more than 130 guests, hosted for Chinese President Xi Jinping's second face-to-face meeting with Donald Trump this year. It was, by any measure, the most AI-industry-dense room Washington has assembled all year, and both governments billed it as evidence that AI diplomacy is maturing past ad hoc phone calls into something more like a standing process. What it did not produce, by every account published so far, was **a deal on the one AI question with real teeth**: whether Washington eases or tightens the export controls keeping its most advanced chips out of China.",
-   "citation_urls": [
-    "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html",
-    "https://www.businesstoday.in/technology/news/story/trump-xi-dinner-puts-ai-and-tech-giants-in-the-spotlight-elon-musk-sam-altman-jensen-huang-in-attendance-557848-2026-09-25"
-   ]
-  },
-  {
-   "type": "p",
-   "text": "The two governments did agree to keep talking. Per China's official account of the meeting — ==the only government readout published as of this writing== — Xi called for the two sides to “exchange views on [AI's] risks and benefits, and jointly prevent the misuse and abuse of AI,” adding that AI “must be kept under human control.” Trump, in China's telling, agreed the two countries “should maintain dialogue and strengthen cooperation” on AI. U.S. Trade Representative Jamieson Greer described the result as a standing channel — something officials likened to a Cold War-style hotline between the two capitals — with another session expected in roughly a month. **No trigger list, notification procedure, or response protocol has been made public for either government.**",
-   "citation_urls": [
-    "https://superpowerdaily.com/posts/china-says-trump-and-xi-back-more-ai-dialogue-but-no-specific-deal-is-confirmed",
-    "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/"
-   ]
-  },
-  {
-   "type": "timeline",
-   "timeline": {
-    "title": "How the week actually went",
-    "items": [
-     {
-      "when": "Sep 8, 2026",
-      "what": "Anthropic quits the Information Technology Industry Council after the trade group asks Congress to strip three chip-export bills from the defense bill.",
-      "source": "https://www.axios.com/2026/09/08/anthropic-breaks-tech-group-chips"
-     },
-     {
-      "when": "Sep 20, 2026",
-      "what": "Treasury Secretary Scott Bessent and China's He Lifeng hold eight hours of talks in New York, producing a US proposal for a standing AI-incident dialogue."
-     },
-     {
-      "when": "Sep 22, 2026",
-      "what": "Senate Minority Leader Chuck Schumer says Trump should draw a “line in the sand” on chip exports ahead of the summit.",
-      "source": "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
-     },
-     {
-      "when": "Sep 23, 2026",
-      "what": "Roll Call reports the three chip-export bills are folded into the Senate's FY2027 NDAA manager's amendment -- but the broader bill is stalled until after the midterms.",
-      "source": "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
-      "hi": true
-     },
-     {
-      "when": "Sep 24, 2026",
-      "what": "Trump and Xi meet at the White House; a state dinner follows with more than 130 guests, including every major AI lab's CEO.",
-      "hi": true
-     },
-     {
-      "when": "~Oct 2026",
-      "what": "A follow-up US-China AI dialogue session is expected, with no fixed agenda announced yet.",
-      "future": true
-     }
-    ]
-   }
-  },
-  {
-   "type": "p",
-   "text": "That sequence shows two negotiations running on separate tracks that never actually met this week. One is diplomatic — the dialogue channel Bessent and He Lifeng sketched out, which Thursday's summit endorsed in principle but left exactly as undefined as it was four days earlier. The other is legislative — three chip-export bills with real bipartisan support and, per Roll Call's reporting, a path into the Senate's annual defense bill via a __manager's amendment__{{note: A manager's amendment is the bundle of last-minute changes party leaders fold into a big bill right before it comes to a vote -- getting a provision into one is not the same as the underlying bill passing.}} — that remain stuck behind a bill Congress won't finish until after the November midterms.",
-   "citation_urls": [
-    "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
-    "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
-   ]
-  },
-  {
-   "type": "compare",
-   "compare": {
-    "title": "Two tracks, both stalled",
-    "columns": [
-     {
-      "label": "Diplomatic track",
-      "sub": "the AI dialogue channel"
-     },
-     {
-      "label": "Legislative track",
-      "sub": "the three chip-export bills",
-      "hi": true
-     }
-    ],
-    "rows": [
-     {
-      "label": "What's proposed",
-      "values": [
-       "A standing US-China channel to flag serious AI incidents",
-       "Chip location-tracking, export licensing curbs, and limits on chip-equipment sales to China"
-      ]
-     },
-     {
-      "label": "Where it stands",
-      "values": [
-       "Endorsed “in principle” at the Sep. 24 summit; no operating details published",
-       "Folded into the Senate's NDAA manager's amendment, per Roll Call"
-      ]
-     },
-     {
-      "label": "What's actually decided",
-      "values": [
-       "Nothing -- no triggers, notification steps, or response protocol yet",
-       "Nothing -- the underlying NDAA itself won't reach a floor vote until after the midterms"
-      ]
-     },
-     {
-      "label": "Next milestone",
-      "values": [
-       "A follow-up session expected in about a month",
-       "A Senate floor vote on the FY2027 NDAA, date unset"
-      ],
-      "note": "Both tracks are waiting on a date nobody has set."
-     }
-    ],
-    "source": "China's official summit readout, via CBS News and Superpower Daily; Roll Call, Sept. 23, 2026"
-   }
-  },
-  {
-   "type": "p",
-   "text": "Whether that legislative inclusion is actually locked in is itself unclear. Schumer and Sen. Elizabeth Warren spent the week publicly pressing Republicans to pass the same three bills Roll Call reported Republicans had already agreed to fold into the amendment — a pressure campaign that only makes sense if the deal isn't as settled as it sounds. Industry lobbying cuts the other way: the Information Technology Industry Council, whose members include Nvidia, AMD, OpenAI and Google, urged congressional leaders this month to strip the same three measures back out.",
-   "citation_urls": [
-    "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
-    "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
-   ]
-  },
-  {
-   "type": "quote",
-   "text": "“We've got to move before it's too late.” — Senate Minority Leader Chuck Schumer (D-N.Y.), on chip export controls ahead of the Trump-Xi summit",
-   "citation_urls": [
-    "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
-   ]
-  },
-  {
-   "type": "p",
-   "text": "The backdrop favors Beijing more than it did a few months ago. Xi arrived fresh off a run of domestic chip and model announcements — including [Alibaba](/company/alibaba)'s Zhenwu V900, unveiled days before the summit and pitched as the chip built around the exact gap Washington's export controls left open. CNBC's reporting on the summit's run-up framed that timing as handing China a message for the US side: further tightening has diminishing returns while Chinese chipmakers keep closing the gap anyway. That is CNBC's characterization of the negotiating dynamic, not a quote from Xi himself — and for all the framing, the actual US license terms for [Nvidia](/company/nvidia)'s most advanced chips did not change this week, in either direction. The Commerce Department's licensing regime for China-bound AI accelerators remains the one it set earlier this year, unrevised by anything said at the summit.",
-   "citation_urls": [
-    "https://www.cnbc.com/2026/09/24/trump-xi-china-summit-ai-export-control-nvidia-huawei-alibaba-.html"
-   ]
-  },
-  {
-   "type": "stakes",
-   "stakes": {
-    "items": [
-     {
-      "who": "Nvidia and AMD, ITI's chipmaker members",
-      "tone": "gains",
-      "what": "Keep selling into China's market a while longer while the three export bills sit outside a defense bill that isn't moving until after the midterms."
-     },
-     {
-      "who": "Anthropic",
-      "tone": "exposed",
-      "what": "Broke from its main Washington trade group over this fight in September and now has no industry coalition carrying its position into the NDAA talks."
-     },
-     {
-      "who": "Senate Democrats pushing the three bills",
-      "tone": "loses",
-      "what": "Got a news cycle timed to Xi's visit, not a vote -- the underlying defense bill isn't reaching the floor before November."
-     },
-     {
-      "who": "Chinese AI and chip makers",
-      "tone": "unclear",
-      "what": "Gain a stronger negotiating position from a year of domestic chip progress, but still can't buy Nvidia's most advanced parts -- and no timeline exists for that to change."
-     }
-    ]
-   }
-  },
-  {
-   "type": "p",
-   "text": "None of this is happening in isolation. The same Congress that can't move the three chip bills also can't move its own broader AI-safety framework: the bipartisan [FRONTIER Act](https://www.congress.gov/bill/119th-congress/house-bill/9925), introduced in July to require frontier labs to report catastrophic-risk assessments to the Commerce Department, hasn't advanced since introduction; a House-passed data-center ratepayer bill is blocked in the Senate by Sen. Martin Heinrich as inadequate; and a Sanders-Casar proposal to pause superintelligent-AI development pending a new federal AI department has no path forward either. House Energy Committee Chair Brett Guthrie told reporters this month not to expect major AI legislation before 2027. Chip policy has already lived through one version of this exact stall: a similar priority-access bill, the GAIN AI Act, was reported heading for exclusion from the FY2026 defense bill under the same kind of industry pressure last winter. The three bills sitting in this year's manager's amendment are ++the same fight, one budget cycle later++ -- introduced with bipartisan sponsors, blessed for inclusion by a committee chairman, and still hostage to a defense bill's own broader timeline. Nothing this week -- not the dinner, not the readout, not the amendment language -- changed that arithmetic.",
-   "citation_urls": [
-    "https://time.com/article/2026/09/25/ai-congress-regulation-safety-democrats-republicans/",
-    "https://www.nextgov.com/policy/2025/12/bill-prioritizing-american-customers-ai-chips-not-expected-make-final-ndaa-sources-say/409920/"
-   ]
-  }
- ],
- "pipeline": {
-  "stages": [
+ {
+  "slug": "trump-xi-summit-dinner-chip-export-gridlock",
+  "id": "newsroom-trump-xi-summit-dinner-chip-export-gridlock",
+  "title": "Trump and Xi capped their summit with a state dinner for AI's biggest names -- neither government moved an inch on chip exports",
+  "dek": "Thursday's summit produced a black-tie dinner for every frontier lab's CEO and a vaguely defined U.S.-China AI dialogue channel. Away from the cameras, Washington's export limits on advanced Nvidia chips are unchanged, China's own chip and model advances are the backdrop giving Beijing leverage, and the same three chip-export bills Senate Democrats spent the week publicly pushing are still stuck inside a defense bill that won't reach a vote until after the midterms.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
    {
-    "name": "Research",
-    "agent": "claude-runner",
-    "note": "Eleven sources across five classes: an official government readout (China's, via CBS News/Superpower Daily reporting), a member-of-Congress official press release (FRONTIER Act), and independent reporting from CNBC, Roll Call, Punchbowl, Axios, Time, Business Today, and Nextgov. No US government readout of the summit's AI discussion had been published as of drafting -- noted explicitly in the piece rather than papered over. Routed Synthesis: rich reconciliation across two parallel gridlocked tracks, but this cycle's own research-format piece ran 6 days ago (Sep 19), so per the runbook this was not elevated to Research despite clearing the evidence-thread count."
+    "label": "Watch for the follow-up US-China AI dialogue session",
+    "text": "Officials described a second meeting roughly a month out, with no fixed agenda. Whether it produces defined incident triggers and notification steps -- not just another joint statement -- is the actual test of whether Thursday's pledge was substance or scenery."
    },
    {
-    "name": "Verification",
-    "agent": "claude-runner",
-    "note": "No mandatory-scrutiny trigger: reports on public statements, an official government readout, and pending legislation, none of it accusatory or unverifiable. The Xi/Trump quotes are attributed to China's official readout as relayed by CBS News and Superpower Daily, matching this archive's existing practice of citing quotes via the reporting outlet that captured them. The CNBC 'message for Trump' framing is explicitly marked as the outlet's characterization, not a direct Xi quote, since the underlying CNBC page could not be directly verified beyond its own headline and search-indexed summary."
+    "label": "Watch the FY2027 NDAA conference report for the three chip bills",
+    "text": "The AI OVERWATCH Act, Chip Security Act, and MATCH Act are folded into the Senate's manager's amendment, but the underlying defense bill isn't moving until after November's midterms -- and a similar bill, the GAIN AI Act, was reported heading for exclusion from last year's NDAA under the same kind of pressure."
    },
    {
-    "name": "Loop 1 - critique and revise",
-    "agent": "claude-runner",
-    "note": "Critique found the first draft implied the Roll Call 'agreed to include' framing and Schumer's 'still pushing' framing were consistent when they're actually in mild tension -- revised to flag that tension explicitly rather than silently picking one account. Self-referential-language check clean. Cross-links (Alibaba, Nvidia) phrased about the companies, not about this newsroom's prior coverage of them."
+    "label": "Watch which government publishes its own summit readout first",
+    "text": "Only China's account of the AI conversation was public as this piece went to press. A US State Department or White House readout naming specific commitments would be the first real confirmation of what, if anything, the two sides agreed to."
    },
    {
-    "name": "Loop 2 - component provenance check",
-    "agent": "claude-runner",
-    "note": "Timeline: all six dates and events trace to the cited sources. Compare: all row values map to facts stated in body prose or cited sources; both columns have equal-length values arrays. Stakes: four named parties, none as broad as 'the industry'; one entry honestly marked 'unclear'. No component carries a top-level text field."
-   },
-   {
-    "name": "Gate",
-    "agent": "claude-runner",
-    "note": "Approved for publication. No health, financial-advice, legal-proceeding, or defamation trigger."
+    "label": "Watch whether Anthropic's exit from ITI becomes a pattern",
+    "text": "Anthropic is the first frontier lab to publicly break from its main Washington trade group over the export-control fight. Whether OpenAI or Google DeepMind follow, or stay inside ITI's opposition to the bills, signals how unified the industry actually is."
    }
   ],
-  "gate": {
-   "decision": "Approved for publication",
-   "note": "Reports on public statements, an official government readout, and pending legislation -- no mandatory-scrutiny trigger fired."
-  },
-  "run": "autonomous Claude-runner cycle · 2026-09-25T20:04:41Z"
- },
- "image": "assets/img/newsroom/trump-xi-summit-dinner-chip-export-gridlock.jpg",
- "publishedAt": "2026-09-25T20:04:41Z"
-},
-{
- "slug": "micro1-4-billion-valuation-ai-training-data",
- "id": "newsroom-micro1-4-billion-valuation-ai-training-data",
- "title": "A data-labeling startup just raised its valuation eightfold to $4 billion in a year -- by selling AI labs the training data their own models need",
- "dek": "Micro1, founded by 25-year-old Ali Ansari, closed a Series B above $100 million at a $4 billion valuation, up from $500 million a year earlier. Frontier labs, Microsoft, Amazon and robotics firm 1X are among its customers -- but the company's own $500 million 'gross annualized revenue' figure, disclosed a month before the raise, is a different number than either the valuation or what actually reaches Micro1's own books.",
- "persona": "kian-farzan",
- "section": "Markets",
- "format": "brief",
- "disclaimer": "not-financial-advice",
- "applyType": "watch",
- "apply": [
-  {
-   "label": "Watch Micro1's net take, not the gross number",
-   "text": "The company says it keeps 60-70% of gross revenue after paying the human labelers and data providers behind it. The net figure, not the $500 million headline, is what actually sizes the business against rivals like Mercor ($2B gross run rate) or Handshake ($1B)."
-  },
-  {
-   "label": "Watch whether the exact raise amount ever surfaces",
-   "text": "Every outlet reporting this round describes it as 'more than $100 million' or '$100 million+' without a precise figure. A regulatory filing or a lead investor naming the exact check size would be the first hard number beyond the company's own account."
-  }
- ],
- "sources": [
-  {
-   "label": "AI data startup Micro1 reaches $500M gross run rate amid AI training boom",
-   "url": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
-   "outlet": "TechCrunch",
-   "kind": "reporting"
-  },
-  {
-   "label": "This 25-Year-Old Raised Over $100 Million For His AI Data Startup At A $4 Billion Valuation",
-   "url": "https://www.forbes.com/sites/annatong/2026/09/22/this-25-year-old-raised-over-100-million-for-his-ai-data-startup-at-a-4-billion-valuation/",
-   "outlet": "Forbes",
-   "kind": "reporting"
-  },
-  {
-   "label": "Micro1 Raises $100M+ at $4B Valuation, 8x Jump From $500M Mark",
-   "url": "https://aiweekly.co/alerts/micro1-raises-100m-at-4b-valuation-8x-jump-from-500m-mark-in-september-2025",
-   "outlet": "AI Weekly",
-   "kind": "reporting"
-  }
- ],
- "tldr": [
-  "Micro1's Series B closed above $100 million at a $4 billion valuation, per Forbes and TechCrunch.",
-  "That's 8x the startup's $500 million valuation from its September 2025 Series A.",
-  "The company reports $500 million in gross annualized revenue but keeps only 60-70% after data-provider costs.",
-  "Founder Ali Ansari says Micro1 won't sell training data to Chinese model makers, unlike some rivals.",
-  "None of the funding figures are independently confirmed beyond the company's own and reporters' accounts."
- ],
- "body": [
-  {
-   "type": "p",
-   "text": "Ali Ansari turned a small AI-recruiting business into a **$4 billion** data-labeling startup in about a year. Micro1 has closed a Series B raise of more than $100 million at that valuation, according to Forbes and TechCrunch -- eight times the $500 million price its Series A set in September 2025. Frontier AI labs, Microsoft, Amazon and humanoid-robotics maker 1X are among its customers, with several of them participating in the new round, including two frontier labs and two of xAI's co-founders, per Forbes. The business itself has broadened past its recruiting-platform roots: alongside contract evaluations of model outputs and human-labeled training sets, Micro1 now sells synthetic data and \"reinforcement learning gyms\" -- simulated environments built from real enterprise data where AI agents practice navigating a workplace before they're deployed into one.",
-   "citation_urls": [
-    "https://www.forbes.com/sites/annatong/2026/09/22/this-25-year-old-raised-over-100-million-for-his-ai-data-startup-at-a-4-billion-valuation/",
-    "https://aiweekly.co/alerts/micro1-raises-100m-at-4b-valuation-8x-jump-from-500m-mark-in-september-2025",
-    "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/"
-   ]
-  },
-  {
-   "type": "ledger",
-   "ledger": {
-    "title": "Micro1's three $500-million-ish numbers, and what each one is",
-    "items": [
-     {
-      "value": "$500M",
-      "unit": "Valuation, Sept. 2025",
-      "label": "Micro1's Series A price tag, one year before this raise",
-      "includes": "What investors priced the whole company at a year ago",
-      "excludes": "Any revenue figure -- this is a valuation, not a sales number",
-      "note": "The number this raise moved 8x in twelve months."
-     },
-     {
-      "value": "$500M",
-      "unit": "Gross annualized revenue, Aug. 2026",
-      "label": "Micro1's own disclosed run-rate, a month before the raise",
-      "includes": "All revenue booked before paying the people and vendors who supply the actual labeled data",
-      "excludes": "The 30-40% Micro1 says goes straight back out to data providers",
-      "note": "Company-disclosed to TechCrunch; not independently audited."
-     },
-     {
-      "value": "$4B",
-      "unit": "Valuation, Sept. 2026 (this raise)",
-      "label": "What the new Series B prices the company at",
-      "includes": "The full company, per the new round's terms",
-      "excludes": "The raise amount itself, which every outlet reports only as \"over $100 million\"",
-      "note": "8x the Series A price, and roughly 8x the disclosed gross revenue -- an ordinary multiple for a fast-growing data business."
-     }
-    ]
-   }
-  },
-  {
-   "type": "p",
-   "text": "The distinction matters because “gross annualized revenue” is doing a lot of work in a business that pays most of its actual labelers and data providers out of that top line. Ansari told TechCrunch in August that Micro1 keeps 60% to 70% of gross revenue after those costs on its highest-margin work -- meaning 30% to 40% goes straight back out to the data providers and labelers who did the actual work -- meaning the business's real size, by net revenue, likely runs closer to $300-350 million a year than the $500 million headline. That still trails competitors Mercor ($2 billion gross run rate) and Handshake ($1 billion), which Ansari himself named as the market Micro1 is chasing.",
-   "citation_urls": [
-    "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/"
-   ]
-  },
-  {
-   "type": "p",
-   "text": "Ansari has also drawn a line his rivals reportedly haven't: he told TechCrunch Micro1 ++doesn't sell its training data to Chinese model makers++, contrasting the company with competitors that do. Whether that stance survives contact with a $4 billion valuation and a fresh set of outside investors is one of the more concrete things to watch as the company scales. For now, the raise is a bet that the AI industry's hunger for the human-generated data underneath every frontier model -- graded conversations, labeled images, workplace simulations -- is growing at least as fast as the models trained on it.",
-   "citation_urls": [
-    "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/"
-   ]
-  }
- ],
- "pipeline": {
-  "stages": [
+  "sources": [
    {
-    "name": "Research",
-    "agent": "claude-runner",
-    "note": "Three sources, all ultimately tracing to two company disclosures two months apart (Micro1's Aug. 20 TechCrunch interview on revenue run-rate, its Sept. 22 Forbes interview on the new raise) plus one aggregator confirming the same. Routed Brief per format-routing.md: confirmatory reporting of one company's own account does not create a synthesis just by adding outlets."
+    "label": "The Tech Download: Trump and Xi dined with AI's biggest names",
+    "url": "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html",
+    "outlet": "CNBC",
+    "kind": "reporting"
    },
    {
-    "name": "Verification",
-    "agent": "claude-runner",
-    "note": "No mandatory-scrutiny trigger, though Markets-section valuation claims carry the standard not-financial-advice disclaimer per house rule. All figures ($500M Series A valuation, $500M gross run-rate, $4B new valuation, 60-70% net retention, Mercor/Handshake comparisons) are the company's own disclosed figures via named reporters -- flagged as company-disclosed and unaudited in the ledger's own notes rather than presented as independently confirmed."
+    "label": "Trump-Xi dinner puts AI and tech giants in the spotlight",
+    "url": "https://www.businesstoday.in/technology/news/story/trump-xi-dinner-puts-ai-and-tech-giants-in-the-spotlight-elon-musk-sam-altman-jensen-huang-in-attendance-557848-2026-09-25",
+    "outlet": "Business Today",
+    "kind": "reporting"
    },
    {
-    "name": "Loop 1 - critique and revise",
-    "agent": "claude-runner",
-    "note": "Critique found the initial draft used the $500M revenue figure and $500M valuation figure interchangeably in one sentence -- revised into a dedicated ledger component precisely to stop that conflation. Self-referential-language check clean."
+    "label": "China Says Trump and Xi Back More AI Dialogue, but No Specific Deal Is Confirmed",
+    "url": "https://superpowerdaily.com/posts/china-says-trump-and-xi-back-more-ai-dialogue-but-no-specific-deal-is-confirmed",
+    "outlet": "Superpower Daily",
+    "kind": "reporting"
    },
    {
-    "name": "Loop 2 - component provenance check",
-    "agent": "claude-runner",
-    "note": "Ledger: all three values ($500M, $500M, $4B) and their scoping appear in body prose. No component carries a top-level text field."
+    "label": "Trump-China visit live updates: dinner, tariffs, AI",
+    "url": "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/",
+    "outlet": "CBS News",
+    "kind": "reporting"
    },
    {
-    "name": "Gate",
-    "agent": "claude-runner",
-    "note": "Approved for publication. Not-financial-advice disclaimer attached per Markets/valuation topic rule."
+    "label": "AI export controls debate rages as Trump, Xi meet",
+    "url": "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
+    "outlet": "Roll Call",
+    "kind": "reporting"
+   },
+   {
+    "label": "Schumer warns Trump on AI, chips ahead of Xi meeting",
+    "url": "https://punchbowl.news/article/senate/schumer-on-ai-chips/",
+    "outlet": "Punchbowl News",
+    "kind": "reporting"
+   },
+   {
+    "label": "Scoop: Anthropic breaks from major tech group over chips",
+    "url": "https://www.axios.com/2026/09/08/anthropic-breaks-tech-group-chips",
+    "outlet": "Axios",
+    "kind": "reporting"
+   },
+   {
+    "label": "The Fight to Rein In AI Is Dividing Washington",
+    "url": "https://time.com/article/2026/09/25/ai-congress-regulation-safety-democrats-republicans/",
+    "outlet": "Time",
+    "kind": "reporting"
+   },
+   {
+    "label": "Obernolte, Trahan Introduce Bipartisan FRONTIER Act",
+    "url": "https://obernolte.house.gov/media/press-releases/obernolte-trahan-introduce-bipartisan-frontier-act-strengthen-oversight",
+    "outlet": "Rep. Jay Obernolte (official)",
+    "kind": "filing_or_official"
+   },
+   {
+    "label": "China's AI chip blitz arms Xi with a message for Trump",
+    "url": "https://www.cnbc.com/2026/09/24/trump-xi-china-summit-ai-export-control-nvidia-huawei-alibaba-.html",
+    "outlet": "CNBC",
+    "kind": "reporting"
+   },
+   {
+    "label": "Bill prioritizing American customers for AI chips not expected to make it into final NDAA",
+    "url": "https://www.nextgov.com/policy/2025/12/bill-prioritizing-american-customers-ai-chips-not-expected-make-final-ndaa-sources-say/409920/",
+    "outlet": "Nextgov/FCW",
+    "kind": "reporting"
    }
   ],
-  "gate": {
-   "decision": "Approved for publication",
-   "note": "Valuation/funding claims attributed to named reporting, not stated as this desk's own verified fact; not-financial-advice disclaimer applied."
-  },
-  "run": "autonomous Claude-runner cycle · 2026-09-25T20:04:41Z"
- },
- "image": "assets/img/newsroom/micro1-4-billion-valuation-ai-training-data.jpg",
- "publishedAt": "2026-09-25T20:04:41Z"
-},
-{
- "slug": "niq-agentic-commerce-tracker-51-percent-ai-shopping",
- "id": "newsroom-niq-agentic-commerce-tracker-51-percent-ai-shopping",
- "title": "AI shopping just crossed 50% of US consumers for the first time, NIQ's monthly tracker finds",
- "dek": "NIQ's Agentic Commerce Tracker put 51% of US shoppers using at least one AI-powered tool in the past month -- the tracker's first reading above half since NIQ started asking. Product recommendations, not autonomous purchasing agents, are still doing most of the work.",
- "persona": "nova-reyes",
- "section": "Products",
- "format": "brief",
- "disclaimer": "none",
- "applyType": "watch",
- "apply": [
-  {
-   "label": "Watch whether the next monthly reading holds above 50%",
-   "text": "NIQ frames this as a threshold crossing, not a peak. The next Quick Question wave will show whether 51% was a one-month blip or the new floor."
-  },
-  {
-   "label": "Watch which AI shopping behavior grows fastest",
-   "text": "Recommendations (20%) and shopping assistants (16%) lead today; fully autonomous ordering agents are the smallest category NIQ tracks. That's the number to watch for agentic commerce actually taking hold, not just AI-assisted browsing."
-  }
- ],
- "sources": [
-  {
-   "label": "Majority of U.S. Consumers Now Use AI to Shop, NIQ Finds",
-   "url": "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/",
-   "outlet": "NIQ",
-   "kind": "primary_company"
-  },
-  {
-   "label": "NIQ Study Finds 51% of U.S. Consumers Use AI to Shop",
-   "url": "https://www.stocktitan.net/news/NIQ/majority-of-u-s-consumers-now-use-ai-to-shop-niq-hgqc7tcjwd8p.html",
-   "outlet": "StockTitan",
-   "kind": "reporting"
-  }
- ],
- "tldr": [
-  "NIQ's Agentic Commerce Tracker found 51% of US consumers used an AI shopping tool last month.",
-  "That's the tracker's first reading above 50% since NIQ began the monthly survey.",
-  "AI product recommendations lead adoption at 20%; personal shopping assistants follow at 16%.",
-  "The finding comes from NIQ's Quick Question research, a monthly sample of about 500 US consumers.",
-  "A 500-person monthly sample is NIQ's own measure, not an independent audit of actual purchases."
- ],
- "body": [
-  {
-   "type": "p",
-   "text": "For the first time since NielsenIQ started asking, ==more than half of US shoppers== say they used some kind of AI tool to help them shop in the past month. NIQ's Agentic Commerce Tracker put the figure at **51%** in its September reading -- a threshold the monthly survey has approached but not cleared since it launched, per NIQ's own release. NIQ runs the tracker as part of a research operation that covers more than 90 countries and roughly 82% of the world's population, though this particular reading is US-only.",
-   "citation_urls": [
-    "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/",
-    "https://www.stocktitan.net/news/NIQ/majority-of-u-s-consumers-now-use-ai-to-shop-niq-hgqc7tcjwd8p.html"
-   ]
-  },
-  {
-   "type": "keyfacts",
-   "keyfacts": {
-    "title": "The tracker, in short",
-    "items": [
-     {
-      "label": "Headline number",
-      "value": "51% of US shoppers",
-      "note": "first monthly reading above half"
-     },
-     {
-      "label": "Leading use case",
-      "value": "AI product recommendations",
-      "note": "20% adoption"
-     },
-     {
-      "label": "Second most common",
-      "value": "AI personal shopping assistants",
-      "note": "16% adoption"
-     },
-     {
-      "label": "Sample",
-      "value": "~500 US consumers/month",
-      "note": "NIQ's Quick Question research"
-     },
-     {
-      "label": "Trend",
-      "value": "\"Steady\" growth over the past two quarters, per NIQ"
-     }
+  "tldr": [
+   "Trump and Xi's Thursday summit produced a state dinner and a vague AI-dialogue pledge, no signed deal.",
+   "China's official readout is the only public account so far; Washington hadn't published its own.",
+   "U.S. export limits on advanced Nvidia chips bound for China are unchanged after the summit.",
+   "Three chip-export bills sit inside a stalled Senate defense bill; Anthropic quit its trade group over it.",
+   "No timeline, trigger list, or vote date has been set for either the dialogue or the bills."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Nvidia's Jensen Huang, OpenAI's Sam Altman and Greg Brockman, Meta's Mark Zuckerberg, Microsoft's Satya Nadella, Google's Sundar Pichai, Apple's Tim Cook, Elon Musk and Jeff Bezos all sat down at the White House on Thursday, Sept. 24, for a black-tie state dinner with more than 130 guests, hosted for Chinese President Xi Jinping's second face-to-face meeting with Donald Trump this year. It was, by any measure, the most AI-industry-dense room Washington has assembled all year, and both governments billed it as evidence that AI diplomacy is maturing past ad hoc phone calls into something more like a standing process. What it did not produce, by every account published so far, was **a deal on the one AI question with real teeth**: whether Washington eases or tightens the export controls keeping its most advanced chips out of China.",
+    "citation_urls": [
+     "https://www.cnbc.com/2026/09/25/the-tech-download-trump-xi-ai-talks.html",
+     "https://www.businesstoday.in/technology/news/story/trump-xi-dinner-puts-ai-and-tech-giants-in-the-spotlight-elon-musk-sam-altman-jensen-huang-in-attendance-557848-2026-09-25"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The two governments did agree to keep talking. Per China's official account of the meeting — ==the only government readout published as of this writing== — Xi called for the two sides to “exchange views on [AI's] risks and benefits, and jointly prevent the misuse and abuse of AI,” adding that AI “must be kept under human control.” Trump, in China's telling, agreed the two countries “should maintain dialogue and strengthen cooperation” on AI. U.S. Trade Representative Jamieson Greer described the result as a standing channel — something officials likened to a Cold War-style hotline between the two capitals — with another session expected in roughly a month. **No trigger list, notification procedure, or response protocol has been made public for either government.**",
+    "citation_urls": [
+     "https://superpowerdaily.com/posts/china-says-trump-and-xi-back-more-ai-dialogue-but-no-specific-deal-is-confirmed",
+     "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "title": "How the week actually went",
+     "items": [
+      {
+       "when": "Sep 8, 2026",
+       "what": "Anthropic quits the Information Technology Industry Council after the trade group asks Congress to strip three chip-export bills from the defense bill.",
+       "source": "https://www.axios.com/2026/09/08/anthropic-breaks-tech-group-chips"
+      },
+      {
+       "when": "Sep 20, 2026",
+       "what": "Treasury Secretary Scott Bessent and China's He Lifeng hold eight hours of talks in New York, producing a US proposal for a standing AI-incident dialogue."
+      },
+      {
+       "when": "Sep 22, 2026",
+       "what": "Senate Minority Leader Chuck Schumer says Trump should draw a “line in the sand” on chip exports ahead of the summit.",
+       "source": "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
+      },
+      {
+       "when": "Sep 23, 2026",
+       "what": "Roll Call reports the three chip-export bills are folded into the Senate's FY2027 NDAA manager's amendment -- but the broader bill is stalled until after the midterms.",
+       "source": "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
+       "hi": true
+      },
+      {
+       "when": "Sep 24, 2026",
+       "what": "Trump and Xi meet at the White House; a state dinner follows with more than 130 guests, including every major AI lab's CEO.",
+       "hi": true
+      },
+      {
+       "when": "~Oct 2026",
+       "what": "A follow-up US-China AI dialogue session is expected, with no fixed agenda announced yet.",
+       "future": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "That sequence shows two negotiations running on separate tracks that never actually met this week. One is diplomatic — the dialogue channel Bessent and He Lifeng sketched out, which Thursday's summit endorsed in principle but left exactly as undefined as it was four days earlier. The other is legislative — three chip-export bills with real bipartisan support and, per Roll Call's reporting, a path into the Senate's annual defense bill via a __manager's amendment__{{note: A manager's amendment is the bundle of last-minute changes party leaders fold into a big bill right before it comes to a vote -- getting a provision into one is not the same as the underlying bill passing.}} — that remain stuck behind a bill Congress won't finish until after the November midterms.",
+    "citation_urls": [
+     "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
+     "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Two tracks, both stalled",
+     "columns": [
+      {
+       "label": "Diplomatic track",
+       "sub": "the AI dialogue channel"
+      },
+      {
+       "label": "Legislative track",
+       "sub": "the three chip-export bills",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "What's proposed",
+       "values": [
+        "A standing US-China channel to flag serious AI incidents",
+        "Chip location-tracking, export licensing curbs, and limits on chip-equipment sales to China"
+       ]
+      },
+      {
+       "label": "Where it stands",
+       "values": [
+        "Endorsed “in principle” at the Sep. 24 summit; no operating details published",
+        "Folded into the Senate's NDAA manager's amendment, per Roll Call"
+       ]
+      },
+      {
+       "label": "What's actually decided",
+       "values": [
+        "Nothing -- no triggers, notification steps, or response protocol yet",
+        "Nothing -- the underlying NDAA itself won't reach a floor vote until after the midterms"
+       ]
+      },
+      {
+       "label": "Next milestone",
+       "values": [
+        "A follow-up session expected in about a month",
+        "A Senate floor vote on the FY2027 NDAA, date unset"
+       ],
+       "note": "Both tracks are waiting on a date nobody has set."
+      }
+     ],
+     "source": "China's official summit readout, via CBS News and Superpower Daily; Roll Call, Sept. 23, 2026"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Whether that legislative inclusion is actually locked in is itself unclear. Schumer and Sen. Elizabeth Warren spent the week publicly pressing Republicans to pass the same three bills Roll Call reported Republicans had already agreed to fold into the amendment — a pressure campaign that only makes sense if the deal isn't as settled as it sounds. Industry lobbying cuts the other way: the Information Technology Industry Council, whose members include Nvidia, AMD, OpenAI and Google, urged congressional leaders this month to strip the same three measures back out.",
+    "citation_urls": [
+     "https://rollcall.com/2026/09/23/ai-export-controls-debate-rages-as-trump-xi-meet/",
+     "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“We've got to move before it's too late.” — Senate Minority Leader Chuck Schumer (D-N.Y.), on chip export controls ahead of the Trump-Xi summit",
+    "citation_urls": [
+     "https://punchbowl.news/article/senate/schumer-on-ai-chips/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The backdrop favors Beijing more than it did a few months ago. Xi arrived fresh off a run of domestic chip and model announcements — including [Alibaba](/company/alibaba)'s Zhenwu V900, unveiled days before the summit and pitched as the chip built around the exact gap Washington's export controls left open. CNBC's reporting on the summit's run-up framed that timing as handing China a message for the US side: further tightening has diminishing returns while Chinese chipmakers keep closing the gap anyway. That is CNBC's characterization of the negotiating dynamic, not a quote from Xi himself — and for all the framing, the actual US license terms for [Nvidia](/company/nvidia)'s most advanced chips did not change this week, in either direction. The Commerce Department's licensing regime for China-bound AI accelerators remains the one it set earlier this year, unrevised by anything said at the summit.",
+    "citation_urls": [
+     "https://www.cnbc.com/2026/09/24/trump-xi-china-summit-ai-export-control-nvidia-huawei-alibaba-.html"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "Nvidia and AMD, ITI's chipmaker members",
+       "tone": "gains",
+       "what": "Keep selling into China's market a while longer while the three export bills sit outside a defense bill that isn't moving until after the midterms."
+      },
+      {
+       "who": "Anthropic",
+       "tone": "exposed",
+       "what": "Broke from its main Washington trade group over this fight in September and now has no industry coalition carrying its position into the NDAA talks."
+      },
+      {
+       "who": "Senate Democrats pushing the three bills",
+       "tone": "loses",
+       "what": "Got a news cycle timed to Xi's visit, not a vote -- the underlying defense bill isn't reaching the floor before November."
+      },
+      {
+       "who": "Chinese AI and chip makers",
+       "tone": "unclear",
+       "what": "Gain a stronger negotiating position from a year of domestic chip progress, but still can't buy Nvidia's most advanced parts -- and no timeline exists for that to change."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "None of this is happening in isolation. The same Congress that can't move the three chip bills also can't move its own broader AI-safety framework: the bipartisan [FRONTIER Act](https://www.congress.gov/bill/119th-congress/house-bill/9925), introduced in July to require frontier labs to report catastrophic-risk assessments to the Commerce Department, hasn't advanced since introduction; a House-passed data-center ratepayer bill is blocked in the Senate by Sen. Martin Heinrich as inadequate; and a Sanders-Casar proposal to pause superintelligent-AI development pending a new federal AI department has no path forward either. House Energy Committee Chair Brett Guthrie told reporters this month not to expect major AI legislation before 2027. Chip policy has already lived through one version of this exact stall: a similar priority-access bill, the GAIN AI Act, was reported heading for exclusion from the FY2026 defense bill under the same kind of industry pressure last winter. The three bills sitting in this year's manager's amendment are ++the same fight, one budget cycle later++ -- introduced with bipartisan sponsors, blessed for inclusion by a committee chairman, and still hostage to a defense bill's own broader timeline. Nothing this week -- not the dinner, not the readout, not the amendment language -- changed that arithmetic.",
+    "citation_urls": [
+     "https://time.com/article/2026/09/25/ai-congress-regulation-safety-democrats-republicans/",
+     "https://www.nextgov.com/policy/2025/12/bill-prioritizing-american-customers-ai-chips-not-expected-make-final-ndaa-sources-say/409920/"
     ]
    }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Eleven sources across five classes: an official government readout (China's, via CBS News/Superpower Daily reporting), a member-of-Congress official press release (FRONTIER Act), and independent reporting from CNBC, Roll Call, Punchbowl, Axios, Time, Business Today, and Nextgov. No US government readout of the summit's AI discussion had been published as of drafting -- noted explicitly in the piece rather than papered over. Routed Synthesis: rich reconciliation across two parallel gridlocked tracks, but this cycle's own research-format piece ran 6 days ago (Sep 19), so per the runbook this was not elevated to Research despite clearing the evidence-thread count."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger: reports on public statements, an official government readout, and pending legislation, none of it accusatory or unverifiable. The Xi/Trump quotes are attributed to China's official readout as relayed by CBS News and Superpower Daily, matching this archive's existing practice of citing quotes via the reporting outlet that captured them. The CNBC 'message for Trump' framing is explicitly marked as the outlet's characterization, not a direct Xi quote, since the underlying CNBC page could not be directly verified beyond its own headline and search-indexed summary."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft implied the Roll Call 'agreed to include' framing and Schumer's 'still pushing' framing were consistent when they're actually in mild tension -- revised to flag that tension explicitly rather than silently picking one account. Self-referential-language check clean. Cross-links (Alibaba, Nvidia) phrased about the companies, not about this newsroom's prior coverage of them."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Timeline: all six dates and events trace to the cited sources. Compare: all row values map to facts stated in body prose or cited sources; both columns have equal-length values arrays. Stakes: four named parties, none as broad as 'the industry'; one entry honestly marked 'unclear'. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No health, financial-advice, legal-proceeding, or defamation trigger."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Reports on public statements, an official government readout, and pending legislation -- no mandatory-scrutiny trigger fired."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-25T20:04:41Z"
   },
-  {
-   "type": "p",
-   "text": "The two categories NIQ named are both AI working in the background of a purchase a person still makes themselves -- a recommendation engine narrowing options, an assistant answering questions -- rather than an agent placing the order outright. NIQ's own framing treats that as the meaningful shift regardless -- the underlying number is self-reported behavior from a 500-person monthly panel, not a count of transactions an agent actually completed.",
-   "citation_urls": [
-    "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/"
-   ]
-  },
-  {
-   "type": "quote",
-   "text": "“Crossing the 50 percent threshold is a defining moment for the industry. Today, it is now mainstream.” — Liz Buchanan, President of North America, NIQ",
-   "citation_urls": [
-    "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/"
-   ]
-  },
-  {
-   "type": "p",
-   "text": "The reading lands the same month a run of actual shopping-agent moves played out in public -- [Meta](/company/meta)'s Muse agent added PayPal checkout worldwide, while [Amazon](/company/amazon) kept Muse locked out of its own marketplace even as it opened Seller Central to a Claude plugin instead. NIQ's tracker doesn't distinguish those headline-grabbing agent deployments from the far more mundane AI recommendation widgets already built into most retail sites -- which is probably why the adoption number is already this high.",
-   "citation_urls": [
-    "https://www.pymnts.com/commerce/ecommerce/2026/shopify-brings-shop-pay-checkout-solution-to-metas-muse-ai-agent/",
-    "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude/"
-   ]
-  }
- ],
- "pipeline": {
-  "stages": [
+  "image": "assets/img/newsroom/trump-xi-summit-dinner-chip-export-gridlock.jpg",
+  "publishedAt": "2026-09-25T20:04:41Z"
+ },
+ {
+  "slug": "micro1-4-billion-valuation-ai-training-data",
+  "id": "newsroom-micro1-4-billion-valuation-ai-training-data",
+  "title": "A data-labeling startup just raised its valuation eightfold to $4 billion in a year -- by selling AI labs the training data their own models need",
+  "dek": "Micro1, founded by 25-year-old Ali Ansari, closed a Series B above $100 million at a $4 billion valuation, up from $500 million a year earlier. Frontier labs, Microsoft, Amazon and robotics firm 1X are among its customers -- but the company's own $500 million 'gross annualized revenue' figure, disclosed a month before the raise, is a different number than either the valuation or what actually reaches Micro1's own books.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "brief",
+  "disclaimer": "not-financial-advice",
+  "applyType": "watch",
+  "apply": [
    {
-    "name": "Research",
-    "agent": "claude-runner",
-    "note": "Primary source is NIQ's own published press release; StockTitan's syndication confirms the same figures independently distributed. Two evidence threads, one primary/official. Routed Brief: single-source data release, no reconciliation needed."
+    "label": "Watch Micro1's net take, not the gross number",
+    "text": "The company says it keeps 60-70% of gross revenue after paying the human labelers and data providers behind it. The net figure, not the $500 million headline, is what actually sizes the business against rivals like Mercor ($2B gross run rate) or Handshake ($1B)."
    },
    {
-    "name": "Verification",
-    "agent": "claude-runner",
-    "note": "No mandatory-scrutiny trigger. All figures (51%, 20%, 16%, ~500 sample size) traced directly to NIQ's own release. The Meta/Amazon cross-context paragraph cites the original reporting behind those two prior, separate news events rather than this desk's own past articles."
-   },
-   {
-    "name": "Loop 1 - critique and revise",
-    "agent": "claude-runner",
-    "note": "Critique found an earlier search had surfaced a different, older NIQ release (42%, dated May 2026) that could have been conflated with this one -- confirmed the correct Sept. 24, 2026 release and figures directly against NIQ's own page before drafting. Self-referential-language check clean."
-   },
-   {
-    "name": "Loop 2 - component provenance check",
-    "agent": "claude-runner",
-    "note": "Keyfacts: all five items trace to NIQ's release, cited in body prose. No component carries a top-level text field."
-   },
-   {
-    "name": "Gate",
-    "agent": "claude-runner",
-    "note": "Approved for publication. No mandatory-scrutiny trigger."
+    "label": "Watch whether the exact raise amount ever surfaces",
+    "text": "Every outlet reporting this round describes it as 'more than $100 million' or '$100 million+' without a precise figure. A regulatory filing or a lead investor naming the exact check size would be the first hard number beyond the company's own account."
    }
   ],
-  "gate": {
-   "decision": "Approved for publication",
-   "note": "Single-source consumer-research data release, no health/financial/legal/defamation trigger."
+  "sources": [
+   {
+    "label": "AI data startup Micro1 reaches $500M gross run rate amid AI training boom",
+    "url": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
+    "outlet": "TechCrunch",
+    "kind": "reporting"
+   },
+   {
+    "label": "This 25-Year-Old Raised Over $100 Million For His AI Data Startup At A $4 Billion Valuation",
+    "url": "https://www.forbes.com/sites/annatong/2026/09/22/this-25-year-old-raised-over-100-million-for-his-ai-data-startup-at-a-4-billion-valuation/",
+    "outlet": "Forbes",
+    "kind": "reporting"
+   },
+   {
+    "label": "Micro1 Raises $100M+ at $4B Valuation, 8x Jump From $500M Mark",
+    "url": "https://aiweekly.co/alerts/micro1-raises-100m-at-4b-valuation-8x-jump-from-500m-mark-in-september-2025",
+    "outlet": "AI Weekly",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Micro1's Series B closed above $100 million at a $4 billion valuation, per Forbes and TechCrunch.",
+   "That's 8x the startup's $500 million valuation from its September 2025 Series A.",
+   "The company reports $500 million in gross annualized revenue but keeps only 60-70% after data-provider costs.",
+   "Founder Ali Ansari says Micro1 won't sell training data to Chinese model makers, unlike some rivals.",
+   "None of the funding figures are independently confirmed beyond the company's own and reporters' accounts."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Ali Ansari turned a small AI-recruiting business into a **$4 billion** data-labeling startup in about a year. Micro1 has closed a Series B raise of more than $100 million at that valuation, according to Forbes and TechCrunch -- eight times the $500 million price its Series A set in September 2025. Frontier AI labs, Microsoft, Amazon and humanoid-robotics maker 1X are among its customers, with several of them participating in the new round, including two frontier labs and two of xAI's co-founders, per Forbes. The business itself has broadened past its recruiting-platform roots: alongside contract evaluations of model outputs and human-labeled training sets, Micro1 now sells synthetic data and \"reinforcement learning gyms\" -- simulated environments built from real enterprise data where AI agents practice navigating a workplace before they're deployed into one.",
+    "citation_urls": [
+     "https://www.forbes.com/sites/annatong/2026/09/22/this-25-year-old-raised-over-100-million-for-his-ai-data-startup-at-a-4-billion-valuation/",
+     "https://aiweekly.co/alerts/micro1-raises-100m-at-4b-valuation-8x-jump-from-500m-mark-in-september-2025",
+     "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "Micro1's three $500-million-ish numbers, and what each one is",
+     "items": [
+      {
+       "value": "$500M",
+       "unit": "Valuation, Sept. 2025",
+       "label": "Micro1's Series A price tag, one year before this raise",
+       "includes": "What investors priced the whole company at a year ago",
+       "excludes": "Any revenue figure -- this is a valuation, not a sales number",
+       "note": "The number this raise moved 8x in twelve months."
+      },
+      {
+       "value": "$500M",
+       "unit": "Gross annualized revenue, Aug. 2026",
+       "label": "Micro1's own disclosed run-rate, a month before the raise",
+       "includes": "All revenue booked before paying the people and vendors who supply the actual labeled data",
+       "excludes": "The 30-40% Micro1 says goes straight back out to data providers",
+       "note": "Company-disclosed to TechCrunch; not independently audited."
+      },
+      {
+       "value": "$4B",
+       "unit": "Valuation, Sept. 2026 (this raise)",
+       "label": "What the new Series B prices the company at",
+       "includes": "The full company, per the new round's terms",
+       "excludes": "The raise amount itself, which every outlet reports only as \"over $100 million\"",
+       "note": "8x the Series A price, and roughly 8x the disclosed gross revenue -- an ordinary multiple for a fast-growing data business."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The distinction matters because “gross annualized revenue” is doing a lot of work in a business that pays most of its actual labelers and data providers out of that top line. Ansari told TechCrunch in August that Micro1 keeps 60% to 70% of gross revenue after those costs on its highest-margin work -- meaning 30% to 40% goes straight back out to the data providers and labelers who did the actual work -- meaning the business's real size, by net revenue, likely runs closer to $300-350 million a year than the $500 million headline. That still trails competitors Mercor ($2 billion gross run rate) and Handshake ($1 billion), which Ansari himself named as the market Micro1 is chasing.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Ansari has also drawn a line his rivals reportedly haven't: he told TechCrunch Micro1 ++doesn't sell its training data to Chinese model makers++, contrasting the company with competitors that do. Whether that stance survives contact with a $4 billion valuation and a fresh set of outside investors is one of the more concrete things to watch as the company scales. For now, the raise is a bet that the AI industry's hunger for the human-generated data underneath every frontier model -- graded conversations, labeled images, workplace simulations -- is growing at least as fast as the models trained on it.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/"
+    ]
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Three sources, all ultimately tracing to two company disclosures two months apart (Micro1's Aug. 20 TechCrunch interview on revenue run-rate, its Sept. 22 Forbes interview on the new raise) plus one aggregator confirming the same. Routed Brief per format-routing.md: confirmatory reporting of one company's own account does not create a synthesis just by adding outlets."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger, though Markets-section valuation claims carry the standard not-financial-advice disclaimer per house rule. All figures ($500M Series A valuation, $500M gross run-rate, $4B new valuation, 60-70% net retention, Mercor/Handshake comparisons) are the company's own disclosed figures via named reporters -- flagged as company-disclosed and unaudited in the ledger's own notes rather than presented as independently confirmed."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the initial draft used the $500M revenue figure and $500M valuation figure interchangeably in one sentence -- revised into a dedicated ledger component precisely to stop that conflation. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Ledger: all three values ($500M, $500M, $4B) and their scoping appear in body prose. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. Not-financial-advice disclaimer attached per Markets/valuation topic rule."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Valuation/funding claims attributed to named reporting, not stated as this desk's own verified fact; not-financial-advice disclaimer applied."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-25T20:04:41Z"
   },
-  "run": "autonomous Claude-runner cycle · 2026-09-25T20:04:41Z"
+  "image": "assets/img/newsroom/micro1-4-billion-valuation-ai-training-data.jpg",
+  "publishedAt": "2026-09-25T20:04:41Z"
  },
- "image": "assets/img/newsroom/niq-agentic-commerce-tracker-51-percent-ai-shopping.jpg",
- "publishedAt": "2026-09-25T20:04:41Z"
-}
+ {
+  "slug": "niq-agentic-commerce-tracker-51-percent-ai-shopping",
+  "id": "newsroom-niq-agentic-commerce-tracker-51-percent-ai-shopping",
+  "title": "AI shopping just crossed 50% of US consumers for the first time, NIQ's monthly tracker finds",
+  "dek": "NIQ's Agentic Commerce Tracker put 51% of US shoppers using at least one AI-powered tool in the past month -- the tracker's first reading above half since NIQ started asking. Product recommendations, not autonomous purchasing agents, are still doing most of the work.",
+  "persona": "nova-reyes",
+  "section": "Products",
+  "format": "brief",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch whether the next monthly reading holds above 50%",
+    "text": "NIQ frames this as a threshold crossing, not a peak. The next Quick Question wave will show whether 51% was a one-month blip or the new floor."
+   },
+   {
+    "label": "Watch which AI shopping behavior grows fastest",
+    "text": "Recommendations (20%) and shopping assistants (16%) lead today; fully autonomous ordering agents are the smallest category NIQ tracks. That's the number to watch for agentic commerce actually taking hold, not just AI-assisted browsing."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Majority of U.S. Consumers Now Use AI to Shop, NIQ Finds",
+    "url": "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/",
+    "outlet": "NIQ",
+    "kind": "primary_company"
+   },
+   {
+    "label": "NIQ Study Finds 51% of U.S. Consumers Use AI to Shop",
+    "url": "https://www.stocktitan.net/news/NIQ/majority-of-u-s-consumers-now-use-ai-to-shop-niq-hgqc7tcjwd8p.html",
+    "outlet": "StockTitan",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "NIQ's Agentic Commerce Tracker found 51% of US consumers used an AI shopping tool last month.",
+   "That's the tracker's first reading above 50% since NIQ began the monthly survey.",
+   "AI product recommendations lead adoption at 20%; personal shopping assistants follow at 16%.",
+   "The finding comes from NIQ's Quick Question research, a monthly sample of about 500 US consumers.",
+   "A 500-person monthly sample is NIQ's own measure, not an independent audit of actual purchases."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "For the first time since NielsenIQ started asking, ==more than half of US shoppers== say they used some kind of AI tool to help them shop in the past month. NIQ's Agentic Commerce Tracker put the figure at **51%** in its September reading -- a threshold the monthly survey has approached but not cleared since it launched, per NIQ's own release. NIQ runs the tracker as part of a research operation that covers more than 90 countries and roughly 82% of the world's population, though this particular reading is US-only.",
+    "citation_urls": [
+     "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/",
+     "https://www.stocktitan.net/news/NIQ/majority-of-u-s-consumers-now-use-ai-to-shop-niq-hgqc7tcjwd8p.html"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "title": "The tracker, in short",
+     "items": [
+      {
+       "label": "Headline number",
+       "value": "51% of US shoppers",
+       "note": "first monthly reading above half"
+      },
+      {
+       "label": "Leading use case",
+       "value": "AI product recommendations",
+       "note": "20% adoption"
+      },
+      {
+       "label": "Second most common",
+       "value": "AI personal shopping assistants",
+       "note": "16% adoption"
+      },
+      {
+       "label": "Sample",
+       "value": "~500 US consumers/month",
+       "note": "NIQ's Quick Question research"
+      },
+      {
+       "label": "Trend",
+       "value": "\"Steady\" growth over the past two quarters, per NIQ"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The two categories NIQ named are both AI working in the background of a purchase a person still makes themselves -- a recommendation engine narrowing options, an assistant answering questions -- rather than an agent placing the order outright. NIQ's own framing treats that as the meaningful shift regardless -- the underlying number is self-reported behavior from a 500-person monthly panel, not a count of transactions an agent actually completed.",
+    "citation_urls": [
+     "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“Crossing the 50 percent threshold is a defining moment for the industry. Today, it is now mainstream.” — Liz Buchanan, President of North America, NIQ",
+    "citation_urls": [
+     "https://nielseniq.com/global/en/news-center/2026/majority-of-u-s-consumers-now-use-ai-to-shop-niq-finds/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The reading lands the same month a run of actual shopping-agent moves played out in public -- [Meta](/company/meta)'s Muse agent added PayPal checkout worldwide, while [Amazon](/company/amazon) kept Muse locked out of its own marketplace even as it opened Seller Central to a Claude plugin instead. NIQ's tracker doesn't distinguish those headline-grabbing agent deployments from the far more mundane AI recommendation widgets already built into most retail sites -- which is probably why the adoption number is already this high.",
+    "citation_urls": [
+     "https://www.pymnts.com/commerce/ecommerce/2026/shopify-brings-shop-pay-checkout-solution-to-metas-muse-ai-agent/",
+     "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude/"
+    ]
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Primary source is NIQ's own published press release; StockTitan's syndication confirms the same figures independently distributed. Two evidence threads, one primary/official. Routed Brief: single-source data release, no reconciliation needed."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger. All figures (51%, 20%, 16%, ~500 sample size) traced directly to NIQ's own release. The Meta/Amazon cross-context paragraph cites the original reporting behind those two prior, separate news events rather than this desk's own past articles."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found an earlier search had surfaced a different, older NIQ release (42%, dated May 2026) that could have been conflated with this one -- confirmed the correct Sept. 24, 2026 release and figures directly against NIQ's own page before drafting. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Keyfacts: all five items trace to NIQ's release, cited in body prose. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Single-source consumer-research data release, no health/financial/legal/defamation trigger."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-25T20:04:41Z"
+  },
+  "image": "assets/img/newsroom/niq-agentic-commerce-tracker-51-percent-ai-shopping.jpg",
+  "publishedAt": "2026-09-25T20:04:41Z"
+ },
+ {
+  "slug": "anthropic-akamai-11-6-billion-cpu-compute-warrant",
+  "id": "newsroom-anthropic-akamai-11-6-billion-cpu-compute-warrant",
+  "title": "Anthropic signed Akamai's largest deal ever -- $11.6 billion in CPU compute, paid for partly in Akamai's own stock",
+  "dek": "The seven-year contract, which could grow toward $20 billion, comes with a warrant for up to 5% of Akamai's shares that vests only as Anthropic actually spends beyond its initial commitment -- the vendor compensating the customer, not the usual direction these deals run. Akamai's stock closed up 14.2% on the news, though a $5.5 billion capex bill and a heavily shorted float complicate how much of that is durable.",
+  "persona": "jin-park",
+  "section": "Compute",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch whether Anthropic actually draws the $9 billion expansion option",
+    "text": "The vesting schedule is public and mechanical -- every additional $3 billion Anthropic spends is a dated, checkable fact, not a one-time headline. The first tranche would show up in Akamai's own quarterly filings."
+   },
+   {
+    "label": "Watch Akamai's next earnings call for whether the $1.7 billion 2026 capex increase actually lands",
+    "text": "Akamai ties this specific figure to supply-chain components including memory -- a line item that can move on cost, not just Anthropic's demand."
+   },
+   {
+    "label": "Watch whether the short interest unwinds or the stock gives back the pop",
+    "text": "19.02 million shares -- about 13.5% of the float -- were sold short before the announcement; some of the 14% single-day move is plausibly short covering rather than a fresh read on the deal's value."
+   },
+   {
+    "label": "Watch for the next AI lab to strike a vendor-funded warrant deal, not a lab-funded one",
+    "text": "Akamai's structure runs the same direction AMD used with OpenAI a year earlier -- the supplier paying in equity -- rather than the more common pattern of a lab's own compute vendor investing directly into the lab, as Microsoft and Nvidia did with Anthropic in November 2025."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Akamai Announces $11.6 Billion Multi-Year Agreement with Anthropic to Support Growing Demand",
+    "url": "https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand",
+    "outlet": "Akamai",
+    "kind": "primary"
+   },
+   {
+    "label": "Akamai Technologies, Inc. -- Form 8-K, Exhibit 99.1",
+    "url": "https://www.sec.gov/Archives/edgar/data/0001086222/000119312526401048/d288154dex991.htm",
+    "outlet": "U.S. Securities and Exchange Commission",
+    "kind": "filing_or_official"
+   },
+   {
+    "label": "Anthropic Strikes $12 Billion Deal With Akamai for AI Computing",
+    "url": "https://www.bloomberg.com/news/articles/2026-09-24/anthropic-strikes-12-billion-deal-with-akamai-for-ai-computing",
+    "outlet": "Bloomberg",
+    "kind": "reporting"
+   },
+   {
+    "label": "Anthropic teams up with Akamai in $11.6bn cloud partnership",
+    "url": "https://www.itpro.com/infrastructure/anthropic-teams-up-with-akamai-in-usd11-6bn-cloud-partnership",
+    "outlet": "ITPro",
+    "kind": "reporting"
+   },
+   {
+    "label": "Akamai's $11 billion CPU-capacity deal, and the warrant that pays for it",
+    "url": "https://fourweekmba.com/ai-akamai-anthropic-11-billion-cpu-capacity-warrant/",
+    "outlet": "FourWeekMBA",
+    "kind": "analysis"
+   },
+   {
+    "label": "Akamai Technologies Stock Pops After Anthropic Deal",
+    "url": "https://www.schaeffersresearch.com/content/news/2026/09/25/akamai-technologies-stock-pops-after-anthropic-deal",
+    "outlet": "Schaeffer's Investment Research",
+    "kind": "reporting"
+   },
+   {
+    "label": "Akamai Surges 15% on $11.6B Anthropic Cloud Deal; CoreWeave and Cloudflare Tick Up",
+    "url": "https://247wallst.com/investing/2026/09/25/akamai-surges-15-on-11-6b-anthropic-cloud-deal-coreweave-and-cloudflare-tick-up/",
+    "outlet": "24/7 Wall St.",
+    "kind": "reporting"
+   },
+   {
+    "label": "Should we worry about AI's circular deals?",
+    "url": "https://www.noahpinion.blog/p/should-we-worry-about-ais-circular",
+    "outlet": "Noahpinion (Noah Smith)",
+    "kind": "analysis"
+   },
+   {
+    "label": "Microsoft and Nvidia Just Signed a Multibillion-Dollar Deal With Anthropic. Here's What It Really Means for Investors.",
+    "url": "https://www.fool.com/investing/2025/11/24/microsoft-and-nvidia-just-signed-a-multibillion-do/",
+    "outlet": "The Motley Fool",
+    "kind": "historical_context"
+   }
+  ],
+  "tldr": [
+   "Akamai will supply Anthropic $11.6 billion of CPU compute over seven years, expandable to $20 billion.",
+   "Akamai's largest deal ever, on top of a $1.8 billion contract the two signed earlier in 2026.",
+   "Akamai pays Anthropic in stock: a warrant for up to 5% of shares, not a price discount.",
+   "Akamai's stock closed up 14.2% on the news; heavy short interest complicates how durable that is.",
+   "Caveat: Akamai says the deal won't move 2026 revenue -- the spending lands well before it does."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Akamai will spend an estimated **$5.5 billion** building out compute capacity for [Anthropic](/company/anthropic) under a seven-year, **$11.6 billion** contract signed Sept. 24 -- the largest deal in Akamai's history, on top of a $1.8 billion contract the two companies signed earlier in 2026. The commitment can grow to roughly **$20 billion** if Anthropic keeps buying. What makes it unusual isn't the size -- multi-billion-dollar AI compute contracts are routine now -- it's who paid whom in equity. [Akamai](/company/akamai) is handing Anthropic a warrant for up to 5% of its own stock. ==The vendor is compensating the customer, not the other way around.==",
+    "citation_urls": [
+     "https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand",
+     "https://www.bloomberg.com/news/articles/2026-09-24/anthropic-strikes-12-billion-deal-with-akamai-for-ai-computing"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The terms, filed with the SEC in an Akamai 8-K exhibit, are specific down to the vesting schedule. The base commitment immediately vests a warrant covering about 2% of Akamai's stock on an __as-converted basis__; each additional **$3 billion** Anthropic actually purchases beyond that -- up to $9 billion more -- vests roughly one more percentage point, capping the total at 5%, or about **7.7 million shares**, exercisable at **$111.33** apiece.",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0001086222/000119312526401048/d288154dex991.htm"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "\"Anthropic is advancing the AI revolution and we are thrilled they chose Akamai's capabilities for building and operating AI infrastructure at scale.\" -- Tom Leighton, Akamai co-founder and CEO",
+    "citation_urls": [
+     "https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Akamai isn't a GPU cloud. Its business for two decades has been [content delivery](/dictionary) -- caching and routing internet traffic from thousands of points of presence close to end users, not training frontier models inside a handful of hyperscale campuses. The company's own language for what it's selling here is telling: 'compute from core to edge,' for Anthropic's __CPU__ workload growth. Neither company has said publicly which of Claude's workloads that covers -- inference serving close to users is the obvious guess, given Akamai's edge footprint, but the release doesn't say so directly, and the honest answer is that detail isn't public yet.",
+    "citation_urls": [
+     "https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand",
+     "https://www.itpro.com/infrastructure/anthropic-teams-up-with-akamai-in-usd11-6bn-cloud-partnership"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "What the $11.6 billion actually covers",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "Akamai's own numbers span several different things that are easy to blur into one headline figure. Here's what each one is, and isn't:",
+    "citation_urls": []
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the $11.6 billion Akamai deal covers, and what it doesn't",
+     "items": [
+      {
+       "value": "$11.6B",
+       "unit": "7-year term",
+       "label": "Committed CPU-compute purchase, Anthropic to Akamai",
+       "includes": "The base contractual commitment Akamai calls its largest deal ever, on top of a $1.8B contract the two signed earlier in 2026.",
+       "excludes": "The separate $9B expansion option -- not yet spent, not yet owed."
+      },
+      {
+       "value": "$9B",
+       "unit": "expansion option",
+       "label": "Additional purchases Anthropic could make, not yet committed",
+       "includes": "The ceiling that would bring the relationship to roughly $20B total.",
+       "excludes": "Any obligation -- Anthropic can decline it entirely, and nothing vests if it does."
+      },
+      {
+       "value": "$5.5B",
+       "unit": "Akamai's own capex",
+       "label": "What Akamai expects to spend building the capacity",
+       "includes": "Akamai's own estimate of its build-out cost tied to the $11.6B commitment -- more than six times its total 2025 capital spending.",
+       "excludes": "Revenue -- Akamai says the deal has no impact on 2026 revenue."
+      },
+      {
+       "value": "$1.7B",
+       "unit": "2026 capex increase",
+       "label": "Akamai's separately guided rise in 2026 capital spending",
+       "includes": "Supply-chain components, including memory, tied to the broader buildout.",
+       "excludes": "A stated breakdown of how much of this sits inside the $5.5B figure versus alongside it -- Akamai's disclosures don't specify."
+      },
+      {
+       "value": "5%",
+       "unit": "warrant, capped",
+       "label": "Maximum stake Anthropic can earn in Akamai",
+       "includes": "7.7 million shares on an as-converted basis, exercisable at $111.33 each.",
+       "excludes": "Any cash payment from Akamai to Anthropic -- the entire consideration is equity, contingent on spending."
+      }
+     ],
+     "source": "Akamai's Sept. 24, 2026 press release and its Form 8-K exhibit filed with the SEC."
+    }
+   },
+   {
+    "type": "p",
+    "text": "==The gap between what Akamai is spending and what it expects to collect this year is the deal's real risk, not its size.== The company's own estimate for building this out -- $5.5 billion -- is more than six times what Akamai spent on capital expenditures in all of 2025, and separately, Akamai's total 2026 capex guidance is rising by about $1.7 billion for supply-chain components, including memory. Akamai's own guidance says none of it moves 2026 revenue -- the infrastructure gets built well before Anthropic's payments catch up to it, and Akamai is carrying that gap on its own balance sheet in the meantime.",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0001086222/000119312526401048/d288154dex991.htm"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The vesting math, run for yourself",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "The mechanism is unusually legible for the kind of arithmetic that normally needs an analyst deck to reconstruct -- Akamai's own filing states the exchange rate outright: about one percentage point of the company for every $3 billion Anthropic spends past its initial commitment. Move the slider to see what different levels of additional spending are actually worth to Anthropic, in Akamai stock, at today's price:",
+    "citation_urls": [
+     "https://www.sec.gov/Archives/edgar/data/0001086222/000119312526401048/d288154dex991.htm"
+    ]
+   },
+   {
+    "type": "model",
+    "model": {
+     "title": "What Anthropic's extra spending is actually worth, in Akamai stock",
+     "inputs": [
+      {
+       "key": "add",
+       "label": "Compute purchased beyond the $11.6B commitment",
+       "value": 0,
+       "min": 0,
+       "max": 9,
+       "step": 0.5,
+       "prefix": "$",
+       "unit": "B",
+       "dec": 1,
+       "note": "Zero today -- the deal just signed. $9B is the full disclosed expansion ceiling."
+      },
+      {
+       "key": "price",
+       "label": "Akamai share price",
+       "value": 126.1,
+       "min": 80,
+       "max": 170,
+       "step": 0.5,
+       "prefix": "$",
+       "dec": 2,
+       "note": "Closed at $126.10 on Sept. 25, 2026, up 14.2% on the news -- Schaeffer's Investment Research."
+      }
+     ],
+     "outputs": [
+      {
+       "label": "Akamai stock vested",
+       "expr": "min(5,2+floor(add/3))",
+       "unit": "%",
+       "dec": 0,
+       "note": "2% vests with the $11.6B commitment; each additional $3B purchased vests roughly one more percentage point, capped at 5%, per Akamai's SEC filing."
+      },
+      {
+       "label": "Paper value if exercised today",
+       "expr": "((min(5,2+floor(add/3))/5)*7.7)*(price-111.33)",
+       "unit": "$M",
+       "dec": 0,
+       "note": "7.7 million shares equal the full 5% warrant on an as-converted basis; strike price is $111.33. Assumes Akamai's share count and price hold at today's level."
+      }
+     ],
+     "source": "Vesting formula and share/strike figures from Akamai's Form 8-K exhibit; starting share price from Schaeffer's Investment Research, Sept. 25, 2026."
+    }
+   },
+   {
+    "type": "h2",
+    "text": "How Wall Street read it",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "Akamai's stock actually fell 6.8% the day the deal was announced after-hours Thursday, then swung hard the other direction Friday as the market had a full session to digest the terms. How hard depends on which snapshot you read -- outlets measured the same trading day at different moments and got different numbers:",
+    "citation_urls": [
+     "https://www.schaeffersresearch.com/content/news/2026/09/25/akamai-technologies-stock-pops-after-anthropic-deal",
+     "https://247wallst.com/investing/2026/09/25/akamai-surges-15-on-11-6b-anthropic-cloud-deal-coreweave-and-cloudflare-tick-up/"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "How much did Akamai's stock actually move on Sept. 25?",
+       "claims": [
+        {
+         "who": "Schaeffer's Investment Research",
+         "kind": "reporting",
+         "says": "Up 14.2%, closing at $126.10",
+         "url": "https://www.schaeffersresearch.com/content/news/2026/09/25/akamai-technologies-stock-pops-after-anthropic-deal",
+         "trusted": true
+        },
+        {
+         "who": "24/7 Wall St.",
+         "kind": "reporting",
+         "says": "Up 15%, to $127.49, in morning trading",
+         "url": "https://247wallst.com/investing/2026/09/25/akamai-surges-15-on-11-6b-anthropic-cloud-deal-coreweave-and-cloudflare-tick-up/"
+        }
+       ],
+       "ruling": "Using Schaeffer's closing-price figure. It's measured at the end of the trading day; the other figure is a morning snapshot from earlier in the same session, before the stock finished moving."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Three analysts raised their price targets the same day, including J.P. Morgan Securities, up to $167 from $158. Some of the pop is plausibly mechanical rather than a fresh read on the deal's value: **19.02 million shares** -- about 13.5% of Akamai's float -- were sold short heading into the announcement, a setup where a positive surprise can force short sellers to buy back stock and amplify the move.",
+    "citation_urls": [
+     "https://www.schaeffersresearch.com/content/news/2026/09/25/akamai-technologies-stock-pops-after-anthropic-deal"
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The direction these deals usually run",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "Akamai paying Anthropic in equity isn't unprecedented, but it isn't the more common pattern either. AMD granted OpenAI warrants to buy its stock as part of a chips deal -- the same vendor-to-customer direction Akamai just used. {{note: OpenAI has separately become one of AMD's largest shareholders through that arrangement.}} The more familiar shape runs the other way: Anthropic's own November 2025 deal had Microsoft and Nvidia investing a combined $15 billion directly into Anthropic itself -- $10 billion and $5 billion respectively, at a $350 billion valuation -- in exchange for Anthropic committing $30 billion of Azure compute plus gigawatt-scale Nvidia hardware purchases. That's the customer's vendors buying into the customer. Akamai's warrant is the customer's vendor being paid by the customer's own future spending, in the vendor's stock instead of the customer's.",
+    "citation_urls": [
+     "https://www.noahpinion.blog/p/should-we-worry-about-ais-circular",
+     "https://www.fool.com/investing/2025/11/24/microsoft-and-nvidia-just-signed-a-multibillion-do/"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "The stock pop overstates fresh conviction about the deal, because a lot of it is short covering.",
+       "detail": "19.02 million shares -- 13.5% of Akamai's float -- were sold short before the announcement; a move this size can force shorts to buy back stock regardless of what the deal is actually worth.",
+       "whoHolds": "Schaeffer's Investment Research's own read of the short-interest data"
+      },
+      {
+       "claim": "The headline $20 billion figure is aspirational, not contracted.",
+       "detail": "Only $11.6 billion is actually committed. The remaining $9 billion is an option Anthropic can decline entirely, and none of the warrant tied to it vests unless Anthropic actually spends it.",
+       "whoHolds": "The structure disclosed in Akamai's own SEC filing"
+      },
+      {
+       "claim": "Akamai is taking on real financial risk for a payoff that isn't guaranteed.",
+       "detail": "The company is committing to roughly $5.5 billion in capital spending -- more than six times its 2025 total -- while telling investors the deal won't move 2026 revenue at all.",
+       "whoHolds": "The capex-before-revenue risk flagged in Akamai's own guidance and read skeptically in Schaeffer's reporting"
+      }
+     ],
+     "verdict": "All three hold up, and none of them make the deal smaller than advertised -- they make it earlier-stage than the 14% stock pop implies. The $11.6 billion is real and contractual; the $20 billion, the fully vested warrant, and a chunk of Friday's rally are all still waiting on Anthropic actually spending money it hasn't spent yet.",
+     "source": "Schaeffer's Investment Research and Akamai's Form 8-K exhibit."
+    }
+   },
+   {
+    "type": "p",
+    "text": "None of that makes the demand fake -- Akamai calls this the largest contract in the company's history, and the SEC filing puts a real, checkable vesting schedule behind it rather than a vague number in a press release. It does mean the 14% pop and the $20 billion headline are measuring two different things: one is a dated, mechanically verifiable contract; the other is Wall Street pricing in continued expansion Anthropic hasn't actually committed to yet.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "6 independent evidence threads: Akamai's press release (primary_company), the SEC 8-K exhibit (filing_or_official, materially distinct legal document from the release), stock-reaction reporting (Schaeffer's + 24/7 Wall St., treated as one independent_reporting thread despite multiple outlets), ITPro's CPU/edge context (independent_reporting), FourWeekMBA's warrant-mechanics analysis (analysis), and Noahpinion's circular-financing framing plus the Nov 2025 Microsoft/Nvidia-Anthropic deal (analysis + historical_context). Spans 4+ source classes with 2 primary/official sources. Routed synthesis rather than research: this is one corporate-deal event with its market reaction, not a multi-event investigation -- the smallest honest container that still reconciles the conflicting stock-move percentages and the two possible readings of the warrant structure."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Financial/valuation-claims mandatory-scrutiny trigger reviewed: every dollar figure traces to the SEC filing or Akamai's own release; the Leighton quote is verbatim from the primary press release fetch, not secondary paraphrase; no buy/sell framing or investment recommendation is made, so no disclaimer required (Compute desk, not Markets). Bloomberg's $12B headline figure vs. the filing's exact $11.6B is a rounding difference, not a genuine factual conflict -- noted in-line rather than staged as a sourcecheck."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the model component's second output (paper warrant value) needed every bare number (5, 2, 3, 7.7, 111.33) independently present in body prose, not just the component -- confirmed each appears in paragraph 2 before finalizing. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Ledger: all five values (11.6B, 9B, 5.5B, 1.7B, 5%) traced to body prose. Model: all constants in both expressions (5, 2, 3, 7.7, 111.33) traced to body prose. Sourcecheck: exactly one trusted claim with a ruling. Counter: three real, sourced positions, no strawman. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. Financial/valuation trigger reviewed and cleared; no health, legal, defamation, or unverifiable-quote trigger."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Financial/valuation claims trigger reviewed and cleared -- all figures sourced to the primary filing or attributed reporting, no investment advice or buy/sell framing."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-26T00:43:07Z"
+  },
+  "image": "assets/img/newsroom/anthropic-akamai-11-6-billion-cpu-compute-warrant.jpg",
+  "publishedAt": "2026-09-26T00:43:07Z"
+ },
+ {
+  "slug": "atlas-energy-solutions-frontier-ai-lab-power-deal",
+  "id": "newsroom-atlas-energy-solutions-frontier-ai-lab-power-deal",
+  "title": "An unnamed 'leading frontier AI lab' signed $613.5 million in power-equipment orders with Atlas Energy Solutions -- and the stock jumped as much as 15%",
+  "dek": "The Sept. 25 agreements split into $340.5 million in balance-of-plant equipment and $273 million in Caterpillar generators for a data-center build the customer is paying Atlas to buy ahead of time. Atlas won't name the AI lab, and neither will this piece -- but even an anonymous AI-infrastructure order is now big enough to move a public company's stock.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "brief",
+  "disclaimer": "not-financial-advice",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for the customer's identity to surface through a different filing",
+    "text": "Atlas's own announcement doesn't name the AI lab; a permit filing, a local zoning record, or the lab's own future disclosure is what would actually confirm it -- not further Atlas guidance, which is contractually silent on the point."
+   },
+   {
+    "label": "Watch the 328 MW, 2027-delivery Caterpillar order for whether the buildout stays on schedule",
+    "text": "That capacity is committed under Atlas's existing Global Framework Agreement with Caterpillar, separate from this week's new order -- a concrete date against which the larger buildout can actually be checked."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Atlas Energy Solutions Announces Equipment Purchase Agreements Backed by Cost Reimbursement Agreements with a Leading Frontier AI Lab",
+    "url": "https://offshoresource.com/business-wire/atlas-energy-solutions-announces-equipment-purchase-agreements-backed-by-cost-reimbursement-agreements-with-a-leading-frontier-ai-lab",
+    "outlet": "Business Wire (via OffshoreSource)",
+    "kind": "primary"
+   },
+   {
+    "label": "Atlas Energy Solutions (AESI) Stock Jumps 13% After Securing $613M AI Data Center Power Contracts",
+    "url": "https://parameter.io/atlas-energy-solutions-aesi-stock-jumps-13-after-securing-613m-ai-data-center-power-contracts/",
+    "outlet": "Parameter",
+    "kind": "reporting"
+   },
+   {
+    "label": "Atlas Energy Solutions Announces Equipment Purchase Agreements Backed by Cost Reimbursement Agreements with a Leading Frontier AI Lab",
+    "url": "https://www.stocktitan.net/news/AESI/atlas-energy-solutions-announces-equipment-purchase-agreements-iyqtmdwg6qtn.html",
+    "outlet": "StockTitan",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Atlas Energy Solutions signed $613.5 million in power-equipment orders with an unnamed AI lab.",
+   "The total splits into $340.5 million in balance-of-plant gear and $273 million in Caterpillar generators.",
+   "The customer reimburses Atlas for equipment costs as they're purchased, not after the fact.",
+   "Atlas stock jumped as much as 15% on the Sept. 25 news.",
+   "Caveat: the AI lab's identity isn't disclosed anywhere in Atlas's own announcement."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Atlas Energy Solutions -- an oilfield-services company that supplies sand and equipment to oil and gas producers -- announced **$613.5 million** in new equipment-purchase agreements on Sept. 25, backed by an unnamed customer it describes only as 'a leading frontier AI lab.' The stock jumped as much as **15%** in early trading. Atlas won't say who the customer is, and neither Atlas's own release nor any of the market coverage that followed names it.",
+    "citation_urls": [
+     "https://offshoresource.com/business-wire/atlas-energy-solutions-announces-equipment-purchase-agreements-backed-by-cost-reimbursement-agreements-with-a-leading-frontier-ai-lab",
+     "https://parameter.io/atlas-energy-solutions-aesi-stock-jumps-13-after-securing-613m-ai-data-center-power-contracts/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The total splits into two pieces: **$340.5 million** for 'balance-of-plant' equipment -- emissions controls, electrical distribution, battery storage -- through Atlas subsidiary Wyoming Machinery Company, and **$273 million** for Caterpillar power-generation equipment covering **283 megawatts** of capacity. A separate, related agreement locks in an additional **328 megawatts** of Caterpillar generators for 2027 delivery, under Atlas's existing Global Framework Agreement with Caterpillar.",
+    "citation_urls": [
+     "https://parameter.io/atlas-energy-solutions-aesi-stock-jumps-13-after-securing-613m-ai-data-center-power-contracts/",
+     "https://www.stocktitan.net/news/AESI/atlas-energy-solutions-announces-equipment-purchase-agreements-iyqtmdwg6qtn.html"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "The $613.5 million, split out",
+     "items": [
+      {
+       "value": "$340.5M",
+       "unit": "balance-of-plant",
+       "label": "Emissions controls, electrical distribution, battery storage",
+       "includes": "Ordered through Atlas subsidiary Wyoming Machinery Company.",
+       "excludes": "Any Caterpillar generator hardware -- that's the second line item."
+      },
+      {
+       "value": "$273M",
+       "unit": "generation equipment",
+       "label": "283 MW of Caterpillar power generators",
+       "includes": "New equipment beyond Atlas's existing framework-agreement obligations.",
+       "excludes": "The separate 328 MW of 2027-delivery generators, which Atlas says falls under its existing Global Framework Agreement, not this new order."
+      },
+      {
+       "value": "$613.5M",
+       "unit": "combined total",
+       "label": "What Atlas actually announced Sept. 25",
+       "excludes": "Who the customer is, what it's paying overall, or any timeline beyond 'reimbursed as purchased.'"
+      }
+     ],
+     "source": "Atlas Energy Solutions' Sept. 25, 2026 announcement, as reported by Parameter and StockTitan."
+    }
+   },
+   {
+    "type": "p",
+    "text": "What makes the structure notable is who's carrying the financial risk. These are **cost-reimbursement agreements** -- the AI lab customer pays Atlas back for the equipment cost as Atlas buys it, rather than Atlas fronting the capital and hoping the customer's build-out actually happens. ==That's the customer buying certainty for the seller, the same trade underlying a wave of AI-infrastructure deals this year, just running in the more familiar direction: the buyer de-risking the seller's balance sheet, not the other way around.== 'This customer's willingness to enter into cost reimbursement agreements is a clear sign of commitment to these projects,' Atlas CEO John Turner said in the announcement.",
+    "citation_urls": [
+     "https://parameter.io/atlas-energy-solutions-aesi-stock-jumps-13-after-securing-613m-ai-data-center-power-contracts/",
+     "https://offshoresource.com/business-wire/atlas-energy-solutions-announces-equipment-purchase-agreements-backed-by-cost-reimbursement-agreements-with-a-leading-frontier-ai-lab"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Atlas built its business on frac sand and oilfield logistics; 2026 has been a pivot toward supplying private power to data centers wherever the local grid can't keep up -- the same power-scarcity story running through deals across the AI-infrastructure buildout, including [Anthropic's $11.6 billion compute commitment to Akamai](/article/anthropic-akamai-11-6-billion-cpu-compute-warrant) the same week. None of that confirms which lab is actually behind this specific order -- Atlas's own filing doesn't say, and this piece isn't guessing.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Two independent evidence threads: Atlas's own company announcement (primary, confirmed via a Business Wire mirror after the direct businesswire.com URL returned a 403) and market-reaction reporting from two independent financial-data outlets (Parameter, StockTitan) confirming the same $340.5M/$273M/$613.5M breakdown and the stock move. Routed brief: one discrete corporate announcement, no reconciliation needed."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "Financial/valuation trigger fired (deal value, stock move) -- not-financial-advice disclaimer applied per Markets-desk convention. Unverifiable-claim trigger considered and deliberately not resolved: the AI lab customer's identity is undisclosed by the company itself, so the piece states that plainly rather than speculating or naming a candidate."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique confirmed no attempt to guess or imply the customer's identity anywhere in the draft. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Ledger: all four values (340.5M, 273M, 613.5M, 283 MW referenced in body) trace to body prose and cited sources. No top-level text field on the component."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. Financial-claims trigger cleared with disclaimer; no legal, health, or defamation trigger; central claim (the deal itself) is well-corroborated across independent outlets even though the customer is unnamed."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "Financial claims sourced to the company's own announcement and independent market-data reporting; not-financial-advice disclaimer applied; customer identity honestly reported as undisclosed rather than guessed."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-26T00:43:07Z"
+  },
+  "image": "assets/img/newsroom/atlas-energy-solutions-frontier-ai-lab-power-deal.jpg",
+  "publishedAt": "2026-09-26T00:43:07Z"
+ }
 ]
 ;

@@ -25801,5 +25801,168 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-akamai-11-6-billion-cpu-compute-warrant",
+    "ts": "2026-09-26T00:43:07Z",
+    "export": {
+      "article_id": "newsroom-anthropic-akamai-11-6-billion-cpu-compute-warrant",
+      "url": "https://rtfclmgzn.com/article/anthropic-akamai-11-6-billion-cpu-compute-warrant",
+      "headline": "Anthropic signed Akamai's largest deal ever -- $11.6 billion in CPU compute, paid for partly in Akamai's own stock",
+      "hook": "Akamai just signed the largest deal in its history with Anthropic -- and paid for it partly in its own stock, not a discount.",
+      "key_facts": [
+        "$11.6 billion, 7-year deal, expandable to $20 billion -- Akamai's biggest contract ever.",
+        "Akamai hands Anthropic a warrant for up to 5% of its stock, vesting as Anthropic spends beyond the base commitment.",
+        "Akamai's stock closed up 14.2% on the news, but 13.5% of its float was sold short going in."
+      ],
+      "tone": "analytical, numbers-first, skeptical of the headline pop",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/anthropic-akamai-11-6-billion-cpu-compute-warrant.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Akamai just signed its biggest deal ever: $11.6B in CPU compute for Anthropic over 7 years. The twist -- Akamai is paying Anthropic in equity, a warrant for up to 5% of its own stock, not a price discount.",
+        "reply_copy": "The vesting math, and why the 14% stock pop is more complicated than it looks:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Akamai"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-26T05:43:07Z",
+        "copy": "19.02 million Akamai shares -- 13.5% of the float -- were sold short right before this deal dropped. Some of Friday's 14% pop is probably short covering, not a fresh read on $11.6B of AI compute demand.",
+        "reply_copy": "Full breakdown of the warrant mechanics:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Akamai",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Akamai just signed the biggest deal in its history.\n\n$11.6 billion over 7 years for Anthropic's CPU compute needs -- expandable to $20 billion. But here's the part that's actually unusual: Akamai isn't discounting the deal. It's paying for it in equity, handing Anthropic a warrant for up to 5% of Akamai's own stock.\n\nThe stock jumped 14% on the news. Some of that's real demand. Some of it is 13.5% of the float being short and getting squeezed. Full breakdown at the link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#Akamai",
+          "#AIInfrastructure",
+          "#CloudComputing",
+          "#TechNews",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Akamai signed its largest deal ever this week: $11.6 billion over seven years to supply Anthropic's CPU compute, expandable to $20 billion. The unusual part -- Akamai is paying Anthropic in stock, a warrant for up to 5% of shares, rather than cutting the price. The stock closed up 14.2% on the news, though heavy short interest and a $5.5 billion capex bill complicate how much of that pop is durable.",
+        "hashtags": [
+          "#Anthropic",
+          "#Akamai"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Akamai's $11.6B Anthropic deal is its biggest ever -- and the vendor is paying the customer in stock, not the usual direction these deals run. 2% of Akamai vests now, another 1% per extra $3B Anthropic spends, capped at 5%. Stock popped 14%, but 13.5% of the float was short going in.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Akamai's biggest deal ever: $11.6B/7yr for Anthropic's CPU compute, expandable to $20B -- paid for partly in a warrant for up to 5% of Akamai's own stock. Stock +14.2%, but 13.5% of the float was short beforehand. Real demand and a squeeze, probably both.",
+        "hashtags": [
+          "#Anthropic",
+          "#Akamai",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-atlas-energy-solutions-frontier-ai-lab-power-deal",
+    "ts": "2026-09-26T00:43:07Z",
+    "export": {
+      "article_id": "newsroom-atlas-energy-solutions-frontier-ai-lab-power-deal",
+      "url": "https://rtfclmgzn.com/article/atlas-energy-solutions-frontier-ai-lab-power-deal",
+      "headline": "An unnamed 'leading frontier AI lab' signed $613.5 million in power-equipment orders with Atlas Energy Solutions -- and the stock jumped as much as 15%",
+      "hook": "A former oilfield-services company just landed $613.5 million in power-equipment orders from an AI lab it won't name -- and its stock jumped 15% anyway.",
+      "key_facts": [
+        "$613.5 million total: $340.5M in balance-of-plant gear, $273M in Caterpillar generators (283 MW).",
+        "The AI lab customer reimburses Atlas for equipment costs as they're purchased -- Atlas isn't fronting the capital.",
+        "Atlas won't name the customer, and no report has independently confirmed who it is."
+      ],
+      "tone": "brisk, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/atlas-energy-solutions-frontier-ai-lab-power-deal.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "An oilfield-services company just signed $613.5M in power-equipment orders with an AI lab it refuses to name. Stock jumped as much as 15% anyway. Even anonymous AI infrastructure demand moves markets now.",
+        "reply_copy": "The full breakdown of who's paying for what:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIInfrastructure",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Atlas Energy Solutions built its business on frac sand and oilfield logistics. This week it signed $613.5 million in power-equipment orders -- generators, transformers, battery storage -- for an unnamed 'leading frontier AI lab.'\n\nThe stock jumped as much as 15%. Nobody outside Atlas knows who the customer actually is. Full numbers at the link in bio.",
+        "hashtags": [
+          "#AIInfrastructure",
+          "#Markets",
+          "#Energy",
+          "#DataCenters",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Atlas Energy Solutions, an oilfield-services company pivoting into AI data-center power, announced $613.5 million in equipment orders on Sept. 25 -- $340.5 million in balance-of-plant gear and $273 million in Caterpillar generators -- backed by an unnamed 'leading frontier AI lab.' The stock jumped as much as 15%. Not financial advice.",
+        "hashtags": [
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "$613.5M in power-equipment orders, an AI lab nobody will name, and a stock that jumped 15% anyway. Atlas Energy Solutions' pivot from oilfield services to AI data-center power is now big enough to move markets on an anonymous customer alone.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Atlas Energy Solutions signed $613.5M in power-equipment orders for an unnamed 'leading frontier AI lab' -- stock +15%. $340.5M balance-of-plant, $273M Caterpillar generators (283 MW). Nobody's confirmed the customer. Not financial advice.",
+        "hashtags": [
+          "#AIInfrastructure",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

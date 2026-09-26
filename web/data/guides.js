@@ -5622,9 +5622,15 @@ window.RTFC_GUIDES = [
           "kicker": "THREE VENDORS, THREE CLOCKS",
           "title": "Model deprecation policy: OpenAI vs. Anthropic vs. Google Gemini",
           "columns": [
-            {"label": "OpenAI"},
-            {"label": "Anthropic"},
-            {"label": "Google Gemini"}
+            {
+              "label": "OpenAI"
+            },
+            {
+              "label": "Anthropic"
+            },
+            {
+              "label": "Google Gemini"
+            }
           ],
           "rows": [
             {
@@ -6392,6 +6398,251 @@ window.RTFC_GUIDES = [
       {
         "type": "p",
         "text": "None of this is an argument against using an AI notetaker -- transcripts genuinely help, and getting the words right matters too (our [companion guide on catching a bad AI transcript](/article/catch-a-bad-ai-transcript-before-you-send-it) covers the accuracy side of the same tools). It's an argument for treating the consent question with the same seriousness you'd give an actual audio recorder in your pocket, because legally, an AI notetaker is exactly that -- with the added twist that nobody has yet decided in court whether its own on-screen presence is enough to ask on your behalf.",
+        "citation_urls": []
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g24",
+    "slug": "check-whether-a-browser-extension-can-read-your-ai-chats",
+    "image": "assets/img/newsroom/g24.jpg",
+    "title": "How to check whether a browser extension can read what you tell an AI chatbot",
+    "dek": "Two very different 2026 incidents point at the same lesson: a fake AI-sidebar extension quietly copied 900,000 people's ChatGPT and DeepSeek conversations, and a separate disclosure showed how any already-installed extension -- not just an 'AI' one -- could hijack five browsers' own built-in AI agents. Here's the five-minute audit that catches both.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-26T00:43:07Z",
+    "readMins": 7,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "A fake AI-sidebar Chrome extension with 600,000 users carried Google's own 'Featured' badge.",
+      "Two clone extensions secretly copied ChatGPT and DeepSeek chats from about 900,000 users.",
+      "Separately, one malicious extension could hijack five browsers' built-in AI agents entirely.",
+      "Chrome and Edge patched the underlying flaw; check your browser is actually updated.",
+      "Caveat: a 'Featured' or verified badge checks the developer, never what the code actually does."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Audit every extension with broad site access today, not just ones labeled 'AI'",
+        "text": "BragJack's technique works through any extension that already has broad permissions -- the built-in AI agent it hijacks is the browser's own, not something the malicious extension has to bring itself."
+      },
+      {
+        "label": "Check chrome://extensions' Site access setting on anything you don't fully recognize",
+        "text": "'On specific sites' or 'On click' both beat 'On all sites' for anything that doesn't need to run everywhere -- and it takes under a minute per extension to check."
+      },
+      {
+        "label": "Confirm your browser version if you use Chrome or Edge's built-in AI features",
+        "text": "Google shipped the fix for CVE-2026-0628 in Chrome 143.0.7499.192; Microsoft's Edge fix landed in 150.0.4078.48. An unpatched browser stays exposed regardless of which extensions you trust."
+      }
+    ],
+    "sources": [
+      {
+        "label": "BragJack [Technical Overview]: How We Hijacked Top 5 Browsers' Internal Agents With Just One Single Extension",
+        "url": "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent/",
+        "outlet": "Forever Security",
+        "kind": "primary"
+      },
+      {
+        "label": "Malicious Chrome Extensions Steal ChatGPT, DeepSeek Conversations",
+        "url": "https://www.ox.security/blog/malicious-chrome-extensions-steal-chatgpt-deepseek-conversations/",
+        "outlet": "OX Security",
+        "kind": "primary"
+      },
+      {
+        "label": "Two Chrome Extensions Caught Stealing ChatGPT and DeepSeek Chats from 900,000 Users",
+        "url": "https://thehackernews.com/2026/01/two-chrome-extensions-caught-stealing.html",
+        "outlet": "The Hacker News",
+        "kind": "reporting"
+      },
+      {
+        "label": "Why 'Featured' badges do not guarantee extension safety",
+        "url": "https://www.paubox.com/blog/why-featured-badges-do-not-guarantee-extension-safety",
+        "outlet": "Paubox",
+        "kind": "analysis"
+      },
+      {
+        "label": "Manage your extensions",
+        "url": "https://support.google.com/chrome_webstore/answer/2664769?hl=en",
+        "outlet": "Google Chrome Help",
+        "kind": "primary"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "A browser extension asking to 'read and change all your data on all websites you visit' used to mean it could see what you typed into a search box. Now it can mean it's reading what you told an AI chatbot and what the chatbot told back -- and in the worst 2026 disclosures, that a completely unrelated extension could reach into your browser's own built-in AI agent and make it act on an attacker's instructions instead of yours. Two incidents this year show what that actually looks like, and a five-minute check catches both.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Two different ways this goes wrong",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The first is the simpler one: an extension that just lies about what it is. In January 2026, OX Security researcher Moshe Siman Tov Bustan found two Chrome extensions impersonating a real AI-sidebar tool called AITOPIA -- one, with over **600,000** installs, even carried the Chrome Web Store's own 'Featured' badge. Both quietly captured every prompt and reply from ChatGPT and DeepSeek sessions, plus the full URL of every open tab, and sent it to an attacker's server every **30 minutes**. Combined, the two extensions had roughly **900,000** users. Google confirmed the report was 'in review' the day after OX Security disclosed it; the extensions were still live at that point.",
+        "citation_urls": [
+          "https://www.ox.security/blog/malicious-chrome-extensions-steal-chatgpt-deepseek-conversations/",
+          "https://thehackernews.com/2026/01/two-chrome-extensions-caught-stealing.html"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The second is stranger, and doesn't require installing anything that calls itself an AI tool at all. Security researcher Gal Weizman published **BragJack** on Sept. 16, 2026, showing that a single already-installed browser extension -- any extension with broad enough permissions, not one built to look like an AI product -- could hijack the browser's own built-in AI agent in [Chrome](/company/google), [Edge](/company/microsoft), Comet, Opera Neon, and Claude for Chrome, forcing it to execute a complete attacker-written prompt with no further clicks -- [the full technical breakdown of how the bypass worked is here](/article/bragjack-ai-browser-agent-hijack-five-browsers). {{note: \"Prompt forcing,\" Weizman's name for the technique, is different from prompt injection -- it doesn't need the AI to be reading a hostile webpage at all.}} Google and Microsoft shipped fixes and assigned CVEs; Opera disputes how Weizman found the bug in its browser.",
+        "citation_urls": [
+          "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What actually changed, and what you should check anyway",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Google patched the underlying WebView flaw (CVE-2026-0628, severity 8.8) in Chrome 143.0.7499.192, released in January 2026 -- before BragJack was even publicly disclosed, because Weizman reported it privately first. Microsoft's Edge fix (CVE-2026-55945) shipped in Edge 150.0.4078.48. If your browser updates itself automatically, you likely already have both fixes. The AITOPIA clones are a different kind of problem: Chrome eventually stripped the bigger one's Featured badge, but __badges describe the developer's track record, not what any specific version of the code actually does__ -- the fake AITOPIA extensions passed that bar for months before anyone caught them.",
+        "citation_urls": [
+          "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent/",
+          "https://www.ox.security/blog/malicious-chrome-extensions-steal-chatgpt-deepseek-conversations/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this requires waiting on a vendor. Both incidents share the same underlying weakness: broad permissions granted to an extension nobody has actually looked at closely since the day it was installed. Here's the check, and it takes about five minutes per extension you're unsure about:",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check what a browser extension can actually do to your AI sessions",
+          "sub": "Chrome and Edge share the same underlying extension-permission model -- the steps below work on both.",
+          "est": "5 min per extension",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "A few minutes with your browser open.",
+            "A list of the extensions you don't clearly remember installing or don't remember why you kept."
+          ],
+          "steps": [
+            {
+              "do": "Open your browser's extension manager directly -- type chrome://extensions or edge://extensions.",
+              "detail": "This shows everything installed, including anything added by another program or a workplace policy, not just what shows in your toolbar.",
+              "verify": "You see a full list, including extensions with no visible toolbar icon.",
+              "ifnot": "If an extension you don't recognize is greyed out or managed by policy, it was likely installed by your organization -- check with IT before removing it."
+            },
+            {
+              "do": "Click Details on any extension that can read page content, then check its Site access setting.",
+              "detail": "Site access decides whether the extension can read the page you're on at all -- and if you're on an AI chatbot's site, that includes what you type and what it answers.",
+              "verify": "The setting reads 'On click' or 'On specific sites' for anything that doesn't need to run everywhere.",
+              "ifnot": "If it's set to 'On all sites' and the extension's actual job doesn't require that -- a note-taking tool, a coupon finder, a theme -- change it to 'On specific sites' or remove the extension."
+            },
+            {
+              "do": "For anything AI-related specifically, check what it actually does versus what it claims.",
+              "detail": "The fake AITOPIA extensions worked exactly as advertised on the surface -- a real AI sidebar -- while separately exfiltrating chat content in the background. A working feature doesn't rule out a second, hidden one.",
+              "verify": "The extension's permissions match its stated job -- an AI-summary tool needing 'read page content' is normal; the same tool also wanting access to a payment or banking site is not.",
+              "ifnot": "If the permissions go further than the stated function, remove it and look for an alternative with a narrower ask."
+            },
+            {
+              "do": "Confirm your browser itself is updated, not just your extensions.",
+              "detail": "BragJack's underlying flaws were fixed at the browser level, not the extension level -- an out-of-date Chrome or Edge stays exposed no matter how careful you are about what you install.",
+              "verify": "Your browser's About page shows Chrome 143.0.7499.192 (or the .193 follow-up) or Edge 150.0.4078.48, or a later release.",
+              "ifnot": "If it's older and hasn't auto-updated, update manually and restart the browser before doing anything sensitive in an AI chat."
+            },
+            {
+              "do": "Remove anything you can't account for, rather than leaving it 'just in case.'",
+              "hi": true,
+              "detail": "An extension you don't remember the purpose of is providing zero value and carrying all of the risk described above.",
+              "verify": "Your extension list only contains things you can each name a specific, current reason for keeping.",
+              "ifnot": "If removing one breaks a workflow you actually use, that's useful information too -- reinstall it deliberately and re-check its permissions with fresh eyes."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Step two points at a real question: how far should site access actually go for something you're keeping?",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH SETTING",
+          "title": "What site access should this extension actually have?",
+          "question": "What does the extension need to do its job?",
+          "branches": [
+            {
+              "when": "It only ever works on one AI chatbot's site (a ChatGPT or Claude sidebar, for instance).",
+              "then": "Set Site access to 'On specific sites' and list only that domain.",
+              "because": "There's no legitimate reason for a single-site tool to read every other page you visit."
+            },
+            {
+              "when": "It's a general-purpose tool -- a summarizer, translator, or clipper you invoke by clicking it.",
+              "then": "Set it to 'On click.'",
+              "because": "On click means it only reads the current page when you actually ask it to, not continuously in the background."
+            },
+            {
+              "when": "It genuinely needs to run everywhere automatically -- an ad blocker or a password manager, for example.",
+              "then": "'On all sites' is reasonable here, but only for tools whose entire function requires it.",
+              "because": "Broad access is the correct trade for a small number of tools with a real always-on job -- the problem is granting it by default to everything.",
+              "hi": true
+            },
+            {
+              "when": "You're not sure what it actually needs.",
+              "then": "Default to the narrowest setting and loosen it only if the extension visibly breaks.",
+              "because": "An extension that stops working tells you immediately; an extension quietly over-permissioned tells you nothing until something goes wrong."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Whichever setting applies, the same four mistakes are what actually let either 2026 incident happen in the first place.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this gets skipped",
+          "items": [
+            {
+              "mistake": "Trusting a 'Featured' or verified-publisher badge as proof the extension behaves safely.",
+              "looks": "Installing an AI sidebar because it's badged and has hundreds of thousands of users, and never checking further.",
+              "why": "One of the two AITOPIA clones carried Google's Featured badge the entire time it was secretly exfiltrating chat data -- the badge checks developer identity and store-listing quality, not runtime behavior.",
+              "fix": "Check Site access and stated permissions yourself regardless of any badge.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming only extensions labeled 'AI' are the ones worth auditing.",
+              "looks": "Carefully vetting an AI sidebar while ignoring a coupon extension with broad permissions from years ago.",
+              "why": "BragJack's technique works through any extension with broad site access -- it doesn't need to be AI-branded, because it's hijacking the browser's own built-in agent, not bringing its own.",
+              "fix": "Audit every extension with broad access, not just the ones that mention AI in their name.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Granting 'On all sites' by default because the one-time prompt is easier than choosing.",
+              "looks": "Clicking 'Allow' on the broadest option just to make an install dialog go away.",
+              "why": "Most extensions' actual function doesn't require reading every page you visit -- the broad grant is a convenience for the developer, not a requirement of the feature.",
+              "fix": "Start at the narrowest setting and widen only if the extension actually needs more.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Checking extensions but never checking whether the browser itself is updated.",
+              "looks": "Auditing every extension carefully while running a Chrome or Edge build from before January 2026.",
+              "why": "BragJack's core flaws were fixed in the browser, not in any extension -- a stale browser stays exposed regardless of what's installed on top of it.",
+              "fix": "Confirm your browser version alongside your extension list, not instead of it.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this means an AI-connected extension is inherently unsafe -- most people running one have had no problem. It means the two checks that actually catch trouble -- what does this thing say it does, and does its permission list match -- take less time than reading this guide did, and unlike a store badge, they're a check you're actually running yourself. The same logic applies to [giving an AI agent standing access to your inbox and calendar](/article/give-an-ai-agent-email-calendar-access-safely): connect narrow, then verify, not trust and forget.",
         "citation_urls": []
       }
     ],
