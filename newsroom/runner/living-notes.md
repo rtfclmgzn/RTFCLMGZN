@@ -799,3 +799,16 @@
   cybersecurity, consumer-privacy, diplomatic-summit, online-shopping, and now CDN/edge-compute and
   power-generation) where the ~155-image library has no real semantic fit and the tool's scoring can't
   say so.
+- **2026-09-26** (newsroom cycle, 19:27:36Z): confirmed the art-library gap already logged for
+  cybersecurity/policy/consumer-privacy/etc. topics extends to "government-liability/regulatory-official"
+  and "pre-product frontier-research-funding" subjects too -- `verify_covers.py pick` returned the same
+  off-topic never-used images (a surgical-robot-arms photo, an abstract post-silicon-substrate render) for
+  both an FTC/agent-liability story and a DeepMind/Meta-alumni-funding story, regardless of keyword
+  rephrasing. Generated fresh covers for all three of this cycle's articles rather than force a mismatch
+  or spend an LRU exception on a bad fit; all three generations succeeded on the first attempt ($0.06 each).
+  Separately: `web/data/scoreboard.js`'s own `basisNote`/`scannedAt` timestamps for the scheduled pulse-scan
+  job (e.g. "2026-09-26T22:15:00Z") are NOT real wall-clock times -- they read as fixed nominal schedule-slot
+  labels, confirmed by checking the actual git commit timestamp for that same pulse-scan's ledger entry
+  (16:50:36Z, over 5 hours earlier than the label inside its own basisNote text). Don't treat a scoreboard
+  timestamp that looks "ahead" of your own real `date -u` output as a sign your own clock or timestamp is
+  wrong -- measure your own real time and use it regardless of what an earlier entry's label says.

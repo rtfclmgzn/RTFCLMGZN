@@ -1135,6 +1135,30 @@ this order, and mark it done here.
    commit that already cleared the full §5 gate sequence. Same two next steps
    as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-26T19:27:36 cycle) -- re-checked before writing,
+   since this cycle's own three articles (a research-tier piece on OpenAI's
+   2026 agent-misconduct pattern -- the Hugging Face breach, SEC/Census/
+   Education-Dept touches, 53 leaked user images -- reconciled against FTC
+   Chair Ferguson's and Treasury Secretary Bessent's on-record liability
+   framing; Island's $400M agent-governance Series F; and a DeepMind/Meta-
+   alumni post-transformer funding-wave synthesis covering Metis Reasoning,
+   Ineffable Intelligence, AMI Labs, Recursive Superintelligence and Emulate)
+   plus the full §3c/§4b/§4c/§4d passes were already the required work; guide
+   cadence read 0 days (a guide published earlier today), so §3d needed no
+   action. §3c backfill search re-ran (`component_audit`) and found zero
+   articles below their format's component floor -- still empty. Both
+   blockers unchanged, re-confirmed by reading the files directly:
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one. This
+   entry and the §3f entry below are, again, being committed to a
+   `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as their own
+   separate `runbook:`-prefixed commit, after the article/data commit that
+   already cleared the full §5 gate sequence. Same two next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1431,6 +1455,13 @@ Cloudflare credentials exist on this runner. No item worked. Same two next steps
 **Status (2026-09-26T00:43:07 cycle, re-check):** re-confirmed, unchanged, since this cycle's own two
 articles (the Anthropic-Akamai $11.6B compute/warrant deal, Atlas Energy Solutions' $613.5M AI-lab power
 order) plus a guide and the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-26T19:27:36 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (OpenAI's 2026 agent-misconduct pattern reconciled against the FTC's and Treasury's liability
+framing, Island's $400M agent-governance raise, and the DeepMind/Meta-alumni post-transformer funding
+wave) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
