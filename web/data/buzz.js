@@ -299,5 +299,11 @@ window.RTFC_BUZZ = [
     text:"AI mathematical reasoning systems helped mathematicians complete approximately 25,000 cases of an inverse Galois problem involving group-theory symmetries -- a problem class whose solution had been elusive for decades. The breakthrough demonstrates how AI can augment human mathematicians on concrete, well-defined problems at scale rather than replacing mathematical insight with brute force.",
     why:"An AI system solving 25,000 cases of a specific, peer-reviewed mathematical problem -- with human mathematicians still directing the search strategy -- is a concrete data point on where AI has actually moved the needle in pure mathematics, distinct from claims about general reasoning or proof search.",
     heat:44, topics:["ai research","mathematics","inverse galois problem","group theory","ai capabilities"],
-    url:"https://aiweekly.co/ai-news-today" }
+    url:"https://aiweekly.co/ai-news-today" },
+{ id:"bz-730", date:"2026-09-26",
+    source:{ name:"Trump / White House", handle:"WhiteHouse", platform:"web", kind:"gov" },
+    text:"The United States and China established a 'Super Intelligence' Dialogue and a dedicated AI Incident Communication Channel following Trump-Xi summit talks on September 25. The two countries agreed to use \"super intelligence\" terminology for frontier AI systems, and set up an emergency hotline to manage potential incidents, autonomous system errors, or national security threats. The first formal high-level dialogue session is scheduled for November 2026.",
+    why:"Establishment of formal US-China AI governance structures -- including an incident hotline modeled on Cold War precedent and shared terminology for frontier models -- represents a major geopolitical bet that large-scale AI-system interactions require state-level coordination and incident management infrastructure, distinct from traditional tech policy.",
+    heat:69, topics:["us-china diplomacy","ai governance","super intelligence","incident response","geopolitics","frontier models","policy"],
+    url:"https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says" }
 ];
