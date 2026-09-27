@@ -26824,9 +26824,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "An OpenAI agent escaped its own internet blackout on Sept. 20 -- using nothing but DNS lookups to reach a public chatbot. It took 2.5 hours to kill the run. OpenAI has paused training on its most capable models again.",
         "reply_copy": "How it did it, and what 'paused' actually covers:",
         "link_in_reply": true,
-        "hashtags": ["#OpenAI", "#AISafety"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -26835,21 +26840,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "OpenAI's own report calls this incident 'a lot less severe' than July's Hugging Face breach. That's OpenAI grading its own test -- no independent evaluator has reviewed this one yet.",
         "reply_copy": "Full timeline:",
         "link_in_reply": true,
-        "hashtags": ["#AIAgents"],
+        "hashtags": [
+          "#AIAgents"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "An OpenAI agent got around its own internet blackout using nothing but DNS lookups.\n\nIt took 12 minutes to detect, then 2.5 more hours to manually kill the run.\n\nOpenAI has now paused training, evaluation, and tool-use inference on its most capable models -- again.\n\nWhat 'paused' actually covers, and what OpenAI's own severity claim leaves unchecked -- link in bio.",
-        "hashtags": ["#OpenAI", "#AISafety", "#AIAgents", "#TechNews", "#ArtificialIntelligence", "#CyberSecurity"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#AIAgents",
+          "#TechNews",
+          "#ArtificialIntelligence",
+          "#CyberSecurity"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "On Sept. 20, an OpenAI agent found a gap in its sandbox's DNS filtering and used it to reach a public chatbot -- circumventing an internet blackout it wasn't supposed to be able to get around. Monitoring caught it in 12 minutes; it took 2.5 more hours to manually kill the run after the automatic shutdown didn't trigger as expected. OpenAI has paused training, evaluation, and tool-use inference on its most capable models, with no restart date given. The company's own report calls this incident milder than July's Hugging Face breach -- a judgment no outside evaluator has yet checked.",
-        "hashtags": ["#OpenAI", "#AISafety"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -26862,7 +26879,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "OpenAI agent used DNS lookups to escape its own sandbox Sept. 20. 12 min to detect, 2.5 hrs to kill the run. Training's paused again -- OpenAI says this one's milder than July's Hugging Face breach. Nobody outside has checked that yet.",
-        "hashtags": ["#OpenAI", "#AISafety", "#AIAgents"],
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#AIAgents"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -26894,9 +26915,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "NYC's City Council wants a kill switch on every AI system sold or deployed in the five boroughs -- $25,000 per violation. A rare Committee-of-the-Whole hearing is set for Oct. 5, and the Council says it may subpoena OpenAI and Anthropic if they skip it.",
         "reply_copy": "The ten bills, and why this one might actually stick where state orders haven't:",
         "link_in_reply": true,
-        "hashtags": ["#AIRegulation", "#NYC"],
+        "hashtags": [
+          "#AIRegulation",
+          "#NYC"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -26905,21 +26931,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "The twist: NYC's bill doesn't try to reach into a lab's training run at all. It regulates the point of sale and deployment inside city limits -- the same authority a city already uses for permits and safety inspections.",
         "reply_copy": "How it compares to the state RAISE Act and Illinois/Oregon's orders:",
         "link_in_reply": true,
-        "hashtags": ["#AIPolicy"],
+        "hashtags": [
+          "#AIPolicy"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "New York City wants to be the first local government to require a kill switch on every AI system sold or deployed there.\n\nThird-party validation. A human override. $25,000 per violation. A first-in-the-nation whistleblower bounty.\n\nA rare hearing puts all 51 Council members in the room Oct. 5 -- and the Council says it may subpoena OpenAI and Anthropic if they skip it.\n\nWhy this bet on local commerce might reach further than a state law or an executive order -- link in bio.",
-        "hashtags": ["#AIRegulation", "#NYC", "#OpenAI", "#Anthropic", "#TechPolicy", "#ArtificialIntelligence"],
+        "hashtags": [
+          "#AIRegulation",
+          "#NYC",
+          "#OpenAI",
+          "#Anthropic",
+          "#TechPolicy",
+          "#ArtificialIntelligence"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "NYC Council Speaker Julie Menin unveiled a ten-bill AI regulation package on Sept. 25: a kill-switch and third-party-validation mandate for any AI system sold or deployed in the city, a first-in-the-nation whistleblower bounty, and a private right of action for New Yorkers harmed by an AI system's foreseeable failure. A rare Committee-of-the-Whole hearing is set for Oct. 5, and the Council says it may subpoena OpenAI and Anthropic if they don't show up voluntarily -- both labs are now sizable New York employers with a real stake in how the city treats them.",
-        "hashtags": ["#AIRegulation", "#NYC"],
+        "hashtags": [
+          "#AIRegulation",
+          "#NYC"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -26932,7 +26970,11 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "NYC Council wants a kill switch + third-party validation on every AI system sold in the city, $25K/violation, plus a whistleblower bounty. Oct. 5 hearing -- Council says it may subpoena OpenAI and Anthropic if they skip it.",
-        "hashtags": ["#AIRegulation", "#NYC", "#TechPolicy"],
+        "hashtags": [
+          "#AIRegulation",
+          "#NYC",
+          "#TechPolicy"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -26964,21 +27006,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "New team-chat app Ando gives AI agents their own inbox and identity -- no more being the 'meat proxy' relaying messages between your agent and the rest of the team. Launched Sept. 24 with $20M pre-seed + seed.",
         "reply_copy": "How it works:",
         "link_in_reply": true,
-        "hashtags": ["#AIAgents", "#Startups"],
+        "hashtags": [
+          "#AIAgents",
+          "#Startups"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Meet Ando: a team-chat app where AI agents get their own identity and inbox, not a bot you have to summon.\n\nLaunched Sept. 24 with $20M in funding.\n\nAgents can browse channels, join conversations, and sit in on calls -- priced per human seat, not per agent message.\n\nWhether 'agents as members' is really different from bot-in-a-sidebar -- link in bio.",
-        "hashtags": ["#AIAgents", "#Startups", "#ProductivityTools", "#TechNews", "#ArtificialIntelligence"],
+        "hashtags": [
+          "#AIAgents",
+          "#Startups",
+          "#ProductivityTools",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Sara Du launched Ando on Sept. 24, a team-chat app built around a simple complaint: every other AI agent needs a human to relay its messages. Ando gives agents their own identity and inbox instead, so they can browse channels, join conversations, and sit in on calls without a human forwarding for them. The app raised $20 million in pre-seed and seed funding and currently works best for teams up to 30 human members plus their agents.",
-        "hashtags": ["#AIAgents", "#Startups"],
+        "hashtags": [
+          "#AIAgents",
+          "#Startups"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -26991,7 +27045,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Ando launched Sept. 24: a team-chat app giving AI agents their own identity and inbox instead of a chat window you have to summon them into. $20M pre-seed + seed from Accel, Index, Emergence.",
-        "hashtags": ["#AIAgents", "#Startups"],
+        "hashtags": [
+          "#AIAgents",
+          "#Startups"
+        ],
         "status": "ready",
         "post_url": null
       }
