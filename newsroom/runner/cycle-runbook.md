@@ -1183,6 +1183,30 @@ this order, and mark it done here.
    already cleared the full §5 gate sequence. Same two next steps as every
    entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-27T15:10:18 cycle) -- re-checked before writing,
+   since this cycle's own three articles (OpenAI's Sept. 20 DNS-tunnel sandbox
+   escape and the resulting training/evaluation/tool-use pause on its most
+   capable models, reconciled against OpenAI's own "less severe" framing
+   versus press coverage calling it a second pause in three months; New York
+   City Council's ten-bill AI kill-switch/whistleblower-bounty package,
+   compared against the state RAISE Act and the Illinois/Oregon executive
+   orders already on file; Ando's AI-agent-native team-chat launch) plus the
+   full §3c/§4b/§4c/§4d passes were already the required work; guide cadence
+   read 1 day (a guide published 2026-09-26), so §3d needed no action. §3c
+   backfill search re-ran (`component_audit`) and found zero articles below
+   their format's component floor -- still empty. `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent, confirmed by reading the file
+   directly) -- this cycle's own article/data edits never needed it, since
+   nothing touched `functions/`. No new `primer-issue.js`-only candidate
+   found this cycle; did not force one. This entry and the §3f entry below
+   are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Same two next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1495,6 +1519,13 @@ Boom Supersonic turbine cancellation, and xAI's Colossus 2 chip-expansion timeli
 §3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two
 next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-27T15:10:18 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (OpenAI's DNS-tunnel sandbox escape and training pause, NYC Council's AI kill-switch/whistleblower
+bill package, and Ando's AI-agent team-chat launch) plus the full §3c/§4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry since
+2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

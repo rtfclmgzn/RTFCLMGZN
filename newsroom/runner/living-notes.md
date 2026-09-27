@@ -837,3 +837,23 @@
   (16:50:36Z, over 5 hours earlier than the label inside its own basisNote text). Don't treat a scoreboard
   timestamp that looks "ahead" of your own real `date -u` output as a sign your own clock or timestamp is
   wrong -- measure your own real time and use it regardless of what an earlier entry's label says.
+- **2026-09-27T15:10:18Z cycle**: the already-long `verify_covers.py pick` semantic-gap list (policy,
+  cybersecurity, consumer-privacy, diplomatic-summit, CDN/edge-compute, power-generation, etc.) extends to
+  three more categories this cycle: a DNS/network-security incident story (`--subjects "AI agent, sandbox
+  escape, DNS, network security, OpenAI training pause"` and a retry with plainer cybersecurity keywords
+  both returned the same generic "post-silicon compute substrate" wallpaper art), a city-government/
+  legislation story (`--section Policy --subjects "city council, legislation, government regulation, kill
+  switch, hearing"` returned the same off-topic surgical-robot-arms photo the 2026-09-25T20:04:41Z entry
+  already flagged for a different Policy story), and a workplace-chat-product story (`--subjects "team
+  chat, messaging app, AI agents, workplace collaboration, chat interface"` returned generic silicon-wafer
+  wallpaper art). Generated fresh covers for all three ($0.06 each, $0.18 total) rather than ship a
+  mismatch. Separately, confirmed the intended pulse-scan-to-cycle handoff works as designed: this cycle's
+  two biggest stories (the OpenAI DNS incident and the NYC Council AI bill package) had already been
+  flagged as Buzz cards (bz-729, bz-733) by an earlier same-day pulse scan, sourced to secondary
+  aggregators (alignment.openai.com's index page, byobot.ai) -- this cycle's articles upgraded both to
+  full primary-sourced reporting (OpenAI's own per-incident alignment-report page; the NYC Council's own
+  press release) rather than duplicating the buzz signal, which is exactly the "strongest signals that
+  didn't become articles" handoff the runbook describes. Also found and fixed one duplicate Buzz card
+  (`bz-677` and `bz-714` both described the identical Sept. 22 Cyera $400M Series G raise, just phrased
+  differently with different source URLs) -- retired the older-positioned duplicate rather than both
+  surviving to the 7-day cutoff.
