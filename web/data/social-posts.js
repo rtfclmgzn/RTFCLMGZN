@@ -26323,8 +26323,10 @@ window.RTFC_SOCIAL_POSTS = [
         "hashtags": [
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwi3iisuh72t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwi3iisuh72t",
+        "posted_at": "2026-09-27T05:38:46Z"
       }
     ]
   },
@@ -26534,7 +26536,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -26561,10 +26563,11 @@ window.RTFC_SOCIAL_POSTS = [
           "#ArtificialIntelligence",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null,
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Ddx3pOGl1_m/",
         "attempts": 1,
-        "last_error": "HTTP 400 https://graph.facebook.com/v25.0/17841437848762452/media: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"type\":\"OAuthException\",\"code\":9004,\"error_subcode\":2207052,\"is_transient\":false,\"error_user_title\":\"Media download has failed. The media URI doesn't meet our requirements.\",\"error_user_msg\":\"The media could not be fetched from this URI: https:\\/\\/rtfclmgzn.com\\/assets\\/img\\/newsroom\\/anthropic-claude-nine-loop-physics-song-he-concurrent-result.jpg.Please ch"
+        "remote_id": "18135035533645915",
+        "posted_at": "2026-09-27T05:34:21Z"
       },
       {
         "platform": "facebook",
@@ -26633,7 +26636,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -26771,8 +26774,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Two of Musk's three promised chip waves for Colossus 2 come with no qualifier. The third: 'if we get lucky.' That distinction matters more than the eye-catching 1.21M total.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Ddx3rchjgdJ",
+        "remote_id": "18075378518454016",
+        "posted_at": "2026-09-27T05:34:37Z"
       },
       {
         "platform": "bluesky",
@@ -26782,8 +26787,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#Compute"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwi3bc55fm2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwi3bc55fm2u",
+        "posted_at": "2026-09-27T05:34:44Z"
       }
     ]
   }
