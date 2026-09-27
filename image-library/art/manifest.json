@@ -3868,7 +3868,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-35-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "xai-colossus-2-nvidia-gpu-expansion-year-end",
+     "used_at": "2026-09-27"
+    }
+   ]
   },
   {
    "id": "art-wp-post-silicon-06",
@@ -4669,7 +4674,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/03_Future_AI_Labs_and_Data_Centers/RTFCLMGZN-Impossible-Lab-Wallpaper-59-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "anthropic-claude-nine-loop-physics-song-he-concurrent-result",
+     "used_at": "2026-09-27"
+    }
+   ]
   },
   {
    "id": "art-wp-frontier-lab-10",

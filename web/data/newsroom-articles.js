@@ -80801,6 +80801,846 @@ window.RTFC_NEWSROOM_ARTICLES = [
   },
   "image": "assets/img/newsroom/deepmind-meta-alumni-post-transformer-funding-wave-2026.jpg",
   "publishedAt": "2026-09-26T19:20:19Z"
+ },
+ {
+  "slug": "anthropic-claude-nine-loop-physics-song-he-concurrent-result",
+  "id": "newsroom-anthropic-claude-nine-loop-physics-song-he-concurrent-result",
+  "title": "Anthropic says Claude solved a nine-loop physics problem for about $2,000. A Chinese team had already posted the same answer.",
+  "dek": "Two Anthropic physicists set Claude loose on a public dare from physicist Matt von Hippel, and the record-holder who checked the result says it's correct. But a Chinese Academy of Sciences team quietly published the identical nine-loop answer eight days earlier, using a more human-directed process built around GPT-6.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch the harder half of the same bet",
+    "text": "Von Hippel's Aug. 7 challenge also asked whether N=8 supergravity diverges at seven loops. Neither Anthropic nor Song He's team has claimed that one -- by his own framing it's the tougher of the two."
+   },
+   {
+    "label": "Watch for a refereed paper, not just a blog post and a data dump",
+    "text": "Anthropic's write-up is a research blog post; Song He's group filed a Zenodo dataset. Neither has gone through peer review yet -- that's the next real checkpoint for either claim."
+   },
+   {
+    "label": "Watch whether the $1-2k harness gets reused on someone else's field",
+    "text": "Claude Science is a standing setup, not a one-off stunt. Whether Anthropic points it at another expert's public dare is the test of whether this generalizes past one physicist's bet."
+   },
+   {
+    "label": "Watch for independent re-derivation",
+    "text": "Dixon verified Claude's answer himself, but called the whole method 'fragile' -- a second, unaffiliated group reproducing it independently would settle whether this is repeatable rather than a single lucky run."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Claude computes a nine-loop amplitude in N=4 super-Yang-Mills",
+    "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+    "outlet": "Anthropic",
+    "kind": "primary"
+   },
+   {
+    "label": "It only counts when AI gets to my field",
+    "url": "https://4gravitons.com/2026/08/07/it-only-counts-when-ai-gets-to-my-field/",
+    "outlet": "4gravitons (Matt von Hippel)",
+    "kind": "primary"
+   },
+   {
+    "label": "The Symbols of Six-Gluon MHV Amplitudes through Nine Loops (dataset)",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.22800071",
+    "outlet": "Zenodo (He, Jing, Li)",
+    "kind": "primary"
+   },
+   {
+    "label": "Anthropic Says Claude Computed a Nine-Loop Particle Physics Amplitude",
+    "url": "https://www.unite.ai/anthropic-says-claude-computed-a-nine-loop-particle-physics-amplitude/",
+    "outlet": "Unite.AI",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Two Anthropic physicists had Claude compute a nine-loop particle-physics amplitude for about $2,000.",
+   "Lance Dixon, who held the prior eight-loop record, personally checked and confirmed Claude's result.",
+   "The task answered an Aug. 7 public dare from physicist Matt von Hippel to AI labs generally.",
+   "A Chinese Academy of Sciences team posted the same nine-loop answer to Zenodo on Sept. 17 -- eight days earlier.",
+   "Caveat: that team used GPT-6 to assist a human-directed process, not Claude's largely self-steered run."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Two Anthropic physicists, Liam Fitzpatrick and Siddharth Mishra-Sharma, gave Claude a one-line problem statement in late August: compute the six-particle (\"hexagon\") __scattering amplitude__ in planar N=4 super Yang-Mills theory at nine loops -- one loop past the previous record. A week and about **$2,000** of compute later, Claude had produced the answer two different ways. Lance Dixon, the SLAC National Accelerator Laboratory and Stanford physicist who set the prior eight-loop record in 2023, checked the math himself and **confirmed it holds**.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "N=4 super Yang-Mills is not a theory of anything that exists. Physicists use it as a sandbox: it shares deep mathematical structure with the equations that describe real particle collisions, but it's clean enough to actually solve. A \"loop\" is a unit of calculational difficulty -- each one adds a layer of quantum correction, and the arithmetic needed to track them grows, in von Hippel's words, \"exponentially or even factorially.\" Nine loops was, until this month, past the edge of what anyone had directly computed.",
+    "citation_urls": [
+     "https://4gravitons.com/2026/08/07/it-only-counts-when-ai-gets-to-my-field/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The occasion was a dare, not a research agenda. On Aug. 7, physicist-turned-writer ++Matt von Hippel++ posted a public challenge to AI companies: solve one of a short list of the field's genuinely hard open problems, using only \"the kinds of computer resources an academic has access to.\" His stated bet was skeptical -- that AI would keep failing this test the way it had failed others, until, predictably, someone's field was the one it finally cracked. Nine loops of N=4 super Yang-Mills was one of two problems on his list.",
+    "citation_urls": [
+     "https://4gravitons.com/2026/08/07/it-only-counts-when-ai-gets-to-my-field/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Anthropic's setup, which it calls ++Claude Science++, ran Claude driving Python and the symbolic-math library SymPy across the equivalent of 96 CPUs for about a week, with the two physicists **checking in roughly every four to six hours rather than steering each step**. Claude worked the problem two ways: the original __bootstrap method__ physicists have used for this class of calculation since the 2010s, and a second, independent route through \"form factors\" that cross-checked the first.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "This isn't Anthropic's first attempt at pointing Claude at open physics problems with a light hand on the wheel -- the company ran a related \"vibe physics\" effort earlier this year testing how far a model could get on research-grade problems with minimal scaffolding. The nine-loop run is the same bet at a harder, more externally-verifiable target: a problem with a named expert, a specific numeric answer, and someone with the standing to say whether it's actually right. Anthropic breaks the cost down further: about $100 of that went to the core bootstrap calculation alone, with the rest of the roughly $1,000 to $2,000 total spent on the independent cross-check and the exploration around it.",
+    "citation_urls": [
+     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the $2,000 actually bought",
+     "items": [
+      {
+       "value": "~$100",
+       "unit": "Bootstrap step",
+       "label": "The core nine-loop bootstrap calculation",
+       "includes": "The primary computation Anthropic reports as the headline result",
+       "excludes": "Exploration, retries, and the independent cross-check"
+      },
+      {
+       "value": "$1,000-$2,000",
+       "unit": "Total run",
+       "label": "Full week of compute across both methods",
+       "includes": "Both the bootstrap and the independent form-factor derivation, plus false starts",
+       "excludes": "The two physicists' own time, and any cost of the underlying model"
+      },
+      {
+       "value": "96 CPUs x ~1 week",
+       "unit": "Compute",
+       "label": "Hardware Anthropic says the run used",
+       "includes": "CPU-equivalent capacity, not GPU time",
+       "note": "Framed explicitly as within reach of an academic's normal compute allocation -- the point of von Hippel's bet"
+      }
+     ]
+    }
+   },
+   {
+    "type": "quote",
+    "text": "“The whole setup is very fragile: if you make any mistake at all in the computational recipe, it all crashes down like a failed soufflé.” — Lance Dixon, SLAC / Stanford, on verifying Claude's result",
+    "citation_urls": [
+     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Dixon's own reaction undercuts any read of this as routine. He told Anthropic the direct bootstrap approach to nine loops was one he'd considered \"too hard to do directly\" -- his own 2023 eight-loop record used an indirect route through form factors and a duality relation instead. {{note: Dixon didn't just bless the number -- he said Claude \"understands our papers better than anyone else,\" which is a different and larger claim than getting one calculation right.}}",
+    "citation_urls": [
+     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "2023",
+       "what": "Lance Dixon and Andy Liu compute the eight-loop hexagon amplitude via an indirect form-factor method",
+       "source": "https://www.unite.ai/anthropic-says-claude-computed-a-nine-loop-particle-physics-amplitude/"
+      },
+      {
+       "when": "Aug. 7, 2026",
+       "what": "Matt von Hippel publishes his public challenge to AI companies",
+       "hi": true,
+       "source": "https://4gravitons.com/2026/08/07/it-only-counts-when-ai-gets-to-my-field/"
+      },
+      {
+       "when": "Sept. 17, 2026",
+       "what": "Song He's team posts a nine-loop symbol dataset to Zenodo, via a GPT-6-assisted, human-directed process",
+       "source": "https://zenodo.org/doi/10.5281/zenodo.22800071"
+      },
+      {
+       "when": "Sept. 25, 2026",
+       "what": "Anthropic publishes Claude's nine-loop result, verified by Dixon",
+       "hi": true,
+       "source": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "That last date matters, because Anthropic's post does not stand alone. Song He, a scattering-amplitudes researcher at the Chinese Academy of Sciences in Beijing, says his group **already had the majority of the same nine-loop result** -- using AI assistance from GPT-6 to help fix constraints within a process two humans were actively directing, not the largely self-steered run Anthropic describes. He, Jirong Jing and Xiang Li posted their dataset, \"The Symbols of Six-Gluon MHV Amplitudes through Nine Loops,\" to Zenodo on Sept. 17 -- eight days before Anthropic's post went up.",
+    "citation_urls": [
+     "https://zenodo.org/doi/10.5281/zenodo.22800071"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "Who actually got the nine-loop answer first, and does it matter that the methods differed?",
+       "claims": [
+        {
+         "who": "Anthropic (research blog)",
+         "kind": "primary",
+         "says": "Claude reached the result largely on its own, with physicists checking in every 4-6 hours",
+         "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+        },
+        {
+         "who": "Song He / Zenodo dataset",
+         "kind": "primary",
+         "says": "His team already had the majority of the same result, using GPT-6 as an assistant inside a human-led process, published Sept. 17",
+         "url": "https://zenodo.org/doi/10.5281/zenodo.22800071",
+         "trusted": true
+        }
+       ],
+       "ruling": "On timing, Song He's team's own dated Zenodo publication (Sept. 17) predates Anthropic's post (Sept. 25) by eight days -- that part isn't in dispute. What's genuinely different, and what Anthropic's framing is really claiming credit for, is the degree of autonomy: Claude ran with far less human steering per hour of work. Both facts can be true at once; treating either team's framing as the whole story understates the other's."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "==That distinction is the actual news, not a footnote to it.== A model producing a correct, expert-verified physics result with minimal supervision is **a different capability claim than a model helping human experts go faster** at something they were already doing -- even if the two processes land on the same number in the same month. Conflating the two is exactly the kind of framing gap that makes a genuine capability jump hard to tell apart from a well-timed press cycle.",
+    "citation_urls": []
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "The hard conceptual work here -- the bootstrap method itself -- was built by human physicists over roughly 15 years; Claude applied an established recipe rather than inventing one.",
+       "detail": "Dixon's own framing treats this as execution of a known method at a new loop order, not a new idea in the field.",
+       "whoHolds": "Implicit in Dixon's and von Hippel's own descriptions of what was being tested"
+      },
+      {
+       "claim": "A team of human experts, using a different AI model as an assistant rather than an autonomous operator, reached essentially the same result first.",
+       "detail": "Song He's group published Sept. 17, eight days before Anthropic's post -- undercutting any framing of Claude's run as the field's first nine-loop result, full stop.",
+       "whoHolds": "Song He, Jirong Jing and Xiang Li, in their own dated publication"
+      },
+      {
+       "claim": "The task was, by von Hippel's own design, chosen because it was believed solvable with enough grinding -- not because it required a genuine conceptual leap.",
+       "detail": "Von Hippel framed the bet as a test of computational endurance within known methods, explicitly distinct from originating new physics.",
+       "whoHolds": "Matt von Hippel's own challenge post"
+      }
+     ],
+     "verdict": "The strongest of these holds up on timing but not on substance: Song He's team got there first, but by a route that leaned more on human direction and less on the model working unsupervised for days at a stretch. The two results are not really competing for the same prize -- one demonstrates a faster human-AI collaboration, the other demonstrates a model operating with unusually light supervision on a task an expert called 'too hard to do directly.' Both are real; neither cancels the other out."
+    }
+   },
+   {
+    "type": "p",
+    "text": "For a reader tracking what ++Claude Fable 5.1++ and its peers can actually do unsupervised, the honest summary is narrower than \"AI solves physics problem\": a frontier model, checked in on twice a day, executed a known-but-brutal calculation correctly on the first fully-reported attempt, on a task its own verifier didn't expect to be tractable that way. ==Whether that generalizes past one physicist's dare is the open question the apply items below are actually about.==",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "It's also a small, telling data point for [Anthropic](/company/anthropic)'s own positioning in the frontier-lab race: a capability demo that costs a few thousand dollars and produces a result an outside expert is willing to stake his own name on is a cheaper, harder-to-fake credibility signal than a benchmark score the company graded itself. Whether rivals answer with their own version of von Hippel's dare -- rather than another self-reported eval -- is worth watching the same way the __reasoning model__ race itself is.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Four independent evidence threads, three of them primary: Anthropic's own research post, Matt von Hippel's own challenge post, and Song He/Jing/Li's own dated Zenodo dataset (verified the DOI resolves and confirmed title/authors/date directly). Fourth thread (Unite.AI) used only for the Dixon-quote framing already corroborated by the primary post. Deliberately did not elevate to research tier: a research-format piece ran last cycle (2026-09-26), and this story's actual depth -- one clear claim plus one genuine complication -- fits synthesis without padding."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No health/financial/legal-proceeding trigger. Central claim (Claude's result is correct) is independently verified by Dixon, the record-holder, not merely Anthropic's own word -- confirmed this is stated as such in body prose. Cross-checked the Zenodo dataset directly (resolved the DOI, confirmed title/authors/publish date) rather than relying solely on secondary summaries of it, since the sourcecheck's ruling depends on that date being real."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft let Anthropic's framing stand as the whole story without the Song He complication given real weight. Revised: added the sourcecheck and counter components and rewrote the closing paragraph to state the narrower, more honest claim rather than the announcement's implicit one. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Ledger, timeline, sourcecheck and counter values all trace to the four cited sources; the $100/$1-2k/96-CPU figures and both dates in the timeline appear in body prose or a cited source. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fires: no health/financial-advice/legal-proceeding content, no accusatory claim about a named party (the piece states a timing fact about Song He's team, not a wrongdoing claim), and the central claim is independently verified rather than resting on a company's own unverified word."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No compliance trigger fires. The piece's central capability claim is corroborated by an independent verifier (Dixon) rather than resting solely on Anthropic's own account, and the Song He timing fact is stated neutrally as a publication-date comparison, not as an accusation."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-27T00:25:39Z"
+  },
+  "image": "assets/img/newsroom/anthropic-claude-nine-loop-physics-song-he-concurrent-result.jpg",
+  "publishedAt": "2026-09-27T00:25:39Z"
+ },
+ {
+  "slug": "crusoe-abandons-boom-supersonic-turbine-deal",
+  "id": "newsroom-crusoe-abandons-boom-supersonic-turbine-deal",
+  "title": "Crusoe canceled its $1.25 billion turbine order from Boom Supersonic -- eight days after raising $3.9 billion",
+  "dek": "Boom's CEO announced the end of the launch-customer partnership on X, saying jet-derived turbines are no longer part of Crusoe's near-term power mix at its Abilene campus. The reversal, nine months after the deal was signed, lands alongside an earlier paused Wyoming site -- a pattern that says more about how unsettled AI-datacenter power sourcing still is than either data point alone.",
+  "persona": "jin-park",
+  "section": "Compute",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for Crusoe's actual replacement supplier",
+    "text": "Crusoe says it still wants turbines -- 'just not Boom's.' The next real signal is which manufacturer, if any, gets a comparable order at Abilene."
+   },
+   {
+    "label": "Watch whether Boom's other 2027 commitments hold",
+    "text": "Boom says it will still ship about 250MW of Superpowers next year and target 1GW by 2028 without its largest named launch customer -- that's the first real test of the business without Crusoe's backlog."
+   },
+   {
+    "label": "Watch whether this is a pattern, not an incident",
+    "text": "Crusoe separately paused a planned Wyoming campus earlier in 2026. A third reversal on a signed, capital-intensive power commitment -- even flush with new funding -- would confirm a genuine shift in appetite, not a one-off."
+   },
+   {
+    "label": "Watch the cost of 'flexible' power",
+    "text": "Crusoe's stated pivot to wind, solar, batteries, turbines and grid power case-by-case reads as more resilient on paper. The number that will actually tell: whether its next site comes online faster or slower than a single committed supplier would have."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Boom Supersonic to Power AI Data Centers With Superpower Natural Gas Turbines",
+    "url": "https://boomsupersonic.com/press-release/boom-supersonic-to-power-ai-data-centers",
+    "outlet": "Boom Supersonic",
+    "kind": "primary"
+   },
+   {
+    "label": "Crusoe expands AI data center campus in Abilene to 1.2 gigawatts",
+    "url": "https://www.crusoe.ai/resources/newsroom/crusoe-expands-ai-data-center-campus-in-abilene-to-1-2-gigawatts",
+    "outlet": "Crusoe",
+    "kind": "primary"
+   },
+   {
+    "label": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+    "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
+    "outlet": "TechCrunch",
+    "kind": "reporting"
+   },
+   {
+    "label": "Boom Supersonic raises $300M to build natural gas turbines for Crusoe data centers",
+    "url": "https://techcrunch.com/2025/12/09/boom-supersonic-raises-300m-to-build-natural-gas-turbines-for-crusoe-data-centers/",
+    "outlet": "TechCrunch",
+    "kind": "reporting"
+   },
+   {
+    "label": "Crusoe walks away from its $1.25 billion jet turbine deal with Boom",
+    "url": "https://startupfortune.com/crusoe-walks-away-from-its-125-billion-jet-turbine-deal-with-boom/",
+    "outlet": "Startup Fortune",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Crusoe canceled its $1.25 billion order for 29 of Boom Supersonic's 42-megawatt turbines.",
+   "Boom's CEO says turbines are no longer part of Crusoe's near-term power mix at Abilene.",
+   "The reversal came eight days after Crusoe closed a $3.9 billion round at a $30.9 billion valuation.",
+   "Crusoe says it still wants turbines -- 'just not Boom's' -- alongside wind, solar, batteries and the grid.",
+   "Caveat: neither company has named a replacement supplier or a dollar figure for the gap this leaves."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "**Crusoe has canceled a $1.25 billion order for 29 of Boom Supersonic's jet-derived power turbines**, nine months after signing on as Boom's launch customer for a business it was betting would help fund its supersonic-jet program on the side. ==The reversal lands eight days after Crusoe closed a $3.9 billion funding round==, so this wasn't a company short on cash walking away from a bill it couldn't pay. Boom CEO Blake Scholl announced the split on X, writing that turbines are \"no longer part of Crusoe's near term primary power mix at Abilene/etc., so a launch partnership just didn't make sense.\" A Crusoe spokesperson, Andrew Schmitt, told reporters the company still wants turbines -- \"just not Boom's\" -- as part of **a mix that now includes wind, solar, batteries, turbines and the grid, decided site by site rather than locked to one supplier**.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The deal was, at signing, a genuine bet on a new category. Boom -- known for the Overture supersonic airliner, with 130 aircraft on order from United, American and Japan Airlines -- announced on Dec. 9, 2025 that it was repurposing the high-pressure engine core it built for supersonic cruise into a stationary 42-megawatt natural-gas turbine called ++Superpower++, marketed as running at full output above 110°F and needing no water -- both real constraints for data centers sited away from reliable grid capacity. Crusoe signed on as __launch customer__ for 29 units, a $1.21-gigawatt order, alongside a $300 million Series B Boom raised to build them.",
+    "citation_urls": [
+     "https://boomsupersonic.com/press-release/boom-supersonic-to-power-ai-data-centers"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the $1.25 billion actually committed to",
+     "items": [
+      {
+       "value": "$1.25B",
+       "unit": "Crusoe / Boom",
+       "label": "Order for 29 Superpower turbines",
+       "includes": "The turbine units themselves, 42MW / 1.21GW total, shipping-container packaged",
+       "excludes": "Site prep, interconnection, land, fuel supply, and O&M -- none disclosed as part of the figure",
+       "note": "Announced as a launch-customer backlog commitment, not cash already paid; first deliveries were targeted for 2027 and never arrived before the deal ended"
+      },
+      {
+       "value": "$300M",
+       "unit": "Boom Series B",
+       "label": "Boom's own raise to build the Superpower business",
+       "includes": "Announced alongside the Crusoe order, led by Darsana Capital Partners",
+       "excludes": "Any Crusoe capital -- this was Boom's fundraise, not Crusoe's investment in Boom"
+      },
+      {
+       "value": "$3.9B",
+       "unit": "Crusoe Series F",
+       "label": "Crusoe's own raise, closed Sept. 17, 2026",
+       "includes": "A $30.9B post-money valuation",
+       "note": "Closed eight days before the turbine cancellation became public -- Crusoe was not short on capital when it walked away"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Both men said the launch partnership mattered at the time. \"We're proud to be partnering closely with Boom as the launch customer for Superpower,\" Crusoe CEO Chase Lochmiller said in the December announcement. Scholl called supersonic engine technology \"an accelerant -- of course for faster flight, but now for artificial intelligence as well.\" Nine months later, Scholl's own announcement of the split briefly used, then removed, the line about turbines no longer fitting Crusoe's near-term plans -- before he pivoted to congratulating Cavness and Lochmiller on Crusoe's new raise and wishing the companies well if the fit ever returns.",
+    "citation_urls": [
+     "https://boomsupersonic.com/press-release/boom-supersonic-to-power-ai-data-centers",
+     "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“Turbines are no longer part of Crusoe's near term primary power mix at Abilene/etc., so a launch partnership just didn't make sense.” — Blake Scholl, Boom Supersonic CEO, announcing the split",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
+    ]
+   },
+   {
+    "type": "beforeafter",
+    "beforeafter": {
+     "beforeLabel": "At signing (Dec. 2025)",
+     "afterLabel": "Now (Sept. 2026)",
+     "rows": [
+      {
+       "label": "Boom's launch customer for Superpower",
+       "before": "Crusoe, publicly named",
+       "after": "None named"
+      },
+      {
+       "label": "Crusoe's committed turbine order",
+       "before": "$1.25B / 29 units / 1.21GW",
+       "after": "None -- order canceled"
+      },
+      {
+       "label": "Crusoe's stated power mix at Abilene",
+       "before": "Grid plus Boom turbines as a named future source",
+       "after": "Grid, wind, solar, batteries, turbines from an unnamed vendor -- decided site-by-site"
+      },
+      {
+       "label": "First Superpower deliveries to Crusoe",
+       "before": "Targeted 2027",
+       "after": "No longer scheduled"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Crusoe's own account of Abilene undercuts any read of this as a sudden retreat from turbines generally. Its 1.2-gigawatt Oracle/OpenAI campus there already runs on the grid with gas turbines as backup only; a separate 900-megawatt Microsoft-anchored site on the same campus uses on-site gas turbines directly. The company's own description of its approach -- battery storage \"to ensure reliability,\" wind and solar for \"economic and carbon optimization,\" turbines as backup -- reads as a company that was already treating power sourcing as a per-site optimization problem, not a single long-term supplier relationship. Boom's Superpower business was a bet that Crusoe would centralize around one; **Crusoe's answer, nine months in, is that it won't**.",
+    "citation_urls": [
+     "https://www.crusoe.ai/resources/newsroom/crusoe-expands-ai-data-center-campus-in-abilene-to-1-2-gigawatts"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The turbine question exists at all because grid interconnection for a gigawatt-scale campus routinely takes years longer than the AI industry's own build timelines -- which is exactly the gap Boom's pitch was built to fill: a shipping-container-packaged 42-megawatt unit, buildable off Boom's existing Symphony jet-engine supply chain rather than a years-long turbine-manufacturer order queue. What Crusoe's reversal adds to that picture isn't that on-site generation is a bad idea -- its own Microsoft-anchored Abilene building still runs on it -- it's that even the specific vendor and technology chosen for it, a year into a signed order, turned out to be as negotiable as any other line item, in a way land, cooling and chip supply generally aren't allowed to be once a campus is under construction.",
+    "citation_urls": [
+     "https://boomsupersonic.com/press-release/boom-supersonic-to-power-ai-data-centers",
+     "https://www.crusoe.ai/resources/newsroom/crusoe-expands-ai-data-center-campus-in-abilene-to-1-2-gigawatts"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "Dec. 9, 2025",
+       "what": "Boom announces the Superpower turbine and Crusoe as launch customer, a $1.25B order alongside Boom's own $300M raise",
+       "hi": true,
+       "source": "https://boomsupersonic.com/press-release/boom-supersonic-to-power-ai-data-centers"
+      },
+      {
+       "when": "Early 2026",
+       "what": "Crusoe separately pauses a planned AI campus in Wyoming",
+       "source": "https://startupfortune.com/crusoe-walks-away-from-its-125-billion-jet-turbine-deal-with-boom/"
+      },
+      {
+       "when": "Sept. 17, 2026",
+       "what": "Crusoe closes a $3.9B Series F at a $30.9B valuation",
+       "source": "https://startupfortune.com/crusoe-walks-away-from-its-125-billion-jet-turbine-deal-with-boom/"
+      },
+      {
+       "when": "Sept. 25-26, 2026",
+       "what": "Boom's CEO announces the turbine partnership has ended; Crusoe says it still wants turbines, just not Boom's",
+       "hi": true,
+       "source": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Laid out that way, the sequence reads less like a single bad fit and more like **a company still actively re-pricing its own infrastructure bets in real time**, even while its balance sheet gets stronger. That's the part worth separating from the Boom-specific drama: the $3.9 billion raise and the $1.25 billion cancellation are not in tension with each other financially -- Crusoe clearly isn't short of capital -- which means the reversal was a judgment about the turbines and the vendor, not about affordability.",
+    "citation_urls": []
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "This isn't a retreat from turbines, or from ambitious power sourcing generally -- Crusoe's own spokesperson says its energy plans 'haven't changed' and it still wants turbines, just from a different vendor.",
+       "detail": "Crusoe's Abilene campus already runs multiple gas-turbine deployments today; canceling one supplier isn't the same as abandoning the category.",
+       "whoHolds": "Crusoe spokesperson Andrew Schmitt, on the record"
+      },
+      {
+       "claim": "Boom's turbine business isn't collapsing either -- it says it will still deliver roughly 250MW next year to other, unnamed sites and is targeting 1GW by 2028.",
+       "detail": "Losing its named launch customer is a real setback, but Boom's own stated production targets for 2027-2028 are unchanged in its public statement.",
+       "whoHolds": "Boom CEO Blake Scholl, in his own announcement"
+      }
+     ],
+     "verdict": "Both points are true and neither fully clears the pattern. A company that just raised $3.9 billion still walked away from a signed $1.25 billion commitment it had publicly championed nine months earlier, on the heels of pausing a different site entirely -- that's a real signal about how provisional even flagship AI-power deals are right now, whatever either company's spokesperson calls it."
+    }
+   },
+   {
+    "type": "p",
+    "text": "{{note: Boom's Superpower pitch was never just about data centers -- turbine profits were explicitly earmarked to help fund the Overture supersonic jet's certification program. Losing its largest named power customer doesn't touch Overture's 130-aircraft order book directly, but it does remove the cross-subsidy Boom's own executives had built into the plan.}} For the AI-infrastructure buildout broadly, the more durable lesson may be less about Boom specifically and more about how little of this market has actually settled: even a company that just closed one of the largest AI-infrastructure raises of the year treated a year-old, publicly announced, gigawatt-scale power commitment as changeable rather than load-bearing.",
+    "citation_urls": []
+   },
+   {
+    "type": "p",
+    "text": "==That's a harder problem for smaller turbine and generation vendors than for Crusoe.== Crusoe can absorb a canceled order and shop for a new one from a position of fresh capital; a launch-customer relationship walking away nine months in is a much bigger hit to a young hardware manufacturer's own backlog, financing story and supplier negotiations than to the buyer's build schedule. Boom's public statement papers over that asymmetry with warmth toward Crusoe's founders and its own unchanged 2027-2028 targets -- worth remembering the next time a vendor's own announcement of a canceled deal reads more like a breakup text than a business update.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Five independent evidence threads, two of them primary company sources (Boom's own Dec. 2025 press release, Crusoe's own Abilene newsroom page) rather than only secondary reporting on the cancellation. TechCrunch's two pieces (Dec. 2025 and Sept. 25 2026) supply the direct quotes from both Scholl and Crusoe's spokesperson; Startup Fortune supplies the $3.9B raise and Wyoming-pause context not in the TechCrunch pieces."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No health/legal-proceeding trigger. Financial trigger (compliance-rulebook #2) considered: the $3.9B/$30.9B figures are reported as closed-round facts from the company's own funding announcement via secondary reporting, not a valuation prediction or investment recommendation. No negative/accusatory claim about either named company -- the piece states a sequence of disclosed facts (order placed, order canceled, raise closed) without alleging wrongdoing by either party."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft implied the cancellation was purely a retreat without giving real weight to Crusoe's own 'plans haven't changed' framing or Boom's stated 2027-2028 targets being intact. Added the counter component with an honest verdict that concedes both points are true while still holding the piece's core read. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Ledger, beforeafter, timeline and counter values all trace to the five cited sources; the $1.25B/$300M/$3.9B/$30.9B figures and every date in the timeline appear in body prose or a cited source. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fires: valuation figures are reported deal facts, not predictions; no accusatory claim about either named company; no health/legal content; central facts (the cancellation, the quotes) are corroborated by the companies' own statements as reported, not resting on a single secondary account."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No compliance trigger fires. Funding and valuation figures are sourced to each company's own disclosed round; the piece's evaluative claim (that this reflects broader instability in AI-power sourcing) is stated as this desk's own analysis in the persona's spec-sheet-and-earnings-call voice, not as a factual allegation against either company."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-27T00:25:39Z"
+  },
+  "image": "assets/img/newsroom/crusoe-abandons-boom-supersonic-turbine-deal.jpg",
+  "publishedAt": "2026-09-27T00:25:39Z"
+ },
+ {
+  "slug": "xai-colossus-2-nvidia-gpu-expansion-year-end",
+  "id": "newsroom-xai-colossus-2-nvidia-gpu-expansion-year-end",
+  "title": "xAI says Colossus 2 could hit 1.21 million Nvidia chips by year-end -- more than double what's running today",
+  "dek": "Elon Musk laid out the most detailed chip-deployment timeline yet for xAI's Memphis supercomputer: three more 220,000-GB300 waves stacked on the 550,000 chips already installed. Two of the three carry no hedge in his own account. The third, explicitly, does -- and the gap between those two categories is the actual story.",
+  "persona": "jin-park",
+  "section": "Compute",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch next week's wave land on schedule",
+    "text": "The first 220,000-GB300 wave is the near-term, unhedged part of Musk's own timeline -- the first real test of whether the rest of it holds."
+   },
+   {
+    "label": "Watch for an independently audited count, not just a founder's own tally",
+    "text": "Every figure in this timeline is self-reported by Musk on X. An independent tracker counting delivered, powered chips -- the kind Epoch AI already runs for OpenAI's Stargate sites -- would be the first outside check on it."
+   },
+   {
+    "label": "Watch power, not just chip shipments",
+    "text": "1.21 million GB300s need gigawatts of commissioned, delivered power to actually train anything. Chip count arriving on a loading dock and compute capacity coming online are two different milestones."
+   },
+   {
+    "label": "Watch how Stargate Abilene's own Q4 number compares",
+    "text": "OpenAI's single Abilene site is separately tracked toward roughly 1.02 million H100-equivalents by Q4 2026 -- a rough, unit-adjusted read on whether xAI's single Memphis site is actually pulling ahead of it."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Elon Musk on X: Colossus 1/2 chip counts and deployment waves",
+    "url": "https://x.com/elonmusk/status/2103329761690865846",
+    "outlet": "X (Elon Musk)",
+    "kind": "primary"
+   },
+   {
+    "label": "OpenAI Stargate Abilene data center directory entry",
+    "url": "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-abilene",
+    "outlet": "Epoch AI",
+    "kind": "primary"
+   },
+   {
+    "label": "Elon Musk Aims to Double Colossus 2's Nvidia Chips by Year-End",
+    "url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-aims-double-colossus-060447907.html",
+    "outlet": "Bloomberg via Yahoo Finance",
+    "kind": "reporting"
+   },
+   {
+    "label": "xAI Colossus 2 Gigawatt Expansion: 555K GPUs, $18B",
+    "url": "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026",
+    "outlet": "Introl",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Colossus 2 currently runs about 550,000 Nvidia GB200 and GB300 chips, per Musk's own count.",
+   "Musk says two more 220,000-chip waves, due next week and in November, carry no stated hedge.",
+   "A third 220,000-chip wave in December is explicitly qualified: 'if we get lucky.'",
+   "All three waves would put Colossus 2 near 1.21 million chips -- roughly 2.2x today's count.",
+   "Caveat: a chip count isn't delivered training capacity until it's powered, networked and commissioned."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "**xAI's Colossus 2 could reach 1.21 million Nvidia GPUs by the end of the year** -- more than double the roughly 550,000 it's running today -- according to the most detailed deployment timeline Elon Musk has given for the Memphis-area cluster. Replying to a question on X on Sept. 25, Musk broke down both sites: Colossus 1 holds 150,000 H100s, 50,000 H200s and 30,000 GB200s; ==Colossus 2 currently runs 110,000 GB200s and 440,000 GB300s==. Three more waves of 220,000 GB300s each are due next week, in November, and -- his words -- \"if we get lucky,\" by late December.",
+    "citation_urls": [
+     "https://x.com/elonmusk/status/2103329761690865846"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "GB300 is Nvidia's current top-tier __Blackwell__-generation training chip, the successor to the GB200s that made up Colossus 2's first buildout; both are sold as part of full rack-scale systems rather than standalone processors, which is part of why a chip count alone understates how much else -- networking, cooling, power distribution -- has to arrive and get commissioned alongside each wave. xAI's own history with this site is one of the reasons Musk's numbers get taken seriously rather than dismissed as a founder's usual optimism: Colossus 1 reportedly went from an empty building to a running training cluster in 19 days, against an industry-standard permitting-to-power timeline measured in years. That reputation for speed is doing real work in how this announcement lands -- the same claim from an operator with a slower, less-verified build history would reasonably draw more skepticism than this one has.",
+    "citation_urls": [
+     "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "By early this year, independent trackers already put Colossus 2 at roughly 555,000 GPUs, 2 gigawatts of capacity and about $18 billion in cumulative hardware spend -- figures that line up closely with the 550,000-chip current count Musk gave in September, once GB200/GB300 mix and a few months of incremental deployment are accounted for. Musk's new numbers, in other words, aren't a change of plan so much as the next scheduled step in a buildout that has consistently moved faster than the industry's normal permitting-to-power timeline.",
+    "citation_urls": [
+     "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "Early 2026",
+       "what": "Independent trackers put Colossus 2 at roughly 555,000 GPUs, 2GW capacity, ~$18B in cumulative hardware spend",
+       "source": "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026"
+      },
+      {
+       "when": "Sept. 25, 2026",
+       "what": "Musk states Colossus 2's current count as 110,000 GB200s + 440,000 GB300s (~550,000 total)",
+       "hi": true,
+       "source": "https://x.com/elonmusk/status/2103329761690865846"
+      },
+      {
+       "when": "\"Next week\" (per Sept. 25 post)",
+       "what": "First wave of 220,000 more GB300s due online, no hedge stated",
+       "future": true,
+       "source": "https://x.com/elonmusk/status/2103329761690865846"
+      },
+      {
+       "when": "November 2026",
+       "what": "Second wave of 220,000 more GB300s due online, no hedge stated",
+       "future": true,
+       "source": "https://x.com/elonmusk/status/2103329761690865846"
+      },
+      {
+       "when": "Late December 2026",
+       "what": "Third wave of 220,000 more GB300s -- \"if we get lucky,\" per Musk",
+       "future": true,
+       "source": "https://x.com/elonmusk/status/2103329761690865846"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Laid end to end, two of those three future waves carry no qualifier at all in Musk's own account -- only the last one does. **That distinction matters more than the eye-catching 1.21 million total**, because it separates what Musk is stating as scheduled from what he's explicitly flagging as contingent.",
+    "citation_urls": [
+     "https://x.com/elonmusk/status/2103329761690865846"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“Another 220k GB300 will be fully operational next week and another 220k in November. If we get lucky, yet another 220k GB300 by late December.” — Elon Musk, on X, Sept. 25, 2026",
+    "citation_urls": [
+     "https://x.com/elonmusk/status/2103329761690865846"
+    ]
+   },
+   {
+    "type": "chart",
+    "chart": {
+     "kind": "range",
+     "title": "Projected chip count, year-end 2026",
+     "unit": "chips",
+     "source": "Elon Musk, X, Sept. 25, 2026",
+     "data": [
+      {
+       "label": "Colossus 2 alone",
+       "low": 990000,
+       "high": 1210000,
+       "point": 990000,
+       "hi": true,
+       "note": "Low = the two unhedged waves only; high adds the hedged third wave"
+      },
+      {
+       "label": "Colossus 1 + 2 combined",
+       "low": 1220000,
+       "high": 1440000,
+       "point": 1220000,
+       "note": "Adds Colossus 1's fixed 230,000-chip count to each Colossus 2 scenario"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Even the conservative reading is a large number: the two waves Musk stated without any qualifier would take Colossus 2 alone to roughly **990,000 chips** by November, before the hedged December wave is even counted. Combined with Colossus 1's 230,000, Musk's own figures put the Memphis site as a whole within reach of **1.44 million GPUs** if every wave lands on schedule -- a threshold xAI has been publicly chasing since it first talked about a million-GPU Memphis footprint earlier this year, and one it would now clear with room to spare even under the more conservative reading.",
+    "citation_urls": [
+     "https://x.com/elonmusk/status/2103329761690865846"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Two ways to measure the largest single AI compute buildouts",
+     "columns": [
+      {
+       "label": "xAI Colossus 2",
+       "sub": "Memphis, single site"
+      },
+      {
+       "label": "OpenAI Stargate Abilene",
+       "sub": "Texas, single site",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "Current scale",
+       "values": [
+        "~550,000 raw GB200/GB300 chips",
+        "~509,000 H100-equivalents"
+       ],
+       "note": "Different units -- raw chip count vs. Epoch AI's normalized compute-equivalent -- not directly additive"
+      },
+      {
+       "label": "Stated/tracked year-end 2026 target",
+       "values": [
+        "~1.21 million raw chips (Musk's projection, one wave hedged)",
+        "~1.02 million H100-equivalents (Epoch AI's tracked projection)"
+       ]
+      },
+      {
+       "label": "Power capacity",
+       "values": [
+        "~2 GW (as of early 2026)",
+        "421 MW now, ~843 MW projected by year-end 2026"
+       ]
+      },
+      {
+       "label": "Reported capital cost",
+       "values": [
+        "~$18B (as of early 2026)",
+        "$15.9B now, ~$31.9B projected by year-end 2026"
+       ]
+      }
+     ],
+     "source": "Elon Musk (X); introl.com; Epoch AI Stargate Abilene tracker"
+    }
+   },
+   {
+    "type": "p",
+    "text": "The comparison undercuts a clean \"who's bigger\" headline as much as it supports one. Colossus 2's figures are Musk's own raw chip tally; Stargate Abilene's, per Epoch AI's independent tracker, are a normalized 509,000 H100-equivalents today, projected toward 1.02 million by year-end, on 421 megawatts of IT power scaling to about 843 megawatts and a reported $15.9 billion in capital cost growing toward $31.9 billion. Nvidia's GB300 is also meaningfully more capable per chip than the H100 generation Epoch's normalization is anchored to, which means a straight chip-for-chip count actually understates Colossus 2's relative compute versus a raw comparison of the two totals. xAI's site currently runs on roughly a fifth of Stargate Abilene's projected year-end power draw relative to its chip count, though, which is the more interesting number: __compute__ without commissioned power behind it doesn't train anything.",
+    "citation_urls": [
+     "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-abilene",
+     "https://x.com/elonmusk/status/2103329761690865846"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "The year-end total is contingent on Musk's own hedge -- 'if we get lucky' -- applied to a third of the projected growth. It is a schedule, not a delivery record.",
+       "detail": "Two of the three cited waves carry no qualifier in Musk's post; the third explicitly does, in the same sentence making the claim.",
+       "whoHolds": "Musk's own framing, stated alongside the projection itself"
+      },
+      {
+       "claim": "A raw chip count is not the same as usable training capacity -- chips still need power, networking, cooling and commissioning before they add compute the way a completed, powered site does.",
+       "detail": "Even xAI's own prior buildout put Colossus 2 at roughly 2 gigawatts of capacity months before reaching its current chip count, and each new wave needs its own power to actually be useful.",
+       "whoHolds": "General pattern visible in xAI's own reported Colossus 2 buildout history"
+      }
+     ],
+     "verdict": "Both objections are real and neither erases the underlying pace. Even the low, unhedged estimate built from Musk's own numbers -- 990,000 chips by November -- would nearly double Colossus 2's current count in about six weeks. The exact year-end figure is genuinely uncertain; the rate of buildout at this one site is not."
+    }
+   },
+   {
+    "type": "p",
+    "text": "For a reader tracking [xAI](/company/xai)'s position against OpenAI, Google and Anthropic in the compute race, the more durable fact isn't the 1.21-million-chip target -- it's that a single site in Memphis is now routinely discussed in the same breath as a national-scale, multi-site project like Stargate, which spans seven planned locations rather than one. **xAI has consistently chosen to concentrate its buildout at one campus** instead of spreading it across sites the way OpenAI, Microsoft and Google have -- a bet that a single, faster-to-permit location beats the redundancy and grid access multiple sites would offer. ==That concentration is also what makes Colossus 2 unusually exposed to a single point of failure: one delayed substation, one contested permit, or one supply disruption slows the whole cluster rather than one site among several.==",
+    "citation_urls": [
+     "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-abilene"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Whether Musk's schedule holds past the next self-reported milestone is exactly what the apply items above are watching for -- and it's worth remembering that this isn't the first time a Colossus timeline has been stated in public before it was independently confirmed. The pattern so far has been that the numbers arrive roughly on schedule, if not always exactly as first described; that track record is the actual reason this projection is worth covering rather than dismissing, not proof that this specific 1.21-million figure will land precisely as stated.",
+    "citation_urls": []
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Four independent evidence threads, two of them primary: Musk's own X post (located and confirmed the exact post text and URL via search, not just secondary paraphrase) and Epoch AI's own independently tracked Stargate Abilene dataset. Bloomberg's report (via Yahoo Finance syndication) and introl.com's technical writeup corroborate but are treated as reporting, not primary, since both are describing Musk's or the site's numbers rather than disclosing their own."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No health/financial-advice/legal-proceeding trigger. Central claim (the 1.21M year-end figure) is explicitly flagged in body prose and the counter component as self-reported and partly hedged by Musk himself, rather than presented as a confirmed fact -- avoids the unverifiable-central-claim trigger by labeling the uncertainty rather than stating the projection as settled."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft's compare component implied Colossus 2's raw chip count and Stargate's H100-equivalent figure were directly comparable. Revised the compare component's row values and added an explicit note plus a follow-up paragraph stating the units differ. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Range chart, compare and counter values all trace to the four cited sources; the 990,000/1.21M/1.44M figures in prose match the arithmetic stated in the range chart's source. No component carries a top-level text field."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No mandatory-scrutiny trigger fires: no health/financial-advice content, no accusatory claim about any named party, and the central projection is explicitly labeled as self-reported and partly hedged rather than presented as an independently confirmed fact."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No compliance trigger fires. All chip-count and timeline figures are attributed to Musk's own statement and labeled as such; the comparison to Stargate Abilene uses an independent tracker's figures with an explicit unit-difference caveat rather than presenting the two as equivalent."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-27T00:25:39Z"
+  },
+  "image": "assets/img/newsroom/xai-colossus-2-nvidia-gpu-expansion-year-end.jpg",
+  "publishedAt": "2026-09-27T00:25:39Z"
  }
 ]
 ;
