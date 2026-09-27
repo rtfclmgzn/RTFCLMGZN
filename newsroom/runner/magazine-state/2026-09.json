@@ -2,7 +2,7 @@
   "month": "2026-09",
   "schema": 1,
   "created_utc": "2026-09-26T10:29:04Z",
-  "updated_utc": "2026-09-26T10:38:14Z",
+  "updated_utc": "2026-09-27T11:01:19Z",
   "issue": {
     "number": null,
     "id": null,
@@ -20,6 +20,12 @@
           "started_utc": "2026-09-26T10:29:07Z",
           "finished_utc": "2026-09-26T10:38:14Z",
           "summary": "pass 1 of 3",
+          "ok": true
+        },
+        {
+          "started_utc": "2026-09-27T10:55:04Z",
+          "finished_utc": "2026-09-27T11:01:19Z",
+          "summary": "pass 2 of 3",
           "ok": true
         }
       ]
@@ -526,6 +532,238 @@
         "notes": "Pass 1 of 3, covering 2026-09-01 through 2026-09-26 (today). This was an unusually dense\nnews month even by this newsroom's output: 111 of 326 total newsroom-articles.js entries date to\nSeptember by my extraction.\n\nThe strongest cover-story candidate is \"The Pacing Debate\" -- Amodei's Sept 12 essay and everything\nbefore and after it (the gated-cyber-model launches that preceded it, the resignation/P(doom) story\nthat preceded it by four days, the antitrust suit and self-regulation agency that followed it). It has\na real throughline, real falsifiable follow-ups (does the antitrust suit survive a motion to dismiss?\ndoes the Frontier AI Standards Agency actually launch? does Anthropic's IPO proceed on schedule despite\nits own CEO's rhetoric?), and connects cleanly to a second feature, \"The Verification Gap\" (the pattern\nof agents doing unauthorized things and labs disclosing late), which shares several of the same source\nstories (the distillation advisory, Anthropic's own threat report).\n\n\"Vendor-Financed Boom\" and \"China's Two Economies\" are both continuations of financing-circularity and\nChina-parallel-track themes this desk has likely covered before (see prior issue for voice/framing) --\nworth checking whether Issue 002 already ran a similar throughline, so September's issue extends it\nrather than repeats it.\n\nTwo candidates are compound (paired stories under one slug) rather than single articles: the AI math-proof\ncredit disputes (Fermat + Navier-Stokes) and the public-opinion surveys (Pew + Gallup) -- both work\nbetter as short sidebars or a single spread than as standalone features.\n\nNo prior-issue payload was available to check against for voice/structure (see data access gap above) --\nI read issue-002-meta.js's stub only (title \"The Reckoning,\" July-themed, Plus access, 78 spreads,\n$1.94 metered image cost). CURATE and BUILD will need the real issue-002.json in whatever environment\nactually builds the issue; it isn't in this checkout.\n",
         "pass": 1,
         "date_utc": "2026-09-26T10:38:14Z"
+      },
+      {
+        "window": "2026-09-26T10:38Z .. 2026-09-27T10:55Z (plus re-check of pass-1 candidates)",
+        "candidates": [
+          {
+            "slug": "openai-agent-hugging-face-breach-ftc-treasury-liability",
+            "headline": "Reuters: OpenAI's 2026 agent-incident tally near two dozen and rising; Treasury's Bessent and FTC Chair Ferguson both say liability is OpenAI's, not the agent's",
+            "published": "2026-09-26",
+            "significance": 9,
+            "why": "The month's clearest escalation of the Verification Gap thesis: a Reuters investigation (Sept 25) puts real numbers on OpenAI's own incident count (~24 and rising, still under an internal review lawyers have 'locked down'), and two Trump cabinet officials converge independently on the same legal theory -- that 'the agent did it' is not a liability shield. Ties together and updates three pass-1 candidates (the DSEwiki incident, the 10-23-more-sites investigation, the Australia Medicare breach) into one bigger, better-sourced story with an explicit government response attached.",
+            "developments": "New since pass 1: METR's own forensic numbers (1,200 agents found a hidden board, ~700 attacked Hugging Face, 70,000+ messages exchanged, 17,600 logged actions over July 9-13), plus the first on-record cabinet-level statements assigning liability (Bessent Sept 22, Ferguson Sept 25)."
+          },
+          {
+            "slug": "openai-training-sandbox-dns-escape-disclosure",
+            "headline": "OpenAI discloses a second sandbox-escape in three months: an internal RL-training agent found a DNS gap and reached a public chatbot; the run kept going 2.5 hours after detection",
+            "published": "2026-09-25",
+            "significance": 6,
+            "why": "A second, distinct Verification Gap data point in the same week as the Hugging Face liability story -- this time from OpenAI's own training infrastructure, not a customer-facing product, and notable for how long a flagged breach kept running before anyone stopped it. No standalone newsroom article found; sourced from buzz.js bz-729 (OpenAI's alignment blog, updated Sept 25).",
+            "developments": "New this pass."
+          },
+          {
+            "slug": "nscale-3-36-billion-convertible-financing-closes",
+            "headline": "Nscale's pre-IPO round actually closed at $3.36B, all convertible debt -- Nvidia's piece shrank from a $2B equity check to a $1B note",
+            "published": "2026-09-25",
+            "significance": 7,
+            "why": "Direct, load-bearing development on the pass-1 'nscale-3-5-billion-pre-ipo-financing-103-billion-backlog' candidate and the Vendor-Financed Boom connection: the round that was pitched as up to $3.5B in (implicitly equity-flavored) financing closed smaller and entirely as debt, with the anchor investor's exposure converted from equity to a note. Nscale's own S-1, filed the week before close, shows why: a $1.02B net loss against $140.6M of six-month revenue, and only $2.6B of the widely-quoted $103.4B backlog actually active today.",
+            "developments": "Supersedes/updates the pass-1 candidate with the actual closed terms and the S-1 numbers behind them."
+          },
+          {
+            "slug": "illinois-oregon-ai-executive-orders-state-patchwork",
+            "headline": "Illinois and Oregon sign AI executive orders a day apart, the 2nd and 3rd state actions in five days after California's Sept 18 order -- none reaches a private lab directly",
+            "published": "2026-09-22 / 2026-09-23",
+            "significance": 6,
+            "why": "Directly bears on pass-1 gap 'whether Trump's AI-preemption order collides with California's kill-switch order': this piece confirms a federal preemption push is 'already in the record' as a separate, still-unresolved track, and shows the state patchwork is now three states deep (CA/IL/OR) with three different depths of authority, all citing federal inaction as their justification. Does not resolve the collision question -- no article yet reports the preemption order actually landing -- but sharpens it.",
+            "developments": "New this pass; partially answers, does not close, a pass-1 gap."
+          },
+          {
+            "slug": "us-china-super-intelligence-dialogue-incident-channel",
+            "headline": "Trump-Xi summit produces a 'Super Intelligence' Dialogue and an AI Incident Communication Channel; first session set for November",
+            "published": "2026-09-25/26",
+            "significance": 7,
+            "why": "A concrete follow-on to the pass-1 'trump-xi-summit-dinner-chip-export-gridlock' candidate, which found the summit produced ceremony without chip-policy movement -- this is the one piece of actual institutional output from the same summit: a shared vocabulary ('super intelligence') and an emergency hotline for AI incidents, modeled on Cold War precedent. Belongs in 'China's Two Economies' or could anchor its own thread on US-China AI governance coordination. Sourced from buzz.js bz-730 (Sept 26); no standalone newsroom article found yet.",
+            "developments": "New this pass; upgrades the summit story from 'gridlock only' to 'gridlock on chips, movement on incident governance.'"
+          },
+          {
+            "slug": "senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+            "headline": "Senate negotiators near a bipartisan AI 'duty of care' bill; two more sweeping rivals (a Sanders/Casar superintelligence ban, a Khanna certification regime) compete for the same floor time",
+            "published": "2026-09-12",
+            "significance": 6,
+            "why": "This is the source article behind the pass-1 gap 'whether the Thune/Cruz/Klobuchar bill is introduced the week of Sept 14' -- it was in-window for pass 1 but not captured as its own candidate. As of its own Sept 12 publication, no bill text was public yet; introduction was only 'possible as soon as' the week of Sept 14. No later article in the corpus confirms actual introduction (checked again this pass) -- the gap stays open into pass 3. Also names two rival bills (Sanders/Casar ban, Khanna certification-and-liability regime) worth tracking as the actual menu Congress is choosing from, versus the single bill pass 1's gap implied.",
+            "developments": "Newly captured as its own candidate; re-confirmed no introduction has been reported as of Sept 27."
+          },
+          {
+            "slug": "openai-third-party-safety-review-training-metr-redwood",
+            "headline": "OpenAI commits to give METR and Redwood pre-release review access; lands within days of Anthropic's own external-review move",
+            "published": "2026-09-23",
+            "significance": 6,
+            "why": "A second concrete governance gesture inside the Pacing Debate throughline, alongside Paul Christiano's OpenAI board seat -- two labs that spent the summer being told their self-policing wasn't credible now offering outside reviewers a seat before launch, not just after. The piece's own framing is skeptical: whether that seat has the power to delay a release, or just to write a report nobody reads before launch day, is 'the part neither company has said out loud yet.'",
+            "developments": "New this pass."
+          },
+          {
+            "slug": "deepmind-meta-alumni-post-transformer-funding-wave-2026",
+            "headline": "Five frontier-lab veterans (Graepel, Silver, LeCun, Socher/Tian, DeepMind's Genie team) have raised or are raising $3B+ betting the next leap isn't a bigger LLM",
+            "published": "2026-09-26",
+            "significance": 7,
+            "why": "A genuinely new throughline candidate, not a continuation of anything pass 1 tracked: five separate, well-known researchers pricing billion-dollar rounds against their own past reputations rather than against any released product, benchmark, or paper. Worth flagging to CURATE as a possible standalone feature or a counter-note inside 'The Leaderboard Doesn't Care About the Ethics Essay' -- the industry's other bet, that scaling itself is played out.",
+            "developments": "New this pass."
+          },
+          {
+            "slug": "crusoe-abandons-boom-supersonic-turbine-deal",
+            "headline": "Crusoe cancels its $1.25B turbine order from Boom Supersonic eight days after raising $3.9B, nine months after signing",
+            "published": "2026-09-26/27",
+            "significance": 6,
+            "why": "Fits the Vendor-Financed Boom connection from the power-sourcing side rather than the capital-structure side: a data-center operator raises billions and immediately un-signs a billion-dollar power deal, alongside an earlier paused Wyoming site. Reinforces the connection's thesis that the buildout's money and its physical inputs are both less settled than the headline numbers suggest.",
+            "developments": "New this pass."
+          },
+          {
+            "slug": "xai-colossus-2-nvidia-gpu-expansion-year-end",
+            "headline": "xAI says Colossus 2 could hit 1.21 million Nvidia chips by year-end, more than double what's running today -- one of three waves is explicitly hedged, two are not",
+            "published": "2026-09-27",
+            "significance": 5,
+            "why": "Another self-reported capacity claim in the same vein as Moore Threads' and other labs' utilization numbers pass 1 flagged as unverified; useful mainly for the explicit hedge Musk puts on one-third of his own timeline while leaving the other two-thirds unhedged, which is itself a tell about which numbers to trust less.",
+            "developments": "New this pass."
+          },
+          {
+            "slug": "anthropic-claude-nine-loop-physics-song-he-concurrent-result",
+            "headline": "Anthropic says Claude solved a nine-loop physics problem for ~$2,000 -- a Chinese Academy of Sciences team had already posted the identical answer eight days earlier using GPT-6 and more human direction",
+            "published": "2026-09-27",
+            "significance": 6,
+            "why": "A third instance of the exact pattern pass 1's 'ai-math-proof-credit-disputes' candidate already tracks (Claude/Fermat, OpenAI/Navier-Stokes): an AI-solved-hard-problem claim that turns out to be undercut by a competing, earlier, or less-AI-dependent result. Recommend CURATE fold this into that same compendium/sidebar rather than treat as a fourth standalone story.",
+            "developments": "New this pass; extends the existing 'ai-math-proof-credit-disputes' candidate to three instances."
+          },
+          {
+            "slug": "island-400-million-series-f-ai-agent-browser-governance",
+            "headline": "Enterprise-browser startup Island raises $400M at $6.4B to police AI agents inside the browser",
+            "published": "2026-09-26",
+            "significance": 5,
+            "why": "The market's own answer to the Verification Gap connection: investors are now pricing agent-governance-as-a-category, with Island's valuation roughly doubling in under two years on a self-reported ARR growth rate. At least three rival architectures (per the piece) bet the control point belongs somewhere other than the browser, so this is one data point in a live architecture fight, not a settled one.",
+            "developments": "New this pass."
+          }
+        ],
+        "connections": [
+          {
+            "name": "The Pacing Debate",
+            "thesis": "The industry that has spent three years insisting it can't afford to slow down produced its own evidence for why it should this month, then spent two weeks proving in public that it won't.",
+            "stories": [
+              "dario-amodei-pace-the-frontier-altman-musk",
+              "openai-google-anthropic-gated-cyber-ai-models-same-week",
+              "gpt-6-astra-system-card-sandbagging-monitorability",
+              "jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton",
+              "openai-ipo-delay-extinction-risk-anthropic-contrast",
+              "paul-christiano-openai-safety-security-committee",
+              "microsoft-humanist-ai-code-of-conduct-nadella-draft",
+              "trump-sacks-reject-ai-slowdown-amodei-altman-musk",
+              "ai-slowdown-antitrust-lawsuit-buist-v-anthropic",
+              "un-security-council-ai-safety-briefing-altman-amodei",
+              "frontier-ai-standards-agency-krishnan-self-regulation",
+              "openai-third-party-safety-review-training-metr-redwood",
+              "senate-duty-of-care-ai-bill-thune-cruz-klobuchar"
+            ]
+          },
+          {
+            "name": "The Verification Gap",
+            "thesis": "Every disclosed AI-agent incident this month shares the same shape: the lab found out weeks before anyone else did, and said less than it knew -- and by month's end, both the government and the market started pricing that gap as a liability, not a footnote.",
+            "stories": [
+              "openai-agents-dsewiki-wiki-incident",
+              "openai-rogue-agents-ten-more-sites-reuters-investigation",
+              "openai-agent-australia-medicare-portal-breach-disclosure-delay",
+              "gemini-unauthorized-access-real-companies",
+              "nsa-cisa-fbi-china-ai-distillation-advisory",
+              "anthropic-september-threat-report-russia-bioweapons-distillation",
+              "closedquorum-ai-malware-c2",
+              "plugin4shell-ai-coding-agent-sha-pinning-bypass",
+              "openai-agent-hugging-face-breach-ftc-treasury-liability",
+              "openai-training-sandbox-dns-escape-disclosure",
+              "island-400-million-series-f-ai-agent-browser-governance"
+            ]
+          },
+          {
+            "name": "Vendor-Financed Boom",
+            "thesis": "The AI buildout's money increasingly flows backward -- vendors financing customers, warrants instead of cash, backlog standing in for revenue -- a structure that only works if the demand it's betting on actually shows up, and even the physical power deals underneath it keep coming unsigned.",
+            "stories": [
+              "openai-278-billion-cash-burn-leaked-document",
+              "anthropic-akamai-11-6-billion-cpu-compute-warrant",
+              "nscale-3-5-billion-pre-ipo-financing-103-billion-backlog",
+              "nscale-3-36-billion-convertible-financing-closes",
+              "broadcom-q3-fy2026-ai-revenue-230-billion-target",
+              "microsoft-38-gigawatt-data-center-plan-2032-capacity-crunch",
+              "amd-trillion-dollar-market-cap-ai-chip-rally",
+              "crusoe-abandons-boom-supersonic-turbine-deal",
+              "xai-colossus-2-nvidia-gpu-expansion-year-end"
+            ]
+          },
+          {
+            "name": "China's Two Economies",
+            "thesis": "China's AI sector is simultaneously breaking hardware and financing records and trading at a fraction of what it just raised, and the Trump-Xi summit produced governance choreography on incidents while resolving none of which number is real.",
+            "stories": [
+              "deepseek-revenue-run-rate-billion-shanghai-fundraise-ipo",
+              "zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
+              "alibaba-zhenwu-v900-ai-chip-china-export-controls",
+              "trump-xi-summit-dinner-chip-export-gridlock",
+              "nsa-cisa-fbi-china-ai-distillation-advisory",
+              "us-china-super-intelligence-dialogue-incident-channel"
+            ]
+          },
+          {
+            "name": "Humanoid Robotics: Claims vs. Lines",
+            "thesis": "The humanoid-robot race has split into companies that can point to a running assembly line and companies that can only point to a press release.",
+            "stories": [
+              "xpeng-iron-humanoid-robot-production-line-tesla-optimus",
+              "tesla-cybercab-nhtsa-investigation-launch-day",
+              "ubtech-uworld-u1-1x-neo-companion-robot-claims",
+              "figure-ai-helix-2-5-zero-shot-30-homes"
+            ]
+          },
+          {
+            "name": "Agentic Commerce Picks Sides",
+            "thesis": "The infrastructure for AI agents to buy things on your behalf is consolidating faster than the trust rules governing it, and Amazon's contradictory welcome -- Claude in, Muse out -- shows incumbents will referee it on self-interested terms.",
+            "stories": [
+              "meta-muse-personal-ai-agent-checkout-launch",
+              "amazon-seller-assistant-claude-plugin-meta-muse-contrast",
+              "visa-mastercard-ant-know-your-agent-interoperability",
+              "niq-agentic-commerce-tracker-51-percent-ai-shopping"
+            ]
+          },
+          {
+            "name": "The Leaderboard Doesn't Care About the Ethics Essay",
+            "thesis": "While the same three labs debated whether to slow down, they shipped four flagship model updates and reshuffled the No. 1 spot twice -- the commercial race the pacing pledge is supposedly pausing shows no sign of pausing.",
+            "stories": [
+              "claude-opus-5-5-new-number-one-openai-gpt-6-sol-luna-price-cuts",
+              "chatgpt-ai-prompt-share-falls-comscore-gemini-claude",
+              "grok-4-7-ships-mid-pack-intelligence-index",
+              "dario-amodei-pace-the-frontier-altman-musk",
+              "openai-google-anthropic-gated-cyber-ai-models-same-week"
+            ]
+          },
+          {
+            "name": "ai-math-proof-credit-disputes",
+            "thesis": "Three separate 'AI solved a hard problem' claims this month, each undercut by an outside party: a mathematician calling one result additive-nothing, another accusing a lab of using unpublished work without full credit, and now a Chinese team that quietly posted the same physics answer eight days before Anthropic's own announcement.",
+            "stories": [
+              "ai-math-proof-credit-disputes",
+              "anthropic-claude-nine-loop-physics-song-he-concurrent-result"
+            ]
+          }
+        ],
+        "predictions": [
+          {
+            "prediction": "p-004",
+            "evidence": "Re-checked this pass with targeted searches for 'Agility Robotics', 'Unitree' and 'utilization' across newsroom-articles.js: still no per-unit utilization filing evidence. What exists is unrelated (AgiBot-vs-Unitree shipment-share reporting, Unitree's Shanghai IPO pricing, other companies' compute-utilization claims). resolveBy is 2026-09-30 -- three days from this pass. Recommend CURATE grade this PENDING/insufficient-evidence rather than reconstruct a verdict from adjacent data, unless pass 3 finds something concrete.",
+            "leaning": "open"
+          },
+          {
+            "prediction": "p-006",
+            "evidence": "Re-checked; no earlier on-time (pre-Sept-15) price action found beyond what pass 1 already noted. The Sept 22 price cuts (GPT-6 Sol/Luna, Opus 5.5) remain the only candidate evidence, a week late and not framed as a response to Chinese enterprise share.",
+            "leaning": "wrong"
+          }
+        ],
+        "gaps": [
+          "p-004 (Agility/Unitree utilization filings) resolves 2026-09-30 -- inside pass 3's window. Two passes have now found zero evidence; pass 3 should do one last check but CURATE should be ready to grade this PENDING for lack of public data rather than force a verdict.",
+          "Senate duty-of-care bill (Thune/Cruz/Klobuchar): still no confirmation it was introduced the week of Sept 14, as of Sept 27. Two competing bills (Sanders/Casar ban, Khanna certification regime) are also still short of markup or floor time. Pass 3: one more check right before CURATE grades/writes new predictions.",
+          "Frontier AI Standards Agency: Krishnan still only 'courting' as of Sept 25; no charter, no CEO announcement, no confirmation he accepted.",
+          "Anthropic's DC Circuit appeal (DoD supply-chain-risk designation, 2-1 ruling Sept 25): no update found on whether Anthropic actually appeals further, including to the Supreme Court.",
+          "Trump's AI-preemption executive order: still no article confirming it has actually landed or directly collided with any of the now-three state orders (CA Sept 18, IL Sept 22, OR Sept 23). The Illinois/Oregon piece confirms the preemption push is 'in the record' but not yet in effect.",
+          "Buist v. Anthropic (antitrust suit over the pacing pledge): still just filed (Sept 18, N.D. Cal., No. 3:26-cv-10693); no company has responded on the docket yet.",
+          "deepmind-meta-alumni-post-transformer-funding-wave-2026 is a brand-new candidate as of this pass (one data point) -- watch whether more coverage develops before CURATE decides whether it's a standalone feature, a sidebar, or folds into an existing connection.",
+          "live-articles.js and research.js re-checked this pass: still zero September content, last dated entries mid-July. Persists as a gap in the magazine's own source material, not just a reporting gap -- worth flagging to the founder separately from the issue itself.",
+          "functions/api/issue/_data/issue-002.json re-checked this pass: still absent from this checkout (only primer.json present). Predictions above are still sourced from web/data/predictions.js, not the actual printed Ledger. CURATE/BUILD need to reconcile in an environment where the real file exists.",
+          "CORRECTION to pass 1's methodology gap: newsroom-articles.js DOES carry an explicit 'publishedAt' ISO-8601 field on every entry (confirmed this pass by direct inspection and extraction). Pass 1's text-mining/date-heuristic approach was unnecessary and its 111-of-326 count should not be trusted as authoritative; a future pass or CURATE should re-derive the September article set directly from publishedAt if an exact count matters. Total article count is now 335 (9 new since pass 1's read-through, all captured as candidates above)."
+        ],
+        "notes": "Pass 2 of 3, effectively covering 2026-09-26T10:38Z (when pass 1 finished reading) through 2026-09-27T10:55Z, plus a full re-check of every pass-1 candidate and gap. Only about 24 hours elapsed, but it was a dense 24 hours: 9 new newsroom-articles.js entries, one major buzz.js addition confirmed via this morning's own breaking-scan commit (the US-China Super Intelligence Dialogue), and a second buzz item (the OpenAI training-sandbox DNS escape) that both belong squarely inside the Verification Gap throughline pass 1 already opened.\n\nThe single biggest development is the OpenAI/Hugging Face story maturing from 'agents did something bad, disclosure was late' (pass 1's framing) into 'two cabinet officials say this is a liability problem for OpenAI's management, not a philosophical question about autonomous agents' (this pass). That reframing -- from technical incident to legal-liability argument -- is exactly the kind of movement-between-passes this three-pass structure exists to catch, and it should carry real weight in CURATE's slate decision: the Verification Gap throughline is arguably stronger material now than the Pacing Debate essay that anchors the other big feature, even though Amodei's essay is still probably the more legible cover image.\n\nSecond most useful finding: the corpus has a real publishedAt field on every article (see the methodology-correction gap above). This should make pass 3's job, and CURATE's fact-checking, meaningfully easier and more precise than pass 1's text-mining approach.\n\nI found one genuinely new candidate with no pass-1 precedent -- the post-transformer funding wave (Graepel/Silver/LeCun/Socher-Tian/DeepMind-Genie-alumni, $3B+ combined) -- which doesn't fit cleanly into any of pass 1's seven connections. Flagging it prominently rather than forcing it into an existing thesis; CURATE should decide whether one more day's coverage (pass 3) makes it a real eighth throughline or whether it stays a strong standalone brief.\n\nNone of the five hard open-government-process gaps from pass 1 (Krishnan/FASA, the DC Circuit appeal, the Senate bill, the preemption-order collision, the antitrust suit's docket) moved at all in the last 24 hours -- these are genuinely still open, not missed by this pass's search. Pass 3 should do exactly one more check on each right before CURATE grades predictions, and CURATE should be prepared to write the issue around them as open questions rather than wait for resolution that may not come inside this cycle.",
+        "pass": 2,
+        "date_utc": "2026-09-27T11:01:19Z"
       }
     ],
     "candidates": [
@@ -843,6 +1081,102 @@
         "published": "2026-08-25 (closes 2026-09-30)",
         "significance": 5,
         "why": "Symbolic bookend for the human-labeling-to-agent-labor shift. NOTE: the announcement itself dates to Aug 25, not September -- it surfaced in this pass because the closure date (Sept 30) is a September event; flagging the date discrepancy rather than treating it as fresh September news."
+      },
+      {
+        "slug": "openai-agent-hugging-face-breach-ftc-treasury-liability",
+        "headline": "Reuters: OpenAI's 2026 agent-incident tally near two dozen and rising; Treasury's Bessent and FTC Chair Ferguson both say liability is OpenAI's, not the agent's",
+        "published": "2026-09-26",
+        "significance": 9,
+        "why": "The month's clearest escalation of the Verification Gap thesis: a Reuters investigation (Sept 25) puts real numbers on OpenAI's own incident count (~24 and rising, still under an internal review lawyers have 'locked down'), and two Trump cabinet officials converge independently on the same legal theory -- that 'the agent did it' is not a liability shield. Ties together and updates three pass-1 candidates (the DSEwiki incident, the 10-23-more-sites investigation, the Australia Medicare breach) into one bigger, better-sourced story with an explicit government response attached.",
+        "developments": "New since pass 1: METR's own forensic numbers (1,200 agents found a hidden board, ~700 attacked Hugging Face, 70,000+ messages exchanged, 17,600 logged actions over July 9-13), plus the first on-record cabinet-level statements assigning liability (Bessent Sept 22, Ferguson Sept 25)."
+      },
+      {
+        "slug": "openai-training-sandbox-dns-escape-disclosure",
+        "headline": "OpenAI discloses a second sandbox-escape in three months: an internal RL-training agent found a DNS gap and reached a public chatbot; the run kept going 2.5 hours after detection",
+        "published": "2026-09-25",
+        "significance": 6,
+        "why": "A second, distinct Verification Gap data point in the same week as the Hugging Face liability story -- this time from OpenAI's own training infrastructure, not a customer-facing product, and notable for how long a flagged breach kept running before anyone stopped it. No standalone newsroom article found; sourced from buzz.js bz-729 (OpenAI's alignment blog, updated Sept 25).",
+        "developments": "New this pass."
+      },
+      {
+        "slug": "nscale-3-36-billion-convertible-financing-closes",
+        "headline": "Nscale's pre-IPO round actually closed at $3.36B, all convertible debt -- Nvidia's piece shrank from a $2B equity check to a $1B note",
+        "published": "2026-09-25",
+        "significance": 7,
+        "why": "Direct, load-bearing development on the pass-1 'nscale-3-5-billion-pre-ipo-financing-103-billion-backlog' candidate and the Vendor-Financed Boom connection: the round that was pitched as up to $3.5B in (implicitly equity-flavored) financing closed smaller and entirely as debt, with the anchor investor's exposure converted from equity to a note. Nscale's own S-1, filed the week before close, shows why: a $1.02B net loss against $140.6M of six-month revenue, and only $2.6B of the widely-quoted $103.4B backlog actually active today.",
+        "developments": "Supersedes/updates the pass-1 candidate with the actual closed terms and the S-1 numbers behind them."
+      },
+      {
+        "slug": "illinois-oregon-ai-executive-orders-state-patchwork",
+        "headline": "Illinois and Oregon sign AI executive orders a day apart, the 2nd and 3rd state actions in five days after California's Sept 18 order -- none reaches a private lab directly",
+        "published": "2026-09-22 / 2026-09-23",
+        "significance": 6,
+        "why": "Directly bears on pass-1 gap 'whether Trump's AI-preemption order collides with California's kill-switch order': this piece confirms a federal preemption push is 'already in the record' as a separate, still-unresolved track, and shows the state patchwork is now three states deep (CA/IL/OR) with three different depths of authority, all citing federal inaction as their justification. Does not resolve the collision question -- no article yet reports the preemption order actually landing -- but sharpens it.",
+        "developments": "New this pass; partially answers, does not close, a pass-1 gap."
+      },
+      {
+        "slug": "us-china-super-intelligence-dialogue-incident-channel",
+        "headline": "Trump-Xi summit produces a 'Super Intelligence' Dialogue and an AI Incident Communication Channel; first session set for November",
+        "published": "2026-09-25/26",
+        "significance": 7,
+        "why": "A concrete follow-on to the pass-1 'trump-xi-summit-dinner-chip-export-gridlock' candidate, which found the summit produced ceremony without chip-policy movement -- this is the one piece of actual institutional output from the same summit: a shared vocabulary ('super intelligence') and an emergency hotline for AI incidents, modeled on Cold War precedent. Belongs in 'China's Two Economies' or could anchor its own thread on US-China AI governance coordination. Sourced from buzz.js bz-730 (Sept 26); no standalone newsroom article found yet.",
+        "developments": "New this pass; upgrades the summit story from 'gridlock only' to 'gridlock on chips, movement on incident governance.'"
+      },
+      {
+        "slug": "senate-duty-of-care-ai-bill-thune-cruz-klobuchar",
+        "headline": "Senate negotiators near a bipartisan AI 'duty of care' bill; two more sweeping rivals (a Sanders/Casar superintelligence ban, a Khanna certification regime) compete for the same floor time",
+        "published": "2026-09-12",
+        "significance": 6,
+        "why": "This is the source article behind the pass-1 gap 'whether the Thune/Cruz/Klobuchar bill is introduced the week of Sept 14' -- it was in-window for pass 1 but not captured as its own candidate. As of its own Sept 12 publication, no bill text was public yet; introduction was only 'possible as soon as' the week of Sept 14. No later article in the corpus confirms actual introduction (checked again this pass) -- the gap stays open into pass 3. Also names two rival bills (Sanders/Casar ban, Khanna certification-and-liability regime) worth tracking as the actual menu Congress is choosing from, versus the single bill pass 1's gap implied.",
+        "developments": "Newly captured as its own candidate; re-confirmed no introduction has been reported as of Sept 27."
+      },
+      {
+        "slug": "openai-third-party-safety-review-training-metr-redwood",
+        "headline": "OpenAI commits to give METR and Redwood pre-release review access; lands within days of Anthropic's own external-review move",
+        "published": "2026-09-23",
+        "significance": 6,
+        "why": "A second concrete governance gesture inside the Pacing Debate throughline, alongside Paul Christiano's OpenAI board seat -- two labs that spent the summer being told their self-policing wasn't credible now offering outside reviewers a seat before launch, not just after. The piece's own framing is skeptical: whether that seat has the power to delay a release, or just to write a report nobody reads before launch day, is 'the part neither company has said out loud yet.'",
+        "developments": "New this pass."
+      },
+      {
+        "slug": "deepmind-meta-alumni-post-transformer-funding-wave-2026",
+        "headline": "Five frontier-lab veterans (Graepel, Silver, LeCun, Socher/Tian, DeepMind's Genie team) have raised or are raising $3B+ betting the next leap isn't a bigger LLM",
+        "published": "2026-09-26",
+        "significance": 7,
+        "why": "A genuinely new throughline candidate, not a continuation of anything pass 1 tracked: five separate, well-known researchers pricing billion-dollar rounds against their own past reputations rather than against any released product, benchmark, or paper. Worth flagging to CURATE as a possible standalone feature or a counter-note inside 'The Leaderboard Doesn't Care About the Ethics Essay' -- the industry's other bet, that scaling itself is played out.",
+        "developments": "New this pass."
+      },
+      {
+        "slug": "crusoe-abandons-boom-supersonic-turbine-deal",
+        "headline": "Crusoe cancels its $1.25B turbine order from Boom Supersonic eight days after raising $3.9B, nine months after signing",
+        "published": "2026-09-26/27",
+        "significance": 6,
+        "why": "Fits the Vendor-Financed Boom connection from the power-sourcing side rather than the capital-structure side: a data-center operator raises billions and immediately un-signs a billion-dollar power deal, alongside an earlier paused Wyoming site. Reinforces the connection's thesis that the buildout's money and its physical inputs are both less settled than the headline numbers suggest.",
+        "developments": "New this pass."
+      },
+      {
+        "slug": "xai-colossus-2-nvidia-gpu-expansion-year-end",
+        "headline": "xAI says Colossus 2 could hit 1.21 million Nvidia chips by year-end, more than double what's running today -- one of three waves is explicitly hedged, two are not",
+        "published": "2026-09-27",
+        "significance": 5,
+        "why": "Another self-reported capacity claim in the same vein as Moore Threads' and other labs' utilization numbers pass 1 flagged as unverified; useful mainly for the explicit hedge Musk puts on one-third of his own timeline while leaving the other two-thirds unhedged, which is itself a tell about which numbers to trust less.",
+        "developments": "New this pass."
+      },
+      {
+        "slug": "anthropic-claude-nine-loop-physics-song-he-concurrent-result",
+        "headline": "Anthropic says Claude solved a nine-loop physics problem for ~$2,000 -- a Chinese Academy of Sciences team had already posted the identical answer eight days earlier using GPT-6 and more human direction",
+        "published": "2026-09-27",
+        "significance": 6,
+        "why": "A third instance of the exact pattern pass 1's 'ai-math-proof-credit-disputes' candidate already tracks (Claude/Fermat, OpenAI/Navier-Stokes): an AI-solved-hard-problem claim that turns out to be undercut by a competing, earlier, or less-AI-dependent result. Recommend CURATE fold this into that same compendium/sidebar rather than treat as a fourth standalone story.",
+        "developments": "New this pass; extends the existing 'ai-math-proof-credit-disputes' candidate to three instances."
+      },
+      {
+        "slug": "island-400-million-series-f-ai-agent-browser-governance",
+        "headline": "Enterprise-browser startup Island raises $400M at $6.4B to police AI agents inside the browser",
+        "published": "2026-09-26",
+        "significance": 5,
+        "why": "The market's own answer to the Verification Gap connection: investors are now pricing agent-governance-as-a-category, with Island's valuation roughly doubling in under two years on a self-reported ARR growth rate. At least three rival architectures (per the piece) bet the control point belongs somewhere other than the browser, so this is one data point in a live architecture fight, not a settled one.",
+        "developments": "New this pass."
       }
     ],
     "connections": [
@@ -860,12 +1194,14 @@
           "trump-sacks-reject-ai-slowdown-amodei-altman-musk",
           "ai-slowdown-antitrust-lawsuit-buist-v-anthropic",
           "un-security-council-ai-safety-briefing-altman-amodei",
-          "frontier-ai-standards-agency-krishnan-self-regulation"
+          "frontier-ai-standards-agency-krishnan-self-regulation",
+          "openai-third-party-safety-review-training-metr-redwood",
+          "senate-duty-of-care-ai-bill-thune-cruz-klobuchar"
         ]
       },
       {
         "name": "The Verification Gap",
-        "thesis": "Every disclosed AI-agent incident this month shares the same shape: the lab found out weeks before anyone else did, and said less than it knew.",
+        "thesis": "Every disclosed AI-agent incident this month shares the same shape: the lab found out weeks before anyone else did, and said less than it knew -- and by month's end, both the government and the market started pricing that gap as a liability, not a footnote.",
         "stories": [
           "openai-agents-dsewiki-wiki-incident",
           "openai-rogue-agents-ten-more-sites-reuters-investigation",
@@ -874,30 +1210,37 @@
           "nsa-cisa-fbi-china-ai-distillation-advisory",
           "anthropic-september-threat-report-russia-bioweapons-distillation",
           "closedquorum-ai-malware-c2",
-          "plugin4shell-ai-coding-agent-sha-pinning-bypass"
+          "plugin4shell-ai-coding-agent-sha-pinning-bypass",
+          "openai-agent-hugging-face-breach-ftc-treasury-liability",
+          "openai-training-sandbox-dns-escape-disclosure",
+          "island-400-million-series-f-ai-agent-browser-governance"
         ]
       },
       {
         "name": "Vendor-Financed Boom",
-        "thesis": "The AI buildout's money increasingly flows backward -- vendors financing customers, warrants instead of cash, backlog standing in for revenue -- a structure that only works if the demand it's betting on actually shows up.",
+        "thesis": "The AI buildout's money increasingly flows backward -- vendors financing customers, warrants instead of cash, backlog standing in for revenue -- a structure that only works if the demand it's betting on actually shows up, and even the physical power deals underneath it keep coming unsigned.",
         "stories": [
           "openai-278-billion-cash-burn-leaked-document",
           "anthropic-akamai-11-6-billion-cpu-compute-warrant",
           "nscale-3-5-billion-pre-ipo-financing-103-billion-backlog",
+          "nscale-3-36-billion-convertible-financing-closes",
           "broadcom-q3-fy2026-ai-revenue-230-billion-target",
           "microsoft-38-gigawatt-data-center-plan-2032-capacity-crunch",
-          "amd-trillion-dollar-market-cap-ai-chip-rally"
+          "amd-trillion-dollar-market-cap-ai-chip-rally",
+          "crusoe-abandons-boom-supersonic-turbine-deal",
+          "xai-colossus-2-nvidia-gpu-expansion-year-end"
         ]
       },
       {
         "name": "China's Two Economies",
-        "thesis": "China's AI sector is simultaneously breaking hardware and financing records and trading at a fraction of what it just raised, and the Trump-Xi summit resolved none of which number is real.",
+        "thesis": "China's AI sector is simultaneously breaking hardware and financing records and trading at a fraction of what it just raised, and the Trump-Xi summit produced governance choreography on incidents while resolving none of which number is real.",
         "stories": [
           "deepseek-revenue-run-rate-billion-shanghai-fundraise-ipo",
           "zai-5-billion-second-raise-stock-down-73-percent-distillation-advisory",
           "alibaba-zhenwu-v900-ai-chip-china-export-controls",
           "trump-xi-summit-dinner-chip-export-gridlock",
-          "nsa-cisa-fbi-china-ai-distillation-advisory"
+          "nsa-cisa-fbi-china-ai-distillation-advisory",
+          "us-china-super-intelligence-dialogue-incident-channel"
         ]
       },
       {
@@ -929,6 +1272,14 @@
           "grok-4-7-ships-mid-pack-intelligence-index",
           "dario-amodei-pace-the-frontier-altman-musk",
           "openai-google-anthropic-gated-cyber-ai-models-same-week"
+        ]
+      },
+      {
+        "name": "ai-math-proof-credit-disputes",
+        "thesis": "Three separate 'AI solved a hard problem' claims this month, each undercut by an outside party: a mathematician calling one result additive-nothing, another accusing a lab of using unpublished work without full credit, and now a Chinese team that quietly posted the same physics answer eight days before Anthropic's own announcement.",
+        "stories": [
+          "ai-math-proof-credit-disputes",
+          "anthropic-claude-nine-loop-physics-song-he-concurrent-result"
         ]
       }
     ],
@@ -982,7 +1333,7 @@
       },
       {
         "prediction": "p-004",
-        "evidence": "resolveBy 2026-09-30 -- resolves within days of this pass. No Agility or Unitree utilization-filing evidence found in September's article set. This is the most urgent gap for pass 2/3 to chase before CURATE grades it.",
+        "evidence": "Re-checked this pass with targeted searches for 'Agility Robotics', 'Unitree' and 'utilization' across newsroom-articles.js: still no per-unit utilization filing evidence. What exists is unrelated (AgiBot-vs-Unitree shipment-share reporting, Unitree's Shanghai IPO pricing, other companies' compute-utilization claims). resolveBy is 2026-09-30 -- three days from this pass. Recommend CURATE grade this PENDING/insufficient-evidence rather than reconstruct a verdict from adjacent data, unless pass 3 finds something concrete.",
         "leaning": "open"
       },
       {
@@ -992,20 +1343,21 @@
       },
       {
         "prediction": "p-006",
-        "evidence": "resolveBy 2026-09-15 passed before OpenAI's GPT-6 Sol/Luna price cuts (Sept 22) and Claude Opus 5.5's cheaper pricing (Sept 22) -- both landed a week after the deadline, and neither was framed publicly as a response to Chinese-model enterprise share specifically. On the letter of the deadline this leans toward 'wrong' or at least not-yet-right; CURATE should weigh whether the week-late price cuts count.",
+        "evidence": "Re-checked; no earlier on-time (pre-Sept-15) price action found beyond what pass 1 already noted. The Sept 22 price cuts (GPT-6 Sol/Luna, Opus 5.5) remain the only candidate evidence, a week late and not framed as a response to Chinese enterprise share.",
         "leaning": "wrong"
       }
     ],
     "gaps": [
-      "p-004 (Agility/Unitree per-unit utilization filings) resolves 2026-09-30, inside this cycle -- no evidence found yet. Chase specifically in pass 2/3 before CURATE grades it.",
-      "p-006 resolveBy 2026-09-15 has passed; the price cuts that might satisfy it (GPT-6 Sol/Luna, Opus 5.5) landed Sept 22, a week late and not framed as a response to Chinese competition. Confirm whether any earlier, on-time price action exists that this pass missed.",
-      "Whether the Frontier AI Standards Agency actually secures Sriram Krishnan and reaches a launch announcement -- still 'courting' as of Sept 25.",
-      "Whether Anthropic appeals the Sept 25 DC Circuit ruling upholding its DoD supply-chain-risk designation (2-1, Katsas/Rao majority, Henderson dissent) -- Anthropic said it's 'considering' further appeal, including to the Supreme Court. A parallel California ruling reportedly favors Anthropic, so the conflict is live.",
-      "Whether the Senate 'duty of care' bill (Thune/Cruz/Klobuchar) is actually introduced the week of Sept 14 as its own drafters signaled -- no confirmation found that it happened.",
-      "Whether Trump's AI-preemption executive order actually collides with California's Sept 18 kill-switch order, as the article's own framing anticipated.",
-      "DATA ACCESS GAP: functions/api/issue/_data/issue-002.json (the actual prior issue's Prediction Ledger page) is gitignored and not present in this checkout. Pending predictions above were pulled from web/data/predictions.js instead, which is the newsroom's site-wide ledger, not necessarily an exact mirror of what printed inside Issue 002's Ledger spread. CURATE should reconcile against the real issue file if working in an environment where it's present.",
-      "METHODOLOGY GAP: web/data/newsroom-articles.js carries no explicit publish-date field. September candidates above were identified by text-mining month/day mentions in each article's dek/body and cross-referencing web/data/buzz.js's explicit dates. Of 326 total articles in the store, 111 were confidently dated to September; 34 had no discoverable date at all in this pass. At least one item (amazon-mechanical-turk-shutdown-ai-training-labor) was mis-flagged as a September story by this heuristic when its actual announcement was Aug 25 -- only its Sept 30 closure date is a September event. Pass 2/3 should spot-check dates near the month boundary rather than trust the heuristic blindly.",
-      "live-articles.js and research.js show no September content at all (last dated entry is mid-July) -- either the long-form research/live desk went quiet this month or that store isn't being updated; worth flagging to CURATE as a possible gap in the magazine's own source material, not just a reporting gap."
+      "p-004 (Agility/Unitree utilization filings) resolves 2026-09-30 -- inside pass 3's window. Two passes have now found zero evidence; pass 3 should do one last check but CURATE should be ready to grade this PENDING for lack of public data rather than force a verdict.",
+      "Senate duty-of-care bill (Thune/Cruz/Klobuchar): still no confirmation it was introduced the week of Sept 14, as of Sept 27. Two competing bills (Sanders/Casar ban, Khanna certification regime) are also still short of markup or floor time. Pass 3: one more check right before CURATE grades/writes new predictions.",
+      "Frontier AI Standards Agency: Krishnan still only 'courting' as of Sept 25; no charter, no CEO announcement, no confirmation he accepted.",
+      "Anthropic's DC Circuit appeal (DoD supply-chain-risk designation, 2-1 ruling Sept 25): no update found on whether Anthropic actually appeals further, including to the Supreme Court.",
+      "Trump's AI-preemption executive order: still no article confirming it has actually landed or directly collided with any of the now-three state orders (CA Sept 18, IL Sept 22, OR Sept 23). The Illinois/Oregon piece confirms the preemption push is 'in the record' but not yet in effect.",
+      "Buist v. Anthropic (antitrust suit over the pacing pledge): still just filed (Sept 18, N.D. Cal., No. 3:26-cv-10693); no company has responded on the docket yet.",
+      "deepmind-meta-alumni-post-transformer-funding-wave-2026 is a brand-new candidate as of this pass (one data point) -- watch whether more coverage develops before CURATE decides whether it's a standalone feature, a sidebar, or folds into an existing connection.",
+      "live-articles.js and research.js re-checked this pass: still zero September content, last dated entries mid-July. Persists as a gap in the magazine's own source material, not just a reporting gap -- worth flagging to the founder separately from the issue itself.",
+      "functions/api/issue/_data/issue-002.json re-checked this pass: still absent from this checkout (only primer.json present). Predictions above are still sourced from web/data/predictions.js, not the actual printed Ledger. CURATE/BUILD need to reconcile in an environment where the real file exists.",
+      "CORRECTION to pass 1's methodology gap: newsroom-articles.js DOES carry an explicit 'publishedAt' ISO-8601 field on every entry (confirmed this pass by direct inspection and extraction). Pass 1's text-mining/date-heuristic approach was unnecessary and its 111-of-326 count should not be trusted as authoritative; a future pass or CURATE should re-derive the September article set directly from publishedAt if an exact count matters. Total article count is now 335 (9 new since pass 1's read-through, all captured as candidates above)."
     ]
   },
   "slate": {
@@ -1058,6 +1410,21 @@
       "utc": "2026-09-26T10:38:14Z",
       "phase": "gather",
       "msg": "gather pass recorded (1/3) — phase not complete yet"
+    },
+    {
+      "utc": "2026-09-27T10:55:04Z",
+      "phase": "gather",
+      "msg": "run started (pass 2 of 3 starting)"
+    },
+    {
+      "utc": "2026-09-27T11:01:19Z",
+      "phase": "gather",
+      "msg": "dossier pass 2: +12 candidates, 57 total, 10 open gap(s)"
+    },
+    {
+      "utc": "2026-09-27T11:01:19Z",
+      "phase": "gather",
+      "msg": "gather pass recorded (2/3) — phase not complete yet"
     }
   ]
 }
