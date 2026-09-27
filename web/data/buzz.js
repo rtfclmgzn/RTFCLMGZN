@@ -335,5 +335,11 @@ window.RTFC_BUZZ = [
     text:"New York City Council introduced a 10-bill AI regulation package requiring third-party validation of AI systems, mandatory 24-hour incident reporting, kill switches on all deployed agents, and $25,000 per-agent penalties for violations. The framework also establishes whistleblower bounties for employees of AI vendors reporting violations, and applies to any AI system sold to city agencies or contractors.",
     why:"A major city imposing agent-specific penalties (per-agent, not per-incident) and requiring kill switches on every deployed system is the toughest municipal AI regulation yet -- worth watching whether this becomes a template other cities follow or whether vendor lobbying prevents passage.",
     heat:59, topics:["ai regulation","new york city","policy","autonomous agents","kill switches","incident reporting","municipal governance"],
-    url:"https://byobot.ai/ai-news/ai-daily-newsstand-september-27-2026" }
+    url:"https://byobot.ai/ai-news/ai-daily-newsstand-september-27-2026" },
+{ id:"bz-737", date:"2026-09-27",
+    source:{ name:"Google", handle:"google", platform:"web", kind:"lab" },
+    text:"Google began testing checkout integration between Gemini/AI Mode and Flipkart in India, allowing select shoppers to purchase directly from Flipkart listings within the AI chat interface. The test, limited to smartphones, electronics, and mobile accessories, is targeted to expand broadly across India in October ahead of the festive shopping season.",
+    why:"Integration of checkout into an AI search/chat interface, where previously Google and Gemini only handled discovery, represents the next frontier in agentic commerce -- the question of whether AI agents can reliably convert search signals into transactions at scale.",
+    heat:38, topics:["google","gemini","flipkart","ai agents","e-commerce","shopping","india"],
+    url:"https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/" }
 ];

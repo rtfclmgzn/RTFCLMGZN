@@ -8,13 +8,13 @@
    anything past. `sort` is an approximate ISO start for ordering only.
    ============================================================ */
 window.RTFC_EVENTS = {
-  updated: "2026-09-25",
-  checkedAt: "2026-09-25T12:00:00Z",
+  updated: "2026-09-27",
+  checkedAt: "2026-09-27T19:45:00Z",
   note: "Curated by the newsroom. Dates are approximate windows — confirm exact times on each official page.",
   items: [
     { name:"OpenAI DevDay", org:"OpenAI", when:"Sept 29, 2026", sort:"2026-09-29",
       type:"Developer", place:"San Francisco + streamed", tag:"labs",
-      status:"soon", checkedAt:"2026-09-25T12:00:00Z",
+      status:"soon", checkedAt:"2026-09-27T19:45:00Z",
       url:"https://openai.com/devday/", blurb:"Sam Altman keynote at 10:00 a.m. PT — livestreamed API roadmap, new models and developer tools." },
     { name:"Web Summit", org:"Web Summit", when:"Expected Nov 2026", sort:"2026-11-03",
       type:"Conference", place:"Lisbon", tag:"industry",
