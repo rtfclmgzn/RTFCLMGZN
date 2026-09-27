@@ -365,7 +365,8 @@ the state log* — do not silently substitute your own slate.
    it to the gate in the same run.
 
 2. **Audit against the REAL reader.** This is the step that was faked once and must never be faked
-   again. Serve `web/` and open `#/read/issue-NNN` in a headless browser, stubbing
+   again. Serve `web/` and open `/read/issue-NNN` (a real path, never `#/read/issue-NNN` — Law 1) in a
+   headless browser, stubbing
    `GET /api/issue/issue-NNN` to return `{ok:true,issue:{…}}` and `GET /api/auth/me` to return a Plus
    session — `agents/magazine/audit_real.py` is that harness. **Use it.** If it is pointing at a
    previous issue's id or a scratch path, change the id and the paths; do not write a new one, and do

@@ -2,7 +2,8 @@
 
 **A human visual pass is still required before this ships.** Everything measurable has been measured
 and is clean; nothing has judged whether the pages are *beautiful*. Run
-`agents/magazine/devserver.py` (never bare `python -m http.server`), open `#/read/issue-002`, and go
+`agents/magazine/devserver.py` (never bare `python -m http.server`), open `/read/issue-002` (a real
+path, never `#/read/issue-002` — OPERATING_LAW.md Law 1), and go
 through it. Art has not been generated yet — see §4.
 
 ---

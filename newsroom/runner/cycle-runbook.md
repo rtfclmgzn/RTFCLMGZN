@@ -71,7 +71,7 @@ The owner's explicit standing instruction: this is an AI writing at AI-scale, on
 - **`apply` block, required on every synthesis and research piece** (briefs: include one when a genuine forward-looking angle exists, skip it rather than force one on a thin brief). Shape: `applyType` (one of `work`/`watch`/`matters`/`stakes`/`bottomline`/`context`/`numbers` — pick whichever actually fits, don't default to the same one every time) plus `apply: [{label, text}, ...]`, 2-4 items. This is the single highest-value thing you add that a wire story doesn't: concrete, specific, forward-looking substance — not "time will tell," but named things to watch (a specific date, filing, or decision point), named actions a reader in this space could actually take, or named unresolved questions with the specific fact that would resolve them. Read a few recent entries with a real `apply` block for the bar to clear (`grep -l '"apply":' web/data/newsroom-articles.js`) — this field exists in the schema but was going onto articles inconsistently, purely by luck of which template got copied; it is not optional anymore.
 - **Reconcile sources, don't just stack them.** When your research turns up conflicting numbers, dates, or framings across sources, say so explicitly in the body and state which you're trusting and why (primary beats secondary, on-the-record beats anonymous, more recent beats stale) — this is real analytical value a re-aggregated wire story doesn't do. Don't silently pick one and hide the disagreement.
 - **Build the visual layer.** Now a required step with its own section — see **§3b**. It replaces the old "add a chart when the numbers are comparable" bullet, which in practice produced one bar chart every dozen articles and nothing else (8 charts across 46 articles, one `stat`, and nothing more).
-- **Cross-link the site's own reference surfaces where a real one exists**, using an actual inline link, not a name-drop: a mentioned company with a dossier (`grep -oE 'key:"[a-z-]+"' web/data/companies.js` for the current list; link `#/company/<key>`), a mentioned model already on the Scoreboard (`#/scoreboard`), a jargon term already in the Dictionary (`#/dictionary`). This turns a standalone article into a connected node in the site's own knowledge base instead of an isolated post — do this only where it's genuinely natural, never force a link.
+- **Cross-link the site's own reference surfaces where a real one exists**, using an actual inline link, not a name-drop: a mentioned company with a dossier (`grep -oE 'key:"[a-z-]+"' web/data/companies.js` for the current list; link `/company/<key>` — a REAL PATH, never `#/company/<key>`; see OPERATING_LAW.md Law 1 and the 2026-08-22 living-notes entry), a mentioned model already on the Scoreboard (`/scoreboard`), a jargon term already in the Dictionary (`/dictionary`). This turns a standalone article into a connected node in the site's own knowledge base instead of an isolated post — do this only where it's genuinely natural, never force a link.
 - **Give prior developments on the same subject their context**, phrased about the event itself, never about "our coverage" of it (the self-referential-language ban applies here too — "China's separate companion-AI rules," not "the rules we covered before"). A reader landing on this one piece cold should understand how it fits the larger thread without having to have read everything that came before.
 - `publishedAt`: run `date -u +%Y-%m-%dT%H:%M:%SZ` (a real shell command) and use its exact output. Never estimate, infer from a source article's dateline, or reason about "what time it probably is" — a wrong guess silently reorders the whole homepage feed by publish time and can bury the cycle's own newest, most important story. This has happened before: two real cycles both wrote `publishedAt` values 4-5 hours ahead of their actual commit time, which buried a same-day flagship model-release story under older articles.
 - `breaking`: if the entry you copied as a template happens to have `"breaking": true` (an out-of-cycle story still holding the homepage hero slot), do NOT carry that field into your own new entry. It's reserved for `newsroom/runner/breaking-scan-runbook.md` publishes only — a regular cycle's articles should never set it.
@@ -140,7 +140,7 @@ them. **This section is canonical for the visual layer**; that table is a summar
 - **`counter`** — the strongest case against the piece's own conclusion, stated as strongly as its holders would put it. No human newsroom publishes this, because the incentive runs the other way; a publication that discloses it is machine-written has no such incentive, which is exactly why it is credible here. Use it wherever a serious reader would push back.
 - **`document`** — the filing itself with the load-bearing line marked, instead of a link. `text` must be VERBATIM excerpt the article already quotes; paraphrase inside a component that looks like a document is forgery.
 
-**Also required now:** if any open question in your piece could later be settled, put it in a `scorecard` item with a `resolver` naming the specific document or event that would settle it. Those become the Claims Ledger (`#/claims`) automatically, and the pulse scan closes them as they resolve. A `resolver` of "time will tell" is not a resolver.
+**Also required now:** if any open question in your piece could later be settled, put it in a `scorecard` item with a `resolver` naming the specific document or event that would settle it. Those become the Claims Ledger (`/claims` — a real path, never `#/claims`; Law 1) automatically, and the pulse scan closes them as they resolve. A `resolver` of "time will tell" is not a resolver.
 
 **Before you push:** `python -m newsroom.quality.component_audit` must exit clean. It checks the schema, the no-`text` invariant, per-format floors, numeric provenance, `rank` figure ids, adjacency and density across the entire archive. It catches what a diff cannot.
 
@@ -1159,6 +1159,30 @@ this order, and mark it done here.
    already cleared the full §5 gate sequence. Same two next steps as every
    entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-27T00:53:28 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Anthropic's Claude computing a
+   nine-loop N=4 super-Yang-Mills amplitude, reconciled against a Chinese
+   Academy of Sciences team's concurrent, more human-directed GPT-6-assisted
+   result published eight days earlier; Crusoe canceling a $1.25B Boom
+   Supersonic turbine order eight days after closing a $3.9B raise; xAI's
+   Colossus 2 chip-expansion timeline toward 1.21M GPUs compared against
+   OpenAI's Stargate Abilene) plus the full §3c/§4b/§4c/§4d passes were
+   already the required work; guide cadence read 1 day (a guide published
+   2026-09-26), so §3d needed no action. §3c backfill search re-ran
+   (`component_audit`-equivalent floor check) and found zero articles below
+   their format's component floor -- still empty. Both blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   This entry and the §3f entry below are, again, being committed to a
+   `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as their own
+   separate `runbook:`-prefixed commit, after the article/data commit that
+   already cleared the full §5 gate sequence. Same two next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1465,6 +1489,13 @@ wave) plus the full §3c/§4b/§4c/§4d passes were already the required work: `
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
+**Status (2026-09-27T00:53:28 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Anthropic's Claude nine-loop physics result vs. Song He's concurrent Chinese-team claim, Crusoe's
+Boom Supersonic turbine cancellation, and xAI's Colossus 2 chip-expansion timeline) plus the full
+§3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two
+next steps as every entry since 2026-08-30, still open.
+
 ### Standing rule for every FUTURE issue (effective immediately)
 
 **No issue ships without sources per spread.** Every spread carrying a factual or numeric claim carries
@@ -1501,12 +1532,12 @@ The Buzz and Scoreboard pages are live surfaces readers judge the whole site by.
 - Update `scannedAt` to now, and **`updated` to today's human-readable date** — `updated` is what renders on the page, so leaving it stale makes a fresh scan look weeks old.
 - Record the scan in `basisNote` even when nothing moved.
 
-**Company directory** (`web/data/companies.js`) — read its own header comment first; it's binding. Each entry is `{key, name, re, desc}`; the dossier page at `#/company/<key>` auto-builds from every article/buzz-post/scoreboard-row matching `re`, so adding an entry is cheap and immediately populates a real page from real coverage:
+**Company directory** (`web/data/companies.js`) — read its own header comment first; it's binding. Each entry is `{key, name, re, desc}`; the dossier page at `/company/<key>` (a real path, never `#/company/<key>` — Law 1) auto-builds from every article/buzz-post/scoreboard-row matching `re`, so adding an entry is cheap and immediately populates a real page from real coverage:
 - If this cycle's research surfaced a company that isn't in the list yet and has genuine coverage on the site (check `grep -oE 'key:"[a-z-]+"' web/data/companies.js` against what you just wrote and what's already in buzz.js/scoreboard.js), add it: a real regex matching how it's actually referred to in prose, and one crisp, factual sentence — never invent a fact to fill the description.
 - This file's own comment has said "the newsroom maintains this list" since it was created, but no cycle was ever actually told to — don't leave it as a promise nothing keeps.
 
 **RSS feed** (`web/rss.xml`) — this one is fully mechanical, no editorial judgment needed, so just do it every cycle that publishes:
-- Add an `<item>` for each article you published this cycle (title, `<link>` to `#/article/<slug>`, `<guid isPermaLink="false">rtfclmgzn-<id></guid>`, `<pubDate>` in RFC-822 form matching `publishedAt`, `<description>` = the dek).
+- Add an `<item>` for each article you published this cycle (title, `<link>` to the real path `https://rtfclmgzn.com/article/<slug>` — never `#/article/<slug>`, Law 1, OPERATING_LAW.md, `<guid isPermaLink="false">rtfclmgzn-<id></guid>`, `<pubDate>` in RFC-822 form matching `publishedAt`, `<description>` = the dek).
 - Keep the file to the ~30 most recent items (drop the oldest as you add new ones) and update `<lastBuildDate>` to now.
 - This feed sat frozen for 12 days once before (missed ~30 published stories, including the Claude Opus 5 launch) because nothing was ever told to touch it — don't let that regress.
 

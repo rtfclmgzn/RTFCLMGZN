@@ -33,7 +33,7 @@ For each event whose window plausibly includes today (check `sort`), do ONE WebF
 NEVER set `live` from the calendar alone — only from the page actually saying so. Update `updated` to today. Skip events whose window is clearly months away; do not fetch them.
 
 ## 2b. Close open claims (the Claims Ledger) — the highest-value thing this scan does
-Every article names what it does not yet know and the specific document or event that would settle it. Those are collected automatically at `#/claims`. A human newsroom never goes back to close them; you do.
+Every article names what it does not yet know and the specific document or event that would settle it. Those are collected automatically at `/claims` (a real path, never `#/claims` — OPERATING_LAW.md Law 1). A human newsroom never goes back to close them; you do.
 
 1. Open `web/data/resolutions.js` and read its header — the key format and the append-only rule are binding.
 2. Get the current open claims. They are DERIVED, not stored, so read them out of the articles. **The ledger has TWO kinds of claim and this step must list both:**

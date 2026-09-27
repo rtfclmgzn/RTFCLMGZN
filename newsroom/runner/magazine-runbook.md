@@ -89,7 +89,8 @@ that was already in the repo. Do not repeat them.
 1. `uv run --python 3.12 python agents/magazine/qa_scan.py` — must exit 0. Never weaken a check to
    make it pass; if a threshold is genuinely wrong, prove it with a measurement and change it
    deliberately, in its own commit, with the reason written down.
-2. Serve `web/` and open `#/read/issue-<NNN>` in a headless browser, stubbing
+2. Serve `web/` and open `/read/issue-<NNN>` (a real path, never `#/read/issue-<NNN>` — OPERATING_LAW.md
+   Law 1) in a headless browser, stubbing
    `GET /api/issue/issue-<NNN>` to return `{ok:true,issue:{…}}`. Measure every `.mpage` for fill
    (<90% = void) and cutoff (element bottom past page bottom) at **1320×780, 860×1080, and
    1440×900**. Iterate until all three are clean.

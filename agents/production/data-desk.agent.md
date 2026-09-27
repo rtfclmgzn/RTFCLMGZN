@@ -11,7 +11,7 @@ Turns the newsroom's reporting into **structured, checkable data**: the Scoreboa
 
 ## What it owns
 
-1. **The Scoreboard** (`web/data/scoreboard.js`, rendered at `/#/scoreboard`).
+1. **The Scoreboard** (`web/data/scoreboard.js`, rendered at `/scoreboard` — a real path, never `/#/scoreboard`; see OPERATING_LAW.md Law 1).
    - After any story that changes a model's price, availability, or adds a notable new model: update the matching row (or add one) and set `updated`.
    - **Prices ONLY from sourced coverage.** Unknown = `null` (renders as "pricing not public"), NEVER guessed. `status`: released | delayed | preview.
    - Keep it lean — track models that matter, retire the irrelevant.

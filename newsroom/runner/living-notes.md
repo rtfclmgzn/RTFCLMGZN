@@ -1,5 +1,30 @@
 # Living Notes — operational lessons for future runs
 
+- **2026-09-27T00:53:28Z** (newsroom cycle): while drafting this cycle's articles, caught myself
+  about to write `[Anthropic](#/company/anthropic)` and `[xAI](#/company/xai)` as body-prose
+  cross-links -- exactly the `#/` hash-route pattern Law 1 bans, and exactly the mistake the
+  2026-08-22 living-notes entry below already diagnosed as a live self-contradiction in
+  `cycle-runbook.md` §3a's own worked example. Caught it myself before shipping (checked
+  `mdLinks()` in `app.js` directly, confirmed `/company/<key>`, `/scoreboard`, `/dictionary` are
+  the real paths) and used real paths in both articles -- but the underlying bug the 2026-08-22
+  entry flagged had sat uncorrected in the instruction text itself for over a month, meaning
+  every cycle since has had to independently notice and route around it rather than the source
+  simply being fixed. Fixed it at the root this cycle instead of routing around it again:
+  corrected `cycle-runbook.md` §3a's cross-link example (line ~74) and its §4b company-directory
+  description (line ~1535) to say `/company/<key>` / `/scoreboard` / `/dictionary`, corrected the
+  same `/#/scoreboard` pattern in `agents/production/data-desk.agent.md`, and found two more live
+  instances of the same underlying bug while sweeping for it (Law 7): `cycle-runbook.md` §4b's RSS
+  instruction itself said `<link>` should point at `#/article/<slug>`, and
+  `agents/email/daily-digest.agent.md`'s flagship-email template spec said
+  `https://rtfclmgzn.com/#/article/<slug>` -- both corrected to real paths. Left the historical
+  incident write-ups in `newsroom/reference-desk-log.md`, `FAILURE_REGISTER.md`, and this file's
+  own older entries untouched (they're accurate records of past incidents, not live instructions
+  telling an agent what to emit). `check_no_hash_links` still won't catch a bare `#/...` sitting in
+  an agent-spec `.md` file's own prose example -- it only scans data files and rendered `href=`
+  attributes -- so an instruction file can keep silently teaching the bug even while every guarded
+  data file is clean. Worth a dedicated pass to grep every `agents/**/*.md` and
+  `newsroom/**/*.md` for `#/` once, rather than finding one instance per cycle indefinitely.
+
 - **2026-08-21** (newsroom cycle, evening): `newsroom/quality/render_smoke.py`'s HOSTILE-minimal-record check fails on this runner — confirmed it fails identically on a clean, unmodified checkout of `main` (stashed all of this cycle's changes and re-ran: same two failures, same "still empty after 6200ms" / "did not render its own headline" on `152 articles checked` before any of this cycle's work landed). Every real route (33) and every real article (152, then 155 after this cycle's 3 new ones) passed both times — only the synthetic hostile fixture at `/article/guard-hostile-record?guard=hostile` fails. Not caused by this cycle and not fixed this cycle (out of scope — this is a renderer/environment question, not a content one); flagging because §0b instructs running render_smoke and reporting cleanly, and a silent pass/fail without this note would misattribute the failure to whichever cycle happens to run it next. Possible causes worth a dedicated pass: a real unguarded-field regression in the article renderer that the site's own real articles all happen to avoid triggering, or a Playwright/headless-Chromium timing issue specific to sandboxed CI-style runners (6200ms budget too tight when the local static server is competing for the same CPU as the browser). `python3 -m playwright install chromium --with-deps` was needed first — Playwright itself was pip-installed but had no browser binary on this runner.
 - **2026-08-21** (reference-desk cycle): `newsroom/runner/verify_covers.py`'s `check` command (the §4d cover-health sweep) only scans `web/data/newsroom-articles.js` — its `STORES` list (line ~60) does not include `web/data/guides.js`. A coverless or dangling-image guide would currently pass the cover gate with zero warnings; the gate's `checked=N` count has stayed at 136 across this cycle regardless of whether guides.js changed, which is the tell. Verified g13's own cover manually (rendered it, confirmed the file exists and is referenced correctly) since the tool wouldn't have caught a mistake either way. Not fixed this cycle — out of scope for a single-guide cycle — but a future pass should add guides.js to that tool's store list, the same gap class as the `check_no_hash_links` / `sources[].url` blind spot already on record below.
 - **2026-08-21** (reference-desk cycle): `web/data/scoreboard.js`'s own `sources` array carries two `"url":"#/article/..."` hash links (the Sol/Terra/Luna launch and Chinese-price-war rows) — a third file with the same blind spot already flagged for `newsroom-articles.js`'s `citation_urls` and `guides.js`'s `sources[].url` in the 2026-08-19 entry below: `check_no_hash_links` only matches `href="#/...` and full-URL fragment patterns, never a bare `#/...` sitting in a plain data field. Inert today (nothing renders scoreboard.js's `sources` as a literal link on the page, same reasoning as the earlier entry), not fixed this cycle since it's the same pre-existing, already-logged pattern rather than something this cycle introduced — but worth folding into whichever future pass finally sweeps all three files at once instead of finding them one at a time.

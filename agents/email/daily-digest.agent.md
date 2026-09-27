@@ -21,7 +21,7 @@ The email list is the publication's single most valuable asset (Revenue Blueprin
 2. Pick the **flagship** = the day's `top:true` article (or, if none, the day's longest synthesis). Pick **2–5 supporting** = the rest of the day's articles, newest first. Pick **3–5 Buzz** = highest-`heat` cards from today.
 3. Fill `daily-digest.template.html`:
    - `{{DATE_LONG}}`, `{{PREHEADER}}` (= flagship dek, truncated ~90 chars), `{{INTRO_LINE}}` (one templated editor's line — a fixed rotation, NOT LLM-written, e.g. "Everything that mattered in AI today, in five minutes.").
-   - `{{#FLAGSHIP}}`: image, section, title, dek, url (`https://rtfclmgzn.com/#/article/<slug>`), byline (persona name), readmin (derived).
+   - `{{#FLAGSHIP}}`: image, section, title, dek, url (`https://rtfclmgzn.com/article/<slug>` — a real path, never `#/article/<slug>`; OPERATING_LAW.md Law 1), byline (persona name), readmin (derived).
    - `{{#STORIES}}`: repeat per supporting article.
    - `{{#BUZZ}}`: repeat per selected card (source name, text stripped of markdown, url).
    - `{{UNSUB_URL}}`: the provider's per-recipient unsubscribe token.

@@ -131,7 +131,8 @@ All `<script>`/`<link>` asset tags in `index.html` carry `?b=N`. **Bump N on eve
 
 ## 6. The audit (mandatory before showing the founder)
 
-**Run it against the REAL reader, not a mock-up.** Serve `web/` and open `#/read/<issue>`; for a Plus
+**Run it against the REAL reader, not a mock-up.** Serve `web/` and open `/read/<issue>` (a real path,
+never `#/read/<issue>` — OPERATING_LAW.md Law 1); for a Plus
 issue, stub `GET /api/issue/<id>` to return `{ok:true,issue:{...}}` so the pages actually load. A
 hand-rolled preview renderer measures nothing — it has different CSS and will report a clean page that
 the site paints broken. If a headless browser is available, drive that; a script that renders the issue
@@ -144,7 +145,7 @@ comparison is what separates "my page is too long" from "the CSS is broken", and
 flex bug below was found instead of being papered over by cutting good reporting.
 
 
-Run in the browser on `#/read/<issue>` after a cache-busted reload:
+Run in the browser on `/read/<issue>` after a cache-busted reload:
 ```js
 [...document.querySelectorAll('.mpage')].map((p,i)=>{
   const overflow=p.scrollHeight>p.clientHeight+4;           // Law 2
