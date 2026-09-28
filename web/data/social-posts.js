@@ -27525,5 +27525,185 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
-  }
+  },
+{
+  "article_id": "newsroom-instinct-10-billion-series-c-privacy-terms-reality-check",
+  "ts": "2026-09-28T21:41:14Z",
+  "export": {
+    "article_id": "newsroom-instinct-10-billion-series-c-privacy-terms-reality-check",
+    "url": "https://rtfclmgzn.com/article/instinct-10-billion-series-c-privacy-terms-reality-check",
+    "headline": "Instinct's AI assistant is worth $10 billion now, four times last month's price -- its own rewritten privacy terms show what actually changed",
+    "hook": "Instinct's personal AI assistant just quadrupled to a $10 billion valuation in 30 days -- while its own rewritten privacy terms still let it train on your data by default.",
+    "key_facts": [
+      "Sequoia, Benchmark and Coatue priced Instinct at $10 billion on Sept. 28, up from $2.5 billion a month earlier.",
+      "Instinct's Aug. 26 rewritten terms drop the 'perpetual and irrevocable' data license that drew criticism.",
+      "Users can now opt out of AI training -- except for data 'flagged for safety review,' which trains regardless."
+    ],
+    "tone": "arithmetic-skeptic, numbers-first",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/instinct-10-billion-series-c-privacy-terms-reality-check.jpg",
+    "disclaimer": "not-financial-advice"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Instinct's AI assistant just went from a $2.5B to a $10B valuation in 30 days. Its own rewritten privacy terms show what actually changed -- and what didn't.",
+      "reply_copy": "What the fine print still allows:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AIagents",
+        "#Instinct"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-29T02:41:14Z",
+      "copy": "Instinct's 'fixed' terms of service still train on your data by default. The opt-out has one exception: anything flagged for 'safety review' gets used regardless.",
+      "reply_copy": "The reconciliation, with receipts:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Privacy",
+        "#AIagents"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Instinct's personal AI assistant is worth $10 billion now.\n\nFour times what it was worth 30 days ago.\n\nThe catch: its own rewritten privacy terms still let it train on your data by default -- with one carve-out that survives even opting out.\n\nWhat changed, what didn't -- link in bio.",
+      "hashtags": [
+        "#Instinct",
+        "#AIagents",
+        "#StartupFunding",
+        "#Privacy",
+        "#TechNews",
+        "#VentureCapital"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Sequoia, Benchmark and Coatue priced personal-AI-assistant startup Instinct at $10 billion on Sept. 28 -- four times its price just 30 days earlier. The August round that priced it at $2.5 billion came with public scrutiny over data collection; Instinct's terms of service, rewritten Aug. 26, drop the 'perpetual and irrevocable' license language that drew criticism, but still train on user data by default, with a safety-review carve-out that survives opting out.",
+      "hashtags": [
+        "#Instinct",
+        "#AIagents"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "30 days, 4x valuation, and a rewritten privacy policy that fixes some of what got criticized -- not all of it. Instinct is now worth $10B with the same open question: what happens to everything it can already see on your screen.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Instinct's AI assistant: $2.5B a month ago, $10B now. Its rewritten terms drop the 'perpetual and irrevocable' license -- but still train on your data by default, safety-review carve-out included.",
+      "hashtags": [
+        "#AIagents",
+        "#Privacy",
+        "#Startups"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-meta-enterprise-platform-anthropic-marketplace-microsoft-workiq",
+  "ts": "2026-09-28T21:41:14Z",
+  "export": {
+    "article_id": "newsroom-meta-enterprise-platform-anthropic-marketplace-microsoft-workiq",
+    "url": "https://rtfclmgzn.com/article/meta-enterprise-platform-anthropic-marketplace-microsoft-workiq",
+    "headline": "Meta built a whole new business to sell Muse to companies -- the same week Anthropic and Microsoft bet on two different answers to who gets paid",
+    "hook": "Meta, Anthropic and Microsoft each launched a different theory this month of how AI agents actually make money for businesses -- and none of the three has published what it charges.",
+    "key_facts": [
+      "Meta Enterprise Platform launched Sept. 28, run by ex-MongoDB CEO CJ Desai, reporting to Zuckerberg.",
+      "Anthropic's Claude Marketplace opened Sept. 23 with 2,000-plus outside connectors and products.",
+      "Microsoft's Work IQ -- a data context layer, not a storefront -- reaches general preview Sept. 30."
+    ],
+    "tone": "evaluation-first, austere",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "primary_image": "assets/img/newsroom/meta-enterprise-platform-anthropic-marketplace-microsoft-workiq.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Meta just built a whole new business to sell its AI agent to companies. Anthropic did the rail-renting version 5 days earlier. Microsoft skipped the storefront entirely. Three bets, zero published prices.",
+      "reply_copy": "The three-way comparison:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AIagents",
+        "#Meta"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-09-29T02:41:14Z",
+      "copy": "Anthropic said in March it wasn't taking a cut on its marketplace. That was a 3-partner pilot. Nobody's confirmed the policy still holds now that it's 2,000+ partners.",
+      "reply_copy": "The commission question, reconciled:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Anthropic",
+        "#AIagents"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Three companies. Three different bets on the same question: once an AI agent can do the work, who gets paid for it?\n\nMeta built a whole new business unit to sell its own agent directly.\n\nAnthropic opened a marketplace and rents the rails to outside partners.\n\nMicrosoft skipped the storefront and sells the data context agents actually need.\n\nNone of the three has published what it charges. Full comparison -- link in bio.",
+      "hashtags": [
+        "#AIagents",
+        "#Meta",
+        "#Anthropic",
+        "#Microsoft",
+        "#EnterpriseAI",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Meta announced Meta Enterprise Platform on Sept. 28, spinning its Muse agent technology into a standalone business for companies, run by former MongoDB CEO CJ Desai reporting directly to Mark Zuckerberg. It lands five days after Anthropic's Claude Marketplace opened with over 2,000 outside connectors and products, and as Microsoft's Work IQ -- a context layer grounding agents in a company's own data rather than a storefront -- moves toward a Sept. 30 general preview. None of the three companies has published pricing or a commission structure.",
+      "hashtags": [
+        "#AIagents",
+        "#EnterpriseAI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "The enterprise-AI-agent land grab has three different shapes now: Meta selling its own agent directly, Anthropic renting the rails to partners, Microsoft selling the data context under all of it. Interesting that none of them will say what it costs yet.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Meta Enterprise Platform (Sept 28) vs. Claude Marketplace (Sept 23) vs. Microsoft Work IQ (preview Sept 30): three different theories of how AI agents get sold to businesses, none with published pricing.",
+      "hashtags": [
+        "#AIagents",
+        "#EnterpriseAI",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];

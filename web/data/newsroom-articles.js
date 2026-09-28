@@ -83300,6 +83300,568 @@ window.RTFC_NEWSROOM_ARTICLES = [{
  },
  "image": "assets/img/newsroom/rabbit-os3-agentic-operating-system-launch.jpg",
  "publishedAt": "2026-09-28T18:06:44Z"
+},
+{
+ "slug": "instinct-10-billion-series-c-privacy-terms-reality-check",
+ "id": "newsroom-instinct-10-billion-series-c-privacy-terms-reality-check",
+ "title": "Instinct's AI assistant is worth $10 billion now, four times last month's price -- its own rewritten privacy terms show what actually changed",
+ "dek": "Sequoia, Benchmark and Coatue priced the four-month-old personal-agent startup at $10 billion on Sept. 28, a month after a $2.5 billion round drew scrutiny over data collection. The company's own terms of service, rewritten Aug. 26, drop the 'perpetual and irrevocable' license language that drew criticism -- but still train on user data by default, with a safety-review carve-out that survives opting out.",
+ "persona": "kian-farzan",
+ "section": "Markets",
+ "format": "synthesis",
+ "disclaimer": "not-financial-advice",
+ "applyType": "watch",
+ "apply": [
+  {
+   "label": "Watch whether the opt-out actually holds",
+   "text": "Instinct's opt-out lives at app.instinct.com/settings, but the company reserves the right to use data 'flagged for safety review' regardless of that setting. How narrowly that carve-out gets applied isn't verifiable from outside the company."
+  },
+  {
+   "label": "Watch for a disclosed revenue or retention number",
+   "text": "Neither the $2.5B nor the $10B round came with a published user count, revenue figure, or retention rate. The first funding announcement that includes one will be the first real test of the valuation."
+  },
+  {
+   "label": "Watch adoption of the 'Vault' feature",
+   "text": "Instinct says material placed in Vault is never used for training, unlike the rest of the product by default. Whether users actually route sensitive material there is the practical test of whether the fix matters."
+  },
+  {
+   "label": "Watch whether other consumer agents copy this exact template",
+   "text": "Opt-out-plus-safety-carve-out is now Instinct's answer to a privacy backlash. If rival personal-agent startups adopt the same structure rather than a cleaner one, it becomes the industry default rather than a one-company fix."
+  }
+ ],
+ "sources": [
+  {
+   "label": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+   "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+   "outlet": "TechCrunch",
+   "kind": "reporting"
+  },
+  {
+   "label": "Instinct Raises $1 Billion in Series C Funding from Sequoia, Benchmark and Coatue at $10 Billion Valuation",
+   "url": "https://finance.yahoo.com/technology/ai/articles/instinct-raises-1-billion-series-120300548.html",
+   "outlet": "Yahoo Finance / Business Wire",
+   "kind": "primary_company"
+  },
+  {
+   "label": "Instinct Terms of Service (revised Aug. 26, 2026)",
+   "url": "https://instinct.com/terms",
+   "outlet": "Instinct",
+   "kind": "primary"
+  },
+  {
+   "label": "Instinct Privacy Policy (revised Aug. 26, 2026)",
+   "url": "https://instinct.com/privacy-policy",
+   "outlet": "Instinct",
+   "kind": "primary"
+  },
+  {
+   "label": "Instinct's powerful AI assistant is raising privacy and security concerns",
+   "url": "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/",
+   "outlet": "TechCrunch",
+   "kind": "reporting"
+  },
+  {
+   "label": "Instinct Terms 2026: Gmail Exempt, Screen Data Trained",
+   "url": "https://ecorpit.com/instinct-ai-assistant-workspace-limited-use-training-split-2026/",
+   "outlet": "ecorpit.com",
+   "kind": "analysis"
+  },
+  {
+   "label": "Instinct's AI Assistant Can Book the Table — and Keep the Inbox. That's the Privacy Problem.",
+   "url": "https://captaincompliance.com/news/instincts-ai-assistant-can-book-the-table-and-keep-the-inbox-thats-the-privacy-problem/",
+   "outlet": "Captain Compliance",
+   "kind": "analysis"
+  }
+ ],
+ "tldr": [
+  "Instinct raised $1 billion at a $10 billion valuation on Sept. 28 -- four times its price a month earlier.",
+  "Its Aug. 26 rewritten terms of service remove the 'perpetual and irrevocable' data license that drew criticism.",
+  "Users can now opt out of AI training in settings, but data 'flagged for safety review' is used regardless.",
+  "Neither funding round came with a disclosed user count, revenue figure, or retention number.",
+  "Caveat: the opt-out's real scope depends on how broadly Instinct defines a safety-review flag, which it hasn't published."
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "%%$10B|Instinct's valuation as of Sept. 28 -- four times what it was a month earlier%% Sequoia Capital, Benchmark and Coatue closed a $1 billion Series C in the personal-AI-assistant startup on Sunday, pricing the company at four times its worth just thirty days ago. The startup, formally registered as Spear Street Technology in April, has raised roughly **$1.35 billion in under six months** without disclosing a user count, a revenue figure, or a retention number at any stage. The number the market is pricing is the shape of an opportunity, not a measured result.",
+   "citation_urls": [
+    "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Sunday's round came from ++Noah Shinn++, a former Sierra research scientist who founded the company and put its pitch plainly in the funding announcement: the product is a service reachable only by text or phone call, with no app to open, that plans trips, cancels subscriptions, books tables and orders groceries by operating a phone and a computer the way a person would. It still runs invite-only.",
+   "citation_urls": [
+    "https://finance.yahoo.com/technology/ai/articles/instinct-raises-1-billion-series-120300548.html"
+   ]
+  },
+  {
+   "type": "quote",
+   "text": "“We're building Instinct to be the best personal agent that can handle the deeply personal nuances of everyday life.” — Noah Shinn, Instinct founder, Sept. 28, 2026",
+   "citation_urls": [
+    "https://finance.yahoo.com/technology/ai/articles/instinct-raises-1-billion-series-120300548.html"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The product itself kept moving alongside the money. Recent additions include Instinct Concierge, a white-glove tier for complex requests like restaurant reservations or dental-appointment changes, and a 'trusted person network' that lets separate users' assistants coordinate directly -- scheduling around each other's calendars without either person relaying details by hand. None of that functionality has been independently tested for the same phishing and data-retention issues raised about the original product, and Instinct hasn't said whether the underlying access model changed along with the terms of service.",
+   "citation_urls": [
+    "https://finance.yahoo.com/technology/ai/articles/instinct-raises-1-billion-series-120300548.html"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The pace is the story now as much as the product. A month earlier, [Instinct](/company/instinct)'s $250 million Series B priced the company at $2.5 billion -- itself five times its Series A price three weeks before that -- while named early users were publicly documenting a phishing hole, an email the assistant sent without approval, and inbox data that persisted after they'd disconnected the service. Neither price came with ==a published user, revenue, or retention figure==.",
+   "citation_urls": [
+    "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/"
+   ]
+  },
+  {
+   "type": "ledger",
+   "ledger": {
+    "title": "What each Instinct valuation actually covers",
+    "items": [
+     {
+      "value": "$2.5B",
+      "unit": "Aug. 2026 · Series B",
+      "label": "Index Ventures / Benchmark, $250M raised",
+      "includes": "A fivefold markup on a three-week-old Series A price",
+      "excludes": "Any disclosed user count, revenue, or retention figure"
+     },
+     {
+      "value": "$10B",
+      "unit": "Sept. 28 2026 · Series C",
+      "label": "Sequoia / Benchmark / Coatue, $1B raised",
+      "includes": "A fourfold markup on the Series B price, 30 days later",
+      "excludes": "Still no disclosed user count, revenue, or retention figure",
+      "note": "Total raised across all rounds: roughly $1.35B since the company's April registration."
+     }
+    ],
+    "source": "TechCrunch, Aug. 24 and Sept. 28, 2026"
+   }
+  },
+  {
+   "type": "p",
+   "text": "The scrutiny that came with the August round centered on what Instinct's assistant can see and keep: email, messages, screen contents, audio, location, and -- because the assistant operates the phone and computer directly -- keystrokes and passwords for connected third-party accounts. TechCrunch reported at the time that the original terms of service granted the company a **'perpetual and irrevocable' license** to that material, sub-licensable and transferable, with no stated path to withdraw it once the license attached.",
+   "citation_urls": [
+    "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Instinct's current terms of service, last revised Aug. 26, __no longer contain that language.__ The document now describes users' rights, not the company's: a \"personal, non-assignable, non-sublicensable, non-transferrable, and non-exclusive right and license,\" with the company stating it \"does not claim any ownership\" in user materials. The company may still use that material to \"develop, provide, maintain and improve the Services ... including training AI models,\" and users can now opt out at a dedicated settings page -- with one exception: **material \"flagged for safety review\" is used for training regardless of the opt-out setting.** A separate 'Vault' feature is the one place Instinct says training never applies.",
+   "citation_urls": [
+    "https://instinct.com/terms",
+    "https://instinct.com/privacy-policy"
+   ]
+  },
+  {
+   "type": "sourcecheck",
+   "sourcecheck": {
+    "items": [
+     {
+      "question": "Does Instinct's terms of service still grant a perpetual, irrevocable license over user data?",
+      "claims": [
+       {
+        "who": "Instinct's own Terms of Service, revised Aug. 26",
+        "kind": "primary",
+        "says": "No -- the license is described as personal, non-sublicensable and non-exclusive; 'perpetual' and 'irrevocable' do not appear.",
+        "url": "https://instinct.com/terms",
+        "trusted": true
+       },
+       {
+        "who": "Outside analysis citing an Aug. 20 terms draft",
+        "kind": "analysis",
+        "says": "Yes -- quotes a 'perpetual and irrevocable' license directly from the document it reviewed.",
+        "url": "https://ecorpit.com/instinct-ai-assistant-workspace-limited-use-training-split-2026/"
+       }
+      ],
+      "ruling": "Using Instinct's own live document. The Aug. 20 draft the outside analysis quotes predates the company's Aug. 26 rewrite by six days; the current terms page is the primary, current record of what users are actually agreeing to now."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "What the rewrite doesn't resolve is the boundary the earlier reporting flagged hardest: __the assistant watches the screen directly__, and Instinct's documentation gives no revocation path for material already captured that way. Disconnecting a linked account, as one early user found when cutting off Google access, did not retroactively delete inbox summaries the assistant had already generated and stored. The one hard exemption in the current privacy policy is data arriving through Google Workspace's own APIs -- a carve-out that exists because Google's developer terms require it as a condition of the integration, not because Instinct volunteered it.",
+   "citation_urls": [
+    "https://captaincompliance.com/news/instincts-ai-assistant-can-book-the-table-and-keep-the-inbox-thats-the-privacy-problem/",
+    "https://instinct.com/privacy-policy"
+   ]
+  },
+  {
+   "type": "timeline",
+   "timeline": {
+    "items": [
+     {
+      "when": "Apr 2026",
+      "what": "Spear Street Technology registered by founder Noah Shinn, a former Sierra research scientist."
+     },
+     {
+      "when": "Aug 2026",
+      "what": "Series A closes; a Series B follows roughly three weeks later."
+     },
+     {
+      "when": "Aug 20-24 2026",
+      "what": "Original terms of service draw public criticism over a 'perpetual and irrevocable' data license; early users report a phishing hole and post-disconnect data retention.",
+      "source": "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/"
+     },
+     {
+      "when": "Aug 26 2026",
+      "what": "Terms of service and privacy policy rewritten; a training opt-out and a 'Vault' feature are added.",
+      "hi": true,
+      "source": "https://instinct.com/terms"
+     },
+     {
+      "when": "Aug 29 2026",
+      "what": "$250M Series B prices the company at $2.5 billion."
+     },
+     {
+      "when": "Sep 28 2026",
+      "what": "$1B Series C prices the company at $10 billion, led by Sequoia, Benchmark and Coatue.",
+      "hi": true,
+      "source": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "The competitive backdrop raises the stakes on that pricing. Meta's Muse assistant, chasing the same 'agent that runs your life' niche, already claims tens of millions of downloads backed by a company that doesn't need a Series C to survive a slow quarter -- a rival Instinct cannot outspend, only try to out-focus. What has to be true for a $10 billion price to make sense with no revenue disclosed is that investors are pricing the **category**, not this company's traction inside it: a bet that an always-on agent people trust with their inbox and calendar becomes **as durable a habit as search or messaging once was**. {{note: The same bet is why Meta, OpenAI and Google are all racing to ship their own version of the same idea -- Instinct's edge, for now, is that it has no other product competing for the same engineering time.}}",
+   "citation_urls": [
+    "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "==30 days from a $2.5 billion price to $10 billion is not a pace that leaves room for a slower, metric-by-metric case to have been made in between.== Whether that's rational pricing of where personal agents are headed, or another marking of a category still running mostly on narrative, is the open question the next round -- whenever it comes -- will answer either way."
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "name": "Research",
+    "agent": "claude-runner",
+    "note": "Seven independent threads: TechCrunch's Sept. 28 funding report and its Aug. 24 privacy-and-security report (both independent reporting), the Business Wire funding release syndicated on Yahoo Finance (primary company statement), Instinct's own live Terms of Service and Privacy Policy (primary, both dated Aug. 26), and two outside analyses (ecorpit.com, Captain Compliance) of the terms language. Cross-checked the founder quote against the Yahoo/Business Wire mirror before treating it as verbatim, given the compliance rulebook's quote-verification trigger."
+   },
+   {
+    "name": "Verification",
+    "agent": "claude-runner",
+    "note": "Found a genuine dated conflict: an outside analysis citing an Aug. 20 terms draft still shows 'perpetual and irrevocable' license language, while Instinct's own live terms page (dated Aug. 26) does not. Resolved by treating the company's current, live document as authoritative and noting the six-day gap explicitly in a sourcecheck component rather than silently picking one account. No mandatory-scrutiny trigger for accusatory claims fires -- the privacy criticism restates already-public reporting and Instinct's own current documents, not a newsroom-originated accusation."
+   },
+   {
+    "name": "Loop 1 - critique and revise",
+    "agent": "claude-runner",
+    "note": "Critique found the draft implied the opt-out has no exceptions; revised to state the safety-review carve-out explicitly in both the prose and the tldr's caveat bullet, since it's the load-bearing limitation on the fix. Self-referential-language check clean throughout."
+   },
+   {
+    "name": "Loop 2 - component provenance check",
+    "agent": "claude-runner",
+    "note": "Every ledger, timeline and sourcecheck value traces to a cited source; the $1.35B total is stated arithmetic ($350M prior + $1B new) with the basis given in the ledger's note field. No top-level text field on any component."
+   },
+   {
+    "name": "Gate",
+    "agent": "claude-runner",
+    "note": "Routed through the financial/valuation mandatory-scrutiny trigger given the compliance rulebook; disclaimer set to not-financial-advice. No claim states investment merit -- valuation figures are reported as what investors paid, not as a recommendation. Approved for publication."
+   }
+  ],
+  "gate": {
+   "decision": "Approved for publication",
+   "note": "not-financial-advice disclaimer applied per the compliance rulebook's Markets/valuation trigger; no claim reads as investment advice."
+  },
+  "run": "autonomous Claude-runner cycle · 2026-09-28T21:41:14Z"
+ },
+ "image": "assets/img/newsroom/instinct-10-billion-series-c-privacy-terms-reality-check.jpg",
+ "publishedAt": "2026-09-28T21:41:14Z"
+},
+{
+ "slug": "meta-enterprise-platform-anthropic-marketplace-microsoft-workiq",
+ "id": "newsroom-meta-enterprise-platform-anthropic-marketplace-microsoft-workiq",
+ "title": "Meta built a whole new business to sell Muse to companies -- the same week Anthropic and Microsoft bet on two different answers to who gets paid",
+ "dek": "Meta Enterprise Platform launched Sept. 28 under a chief reporting directly to Zuckerberg, bundling Muse's consumer agent technology into a direct sales pitch to businesses. It lands five days after Anthropic opened Claude Marketplace to more than 2,000 outside integrations, and as Microsoft's Work IQ -- a context layer, not a storefront -- moves toward a Sept. 30 general preview. None of the three has published what it actually charges.",
+ "persona": "luka-petrovic",
+ "section": "Frontier",
+ "format": "synthesis",
+ "disclaimer": "none",
+ "applyType": "watch",
+ "apply": [
+  {
+   "label": "Watch for Meta Enterprise Platform's actual price sheet",
+   "text": "No terms were disclosed at launch. The first published price sheet will show whether Meta is competing on cost or purely on the reach it already has."
+  },
+  {
+   "label": "Watch whether Anthropic confirms its commission policy at the new scale",
+   "text": "Anthropic was reported to be forgoing a revenue cut on a three-partner pilot in March. Whether that holds for the 2,000-plus-integration September relaunch hasn't been confirmed by the company."
+  },
+  {
+   "label": "Watch Microsoft's Sept. 30 general preview",
+   "text": "Work IQ moves from limited rollout to general preview that date -- the first point most Microsoft 365 customers can actually test whether the context layer changes agent usefulness."
+  },
+  {
+   "label": "Watch which model a rival copies next",
+   "text": "OpenAI's own App Directory predates all three, launched in December. Whether OpenAI updates its approach in response is the next concrete signal of which of these three bets other labs think is winning."
+  }
+ ],
+ "sources": [
+  {
+   "label": "Launching Meta Enterprise Platform",
+   "url": "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/",
+   "outlet": "Meta",
+   "kind": "primary"
+  },
+  {
+   "label": "Meta Enterprise Platform to bring Muse AI tools to businesses",
+   "url": "https://uk.finance.yahoo.com/news/meta-enterprise-platform-bring-muse-153600195.html",
+   "outlet": "Yahoo Finance UK",
+   "kind": "reporting"
+  },
+  {
+   "label": "Anthropic turns Claude into an AI marketplace with 2,000+ plugins and connectors",
+   "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/",
+   "outlet": "BleepingComputer",
+   "kind": "reporting"
+  },
+  {
+   "label": "Anthropic launches Claude Marketplace, giving enterprises access to Claude-powered tools from Replit, GitLab, Harvey and more",
+   "url": "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude",
+   "outlet": "VentureBeat",
+   "kind": "reporting"
+  },
+  {
+   "label": "Anthropic launches marketplace for Claude-powered software",
+   "url": "https://thenextweb.com/news/anthropic-marketplace-claude-enterprise-software",
+   "outlet": "The Next Web",
+   "kind": "reporting"
+  },
+  {
+   "label": "Work IQ: Business and workplace intelligence in the flow of work",
+   "url": "https://www.microsoft.com/en-us/dynamics-365/blog/it-professional/2026/09/25/work-iq-business-and-workplace-intelligence-in-the-flow-of-work/",
+   "outlet": "Microsoft Dynamics 365 Blog",
+   "kind": "primary"
+  },
+  {
+   "label": "Meta Prices Muse Code 21x Cheaper for Developers Who Share Data",
+   "url": "https://www.implicator.ai/meta-muse-code-21x-discount-for-developer-data/",
+   "outlet": "implicator.ai",
+   "kind": "reporting"
+  }
+ ],
+ "tldr": [
+  "Meta launched Meta Enterprise Platform on Sept. 28, selling Muse's agent tech directly to businesses under a new chief, CJ Desai.",
+  "It lands five days after Anthropic's Claude Marketplace opened with 2,000-plus outside connectors and products.",
+  "Microsoft's rival play, Work IQ, isn't a storefront -- it grounds agents in a company's own data, reaching general preview Sept. 30.",
+  "None of the three companies has published pricing or a commission structure for its new platform.",
+  "Caveat: Anthropic was reported to forgo a revenue cut on a 3-partner pilot in March; whether that holds at 2,000-plus partners is unconfirmed."
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "Meta announced on Sept. 28 that it is spinning its AI agent technology into a standalone business aimed squarely at companies, not consumers -- the third distinct answer in nine days to the question every AI lab is now racing to solve: once an agent can do the work, who actually gets paid for it. **Meta Enterprise Platform** bundles the consumer-facing Muse agent, a dedicated Meta Business Agent, and the Muse API and Muse Code developer tools into a single sales pitch, run by ++CJ Desai++, MongoDB's former chief executive, reporting directly to Mark Zuckerberg.",
+   "citation_urls": [
+    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Meta's own framing leans entirely on scale it already has: the company says it \"helps hundreds of millions of businesses reach customers\" through its existing apps, and that the new platform exists to formalize that relationship into a paid product built on \"advanced models, leading agents, large-scale infrastructure, and years of working closely with many businesses.\" Desai put it more simply in the announcement. Meta disclosed **no pricing, no commission structure, and no launch-partner list** beyond its own products.",
+   "citation_urls": [
+    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"
+   ]
+  },
+  {
+   "type": "quote",
+   "text": "“AI will fundamentally redefine how organizations of all sizes innovate, grow, serve customers, and run business operations.” — CJ Desai, Chief Enterprise Platform Officer, Meta, Sept. 28, 2026",
+   "citation_urls": [
+    "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "[Anthropic](/company/anthropic) got there first, by five days. Claude Marketplace went live Sept. 23 as a single catalog split into three sections: over 2,000 connectors and plugins from partners including Atlassian, Google, Microsoft, Notion and Salesforce; a storefront of Claude-powered products from CrowdStrike, Cursor, Harvey, Legora, Lovable and Snowflake; and a directory of consulting partners -- Accenture, Boston Consulting Group and Deloitte -- for companies that want help rolling any of it out. The mechanism is different from Meta's from the ground up: Anthropic isn't selling its own vertical apps. ==It's renting the rails to partners who build them==, and letting enterprise customers pay with __committed spend__ -- money already contracted with Claude's API.",
+   "citation_urls": [
+    "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "None of this is the industry's first attempt at the same idea. OpenAI opened its own App Directory in December, letting outside developers list ChatGPT-integrated apps -- a precedent Anthropic's marketplace explicitly extends by adding a way to pay for listed products with existing committed spend, and that Meta's new platform sidesteps entirely by selling its own agent directly instead of hosting anyone else's.",
+   "citation_urls": [
+    "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude"
+   ]
+  },
+  {
+   "type": "compare",
+   "compare": {
+    "title": "Three answers to the same question",
+    "columns": [
+     {
+      "label": "Meta Enterprise Platform",
+      "sub": "launched Sept. 28"
+     },
+     {
+      "label": "Claude Marketplace",
+      "sub": "launched Sept. 23",
+      "hi": true
+     },
+     {
+      "label": "Microsoft Work IQ",
+      "sub": "general preview Sept. 30"
+     }
+    ],
+    "rows": [
+     {
+      "label": "What it is",
+      "values": [
+       "A new business unit selling Meta's own agent (Muse), API and coding tool directly to companies",
+       "A catalog of outside connectors, buyable Claude-powered products, and consulting partners",
+       "A context layer grounding Copilot and agents in a company's own Dynamics 365, Power Platform and Microsoft 365 data"
+      ]
+     },
+     {
+      "label": "Who builds the vertical product",
+      "values": [
+       "Meta itself",
+       "Outside partners (CrowdStrike, Harvey, Snowflake, etc.)",
+       "Neither -- it's infrastructure other agents plug into"
+      ]
+     },
+     {
+      "label": "Leadership",
+      "values": [
+       "CJ Desai, ex-MongoDB CEO, reporting to Zuckerberg",
+       "Anthropic's existing enterprise organization",
+       "Built into the Microsoft 365 org; no standalone chief named"
+      ]
+     },
+     {
+      "label": "Pricing or commission disclosed?",
+      "values": [
+       "No",
+       "No -- see reconciliation below",
+       "Bundled into Microsoft 365 E7 licensing"
+      ],
+      "note": "none of the three has published a complete rate card"
+     }
+    ],
+    "source": "about.fb.com; BleepingComputer/VentureBeat; Microsoft Dynamics 365 Blog"
+   }
+  },
+  {
+   "type": "p",
+   "text": "Microsoft's version of the same bet has been rolling out for longer and looks the least like a storefront of the three. Work IQ's APIs went live in June, letting agents read and act on Microsoft 365 data without stitching together dozens of separate endpoints by hand; a general preview arrives Sept. 30, bundled into the new Microsoft 365 E7 tier alongside Copilot and Agent 365. Rather than selling agents or a catalog of them, Microsoft is selling the thing an agent needs to be useful inside a specific company: a context graph built from a customer's own Dynamics 365 records, Power Platform apps, email and meetings, plus a business glossary for company-specific terms a generic model would otherwise guess at.",
+   "citation_urls": [
+    "https://www.microsoft.com/en-us/dynamics-365/blog/it-professional/2026/09/25/work-iq-business-and-workplace-intelligence-in-the-flow-of-work/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The clearest test of which bet actually pays off is the one none of the three has answered in public: does the platform operator take a cut, or does it make its money elsewhere? Anthropic came closest to a concrete number -- back in March, at a much smaller pilot version of the same idea with just three launch partners, the company was reported to be **waiving the revenue share cloud marketplaces typically charge**, which runs three to fifteen percent on AWS and Azure. ==Whether that policy survived the jump to a 2,000-partner catalog five days ago is something Anthropic has not said.==",
+   "citation_urls": [
+    "https://thenextweb.com/news/anthropic-marketplace-claude-enterprise-software",
+    "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude"
+   ]
+  },
+  {
+   "type": "sourcecheck",
+   "sourcecheck": {
+    "items": [
+     {
+      "question": "Does Anthropic take a commission on Claude Marketplace transactions?",
+      "claims": [
+       {
+        "who": "Reporting on Anthropic's March 2026 pilot (3 partners)",
+        "kind": "reporting",
+        "says": "No -- Anthropic was 'forgoing the revenue cut those cloud giants typically collect.'",
+        "url": "https://thenextweb.com/news/anthropic-marketplace-claude-enterprise-software"
+       },
+       {
+        "who": "Reporting on the Sept. 23 relaunch (2,000+ partners)",
+        "kind": "reporting",
+        "says": "Not disclosed -- no commission or fee structure is stated for the expanded marketplace.",
+        "url": "https://venturebeat.com/technology/anthropic-launches-claude-marketplace-giving-enterprises-access-to-claude",
+        "trusted": true
+       }
+      ],
+      "ruling": "Treating the commission question as unconfirmed at current scale. The 'no cut' reporting describes a three-partner pilot six months earlier; coverage of the September relaunch does not repeat or update that claim for the version that actually shipped."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "Meta has already run a smaller version of this bet once. Muse Code, its coding-agent product, launched in beta Aug. 5 with a Contributor tier priced as much as 21 times cheaper on output tokens than the standard rate, in exchange for **letting Meta train future models on a developer's prompts and completions**. Folding Muse Code into Meta Enterprise Platform now extends that same trade -- steep discounts priced partly in data rather than dollars -- to the rest of the new business line, though Meta hasn't said whether the same terms apply to the products it just bundled in.",
+   "citation_urls": [
+    "https://www.implicator.ai/meta-muse-code-21x-discount-for-developer-data/"
+   ]
+  },
+  {
+   "type": "stakes",
+   "stakes": {
+    "items": [
+     {
+      "who": "Outside developers building on Claude",
+      "tone": "gains",
+      "what": "Get a direct channel to Anthropic's existing enterprise customers and their already-committed spend, without a new procurement cycle."
+     },
+     {
+      "who": "Independent enterprise-agent startups",
+      "tone": "loses",
+      "what": "Now compete for the same customer relationship against three platforms with existing infrastructure, distribution and balance sheets none of them can match."
+     },
+     {
+      "who": "Microsoft 365 E7 subscribers",
+      "tone": "gains",
+      "what": "Get Work IQ's context layer bundled into an existing license rather than as a new vendor relationship to negotiate."
+     },
+     {
+      "who": "Meta's own Muse Code developers",
+      "tone": "unclear",
+      "what": "Don't yet know whether the data-for-discount trade that applies to Muse Code carries over to the rest of the new enterprise line."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "What none of the three companies has said in public is the number that would actually settle which bet is winning: how much of an enterprise's agent budget each platform is capturing, and at what margin. Meta is betting that distribution it already owns beats a marketplace it doesn't; Anthropic is betting that being the neutral rail earns more loyalty than owning the vertical app would; Microsoft is betting that the company that already holds the data graph doesn't need to sell an agent at all. {{note: Meta's own history runs the other way on this kind of bet -- Instagram and WhatsApp were both bought, not built from a standing start. A from-scratch enterprise sales business, rather than an acquisition, is a genuine change in how the company expands.}} ==The first of the three to publish a number instead of a press release is the one that will have actually tested its own theory.=="
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "name": "Research",
+    "agent": "claude-runner",
+    "note": "Six independent threads: Meta's own press release (primary), independent reporting on the same launch (Yahoo Finance UK), two independent reports on Anthropic's Sept. 23 Claude Marketplace relaunch (BleepingComputer, VentureBeat) plus a third on its earlier March pilot (The Next Web), Microsoft's own Dynamics 365 blog post on Work IQ (primary), and independent reporting on Meta Muse Code's Contributor-tier pricing for prior-context. Deliberately excluded Anthropic's own Project Swap coverage from this piece -- a separate internal agent-bartering experiment already covered on its own, not the commercial marketplace this piece is about -- to avoid conflating two distinct Anthropic initiatives."
+   },
+   {
+    "name": "Verification",
+    "agent": "claude-runner",
+    "note": "Found a genuine gap, not a contradiction: reporting on Anthropic's commission structure exists only for its much smaller March pilot, not for the September relaunch at 2,000+ partners. Treated as unconfirmed at current scale rather than assuming the earlier policy still holds, and made that gap visible via a sourcecheck component. No mandatory-scrutiny trigger fires -- all claims are attributed to named companies' own statements or named outlets' reporting."
+   },
+   {
+    "name": "Loop 1 - critique and revise",
+    "agent": "claude-runner",
+    "note": "Critique found the first draft implied Anthropic currently charges no commission at the new scale; revised throughout to state that claim is unconfirmed rather than current fact. Self-referential-language check clean throughout."
+   },
+   {
+    "name": "Loop 2 - component provenance check",
+    "agent": "claude-runner",
+    "note": "Every compare-table cell, stakes claim, and sourcecheck value traces to a cited source. No top-level text field on any component."
+   },
+   {
+    "name": "Gate",
+    "agent": "claude-runner",
+    "note": "Approved for publication. No compliance trigger fires -- reporting on named companies' own product launches and public statements, not accusatory or unverifiable claims."
+   }
+  ],
+  "gate": {
+   "decision": "Approved for publication",
+   "note": "No compliance trigger fires. Sourced reporting on three companies' own announced products and public statements."
+  },
+  "run": "autonomous Claude-runner cycle · 2026-09-28T21:41:14Z"
+ },
+ "image": "assets/img/newsroom/meta-enterprise-platform-anthropic-marketplace-microsoft-workiq.jpg",
+ "publishedAt": "2026-09-28T21:41:14Z"
 }
 ]
 ;
