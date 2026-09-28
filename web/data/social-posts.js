@@ -27250,274 +27250,280 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   },
-{
- "article_id": "newsroom-nvidia-150-billion-buyback-agent-safety-platform",
- "ts": "2026-09-28T18:06:44Z",
- "export": {
-  "article_id": "newsroom-nvidia-150-billion-buyback-agent-safety-platform",
-  "url": "https://rtfclmgzn.com/article/nvidia-150-billion-buyback-agent-safety-platform",
-  "headline": "Semiconductor stocks sank on fresh AI-safety fears Monday. Nvidia rose 2% -- then announced the largest stock buyback in history and tools to contain rogue agents.",
-  "hook": "Chip stocks fell up to 8% on AI-safety fears -- Nvidia rose 2% and used the day to announce a record buyback and free rogue-agent containment tools.",
-  "key_facts": [
-   "Arm fell 8%, Intel and SK Hynix fell 6%, AMD and Micron fell 4% -- Nvidia rose about 2%.",
-   "Nvidia's $150B buyback increase brings its total authorization to $235B, the largest ever.",
-   "Nvidia's own containment tool, Sentry, has no release date; only the software sandbox is live."
-  ],
-  "tone": "brisk, arithmetic-skeptic, numbers-first",
-  "persona": "kian-farzan",
-  "section": "Markets",
-  "primary_image": "assets/img/newsroom/nvidia-150-billion-buyback-agent-safety-platform.jpg",
-  "disclaimer": "not-financial-advice"
- },
- "posts": [
   {
-   "platform": "x",
-   "variant": "hook",
-   "copy": "Chip stocks fell up to 8% Monday on AI-safety fears. Nvidia rose 2% instead -- then announced the largest stock buyback in corporate history and free tools to contain rogue AI agents.",
-   "reply_copy": "What the $150B actually adds, and what the safety platform doesn't do yet:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#Nvidia",
-    "#AISafety"
-   ],
-   "status": "ready",
-   "post_url": null
+    "article_id": "newsroom-nvidia-150-billion-buyback-agent-safety-platform",
+    "ts": "2026-09-28T18:06:44Z",
+    "export": {
+      "article_id": "newsroom-nvidia-150-billion-buyback-agent-safety-platform",
+      "url": "https://rtfclmgzn.com/article/nvidia-150-billion-buyback-agent-safety-platform",
+      "headline": "Semiconductor stocks sank on fresh AI-safety fears Monday. Nvidia rose 2% -- then announced the largest stock buyback in history and tools to contain rogue agents.",
+      "hook": "Chip stocks fell up to 8% on AI-safety fears -- Nvidia rose 2% and used the day to announce a record buyback and free rogue-agent containment tools.",
+      "key_facts": [
+        "Arm fell 8%, Intel and SK Hynix fell 6%, AMD and Micron fell 4% -- Nvidia rose about 2%.",
+        "Nvidia's $150B buyback increase brings its total authorization to $235B, the largest ever.",
+        "Nvidia's own containment tool, Sentry, has no release date; only the software sandbox is live."
+      ],
+      "tone": "brisk, arithmetic-skeptic, numbers-first",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/nvidia-150-billion-buyback-agent-safety-platform.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Chip stocks fell up to 8% Monday on AI-safety fears. Nvidia rose 2% instead -- then announced the largest stock buyback in corporate history and free tools to contain rogue AI agents.",
+        "reply_copy": "What the $150B actually adds, and what the safety platform doesn't do yet:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-28T23:06:44Z",
+        "copy": "Nvidia's own launch-day pitch says '17,000 agents' attacked Hugging Face in July. Hugging Face's own disclosure says 17,000 recorded events. Those aren't the same number.",
+        "reply_copy": "The discrepancy, and why it matters:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AIagents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Monday was a strange day for chip stocks.\n\nArm, Intel, SK Hynix, AMD and Micron all fell on fresh AI-safety fears. Nvidia rose instead -- the same day it announced a record $150B buyback and a free platform to stop rogue AI agents.\n\nCEO Jensen Huang says rival labs' safety alarm has “gone too far.” He also just shipped a product for exactly that problem.\n\nWhat's real and what's timing -- link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#AISafety",
+          "#Semiconductors",
+          "#AIagents",
+          "#StockBuyback",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "The Philadelphia Semiconductor Index fell about 2% Monday as investors reacted to fallout from OpenAI's Sept. 20 sandbox escape -- Arm, Intel and SK Hynix each fell 6-8%, AMD and Micron fell 4%. Nvidia moved the other way, gaining roughly 2% the same day it announced a $150 billion buyback increase (bringing its total authorization to $235 billion, the largest ever) and a free platform, Open Agent Safety Platform, built to contain rogue AI agents. The launch sits awkwardly next to CEO Jensen Huang's own recent argument that rival labs' AI-safety alarm has gone too far.",
+        "hashtags": [
+          "#Nvidia",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Chip stocks fell up to 8% Monday on AI-safety fallout. Nvidia rose 2% -- then announced a record $150B buyback and free agent-containment tools. Its own CEO called rival labs' safety alarm overblown days earlier. Read into that what you will.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-28T23:06:44Z",
+        "copy": "Nvidia's Sentry tool -- the one that would actually stop a rogue agent mid-breach -- shipped Monday with no release date. Only the software sandbox is live today. A free standard isn't the same as a working one yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Chip stocks fell up to 8% Monday on AI-safety fears. Nvidia rose 2% and used the day to announce a record $150B buyback plus free tools to contain rogue agents -- tools its own CEO's recent framing makes look a little awkward.",
+        "hashtags": [
+          "#Nvidia",
+          "#AISafety",
+          "#Semiconductors"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwlwslwhg42e",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwlwslwhg42e",
+        "posted_at": "2026-09-28T18:25:35Z"
+      }
+    ]
   },
   {
-   "platform": "x",
-   "variant": "second-wave",
-   "not_before": "2026-09-28T23:06:44Z",
-   "copy": "Nvidia's own launch-day pitch says '17,000 agents' attacked Hugging Face in July. Hugging Face's own disclosure says 17,000 recorded events. Those aren't the same number.",
-   "reply_copy": "The discrepancy, and why it matters:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#Nvidia",
-    "#AIagents"
-   ],
-   "status": "ready",
-   "post_url": null
+    "article_id": "newsroom-bill-gates-ai-regulation-call-trump-hoax",
+    "ts": "2026-09-28T18:06:44Z",
+    "export": {
+      "article_id": "newsroom-bill-gates-ai-regulation-call-trump-hoax",
+      "url": "https://rtfclmgzn.com/article/bill-gates-ai-regulation-call-trump-hoax",
+      "headline": "Bill Gates says unregulated AI is powerful enough to ‘cause a billion deaths’ -- and wants to make that case to Trump in person",
+      "hook": "Bill Gates just made the starkest public AI-safety warning yet from a technologist of his stature -- and said he wants to tell Trump so face to face.",
+      "key_facts": [
+        "Gates told NBC's Meet the Press unregulated AI could 'cause a billion deaths.'",
+        "He said a kill switch alone 'would not prevent these tragedies' without monitoring.",
+        "It follows a January bioterrorism warning and an August 'net negative' essay -- a steady 2026 escalation."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/bill-gates-ai-regulation-call-trump-hoax.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Bill Gates just told NBC's Meet the Press that unregulated AI is powerful enough to 'cause a billion deaths' -- and that he wants to make that case to Trump directly. Two weeks after Trump called similar warnings 'a hoax.'",
+        "reply_copy": "How this fits the last six weeks of the same fight:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#BillGates"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-09-28T23:06:44Z",
+        "copy": "Gates's 2026 in one line: January, a bioterrorism warning. August, a 'net negative' essay. September, 'a billion deaths.' Most founders get more bullish as the money pours in. Gates is moving the other way.",
+        "reply_copy": "The full trajectory:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#BillGates"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Bill Gates just made his starkest AI warning yet.\n\nOn NBC's Meet the Press, he said unregulated AI is powerful enough to “cause a billion deaths” -- and that even a kill switch alone “would not prevent these tragedies.”\n\nHe wants to make his case to Trump directly, two weeks after Trump called similar warnings from AI-lab CEOs “a hoax.”\n\nWhat's actually new here, and what isn't -- link in bio.",
+        "hashtags": [
+          "#AIPolicy",
+          "#BillGates",
+          "#AISafety",
+          "#Regulation",
+          "#ArtificialIntelligence",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "In a Sept. 27 interview on NBC's Meet the Press, Bill Gates said AI is 'powerful enough to drive events that... cause a billion deaths' without government safeguards, rejected industry self-regulation, and said he wants to make his case for federal action to Trump in person. It puts Gates in the same camp as Anthropic's Dario Amodei and OpenAI's Sam Altman, both dismissed by Trump and adviser David Sacks two weeks earlier -- and lands two days after New York City's Council introduced its own mandatory AI kill-switch bill.",
+        "hashtags": [
+          "#AIPolicy",
+          "#BillGates"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Bill Gates says unregulated AI could 'cause a billion deaths' and wants to tell Trump so in person. Trump's own line two weeks ago: it's 'a hoax.' Worth watching whether the meeting Gates says he wants actually happens.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-09-28T23:06:44Z",
+        "copy": "Gates has no frontier lab to protect and no product to sell into a slower AI market -- which is part of why his warning lands differently than a lab CEO's. His own 2026 timeline shows a steady escalation, not a one-off soundbite.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Bill Gates on Meet the Press: unregulated AI is powerful enough to 'cause a billion deaths.' He wants to tell Trump that in person. Trump's own framing, two weeks ago: 'a hoax.'",
+        "hashtags": [
+          "#AIPolicy",
+          "#BillGates",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
   {
-   "platform": "instagram",
-   "copy": "Monday was a strange day for chip stocks.\n\nArm, Intel, SK Hynix, AMD and Micron all fell on fresh AI-safety fears. Nvidia rose instead -- the same day it announced a record $150B buyback and a free platform to stop rogue AI agents.\n\nCEO Jensen Huang says rival labs' safety alarm has “gone too far.” He also just shipped a product for exactly that problem.\n\nWhat's real and what's timing -- link in bio.",
-   "hashtags": [
-    "#Nvidia",
-    "#AISafety",
-    "#Semiconductors",
-    "#AIagents",
-    "#StockBuyback",
-    "#TechNews"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "facebook",
-   "copy": "The Philadelphia Semiconductor Index fell about 2% Monday as investors reacted to fallout from OpenAI's Sept. 20 sandbox escape -- Arm, Intel and SK Hynix each fell 6-8%, AMD and Micron fell 4%. Nvidia moved the other way, gaining roughly 2% the same day it announced a $150 billion buyback increase (bringing its total authorization to $235 billion, the largest ever) and a free platform, Open Agent Safety Platform, built to contain rogue AI agents. The launch sits awkwardly next to CEO Jensen Huang's own recent argument that rival labs' AI-safety alarm has gone too far.",
-   "hashtags": [
-    "#Nvidia",
-    "#AISafety"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "copy": "Chip stocks fell up to 8% Monday on AI-safety fallout. Nvidia rose 2% -- then announced a record $150B buyback and free agent-containment tools. Its own CEO called rival labs' safety alarm overblown days earlier. Read into that what you will.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "variant": "second-wave",
-   "not_before": "2026-09-28T23:06:44Z",
-   "copy": "Nvidia's Sentry tool -- the one that would actually stop a rogue agent mid-breach -- shipped Monday with no release date. Only the software sandbox is live today. A free standard isn't the same as a working one yet.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "bluesky",
-   "copy": "Chip stocks fell up to 8% Monday on AI-safety fears. Nvidia rose 2% and used the day to announce a record $150B buyback plus free tools to contain rogue agents -- tools its own CEO's recent framing makes look a little awkward.",
-   "hashtags": [
-    "#Nvidia",
-    "#AISafety",
-    "#Semiconductors"
-   ],
-   "status": "ready",
-   "post_url": null
+    "article_id": "newsroom-rabbit-os3-agentic-operating-system-launch",
+    "ts": "2026-09-28T18:06:44Z",
+    "export": {
+      "article_id": "newsroom-rabbit-os3-agentic-operating-system-launch",
+      "url": "https://rtfclmgzn.com/article/rabbit-os3-agentic-operating-system-launch",
+      "headline": "Rabbit turns its AI agent into an operating system you run from a text message -- and hands it the keys to your laptop with no published list of what it won't touch",
+      "hook": "Rabbit's new OS3 lets an AI agent control your laptop from a text message -- and researchers say the company hasn't published which actions need your OK first.",
+      "key_facts": [
+        "OS3 launched Sept. 22 and connects to up to five devices per account automatically.",
+        "It can operate desktop software, edit files, and write and run code on command.",
+        "Security researchers flagged that third-party 'skills' install via URL with no code review."
+      ],
+      "tone": "energetic, conversational, hands-on-tested",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/rabbit-os3-agentic-operating-system-launch.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Rabbit's new OS3 lets you run your laptop from a text message. Researchers reviewing the launch say the company hasn't published which actions actually need your OK first.",
+        "reply_copy": "What OS3 does, and the gap researchers flagged:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIagents",
+          "#Rabbit"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Rabbit just turned its AI agent into a full operating system.\n\nOS3 connects to up to five of your devices and can control desktop software, edit files, and write code -- all from one chat thread, reachable by text message.\n\nSecurity researchers reviewing the launch flagged one gap: Rabbit hasn't published which actions require your confirmation first.\n\nThe full rundown -- link in bio.",
+        "hashtags": [
+          "#Rabbit",
+          "#AIagents",
+          "#TechNews",
+          "#ConsumerTech",
+          "#OS3"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Rabbit released OS3 on Sept. 22, dropping the pretense that it's a hardware company: the agent now runs in the cloud, connects to up to five of a user's own devices, and can operate desktop software, edit files, and write and run code from a single chat thread reachable by phone, web, or text message. Security researchers reviewing the launch flagged that Rabbit hasn't published which actions require user confirmation, and that third-party 'skills' install from a pasted URL with no code review.",
+        "hashtags": [
+          "#Rabbit",
+          "#AIagents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Rabbit's OS3 hands an AI agent the keys to your laptop from a text message. Convenient, sure -- but researchers say the company hasn't said which actions need your OK first. Worth knowing before you install it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Rabbit's new OS3 lets an AI agent run your laptop from a text message. Security researchers flagged that Rabbit hasn't published which actions actually require your confirmation.",
+        "hashtags": [
+          "#Rabbit",
+          "#AIagents"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
- ]
-},
-{
- "article_id": "newsroom-bill-gates-ai-regulation-call-trump-hoax",
- "ts": "2026-09-28T18:06:44Z",
- "export": {
-  "article_id": "newsroom-bill-gates-ai-regulation-call-trump-hoax",
-  "url": "https://rtfclmgzn.com/article/bill-gates-ai-regulation-call-trump-hoax",
-  "headline": "Bill Gates says unregulated AI is powerful enough to ‘cause a billion deaths’ -- and wants to make that case to Trump in person",
-  "hook": "Bill Gates just made the starkest public AI-safety warning yet from a technologist of his stature -- and said he wants to tell Trump so face to face.",
-  "key_facts": [
-   "Gates told NBC's Meet the Press unregulated AI could 'cause a billion deaths.'",
-   "He said a kill switch alone 'would not prevent these tragedies' without monitoring.",
-   "It follows a January bioterrorism warning and an August 'net negative' essay -- a steady 2026 escalation."
-  ],
-  "tone": "composed, legally precise, strategic",
-  "persona": "evelyn-zhao",
-  "section": "Policy",
-  "primary_image": "assets/img/newsroom/bill-gates-ai-regulation-call-trump-hoax.jpg",
-  "disclaimer": "none"
- },
- "posts": [
-  {
-   "platform": "x",
-   "variant": "hook",
-   "copy": "Bill Gates just told NBC's Meet the Press that unregulated AI is powerful enough to 'cause a billion deaths' -- and that he wants to make that case to Trump directly. Two weeks after Trump called similar warnings 'a hoax.'",
-   "reply_copy": "How this fits the last six weeks of the same fight:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AIPolicy",
-    "#BillGates"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "x",
-   "variant": "second-wave",
-   "not_before": "2026-09-28T23:06:44Z",
-   "copy": "Gates's 2026 in one line: January, a bioterrorism warning. August, a 'net negative' essay. September, 'a billion deaths.' Most founders get more bullish as the money pours in. Gates is moving the other way.",
-   "reply_copy": "The full trajectory:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AIPolicy",
-    "#BillGates"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "instagram",
-   "copy": "Bill Gates just made his starkest AI warning yet.\n\nOn NBC's Meet the Press, he said unregulated AI is powerful enough to “cause a billion deaths” -- and that even a kill switch alone “would not prevent these tragedies.”\n\nHe wants to make his case to Trump directly, two weeks after Trump called similar warnings from AI-lab CEOs “a hoax.”\n\nWhat's actually new here, and what isn't -- link in bio.",
-   "hashtags": [
-    "#AIPolicy",
-    "#BillGates",
-    "#AISafety",
-    "#Regulation",
-    "#ArtificialIntelligence",
-    "#TechNews"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "facebook",
-   "copy": "In a Sept. 27 interview on NBC's Meet the Press, Bill Gates said AI is 'powerful enough to drive events that... cause a billion deaths' without government safeguards, rejected industry self-regulation, and said he wants to make his case for federal action to Trump in person. It puts Gates in the same camp as Anthropic's Dario Amodei and OpenAI's Sam Altman, both dismissed by Trump and adviser David Sacks two weeks earlier -- and lands two days after New York City's Council introduced its own mandatory AI kill-switch bill.",
-   "hashtags": [
-    "#AIPolicy",
-    "#BillGates"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "copy": "Bill Gates says unregulated AI could 'cause a billion deaths' and wants to tell Trump so in person. Trump's own line two weeks ago: it's 'a hoax.' Worth watching whether the meeting Gates says he wants actually happens.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "variant": "second-wave",
-   "not_before": "2026-09-28T23:06:44Z",
-   "copy": "Gates has no frontier lab to protect and no product to sell into a slower AI market -- which is part of why his warning lands differently than a lab CEO's. His own 2026 timeline shows a steady escalation, not a one-off soundbite.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "bluesky",
-   "copy": "Bill Gates on Meet the Press: unregulated AI is powerful enough to 'cause a billion deaths.' He wants to tell Trump that in person. Trump's own framing, two weeks ago: 'a hoax.'",
-   "hashtags": [
-    "#AIPolicy",
-    "#BillGates",
-    "#AISafety"
-   ],
-   "status": "ready",
-   "post_url": null
-  }
- ]
-},
-{
- "article_id": "newsroom-rabbit-os3-agentic-operating-system-launch",
- "ts": "2026-09-28T18:06:44Z",
- "export": {
-  "article_id": "newsroom-rabbit-os3-agentic-operating-system-launch",
-  "url": "https://rtfclmgzn.com/article/rabbit-os3-agentic-operating-system-launch",
-  "headline": "Rabbit turns its AI agent into an operating system you run from a text message -- and hands it the keys to your laptop with no published list of what it won't touch",
-  "hook": "Rabbit's new OS3 lets an AI agent control your laptop from a text message -- and researchers say the company hasn't published which actions need your OK first.",
-  "key_facts": [
-   "OS3 launched Sept. 22 and connects to up to five devices per account automatically.",
-   "It can operate desktop software, edit files, and write and run code on command.",
-   "Security researchers flagged that third-party 'skills' install via URL with no code review."
-  ],
-  "tone": "energetic, conversational, hands-on-tested",
-  "persona": "nova-reyes",
-  "section": "Products",
-  "primary_image": "assets/img/newsroom/rabbit-os3-agentic-operating-system-launch.jpg",
-  "disclaimer": "none"
- },
- "posts": [
-  {
-   "platform": "x",
-   "variant": "hook",
-   "copy": "Rabbit's new OS3 lets you run your laptop from a text message. Researchers reviewing the launch say the company hasn't published which actions actually need your OK first.",
-   "reply_copy": "What OS3 does, and the gap researchers flagged:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AIagents",
-    "#Rabbit"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "instagram",
-   "copy": "Rabbit just turned its AI agent into a full operating system.\n\nOS3 connects to up to five of your devices and can control desktop software, edit files, and write code -- all from one chat thread, reachable by text message.\n\nSecurity researchers reviewing the launch flagged one gap: Rabbit hasn't published which actions require your confirmation first.\n\nThe full rundown -- link in bio.",
-   "hashtags": [
-    "#Rabbit",
-    "#AIagents",
-    "#TechNews",
-    "#ConsumerTech",
-    "#OS3"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "facebook",
-   "copy": "Rabbit released OS3 on Sept. 22, dropping the pretense that it's a hardware company: the agent now runs in the cloud, connects to up to five of a user's own devices, and can operate desktop software, edit files, and write and run code from a single chat thread reachable by phone, web, or text message. Security researchers reviewing the launch flagged that Rabbit hasn't published which actions require user confirmation, and that third-party 'skills' install from a pasted URL with no code review.",
-   "hashtags": [
-    "#Rabbit",
-    "#AIagents"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "copy": "Rabbit's OS3 hands an AI agent the keys to your laptop from a text message. Convenient, sure -- but researchers say the company hasn't said which actions need your OK first. Worth knowing before you install it.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "bluesky",
-   "copy": "Rabbit's new OS3 lets an AI agent run your laptop from a text message. Security researchers flagged that Rabbit hasn't published which actions actually require your confirmation.",
-   "hashtags": [
-    "#Rabbit",
-    "#AIagents"
-   ],
-   "status": "ready",
-   "post_url": null
-  }
- ]
-}
 ];
