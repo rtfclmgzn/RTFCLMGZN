@@ -4188,7 +4188,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-25-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "nvidia-150-billion-buyback-agent-safety-platform",
+     "used_at": "2026-09-28"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-beyond-06",
