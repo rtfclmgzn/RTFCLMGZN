@@ -27053,5 +27053,177 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
-  }
+  },
+ {
+  "article_id": "newsroom-trump-xi-ai-incident-channel-super-intelligence-terminology",
+  "ts": "2026-09-28T00:37:23Z",
+  "export": {
+   "article_id": "newsroom-trump-xi-ai-incident-channel-super-intelligence-terminology",
+   "url": "https://rtfclmgzn.com/article/trump-xi-ai-incident-channel-super-intelligence-terminology",
+   "headline": "Trump and Xi agreed to a bilateral AI ‘incident’ channel — and to start calling it ‘super intelligence’",
+   "hook": "The White House says the US and China agreed to a bilateral AI-incident channel and a new name for the technology -- but Beijing hasn't confirmed either detail yet.",
+   "key_facts": [
+    "The White House said Sept. 25 the two countries will open a channel for reporting AI-related incidents, with a dialogue set for November.",
+    "Trump said the two leaders agreed to call the technology ‘super intelligence’ instead of ‘artificial intelligence.’",
+    "No Chinese government statement has confirmed the channel's terms or used the new terminology."
+   ],
+   "tone": "composed, legally precise, skeptical of the spin",
+   "persona": "evelyn-zhao",
+   "section": "Policy",
+   "primary_image": "assets/img/newsroom/trump-xi-ai-incident-channel-super-intelligence-terminology.jpg",
+   "disclaimer": "none"
+  },
+  "posts": [
+   {
+    "platform": "x",
+    "variant": "hook",
+    "copy": "The White House says the US and China agreed to a bilateral AI-incident channel Sept. 25 -- and a new name for the technology, ‘super intelligence.’ Beijing hasn't confirmed either detail. A November dialogue is set; no agenda yet.",
+    "reply_copy": "What's actually agreed, and what isn't:",
+    "link_in_reply": true,
+    "hashtags": [
+     "#AIPolicy",
+     "#USChina"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "x",
+    "variant": "second-wave",
+    "not_before": "2026-09-28T05:37:23Z",
+    "copy": "“I call it SI because it's a much better name,” Trump said of renaming AI to ‘super intelligence’ -- a term no Chinese official has used yet. The gap between the two governments' accounts is the actual story.",
+    "reply_copy": "Full reconciliation:",
+    "link_in_reply": true,
+    "hashtags": [
+     "#AIPolicy",
+     "#USChina"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "instagram",
+    "copy": "The US and China agreed Sept. 25 to open a channel for reporting AI incidents -- with a dialogue set for November.\n\nTrump says the two leaders also agreed to rename the technology ‘super intelligence.’\n\nOne problem: no Chinese statement has confirmed either the terms or the new name yet.\n\nWhat's real and what's spin -- link in bio.",
+    "hashtags": [
+     "#AIPolicy",
+     "#USChina",
+     "#ArtificialIntelligence",
+     "#Diplomacy",
+     "#TrumpXi",
+     "#Geopolitics"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "facebook",
+    "copy": "The White House said Friday that the US and China agreed to a bilateral channel for reporting AI-related incidents, with a dedicated dialogue scheduled for November. Trump also said the two leaders agreed to start calling the technology ‘super intelligence’ instead of ‘artificial intelligence.’ Neither the channel's specific terms nor the new name has been confirmed by any Chinese government statement -- and Washington's export limits on advanced chips bound for China are unchanged.",
+    "hashtags": [
+     "#AIPolicy",
+     "#USChina"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "threads",
+    "copy": "US and China agreed to an AI-incident channel and a new name for the tech, ‘super intelligence’ -- per the White House. Beijing hasn't confirmed either one yet. November dialogue, no agenda published.",
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "threads",
+    "variant": "second-wave",
+    "not_before": "2026-09-28T05:37:23Z",
+    "copy": "The chip-export fight and the new AI-incident channel are separate tracks. The White House's Friday readout doesn't touch export controls at all -- worth remembering before reading the two as connected.",
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "bluesky",
+    "copy": "US-China summit outcome: a bilateral AI-incident channel, a November dialogue, and Trump's push to rename AI ‘super intelligence.’ Beijing hasn't confirmed any of it independently yet.",
+    "hashtags": [
+     "#AIPolicy",
+     "#USChina",
+     "#Diplomacy"
+    ],
+    "status": "ready",
+    "post_url": null
+   }
+  ]
+ },
+ {
+  "article_id": "newsroom-abridge-va-775-million-ambient-ai-contract-ceiling",
+  "ts": "2026-09-28T00:37:23Z",
+  "export": {
+   "article_id": "newsroom-abridge-va-775-million-ambient-ai-contract-ceiling",
+   "url": "https://rtfclmgzn.com/article/abridge-va-775-million-ambient-ai-contract-ceiling",
+   "headline": "The VA's new ambient-AI contract tops out at $775 million over five years — and Abridge is one of at least two vendors on it",
+   "hook": "Abridge's VA contract isn't a $775 million check to Abridge -- it's a five-year ceiling shared with at least one other vendor.",
+   "key_facts": [
+    "Abridge said Sept. 22 it will keep serving the VA under a new enterprise ambient-AI contract.",
+    "The $775.72 million figure is a five-year ceiling across every vendor on the contract, not a guaranteed Abridge payment.",
+    "Rival vendor Knowtex was also selected; the VA hasn't disclosed how the ceiling splits."
+   ],
+   "tone": "precise, evidence-first, number-skeptical",
+   "persona": "priya-anand",
+   "section": "Health",
+   "primary_image": "assets/img/newsroom/abridge-va-775-million-ambient-ai-contract-ceiling.jpg",
+   "disclaimer": "not-medical-advice"
+  },
+  "posts": [
+   {
+    "platform": "x",
+    "variant": "hook",
+    "copy": "Headlines call it a ‘$775 million Abridge deal.’ It isn't. That's a 5-year ceiling across every vendor on the VA's new ambient-AI contract -- Knowtex is on it too, and no one's said how the split works.",
+    "reply_copy": "What the number actually covers:",
+    "link_in_reply": true,
+    "hashtags": [
+     "#HealthTech",
+     "#AIinHealthcare"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "instagram",
+    "copy": "Abridge is keeping its spot serving the VA's ambient clinical-documentation needs -- but the ‘$775 million deal’ headline is misleading.\n\nThat figure is a 5-year ceiling shared across every vendor on the contract, including rival Knowtex.\n\nNo one's disclosed the actual split, or a single pilot outcome metric.\n\nWhat the number really covers -- link in bio.",
+    "hashtags": [
+     "#HealthTech",
+     "#AIinHealthcare",
+     "#VeteransAffairs",
+     "#DigitalHealth",
+     "#AmbientAI"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "facebook",
+    "copy": "Abridge said Sept. 22 it will keep providing ambient clinical-documentation AI to the VA under a new enterprise contract -- but the widely-reported ‘$775 million’ figure is a five-year ceiling shared across every vendor on the contract, not a guaranteed payment to Abridge alone. Rival vendor Knowtex was also selected, and neither company has disclosed its actual task-order value.",
+    "hashtags": [
+     "#HealthTech",
+     "#AIinHealthcare"
+    ],
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "threads",
+    "copy": "The VA's new ambient-AI contract tops out at $775.72M over 5 years -- across ALL vendors, not just Abridge. Knowtex is on the same contract. No split disclosed, no pilot metrics published either.",
+    "status": "ready",
+    "post_url": null
+   },
+   {
+    "platform": "bluesky",
+    "copy": "That ‘$775M Abridge/VA deal’ headline: it's a 5-year ceiling across every vendor on a multi-award contract, not an Abridge-exclusive payout. Knowtex is on it too.",
+    "hashtags": [
+     "#HealthTech",
+     "#AIinHealthcare"
+    ],
+    "status": "ready",
+    "post_url": null
+   }
+  ]
+ }
 ];

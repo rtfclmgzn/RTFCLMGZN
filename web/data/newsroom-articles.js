@@ -82181,6 +82181,359 @@ window.RTFC_NEWSROOM_ARTICLES = [
   },
   "image": "assets/img/newsroom/ando-ai-agent-team-chat-slack-alternative.jpg",
   "publishedAt": "2026-09-27T15:10:18Z"
+ },
+ {
+  "slug": "trump-xi-ai-incident-channel-super-intelligence-terminology",
+  "id": "newsroom-trump-xi-ai-incident-channel-super-intelligence-terminology",
+  "title": "Trump and Xi agreed to a bilateral AI ‘incident’ channel -- and to start calling it ‘super intelligence’",
+  "dek": "The White House said Sept. 25 that Washington and Beijing will open a communication channel for AI-related incidents, with a dedicated dialogue set for November -- the U.S.-side account that was still missing when Thursday's summit ended with only a dinner and China's own readout. Trump also said the two leaders agreed to call the technology ‘super intelligence’ rather than ‘artificial intelligence’; Beijing has not independently confirmed either detail.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for a defined trigger list before November",
+    "text": "No document published so far says what counts as a reportable ‘AI incident.’ The specific test of whether this channel is real machinery or a press-release line is whether an agenda, participant list, or incident definition surfaces before the November dialogue."
+   },
+   {
+    "label": "Watch whether Beijing ever says ‘super intelligence’",
+    "text": "Every quote using the ‘SI’ framing so far is Trump's own, relayed by the White House. If China's own statements keep using 人工智能 (artificial intelligence) rather than adopting the new term, that is itself a signal of how much of this agreement is shared versus asserted."
+   },
+   {
+    "label": "Watch the stalled chip-export bills for any movement",
+    "text": "The three Senate chip-export measures sitting inside a defense-bill rider were untouched by the summit. A new bilateral AI channel does not, on its own, change the export-control fight; whether it becomes a venue for it is a separate and open question."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Trump, Xi agree to establish AI safety channel as military and trade talks continue",
+    "url": "https://www.cbsnews.com/news/trump-xi-us-china-ai-trade-summit/",
+    "outlet": "CBS News",
+    "kind": "reporting"
+   },
+   {
+    "label": "China, US to open AI 'communication channel' after summit, White House says",
+    "url": "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says",
+    "outlet": "Al Jazeera",
+    "kind": "reporting"
+   },
+   {
+    "label": "U.S. and China agree to 'super intelligence' dialogue amid AI tensions",
+    "url": "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+    "outlet": "Axios",
+    "kind": "reporting"
+   },
+   {
+    "label": "Trump, Xi agree to establish AI communication channel, oppose tolls on int'l waterways: White House",
+    "url": "https://www.koreatimes.co.kr/foreignaffairs/20260926/trump-xi-agree-to-establish-ai-communication-channel-oppose-tolls-on-intl-waterways-white-house",
+    "outlet": "The Korea Times",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "The White House said Sept. 25 the U.S. and China will open a channel for reporting AI-related incidents.",
+   "A dedicated AI dialogue between the two governments is scheduled for November, with no agenda published yet.",
+   "Trump said the two leaders agreed to call the technology ‘super intelligence,’ not ‘artificial intelligence.’",
+   "Trump said the U.S. will keep developing AI at full speed and limit what it shares with Beijing.",
+   "Caveat: Beijing has issued no account of its own confirming the terminology or the channel's terms."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "**The Trump administration published its own account of the summit's AI outcome on Friday, a day after the event itself closed with only a state dinner and China's separate readout.** The White House said the two governments agreed to set up a “bilateral communication channel” for AI-related incidents, alongside a dedicated AI dialogue scheduled for November. That fills in the gap this newsroom flagged when the summit ended Thursday: a vague dialogue pledge with no U.S.-side account to check it against. There still isn't a document defining what counts as a reportable incident, who sits on either side of the channel, or what the November session will actually cover.",
+    "citation_urls": [
+     "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The more concrete detail to come out of the readout is a naming choice. Trump told reporters the two leaders agreed to call the technology “super intelligence” instead of “artificial intelligence” going forward — ++SI++, in his own shorthand. “I call it SI because it's a much better name,” he said. “It's much more accurate,” since “artificial”, in his framing, implies something false. It is a rebranding, not a technical redefinition, and the White House's account is the only place the term “super intelligence” has actually been used to describe what the two countries agreed to — nothing attributed to Xi or a Chinese government statement uses it.",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-xi-us-china-ai-trade-summit/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“I call it SI because it's a much better name. It's much more accurate.” — President Trump, on renaming AI to ‘super intelligence’ in the joint framing with Xi",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-xi-us-china-ai-trade-summit/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "**The cooperative framing sits next to a competitive one Trump stated just as plainly.** He said the U.S. would limit what it shares with China under the new channel and would not slow its own AI development to match any joint understanding: “The United States of America is not going to be putting on brakes,” he told reporters, pointing to American technological leadership as the reason. Xi's own public framing, by contrast, called for “a healthy competition” and said both countries share “the capability and responsibility to develop and manage AI for good” — language that reads as aspirational rather than as agreement to any specific limit.",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-xi-us-china-ai-trade-summit/",
+     "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "Did China agree to the deal exactly as the White House describes it?",
+       "claims": [
+        {
+         "who": "The White House",
+         "kind": "official",
+         "says": "A bilateral AI-incident channel was agreed, with a November dialogue and joint adoption of the term ‘super intelligence.’",
+         "url": "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says",
+         "trusted": true
+        },
+        {
+         "who": "Chinese government",
+         "kind": "official",
+         "says": "No independent statement confirming the channel's terms or the ‘super intelligence’ framing had been issued as of Friday.",
+         "url": "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+        }
+       ],
+       "ruling": "Using the White House's account because it is the only one on record describing specific terms — but treating it as one side's characterization until Beijing publishes its own, especially on the terminology point, which no Chinese official has echoed."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "==That silence matters more here than in most joint-statement stories, because the summit's own reporting already primed skepticism about how much was actually agreed.== Al Jazeera's correspondent covering the three-day visit described it as “a lot of ceremony and a lot of pomp” with “a lot more pomp than progress,” and framed the continuation of dialogue itself — not any specific deliverable — as “perhaps the biggest deliverable for both sides.” That reading lines up with what didn't move: Washington's export limits on advanced [Nvidia](/company/nvidia) chips bound for China are unchanged, and the three chip-export bills Senate Democrats spent the same week publicly pushing remain stuck inside a defense-bill rider with no vote scheduled before the midterms.",
+    "citation_urls": [
+     "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "title": "How the channel got here",
+     "items": [
+      {
+       "when": "Before Sept. 23",
+       "what": "The U.S. pitches China a standing AI-incident hotline ahead of Xi's Washington visit, alongside a proposed chip-export carveout.",
+       "source": "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+      },
+      {
+       "when": "Sept. 25",
+       "what": "The summit closes with a state dinner for frontier-lab CEOs and a vague dialogue pledge — China's readout is the only public account, and export limits are unchanged.",
+       "hi": true
+      },
+      {
+       "when": "Sept. 26",
+       "what": "The White House publishes its own account: a bilateral AI-incident channel, a November dialogue, and the ‘super intelligence’ framing.",
+       "source": "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+      },
+      {
+       "when": "November 2026",
+       "what": "The dedicated AI dialogue is due to take place — no agenda, participant list, or incident definition has been published yet.",
+       "future": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "{{note: The two governments also used the same summit to extend their trade truce by two months, agree a military crisis-communications memorandum, and settle a coal-import commitment from China — the AI channel is one line item in a broader normalization push, not a standalone breakthrough.}} None of that broader deal-making resolved the underlying disagreement driving most of this year's AI-policy friction between the two governments: __export controls__ on the advanced chips that train frontier models. A loophole this newsroom traced earlier this month, running through a renamed, blacklisted server maker, remains open regardless of any incident-reporting channel — the two are separate tracks, and Friday's readout does not claim to touch the second one.",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-xi-us-china-ai-trade-summit/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That's also the domestic backdrop this agreement lands on. Senate Democrats spent the same week publicly pushing three separate chip-export bills, all still sitting inside a defense-authorization rider that isn't scheduled for a floor vote until after the November midterms — a timeline this newsroom traced in detail after the earlier NDAA gridlock. **A bilateral AI-incident channel does not touch that legislative fight at all**; it is an executive-to-executive arrangement between two governments, not a change to any of the export-control statutes Congress is separately trying to tighten or loosen. Reading the two as connected — as if a cooperative gesture on incident-reporting signals movement on chips — is exactly the kind of inference Friday's readout gives no basis for.",
+    "citation_urls": [
+     "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "None of that makes the channel meaningless — a standing line for reporting AI incidents between the two governments most responsible for frontier development is a real, if modest, guardrail against the kind of miscalculation both sides say they want to avoid. It just isn't the breakthrough either government's language implies, and the gap between the two is worth holding onto until November actually produces an agenda.",
+    "citation_urls": [
+     "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "What actually changed this week, in other words, is narrower than either government's language suggests: a channel exists on paper, a date is set for November, and one side has attached a new name to the technology it covers. **Whether an “AI incident” gets reported through it before November, and whether Beijing ever calls the technology anything but 人工智能, are the two concrete tests this agreement now has to clear — neither has been set up yet, on the public record.**",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-xi-us-china-ai-trade-summit/"
+    ]
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Four independent reporting threads (CBS News, Al Jazeera, Axios, Korea Times) all describing the White House's Sept. 26 account of the Sept. 25 Trump-Xi summit outcome, cross-checked against this newsroom's own prior two pieces on the same summit (the pre-summit dialogue pitch and the dinner-with-no-U.S.-account outcome) to isolate what is genuinely new: the published White House readout, the November date, and the 'super intelligence' terminology detail."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger fires (no health, financial, legal-proceeding, or accusatory claim about a named party). The central claim -- what the White House readout says -- is attributed to the White House throughout and flagged as unconfirmed by Beijing rather than stated as settled fact."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft treated Xi's 'healthy competition' quote as if it endorsed the U.S. account of the deal; revised to state plainly that no Chinese statement uses the 'super intelligence' term or confirms the channel's specific terms. Self-referential-language check clean throughout."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Every date and claim in the timeline and sourcecheck components traces to the cited reporting; no invented figures."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No compliance trigger fires."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No compliance trigger fires. Government-statement reporting attributed throughout, with the central claim explicitly marked as one-sided pending Beijing's own account."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-28T00:37:23Z"
+  },
+  "image": "assets/img/newsroom/trump-xi-ai-incident-channel-super-intelligence-terminology.jpg",
+  "publishedAt": "2026-09-28T00:37:23Z"
+ },
+ {
+  "slug": "abridge-va-775-million-ambient-ai-contract-ceiling",
+  "id": "newsroom-abridge-va-775-million-ambient-ai-contract-ceiling",
+  "title": "The VA's new ambient-AI contract tops out at $775 million over five years — and Abridge is one of at least two vendors on it",
+  "dek": "Abridge said Sept. 22 it will keep supplying ambient clinical-documentation AI to the Department of Veterans Affairs under a new five-year, multiple-award enterprise contract with a $775.72 million ceiling shared across every competing vendor — not a $775 million check to Abridge alone. Rival vendor Knowtex was also selected; the VA has not disclosed how the ceiling splits or what either company's actual task orders are worth.",
+  "persona": "priya-anand",
+  "section": "Health",
+  "format": "brief",
+  "disclaimer": "not-medical-advice",
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for the first task-order value",
+    "text": "The $775.72 million figure is a five-year ceiling across all vendors on the contract, not a guaranteed payment to any one of them. The number that actually matters — what Abridge or Knowtex gets paid to do — shows up only when the VA issues its first task order under this vehicle."
+   },
+   {
+    "label": "Watch for pilot outcome data",
+    "text": "Neither Abridge's press release nor the VA's own announcement cites a single clinician-satisfaction score or time-saved figure from the roughly year-long pilot at 75-plus medical centers. That's the evidence a $775 million-ceiling contract should eventually produce."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Abridge Selected for VA Ambient AI Enterprise Contract",
+    "url": "https://www.abridge.com/press-release/va-enterprise-contract",
+    "outlet": "Abridge (company press release)",
+    "kind": "primary"
+   },
+   {
+    "label": "Abridge selected for VA ambient AI enterprise contract",
+    "url": "https://www.nextgov.com/artificial-intelligence/2026/09/va-selects-abridge-ambient-scribe-under-new-enterprise-contract/416140/",
+    "outlet": "Nextgov/FCW",
+    "kind": "reporting"
+   },
+   {
+    "label": "Abridge Wins Seat on $775.7M VA Enterprise Contract to Power Ambient Clinical AI",
+    "url": "https://hitconsultant.net/2026/09/22/abridge-awarded-va-enterprise-contract-ambient-ai-veterans-health-administration/",
+    "outlet": "HIT Consultant",
+    "kind": "reporting"
+   }
+  ],
+  "tldr": [
+   "Abridge said Sept. 22 it will keep serving the VA under a new enterprise ambient-AI contract.",
+   "The contract is a five-year, multiple-award IDIQ with a $775.72 million ceiling across all vendors.",
+   "Knowtex was also selected; the VA hasn't disclosed how the ceiling splits between vendors.",
+   "Abridge's pilot already runs at more than 75 VA medical centers, live since October 2025.",
+   "Caveat: no VA official is quoted, and no clinician time-saved or satisfaction data has been released."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "**[Abridge](/company/abridge) said Sept. 22 it has been selected to keep providing ambient clinical-documentation AI to the Department of Veterans Affairs, under a new enterprise contract that several headlines described as a “$775 million deal.” It isn't one — not for Abridge alone.** The figure is a five-year ceiling of $775.72 million on a multiple-award, indefinite-delivery/indefinite-quantity (IDIQ) contract, spread across every vendor eligible to compete for task orders under it. Knowtex, a separate ambient-AI vendor, was also selected onto the same vehicle. Neither the VA nor Abridge has said how that ceiling is expected to split, or what either company's actual task orders will be worth. Abridge's existing pilot, live since October 2025, already runs across primary care, 12-plus medical and surgical specialties, and the VA's virtual-care Clinical Resource Hubs at more than 75 medical centers.",
+    "citation_urls": [
+     "https://www.abridge.com/press-release/va-enterprise-contract",
+     "https://www.nextgov.com/artificial-intelligence/2026/09/va-selects-abridge-ambient-scribe-under-new-enterprise-contract/416140/"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the $775.72 million actually covers",
+     "items": [
+      {
+       "value": "$775.72M",
+       "unit": "5-year ceiling",
+       "label": "Total IDIQ contract value",
+       "includes": "The maximum spend across every vendor awarded a task order under this contract",
+       "excludes": "Any guaranteed payment to Abridge specifically, or a confirmed split between Abridge and Knowtex",
+       "note": "A ceiling is the most a contract can pay out, not what it will pay out."
+      },
+      {
+       "value": "75+",
+       "unit": "VA medical centers",
+       "label": "Where Abridge's ambient scribe is already live",
+       "includes": "Primary care, 12-plus medical/surgical specialties, and the VA's virtual-care Clinical Resource Hubs",
+       "excludes": "A count of individual clinicians, or any published time-saved or satisfaction metric from the pilot"
+      }
+     ],
+     "source": "Abridge press release; Nextgov/FCW reporting"
+    }
+   },
+   {
+    "type": "p",
+    "text": "The scale claim in Abridge's own release is a company-wide figure, not a VA-specific one: Abridge says it supports “more than 100 million patient conversations annually across 300-plus U.S. health systems,” and that its VA deployment is “the only one to currently integrate with legacy and new VA electronic health records” across the pilot's 75-plus sites. ==That EHR-integration claim, if accurate, is the actual competitive edge here== — not the headline dollar figure — given that the VA is mid-transition between its legacy Vista system and a new Oracle Health EHR at different facilities, a migration that has separately been documented as rocky.",
+    "citation_urls": [
+     "https://www.abridge.com/press-release/va-enterprise-contract"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Abridge CEO Dr. Shiv Rao framed the award as continuity rather than a new relationship: “It is an honor to support the clinicians who care for our nation's Veterans,” he said. “We've worked to earn trust by meeting them where they are and preserving clinical context.” Former VA Secretary Dr. David Shulkin, who is not a VA employee today, added that “what matters most during a transition of this scale is that care stays connected for every Veteran” — a comment framed around the EHR migration rather than the contract's dollar value.",
+    "citation_urls": [
+     "https://www.abridge.com/press-release/va-enterprise-contract"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Abridge competes for hospital ambient-documentation budgets against Microsoft's Dragonfly, Nuance's DAX Copilot, and __OpenAI__'s own Epic-integrated push into the same workflow — a market this newsroom has already covered from the OpenAI side. This VA award is the clearest evidence yet that the company's pitch is landing in the largest single U.S. health system rather than just commercial hospital groups, but the pilot phase that preceded it, running since October 2025, has produced no public metric — no hours saved per clinician, no documentation-error rate, no satisfaction score — that would let a reader independently judge whether the deployment is working, as opposed to simply continuing.",
+    "citation_urls": [
+     "https://www.nextgov.com/artificial-intelligence/2026/09/va-selects-abridge-ambient-scribe-under-new-enterprise-contract/416140/"
+    ]
+   }
+  ],
+  "pipeline": {
+   "stages": [
+    {
+     "name": "Research",
+     "agent": "claude-runner",
+     "note": "Three independent threads: Abridge's own press release (primary, company account), Nextgov/FCW's independent reporting (confirms multi-award structure and names Knowtex as a second vendor), and HIT Consultant's trade coverage. All three agree on the $775.72M ceiling figure and the five-year IDIQ structure."
+    },
+    {
+     "name": "Verification",
+     "agent": "claude-runner",
+     "note": "No mandatory-scrutiny trigger (no diagnosis/treatment claim, no financial advice, no legal proceeding, no accusatory claim). Flagged and corrected the routing risk in most coverage's own headlines, which read as if $775M is committed to Abridge alone -- the ledger component and lede state the ceiling-vs-award distinction explicitly."
+    },
+    {
+     "name": "Loop 1 - critique and revise",
+     "agent": "claude-runner",
+     "note": "Critique found the first draft repeated Abridge's company-wide '100 million conversations' figure without flagging it as company-wide rather than VA-specific; revised to state that distinction directly. Self-referential-language check clean."
+    },
+    {
+     "name": "Loop 2 - component provenance check",
+     "agent": "claude-runner",
+     "note": "Both ledger items ($775.72M ceiling, 75+ medical centers) trace verbatim to body prose and the cited sources. No top-level text field on the component."
+    },
+    {
+     "name": "Gate",
+     "agent": "claude-runner",
+     "note": "Approved for publication. No compliance trigger fires; not-medical-advice disclaimer applied per section convention (Health desk) though no diagnostic or treatment claim is present."
+    }
+   ],
+   "gate": {
+    "decision": "Approved for publication",
+    "note": "No compliance trigger fires. Procurement/business reporting on a health-AI vendor, not a clinical-efficacy claim."
+   },
+   "run": "autonomous Claude-runner cycle · 2026-09-28T00:37:23Z"
+  },
+  "image": "assets/img/newsroom/abridge-va-775-million-ambient-ai-contract-ceiling.jpg",
+  "publishedAt": "2026-09-28T00:37:23Z"
  }
 ]
 ;
