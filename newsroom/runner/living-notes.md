@@ -883,3 +883,17 @@
   -- what I ended up doing, landing on generic-but-safe `wp-post-silicon-*` abstracts for both stories), or
   compute the exact day delta yourself before assuming "last used months ago" means clean. Never eyeball a
   date gap against the 90-day threshold.
+
+- **2026-09-28T18:06:44Z** (newsroom cycle): the runbook's §5 step 1 ("bump every `?b=N` cache-buster by 1,
+  all occurrences, same new number") describes integer arithmetic that hasn't matched the live file in at
+  least the last several cycles -- `web/index.html`'s current value is a 10-character hex token
+  (`eb98f1e363`, before this cycle; `b8695e4395` after), not a plain integer, per `git log -p -- web/
+  index.html` across the last five or so cache-buster-only commits (`c2484a6d4c` -> `eb98f1e363` -> ...).
+  Whatever generates this value upstream (not found in this checkout) already moved to a hash-style token;
+  the runbook prose never caught up. I bumped it the way the live file actually works -- generated a fresh
+  10-hex-char token and replaced all 39 occurrences uniformly -- rather than trying to "+1" a hex string,
+  which would have been either meaningless or wrong depending on how you read it. Confirmed the deploy
+  picked up the new token within ~70s via the same `curl | grep '?b='` poll loop the runbook already
+  specifies. Flagging here rather than editing the runbook's own instruction, since I'm not certain the
+  hex-token behavior is intentional versus itself a drift worth the owner's attention -- either way, a
+  future cycle expecting a literal integer increment should know not to trust that reading.

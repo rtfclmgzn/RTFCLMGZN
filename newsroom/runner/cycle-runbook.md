@@ -1231,6 +1231,37 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-09-28T18:06:44 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Nvidia's $150B buyback increase and
+   Open Agent Safety Platform launch, landing the same day chip stocks fell on
+   OpenAI sandbox-escape fallout; Bill Gates's Meet the Press call for federal
+   AI safeguards set against Trump's "hoax" framing and the Amodei/Altman
+   slowdown-call rejection; Rabbit's OS3 agentic-operating-system launch) plus
+   the full §4b/§4c/§4d passes were already the required work; guide cadence
+   read 2 days (a guide published 2026-09-26), so §3d needed no action. §3c
+   backfill search re-ran (`component_audit`) and found zero articles below
+   their format's component floor -- still empty. Both §3e/§3f blockers
+   unchanged, re-confirmed by reading the files directly: `ALLOWED_PREFIXES`
+   in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: found and fixed one real gap in `verify_covers.py pick`'s
+   library -- every image tagged `Policy` in the manifest has been used within
+   the last 90 days, so a Policy story (this cycle's Gates piece) gets zero
+   "clean" library candidates and the tool falls back to badly-mismatched
+   generic art (a health/surgical image, again -- the same failure mode
+   2026-09-02's and 2026-09-25's living-notes entries already catalogued for
+   different stories). Generated fresh covers for the Gates and Rabbit pieces
+   instead of shipping a mismatch ($0.06 each); the Nvidia piece got a genuine
+   library match (`wp-silicon-beyond-05`). This entry and the §3f entry below
+   are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Same two next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1557,6 +1588,12 @@ terminology agreement, and Abridge's slot on the VA's $775.72M ambient-AI contra
 §3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two
 next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-28T18:06:44 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Nvidia's buyback/safety-platform synthesis, Bill Gates's AI-regulation-call synthesis, and
+Rabbit's OS3 brief) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
