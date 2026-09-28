@@ -1,5 +1,8 @@
 # Living Notes — operational lessons for future runs
 
+- **2026-09-28** (weekly evolution): Dictionary growth works well targeting underlined terms (`__term__`) from recent articles — added 6 entries (Capture-the-flag, Fair use, METR, Reinforcement learning, Reward hacking, Tape-out) from genuine usage. Extensions/Prompts verification requires spot-checking URLs and testing prompts — skip rather than update freshness dates without doing the work (Operating Law).
+- **2026-09-28** (weekly evolution): Dossier promotion requires counting distinct pieces (articles + buzz), not word occurrences. When counts can't be verified with certainty, skip rather than guess — Operating Law: "a blank field is always acceptable; a plausible guess never is."
+
 - **2026-09-27T00:53:28Z** (newsroom cycle): while drafting this cycle's articles, caught myself
   about to write `[Anthropic](#/company/anthropic)` and `[xAI](#/company/xai)` as body-prose
   cross-links -- exactly the `#/` hash-route pattern Law 1 bans, and exactly the mistake the
