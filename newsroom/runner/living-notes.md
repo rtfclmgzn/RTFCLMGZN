@@ -857,3 +857,26 @@
   (`bz-677` and `bz-714` both described the identical Sept. 22 Cyera $400M Series G raise, just phrased
   differently with different source URLs) -- retired the older-positioned duplicate rather than both
   surviving to the 7-day cutoff.
+
+- **2026-09-28T00:37:23Z** (newsroom cycle): two new findings, both self-caught before shipping. (1) A
+  `{type:"quote"}` body block is NOT a component and does NOT take a nested `{"quote":{...}}` object --
+  unlike every §3b component (`ledger`, `timeline`, etc.), it takes a top-level `"text"` field directly
+  (e.g. `{"type":"quote","text":"“...” — Attribution","citation_urls":[...]}`), same shape as
+  a `p` block. `site_guard.py`'s `check_articles` catches the wrong shape immediately (`body[N] type=quote
+  has no text`) but it's worth knowing before drafting rather than after -- I'd nested it like a component
+  on the reasonable-looking assumption that "it's in the same menu as the other visual blocks," which it
+  is not; §3b+ (the ink-layer section) documents it separately from §3b's component menu for exactly this
+  reason. (2) Confirmed a live instance of the `verify_covers.py pick` clean()-pool bug already catalogued
+  2026-08-26 through 09-02: for a US-China-summit Policy story and a health-AI-documentation Health story,
+  `pick` returned the same never-used-but-badly-mismatched image (`art-073-surgical-suite-dual-robot-arms`,
+  literal surgical robot arms) as the top "clean" candidate for BOTH unrelated stories, because age_bonus
+  for a never-used image beats every genuinely on-topic image that's merely >30 days stale but still within
+  the 90-day cooldown. Separately, I made a real mistake trying to route around it: I manually picked
+  `art-041-committee-behind-the-glass` (Policy-tagged, seemingly stale) without doing the cooldown math
+  correctly -- it was actually last used 73 days ago, not >90 -- and `verify_covers.py check` correctly
+  hard-FAILed the duplicate (2026-09-02's fix made ALL duplicate-cover reuse a failure regardless of
+  `"exception":true` marking, not just a warning). Lesson: when hand-picking a cover to route around the
+  bug, either trust `pick`'s own `clean()` math by excluding the bad candidate and re-running the tool (safe
+  -- what I ended up doing, landing on generic-but-safe `wp-post-silicon-*` abstracts for both stories), or
+  compute the exact day delta yourself before assuming "last used months ago" means clean. Never eyeball a
+  date gap against the 90-day threshold.
