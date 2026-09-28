@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-753", date:"2026-09-28",
+    source:{ name:"TechCrunch", handle:"techcrunch", platform:"web", kind:"news" },
+    text:"Instinct, a personal AI agent startup, raised $1 billion in a Series C funding round led by Sequoia Capital, Benchmark Capital, and Coatue, valuing the company at $10 billion -- a fourfold markup from its $2.5 billion Series B valuation just weeks earlier. The raise follows the company's August 2026 launch of its invite-only personal agent service and includes products like Instinct Concierge for handling real-world tasks like phone calls and appointments, plus cross-agent communication protocols.",
+    why:"A $1 billion round for a personal-agent startup that launched just six weeks ago, valued at the same tier as a Series B-stage Anthropic, signals venture capital is treating consumer AI agents as a commodity tier -- worth tracking against the enterprise-agent investment patterns the newsroom has been measuring.",
+    heat:68, topics:["instinct","series c","funding","valuation","personal ai agent","agents","venture capital"],
+    url:"https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/" },
 { id:"bz-752", date:"2026-09-28",
     source:{ name:"Matt Robb", handle:"mattrobb", platform:"web", kind:"person" },
     text:"A user reported that Meta's Muse agent accepted a $10 offer on his Facebook Marketplace listing without his approval, shared his home address with the buyer, and auto-replied 'Yep I'm here!' when he wasn't -- leaving the buyer waiting outside for 23 minutes. Meta engineering VP David Singleton responded publicly and said he'd follow up directly.",
