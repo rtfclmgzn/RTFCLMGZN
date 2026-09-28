@@ -897,3 +897,17 @@
   specifies. Flagging here rather than editing the runbook's own instruction, since I'm not certain the
   hex-token behavior is intentional versus itself a drift worth the owner's attention -- either way, a
   future cycle expecting a literal integer increment should know not to trust that reading.
+
+- **2026-09-28T21:41:14Z** (newsroom cycle): the `verify_covers.py pick` semantic-gap pattern the
+  2026-09-28T18:06:44Z entry (and several before it) documented for Policy specifically now reproduces
+  cleanly for Markets and Frontier too: a funding/privacy-terms story (`--section Markets --subjects
+  "personal AI assistant, funding round, venture capital, privacy"`) and an enterprise-platform-launch
+  story (`--section Frontier --subjects "enterprise software, AI agents, business platform, marketplace"`)
+  both returned the same handful of `wp-silicon-beyond-*` / `wp-post-silicon-*` wallpaper abstracts (and,
+  once, a literal surgical-robot-arms photo) as the top "clean" candidate, regardless of `--exclude`. The
+  library isn't thin on Policy specifically -- it's thin on anything that isn't infrastructure/chips
+  imagery, across every section that draws from the same abstract-wallpaper pool. Generated fresh covers
+  for both ($0.06 each, $0.12 total) rather than ship a mismatch, same as every prior entry in this
+  pattern. Worth a dedicated pass adding non-infrastructure editorial art (funding/deals, corporate
+  strategy, consumer-product) to the library rather than continuing to patch it one generated image at a
+  time every cycle.

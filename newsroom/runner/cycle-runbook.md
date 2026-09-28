@@ -1262,6 +1262,35 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-09-28T21:41:14 cycle) -- re-checked before writing,
+   since this cycle's own two articles (Instinct's $1B Series C / $10B
+   valuation reconciled against its own rewritten privacy terms; a Meta
+   Enterprise Platform / Anthropic Claude Marketplace / Microsoft Work IQ
+   three-way comparison) plus the full §3c/§4b/§4c/§4d passes were already
+   the required work; guide cadence read 2 days (a guide published
+   2026-09-26), so §3d needed no action. §3c backfill search re-ran
+   (`component_audit`-style floor check) and found zero articles below
+   their format's component floor -- still empty. Both §3e/§3f blockers
+   unchanged, re-confirmed by reading the files directly: `ALLOWED_PREFIXES`
+   in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner; `find . -iname
+   "issue-001.json"` also still returns nothing. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Separately: the
+   `verify_covers.py pick` library-exhaustion pattern §3e's own image-gap
+   findings and living-notes.md have been tracking for Policy specifically
+   reproduced for Markets and Frontier this cycle too (same generic
+   silicon-wafer wallpaper pool returned for a funding story and an
+   enterprise-platform story); generated fresh covers for both rather than
+   ship a mismatch, logged in full in living-notes.md rather than duplicated
+   here since it's a §4/cover-pipeline finding, not a Primer-content one.
+   This entry and the §3f entry below are, again, being committed to a
+   `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as their own
+   separate `runbook:`-prefixed commit, after the article/data commit that
+   already cleared the full §5 gate sequence. Same two next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1594,6 +1623,13 @@ articles (Nvidia's buyback/safety-platform synthesis, Bill Gates's AI-regulation
 Rabbit's OS3 brief) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-28T21:41:14 cycle, re-check):** re-confirmed, unchanged, since this cycle's own two
+articles (Instinct's $1B Series C / $10B valuation vs. its own rewritten privacy terms; a Meta Enterprise
+Platform / Claude Marketplace / Microsoft Work IQ three-way comparison) plus the full §3c/§4b/§4c/§4d
+passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
+`wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as
+every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
