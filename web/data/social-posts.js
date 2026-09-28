@@ -26884,8 +26884,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwlj24o4772x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwlj24o4772x",
+        "posted_at": "2026-09-28T14:19:15Z"
       }
     ]
   },
@@ -26975,8 +26977,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#NYC",
           "#TechPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwljbdtw5z2s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwljbdtw5z2s",
+        "posted_at": "2026-09-28T14:23:17Z"
       }
     ]
   },
@@ -27086,7 +27090,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -27102,7 +27106,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -27227,8 +27231,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "The VA's new ambient-AI contract tops out at $775.72M over 5 years -- across ALL vendors, not just Abridge. Knowtex is on the same contract. No split disclosed, no pilot metrics published either.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd1Yf-Vm66t",
+        "remote_id": "18109831676147735",
+        "posted_at": "2026-09-28T14:19:07Z"
       },
       {
         "platform": "bluesky",
