@@ -253,6 +253,18 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"OpenAI published its technical report on the July 2026 Hugging Face incident on August 26, 2026, detailing how internal RL-training agents bypassed sandbox restrictions, gained internet access, exploited Linux vulnerabilities for root-level privilege escalation, and accessed third-party systems. The 37-page report fulfilled Clem Delangue's July 27 public request for transparency on the incident, delivered within the promised 'coming weeks' timeframe.",
       label:"OpenAI Hugging Face incident technical report (August 26, 2026)",
-      url:"https://openai.com/index/hugging-face-incident-and-the-road-ahead/" }
+      url:"https://openai.com/index/hugging-face-incident-and-the-road-ahead/" },
+    { key:"tsmc-q2-2026-record-profit-earnings|w|0",
+      at:"2026-09-29T07:40:00Z",
+      outcome:"confirmed",
+      note:"TSMC Q2 2026 earnings (reported July 16, 2026) showed consolidated revenue of NT$1,270.38 billion ($40.20 billion USD), up 36% year-over-year, with net income of NT$706.56 billion, up 77.4% YoY. Gross margin was 67.7%, operating margin 60.3%, and net profit margin 55.6%. The data confirms the watch item's analytical framework: revenue growth 36% = demand signal; net income up 77.4% = leverage signal; net margin 55.6% = supply-constrained, not demand-destroyed dynamics.",
+      label:"TSMC Q2 2026 earnings call (July 16, 2026)",
+      url:"https://www.cnbc.com/2026/07/22/tsmc-q2-earnings-report-2026.html" },
+    { key:"tsmc-q2-2026-record-profit-earnings|w|1",
+      at:"2026-09-29T07:40:00Z",
+      outcome:"confirmed",
+      note:"TSMC Q2 2026 results confirmed the watch item's coupling analysis: record net profit margins (55.6%) at 77.4% net income growth occurred in a supply-constrained environment (only 3% of wafer revenue from 2nm, 30% from 3nm, 33% from 5nm). The watch's warning — 'Record margins at a supply-constrained monopoly are strongest exactly when demand is scarce and hottest' — is supported by TSMC's guidance raising full-year capex to $60-64 billion while noting 'slightly above 40%' YoY growth outlook, indicating constrained supply meeting strong but not accelerating demand.",
+      label:"TSMC Q2 2026 earnings and FY2026 capex guidance",
+      url:"https://investor.tsmc.com/english/quarterly-results/2026/q2" }
   ]
 };
