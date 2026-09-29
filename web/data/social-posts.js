@@ -27558,7 +27558,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -27586,8 +27586,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dd2i4ALjLGw/",
+        "remote_id": "18426700681149197",
+        "posted_at": "2026-09-29T01:09:04Z"
       },
       {
         "platform": "facebook",
@@ -27596,14 +27598,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Instinct",
           "#AIagents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124119085396947",
+        "remote_id": "1238977099292018_122124119085396947",
+        "posted_at": "2026-09-29T01:09:12Z"
       },
       {
         "platform": "threads",
         "copy": "30 days, 4x valuation, and a rewritten privacy policy that fixes some of what got criticized -- not all of it. Instinct is now worth $10B with the same open question: what happens to everything it can already see on your screen.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd2i7Q3kcgI",
+        "remote_id": "18020039321933305",
+        "posted_at": "2026-09-29T01:09:31Z"
       },
       {
         "platform": "bluesky",
@@ -27613,8 +27619,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Privacy",
           "#Startups"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwmnf4t5ie2e",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwmnf4t5ie2e",
+        "posted_at": "2026-09-29T01:09:39Z"
       }
     ]
   },
@@ -27650,7 +27658,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -27688,14 +27696,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIagents",
           "#EnterpriseAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124119787396947",
+        "remote_id": "1238977099292018_122124119787396947",
+        "posted_at": "2026-09-29T01:13:15Z"
       },
       {
         "platform": "threads",
         "copy": "The enterprise-AI-agent land grab has three different shapes now: Meta selling its own agent directly, Anthropic renting the rails to partners, Microsoft selling the data context under all of it. Interesting that none of them will say what it costs yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd2jaSkEasE",
+        "remote_id": "17982650478084209",
+        "posted_at": "2026-09-29T01:13:47Z"
       },
       {
         "platform": "bluesky",
@@ -27705,8 +27717,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#EnterpriseAI",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwmnmqvnf32m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwmnmqvnf32m",
+        "posted_at": "2026-09-29T01:13:54Z"
       }
     ]
   }
