@@ -27326,8 +27326,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Chip stocks fell up to 8% Monday on AI-safety fallout. Nvidia rose 2% -- then announced a record $150B buyback and free agent-containment tools. Its own CEO called rival labs' safety alarm overblown days earlier. Read into that what you will.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd3f8rWFX9Z",
+        "remote_id": "17973967593141949",
+        "posted_at": "2026-09-29T10:02:40Z"
       },
       {
         "platform": "threads",
@@ -27447,8 +27449,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#BillGates",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwnl6hmj5f22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwnl6hmj5f22",
+        "posted_at": "2026-09-29T10:02:47Z"
       }
     ]
   },
@@ -27521,8 +27525,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Rabbit",
           "#AIagents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwnlfo642q24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwnlfo642q24",
+        "posted_at": "2026-09-29T10:06:49Z"
       }
     ]
   },
@@ -27556,9 +27562,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIagents",
           "#Instinct"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -27573,7 +27579,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIagents"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
