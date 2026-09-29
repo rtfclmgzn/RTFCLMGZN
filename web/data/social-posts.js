@@ -27731,5 +27731,81 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-29T01:13:54Z"
       }
     ]
+  },
+  {
+    "article_id": "g25",
+    "ts": "2026-09-29T16:30:00Z",
+    "export": {
+      "article_id": "g25",
+      "url": "https://rtfclmgzn.com/article/vet-an-mcp-server-before-you-connect-it",
+      "headline": "How to vet an MCP server before you connect it to an AI agent",
+      "hook": "Anyone can publish an MCP server, and nothing about the protocol itself checks its code for malicious behavior before your agent runs it.",
+      "key_facts": [
+        "A May 2025 GitHub MCP flaw let one poisoned issue leak private repository data via a broad access token.",
+        "A backdoored npm package quietly BCC'd emails for weeks before Koi Security caught it in September 2025.",
+        "Anthropic disputes an April 2026 researcher claim that MCP's own default design is a critical flaw."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g25.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anyone can publish an MCP server, and nothing about the protocol checks its code before your agent runs it. One poisoned GitHub issue leaked private repo data in 2025. A backdoored npm package BCC'd emails for weeks before anyone noticed.",
+        "reply_copy": "The five-minute check before you connect the next one:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#MCP"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anyone can publish an MCP server -- the plug-in standard that lets Claude, ChatGPT, and other AI agents reach your calendar, GitHub, or inbox.\n\nNothing about the protocol checks a server's code before your agent runs it. A 2025 GitHub MCP flaw leaked private repo data through one poisoned issue. A backdoored npm package quietly BCC'd emails for weeks before anyone caught it.\n\nOur new guide: the five-minute check before you connect the next one. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#MCP",
+          "#CyberSecurity",
+          "#AIagents",
+          "#TechTips",
+          "#DataPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Model Context Protocol (MCP) is the standard letting AI agents like Claude and ChatGPT plug into outside tools -- your calendar, GitHub, a database -- without custom code for each one. Anyone can publish a server that implements it, and nothing about the protocol itself checks that server's code for malicious behavior before your agent runs it.\n\nThree real incidents show what goes wrong: a May 2025 disclosure where one poisoned GitHub issue let an agent leak private repository data, a backdoored npm package that quietly BCC'd emails for weeks before being caught, and an April 2026 flaw where a security firm and Anthropic still disagree about whether the protocol's own defaults are safe.\n\nOur new guide has the five-minute vet to run before connecting the next server.",
+        "hashtags": [
+          "#AI",
+          "#CyberSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anyone can publish an MCP server, and nothing about the protocol checks its code before your agent runs it. A 2025 GitHub MCP flaw leaked private data through one poisoned issue; a backdoored npm package BCC'd emails for weeks before anyone caught it. Our new guide: the five-minute vet before you connect the next one.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anyone can publish an MCP server. Nothing checks its code before your agent runs it -- a 2025 GitHub flaw proved that, leaking private repo data through one poisoned issue. The five-minute vet before you connect the next one:",
+        "hashtags": [
+          "#AI",
+          "#MCP",
+          "#CyberSecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

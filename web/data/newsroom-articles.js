@@ -82143,7 +82143,7 @@ window.RTFC_NEWSROOM_ARTICLES = [{
   },
   {
    "type": "p",
-   "text": "The idea traces to Du's prior work building __MCP__ servers -- the connector standard that lets an AI model call outside tools -- in 2025, where she kept hearing the same request: clients wanted agents dropped directly into Slack conversations, and kept hitting the same wall of token budgets and lost context when they tried. Ando raised **$20 million** across pre-seed (led by Accel) and seed (led by Index Ventures and Emergence Capital) to build the alternative instead of the workaround, and launched with early customers in software, real estate, and financial services across more than a dozen countries -- currently tuned for teams of up to 30 human members plus their agents.",
+   "text": "The idea traces to Du's prior work building [MCP](/dictionary) servers -- the connector standard that lets an AI model call outside tools -- in 2025, where she kept hearing the same request: clients wanted agents dropped directly into Slack conversations, and kept hitting the same wall of token budgets and lost context when they tried. Ando raised **$20 million** across pre-seed (led by Accel) and seed (led by Index Ventures and Emergence Capital) to build the alternative instead of the workaround, and launched with early customers in software, real estate, and financial services across more than a dozen countries -- currently tuned for teams of up to 30 human members plus their agents.",
    "citation_urls": [
     "https://kingy.ai/news/ando-ai-native-slack-alternative/"
    ]
@@ -83922,7 +83922,7 @@ window.RTFC_NEWSROOM_ARTICLES = [{
   },
   {
    "type": "p",
-   "text": "Fei-Fei Li, who founded World Labs in 2024 after years as director of the Stanford Human-Centered Artificial Intelligence Institute, will join AMD as ==Executive Vice President and Chief Scientist==. Her placement directly under Lisa Su signals AMD intends World Labs to operate with significant autonomy while feeding insights directly into the company's chip and software architecture. {{note: This level of executive placement for an acquired research team is unusual; it suggests AMD views spatial intelligence as core to its competitive strategy.}}",
+   "text": "Fei-Fei Li, who founded World Labs in 2024 after years as director of the Stanford Human-Centered Artificial Intelligence Institute, will join AMD as ==Executive Vice President and Chief Scientist==. Her placement directly under Lisa Su signals AMD intends World Labs to operate with significant autonomy while feeding insights directly into the company's chip and software architecture. {{note: This level of executive placement for an acquired research team is unusual; it suggests AMD views spatial intelligence as core to its competitive strategy.}} AMD said it expects the deal to close by December 31, 2026, and it's the chipmaker's largest acquisition since its roughly $50 billion purchase of Xilinx, which closed in 2022.",
    "citation_urls": [
     "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
    ]

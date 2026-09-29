@@ -6647,5 +6647,367 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g25",
+    "slug": "vet-an-mcp-server-before-you-connect-it",
+    "image": "assets/img/newsroom/g25.jpg",
+    "title": "How to vet an MCP server before you connect it to an AI agent",
+    "dek": "Anyone can publish a Model Context Protocol server, and nothing about the standard itself checks its code for malicious behavior before your agent runs it. Three real incidents -- a hijacked GitHub connector, a backdoored npm package, and a silently swapped approval -- plus an unresolved 2026 dispute over MCP's own default design, turned into a five-minute check before you connect the next one.",
+    "persona": "luka-petrovic",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-29T16:30:00Z",
+    "readMins": 8,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "Anyone can publish an MCP server; registry listing verifies the publisher, not the code.",
+      "A May 2025 GitHub MCP flaw let one poisoned issue leak private repository data.",
+      "A backdoored npm package quietly BCC'd emails for weeks before Koi Security caught it.",
+      "Check Point's MCPoison let an approved server be silently swapped for a malicious one.",
+      "Anthropic disputes a 2026 researcher claim that its own default design is a critical flaw."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Check what access token is wired into every MCP server you've already connected.",
+        "text": "A single broad token that spans everything you can reach is the exact gap that let one poisoned GitHub issue leak private data in a real May 2025 disclosure -- scope each server's credential to only what it needs."
+      },
+      {
+        "label": "Pin every server to an exact version, and read the diff before bumping it.",
+        "text": "A malicious npm package built trust with fifteen clean releases before its real payload landed in version 1.0.16 -- an install pinned to 'latest' would have picked it up automatically."
+      },
+      {
+        "label": "Confirm your MCP client re-prompts when an approved server's config changes, not just on first install.",
+        "text": "Cursor shipped a fix for exactly this gap in July 2025 after researchers showed an already-approved server could be silently swapped for a malicious one -- check your own client does the same before trusting a shared config."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Introducing the Model Context Protocol",
+        "url": "https://www.anthropic.com/news/model-context-protocol",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "Donating MCP to the Agentic AI Foundation",
+        "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+        "outlet": "Anthropic",
+        "kind": "primary"
+      },
+      {
+        "label": "GitHub MCP Exploited: Accessing private repositories via MCP",
+        "url": "https://invariantlabs.ai/blog/mcp-github-vulnerability",
+        "outlet": "Invariant Labs",
+        "kind": "primary"
+      },
+      {
+        "label": "Cursor IDE's MCP Vulnerability (MCPoison)",
+        "url": "https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/",
+        "outlet": "Check Point Research",
+        "kind": "primary"
+      },
+      {
+        "label": "First Malicious MCP Server Found Stealing Emails in Rogue Postmark-MCP Package",
+        "url": "https://thehackernews.com/2025/09/first-malicious-mcp-server-found.html",
+        "outlet": "The Hacker News",
+        "kind": "reporting"
+      },
+      {
+        "label": "Introducing the MCP Registry",
+        "url": "https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/",
+        "outlet": "Model Context Protocol",
+        "kind": "primary"
+      },
+      {
+        "label": "The MCP Registry -- Trust and Security",
+        "url": "https://modelcontextprotocol.io/registry/about",
+        "outlet": "Model Context Protocol",
+        "kind": "reference"
+      },
+      {
+        "label": "The Architectural Flaw at the Core of Anthropic's MCP",
+        "url": "https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/",
+        "outlet": "OX Security",
+        "kind": "primary"
+      },
+      {
+        "label": "Anthropic MCP Design Vulnerability Enables RCE, Threatening AI Supply Chain",
+        "url": "https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html",
+        "outlet": "The Hacker News",
+        "kind": "reporting"
+      },
+      {
+        "label": "MCP 'design flaw' puts 200k servers at risk: Researcher",
+        "url": "https://www.theregister.com/2026/04/16/anthropic_mcp_design_flaw/",
+        "outlet": "The Register",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Before you connect a new MCP server to Claude, ChatGPT, or any other agent, three things are checkable in under five minutes: who actually published it, what access it's asking for, and whether it's pinned to a specific version rather than whatever the maintainer ships next. None of that is optional, because nothing about the Model Context Protocol itself checks a server's code for malicious behavior before your agent runs it -- that job falls entirely on you or your client.",
+        "citation_urls": [
+          "https://modelcontextprotocol.io/registry/about"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "[Anthropic](/company/anthropic) open-sourced MCP in November 2024 to solve a real integration problem: connecting many different AI apps to many different tools and data sources used to mean custom code for every single pairing. Anthropic donated the protocol to a new vendor-neutral body, the Agentic AI Foundation, on December 9, 2025 -- the same foundation that now also [hosts Google's rival agent-to-agent protocol](/article/google-a2a-protocol-agentic-ai-foundation-mcp) alongside it. Claude, ChatGPT, Microsoft Copilot, and Gemini all support MCP for connecting to outside tools. None of that governance touches server safety: it decides who steers the standard, not who's allowed to publish a server that implements it.",
+        "citation_urls": [
+          "https://www.anthropic.com/news/model-context-protocol",
+          "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What actually goes wrong when nobody checks",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The clearest illustration is a single disclosure from May 2025, when researchers found that GitHub's own official MCP server could be turned against its user without any bug in the server's code at all.",
+        "citation_urls": [
+          "https://invariantlabs.ai/blog/mcp-github-vulnerability"
+        ]
+      },
+      {
+        "type": "flow",
+        "flow": {
+          "kicker": "HOW ONE ISSUE BECAME A DATA LEAK",
+          "title": "The GitHub MCP \"toxic agent flow\", May 2025",
+          "steps": [
+            {
+              "actor": "Attacker",
+              "what": "Posts a public GitHub issue containing hidden instructions, written to look like ordinary text."
+            },
+            {
+              "actor": "Developer's agent",
+              "what": "Reads the issue while doing the task it was asked to do: check open issues on the public repo."
+            },
+            {
+              "actor": "Agent",
+              "what": "Follows the hidden instruction instead of the developer's -- it has no way to tell issue text from a command.",
+              "hi": true
+            },
+            {
+              "actor": "Agent",
+              "what": "Uses its own access token -- often scoped to every repository the developer can see, not just the public one -- to read a private repository."
+            },
+            {
+              "actor": "Agent",
+              "what": "Publishes what it found into a pull request on the public repo, where the attacker can read it."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Invariant Labs, the security firm that found this, was explicit that nothing malfunctioned: the server read a public issue it was allowed to read, and opened a pull request it was allowed to open. The fix isn't a patch to GitHub's server code -- it's never handing an agent one token that spans both public and private repositories in the first place.",
+        "citation_urls": [
+          "https://invariantlabs.ai/blog/mcp-github-vulnerability"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Three more incidents, and one still-open argument",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "That May 2025 disclosure wasn't an isolated case. The incidents below show the same underlying problem from different angles -- a trusted approval that doesn't mean what you think, and a clean-looking package that turns malicious only after it's earned your trust.",
+        "citation_urls": []
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "HOW WE GOT HERE",
+          "title": "MCP, launch to open dispute",
+          "items": [
+            {
+              "when": "Nov 25, 2024",
+              "what": "Anthropic open-sources MCP, the connector standard now behind this whole category of tool.",
+              "source": "https://www.anthropic.com/news/model-context-protocol"
+            },
+            {
+              "when": "May 26, 2025",
+              "what": "Invariant Labs discloses the GitHub MCP \"toxic agent flow\" -- a scoped-token fix, not a server patch.",
+              "source": "https://invariantlabs.ai/blog/mcp-github-vulnerability"
+            },
+            {
+              "when": "Jul 29, 2025",
+              "what": "Cursor ships a fix for MCPoison (CVE-2025-54136) after Check Point shows an approved MCP server can be silently swapped for a malicious one.",
+              "hi": true,
+              "source": "https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/"
+            },
+            {
+              "when": "Sep 15, 2025",
+              "what": "The postmark-mcp npm package ships version 1.0.16 -- its first with a backdoor that BCCs every email it sends.",
+              "source": "https://thehackernews.com/2025/09/first-malicious-mcp-server-found.html"
+            },
+            {
+              "when": "Dec 9, 2025",
+              "what": "Anthropic donates MCP to the newly formed Agentic AI Foundation, alongside OpenAI and Block.",
+              "source": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+            },
+            {
+              "when": "Apr 15, 2026",
+              "what": "OX Security discloses a systemic command-injection flaw in MCP's default server-launch design; Anthropic calls the behavior expected, not a bug.",
+              "hi": true,
+              "source": "https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The postmark-mcp case is the one to notice if you've ever installed anything from an open registry without reading the diff first: the package shipped fifteen ordinary, functioning versions specifically to earn trust before version 1.0.16 quietly added the line of code that BCC'd a copy of every email it touched to an outside address. Koi Security caught it after the package had been downloaded 1,643 times -- not because MCP's registry flagged it, but because someone happened to look.",
+        "citation_urls": [
+          "https://thehackernews.com/2025/09/first-malicious-mcp-server-found.html"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Two things people assume about MCP that aren't quite true",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "In April 2026, security firm OX Security published research alleging a systemic flaw in how MCP servers are launched by default -- one that could, in the worst case, reach across as many as 200,000 running instances, and that produced ten official CVE numbers, nine of them rated critical. Anthropic didn't dispute the technical mechanism the researchers found, but declined to change MCP's reference implementation, saying the flagged behavior -- the STDIO execution model -- is a secure default whose input sanitization is the responsibility of whoever builds on top of it. That leaves a genuine, unresolved dispute rather than a settled fact, alongside a second, quieter misconception about what a registry listing actually proves:",
+        "citation_urls": [
+          "https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/",
+          "https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html",
+          "https://www.theregister.com/2026/04/16/anthropic_mcp_design_flaw/"
+        ]
+      },
+      {
+        "type": "scorecard",
+        "scorecard": {
+          "kicker": "WHAT'S ACTUALLY ESTABLISHED",
+          "title": "Two claims worth separating from the facts",
+          "items": [
+            {
+              "claim": "MCP's default server-launch design is a critical, systemic vulnerability putting up to 200,000 servers at risk.",
+              "level": "contested",
+              "basis": "OX Security's April 15, 2026 disclosure ties the flaw to ten CVEs, nine rated critical, across MCP's Python, TypeScript, Java, and Rust implementations. Anthropic has declined to change the reference implementation, calling the STDIO execution model a secure default and sanitization the responsibility of whoever builds on top of it.",
+              "resolver": "Anthropic revising MCP's own reference implementation to sanitize input by default, or a CVSS re-scoring both sides accept."
+            },
+            {
+              "claim": "A server listed in the official MCP Registry has had its code checked for malicious behavior.",
+              "level": "unverified",
+              "basis": "The registry's own documentation says it performs namespace authentication tying a server's name to a verified GitHub account or domain -- proving who published it -- and explicitly delegates all code security scanning to the underlying package registries (npm, PyPI, Docker Hub) and downstream marketplaces.",
+              "resolver": "The MCP Registry adding its own mandatory security scan for every listed server, which its published design does not currently include."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The five-minute vet before you connect a new server",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of this means treating every MCP server as guilty until proven innocent. It means running the same five checks every time, regardless of how official a server looks:",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Vet an MCP server before your agent runs it",
+          "sub": "Works whether you're connecting a server in Claude Desktop, Cursor, VS Code, or any other MCP client.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The server's listing in the official MCP Registry or its source repository."
+          ],
+          "steps": [
+            {
+              "do": "Confirm who actually published it, not just what it's named.",
+              "detail": "The official MCP Registry ties a server's name to a verified GitHub account or domain through namespace authentication -- a name like io.github.username/server means that specific GitHub user published it.",
+              "verify": "You can name the actual account or organization behind the server, not just its display name.",
+              "ifnot": "If the publisher can't be verified through the registry's own namespace system, treat it the way you'd treat an unsigned executable from a random link."
+            },
+            {
+              "do": "Check the access it actually requests against the task you need it for.",
+              "detail": "A server that only needs to read one calendar shouldn't be handed a token that reaches every repository or inbox you own -- a scoped token instead of a blanket one is exactly what would have closed the May 2025 GitHub MCP gap.",
+              "verify": "The credential you're about to hand it is scoped to the minimum it needs, not your broadest existing one.",
+              "ifnot": "If the client doesn't support scoping a credential that narrowly, create a separate, minimal-permission token just for this server rather than reusing one you already trust with more."
+            },
+            {
+              "do": "Pin an exact version or commit -- never install 'latest.'",
+              "detail": "postmark-mcp shipped fifteen clean releases before its backdoor landed in version 1.0.16; a floating install would have picked that version up automatically.",
+              "verify": "Your config names a specific version number or commit hash, not a moving tag.",
+              "ifnot": "If you must auto-update, at minimum review the changelog or diff before every version bump reaches a machine holding real credentials."
+            },
+            {
+              "do": "Confirm your client re-prompts on any change to an already-approved server, not just on first install.",
+              "hi": true,
+              "detail": "MCPoison (CVE-2025-54136) exploited the opposite assumption in Cursor: once approved, edits to a server's command or arguments ran silently. Cursor fixed this in version 1.3, released July 29, 2025.",
+              "verify": "Editing the server's config in a test setup actually triggers a new approval prompt.",
+              "ifnot": "If your client doesn't re-prompt on edits, treat any shared or synced config file the same way you'd treat a pull request -- read the diff before it reaches your machine."
+            },
+            {
+              "do": "Test it against something adversarial before trusting it with anything sensitive.",
+              "detail": "Feed it a file, issue, or message containing an obvious fake instruction and confirm the server -- and your agent -- treat it as inert content, not a command.",
+              "verify": "The test run completes with no unexpected tool calls and no credentials touched.",
+              "ifnot": "If the agent reacts to the planted instruction at all, don't connect that server to anything real until the behavior is understood."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running those five checks once closes the specific gaps above. The ways this quietly gets skipped anyway are the same four every time.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped without anyone noticing",
+          "items": [
+            {
+              "mistake": "Assuming a registry listing means the code has been checked.",
+              "looks": "A server shows up in a search with a verified-looking namespace and a normal-sounding name.",
+              "why": "The MCP Registry's own documentation says it verifies who published a server, not whether its code is safe -- that's delegated entirely to npm, PyPI, Docker Hub, and downstream marketplaces.",
+              "fix": "Read the source or run it in an isolated test before connecting it to anything with real access, regardless of where it's listed.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Wiring one broad access token into every MCP server you connect.",
+              "looks": "The same GitHub, Google, or Slack token pasted into every new server's config because it's already there.",
+              "why": "This is precisely what let a single poisoned GitHub issue reach private-repository data in the May 2025 disclosure -- the agent's token, not a server bug, was the actual vulnerability.",
+              "fix": "Create a separate, minimally scoped credential per server, even when it's more setup work.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating a clean update history as proof a package stays clean.",
+              "looks": "Auto-update left on because the last several versions caused no problems.",
+              "why": "postmark-mcp shipped fifteen ordinary versions specifically to build that exact impression before its backdoor landed in version 1.0.16.",
+              "fix": "Pin versions and review the diff before bumping, especially for anything with email, database, or credential access.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Calling the vetting done because the vendor says the behavior is 'expected.'",
+              "looks": "Dismissing a security researcher's finding because the platform maker disputes the framing.",
+              "why": "OX Security's disclosure produced real CVE numbers regardless of how Anthropic characterizes the underlying design choice -- a company's own comfort with a default isn't the same as the default being safe for your setup.",
+              "fix": "Judge a disclosed flaw by what it actually lets an attacker do, not by whether the platform maker calls it a bug.",
+              "cost": "high"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this requires distrust of [MCP](/dictionary) as a standard -- it's doing exactly the integration job it was built for, and the incidents above are the ordinary growing pains of a fast-adopted connector standard, not a reason to avoid it. It requires treating a new MCP server the same way you'd treat [a new CI dependency running with production access](/article/audit-your-ci-for-the-claude-code-gemini-cli-codex-rce) or [a new inbox you're about to hand an agent](/article/give-an-ai-agent-email-calendar-access-safely) -- worth five minutes of checking before it's running with your credentials, not after.",
+        "citation_urls": []
+      }
+    ],
+    "corrections": []
   }
 ];
