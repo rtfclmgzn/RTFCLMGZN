@@ -930,3 +930,19 @@
   place: a generation call that returns a near-empty response should probably be treated as a failure and
   retried/fall back, not written to disk as if it succeeded -- the same "never write a fabricated/placeholder
   value" principle Law 3 already applies to token counts.
+
+- **2026-09-29T20:41:33Z** (newsroom cycle): published three synthesis pieces (OpenAI's DevDay launch of
+  Dots always-on agents and GPT-6.1 Sol; Trump's America.gov AI portal on Gemini/Grok; SiMa.ai's $150M
+  Series C). Two findings worth keeping. (1) GPT-6.1 Sol shipped the same day with an Artificial Analysis
+  Intelligence Index score already public (52, one point behind GPT-6 Astra's 53) -- unlike the usual
+  pattern where a new model ships with `score:null` pending independent measurement, this one had already
+  been measured within hours, so it went straight onto the Scoreboard with a real score rather than the
+  usual placeholder. Worth checking Artificial Analysis's own release page before defaulting to `null` on
+  a same-day model launch; the measurement sometimes already exists. (2) The `verify_covers.py pick`
+  library-thinness pattern this log has tracked since 2026-08-26 reproduced exactly on cue for the
+  America.gov piece: every Policy-relevant subject string returned either the same surgical-robot-arms
+  mismatch or a generic silicon-wafer abstract as the top "clean" candidate for a government-portal story.
+  Generated a fresh cover instead ($0.06). Separately confirmed the two silicon/compute-substrate abstracts
+  (`wp-post-silicon-09`, `wp-post-silicon-10`) are a genuinely good fit for chip-story covers specifically
+  (used one for the SiMa.ai piece) -- the library isn't uniformly thin, it's specifically thin on
+  government/policy and consumer-product imagery, which matches every prior entry in this pattern.
