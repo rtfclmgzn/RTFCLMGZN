@@ -911,3 +911,22 @@
   pattern. Worth a dedicated pass adding non-infrastructure editorial art (funding/deals, corporate
   strategy, consumer-product) to the library rather than continuing to patch it one generated image at a
   time every cycle.
+
+- **2026-09-29T16:30:00Z** (reference-desk cycle): a NEW cover-corruption failure mode, distinct from the
+  already-documented `verify_covers.py pick`/`--allow-lru-exception` semantic-gap pattern above: this
+  cycle's mandatory §4d cover-health sweep (`verify_covers.py check`) found `rtfc-20260929-amd-worldlabs-01`
+  (the AMD/World Labs acquisition article, published via the out-of-cycle breaking scan a few hours before
+  this cycle started) shipped with a **69-byte cover file** -- a truncated 1x1 PNG saved with a `.jpg`
+  extension, already committed to `main` (`git log` shows it landed in commit `209186c`, not a working-tree
+  artifact). `verify_covers.py check`'s `checked=N`/`with_image=N` counts don't distinguish a real image
+  from a byte-count-only stub, so this shipped invisibly until the file-size FAIL check happened to catch
+  it. Repaired this cycle per §4d ("repair THIS cycle, before §5"): generated a fresh, on-topic cover
+  ($0.06) and re-ran the gate clean. While in that same record, `component_audit.py` also failed on it
+  (three numbers in its `keyfacts` block -- the Xilinx-acquisition comparison's `$50B`/`2022`, and the
+  expected-close date's `31` -- appeared nowhere in the article's own prose, only in the component itself);
+  fixed by adding one sourced sentence to existing body prose rather than deleting the keyfacts item, since
+  both facts were real and citable, just never actually written into a paragraph. Worth asking whichever
+  job (breaking-scan's image-generation or upload step, most likely) produced the 69-byte file in the first
+  place: a generation call that returns a near-empty response should probably be treated as a failure and
+  retried/fall back, not written to disk as if it succeeded -- the same "never write a fabricated/placeholder
+  value" principle Law 3 already applies to token counts.
