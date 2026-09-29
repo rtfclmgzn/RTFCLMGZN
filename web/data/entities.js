@@ -71,6 +71,8 @@ window.RTFC_ENTITIES = {
       kind:"frontier model, first to cross OpenAI's Critical cyber-capability threshold", access:"closed" },
     { re:/\bGPT-6 Sol\b/i, name:"GPT-6 Sol", maker:"OpenAI", makerKey:"openai",
       kind:"balanced coding and agentic model", access:"closed" },
+    { re:/\bGPT-6\.1 Sol\b/i, name:"GPT-6.1 Sol", maker:"OpenAI", makerKey:"openai",
+      kind:"efficiency-focused coding and agentic model, one point off flagship Astra", access:"closed" },
     { re:/\bGPT-6 Luna\b/i, name:"GPT-6 Luna", maker:"OpenAI", makerKey:"openai",
       kind:"lightweight, cost-efficient model", access:"closed" },
     { re:/\bGPT-5\.6\b/i, name:"GPT-5.6", maker:"OpenAI", makerKey:"openai",
