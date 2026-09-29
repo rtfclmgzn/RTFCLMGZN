@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-760", date:"2026-09-29",
+    source:{ name:"OpenAI", handle:"openai", platform:"web", kind:"lab" },
+    text:"OpenAI announced Pro 500, a $500/month ChatGPT tier with 25x the usage allowance of Plus and exclusive access to Astra Ultrafast, which generates tokens up to 8x faster than standard (300+ tokens/second in Codex). The company simultaneously halved Pro 200's included usage from October 30, reducing it from 20x to 10x Plus, but issued $2,500 in usage credits to existing Pro 200 subscribers expiring year-end.",
+    why:"A $500/month tier represents OpenAI's bet that power users will pay 5x the Pro 200 price for speed and usage alone -- while simultaneously nerfing the $200 tier sits squarely in the revenue-extraction playbook and signals confidence in its model's speed advantage.",
+    heat:67, topics:["openai","pricing","pro subscription","ultrafast","revenue","devday","chatgpt"],
+    url:"https://www.digitaltrends.com/computing/openai-wants-500-a-month-for-chatgpt/" },
 { id:"bz-759", date:"2026-09-29",
     source:{ name:"Anthropic", handle:"anthropic_status", platform:"web", kind:"lab" },
     text:"Anthropic's own status page logged elevated error rates across claude.ai, Claude Code, Claude Cowork, Claude Console and the API starting 14:21 UTC Sept. 29. A first mitigation at 14:41 UTC left sign-ins, account actions, and Code/Cowork sessions still failing; a second, broader failure blocked new chats, voice, purchases, and file uploads before Anthropic told users still logged in not to sign out. The company reported full service restored by roughly 1:12 p.m. ET.",

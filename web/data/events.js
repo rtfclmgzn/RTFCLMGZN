@@ -14,8 +14,8 @@ window.RTFC_EVENTS = {
   items: [
     { name:"OpenAI DevDay", org:"OpenAI", when:"Sept 29, 2026", sort:"2026-09-29",
       type:"Developer", place:"San Francisco + streamed", tag:"labs",
-      status:"soon", checkedAt:"2026-09-27T19:45:00Z",
-      url:"https://openai.com/devday/", blurb:"Sam Altman keynote at 10:00 a.m. PT — livestreamed API roadmap, new models and developer tools." },
+      status:"live", checkedAt:"2026-09-29T23:00:00Z", liveUrl:"https://devday.openai.com/",
+      url:"https://openai.com/devday/", blurb:"Sam Altman keynote — 20+ announcements including Dots (always-on agents), Pro 500 tier, Ultrafast speed, and plugin extensions." },
     { name:"Web Summit", org:"Web Summit", when:"Expected Nov 2026", sort:"2026-11-03",
       type:"Conference", place:"Lisbon", tag:"industry",
       url:"https://websummit.com/", blurb:"One of the largest tech gatherings; AI dominates the mainstage." },
