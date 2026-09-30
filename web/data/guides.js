@@ -4981,7 +4981,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this makes an AI transcript untrustworthy -- **2.6%** is a genuine improvement over what shipped even a year ago. It just means the number on the announcement and the number that matters for your specific recording are two different things, and only one of them is checkable from a chair. Accuracy is one half of the AI-notetaker question; [whether everyone on the call actually agreed to being recorded](/article/check-whether-your-ai-notetaker-needs-consent) is the other, and it's the half with an actual lawsuit attached.",
+        "text": "None of this makes an AI transcript untrustworthy -- **2.6%** is a genuine improvement over what shipped even a year ago. It just means the number on the announcement and the number that matters for your specific recording are two different things, and only one of them is checkable from a chair. Accuracy is one half of the AI-notetaker question; [whether everyone on the call actually agreed to being recorded](/article/check-whether-your-ai-notetaker-needs-consent) is the other, and it's the half with an actual lawsuit attached. The higher-stakes version of this same check applies to [an AI medical scribe's drafted clinical note](/article/catch-an-ai-scribes-mistake-before-you-sign-the-note), where the same kind of confident, clean-reading omission carries real clinical weight.",
         "citation_urls": []
       }
     ],
@@ -7006,6 +7006,248 @@ window.RTFC_GUIDES = [
         "type": "p",
         "text": "None of this requires distrust of [MCP](/dictionary) as a standard -- it's doing exactly the integration job it was built for, and the incidents above are the ordinary growing pains of a fast-adopted connector standard, not a reason to avoid it. It requires treating a new MCP server the same way you'd treat [a new CI dependency running with production access](/article/audit-your-ci-for-the-claude-code-gemini-cli-codex-rce) or [a new inbox you're about to hand an agent](/article/give-an-ai-agent-email-calendar-access-safely) -- worth five minutes of checking before it's running with your credentials, not after.",
         "citation_urls": []
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g26",
+    "slug": "catch-an-ai-scribes-mistake-before-you-sign-the-note",
+    "image": "assets/img/newsroom/g26.jpg",
+    "title": "How to catch your AI medical scribe's mistake before you sign the note",
+    "dek": "A peer-reviewed audit of five deployed AI scribes found roughly one key clinical detail omitted or wrong in every four notes. A second 2026 audit of 565 real notes found the same underlying data could be scored as a 9% or a 79% failure rate depending only on how reviewers were instructed to look. Neither number tells you what to check on the note sitting in front of you right now -- this does.",
+    "persona": "priya-anand",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-09-30T16:31:07Z",
+    "readMins": 7,
+    "sample": false,
+    "disclaimer": "not-medical-advice",
+    "tldr": [
+      "A 2025 study found AI scribes omitted or garbled roughly one in four key clinical details.",
+      "Omission, not garbled text, is the dominant error type in every published scribe-accuracy study.",
+      "A 2026 audit found published failure rates swing from 9% to 79% on identical notes by instrument.",
+      "Check medications, allergies, and telehealth exam claims first -- they carry the most real harm.",
+      "Caveat: a vendor's own accuracy percentage is not a substitute for reviewing the note yourself."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Check medication names, dosages, and allergy lines against what was actually said, every time.",
+        "text": "Every study measured here found medication and allergy information among the highest-harm error categories -- and the one category vendors themselves flag as a known weak point."
+      },
+      {
+        "label": "On a phone or video visit, strike any 'examination' language the note invented.",
+        "text": "A 2026 audit of real deployed notes found physical-exam findings written into notes from telephone-only consultations, where no exam could have happened at all."
+      },
+      {
+        "label": "Don't cite a vendor's accuracy number without asking what instrument produced it.",
+        "text": "The same 565-note dataset was scored as a 9.3% or a 79.0% failure rate depending only on the instructions given to reviewers -- a headline percentage alone tells you almost nothing."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Documenting Care with AI: A Comparative Analysis of Commercial Scribe Tools",
+        "url": "https://ebooks.iospress.nl/doi/10.3233/SHTI250857",
+        "outlet": "Studies in Health Technology and Informatics (IOS Press)",
+        "kind": "primary"
+      },
+      {
+        "label": "Evaluating the Quality and Safety of Ambient Digital Scribe Platforms Using Simulated Ambulatory Encounters",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12605248/",
+        "outlet": "Mayo Clinic Proceedings: Digital Health",
+        "kind": "primary"
+      },
+      {
+        "label": "One note in three: a verified census of three deployed AI scribes, and the instrument that counted it",
+        "url": "https://arxiv.org/abs/2608.31017",
+        "outlet": "arXiv preprint (Fox, Markham, Lail, Karotsieris)",
+        "kind": "primary"
+      },
+      {
+        "label": "Using AI Medical Scribes: Risk Management Considerations",
+        "url": "https://www.tmlt.org/resource/using-ai-medical-scribes-risk-management-considerations",
+        "outlet": "Texas Medical Liability Trust",
+        "kind": "reporting"
+      },
+      {
+        "label": "Using AI Medical Scribes Safely",
+        "url": "https://www.heidihealth.com/en-us/blog/using-ai-medical-scribes-safely",
+        "outlet": "Heidi Health",
+        "kind": "primary"
+      },
+      {
+        "label": "What Clinicians Should Know Before Using Heidi or Any AI Scribe",
+        "url": "https://www.iatrox.com/blog/what-clinicians-should-know-before-using-heidi-ai-scribe",
+        "outlet": "IatroX",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "Before you sign the next note your AI scribe drafted, know this: the single largest published study of the practice found key clinical details -- a medication, an allergy, a finding the patient actually reported -- missing or wrong in roughly **26%** of cases, and a separate 2026 audit of real deployed notes found that headline accuracy figures move almost entirely with how strictly reviewers are told to look, not with which product is being graded. Neither fact is a reason to distrust [AI scribes like Heidi Health's](/article/heidi-health-340-million-raise-ai-clinical-documentation) or [Abridge's](/article/abridge-va-775-million-ambient-ai-contract-ceiling) wholesale -- clinicians are adopting them fast because the time savings are real. It's a reason to know exactly what to check before your signature makes the note the official record, because that signature is what the responsibility actually rests on.",
+        "citation_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC12605248/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What 'AI scribe accuracy' numbers actually measure",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Three independent studies have measured AI-scribe error rates in the past year, and they don't agree with each other -- not because the tools disagree, but because the studies measured different things. A comparison of four commercial scribes against two simulated internal-medicine and surgical encounters, published in Studies in Health Technology and Informatics, found **71%** of all errors were omissions -- information that was said but never made it into the note -- against 19.4% additions and 6.5% incorrect facts. Mayo Clinic Proceedings: Digital Health ran a larger test in October 2025: five ambient scribe platforms against 14 simulated ambulatory encounters, finding **26.3%** of key clinical elements per case omitted or inaccurately captured, with omissions again the majority error type at roughly **76.3%**, and an average of 3.0 errors per case carrying potential for moderate-to-severe patient harm.",
+        "citation_urls": [
+          "https://ebooks.iospress.nl/doi/10.3233/SHTI250857",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC12605248/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The third study is the one that should change how you read the other two. A September 2026 preprint audited **565 real notes** from 142 actual consultations across three deployed commercial scribes -- not simulations -- using an adversarial two-model review panel, and found **31.3%** of notes carried at least one independently verified failure, concentrated in allergy and medication information, invented patient identity, and physical-exam language written into notes from telephone-only visits. But the authors' own omission share of their verified errors was just **23.1%** -- far below the 54-86% range other published audits report -- and when they held the scribe, the evidence, and the settings fixed and changed only the instruction given to reviewers, the share of candidate errors that counted as verified moved from **9.3% to 79.0%** on the exact same data. ==The instrument used to measure an AI scribe's accuracy determines the number it reports almost as much as the scribe itself does.==",
+        "citation_urls": [
+          "https://arxiv.org/abs/2608.31017"
+        ]
+      },
+      {
+        "type": "ledger",
+        "ledger": {
+          "title": "What each scribe-accuracy number actually counts",
+          "items": [
+            {
+              "value": "71%",
+              "unit": "share of errors that are omissions",
+              "label": "4 commercial scribes, 2 simulated encounters (IOS Press study)",
+              "includes": "Errors found comparing AI notes to a reference transcript on scripted, simulated visits.",
+              "excludes": "Real deployed notes, and any measure of which omissions were clinically dangerous.",
+              "note": "Smallest sample of the three studies -- a useful signal, not a population estimate."
+            },
+            {
+              "value": "26.3%",
+              "unit": "of key elements omitted or inaccurate per case",
+              "label": "5 platforms, 14 simulated ambulatory encounters (Mayo Clinic Proceedings)",
+              "includes": "Omissions and inaccuracies together, plus a separate finding that ~76.3% of all errors were omissions.",
+              "excludes": "Real patient encounters -- every case here was simulated."
+            },
+            {
+              "value": "31.3%",
+              "unit": "of notes with a verified failure",
+              "label": "3 deployed scribes, 565 real notes, 142 real consultations (arXiv audit)",
+              "includes": "Real-world deployed notes, adversarially verified by two separate AI reviewers plus human spot-checks.",
+              "excludes": "A severity ranking -- and their own omission share of errors was 23.1%, not the 54-86% other audits found.",
+              "note": "The same dataset scored 9.3% to 79.0% depending only on the review instruction given -- treat the headline rate as instrument-dependent."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The five-minute check before you sign",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of the three studies above will tell you whether the specific note in front of you right now is one of the ones with an error. What they do tell you, consistently, is where to look first.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check an AI-drafted clinical note before you sign it",
+          "sub": "Ordered by where the studies above found the highest-harm errors concentrate, not by how the note reads top to bottom.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The drafted note.",
+            "Your own memory of the encounter, or the recording if your workflow keeps one."
+          ],
+          "steps": [
+            {
+              "do": "Check every medication name, dose, and allergy line against what was actually discussed.",
+              "detail": "Medication and allergy information is the single category every study here flags as highest-harm -- and the category Heidi Health's own published safety guidance separately names as a known failure point for speech recognition.",
+              "verify": "Every drug name, dose, and allergy in the note matches what you recall saying or hearing, with no substitutions.",
+              "ifnot": "If a medication or allergy entry doesn't match your memory of the visit, correct it before anything else -- don't move on to formatting or phrasing first."
+            },
+            {
+              "do": "Read for what's missing, not just what's wrong.",
+              "detail": "Omission is the dominant error type across all three studies -- as high as 76.3% of errors in one -- and a missing detail reads as a clean, confident note, exactly like a wrong one does.",
+              "verify": "Every finding, symptom, or instruction you remember discussing actually appears somewhere in the note.",
+              "ifnot": "If something you said isn't in the note anywhere, add it -- an AI scribe omitting a detail is not the same as that detail not mattering."
+            },
+            {
+              "do": "On a phone or video visit, delete any exam finding the note couldn't have actually observed.",
+              "detail": "The largest real-notes audit to date found physical-exam language written into notes from telephone-only consultations specifically -- a fabrication a remote visit makes structurally impossible to have happened.",
+              "verify": "Every examination finding in the note is one that was actually possible to observe in the format the visit took.",
+              "ifnot": "If an exam line couldn't have happened in a phone or video visit, remove it rather than editing it to sound plausible."
+            },
+            {
+              "do": "Confirm the patient's name and identifying details, especially after unclear audio.",
+              "detail": "The same audit found invented patient-identity details among its most common verified-failure categories -- a scribe filling an inaudible stretch of audio with a plausible-sounding guess rather than leaving a gap.",
+              "verify": "Every identifying detail in the note is one you can confirm independently, not just one that sounds right.",
+              "ifnot": "If a detail can't be confirmed, flag it as unclear in the note rather than letting a confident guess stand as fact."
+            },
+            {
+              "do": "Periodically spot-check a full note against your own memory or the recording, not just a skim.",
+              "detail": "Research cited in the Mayo Clinic Proceedings study found clinicians reviewing AI-drafted text on screen frequently failed to catch clinically relevant errors -- a skim is a weaker check than it feels like.",
+              "verify": "Your spot-checked note matches your independent memory of the encounter on every load-bearing detail, not just the ones that stood out on a read-through.",
+              "ifnot": "If a spot-check turns up an error you wouldn't have caught by skimming, treat that as a sign to slow down on this scribe's notes generally, not a one-off."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running that check closes the specific gaps three separate studies actually found. The ways it quietly gets skipped anyway are mostly the same few, every time.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped without anyone noticing",
+          "items": [
+            {
+              "mistake": "Trusting a published accuracy percentage without asking what instrument produced it.",
+              "looks": "A vendor or a study cites a single error rate and it gets treated as a fixed, comparable fact.",
+              "why": "The same 565-note dataset scored anywhere from 9.3% to 79.0% depending only on the instructions given to reviewers -- the number alone carries almost no information without its methodology.",
+              "fix": "Ask what counted as an error and who verified it before comparing any two accuracy numbers to each other.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating a clean-reading note as an accurate one.",
+              "looks": "The note reads smoothly with no obvious typos or garbled text, so it's signed without further checking.",
+              "why": "Omission -- not garbled text -- is the dominant error type in every study measured here, and a missing detail by definition leaves nothing odd-looking behind for a skim to catch.",
+              "fix": "Check for what should be there and isn't, not just for what reads wrong.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Relying on a careful read-through alone as the safeguard.",
+              "looks": "Reading the whole note once, end to end, before signing, and treating that as sufficient review.",
+              "why": "Research cited in the Mayo Clinic Proceedings study found clinicians reviewing AI-drafted text on screen frequently missed clinically relevant errors -- reading is not the same check as verifying against the encounter itself.",
+              "fix": "Spot-check specific load-bearing details -- medications, allergies, exam findings -- against memory or the recording, not just read the prose.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Assuming a vendor's own hallucination disclaimer changes who's responsible for catching one.",
+              "looks": "A product's safety documentation says the model 'can hallucinate,' and that's treated as covering the risk.",
+              "why": "Risk-management guidance is consistent on this point: the signing clinician carries the same liability as if they had dictated every word themselves, and professional-board guidance discourages signing AI-generated content automatically.",
+              "fix": "Read the vendor's own safety disclosures as a map of where to look harder, not as something that lowers what you personally need to verify.",
+              "cost": "high"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is an argument against AI scribes -- the documentation-time savings behind their fast adoption are real, and independent clinician guidance on [Heidi Health's own product](/company/heidi-health) is explicit that the vendors aren't disputing any of this either. It's an argument for treating every AI-drafted note the way you'd treat a draft written by a bright new hire who wasn't actually in the room: useful, fast, and never the final word until you've checked it against what you know happened. Accuracy is one half of the AI-notetaker question; [whether everyone in the room agreed to being recorded in the first place](/article/check-whether-your-ai-notetaker-needs-consent) is the other, and it's the half with an actual lawsuit attached.",
+        "citation_urls": [
+          "https://www.heidihealth.com/en-us/blog/using-ai-medical-scribes-safely",
+          "https://www.tmlt.org/resource/using-ai-medical-scribes-risk-management-considerations"
+        ]
       }
     ],
     "corrections": []

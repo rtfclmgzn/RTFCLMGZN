@@ -28416,5 +28416,80 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-30T12:53:19Z"
       }
     ]
+  },
+  {
+    "article_id": "g26",
+    "ts": "2026-09-30T16:31:07Z",
+    "export": {
+      "article_id": "g26",
+      "url": "https://rtfclmgzn.com/article/catch-an-ai-scribes-mistake-before-you-sign-the-note",
+      "headline": "How to catch your AI medical scribe's mistake before you sign the note",
+      "hook": "A peer-reviewed study found AI medical scribes omitted or garbled roughly one in four key clinical details -- and a 2026 audit found the same failure rate reported as 9% or 79% depending only on how reviewers were told to look.",
+      "key_facts": [
+        "A Mayo Clinic Proceedings: Digital Health study found 26.3% of key clinical elements omitted or inaccurate across 5 AI scribe platforms.",
+        "Omission, not garbled text, is the dominant AI-scribe error type in every published study measured.",
+        "A 2026 audit of 565 real deployed notes found the reported failure rate swings from 9.3% to 79.0% by review instruction alone."
+      ],
+      "tone": "Precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g26.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A peer-reviewed study found AI medical scribes omitted or garbled roughly 1 in 4 key clinical details. A 2026 audit found the same failure rate reported as 9% or 79% -- depending only on how reviewers were told to look.",
+        "reply_copy": "The five-minute check before you sign the next note:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#HealthTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "AI medical scribes draft the note. You still sign it -- and a peer-reviewed study found roughly 1 in 4 key clinical details get omitted or garbled along the way.\n\nA separate 2026 audit of 565 real notes found the same data scored as a 9% or a 79% failure rate, depending only on how reviewers were instructed to check.\n\nOur new guide: the five-minute check that catches what the headline number won't. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#HealthTech",
+          "#DigitalHealth",
+          "#ClinicalDocumentation",
+          "#AIinHealthcare",
+          "#PatientSafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI medical scribes -- like Heidi Health's and Abridge's -- draft clinical notes that a doctor then signs. A Mayo Clinic Proceedings: Digital Health study found key clinical details, like a medication or an allergy, omitted or inaccurate in roughly 26% of cases across five platforms. A separate 2026 audit of 565 real deployed notes found something more unsettling: the same dataset scored as a 9.3% or a 79.0% failure rate depending only on the instructions given to reviewers.\n\nOur new guide walks through the five-minute check that catches what a vendor's headline accuracy number won't.",
+        "hashtags": [
+          "#AI",
+          "#HealthTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "AI scribes draft the note; you still sign it. A peer-reviewed study found ~26% of key clinical details omitted or wrong across 5 platforms. A 2026 audit found the same data scored as a 9% or 79% failure rate depending only on review instructions. New guide: the five-minute check before you sign.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "A study found AI medical scribes omit or garble roughly 1 in 4 key clinical details. A 2026 audit found the same failure rate scored as 9% or 79% depending only on how reviewers were told to look. The 5-minute check before you sign:",
+        "hashtags": [
+          "#AI",
+          "#HealthTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
