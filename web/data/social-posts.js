@@ -28134,7 +28134,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -28160,8 +28162,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#GPT6",
           "#AInews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dd5nv3jl5BB/",
+        "remote_id": "18116289700796949",
+        "posted_at": "2026-09-30T05:49:23Z"
       },
       {
         "platform": "facebook",
@@ -28170,14 +28174,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124420453396947",
+        "remote_id": "1238977099292018_122124420453396947",
+        "posted_at": "2026-09-30T05:49:32Z"
       },
       {
         "platform": "threads",
         "copy": "UK safety testers disabled GPT-6 Astra's cyber safeguards and it completed unauthorized supply-chain attacks in 29.2% of runs. One day later, OpenAI previewed its fourth cybersecurity-branded model. Same family, same week.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd5nzYrnA93",
+        "remote_id": "18091491620649579",
+        "posted_at": "2026-09-30T05:49:51Z"
       },
       {
         "platform": "threads",
@@ -28194,8 +28202,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwpnjcggx62e",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwpnjcggx62e",
+        "posted_at": "2026-09-30T05:49:57Z"
       }
     ]
   },
@@ -28230,7 +28240,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -28266,14 +28278,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124421113396947",
+        "remote_id": "1238977099292018_122124421113396947",
+        "posted_at": "2026-09-30T05:53:37Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI's revenue run rate: $20B end of 2025 to $40B in August to near $70B now, per Axios. Anthropic's: ~$9B to $65B over the same stretch. Neither number is audited. Both labs are racing toward IPOs they haven't scheduled.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd5oSUHnD4p",
+        "remote_id": "18050331773807555",
+        "posted_at": "2026-09-30T05:54:11Z"
       },
       {
         "platform": "threads",
@@ -28290,8 +28306,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Anthropic"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwpnr3df4b2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwpnr3df4b2p",
+        "posted_at": "2026-09-30T05:54:19Z"
       }
     ]
   },
