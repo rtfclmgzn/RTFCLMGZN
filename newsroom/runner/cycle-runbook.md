@@ -1337,6 +1337,34 @@ this order, and mark it done here.
    cleared the full §5 gate sequence. Same two next steps as every entry since
    2026-08-30, still open.
 
+   PARTIAL, checked (2026-09-30T20:29:59 cycle) -- re-checked before writing,
+   since this cycle's own three articles (the White House voluntary AI-safety
+   accord and the FTC's first formal AI-agent investigation, alongside
+   OpenAI's GPT-6.1 Astra delay and Anthropic's silent provable-inference
+   deadline; Trump's "Super Intelligence" federal-terminology executive
+   order; Synopsys and OpenAI's GPT-Synopsys chip-design partnership) plus
+   the full §3c/§4b/§4c/§4d passes were already the required work; guide
+   cadence read 0 days (a guide published earlier today), so §3d needed no
+   action. §3c backfill search re-ran (`component_audit`) and found zero
+   articles below their format's component floor -- still empty. Both
+   §3e/§3f blockers unchanged, re-confirmed by reading the files directly:
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), `find . -iname
+   "issue-001.json"` still returns nothing, and no `wrangler` binary or
+   Cloudflare credentials exist on this runner. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. This entry and the §3f
+   entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Separately: while reading through existing published
+   articles to confirm this cycle's own JSON shape, found a real, systemic
+   self-referential-language pattern ("this newsroom has tracked," "this
+   newsroom's own register," etc.) across roughly 20 already-published
+   articles -- logged in full in `living-notes.md` rather than here, since
+   it's a style/QA finding about the existing archive, not a Primer-content
+   item. Same two next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1689,6 +1717,14 @@ articles (UK AISI's GPT-6 Astra supply-chain-attack finding vs. OpenAI's GPT-6 C
 §3c/§4b/§4c/§4d passes were already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same
 two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-09-30T20:29:59 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the White House's voluntary AI-safety accord and the FTC's first formal AI-agent investigation,
+alongside OpenAI's GPT-6.1 Astra delay and Anthropic's silent provable-inference deadline; Trump's "Super
+Intelligence" federal-terminology executive order; Synopsys and OpenAI's GPT-Synopsys chip-design
+partnership) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

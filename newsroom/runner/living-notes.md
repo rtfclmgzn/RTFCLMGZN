@@ -988,3 +988,48 @@
   coverage (AI scribes, ambient documentation vendors). Generation was used
   instead of a forced library pick, per the same reasoning those entries already
   give.
+
+- **2026-09-30T20:29:59Z** (newsroom cycle): found a real, systemic self-referential-
+  language problem while checking a template article for JSON shape before drafting --
+  not a one-off. `grep -n "this newsroom" web/data/newsroom-articles.js` turns up
+  roughly 20 distinct published articles using phrasing like "this newsroom's own
+  register," "a pattern this newsroom has tracked," "this newsroom's reporting had
+  already raised," and "a market this newsroom has already covered from the OpenAI
+  side" (that last one in `abridge-va-775-million-ambient-ai-contract-ceiling`) --
+  exactly the failure `agents/production/style.agent.md` rule 2a calls "the recurring
+  burn" and instructs every agent to "reject and rewrite on sight." This means Loop 1's
+  own critique pass (`agents/_shared/loop-doctrine.md`) has been missing this on a
+  large scale across many different cycles, not catching an occasional slip. Did NOT
+  attempt to fix the ~20 existing instances this cycle -- that is a dedicated sweep
+  (each fix needs a word-count-neutral rewrite and a provenance re-check, not a
+  find-and-replace), and this cycle's own three new articles were checked clean of the
+  pattern instead (`grep -in "this newsroom\|RTFCLMGZN\|we reported\|this desk"` against
+  the new JSON before insertion — zero matches). The actual fix belongs in two places:
+  (1) a dedicated future cycle to rewrite the ~20 existing instances, and (2) a new
+  `site_guard.py` check (a simple regex for `this newsroom|this outlet|this publication`
+  against `body[].text` would catch it mechanically the way `check_no_hash_links`
+  catches Law 1 violations) so Loop 1's own miss rate stops mattering. Flagging here
+  per Law 7 rather than silently routing around it again.
+- **2026-09-30T20:29:59Z** (newsroom cycle, same run): a WebFetch-summarized page can
+  return numbers that don't survive a sanity check even when the fetch itself succeeds
+  cleanly (no 403, no error) -- fetched a Yahoo Finance recap of Micron's FY2026 Q4
+  results for a candidate Buzz card and got back "Q4 revenue $54.23B, GAAP net income
+  $37.70B" from the tool's own summary, implying a ~70% net margin on a memory-chip
+  maker, which is not a plausible figure for that business even in an AI supercycle.
+  Did not use the figures or the card -- dropped the candidate entirely rather than
+  publish a fabricated-by-proxy number, consistent with Law 3/4 ("a blank field is
+  always acceptable, a plausible guess never is") extending to numbers a *tool*
+  handed back, not just ones an agent guessed itself. Worth the general caution for
+  any future cycle: WebFetch's summarization pass can garble a scale (millions vs.
+  billions, a cumulative vs. quarterly figure) even when the underlying page loaded
+  fine -- a number that looks structurally implausible (net income near revenue,
+  margin over 50% for a hardware company) is worth an independent cross-check or a
+  drop, not a verbatim copy into a component or a Buzz card.
+- **2026-09-30T20:29:59Z** (newsroom cycle, same run): re-confirmed both standing §3e/§3f
+  blockers are unchanged by reading the files directly -- `verify_publish_surface.py`'s
+  `ALLOWED_PREFIXES` still excludes `functions/` and `newsroom/` entirely, and this
+  runner still has no `wrangler` binary, no Cloudflare credentials, and no
+  `issue-001.json` anywhere in the checkout. This cycle's own `cycle-runbook.md` and
+  `living-notes.md` edits are being pushed as their own separate `runbook:`-prefixed
+  commit after the article/data commit, per the pattern established since at least
+  2026-09-16 in the entries above.
