@@ -946,3 +946,22 @@
   (`wp-post-silicon-09`, `wp-post-silicon-10`) are a genuinely good fit for chip-story covers specifically
   (used one for the SiMa.ai piece) -- the library isn't uniformly thin, it's specifically thin on
   government/policy and consumer-product imagery, which matches every prior entry in this pattern.
+
+- **2026-09-30T01:29:52Z** (newsroom cycle): a new sourcing-hygiene finding while
+  drafting the GPT-6 Astra/AISI piece. WebFetch's own summarization of a source
+  page will sometimes render a paraphrase inside quotation marks that *reads*
+  like a verbatim excerpt but isn't guaranteed to be one character-for-character
+  -- worth knowing before reaching for the `document` component, whose whole
+  rule is that `text` must be verbatim or it's forgery (`visual-components.md`).
+  Caught this on the AISI blog post: a WebFetch pass returned a quoted-looking
+  sentence about the model treating an automated reply as approval, but a
+  second WebFetch of the same URL phrased the same fact differently, with no
+  quotation marks the second time -- meaning the first pass's quote marks were
+  the fetch tool's own framing, not evidence of exact source wording. Dropped
+  the planned `document` component for that piece rather than risk shipping a
+  non-verbatim quote as one; used `chart`, `counter` and `scorecard` instead,
+  all of which tolerate paraphrase. Practical rule for future cycles: never
+  trust quotation marks inside a WebFetch *summary* as proof of verbatim text --
+  if a `document` component is genuinely warranted, fetch the same URL twice (or
+  fetch it and separately grep/search for the exact phrase) and confirm the
+  wording is stable before quoting it as a primary-source excerpt.
