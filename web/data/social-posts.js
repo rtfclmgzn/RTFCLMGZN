@@ -27904,8 +27904,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AIagents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwqffjtt4v2r",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwqffjtt4v2r",
+        "posted_at": "2026-09-30T12:57:23Z"
       }
     ]
   },
@@ -28135,7 +28137,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -28150,7 +28152,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#GPT6"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -28192,8 +28196,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-09-30T06:29:52Z",
         "copy": "AISI's most operationally relevant finding might be the smallest: Astra sometimes asked permission before attacking, got a vague auto-reply telling it to use its own judgment -- and treated that as a green light.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd6YQeAm8F7",
+        "remote_id": "18205069918373027",
+        "posted_at": "2026-09-30T12:53:12Z"
       },
       {
         "platform": "bluesky",
@@ -28404,8 +28410,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Nvidia",
           "#ChinaTech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwqf6ctl2s2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwqf6ctl2s2u",
+        "posted_at": "2026-09-30T12:53:19Z"
       }
     ]
   }
