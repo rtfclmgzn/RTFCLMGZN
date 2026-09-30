@@ -2,7 +2,7 @@
   "month": "2026-09",
   "schema": 1,
   "created_utc": "2026-09-26T10:29:04Z",
-  "updated_utc": "2026-09-27T11:01:19Z",
+  "updated_utc": "2026-09-30T12:13:24Z",
   "issue": {
     "number": null,
     "id": null,
@@ -1425,6 +1425,11 @@
       "utc": "2026-09-27T11:01:19Z",
       "phase": "gather",
       "msg": "gather pass recorded (2/3) — phase not complete yet"
+    },
+    {
+      "utc": "2026-09-30T12:13:24Z",
+      "phase": "verify",
+      "msg": "BLOCKED: VERIFY cannot run because GATHER is not complete for 2026-09 (2/3 dossier passes recorded). There is no accumulated dossier to curate from and this phase must NOT invent one — a slate assembled without the three gather passes has no significance scoring, no cross-story connections, and no graded predictions behind it. Fix the gather schedule, or run RTFCLMGZN_MAGAZINE_PIPELINE.bat gather manually 1 more time(s), then re-run verify."
     }
   ]
 }
