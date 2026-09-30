@@ -28135,9 +28135,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#OpenAI"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -28448,7 +28448,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#HealthTech"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -28487,8 +28489,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#HealthTech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwqrmbul2l2u",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwqrmbul2l2u",
+        "posted_at": "2026-09-30T16:35:53Z"
       }
     ]
   }
