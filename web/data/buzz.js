@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-764", date:"2026-09-30",
+    source:{ name:"Google", handle:"google", platform:"web", kind:"lab" },
+    text:"Google unveiled Gemini 4 Argon, an enterprise-focused frontier model it says leads or ties rivals on 13 of 18 disclosed benchmarks (legal-agent tasks, business automation, software engineering), while trailing GPT-6 Astra and Claude Opus 5.5 on a few others. It's rolling out first to 'trusted cyber defenders' via Google's Fairwind Program, not broadly available yet. Introductory pricing: $2/$10 per million input/output tokens.",
+    why:"A benchmark-leadership claim paired with a gated rollout and introductory pricing undercutting GPT-6 Astra is a pattern this year's frontier releases keep repeating -- worth watching whether broad availability lands with the same numbers once outside evaluators get access.",
+    heat:58, topics:["google","gemini","benchmarks","enterprise ai","pricing"],
+    url:"https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release" },
+{ id:"bz-765", date:"2026-09-30",
+    source:{ name:"OpenAI", handle:"openai", platform:"web", kind:"lab" },
+    text:"OpenAI is reportedly in talks to raise at least $30 billion at a $1.4 trillion valuation, per Bloomberg -- up from the $852 billion valuation set in its March 2026 round, which had been expected to be its last private raise before an IPO. The report cites run-rate revenue roughly doubling since July to near $40 billion by August.",
+    why:"A reported valuation jump of this size lands the same week Sam Altman pushed the company's IPO timeline from 2026 to 2027 over AI-safety concerns -- worth tracking whether a confirmed round, if it closes, names a lead investor and an actual close date rather than sitting at 'reportedly in talks.'",
+    heat:54, topics:["openai","funding","valuation","ipo"],
+    url:"https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/" },
 { id:"bz-761", date:"2026-09-30",
     source:{ name:"White House / Trump Admin", handle:"whitehouse", platform:"web", kind:"gov" },
     text:"President Trump said tech leaders including Sundar Pichai (Google), Satya Nadella (Microsoft), and Dario Amodei (Anthropic) signed an AI safety agreement at a White House lunch on Sept. 29 that is 'morally binding,' requiring companies to establish internal controls for safe AI development, work with outside auditors to verify compliance, and form internal boards to review auditor reports. Trump said he will appoint an adviser to oversee the agreement in the coming days.",

@@ -85,6 +85,8 @@ window.RTFC_ENTITIES = {
       kind:"consumer assistant product", access:"closed" },
 
     // --- Google ---
+    { re:/\bGemini 4 Argon\b/i, name:"Gemini 4 Argon", maker:"Google DeepMind", makerKey:"google",
+      kind:"enterprise/cybersecurity frontier model", access:"closed" },
     { re:/\bGemini 3\.8 Live Extended Thinking\b/i, name:"Gemini 3.8 Live Extended Thinking", maker:"Google DeepMind", makerKey:"google",
       kind:"live voice-dialogue model", access:"closed" },
     { re:/\bGemini 3\.8 Live\b/i, name:"Gemini 3.8 Live", maker:"Google DeepMind", makerKey:"google",

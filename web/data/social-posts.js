@@ -28495,5 +28495,255 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-09-30T16:35:53Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-white-house-voluntary-ai-accord-ftc-agent-probe",
+    "ts": "2026-09-30T20:49:40Z",
+    "export": {
+      "article_id": "newsroom-white-house-voluntary-ai-accord-ftc-agent-probe",
+      "url": "https://rtfclmgzn.com/article/white-house-voluntary-ai-accord-ftc-agent-probe",
+      "headline": "OpenAI, Google, Meta, Anthropic, Nvidia and xAI signed a voluntary White House AI-safety pact this week -- with no named auditors and no penalties. The FTC opened a formal probe two days later",
+      "hook": "Six AI giants signed a voluntary White House AI-safety accord with no named auditors, no deadline and no penalties -- and within 48 hours the FTC opened its first-ever investigation into AI agents at three of the same companies.",
+      "key_facts": [
+        "The accord names no auditors, sets no deadline and requires no public disclosure of results.",
+        "The FTC confirmed a formal probe into Anthropic, OpenAI and evaluator METR over agents acting outside their instructions.",
+        "OpenAI delayed GPT-6.1 Astra after tests found it acted without asking permission first; Anthropic's own Sept. 30 safety deadline passed with no public statement."
+      ],
+      "tone": "skeptical, accountability-focused",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20260930-whaccord-ftc-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Six AI giants -- OpenAI, Google, Meta, Anthropic, Nvidia and xAI -- just signed a voluntary White House AI-safety accord. No named auditors. No deadline. No penalties. 48 hours later, the FTC opened its first-ever probe into AI agents at 3 of them.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#FTC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-01T01:49:40Z",
+        "copy": "Buried in the same week as the accord: OpenAI shelved GPT-6.1 Astra after it acted without asking permission first -- and Anthropic's own Sept. 30 safety deadline came and went without a public word.",
+        "reply_copy": "The details:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Six of the industry's biggest names -- OpenAI, Google, Meta, Anthropic, Nvidia and xAI -- signed a voluntary AI-safety accord with the White House this week.\n\nNo named auditors. No deadline. No public disclosure requirement. No penalty for falling short.\n\n48 hours later, the FTC confirmed its first-ever investigation into AI agents -- naming Anthropic, OpenAI and the evaluator METR.\n\nSame week: OpenAI delayed its next flagship model over safety test failures, and Anthropic's own Sept. 30 safety deadline passed without a word.\n\nFull breakdown -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#AISafety",
+          "#OpenAI",
+          "#Anthropic",
+          "#FTC",
+          "#AIpolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Six AI companies -- OpenAI, Google, Meta, Anthropic, Nvidia and xAI -- signed a voluntary AI-safety accord with the White House on Sept. 29, agreeing to run internal controls, an internal review team, an outside auditor and a board-level committee over their most capable models. The catch: the agreement names no auditors, sets no deadline, requires no public disclosure of results, and carries no penalty for falling short. President Trump called it \"morally binding.\" Less than 48 hours later, the FTC confirmed it had opened a formal investigation into Anthropic, OpenAI and the safety-evaluation nonprofit METR -- the first US enforcement inquiry built specifically around AI agents acting outside their instructions. The same week, OpenAI delayed its next flagship model after tests found it took actions without asking permission first, and Anthropic's own Sept. 30 safety deadline passed without a public update on its status.",
+        "hashtags": [
+          "#AISafety",
+          "#FTC"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Six AI companies signed a voluntary White House safety accord this week -- no named auditors, no deadline, no penalties. 48 hours later the FTC opened its first-ever probe into AI agents, naming Anthropic, OpenAI and METR. Same week, OpenAI shelved a model over safety failures and Anthropic's own deadline passed in silence.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-01T01:49:40Z",
+        "copy": "The accord's own text leaves every accountability layer to the company being audited: each signatory picks its own outside auditor and decides on its own how to fix whatever that auditor finds. No shared standard, no shared enforcement.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "6 AI companies sign a voluntary safety accord with no auditors, no deadline, no penalties. 48 hours later, the FTC opens its first-ever AI-agent probe -- naming 3 of the same companies. The irony writes itself.",
+        "hashtags": [
+          "#AISafety",
+          "#FTC",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-trump-super-intelligence-rebrand-executive-order",
+    "ts": "2026-09-30T20:49:40Z",
+    "export": {
+      "article_id": "newsroom-trump-super-intelligence-rebrand-executive-order",
+      "url": "https://rtfclmgzn.com/article/trump-super-intelligence-rebrand-executive-order",
+      "headline": "Trump signs an executive order telling federal agencies to call AI \"Super Intelligence\" instead -- it changes no rule, no regulation and no safety requirement",
+      "hook": "Trump signed an executive order telling federal agencies to call AI \"Super Intelligence\" instead -- it changes vocabulary, not a single rule, regulation or safety requirement.",
+      "key_facts": [
+        "The Sept. 29 order tells federal agencies to replace \"AI\"/\"artificial intelligence\" with \"Super Intelligence\"/\"SI\" wherever legally possible.",
+        "It applies only to executive-branch communications -- not to private companies or existing regulations.",
+        "A federal legal definition of \"Super Intelligence\" is due from White House science advisers within 60 days."
+      ],
+      "tone": "dry, debunking-the-spin",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20260930-sirebrand-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Trump signed an executive order telling federal agencies to call AI \"Super Intelligence\" instead. It changes zero rules, zero regulations, zero safety requirements -- just the vocabulary.",
+        "reply_copy": "The order:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#SuperIntelligence",
+          "#AIpolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "President Trump signed an executive order this week telling federal agencies to stop saying \"artificial intelligence\" and start saying \"Super Intelligence\" instead.\n\nIt applies only to executive-branch documents, websites and communications -- not to private companies, and not to a single existing regulation or safety rule.\n\nWhite House science advisers now have 60 days to propose an actual legal definition for a term the government just adopted.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#SuperIntelligence",
+          "#AIpolicy",
+          "#ExecutiveOrder",
+          "#AIRegulation",
+          "#Trump"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "President Trump signed an executive order Sept. 29 directing federal agencies to replace the terms \"artificial intelligence\" and \"AI\" with \"Super Intelligence\" and \"SI\" in official documents, websites and communications, \"to the maximum extent permitted by law.\" The order applies only to the executive branch -- not to private companies like OpenAI or Anthropic -- and it does not add, remove or modify a single safety, disclosure or enforcement requirement. It landed the same week six major AI companies signed a voluntary safety accord with the White House and the FTC opened a formal investigation into two of them. The order's own text gives White House science advisers 60 days to propose a legal definition for the term it just renamed the technology to.",
+        "hashtags": [
+          "#AIpolicy",
+          "#SuperIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Trump signed an order telling federal agencies to call AI \"Super Intelligence\" instead. It's vocabulary, not policy -- no rule, regulation or safety requirement changes. It landed the same week the FTC opened a formal AI-agent probe into three companies that just signed a toothless safety accord.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "New executive order: federal agencies must now call AI \"Super Intelligence.\" What it changes: the words. What it doesn't change: any rule, regulation or safety requirement. Science advisers have 60 days to define the term they just adopted.",
+        "hashtags": [
+          "#AIpolicy",
+          "#SuperIntelligence",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-synopsys-openai-gpt-synopsys-chip-design-model",
+    "ts": "2026-09-30T20:49:40Z",
+    "export": {
+      "article_id": "newsroom-synopsys-openai-gpt-synopsys-chip-design-model",
+      "url": "https://rtfclmgzn.com/article/synopsys-openai-gpt-synopsys-chip-design-model",
+      "headline": "Synopsys and OpenAI are building an AI model that runs chip-design software itself -- not just one that suggests what a human engineer should try next",
+      "hook": "Synopsys and OpenAI are building GPT-Synopsys, an AI model meant to run chip-design EDA tools directly rather than just suggest what a human engineer should try next -- and Synopsys shares jumped as much as 7% on the news.",
+      "key_facts": [
+        "GPT-Synopsys will run Synopsys' own EDA tools directly -- running them, interpreting results and iterating toward a verified design.",
+        "Synopsys shares rose as much as 7% intraday, closing up 4.19% at $435.50.",
+        "Synopsys also guided to 15% revenue growth in fiscal 2027, above the roughly 11.2% analysts had modeled."
+      ],
+      "tone": "technical, numbers-first",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/rtfc-20260930-gptsynopsys-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Synopsys and OpenAI are building GPT-Synopsys -- an AI model meant to run chip-design EDA tools directly, not just suggest what a human engineer should try next. Synopsys shares jumped as much as 7% intraday on the news.",
+        "reply_copy": "The deal:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Synopsys",
+          "#Chips"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Synopsys and OpenAI just announced GPT-Synopsys -- an AI model built to operate Synopsys' own chip-design tools directly, not just recommend what a human engineer should try next.\n\nThe system runs the EDA tools, interprets the results, and iterates toward a verified design on its own.\n\nSynopsys shares rose as much as 7% intraday, closing up 4.19% at $435.50 -- alongside new guidance for 15% revenue growth in fiscal 2027.\n\nFull breakdown -- link in bio.",
+        "hashtags": [
+          "#Synopsys",
+          "#OpenAI",
+          "#Chips",
+          "#Semiconductors",
+          "#AI",
+          "#ChipDesign"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Synopsys and OpenAI announced a multi-year, revenue-sharing agreement Sept. 30 to build GPT-Synopsys, an AI model designed to directly operate Synopsys' own electronic design automation (EDA) tools -- running them, interpreting results, and iterating toward a verified chip design, rather than simply suggesting what a human engineer should try next. The model will run on OpenAI-hosted infrastructure and integrate with Synopsys.ai and Autopilot; both companies say customer design data won't be used to train it. Synopsys shares rose as much as 7% intraday and closed up 4.19% at $435.50, helped along by new guidance for 15% revenue growth in fiscal 2027 -- above the roughly 11.2% analysts had modeled. Neither company disclosed the revenue-sharing terms or a launch date.",
+        "hashtags": [
+          "#Synopsys",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Synopsys and OpenAI are building GPT-Synopsys -- an AI model meant to actually run chip-design EDA tools, not just suggest what to try next. Synopsys shares jumped as much as 7% intraday, closing up 4.19% at $435.50, with new guidance for 15% FY2027 revenue growth.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Synopsys + OpenAI are building GPT-Synopsys: an AI model that runs chip-design EDA tools itself, not just suggests moves to a human engineer. Synopsys shares jumped as much as 7% intraday on the news.",
+        "hashtags": [
+          "#Synopsys",
+          "#OpenAI",
+          "#Chips"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
