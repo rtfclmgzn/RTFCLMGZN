@@ -965,3 +965,26 @@
   if a `document` component is genuinely warranted, fetch the same URL twice (or
   fetch it and separately grep/search for the exact phrase) and confirm the
   wording is stable before quoting it as a primary-source excerpt.
+- **2026-09-30** (reference-desk cycle): re-confirmed the 2026-09-04 finding that
+  `newsroom.cli generate-image` can render a real brand logo (this time an Apple
+  wordmark on a laptop lid, in a "clinician at a desk with a laptop and
+  stethoscope" prompt that never named a device brand) even on a prompt with no
+  brand mentioned at all -- third instance of this exact pattern now on record.
+  The documented fix still works on the first retry: adding an explicit "no
+  visible logos, no brand names, plain unbranded laptop" clause to the prompt
+  produced a clean, shippable image immediately. Worth promoting from a
+  living-notes workaround to a standing clause in `newsroom.cli generate-image`'s
+  own default prompt template (or `cycle-runbook.md` §4 step 2's instructions) --
+  three independent cycles hitting the identical failure and each having to
+  rediscover the same fix is exactly the "write it down once" case Law 1 of
+  OPERATING_LAW.md exists for. Separately: the art library has zero Health-tagged
+  images fitting an AI-scribe/clinical-documentation/doctor-at-a-desk topic --
+  every Health entry is either a biotech-lab-bench scene or a surgical-robot
+  operating theater (checked the full `best_for_sections` list by hand). This is
+  the same recurring library-gap pattern already catalogued for labor-market,
+  legal/courtroom, consumer-privacy, and phone-assistant topics (2026-08-18
+  through 09-04 entries above) -- now confirmed for routine clinical-office
+  topics too, which is a large and growing share of this newsroom's Health desk
+  coverage (AI scribes, ambient documentation vendors). Generation was used
+  instead of a forced library pick, per the same reasoning those entries already
+  give.
