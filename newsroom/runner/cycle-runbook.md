@@ -1365,6 +1365,27 @@ this order, and mark it done here.
    it's a style/QA finding about the existing archive, not a Primer-content
    item. Same two next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-01T01:14:37 cycle) -- re-checked before writing,
+   since this cycle's own three articles (OpenAI and Anthropic skipping the
+   Oct. 1 Australian Senate hearing over OpenAI's Medicare breach; OpenAI's
+   reported $30B/$1.4T bridge round; Figure AI's F.02 molten-steel
+   decommission) plus the full §3c/§4b/§4c/§4d passes were already the
+   required work; guide cadence read 1 day (a guide published 2026-09-30),
+   so §3d needed no action. §3c backfill search re-ran (component-floor
+   check) and found zero articles below their format's component floor --
+   still empty. Both §3e/§3f blockers unchanged, re-confirmed by reading the
+   files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py` still
+   reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), `find . -iname "issue-001.json"` still returns nothing, and no
+   `wrangler` binary or Cloudflare credentials exist on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   This entry and the §3f entry below are, again, being committed to a
+   `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as their own
+   separate `runbook:`-prefixed commit, after the article/data commit that
+   already cleared the full §5 gate sequence. Same two next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1723,6 +1744,12 @@ articles (the White House's voluntary AI-safety accord and the FTC's first forma
 alongside OpenAI's GPT-6.1 Astra delay and Anthropic's silent provable-inference deadline; Trump's "Super
 Intelligence" federal-terminology executive order; Synopsys and OpenAI's GPT-Synopsys chip-design
 partnership) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-01T01:14:37 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (the Australian Senate hearing no-show, OpenAI's reported $30B/$1.4T bridge round, and Figure
+AI's F.02 decommission) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
 

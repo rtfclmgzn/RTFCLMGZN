@@ -1033,3 +1033,32 @@
   `living-notes.md` edits are being pushed as their own separate `runbook:`-prefixed
   commit after the article/data commit, per the pattern established since at least
   2026-09-16 in the entries above.
+
+- **2026-10-01T01:14:37Z** (newsroom cycle): two mechanical gotchas worth recording
+  before the next cycle re-discovers either one by hand. (1) When appending new
+  entries to `web/data/newsroom-articles.js` or `web/data/social-posts.js` via a
+  Python script, do NOT read-parse-and-rewrite the WHOLE file with
+  `json.dumps(data, indent=N)` -- `newsroom-articles.js` happens to already be
+  formatted at `indent=1`, so that round-trips as a clean append, but
+  `social-posts.js` is formatted at `indent=2` with different conventions, and a
+  blind `indent=1` rewrite of it produced a ~58,000-line diff (29k insertions /
+  29k deletions) touching every existing record for a 3-entry append -- caught by
+  `git diff --stat` before committing, not by any check. The safe method for any
+  of these hand-maintained JS-array data files: locate the final `window.X = [`
+  assignment, splice new JSON text in as a string immediately before the closing
+  `]`, and never round-trip the surrounding bytes through a serializer. (2) The
+  `component_audit.py` numeric-provenance check (`agents/_shared/visual-
+  components.md` §5) only scans STRING fields not in its `SKIP_KEYS` list --
+  raw JSON numbers (a `model` component's `value`/`min`/`max`, a chart's numeric
+  `value`) are never checked, but a `compare` block's `values` array (strings)
+  IS checked, so a number embedded there (e.g. a date fragment like "Sept. 29"
+  parsed as the digits 29) must independently appear in the article's own
+  prose/title/dek/tldr text or the audit fails -- simplest fix is to drop
+  incidental digits (day-of-month, etc.) from component `values` strings rather
+  than padding prose to satisfy them. Separately: `web/data/figures.js`'s own
+  `funding-raise-usd` and `valuation-usd` kinds explicitly exclude in-progress
+  asks/open talks ("Closed prices only", "excluded by definition") -- a reported
+  but not-yet-closed valuation (this cycle's OpenAI $30B/$1.4T bridge-round story)
+  does not qualify for a `rank` component in either register, which is itself
+  worth stating in the article's own `counter` component rather than silently
+  skipping `rank`.
