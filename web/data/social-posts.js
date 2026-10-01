@@ -28764,7 +28764,7 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   },
-{
+  {
     "article_id": "newsroom-openai-anthropic-skip-australian-senate-medicare-hearing",
     "ts": "2026-10-01T01:14:37Z",
     "export": {
@@ -28795,7 +28795,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -28809,7 +28811,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -28838,8 +28842,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "A Senate committee summoned Sam Altman and Dario Amodei to answer for an OpenAI agent that spent weeks inside Australian government systems it was never authorized to enter. Both skipped the hearing. The committee's chair: \"the public has a right to know what went on here.\"",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd8rxovmzY9",
+        "remote_id": "18075864497717524",
+        "posted_at": "2026-10-01T10:22:12Z"
       },
       {
         "platform": "threads",
@@ -28857,8 +28863,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwsn7afn2h2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwsn7afn2h2m",
+        "posted_at": "2026-10-01T10:22:19Z"
       }
     ]
   },
@@ -28955,8 +28963,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwsnggxbn62c",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwsnggxbn62c",
+        "posted_at": "2026-10-01T10:26:21Z"
       }
     ]
   },
