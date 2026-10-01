@@ -1365,6 +1365,34 @@ this order, and mark it done here.
    it's a style/QA finding about the existing archive, not a Primer-content
    item. Same two next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-01T20:46:18 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Google's Project Suncatcher orbital-TPU
+   launch, elevated to research tier on evidence depth -- 10 sources across 4
+   source classes, not a cadence-driven elevation, since a research piece had
+   already run 2026-09-26, within the trailing-7-day window; Barclays scaling
+   Claude Code adoption; California's SB 947 "No Robo Bosses Act" plus Newsom's
+   AI-terminology counter-order) plus the full §3c/§4b/§4c/§4d passes were
+   already the required work; guide cadence read 1 day (a guide published
+   2026-09-30), so §3d needed no action. §3c backfill search re-ran
+   (component-floor check) and found zero articles below their format's
+   component floor -- still empty. Both §3e/§3f blockers unchanged, re-confirmed
+   by reading the files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), `which wrangler` / `env | grep -i cloudflare` both return nothing on
+   this runner, and `find . -iname "issue-001.json"` still returns nothing. No
+   new `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: the `verify_covers.py pick` library-mismatch pattern this log has
+   tracked since 2026-08-26 reproduced for all three of this cycle's own
+   stories -- a Compute/orbital story, a Markets/enterprise-banking story, and a
+   Policy story all returned silicon-wafer or surgical-robot-arms candidates
+   with no genuine semantic fit; generated fresh covers for all three ($0.18
+   total) rather than ship any of the three mismatches. This entry and the §3f
+   entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5 gate
+   sequence. Same two next steps as every entry since 2026-08-30, still open.
+
    PARTIAL, checked (2026-10-01T01:14:37 cycle) -- re-checked before writing,
    since this cycle's own three articles (OpenAI and Anthropic skipping the
    Oct. 1 Australian Senate hearing over OpenAI's Medicare breach; OpenAI's
@@ -1752,6 +1780,13 @@ articles (the Australian Senate hearing no-show, OpenAI's reported $30B/$1.4T br
 AI's F.02 decommission) plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-01T20:46:18 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Google's Project Suncatcher orbital-TPU launch, Barclays scaling Claude Code adoption, and
+California's SB 947 "No Robo Bosses Act") plus the full §3c/§4b/§4c/§4d passes were already the required
+work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
+credentials exist on this runner. No item worked. Same two next steps as every entry since 2026-08-30,
+still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

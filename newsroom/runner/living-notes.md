@@ -1062,3 +1062,36 @@
   does not qualify for a `rank` component in either register, which is itself
   worth stating in the article's own `counter` component rather than silently
   skipping `rank`.
+
+- **2026-10-01T20:46:18Z** (newsroom cycle): the `verify_covers.py pick`
+  library-exhaustion pattern this log has tracked since 2026-08-26 reproduced
+  for all three of this cycle's stories at once -- a first for how broadly it
+  hit in one cycle. A Compute/orbital-satellite story, a Markets/enterprise-
+  banking story, and a Policy/state-legislation story all returned the same
+  handful of generic candidates (silicon-wafer wallpaper variants, or the
+  surgical-robot-arms image) regardless of how the `--subjects` keywords were
+  varied across three separate retries each. None of the three has any real
+  semantic fit for their stories. Generated fresh covers for all three instead
+  of shipping a mismatch ($0.06 each, $0.18 total). Checked the manifest
+  directly (`grep -i "satellite\|orbit" image-library/art/manifest.json`) and
+  confirmed there is no satellite/orbit-tagged art at all -- this isn't a
+  keyword-matching failure, the library genuinely has nothing. Worth a
+  dedicated future pass to seed the library with a handful of generic
+  satellite/space, trading-floor/office, and government-building images, since
+  Compute, Markets, and Policy are three of the highest-volume desks and all
+  three are hitting the same generic-fallback wall this cycle demonstrated can
+  occur simultaneously, not just one at a time as prior entries described it.
+
+- **2026-10-01T20:46:18Z** (newsroom cycle, same run): elevated one article to
+  research tier this cycle (Google's Project Suncatcher launch) on evidence
+  depth alone, not because the §2 cadence check found no research piece in the
+  trailing 7 days -- one had in fact run 5 days earlier (2026-09-26). Worth
+  noting for whoever next reads that §2 instruction literally: it's written as
+  a trigger for elevating when the queue is empty, but format-routing.md's own
+  "a story that genuinely supports more sources than the floor requires should
+  use them" principle means the elevation call should be evidence-first in
+  either direction, cadence-recency only breaks a close tie. This cycle's
+  Suncatcher piece cleared 10 independent sources across 4 source classes
+  (primary_company, independent_reporting, expert_or_stakeholder) well past
+  the 8-thread/3-primary research floor, which is what actually justified the
+  tier -- not the trailing-7-day gap.
