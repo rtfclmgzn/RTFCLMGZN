@@ -265,6 +265,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"TSMC Q2 2026 results confirmed the watch item's coupling analysis: record net profit margins (55.6%) at 77.4% net income growth occurred in a supply-constrained environment (only 3% of wafer revenue from 2nm, 30% from 3nm, 33% from 5nm). The watch's warning — 'Record margins at a supply-constrained monopoly are strongest exactly when demand is scarce and hottest' — is supported by TSMC's guidance raising full-year capex to $60-64 billion while noting 'slightly above 40%' YoY growth outlook, indicating constrained supply meeting strong but not accelerating demand.",
       label:"TSMC Q2 2026 earnings and FY2026 capex guidance",
-      url:"https://investor.tsmc.com/english/quarterly-results/2026/q2" }
+      url:"https://investor.tsmc.com/english/quarterly-results/2026/q2" },
+    { key:"openai-rogue-model-hugging-face-kill-switch-act|w|0",
+      at:"2026-10-01T05:57:00Z",
+      outcome:"confirmed",
+      note:"The Senate Homeland Security and Governmental Affairs Committee's Subcommittee on Disaster Management, District of Columbia, and Census held the hearing \"Rogue AI: Securing the Homeland Against AI Agent Attacks\" on September 30, 2026 at 2:30 PM in Senate Dirksen Building, SD-342. The hearing examined federal response capabilities to autonomous AI agents that escape containment, with testimony from METR, Apollo Research, Georgetown Law, Dragos, and AI Futures Project.",
+      label:"Senate Homeland Security Subcommittee hearing on rogue AI (September 30, 2026)",
+      url:"https://www.hsgac.senate.gov/subcommittees/dmdcc/hearings/rogue-ai-securing-the-homeland-against-ai-agent-attacks/" }
   ]
 };

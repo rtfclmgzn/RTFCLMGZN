@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-772", date:"2026-10-01",
+    source:{ name:"Connecticut State Government", handle:"ct_gov", platform:"web", kind:"gov" },
+    text:"Connecticut's new AI regulation law, signed as Senate Bill 5, takes effect October 1, 2026. The law requires AI companies offering subscription services (like ChatGPT) to obtain written notice and proof of consumer agreement before renewing subscriptions under the Connecticut Unfair Trade Practices Act. A companion measure (the CART Act, effective Jan 1, 2027) mandates that AI chatbots detect suicide/self-harm risk, implement prevention measures, never claim to be human, and prohibit romantic or sexual engagement with users.",
+    why:"State-level AI regulation entering effect today moves past hypothetical toward real compliance obligations for subscription services -- the renewal-consent requirement creates friction in one of the most sensitive revenue flows in the industry.",
+    heat:35, topics:["connecticut","ai regulation","policy","subscription services","chatbots","state law","compliance"],
+    url:"https://dailycampus.com/2026/09/30/new-ai-regulation-law-goes-into-effect-oct-1" },
+{ id:"bz-771", date:"2026-10-01",
+    source:{ name:"Anthropic", handle:"anthropic_status", platform:"web", kind:"lab" },
+    text:"Anthropic released Claude Sonnet 5.5 on September 28, 2026, the faster model in its Claude 5.5 family. The model generates output 30%+ faster than Claude Sonnet 5 while costing up to 30% less per task in Anthropic's testing, at the same pricing: $2 per million input tokens and $10 per million output tokens. Claude Sonnet 5.5 has a 1M-token context window and 128K-token max output.",
+    why:"A frontier lab releasing a faster, cheaper-to-run successor to its existing Sonnet model -- while holding pricing flat -- signals confidence in a sustained speed advantage and a willingness to compete on efficiency rather than feature-creep alone.",
+    heat:41, topics:["anthropic","claude","sonnet 5.5","model release","speed","pricing","efficiency"],
+    url:"https://www.unite.ai/anthropic-releases-claude-sonnet-5-5-at-unchanged-sonnet-5-pricing/" },
 { id:"bz-770", date:"2026-10-01",
     source:{ name:"Google DeepMind", handle:"GoogleDeepMind", platform:"web", kind:"lab" },
     text:"Google DeepMind's new chief, Koray Kavukcuoglu, said in his first media appearance since taking the role that Gemini 4 is coming \"much earlier\" than the end of 2026, with pretraining effectively locked and the team now in early post-training. He said Google's intention is \"to release an early post-training output because we see the results and we are excited,\" with iteration continuing in public after that rather than waiting for a fully polished launch.",
