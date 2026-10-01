@@ -29124,5 +29124,275 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-01T17:15:09Z"
       }
     ]
-  }
+  },
+  {
+  "article_id": "newsroom-google-project-suncatcher-orbital-tpu-launch",
+  "ts": "2026-10-01T21:09:03Z",
+  "export": {
+    "article_id": "newsroom-google-project-suncatcher-orbital-tpu-launch",
+    "url": "https://rtfclmgzn.com/article/google-project-suncatcher-orbital-tpu-launch",
+    "headline": "Google put four TPUs into orbit today, joining three rivals already racing to build AI data centers in space",
+    "hook": "Google just launched its first orbital-AI test satellite -- and its own project lead says it won't be cheaper than a ground data center for at least five years, even as three rivals move faster.",
+    "key_facts": [
+      "Google's satellite carries 4 Trillium TPUs that run in 15-minute bursts before overheating.",
+      "Starcloud filed for an 88,000-satellite constellation after putting an H100 in orbit for $2M.",
+      "Nvidia's Vera Rubin Space-1 claims up to 25x an H100's AI performance for orbital deployment."
+    ],
+    "tone": "technical, detail-obsessed, skeptical of the hype",
+    "persona": "jin-park",
+    "section": "Compute",
+    "primary_image": "assets/img/newsroom/rtfc-20261001-suncatcher-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Google just launched 4 TPUs into orbit. Its own project lead says it won't beat a ground data center on cost for at least 5 years -- while Starcloud, Axiom Space and Nvidia are all racing the same bet right now.",
+      "reply_copy": "The full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Google",
+        "#AIInfrastructure"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-02T02:09:03Z",
+      "copy": "The chips run 15 minutes at a time before they have to cool down. That one number explains almost the entire engineering story behind \"AI data centers in space.\"",
+      "reply_copy": "Why 15 minutes:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#TPU",
+        "#SpaceTech"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Google just put four TPU chips into orbit.\n\nIt's the first real hardware test of Project Suncatcher -- the idea that solar-powered satellites, linked by lasers, could one day run AI cheaper than any data center on Earth.\n\nHere's the honest part: Google's own project lead says it won't be cheaper for at least five years. The chips run in 15-minute bursts before they overheat. And Google isn't even first -- Starcloud, Axiom Space, and Nvidia are all racing the same bet right now.\n\nFull story, with the real economics -- link in bio.",
+      "hashtags": [
+        "#Google",
+        "#AI",
+        "#SpaceTech",
+        "#TPU",
+        "#DataCenters",
+        "#Compute"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Google launched its first Project Suncatcher satellite Thursday, carrying four Trillium TPU chips into orbit to test whether AI compute run on solar-powered satellites could one day beat a terrestrial data center on cost. The honest headline: Google's own project lead says that's at least five years away, and the chips in this test run for only 15 minutes before they overheat. Google also isn't first -- Starcloud already put an Nvidia H100 in orbit for $2 million, Axiom Space is running commercial data-center nodes in low Earth orbit, and Nvidia has previewed its own orbital chip system. Four different companies, one real bet: that terrestrial power constraints get worse faster than space gets cheaper.",
+      "hashtags": [
+        "#Google",
+        "#AIInfrastructure"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Google launched 4 TPUs into orbit today. The company's own line: not cheaper than a ground data center for 5+ years. Meanwhile Starcloud, Axiom Space and Nvidia are all already moving on the same bet. The real story isn't the launch, it's how candid Google is being about how far off it is.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-10-02T02:09:03Z",
+      "copy": "Starcloud got an H100 into orbit for $2M after an aerospace prime quoted it $75-100M for the same job. That gap is most of the reason this race exists at all.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Google launched 4 TPUs into orbit today -- and its own team says it won't be cheaper than a ground data center for 5+ years. Starcloud, Axiom Space and Nvidia are all racing the same bet anyway.",
+      "hashtags": [
+        "#Google",
+        "#AI",
+        "#SpaceTech"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+  {
+  "article_id": "newsroom-barclays-scales-claude-code-developer-adoption-target",
+  "ts": "2026-10-01T21:09:03Z",
+  "export": {
+    "article_id": "newsroom-barclays-scales-claude-code-developer-adoption-target",
+    "url": "https://rtfclmgzn.com/article/barclays-scales-claude-code-developer-adoption-target",
+    "headline": "Barclays is targeting 50% Claude Code adoption among its developers by the end of this year",
+    "hook": "Barclays set a dated, specific target -- 50% of its developers on Claude Code by year-end -- joining JPMorgan, Goldman Sachs, Citi, AIG and Visa as banks running Claude in production.",
+    "key_facts": [
+      "Barclays targets 50% Claude Code developer adoption by end of 2026, most by 2027.",
+      "Claude already sorts 120,000 Barclays emails a day and backs an assistant 16,000 staff use.",
+      "Neither company disclosed contract value, seat count, or per-user cost."
+    ],
+    "tone": "brisk, arithmetic-skeptic",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/rtfc-20261001-barclaysclaude-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Barclays just set a dated target: 50% of its developers on Claude Code by the end of 2026. That's a number a bank can be held to -- unlike \"we're exploring AI.\"",
+      "reply_copy": "The deal:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Anthropic",
+        "#Barclays"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Barclays and Anthropic just expanded their partnership -- with a specific, dated target: 50% of Barclays developers using Claude Code by the end of 2026.\n\nClaude already sorts 120,000 Barclays emails a day and backs an assistant 16,000 UK staff use.\n\nBarclays joins JPMorgan, Goldman Sachs, Citi, AIG and Visa on the list of major banks running Claude in production. Full story -- link in bio.",
+      "hashtags": [
+        "#Anthropic",
+        "#Barclays",
+        "#AI",
+        "#Banking",
+        "#EnterpriseAI",
+        "#FinTech"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Barclays and Anthropic announced an expanded partnership Thursday, with Barclays setting a specific target: 50% of its software developers using Claude Code by the end of 2026, most by 2027. The expansion also covers cybersecurity work and continues two existing deployments -- a client-support assistant used by 16,000+ UK staff (over a million searches since 2025) and an email-processing system handling 120,000 messages a day in Barclays' Global Markets division. Neither company disclosed a contract value. Barclays joins JPMorgan, Goldman Sachs, Citi, AIG and Visa on the roster of major banks now running Claude in production.",
+      "hashtags": [
+        "#Anthropic",
+        "#Barclays"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Barclays set a dated target for Claude Code adoption: 50% of developers by year-end. No dollar figures disclosed on either side -- the only hard numbers are usage, not spend. Joins JPMorgan, Goldman, Citi, AIG and Visa already running Claude in production.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Barclays: 50% of our developers on Claude Code by end of 2026. A specific, dated target -- joining JPMorgan, Goldman Sachs, Citi, AIG and Visa on the list of banks running Claude in production.",
+      "hashtags": [
+        "#Anthropic",
+        "#Barclays"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+  {
+  "article_id": "newsroom-california-no-robo-bosses-act-ai-worker-protections-newsom",
+  "ts": "2026-10-01T21:09:03Z",
+  "export": {
+    "article_id": "newsroom-california-no-robo-bosses-act-ai-worker-protections-newsom",
+    "url": "https://rtfclmgzn.com/article/california-no-robo-bosses-act-ai-worker-protections-newsom",
+    "headline": "California just banned employers from firing workers on AI's word alone -- and told state agencies to keep saying \"AI,\" not \"Super Intelligence\"",
+    "hook": "California's SB 947 is the first US law requiring a human to corroborate any AI-flagged firing -- signed the same day Newsom ordered state agencies to reject Trump's \"Super Intelligence\" rebrand.",
+    "key_facts": [
+      "SB 947 bars employers from firing or disciplining a worker on AI's output alone.",
+      "CalChamber calls the human-review rule \"impossible or highly impractical\" to satisfy.",
+      "A same-day executive order keeps California agencies saying \"artificial intelligence,\" not Trump's term."
+    ],
+    "tone": "composed, legally precise",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/rtfc-20261001-calairobobosses-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "California just became the first state to ban firing a worker on AI's word alone. SB 947 requires a human to corroborate the decision first. Business groups call the rule impossible to satisfy in practice.",
+      "reply_copy": "What it actually requires:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AIPolicy",
+        "#California"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-02T02:09:03Z",
+      "copy": "Same day California banned AI-only firings, Newsom also ordered state agencies to keep saying \"artificial intelligence\" -- a direct rebuttal to Trump's \"Super Intelligence\" rebrand order from a day earlier.",
+      "reply_copy": "Both orders:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Newsom",
+        "#AIPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "California just signed the first US law banning employers from firing a worker on AI's word alone.\n\nSB 947 -- the \"No Robo Bosses Act\" -- requires a human to corroborate any AI-flagged firing or discipline decision before it takes effect.\n\nLabor groups call it overdue. The California Chamber of Commerce calls the human-review rule \"impossible or highly impractical\" to satisfy.\n\nSame day, Gov. Newsom ordered state agencies to keep calling the technology \"artificial intelligence\" -- not the \"Super Intelligence\" rebrand Trump ordered federal agencies to adopt a day earlier.\n\nFull story -- link in bio.",
+      "hashtags": [
+        "#California",
+        "#AIPolicy",
+        "#Newsom",
+        "#WorkerRights",
+        "#AI",
+        "#Regulation"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Gov. Gavin Newsom signed a package of AI workplace bills Sept. 30, led by SB 947 -- the \"No Robo Bosses Act\" -- which makes California the first state to bar employers from relying on AI as the sole basis for firing, disciplining, or deactivating a worker. A human must review and corroborate the decision first. The California Chamber of Commerce opposed the bill, warning the human-corroboration requirement \"may be impossible or highly impractical\" to satisfy; the California Labor Federation (AFL-CIO) called it workers finally getting what they'd demanded. The same day, Newsom signed an executive order keeping state agencies on \"artificial intelligence\" rather than the \"Super Intelligence\" terminology President Trump ordered federal agencies to adopt a day earlier.",
+      "hashtags": [
+        "#AIPolicy",
+        "#California"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "California's SB 947 doesn't ban AI from employment decisions -- it bans AI from being the ONLY basis for one. A human has to corroborate it first. Whether \"corroborate\" becomes a real check or a rubber stamp is a question no court has tested yet.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-10-02T02:09:03Z",
+      "copy": "\"Super intelligence is clearly not coming from the White House\" -- California's own announcement, signing a worker-protection law the federal government hasn't matched with anything binding.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "California's SB 947: first US law requiring a human to corroborate any AI-flagged firing before it takes effect. CalChamber says the rule may be \"impossible or highly impractical.\" AFL-CIO calls it overdue.",
+      "hashtags": [
+        "#AIPolicy",
+        "#California"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
