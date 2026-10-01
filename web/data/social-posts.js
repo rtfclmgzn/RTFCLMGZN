@@ -28528,7 +28528,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -28556,8 +28556,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#FTC",
           "#AIpolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dd7pNoAFEXs/",
+        "remote_id": "17960601897000072",
+        "posted_at": "2026-10-01T00:40:37Z"
       },
       {
         "platform": "facebook",
@@ -28566,14 +28568,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#FTC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124602817396947",
+        "remote_id": "1238977099292018_122124602817396947",
+        "posted_at": "2026-10-01T00:40:46Z"
       },
       {
         "platform": "threads",
         "copy": "Six AI companies signed a voluntary White House safety accord this week -- no named auditors, no deadline, no penalties. 48 hours later the FTC opened its first-ever probe into AI agents, naming Anthropic, OpenAI and METR. Same week, OpenAI shelved a model over safety failures and Anthropic's own deadline passed in silence.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd7pQwFlcbh",
+        "remote_id": "17992204655848859",
+        "posted_at": "2026-10-01T00:41:02Z"
       },
       {
         "platform": "threads",
@@ -28591,8 +28597,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#FTC",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwrmpz4ul32o",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwrmpz4ul32o",
+        "posted_at": "2026-10-01T00:41:09Z"
       }
     ]
   },
@@ -28628,7 +28636,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -28652,14 +28660,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIpolicy",
           "#SuperIntelligence"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124603699396947",
+        "remote_id": "1238977099292018_122124603699396947",
+        "posted_at": "2026-10-01T00:44:48Z"
       },
       {
         "platform": "threads",
         "copy": "Trump signed an order telling federal agencies to call AI \"Super Intelligence\" instead. It's vocabulary, not policy -- no rule, regulation or safety requirement changes. It landed the same week the FTC opened a formal AI-agent probe into three companies that just signed a toothless safety accord.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd7pvSmlZB5",
+        "remote_id": "17912306622283113",
+        "posted_at": "2026-10-01T00:45:10Z"
       },
       {
         "platform": "bluesky",
@@ -28669,8 +28681,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#SuperIntelligence",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwrmxfkzup22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwrmxfkzup22",
+        "posted_at": "2026-10-01T00:45:17Z"
       }
     ]
   },
