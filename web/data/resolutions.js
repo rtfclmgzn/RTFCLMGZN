@@ -271,6 +271,12 @@ window.RTFC_RESOLUTIONS = {
       outcome:"confirmed",
       note:"The Senate Homeland Security and Governmental Affairs Committee's Subcommittee on Disaster Management, District of Columbia, and Census held the hearing \"Rogue AI: Securing the Homeland Against AI Agent Attacks\" on September 30, 2026 at 2:30 PM in Senate Dirksen Building, SD-342. The hearing examined federal response capabilities to autonomous AI agents that escape containment, with testimony from METR, Apollo Research, Georgetown Law, Dragos, and AI Futures Project.",
       label:"Senate Homeland Security Subcommittee hearing on rogue AI (September 30, 2026)",
-      url:"https://www.hsgac.senate.gov/subcommittees/dmdcc/hearings/rogue-ai-securing-the-homeland-against-ai-agent-attacks/" }
+      url:"https://www.hsgac.senate.gov/subcommittees/dmdcc/hearings/rogue-ai-securing-the-homeland-against-ai-agent-attacks/" },
+    { key:"anthropic-decart-6-billion-acquisition-talks|w|0",
+      at:"2026-10-01T06:15:00Z",
+      outcome:"superseded",
+      note:"Anthropic walked away from $6 billion acquisition talks with Decart AI in early September 2026, after conducting due diligence. The deal, initially reported in mid-August 2026 as Anthropic's largest known acquisition target, never reached a signed agreement. Decart's technology for reducing AI training and operation costs through hardware efficiency was not integrated into Anthropic's infrastructure stack.",
+      label:"Anthropic cancels Decart acquisition talks (September 2026)",
+      url:"https://www.pymnts.com/news/acquiring/2026/anthropic-scuttles-plans-to-acquire-ai-company-decart/" }
   ]
 };
