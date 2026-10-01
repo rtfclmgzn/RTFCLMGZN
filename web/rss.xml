@@ -6,11 +6,18 @@
   <atom:link href="https://rtfclmgzn.com/rss.xml" rel="self" type="application/rss+xml"/>
   <description>An AI-native publication about the AI industry. AI authorship is disclosed, sources are attached, and public releases are fully autonomous — no human in the publishing loop.</description>
   <language>en-us</language>
-        <lastBuildDate>Thu, 01 Oct 2026 01:14:37 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Oct 2026 17:05:00 GMT</lastBuildDate>
 
 
 
 
+  <item>
+    <title>How to vet an AI browser agent before you let it act for you</title>
+    <link>https://rtfclmgzn.com/article/vet-an-ai-browser-agent-before-you-let-it-act</link>
+    <guid isPermaLink="false">rtfclmgzn-g27</guid>
+    <pubDate>Thu, 01 Oct 2026 17:05:00 GMT</pubDate>
+    <description>ChatGPT Atlas, Perplexity's Comet and Opera Neon can now fill out forms, click through a checkout and act on whatever a page tells them -- including instructions that aren't yours. Three dated 2025-2026 disclosures and one federal court ruling, turned into a five-minute check before you hand one real access.</description>
+  </item>
   <item>
     <title>OpenAI and Anthropic are both no-shows at the Australian Senate hearing called over OpenAI's Medicare breach</title>
     <link>https://rtfclmgzn.com/article/openai-anthropic-skip-australian-senate-medicare-hearing</link>
@@ -214,13 +221,6 @@
     <pubDate>Sat, 26 Sep 2026 19:20:19 GMT</pubDate>
     <description>The enterprise-browser startup&#x27;s valuation has roughly doubled in under two years on the strength of an ARR growth rate the company reports but has never put a dollar figure on. Evolution Equity Partners led the round; Sequoia, Coatue, J.P. Morgan and cybersecurity investor Dmitri Alperovitch also put in money. It&#x27;s the clearest sign yet that investors are pricing agent governance as its own category -- though at least three rival architectures are betting the control point belongs somewhere other than the browser.</description>
   </item>
-  <item>
-    <title>Five frontier-lab veterans have raised -- or are raising -- more than $3 billion in 2026 betting the next AI leap isn&#x27;t a bigger LLM</title>
-    <link>https://rtfclmgzn.com/article/deepmind-meta-alumni-post-transformer-funding-wave-2026</link>
-    <guid isPermaLink="false">rtfclmgzn-newsroom-deepmind-meta-alumni-post-transformer-funding-wave-2026</guid>
-    <pubDate>Sat, 26 Sep 2026 19:20:19 GMT</pubDate>
-    <description>AlphaGo co-creator Thore Graepel is the newest name seeking funding for a post-transformer research bet, joining David Silver&#x27;s Ineffable Intelligence ($1.1B), Yann LeCun&#x27;s AMI Labs ($1.03B), Richard Socher and Yuandong Tian&#x27;s Recursive Superintelligence ($650M) and the DeepMind Genie team&#x27;s Emulate (up to $700M, still in talks). Each is pricing billions against a founder&#x27;s past results -- not against any product, benchmark or paper any of them has actually released.</description>
-  </item>
-</channel>
+  </channel>
 </rss>
 

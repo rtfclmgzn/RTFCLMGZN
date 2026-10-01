@@ -29044,5 +29044,81 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "g27",
+    "ts": "2026-10-01T17:10:00Z",
+    "export": {
+      "article_id": "g27",
+      "url": "https://rtfclmgzn.com/article/vet-an-ai-browser-agent-before-you-let-it-act",
+      "headline": "How to vet an AI browser agent before you let it act for you",
+      "hook": "Independent testing found ChatGPT Atlas blocked just 5.8% of real phishing pages, versus 47-53% for Chrome and Edge -- and two separate 2025-2026 disclosures show agents can be hijacked through the very pages they're asked to read.",
+      "key_facts": [
+        "LayerX found ChatGPT Atlas blocked 5.8% of 103 real phishing pages, versus 47% (Chrome) and 53% (Edge).",
+        "Brave showed a hidden Reddit comment could trick Comet into emailing a stranger a user's email and login code.",
+        "BragJack showed one ordinary browser extension could hijack five browsers' built-in AI agents at once."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g27.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ChatGPT Atlas blocked just 5.8% of real phishing pages in independent testing. Chrome and Edge blocked 47-53%. Here's the 5-minute check before you let any AI browser agent act for you.",
+        "reply_copy": "The full check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "ChatGPT Atlas, Perplexity's Comet and Opera Neon can now fill out forms and click through a checkout for you.\n\nIndependent testing found Atlas blocked just 5.8% of real phishing pages -- Chrome and Edge blocked 47-53%. Separately, researchers showed a hidden Reddit comment could trick Comet into emailing a stranger your email and login code.\n\nOur new guide: the five-minute check before you let one act for you. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#Privacy",
+          "#BrowserSecurity",
+          "#AIAgents",
+          "#TechSafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "AI browser agents -- ChatGPT Atlas, Perplexity's Comet, Opera Neon -- can now read a page, fill out a form and click through a checkout on your behalf. Independent testing from LayerX found Atlas blocked just 5.8% of 103 real phishing pages, against 47% for Chrome and 53% for Edge. Separately, Brave's security team showed a single hidden Reddit comment could trick Comet into emailing a stranger a user's email address and one-time login code.\n\nOur new guide walks through the five-minute check before you hand one of these agents real access -- including what a federal court ruling says about agents that run locally versus ones hosted in the cloud.",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ChatGPT Atlas blocked just 5.8% of real phishing pages in independent testing vs. 47-53% for Chrome/Edge. Separately, a hidden Reddit comment could trick Comet into emailing a stranger your email + login code. New guide: the 5-minute check before you trust an AI browser agent.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ChatGPT Atlas blocked just 5.8% of real phishing pages in testing -- Chrome and Edge blocked 47-53%. A hidden Reddit comment separately tricked Comet into emailing a stranger your login code. The 5-minute check before you trust an AI browser agent:",
+        "hashtags": [
+          "#AI",
+          "#Cybersecurity",
+          "#Privacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

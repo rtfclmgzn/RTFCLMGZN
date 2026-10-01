@@ -6642,7 +6642,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this means an AI-connected extension is inherently unsafe -- most people running one have had no problem. It means the two checks that actually catch trouble -- what does this thing say it does, and does its permission list match -- take less time than reading this guide did, and unlike a store badge, they're a check you're actually running yourself. The same logic applies to [giving an AI agent standing access to your inbox and calendar](/article/give-an-ai-agent-email-calendar-access-safely): connect narrow, then verify, not trust and forget.",
+        "text": "None of this means an AI-connected extension is inherently unsafe -- most people running one have had no problem. It means the two checks that actually catch trouble -- what does this thing say it does, and does its permission list match -- take less time than reading this guide did, and unlike a store badge, they're a check you're actually running yourself. The same logic applies to [giving an AI agent standing access to your inbox and calendar](/article/give-an-ai-agent-email-calendar-access-safely): connect narrow, then verify, not trust and forget. An AI agent built directly into the browser -- the kind BragJack targeted -- [needs the same kind of check before you let it act on a page, not just read one](/article/vet-an-ai-browser-agent-before-you-let-it-act).",
         "citation_urls": []
       }
     ],
@@ -7248,6 +7248,272 @@ window.RTFC_GUIDES = [
           "https://www.heidihealth.com/en-us/blog/using-ai-medical-scribes-safely",
           "https://www.tmlt.org/resource/using-ai-medical-scribes-risk-management-considerations"
         ]
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g27",
+    "slug": "vet-an-ai-browser-agent-before-you-let-it-act",
+    "image": "assets/img/newsroom/g27.jpg",
+    "title": "How to vet an AI browser agent before you let it act for you",
+    "dek": "ChatGPT Atlas, Perplexity's Comet and Opera Neon can now fill out forms, click through a checkout and act on whatever a page tells them -- including instructions that aren't yours. Three dated 2025-2026 disclosures and one federal court ruling, turned into a five-minute check before you hand one real access.",
+    "persona": "nova-reyes",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-10-01T17:05:00Z",
+    "readMins": 8,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "ChatGPT Atlas blocked just 5.8% of real phishing pages in independent testing, versus 47-53% for Chrome, Edge.",
+      "Brave showed Comet could be tricked into emailing a stranger your email address and login code.",
+      "BragJack showed one ordinary browser extension could hijack five browsers' built-in AI agents at once.",
+      "A federal appeals court treats agents that run locally very differently from ones hosted in the cloud.",
+      "No vendor has solved prompt injection yet; scope what the agent can touch instead of trusting it."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Find out whether your agent runs locally or on the vendor's own servers",
+        "text": "The Ninth Circuit's Aug. 2026 ruling treats these two architectures differently under federal computer-fraud law, and it usually tells you how much the vendor itself can see and log."
+      },
+      {
+        "label": "Turn on per-action confirmation before using an agent for anything beyond reading a page",
+        "text": "Both real incidents below -- Comet's OTP exfiltration and BragJack's five-browser hijack -- happened through standing access the agent already had, not a fresh breach it had to pull off."
+      },
+      {
+        "label": "Keep agents out of your primary email and payment methods until you've tested one on something low-stakes",
+        "text": "Brave's own demonstration used the agent's already-logged-in Gmail tab to retrieve a one-time passcode -- a separate, restricted account removes that specific path entirely."
+      }
+    ],
+    "sources": [
+      {
+        "label": "\"ChatGPT Tainted Memories\": LayerX Discovers The First Vulnerability in OpenAI Atlas Browser",
+        "url": "https://layerxsecurity.com/blog/layerx-identifies-vulnerability-in-new-chatgpt-atlas-browser/",
+        "outlet": "LayerX Security",
+        "kind": "primary"
+      },
+      {
+        "label": "Agentic Browser Security: Indirect Prompt Injection in Perplexity Comet",
+        "url": "https://brave.com/blog/comet-prompt-injection/",
+        "outlet": "Brave",
+        "kind": "primary"
+      },
+      {
+        "label": "BragJack [Technical Overview]: How We Hijacked Top 5 Browsers' Internal Agents With Just One Single Extension",
+        "url": "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent/",
+        "outlet": "Forever Security",
+        "kind": "primary"
+      },
+      {
+        "label": "AMAZON.COM SERVICES LLC v. PERPLEXITY AI, INC. (9th Cir. Aug. 4, 2026)",
+        "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/04/26-1444.pdf",
+        "outlet": "U.S. Court of Appeals for the Ninth Circuit",
+        "kind": "primary"
+      },
+      {
+        "label": "Ninth Circuit Rules on AI Agent 'Access' to Third-Party Websites Under CFAA",
+        "url": "https://www.cooley.com/news/insight/2026/2026-08-06-ninth-circuit-rules-on-ai-agent-access-to-third-party-websites-under-cfaa",
+        "outlet": "Cooley LLP",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The honest answer is: it depends on what you're about to let it do, and most of the people building these tools haven't made that easy to judge yet. ChatGPT Atlas, [Perplexity](/company/perplexity)'s Comet, Opera Neon and the agent features now built into Chrome and Edge can read a page, fill out a form, click through a checkout and act on instructions buried in whatever they're looking at -- including instructions that aren't yours. Three real disclosures from the past year, plus a federal court ruling, give you a way to check before you hand one real access.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What makes an agent different from a browser tab",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The core risk isn't that these tools read pages -- every browser does that. It's that an [agent](/dictionary) can act on what it reads, using your already-logged-in session, without asking first every time. That distinction turned out to matter legally as well as technically: in __Amazon.com Services v. Perplexity AI__, decided Aug. 4, 2026, the Ninth Circuit vacated Amazon's injunction against Perplexity's Comet because Comet runs locally on the user's own machine -- taking screenshots of what the browser shows and sending instructions back, without Perplexity's own servers ever talking to Amazon's directly. The court explicitly left open whether an agent with \"greater control,\" where the company's own servers talk to the target site directly, would be treated the same way -- [the practical fallout played out six weeks later](/article/meta-muse-connectors-stripe-amazon-blocks-agent), when Amazon blocked a cloud-hosted rival agent built the opposite way. Whether your agent runs on your machine or on the vendor's servers changes who is legally \"accessing\" the site on the other end, and what the vendor itself can see and log along the way.",
+        "citation_urls": [
+          "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/04/26-1444.pdf",
+          "https://www.cooley.com/news/insight/2026/2026-08-06-ninth-circuit-rules-on-ai-agent-access-to-third-party-websites-under-cfaa"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Three disclosures that show what actually goes wrong",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Brave's own security team showed how little it takes. In an Aug. 20, 2025 disclosure, researchers Artem Chaikin and Shivan Kaul Sahib demonstrated that a single Reddit comment, with instructions hidden inside a spoiler tag, could hijack Comet: a user clicking the browser's own \"Summarize\" button was enough for the agent to read the hidden text as a command, pull the user's email address from their Perplexity account, request a one-time passcode, retrieve it from the user's already-logged-in Gmail tab, and post both back to the same Reddit thread -- entirely within the page-summarizing task the user actually asked for. Brave reported the flaw privately on July 25, 2025; Perplexity's first fix, shipped two days later, turned out to be incomplete on retest.",
+        "citation_urls": [
+          "https://brave.com/blog/comet-prompt-injection/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A separate disclosure a year later showed the hijack doesn't even need a hostile webpage. Security researcher Gal Weizman's **BragJack** technique, published Sept. 16, 2026, used one already-installed, unrelated browser extension to feed a complete attacker-written [prompt](/dictionary) straight to the built-in AI agents in Chrome, Edge, Comet, Opera Neon and Claude for Chrome at once -- reaching local files, camera, microphone and screenshots with zero further clicks in some cases. [The full technical breakdown is here](/article/bragjack-ai-browser-agent-hijack-five-browsers). Google and Microsoft shipped fixes and assigned CVEs; Opera disputes how the flaw in its browser was found, and no vendor has reported a confirmed real-world victim as of publication.",
+        "citation_urls": [
+          "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent/"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Independent testing also shows a real gap between vendors, not just between \"AI browsers\" and ordinary ones. Security firm LayerX ran 103 real, in-the-wild phishing and malicious pages against ChatGPT Atlas on Oct. 27, 2025 and found it blocked just **5.8%** of them -- compared with **47%** for Chrome and **53%** for Edge running their own built-in protections. Testing three other agentic browsers (Comet, Dia and Genspark) against the same attack set, LayerX found they blocked roughly **7%** on average. None of the agent-equipped browsers came close to the traditional pair.",
+        "citation_urls": [
+          "https://layerxsecurity.com/blog/layerx-identifies-vulnerability-in-new-chatgpt-atlas-browser/"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "Real-world phishing pages blocked, by browser",
+          "unit": "%",
+          "source": "LayerX Security, Oct. 27, 2025 test of 103 live phishing/malicious pages",
+          "data": [
+            {"label": "Edge", "value": 53},
+            {"label": "Chrome", "value": 47},
+            {"label": "Comet / Dia / Genspark (avg)", "value": 7},
+            {"label": "ChatGPT Atlas", "value": 5.8, "hi": true, "note": "lowest of the five tested"}
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this means skip agentic browsing -- it means check the specific agent in front of you before it touches anything that matters. Here's the five-minute version.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check an AI browser agent before you let it act for you",
+          "sub": "Five minutes before you grant it anything beyond reading a page.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The agent or agentic-browser feature already installed, with its settings page open.",
+            "A low-stakes task in mind to test it on before trusting it with anything that matters."
+          ],
+          "steps": [
+            {
+              "do": "Find out whether the agent runs locally on your machine or on the vendor's own cloud servers.",
+              "detail": "Perplexity's Comet runs locally, taking screenshots of what your browser shows; most enterprise-hosted agents run on the vendor's own servers with your stored login. The Ninth Circuit's Aug. 2026 ruling treats these differently under federal computer-fraud law, and it usually tells you how much the vendor itself can see and log.",
+              "verify": "The vendor's own help page or privacy page states which architecture it uses.",
+              "ifnot": "If you can't find a clear answer, treat it as cloud-hosted and assume the vendor can see everything it does until told otherwise."
+            },
+            {
+              "do": "Check what it's allowed to do without asking you first, not just what it claims it can do.",
+              "detail": "Most agentic browsers ship with some version of a faster, less-confirmed default mode alongside a stricter 'ask before every action' setting.",
+              "verify": "You can find and toggle a confirmation setting for consequential actions -- purchases, sending messages, entering payment or login details.",
+              "ifnot": "If there's no such setting at all, treat every session as full-autonomy and don't use it for anything you wouldn't want done without a final check."
+            },
+            {
+              "do": "Look for a real security disclosure history, not just a safety-page promise.",
+              "detail": "Google and Microsoft each shipped a fix and a CVE number for the BragJack flaw in their AI agents within weeks; Opera disputed how its own flaw was found rather than confirming a fix timeline. A vendor's pattern of actually patching and disclosing matters more than its stated principles.",
+              "verify": "A search for \"<product name> CVE\" or \"<product name> security advisory\" turns up real, dated entries.",
+              "ifnot": "If you find disclosures but no vendor response to them on record, weight the risk accordingly."
+            },
+            {
+              "do": "Keep it out of your primary email and anything that can move money, at least at first.",
+              "detail": "Brave's Comet demonstration specifically used the agent's standing access to a logged-in Gmail tab to retrieve a one-time passcode -- the risk wasn't a separate email hack, it was the agent's browser session already being logged in.",
+              "verify": "The accounts the agent can reach are ones you'd be fine with it touching if today's disclosure had been about this product instead.",
+              "ifnot": "If it's already connected to your primary inbox or a payment method, disconnect it and reconnect through a secondary account or a restricted profile instead."
+            },
+            {
+              "do": "Run one low-stakes task before trusting it with anything that matters.",
+              "hi": true,
+              "detail": "A task like summarizing an article or comparing two product pages shows you how the agent actually behaves -- what it asks permission for, what it does silently -- without real exposure if something goes wrong.",
+              "verify": "You watched it complete the task and can describe exactly which permissions it used along the way.",
+              "ifnot": "If you can't tell what it did or didn't access during a test run, that opacity is itself the answer -- don't hand it anything that matters yet."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Step two above -- what it's allowed to do without asking -- is really a scoping decision, and it looks different depending on the task.",
+        "citation_urls": []
+      },
+      {
+        "type": "decide",
+        "decide": {
+          "kicker": "WHICH ACCESS LEVEL",
+          "title": "How much should this specific agent be allowed to do?",
+          "question": "What are you actually asking it to do?",
+          "branches": [
+            {
+              "when": "Reading, summarizing or comparing pages you'd otherwise read yourself.",
+              "then": "Default settings are reasonable -- this is the lowest-risk use and the one every agentic browser is actually built for.",
+              "because": "Nothing here touches a login, a payment, or an action you can't just redo yourself if it's wrong."
+            },
+            {
+              "when": "Filling out a form or completing a purchase with information you provide each time.",
+              "then": "Turn on 'ask before every action' or the equivalent confirmation setting, and watch the first few sessions closely.",
+              "because": "This is exactly the category Brave's Comet demonstration and LayerX's phishing results both tested -- the step where an agent acts on something it read rather than something you typed.",
+              "hi": true
+            },
+            {
+              "when": "Anything involving your primary email, banking, or a stored payment method.",
+              "then": "Use a separate account or a restricted browser profile for the agent, not your primary one -- or don't connect it yet.",
+              "because": "Every incident on this page reached its worst outcome through access the agent already had, not access it had to newly break into."
+            },
+            {
+              "when": "You're not sure which category it falls into.",
+              "then": "Default to the narrowest setting and the most low-stakes test task, and widen only once you've watched it behave.",
+              "because": "An agent that can't complete a task tells you immediately; an agent quietly over-permissioned tells you nothing until something goes wrong."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The same handful of mistakes show up across all three disclosures above.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this gets skipped",
+          "items": [
+            {
+              "mistake": "Assuming an agent only acts on your typed instructions, never on what it reads.",
+              "looks": "Letting an agent summarize an untrusted page without a second thought, because 'summarizing' sounds passive.",
+              "why": "Brave's Comet demonstration and BragJack both relied on exactly this: an agent reading hidden instructions inside content it was asked to process, not a command the user typed.",
+              "fix": "Treat 'read this page' and 'act on what this page says' as the same permission, because to the agent, they are.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Trusting a 'no confirmed real-world victims' line as proof it's safe.",
+              "looks": "Reading that a disclosed flaw hasn't been exploited in the wild yet and treating that as closed.",
+              "why": "BragJack's own researcher frames it as a technique class, not a one-off -- the absence of a reported victim measures what's been noticed, not what's safe.",
+              "fix": "Check whether the flaw is actually fixed, not whether it's been reported exploited.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Judging an AI browser's safety by its traditional phishing and malware protections.",
+              "looks": "Assuming a familiar-feeling browser interface means familiar-level protection underneath.",
+              "why": "LayerX's testing found ChatGPT Atlas blocked under 6% of real phishing pages against Chrome and Edge's 47-53% -- the agent layer is new enough that it hasn't inherited the browser's own defenses yet.",
+              "fix": "Check independent testing of the specific product, not just its brand's general reputation.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Leaving an agent connected to an account 'just for this one task' and forgetting to disconnect it.",
+              "looks": "Granting broad or standing access for a single use and never revisiting it.",
+              "why": "Every documented incident here involved standing access the agent still had, not a fresh breach it had to pull off.",
+              "fix": "Disconnect or re-scope access once the task that needed it is done.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is an argument that agentic browsers are uniquely broken -- it's an argument for treating their permissions the same way you'd treat [handing an AI agent standing access to your email and calendar](/article/give-an-ai-agent-email-calendar-access-safely): scope it narrow, confirm what it actually touches, and don't assume [an extension that isn't labeled 'AI' is automatically safer to leave running next to one that is](/article/check-whether-a-browser-extension-can-read-your-ai-chats) -- BragJack worked through an entirely ordinary one.",
+        "citation_urls": []
       }
     ],
     "corrections": []
