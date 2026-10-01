@@ -19,7 +19,7 @@
   instances of the same underlying bug while sweeping for it (Law 7): `cycle-runbook.md` §4b's RSS
   instruction itself said `<link>` should point at `#/article/<slug>`, and
   `agents/email/daily-digest.agent.md`'s flagship-email template spec said
-  `https://rtfclmgzn.com/#/article/<slug>` -- both corrected to real paths. Left the historical
+  `{site_url}/#/article/<slug>` (hash-route pattern) -- both corrected to real paths. Left the historical
   incident write-ups in `newsroom/reference-desk-log.md`, `FAILURE_REGISTER.md`, and this file's
   own older entries untouched (they're accurate records of past incidents, not live instructions
   telling an agent what to emit). `check_no_hash_links` still won't catch a bare `#/...` sitting in

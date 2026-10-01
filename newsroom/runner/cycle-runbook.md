@@ -8,7 +8,7 @@
 > report the contradiction.
 You are running unattended, headless, on the owner's Claude subscription (no API billing — do not call any paid API for text; images use the capped `generate-image` CLI only when the art library has no fit). You are one newsroom cycle. Follow this runbook exactly, then stop.
 
-**Repo root:** `D:\BUSINESS\RTFCLMGZN` — you are already running with this as your working directory.
+You are already running with the repo root as your working directory.
 
 ## 0. Kill switch
 
@@ -1794,7 +1794,7 @@ The Buzz and Scoreboard pages are live surfaces readers judge the whole site by.
 - This file's own comment has said "the newsroom maintains this list" since it was created, but no cycle was ever actually told to — don't leave it as a promise nothing keeps.
 
 **RSS feed** (`web/rss.xml`) — this one is fully mechanical, no editorial judgment needed, so just do it every cycle that publishes:
-- Add an `<item>` for each article you published this cycle (title, `<link>` to the real path `https://rtfclmgzn.com/article/<slug>` — never `#/article/<slug>`, Law 1, OPERATING_LAW.md, `<guid isPermaLink="false">rtfclmgzn-<id></guid>`, `<pubDate>` in RFC-822 form matching `publishedAt`, `<description>` = the dek).
+- Add an `<item>` for each article you published this cycle (title, `<link>` to the real path `{site_url}/article/<slug>` (read `site_url` from engine.config.json) — never `#/article/<slug>`, Law 1, OPERATING_LAW.md, `<guid isPermaLink="false">{name}-<id></guid>` (read name from engine.config.json), `<pubDate>` in RFC-822 form matching `publishedAt`, `<description>` = the dek).
 - Keep the file to the ~30 most recent items (drop the oldest as you add new ones) and update `<lastBuildDate>` to now.
 - This feed sat frozen for 12 days once before (missed ~30 published stories, including the Claude Opus 5 launch) because nothing was ever told to touch it — don't let that regress.
 
@@ -1854,7 +1854,7 @@ Run `python3 newsroom/runner/verify_covers.py check`. If it prints FAILures, a p
    - **If the rebase reports a conflict: STOP.** Do not `--force`, do not `--force-with-lease`, do not `git rebase --skip`, do not resolve it by taking your own side wholesale. A force-push here overwrites another scan's already-published article. Run `git rebase --abort`, leave the commit sitting unpushed, and say exactly that in your Step 6 report so the owner can land it by hand. An unshipped commit is recoverable; an overwritten one is not.
    - The usual case is a clean replay onto whatever landed while you worked, and it takes a second.
 6. `git push origin main`.
-7. Verify: `curl -s https://rtfclmgzn.com/ | grep -o '?b=[0-9]*'` in a short poll loop until it shows your new number (deploy takes ~30-90s). If the number never appears, check for a **cache-buster collision** first: a scan that landed during your rebase may have bumped `?b=` to the same number you did, in which case yours rebased on top and the live number is right but yours isn't the one showing. Re-read `web/index.html` before bumping again.
+7. Verify: `curl -s {site_url}/ | grep -o '?b=[0-9]*'` (read `site_url` from engine.config.json) in a short poll loop until it shows your new number (deploy takes ~30-90s). If the number never appears, check for a **cache-buster collision** first: a scan that landed during your rebase may have bumped `?b=` to the same number you did, in which case yours rebased on top and the live number is right but yours isn't the one showing. Re-read `web/index.html` before bumping again.
 
 ## 5b. Social dispatch (runs AFTER the deploy is verified live)
 
