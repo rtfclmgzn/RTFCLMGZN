@@ -29157,7 +29157,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -29185,8 +29185,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters",
           "#Compute"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/Dd-QMOnlGuo/",
+        "remote_id": "17906459442330131",
+        "posted_at": "2026-10-02T00:59:41Z"
       },
       {
         "platform": "facebook",
@@ -29195,14 +29197,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Google",
           "#AIInfrastructure"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124819591396947",
+        "remote_id": "1238977099292018_122124819591396947",
+        "posted_at": "2026-10-02T00:59:49Z"
       },
       {
         "platform": "threads",
         "copy": "Google launched 4 TPUs into orbit today. The company's own line: not cheaper than a ground data center for 5+ years. Meanwhile Starcloud, Axiom Space and Nvidia are all already moving on the same bet. The real story isn't the launch, it's how candid Google is being about how far off it is.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd-QPIMkTwU",
+        "remote_id": "18144495067569374",
+        "posted_at": "2026-10-02T01:00:05Z"
       },
       {
         "platform": "threads",
@@ -29220,8 +29226,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#SpaceTech"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwu6azcqnk2i",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwu6azcqnk2i",
+        "posted_at": "2026-10-02T01:00:12Z"
       }
     ]
   },
@@ -29257,7 +29265,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -29281,14 +29289,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Barclays"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122124820101396947",
+        "remote_id": "1238977099292018_122124820101396947",
+        "posted_at": "2026-10-02T01:03:52Z"
       },
       {
         "platform": "threads",
         "copy": "Barclays set a dated target for Claude Code adoption: 50% of developers by year-end. No dollar figures disclosed on either side -- the only hard numbers are usage, not spend. Joins JPMorgan, Goldman, Citi, AIG and Visa already running Claude in production.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd-Qtz_ESg4",
+        "remote_id": "17998989729034502",
+        "posted_at": "2026-10-02T01:04:16Z"
       },
       {
         "platform": "bluesky",
@@ -29297,8 +29309,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Barclays"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwu6ii7bnp2g",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwu6ii7bnp2g",
+        "posted_at": "2026-10-02T01:04:23Z"
       }
     ]
   },
