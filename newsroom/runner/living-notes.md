@@ -1095,3 +1095,27 @@
   (primary_company, independent_reporting, expert_or_stakeholder) well past
   the 8-thread/3-primary research floor, which is what actually justified the
   tier -- not the trailing-7-day gap.
+
+- **2026-10-02T16:29:16Z** (reference-desk cycle): root-caused the
+  `render_smoke.py` failure on `jacob-coxon-anthropic-resignation-ai-extinction-
+  risk-hubinger-hinton` that the 2026-09-24 entry above found reproducible but
+  couldn't diagnose. It is a FALSE POSITIVE in the checker itself, not a site
+  defect. `PROBE`'s crash test (`render_smoke.py` ~line 186) is
+  `document.querySelector('#app h1').textContent.indexOf('didn') >= 0` -- meant
+  to catch the "This page didn't render" fallback message, which is itself
+  rendered as an `h1`. But it matches on the bare substring `didn`, not a
+  specific fallback marker, and this article's own real, correctly-rendered
+  headline is "...His former colleague **didn't** dispute it...". Verified by
+  importing `render_smoke.py` directly and driving its own `serve()` +
+  Playwright against just this route (not a standalone reimplementation, which
+  the 2026-09-24 entry correctly warned doesn't reproduce faithfully): the page
+  loads with the real headline as `h1` text and 16,784 characters of real body
+  text -- not empty, not a crash screen. Per Law 6, did not edit
+  `render_smoke.py`; the real fix is checking for the fallback's specific
+  wrapper class/element (same pattern app.js already uses for its own
+  `.block-fail` marker) instead of a content substring that ordinary English
+  prose can contain. Any future headline or dek using the word "didn't" (or
+  "didn'ts", "aladdin't"-style neologisms, unlikely but possible) will trip this
+  same false alarm until that's fixed -- worth checking this specific failure
+  against the word "didn't" before assuming a new RENDER SMOKE failure on an
+  unfamiliar article is real.
