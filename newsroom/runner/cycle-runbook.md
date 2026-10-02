@@ -1414,6 +1414,34 @@ this order, and mark it done here.
    already cleared the full §5 gate sequence. Same two next steps as every
    entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-02T01:26:26 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Anthropic's reported confidential
+   IPO prospectus and its "existential risk to humanity" risk-factor
+   disclosure; Boston Dynamics' redesigned four-digit Atlas hand set against
+   Tesla's and 1X's opposite tendon-driven bets; Connecticut's CART Act
+   phased Oct. 1 effective dates) plus the full §3c/§4b/§4c/§4d passes were
+   already the required work; guide cadence read 1 day (a guide published
+   2026-10-01), so §3d needed no action. §3c backfill search re-ran
+   (component-floor check) and found zero articles below their format's
+   component floor -- still empty. Both §3e/§3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner, and `find .
+   -iname "issue-001.json"` still returns nothing. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: the `verify_covers.py pick` library-mismatch pattern reproduced
+   again for all three of this cycle's own stories (a Markets/IPO story, a
+   Robotics/hardware story, and a Policy/state-law story each returned
+   silicon-wafer or surgical-robot-arms candidates with no genuine semantic
+   fit); generated fresh covers for all three ($0.18 total) rather than ship
+   any mismatch. This entry and the §3f entry below are, again, being
+   committed to a `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as
+   their own separate `runbook:`-prefixed commit, after the article/data
+   commit that already cleared the full §5 gate sequence. Same two next
+   steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1787,6 +1815,13 @@ California's SB 947 "No Robo Bosses Act") plus the full §3c/§4b/§4c/§4d pass
 work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
 credentials exist on this runner. No item worked. Same two next steps as every entry since 2026-08-30,
 still open.
+
+**Status (2026-10-02T01:26:26 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Anthropic's reported IPO prospectus/existential-risk disclosure, Boston Dynamics' redesigned
+Atlas hand vs. Tesla/1X, Connecticut's CART Act phased effective dates) plus the full §3c/§4b/§4c/§4d
+passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
+`wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as
+every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
