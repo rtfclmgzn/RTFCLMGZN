@@ -29414,299 +29414,309 @@ window.RTFC_SOCIAL_POSTS = [
     ]
   },
   {
-  "article_id": "newsroom-anthropic-ipo-prospectus-existential-risk-disclosure",
-  "ts": "2026-10-02T01:37:51Z",
-  "export": {
     "article_id": "newsroom-anthropic-ipo-prospectus-existential-risk-disclosure",
-    "url": "https://rtfclmgzn.com/article/anthropic-ipo-prospectus-existential-risk-disclosure",
-    "headline": "Anthropic's reported IPO filing spends 80 pages on AI risk, including the words \"existential risk to humanity\"",
-    "hook": "Anthropic's confidential IPO prospectus reportedly spends more pages warning about AI risk than describing the business -- and nobody outside Reuters has actually read it yet.",
-    "key_facts": [
-      "Reuters reviewed the draft filing; it still isn't public on SEC EDGAR as of Oct. 2.",
-      "2025 revenue hit $4.6 billion against a reported $42 billion net loss.",
-      "Anthropic has reportedly locked in $518 billion in compute commitments -- about $113 per revenue dollar."
-    ],
-    "tone": "brisk, cosmopolitan, arithmetic-skeptic",
-    "persona": "kian-farzan",
-    "section": "Markets",
-    "primary_image": "assets/img/newsroom/rtfc-20261002-anthropicipo-01.jpg",
-    "disclaimer": "not-financial-advice"
+    "ts": "2026-10-02T01:37:51Z",
+    "export": {
+      "article_id": "newsroom-anthropic-ipo-prospectus-existential-risk-disclosure",
+      "url": "https://rtfclmgzn.com/article/anthropic-ipo-prospectus-existential-risk-disclosure",
+      "headline": "Anthropic's reported IPO filing spends 80 pages on AI risk, including the words \"existential risk to humanity\"",
+      "hook": "Anthropic's confidential IPO prospectus reportedly spends more pages warning about AI risk than describing the business -- and nobody outside Reuters has actually read it yet.",
+      "key_facts": [
+        "Reuters reviewed the draft filing; it still isn't public on SEC EDGAR as of Oct. 2.",
+        "2025 revenue hit $4.6 billion against a reported $42 billion net loss.",
+        "Anthropic has reportedly locked in $518 billion in compute commitments -- about $113 per revenue dollar."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/rtfc-20261002-anthropicipo-01.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic's reported IPO filing spends ~80 of 261 pages on AI risk factors -- including language multiple outlets call the first \"existential risk to humanity\" warning in SEC history. The document itself still isn't public.",
+        "reply_copy": "The numbers, reconciled:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-02T06:37:51Z",
+        "copy": "For every dollar Anthropic earned in 2025, it's reportedly committed about $113 to future compute. $518B total, ~80% non-cancelable, across Broadcom, Google, Amazon and Microsoft.",
+        "reply_copy": "Where the $518B goes:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIInfrastructure",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic's confidential IPO prospectus has not been made public.\n\nBut Reuters says it reviewed a draft, and multiple outlets have described what's reportedly inside: roughly 80 of 261 pages on AI risk factors -- more than the business section gets. Language warning Anthropic's own models could pose \"existential risks to humanity.\"\n\nThe financials are real too: $4.6B in 2025 revenue, a reported $42B net loss, and $518B in locked-in compute commitments targeting a $2 trillion valuation.\n\nNone of it is checkable against the actual document yet. Full breakdown -- link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#IPO",
+          "#WallStreet",
+          "#AIRisk",
+          "#Markets",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic's confidential IPO prospectus reportedly devotes about 80 of its 261 pages to AI risk factors -- more than it spends describing the business itself, according to Reuters and multiple outlets that have reviewed the draft. The language includes warnings that Anthropic's own models could \"resist shutdown,\" act in ways \"resembling blackmail,\" and pose what several outlets call the first \"existential risk to humanity\" disclosure in SEC history. On the numbers: $4.6 billion in 2025 revenue, a reported $42 billion net loss, and $518 billion in compute commitments behind a targeted $2 trillion valuation. The document itself still hasn't appeared on public SEC EDGAR, so every figure here comes from reporting about it, not the filing itself.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's reported IPO prospectus spends more pages on AI risk than on its own business -- including language several outlets call the first \"existential risk to humanity\" warning in SEC filing history. The twist: the document itself still isn't public. Everything here is reporting about a filing nobody outside Reuters has actually read.",
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/Dd_N4V0HN3O",
+        "remote_id": "18134941195637027",
+        "posted_at": "2026-10-02T09:58:41Z"
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-02T06:37:51Z",
+        "copy": "A Founder LLC reportedly gives seven Anthropic co-founders 50.1% of the vote even after a $2T IPO. Public investors would be buying economic exposure, not control.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic's reported IPO filing spends ~80 of 261 pages on AI risk, incl. the first \"existential risk to humanity\" language in an SEC filing, per Reuters. The document itself still isn't public.",
+        "hashtags": [
+          "#Anthropic",
+          "#AI",
+          "#IPO"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwv4e452pf2h",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwv4e452pf2h",
+        "posted_at": "2026-10-02T09:58:48Z"
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Anthropic's reported IPO filing spends ~80 of 261 pages on AI risk factors -- including language multiple outlets call the first \"existential risk to humanity\" warning in SEC history. The document itself still isn't public.",
-      "reply_copy": "The numbers, reconciled:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Anthropic",
-        "#IPO"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-10-02T06:37:51Z",
-      "copy": "For every dollar Anthropic earned in 2025, it's reportedly committed about $113 to future compute. $518B total, ~80% non-cancelable, across Broadcom, Google, Amazon and Microsoft.",
-      "reply_copy": "Where the $518B goes:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AIInfrastructure",
-        "#Markets"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Anthropic's confidential IPO prospectus has not been made public.\n\nBut Reuters says it reviewed a draft, and multiple outlets have described what's reportedly inside: roughly 80 of 261 pages on AI risk factors -- more than the business section gets. Language warning Anthropic's own models could pose \"existential risks to humanity.\"\n\nThe financials are real too: $4.6B in 2025 revenue, a reported $42B net loss, and $518B in locked-in compute commitments targeting a $2 trillion valuation.\n\nNone of it is checkable against the actual document yet. Full breakdown -- link in bio.",
-      "hashtags": [
-        "#Anthropic",
-        "#AI",
-        "#IPO",
-        "#WallStreet",
-        "#AIRisk",
-        "#Markets",
-        "#TechNews"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Anthropic's confidential IPO prospectus reportedly devotes about 80 of its 261 pages to AI risk factors -- more than it spends describing the business itself, according to Reuters and multiple outlets that have reviewed the draft. The language includes warnings that Anthropic's own models could \"resist shutdown,\" act in ways \"resembling blackmail,\" and pose what several outlets call the first \"existential risk to humanity\" disclosure in SEC history. On the numbers: $4.6 billion in 2025 revenue, a reported $42 billion net loss, and $518 billion in compute commitments behind a targeted $2 trillion valuation. The document itself still hasn't appeared on public SEC EDGAR, so every figure here comes from reporting about it, not the filing itself.",
-      "hashtags": [
-        "#Anthropic",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Anthropic's reported IPO prospectus spends more pages on AI risk than on its own business -- including language several outlets call the first \"existential risk to humanity\" warning in SEC filing history. The twist: the document itself still isn't public. Everything here is reporting about a filing nobody outside Reuters has actually read.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-10-02T06:37:51Z",
-      "copy": "A Founder LLC reportedly gives seven Anthropic co-founders 50.1% of the vote even after a $2T IPO. Public investors would be buying economic exposure, not control.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Anthropic's reported IPO filing spends ~80 of 261 pages on AI risk, incl. the first \"existential risk to humanity\" language in an SEC filing, per Reuters. The document itself still isn't public.",
-      "hashtags": [
-        "#Anthropic",
-        "#AI",
-        "#IPO"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
   {
-  "article_id": "newsroom-boston-dynamics-atlas-hand-redesign-fewer-fingers",
-  "ts": "2026-10-02T01:37:51Z",
-  "export": {
     "article_id": "newsroom-boston-dynamics-atlas-hand-redesign-fewer-fingers",
-    "url": "https://rtfclmgzn.com/article/boston-dynamics-atlas-hand-redesign-fewer-fingers",
-    "headline": "Boston Dynamics cut Atlas's pinky and its motor count -- while Tesla and 1X are adding both",
-    "hook": "Boston Dynamics just redesigned Atlas's hand to do LESS -- fewer fingers, fewer motors -- while Tesla and 1X both went the opposite direction. One of these bets is wrong.",
-    "key_facts": [
-      "Atlas's new hand has 4 digits and 13 degrees of freedom, built on direct-drive motors, not tendons.",
-      "Tesla's and 1X's rival hands both use tendons and roughly double the degrees of freedom (25).",
-      "Boston Dynamics' entire 2026 Atlas production run is already committed to Hyundai and Google DeepMind."
-    ],
-    "tone": "curious, hands-on, demo-vs-shipping skeptic",
-    "persona": "ash-lindqvist",
-    "section": "Robotics",
-    "primary_image": "assets/img/newsroom/rtfc-20261002-atlashand-01.jpg",
-    "disclaimer": "none"
+    "ts": "2026-10-02T01:37:51Z",
+    "export": {
+      "article_id": "newsroom-boston-dynamics-atlas-hand-redesign-fewer-fingers",
+      "url": "https://rtfclmgzn.com/article/boston-dynamics-atlas-hand-redesign-fewer-fingers",
+      "headline": "Boston Dynamics cut Atlas's pinky and its motor count -- while Tesla and 1X are adding both",
+      "hook": "Boston Dynamics just redesigned Atlas's hand to do LESS -- fewer fingers, fewer motors -- while Tesla and 1X both went the opposite direction. One of these bets is wrong.",
+      "key_facts": [
+        "Atlas's new hand has 4 digits and 13 degrees of freedom, built on direct-drive motors, not tendons.",
+        "Tesla's and 1X's rival hands both use tendons and roughly double the degrees of freedom (25).",
+        "Boston Dynamics' entire 2026 Atlas production run is already committed to Hyundai and Google DeepMind."
+      ],
+      "tone": "curious, hands-on, demo-vs-shipping skeptic",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/rtfc-20261002-atlashand-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Boston Dynamics just cut Atlas's hand from 5 fingers to 4 and roughly halved its degrees of freedom vs. rivals. Tesla's and 1X's hands both went the other way, chasing 25 DOF. Same problem, opposite bets.",
+        "reply_copy": "The actual trade-off:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#BostonDynamics",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-02T06:37:51Z",
+        "copy": "Engineers taped their own pinkies to their ring fingers for a day before cutting Atlas's hand down to 4 digits. They never missed it.",
+        "reply_copy": "Why Boston Dynamics did it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Atlas",
+          "#Humanoid"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Boston Dynamics gave Atlas a new hand -- and cut a finger to do it.\n\n4 digits instead of 5. 13 degrees of freedom, built on direct-drive motors instead of tendons. \"Hands are a ruthless design trade-off,\" says Boston Dynamics' director of robot behavior.\n\nHere's what makes it interesting: Tesla's and 1X's rival hands both went the OPPOSITE direction -- more fingers, more motors, ~25 degrees of freedom each.\n\nThree companies, three bets, the same unsolved problem. Full breakdown -- link in bio.",
+        "hashtags": [
+          "#BostonDynamics",
+          "#Atlas",
+          "#Robotics",
+          "#Humanoid",
+          "#AI",
+          "#Tesla",
+          "#Engineering"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Boston Dynamics released video Thursday of a redesigned hand for its Atlas humanoid robot -- and the headline change is what it took away. The new hand drops from five digits to four and runs on direct-drive motors instead of tendons, for 13 degrees of freedom total. That's a very different bet than Tesla's Optimus or 1X's NEO, both of which kept all five fingers and roughly doubled Atlas's degrees of freedom using tendon-driven systems. Boston Dynamics says fewer, larger motors are cheaper to build and repair at scale -- a real argument, given its entire 2026 Atlas production run is already committed to Hyundai and Google DeepMind, with Hyundai planning 25,000 units across its plants.",
+        "hashtags": [
+          "#BostonDynamics",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Boston Dynamics redesigned Atlas's hand this week: 4 fingers instead of 5, direct-drive motors instead of tendons, 13 degrees of freedom. Tesla's and 1X's hands both went the opposite way -- more fingers, more motors, ~25 DOF. The real disagreement isn't which looks more dexterous in a demo, it's which one breaks less at 100,000 units a year.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-02T06:37:51Z",
+        "copy": "1X says it's already built several hundred NEO units toward a 10,000-unit annual capacity. Boston Dynamics hasn't disclosed current Atlas hand output at all -- only a 100,000-unit goal.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Boston Dynamics cut Atlas's hand to 4 fingers and direct-drive motors (13 DOF). Tesla's and 1X's hands both went the other way, chasing ~25 DOF with tendons. Same problem, opposite engineering bets.",
+        "hashtags": [
+          "#Robotics",
+          "#BostonDynamics",
+          "#AI"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwv4lca2p423",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwv4lca2p423",
+        "posted_at": "2026-10-02T10:02:49Z"
+      }
+    ]
   },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Boston Dynamics just cut Atlas's hand from 5 fingers to 4 and roughly halved its degrees of freedom vs. rivals. Tesla's and 1X's hands both went the other way, chasing 25 DOF. Same problem, opposite bets.",
-      "reply_copy": "The actual trade-off:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#BostonDynamics",
-        "#Robotics"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-10-02T06:37:51Z",
-      "copy": "Engineers taped their own pinkies to their ring fingers for a day before cutting Atlas's hand down to 4 digits. They never missed it.",
-      "reply_copy": "Why Boston Dynamics did it:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Atlas",
-        "#Humanoid"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Boston Dynamics gave Atlas a new hand -- and cut a finger to do it.\n\n4 digits instead of 5. 13 degrees of freedom, built on direct-drive motors instead of tendons. \"Hands are a ruthless design trade-off,\" says Boston Dynamics' director of robot behavior.\n\nHere's what makes it interesting: Tesla's and 1X's rival hands both went the OPPOSITE direction -- more fingers, more motors, ~25 degrees of freedom each.\n\nThree companies, three bets, the same unsolved problem. Full breakdown -- link in bio.",
-      "hashtags": [
-        "#BostonDynamics",
-        "#Atlas",
-        "#Robotics",
-        "#Humanoid",
-        "#AI",
-        "#Tesla",
-        "#Engineering"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Boston Dynamics released video Thursday of a redesigned hand for its Atlas humanoid robot -- and the headline change is what it took away. The new hand drops from five digits to four and runs on direct-drive motors instead of tendons, for 13 degrees of freedom total. That's a very different bet than Tesla's Optimus or 1X's NEO, both of which kept all five fingers and roughly doubled Atlas's degrees of freedom using tendon-driven systems. Boston Dynamics says fewer, larger motors are cheaper to build and repair at scale -- a real argument, given its entire 2026 Atlas production run is already committed to Hyundai and Google DeepMind, with Hyundai planning 25,000 units across its plants.",
-      "hashtags": [
-        "#BostonDynamics",
-        "#Robotics"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Boston Dynamics redesigned Atlas's hand this week: 4 fingers instead of 5, direct-drive motors instead of tendons, 13 degrees of freedom. Tesla's and 1X's hands both went the opposite way -- more fingers, more motors, ~25 DOF. The real disagreement isn't which looks more dexterous in a demo, it's which one breaks less at 100,000 units a year.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-10-02T06:37:51Z",
-      "copy": "1X says it's already built several hundred NEO units toward a 10,000-unit annual capacity. Boston Dynamics hasn't disclosed current Atlas hand output at all -- only a 100,000-unit goal.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Boston Dynamics cut Atlas's hand to 4 fingers and direct-drive motors (13 DOF). Tesla's and 1X's hands both went the other way, chasing ~25 DOF with tendons. Same problem, opposite engineering bets.",
-      "hashtags": [
-        "#Robotics",
-        "#BostonDynamics",
-        "#AI"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-},
   {
-  "article_id": "newsroom-connecticut-ai-law-cart-act-phased-effective-dates",
-  "ts": "2026-10-02T01:37:51Z",
-  "export": {
     "article_id": "newsroom-connecticut-ai-law-cart-act-phased-effective-dates",
-    "url": "https://rtfclmgzn.com/article/connecticut-ai-law-cart-act-phased-effective-dates",
-    "headline": "Connecticut's AI law arrives in four separate waves -- here's what actually changed today",
-    "hook": "Connecticut's big new AI law took effect today -- but the part everyone's been talking about, the AI companion chatbot rules, doesn't actually start until 2027.",
-    "key_facts": [
-      "Six CART Act provisions took effect Oct. 1: subscription disclosures, frontier-model safety reporting, and more.",
-      "AI companion chatbot rules (harm detection, minor protections) don't start until Jan. 1, 2027.",
-      "Enforcement runs only through Connecticut's AG -- no private lawsuits, penalties capped at $5,000/violation."
-    ],
-    "tone": "composed, legally precise, strategic",
-    "persona": "evelyn-zhao",
-    "section": "Policy",
-    "primary_image": "assets/img/newsroom/rtfc-20261002-ctaiact-01.jpg",
-    "disclaimer": "none"
-  },
-  "posts": [
-    {
-      "platform": "x",
-      "variant": "hook",
-      "copy": "Connecticut's AI law took effect today -- 6 provisions, incl. a frontier-model safety-reporting duty. But the part most people are talking about, AI companion chatbot rules, doesn't actually start until Jan. 1, 2027.",
-      "reply_copy": "The full phased timeline:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#Connecticut",
-        "#AIPolicy"
+    "ts": "2026-10-02T01:37:51Z",
+    "export": {
+      "article_id": "newsroom-connecticut-ai-law-cart-act-phased-effective-dates",
+      "url": "https://rtfclmgzn.com/article/connecticut-ai-law-cart-act-phased-effective-dates",
+      "headline": "Connecticut's AI law arrives in four separate waves -- here's what actually changed today",
+      "hook": "Connecticut's big new AI law took effect today -- but the part everyone's been talking about, the AI companion chatbot rules, doesn't actually start until 2027.",
+      "key_facts": [
+        "Six CART Act provisions took effect Oct. 1: subscription disclosures, frontier-model safety reporting, and more.",
+        "AI companion chatbot rules (harm detection, minor protections) don't start until Jan. 1, 2027.",
+        "Enforcement runs only through Connecticut's AG -- no private lawsuits, penalties capped at $5,000/violation."
       ],
-      "status": "ready",
-      "post_url": null
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20261002-ctaiact-01.jpg",
+      "disclaimer": "none"
     },
-    {
-      "platform": "x",
-      "variant": "second-wave",
-      "not_before": "2026-10-02T06:37:51Z",
-      "copy": "\"This is a start. This is not a finish; this is not a ceiling. This is the floor.\" -- CT state Sen. James Maroney, on today's first wave of AI law provisions.",
-      "reply_copy": "What's in the floor:",
-      "link_in_reply": true,
-      "hashtags": [
-        "#AIRegulation",
-        "#Policy"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "instagram",
-      "copy": "Connecticut's sprawling AI law didn't take effect all at once.\n\nSix provisions started today: AI subscription disclosures, a frontier-model safety-reporting duty, a clarification that automated hiring tools are no defense against discrimination claims, and three more.\n\nThe part most headlines focus on -- rules for AI companion chatbots -- doesn't actually arrive until January 2027.\n\nFour separate effective dates, one law. Full breakdown -- link in bio.",
-      "hashtags": [
-        "#Connecticut",
-        "#AIPolicy",
-        "#AIRegulation",
-        "#TechPolicy",
-        "#AI",
-        "#StateLaw"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "facebook",
-      "copy": "Connecticut's AI Responsibility and Transparency Act took effect in its first wave Oct. 1 -- six provisions, including AI subscription-cancellation disclosures, a new safety-reporting duty for large frontier AI model developers, and a clarification that a company's use of automated hiring tools isn't by itself a legal defense against a discrimination claim. The provision that's drawn the most outside attention, rules governing AI companion chatbots, doesn't actually take effect until January 1, 2027. State Sen. James Maroney, who shepherded the bill: \"This is a start. This is not a finish; this is not a ceiling. This is the floor.\"",
-      "hashtags": [
-        "#Connecticut",
-        "#AIPolicy"
-      ],
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "copy": "Connecticut's AI law arrived in waves today -- 6 provisions in effect now (subscription disclosures, frontier-model safety reporting, a hiring-discrimination clarification), with the most-discussed piece, AI companion chatbot rules, not starting until Jan. 1, 2027. Worth knowing which part is actually live before reacting to the headline.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "threads",
-      "variant": "second-wave",
-      "not_before": "2026-10-02T06:37:51Z",
-      "copy": "Connecticut's AEDT hiring-discrimination law is broader than California's or Colorado's -- it covers hiring, promotion, discipline, discharge, renewal, AND training decisions. But the detailed worker-notice requirement isn't operational until Oct. 1, 2027.",
-      "status": "ready",
-      "post_url": null
-    },
-    {
-      "platform": "bluesky",
-      "copy": "Connecticut's AI law took effect in its first wave today -- 6 provisions, incl. frontier-model safety reporting. The AI companion chatbot rules everyone's citing don't start until Jan. 1, 2027.",
-      "hashtags": [
-        "#Connecticut",
-        "#AIPolicy",
-        "#TechPolicy"
-      ],
-      "status": "ready",
-      "post_url": null
-    }
-  ]
-}
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Connecticut's AI law took effect today -- 6 provisions, incl. a frontier-model safety-reporting duty. But the part most people are talking about, AI companion chatbot rules, doesn't actually start until Jan. 1, 2027.",
+        "reply_copy": "The full phased timeline:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Connecticut",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-02T06:37:51Z",
+        "copy": "\"This is a start. This is not a finish; this is not a ceiling. This is the floor.\" -- CT state Sen. James Maroney, on today's first wave of AI law provisions.",
+        "reply_copy": "What's in the floor:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIRegulation",
+          "#Policy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Connecticut's sprawling AI law didn't take effect all at once.\n\nSix provisions started today: AI subscription disclosures, a frontier-model safety-reporting duty, a clarification that automated hiring tools are no defense against discrimination claims, and three more.\n\nThe part most headlines focus on -- rules for AI companion chatbots -- doesn't actually arrive until January 2027.\n\nFour separate effective dates, one law. Full breakdown -- link in bio.",
+        "hashtags": [
+          "#Connecticut",
+          "#AIPolicy",
+          "#AIRegulation",
+          "#TechPolicy",
+          "#AI",
+          "#StateLaw"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Connecticut's AI Responsibility and Transparency Act took effect in its first wave Oct. 1 -- six provisions, including AI subscription-cancellation disclosures, a new safety-reporting duty for large frontier AI model developers, and a clarification that a company's use of automated hiring tools isn't by itself a legal defense against a discrimination claim. The provision that's drawn the most outside attention, rules governing AI companion chatbots, doesn't actually take effect until January 1, 2027. State Sen. James Maroney, who shepherded the bill: \"This is a start. This is not a finish; this is not a ceiling. This is the floor.\"",
+        "hashtags": [
+          "#Connecticut",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Connecticut's AI law arrived in waves today -- 6 provisions in effect now (subscription disclosures, frontier-model safety reporting, a hiring-discrimination clarification), with the most-discussed piece, AI companion chatbot rules, not starting until Jan. 1, 2027. Worth knowing which part is actually live before reacting to the headline.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-02T06:37:51Z",
+        "copy": "Connecticut's AEDT hiring-discrimination law is broader than California's or Colorado's -- it covers hiring, promotion, discipline, discharge, renewal, AND training decisions. But the detailed worker-notice requirement isn't operational until Oct. 1, 2027.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Connecticut's AI law took effect in its first wave today -- 6 provisions, incl. frontier-model safety reporting. The AI companion chatbot rules everyone's citing don't start until Jan. 1, 2027.",
+        "hashtags": [
+          "#Connecticut",
+          "#AIPolicy",
+          "#TechPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
