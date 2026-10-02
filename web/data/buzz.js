@@ -294,5 +294,11 @@ window.RTFC_BUZZ = [
     why:"A town banning data centers it hasn't been asked to host yet is the clearest sign so far that opposition has gone pre-emptive rather than reactive -- exactly the dynamic the American Infrastructure Alliance's seven-state campaign is racing to get ahead of.",
     heat:24, topics:["maine","data center","moratorium","local government","dover-foxcroft"],
     url:"https://www.bangordailynews.com/2026/09/29/piscataquis/piscataquis-government/dover-foxcroft-temporarily-bans-data-centers/" },
+{ id:"bz-787", date:"2026-10-02",
+    source:{ name:"Microsoft", handle:"microsoft", platform:"web", kind:"lab" },
+    text:"Microsoft's 2026 Digital Defense Report (covering July 2025-June 2026) documents that threat actors have collected the benefits of AI first. The median time from vulnerability discovery to active weaponization has fallen below 24 hours, with defenders facing much longer patch timelines. Phishing as an intrusion vector rose from 7% to 23%; exploits on public-facing apps rose from 15% to 24%. In controlled evaluations, frontier models (Anthropic Mythos Preview and OpenAI GPT-5.5) chained 32 consecutive attack steps to achieve full domain compromise of an emulated enterprise network without human direction.",
+    why:"A major security vendor documenting that attackers' AI capabilities are now outpacing defenders', paired with concrete, measurable escalation (24-hour median, phishing tripled, autonomous 32-step chains) and controlled tests showing frontier models can run multi-step intrusion campaigns without human intervention, represents the clearest vendor-published case yet that 'AI is changing the physics of cybersecurity' in defenders' disfavor.",
+    heat:74, topics:["microsoft","cybersecurity","ai attacks","defense","vulnerabilities","autonomous attacks","frontier models","threat landscape"],
+    url:"https://www.helpnetsecurity.com/2026/10/02/ai-cybersecurity-threats-microsoft-report/" },
 
 ];
