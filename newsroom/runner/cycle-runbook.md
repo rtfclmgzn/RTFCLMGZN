@@ -1442,6 +1442,36 @@ this order, and mark it done here.
    commit that already cleared the full §5 gate sequence. Same two next
    steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-02T20:49:32 cycle) -- re-checked before writing,
+   since this cycle's own three articles (OpenAI firing three safety
+   researchers over an alleged information-handling leak; Broadcom's $60B
+   bank syndication financing Anthropic's chip buildout, reconciled against
+   an August $100B rumor; the American Infrastructure Alliance data-center-
+   moratorium coalition) plus the full §3c/§4b/§4c/§4d passes were already
+   the required work; guide cadence read 0 days (a guide published earlier
+   today), so §3d needed no action. §3c backfill search re-ran
+   (component-floor check) and found zero articles below their format's
+   component floor -- still empty. Both §3e/§3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner, and `find .
+   -iname "issue-001.json"` still returns nothing. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: the `verify_covers.py pick` library-mismatch pattern reproduced
+   for two of this cycle's three stories (a Frontier/corporate-safety story
+   and an Ethics/labor-construction story both returned silicon-wafer or
+   surgical-robot-arms candidates with no genuine semantic fit); generated
+   fresh covers for both ($0.12 total). The third story (chip financing)
+   got a genuine library match (`wp-silicon-beyond-06`) -- worth noting this
+   pattern doesn't block 100% of cycles, just most. This entry and the §3f
+   entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Same two next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1822,6 +1852,13 @@ Atlas hand vs. Tesla/1X, Connecticut's CART Act phased effective dates) plus the
 passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
 `wrangler` binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as
 every entry since 2026-08-30, still open.
+
+**Status (2026-10-02T20:49:32 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (OpenAI's three fired safety researchers, Broadcom's $60B Anthropic chip-financing syndication,
+the American Infrastructure Alliance data-center coalition) plus the full §3c/§4b/§4c/§4d passes were
+already the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
+binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry
+since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

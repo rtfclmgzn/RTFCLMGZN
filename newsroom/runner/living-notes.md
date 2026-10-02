@@ -1119,3 +1119,20 @@
   same false alarm until that's fixed -- worth checking this specific failure
   against the word "didn't" before assuming a new RENDER SMOKE failure on an
   unfamiliar article is real.
+
+- **2026-10-02T20:49:32Z** (newsroom cycle): re-confirmed both standing §3e/§3f
+  blockers unchanged by reading the files directly -- `verify_publish_surface.py`'s
+  `ALLOWED_PREFIXES` still excludes `functions/` and `newsroom/` entirely, and this
+  runner still has no `wrangler` binary, no Cloudflare credentials, and no
+  `issue-001.json` anywhere in the checkout. Separately: `web/index.html`'s cache-buster
+  is now a hex string (`?b=fdadb0f1aN`), not the plain incrementing integer the
+  runbook's §5 step 1 literally describes -- the bump-by-1 instruction still applies,
+  just in hex (`...a7` -> `...a8`), confirmed by checking the prior commit's own diff
+  before bumping rather than assuming the format. Also: `web/data/buzz.js` and
+  `web/data/social-posts.js` use unquoted JS object keys (`id:"bz-NNN"`), so
+  `json.loads` fails on them directly -- use regex extraction or treat them as
+  append-only text, never attempt a JSON round-trip on either file. A first attempt at
+  removing retired buzz cards via a naive non-greedy regex (`\{ id:"bz-N".*?\},\n`)
+  silently truncated at the first nested `},` inside each card's own `source:{...}`
+  object, corrupting the file; the fix was to split on `{ id:"bz-` boundaries first,
+  then drop whole blocks by id, confirmed with `node --check` before relying on it.
