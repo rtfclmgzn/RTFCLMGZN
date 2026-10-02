@@ -7,6 +7,18 @@
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
 [,
+{ id:"bz-781", date:"2026-10-02",
+    source:{ name:"Google", handle:"google", platform:"web", kind:"lab" },
+    text:"Google launched Project Suncatcher, putting a refrigerator-sized satellite carrying four Tensor Processing Units into space as a prototype for orbital AI data centers. The satellite will test how TPUs handle spaceflight radiation and thermal extremes. Google plans to deploy two more satellites in early 2027 to test inter-satellite laser communication, with the eventual vision of clusters of satellites in low Earth orbit (~400 miles up) forming space-based data centers. SpaceX is also pursuing space data center deployment, targeting orbital AI compute satellites as early as 2028.",
+    why:"A major tech company betting on space-based data centers as the next frontier for AI compute infrastructure -- with a concrete satellite already in orbit for testing -- represents a bet that terrestrial power and cooling constraints are becoming the binding constraint on AI scaling. Worth tracking whether the 2027 cluster tests succeed and whether this becomes another land-grab competition between Google and SpaceX.",
+    heat:48, topics:["google","suncatcher","space","data centers","ai infrastructure","tpu","satellites"],
+    url:"https://www.npr.org/2026/10/01/nx-s1-5983697/project-suncatcher-google-ai-data-center-space" },
+{ id:"bz-782", date:"2026-10-02",
+    source:{ name:"NPR / Berkeley Evaluation", handle:"npr", platform:"web", kind:"news" },
+    text:"San Francisco's reported 30% crime reduction in 2026 has drawn heavy use of AI-powered license plate cameras made by Flock Safety, which identify vehicle details using computer vision. A UC Berkeley evaluation of the Community Safety Camera Program found roughly a 24% reduction in property crimes within ~100 feet of cameras but no measurable reduction in violent crime. City leaders are proposing to tighten rules around the system's use and make data misuse a crime, while balancing public safety against civil liberties concerns.",
+    why:"A major city anchoring public safety claims to an AI surveillance system, with independent evaluation showing property-crime reduction but not violent-crime impact, raises questions about which crimes AI actually deters and whose privacy is traded away in the process. The gap between the headline 30% crime drop and the 24% camera-specific reduction is worth tracking as more cities adopt similar systems.",
+    heat:45, topics:["san francisco","flock safety","surveillance","ai cameras","crime reduction","civil liberties","public safety"],
+    url:"https://www.kunm.org/npr-news/2026-10-02/san-franciscos-car-crime-has-plunged-how-much-credit-does-flock-deserve" },
 { id:"bz-779", date:"2026-10-02",
     source:{ name:"Astribot", handle:"astribot", platform:"web", kind:"lab" },
     text:"Astribot brought its T1 wheeled humanoid robot to North America for the first time at IROS 2026 in Pittsburgh (Sept. 27-Oct. 1), pricing US units from $18,000 with immediate delivery. The company frames T1 as a developer-accessible 'Physical AI' platform built on its own Lumo-2 base model, demonstrating tasks like autonomous tidying of deformable objects.",
