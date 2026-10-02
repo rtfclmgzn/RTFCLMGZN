@@ -107,6 +107,9 @@ window.RTFC_FIGURES = {
     { id:"inf-bytedance-loan", kind:"infra-commitment-usd", value:29.6,
       label:"ByteDance, unsecured syndicated loan", slug:"bytedance-29-6-billion-syndicated-loan-ai-capex",
       note:"A signed, priced credit facility from ~30 banks -- not a spend target or a nonbinding MOU like most other figures in this register. ByteDance has not confirmed the terms; reported by Bloomberg, Sept. 14, 2026." },
+    { id:"inf-broadcom-anthropic-loan-oct", kind:"infra-commitment-usd", value:42,
+      label:"Broadcom, direct loan to Anthropic for TPU leases", slug:"broadcom-60-billion-debt-anthropic-chip-financing-syndication",
+      note:"Disclosed in Anthropic's own confidential IPO prospectus, as reviewed by Reuters -- covers roughly a third of Anthropic's separate $125.2B, 5-year TPU lease commitment. Matches, dollar for dollar, the $42B senior tranche of the $60B bank syndication Broadcom's lenders began raising the same week; a distinct, larger, and unconfirmed up-to-$100B figure reported in late August for the same financing talks is deliberately excluded here as never having been priced or closed." },
 
     // ---- closed raises (USD B) ----
     { id:"raise-cxmt-ipo", kind:"funding-raise-usd", value:8.6,
