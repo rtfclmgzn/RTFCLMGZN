@@ -502,7 +502,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "One more piece of housekeeping, in the spirit of the thing. This guide links no external source for the court case in its opening, because we do not have a primary document in front of us to point you at, and a guide about fabricated citations is the last place on earth to attach a citation we have not personally opened. It was widely reported at the time and it is easily found; treat the detail as reported rather than as verified here, and apply step four of the check to it exactly as you would to anything else. The two references below are internal pages, labelled as such, and neither is offered as evidence for that case.",
+        "text": "One more piece of housekeeping, in the spirit of the thing. This guide links no external source for the court case in its opening, because we do not have a primary document in front of us to point you at, and a guide about fabricated citations is the last place on earth to attach a citation we have not personally opened. It was widely reported at the time and it is easily found; treat the detail as reported rather than as verified here, and apply step four of the check to it exactly as you would to anything else. The two references below are internal pages, labelled as such, and neither is offered as evidence for that case. For the full, primary-sourced rundown of that case and four more like it, [a dedicated guide covers the court-by-court detail](/article/catch-a-fake-ai-citation-before-you-file-it).",
         "citation_urls": []
       },
       {
@@ -6397,7 +6397,7 @@ window.RTFC_GUIDES = [
       },
       {
         "type": "p",
-        "text": "None of this is an argument against using an AI notetaker -- transcripts genuinely help, and getting the words right matters too (our [companion guide on catching a bad AI transcript](/article/catch-a-bad-ai-transcript-before-you-send-it) covers the accuracy side of the same tools). It's an argument for treating the consent question with the same seriousness you'd give an actual audio recorder in your pocket, because legally, an AI notetaker is exactly that -- with the added twist that nobody has yet decided in court whether its own on-screen presence is enough to ask on your behalf.",
+        "text": "None of this is an argument against using an AI notetaker -- transcripts genuinely help, and getting the words right matters too (a [companion guide on catching a bad AI transcript](/article/catch-a-bad-ai-transcript-before-you-send-it) covers the accuracy side of the same tools). It's an argument for treating the consent question with the same seriousness you'd give an actual audio recorder in your pocket, because legally, an AI notetaker is exactly that -- with the added twist that nobody has yet decided in court whether its own on-screen presence is enough to ask on your behalf. The stakes get higher still once that transcript or a citation built from it heads into [a court filing instead of a meeting follow-up](/article/catch-a-fake-ai-citation-before-you-file-it).",
         "citation_urls": []
       }
     ],
@@ -7513,6 +7513,303 @@ window.RTFC_GUIDES = [
       {
         "type": "p",
         "text": "None of this is an argument that agentic browsers are uniquely broken -- it's an argument for treating their permissions the same way you'd treat [handing an AI agent standing access to your email and calendar](/article/give-an-ai-agent-email-calendar-access-safely): scope it narrow, confirm what it actually touches, and don't assume [an extension that isn't labeled 'AI' is automatically safer to leave running next to one that is](/article/check-whether-a-browser-extension-can-read-your-ai-chats) -- BragJack worked through an entirely ordinary one.",
+        "citation_urls": []
+      }
+    ],
+    "corrections": []
+  },
+  {
+    "id": "g28",
+    "slug": "catch-a-fake-ai-citation-before-you-file-it",
+    "image": "assets/img/newsroom/g28.jpg",
+    "title": "How to catch a fake AI-generated citation before you file it in court",
+    "dek": "A public tracker has logged more than 2,100 court cases worldwide where a judge found a filing relied on fabricated AI citations or quotes -- growing by roughly 500 in under four months. Five incidents since 2023, spanning ChatGPT, Claude, and specialized legal-AI tools and ending in fines, suspensions, and a pending bar-discipline referral, show exactly what the check that would have caught every one of them looks like.",
+    "persona": "evelyn-zhao",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-10-02T16:16:44Z",
+    "readMins": 8,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "A public tracker counted 2,125 worldwide court cases of AI-fabricated legal citations as of October 2026.",
+      "Specialized legal-AI research tools hallucinate too -- Stanford found 17%-33% error rates, not zero.",
+      "Courts have fined, suspended, and referred attorneys for discipline over fake citations since 2023.",
+      "One 2026 appeals ruling now requires attorneys to certify every citation was personally verified.",
+      "Opening the real source yourself is the only check that counts -- a tool's label never is."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Open the actual case yourself, in a source the AI didn't give you.",
+        "text": "Stanford's 2024 study found specialized legal-AI research tools -- marketed as eliminating hallucinations -- still got facts wrong 17% to 33% of the time; no product's branding substitutes for reading the real opinion."
+      },
+      {
+        "label": "Check what your specific court currently requires on AI disclosure.",
+        "text": "The Ninth Circuit's June 2026 order in Lnu v. Blanche now requires one firm to certify every citation was personally verified before filing -- local rules on this are changing faster than general practice norms keep up."
+      },
+      {
+        "label": "If you catch your own mistake, disclose it -- don't quietly resubmit.",
+        "text": "The Nebraska Supreme Court's case against attorney Greg Lake centered on his initial denial as much as the fabricated citations themselves; attorneys who disclosed AI use early have been consistently punished less than ones who didn't."
+      }
+    ],
+    "sources": [
+      {
+        "label": "AI Hallucination Cases",
+        "url": "https://www.damiencharlotin.com/hallucinations/",
+        "outlet": "Damien Charlotin / HEC Paris",
+        "kind": "primary"
+      },
+      {
+        "label": "Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools",
+        "url": "https://reglab.stanford.edu/publications/hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools/",
+        "outlet": "Stanford RegLab",
+        "kind": "primary"
+      },
+      {
+        "label": "Mata v. Avianca, Inc. -- Document 54 (sanctions order)",
+        "url": "https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2022cv01461/575368/54/",
+        "outlet": "Justia (S.D.N.Y. docket)",
+        "kind": "primary"
+      },
+      {
+        "label": "Mata v. Avianca, Inc.",
+        "url": "https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc.",
+        "outlet": "Wikipedia",
+        "kind": "reference"
+      },
+      {
+        "label": "Judge Strikes Part of Anthropic (Claude.AI) Expert's Declaration, Because of Uncaught AI Hallucination in Part of Citation",
+        "url": "https://reason.com/volokh/2025/05/26/judge-strikes-part-of-anthropic-claude-ai-experts-declaration-because-of-uncaught-ai-hallucination-in-part-of-citation/",
+        "outlet": "Reason (Volokh Conspiracy)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Concord Music Group, Inc. v. Anthropic PBC",
+        "url": "https://www.courtlistener.com/opinion/10592559/concord-music-group-inc-v-anthropic-pbc/",
+        "outlet": "CourtListener",
+        "kind": "primary"
+      },
+      {
+        "label": "Sixth Circuit Sanctions Attorneys for Fake Citations",
+        "url": "https://www.sixthcircuitappellateblog.com/recent-cases/sixth-circuit-sanctions-attorneys-for-fake-citations-what-does-this-mean-for-use-of-ai/",
+        "outlet": "Sixth Circuit Appellate Blog",
+        "kind": "reporting"
+      },
+      {
+        "label": "Nebraska Supreme Court Blasts AI-Authored Court Filings, Recommends Discipline",
+        "url": "https://nebraskapublicmedia.org/en/news/news-articles/nebraska-supreme-court-blasts-ai-authored-court-filings-recommends-discipline/",
+        "outlet": "Nebraska Public Media",
+        "kind": "reporting"
+      },
+      {
+        "label": "Ninth Circuit Sanctions Attorneys for AI-Hallucinated Immigration Briefs",
+        "url": "https://www.sabrinadamast.com/journal/2026/6/12/ninth-circuit-sanctions-attorneys-for-ai-hallucinated-immigration-briefs",
+        "outlet": "Law Office of Sabrina Damast",
+        "kind": "reporting"
+      },
+      {
+        "label": "AI IP Year in Review: AI Hallucinations in Court Filings and Orders -- A 2025 Review of Sanctions Across the Courts and Rule Proposals",
+        "url": "https://www.sternekessler.com/news-insights/insights/ai-ip-year-in-reviewai-hallucinations-in-court-filings-and-orders-a-2025-review-of-sanctions-across-the-courts-and-rule-proposals/",
+        "outlet": "Sterne Kessler",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The fastest way to tell whether an AI gave you a real legal citation is to open the actual case yourself, in a source the AI didn't hand you -- not its summary, not its restated holding, the opinion itself. That single habit, run every time, would have stopped every incident below before it reached a judge, from a $5,000 sanction in 2023 to a bar-discipline referral still pending in 2026.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Nothing about this problem is contained to one chatbot or one country. Paris-based researcher Damien Charlotin has tracked, since the practice first surfaced, every court decision where a judge found or clearly implied a party relied on [hallucinated](/dictionary) AI material; as of October 2, 2026, the database held 2,125 cases. The same tracker had counted 1,598 as of June 9, 2026 -- the figure cited when [OpenAI launched a dedicated legal-research product into exactly this backdrop](/article/openai-astra-for-law-legal-research-index-launch) -- meaning the total grew by more than 500 cases in under four months.",
+        "citation_urls": [
+          "https://www.damiencharlotin.com/hallucinations/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where this is actually happening",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The United States accounts for most of the recorded cases, but not all of them -- a reminder that this isn't a quirk of one country's court system or one AI product's rollout.",
+        "citation_urls": []
+      },
+      {
+        "type": "chart",
+        "chart": {
+          "kind": "bar",
+          "title": "Where the tracked cases are happening",
+          "unit": "cases",
+          "source": "Damien Charlotin, AI Hallucination Cases Database -- accessed Oct 2, 2026",
+          "data": [
+            {"label": "United States", "value": 1459, "hi": true},
+            {"label": "Canada", "value": 223},
+            {"label": "Australia", "value": 112},
+            {"label": "Elsewhere", "value": 331, "note": "all other jurisdictions combined"}
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "Five incidents, two years apart, same underlying mistake",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "The specifics vary -- different courts, different AI tools, different stakes -- but the failure is identical every time: nobody opened the primary source before it went into a filing.",
+        "citation_urls": []
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "HOW WE GOT HERE",
+          "title": "From a $5,000 fine to a certification requirement",
+          "items": [
+            {
+              "when": "Jun 22, 2023",
+              "what": "A federal judge fines two ChatGPT-citing attorneys and their firm $5,000 in Mata v. Avianca -- the case that put AI-fabricated citations on the map.",
+              "hi": true,
+              "source": "https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2022cv01461/575368/54/"
+            },
+            {
+              "when": "May 23, 2025",
+              "what": "A magistrate judge strikes part of Anthropic's own expert declaration in Concord Music Group v. Anthropic after Claude fabricates an article's title and authors while formatting citations.",
+              "hi": true,
+              "source": "https://reason.com/volokh/2025/05/26/judge-strikes-part-of-anthropic-claude-ai-experts-declaration-because-of-uncaught-ai-hallucination-in-part-of-citation/"
+            },
+            {
+              "when": "Mar 20, 2026",
+              "what": "The Nebraska Supreme Court refers attorney Greg Lake for discipline over a divorce-appeal brief it calls 'filled with fictitious cases ... and fictitious quotations,' after he denied using AI.",
+              "source": "https://nebraskapublicmedia.org/en/news/news-articles/nebraska-supreme-court-blasts-ai-authored-court-filings-recommends-discipline/"
+            },
+            {
+              "when": "Mar 24, 2026",
+              "what": "The Sixth Circuit sanctions two attorneys $15,000 each, plus fees and double costs, over 24-plus fake citations in Whiting v. City of Athens -- 'the stiffest penalty available.'",
+              "source": "https://www.sixthcircuitappellateblog.com/recent-cases/sixth-circuit-sanctions-attorneys-for-fake-citations-what-does-this-mean-for-use-of-ai/"
+            },
+            {
+              "when": "Jun 3, 2026",
+              "what": "The Ninth Circuit suspends a firm's attorneys from its practice for six months in Lnu v. Blanche and orders every future filing to certify citations were personally verified.",
+              "hi": true,
+              "source": "https://www.sabrinadamast.com/journal/2026/6/12/ninth-circuit-sanctions-attorneys-for-ai-hallucinated-immigration-briefs"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "The Anthropic case is worth sitting with, because it shows the failure isn't limited to a lawyer typing a loose prompt into a general chatbot. Anthropic's own data scientist used Claude.ai to help format citations in a sworn declaration -- not to do legal research, just formatting -- and the tool invented a plausible article title paired with two authors who had never worked together. Magistrate Judge Susan van Keulen struck the relevant paragraph, writing that the error 'undermines the overall credibility' of the entire declaration. If a formatting task can introduce a fabricated citation into a filing from the company that makes the model, a substantive research task from any tool deserves the same scrutiny -- which is exactly what a 2024 Stanford RegLab study found when it tested commercial legal-AI products built specifically to avoid this: Lexis+ AI, Westlaw AI-Assisted Research, and Ask Practical Law AI each still hallucinated between 17% and 33% of the time, directly contradicting vendor marketing describing the tools as eliminating or avoiding hallucination entirely.",
+        "citation_urls": [
+          "https://www.courtlistener.com/opinion/10592559/concord-music-group-inc-v-anthropic-pbc/",
+          "https://reglab.stanford.edu/publications/hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools/"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The five-minute check before you file",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of the five steps below require a specialized tool or a paid verification product. They require treating an AI's citation exactly the way you'd treat an unsourced tip from a stranger: a useful starting point, worthless as a final answer.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Verify an AI-generated citation before it reaches a filing",
+          "sub": "Works whether the citation came from a general chatbot or a dedicated legal-research product.",
+          "est": "10 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The draft citation or quote, and the case name and number it's attached to."
+          ],
+          "steps": [
+            {
+              "do": "Open the actual case in a source the AI didn't give you.",
+              "detail": "Search the case name and number in a free, independent database -- Google Scholar, CourtListener, or your court's own public docket -- never the AI's own restated summary.",
+              "verify": "You've read the real, full-text opinion, not a paraphrase of it.",
+              "ifnot": "If it can't be located independently within a few minutes, treat the citation as fabricated until proven otherwise."
+            },
+            {
+              "do": "Confirm the quoted language actually appears in the document, word for word.",
+              "detail": "A citation can point to a real case and still be false -- Concord Music Group v. Anthropic involved a real-sounding article title with entirely fabricated authors, not an invented case name.",
+              "verify": "The exact sentence you're quoting appears on the page you found.",
+              "ifnot": "Cut the quote or replace it with one you can point to directly in the text."
+            },
+            {
+              "do": "Check that the case is still good law.",
+              "detail": "Use Shepard's, KeyCite, or a free citator (CourtListener and Google Scholar both show how later cases have treated an opinion) before relying on its holding.",
+              "verify": "No flag for overruled, reversed, or superseded appears against the citation.",
+              "ifnot": "Find the case that actually controls now, or drop the citation."
+            },
+            {
+              "do": "Check what your specific court currently requires on AI disclosure.",
+              "hi": true,
+              "detail": "The Ninth Circuit's order in Lnu v. Blanche now requires one firm to certify every citation was personally verified -- a growing number of districts have their own standing orders, and they are not uniform.",
+              "verify": "The filing complies with what your specific court and judge currently require, not a template from a different case.",
+              "ifnot": "Ask the clerk's office directly -- this is one of the fastest-moving areas of local procedural rule right now."
+            },
+            {
+              "do": "If you find an error yourself, disclose it -- don't quietly fix and refile.",
+              "detail": "Attorneys who disclosed AI use early have been sanctioned less severely than those who didn't; the Nebraska Supreme Court's complaint against Greg Lake centered on his initial denial as much as the fabricated citations themselves.",
+              "verify": "Your filing or correction states what happened, not just a clean replacement page.",
+              "ifnot": "A court discovering the error after a denial is the single worst version of this outcome on record."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running that check once closes the actual gap. The ways it gets skipped anyway cluster around four specific, recurring mistakes.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped when it shouldn't be",
+          "items": [
+            {
+              "mistake": "Trusting a tool marketed as 'hallucination-free' because it's a legal-specific product.",
+              "looks": "Assuming Lexis+ AI, Westlaw, or a legal copilot can't fabricate because it's built on your firm's own case database.",
+              "why": "Stanford RegLab found 17%-33% hallucination rates in exactly these tools, despite vendor claims of eliminating the problem.",
+              "fix": "Run the same open-the-source check regardless of which tool produced the citation.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating 'the case is real' as the whole check.",
+              "looks": "Confirming a citation exists and stopping there.",
+              "why": "Concord Music Group v. Anthropic involved a real-sounding article with entirely fabricated authors -- a citation can be half-right and still false.",
+              "fix": "Confirm both existence and the quoted substance, every time.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Denying AI use when a court asks, then admitting it later.",
+              "looks": "Saying no to a judge's inquiry about AI, then changing the account once pressed.",
+              "why": "Greg Lake's initial denial, not the fabricated citations alone, is what the Nebraska Supreme Court tied to a 'duty of candor' violation -- the cover story became its own problem.",
+              "fix": "Disclose AI use proactively the moment it's asked about, before any investigation starts.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Assuming a generic AI-use disclosure covers a specific court's rule.",
+              "looks": "Attaching boilerplate language used on a past filing to a new one in a different court.",
+              "why": "The Ninth Circuit's requirement in Lnu v. Blanche is specific to that firm's future filings and requires certifying personal verification of every citation -- not a generic notice.",
+              "fix": "Check the actual standing order for the specific court and judge, not a template from a different case.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is an argument against using AI for legal research -- the time it saves is real, and refusing to use it is not itself a safeguard. It's an argument for treating a citation exactly the way [a broader check for AI fabrication already recommends treating any specific, checkable claim](/article/catch-an-ai-making-things-up): useful as a lead, never as the final word, until you've personally opened the source. [Anthropic](/company/anthropic) and [OpenAI](/company/openai) both power tools now marketed directly at legal work, and neither has claimed its product is immune to the failure mode documented above -- which is precisely why the check belongs to the person signing the filing, not the vendor that built the tool.",
         "citation_urls": []
       }
     ],

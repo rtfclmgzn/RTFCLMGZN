@@ -29718,5 +29718,81 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "g28",
+    "ts": "2026-10-02T16:23:17Z",
+    "export": {
+      "article_id": "g28",
+      "url": "https://rtfclmgzn.com/article/catch-a-fake-ai-citation-before-you-file-it",
+      "headline": "How to catch a fake AI-generated citation before you file it in court",
+      "hook": "A public tracker has logged 2,125 court cases worldwide of AI-fabricated legal citations -- including one where Anthropic's own expert declaration was caught by the same mistake.",
+      "key_facts": [
+        "A public tracker counted 2,125 court cases of AI-fabricated citations worldwide as of Oct. 2, 2026.",
+        "Stanford found specialized legal-AI research tools hallucinate 17%-33% of the time, despite 'hallucination-free' marketing.",
+        "A June 2026 Ninth Circuit ruling now requires one firm to certify every citation was personally verified."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g28.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "A public tracker just hit 2,125 court cases worldwide of AI-fabricated legal citations -- up 500+ in under 4 months. One of them: Anthropic's own expert declaration, caught by a judge in 2025. The 5-minute check that would stop this before it reaches a filing:",
+        "reply_copy": "The full check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#LegalTech",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "A public tracker has logged 2,125 court cases worldwide where a judge found an AI-fabricated citation in a filing -- up 500+ in under four months.\n\nFive real incidents show the pattern: a $5,000 fine in 2023. A struck declaration in 2025 -- from Anthropic's own expert. A discipline referral this spring. A six-month suspension in June, with a new rule requiring every citation be personally verified.\n\nEven specialized 'legal AI' tools still hallucinate 17-33% of the time, per a Stanford study.\n\nThe five-minute check that would have caught every one of these -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#LegalTech",
+          "#LawTwitter",
+          "#AIethics",
+          "#CourtTech",
+          "#TechLaw"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A public tracker run by a researcher at HEC Paris has logged 2,125 court cases worldwide where a judge found a filing relied on a fabricated AI citation or quote -- growing by more than 500 cases in under four months. The incidents span the full range: a $5,000 sanction in the original 2023 ChatGPT case, a struck expert declaration in 2025 after Anthropic's own data scientist used Claude to format a citation that turned out to be fabricated, a Nebraska Supreme Court discipline referral this spring after an attorney initially denied using AI, and a Ninth Circuit ruling in June that now requires one firm to certify every citation was personally verified before filing. A 2024 Stanford study found even specialized legal-AI research tools marketed as hallucination-free still get it wrong 17% to 33% of the time. The new guide walks through the five-minute check that would have caught every one of these before it reached a judge.",
+        "hashtags": [
+          "#AI",
+          "#LegalTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A public tracker just hit 2,125 court cases worldwide of AI-fabricated legal citations -- up 500+ in 4 months. One of them: Anthropic's own expert declaration, caught in 2025. Even specialized legal-AI tools hallucinate 17-33% of the time per Stanford. The 5-minute check:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "2,125 court cases worldwide now involve AI-fabricated legal citations, per a public tracker -- up 500+ in under 4 months. One: Anthropic's own expert declaration, caught in 2025. The 5-minute check that would catch this before it reaches a filing:",
+        "hashtags": [
+          "#AI",
+          "#LegalTech",
+          "#LawTwitter"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

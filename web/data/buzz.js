@@ -6,7 +6,6 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
-[,
 { id:"bz-781", date:"2026-10-02",
     source:{ name:"Google", handle:"google", platform:"web", kind:"lab" },
     text:"Google launched Project Suncatcher, putting a refrigerator-sized satellite carrying four Tensor Processing Units into space as a prototype for orbital AI data centers. The satellite will test how TPUs handle spaceflight radiation and thermal extremes. Google plans to deploy two more satellites in early 2027 to test inter-satellite laser communication, with the eventual vision of clusters of satellites in low Earth orbit (~400 miles up) forming space-based data centers. SpaceX is also pursuing space data center deployment, targeting orbital AI compute satellites as early as 2028.",
@@ -319,5 +318,4 @@ window.RTFC_BUZZ = [
     why:"Integration of checkout into an AI search/chat interface, where previously Google and Gemini only handled discovery, represents the next frontier in agentic commerce -- the question of whether AI agents can reliably convert search signals into transactions at scale.",
     heat:38, topics:["google","gemini","flipkart","ai agents","e-commerce","shopping","india"],
     url:"https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/" }
-]
 ];
