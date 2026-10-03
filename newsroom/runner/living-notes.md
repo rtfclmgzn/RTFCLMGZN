@@ -1136,3 +1136,32 @@
   silently truncated at the first nested `},` inside each card's own `source:{...}`
   object, corrupting the file; the fix was to split on `{ id:"bz-` boundaries first,
   then drop whole blocks by id, confirmed with `node --check` before relying on it.
+
+- **2026-10-03T01:28:27Z** (newsroom cycle): `component_audit.py`'s numeric-provenance
+  check (`agents/_shared/visual-components.md` §5) extracts EVERY digit substring from
+  a `compare` block's `values` array strings, including digits embedded in investor/
+  company proper nouns -- "a16z" yields a fake "number" `16`, "Group 11" yields `11` --
+  and fails the build if that digit doesn't independently appear elsewhere in the
+  article's own text. Hit this writing a compare table of AI-security funding rounds
+  whose "Lead investors" row listed `"a16z, Accel"` and `"Bicycle Capital, Group 11"`.
+  Fix: spell out `"Andreessen Horowitz"` instead of the digit-bearing abbreviation where
+  a clean substitute exists; where the real proper noun itself contains a digit (e.g.
+  "Group 11", a VC firm's actual name), make sure that exact digit also appears in the
+  surrounding prose (it's cheap -- one sentence naming the same investor) rather than
+  trying to avoid the proper noun. `timeline`/`stakes`/`counter` are immune (their
+  `when`/`what`/`who`/`claim`/`detail`/`whoHolds` keys are all in `SKIP_KEYS`), but
+  `compare`'s `values` key is not, so this is specific to that one component type.
+- **2026-10-03T01:28:27Z** (newsroom cycle, same run): reproduced the 2026-09-30
+  living-notes finding that a WebFetch/WebSearch summarization pass on Micron's own
+  earnings coverage can return structurally implausible numbers even when the
+  underlying claim is real -- this time an EPS of "$33.42" and a ~70% net margin
+  attributed to Micron's FY2026 Q4 results via a search-result summary, surfaced while
+  sourcing the same earnings call's (accurate, independently multiply-corroborated)
+  200GB-per-humanoid-robot DRAM claim. Did not use the EPS/revenue figures in any
+  article or component -- used only the qualitative memory-demand claim, cross-checked
+  across five independent outlets (Benzinga, TechRadar, Techspot, Gadget Review,
+  wccftech) reporting the same "200GB+" figure and Mehrotra quote. Two independent
+  instances of the same failure mode on the same company's same earnings call is enough
+  to treat any single-source financial figure (EPS, revenue, margin) from a
+  WebFetch/WebSearch summary as unverified until cross-checked, not just "worth a
+  second look."

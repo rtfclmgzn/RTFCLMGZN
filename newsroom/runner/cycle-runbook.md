@@ -1472,6 +1472,19 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-10-03T01:28:27 cycle) -- re-checked before writing,
+   since this cycle's own three articles (Tesla's AI5/AI6 chip memory cut and
+   same-day partial reversal for Optimus production, reconciled against
+   Micron's own earnings-call memory-demand claims; Armadin's $255.5M Series B
+   AI-security round compared against Island, Cyera, and Dream; Albertsons'
+   Safeway-in-ChatGPT shopping expansion) plus the full §3c/§4b/§4d passes
+   were already the required work; guide cadence read 1 day (a guide
+   published 2026-10-02), so §3d needed no action. §3c backfill search
+   re-ran (`component_audit`) and found zero articles below their format's
+   component floor -- still empty. No new `primer-issue.js`-only candidate
+   found this cycle; did not force one. Same next steps as every entry since
+   2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1859,6 +1872,14 @@ the American Infrastructure Alliance data-center coalition) plus the full §3c/�
 already the required work: `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
 binary or Cloudflare credentials exist on this runner. No item worked. Same two next steps as every entry
 since 2026-08-30, still open.
+
+**Status (2026-10-03T01:28:27 cycle, re-check):** re-confirmed, unchanged, since this cycle's own three
+articles (Tesla's AI5/AI6 chip memory cut and reversal for Optimus; Armadin's $255.5M Series B compared
+against Island, Cyera, and Dream; Albertsons' Safeway-in-ChatGPT expansion) plus the full §3c/§4b/§4d
+passes were already the required work: `find . -iname "issue-001.json"` still returns nothing, and no
+`wrangler` binary or Cloudflare credentials exist on this runner (`which wrangler` and
+`env | grep -i cloudflare` both empty). No item worked. Same two next steps as every entry since
+2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
