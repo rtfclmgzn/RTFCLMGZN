@@ -30395,8 +30395,7 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-03T11:53:38Z"
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-california-subpoenas-openai-rogue-agents-dragnet-widens",
     "ts": "2026-10-03T14:44:33Z",
@@ -30428,7 +30427,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -30490,8 +30491,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwy5ohtz2c2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwy5ohtz2c2m",
+        "posted_at": "2026-10-03T15:00:29Z"
       }
     ]
   },
@@ -30526,7 +30529,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#California"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
