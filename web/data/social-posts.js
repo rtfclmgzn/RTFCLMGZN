@@ -30694,5 +30694,277 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-google-gemini-4-argon-cyber-defenders-fairwind-launch",
+    "ts": "2026-10-03T19:15:10Z",
+    "export": {
+      "article_id": "newsroom-google-gemini-4-argon-cyber-defenders-fairwind-launch",
+      "url": "https://rtfclmgzn.com/article/google-gemini-4-argon-cyber-defenders-fairwind-launch",
+      "headline": "Google's Gemini 4 Argon ties the AI frontier on points. It's shipping first to cyber defenders, guardrails off",
+      "hook": "Google's new flagship model ties OpenAI's and Anthropic's top scores on the independent leaderboard -- then Google gave it first to cyber defenders, with the guardrails off.",
+      "key_facts": [
+        "Gemini 4 Argon scores 53 on Artificial Analysis's Intelligence Index, tied with GPT-6 Astra and Claude Fable 5.1.",
+        "Argon's hallucination rate is 15% -- the lowest of any model scoring above 45 on the Index.",
+        "Argon uses more than double the tokens per task that GPT-6 Astra does, eroding its lower list price."
+      ],
+      "tone": "austere, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/rtfc-20261003-geminiargon-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google's Gemini 4 Argon ties GPT-6 Astra and Claude Fable 5.1 on the independent leaderboard (53 pts). Then Google gave it first to cyber defenders -- guardrails off. Its real edge: the lowest hallucination rate of any top model, 15%.",
+        "reply_copy": "The full scorecard:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Google",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T00:15:10Z",
+        "copy": "Argon's price looks cheaper: $2/$10 per million tokens vs. GPT-6 Astra's $10/$50. But it uses ~2.3x the tokens per task -- so the real cost per completed task barely moves. Headline price is not real price.",
+        "reply_copy": "The math:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Google",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google just shipped its most capable model yet -- and the public isn't getting it first.\n\nGemini 4 Argon ties OpenAI's GPT-6 Astra and Anthropic's Claude Fable 5.1 on the independent leaderboard. But Google handed it first to 650+ vetted cybersecurity defenders, with its own guardrails switched off.\n\nThe real standout number: a 15% hallucination rate, the lowest of any top-scoring model. Full breakdown, link in bio.",
+        "hashtags": [
+          "#Google",
+          "#Gemini",
+          "#AI",
+          "#ArtificialIntelligence",
+          "#Cybersecurity",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google released Gemini 4 Argon on Sept. 30, and it scores 53 on Artificial Analysis's independent Intelligence Index -- tied with OpenAI's GPT-6 Astra and Anthropic's Claude Fable 5.1, five points behind category leader Claude Opus 5.5. But instead of a broad public launch, Google is giving it first to more than 650 vetted cybersecurity organizations, with its own cyber guardrails switched off. The model's real edge may be its 15% hallucination rate -- the lowest of any model scoring above 45 on the Index.",
+        "hashtags": [
+          "#Google",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini 4 Argon ties the leaderboard at 53 points -- then Google gave it first to cyber defenders, guardrails off. The real story might be its 15% hallucination rate, lowest of any top model.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T00:15:10Z",
+        "copy": "Argon's $2/$10 per-million-token price looks cheap next to GPT-6 Astra's $10/$50. Then you learn it uses more than double the tokens per task -- and the 'cheaper' model costs about the same per completed job.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Google's Gemini 4 Argon ties GPT-6 Astra and Claude Fable 5.1 at 53 on the independent leaderboard -- then ships first to 650+ cyber defenders, guardrails off. Lowest hallucination rate (15%) of any top model.",
+        "hashtags": [
+          "#Google",
+          "#AI",
+          "#Gemini"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-oracle-project-lighthouse-jupiter-grid-pipeline-delays",
+    "ts": "2026-10-03T19:15:10Z",
+    "export": {
+      "article_id": "newsroom-oracle-project-lighthouse-jupiter-grid-pipeline-delays",
+      "url": "https://rtfclmgzn.com/article/oracle-project-lighthouse-jupiter-grid-pipeline-delays",
+      "headline": "Oracle's two biggest AI data centers are both stuck -- not on construction, but on someone else's permit",
+      "hook": "Oracle's two largest AI data centers -- one of them a flagship OpenAI/SoftBank Stargate site -- are both stuck waiting on energy infrastructure neither company controls.",
+      "key_facts": [
+        "Wisconsin's Project Lighthouse needs a new grid line; the state regulator just reset the review clock.",
+        "New Mexico's Project Jupiter needs a gas pipeline that slipped nearly six months, to Feb. 1, 2027.",
+        "Oracle filed a force-majeure notice on Jupiter while publicly calling it \"on schedule.\""
+      ],
+      "tone": "technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/rtfc-20261003-oraclegrid-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Oracle's two biggest AI data centers -- Wisconsin's Project Lighthouse and New Mexico's Stargate site Project Jupiter -- are both stuck. Not on construction. On a grid line and a gas pipeline neither company controls.",
+        "reply_copy": "The two-site breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Oracle",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T00:15:10Z",
+        "copy": "Oracle says Project Jupiter \"remains on our planned schedule.\" Oracle also just filed a force-majeure notice on the same site, specifically to protect itself if it misses that schedule. Both things are true at once.",
+        "reply_copy": "What the filing actually means:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Oracle",
+          "#Stargate"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Oracle's two biggest AI data-center bets are both stalled -- and it's not the builders' fault.\n\nProject Lighthouse (Wisconsin) is waiting on a new power-grid line the state regulator just reset the review clock on. Project Jupiter (New Mexico), a flagship Stargate site built with OpenAI and SoftBank, is waiting on a gas pipeline that slipped nearly six months.\n\nOracle calls both sites on track for 2028. The paperwork it just filed on one of them tells a more cautious story. Full breakdown, link in bio.",
+        "hashtags": [
+          "#Oracle",
+          "#AI",
+          "#DataCenters",
+          "#Stargate",
+          "#OpenAI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Oracle's two largest AI data-center campuses have both run into the same kind of wall this fall: not construction delays, but energy infrastructure controlled by someone else. Wisconsin's Project Lighthouse needs a new grid interconnection the state Public Service Commission just restarted its review of. New Mexico's Project Jupiter -- a flagship Stargate site built with OpenAI and SoftBank -- needs a gas pipeline that slipped nearly six months. Oracle calls both sites on track for 2028, but it also just filed a force-majeure notice on Jupiter specifically to protect itself if that date slips.",
+        "hashtags": [
+          "#Oracle",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Oracle's two biggest AI data centers -- Wisconsin and New Mexico's Stargate site -- are both stuck on energy infrastructure they don't control: a grid line and a gas pipeline. Oracle says both are on schedule. It also just filed paperwork to protect itself if they're not.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T00:15:10Z",
+        "copy": "A genuinely interesting discrepancy: two outlets reported Oracle's Wisconsin campus at 500 acres and 672 acres. Neither names a filing as its source. Small detail, real reminder to check the number before you repeat it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Oracle's two biggest AI data centers -- Wisconsin and NM's Stargate site Project Jupiter -- are stuck on a grid line and a gas pipeline neither controls. Oracle calls both on schedule, while filing paperwork that says otherwise.",
+        "hashtags": [
+          "#Oracle",
+          "#AI",
+          "#Stargate"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-trump-jay-clayton-ai-czar-reported-pick",
+    "ts": "2026-10-03T19:15:10Z",
+    "export": {
+      "article_id": "newsroom-trump-jay-clayton-ai-czar-reported-pick",
+      "url": "https://rtfclmgzn.com/article/trump-jay-clayton-ai-czar-reported-pick",
+      "headline": "Trump is reportedly set to name his director of national intelligence as his next AI czar",
+      "hook": "Trump is reportedly about to name his spy chief -- not a tech executive -- as the next AI czar, keeping both jobs at once.",
+      "key_facts": [
+        "Multiple outlets report DNI Jay Clayton is the pick, with no on-record confirmation yet.",
+        "Clayton would reportedly keep running US intelligence while also directing AI policy.",
+        "The role has sat vacant since David Sacks left it in March."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20261003-aiczar-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Trump is reportedly about to name Jay Clayton -- his sitting Director of National Intelligence -- as the next AI czar. He'd keep both jobs. The White House calls the reporting \"baseless speculation,\" for now.",
+        "reply_copy": "What we know so far:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#WhiteHouse"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Trump is reportedly about to name his spy chief as the next AI czar.\n\nMultiple outlets report DNI Jay Clayton -- SEC chair under Trump's first term -- is the pick, and would reportedly keep running US intelligence while also directing AI policy.\n\nThe White House hasn't confirmed it. Full story, link in bio.",
+        "hashtags": [
+          "#AIPolicy",
+          "#WhiteHouse",
+          "#TechNews",
+          "#AI",
+          "#Politics",
+          "#Intelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Multiple outlets reported this week that President Trump is preparing to name Jay Clayton -- his current Director of National Intelligence and SEC chair during his first term -- as the administration's next AI czar. Clayton would reportedly keep running the intelligence community while also directing AI policy, a dual role with no real recent precedent. The role has sat vacant since David Sacks left it in March. The White House has not confirmed the pick, calling the reporting \"baseless speculation\" for now.",
+        "hashtags": [
+          "#AIPolicy",
+          "#WhiteHouse"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Trump is reportedly about to name his sitting spy chief, Jay Clayton, as the next AI czar -- keeping both jobs at once. No official confirmation yet; the White House calls it \"baseless speculation.\"",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Trump reportedly set to name DNI Jay Clayton -- SEC chair under Trump's first term -- as the next AI czar, keeping both roles. No official confirmation yet. The AI-czar post has sat empty since David Sacks left in March.",
+        "hashtags": [
+          "#AIPolicy",
+          "#WhiteHouse",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

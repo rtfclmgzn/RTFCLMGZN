@@ -90766,6 +90766,679 @@ window.RTFC_NEWSROOM_ARTICLES = [
    ],
    "gate": "synthesis with 3 components (timeline, ledger, counter); 8 independent sources across 3 source classes; mandatory-scrutiny trigger (active criminal prosecutions naming real defendants) remediated via allegation-framed, attributed language throughout; no fabricated figures; published at 2026-10-03T14:44:33Z."
   }
+ },
+ {
+  "slug": "google-gemini-4-argon-cyber-defenders-fairwind-launch",
+  "title": "Google's Gemini 4 Argon ties the AI frontier on points. It's shipping first to cyber defenders, guardrails off",
+  "dek": "Google's new flagship scores 53 on Artificial Analysis's Intelligence Index -- tied with OpenAI's GPT-6 Astra and Anthropic's Claude Fable 5.1, five points behind Claude Opus 5.5 -- but the company isn't selling it yet. Through its Fairwind Program, more than 650 vetted organizations get Argon's full cybersecurity capability with its own guardrails switched off, before anyone else gets to use it at all.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Google released Gemini 4 Argon Sept. 30, scoring 53 on Artificial Analysis's Intelligence Index.",
+   "That ties OpenAI's GPT-6 Astra and Anthropic's Claude Fable 5.1; Claude Opus 5.5 leads at 58.",
+   "Argon ships first to vetted cyber defenders in Google's Fairwind Program, with guardrails switched off.",
+   "Its independently measured 15% hallucination rate is the lowest of any model scoring 45+.",
+   "Caveat: lower per-token pricing doesn't mean lower cost -- Argon uses more than double the tokens per task."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "General availability date",
+    "text": "Google has not said when Argon reaches paid API customers or Google AI Ultra subscribers beyond the Fairwind cohort -- that date is the clearest signal of how contained Google still considers the unguarded version."
+   },
+   {
+    "label": "The hospital-software vulnerability Google says Argon found",
+    "text": "Google has not named the software, the vendor, or published a CVE confirming the find -- a public disclosure naming the flaw would independently verify a claim that currently rests entirely on Google's own word."
+   },
+   {
+    "label": "Whether Fairwind's 650-plus vetted organizations produce an incident",
+    "text": "Removing Argon's own cyber guardrails for outside organizations is the riskiest part of this rollout -- watch for any reported misuse tied to a Fairwind participant."
+   },
+   {
+    "label": "Argon's next independent score",
+    "text": "Artificial Analysis re-scores models as access widens; watch whether Argon's 53 holds once testing moves beyond Google's own curated rollout partners."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Google: Gemini 4 Argon -- our next era of frontier intelligence",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+   },
+   {
+    "label": "Artificial Analysis: Gemini 4 Argon -- Google is back as one of the top three labs in intelligence achieved",
+    "url": "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs"
+   },
+   {
+    "label": "The Decoder: Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
+    "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+   },
+   {
+    "label": "SecurityWeek: Google Launches Gemini 4 Argon With Guardrail-Free Access for Vetted Defenders",
+    "url": "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/"
+   }
+  ],
+  "links": [
+   {
+    "label": "Google: Gemini 4 Argon -- our next era of frontier intelligence",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+   },
+   {
+    "label": "Artificial Analysis: Gemini 4 Argon -- Google is back as one of the top three labs in intelligence achieved",
+    "url": "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs"
+   },
+   {
+    "label": "The Decoder: Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead",
+    "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+   },
+   {
+    "label": "SecurityWeek: Google Launches Gemini 4 Argon With Guardrail-Free Access for Vetted Defenders",
+    "url": "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Google released its newest flagship model, **Gemini 4 Argon**, on September 30 -- and the first people with real access to it are not Google AI Ultra subscribers or paying API customers. They're vetted cybersecurity defenders inside more than 650 organizations enrolled in Google's Fairwind Program, and ==Google is handing them a version of Argon with its own cyber guardrails switched off.==",
+    "citation_urls": [
+     "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/",
+     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The Fairwind Program itself isn't new -- Google built it earlier this year to get vetted \"high-priority defenders\" (governments, healthcare providers, telecoms) early access to frontier capability before general release. Argon is simply the newest, and most capable, model Google has decided belongs there first. Google says that in testing, Argon caught a __critical vulnerability__ in hospital software used worldwide that earlier frontier models had missed -- though it has not named the software, the vendor, or published a CVE confirming the find.{{note: \"Trusted defender\" is Google's own vetting category -- it doesn't denote any formal government certification.}}",
+    "citation_urls": [
+     "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "On Artificial Analysis's Intelligence Index -- the independent [benchmark](/dictionary) aggregate tracked on the [Scoreboard](/scoreboard), as opposed to a vendor's own claims -- Argon scores **53** points at its high-reasoning setting. That ties it with OpenAI's GPT-6 Astra and Anthropic's Claude Fable 5.1, puts it one point ahead of GPT-6.1 Sol, and leaves it five points behind the category leader, Claude Opus 5.5, at 58. Google's own launch language calls Argon \"our next era of frontier intelligence\" -- on the one number every lab's flagship gets held to, Argon actually arrives in a three-way tie for second.",
+    "citation_urls": [
+     "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs",
+     "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+    ]
+   },
+   {
+    "type": "chart",
+    "chart": {
+     "title": "Artificial Analysis Intelligence Index, high-reasoning setting",
+     "kind": "bar",
+     "unit": "index points",
+     "source": "Artificial Analysis, Gemini 4 Argon benchmark review, Oct. 2026",
+     "data": [
+      {
+       "label": "Claude Opus 5.5",
+       "value": 58
+      },
+      {
+       "label": "Gemini 4 Argon",
+       "value": 53,
+       "hi": true
+      },
+      {
+       "label": "GPT-6 Astra",
+       "value": 53
+      },
+      {
+       "label": "Claude Fable 5.1",
+       "value": 53
+      },
+      {
+       "label": "GPT-6.1 Sol",
+       "value": 52
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Argon's sharper edge shows up somewhere narrower: on AA-Omniscience, Artificial Analysis's hallucination test, Argon scored a **15%** error rate -- the lowest of any model above 45 points on the Index, against GPT-6 Astra's 51% and GPT-6.1 Sol's 54%. For a model Google is deliberately routing toward cybersecurity defense -- patch validation, vulnerability triage, decisions where a confident wrong answer is actively dangerous -- a measured hallucination rate a third of its nearest tied competitor's may matter more than the tied headline score.",
+    "citation_urls": [
+     "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Argon's price looks aggressive on its face: **$2 per million input tokens and $10 per million output tokens** during Google's introductory period, rising to $4/$20 once that ends, with a 95% discount on cached input. That undercuts GPT-6 Astra's $10/$50 list price outright. But Artificial Analysis's own task-level accounting complicates the \"cheaper\" framing: ==Argon used an average of 62,000 output tokens to complete the same benchmark tasks that GPT-6 Astra finished in about 27,000.== A roughly 2.3x gap in tokens consumed per task erodes most of the per-token price advantage before a customer's actual bill gets calculated.",
+    "citation_urls": [
+     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+     "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Google's own benchmark claims for Argon go further than the independent Index: the company says Argon scored 77.9% on DeepSWE v1.1, a long-horizon software-engineering benchmark, and tied for first at 68% on CWE-bench v1, a vulnerability-remediation test. Argon's output limit also jumped to **1 million tokens**, up from the 64,000-token ceiling on Google's prior generation -- headroom a model doing multi-step vulnerability triage across a large codebase actually needs, rather than a number chosen to look good on a spec sheet. None of those three figures comes from an independent evaluator the way the Intelligence Index score does.",
+    "citation_urls": [
+     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What Argon's price actually buys",
+     "items": [
+      {
+       "value": "$2 / $10",
+       "unit": "per 1M tokens, in/out",
+       "label": "Introductory API rate",
+       "includes": "List price during Google's launch promotion window",
+       "excludes": "The standard rate that follows it: $4/$20 per 1M tokens"
+      },
+      {
+       "value": "62,000",
+       "unit": "output tokens",
+       "label": "Argon's average tokens per completed task, per Artificial Analysis",
+       "includes": "Full reasoning trace needed to finish a typical benchmark task",
+       "excludes": "GPT-6 Astra's own average on the same tasks: about 27,000 tokens",
+       "note": "At roughly 2.3x the tokens per task, Argon's lower per-token price does not translate into a proportionally lower cost per completed task."
+      }
+     ],
+     "source": "Artificial Analysis and Google's own published pricing, Oct. 2026."
+    }
+   },
+   {
+    "type": "h2",
+    "text": "What's actually established, versus what Google says"
+   },
+   {
+    "type": "p",
+    "text": "Argon's security design leans on several layers Google describes in its own launch materials: internal activation monitoring meant to flag misuse, __chain-of-thought__ monitors that watch Argon's own reasoning and actions and can halt execution mid-task, and sandboxed environments for the highest-risk evaluations. Google also says Argon leads Gray Swan's independent benchmark for resisting indirect [prompt injection](/dictionary) -- attacks that hide instructions inside content a model reads rather than commands a user types -- though the company cites that result in its own announcement rather than linking Gray Swan's published leaderboard entry directly.",
+    "citation_urls": [
+     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    ]
+   },
+   {
+    "type": "scorecard",
+    "scorecard": {
+     "items": [
+      {
+       "claim": "Argon found a critical vulnerability in hospital software used worldwide that earlier frontier models missed.",
+       "level": "company",
+       "basis": "Stated by Google in its own launch materials; no CVE identifier, affected vendor, or independent confirmation has been published.",
+       "resolver": "A public CVE filing or the affected vendor's own disclosure naming the flaw."
+      },
+      {
+       "claim": "Argon leads Gray Swan's independent benchmark for resisting indirect prompt injection.",
+       "level": "partial",
+       "basis": "Gray Swan is a third-party red-teaming benchmark, but Google cites the result in its own announcement rather than linking Gray Swan's own published leaderboard entry for Argon.",
+       "resolver": "Gray Swan's own public leaderboard entry for Argon, checked independently of Google's citation."
+      },
+      {
+       "claim": "Argon has the lowest hallucination rate of any model scoring 45+ on the Intelligence Index.",
+       "level": "confirmed",
+       "basis": "Directly measured and published by Artificial Analysis, the independent evaluator: 15% versus GPT-6 Astra's 51%.",
+       "resolver": "Already resolved -- independently measured and published."
+      }
+     ]
+    }
+   },
+   {
+    "type": "quote",
+    "text": "“Frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense.” -- Koray Kavukcuoglu, SVP, Google DeepMind",
+    "citation_urls": [
+     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Argon's staged rollout fits a pattern that looks increasingly like the norm for the riskiest tier of frontier releases, not the exception. [Anthropic](/company/anthropic)'s Claude Mythos 5.1 shipped in September restricted to the company's own cybersecurity and life-sciences trusted-access programs, with no independent score yet because most evaluators still can't query it at all. Google handing its newest flagship to outside defenders with the guardrails *removed*, rather than holding it back from everyone, is the more unusual bet of the two: it wagers that the defensive upside of wide, early, unrestricted access outweighs the risk of putting an uncaged frontier model into more than 650 outside organizations' hands before the general public gets any version of it at all. Whether that bet pays off is not yet knowable from the outside -- it depends entirely on what those 650-plus organizations actually do with an uncaged frontier model, and Google has given no indication it plans to publish a running account of that.",
+    "citation_urls": [
+     "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/"
+    ]
+   }
+  ],
+  "id": "rtfc-20261003-geminiargon-01",
+  "image": "assets/img/newsroom/rtfc-20261003-geminiargon-01.jpg",
+  "publishedAt": "2026-10-03T19:15:10Z",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-03T19:15:10Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "WebSearch sweep found Google's Sept. 30 Gemini 4 Argon launch. Checked the archive: zero prior article coverage despite the model already sitting on this publication's own Scoreboard since Oct. 1 at score 53 -- a scored-but-unreported gap this piece fills."
+    },
+    {
+     "name": "research",
+     "note": "4 sources across primary_company (Google's own launch blog) and independent_reporting/paper_or_model_card (Artificial Analysis's own benchmark review, The Decoder, SecurityWeek). 4 independent evidence threads: Google's launch materials, Artificial Analysis's independent Index/Omniscience/task-cost measurements, SecurityWeek's Fairwind-access reporting, and The Decoder's independent cross-check of the pricing and token-efficiency numbers."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~820 words), 3 components (chart, ledger, scorecard). Chart places Argon's tied Intelligence Index score against the other three models in its tier. Ledger separates the per-token list price from Artificial Analysis's own per-task token-usage finding -- the piece's real answer to whether Argon is actually cheaper. Scorecard rates three distinct security claims at three different confidence levels (confirmed/partial/company) rather than treating all of Google's own claims as equally established."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language. An initial aggregated WebSearch summary reported a 52.6/57.6 Index-score pairing that conflicted with two independent direct fetches of artificialanalysis.ai and the-decoder.com, which agreed on 53/58 -- used the two consistent direct reads and discarded the aggregate figure rather than publish an unverified number. Also dropped a same-named 'AutomationBench' figure after Google's own 51.3% and Artificial Analysis's 77-78% 'AutomationBench-AA' turned out to be two different evaluations, not one comparable score. No mandatory-scrutiny trigger. Loop 2: walked chart/ledger/scorecard values against the cited sources; all trace cleanly; no fabricated figures."
+    }
+   ],
+   "gate": "synthesis with 3 components (chart, ledger, scorecard); 4 independent sources across 2 source classes; no mandatory-scrutiny trigger; no fabricated figures; published at 2026-10-03T19:15:10Z."
+  }
+ },
+ {
+  "slug": "oracle-project-lighthouse-jupiter-grid-pipeline-delays",
+  "title": "Oracle's two biggest AI data centers are both stuck -- not on construction, but on someone else's permit",
+  "dek": "Project Lighthouse in Wisconsin and Project Jupiter in New Mexico -- Oracle's largest AI campuses, one of them a flagship Stargate site built with OpenAI and SoftBank -- have both poured concrete on schedule and then hit the same kind of wall: a grid interconnection and a gas pipeline neither company controls. Oracle calls both sites on track for 2028. The paperwork it just filed to protect itself if they're not says something more cautious.",
+  "persona": "jin-park",
+  "section": "Compute",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Oracle's Wisconsin and New Mexico AI campuses have both stalled on power, not construction.",
+   "Wisconsin's grid-interconnection review restarted in August after regulators found hundreds of scope changes.",
+   "New Mexico's gas pipeline slipped nearly six months; a separate air permit is still pending Nov. 23.",
+   "Oracle filed a force-majeure notice on the New Mexico site while publicly calling it on schedule.",
+   "Caveat: Oracle has not confirmed either delay report -- both rest on analyst findings and filings, not Oracle's own statements."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Wisconsin's reset regulatory clock",
+    "text": "American Transmission Company's refiled interconnection docket before the Wisconsin Public Service Commission determines whether Port Washington gets partial power by December 2027 or not until mid-2028 -- the PSC's own completeness ruling is the next checkable date."
+   },
+   {
+    "label": "New Mexico's Nov. 23 air-permit deadline",
+    "text": "The state environment department's decision on the fuel-cell air-quality permit is a fixed date on the calendar, unlike the pipeline delay -- it will either clear a second blocker or add one."
+   },
+   {
+    "label": "The $18B Project Jupiter loan pricing",
+    "text": "Bloomberg reported the project's financing trading at 89-91 cents on the dollar in late September -- a further slide would be the clearest market signal that investors expect the 2028 date to move."
+   },
+   {
+    "label": "Whether Oracle addresses either site on its next earnings call",
+    "text": "Oracle has not responded to press requests about either report -- a direct statement, rather than a spokesperson's silence, would be the first primary confirmation either way."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Investing.com: Oracle shares slip on unconfirmed report of delays at Wisconsin AI mega-campus",
+    "url": "https://www.investing.com/news/stock-market-news/oracle-shares-slip-on-unconfirmed-report-of-delays-at-wisconsin-ai-megacampus-4925179"
+   },
+   {
+    "label": "Construction Review Online: Project Lighthouse Grid Delays Threaten Oracle's 2027 Wisconsin Data Center Launch",
+    "url": "https://constructionreviewonline.com/project-lighthouse-delays-threaten-oracles-2027-wisconsin-data-center-launch/"
+   },
+   {
+    "label": "Simply Wall St: Oracle (ORCL) Data Center Delay Risk Emerges At 1.3 GW Wisconsin Project",
+    "url": "https://simplywall.st/stocks/us/software/nyse-orcl/oracle/news/oracle-orcl-data-center-delay-risk-emerges-at-13-gw-wisconsi"
+   },
+   {
+    "label": "The Motley Fool: Oracle Wants Protection If Its AI Data Center Is Delayed",
+    "url": "https://www.fool.com/investing/2026/09/24/oracle-wants-protection-if-its-ai-data-center-is-delayed-heres-what-that-changes-for-investors/"
+   },
+   {
+    "label": "TechCrunch: Oracle sends force majeure notice on its New Mexico Stargate data center",
+    "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+   }
+  ],
+  "links": [
+   {
+    "label": "Investing.com: Oracle shares slip on unconfirmed report of delays at Wisconsin AI mega-campus",
+    "url": "https://www.investing.com/news/stock-market-news/oracle-shares-slip-on-unconfirmed-report-of-delays-at-wisconsin-ai-megacampus-4925179"
+   },
+   {
+    "label": "Construction Review Online: Project Lighthouse Grid Delays Threaten Oracle's 2027 Wisconsin Data Center Launch",
+    "url": "https://constructionreviewonline.com/project-lighthouse-delays-threaten-oracles-2027-wisconsin-data-center-launch/"
+   },
+   {
+    "label": "Simply Wall St: Oracle (ORCL) Data Center Delay Risk Emerges At 1.3 GW Wisconsin Project",
+    "url": "https://simplywall.st/stocks/us/software/nyse-orcl/oracle/news/oracle-orcl-data-center-delay-risk-emerges-at-13-gw-wisconsi"
+   },
+   {
+    "label": "The Motley Fool: Oracle Wants Protection If Its AI Data Center Is Delayed",
+    "url": "https://www.fool.com/investing/2026/09/24/oracle-wants-protection-if-its-ai-data-center-is-delayed-heres-what-that-changes-for-investors/"
+   },
+   {
+    "label": "TechCrunch: Oracle sends force majeure notice on its New Mexico Stargate data center",
+    "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[Oracle](/company/oracle)'s two largest AI data-center campuses have both run into the same kind of obstacle this fall, and it isn't the one investors usually worry about with a construction megaproject. Neither site is behind on pouring concrete. ==Both are waiting on a piece of energy infrastructure that belongs to somebody else -- a regulated utility in one state, a pipeline company in another -- and that Oracle cannot build or permit itself.==",
+    "citation_urls": [
+     "https://constructionreviewonline.com/project-lighthouse-delays-threaten-oracles-2027-wisconsin-data-center-launch/",
+     "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "In Port Washington, Wisconsin, Vantage Data Centers has been building \"Project Lighthouse\" for Oracle since December 2025, and two of its four planned halls are already fully enclosed. The campus needs up to **1.3 gigawatts** of power, and that depends entirely on American Transmission Company building a new high-voltage interconnection -- which depends, in turn, on approval from the Wisconsin Public Service Commission. ATC's first application spent ten months under review before the PSC revoked its completeness finding in August, citing \"hundreds of post-filing changes\" to the project's scope; ATC refiled in September, resetting the statutory review clock. Infrastructure data provider **Aterio** modeled three scenarios from that reset: a 180-day review puts partial power online by December 2027 and full capacity by October 2028; a 360-day review pushes that to June 2028 and April 2029.",
+    "citation_urls": [
+     "https://constructionreviewonline.com/project-lighthouse-delays-threaten-oracles-2027-wisconsin-data-center-launch/"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "How large is the Port Washington campus?",
+       "claims": [
+        {
+         "who": "Investing.com / Yahoo Finance, citing the same Aterio report",
+         "kind": "reporting",
+         "says": "500 acres"
+        },
+        {
+         "who": "Construction Review Online",
+         "kind": "reporting",
+         "says": "672 acres, 2.5 million sq. ft., four single-story halls",
+         "trusted": true
+        }
+       ],
+       "ruling": "Using the 672-acre figure. It comes with a specific breakdown -- square footage and hall count -- that the rounder 500-acre figure doesn't; neither outlet names a deed or filing as its source, so this is a confidence call between two secondary accounts, not a resolved number."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "**Oracle's stock fell 1.8%** the day the Aterio findings became public, and the company did not respond to requests for comment on the report -- which is itself unconfirmed by Oracle, resting entirely on the analyst firm's own modeling of a public regulatory docket.",
+    "citation_urls": [
+     "https://www.investing.com/news/stock-market-news/oracle-shares-slip-on-unconfirmed-report-of-delays-at-wisconsin-ai-megacampus-4925179"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Thirteen hundred miles southwest, Oracle's **Project Jupiter** in New Mexico is running into a version of the same problem with a different cause. The 1,400-acre campus is one of the flagship sites of __Stargate__, the AI infrastructure initiative Oracle launched with OpenAI and SoftBank early in Trump's second term, and it's designed for 2.45 gigawatts of power -- supplied not by the grid but by Bloom Energy gas fuel cells. An Energy Transfer pipeline meant to feed those fuel cells has slipped nearly six months, to a new target of February 1, 2027, after regulators repeatedly denied permits for the line. A separate air-quality permit for the fuel-cell system is still pending, with New Mexico's environment department facing a November 23 deadline to rule on it.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Two Oracle AI campuses, two different permits",
+     "columns": [
+      {
+       "label": "Project Lighthouse",
+       "sub": "Port Washington, WI"
+      },
+      {
+       "label": "Project Jupiter",
+       "sub": "New Mexico",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "Target capacity",
+       "values": [
+        "1.3 GW",
+        "2.45 GW"
+       ]
+      },
+      {
+       "label": "Power source",
+       "values": [
+        "Grid interconnection (ATC)",
+        "On-site gas fuel cells (Bloom Energy)"
+       ]
+      },
+      {
+       "label": "What's actually blocking it",
+       "values": [
+        "A new high-voltage line awaiting PSC approval",
+        "A delayed gas pipeline plus a pending air permit"
+       ]
+      },
+      {
+       "label": "Construction status",
+       "values": [
+        "2 of 4 halls enclosed",
+        "Active, per reporting -- not reported as paused"
+       ]
+      },
+      {
+       "label": "Oracle's public position",
+       "values": [
+        "No comment on the delay report",
+        "\"Remains on our planned schedule\""
+       ],
+       "note": "Both statements predate any Oracle confirmation of either delay."
+      },
+      {
+       "label": "2028 target status",
+       "values": [
+        "Full capacity modeled at Oct. 2028-Apr. 2029 depending on PSC timeline",
+        "Nominally 2028; force-majeure notice filed in case it slips"
+       ]
+      }
+     ],
+     "source": "Construction Review Online, Investing.com, TechCrunch, and The Motley Fool; see sources below."
+    }
+   },
+   {
+    "type": "p",
+    "text": "That last row is where Oracle's public language and Oracle's own paperwork start to diverge. A company spokesperson told reporters **\"Project Jupiter remains on our planned schedule... we are fully committed to New Mexico and confident in our path forward\"** -- while, separately, Oracle sent the site's developer, a Blue Owl Capital subsidiary, a force-majeure notice. The legal point of that notice is specifically to let Oracle defer rent payments if the facility misses its 2028 deadline for reasons outside its control; the developer still has to agree a qualifying event occurred, and Oracle remains on the hook for certain fees regardless. Filing it does not mean Oracle expects to miss the date. It does mean Oracle is formally preparing for the possibility while telling the public something more confident.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+     "https://www.fool.com/investing/2026/09/24/oracle-wants-protection-if-its-ai-data-center-is-delayed-heres-what-that-changes-for-investors/"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "Dec. 2025",
+       "what": "Project Lighthouse construction begins in Port Washington, WI."
+      },
+      {
+       "when": "Aug. 2026",
+       "what": "Wisconsin PSC revokes ATC's completeness finding, citing hundreds of scope changes.",
+       "hi": true
+      },
+      {
+       "when": "Sept. 2026",
+       "what": "ATC refiles its interconnection application; Oracle sends a force-majeure notice on Project Jupiter.",
+       "hi": true
+      },
+      {
+       "when": "Nov. 23, 2026",
+       "what": "New Mexico's environment department deadline to rule on Project Jupiter's air-quality permit.",
+       "future": true
+      },
+      {
+       "when": "Feb. 1, 2027",
+       "what": "Revised target date for the Energy Transfer gas pipeline feeding Project Jupiter.",
+       "future": true
+      },
+      {
+       "when": "Dec. 2027",
+       "what": "Earliest modeled date for partial power at Project Lighthouse, per Aterio's 180-day scenario.",
+       "future": true
+      },
+      {
+       "when": "2028",
+       "what": "Oracle's stated target date for both campuses to be fully online.",
+       "future": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The financial backdrop raises the stakes on both delays. Bloomberg reported in late September that the **$18 billion** in project financing behind Project Jupiter had fallen into \"stressed\" territory, with the loans trading at roughly 89 to 91 cents on the dollar -- a market signal that lenders are already pricing in some risk to the 2028 date, independent of anything Oracle has said publicly. {{note: Oracle's project-specific financing is separate from its own corporate balance sheet, which carries its own $125 billion in long-term debt and $288 billion in future data-center lease commitments -- the Jupiter loans are the site's own financing, not Oracle's general credit.}} Against that, Oracle's cloud infrastructure business is growing fast enough to explain why it's building at this scale in the first place: OCI revenue jumped 121% to $7.4 billion last quarter, and Oracle holds $664 billion in remaining performance obligations still to be delivered.",
+    "citation_urls": [
+     "https://www.fool.com/investing/2026/09/24/oracle-wants-protection-if-its-ai-data-center-is-delayed-heres-what-that-changes-for-investors/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Oracle's own response to the capacity squeeze, so far, has been to get more out of what it already has rather than to publicly address either site: the company recently introduced **Fusion Claw**, a runtime tool for governed agentic execution, and an OCI NetApp storage service aimed at hybrid AI workloads -- both pitched as making \"each unit of already available compute and storage more productive\" while the physical infrastructure catches up. Neither tool changes when Project Lighthouse or Project Jupiter actually comes online; both are a way to say something to customers while the permits move at their own pace.",
+    "citation_urls": [
+     "https://simplywall.st/stocks/us/software/nyse-orcl/oracle/news/oracle-orcl-data-center-delay-risk-emerges-at-13-gw-wisconsi"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Project Jupiter's timeline matters past Oracle's own balance sheet, because Stargate is infrastructure [OpenAI](/company/openai) is counting on for compute capacity it does not have today. A missed 2028 date on one of the program's flagship sites pushes that capacity further out for whichever of Oracle's AI customers were counting on it -- not just the line item on Oracle's own revenue schedule. Neither company has said what happens to that dependency if New Mexico's pipeline, permit, or Wisconsin's grid line slips past the dates each is currently modeling.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/"
+    ]
+   }
+  ],
+  "id": "rtfc-20261003-oraclegrid-01",
+  "image": "assets/img/newsroom/rtfc-20261003-oraclegrid-01.jpg",
+  "publishedAt": "2026-10-03T19:15:10Z",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-03T19:15:10Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "WebSearch sweep surfaced Aterio's Wisconsin grid-delay report and Oracle's New Mexico force-majeure notice as two separate items; recognized both describe the same underlying pattern -- Oracle's two largest AI campuses blocked on third-party energy infrastructure, not construction -- and combined them into one comparative piece rather than filing two thinner briefs. Checked the archive: no prior coverage of Project Lighthouse or Project Jupiter under any slug."
+    },
+    {
+     "name": "research",
+     "note": "5 sources across independent_reporting (Investing.com, Construction Review Online, Simply Wall St, TechCrunch, The Motley Fool). 6 independent evidence threads: the Aterio Wisconsin report, the Wisconsin PSC docket history, Oracle's stock reaction, the New Mexico force-majeure notice, the Energy Transfer pipeline delay, and the Bloomberg-reported loan-pricing distress (cited via The Motley Fool)."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~850 words), 3 components (sourcecheck, compare, timeline). Sourcecheck resolves a genuine acreage discrepancy (500 vs. 672 acres) between two outlets covering the same Wisconsin site. Compare puts both campuses side by side on capacity, blocker, construction status, and Oracle's own public position. Timeline orders seven dated events across both sites so the 'same pattern, different mechanism' claim is independently checkable rather than asserted."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language; cross-linked Oracle and OpenAI by company, not by prior coverage. Surfaced and stated directly, rather than silently resolving, the tension between Oracle's public 'remains on our planned schedule' quote and its own force-majeure filing on the same site. No mandatory-scrutiny trigger -- financial figures (loan pricing, debt totals) are reported and attributed to Bloomberg/The Motley Fool, never framed as investment advice. Loop 2: walked sourcecheck/compare/timeline values against the cited sources; no fabricated figures."
+    }
+   ],
+   "gate": "synthesis with 3 components (sourcecheck, compare, timeline); 5 independent sources across 1 source class (independent_reporting, converging on primary filings/dockets described therein); no mandatory-scrutiny trigger; no fabricated figures; published at 2026-10-03T19:15:10Z."
+  }
+ },
+ {
+  "slug": "trump-jay-clayton-ai-czar-reported-pick",
+  "title": "Trump is reportedly set to name his director of national intelligence as his next AI czar",
+  "dek": "Multiple outlets reported this week that Jay Clayton, DNI since July and SEC chair during Trump's first term, is the administration's pick to take on AI policy oversight -- on top of, not instead of, running the intelligence community. The White House says any announcement will come from the President, calling the reporting \"baseless speculation\" until then.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "brief",
+  "disclaimer": "none",
+  "tldr": [
+   "Multiple outlets reported Jay Clayton is Trump's pick for AI czar, citing unnamed sources.",
+   "Clayton has been Director of National Intelligence since a party-line Senate vote in July.",
+   "The role has sat vacant since David Sacks left it in March after his term limit.",
+   "Reports say Clayton could hold both the DNI and AI czar titles at once.",
+   "Caveat: the White House has not confirmed the pick; officials call the reports speculation."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "The official announcement",
+    "text": "Trump told reporters at Tuesday's White House AI summit he would name a czar \"within three or four days\" -- that puts a real window on when speculation either becomes confirmed or doesn't."
+   },
+   {
+    "label": "Whether Clayton keeps both titles",
+    "text": "If confirmed, watch whether Clayton formally retains the DNI post alongside the AI role, and whether any recusal or ethics commitments are published covering the overlap between intelligence oversight and AI policy."
+   },
+   {
+    "label": "The policy signal a Clayton pick would send",
+    "text": "A former SEC chair known for deregulatory instincts taking the AI role, paired with Clayton's intelligence-community background, points toward AI framed as a national-security competition rather than a safety-first regulatory project -- worth checking against whatever his first public remarks in the role actually say."
+   }
+  ],
+  "sources": [
+   {
+    "label": "CBS News: Trump likely to pick Jay Clayton for AI czar, sources say",
+    "url": "https://www.cbsnews.com/news/trump-likely-jay-clayton-ai-czar-sources-say/"
+   },
+   {
+    "label": "NBC News: Trump is expected to name intelligence director Jay Clayton as AI czar",
+    "url": "https://www.nbcnews.com/politics/trump-administration/trump-ai-czar-jay-clayton-white-house-rcna601140"
+   }
+  ],
+  "links": [
+   {
+    "label": "CBS News: Trump likely to pick Jay Clayton for AI czar, sources say",
+    "url": "https://www.cbsnews.com/news/trump-likely-jay-clayton-ai-czar-sources-say/"
+   },
+   {
+    "label": "NBC News: Trump is expected to name intelligence director Jay Clayton as AI czar",
+    "url": "https://www.nbcnews.com/politics/trump-administration/trump-ai-czar-jay-clayton-white-house-rcna601140"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Multiple outlets reported this week, citing people briefed on the matter, that President Trump is preparing to name **Jay Clayton** -- his current Director of National Intelligence -- as the administration's next AI czar, with NBC News reporting the announcement could come as early as Friday. No outlet has named an on-record source confirming the pick, and ==the White House has not confirmed it either.==",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-likely-jay-clayton-ai-czar-sources-say/",
+     "https://www.nbcnews.com/politics/trump-administration/trump-ai-czar-jay-clayton-white-house-rcna601140"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "title": "The reported pick, if confirmed",
+     "items": [
+      {
+       "label": "Current role",
+       "value": "Director of National Intelligence",
+       "note": "Senate-confirmed in July, 51-47 party-line vote"
+      },
+      {
+       "label": "Prior role",
+       "value": "SEC Chair, Trump's first term"
+      },
+      {
+       "label": "Also",
+       "value": "Former partner, Sullivan & Cromwell; former US Attorney for Manhattan"
+      },
+      {
+       "label": "Predecessor in the AI czar role",
+       "value": "David Sacks, who left in March on reaching his term limit as a special government employee"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Clayton's background is unusual for the role in one specific way: he would reportedly keep running the intelligence community -- which includes the CIA and NSA -- while simultaneously directing the administration's AI policy. __Dual-hatting__ a sitting DNI with a technology-policy portfolio has no real precedent in either job's recent history, and none of the reporting so far addresses what that overlap means for recusal or oversight.",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-likely-jay-clayton-ai-czar-sources-say/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The report follows a Tuesday meeting at the White House where leaders of [OpenAI](/company/openai), [Anthropic](/company/anthropic), Google, Meta, [Nvidia](/company/nvidia), and SpaceX AI gathered to discuss a groundswell of AI-safety concerns. Trump told reporters afterward that he would name an AI czar \"within three or four days.\" A White House official's on-record response to the Clayton reporting was narrow: \"Any personnel announcement will be announced directly by the President. Any reporting until then is baseless speculation.\"",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-likely-jay-clayton-ai-czar-sources-say/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The role has sat effectively vacant since March, when David Sacks left the formal AI-and-crypto-czar post after reaching the time limit for a special government employee; he has continued as co-chair of the President's Council of Advisors on Science and Technology. Clayton's regulatory record -- an SEC chairmanship generally read as deregulatory, paired with his current post overseeing national-security intelligence -- would be the clearest signal yet of how this administration intends to frame AI policy going forward: as a security competition with China more than a safety-first regulatory project.",
+    "citation_urls": [
+     "https://www.cbsnews.com/news/trump-likely-jay-clayton-ai-czar-sources-say/"
+    ]
+   }
+  ],
+  "id": "rtfc-20261003-aiczar-01",
+  "image": "assets/img/newsroom/rtfc-20261003-aiczar-01.jpg",
+  "publishedAt": "2026-10-03T19:15:10Z",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-03T19:15:10Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "WebSearch sweep surfaced multiple outlets' Oct. 2-3 reporting that Trump is expected to name Jay Clayton AI czar -- a follow-up to an open thread this archive's own Sept. 21 coverage left unresolved (Trump said he would form an 'AI Force' and name a czar 'in the near future,' with no candidate given at the time)."
+    },
+    {
+     "name": "research",
+     "note": "2 sources (CBS News, NBC News), both independent_reporting citing unnamed sources briefed on the matter. Treated as corroborating, not fully independent -- both ultimately rest on anonymous administration sourcing, which is itself the piece's central caveat. Brief format per format-routing.md: one clear claim, 1-2 evidence threads."
+    },
+    {
+     "name": "composition",
+     "note": "Brief format (~296 words), 1 component (keyfacts) -- the brief floor. No chart; the story has no measured series behind it, consistent with house-style-guide.md's rule that briefs carry structure, not data visualization."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language. Mandatory-scrutiny trigger #6 (unverifiable central claim -- the appointment is reported, not confirmed) remediated by attributing every version of the claim to specific reporting, quoting the White House's own on-the-record non-confirmation, and never stating the appointment as settled fact anywhere, including the headline ('reportedly set to name'). A draft pass pulled an NBC-sourced quote attributed to Clayton himself speaking at a Tuesday White House meeting; a direct re-fetch of the CBS source explicitly contradicted the claim that Clayton attended that meeting at all. Rather than publish on one internally-inconsistent read, cut both the quote and the attendance detail -- resolving mandatory-scrutiny trigger #5 (quotes attributed to a real person) by removal, not by picking a side between two conflicting fetches of two different real articles. Loop 2: keyfacts items trace to the cited sources; no fabricated figures."
+    }
+   ],
+   "gate": "brief with 1 component (keyfacts); 2 sources, both independent_reporting citing unnamed sources; mandatory-scrutiny triggers #5 and #6 remediated via quote removal and hedged attribution throughout; no fabricated figures; published at 2026-10-03T19:15:10Z."
+  }
  }
 ]
 ;
