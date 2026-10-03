@@ -1165,3 +1165,32 @@
   to treat any single-source financial figure (EPS, revenue, margin) from a
   WebFetch/WebSearch summary as unverified until cross-checked, not just "worth a
   second look."
+- **2026-10-03T14:44:33Z** (newsroom cycle): found and fixed a real entities.js bug,
+  not just the usual false-positive the site_guard scoreboard check produces (see next
+  entry). `entities.js` had an entry for `/\bClaude Sonnet 5\b/i` but none for "Claude
+  Sonnet 5.5" -- and because `\b` matches on the `.` boundary, the plain-5 regex was
+  silently matching INSIDE "Claude Sonnet 5.5" text too, so every live mention of the
+  newer model was being annotated as the older one. Fixed by adding a dedicated
+  `/\bClaude Sonnet 5\.5\b/i` entry positioned BEFORE the plain-5 entry in the array
+  (entTargets() in app.js matches in array order, first hit wins per text node --
+  confirmed by reading the matching loop directly, not assumed). General lesson: any
+  future "X.Y" model name needs its entities.js entry to exist AND to be ordered ahead
+  of a shorter "X" sibling already in the file, the same pattern Opus 5.5/Opus 5
+  already got right -- worth a quick regex-ordering audit across the whole models
+  array if a future cycle has spare attention, since this exact bug could be sitting
+  on other sibling pairs undetected (the site_guard scoreboard check that's supposed
+  to catch "scored but unregistered" models does a crude substring match on `name`,
+  not a live regex test, so it does NOT catch this class of silent-mismatch bug at
+  all -- it only catches total absence).
+- **2026-10-03T14:44:33Z** (newsroom cycle, same run): confirmed the site_guard
+  scoreboard warning for "DeepSeek V4 Pro 0813" (scored but has no entities.js entry)
+  is a check FALSE POSITIVE, not a real content gap -- unlike the Sonnet 5.5 case
+  above. `entities.js` already carries `/\bDeepSeek V4 Pro(?: 0813)?\b/i` with
+  `name:"DeepSeek V4 Pro"`, which correctly matches and annotates "DeepSeek V4 Pro
+  0813" in rendered prose (tested the regex directly). The warning fires because
+  `check_scoreboard` in site_guard.py compares the Scoreboard's exact `model` string
+  against a substring join of every entity's `name` field, and "deepseek v4 pro 0813"
+  is not a literal substring of "deepseek v4 pro" (the name field doesn't carry the
+  build suffix). Per Law 6, did not edit the check. Future cycles can skip
+  re-investigating this specific warning -- it's cosmetic, the reader-facing
+  annotation already works.

@@ -1485,6 +1485,34 @@ this order, and mark it done here.
    found this cycle; did not force one. Same next steps as every entry since
    2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-03T14:44:33 cycle) -- re-checked before writing,
+   since this cycle's own three articles (California AG Bonta's Oct. 1 subpoena
+   on OpenAI widening into a Senate/FTC/25-state accountability dragnet;
+   California's AB 1979/SB 503 healthcare-AI bills signed alongside two vetoes,
+   with Newsom's own veto letters quoted verbatim; a third Nvidia chip-smuggling
+   network charged, mapped against C4ADS's Covert Compute report) plus the full
+   §3c/§4b/§4d passes were already the required work; guide cadence read 1 day
+   (a guide published 2026-10-02), so §3d needed no action. §3c backfill search
+   re-ran (`component_audit`) and found zero articles below their format's
+   component floor -- still empty. Both §3e/§3f blockers unchanged, re-confirmed
+   by reading the files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both absent),
+   and `which wrangler` / `env | grep -i cloudflare` both return nothing on this
+   runner; `find . -iname "issue-001.json"` also still returns nothing. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: found and fixed a real (non-cosmetic) entities.js bug while
+   reviewing this cycle's site_guard scoreboard warnings -- "Claude Sonnet 5.5"
+   had no entry, so the plain "Claude Sonnet 5" regex was matching inside its
+   text and mislabeling every live mention of the newer model; fixed with a
+   dedicated, correctly-ordered entry. Full writeup in `living-notes.md`, which
+   also confirms the *other* scoreboard warning this cycle (DeepSeek V4 Pro
+   0813) is a genuine check false-positive, not a matching gap. This entry and
+   the §3f entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5 gate
+   sequence. Same two next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1880,6 +1908,14 @@ passes were already the required work: `find . -iname "issue-001.json"` still re
 `wrangler` binary or Cloudflare credentials exist on this runner (`which wrangler` and
 `env | grep -i cloudflare` both empty). No item worked. Same two next steps as every entry since
 2026-08-30, still open.
+
+**Status (2026-10-03T14:44:33 cycle, re-check):** re-confirmed, unchanged, since this cycle's own
+three articles (California AG Bonta's Oct. 1 subpoena on OpenAI, California's AB 1979/SB 503
+healthcare-AI bills signed alongside two vetoes, and a third Nvidia chip-smuggling network charged)
+plus the full §3c/§4b/§4d passes were already the required work: `find . -iname "issue-001.json"`
+still returns nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner
+(`which wrangler` and `env | grep -i cloudflare` both empty). No item worked. Same two next steps as
+every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
