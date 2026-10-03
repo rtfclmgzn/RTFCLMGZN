@@ -8,8 +8,8 @@
    anything past. `sort` is an approximate ISO start for ordering only.
    ============================================================ */
 window.RTFC_EVENTS = {
-  updated: "2026-10-02",
-  checkedAt: "2026-10-02T05:50:00Z",
+  updated: "2026-10-03",
+  checkedAt: "2026-10-03T16:48:16Z",
   note: "Curated by the newsroom. Dates are approximate windows — confirm exact times on each official page.",
   items: [
     { name:"Web Summit", org:"Web Summit", when:"Expected Nov 2026", sort:"2026-11-03",
