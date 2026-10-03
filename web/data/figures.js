@@ -24,7 +24,7 @@
 //     `slug` must be a real published article.
 // ============================================================================
 window.RTFC_FIGURES = {
-  updated: "2026-09-29",
+  updated: "2026-10-03",
 
   // Per-kind display metadata. `unit` is the normalized unit every value in
   // that kind must already be expressed in.
@@ -136,6 +136,15 @@ window.RTFC_FIGURES = {
     { id:"raise-sima-c", kind:"funding-raise-usd", value:0.15,
       label:"SiMa.ai, Series C", slug:"sima-ai-150-million-series-c-nvidia-jetson-humanoid-drone-chips",
       note:"Oversubscribed, co-led by Fidelity Management & Research and Amplify. The smallest closed raise in this register — funds a next-gen edge-AI chip targeted for first half of 2028, not yet built." },
+    { id:"raise-armadin-b", kind:"funding-raise-usd", value:0.2555,
+      label:"Armadin, Series B", slug:"armadin-255-million-series-b-ai-security-funding-wave",
+      note:"Co-led by Andreessen Horowitz and Accel. Brings Armadin's total raised to $445M in seven months out of stealth." },
+    { id:"raise-cyera-growth", kind:"funding-raise-usd", value:0.6,
+      label:"Cyera, growth round", slug:"armadin-255-million-series-b-ai-security-funding-wave",
+      note:"Closed June 10, 2026, led by Evolution Equity Partners — a different company's round, cited here as comparison context for the Armadin raise." },
+    { id:"raise-dream-c", kind:"funding-raise-usd", value:0.26,
+      label:"Dream, Series C", slug:"armadin-255-million-series-b-ai-security-funding-wave",
+      note:"Led by Bicycle Capital and Group 11 — cited as comparison context for the Armadin raise, not this publication's primary story on Dream." },
 
     // ---- valuations (USD B) ----
     { id:"val-cxmt", kind:"valuation-usd", value:489,
@@ -149,6 +158,15 @@ window.RTFC_FIGURES = {
       note:"Up from $5.5B in April 2026 and roughly $1.4B a year earlier. A private round price, not a public market valuation." },
     { id:"val-island", kind:"valuation-usd", value:6.4,
       label:"Island, post-money (Series F)", slug:"island-400-million-series-f-ai-agent-browser-governance",
-      note:"Up from $4.8B in March 2025 and $3B after its 2024 Series D. ARR is reported to have doubled yearly since 2022 but no dollar figure has been disclosed." }
+      note:"Up from $4.8B in March 2025 and $3B after its 2024 Series D. ARR is reported to have doubled yearly since 2022 but no dollar figure has been disclosed." },
+    { id:"val-armadin", kind:"valuation-usd", value:2.5,
+      label:"Armadin, post-money (Series B)", slug:"armadin-255-million-series-b-ai-security-funding-wave",
+      note:"Reported as 'over $2.5B'; listed at the stated floor, not a precise close price." },
+    { id:"val-cyera", kind:"valuation-usd", value:12,
+      label:"Cyera, post-money (June 2026 round)", slug:"armadin-255-million-series-b-ai-security-funding-wave",
+      note:"Up from $9B in January 2026. A different company's valuation, cited as comparison context for the Armadin raise." },
+    { id:"val-dream", kind:"valuation-usd", value:3,
+      label:"Dream, post-money (Series C)", slug:"armadin-255-million-series-b-ai-security-funding-wave",
+      note:"Cited as comparison context for the Armadin raise, not this publication's primary story on Dream." }
   ]
 };

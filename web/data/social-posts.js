@@ -30096,5 +30096,278 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-tesla-ai5-ai6-optimus-memory-cut-reversal",
+    "ts": "2026-10-03T01:20:12Z",
+    "export": {
+      "article_id": "newsroom-tesla-ai5-ai6-optimus-memory-cut-reversal",
+      "url": "https://rtfclmgzn.com/article/tesla-ai5-ai6-optimus-memory-cut-reversal",
+      "headline": "Tesla cut its next robot chip's memory in half, then walked a third of that back within hours",
+      "hook": "Musk cut Tesla's next robot chip's memory in half for Optimus production, then walked a third of it back within a day -- while Micron's own earnings call explains why memory is this tight at all.",
+      "key_facts": [
+        "AI5 memory went from a planned 144GB to 72GB on Oct. 1, then back up to 96GB by Oct. 2.",
+        "AI6's cut, from 216GB to 144GB, was never revised.",
+        "Micron's CEO says a humanoid robot needs 200GB-plus of DRAM -- about 10x a driver-assist car."
+      ],
+      "tone": "curious, hands-on, hard eye for the demo-vs-shipping gap",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/rtfc-20261003-optimusram-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Musk cut Tesla's AI5 robot chip memory in half (144GB→72GB) for Optimus production on Oct. 1. By Oct. 2 he'd walked a third of it back, to 96GB. Micron's own earnings call says a humanoid robot needs 200GB+ of DRAM -- about 10x a driver-assist car.",
+        "reply_copy": "Why the number moved twice:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Tesla",
+          "#Optimus"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-03T06:20:12Z",
+        "copy": "“This was the only way to get enough volume for Optimus production and greatly reduces cost.” — Elon Musk, hours before walking back a third of that same memory cut.",
+        "reply_copy": "The reversal, and Micron's side of it:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIChips",
+          "#Robotics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Tesla's next robot chip just had its memory spec change twice in 24 hours.\n\nOct. 1: Musk cuts AI5 memory in half, 144GB → 72GB, to keep Optimus production moving through a DRAM shortage.\n\nOct. 2: Musk bumps it back up to 96GB -- Tesla didn't want to ship the industry's lowest spec.\n\nWhy the shortage exists at all: Micron's own earnings call says a humanoid robot will need 200GB+ of DRAM -- about 10x today's driver-assist car.\n\nFull breakdown, link in bio.",
+        "hashtags": [
+          "#Tesla",
+          "#Optimus",
+          "#Robotics",
+          "#AIChips",
+          "#DRAM",
+          "#Micron",
+          "#HumanoidRobots"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Elon Musk said Oct. 1 that Tesla was cutting its next-generation AI5 chip's memory in half -- from a planned 144GB down to 72GB -- to keep Optimus robot production moving through what he called a historic DRAM shortage. The AI6 chip's memory was cut by a third, from 216GB to 144GB, in the same announcement. The AI5 number didn't last a day: by Oct. 2, Musk had revised it back up to 96GB, saying Tesla would otherwise be shipping the lowest-spec memory configuration in the industry. The chip didn't move in a vacuum -- one day earlier, on Micron's own earnings call, CEO Sanjay Mehrotra told investors a humanoid robot will need more than 200GB of DRAM, roughly ten times a driver-assist car, with no line of sight to supply catching up before 2027. We laid out exactly what changed, and who the tradeoff actually lands on.",
+        "hashtags": [
+          "#Tesla",
+          "#Optimus"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Tesla's AI5 robot chip memory spec changed twice in about a day: 144GB planned, cut to 72GB on Oct. 1, revised up to 96GB by Oct. 2. AI6's cut (216GB→144GB) stuck. Worth noting this all happened one day after Micron's earnings call said humanoid robots will need 200GB+ of DRAM each.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-03T06:20:12Z",
+        "copy": "DRAM prices are up roughly 400% since the start of 2024, per J.P. Morgan -- data centers are forecast to eat 70% of all memory supply. Tesla designing its own silicon is what let Musk cut and partially restore a memory spec within a single day instead of waiting on a vendor's allocation.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Tesla cut its next robot chip's memory in half for Optimus production, then walked a third of it back within a day. Micron's own earnings call explains why: a humanoid robot needs 200GB+ of DRAM, about 10x a driver-assist car.",
+        "hashtags": [
+          "#Tesla",
+          "#Optimus",
+          "#AIChips"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-armadin-255-million-series-b-ai-security-funding-wave",
+    "ts": "2026-10-03T01:20:12Z",
+    "export": {
+      "article_id": "newsroom-armadin-255-million-series-b-ai-security-funding-wave",
+      "url": "https://rtfclmgzn.com/article/armadin-255-million-series-b-ai-security-funding-wave",
+      "headline": "Kevin Mandia's AI-attack startup raises $255.5 million, the fourth 'AI security' mega-round of 2026",
+      "hook": "Kevin Mandia's Armadin raised $255.5M at a $2.5B+ valuation -- the fourth nine-figure 'AI security' round of 2026, after Island, Cyera, and Dream, and the four companies barely sell the same thing.",
+      "key_facts": [
+        "Armadin's total raised hits $445M in seven months, at a valuation over $2.5B.",
+        "Island, Cyera, and Dream each raised $260M-$600M in 2026 -- for four different products.",
+        "None of the four rounds' announcements disclose revenue or ARR to check against the valuation."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/rtfc-20261003-armadinb-01.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Kevin Mandia's Armadin just raised $255.5M at a $2.5B+ valuation -- the FOURTH nine-figure 'AI security' round of 2026, after Island, Cyera, and Dream. Combined: $1.5B+ raised this year alone. The four companies barely sell the same thing.",
+        "reply_copy": "What each one is actually buying:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Cybersecurity",
+          "#AIAgents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-03T06:20:12Z",
+        "copy": "“The only way to build a defense that keeps pace is to train it against the best offense available, every day.” — Kevin Mandia, on why his new startup points AI agent swarms at its own customers' infrastructure.",
+        "reply_copy": "The case against, and for:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#CyberSecurity",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Kevin Mandia -- the guy who helped uncover the SolarWinds breach -- just raised $255.5M for his newest company.\n\nArmadin sells autonomous AI agents that attack a customer's OWN infrastructure on purpose, chaining small flaws into real attack paths.\n\nIt's the 4th nine-figure 'AI security' round this year:\n🔸 Armadin -- $255.5M / $2.5B+ (offense)\n🔸 Island -- $400M / $6.4B (browser governance)\n🔸 Cyera -- $600M / $12B (data security)\n🔸 Dream -- $260M / $3B (sovereign defense)\n\nNone of the four disclosed revenue. Full comparison, link in bio.",
+        "hashtags": [
+          "#Cybersecurity",
+          "#AIAgents",
+          "#VentureCapital",
+          "#StartupFunding",
+          "#AISecurity",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Kevin Mandia's newest company tripled its valuation in roughly the time most Series B rounds take to close. Armadin -- the agentic-security startup the former Mandiant chief executive launched in March 2026 -- raised $255.5 million in a Series B valuing it at over $2.5 billion. That makes Armadin the fourth AI-security startup this year to close a nine-figure-or-larger round at a billion-dollar-plus valuation, after Island, Cyera, and Dream. We compared all four: what each one actually sells, who's funding them, and why none of their announcements disclose the revenue a reporter could check against the valuation.",
+        "hashtags": [
+          "#Cybersecurity",
+          "#AIAgents"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Armadin just raised $255.5M at a $2.5B+ valuation -- the 4th nine-figure 'AI security' round of 2026. Worth noticing: Armadin (offense), Island (browser governance), Cyera (data security), and Dream (sovereign defense) are selling four totally different products under one funding label.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-03T06:20:12Z",
+        "copy": "Crunchbase put the 10 most-funded agentic AI-security startups at $3.6B combined as of March 2026 -- before Armadin had even left stealth. Gartner projects the category growing from $26B to $172B by 2029. That's the growth story investors are underwriting, unverifiable business quality and all.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Kevin Mandia's Armadin raised $255.5M at a $2.5B+ valuation -- the 4th nine-figure 'AI security' round of 2026. Island, Cyera, and Dream each raised too, for four different products. None disclosed revenue.",
+        "hashtags": [
+          "#Cybersecurity",
+          "#AIAgents",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-albertsons-safeway-chatgpt-shopping-openai-expansion",
+    "ts": "2026-10-03T01:20:12Z",
+    "export": {
+      "article_id": "newsroom-albertsons-safeway-chatgpt-shopping-openai-expansion",
+      "url": "https://rtfclmgzn.com/article/albertsons-safeway-chatgpt-shopping-openai-expansion",
+      "headline": "Albertsons brings ChatGPT checkout to Safeway, with five more grocery banners coming",
+      "hook": "Safeway shoppers can now turn a recipe or a photo into a cart inside ChatGPT -- Albertsons' biggest agentic-commerce move yet, reaching 2,200+ stores before five more grocery banners even get the same treatment.",
+      "key_facts": [
+        "ChatGPT builds the cart from a recipe, photo, or list; checkout still happens on Safeway's site.",
+        "The rollout already reaches 2,200+ stores and about 36 million shoppers a week.",
+        "Albertsons, Vons, Jewel-Osco, Shaw's, ACME, and Tom Thumb are next, with no announced timeline."
+      ],
+      "tone": "energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/rtfc-20261003-safewaygpt-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Safeway shoppers can now turn a recipe, a photo, or a grocery list into a cart -- inside ChatGPT. Albertsons' biggest agentic-commerce move yet, already live across 2,200+ stores. 5 more grocery banners are coming next.",
+        "reply_copy": "How it actually works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Grocery shopping just moved into ChatGPT.\n\nSafeway shoppers can now turn a recipe, a photo, or a saved list straight into a cart -- ChatGPT finds the products and savings, then hands you off to Safeway to check out.\n\nIt's already live across 2,200+ stores, serving ~36M shoppers a week. Five more banners (Albertsons, Vons, Jewel-Osco, Shaw's, ACME, Tom Thumb) are coming next.\n\nFull story, link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#Albertsons",
+          "#Safeway",
+          "#AIShopping",
+          "#GroceryTech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Albertsons and OpenAI said Oct. 2 that Safeway shoppers can now turn a recipe, a meal idea, a photo, or a saved shopping list directly into a cart inside ChatGPT. The assistant identifies the products and any available savings, assembles the basket, and hands the shopper off to Safeway's own site to finish checking out. It's already live across 2,200-plus stores serving roughly 36 million shoppers a week, and Albertsons says five more banners -- Vons, Jewel-Osco, Shaw's, ACME, and Tom Thumb -- are coming next, though no timeline has been announced.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Safeway shoppers can now turn a recipe or photo into a cart inside ChatGPT -- Albertsons' biggest agentic-commerce move yet, live across 2,200+ stores already. Checkout still happens on Safeway's own site, same split Meta's Muse abandoned when it added in-chat PayPal checkout in September.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Safeway shoppers can now turn a recipe or photo into a cart inside ChatGPT -- live across 2,200+ stores already. Five more grocery banners are coming next, no timeline announced.",
+        "hashtags": [
+          "#OpenAI",
+          "#ChatGPT",
+          "#AIShopping"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
