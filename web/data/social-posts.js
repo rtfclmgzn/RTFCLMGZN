@@ -30128,7 +30128,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Optimus"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -30156,8 +30158,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Micron",
           "#HumanoidRobots"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeBUc3_levL/",
+        "remote_id": "18124044118915087",
+        "posted_at": "2026-10-03T05:34:39Z"
       },
       {
         "platform": "facebook",
@@ -30166,14 +30170,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Tesla",
           "#Optimus"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122125091325396947",
+        "remote_id": "1238977099292018_122125091325396947",
+        "posted_at": "2026-10-03T05:34:48Z"
       },
       {
         "platform": "threads",
         "copy": "Tesla's AI5 robot chip memory spec changed twice in about a day: 144GB planned, cut to 72GB on Oct. 1, revised up to 96GB by Oct. 2. AI6's cut (216GB→144GB) stuck. Worth noting this all happened one day after Micron's earnings call said humanoid robots will need 200GB+ of DRAM each.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeBUf_EFee7",
+        "remote_id": "18020441309929874",
+        "posted_at": "2026-10-03T05:35:02Z"
       },
       {
         "platform": "threads",
@@ -30191,8 +30199,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Optimus",
           "#AIChips"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwx63kvxio22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwx63kvxio22",
+        "posted_at": "2026-10-03T05:35:08Z"
       }
     ]
   },
@@ -30227,7 +30237,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -30264,14 +30276,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cybersecurity",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122125092075396947",
+        "remote_id": "1238977099292018_122125092075396947",
+        "posted_at": "2026-10-03T05:38:50Z"
       },
       {
         "platform": "threads",
         "copy": "Armadin just raised $255.5M at a $2.5B+ valuation -- the 4th nine-figure 'AI security' round of 2026. Worth noticing: Armadin (offense), Island (browser governance), Cyera (data security), and Dream (sovereign defense) are selling four totally different products under one funding label.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeBU-Z6lQkz",
+        "remote_id": "18110256656594872",
+        "posted_at": "2026-10-03T05:39:12Z"
       },
       {
         "platform": "threads",
@@ -30289,8 +30305,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwx6czdauk2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwx6czdauk2m",
+        "posted_at": "2026-10-03T05:39:19Z"
       }
     ]
   },
