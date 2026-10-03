@@ -29894,8 +29894,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwxthla66e2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwxthla66e2t",
+        "posted_at": "2026-10-03T11:57:40Z"
       }
     ]
   },
@@ -30129,7 +30131,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -30144,7 +30146,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -30188,8 +30192,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-10-03T06:20:12Z",
         "copy": "DRAM prices are up roughly 400% since the start of 2024, per J.P. Morgan -- data centers are forecast to eat 70% of all memory supply. Tesla designing its own silicon is what let Musk cut and partially restore a memory spec within a single day instead of waiting on a vendor's allocation.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeB_0LSlshE",
+        "remote_id": "18100549574057236",
+        "posted_at": "2026-10-03T11:53:31Z"
       },
       {
         "platform": "bluesky",
@@ -30383,8 +30389,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#ChatGPT",
           "#AIShopping"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mwxtaeesqj23",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mwxtaeesqj23",
+        "posted_at": "2026-10-03T11:53:38Z"
       }
     ]
   }
