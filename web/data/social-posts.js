@@ -30970,5 +30970,261 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
-  }
+  },
+{
+  "article_id": "newsroom-florida-ag-uthmeier-openai-injunction-motion-development-freeze",
+  "ts": "2026-10-04T01:40:00Z",
+  "export": {
+    "article_id": "newsroom-florida-ag-uthmeier-openai-injunction-motion-development-freeze",
+    "url": "https://rtfclmgzn.com/article/florida-ag-uthmeier-openai-injunction-motion-development-freeze",
+    "headline": "Florida asks a judge to freeze all new OpenAI model development -- not just restrict ChatGPT for minors",
+    "hook": "Florida isn't just asking a court to restrict ChatGPT for minors -- it wants a judge to stop OpenAI from training any new model at all.",
+    "key_facts": [
+      "The Sept. 28 motion asks for independent safety sign-off before OpenAI trains any new model.",
+      "It also seeks to bar Florida minors from ChatGPT and ban \"safe\"/human-like marketing language.",
+      "A federal judge already rejected OpenAI's bid to move the case, sending it back to state court."
+    ],
+    "tone": "composed, legally precise, strategic",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/rtfc-20261004-floridaopenai-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Florida's AG isn't just asking a court to restrict ChatGPT for minors. The Sept. 28 motion asks a judge to stop OpenAI from training ANY new model until an outside reviewer signs off on it.",
+      "reply_copy": "What the motion actually asks for:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#OpenAI",
+        "#AIPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-04T06:40:00Z",
+      "copy": "OpenAI's only public response so far isn't to this motion -- it's a statement about a training pause it had already announced, for a different reason. Florida's ask is still sitting in front of a judge, unanswered.",
+      "reply_copy": "The six things the motion asks a court to order:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#OpenAI",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Florida wants a judge to stop OpenAI from building new AI models at all.\n\nThe Sept. 28 motion asks a court to require independent safety sign-off before any new model trains, bar Florida minors from ChatGPT, and ban marketing language that calls the product \"safe\" or human-like.\n\nIt follows a June lawsuit; a federal judge already rejected OpenAI's bid to move the case out of state court. No hearing date is set. Full story, link in bio.",
+      "hashtags": [
+        "#OpenAI",
+        "#AIPolicy",
+        "#TechNews",
+        "#AI",
+        "#Florida",
+        "#Regulation"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Florida Attorney General James Uthmeier filed a motion on Sept. 28 asking a state court to do something no regulator has yet ordered: stop OpenAI from developing any new AI model until an independent reviewer signs off on its safeguards. The motion, filed in Highlands County, also seeks to bar Florida minors from ChatGPT and ban language that frames the chatbot as safe, accurate, or human-like. It follows a June 1 lawsuit; a federal judge already rejected OpenAI's attempt to move the case into federal court. OpenAI's only public response so far addresses a different, already-announced training pause -- not this motion. No hearing date has been set.",
+      "hashtags": [
+        "#OpenAI",
+        "#AIPolicy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Florida's AG wants a judge to freeze ALL new OpenAI model development -- not just restrict minors' access to ChatGPT. It's the first motion of its kind, and it's sitting in a Highlands County courtroom with no hearing date set yet.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Florida's AG asked a court Sept. 28 to stop OpenAI from training any new model without outside safety sign-off -- on top of barring minors from ChatGPT. A federal judge already sent the case back to state court. No hearing date yet.",
+      "hashtags": [
+        "#OpenAI",
+        "#AIPolicy",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-fieldai-700-million-term-sheet-10-billion-valuation",
+  "ts": "2026-10-04T01:40:00Z",
+  "export": {
+    "article_id": "newsroom-fieldai-700-million-term-sheet-10-billion-valuation",
+    "url": "https://rtfclmgzn.com/article/fieldai-700-million-term-sheet-10-billion-valuation",
+    "headline": "FieldAI signs a term sheet for $700 million at a $10 billion valuation -- five times what it was worth a year ago",
+    "hook": "A robotics startup that sells no hardware just signed a term sheet valuing it at $10 billion -- five times what it was worth a year ago.",
+    "key_facts": [
+      "FieldAI's term sheet values it at $10B, up from $2B about a year earlier.",
+      "Its software is a shared \"brain\" meant to run humanoids, robot dogs, drones, and rovers.",
+      "The round has not formally closed; FieldAI did not respond to requests for comment."
+    ],
+    "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/rtfc-20261004-fieldai-01.jpg",
+    "disclaimer": "not-financial-advice"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "FieldAI builds no hardware. It sells software meant to run humanoids, robot dogs, drones, and rovers off one shared \"brain.\" It just signed a term sheet valuing it at $10B -- 5x what it was worth a year ago.",
+      "reply_copy": "The math behind that number:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "FieldAI just signed a term sheet at a $10 billion valuation -- 5x what it was worth a year ago.\n\nThe company builds no hardware. Its product is a shared \"brain\" meant to run humanoids, robot dogs, drones, and industrial rovers from one foundation model.\n\nThe round hasn't closed yet. Full story, link in bio.",
+      "hashtags": [
+        "#Robotics",
+        "#AI",
+        "#Startups",
+        "#VentureCapital",
+        "#TechNews",
+        "#Humanoid"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "FieldAI, a four-year-old Irvine robotics-software startup, has signed a term sheet for a $700 million round at a $10 billion valuation -- roughly five times what it was worth a year ago. The company builds no hardware of its own; its product is a \"universal general-purpose brain\" meant to run humanoids, robot dogs, drones, and industrial rovers from one shared foundation model. It says revenue plus signed contracts has crossed $135 million across more than 30 customers. The round has a signed term sheet. It has not closed.",
+      "hashtags": [
+        "#Robotics",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "FieldAI builds no hardware -- just a shared \"brain\" for humanoids, robot dogs, drones, and rovers. It just signed a term sheet at a $10B valuation, 5x what it was worth a year ago. The round hasn't closed.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "FieldAI signed a term sheet for $700M at a $10B valuation -- 5x its $2B price a year ago. No hardware of its own; it sells a shared robot \"brain\" for humanoids, dogs, drones, and rovers. Round hasn't closed.",
+      "hashtags": [
+        "#Robotics",
+        "#AI",
+        "#Startups"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-microsoft-2026-digital-defense-report-ai-attacker-advantage",
+  "ts": "2026-10-04T01:40:00Z",
+  "export": {
+    "article_id": "newsroom-microsoft-2026-digital-defense-report-ai-attacker-advantage",
+    "url": "https://rtfclmgzn.com/article/microsoft-2026-digital-defense-report-ai-attacker-advantage",
+    "headline": "Microsoft's own threat report says AI has handed attackers a lead that defenders don't have: under 24 hours from bug to breach",
+    "hook": "Microsoft's own security report says vulnerabilities now get weaponized in under 24 hours -- while enterprise patching still takes 30 to 60 days.",
+    "key_facts": [
+      "Median time from a published vulnerability to active exploitation: under 24 hours.",
+      "In a controlled test, two frontier models chained 32 attack steps into a full network compromise -- no human direction.",
+      "Phishing's share of initial access roughly tripled, from 7% to 23%, over the year tracked."
+    ],
+    "tone": "austere, technically exacting, evaluation-first",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "primary_image": "assets/img/newsroom/rtfc-20261004-msdigitaldefense-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Microsoft's own 2026 threat report: vulnerabilities now get weaponized in under 24 hours. Enterprise patching still takes 30-60 days. In a controlled test, two frontier models chained 32 attack steps into a full breach -- no human direction.",
+      "reply_copy": "What Microsoft's report actually measured:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Cybersecurity",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-04T06:40:00Z",
+      "copy": "Microsoft's own framing: none of this is a new attack method. It's the same old tactics, just faster -- which is exactly why a 24-hour weaponization window matters more than a 30-60 day patch cycle.",
+      "reply_copy": "The sectors getting hit hardest:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Cybersecurity",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Microsoft's own 2026 Digital Defense Report: the median time from a published vulnerability to real-world exploitation has fallen below 24 hours.\n\nEnterprise patching still takes 30-60 days.\n\nIn a controlled test, two frontier models chained 32 attack steps into a full network compromise with zero human direction. Full story, link in bio.",
+      "hashtags": [
+        "#Cybersecurity",
+        "#AI",
+        "#TechNews",
+        "#InfoSec",
+        "#Microsoft",
+        "#ThreatIntel"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Microsoft's 2026 Digital Defense Report, covering July 2025 through June 2026, documents the median time from a vulnerability's public disclosure to active exploitation falling below 24 hours -- while enterprise patching still runs 30 to 60 days. In a controlled evaluation run separately from its telemetry, Microsoft had two frontier models chain 32 consecutive attack steps into a full domain compromise of an emulated network, with no human operator directing any step. Phishing's share of initial access roughly tripled, from 7% to 23%, over the year tracked. Microsoft's own framing: none of this is a new attack method -- just a faster version of familiar ones.",
+      "hashtags": [
+        "#Cybersecurity",
+        "#AI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Microsoft's own report: vulnerabilities get weaponized in under 24 hours now. Patching still takes 30-60 days. In a lab test, two frontier models chained 32 attack steps into a full breach with zero human direction.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Microsoft's 2026 Digital Defense Report: vulnerability-to-exploitation time is now under 24 hours; enterprise patching still takes 30-60 days. A controlled test had two frontier models chain 32 attack steps into a full breach, unsupervised.",
+      "hashtags": [
+        "#Cybersecurity",
+        "#AI",
+        "#InfoSec"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];
