@@ -1194,3 +1194,35 @@
   build suffix). Per Law 6, did not edit the check. Future cycles can skip
   re-investigating this specific warning -- it's cosmetic, the reader-facing
   annotation already works.
+
+- **2026-10-04T15:24:08Z** (newsroom cycle): a new flavor of the WebSearch/WebFetch
+  unreliable-figure pattern this log has tracked since 2026-09-30 (Micron EPS) and
+  2026-10-03 (same): this time the unreliable source wasn't a mis-summarized real
+  article, it was an AI-generated blog post itself (a GitHub-hosted page under
+  `mengyahuUSTC-PU/mengyahuUSTC-PU.github.io`, explicitly fact-checked in its own PR
+  description by "Claude Opus 4.8, Fable 5, and GPT") that invented a specific-sounding
+  "38,396 binders" resequencing figure and a "Sarah Carter" quote while writing about
+  Google DeepMind's SynthID Bio. The quote turned out to be real once checked directly
+  against DeepMind's own primary blog post (`deepmind.google/blog/introducing-synthid-bio/`)
+  -- but the 38,396 figure does not appear there or in any other outlet checked, and was
+  dropped. Lesson restated more sharply than the prior two entries: a search result that
+  looks like reporting can itself be AI-generated content with fabricated specifics
+  layered onto real underlying facts, so a specific-sounding number from a secondary
+  aggregator is not "sourced" until it's matched against a primary or clearly-human
+  outlet directly -- the fact that part of a disreputable source checks out is not
+  evidence the rest does.
+
+- **2026-10-04T15:24:08Z** (newsroom cycle, same run): re-confirmed §3e/§3f blockers
+  unchanged -- `verify_publish_surface.py`'s `ALLOWED_PREFIXES` still excludes
+  `functions/` and `newsroom/` entirely, no `wrangler` binary or Cloudflare credentials
+  exist on this runner, and `find . -iname "issue-001.json"` still returns nothing.
+  Separately: `agents/social/post_social.py --live` read working credentials from the
+  `RTFC_SOCIAL_SECRETS` env var (not a `.secrets.json` file, which the script's own
+  comment says is git-ignored and absent by design on CI runners) -- posted successfully
+  to Bluesky, but X/Twitter returned a hard `HTTP 403 "Your account is temporarily
+  locked"` on both attempts this cycle, unrelated to anything this run did. Facebook,
+  Instagram and Threads were already at their daily post caps from earlier dispatches
+  today, not failures. Worth a dedicated look at the X account lock if it persists into
+  the next cycle's dispatch -- it is not the kind of failure the dispatcher's own
+  automatic retry (3 attempts across cycles) can route around if the account itself
+  stays locked.
