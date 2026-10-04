@@ -1,6 +1,6 @@
 // RTFCLMGZN — Resources directory (window.RTFC_RESOURCES).
 // Curated links: official AI companies split by platform, plus podcasts.
-// Handles/URLs verified 2026-09-13.
+// Handles/URLs verified 2026-10-04.
 window.RTFC_RESOURCES = [
   {
     title:"Follow the primary sources",
@@ -36,8 +36,8 @@ window.RTFC_RESOURCES = [
         links:[{label:"Site",url:"https://www.youreverydayai.com"},{label:"Spotify",url:"https://open.spotify.com/show/6bSPqenYtlBc7AU6H5sjca"},{label:"YouTube",url:"https://www.youtube.com/@EverydayAI"}] },
       { name:"The AI Daily Brief", icon:"◉", desc:"Fast daily rundown of the biggest AI stories with sharp analysis.",
         links:[{label:"YouTube",url:"https://www.youtube.com/@AIDailyBrief"},{label:"Spotify",url:"https://open.spotify.com/show/7gKwwMLFLc6RmjmRpbMtEO"}] },
-      { name:"Hard Fork", icon:"◉", desc:"The New York Times' tech show — AI's biggest stories with humor and access.",
-        links:[{label:"Site",url:"https://www.nytimes.com/column/hard-fork"},{label:"Spotify",url:"https://open.spotify.com/show/44fllCS2FTFr2x2kjP9xeT"}] },
+      { name:"Machine Gods", icon:"◉", desc:"Kevin Roose and Casey Newton's successor to Hard Fork (which ended Aug. 2026) — a twice-weekly, video-first AI show now on NPR.",
+        links:[{label:"Site",url:"https://www.npr.org/podcasts/g-s1-143588/machine-gods"},{label:"YouTube",url:"https://www.youtube.com/@MachineGodsPod"}] },
       { name:"Latent Space", icon:"◉", desc:"The AI engineer's podcast — technical, practitioner-focused, ahead of the curve.",
         links:[{label:"Site",url:"https://www.latent.space"},{label:"X",url:"https://x.com/latentspacepod"}] },
       { name:"No Priors", icon:"◉", desc:"Sarah Guo and Elad Gil interview the founders and researchers building the frontier.",
