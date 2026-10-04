@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-796", date:"2026-10-04",
+    source:{ name:"Meta AI", handle:"metaai", platform:"web", kind:"lab" },
+    text:"Meta announced six mathematics papers co-authored between human mathematicians and Meta's Muse Spark models (versions 1.1 and 1.2) using Thinking Mode via the standard meta.ai chat interface. Five of the six papers answer previously open problems in probability, differential equations, group theory, optimization, arithmetic physics, and non-associative algebra. All papers transparently mark AI-drafted versus human-drafted passages.",
+    why:"A frontier lab publicly demonstrating its model solving open mathematics problems -- previously a research breakthrough only OpenAI had announced this year -- is worth tracking as a sign of how fast capability parity across labs is moving and what 'solving open problems' actually means when the human mathematician does the formalization work.",
+    heat:52, topics:["meta","muse spark","mathematics","research","open problems","ai breakthrough"],
+    url:"https://www.remio.ai/post/meta-muse-spark-math-papers-put-ordinary-chat-against-custom-research-systems" },
+{ id:"bz-797", date:"2026-10-04",
+    source:{ name:"Trump Administration", handle:"whitehouse", platform:"web", kind:"gov" },
+    text:"President Trump announced the creation of a new Super Intelligence Force (SIF), appointing four federal officials to lead a coordinated federal engagement with consumers, public interest groups, religious organizations, infrastructure providers and AI companies. The force is tasked with implementing the morally-binding AI safety agreement signed Sept. 29.",
+    why:"An executive-level reorganization of federal AI governance around a newly-named initiative signals the administration is formalizing AI coordination as a standing Cabinet-level function rather than scattered agency oversight -- worth tracking whether SIF becomes an actual enforcement lever or stays advisory.",
+    heat:44, topics:["trump administration","super intelligence force","ai governance","federal coordination","executive order"],
+    url:"https://www.reuters.com/technology/ai/trump-creates-super-intelligence-force-coordinate-ai-development-2026-10-04/" },
 { id:"bz-792", date:"2026-10-03",
     source:{ name:"FieldAI", handle:"fieldai", platform:"web", kind:"lab" },
     text:"FieldAI, the Irvine robotics startup building what it calls a \"universal general-purpose brain\" for humanoids, robot dogs, drones, and industrial rovers, signed a term sheet for a $700 million round at a $10 billion valuation -- up from $2 billion a year earlier. The company says revenue plus signed contracts has crossed $135 million across more than 30 customers; the round has not formally closed.",
