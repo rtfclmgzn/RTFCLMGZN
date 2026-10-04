@@ -30790,8 +30790,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Gemini"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx2gqjkvok2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx2gqjkvok2y",
+        "posted_at": "2026-10-04T12:48:01Z"
       }
     ]
   },
@@ -31003,7 +31005,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -31018,7 +31020,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -31229,8 +31233,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Microsoft's own report: vulnerabilities get weaponized in under 24 hours now. Patching still takes 30-60 days. In a lab test, two frontier models chained 32 attack steps into a full breach with zero human direction.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeEqXsdlZeQ",
+        "remote_id": "17986392201066207",
+        "posted_at": "2026-10-04T12:43:53Z"
       },
       {
         "platform": "bluesky",
@@ -31240,8 +31246,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#InfoSec"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx2gjd22562p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx2gjd22562p",
+        "posted_at": "2026-10-04T12:43:59Z"
       }
     ]
   }
