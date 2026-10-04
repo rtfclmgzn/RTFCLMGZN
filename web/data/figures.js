@@ -167,6 +167,12 @@ window.RTFC_FIGURES = {
       note:"Up from $9B in January 2026. A different company's valuation, cited as comparison context for the Armadin raise." },
     { id:"val-dream", kind:"valuation-usd", value:3,
       label:"Dream, post-money (Series C)", slug:"armadin-255-million-series-b-ai-security-funding-wave",
-      note:"Cited as comparison context for the Armadin raise, not this publication's primary story on Dream." }
+      note:"Cited as comparison context for the Armadin raise, not this publication's primary story on Dream." },
+    { id:"val-elevenlabs", kind:"valuation-usd", value:22,
+      label:"ElevenLabs, employee tender offer (Sept. 30, 2026)", slug:"elevenlabs-22-billion-tender-offer-secondary-valuation",
+      note:"A secondary-market price set by a sale of existing shares, not a primary round -- the company raised no new capital at this price. Its last primary round (Series D, Feb. 2026) priced it at $11B." },
+    { id:"val-suno", kind:"valuation-usd", value:5.4,
+      label:"Suno, post-money (Series D)", slug:"elevenlabs-22-billion-tender-offer-secondary-valuation",
+      note:"A genuine primary round, closed June 2026. Cited as comparison context for the ElevenLabs tender, not this publication's primary story on Suno." }
   ]
 };

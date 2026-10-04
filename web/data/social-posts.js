@@ -31252,5 +31252,215 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-04T12:43:59Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-trump-super-intelligence-force-ferguson-dual-role",
+    "ts": "2026-10-04T15:24:08Z",
+    "export": {
+      "article_id": "newsroom-trump-super-intelligence-force-ferguson-dual-role",
+      "url": "https://rtfclmgzn.com/article/trump-super-intelligence-force-ferguson-dual-role",
+      "headline": "Trump names the officials who'll run his new \"Super Intelligence Force\" -- one of them is the FTC chair now investigating OpenAI and Anthropic",
+      "hook": "Trump named the leadership of his new 'Super Intelligence Force' Oct. 4 -- one of the three vice chairs is the FTC chair currently investigating OpenAI and Anthropic.",
+      "key_facts": [
+        "Jay Clayton directs the task force; FTC chair Andrew Ferguson, Pentagon CTO Emil Michael and OPM's Scott Kupor are vice chairs.",
+        "It has 120 days to report on AI's risks and the government's role -- and no regulatory authority of its own.",
+        "Ferguson's FTC investigation into OpenAI and Anthropic predates the task force and runs separately from it."
+      ],
+      "tone": "composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20261004-sifforce-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Trump named the leadership of his new \"Super Intelligence Force\" today. One of the 3 vice chairs: FTC chair Andrew Ferguson -- who's also running the FTC's active investigation into OpenAI and Anthropic. Same official, two different jobs.",
+        "reply_copy": "The mandate, the deadline, and the overlap:",
+        "link_in_reply": true,
+        "hashtags": ["#AIPolicy", "#FTC"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T20:30:00Z",
+        "copy": "The task force has 120 days to report on AI's risks. It has zero rulemaking power of its own -- report and recommend, nothing more. The actual enforcement authority sits at the agency one of its own vice chairs happens to run.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": ["#AIPolicy", "#FTC"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Trump named the leadership of his new \"Super Intelligence Force\" on Oct. 4: Jay Clayton directing, with FTC chair Andrew Ferguson, Pentagon CTO Emil Michael and OPM's Scott Kupor as vice chairs.\n\nIt has 120 days to report on AI's risks -- and no regulatory power of its own.\n\nFerguson is also the official currently running the FTC's separate investigation into OpenAI and Anthropic. Full story, link in bio.",
+        "hashtags": ["#AIPolicy", "#FTC", "#OpenAI", "#Anthropic", "#AIRegulation", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "President Trump confirmed the leadership of his new \"Super Intelligence Force\" on Oct. 4: Director of National Intelligence Jay Clayton will direct it, with FTC chair Andrew Ferguson, Pentagon CTO Emil Michael and OPM director Scott Kupor as vice chairs. The task force has 120 days to report on AI's risks and the government's role -- but no regulatory authority of its own to act on what it finds. Ferguson's seat is the detail worth noticing: he's simultaneously running the FTC's separate, ongoing investigation into OpenAI and Anthropic over AI-agent risks, a probe that predates the task force and isn't folded into it.",
+        "hashtags": ["#AIPolicy", "#FTC"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Trump named the leadership of his new \"Super Intelligence Force\" today: Jay Clayton directing, Ferguson/Michael/Kupor as vice chairs. 120 days to report on AI risks, zero rulemaking power of its own. Ferguson's other job: running the FTC's live investigation into OpenAI and Anthropic.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Trump's new \"Super Intelligence Force\": Jay Clayton directs, FTC chair Andrew Ferguson is a vice chair. Ferguson is also the one running the FTC's active probe into OpenAI and Anthropic. 120 days to report, no enforcement power of its own.",
+        "hashtags": ["#AIPolicy", "#FTC", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-elevenlabs-22-billion-tender-offer-secondary-valuation",
+    "ts": "2026-10-04T15:24:08Z",
+    "export": {
+      "article_id": "newsroom-elevenlabs-22-billion-tender-offer-secondary-valuation",
+      "url": "https://rtfclmgzn.com/article/elevenlabs-22-billion-tender-offer-secondary-valuation",
+      "headline": "ElevenLabs' valuation doubled to $22 billion this week -- in a sale of existing shares, not a new funding round",
+      "hook": "ElevenLabs' valuation doubled to $22 billion this week -- in a sale of existing shares. The company raised $0 in new capital to get there.",
+      "key_facts": [
+        "A $300M employee tender offer, led by Wellington and T. Rowe Price, set the $22B price -- no new capital went into the company.",
+        "ElevenLabs' last primary round (Feb. 2026) was a genuine $500M raise at an $11B valuation.",
+        "At $22B, it's roughly 4x AI-music rival Suno's $5.4B -- which came from an actual primary round, not a tender."
+      ],
+      "tone": "brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/rtfc-20261004-elevenlabs22b-01.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ElevenLabs' valuation doubled to $22B this week. The company raised $0 in new capital to get there -- it was a sale of existing employee shares, not a funding round. Here's what the number actually is.",
+        "reply_copy": "The mechanics, and the Suno comparison:",
+        "link_in_reply": true,
+        "hashtags": ["#ElevenLabs", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T20:30:00Z",
+        "copy": "ElevenLabs at $22B is ~4x AI-music rival Suno's $5.4B. But Suno's price came from new investors putting new money in. ElevenLabs' is a secondary-market price nobody but the buyers and sellers has independently verified.",
+        "reply_copy": "The full valuation history:",
+        "link_in_reply": true,
+        "hashtags": ["#ElevenLabs", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "ElevenLabs' valuation doubled to $22 billion this week.\n\nThe company raised $0 in new capital to get there -- a $300M tender offer let investors buy out employee shares at double February's price.\n\nIts last real funding round (Feb. 2026) priced it at $11B. At $22B, it's ~4x AI-music rival Suno's $5.4B -- which came from an actual primary round. Full breakdown, link in bio.",
+        "hashtags": ["#ElevenLabs", "#AIFunding", "#VoiceAI", "#StartupValuation", "#VentureCapital", "#TechNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "ElevenLabs' valuation doubled to $22 billion in a Sept. 30 employee tender offer led by Wellington and T. Rowe Price -- but the $300 million changing hands bought out existing employee shares; the company itself raised no new capital. ElevenLabs' last real primary round, in February, raised $500 million at an $11 billion valuation. The company's ElevenAgents product has tripled its own revenue since then, with enterprise customers now 55% of total revenue -- the real business story underneath a headline number that's easy to misread as a funding round.",
+        "hashtags": ["#ElevenLabs", "#AIFunding"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ElevenLabs' valuation doubled to $22B this week -- but it's a tender offer, not a raise. $300M changed hands between investors and employees; the company itself raised $0. Last real round (Feb.) priced it at $11B. The business underneath is real -- the number is just a different kind of number than most coverage will say it is.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ElevenLabs' valuation doubled to $22B. The company raised $0 new capital -- it's a tender offer, a sale of existing shares. Last real raise (Feb.) was $11B. At $22B it's ~4x Suno's $5.4B, which came from an actual primary round.",
+        "hashtags": ["#ElevenLabs", "#AIFunding", "#Markets"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-deepmind-synthid-bio-protein-watermark-provenance",
+    "ts": "2026-10-04T15:24:08Z",
+    "export": {
+      "article_id": "newsroom-google-deepmind-synthid-bio-protein-watermark-provenance",
+      "url": "https://rtfclmgzn.com/article/google-deepmind-synthid-bio-protein-watermark-provenance",
+      "headline": "Google DeepMind can now watermark an AI-designed protein without breaking it -- the easy part of a much harder biosecurity problem",
+      "hook": "Google DeepMind can now watermark an AI-designed protein without changing what it does. The company's own announcement says resistance to deliberate tampering is still unsolved.",
+      "key_facts": [
+        "SynthID Bio's signature survives in both a protein's amino-acid sequence and its predicted 3D structure.",
+        "Confirmed in wet-lab tests on three real protein targets, including the SARS-CoV-2 spike protein's receptor-binding domain.",
+        "Anthropic is solving the same dual-use problem differently: gating who can generate, rather than marking what gets generated."
+      ],
+      "tone": "precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/rtfc-20261004-synthidbio-01.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google DeepMind can now watermark an AI-designed protein without changing what it does. Confirmed in wet-lab tests on 3 real targets. DeepMind's own paper: resistance to deliberate tampering is still unsolved.",
+        "reply_copy": "How it works, and how Anthropic is solving this differently:",
+        "link_in_reply": true,
+        "hashtags": ["#SynthIDBio", "#Biosecurity"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-04T20:30:00Z",
+        "copy": "Two labs, two different bets on the same dual-use problem: DeepMind marks what AI-designed biology gets generated and traces it after the fact. Anthropic gates who's allowed to generate it in the first place. Neither calls its own answer sufficient.",
+        "reply_copy": "The full comparison:",
+        "link_in_reply": true,
+        "hashtags": ["#SynthIDBio", "#Biosecurity"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google DeepMind published SynthID Bio on Sept. 30: an invisible, verifiable signature embedded directly into an AI-designed protein -- in both its sequence and its predicted 3D shape.\n\nConfirmed in wet-lab tests on three real targets, including the SARS-CoV-2 spike protein.\n\nThe catch, in DeepMind's own words: resistance to someone deliberately trying to remove it is still unsolved. Full story, link in bio.",
+        "hashtags": ["#SynthIDBio", "#Biosecurity", "#GoogleDeepMind", "#AIResearch", "#Biotech", "#ScienceNews"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google DeepMind published a technical proof-of-concept on Sept. 30 for watermarking AI-designed proteins: SynthID Bio embeds a verifiable signature into both a protein's amino-acid sequence and its predicted 3D structure, confirmed in wet-lab tests on three real targets without changing what the protein actually does. The intended use: letting DNA-synthesis screening providers trace a sequence back to a safeguarded model. DeepMind's own announcement names resistance to deliberate tampering as an unresolved challenge -- and Anthropic is answering the same underlying dual-use problem differently, by gating who can generate certain biology content rather than marking what gets generated.",
+        "hashtags": ["#SynthIDBio", "#Biosecurity"],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Google DeepMind can now watermark an AI-designed protein without breaking it -- confirmed on 3 real targets in wet-lab tests. The open question, in DeepMind's own words: whether the signal survives someone deliberately trying to remove it. Anthropic is betting on a completely different fix for the same problem.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "DeepMind can now watermark an AI-designed protein without changing what it does -- confirmed in wet-lab tests on 3 targets. Its own paper says tamper-resistance is still unsolved. Anthropic is betting on gated access instead of marking output.",
+        "hashtags": ["#SynthIDBio", "#Biosecurity", "#AI"],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

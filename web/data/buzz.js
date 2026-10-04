@@ -306,5 +306,17 @@ window.RTFC_BUZZ = [
     why:"Unlike GPU export controls, which restrict what China can buy, this would restrict what US data centers can buy from China -- a reversal of direction in the chip fight, and a supply-chain risk for every hyperscaler currently running Chinese optical gear.",
     heat:34, topics:["fcc","china","data center","optical transceivers","export controls","supply chain"],
     url:"https://www.tomshardware.com/tech-industry/data-centers/us-mulling-ban-on-key-chinese-networking-tech-in-data-center-component-crackdown-white-house-wants-to-impose-restrictions-in-2026-china-says-it-will-respond-if-necessary" },
+{ id:"bz-805", date:"2026-10-04",
+    source:{ name:"OpenAI", handle:"openai", platform:"web", kind:"lab" },
+    text:"Among the 20-plus products OpenAI showed at its Sept. 29 DevDay was a Decisions API, now in limited preview: an endpoint that answers one narrow, predefined question from supplied context -- approve or reject, which agent should handle a ticket next -- by picking from a fixed list of outcomes the developer sets in advance. It does no drafting, summarizing or explaining; it returns a value the calling application branches on.",
+    why:"A narrower, cheaper model-call than a full chat completion is a bet that a lot of 'AI' in production workflows is really just a classification step wearing a chatbot's API -- worth watching whether this undercuts third-party decision-routing tools once it leaves preview.",
+    heat:24, topics:["openai","devday","api","agents","product"],
+    url:"https://www.neowin.net/news/openai-unveils-500-chatgpt-pro-plan-decisions-api-and-major-codex-upgrades-at-devday-2026/" },
+{ id:"bz-806", date:"2026-10-04",
+    source:{ name:"Mark Cuban", handle:"mcuban", platform:"web", kind:"person" },
+    text:"Mark Cuban has spent the past week publicly predicting humanoid robots will \"fail miserably\" in the home within five to ten years, arguing homes will instead be redesigned around cheaper, task-specific robot shapes -- \"would you rather have a Roomba or a humanoid that pushes around a vacuum cleaner?\" Robotics executives pushed back, noting homes, doors and tools are already built for the human form, which they call humanoids' actual advantage.",
+    why:"A prominent investor publicly betting against the humanoid thesis, directly against the specialized-vs-general-purpose argument every humanoid maker (Figure, Tesla, Unitree, Astribot) is implicitly making with its own roadmap -- a real industry fault line, not just a hot take.",
+    heat:29, topics:["robotics","humanoid","mark cuban","debate","consumer"],
+    url:"https://finance.yahoo.com/technology/ai/articles/mark-cuban-rips-humanoid-robots-123000310.html" },
 
 ];
