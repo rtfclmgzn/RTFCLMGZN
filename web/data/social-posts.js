@@ -6,7 +6,7 @@
 //
 // status: "ready" (staged, dry-run) | "posted" (live) | "failed"
 // image.status: "none" | "ready" (prompt only) | "generated"
-[
+window.RTFC_SOCIAL_POSTS = [
  {
   "article_id": "live-014",
   "ts": "2026-07-13T08:10:00Z",
