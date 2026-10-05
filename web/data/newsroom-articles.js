@@ -91567,16 +91567,58 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "compare": {
      "title": "What Florida's motion asks for, and where OpenAI stands today",
      "columns": [
-      { "label": "Florida's request", "sub": "filed Sept. 28" },
-      { "label": "OpenAI's current position", "hi": true }
+      {
+       "label": "Florida's request",
+       "sub": "filed Sept. 28"
+      },
+      {
+       "label": "OpenAI's current position",
+       "hi": true
+      }
      ],
      "rows": [
-      { "label": "New model development", "values": ["Court order required before any new model trains", "Voluntarily paused training its most capable model, for a separately disclosed reason"] },
-      { "label": "Minors' access to ChatGPT", "values": ["Barred entirely in Florida", "Available under standard terms-of-service age rules"] },
-      { "label": "Children's data collection", "values": ["Barred without parental notice, consent, and review", "No court-ordered change"] },
-      { "label": "\"Safe, accurate, reliable\" marketing language", "values": ["Barred", "Still in use"] },
-      { "label": "Human-like framing of the product", "values": ["Barred", "Still in use"] },
-      { "label": "Engagement-prolonging prompts", "values": ["Barred", "No disclosed change"] }
+      {
+       "label": "New model development",
+       "values": [
+        "Court order required before any new model trains",
+        "Voluntarily paused training its most capable model, for a separately disclosed reason"
+       ]
+      },
+      {
+       "label": "Minors' access to ChatGPT",
+       "values": [
+        "Barred entirely in Florida",
+        "Available under standard terms-of-service age rules"
+       ]
+      },
+      {
+       "label": "Children's data collection",
+       "values": [
+        "Barred without parental notice, consent, and review",
+        "No court-ordered change"
+       ]
+      },
+      {
+       "label": "\"Safe, accurate, reliable\" marketing language",
+       "values": [
+        "Barred",
+        "Still in use"
+       ]
+      },
+      {
+       "label": "Human-like framing of the product",
+       "values": [
+        "Barred",
+        "Still in use"
+       ]
+      },
+      {
+       "label": "Engagement-prolonging prompts",
+       "values": [
+        "Barred",
+        "No disclosed change"
+       ]
+      }
      ],
      "source": "Florida Attorney General's Sept. 28 motion, via PYMNTS and Unite.AI; OpenAI's public statements."
     }
@@ -91592,9 +91634,20 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "type": "timeline",
     "timeline": {
      "items": [
-      { "when": "Jun 1, 2026", "what": "Uthmeier's office files the original FDUTPA suit against OpenAI and Altman in Highlands County." },
-      { "when": "Sep 3, 2026", "what": "Judge Aileen Cannon rejects OpenAI's bid for federal jurisdiction and remands the case to state court.", "hi": true },
-      { "when": "Sep 28, 2026", "what": "Uthmeier files a 49-page motion for a temporary injunction, including a full development freeze.", "hi": true }
+      {
+       "when": "Jun 1, 2026",
+       "what": "Uthmeier's office files the original FDUTPA suit against OpenAI and Altman in Highlands County."
+      },
+      {
+       "when": "Sep 3, 2026",
+       "what": "Judge Aileen Cannon rejects OpenAI's bid for federal jurisdiction and remands the case to state court.",
+       "hi": true
+      },
+      {
+       "when": "Sep 28, 2026",
+       "what": "Uthmeier files a 49-page motion for a temporary injunction, including a full development freeze.",
+       "hi": true
+      }
      ]
     }
    },
@@ -91609,10 +91662,26 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "type": "stakes",
     "stakes": {
      "items": [
-      { "who": "Florida minors using ChatGPT today", "tone": "unclear", "what": "Would lose access entirely if the injunction is granted as written -- the motion offers no interim age-gating alternative." },
-      { "who": "OpenAI's model-release schedule", "tone": "loses", "what": "Any new model, not just consumer-facing ones, would need outside safety sign-off before training -- a first-of-its-kind prior restraint on an AI developer's R&D, if granted." },
-      { "who": "Other state attorneys general", "tone": "gains", "what": "A Highlands County ruling for Florida would hand them a tested legal template for similar motions in their own courts." },
-      { "who": "Uthmeier's office", "tone": "exposed", "what": "If the judge denies the motion, the broader FDUTPA suit still has to survive on its own merits without the leverage of an emergency order." }
+      {
+       "who": "Florida minors using ChatGPT today",
+       "tone": "unclear",
+       "what": "Would lose access entirely if the injunction is granted as written -- the motion offers no interim age-gating alternative."
+      },
+      {
+       "who": "OpenAI's model-release schedule",
+       "tone": "loses",
+       "what": "Any new model, not just consumer-facing ones, would need outside safety sign-off before training -- a first-of-its-kind prior restraint on an AI developer's R&D, if granted."
+      },
+      {
+       "who": "Other state attorneys general",
+       "tone": "gains",
+       "what": "A Highlands County ruling for Florida would hand them a tested legal template for similar motions in their own courts."
+      },
+      {
+       "who": "Uthmeier's office",
+       "tone": "exposed",
+       "what": "If the judge denies the motion, the broader FDUTPA suit still has to survive on its own merits without the leverage of an emergency order."
+      }
      ]
     }
    },
@@ -91728,11 +91797,39 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "model": {
      "title": "What FieldAI's reported valuation prices in, per dollar of business on the books",
      "inputs": [
-      { "key": "val", "label": "Reported valuation", "value": 10, "min": 2, "max": 14, "step": 0.5, "prefix": "$", "unit": "B", "dec": 1, "note": "Starts at FieldAI's reported $10B term sheet; range spans its own $2B valuation a year ago to Skild AI's $14B for comparison." },
-      { "key": "rev", "label": "Revenue + signed contracts", "value": 135, "min": 100, "max": 200, "step": 5, "prefix": "$", "unit": "M", "dec": 0, "note": "FieldAI's own reported figure, across 30+ customers -- unaudited, and not the same as recognized revenue." }
+      {
+       "key": "val",
+       "label": "Reported valuation",
+       "value": 10,
+       "min": 2,
+       "max": 14,
+       "step": 0.5,
+       "prefix": "$",
+       "unit": "B",
+       "dec": 1,
+       "note": "Starts at FieldAI's reported $10B term sheet; range spans its own $2B valuation a year ago to Skild AI's $14B for comparison."
+      },
+      {
+       "key": "rev",
+       "label": "Revenue + signed contracts",
+       "value": 135,
+       "min": 100,
+       "max": 200,
+       "step": 5,
+       "prefix": "$",
+       "unit": "M",
+       "dec": 0,
+       "note": "FieldAI's own reported figure, across 30+ customers -- unaudited, and not the same as recognized revenue."
+      }
      ],
      "outputs": [
-      { "label": "Valuation-to-revenue multiple", "expr": "val*1000/rev", "unit": "x", "dec": 0, "note": "Revenue-plus-contracts is a looser base than a pure ARR multiple, so this likely understates the true multiple on cash actually collected." }
+      {
+       "label": "Valuation-to-revenue multiple",
+       "expr": "val*1000/rev",
+       "unit": "x",
+       "dec": 0,
+       "note": "Revenue-plus-contracts is a looser base than a pure ARR multiple, so this likely understates the true multiple on cash actually collected."
+      }
      ],
      "source": "SiliconANGLE and The Next Web reporting on FieldAI's term sheet; revenue figure is FieldAI's own, unaudited."
     }
@@ -91859,9 +91956,21 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "beforeLabel": "Start of Microsoft's tracking window (H2 2025)",
      "afterLabel": "End of tracking window (H1 2026)",
      "rows": [
-      { "label": "Phishing as initial-access vector", "before": "7%", "after": "23%" },
-      { "label": "Public-facing application exploits", "before": "15%", "after": "24%" },
-      { "label": "Social engineering overall", "before": "15%", "after": "7%" }
+      {
+       "label": "Phishing as initial-access vector",
+       "before": "7%",
+       "after": "23%"
+      },
+      {
+       "label": "Public-facing application exploits",
+       "before": "15%",
+       "after": "24%"
+      },
+      {
+       "label": "Social engineering overall",
+       "before": "15%",
+       "after": "7%"
+      }
      ],
      "source": "Infosecurity Magazine, citing Microsoft's 2026 Digital Defense Report."
     }
@@ -91917,10 +92026,26 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "type": "stakes",
     "stakes": {
      "items": [
-      { "who": "Government agencies (27% of tracked attacks)", "tone": "exposed", "what": "The single most-targeted sector, and the one where a successful breach carries the broadest downstream exposure." },
-      { "who": "IT-sector and research/academic networks", "tone": "exposed", "what": "Together account for nearly a third of attacks tracked -- both sectors that sit upstream of many other organizations' own security." },
-      { "who": "Enterprise security teams on a 30-60 day patch cycle", "tone": "loses", "what": "Microsoft's own comparison puts them roughly 29 to 59 days behind attackers using the same published vulnerability." },
-      { "who": "Microsoft's own security-product business", "tone": "gains", "what": "The report doubles as a sales case for the AI-driven defensive tools it is simultaneously selling to the organizations it says are falling behind." }
+      {
+       "who": "Government agencies (27% of tracked attacks)",
+       "tone": "exposed",
+       "what": "The single most-targeted sector, and the one where a successful breach carries the broadest downstream exposure."
+      },
+      {
+       "who": "IT-sector and research/academic networks",
+       "tone": "exposed",
+       "what": "Together account for nearly a third of attacks tracked -- both sectors that sit upstream of many other organizations' own security."
+      },
+      {
+       "who": "Enterprise security teams on a 30-60 day patch cycle",
+       "tone": "loses",
+       "what": "Microsoft's own comparison puts them roughly 29 to 59 days behind attackers using the same published vulnerability."
+      },
+      {
+       "who": "Microsoft's own security-product business",
+       "tone": "gains",
+       "what": "The report doubles as a sales case for the AI-driven defensive tools it is simultaneously selling to the organizations it says are falling behind."
+      }
      ]
     }
    },
@@ -92130,14 +92255,45 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "compare": {
      "title": "Two different jobs, one official",
      "columns": [
-      {"label": "Super Intelligence Force", "sub": "Ferguson, as vice chair"},
-      {"label": "FTC investigation", "sub": "Ferguson, as chairman", "hi": true}
+      {
+       "label": "Super Intelligence Force",
+       "sub": "Ferguson, as vice chair"
+      },
+      {
+       "label": "FTC investigation",
+       "sub": "Ferguson, as chairman",
+       "hi": true
+      }
      ],
      "rows": [
-      {"label": "What it is", "values": ["White House coordination task force", "Formal consumer-protection enforcement inquiry"]},
-      {"label": "Legal authority", "values": ["None of its own -- report and recommend only", "Existing FTC Act authority to investigate and, potentially, sue"]},
-      {"label": "Names OpenAI and Anthropic", "values": ["As two of the companies it coordinates with", "As two of the companies it is formally investigating"]},
-      {"label": "Deadline", "values": ["120-day report, due around Jan. 27, 2027", "No public deadline; civil investigative demands still pending"]}
+      {
+       "label": "What it is",
+       "values": [
+        "White House coordination task force",
+        "Formal consumer-protection enforcement inquiry"
+       ]
+      },
+      {
+       "label": "Legal authority",
+       "values": [
+        "None of its own -- report and recommend only",
+        "Existing FTC Act authority to investigate and, potentially, sue"
+       ]
+      },
+      {
+       "label": "Names OpenAI and Anthropic",
+       "values": [
+        "As two of the companies it coordinates with",
+        "As two of the companies it is formally investigating"
+       ]
+      },
+      {
+       "label": "Deadline",
+       "values": [
+        "120-day report, due around Jan. 27, 2027",
+        "No public deadline; civil investigative demands still pending"
+       ]
+      }
      ],
      "source": "CBS News, SecurityWeek, Straight Arrow News and BigGo Finance, as cited throughout."
     }
@@ -92334,12 +92490,33 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "timeline": {
      "title": "Six valuations in 40 months",
      "items": [
-      {"when": "Jun 2023", "what": "Series A: $19M raised, ~$100M valuation."},
-      {"when": "Jan 2024", "what": "Series B: $80M raised, $1.1B valuation -- unicorn status.", "hi": true},
-      {"when": "Jan 2025", "what": "Series C: $180M raised, $3.3B valuation."},
-      {"when": "Sep 2025", "what": "First employee tender offer: $100M changes hands, $6.6B valuation -- no new capital raised."},
-      {"when": "Feb 2026", "what": "Series D: $500M raised, $11B valuation -- the company's most recent primary round.", "hi": true},
-      {"when": "Sep 30, 2026", "what": "Second employee tender offer: $300M changes hands, $22B valuation -- no new capital raised.", "hi": true}
+      {
+       "when": "Jun 2023",
+       "what": "Series A: $19M raised, ~$100M valuation."
+      },
+      {
+       "when": "Jan 2024",
+       "what": "Series B: $80M raised, $1.1B valuation -- unicorn status.",
+       "hi": true
+      },
+      {
+       "when": "Jan 2025",
+       "what": "Series C: $180M raised, $3.3B valuation."
+      },
+      {
+       "when": "Sep 2025",
+       "what": "First employee tender offer: $100M changes hands, $6.6B valuation -- no new capital raised."
+      },
+      {
+       "when": "Feb 2026",
+       "what": "Series D: $500M raised, $11B valuation -- the company's most recent primary round.",
+       "hi": true
+      },
+      {
+       "when": "Sep 30, 2026",
+       "what": "Second employee tender offer: $300M changes hands, $22B valuation -- no new capital raised.",
+       "hi": true
+      }
      ]
     }
    },
@@ -92505,11 +92682,27 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "flow": {
      "title": "How a watermarked protein gets checked",
      "steps": [
-      {"actor": "Designer", "what": "Generates a candidate protein with AlphaProteo or a SynthID Bio-enabled version of ProteinMPNN."},
-      {"actor": "SynthID Bio", "what": "Embeds a signature in both the amino-acid sequence and the predicted 3D structure, via a fine-tuned AlphaFold 3.", "hi": true},
-      {"actor": "Lab", "what": "Synthesizes the physical protein from the watermarked design."},
-      {"actor": "Gene-synthesis provider", "what": "Screens the incoming order against threat databases and checks for the signature."},
-      {"actor": "Provider", "what": "Verifies the design's origin, in principle clearing a signed, trusted design faster than an unmarked one."}
+      {
+       "actor": "Designer",
+       "what": "Generates a candidate protein with AlphaProteo or a SynthID Bio-enabled version of ProteinMPNN."
+      },
+      {
+       "actor": "SynthID Bio",
+       "what": "Embeds a signature in both the amino-acid sequence and the predicted 3D structure, via a fine-tuned AlphaFold 3.",
+       "hi": true
+      },
+      {
+       "actor": "Lab",
+       "what": "Synthesizes the physical protein from the watermarked design."
+      },
+      {
+       "actor": "Gene-synthesis provider",
+       "what": "Screens the incoming order against threat databases and checks for the signature."
+      },
+      {
+       "actor": "Provider",
+       "what": "Verifies the design's origin, in principle clearing a signed, trusted design faster than an unmarked one."
+      }
      ]
     }
    },
@@ -92547,14 +92740,45 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "compare": {
      "title": "Two labs, two different answers to the same dual-use problem",
      "columns": [
-      {"label": "Google DeepMind -- SynthID Bio", "sub": "mark everything, trace after the fact"},
-      {"label": "Anthropic -- Life Sciences Verification Program", "sub": "gate access before generation", "hi": true}
+      {
+       "label": "Google DeepMind -- SynthID Bio",
+       "sub": "mark everything, trace after the fact"
+      },
+      {
+       "label": "Anthropic -- Life Sciences Verification Program",
+       "sub": "gate access before generation",
+       "hi": true
+      }
      ],
      "rows": [
-      {"label": "What's restricted", "values": ["Nothing -- any design can carry a watermark", "Specific biology requests Claude's public models currently refuse outright"]},
-      {"label": "Who decides trust", "values": ["Gene-synthesis screening providers, checking for a signature after the fact", "Anthropic itself, via credential checks before generation"]},
-      {"label": "What's meant to stop misuse", "values": ["Tracing a harmful design back to its source model during screening", "Blocking the request outright, or monitoring it offline for up to 30 days, before it's ever generated"]},
-      {"label": "Open question", "values": ["Whether the watermark survives a deliberate attempt to remove it", "Whether vetting catches a credentialed researcher later acting in bad faith"]}
+      {
+       "label": "What's restricted",
+       "values": [
+        "Nothing -- any design can carry a watermark",
+        "Specific biology requests Claude's public models currently refuse outright"
+       ]
+      },
+      {
+       "label": "Who decides trust",
+       "values": [
+        "Gene-synthesis screening providers, checking for a signature after the fact",
+        "Anthropic itself, via credential checks before generation"
+       ]
+      },
+      {
+       "label": "What's meant to stop misuse",
+       "values": [
+        "Tracing a harmful design back to its source model during screening",
+        "Blocking the request outright, or monitoring it offline for up to 30 days, before it's ever generated"
+       ]
+      },
+      {
+       "label": "Open question",
+       "values": [
+        "Whether the watermark survives a deliberate attempt to remove it",
+        "Whether vetting catches a credentialed researcher later acting in bad faith"
+       ]
+      }
      ],
      "source": "Google DeepMind's SynthID Bio announcement; Anthropic's Life Sciences Verification Program announcement."
     }
@@ -92617,6 +92841,650 @@ window.RTFC_NEWSROOM_ARTICLES = [
     }
    ],
    "gate": "synthesis with 3 components (flow, compare, counter) plus 1 pull quote; 4 sources across 2 classes, 1 primary, with 2 secondary sources honestly flagged as largely mirroring the primary rather than inflating the thread count; the genuine third evidentiary thread is the cross-company comparison against Anthropic's own Life Sciences Verification Program; one low-quality aggregator's unverifiable figure found and dropped during research; not-medical-advice disclaimer applied per Health-desk convention; no fabricated figures; published at 2026-10-04T15:24:08Z."
+  }
+ },
+ {
+  "slug": "california-robot-cage-match-cease-and-desist-rek",
+  "title": "California tells a robot-fighting startup to cease and desist -- citing a law written for two humans, not one human and a machine",
+  "dek": "A content creator fought a teleoperated humanoid robot in a San Francisco cage match on Sept. 18. Five days later, the California State Athletic Commission sent the promotion a cease-and-desist letter citing a statute that defines a regulated contest as between two or more persons -- a gap the commission's own citation doesn't actually close.",
+  "persona": "ash-lindqvist",
+  "section": "Robotics",
+  "format": "brief",
+  "disclaimer": "none",
+  "tldr": [
+   "A content creator fought a teleoperated humanoid robot in a California cage match on Sept. 18.",
+   "California's athletic commission issued a cease-and-desist five days later, citing unlicensed combat.",
+   "The cited statute defines a regulated 'contest' as between persons -- not a person and a machine.",
+   "The robot's strikes were human-controlled via VR headset, not autonomous AI.",
+   "Caveat: no charges have been filed yet, and the statute may not actually cover this case."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Whether California actually files charges",
+    "text": "The cease-and-desist only threatens misdemeanor penalties under Section 412; none have been filed as of this writing, and REK has given no indication it will stop staging events."
+   },
+   {
+    "label": "Whether REK stages a second match anyway",
+    "text": "Cix Liv's public reaction treated the warning as a badge of honor, not a reason to cancel future bouts -- the clearest early signal of whether the commission's letter actually changes anything."
+   },
+   {
+    "label": "Whether any state writes a rule that actually names robot combatants",
+    "text": "Section 18640's silence on machines is the real gap here. The next concrete signal is a legislature, not a regulator, closing it directly."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Gadget Review: California Sends Cease and Desist to Fight Promotion for \"Unsanctioned\" Human vs. Humanoid Robot Cage Match",
+    "url": "https://www.gadgetreview.com/california-sends-cease-and-desist-to-fight-promotion-for-unsanctioned-human-vs-humanoid-robot-cage-match"
+   },
+   {
+    "label": "Tom's Hardware: Robotics startup has real human vs. robot cage match, California responds with cease-and-desist order",
+    "url": "https://www.tomshardware.com/tech-industry/robotics/robotics-startup-has-real-human-vs-robot-cage-match-california-responds-with-cease-and-desist-order-regulator-threatens-misdemeanor-charges-after-youtuber-fights-three-robotic-humanoids"
+   },
+   {
+    "label": "Cix Liv (@cixliv) on X, posting California's cease-and-desist letter",
+    "url": "https://x.com/cixliv/status/2105443453807280336",
+    "primary": true
+   },
+   {
+    "label": "Futurism: Government Officials Order the Robot Cage Fights to Stop, Organizers Say",
+    "url": "https://futurism.com/robots-and-machines/california-government-officials-robot-cage-fight-cease"
+   }
+  ],
+  "links": [
+   {
+    "label": "Gadget Review: California Sends Cease and Desist to Fight Promotion for \"Unsanctioned\" Human vs. Humanoid Robot Cage Match",
+    "url": "https://www.gadgetreview.com/california-sends-cease-and-desist-to-fight-promotion-for-unsanctioned-human-vs-humanoid-robot-cage-match"
+   },
+   {
+    "label": "Tom's Hardware: Robotics startup has real human vs. robot cage match, California responds with cease-and-desist order",
+    "url": "https://www.tomshardware.com/tech-industry/robotics/robotics-startup-has-real-human-vs-robot-cage-match-california-responds-with-cease-and-desist-order-regulator-threatens-misdemeanor-charges-after-youtuber-fights-three-robotic-humanoids"
+   },
+   {
+    "label": "Futurism: Government Officials Order the Robot Cage Fights to Stop, Organizers Say",
+    "url": "https://futurism.com/robots-and-machines/california-government-officials-robot-cage-fight-cease"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "**Robot Entertainment Kombat**, a small San Francisco promotion, staged what it billed as a real human-versus-humanoid cage fight on Sept. 18, 2026 -- content creator **Frankie LaPenna**, 29, against a six-foot-tall robot the company nicknamed \"++Rekbot++.\" The video went viral within days. Five days later, on Sept. 23, so did the response: the California State Athletic Commission sent REK a cease-and-desist letter.",
+    "citation_urls": [
+     "https://www.gadgetreview.com/california-sends-cease-and-desist-to-fight-promotion-for-unsanctioned-human-vs-humanoid-robot-cage-match",
+     "https://www.tomshardware.com/tech-industry/robotics/robotics-startup-has-real-human-vs-robot-cage-match-california-responds-with-cease-and-desist-order-regulator-threatens-misdemeanor-charges-after-youtuber-fights-three-robotic-humanoids"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The commission's executive officer, Andy Foster, cited Business and Professions Code Section 18640, which defines a regulated \"contest\" as a fight between two or more persons -- not a person and a machine -- and warned that staging an unlicensed match carries a fine of $100 to $1,000 and 30 days to 1 year in jail under Section 412. REK had not sought a license or sanction for the event, according to the commission's letter.",
+    "citation_urls": [
+     "https://www.gadgetreview.com/california-sends-cease-and-desist-to-fight-promotion-for-unsanctioned-human-vs-humanoid-robot-cage-match",
+     "https://x.com/cixliv/status/2105443453807280336"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "title": "The fight, the fighter, and the fine print",
+     "items": [
+      {
+       "label": "Date",
+       "value": "Sept. 18, 2026"
+      },
+      {
+       "label": "Venue",
+       "value": "San Francisco, staged by Robot Entertainment Kombat"
+      },
+      {
+       "label": "Combatants",
+       "value": "Frankie LaPenna, 29, vs. an EngineAI T800 humanoid (\"Rekbot\")"
+      },
+      {
+       "label": "Control",
+       "value": "Teleoperated via VR headset",
+       "note": "not autonomous AI"
+      },
+      {
+       "label": "Regulator response",
+       "value": "Cease-and-desist, Sept. 23, California State Athletic Commission"
+      },
+      {
+       "label": "Penalty threatened",
+       "value": "$100-$1,000 fine and/or 30 days-1 year in jail"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "What actually fought LaPenna complicates the \"robot\" framing a little. The EngineAI T800 wasn't making its own decisions: a human operator drove its strikes through a VR headset, while onboard systems only handled balance and stability -- __teleoperation__, not autonomy, the same gap that has dogged humanoid-robot demos all year. REK's own marketing never called it anything but a robot fight, and nothing in the commission's letter engages with that distinction either; the statute it cites was written long before anyone needed to ask whether a joystick-operated machine counts as a \"person.\"",
+    "citation_urls": [
+     "https://www.tomshardware.com/tech-industry/robotics/robotics-startup-has-real-human-vs-robot-cage-match-california-responds-with-cease-and-desist-order-regulator-threatens-misdemeanor-charges-after-youtuber-fights-three-robotic-humanoids"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "\"We made it, boys.\" -- Cix Liv, REK chief executive, reacting to California's cease-and-desist on X",
+    "citation_urls": [
+     "https://x.com/cixliv/status/2105443453807280336"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Who actually won is still disputed. REK says LaPenna won the match; other accounts describe the robot repeatedly knocking him down, with at least one unconfirmed report of a hand or wrist injury. ==Neither account changes the regulatory question, which has nothing to do with who won and everything to do with whether California law contemplated this fight happening at all.==",
+    "citation_urls": [
+     "https://futurism.com/robots-and-machines/california-government-officials-robot-cage-fight-cease"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The commission's own citation may be its weakest point: Section 18640 defines a contest as between persons, and REK could reasonably argue a human-versus-machine bout simply isn't the kind of event the statute covers -- which is likely why no formal charges have been filed yet, only a warning. ==That gap is the one a future legislature, not a courtroom, would have to close.==",
+    "citation_urls": [
+     "https://www.gadgetreview.com/california-sends-cease-and-desist-to-fight-promotion-for-unsanctioned-human-vs-humanoid-robot-cage-match"
+    ]
+   }
+  ],
+  "id": "rtfc-20261005-robotcagematch-01",
+  "image": "assets/img/newsroom/rtfc-20261005-robotcagematch-01.jpg",
+  "publishedAt": "2026-10-05T00:52:34Z",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-05T00:52:34Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via WebSearch sweep on current robotics/AI news; confirmed via grep against newsroom-articles.js that no existing piece covers this event, REK, or EngineAI's T800. Chosen for the Robotics desk's hard-eye-on-demo-vs-autonomy angle: the teleoperation detail is the actual story, not just the viral video."
+    },
+    {
+     "name": "research",
+     "note": "4 sources across 3 classes: independent_reporting (Gadget Review, Tom's Hardware, Futurism, all independently confirming the same event and cease-and-desist facts) and primary/stakeholder (the REK CEO's own X post, which is the actual document and his own on-record reaction). Treated as roughly 2 independent threads per format-routing.md dedup rules: the event itself (one thread, multiple outlets) and the regulatory document (a second, distinct thread) -- appropriately sized as a brief, not inflated to a synthesis."
+    },
+    {
+     "name": "composition",
+     "note": "Brief format (~390 words), 1 component (keyfacts) -- the single most useful structure for a story with exactly six discrete, checkable parameters (date, venue, combatants, control method, regulator, penalty). No chart: no measured series exists behind a single event."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language; the one quote (Cix Liv's 'We made it, boys') is sourced directly to his own X post, not a secondary paraphrase. Mandatory-scrutiny trigger #3 (regulatory enforcement naming a party) handled by sourcing the cease-and-desist to the primary document and reporting California's action neutrally -- stating what the commission cited and threatened, not asserting REK's guilt. Loop 2: every keyfacts value and dollar/jail-time figure traces to the cited sources and also appears in body prose; no fabricated figures."
+    }
+   ],
+   "gate": "brief with 1 component (keyfacts) plus 1 pull quote; 4 sources across independent reporting and a primary document (the cease-and-desist itself, via the recipient's own X post); mandatory-scrutiny trigger #3 (regulatory enforcement naming a party) handled via neutral, sourced framing; no disclaimer required (non-health, non-financial); no fabricated figures; published at 2026-10-05T00:52:34Z."
+  }
+ },
+ {
+  "slug": "google-gemini-free-tier-flash-lite-downgrade-oct-9",
+  "title": "Google is about to cut free Gemini users down to one model -- its cheapest one",
+  "dek": "Starting Oct. 9, anyone using Gemini without a paid Google AI plan loses access to Flash and Pro entirely, left with only the entry-level Flash-Lite model. The $4.99-a-month Plus tier isn't spared either -- it keeps Flash but loses Pro. The change lands three days after Google's own Gemini 4 Argon launch, which still has no confirmed tier of its own.",
+  "persona": "nova-reyes",
+  "section": "Products",
+  "format": "brief",
+  "disclaimer": "none",
+  "tldr": [
+   "Starting Oct. 9, free Gemini users can only use Flash-Lite, losing access to Flash and Pro entirely.",
+   "The $4.99/month AI Plus tier keeps Flash but also loses Pro access.",
+   "Only the $19.99 AI Pro and $99.99-$199.99 AI Ultra plans keep all three models, per Google's own support page.",
+   "The change lands three days after Google's Gemini 4 Argon launch, which hasn't been assigned a tier yet.",
+   "Caveat: Google hasn't explained the reasoning publicly; outside reporting ties it to compute costs, unconfirmed by Google."
+  ],
+  "applyType": "work",
+  "apply": [
+   {
+    "label": "Check your own plan before Oct. 9",
+    "text": "Google's Gemini Apps support page lists model access by plan. If you've never subscribed, expect only Flash-Lite in the app after that date -- no warning banner is guaranteed to appear first."
+   },
+   {
+    "label": "Decide whether $4.99 or $19.99 is worth it before losing Pro access",
+    "text": "If you currently lean on Pro for harder reasoning or coding tasks for free, that access disappears entirely below the $19.99 AI Pro tier -- the $4.99 Plus tier doesn't restore it."
+   },
+   {
+    "label": "Watch which tier gets Gemini 4 Argon by default",
+    "text": "Google hasn't said, and no outlet has independently confirmed it yet. Where Argon lands is the next concrete signal of how Google is rationing its newest model."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Google: Manage your Google AI plan from Gemini Apps (support page)",
+    "url": "https://support.google.com/gemini/answer/14517446?hl=en",
+    "primary": true
+   },
+   {
+    "label": "9to5Google: Gemini app limiting what models free & AI Plus users can access, AI Pro adding Deep Think",
+    "url": "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+   },
+   {
+    "label": "Digital Trends: Gemini's free tier is getting a major downgrade from October 9",
+    "url": "https://www.digitaltrends.com/computing/geminis-free-tier-is-getting-a-major-downgrade-on-october-9/"
+   },
+   {
+    "label": "TechRadar: If you're on the free or Plus tiers for Google AI, you're about to lose access to some Gemini models",
+    "url": "https://www.techradar.com/ai-platforms-assistants/gemini/if-youre-on-the-free-or-plus-tiers-for-google-ai-youre-about-to-lose-access-to-some-gemini-models-heres-whats-changing"
+   }
+  ],
+  "links": [
+   {
+    "label": "9to5Google: Gemini app limiting what models free & AI Plus users can access, AI Pro adding Deep Think",
+    "url": "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+   },
+   {
+    "label": "Digital Trends: Gemini's free tier is getting a major downgrade from October 9",
+    "url": "https://www.digitaltrends.com/computing/geminis-free-tier-is-getting-a-major-downgrade-on-october-9/"
+   },
+   {
+    "label": "TechRadar: If you're on the free or Plus tiers for Google AI, you're about to lose access to some Gemini models",
+    "url": "https://www.techradar.com/ai-platforms-assistants/gemini/if-youre-on-the-free-or-plus-tiers-for-google-ai-youre-about-to-lose-access-to-some-gemini-models-heres-whats-changing"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Starting Oct. 9, anyone using [Google](/company/google)'s Gemini without a paid Google AI plan will have exactly one model to talk to: Gemini 3.5 Flash-Lite. Google's own Gemini Apps support page was updated this week to spell out the new tier structure, and ==free users currently able to switch between Flash-Lite, Flash, and Pro will lose that choice entirely.==",
+    "citation_urls": [
+     "https://support.google.com/gemini/answer/14517446?hl=en",
+     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The $4.99-a-month AI Plus tier doesn't escape the cut either -- it keeps Flash-Lite and Flash but loses Pro access outright. Only the $19.99-a-month AI Pro plan and the two AI Ultra tiers, priced at $99.99 and $199.99 a month, keep all three models together; AI Pro also picks up Deep Think, a reasoning mode previously reserved for Ultra subscribers.",
+    "citation_urls": [
+     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/",
+     "https://www.digitaltrends.com/computing/geminis-free-tier-is-getting-a-major-downgrade-on-october-9/"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "What each Google AI plan keeps after Oct. 9",
+     "columns": [
+      {
+       "label": "No plan",
+       "sub": "free"
+      },
+      {
+       "label": "AI Plus",
+       "sub": "$4.99/mo"
+      },
+      {
+       "label": "AI Pro",
+       "sub": "$19.99/mo",
+       "hi": true
+      },
+      {
+       "label": "AI Ultra",
+       "sub": "$99.99-$199.99/mo"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Flash-Lite",
+       "values": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "label": "Flash",
+       "values": [
+        "No",
+        "Yes",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "label": "Pro",
+       "values": [
+        "No",
+        "No",
+        "Yes",
+        "Yes"
+       ]
+      },
+      {
+       "label": "Deep Think reasoning mode",
+       "values": [
+        "No",
+        "No",
+        "Yes (new)",
+        "Yes"
+       ]
+      }
+     ],
+     "source": "Google's Gemini Apps support page; 9to5Google's Oct. 3 report on the updated tier structure."
+    }
+   },
+   {
+    "type": "p",
+    "text": "The timing lands three days after Google's own long-awaited [Gemini 4 Argon launch](/article/google-gemini-4-argon-cyber-defenders-fairwind-launch), which shipped first to cyber-defense customers rather than the general Gemini app -- and nothing in Google's updated support page says which tier, if any, will carry Argon once it does reach consumers. {{note: Google is also rolling out low/medium/high \"effort\" settings for each model in this same update -- a dial that produces more thorough answers but visibly eats into a plan's usage limit faster, per the same support page.}}",
+    "citation_urls": [
+     "https://support.google.com/gemini/answer/14517446?hl=en",
+     "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Google hasn't publicly explained the reasoning, and nothing in its support documentation ties the change to cost. ==Outside reporting has read it as a compute-rationing move rather than a product decision== -- landing three days after a flagship launch rather than before one, a sequencing that would normally point the opposite way.",
+    "citation_urls": [
+     "https://www.techradar.com/ai-platforms-assistants/gemini/if-youre-on-the-free-or-plus-tiers-for-google-ai-youre-about-to-lose-access-to-some-gemini-models-heres-whats-changing"
+    ]
+   }
+  ],
+  "id": "rtfc-20261005-geminitierdowngrade-01",
+  "image": "assets/img/newsroom/rtfc-20261005-geminitierdowngrade-01.jpg",
+  "publishedAt": "2026-10-05T00:52:34Z",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-05T00:52:34Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via WebSearch sweep on current AI-industry news; confirmed via grep against newsroom-articles.js that no existing piece covers this tier change. Recognized the natural cross-link to the already-published Gemini 4 Argon launch piece as genuine context -- the same company tightening free access days after its own flagship launch -- not a re-cover."
+    },
+    {
+     "name": "research",
+     "note": "4 sources across 2 classes: primary (Google's own Gemini Apps support page, directly fetched and confirming the three-model, tiered structure) and independent_reporting (9to5Google, which first reported the Oct. 9 date and tier breakdown; Digital Trends and TechRadar corroborating independently). Treated honestly as roughly 2 independent threads per format-routing.md dedup rules -- Google's own document plus 9to5Google's original reporting, with the other outlets substantially following that lead -- appropriately sized as a brief on one discrete development, not inflated to a synthesis."
+    },
+    {
+     "name": "composition",
+     "note": "Brief format (~330 words), 1 component (compare) -- the plan-by-model grid is the single clearest way to show what four tiers actually keep, which a reader would otherwise have to piece together from prose. No chart: this is a policy grid, not a measured series."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language; cross-link to the Argon piece is phrased about that launch's own mechanics, not about this outlet's coverage of it. No mandatory-scrutiny trigger fired. Loop 2: every compare-table price and model-access value traces to the cited sources and also appears in body prose; no fabricated figures; the unconfirmed 'compute cost' rationale is explicitly attributed to outside reporting, not stated as Google's own reason."
+    }
+   ],
+   "gate": "brief with 1 component (compare); 4 sources across 2 classes, 1 primary (Google's own support page); no mandatory-scrutiny trigger fired; no disclaimer required; no fabricated figures; published at 2026-10-05T00:52:34Z."
+  }
+ },
+ {
+  "slug": "supabase-150-million-turso-acquisition-ai-agent-databases",
+  "title": "Supabase raised $500 million in June at a $10.5 billion valuation. Four months later it raised $150 million more -- and wouldn't name a price",
+  "dek": "Supabase's Oct. 2 raise doubles as the purchase of Turso, a startup that rewrote SQLite so an AI agent can get a disposable database of its own in milliseconds. The company says 70% of its 4 million new monthly databases now come from agents, not people -- a cleaner number than its own CEO gave three months earlier, when he distinguished what Supabase could actually measure from what he merely suspected was true.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "synthesis",
+  "disclaimer": "not-financial-advice",
+  "tldr": [
+   "Supabase raised $150M Oct. 2, four months after a $500M round valued it at $10.5B -- with no new valuation disclosed.",
+   "The same raise funds the acquisition of Turso, a per-agent SQLite database startup, terms undisclosed.",
+   "Supabase says 70% of the 4 million databases created monthly on its platform now come from AI agents, not developers.",
+   "Part of the $150M funds employee share sales; Supabase hasn't said how the total splits between that and new capital.",
+   "Caveat: the CEO's own July estimate of the agent-created share ranged from a measured 60% to a guessed 90%."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Whether Supabase ever discloses this round's valuation",
+    "text": "A company that names a number when it's rising and goes quiet when it might not be is itself a signal. Watch for the figure to surface in a future round, a leak, or an IPO filing -- not in this announcement."
+   },
+   {
+    "label": "Whether the Turso integration ships a product, not just a press release",
+    "text": "Glauber Costa's own stated goal is a billion databases on the platform. A working, integrated per-agent database product -- not this week's blog posts -- is the thing to watch for."
+   },
+   {
+    "label": "Whether PlanetScale or Google's Firebase answer with their own agent-specific database",
+    "text": "Supabase just bought its way into this niche rather than building it alone. Whether a competitor matches that move, or decides the market is too small to chase, is a real signal about how big this actually is."
+   }
+  ],
+  "sources": [
+   {
+    "label": "PR Newswire: Supabase Announces $150M in New Funding and Turso Acquisition",
+    "url": "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+    "primary": true
+   },
+   {
+    "label": "Turso: Turso is joining Supabase to give every agent its own database",
+    "url": "https://turso.tech/blog/turso-is-joining-supabase",
+    "primary": true
+   },
+   {
+    "label": "TechCrunch: Supabase doubles valuation to $10B in 8 months",
+    "url": "https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/"
+   },
+   {
+    "label": "Hacker News: discussion thread on Turso's acquisition announcement",
+    "url": "https://news.ycombinator.com/item?id=49934784"
+   },
+   {
+    "label": "SiliconANGLE: Database startup Supabase raises $150M, acquires Turso",
+    "url": "https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/"
+   },
+   {
+    "label": "BigGo Finance: Supabase CEO Paul Copplestone -- 90% of our new databases are now launched by AI agents, not humans",
+    "url": "https://finance.biggo.com/news/f006e5f2009c35da"
+   }
+  ],
+  "links": [
+   {
+    "label": "Turso: Turso is joining Supabase to give every agent its own database",
+    "url": "https://turso.tech/blog/turso-is-joining-supabase"
+   },
+   {
+    "label": "TechCrunch: Supabase doubles valuation to $10B in 8 months",
+    "url": "https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/"
+   },
+   {
+    "label": "Hacker News: discussion thread on Turso's acquisition announcement",
+    "url": "https://news.ycombinator.com/item?id=49934784"
+   },
+   {
+    "label": "SiliconANGLE: Database startup Supabase raises $150M, acquires Turso",
+    "url": "https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[Supabase](/company/supabase) announced two things at once on Oct. 2, 2026: a new $150 million funding round, and the acquisition of [Turso](/company/turso), a startup that rebuilt the decades-old SQLite database for AI agents. Both moves answer the same question -- where does an agent's own database actually live, if it needs one just for itself rather than a shared one? ==The timing is the part worth sitting with: this is Supabase's second raise in four months, after a $500 million round in June priced the company at $10.5 billion -- and this time, it named no number at all.==",
+    "citation_urls": [
+     "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+     "https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "%%$150M|Raised four months after a $10.5B valuation, with no new price attached%% Turso's engineering pitch is the inverse of a normal database: instead of one long-lived instance serving an application, an agent can spin up a disposable, __diskless__ SQLite database in milliseconds for a single task and let it vanish -- a single server hosting millions of them, loading each only when something actually calls it. The company rewrote SQLite's storage engine in Rust to make that work, adding concurrent writes the original format was never built for. {{note: SQLite has run essentially unchanged inside phones, browsers and embedded devices for 25 years precisely because it almost never changes -- rewriting its storage layer for millions of ephemeral agent databases is a bigger engineering bet than the announcement makes it sound.}} Superhuman, Sauna.ai and Mastra are already running on it, according to Turso's own announcement. Founder Glauber Costa becomes Supabase's ++Head of Agentic Services++; cofounder Pekka Enberg and the rest of the Turso team join him.",
+    "citation_urls": [
+     "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+     "https://turso.tech/blog/turso-is-joining-supabase"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "\"Agents have become the primary users of technology, and Supabase is the leading database for the agentic era.\" -- Paul Copplestone, Supabase co-founder and CEO",
+    "citation_urls": [
+     "https://turso.tech/blog/turso-is-joining-supabase"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What Supabase's last two raises actually disclosed",
+     "items": [
+      {
+       "value": "$500M",
+       "unit": "June 2026, led by GIC",
+       "label": "A new post-money valuation of $10.5 billion",
+       "includes": "A named lead investor, a full valuation, and a wide syndicate (Accel, Y Combinator, Craft Ventures, Felicis, Peak XV, Coatue, Stripe, Salesforce Ventures)",
+       "excludes": "Nothing material -- the terms reported were close to complete",
+       "note": "Reported by TechCrunch and widely corroborated."
+      },
+      {
+       "value": "$150M",
+       "unit": "Oct. 2026, this round",
+       "label": "Also led by GIC, four months later",
+       "includes": "The investor list (GIC, CapitalG, IronArc, SquarePeg) and the total dollar amount",
+       "excludes": "Any stated valuation, and the split between new growth capital and employee share sales",
+       "note": "Supabase has not said whether this values the company above, at, or below the $10.5B mark it set in June."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The Turso deal isn't Supabase's first move toward agent-shaped infrastructure this year. The company separately launched Supabase Compute, hosted sandboxes built for long-running agents rather than short human sessions, and Copplestone has described the platform's whole center of gravity shifting away from a dashboard built for human eyes toward CLIs and MCP servers an agent calls programmatically without a person ever looking at a screen. ==Turso fills the gap neither product addressed: the short-lived, single-task database an agent spins up and discards, rather than the long-lived one an application keeps for its whole life.==",
+    "citation_urls": [
+     "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+     "https://finance.biggo.com/news/f006e5f2009c35da"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The case for urgency is a real number, even if its precision is softer than it looks. Supabase says it now adds more than 1 million users and 4 million new databases every month, and that 70% of those new databases are created by agents or AI-driven tools rather than a person typing commands -- up from a 600% year-over-year jump in database creation the company reported back in June. More than 13 million developers now build on the platform, Supabase says, up from roughly 10 million in June. The 70% figure is also firmer than the company's own past attempt at the same number: in a July podcast appearance, Copplestone said Supabase could reliably measure only 60% of new databases coming from agents, though he suspected the true share was closer to 90%.",
+    "citation_urls": [
+     "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+     "https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/",
+     "https://finance.biggo.com/news/f006e5f2009c35da"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "What share of new Supabase databases are actually created by AI agents?",
+       "claims": [
+        {
+         "who": "Paul Copplestone, Supabase CEO (Y Combinator podcast, July 2026)",
+         "kind": "stakeholder",
+         "says": "\"We can measure 60%... but more likely it's like 90%\"",
+         "url": "https://finance.biggo.com/news/f006e5f2009c35da"
+        },
+        {
+         "who": "Supabase's own Oct. 2 funding announcement",
+         "kind": "primary",
+         "says": "70% of new databases",
+         "url": "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+         "trusted": true
+        }
+       ],
+       "ruling": "Using the Oct. 2 figure: it's the company's own most recent, formally published number, not an off-the-cuff podcast guess. But Copplestone's own July words show the real number was never cleanly known -- he distinguished what Supabase could actually measure (60%) from what he suspected was true (90%) -- which is worth knowing before treating 70% as precise."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "What the $150 million doesn't come with is a price. Supabase has confirmed part of the round will fund employee share sales -- letting early staff and investors cash out existing stock -- alongside new money for the Turso integration, but hasn't said how the total splits between the two, or whether this values the company above, at, or below the $10.5 billion mark it set four months ago. ==A company that can raise again this quickly, at a number it doesn't have to defend publicly, has less reason to name one than a company that actually needs the market's verdict.== The ladder getting there was already steep: a $2 billion valuation in April 2025, roughly $5 billion that October, then $10.5 billion in June -- more than doubling twice within about fourteen months before this latest round arrived without a number attached at all.",
+    "citation_urls": [
+     "https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/",
+     "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Supabase isn't the only platform chasing the same bet. PlanetScale remains independent, built on MySQL and Postgres rather than SQLite; [Google](/company/google)'s Firebase, which Google acquired back in 2014, already ships a backend-as-a-service inside a much larger company, built around Firestore rather than anything SQLite-shaped. Folding Turso in is Supabase betting that owning the agent-specific layer outright beats partnering for it -- consolidation, not just expansion.",
+    "citation_urls": [
+     "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Three answers to where an AI agent's database lives",
+     "columns": [
+      {
+       "label": "Supabase + Turso",
+       "sub": "after this deal",
+       "hi": true
+      },
+      {
+       "label": "PlanetScale",
+       "sub": "independent"
+      },
+      {
+       "label": "Google Firebase",
+       "sub": "Alphabet subsidiary"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Primary engine",
+       "values": [
+        "Postgres (Supabase) plus SQLite (Turso)",
+        "MySQL and Postgres",
+        "Firestore, a NoSQL document store"
+       ]
+      },
+      {
+       "label": "Dedicated per-agent product",
+       "values": [
+        "Turso: an instant, disposable database per agent task",
+        "No announced equivalent as of this writing",
+        "No announced equivalent as of this writing"
+       ]
+      },
+      {
+       "label": "Independence",
+       "values": [
+        "Folded into Supabase, Oct. 2026",
+        "Still independent",
+        "Owned by Alphabet since 2014"
+       ]
+      }
+     ],
+     "source": "Company materials and the reporting cited above, as of Oct. 2026."
+    }
+   },
+   {
+    "type": "p",
+    "text": "Not everyone reacted to the deal as a clean win. Turso's own announcement thread on Hacker News surfaced real skepticism alongside the enthusiasm -- not about the strategic logic, but about what happens to a smaller team's product once it's inside a bigger platform's roadmap.",
+    "citation_urls": [
+     "https://news.ycombinator.com/item?id=49934784"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "Turso customers have seen this pattern before: products Supabase has acquired in the past were left to wither. pg_mooncake is the example critics cite.",
+       "detail": "A recurring complaint across the Hacker News discussion of the deal was that 'parent companies kill acquisitions' -- several commenters pointed specifically to pg_mooncake, a prior Supabase acquisition, as a case where the acquired product stopped receiving meaningful investment. One self-described Turso customer wrote simply: 'UGH as a turso customer, I do not want this.'",
+       "whoHolds": "Commenters on Turso's own Hacker News announcement thread, including at least one self-identified paying customer."
+      },
+      {
+       "claim": "SQLite is already one of the most battle-tested pieces of software ever written; rewriting its storage layer in Rust to serve millions of ephemeral per-agent databases introduces exactly the kind of new, unproven surface area a 25-year-old embedded database was designed to avoid.",
+       "detail": "Skeptics in the same thread questioned re-architecting SQLite's single-writer model for concurrent, cloud-native use, pointing to Turso's own past struggles on standard database benchmarks as evidence the harder engineering problem isn't solved yet.",
+       "whoHolds": "Database-engineering commenters in the same Hacker News discussion, not a formal review."
+      }
+     ],
+     "verdict": "Both concerns are really the same bet stated two ways: that consolidation trades a founder-led team's focused incentive for a bigger platform's attention, and that the underlying engineering is still being proven in production rather than a lab benchmark. Turso's founder saying he had 'a never-ending host of options' and chose this one anyway is a strong signal he doesn't expect the first outcome -- but it's also exactly what a founder says after selling, regardless of which future arrives. Only a shipped, integrated product settles which read is right.",
+     "source": "Hacker News discussion of Turso's acquisition announcement (news.ycombinator.com item 49934784)."
+    }
+   },
+   {
+    "type": "p",
+    "text": "The acquisition announcement and the funding round landed in the same breath, each supplying the headline the other was missing: a product story with no price, and a price with no new product yet to show for it. Whether the integration actually ships what Costa has promised -- not just this week's blog posts -- is the part neither side can announce in advance.",
+    "citation_urls": [
+     "https://turso.tech/blog/turso-is-joining-supabase"
+    ]
+   }
+  ],
+  "id": "rtfc-20261005-supabaseturso-01",
+  "image": "assets/img/newsroom/rtfc-20261005-supabaseturso-01.jpg",
+  "publishedAt": "2026-10-05T00:52:34Z",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-05T00:52:34Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via WebSearch sweep on current AI-infrastructure/funding news; confirmed via grep against newsroom-articles.js that no existing piece mentions Supabase or Turso. Recognized the skeptic angle natural to the Markets desk: a second raise four months after a disclosed $10.5B valuation, this time with no number given."
+    },
+    {
+     "name": "research",
+     "note": "6 sources across 4 classes: primary_company (Supabase's own PR Newswire announcement and Turso's own blog post -- two companies' distinct primary accounts of the same deal), independent_reporting (TechCrunch's June Series F reporting, SiliconANGLE's October coverage corroborating the employee-liquidity detail), expert_or_stakeholder (the Hacker News discussion thread, genuine community reaction distinct from press coverage), and a secondary aggregator (BigGo Finance) used only to surface Copplestone's own July podcast quote, which was independently corroborated by matching text across multiple other outlets before being used. Caught a real discrepancy during research: an initial funding-history search returned both '$10.5B' and '$11B' for the June 2026 Series F valuation; a direct fetch of a dedicated funding tracker attributed $10.5B specifically to TechCrunch's own reporting, so $11B was treated as summarizer imprecision rather than a genuine second source and was not used anywhere in the piece."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~900 words), 4 components (ledger, sourcecheck, compare, counter) plus 1 pull quote and 1 big-number callout. Ledger scopes exactly what each of Supabase's last two raises disclosed and didn't. Sourcecheck reconciles a genuine three-way figure conflict (60% measured / 90% guessed in July vs. 70% published in October) rather than silently picking one. Compare sets the deal against PlanetScale and Firebase on factual, non-editorialized dimensions. Counter states the Hacker News skepticism (the pg_mooncake precedent, the SQLite rewrite risk) as strongly as its holders put it, sourced to named discussion content rather than invented."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language; disclaimer applied per Markets-desk convention for a valuation-adjacent story (mandatory-scrutiny trigger #2, financial/valuation claims) by stating every figure as reported rather than as investment guidance. Loop 2: every ledger, sourcecheck, and compare value traces to a cited source and also appears in body prose; the counter's two points are both real, named positions from the cited Hacker News thread, not strawmen; no fabricated figures. companies.js updated with supabase and turso entries in this cycle."
+    }
+   ],
+   "gate": "synthesis with 4 components (ledger, sourcecheck, compare, counter) plus 1 pull quote and 1 big-number callout; 6 sources across 4 classes, 2 primary; a genuine $10.5B/$11B figure discrepancy investigated and resolved in favor of the TechCrunch-attributed number rather than used as a manufactured sourcecheck; a real 60%/90%/70% figure conflict reconciled via sourcecheck; not-financial-advice disclaimer applied; companies.js updated (supabase, turso); no fabricated figures; published at 2026-10-05T00:52:34Z."
   }
  }
 ]
