@@ -31285,7 +31285,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -31300,7 +31300,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#FTC"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -31313,8 +31315,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIRegulation",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeF4M8JGG01/",
+        "remote_id": "17991734730028539",
+        "posted_at": "2026-10-05T00:04:01Z"
       },
       {
         "platform": "facebook",
@@ -31323,14 +31327,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#FTC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122125495227396947",
+        "remote_id": "1238977099292018_122125495227396947",
+        "posted_at": "2026-10-05T00:04:12Z"
       },
       {
         "platform": "threads",
         "copy": "Trump named the leadership of his new \"Super Intelligence Force\" today: Jay Clayton directing, Ferguson/Michael/Kupor as vice chairs. 120 days to report on AI risks, zero rulemaking power of its own. Ferguson's other job: running the FTC's live investigation into OpenAI and Anthropic.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeF4QaeGQDQ",
+        "remote_id": "18111379583149141",
+        "posted_at": "2026-10-05T00:04:29Z"
       },
       {
         "platform": "bluesky",
@@ -31417,14 +31425,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#ElevenLabs",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122125495767396947",
+        "remote_id": "1238977099292018_122125495767396947",
+        "posted_at": "2026-10-05T00:08:14Z"
       },
       {
         "platform": "threads",
         "copy": "ElevenLabs' valuation doubled to $22B this week -- but it's a tender offer, not a raise. $300M changed hands between investors and employees; the company itself raised $0. Last real round (Feb.) priced it at $11B. The business underneath is real -- the number is just a different kind of number than most coverage will say it is.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeF4vQomzQ8",
+        "remote_id": "18124273609736102",
+        "posted_at": "2026-10-05T00:08:40Z"
       },
       {
         "platform": "bluesky",
@@ -31434,8 +31446,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIFunding",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx3mrtmwxf23",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx3mrtmwxf23",
+        "posted_at": "2026-10-05T00:08:47Z"
       }
     ]
   },
@@ -31524,8 +31538,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Biosecurity",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx3mz2vnbo2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx3mz2vnbo2y",
+        "posted_at": "2026-10-05T00:12:50Z"
       }
     ]
   }
