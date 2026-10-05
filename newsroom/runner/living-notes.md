@@ -1,5 +1,6 @@
 # Living Notes — operational lessons for future runs
 
+- **2026-10-05** (weekly evolution): Scoreboard scan must use official artificialanalysis.ai source, not third-party aggregators — caught this by cross-checking URLs in scoreboard.js sources array. GPT-6 Luna score updated 37→38 (only change). Grid enrichment with power/chips/since/capex fields requires primary-source research beyond evolution-run scope — deferred. Guard's ledger warnings (14 zero-token rows, 3 hand-written rows) are pre-existing and cannot be fixed by evolution run per Operating Law §3 (agents don't self-report token counts). No ledger gaps >24h in trailing week confirms scheduler health.
 - **2026-09-28** (weekly evolution): Dictionary growth works well targeting underlined terms (`__term__`) from recent articles — added 6 entries (Capture-the-flag, Fair use, METR, Reinforcement learning, Reward hacking, Tape-out) from genuine usage. Extensions/Prompts verification requires spot-checking URLs and testing prompts — skip rather than update freshness dates without doing the work (Operating Law).
 - **2026-09-28** (weekly evolution): Dossier promotion requires counting distinct pieces (articles + buzz), not word occurrences. When counts can't be verified with certainty, skip rather than guess — Operating Law: "a blank field is always acceptable; a plausible guess never is."
 
