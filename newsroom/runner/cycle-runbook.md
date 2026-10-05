@@ -1542,6 +1542,27 @@ this order, and mark it done here.
    directly). No new `primer-issue.js`-only candidate found this cycle; did
    not force one. Same next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-05T00:52:34Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (California's cease-and-desist over a
+   teleoperated human-vs-robot cage match; Google's Oct. 9 Gemini free-tier
+   model downgrade; Supabase's $150M raise and Turso acquisition, reconciling
+   a genuine 60%/90%/70% figure conflict in the company's own agent-database
+   growth claims) plus the full §4b/§4c/§4d passes were already the required
+   work; guide cadence read 3 days (a guide published 2026-10-02), so §3d
+   needed no action. §3c backfill search re-ran (`component_audit`) and found
+   zero articles below their format's component floor -- still empty. The
+   `ALLOWED_PREFIXES` blocker is unchanged (confirmed by reading
+   `verify_publish_surface.py` directly: `functions/` and `newsroom/` both
+   still absent). No new `primer-issue.js`-only candidate found this cycle;
+   did not force one. Separately, this cycle caught and fixed a real bug of
+   its own making in `web/data/social-posts.js` (a prior-step insertion script
+   dropped the `window.RTFC_SOCIAL_POSTS = ` assignment prefix) -- full
+   writeup in `living-notes.md`, relevant here only as a reminder that §5b's
+   instruction to actually run the dispatcher, not just trust an earlier green
+   check, is why this was caught the same cycle it shipped rather than sitting
+   broken for the next one. Same two next steps as every entry since
+   2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1963,6 +1984,14 @@ gated-access approach) plus the full §3c/§4b/§4c/§4d passes were already the
 required work: `find . -iname "issue-001.json"` still returns nothing, and no
 `wrangler` binary or Cloudflare credentials exist on this runner. No item worked.
 Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-05T00:52:34Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (the robot-cage-match cease-and-desist, Google's
+Gemini free-tier downgrade, and Supabase's Turso acquisition) plus the full
+§3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
+credentials exist on this runner. No item worked. Same two next steps as every
+entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

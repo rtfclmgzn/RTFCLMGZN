@@ -1226,3 +1226,34 @@
   the next cycle's dispatch -- it is not the kind of failure the dispatcher's own
   automatic retry (3 attempts across cycles) can route around if the account itself
   stays locked.
+
+- **2026-10-05T00:52:34Z** (newsroom cycle): when appending new entries to
+  `web/data/social-posts.js` (or any `window.X = [...]` data file) via a Python
+  script that re-slices the file around the assignment marker, slicing on
+  `content.index(full_marker_string)` and keeping only `content[:idx]` as the
+  "header" DROPS the marker itself (`window.RTFC_SOCIAL_POSTS = `), not just the
+  array that follows it -- the result is a file that still starts with a bare
+  `[...]` array literal, which is syntactically valid JS (`node --check` passes)
+  and invisible to `site_guard.py` (which doesn't parse this file), but breaks
+  `agents/social/post_social.py`'s loader outright, since it anchors by finding
+  the literal string `RTFC_SOCIAL_POSTS` in the file. This shipped once this
+  cycle before being caught -- only because §5b's instruction to actually run
+  `post_social.py --live` (not just trust the earlier commit's green checks) is
+  followed literally. Fix: when rebuilding one of these files programmatically,
+  slice on a marker that definitely precedes the assignment (e.g. the last line
+  of the header comment) and always re-prepend `window.X = ` explicitly, rather
+  than assuming `content[:idx_of_full_marker]` retains it. General lesson: a
+  data file's `node --check` passing and `site_guard.py` being silent are both
+  necessary but not sufficient evidence a hand-written insertion script left the
+  file intact -- if a downstream consumer (a dispatcher, a loader) exists for a
+  file, running it for real is the only check that actually proves the file
+  still works for its real reader, not just for the parser that happens to be
+  checking it that cycle.
+
+- **2026-10-05T00:52:34Z** (newsroom cycle, same run): re-confirmed §3e/§3f
+  blockers unchanged -- `verify_publish_surface.py`'s `ALLOWED_PREFIXES` still
+  reads `("web/", "docs/operations/releases/", "image-library/art/manifest.json")`
+  (`functions/` and `newsroom/` both absent, confirmed by reading the file
+  directly), and `find . -iname "issue-001.json"` still returns nothing. No new
+  `primer-issue.js`-only candidate found this cycle; did not force one. Same two
+  next steps as every entry since 2026-08-30, still open.
