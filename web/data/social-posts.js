@@ -31931,7 +31931,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIAgents"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -31968,15 +31970,19 @@ window.RTFC_SOCIAL_POSTS = [
           "#Apple",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122125789257396947",
+        "remote_id": "1238977099292018_122125789257396947",
+        "posted_at": "2026-10-06T06:45:32Z"
       },
       {
         "platform": "threads",
         "variant": "wave-1",
         "copy": "Apple is tightening macOS's Full Disk Access permission specifically because of AI agents. Two incidents behind it: a disputed Meta Muse report, and a patched ChatGPT-for-Mac flaw. Apple hasn't said when or how yet.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeJK_RSloP2",
+        "remote_id": "18116580134100391",
+        "posted_at": "2026-10-06T06:45:49Z"
       },
       {
         "platform": "threads",
@@ -31993,8 +31999,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Apple",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx6tgvcqir2f",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx6tgvcqir2f",
+        "posted_at": "2026-10-06T06:45:55Z"
       }
     ]
   },
@@ -32029,7 +32037,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Humanoid"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -32056,8 +32066,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#Automation"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeJKeDVm5H6/",
+        "remote_id": "18136473802726760",
+        "posted_at": "2026-10-06T06:41:22Z"
       },
       {
         "platform": "facebook",
@@ -32066,15 +32078,19 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#Humanoid"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122125788663396947",
+        "remote_id": "1238977099292018_122125788663396947",
+        "posted_at": "2026-10-06T06:41:30Z"
       },
       {
         "platform": "threads",
         "variant": "wave-1",
         "copy": "Nucleus showed 2 unedited hours of its humanoid robot working and said 40% was teleoperated. Figure's CEO, who claims zero teleoperation, calls that kind of disclosure \"deceiving.\" Neither number is independently verified.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeJKhIXlk8h",
+        "remote_id": "18372706618244340",
+        "posted_at": "2026-10-06T06:41:42Z"
       },
       {
         "platform": "threads",
@@ -32091,8 +32107,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Robotics",
           "#Humanoid"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx6t7kipqr24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx6t7kipqr24",
+        "posted_at": "2026-10-06T06:41:49Z"
       }
     ]
   }
