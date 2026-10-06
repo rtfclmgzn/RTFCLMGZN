@@ -1258,3 +1258,57 @@
   directly), and `find . -iname "issue-001.json"` still returns nothing. No new
   `primer-issue.js`-only candidate found this cycle; did not force one. Same two
   next steps as every entry since 2026-08-30, still open.
+
+- **2026-10-06T02:09:13Z** (newsroom cycle): a `quote` body block is NOT a
+  component -- it takes its text at the TOP level (`{"type":"quote","text":"...",
+  "citation_urls":[...]}`), the same shape as a `p` block, not nested under a
+  `"quote":{...}` key the way the thirteen `visual-components.md` components
+  take their payload. Wrote two quote blocks the wrong way this cycle (nested,
+  mirroring the component pattern) and `site_guard.py`'s `article-body` check
+  caught both immediately (`body[N] type=quote has no text`) -- fixed before
+  shipping. Worth flagging explicitly because `visual-components.md` and this
+  file both discuss `quote` in the same breath as the real components (it's in
+  the ink-layer table in `cycle-runbook.md` §3b+), which invites assuming it
+  follows the same nested-payload convention. It doesn't.
+
+- **2026-10-06T02:09:13Z** (newsroom cycle, same run): found and fixed a real,
+  live rendering bug predating this cycle, unrelated to anything it wrote.
+  `south-korea-banks-ai-cyberattack-seven-institutions` (published by the
+  2026-10-05T14:41:44Z breaking scan) had `"image": {"src":..., "alt":...,
+  "credit":...}` -- an object, where every other article in the file (and
+  `app.js`'s own `safeCssUrl(a.image)` call) expects a plain string path. The
+  referenced file (`korean-banks-cyberattack-2026-10-05.jpg`) didn't exist on
+  disk either, so the article was very likely rendering coverless on the live
+  site since it shipped. `newsroom/runner/verify_covers.py check` crashes
+  outright on this shape (`AttributeError: 'dict' object has no attribute
+  'strip'` in `collect_uses()`) instead of degrading per OPERATING_LAW.md Law
+  5b -- which meant the required §5 step-3 cover gate could not run AT ALL for
+  this cycle's own three articles either, since the crash happens while
+  scanning the whole file, not per-record. Fixed by generating a real cover
+  and rewriting the field to a plain string path (same pattern as every other
+  article), which is a record fix, not a guard edit, per §0b/Law 6 -- the
+  object shape was never valid input for this schema. Separately: the same
+  breaking-scan article was also entirely absent from both `rss.xml` and
+  `sitemap.xml`, alongside a stale `rss.xml` that was still missing this
+  cycle's own three new articles too (`gen_sitemap.py` regenerates
+  `sitemap.xml` from the article store directly but only validates `rss.xml`
+  rather than inserting new items -- it printed "rss.xml already clean" both
+  before and after I'd manually added the four missing `<item>` blocks, so
+  that message means "well-formed," not "up to date"). Fixed by hand-editing
+  `rss.xml` (prepending the 4 missing items newest-first, dropping the 4
+  oldest to hold the ~30-item cap, matching the file's own RFC-822/`&#x27;`-
+  escaping conventions) and re-running `gen_sitemap.py` for the sitemap half.
+  Worth a dedicated look at whether `verify_covers.py check` should wrap its
+  per-record scan the same way `site_guard.py`'s readers do (Law 5b), and
+  whether a future pass should make `gen_sitemap.py` actually own `rss.xml`
+  insertion instead of only validating it, since "the tool said clean" is
+  exactly the kind of false confidence Law 10 exists to write down.
+
+- **2026-10-06T02:09:13Z** (newsroom cycle, same run): re-confirmed §3e/§3f
+  blockers unchanged -- `verify_publish_surface.py`'s `ALLOWED_PREFIXES` still
+  reads `("web/", "docs/operations/releases/", "image-library/art/manifest.json")`
+  (`functions/` and `newsroom/` both absent, confirmed by reading the file
+  directly), `which wrangler` / `env | grep -i cloudflare` both return nothing
+  on this runner, and `find . -iname "issue-001.json"` still returns nothing.
+  No new `primer-issue.js`-only candidate found this cycle; did not force one.
+  Same two next steps as every entry since 2026-08-30, still open.

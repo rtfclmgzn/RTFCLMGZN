@@ -1563,6 +1563,41 @@ this order, and mark it done here.
    broken for the next one. Same two next steps as every entry since
    2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-06T02:09:13Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (NYC Council's Oct. 5 AI-safety
+   hearing under oath, with SpaceXAI ignoring its subpoena; Apple's tightened
+   macOS Full Disk Access controls after the Meta Muse/ChatGPT-for-Mac
+   incidents; Nucleus's disclosed 60/40 teleoperated humanoid-demo versus
+   Figure's zero-teleoperation claim) plus the full §4b/§4c/§4d passes were
+   already the required work; guide cadence read 4 days exactly (a guide
+   published 2026-10-02, the check's own `n>4` threshold not tripped), so §3d
+   needed no action. §3c backfill search re-ran (`component_audit`-equivalent
+   floor check) and found zero articles below their format's component floor
+   -- still empty. Both §3e/§3f blockers unchanged, re-confirmed by reading
+   the files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py` still
+   reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), and `which wrangler` / `env | grep -i cloudflare` both return
+   nothing on this runner; `find . -iname "issue-001.json"` also still
+   returns nothing. No new `primer-issue.js`-only candidate found this cycle;
+   did not force one. Separately: found and fixed two real, pre-existing bugs
+   unrelated to this cycle's own new content -- full writeups in
+   `living-notes.md`. First, the prior breaking-scan article
+   (`south-korea-banks-ai-cyberattack-seven-institutions`) had an `image`
+   field shaped as an object instead of the plain string path every renderer
+   and every other article expects, pointing at a file that didn't exist on
+   disk at all -- almost certainly rendering coverless live since it shipped
+   -- and this malformed shape crashes `verify_covers.py check` outright
+   (Law 5b violation: a check that dies instead of degrading), which meant
+   that gate could not run for this cycle's own three articles either until
+   fixed. Second, that same breaking-scan article, plus this cycle's own three
+   new ones, were all missing from `rss.xml` (and the breaking-scan one from
+   `sitemap.xml` too) -- `gen_sitemap.py`'s "rss.xml already clean" message
+   turned out to mean "well-formed," not "up to date"; it validates but does
+   not insert. Fixed both by hand and re-ran `gen_sitemap.py` for the sitemap
+   half. Same two §3e/§3f next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -1989,6 +2024,14 @@ Same two next steps as every entry since 2026-08-30, still open.
 this cycle's own three articles (the robot-cage-match cease-and-desist, Google's
 Gemini free-tier downgrade, and Supabase's Turso acquisition) plus the full
 §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
+credentials exist on this runner. No item worked. Same two next steps as every
+entry since 2026-08-30, still open.
+
+**Status (2026-10-06T02:09:13Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (the NYC Council AI hearing under oath, Apple's
+macOS Full Disk Access tightening, and Nucleus's teleoperation-disclosure piece)
+plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
 credentials exist on this runner. No item worked. Same two next steps as every
 entry since 2026-08-30, still open.
