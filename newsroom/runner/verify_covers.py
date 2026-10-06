@@ -67,6 +67,7 @@ DATA_FILES = (
     ("web/data/live-articles.js", "RTFC_LIVE_ARTICLES"),
     ("web/data/newsroom-articles.js", "RTFC_NEWSROOM_ARTICLES"),
     ("web/data/research.js", "RTFC_RESEARCH"),
+    ("web/data/guides.js", "RTFC_GUIDES"),
 )
 MAGAZINE_FILE = ("web/data/magazine-issues.js", "RTFC_MAGAZINE_ISSUES")
 
