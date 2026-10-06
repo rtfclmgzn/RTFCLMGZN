@@ -30892,8 +30892,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Stargate"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx7t26lv6f2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx7t26lv6f2m",
+        "posted_at": "2026-10-06T16:11:29Z"
       }
     ]
   },
@@ -31895,8 +31897,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mx7ssxc2jr2x",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mx7ssxc2jr2x",
+        "posted_at": "2026-10-06T16:07:26Z"
       }
     ]
   },
@@ -32038,7 +32042,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -32053,7 +32057,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -32097,8 +32103,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-10-06T08:09:40Z",
         "copy": "A buyer evaluating Nucleus knows the 40% labor cost upfront. A buyer taking Figure's zero-teleop claim at face value is trusting a number nobody outside Figure can check. That asymmetry is the actual story here.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeKLPa0FBhB",
+        "remote_id": "18113353535601295",
+        "posted_at": "2026-10-06T16:07:19Z"
       },
       {
         "platform": "bluesky",
