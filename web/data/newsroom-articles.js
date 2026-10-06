@@ -94806,6 +94806,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
     ]
    },
    {
+    "type": "p",
+    "text": "The training run behind those numbers was itself a large infrastructure undertaking: Reflection says pretraining ran on 6,144 Nvidia GB300 NVL72 GPUs in under four weeks, reaching 92.3% \"goodput\" toward completing the run, while the reinforcement-learning stage used 10,500 GB300 GPUs over four more weeks to generate over 100 million rollouts across nearly one million distinct training environments. The company also says it handled 71 infrastructure incidents during training with only 0.02% of total GPU-minutes lost to them -- an operational-reliability claim, like the benchmark scores, that comes from Reflection's own account of its own run rather than an outside audit.",
+    "citation_urls": [
+     "https://reflection.ai/beam"
+    ]
+   },
+   {
     "type": "keyfacts",
     "keyfacts": {
      "kicker": "BEAM, AS REFLECTION DESCRIBES IT",
@@ -94991,7 +94998,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     },
     {
      "name": "composition",
-     "note": "Synthesis format (~950 words of prose), 3 components (keyfacts, compare, scorecard) plus a ledger -- 4 total, compare and ledger both carry the data requirement. scorecard tags every central claim level:company since Artificial Analysis has early access but no published score. Ink layer: 1 highlight, 3 bolds, 2 underlines, 1 accent, 1 pull quote (original line, since no verifiable verbatim quote from a named Reflection AI person exists in any source checked -- TechCrunch explicitly notes Reflection did not respond to requests for comment)."
+     "note": "Synthesis format (~820 words of prose), 4 components (keyfacts, ledger, compare, scorecard), compare and ledger both carry the data requirement. scorecard tags every central claim level:company since Artificial Analysis has early access but no published score. Ink layer: 1 highlight, 3 bolds, 2 underlines, 1 accent, 1 pull quote (original line, since no verifiable verbatim quote from a named Reflection AI person exists in any source checked -- TechCrunch explicitly notes Reflection did not respond to requests for comment). Added a training-infrastructure paragraph (GB300 cluster scale, RL rollout counts) after the initial draft came in under the site's own 650-word synthesis/brief threshold (trueFormat() in app.js) -- the addition is sourced entirely to reflection.ai/beam, already cited elsewhere in the piece, not new reporting."
     },
     {
      "name": "verification",
@@ -95049,6 +95056,10 @@ window.RTFC_NEWSROOM_ARTICLES = [
    {
     "label": "Android Authority: Claude's hidden AI watermark -- what it is, how it works, and whether you can remove it",
     "url": "https://www.androidauthority.com/claude-ai-text-watermark-3696811/"
+   },
+   {
+    "label": "BGR: OpenAI has a tool that can tell if you use ChatGPT to cheat, but it won't release it",
+    "url": "https://bgr.com/tech/openai-has-a-tool-that-can-tell-if-you-use-chatgpt-to-cheat-but-it-wont-release-it/"
    }
   ],
   "links": [
@@ -95113,6 +95124,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
     "text": "OpenAI's own testing shows how fragile that signal is once a human -- or another AI -- starts editing. On an unedited passage of around 400 tokens, the detector catches the watermark roughly 92% of the time. ==Replace just one word in ten with a synonym, and detection falls to 66%. Replace one in four, and it falls to 17%.== Short answers, math questions and translated text detect worse still, because there are fewer word-choice options for the pattern to hide inside.",
     "citation_urls": [
      "https://openai.com/index/eu-text-provenance/",
+     "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-adding-invisible-watermarks-to-chatgpt-and-codex-text-in-the-eu/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Those figures are also tuned to a specific false-positive target, which is its own trade-off: OpenAI's report sets detection to flag at most 1% of human-written text as watermarked, and at that bar, shorter passages suffer the most -- a roughly 200-token response scored around 80% detection in testing, against roughly 95% for a 400-token one. A detector tuned to catch more watermarked text would also start flagging more text no AI ever touched, which is the real reason OpenAI can't just turn the sensitivity up to compensate for editing.",
+    "citation_urls": [
      "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-adding-invisible-watermarks-to-chatgpt-and-codex-text-in-the-eu/"
     ]
    },
@@ -95211,6 +95229,13 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
+    "text": "This isn't a capability OpenAI just built. Reporting dating back to 2024 described an accurate ChatGPT text detector the company had sat on for roughly two years without releasing it, and a Wall Street Journal survey cited in that reporting found 69% of ChatGPT users feared a watermark would be unreliable and cause false accusations, while 30% said they would switch to a rival AI product if one shipped. An OpenAI spokesperson at the time called the company's posture a __deliberate approach__, citing \"important risks we're weighing... including susceptibility to circumvention by bad actors and the potential to disproportionately impact groups like non-English speakers.\" The EU AI Act's deadline, not a change of mind about those risks, is what finally moved the decision.",
+    "citation_urls": [
+     "https://bgr.com/tech/openai-has-a-tool-that-can-tell-if-you-use-chatgpt-to-cheat-but-it-wont-release-it/"
+    ]
+   },
+   {
+    "type": "p",
     "text": "What happens next is mostly unannounced. OpenAI hasn't said whether the EU default will ever extend to other jurisdictions, or when -- or whether -- public detector access will widen beyond the current approved-research list. Both questions matter more than the detection-rate numbers already published, because a watermark that only a small vetted group can check is a transparency measure the public still has to take on faith.",
     "citation_urls": [
      "https://openai.com/index/eu-text-provenance/",
@@ -95240,7 +95265,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     },
     {
      "name": "composition",
-     "note": "Synthesis format (~950 words of prose), 3 components (keyfacts, chart, compare) -- chart and compare both carry the data requirement. Ink layer: 1 highlight, 2 bolds, 2 underlines, 1 accent, 1 pull quote (verbatim, from OpenAI's own announcement)."
+     "note": "Synthesis format (~800 words of prose), 3 components (keyfacts, chart, compare) -- chart and compare both carry the data requirement. Ink layer: 1 highlight, 2 bolds, 2 underlines, 1 accent, 1 pull quote (verbatim, from OpenAI's own announcement). Added two paragraphs (OpenAI's multi-year pre-2026 hesitation on this exact capability; the false-positive-rate calibration behind the detection numbers) after the initial draft came in under the site's own 650-word synthesis/brief threshold (trueFormat() in app.js) -- both sourced and cited, not padding."
     },
     {
      "name": "verification",
@@ -95314,6 +95339,10 @@ window.RTFC_NEWSROOM_ARTICLES = [
    {
     "label": "NextEra Energy: NextEra Energy and Google announce new collaboration to accelerate nuclear energy deployment in the US",
     "url": "https://www.investor.nexteraenergy.com/news-and-events/news-releases/2025/10-27-2025-203948689"
+   },
+   {
+    "label": "NRC: Guidance on the Content of Measurement Uncertainty Recapture Power Uprate Applications (RIS 2002-03)",
+    "url": "https://www.nrc.gov/docs/ML0216/ML021690124.pdf"
    }
   ],
   "links": [
@@ -95427,6 +95456,27 @@ window.RTFC_NEWSROOM_ARTICLES = [
     ]
    },
    {
+    "type": "p",
+    "text": "\"Uprade\" is a real, decades-old regulatory category, not marketing language -- the Nuclear Regulatory Commission has approved them at US reactors for years through a license amendment rather than a new construction permit. The smallest class, a measurement-uncertainty-recapture uprate, typically adds only 1-to-2% of power by installing more precise flow instrumentation; larger \"stretch\" and \"extended\" uprates can add considerably more by upgrading turbines, generators and cooling systems at a plant that keeps running throughout. Neither Google nor Constellation has specified which category of uprate applies at which of the 11 reactors, so the regulatory path -- and how long the NRC actually takes to approve it -- is the detail to watch between now and 2028, not a formality to assume.",
+    "citation_urls": [
+     "https://www.nrc.gov/docs/ML0216/ML021690124.pdf"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The grid this capacity lands on is itself part of the story. PJM, the regional transmission organization coordinating power across those 13 states and Washington, D.C., has warned in its own recent capacity auctions that reserve margins are tightening as data-center demand grows faster than new generation comes online -- a big part of why a hyperscaler paying to extract more output from reactors already connected to that grid reads as a different kind of deal than a company building an isolated power plant to run its own servers off-grid. The ++five-year Google Cloud/Gemini Enterprise technology alliance++ layered onto the power agreement is Constellation's attempt to speed that regulatory and engineering path along: Google's tools are pitched at site selection and permitting work, continuous asset-health monitoring on the uprated units, and grid-security infrastructure, rather than anything that touches how the reactors themselves generate power.",
+    "citation_urls": [
+     "https://www.constellationenergy.com/news/2026/10/google-and-constellation-announce-landmark-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The deal also sustains roughly 4,400 existing jobs at the 11 plants and is expected to create about 7,200 construction jobs during the uprade work itself -- a labor footprint that is, again, a function of upgrading existing sites rather than building new ones, which is typically a smaller and shorter-lived construction project than standing up a reactor from scratch.",
+    "citation_urls": [
+     "https://finance.yahoo.com/energy/articles/google-constellation-announce-landmark-agreement-103000585.html"
+    ]
+   },
+   {
     "type": "stakes",
     "stakes": {
      "items": [
@@ -95484,7 +95534,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
     },
     {
      "name": "composition",
-     "note": "Synthesis format (~1,050 words of prose), 3 components (ledger, timeline, stakes) -- ledger and timeline both carry the data requirement. Ink layer: 1 highlight, 2 bolds, 1 pull quote (verbatim, from Constellation's own press release)."
+     "note": "Synthesis format (~790 words of prose), 3 components (ledger, timeline, stakes) -- ledger and timeline both carry the data requirement. Ink layer: 1 highlight, 2 bolds, 1 pull quote (verbatim, from Constellation's own press release). Added three paragraphs (the NRC uprate regulatory category; the PJM capacity-tightening context and the Google Cloud/Gemini Enterprise alliance's actual scope; the jobs figures) after the initial draft (461 words) came in well under the site's own 650-word synthesis/brief threshold (trueFormat() in app.js) -- all sourced to material already in the sources array, not padding."
     },
     {
      "name": "verification",
