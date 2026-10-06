@@ -188,6 +188,10 @@ window.RTFC_ENTITIES = {
     { re:/\bMistral Large\b/i, name:"Mistral Large", maker:"Mistral AI", makerKey:"mistral",
       kind:"frontier model", access:"partial" },
 
+    // --- Reflection AI ---
+    { re:/\bReflection(?:'s| AI's)? Beam\b/i, name:"Beam", maker:"Reflection AI", makerKey:"reflection",
+      kind:"open-weights MoE reasoning/coding model, self-reported benchmarks only", access:"open-weights-pending" },
+
     // --- Sakana AI ---
     { re:/\bFugu Ultra v2\b|\bFugu Ultra\b/i, name:"Fugu Ultra v2", maker:"Sakana AI", makerKey:"sakana",
       kind:"capability-first model-orchestrator", access:"closed" },

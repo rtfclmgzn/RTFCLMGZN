@@ -32201,5 +32201,299 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-06T16:58:17Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-reflection-ai-beam-open-weight-model-glm-5-2-claim",
+    "ts": "2026-10-06T21:20:00Z",
+    "export": {
+      "article_id": "newsroom-reflection-ai-beam-open-weight-model-glm-5-2-claim",
+      "url": "https://rtfclmgzn.com/article/reflection-ai-beam-open-weight-model-glm-5-2-claim",
+      "headline": "Reflection AI Says Its New Open Model Matches a Chinese Rival at a Fraction of the Compute -- by Its Own, Unverified Math",
+      "hook": "Reflection AI claims its new open model matches a Chinese rival at 3-4x less compute -- but by its own benchmark page, it already trails three newer models it didn't headline against.",
+      "key_facts": [
+        "Beam: 501B total / 23B active parameters, Apache 2.0 weights due end of October 2026.",
+        "Reflection claims parity with Z.ai's GLM-5.2 at 3-4x less inference compute -- its own estimate, not measured.",
+        "Reflection's own benchmark page shows Beam trailing GLM-5.3, Kimi K3, and DeepSeek V4.1 Flash on most coding tasks."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/rtfc-20261006-beamlaunch-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Reflection AI says its new open model Beam matches Z.ai's GLM-5.2 at 3-4x less compute. That's Reflection's own math, on Reflection's own benchmarks -- and by its own fuller scorecard, Beam already trails three newer rivals it didn't put in the headline:",
+        "reply_copy": "The full reconciliation:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenSourceAI",
+          "#AIbenchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Reflection AI's new open-weight model, Beam, claims it matches Z.ai's GLM-5.2 while using 3-4x less compute.\n\nOne catch: that's Reflection's own estimate, on Reflection's own benchmark run. Artificial Analysis has early access but hasn't published a score.\n\nAnother catch: Beam's own benchmark page shows it trailing three newer models -- GLM-5.3, Kimi K3, and DeepSeek V4.1 Flash -- that didn't make the launch headline.\n\nFull breakdown -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OpenSourceAI",
+          "#MachineLearning",
+          "#TechNews",
+          "#AIbenchmarks",
+          "#LLM"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Reflection AI published benchmark scores Oct. 5 for Beam, a 501-billion-parameter open-weight model it says reasons at a level comparable to Z.ai's GLM-5.2 while using 3 to 4 times less inference compute. That efficiency figure is Reflection's own estimate, not an independent measurement -- Artificial Analysis has early access but hasn't published a result yet. And Reflection's own, fuller benchmark page shows Beam trailing three newer models -- GLM-5.3, Kimi K3, and DeepSeek V4.1 Flash -- that never made it into the headline comparison. Weights are due under an Apache 2.0 license before the end of October.",
+        "hashtags": [
+          "#AI",
+          "#OpenSourceAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Reflection AI's new open model Beam claims GLM-5.2-level reasoning at 3-4x less compute. That's the company's own math on its own benchmark run. Its own fuller scorecard also shows it trailing three newer rivals that didn't make the headline:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Reflection AI says Beam matches GLM-5.2 at 3-4x less compute -- its own estimate, on its own benchmarks. Its own benchmark page also shows it trailing 3 newer rivals that didn't make the headline:",
+        "hashtags": [
+          "#AI",
+          "#OpenSourceAI",
+          "#MachineLearning"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-07T02:02:05Z",
+        "copy": "The comparison Reflection AI didn't headline for its new open model: by its own benchmark page, Beam trails GLM-5.3, Kimi K3, and DeepSeek V4.1 Flash on most coding tasks -- all newer than the GLM-5.2 rival it chose to compare against instead:",
+        "reply_copy": "Why that comparison was a choice:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenSourceAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-07T02:02:05Z",
+        "copy": "Beam is being marketed against the model it can match, not the models that have since passed it. That's the real story in Reflection AI's own launch-day benchmark page.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-openai-chatgpt-codex-eu-text-watermark-textgrain",
+    "ts": "2026-10-06T21:20:00Z",
+    "export": {
+      "article_id": "newsroom-openai-chatgpt-codex-eu-text-watermark-textgrain",
+      "url": "https://rtfclmgzn.com/article/openai-chatgpt-codex-eu-text-watermark-textgrain",
+      "headline": "OpenAI Will Invisibly Watermark ChatGPT and Codex Text -- But Only for Users in the EU",
+      "hook": "OpenAI will invisibly watermark ChatGPT and Codex text in the EU -- a narrower rollout than Anthropic's global, no-opt-out version two months earlier, and one that loses most of its power under light editing.",
+      "key_facts": [
+        "EU users get default-on watermarking; API developers worldwide can opt in, off by default.",
+        "Detection falls from ~92% on unedited text to 17% after a quarter of words are swapped for synonyms.",
+        "Anthropic's August rollout applies worldwide with no opt-out; OpenAI chose a narrower, region-scoped approach."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20261006-eutextwatermark-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI will start invisibly watermarking ChatGPT/Codex text -- but only for EU users. Anthropic went global with no opt-out two months ago. OpenAI's own numbers show why the tool is still weak either way: a 25% word swap cuts detection from 92% to 17%.",
+        "reply_copy": "The full comparison:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#EUAIAct"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI will start invisibly watermarking ChatGPT and Codex text -- but only for users in the EU.\n\nAnthropic already did this globally, for every user, with no opt-out. OpenAI chose a narrower, slower path: EU default-on, API opt-in everywhere else.\n\nEither way, OpenAI's own testing shows detection falling from 92% on unedited text to just 17% after a quarter of the words are swapped for synonyms.\n\nFull breakdown -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#AIPolicy",
+          "#EUAIAct",
+          "#TechNews",
+          "#OpenAI",
+          "#DataPrivacy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI said Oct. 5 it will start invisibly watermarking the text ChatGPT and Codex generate for users in the European Union, rolling out over the coming weeks. API developers worldwide can opt in starting now, off by default. The method, called textGrain, reshapes word-choice patterns rather than adding visible marks, so it survives copy-paste. OpenAI's own testing shows the limits: detection runs about 92% on unedited text but falls to 66% after a 10% synonym swap and 17% after 25%. The move answers the same EU AI Act transparency rule that pushed Anthropic to flip on an equivalent watermark worldwide, with no opt-out, back in August -- a narrower, more deliberate posture than Anthropic's blanket approach.",
+        "hashtags": [
+          "#AI",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI will watermark ChatGPT/Codex text invisibly -- but only in the EU. Anthropic already did it everywhere, no opt-out, two months ago. OpenAI's own numbers: detection drops from 92% to 17% once a quarter of the words are swapped.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's new ChatGPT/Codex watermark is EU-only, opt-in elsewhere. Anthropic went global with no opt-out in August. OpenAI's own numbers: 92% detection unedited, 17% after a 25% synonym swap.",
+        "hashtags": [
+          "#AI",
+          "#AIPolicy",
+          "#EUAIAct"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-07T02:03:08Z",
+        "copy": "\"The absence of a detected watermark does not prove human authorship.\" -- OpenAI, on its own new ChatGPT/Codex watermark. What a detected one actually proves is narrower than it sounds:",
+        "reply_copy": "What it does and doesn't show:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIPolicy",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-07T02:03:08Z",
+        "copy": "Neither OpenAI's nor Anthropic's text watermark survives a quarter of the words being swapped for synonyms. Two different compliance bets, same underlying fragility.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-constellation-nuclear-890mw-pjm-deal",
+    "ts": "2026-10-06T21:20:00Z",
+    "export": {
+      "article_id": "newsroom-google-constellation-nuclear-890mw-pjm-deal",
+      "url": "https://rtfclmgzn.com/article/google-constellation-nuclear-890mw-pjm-deal",
+      "headline": "Google Will Pay $4.3 Billion to Upgrade Existing Reactors for 890 Megawatts -- Its Fastest Nuclear Deal Yet",
+      "hook": "Google and Constellation's $4.3B nuclear uprade deal is Google's fifth major nuclear commitment since 2024 -- and the first one likely to deliver real power before 2030, because it upgrades reactors that already exist.",
+      "key_facts": [
+        "890 MW of new capacity by 2028, funded by $4.3B in uprades at 11 existing Constellation reactors.",
+        "Constellation stock rose 12% on the news; rivals Vistra and Talen Energy jumped 8% and 7% in sympathy.",
+        "It's Google's fifth major nuclear deal since Oct. 2024 (Kairos, Elementl, NextEra, Fortum, Constellation) -- each measuring a different kind of megawatt."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/rtfc-20261006-constellationnuclear-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Google will pay $4.3B to upgrade 11 existing nuclear reactors for 890MW of new capacity by 2028. It's Google's 5th major nuclear deal since 2024 -- and the first one that skips building anything new, which is exactly why 2028 is realistic:",
+        "reply_copy": "Why this one's different:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nuclear",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Google just signed its fifth major nuclear power deal since 2024 -- $4.3 billion to upgrade 11 existing Constellation Energy reactors for 890 megawatts of new capacity by 2028.\n\nUnlike Google's small-reactor and plant-restart bets, which won't deliver power until 2029 at the earliest, this one upgrades reactors that are already running -- which is why it's actually on track to be first.\n\nConstellation's stock jumped 12% on the news. Full breakdown -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Nuclear",
+          "#CleanEnergy",
+          "#DataCenters",
+          "#Google",
+          "#Infrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google and Constellation Energy announced Tuesday a 20-year deal: more than $4.3 billion funding uprades at 11 existing nuclear reactors across Illinois, Pennsylvania, and New Jersey, adding 890 megawatts to the PJM grid by 2028. A separate 15-year deal locks in 2,700 MW Constellation already generates. Constellation shares jumped 12% on the announcement, with rivals Vistra and Talen Energy climbing in sympathy. It's Google's fifth major nuclear commitment since October 2024 -- after deals with Kairos Power, Elementl Power, NextEra Energy, and Finland's Fortum -- and the fastest-delivering one yet, because it upgrades reactors that already exist instead of building or restarting one.",
+        "hashtags": [
+          "#Nuclear",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Google's new $4.3B nuclear deal with Constellation doesn't build anything new -- it upgrades 11 reactors already running, for 890MW by 2028. That's why it's the fastest of Google's five nuclear bets since 2024, not the biggest.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Google's new nuclear deal: $4.3B to upgrade 11 existing Constellation reactors for 890MW by 2028. 5th Google nuclear deal since 2024 -- first one fast enough to actually matter this decade, because nothing has to be built from scratch.",
+        "hashtags": [
+          "#Nuclear",
+          "#AI",
+          "#CleanEnergy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-07T02:04:10Z",
+        "copy": "Google has now signed 5 nuclear deals since 2024 totaling ~4.7GW. Almost none of it is online yet. The Constellation uprade deal is the one actually likely to deliver before 2030 -- here's why the megawatts aren't all the same kind of megawatt:",
+        "reply_copy": "What each deal actually measures:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nuclear",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-07T02:04:10Z",
+        "copy": "Constellation's $4.3B is an investment it expects to earn back over 20 years of Google's money -- not a subsidy. Whether the upgrade costs flow into grid-wide capacity prices for everyone else is the next open question.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
