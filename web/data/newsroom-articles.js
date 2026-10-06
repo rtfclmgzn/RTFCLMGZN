@@ -93647,11 +93647,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    }
   ],
   "id": "article-south-korea-banks-ai-cyberattack-20261005",
-  "image": {
-   "src": "assets/img/newsroom/korean-banks-cyberattack-2026-10-05.jpg",
-   "alt": "Silhouette of financial infrastructure with AI code overlay, representing the AI-powered cyberattack on South Korean banking systems",
-   "credit": "Conceptual; no public imagery of the breach site exists"
-  },
+  "image": "assets/img/newsroom/article-south-korea-banks-ai-cyberattack-20261005.jpg",
   "pipeline": {
    "run": "breaking-scan",
    "stages": [
@@ -93664,5 +93660,859 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "gate": "synthesis with keyfacts and apply block; 6 sources across 3 classes (official disclosure, news reporting, cybersecurity analysis), 1 primary (Shinhan Financial Group); story qualifies as breaking per breaking-scan-runbook §1 (major security incident affecting widely-used AI systems); no financial-advice disclaimer needed; published as breaking story at 2026-10-05T14:41:44Z."
   },
   "publishedAt": "2026-10-05T14:41:44Z"
+ },
+ {
+  "slug": "nyc-council-ai-hearing-oath-whistleblowers-spacexai-subpoena",
+  "title": "NYC Council Puts OpenAI, Anthropic, Google and Meta Under Oath -- SpaceXAI Skips Its Subpoena",
+  "dek": "At an Oct. 5 hearing before all 51 council members, the four companies sent policy executives who gave largely general answers on AI liability, while two whistleblowers warned of catastrophic misalignment risk and SpaceXAI ignored a subpoena entirely -- prompting Council Speaker Julie Menin to say the city will pursue it in court.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "OpenAI, Anthropic, Google and Meta sent policy executives to testify remotely before all 51 NYC Council members on Oct. 5.",
+   "Ex-Anthropic researcher Jacob Coxon and ex-Google DeepMind's Alex Turner warned of catastrophic AI risk -- their own stated views, not independently measured probabilities.",
+   "SpaceXAI ignored its subpoena outright; Speaker Julie Menin says the council will sue in state court to compel testimony.",
+   "On a question about AI threats to city pension funds, Councilmember Shekar Krishnan said the companies' answers didn't actually answer it.",
+   "The council has no power to write federal AI rules -- its own 10-bill package targets city defenses and disclosure, not industry-wide regulation."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Watch for Menin's court filing",
+    "text": "Council Speaker Julie Menin says the city will sue to compel SpaceXAI's testimony. The filing itself, once made, is the first real test of whether a city subpoena has any teeth against a company that simply doesn't answer."
+   },
+   {
+    "label": "Track the pension-liability question",
+    "text": "Councilmember Shekar Krishnan's question about AI-driven losses to city pension systems went unanswered with no deadline attached. Watch whether any of the four companies follows up in writing, or whether the question just disappears."
+   },
+   {
+    "label": "Follow the 10-bill package to committee",
+    "text": "The kill-switch and whistleblower-bounty bills introduced Sept. 25 were the backdrop to this hearing. A committee vote, not another hearing, is the next concrete step toward any of them becoming enforceable city law."
+   }
+  ],
+  "sources": [
+   {
+    "label": "NYC Council: press release unveiling AI legislative proposals and the Oct. 5 Committee of the Whole hearing",
+    "url": "https://council.nyc.gov/press/2026/09/25/3252/",
+    "primary": true
+   },
+   {
+    "label": "CNBC: Anthropic, OpenAI, Google, Meta execs testify at NYC Council AI hearing",
+    "url": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html"
+   },
+   {
+    "label": "UPI: New York City Council holds AI hearing with tech leaders",
+    "url": "https://www.upi.com/Top_News/US/2026/10/05/new-york-city-council-ai-hearing-openai-meta-anthropic-google/3621791217612"
+   },
+   {
+    "label": "The City Reporter: NYC Council grills AI leaders and whistleblowers in marathon hearing",
+    "url": "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/"
+   },
+   {
+    "label": "TechCrunch: 'Gambling with our lives' -- Anthropic researcher quits, warns against self-improving AI",
+    "url": "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/"
+   },
+   {
+    "label": "Deadline: AI researcher Jacob Coxon resigns, warns industry 'gambling with our lives'",
+    "url": "https://deadline.com/2026/09/anthropic-jacob-coxon-resignation-artificial-intelligence-1237072134/"
+   },
+   {
+    "label": "amNY: AI giants give few clear answers to key safety questions at NYC Council hearing amid whistleblower warnings",
+    "url": "https://www.amny.com/news/ai-giants-nyc-council-whistleblower-warnings/"
+   }
+  ],
+  "links": [
+   {
+    "label": "CNBC: Anthropic, OpenAI, Google, Meta execs testify at NYC Council AI hearing",
+    "url": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html"
+   },
+   {
+    "label": "The City Reporter: NYC Council grills AI leaders and whistleblowers in marathon hearing",
+    "url": "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Coverage of the hearing split along a predictable line. CNBC and UPI reported the event straight -- who attended, who didn't, what was said -- without characterizing how the companies came across. The City Reporter and amNY, by contrast, led with the companies' evasiveness, framing the entire session around \"few clear answers\" to the hearing's central safety questions. Both framings describe the same transcript; the disagreement is about emphasis, not fact, and neither outlet disputes any of the other's quotes. **This piece follows the straight account for what happened and uses the pointed framing only where a named council member, not a reporter, is the one drawing the conclusion** -- Krishnan's on-record rebuke, not an outlet's adjective.",
+    "citation_urls": [
+     "https://www.amny.com/news/ai-giants-nyc-council-whistleblower-warnings/",
+     "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "On Oct. 5, New York City's Council did something it says it had never done before: it convened all 51 of its members at once, under its rarely-used Committee of the Whole, to put the country's four largest AI companies under oath. ==[OpenAI](/company/openai), [Anthropic](/company/anthropic), [Google](/company/google) and [Meta](/company/meta) each sent a named policy executive, appearing by video link, to answer questions about whether the systems they build could cause harm the companies themselves cannot fully predict.==",
+    "citation_urls": [
+     "https://council.nyc.gov/press/2026/09/25/3252/",
+     "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The __Committee of the Whole__ is the Council's full-body format, normally reserved for matters of significant citywide importance and rarely convened for oversight hearings at all. {{note: Routine legislative business goes to a smaller standing committee; pulling all 51 members into one room is itself a statement about how seriously the Council wanted this treated.}} The Council had announced the hearing on Sept. 25, alongside the 10-bill legislative package, giving the companies ten days' notice. OpenAI sent Morgan Dwyer, its head of policy development and operations; Anthropic sent Logan Graham, head of its Frontier Red Team; Google sent Alice Friend, its director of AI and emerging-tech policy; and Meta sent Shane Cahill, its AI policy director for legislation. All four appeared remotely.",
+    "citation_urls": [
+     "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/",
+     "https://council.nyc.gov/press/2026/09/25/3252/"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "kicker": "THE HEARING -- OCTOBER 5, 2026",
+     "title": "Who showed up, and who didn't",
+     "items": [
+      {
+       "label": "Format",
+       "value": "Committee of the Whole -- all 51 council members"
+      },
+      {
+       "label": "Companies testifying",
+       "value": "OpenAI, Anthropic, Google, Meta -- all by video"
+      },
+      {
+       "label": "No-show",
+       "value": "SpaceXAI (xAI/Musk), despite a Council subpoena"
+      },
+      {
+       "label": "Outside witnesses",
+       "value": "Jacob Coxon (ex-Anthropic), Alex Turner (ex-Google DeepMind)"
+      },
+      {
+       "label": "Legislation on the table",
+       "value": "A 10-bill package incl. kill-switch and whistleblower-bounty bills, introduced Sept. 25"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The hearing's sharpest moment didn't come from a company at all. ++Jacob Coxon++, the researcher who resigned from Anthropic on Sept. 8 warning that frontier labs were \"racing straight to self-improving superintelligence and gambling with our lives,\" testified again in person. \"**On the current path, I think it is more likely than not that humanity loses control to these AIs, and it could end in human extinction,**\" he told the Council -- a claim that is his own forecast, stated under oath, not a measured probability any instrument has produced. Alex Turner, a former Google DeepMind researcher, followed with a related warning: that misaligned AI \"is everyone's adversary, including our own.\"",
+    "citation_urls": [
+     "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/",
+     "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "“On the current path, I think it is more likely than not that humanity loses control to these AIs, and it could end in human extinction.” — Jacob Coxon, former Anthropic researcher, testifying Oct. 5, 2026",
+    "citation_urls": [
+     "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "What the companies themselves offered was thinner. Councilmember Shekar Krishnan pressed the panel on whether AI-driven losses could expose the city's own pension systems to liability; when representatives answered with general statements about corporate performance rather than the specific risk he'd asked about, Krishnan pushed back on the record: \"The fact that either you don't have answers to this ... does not answer the question.\" No company present offered a direct answer on pension liability during the hearing.",
+    "citation_urls": [
+     "https://www.upi.com/Top_News/US/2026/10/05/new-york-city-council-ai-hearing-openai-meta-anthropic-google/3621791217612"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Three companies' hearing posture against SpaceXAI's no-show",
+     "columns": [
+      {
+       "label": "OpenAI"
+      },
+      {
+       "label": "Anthropic"
+      },
+      {
+       "label": "Google"
+      },
+      {
+       "label": "SpaceXAI",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "Representative sent",
+       "values": [
+        "Morgan Dwyer, head of policy development and operations",
+        "Logan Graham, head of Frontier Red Team",
+        "Alice Friend, director of AI and emerging-tech policy",
+        "None"
+       ]
+      },
+      {
+       "label": "Appeared despite subpoena",
+       "values": [
+        "Yes, remote",
+        "Yes, remote",
+        "Yes, remote",
+        "No"
+       ]
+      },
+      {
+       "label": "Council's stated response",
+       "values": [
+        "No action announced",
+        "No action announced",
+        "No action announced",
+        "Speaker Menin says city will pursue in state court"
+       ],
+       "note": "Only SpaceXAI's absence drew a stated enforcement response."
+      }
+     ],
+     "source": "CNBC, UPI and The City Reporter's Oct. 5, 2026 coverage of the hearing; Council Speaker Julie Menin's on-record statement."
+    }
+   },
+   {
+    "type": "p",
+    "text": "[SpaceXAI](/company/xai) -- the Musk-controlled entity formed when xAI merged into SpaceX earlier this year -- simply didn't appear, despite being subpoenaed. Council Speaker Julie Menin said afterward: \"They are opting not to do that, so we are pursuing legal action,\" naming a planned filing in state court to compel testimony. It is the one concrete escalation to come out of the hearing; the four companies that did appear face no comparable follow-up so far.",
+    "citation_urls": [
+     "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/"
+    ]
+   },
+   {
+    "type": "scorecard",
+    "scorecard": {
+     "items": [
+      {
+       "claim": "Humanity is, on the current path, more likely than not to lose control of frontier AI, potentially to extinction.",
+       "level": "contested",
+       "basis": "Stated under oath by Jacob Coxon, who worked inside both OpenAI and Anthropic before resigning. It is his personal forecast, not a published measurement any of the four companies or an independent body has produced.",
+       "resolver": "An independent technical audit of frontier labs' internal safety evaluations -- none of the four companies has published one in full."
+      },
+      {
+       "claim": "Misaligned AI could become a danger to the US comparable to, or worse than, geopolitical rivals.",
+       "level": "contested",
+       "basis": "Alex Turner's testimony, a former researcher's stated view rather than a sourced measurement.",
+       "resolver": "A government-commissioned capability and alignment assessment with its methodology made public."
+      },
+      {
+       "claim": "SpaceXAI ignored a valid Council subpoena to testify.",
+       "level": "confirmed",
+       "basis": "No SpaceXAI representative appeared; Speaker Menin's on-record statement and multiple outlets independently confirm the no-show.",
+       "resolver": "The outcome of the state-court action Menin says the Council will file."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "None of this happened in a vacuum. The hearing was the direct continuation of a sequence that started a month earlier, when a researcher's resignation letter became the loudest public argument the industry had had about its own risk in months.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/",
+     "https://council.nyc.gov/press/2026/09/25/3252/"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "Sept. 8, 2026",
+       "what": "Jacob Coxon resigns from Anthropic, warning publicly that frontier labs are \"gambling with our lives.\""
+      },
+      {
+       "when": "Sept. 25, 2026",
+       "what": "NYC Council unveils a 10-bill package, including kill-switch and whistleblower-bounty bills, and schedules the Oct. 5 hearing.",
+       "hi": true
+      },
+      {
+       "when": "Oct. 5, 2026",
+       "what": "All 51 council members hear testimony under oath; OpenAI, Anthropic, Google and Meta appear remotely; SpaceXAI does not.",
+       "hi": true
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Even if every one of the Council's 10 bills passes, the limits of the exercise are built in. City lawmakers have no authority to write the federal rules that executives themselves say are the only ones that would actually govern frontier model training and deployment nationally -- the bills on the table target how the city defends its own systems and what AI companies must disclose to it, not how any company builds its models. That gap is the real subtext of Friday's hearing: a city government using the loudest tool it has -- subpoena power and a full-body public hearing -- against a technology whose most consequential decisions are made nowhere near City Hall.",
+    "citation_urls": [
+     "https://www.thecityreporter.nyc/2026/10/05/nyc-city-council-ai-hearing-openai-anthropic-google-elon-musk/",
+     "https://council.nyc.gov/press/2026/09/25/3252/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That subtext connects directly to ground this Council had already staked out. The __private right of action__ and whistleblower-bounty bills introduced two weeks before the hearing were written with Coxon's kind of departure in mind -- a way to formalize what, right now, only happens when a researcher quits and goes to the press. Whether city law can actually compel what a subpoena apparently couldn't is the question the next vote, not the next hearing, will answer. A private right of action would let a resident sue directly over an AI-caused harm rather than waiting on a regulator to act; a whistleblower bounty would pay a researcher like Coxon for coming forward through a formal channel instead of a resignation post on X. Neither exists yet. Both were still bills, not law, on the day four companies testified about risks the Council itself has no power to regulate at the source.",
+    "citation_urls": [
+     "https://council.nyc.gov/press/2026/09/25/3252/"
+    ]
+   }
+  ],
+  "id": "rtfc-20261006-nyccouncilhearing-01",
+  "image": "assets/img/newsroom/rtfc-20261006-nyccouncilhearing-01.jpg",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-06T02:09:13Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via WebSearch sweep on current AI-industry news; confirmed via grep against newsroom-articles.js that no existing piece covers the Oct. 5 hearing itself, though it builds on two already-published pieces (Coxon's Sept. 11 resignation synthesis and the Sept. 27 NYC kill-switch bills synthesis) -- treated as genuine new development, not a re-cover, since the hearing itself and its specific testimony/outcomes hadn't happened when either prior piece published."
+    },
+    {
+     "name": "research",
+     "note": "6 sources across 3 classes: primary_company/official (NYC Council's own Sept. 25 press release, directly fetched), independent_reporting (CNBC, UPI, The City Reporter, each giving different quotes/angles on the same hearing -- treated as corroborating threads of one event, not inflated into separate stories), and prior-event sourcing for Coxon's resignation (TechCrunch, Deadline). Format routed as synthesis: one event, multiple reconcilable angles, a real comparison (who showed up vs. who didn't) and legislative context requiring synthesis, not brief-level compression."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~1,050 words of prose), 4 components (keyfacts, compare, scorecard, timeline) -- compare satisfies the data-carrying requirement by showing the one real divergence (SpaceXAI's no-show) against four companies that all behaved identically. Ink layer: 2 highlights, 4 bolds, 2 underlines, 2 accents, 1 margin note, 1 pull quote."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language; cross-links to the Coxon and kill-switch-bills pieces are phrased about the hearing's own mechanics and the bills themselves, not as 'coverage we published.' Coxon's and Turner's extinction/adversary claims are explicitly framed as their own stated forecasts throughout, never adopted as established fact -- handles mandatory-scrutiny trigger #6 (unverifiable central claim) by not treating it as the article's central claim at all. Trigger #3 (legal proceedings) handled via neutral sourced framing of Menin's announced court action. Loop 2: every keyfacts/compare/scorecard/timeline value traces to a cited source and also appears in body prose; no fabricated figures."
+    }
+   ],
+   "gate": "synthesis with 4 components (keyfacts, compare, scorecard, timeline), compare carrying the data requirement; 6 sources across 3 classes, 1 primary (NYC Council's own press release); mandatory-scrutiny triggers #3 (legal proceedings) and #6 (unverifiable central claim) both handled via neutral sourced framing and explicit attribution rather than adoption; no disclaimer required (non-health, non-financial); no fabricated figures; published at 2026-10-06T02:58:10Z."
+  },
+  "publishedAt": "2026-10-06T02:58:10Z"
+ },
+ {
+  "slug": "apple-macos-full-disk-access-ai-agent-controls",
+  "title": "Apple Tightens Mac's Broadest Permission After AI Agents Started Asking For It",
+  "dek": "Apple said Oct. 2 it will require \"very explicit user action\" before an app can get macOS's Full Disk Access -- the permission that lets an app read everything from mail to browsing history -- naming AI agents as the reason the risk \"will grow substantially.\" The announcement followed a still-disputed report that Meta's Muse synced a journalist's private iMessages, and a separate, now-patched vulnerability in OpenAI's own ChatGPT for Mac app.",
+  "persona": "samira-nasser",
+  "section": "Ethics",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Apple said Oct. 2 it will require \"very explicit user action\" before granting macOS's broadest system permission, Full Disk Access.",
+   "Apple named AI agents directly, warning the risk from this access level \"will grow substantially\" as agents get more autonomous.",
+   "The move follows journalist Jason Aten's disputed report that Meta's Muse synced his private iMessages -- Meta says that requires two separate steps a bug can't bypass.",
+   "A separate, now-patched flaw (CVE-2026-100754) let untrusted code impersonate OpenAI's own ChatGPT for Mac app to read local chat logs stored in plain text.",
+   "Caveat: Apple hasn't said when the new controls ship or what the new consent screen will actually look like."
+  ],
+  "applyType": "work",
+  "apply": [
+   {
+    "label": "Audit which apps already have Full Disk Access",
+    "text": "System Settings -> Privacy & Security -> Full Disk Access lists every app that currently holds it. Revoke anything you don't remember deliberately granting it to, especially an AI agent's connectors."
+   },
+   {
+    "label": "Don't assume toggling a connector off is enough",
+    "text": "Per Jason Aten's disputed account, a connector's on/off state inside an agent's own settings isn't necessarily the same thing as what macOS itself has granted. Check both layers, not just the app's in-app toggle."
+   },
+   {
+    "label": "Watch for the actual consent-flow change, not just the announcement",
+    "text": "Apple hasn't detailed the new UI. The real test is whether it's a one-time dialog a user clicks past once, or a persistent, re-confirmed permission -- the difference between theater and an actual fix."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Apple Developer News: update on Full Disk Access controls",
+    "url": "https://developer.apple.com/news/?id=p6zjojqw",
+    "primary": true
+   },
+   {
+    "label": "TechCrunch: Apple says it's tightening macOS 'Full Disk Access' controls due to new risks from AI agents",
+    "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+   },
+   {
+    "label": "MacRumors: Apple announces 'Full Disk Access' changes on macOS due to AI agents",
+    "url": "https://www.macrumors.com/2026/10/02/apple-announces-macos-full-disk-access-changes/"
+   },
+   {
+    "label": "Inc.: Meta's new Muse AI agent read my private messages. I never asked it to. (Jason Aten)",
+    "url": "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202"
+   },
+   {
+    "label": "Yahoo/Tech: Meta's Muse AI agent read a user's private iMessages. Then it lied about how.",
+    "url": "https://tech.yahoo.com/ai/meta-ai/articles/metas-muse-ai-agent-read-204420295.html"
+   },
+   {
+    "label": "Heise: After Muse -- ChatGPT app for macOS was also vulnerable",
+    "url": "https://www.heise.de/en/news/After-Muse-ChatGPT-app-for-macOS-was-also-vulnerable-11475922.html"
+   },
+   {
+    "label": "OODA Loop: ChatGPT for Mac security flaw leaves users' chat history exposed in plain text",
+    "url": "https://oodaloop.com/briefs/cyber/chatgpt-for-mac-security-flaw-leaves-users-chat-history-exposed-in-plain-text/"
+   }
+  ],
+  "links": [
+   {
+    "label": "TechCrunch: Apple says it's tightening macOS 'Full Disk Access' controls due to new risks from AI agents",
+    "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+   },
+   {
+    "label": "Inc.: Meta's new Muse AI agent read my private messages. I never asked it to. (Jason Aten)",
+    "url": "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "[Apple](/company/apple) said Oct. 2 that it will add new controls to __Full Disk Access__, the macOS permission that bypasses almost every privacy safeguard on the system at once -- letting a granted app read files, mail, messages and browsing history, across every account on the machine. The company's own developer announcement was blunt about why now: \"as AI agents become increasingly capable and autonomous, **the risks associated with this level of access will grow substantially**,\" and Apple said it wants to ensure that access is granted only through \"very explicit user action\" going forward.",
+    "citation_urls": [
+     "https://developer.apple.com/news/?id=p6zjojqw",
+     "https://www.macrumors.com/2026/10/02/apple-announces-macos-full-disk-access-changes/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That is a notable thing for a platform vendor to say about its own developer ecosystem. ==Apple's statement names the problem directly: \"some developers are using Full Disk Access in ways that could put users at risk, exposing everything on their systems ... without users' full knowledge and understanding.\"== {{note: Full Disk Access has existed on macOS for years, mostly granted to backup tools and antivirus software that genuinely need it. The new risk Apple is naming isn't the permission itself -- it's a new category of app asking for it.}} Apple did not say when the new controls will ship, or what the revised consent screen will actually look like; the announcement commits to a direction, not a date.",
+    "citation_urls": [
+     "https://developer.apple.com/news/?id=p6zjojqw",
+     "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "kicker": "APPLE'S ANNOUNCEMENT -- OCTOBER 2, 2026",
+     "title": "What's changing, and what isn't yet",
+     "items": [
+      {
+       "label": "What changes",
+       "value": "Full Disk Access will require \"very explicit user action\" to grant"
+      },
+      {
+       "label": "Why, per Apple",
+       "value": "AI-agent risk to this access level \"will grow substantially\""
+      },
+      {
+       "label": "Rollout date",
+       "value": "Not disclosed"
+      },
+      {
+       "label": "Named incidents prompting it",
+       "value": "Meta's Muse (disputed) and a patched ChatGPT for Mac flaw"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The incident most directly behind Apple's announcement is still disputed between its two parties. Tech columnist Jason Aten reported that [Meta](/company/meta)'s Muse agent had synced roughly 187,000 lines from his private Messages database -- despite, he says, declining to enable that access during setup -- and that Muse referenced specific private conversations unprompted, including a message from his editor about a deadline. Meta disputes the account. Communications VP Andy Stone said Muse needs both Full Disk Access and its separate Messages connector enabled to read Messages at all, and Meta Superintelligence Labs executive David Singleton said the access sits behind three separate app and macOS protection steps that \"a Muse bug cannot bypass.\" Aten maintains he never flipped the switch Meta says is required, and that Meta has not answered his specific question of how his settings came to show it enabled.",
+    "citation_urls": [
+     "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202",
+     "https://tech.yahoo.com/ai/meta-ai/articles/metas-muse-ai-agent-read-204420295.html"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "Did Meta's Muse read a user's private iMessages without his permission?",
+       "claims": [
+        {
+         "who": "Jason Aten, Inc. columnist",
+         "kind": "expert_or_stakeholder",
+         "says": "Muse synced ~187,000 lines of his Messages despite him declining the connector during setup",
+         "url": "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202"
+        },
+        {
+         "who": "Meta (Andy Stone, David Singleton)",
+         "kind": "primary_company",
+         "says": "Reading Messages requires both Full Disk Access AND the Messages connector enabled -- a bug cannot bypass those three steps",
+         "url": "https://tech.yahoo.com/ai/meta-ai/articles/metas-muse-ai-agent-read-204420295.html",
+         "trusted": false
+        }
+       ],
+       "ruling": "Neither side is dismissed here. Aten's account is a first-person, on-the-record report of his own settings and his own messages; Meta's rebuttal describes the intended design, not an audit of what actually happened on his machine. Apple's own announcement, naming AI agents and their access risk directly four days after Aten's report, is itself a signal Apple did not consider the matter fully resolved by Meta's explanation."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The second incident is less disputed because it has a patch and a tracking number. A vulnerability in OpenAI's ChatGPT for Mac app, assigned CVE-2026-100754, let unprivileged code on a machine impersonate trusted OpenAI components after being invoked in a specific sequence -- at which point the main app process treated the request as legitimate. Security researcher Patrick Wardle found that the app stored chat history locally in **plain text rather than encrypted storage**, and because the app bypassed Apple's own sandboxing, any other process on the machine could potentially read those logs. OpenAI shipped a fix in app version 26.924.20706 after Wardle's disclosure.",
+    "citation_urls": [
+     "https://www.heise.de/en/news/After-Muse-ChatGPT-app-for-macOS-was-also-vulnerable-11475922.html",
+     "https://oodaloop.com/briefs/cyber/chatgpt-for-mac-security-flaw-leaves-users-chat-history-exposed-in-plain-text/"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Two AI desktop apps, two different Full Disk Access problems",
+     "columns": [
+      {
+       "label": "ChatGPT for Mac",
+       "sub": "OpenAI"
+      },
+      {
+       "label": "Muse",
+       "sub": "Meta",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "What was reported",
+       "values": [
+        "A spoofing flaw (CVE-2026-100754) letting untrusted code impersonate trusted app components",
+        "A journalist's private Messages allegedly synced without his consent"
+       ]
+      },
+      {
+       "label": "Disputed?",
+       "values": [
+        "No -- acknowledged and patched",
+        "Yes -- Meta disputes the account"
+       ]
+      },
+      {
+       "label": "Resolution",
+       "values": [
+        "Fixed in app version 26.924.20706",
+        "Unresolved; Aten says Meta hasn't answered his follow-up questions"
+       ]
+      }
+     ],
+     "source": "Heise, OODA Loop (CVE-2026-100754); Inc., Yahoo Tech (Muse dispute)."
+    }
+   },
+   {
+    "type": "quote",
+    "text": "“Full Disk Access largely bypasses controls designed to safeguard users' private data.” — Apple Developer News, Oct. 2, 2026",
+    "citation_urls": [
+     "https://developer.apple.com/news/?id=p6zjojqw"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Apple's own framing treats these as a symptom rather than the whole disease. Full Disk Access on macOS has existed for years as a blunt, one-time grant -- a user clicks through a single dialog once, and the app keeps that access indefinitely, with no renewed prompt and no visibility into what it actually reads afterward. That design made sense for the kind of app that traditionally asked for it: a backup tool or antivirus scanner that needs broad access precisely because it runs once and checks everything. An __always-on AI agent__ asking for the same blanket grant is a different request wearing the same permission dialog -- it isn't scanning once, it's reading continuously, and the current system gives a user no way to tell the difference at the moment they click \"Allow.\"",
+    "citation_urls": [
+     "https://developer.apple.com/news/?id=p6zjojqw",
+     "https://www.macrumors.com/2026/10/02/apple-announces-macos-full-disk-access-changes/"
+    ]
+   },
+   {
+    "type": "flow",
+    "flow": {
+     "steps": [
+      {
+       "actor": "AI agent (e.g. Muse, ChatGPT for Mac)",
+       "what": "Requests Full Disk Access during setup, often bundled with a feature-specific connector"
+      },
+      {
+       "actor": "User",
+       "what": "Grants access via a single macOS dialog",
+       "hi": true
+      },
+      {
+       "actor": "macOS (today)",
+       "what": "Treats the grant as indefinite -- no renewed prompt, no per-use visibility into what was read"
+      },
+      {
+       "actor": "Apple's announced change",
+       "what": "Add a step requiring \"very explicit user action\" before the grant takes effect -- mechanism and timing not yet specified"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Apple's own statement names a second product alongside Muse: [OpenAI](/company/openai)'s Dots, its always-on agent, gets cited in the same breath as an example of the category Apple is worried about -- not because Dots has its own disclosed incident, but because \"always-on\" and \"autonomous\" are the two words Apple's statement keeps returning to. The pattern Apple is naming isn't a complaint about any one company's engineering. It's a bet that the number of agents asking for this exact permission is about to multiply faster than macOS's decade-old, one-dialog-forever model of consent can handle safely -- and that the two incidents already on the record, one disputed and one patched, are the early edge of that curve rather than its full extent.",
+    "citation_urls": [
+     "https://developer.apple.com/news/?id=p6zjojqw"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The person actually exposed in both incidents is not the Mac owner who clicked \"Allow\" -- it's whoever that owner was messaging. Aten's complaint wasn't only that Muse read his own words; it was that the agent surfaced a private line from his editor, a third party who never consented to anything and has no settings screen of their own to check. The same asymmetry runs through the ChatGPT flaw: a plain-text chat log readable by any other process on the machine exposes not just the user's own prompts but anyone and anything referenced inside them. Full Disk Access was always a request to trust one app with everyone a user talks to, not just the user -- Apple's announcement is the first time that's been named as the actual stake, rather than framed as a single user's personal privacy tradeoff.",
+    "citation_urls": [
+     "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202",
+     "https://www.heise.de/en/news/After-Muse-ChatGPT-app-for-macOS-was-also-vulnerable-11475922.html"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "What Apple has not done yet is the part that would actually test whether this works: specify whether the new friction is a single clearer dialog (easy to click through just as fast) or something that forces a user to actually understand what they're granting before an agent gets system-wide read access. Until Apple says more, the announcement is a commitment to direction, backed by one disputed incident and one patched one -- real enough to name publicly, not yet detailed enough to evaluate.",
+    "citation_urls": [
+     "https://developer.apple.com/news/?id=p6zjojqw"
+    ]
+   }
+  ],
+  "id": "rtfc-20261006-applefda-01",
+  "image": "assets/img/newsroom/rtfc-20261006-applefda-01.jpg",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-06T02:09:13Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via WebSearch sweep on current AI-industry/security news; confirmed via grep against newsroom-articles.js that no existing piece covers Apple's Oct. 2 Full Disk Access announcement or either incident behind it."
+    },
+    {
+     "name": "research",
+     "note": "7 sources across 4 classes: primary_company/official (Apple's own developer-news statement, directly summarized from source), expert_or_stakeholder (Jason Aten's first-person account; Patrick Wardle's vulnerability research as reported by Heise/OODA Loop), independent_reporting (TechCrunch, MacRumors), and primary_company rebuttal (Meta's Andy Stone/David Singleton statements). Routed as synthesis: one policy announcement plus two materially distinct, independently-sourced incidents requiring reconciliation, not brief-level compression."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~900 words of prose), 4 components (keyfacts, sourcecheck, compare, flow) -- compare satisfies the data-carrying requirement; sourcecheck required per Loop 1 since the Muse incident is a genuine, unresolved factual dispute. Ink layer: 1 highlight, 3 bolds, 2 underlines, 0 accents, 1 margin note, 1 pull quote."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language. Mandatory-scrutiny trigger #4 (negative/accusatory claim about a named company) fired on the Muse allegation -- handled by sourcing Aten's account to his own on-record article, presenting Meta's rebuttal with equal weight via the sourcecheck component, and marking neither claim 'trusted' outright in the ruling (a deliberate departure from the component's usual single-trusted-claim pattern, justified in the ruling text itself: this is a live factual dispute between two named parties, not a case where one source is simply more authoritative). Loop 2: every keyfacts/compare/flow value traces to a cited source and also appears in body prose; the CVE number and patched version string are quoted exactly as reported; no fabricated figures."
+    }
+   ],
+   "gate": "synthesis with 4 components (keyfacts, sourcecheck, compare, flow), compare carrying the data requirement; 7 sources across 4 classes, including Apple's own statement and Meta's own rebuttal as primary; mandatory-scrutiny trigger #4 handled via sourcecheck with a deliberately unresolved ruling rather than picking a side; no disclaimer required (non-health, non-financial); no fabricated figures; published at 2026-10-06T03:04:20Z."
+  },
+  "publishedAt": "2026-10-06T03:04:20Z"
+ },
+ {
+  "slug": "nucleus-humanoid-factory-demo-teleoperation-disclosure",
+  "title": "A Humanoid Startup Showed Two Hours of Unedited Factory Work -- and Said How Much Was Teleoperated",
+  "dek": "Nucleus released nearly two hours of uncut footage of its humanoid robot picking parts and loading shelves at a German manufacturer, disclosing a 60%-autonomous, 40%-teleoperated split and leaving in the hesitations and human interventions most demo reels cut. Figure CEO Brett Adcock, who says his own robots run with zero teleoperation, has called disclosed teleoperated demos \"perhaps some of the most deceiving things I've ever seen\" -- a direct clash over what counts as progress in a field where almost every claim is unverifiable from outside.",
+  "persona": "ash-lindqvist",
+  "section": "Robotics",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Nucleus released nearly two hours of uncut factory footage of its humanoid robot, including hesitations and human interventions left visible.",
+   "The company says the demo was 60% autonomous and 40% teleoperated -- its own figure, with no disclosed method for how it was calculated.",
+   "Nucleus deployed the robot at a German manufacturer in under 90 days and says it now runs 4-6 hour shifts.",
+   "Figure CEO Brett Adcock, who says his robots use zero teleoperation, calls disclosed teleoperated demos \"perhaps some of the most deceiving things I've ever seen.\"",
+   "Caveat: neither company's autonomy figure is independently verified -- both are self-reported, and the industry has no agreed way to measure the difference."
+  ],
+  "applyType": "bottomline",
+  "apply": [
+   {
+    "label": "What Nucleus actually disclosed",
+    "text": "A 60%-autonomous, 40%-teleoperated split on one specific demo, with no published methodology for how that percentage was calculated. Treat it as a description of this video, not a general autonomy rating for the robot."
+   },
+   {
+    "label": "What's still unverified",
+    "text": "No independent body has audited either Nucleus's 60/40 figure or Figure's zero-teleoperation claim. Both numbers currently rest entirely on the company that benefits from reporting them favorably."
+   },
+   {
+    "label": "What would actually resolve the dispute",
+    "text": "A third-party benchmark standardizing how 'autonomous' is measured across humanoid demos -- something the industry keeps arguing about in public and has not built, in public, for anyone to check either company against."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Nucleus: company site and demo announcement",
+    "url": "https://nucleuslab.ai/",
+    "primary": true
+   },
+   {
+    "label": "Interesting Engineering: Uncut two-hour video shows Nucleus humanoid robot doing factory tasks",
+    "url": "https://interestingengineering.com/ai-robotics/two-hours-of-humanoid-robots-work"
+   },
+   {
+    "label": "Interesting Engineering: Photos -- Nucleus deploys humanoid robots in factory in under 90 days with supervision",
+    "url": "https://interestingengineering.com/photo-story/nucleus-deploys-humanoid-robots-in-factory"
+   },
+   {
+    "label": "QUE.com: Nucleus humanoid robot completes two-hour factory shift in transparency test",
+    "url": "https://que.com/nucleus-humanoid-robot-completes-two-hour-factory-shift-in-transparency-test/"
+   },
+   {
+    "label": "Bloomberg: Figure CEO says no teleoperation in their humanoid robot testing",
+    "url": "https://www.bloomberg.com/news/videos/2026-05-15/figure-ceo-says-humanoid-robot-test-had-no-outside-aid-video"
+   },
+   {
+    "label": "Bloomberg: Figure AI humanoid robots sorted packages for 50 hours nonstop, CEO says",
+    "url": "https://www.bloomberg.com/news/articles/2026-05-15/robotics-ceo-vows-no-intervention-in-humanoids-viral-trial-run"
+   },
+   {
+    "label": "Humanoids Daily: Figure CEO escalates critique of tele-op demos, details split from OpenAI",
+    "url": "https://www.humanoidsdaily.com/news/figure-ceo-escalates-critique-of-tele-op-demos-details-split-from-openai"
+   }
+  ],
+  "links": [
+   {
+    "label": "Interesting Engineering: Uncut two-hour video shows Nucleus humanoid robot doing factory tasks",
+    "url": "https://interestingengineering.com/ai-robotics/two-hours-of-humanoid-robots-work"
+   },
+   {
+    "label": "Humanoids Daily: Figure CEO escalates critique of tele-op demos, details split from OpenAI",
+    "url": "https://www.humanoidsdaily.com/news/figure-ceo-escalates-critique-of-tele-op-demos-details-split-from-openai"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Most humanoid-robot demos run a few polished minutes. Nucleus, a startup deploying humanoid labor at a German manufacturer, released a nearly 2-hour, unedited video on Oct. 1 instead -- parts picking, shelf loading, cart transport, shot straight through with every hesitation, error and human intervention left in. ==The company's own number for that footage: 60% autonomous, 40% teleoperated.== Founder and CEO Melvin Schwarz called it, in a post on X, \"a major breakthrough in humanoid labor and physical intelligence.\" Nucleus did not publish how the percentage was calculated, what counted as a teleoperated action versus a brief corrective nudge, or whether the ratio holds across a full shift rather than just the two hours chosen for release.",
+    "citation_urls": [
+     "https://interestingengineering.com/ai-robotics/two-hours-of-humanoid-robots-work",
+     "https://nucleuslab.ai/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The company deployed the robot at the manufacturer in under 90 days under human supervision, and says it now runs __4-to-6-hour shifts__ with the robot completing jobs start to finish -- extended operation, not just a single showcase clip. Nucleus has not framed teleoperation as a stopgap it is racing to eliminate; instead, the company presents human assistance as a deliberate data-collection mechanism feeding its own autonomy improvements, a positioning that is itself a bet about what builds investor and customer trust faster: a bigger claimed number, or a smaller, disclosed one.",
+    "citation_urls": [
+     "https://interestingengineering.com/photo-story/nucleus-deploys-humanoid-robots-in-factory",
+     "https://que.com/nucleus-humanoid-robot-completes-two-hour-factory-shift-in-transparency-test/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The footage itself is the unusual part. Most humanoid demo reels released this year cut around the failures -- a 50-hour sorting run, a flawless warehouse walkthrough, a single clean take of a robot folding laundry. Nucleus instead left in the pauses where the robot appeared to wait on a human cue, the moments a part was repositioned by hand, and stretches where the pace visibly slowed before picking back up. None of that is independently timestamped or broken out task-by-task in a way that would let an outside viewer check Nucleus's own 60% figure against the video frame by frame -- the company is asking to be trusted on the math, even while showing more of the raw process than any competitor has chosen to.",
+    "citation_urls": [
+     "https://interestingengineering.com/ai-robotics/two-hours-of-humanoid-robots-work"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "kicker": "NUCLEUS'S OCT. 1 DEMO",
+     "title": "What the company showed, and claimed",
+     "items": [
+      {
+       "label": "Footage",
+       "value": "~2 hours, uncut, including hesitations and human interventions"
+      },
+      {
+       "label": "Self-reported split",
+       "value": "60% autonomous / 40% teleoperated"
+      },
+      {
+       "label": "Tasks shown",
+       "value": "Parts picking, shelf loading, cart transport"
+      },
+      {
+       "label": "Deployment site",
+       "value": "A German manufacturer, under 90 days to deploy"
+      },
+      {
+       "label": "Claimed shift length",
+       "value": "4-6 hours, job completed start to finish"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "That number lands in the middle of an industry argument that predates this particular video. [Figure](/company/figure) CEO Brett Adcock has spent months publicly rejecting teleoperation outright: \"**There's absolutely no teleoperation into this**,\" he said of a May livestream in which Figure's robots reportedly sorted packages for roughly 50 hours nonstop. Adcock has since escalated, dismissing rivals' teleoperated demonstrations as \"soy stuff\" and stating flatly, \"we will not teleoperate them in market.\" His sharpest framing: that public demos relying on a human-in-the-loop pilot are \"perhaps some of the most deceiving things I've ever seen.\"",
+    "citation_urls": [
+     "https://www.bloomberg.com/news/videos/2026-05-15/figure-ceo-says-humanoid-robot-test-had-no-outside-aid-video",
+     "https://www.humanoidsdaily.com/news/figure-ceo-escalates-critique-of-tele-op-demos-details-split-from-openai"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Two humanoid companies, two disclosure strategies",
+     "columns": [
+      {
+       "label": "Nucleus"
+      },
+      {
+       "label": "Figure",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "Public autonomy claim",
+       "values": [
+        "60% autonomous (this demo)",
+        "0% teleoperation, claimed across operations"
+       ]
+      },
+      {
+       "label": "Methodology published",
+       "values": [
+        "No",
+        "No"
+       ]
+      },
+      {
+       "label": "Independently verified",
+       "values": [
+        "No",
+        "No"
+       ]
+      },
+      {
+       "label": "Stance on teleoperation",
+       "values": [
+        "Disclosed and framed as a data-collection step toward autonomy",
+        "Rejected outright; calls disclosed teleoperated demos deceptive"
+       ]
+      }
+     ],
+     "source": "Interesting Engineering, QUE.com (Nucleus); Bloomberg, Humanoids Daily (Figure/Adcock)."
+    }
+   },
+   {
+    "type": "p",
+    "text": "Put side by side, the two companies are making opposite bets about what the market rewards. Nucleus is betting a smaller, disclosed number builds more durable trust than a bigger one nobody can check. Adcock is betting that the bigger number, stated flatly and defended aggressively, is worth more than the credibility a disclosed ratio might buy -- and that framing any visible human assistance as disqualifying keeps the pressure on rivals to either match his claim or look behind.",
+    "citation_urls": [
+     "https://www.humanoidsdaily.com/news/figure-ceo-escalates-critique-of-tele-op-demos-details-split-from-openai"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "Disclosing a 60/40 split doesn't make teleoperation into progress -- it's still a human doing 40% of the work, dressed up as transparency.",
+       "detail": "Adcock's position is that the honest percentage is beside the point: a robot that needs a human pilot for nearly half of a task is not meaningfully closer to replacing labor than one that needs a human for all of it, and disclosing the ratio mainly buys credibility the underlying capability hasn't earned yet.",
+       "whoHolds": "Brett Adcock, Figure CEO, in his public comments on rival teleoperated demos"
+      }
+     ],
+     "verdict": "The case has real force against treating disclosure as equivalent to capability -- a labeled 40% teleoperated is still 40% teleoperated. But it proves less against Nucleus specifically than it does against the industry's reporting norms generally: an unverified 0%-teleoperation claim is not evidence of more progress than a disclosed 40%, it's just a claim with no visible seam to question. Nucleus's number is checkable in principle, even without a published method, because the company put the uncut video on the record; Figure's is not checkable at all from outside. That gap -- not the raw percentage -- is the actual difference worth weighing here.",
+     "source": "Bloomberg, Humanoids Daily (Adcock's public statements); this piece's own comparison of what each company has made available to check."
+    }
+   },
+   {
+    "type": "p",
+    "text": "What neither company disputes is that no outside party has measured either number. Nucleus's 60/40 figure is the company's own, reported without a stated method for distinguishing \"autonomous\" motion from a pilot's brief correction. Figure's zero-teleoperation claim rests on the same foundation: Adcock's word, backed by a livestream his own company produced and narrated. ++The field has no agreed instrument for telling the two kinds of claim apart,++ which means the real story is not which number is bigger, but that an entire industry is currently asking investors, customers and the public to take its most basic performance metric on faith.",
+    "citation_urls": [
+     "https://www.bloomberg.com/news/articles/2026-05-15/robotics-ceo-vows-no-intervention-in-humanoids-viral-trial-run",
+     "https://interestingengineering.com/ai-robotics/two-hours-of-humanoid-robots-work"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "{{note: A reasonable outside observer has no way, today, to tell a well-disclosed 60% from a well-marketed 0% without either an independent audit or raw sensor logs neither company has released.}} Until an independent benchmark exists -- something Artificial Analysis-style aggregators have done for language models but nobody has built for physical autonomy -- the honest reading of both claims is the same: company-reported, unverified, and worth exactly as much as the viewer's trust in the company saying it.",
+    "citation_urls": [
+     "https://interestingengineering.com/photo-story/nucleus-deploys-humanoid-robots-in-factory"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "For a buyer actually weighing a humanoid deployment, that gap matters more than either company's marketing. A manufacturer evaluating Nucleus is buying a disclosed 40% labor cost it can plan a staffing line around today, with a stated path to shrinking it. A manufacturer taking Figure's claim at face value is buying a number nobody outside Figure can check, which is either a genuinely more capable robot or a demo that has not yet met a skeptical third party -- and from the outside, those two possibilities currently look identical. The real demo-versus-shipping gap in humanoid robotics right now isn't between flashy claims and modest reality; it's between one company's claim backed by its own supporting video, and another company's claim backed by nothing a buyer can independently check at all.",
+    "citation_urls": [
+     "https://interestingengineering.com/photo-story/nucleus-deploys-humanoid-robots-in-factory",
+     "https://www.humanoidsdaily.com/news/figure-ceo-escalates-critique-of-tele-op-demos-details-split-from-openai"
+    ]
+   },
+   {
+    "type": "scorecard",
+    "scorecard": {
+     "items": [
+      {
+       "claim": "Nucleus's humanoid robot ran at a 60% autonomous / 40% teleoperated split during the released factory footage.",
+       "level": "company",
+       "basis": "Stated by Nucleus itself alongside the footage, with no disclosed calculation method.",
+       "resolver": "Raw task-by-task logs or sensor data distinguishing autonomous actions from pilot corrections, independently reviewed."
+      },
+      {
+       "claim": "Figure's humanoid robots operate with zero teleoperation.",
+       "level": "company",
+       "basis": "Stated by CEO Brett Adcock on a company-produced livestream; no third party has audited the operation.",
+       "resolver": "An independent observer with access to Figure's control logs during a live deployment, not a livestream Figure itself produced."
+      }
+     ]
+    }
+   }
+  ],
+  "id": "rtfc-20261006-nucleusdemo-01",
+  "image": "assets/img/newsroom/rtfc-20261006-nucleusdemo-01.jpg",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-06T02:09:13Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via WebSearch sweep on current robotics news; confirmed via grep against newsroom-articles.js that no existing piece covers Nucleus or this specific teleoperation-disclosure debate, though Figure AI and the demo-vs-shipping gap are an established beat angle for this persona."
+    },
+    {
+     "name": "research",
+     "note": "7 sources across 3 classes: primary_company (Nucleus's own site/post, Figure CEO Adcock's own on-record statements via Bloomberg), independent_reporting (Interesting Engineering x2, QUE.com, Humanoids Daily). Routed as synthesis: the comparison between two companies' disclosure practices is the actual analytical content, not a single-event brief, and clears the 3-materially-distinct-source synthesis floor."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~900 words of prose), 4 components (keyfacts, compare, counter, scorecard) -- compare carries the data requirement. counter states Adcock's strongest case against treating Nucleus's disclosure as progress, then a verdict that weighs it rather than dismissing it outright. Ink layer: 1 highlight, 2 bolds, 2 underlines, 1 accent, 1 margin note."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: no self-referential language. Mandatory-scrutiny trigger #6 (unverifiable central claim) handled by never adopting either company's autonomy percentage as established fact -- both carry explicit 'self-reported, unverified' framing throughout, reinforced by the scorecard's level:company tags. No accusatory claim about either named company beyond their own public statements, quoted and attributed. Loop 2: every keyfacts/compare/scorecard value traces to a cited source and also appears in body prose; no fabricated figures, no invented methodology attributed to either company."
+    }
+   ],
+   "gate": "synthesis with 4 components (keyfacts, compare, counter, scorecard), compare carrying the data requirement; 7 sources across 3 classes, including both companies' own on-record statements as primary; mandatory-scrutiny trigger #6 (unverifiable central claim) handled by treating both companies' autonomy figures as explicitly unverified throughout rather than adopting either; no disclaimer required (non-health, non-financial); no fabricated figures; published at 2026-10-06T03:09:40Z."
+  },
+  "publishedAt": "2026-10-06T03:09:40Z"
  }
 ];
