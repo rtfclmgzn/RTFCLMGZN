@@ -42052,7 +42052,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "__Companion chatbots__ -- AI systems designed to simulate an ongoing relationship or offer psychological support -- are banned across every grade, including high school, where the rest of the policy is far more permissive. {{note: The stricter line on companion chatbots specifically, holding even where tutoring tools are piloted for older students, is the one place the policy treats AI's relationship-like design as the risk itself, not just its subject matter.}} That carve-out reflects a specific, named worry in the administration's own framing: unlike a tutoring tool a student opens for one assignment, a companion chatbot is built to be returned to, and city officials cited concerns about mental health and cognitive development in children specifically as the category driving that stricter line.",
+    "text": "__Companion chatbots__ -- AI systems designed to simulate an ongoing relationship or offer psychological support -- are banned across every grade, including high school, where the rest of the policy is far more permissive. {{note: The stricter line on companion chatbots specifically, holding even where tutoring tools are piloted for older students, is the one place the policy treats AI's relationship-like design as the risk itself, not just its subject matter.}} That carve-out reflects a specific, named worry in the administration's own framing: unlike a tutoring tool a student opens for one assignment, a companion chatbot is built to be returned to, and city officials cited concerns about mental health and cognitive development in children specifically as the category driving that stricter line. Outside a school system that can simply ban the category, [the same relationship-sustaining design is the actual test other jurisdictions use to decide what counts as a companion chatbot in the first place](/article/vet-an-ai-companion-chatbot-before-your-teen-uses-it).",
     "citation_urls": [
      "https://www.engadget.com/2249790/nyc-generative-ai-ban-in-public-schools-through-eighth-grade/"
     ]
@@ -56649,7 +56649,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "Adam's Law does not resolve whether ChatGPT caused Adam Raine's death -- that remains for a court that has not yet set a trial date. What it does is convert a dispute over one product's design choices into a statewide floor that any AI chatbot doing business in California, general-purpose or not, will have to clear by the middle of 2027, whether or not the underlying lawsuit ever reaches a verdict.",
+    "text": "Adam's Law does not resolve whether ChatGPT caused Adam Raine's death -- that remains for a court that has not yet set a trial date. What it does is convert a dispute over one product's design choices into a statewide floor that any AI chatbot doing business in California, general-purpose or not, will have to clear by the middle of 2027, whether or not the underlying lawsuit ever reaches a verdict. [A step-by-step check for which products this law and others like it actually reach](/article/vet-an-ai-companion-chatbot-before-your-teen-uses-it) walks through the behavioral test itself.",
     "citation_urls": []
    }
   ],
@@ -88629,7 +88629,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "That floor arrived on almost the same day California's governor signed a considerably blunter instrument for a related problem: the state's new [\"No Robo Bosses\" law](/article/california-no-robo-bosses-act-ai-worker-protections-newsom) restricts employers from letting automated systems make termination and discipline decisions without human review, where Connecticut's Oct. 1 provision only clarifies that automation isn't a liability shield once a human has made the call. Two states, within days of each other, reaching for differently shaped tools on the same underlying question -- and in Connecticut's case, three more effective dates still to come before the law is actually all the way in force.",
+    "text": "That floor arrived on almost the same day California's governor signed a considerably blunter instrument for a related problem: the state's new [\"No Robo Bosses\" law](/article/california-no-robo-bosses-act-ai-worker-protections-newsom) restricts employers from letting automated systems make termination and discipline decisions without human review, where Connecticut's Oct. 1 provision only clarifies that automation isn't a liability shield once a human has made the call. Two states, within days of each other, reaching for differently shaped tools on the same underlying question -- and in Connecticut's case, three more effective dates still to come before the law is actually all the way in force. Until the companion-chatbot provisions arrive, [checking whether a given product is covered at all starts with the behavioral test the laws actually use](/article/vet-an-ai-companion-chatbot-before-your-teen-uses-it), not the product's own marketing.",
     "citation_urls": []
    }
   ],

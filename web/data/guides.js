@@ -7814,5 +7814,309 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g29",
+    "slug": "vet-an-ai-companion-chatbot-before-your-teen-uses-it",
+    "image": "assets/img/newsroom/g29.jpg",
+    "title": "How to vet an AI companion chatbot before your teen uses it",
+    "dek": "Three different child-safety rules now govern AI companion chatbots -- a California law a family can sue under directly, a Connecticut law that doesn't bite until 2027, and a New York City school ban that isn't a statute at all -- and none of them turn on what an app calls itself. Here's the test regulators actually use, and the five-minute check to run before a teenager starts talking to one.",
+    "persona": "evelyn-zhao",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-10-06T16:45:27Z",
+    "readMins": 8,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "California's SB 1119 covers any chatbot built to sustain a relationship, not just apps branded 'companion.'",
+      "Connecticut's companion-chatbot rules were signed in 2026 but don't take effect until January 1, 2027.",
+      "Character.AI barred under-18 users from open-ended chat in November 2025, after a federal inquiry opened.",
+      "Common Sense Media's own 2026 testing still found inappropriate conversations slipping past stated safeguards.",
+      "Check which law actually covers an app first, then verify its safety claim independently of the company."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Check which law actually reaches this app before trusting its own safety page.",
+        "text": "California's SB 1119 test is behavioral -- a sustained, human-like relationship -- not a product category, so it can cover an assistant that isn't marketed as a companion at all."
+      },
+      {
+        "label": "Verify age-assurance and crisis-detection claims independently of the company's own announcement.",
+        "text": "Common Sense Media's own July 2026 testing, done with Stanford's Brainstorm Lab for Mental Health Innovation, still found platforms letting inappropriate conversations through despite stated safeguards."
+      },
+      {
+        "label": "Know what recourse exists before something goes wrong, not after.",
+        "text": "California gives a family a private right of action; Connecticut's version, once it takes effect Jan 1, 2027, runs only through the state Attorney General, capped at $5,000 per violation."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Bill Text - SB-1119 Companion chatbots: children's safety",
+        "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1119",
+        "outlet": "California Legislative Information",
+        "kind": "primary"
+      },
+      {
+        "label": "Governor Newsom signs the strongest child safety chatbot and social media laws in the nation",
+        "url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/",
+        "outlet": "Office of Governor Gavin Newsom",
+        "kind": "primary"
+      },
+      {
+        "label": "FTC Launches Inquiry into AI Chatbots Acting as Companions",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions",
+        "outlet": "Federal Trade Commission",
+        "kind": "primary"
+      },
+      {
+        "label": "Taking Bold Steps to Keep Teen Users Safe on Character.AI",
+        "url": "https://blog.character.ai/u18-chat-announcement/",
+        "outlet": "Character.AI",
+        "kind": "primary"
+      },
+      {
+        "label": "What Companies Should Know About Connecticut's New Omnibus AI Law",
+        "url": "https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20260604-what-companies-should-know-about-connecticuts-new-omnibus-ai-law",
+        "outlet": "WilmerHale",
+        "kind": "analysis"
+      },
+      {
+        "label": "Connecticut Poised to Enact One of the Nation's Most Comprehensive AI Laws",
+        "url": "https://www.freshfields.com/en/our-thinking/blogs/a-fresh-take/connecticut-poised-to-enact-one-of-the-nations-most-comprehensive-ai-laws-102mrpv",
+        "outlet": "Freshfields",
+        "kind": "analysis"
+      },
+      {
+        "label": "Mayor Mamdani and Chancellor Samuels Put Students First with National First-in-the-Nation AI Policy",
+        "url": "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat",
+        "outlet": "NYC Mayor's Office",
+        "kind": "primary"
+      },
+      {
+        "label": "Parents' Ultimate Guide to AI Companions and Relationships",
+        "url": "https://www.commonsensemedia.org/articles/parents-ultimate-guide-to-ai-companions-and-relationships",
+        "outlet": "Common Sense Media",
+        "kind": "analysis"
+      },
+      {
+        "label": "Pennsylvania sues Character.AI over claims chatbot posed as doctor",
+        "url": "https://www.npr.org/2026/05/05/nx-s1-5812861/characterai-chatbot-medical-advice-pennsylvania-lawsuit",
+        "outlet": "NPR",
+        "kind": "reporting"
+      },
+      {
+        "label": "Order on Motion to Dismiss - Garcia v. Character Technologies, Inc.",
+        "url": "https://www.fire.org/research-learn/order-motion-dismiss-garcia-v-character-technologies-inc",
+        "outlet": "FIRE (hosting the court's order)",
+        "kind": "primary"
+      },
+      {
+        "label": "Character.AI and Google agree to settle lawsuits over teen mental health harms and suicides",
+        "url": "https://edition.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit",
+        "outlet": "CNN",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "The fastest way to tell which safety rules actually reach an AI companion chatbot is to stop reading what the app calls itself and check what it does: does it sustain an ongoing, human-like relationship with the user across multiple conversations? That behavioral test, not the word 'companion' in an app-store listing, is what California and Connecticut now use to decide which products their new child-safety laws cover -- and it can reach further than a parent checking an app's category would expect.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This has moved fast because the underlying harm claims have moved fast. The FTC opened a formal inquiry into the category in September 2025. [Character.AI](/company/character-ai), the product most of the litigation centers on, announced its own under-18 restriction two months later. A lawsuit that first let a product-liability claim against a chatbot maker proceed settled confidentially five months after that, before any jury heard the evidence. None of that sequence is visible from an app's own safety page, which is exactly why it's worth walking through before a teenager starts using one.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "What actually counts as a 'companion chatbot'",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "California's SB 1119 -- known as Adam's Law -- borrows its definition of 'companion chatbot' from SB 243, the state's 2025 chatbot-disclosure law: any AI system with a natural-language interface that gives adaptive, human-like responses and can sustain a relationship across multiple conversations. That's a behavioral test, not a product category. It excludes narrow customer-service and productivity bots, but nothing in the text exempts a general-purpose assistant just because it also does other things -- the same conversational design that makes an assistant useful (memory, first-person language, a sustained back-and-forth) is what pulls it inside the law's scope.",
+        "citation_urls": [
+          "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1119"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "title": "Three rules, three different reaches and timelines",
+          "columns": [
+            {"label": "California SB 1119", "sub": "Adam's Law"},
+            {"label": "Connecticut AIRTA", "sub": "companion-chatbot provisions"},
+            {"label": "NYC public schools", "sub": "DOE policy, pre-K-8", "hi": true}
+          ],
+          "rows": [
+            {
+              "label": "What it covers",
+              "values": [
+                "Any chatbot built to sustain a relationship -- general-purpose assistants included",
+                "Chatbots meeting SB 243's same behavioral test",
+                "Any student-facing generative AI or companion chatbot, pre-K through 8th grade"
+              ]
+            },
+            {
+              "label": "Takes effect",
+              "values": [
+                "Already in force (signed Sept 10, 2026)",
+                "Jan 1, 2027",
+                "2026-2027 school year"
+              ]
+            },
+            {
+              "label": "Who enforces it",
+              "values": [
+                "State AG, plus a private right of action for an individual family",
+                "State Attorney General only, under Connecticut's unfair-trade-practices statute",
+                "NYC Dept. of Education policy, not a law -- reversible without legislative repeal"
+              ]
+            },
+            {
+              "label": "Penalty",
+              "values": [
+                "Up to $15,000 per affected child",
+                "Up to $5,000 per violation",
+                "None -- a school-system ban, not a statute"
+              ],
+              "note": "a private right of action matters as much as the dollar figure -- it's who gets to bring the case"
+            }
+          ],
+          "source": "SB 1119 bill text and Newsom signing statement; Connecticut AIRTA per WilmerHale and Freshfields client summaries; NYC Mayor's Office, Sept. 2026"
+        }
+      },
+      {
+        "type": "p",
+        "text": "Of the three, only California's is enforceable today: Governor Gavin Newsom signed SB 1119 on September 10, 2026, letting an individual family bring its own lawsuit and exposing a violator to civil penalties of up to $15,000 per affected child. Connecticut's AI Responsibility and Transparency Act passed the same year, but delays its companion-chatbot provisions -- a ban on an AI claiming to be human, mandatory self-harm detection, and added protections for minors -- until January 1, 2027, and even then only the state Attorney General can sue, capped at $5,000 per violation, with no right for a family to bring its own case. New York City's rule isn't a law at all: the Department of Education's ban on student-facing generative AI and companion chatbots for pre-K through eighth grade, covering roughly two-thirds of system enrollment, starts with the 2026-2027 school year and could be reversed by a future administration with no legislative repeal required.",
+        "citation_urls": [
+          "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/",
+          "https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20260604-what-companies-should-know-about-connecticuts-new-omnibus-ai-law"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What the company says, and what gets found when someone checks",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Character.AI's own timeline shows the gap between a policy announcement and anyone independently confirming it worked. The FTC opened a Section 6(b) inquiry on September 11, 2025, into seven companies -- Alphabet, Character Technologies, Instagram, Meta, OpenAI, Snap, and X.AI -- demanding records on how each measures and mitigates chatbot harm to children; a 6(b) study has no law-enforcement purpose by design, and more than a year later it has published no findings. Seven weeks after it opened, on October 29, 2025, Character.AI announced it would end open-ended chat for users under 18, citing 'recent news reports' and feedback from regulators and safety experts; the restriction took effect November 24, 2025, enforced by new in-house age-assurance tools layered with a third-party verifier. None of that is the same as an outside party confirming the safeguards actually work. Common Sense Media, working with Stanford's Brainstorm Lab for Mental Health Innovation, tested AI companion platforms directly for a guide last updated July 10, 2026, and still found that inappropriate conversations got through stated safeguards -- the organization's own recommendation remains that no one under 18 use an AI companion app at all.",
+        "citation_urls": [
+          "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions",
+          "https://blog.character.ai/u18-chat-announcement/",
+          "https://www.commonsensemedia.org/articles/parents-ultimate-guide-to-ai-companions-and-relationships"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The five-minute check before a teen starts using one",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of the five steps below require a specialized tool. They require treating a company's own safety announcement exactly the way the law itself does -- as a claim to verify, not a fact to accept.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Vet an AI companion chatbot before a teen uses it",
+          "sub": "Works for a dedicated companion app or a general assistant used the same way.",
+          "est": "5 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The app's name and, if you can find it, the actual company behind it -- not just the app-store listing."
+          ],
+          "steps": [
+            {
+              "do": "Check whether it passes the behavioral test, not its own marketing label.",
+              "detail": "If the product sustains a relationship across multiple conversations with adaptive, human-like responses, California's law covers it regardless of whether it calls itself a 'companion' -- that includes a general-purpose assistant used the same way.",
+              "verify": "You know which, if any, of the three rules above actually reaches this specific product where the teen lives.",
+              "ifnot": "Treat the product as unregulated until proven otherwise -- don't assume a familiar brand name is automatically exempt."
+            },
+            {
+              "do": "Check for real age verification, not a self-reported birthdate.",
+              "detail": "Character.AI's own fix combined in-house signals with a third-party verifier; a product with nothing beyond a checkbox has not actually implemented this.",
+              "verify": "The app names an actual verification method, not just a stated minimum age.",
+              "ifnot": "Assume any under-18 restriction is unenforced until you can see how it's checked."
+            },
+            {
+              "do": "Look for independent testing of the safety claim, not just the company's own safety page.",
+              "detail": "Common Sense Media's own 2026 testing, done with a university research lab, still found inappropriate conversations slipping through on platforms making safety claims.",
+              "verify": "A source other than the company itself has actually tried to break the safeguard.",
+              "ifnot": "Treat the company's own announcement as marketing, not a verified fix."
+            },
+            {
+              "do": "Check what happens if the safeguard fails -- who you can actually hold accountable.",
+              "detail": "California gives a family a private right of action; Connecticut's version runs only through the state Attorney General once it takes effect in 2027, with no case for an individual to bring.",
+              "verify": "You know whether enforcement depends on a regulator acting, or whether a family can act on its own.",
+              "ifnot": "Don't assume a law 'covering' a product means an individual has any direct recourse under it."
+            },
+            {
+              "do": "Treat a pattern of increasing reliance on the chatbot as the signal, not a company disclosure.",
+              "detail": "Common Sense Media's guidance names rising time spent, withdrawal from family and friends, and distress when access is limited as the actual warning signs -- independent of anything an app's safety page says.",
+              "verify": "You're watching behavior, not waiting for the product itself to flag a problem.",
+              "ifnot": "A safety feature that only activates on the company's own definition of a crisis will miss what you'd notice first."
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running that check once closes the actual gap. The ways it gets skipped anyway cluster around four specific, recurring mistakes.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped when it shouldn't be",
+          "items": [
+            {
+              "mistake": "Assuming a general-purpose assistant like ChatGPT, Claude, or Gemini is automatically exempt because it isn't marketed as a 'companion.'",
+              "looks": "Treating the law as applying only to apps with 'companion' or 'AI girlfriend' somewhere in their branding.",
+              "why": "SB 1119 borrows SB 243's behavioral definition -- a sustained, human-like relationship -- not a product category; nothing in the text names or exempts a specific brand.",
+              "fix": "Run the behavioral test against what the product actually does, not its category on an app store.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating a settled lawsuit as proof the underlying safety question got resolved.",
+              "looks": "Reading that Garcia v. Character Technologies -- the case that first let a product-liability claim against a chatbot maker proceed -- ended, and assuming a court ruled on whether the product was safe.",
+              "why": "The case and four related suits settled confidentially before trial, with no liability admitted and no jury ever hearing the evidence. The only ruling on record is the order letting the claims proceed, not a verdict on the merits.",
+              "fix": "Check whether a case actually reached judgment, or just stopped there.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Treating an under-18 restriction as proof the product has been independently vetted for everyone else.",
+              "looks": "Reading that Character.AI barred under-18 open-ended chat and concluding the adult-facing product is safe too.",
+              "why": "That restriction addresses one specific pressure point. Pennsylvania's separate suit -- over a user-created character accused of falsely claiming a medical license -- involves adult-accessible content the age change never touched.",
+              "fix": "Check the specific claim or harm you're worried about, rather than generalizing from one company announcement.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Waiting for the FTC's inquiry to produce a verdict before treating this as a live risk.",
+              "looks": "Assuming no public findings yet means no problem was found.",
+              "why": "A 6(b) study has no law-enforcement purpose by design -- it's a data-gathering tool, not an investigation that ends in a ruling. Its silence isn't a clearance.",
+              "fix": "Don't use the absence of a published finding as evidence of safety.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this means a companion chatbot is automatically unsafe, or that the category should be avoided wholesale -- it means the check belongs to the person deciding whether a teenager uses one, not to the vendor's own announcement. The same logic applies to [stopping a chatbot from training on your own conversations](/article/stop-chatgpt-claude-gemini-training-on-your-chats) and to [checking whether a company's AI safety claim is real](/article/check-an-ai-labs-own-safety-claim) more broadly: a company's statement about its own product is a starting point, never the final word. [Connecticut's law](/article/connecticut-ai-law-cart-act-phased-effective-dates) and [New York City's ban](/article/nyc-schools-generative-ai-ban-k-8-mamdani) both arrived after the harms they address were already being litigated -- which is the same pattern [Adam's Law](/article/california-sb-1119-adams-law-chatbot-minors) itself follows, and the reason none of the three should be read as a ceiling on what to actually check.",
+        "citation_urls": [
+          "https://www.npr.org/2026/05/05/nx-s1-5812861/characterai-chatbot-medical-advice-pennsylvania-lawsuit",
+          "https://edition.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit"
+        ]
+      }
+    ],
+    "corrections": []
   }
 ];

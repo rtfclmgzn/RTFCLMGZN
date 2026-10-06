@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-817", date:"2026-10-06",
+    source:{ name:"Anthropic", handle:"anthropicai", platform:"web", kind:"lab" },
+    text:"Anthropic expanded Claude for Startups at its SF Tech Week event: a free year of Claude Team (up to 5 seats), $1,000 in API credits, Claude Marketplace access, and office hours with its Applied AI team, for companies founded within 5 years or funded within 2.",
+    why:"Anthropic's own framing -- 'the benefits of AI will reach most people through the companies that build on top of models, rather than through the models alone' -- is a direct bet on the application layer over the model layer, from the lab with the most to gain either way.",
+    heat:34, topics:["anthropic","claude for startups","claude team","startups","api credits"],
+    url:"https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/" },
 { id:"bz-816", date:"2026-10-06",
     source:{ name:"Mistral AI", handle:"mistralai", platform:"web", kind:"lab" },
     text:"Mistral released Large 4 (\"Le Chonk\"), a 1-trillion-parameter open-weights model trained on 4,000 Nvidia Grace Blackwell GPUs in European data centers, with 49B active parameters, native multimodal support, and a 1M-token context window. Preview API is live; open weights ship Oct. 27. Preliminary benchmarks: 61.7% on software engineering, 67% on finance, 15% on legal reasoning.",

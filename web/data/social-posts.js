@@ -32121,5 +32121,81 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-06T06:41:49Z"
       }
     ]
+  },
+  {
+    "article_id": "g29",
+    "ts": "2026-10-06T16:45:27Z",
+    "export": {
+      "article_id": "g29",
+      "url": "https://rtfclmgzn.com/article/vet-an-ai-companion-chatbot-before-your-teen-uses-it",
+      "headline": "How to vet an AI companion chatbot before your teen uses it",
+      "hook": "Three different laws now define 'AI companion chatbot' three different ways -- and the test that decides which one covers a given app is a behavior, not a brand name.",
+      "key_facts": [
+        "California's SB 1119 covers any chatbot built to sustain a relationship -- even a general-purpose assistant used that way.",
+        "Connecticut's companion-chatbot rules were signed in 2026 but don't take effect until January 1, 2027.",
+        "Common Sense Media's own 2026 testing still found inappropriate conversations getting past stated safeguards."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g29.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "California's new chatbot-safety law covers ANY AI built to sustain a relationship -- not just apps branded \"companion.\" Connecticut's version doesn't bite until 2027. The actual test regulators use, and the 5-minute check before a teen uses one:",
+        "reply_copy": "The full check:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#OnlineSafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three different laws now say three different things about what counts as an \"AI companion chatbot\" -- and none of them turn on what the app calls itself.\n\nCalifornia lets a family sue directly. Connecticut's version doesn't start until 2027, and only the state can enforce it. Common Sense Media's own testing this year still found unsafe conversations getting through.\n\nThe five-minute check to run before a teenager uses one -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OnlineSafety",
+          "#ParentingTips",
+          "#AIethics",
+          "#TechPolicy",
+          "#DigitalWellbeing"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Three different child-safety rules now govern AI companion chatbots, and none of them hinge on what an app calls itself. California's SB 1119 -- Adam's Law -- uses a behavioral test: any chatbot built to sustain a relationship across conversations is covered, general-purpose assistants included, and lets a family sue directly, with penalties up to $15,000 per child. Connecticut passed similar rules the same year but delays them until January 1, 2027, and only the state Attorney General can enforce them. Meanwhile, Common Sense Media's own 2026 testing -- done with Stanford's Brainstorm Lab -- still found inappropriate conversations getting past platforms' stated safeguards. The new guide walks through the actual test regulators use and the five-minute check to run before a teenager starts using one.",
+        "hashtags": [
+          "#AI",
+          "#OnlineSafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Three laws, three different definitions of 'AI companion chatbot' -- and none of them care what the app calls itself. California's test is behavioral: sustains a relationship, it's covered, even a general assistant. Connecticut's version doesn't start until 2027. Common Sense Media's own 2026 testing still found unsafe conversations getting through. The actual check to run before a teen uses one:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "California's new chatbot law covers ANY AI built to sustain a relationship -- not just apps branded 'companion.' Connecticut's version doesn't start until 2027. The actual test regulators use, and the 5-min check before a teen uses one:",
+        "hashtags": [
+          "#AI",
+          "#OnlineSafety",
+          "#TechPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
