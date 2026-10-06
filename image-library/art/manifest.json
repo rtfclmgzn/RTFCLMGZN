@@ -4033,7 +4033,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Post-Silicon-Wallpaper-40-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "a-2026-10-06-mistral-large-4",
+     "used_at": "2026-10-06"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-beyond-01",

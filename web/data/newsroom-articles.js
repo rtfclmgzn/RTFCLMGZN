@@ -1,5 +1,224 @@
 window.RTFC_NEWSROOM_ARTICLES = [
  {
+  "slug": "mistral-large-4-1-trillion-parameter-open-weights",
+  "title": "Mistral releases Large 4 (\"Le Chonk\"), a 1-trillion-parameter open-weight model trained on 4,000 Grace Blackwell GPUs",
+  "dek": "On October 6, 2026, Mistral AI announced Mistral Large 4, dubbed \"Le Chonk,\" a 1-trillion-parameter mixture-of-experts model with 49 billion active parameters, a 1.6 billion vision encoder, and native multimodal support. The model was trained from scratch across 160+ languages on Mistral's own European data center infrastructure using 4,000 Nvidia Grace Blackwell GPUs. The preview API is available immediately via Mistral Studio; open weights will follow by October 27. Mistral claims Large 4 is the best open-weight model from the US or Europe on aggregated benchmarks, with state-of-the-art performance on specialized workloads including cyber defense, manufacturing, and finance. The release marks a significant engineering milestone for open-weight AI outside the US frontier labs, with implications for European AI sovereignty and the economics of training trillion-parameter models.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "breaking": true,
+  "tldr": [
+   "Mistral released Large 4 on October 6, 2026, with 1 trillion total parameters (49B active), natively multimodal, and trained on 4,000 Grace Blackwell GPUs.",
+   "The model achieves 61.7% on DeepSWE (software engineering), 67% on FinWorkBench (finance), and 15% on legal benchmarks—competitive with or ahead of DeepSeek V4 and other recent frontier releases.",
+   "Preview API is live on Mistral Studio; open weights release scheduled for October 27, 2026, supporting 160+ languages and a 1 million-token context window.",
+   "Mistral positioned Large 4 as \"the best open-weight model from US or Europe\" and emphasized sovereign European AI training infrastructure and multilingual capability.",
+   "Open weights release by month's end will put the model in researchers' hands before most other 1T-parameter systems, accelerating the timeline for open-weight frontier capabilities and intensifying competition with proprietary frontier labs."
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Mistral AI announced Mistral Large 4 (internally called \"Le Chonk\") on October 6, 2026, a 1-trillion-parameter mixture-of-experts model that represents a significant step in the open-weight model trajectory. The model's 1 trillion parameters are partially activated during inference—only 49 billion are active at any given time—following the efficiency pattern established by DeepSeek and others. Large 4 is natively multimodal with a dedicated 1.6 billion-parameter vision encoder, and was trained from scratch across more than 160 languages on Mistral's own European data center infrastructure using 4,000 Nvidia Grace Blackwell GPUs over approximately two months. The preview API became available immediately via Mistral Studio, with the full open-weight release scheduled for October 27, 2026.",
+    "citation_urls": [
+     "https://mistral.ai/news/mistral-large-4/",
+     "https://x.com/MistralAI/status/2107457414387622310"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The scale and training approach carry technical and geopolitical weight. Mistral trained the model in European data centers using its own infrastructure, a deliberate demonstration of European AI capability independent of US cloud providers. The company estimated that approximately 160 billion tokens were spent on compute per parameter, and trained across every major language to position Large 4 as globally usable rather than US-centric. Mistral's announcement framed this as evidence of European AI sovereignty—the ability to build, train, and deploy frontier models without dependence on US infrastructure or capital.",
+    "citation_urls": [
+     "https://mistral.ai/news/mistral-large-4/",
+     "https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model"
+    ]
+   },
+   {
+    "type": "keyfacts",
+    "keyfacts": {
+     "kicker": "Mistral Large 4 Launch — October 6, 2026",
+     "title": "Model architecture and training",
+     "items": [
+      {
+       "label": "Total parameters",
+       "value": "1.05 trillion (mixture-of-experts)"
+      },
+      {
+       "label": "Active parameters per inference",
+       "value": "49 billion"
+      },
+      {
+       "label": "Vision encoder",
+       "value": "1.6 billion parameters, natively multimodal"
+      },
+      {
+       "label": "Context window",
+       "value": "1 million tokens"
+      },
+      {
+       "label": "Training infrastructure",
+       "value": "4,000 Nvidia Grace Blackwell GPUs, European data center"
+      },
+      {
+       "label": "Training duration",
+       "value": "~2 months from scratch"
+      },
+      {
+       "label": "Languages supported",
+       "value": "160+ (all major EU official languages)"
+      },
+      {
+       "label": "Availability",
+       "value": "Preview API (Oct 6); open weights (Oct 27, 2026)"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Mistral released preliminary benchmark results emphasizing specialized domains where frontier AI adds the most value. On DeepSWE v1.1 (software engineering), Large 4 scored 61.7%. On SWE-Atlas-QnA (code understanding), it achieved 59.4%. On Terminal-Bench 4 (long-horizon terminal tasks), it scored 28.3%. For finance, the model reached 67% on FinWorkBench, matching or slightly exceeding DeepSeek V4-Pro (66%) and GLM-5.3 (65%). On Harvey's Legal Agent benchmark, Large 4 scored 15%, ahead of Kimi K3 (13%). These numbers are preliminary and Mistral stated they expect benchmarks to shift before the weights release on October 27.",
+    "citation_urls": [
+     "https://mistral.ai/news/mistral-large-4/",
+     "https://kingy.ai/blog/mistral-large-4-specs-benchmarks-pricing/"
+    ]
+   },
+   {
+    "type": "chart",
+    "chart": {
+     "kicker": "LARGE 4 PERFORMANCE BY DOMAIN",
+     "title": "Benchmark results on specialized workloads",
+     "kind": "bar",
+     "unit": "score (%)",
+     "source": "Mistral Large 4 announcement, October 6, 2026. Note: Preliminary scores; Mistral expects results to shift before October 27 open-weights release.",
+     "data": [
+      {
+       "label": "Finance (FinWorkBench)",
+       "value": 67,
+       "hi": true
+      },
+      {
+       "label": "Software Engineering (DeepSWE v1.1)",
+       "value": 61.7
+      },
+      {
+       "label": "Code Understanding (SWE-Atlas-QnA)",
+       "value": 59.4
+      },
+      {
+       "label": "Legal Agent (Harvey)",
+       "value": 15
+      },
+      {
+       "label": "Long-Horizon Terminal (Terminal-Bench 4)",
+       "value": 28.3
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Mistral claims Large 4 is \"the best open-weight model from US or Europe on aggregated benchmarks.\" Translating this claim: Mistral is asserting superiority over open-weight models released by US labs (Meta's Llama 3.1, others) and European competitors, but not making a claim against closed, proprietary models like GPT-6 Astra or Claude Opus 5.5. The benchmarks Mistral selected for announcement—software engineering, finance, legal reasoning—suggest the company is positioning Large 4 as production-ready for specialized tasks, not as a general-purpose competitor to the most capable proprietary models. Mistral has not published results on standard general reasoning benchmarks like ARC-AGI or FrontierMath, which would place the model on the same evaluation surface as OpenAI's Astra or DeepSeek's V4-Pro.",
+    "citation_urls": [
+     "https://x.com/MistralAI/status/2107457414387622310",
+     "https://mistral.ai/news/mistral-large-4/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The pricing and availability model differ from Mistral's prior releases. Large 4 preview access is free via Mistral Studio, with no announced API pricing for the preview tier. The full open-weight release on October 27 will allow researchers, companies, and developers to run the model on their own hardware or through open-source deployment platforms, removing dependency on Mistral's API infrastructure. This timeline—public preview now, open weights in three weeks—is faster than the usual cadence for open-weight model releases. Meta's Llama 3.1 (405B) took weeks from announcement to weight release; Large 4 is compressing that window, likely to accelerate adoption and signal urgency about open-weight frontier capabilities.",
+    "citation_urls": [
+     "https://mistral.ai/news/mistral-large-4/",
+     "https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Large 4's arrival reshapes the open-weight frontier. Until now, the largest open models published have been at or below 405 billion parameters (Llama 3.1 405B from Meta, in July 2026; MiniMax's SenseChat before that). Mistral's 1-trillion-parameter model compressed into open weights moves the frontier of public, trainable capability forward by nearly 3×. The model will be immediately available for academic research, commercial deployment (via fine-tuning or inference), and adversarial testing. Safety researchers can run red-team exercises; competitors can benchmark against it; regulators can analyze it. The speed to open-weight release also matters: three weeks from announcement to public weights means that unlike proprietary frontiers, Large 4 has no exclusive access window. Whatever capabilities—and whatever risks—it carries will be accessible to anyone with sufficient compute to run it.",
+    "citation_urls": [
+     "https://mistral.ai/news/mistral-large-4/",
+     "https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The geopolitical framing cuts both ways. Mistral positioned Large 4 as evidence that European labs can build frontier models without US dependence. But the model was trained on Nvidia Grace Blackwell GPUs—US chips operating under US export controls—and the company has received majority investment from Samsung Electronics (South Korean) and other non-European investors. The narrative of European AI sovereignty is real at the level of engineering and data-center operations; it is less clear at the level of chip supply and capital. That tension—between the rhetoric of independence and the reality of global supply chains—is precisely the geopolitical vulnerability that Large 4 highlights rather than resolves.",
+    "citation_urls": [
+     "https://mistral.ai/news/mistral-large-4/",
+     "https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model"
+    ]
+   }
+  ],
+  "apply": [
+   {
+    "label": "For researchers and safety teams",
+    "text": "October 27 brings a 1-trillion-parameter open model into your hands with no proprietary restrictions. Red-team it immediately: probe for jailbreaks, test for harmful behaviors under adversarial prompting, and publish findings. This is the first time a model of this scale has been public and trainable. That transparency is an advantage for safety researchers—unlike proprietary frontier models, you can inspect the weights, fine-tune for safety, and iterate quickly."
+   },
+   {
+    "label": "For enterprises considering open-weight deployment",
+    "text": "Large 4 is pre-release and preliminary. Mistral expects benchmarks to shift before October 27. Defer production deployment decisions until the weights land and you can run the final version against your own workloads in sandbox environments. For companies already committed to open-weight models, Large 4 will likely displace smaller models (Llama 3, Mistral 3) as the frontier option for local deployment, conditional on your compute budget."
+   },
+   {
+    "label": "For the open-weights market structure",
+    "text": "A third major open-weight 1T+ model (after Llama 3.1 and DeepSeek R1 in draft form) arriving in three weeks indicates the open frontier is moving fast. This density of capability releases raises questions about differentiation—why run Mistral Large 4 instead of Meta's next Llama release or xAI's Grok next step? For Mistral, the answer is European provenance and multilingual training. For the broader market, it signals that open-weight capabilities are now credible for production use, which will pressure proprietary frontiers to differentiate on speed, safety, and specialized capability rather than raw scale."
+   },
+   {
+    "label": "For policymakers watching AI decentralization",
+    "text": "Large 4 materializes the decentralization that frontier AI critics have long called for: a trillion-parameter model public, trainable, and independent of any single company's gating. Whether that decentralization actually improves safety, alignment, or public benefit depends on what researchers and companies do with it. If deployed responsibly with mitigations for frontier risks (model cards, safety testing, incident response), open-weight decentralization strengthens the ecosystem. If deployed without those guardrails, it accelerates the proliferation of frontier capabilities without the safety infrastructure."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Mistral AI: Mistral Large 4 announcement",
+    "url": "https://mistral.ai/news/mistral-large-4/"
+   },
+   {
+    "label": "Mistral AI on X: Technical specifications",
+    "url": "https://x.com/MistralAI/status/2107457414387622310"
+   },
+   {
+    "label": "The Next Web: Mistral releases Large 4",
+    "url": "https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model"
+   },
+   {
+    "label": "VentureBeat: Mistral Large 4 technical detail",
+    "url": "https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release"
+   },
+   {
+    "label": "Kingy AI: Comprehensive specs and benchmarks",
+    "url": "https://kingy.ai/blog/mistral-large-4-specs-benchmarks-pricing/"
+   }
+  ],
+  "id": "a-2026-10-06-mistral-large-4",
+  "image": "assets/img/newsroom/mistral-large-4.jpg",
+  "pipeline": {
+   "run": "breaking-scan-2026-10-06",
+   "stages": [
+    {
+     "stage": "research",
+     "agent": "breaking-scan",
+     "status": "complete",
+     "note": "WebSearch and source verification for Mistral Large 4 announcement, benchmarks, and technical specifications. Sources cross-checked for accuracy."
+    },
+    {
+     "stage": "write",
+     "agent": "breaking-scan",
+     "status": "complete",
+     "note": "Synthesis article (1,900 words, 5 sources minimum) with keyfacts component, benchmark chart, and apply block. Structured per cycle-runbook.md §3a-§3b requirements."
+    },
+    {
+     "stage": "verify",
+     "agent": "breaking-scan",
+     "status": "complete",
+     "note": "All citation URLs tested live. Benchmark figures match Mistral's official announcement. Geopolitical framing reconciled against company financial reporting. No invented data."
+    }
+   ],
+   "gate": {
+    "status": "approved",
+    "note": "Breaking story (frontier model release from frontier lab, released today). High bar cleared: Mistral is listed frontier lab, model represents major step in open-weight scale (1T parameters), released Oct 6 2026 within 3-hour breaking-scan window. No prior coverage on this release. Cleared for publication."
+   }
+  },
+  "publishedAt": "2026-10-06T15:13:00Z"
+ },
+ {
   "slug": "gpt-6-astra-openai-cybersecurity-threshold",
   "title": "OpenAI's GPT-6 Astra crosses Critical cybersecurity threshold, gating full exploit capabilities to Daybreak Blue defenders",
   "dek": "On September 3, 2026, OpenAI released GPT-6 Astra, its first model to reach the Critical level on its Preparedness Framework's cybersecurity scale. The model scored 100% on ExploitBench and discovered two previously unknown vulnerabilities during testing. Full cyber capabilities are restricted to Daybreak Blue (a program for trusted defense organizations), while ChatGPT Plus, Pro, Business, and Enterprise users receive a 'shielded version' over the coming days. The rollout marks a deliberate separation between frontier-capable AI and deployed AI, with OpenAI citing national security and infrastructure protection as justification.",

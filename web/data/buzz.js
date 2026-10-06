@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-816", date:"2026-10-06",
+    source:{ name:"Mistral AI", handle:"mistralai", platform:"web", kind:"lab" },
+    text:"Mistral released Large 4 (\"Le Chonk\"), a 1-trillion-parameter open-weights model trained on 4,000 Nvidia Grace Blackwell GPUs in European data centers, with 49B active parameters, native multimodal support, and a 1M-token context window. Preview API is live; open weights ship Oct. 27. Preliminary benchmarks: 61.7% on software engineering, 67% on finance, 15% on legal reasoning.",
+    why:"A trillion-parameter model in open-weights within weeks is the frontier-capabilities shift that matters most to open-source AI: three weeks from announcement to public download is the acceleration threshold where proprietary labs can no longer maintain exclusive access. Mistral's European training infrastructure is a geopolitical factoid, but the scale and the speed matter more than the location.",
+    heat:78, topics:["mistral","large-4","trillion parameter","open-weights","frontier model","moe"],
+    url:"https://mistral.ai/news/mistral-large-4/" },
 { id:"bz-811", date:"2026-10-05",
     source:{ name:"Cohere", handle:"cohere", platform:"web", kind:"lab" },
     text:"Cohere launched North 2 on Oct. 5, adding cross-session memory so its enterprise agents retain context between sessions, plus a redesigned orchestration harness and org-wide token-spending caps, deployable across cloud, on-premises and air-gapped environments.",

@@ -183,6 +183,8 @@ window.RTFC_ENTITIES = {
     // --- Europe ---
     { re:/\bLe Chat\b/i, name:"Le Chat", maker:"Mistral AI", makerKey:"mistral",
       kind:"assistant product", access:"closed" },
+    { re:/\bMistral Large 4\b|\bLe Chonk\b/i, name:"Mistral Large 4", maker:"Mistral AI", makerKey:"mistral",
+      kind:"1T-parameter open-weights MoE frontier model", access:"open-weights-pending" },
     { re:/\bMistral Large\b/i, name:"Mistral Large", maker:"Mistral AI", makerKey:"mistral",
       kind:"frontier model", access:"partial" },
 
