@@ -1598,6 +1598,31 @@ this order, and mark it done here.
    half. Same two §3e/§3f next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-10-06T21:01:00Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (Reflection AI's Beam open-weight
+   model launch, reconciled against its own disclosed trailing position
+   behind GLM-5.3/Kimi K3/DeepSeek V4.1 Flash; OpenAI's EU-only ChatGPT/Codex
+   text watermarking rollout vs. Anthropic's global one; Google and
+   Constellation Energy's $4.3B/890MW nuclear uprade deal, reconciled against
+   Google's four prior nuclear agreements) plus the full §3c/§4b/§4c/§4d
+   passes were already the required work; guide cadence read 0 days, so §3d
+   needed no action. §3c backfill search re-ran (direct component-floor
+   check over the whole archive) and found zero articles below their
+   format's component floor -- still empty. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Separately: this cycle's
+   own `verify_covers.py pick` run returned a semantically wrong top
+   candidate (a surgical-suite image) for all three new articles regardless
+   of subject keywords tried, which the runbook's own "judge the fit
+   yourself" instruction caught before it shipped; generated fresh art for
+   two of the three rather than ship a mismatch, and used an unused,
+   unbranded library fallback (a generic silicon-wafer image) for the third.
+   Worth a note for whoever next tunes `pick`'s scoring: with most of the
+   library inside its 90-day cooldown, the candidate pool it actually has to
+   choose from on a given day can be very small, and defaulting to the first
+   keyword-scored hit without a true semantic-relevance signal picked an
+   unrelated image three times in a row this cycle. Same two §3e/§3f next
+   steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2032,6 +2057,14 @@ entry since 2026-08-30, still open.
 this cycle's own three articles (the NYC Council AI hearing under oath, Apple's
 macOS Full Disk Access tightening, and Nucleus's teleoperation-disclosure piece)
 plus the full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
+credentials exist on this runner. No item worked. Same two next steps as every
+entry since 2026-08-30, still open.
+
+**Status (2026-10-06T21:01:00Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (Reflection AI's Beam launch, OpenAI's EU text
+watermarking rollout, and Google/Constellation's nuclear uprade deal) plus the
+full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
 credentials exist on this runner. No item worked. Same two next steps as every
 entry since 2026-08-30, still open.

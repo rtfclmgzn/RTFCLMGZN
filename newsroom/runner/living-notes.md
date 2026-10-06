@@ -1328,3 +1328,24 @@
   `ALLOWED_PREFIXES`, so they ship in their own commit, separate from the
   gated `web/` content commit -- still true as of this cycle, still not a
   rule worth re-discovering again next time.
+
+- **2026-10-06T21:01:00Z** (newsroom cycle): `verify_covers.py pick` returned
+  the same semantically-wrong top candidate (`art-073-surgical-suite-dual-robot-arms`,
+  a surgical scene) for three unrelated articles (an open-weight model launch,
+  an EU text-watermarking policy piece, a nuclear-power infrastructure deal)
+  regardless of the `--subjects` keywords passed each time. Root cause, found
+  by sampling `image-library/art/manifest.json` directly: almost the entire
+  155-image library is inside its own 90-day no-reuse cooldown right now (most
+  images were last used within the past ~2 months), so on a given day the tool
+  may only have a handful of genuinely eligible images to rank, and its scoring
+  is keyword-overlap, not true semantic relevance -- it will confidently return
+  whatever's left even when nothing fits. This is exactly why the runbook says
+  to judge the top pick's `description` yourself rather than trust the score;
+  that step caught it here. Generated fresh art for two of the three articles
+  this cycle rather than ship a mismatch (a cost the picker is supposed to let
+  the newsroom avoid on a normal day), and used an unused, unbranded fallback
+  (a generic silicon-wafer image, not a strong thematic fit either) for the
+  third. Worth a future look at whether the library needs restocking faster
+  than cycles are drawing it down, or whether `pick` should report something
+  closer to `NO_CLEAN_CANDIDATE` when its own top score is low instead of
+  always returning its best-available guess with equal confidence.
