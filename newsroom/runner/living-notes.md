@@ -1312,3 +1312,19 @@
   on this runner, and `find . -iname "issue-001.json"` still returns nothing.
   No new `primer-issue.js`-only candidate found this cycle; did not force one.
   Same two next steps as every entry since 2026-08-30, still open.
+
+- **2026-10-06T16:45:27Z** (reference-desk cycle): closed the `verify_covers.py`
+  cover-gate gap this file has flagged since 2026-08-21 -- `DATA_FILES` never
+  included `web/data/guides.js`, so every guide's cover (existence, size,
+  manifest registration, 90-day reuse) was silently unchecked by `check` the
+  entire time the gate has existed. Added the one missing tuple
+  (`("web/data/guides.js", "RTFC_GUIDES")`); `checked` jumped from 415 to 444
+  with zero new failures, confirming no guide cover was actually broken --
+  the gap was in coverage, not a hidden defect. This is a runner script, not
+  one of the `newsroom/quality/*` guards Law 6 protects, so fixing it directly
+  is in scope. Also reused the same precedent several prior entries already
+  established for `living-notes.md` itself (2026-08-31, 2026-09-01): this file
+  and `reference-desk-log.md` both sit outside `verify_publish_surface.py`'s
+  `ALLOWED_PREFIXES`, so they ship in their own commit, separate from the
+  gated `web/` content commit -- still true as of this cycle, still not a
+  rule worth re-discovering again next time.
