@@ -1377,3 +1377,43 @@
   biology-funding story, a cybersecurity story) -- top candidate was the same
   surgical-suite image regardless of `--subjects` keywords. Generated fresh
   art for all three ($0.18 total) rather than ship a mismatch.
+
+- **2026-10-07T21:32:00Z** (newsroom cycle): `WebFetch` on a live aggregator
+  page (Techmeme's front page, fetched twice at different offsets) produced at
+  least one headline cluster this cycle could not independently corroborate
+  after a direct follow-up search: a claimed "GPT-6 ChatGPT Intelligent UI"
+  rollout with interactive charts/buttons/forms, attributed to an
+  `openai.com/index/gpt-6-for-everyone/` URL that returned HTTP 403 when
+  fetched directly. Independent search turned up GPT-6's actual (narrower,
+  limited-rollout) status and ChatGPT's existing interactive-charts feature,
+  but nothing matching the "Intelligent UI" framing or that URL. Dropped the
+  story rather than publish on an unconfirmable aggregator summary. Separately,
+  two more Techmeme-summarized items this cycle (a SpaceX $40B/Apollo Nvidia-
+  chip financing deal; Musk's Terafab project "ruling out" a TSMC role) also
+  failed independent verification on follow-up search -- the first found no
+  corroborating report at that figure, the second found TSMC's actual comments
+  were skeptical-but-not-a-refusal and Bloomberg's actual reporting was about
+  equipment-supplier outreach, not a ruled-out TSMC role. General lesson: a
+  single quick-fetch pass over an aggregator's homepage is a discovery tool for
+  finding *that* a story exists, not a citable source for its specifics --
+  always re-verify the aggregator's own framing and any URL it supplies with an
+  independent search or a second direct fetch before using either in a
+  published article or a Buzz card. This is why this cycle's Buzz additions
+  (2 cards) came in under the usual 3-6 range: two other Techmeme-sourced
+  candidates were dropped at this same verification step rather than published
+  on an unconfirmed basis.
+
+- **2026-10-07T21:32:00Z** (newsroom cycle, same run): found and corrected a
+  real, live pricing error on the Scoreboard, unrelated to anything this cycle
+  set out to check. Claude Sonnet 5.5's row had read `pin:3, pout:15` since the
+  2026-10-01 pulse scan, but Anthropic's own pricing page
+  (anthropic.com/claude-haiku-5-5, fetched directly while researching this
+  cycle's Haiku 5.5 piece) states Sonnet 5.5's rate is "unchanged" at $2/$10
+  per million tokens alongside this week's cache-read cut -- not $3/$15.
+  Corrected the row per the standing rule that a number no longer matching its
+  source gets corrected, not defended (full reasoning recorded in the
+  Scoreboard's own `basisNote`). Worth a dedicated look at where the original
+  $3/$15 figure came from on 2026-10-01, since nothing in this cycle's research
+  turned up a prior Anthropic announcement actually stating that price --
+  it may have been a transcription error from that scan, not a since-reversed
+  real price change.

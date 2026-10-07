@@ -1668,6 +1668,34 @@ this order, and mark it done here.
    both return nothing on this runner; `find . -iname "issue-001.json"` also
    still returns nothing.
 
+   PARTIAL, checked (2026-10-07T21:32:00Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (Anthropic's Claude Haiku 5.5 launch
+   and same-day Sonnet 5.5 cache-price cut; Google's SynthID Detector public
+   launch; Nous Research's $90M Series B for Hermes) plus the full §4b/§4c/§4d
+   passes were already the required work; guide cadence read 1 day (a guide
+   published 2026-10-06), so §3d needed no action. §3c backfill search re-ran
+   (`component_audit`) and found zero articles below their format's component
+   floor -- still empty. `verify_covers.py pick` again returned semantically
+   mismatched candidates (a silicon-wafer image, a surgical-suite image) for
+   all three of this cycle's stories regardless of subject keywords tried --
+   same library-exhaustion pattern every entry since 2026-09-28 has flagged;
+   generated fresh art for all three rather than ship a mismatch ($0.18
+   total). No new `primer-issue.js`-only candidate found this cycle; did not
+   force one. Separately: found and corrected a real pricing error on the
+   live Scoreboard while researching this cycle's Haiku 5.5 piece -- Claude
+   Sonnet 5.5's row had read pin:3/pout:15 since the 2026-10-01 scan, but
+   Anthropic's own pricing page (fetched directly this cycle) states the
+   "unchanged" rate alongside this week's cache-read cut is $2/$10, not
+   $3/$15. Corrected per the standing rule that a number no longer matching
+   its source gets corrected, not defended; full reasoning in the Scoreboard's
+   own `basisNote`. Same two §3e/§3f next steps as every entry since
+   2026-08-30, still open: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), and `which wrangler` / `env | grep -i cloudflare` both return
+   nothing on this runner; `find . -iname "issue-001.json"` also still
+   returns nothing.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2131,6 +2159,15 @@ Program merger) plus the full §3c/§4b/§4c/§4d passes were already the
 required work: `find . -iname "issue-001.json"` still returns nothing, and no
 `wrangler` binary or Cloudflare credentials exist on this runner. No item
 worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-07T21:32:00Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (Anthropic's Claude Haiku 5.5 launch and
+same-day Sonnet 5.5 cache-price cut; Google's SynthID Detector public launch;
+Nous Research's $90M Series B for Hermes) plus the full §3c/§4b/§4c/§4d passes
+were already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30,
+still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
