@@ -1643,6 +1643,31 @@ this order, and mark it done here.
    wrangler` / `env | grep -i cloudflare` both return nothing on this runner;
    `find . -iname "issue-001.json"` also still returns nothing.
 
+   PARTIAL, checked (2026-10-07T17:20:33Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (OpenAI's first teen-ChatGPT-use
+   report landing hours before Common Sense Media rated the same product an
+   "Unacceptable Risk"; the Biohub/DOE/NIH/Google DeepMind/Isomorphic
+   Labs/Meta $1.8B Virtual Biology Initiative expansion; Anthropic folding
+   Project Glasswing into a three-tier Cyber Verification Program) plus the
+   full §4b/§4c/§4d passes were already the required work; guide cadence read
+   1 day (a guide published 2026-10-06), so §3d needed no action. §3c
+   backfill search re-ran (`component_audit`) and found zero articles below
+   their format's component floor -- still empty. `verify_covers.py pick`
+   again returned semantically mismatched candidates (a surgical-suite image,
+   a silicon-wafer image) for all three of this cycle's stories regardless of
+   subject keywords tried -- same library-exhaustion pattern every entry
+   since 2026-09-28 has flagged; generated fresh art for all three rather
+   than ship a mismatch ($0.18 total), and regenerated the Biohub cover a
+   second time after the first attempt flagged as a 90-day perceptual
+   near-duplicate of an unrelated prior article's cover. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one. Same
+   two next steps as every entry since 2026-08-30, still open: `ALLOWED_PREFIXES`
+   in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` absent), and `which wrangler` / `env | grep -i cloudflare`
+   both return nothing on this runner; `find . -iname "issue-001.json"` also
+   still returns nothing.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2096,6 +2121,16 @@ AI, and Google's OSS VRP bug-bounty pause) plus the full §3c/§4b/§4c/§4d pas
 were already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner.
 No item worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-07T17:20:33Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (OpenAI's first teen-ChatGPT-use report
+vs. Common Sense Media's same-day "Unacceptable Risk" assessment; the
+Biohub/DOE/NIH/Google DeepMind/Isomorphic Labs/Meta $1.8B Virtual Biology
+Initiative expansion; Anthropic's Project Glasswing/Cyber Verification
+Program merger) plus the full §3c/§4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and no
+`wrangler` binary or Cloudflare credentials exist on this runner. No item
+worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

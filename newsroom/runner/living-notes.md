@@ -1349,3 +1349,31 @@
   than cycles are drawing it down, or whether `pick` should report something
   closer to `NO_CLEAN_CANDIDATE` when its own top score is low instead of
   always returning its best-available guess with equal confidence.
+
+- **2026-10-07T17:20:33Z** (newsroom cycle): `web/data/social-posts.js`'s own
+  header comment (line 2) contains a literal `posts[]` -- a naive merge script
+  doing `src.indexOf('[')` to find the start of the `window.RTFC_SOCIAL_POSTS =`
+  array finds that comment's `[` first and parses garbage. `newsroom-articles.js`
+  and `buzz.js` don't have this problem (no stray `[`/`]` in their header
+  comments), so a script that works against those files will silently break
+  against this one. Fix: anchor the search on the literal assignment text
+  (`indexOf('RTFC_SOCIAL_POSTS = [')`), not a bare bracket search.
+
+- **2026-10-07T17:20:33Z** (newsroom cycle, same run): `verify_covers.py check`'s
+  90-day perceptual-near-duplicate detector caught a real near-miss worth noting
+  for future generated art: an abstract-glow prompt for a biology/cell story
+  ("translucent membrane, glowing internal structures... deep blues and warm
+  gold") rendered close enough to an unrelated prior article's generated cover
+  to FAIL the check, even though the prompts shared no explicit wording. Fully
+  abstract/glow-style generation prompts appear to collapse toward a smaller
+  visual space than concrete-scene prompts do; switching to a concrete scene
+  (a lab researcher at a cryo-electron microscope) cleared the check on the
+  first try. Worth defaulting to concrete scenes over abstract glow art when
+  prompting `generate-image`, not just when `pick` is exhausted.
+
+- **2026-10-07T17:20:33Z** (newsroom cycle, same run): `verify_covers.py pick`
+  reproduced the same library-exhaustion mismatch this log has tracked since
+  2026-08-26 for all three of this cycle's stories (a teen-safety story, a
+  biology-funding story, a cybersecurity story) -- top candidate was the same
+  surgical-suite image regardless of `--subjects` keywords. Generated fresh
+  art for all three ($0.18 total) rather than ship a mismatch.
