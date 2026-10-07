@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-09-30",
+  updated: "2026-10-07",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -59,6 +59,8 @@ window.RTFC_ENTITIES = {
       kind:"smaller safety-focused model", access:"closed" },
     { re:/\bClaude Mythos Preview\b|\bMythos Preview\b/i, name:"Claude Mythos Preview", maker:"Anthropic", makerKey:"anthropic",
       kind:"invitation-only frontier research preview", access:"closed" },
+    { re:/\bClaude Haiku 5\.5\b/i, name:"Claude Haiku 5.5", maker:"Anthropic", makerKey:"anthropic",
+      kind:"small, low-cost model with an adjustable cost-vs-intelligence effort setting", access:"closed" },
 
     // --- OpenAI ---
     { re:/\bGPT-5\.6 Sol\b|\bSol max\b/i, name:"GPT-5.6 Sol", maker:"OpenAI", makerKey:"openai",

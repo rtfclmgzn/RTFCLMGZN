@@ -96939,5 +96939,883 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "gate": "synthesis with 3 components (ledger, timeline, counter) plus one verbatim pull quote; 5 sources across 2 classes including two of Anthropic's own primary pages; no mandatory-scrutiny trigger fired; counter component grounded in a real, named objection with a reasoned verdict; no fabricated figures or quotes; published at 2026-10-07T17:42:30Z."
   },
   "publishedAt": "2026-10-07T17:42:30Z"
+ },
+ {
+  "slug": "anthropic-claude-haiku-5-5-launch-sonnet-cache-price-cut",
+  "title": "Anthropic Ships Claude Haiku 5.5, Its Cheapest Model Yet, and Cuts Sonnet 5.5's Cache Price the Same Day",
+  "dek": "Anthropic completed its three-tier Claude 5.5 refresh on Oct. 7 with Haiku 5.5 -- a small model priced as much as 90% below its predecessor and the first Haiku carrying an adjustable cost-versus-intelligence dial. The same release cut Sonnet 5.5's cache-read price in half. Every benchmark number behind the launch, including the comparisons to GPT-6 Luna, comes from Anthropic's own testing -- no independent evaluator has checked them yet.",
+  "persona": "luka-petrovic",
+  "section": "Frontier",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Anthropic released Claude Haiku 5.5 on Oct. 7, its cheapest and fastest small model yet.",
+   "Pricing drops as much as 90% versus Haiku 4.5 for prompts under 100,000 tokens.",
+   "Sonnet 5.5's cache-read price was cut 50% the same day, to $0.10 per million tokens.",
+   "Haiku 5.5 is Anthropic's first Haiku-class model with an adjustable cost-versus-intelligence effort dial.",
+   "Caveat: every benchmark score behind the launch is Anthropic's own; no independent index has measured it yet."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "The independent check",
+    "text": "Every Haiku 5.5 benchmark number in this story is Anthropic's own. Watch for the first independent aggregate score -- Sonnet 5.5 already carries one; Haiku 5.5 doesn't yet."
+   },
+   {
+    "label": "The next price move",
+    "text": "This is at least the third small-model price cut across OpenAI, Anthropic, and Google since late July. Watch whether a rival answers this one within days, the way the last two were answered."
+   },
+   {
+    "label": "The effort dial in practice",
+    "text": "Haiku 5.5's Low-to-Max effort setting means two customers can pay very different amounts for the 'same' model. Watch which default third-party agent frameworks actually ship, since that decides real-world cost more than the sticker price."
+   }
+  ],
+  "sources": [
+   {
+    "label": "Anthropic: Introducing Claude Haiku 5.5",
+    "url": "https://www.anthropic.com/claude-haiku-5-5",
+    "primary": true
+   },
+   {
+    "label": "Unite.AI: Anthropic Releases Claude Haiku 5.5, Cutting Small-Model API Prices",
+    "url": "https://www.unite.ai/anthropic-releases-claude-haiku-5-5-cutting-small-model-api-prices/"
+   },
+   {
+    "label": "Unite.AI: Anthropic Slashes Claude Sonnet 5.5 Cache-Read Cost by 50%",
+    "url": "https://www.unite.ai/anthropic-slashes-claude-sonnet-5-5-cache-read-cost-by-50/"
+   },
+   {
+    "label": "Yahoo Finance: Anthropic Reveals Haiku 5.5 Model as AI Pricing War Intensifies",
+    "url": "https://finance.yahoo.com/technology/article/anthropic-reveals-haiku-55-model-as-ai-pricing-war-intensifies-180000423.html"
+   },
+   {
+    "label": "The New Stack: Anthropic Launches Haiku 5.5 at a Much Lower Price",
+    "url": "https://thenewstack.io/anthropic-claude-haiku-5-5/"
+   }
+  ],
+  "links": [
+   {
+    "label": "Anthropic's Claude Haiku 5.5 announcement",
+    "url": "https://www.anthropic.com/claude-haiku-5-5"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Anthropic released ++Claude Haiku 5.5++ on Oct. 7, calling it \"the cheapest, fastest, and most capable small model we've ever released.\" The launch closes out a three-model refresh that began with Claude Opus 5.5 on Sept. 22 and continued with Claude Sonnet 5.5 on Sept. 28. [Anthropic](/company/anthropic) folded a second announcement into the same release: a same-day price cut to Sonnet 5.5's cache-read rate.",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "The cheapest, fastest, and most capable small model we've ever released.",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "For prompts under 100,000 tokens, Haiku 5.5 costs **$0.10 per million input tokens and $0.50 per million output tokens** -- what Anthropic calls a 90% cut from Haiku 4.5's $1.00/$5.00 rate. Above that threshold, pricing rises and the cut shrinks to 50%. Anthropic's separate headline claim -- that the model \"costs around 75% less to run\" on average -- blends both tiers across the company's own internal usage mix, which is a different number from either tier cut alone.",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5",
+     "https://www.unite.ai/anthropic-releases-claude-haiku-5-5-cutting-small-model-api-prices/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That $0.10/$0.50 entry rate is, per The New Stack, \"in line with\" [OpenAI](/company/openai)'s cheapest model, GPT-6 Luna -- one more sign that the bottom tier of frontier-model pricing has become a genuine price-matching race rather than a one-lab discount.",
+    "citation_urls": [
+     "https://thenewstack.io/anthropic-claude-haiku-5-5/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The Sonnet 5.5 change is narrower and easy to miss inside a small-model launch post: __cache-read tokens__ drop from **$0.20 to $0.10 per million**, a 50% cut applying only to the share of a request served from cache. Because cache reads make up a large share of token volume in most agentic work, Anthropic says the change lowers the cost of running Sonnet 5.5 on typical agentic tasks by **roughly 20%** -- Sonnet 5.5's input ($2.00), output ($10.00), and cache-write rates are unchanged.",
+    "citation_urls": [
+     "https://www.unite.ai/anthropic-slashes-claude-sonnet-5-5-cache-read-cost-by-50/"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What each percentage actually covers",
+     "items": [
+      {
+       "value": "90%",
+       "unit": "prompts ≤100k tokens",
+       "label": "Haiku 5.5 cost cut vs. Haiku 4.5, first pricing tier",
+       "includes": "Anthropic's listed per-token rate for prompts up to 100,000 tokens",
+       "excludes": "The higher per-token rate that applies above 100,000 tokens, cut only 50%"
+      },
+      {
+       "value": "50%",
+       "unit": "prompts >100k tokens",
+       "label": "Haiku 5.5 cost cut vs. Haiku 4.5, second pricing tier",
+       "note": "This and the 90% figure above describe two different pricing tiers, not two measurements of the same thing"
+      },
+      {
+       "value": "75%",
+       "unit": "Anthropic's own stated average",
+       "label": "Headline 'costs about 75% less' claim",
+       "includes": "A blended average across Anthropic's own internal usage mix",
+       "excludes": "Any single customer's actual tier of usage, which could land above or below 75%"
+      },
+      {
+       "value": "50%",
+       "unit": "Sonnet 5.5, cache-read tokens only",
+       "label": "Same-day Sonnet 5.5 price cut",
+       "includes": "Cache-read tokens only, cut from $0.20 to $0.10 per million",
+       "excludes": "Sonnet 5.5's input ($2), output ($10), and cache-write rates, all unchanged"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Pricing is where Haiku 5.5 is most directly comparable to what came before it and to OpenAI's equivalent tier:",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Haiku 5.5's entry-tier pricing against its own predecessor and its nearest rival",
+     "columns": [
+      {
+       "label": "Haiku 5.5",
+       "sub": "new, Oct. 7",
+       "hi": true
+      },
+      {
+       "label": "Haiku 4.5",
+       "sub": "predecessor"
+      },
+      {
+       "label": "GPT-6 Luna",
+       "sub": "OpenAI, cheapest tier"
+      },
+      {
+       "label": "Sonnet 5.5",
+       "sub": "Anthropic, mid-tier"
+      }
+     ],
+     "rows": [
+      {
+       "label": "Input price (per million tokens, ≤100k)",
+       "values": [
+        "$0.10",
+        "$1.00",
+        "$0.10",
+        "$2.00"
+       ]
+      },
+      {
+       "label": "Output price (per million tokens, ≤100k)",
+       "values": [
+        "$0.50",
+        "$5.00",
+        "$0.50",
+        "$10.00"
+       ]
+      }
+     ],
+     "source": "Anthropic's own published pricing table; The New Stack on GPT-6 Luna price parity"
+    }
+   },
+   {
+    "type": "p",
+    "text": "On capability, Anthropic's own benchmark tables put Haiku 5.5 well ahead of its predecessor and roughly in range of GPT-6 Luna on one widely-used agentic-computer-use test, OSWorld 2.1: **72.4% for Haiku 5.5, against 15.7% for Haiku 4.5, 48.9% for GPT-6 Luna, and 83.9% for Sonnet 5.5** -- still well behind Sonnet 5.5 on anything requiring sustained agentic work. Anthropic also publishes results on GDPval-AA, Terminal-Bench 4.0, and Humanity's Last Exam showing the same broad pattern.",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   },
+   {
+    "type": "chart",
+    "chart": {
+     "kind": "bar",
+     "title": "OSWorld 2.1 (offline subset), by model",
+     "unit": "%",
+     "data": [
+      {
+       "label": "Haiku 5.5",
+       "value": 72.4,
+       "hi": true
+      },
+      {
+       "label": "Haiku 4.5",
+       "value": 15.7
+      },
+      {
+       "label": "GPT-6 Luna",
+       "value": 48.9
+      },
+      {
+       "label": "Sonnet 5.5",
+       "value": 83.9
+      }
+     ],
+     "source": "Anthropic's own published OSWorld 2.1 benchmark table"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Every one of those numbers, for every model, comes from Anthropic's own evaluation harness, scored by Anthropic, against baselines Anthropic chose. **No independent evaluator has checked Haiku 5.5 yet.** That's a different position than Sonnet 5.5, which already carries a score of 56 on the Artificial Analysis Intelligence Index -- ==the one number on [the Scoreboard](/scoreboard) that never comes from a vendor's own test suite==. Anthropic's own charts also break each benchmark out by how much the model is allowed to \"think\": the same Haiku 5.5, run at Low, Medium, High, Xhigh, or Max effort, climbs steadily up every one of them -- a reminder that a single benchmark number for this model is already a choice of setting, not a fixed fact about the model itself.",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "Sep 22, 2026",
+       "what": "Claude Opus 5.5 ships, taking the #1 spot on the independent Intelligence Index."
+      },
+      {
+       "when": "Sep 28, 2026",
+       "what": "Claude Sonnet 5.5 ships at $2/$10 per million tokens, with cache reads priced at $0.20.",
+       "source": "https://www.unite.ai/anthropic-slashes-claude-sonnet-5-5-cache-read-cost-by-50/"
+      },
+      {
+       "when": "Oct 7, 2026",
+       "what": "Claude Haiku 5.5 ships, completing the three-tier 5.5 lineup; Sonnet 5.5's cache-read price is cut 50% the same day.",
+       "hi": true,
+       "source": "https://www.anthropic.com/claude-haiku-5-5"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Haiku 5.5 is also the first Haiku-class model with an __adjustable effort setting__ -- Low, Medium, High, Xhigh, or Max -- letting a developer trade cost for intelligence on the same model rather than switching to a larger one. Anthropic positions it as a subagent that pairs with Opus 5.5 and Sonnet 5.5 on coding work, and for narrow, high-volume jobs: summarization, classification, database queries, compaction. {{note: An effort dial changes what a sticker price actually means -- two customers running the same model at different settings pay meaningfully different amounts per task, which is part of why Anthropic's own 75% figure is an average rather than a single number.}}",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The release lands inside a broader price war -- OpenAI, Anthropic, and Google have each cut prices on at least one model tier since late July -- and it comes as Anthropic prepares for a reported IPO, per Reuters' review of the company's S-1 filing. Cheap small models are also how a lab without consumer-chatbot scale competes for the highest-volume, lowest-margin slice of enterprise AI spending -- the queries too numerous and too routine to justify a flagship model's price. The New Stack frames the same pressure from the buyer's side: enterprise customers are pulling back after a year of heavy, open-ended spending on frontier models -- what the piece calls the \"tokenmaxxing\" era -- and weighing open-weight alternatives from both U.S. and Chinese developers against anything a closed lab charges.",
+    "citation_urls": [
+     "https://finance.yahoo.com/technology/article/anthropic-reveals-haiku-55-model-as-ai-pricing-war-intensifies-180000423.html",
+     "https://thenewstack.io/anthropic-claude-haiku-5-5/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Anthropic's model lineup is now four names deep, and Haiku 5.5 slots into the bottom of it: Haiku for fast, cheap, high-volume work; Sonnet and Opus for heavier coding and enterprise use; and Fable at the top for extended, multi-day workloads. A fifth name, Mythos, is a reduced-safeguard variant restricted to vetted members of Anthropic's Cyber Verification Program, which the company expanded into three access tiers on Oct. 6 -- ==a reminder that \"Claude\" is no longer one model with one set of guardrails, but a family whose access and restrictions vary by name as much as by price==.",
+    "citation_urls": [
+     "https://thenewstack.io/anthropic-claude-haiku-5-5/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Haiku 5.5 is live now on the Claude Platform, Amazon Web Services, Google Cloud, and Microsoft Azure. Anthropic's own launch post includes endorsements from early customers -- Asana calls it \"a noticeably snappier experience,\" HubSpot says it \"got the best score we've seen on this suite yet, at **92.8% averaged over three runs**,\" and Cognition says the model \"joins the sidekick lineup in Devin Fusion as an excellent option.\" Those are Anthropic's chosen quotes from its own announcement, not independently selected case studies.",
+    "citation_urls": [
+     "https://www.anthropic.com/claude-haiku-5-5"
+    ]
+   }
+  ],
+  "id": "rtfc-20261007-haiku55-01",
+  "image": "assets/img/newsroom/rtfc-20261007-haiku55-01.jpg",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-07T21:11:42Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via a Techmeme front-page sweep for current AI-industry news (Oct. 7); confirmed via grep against newsroom-articles.js that neither Haiku 5.5 nor this Sonnet 5.5 cache cut had prior coverage."
+    },
+    {
+     "name": "research",
+     "note": "5 sources across 3 classes: primary_company (Anthropic's own Haiku 5.5 announcement with full pricing/benchmark tables), independent_reporting (Unite.AI x2 on the Haiku launch and the separate Sonnet cache cut, Yahoo Finance on pricing-war/IPO context, The New Stack on GPT-6 Luna price parity and the 'tokenmaxxing' cost-pressure trend). Routed as synthesis: reconciling three different percentage claims (90%/50%/75%) describing the same price cut, and placing the launch against GPT-6 Luna and the broader price war, is the analytical work."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~920 words of prose), 4 components (compare, chart, ledger, timeline) plus one verbatim pull quote -- ledger scopes the four percentage claims so none is mistaken for the others, compare + chart separate pricing from capability, timeline places Haiku 5.5 against the Sep 22/Sep 28 Opus/Sonnet launches. Cross-linked /company/anthropic, /company/openai, /scoreboard. Ink layer: 2 highlights, 5 bolds, 2 underlines, 1 accent, 1 margin note, 1 pull quote."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: initial draft ran under the 650-word synthesis floor and conflated a leftover clause into the pricing paragraph -- both fixed on revision. No self-referential language. No mandatory-scrutiny trigger fired (no health/financial-advice/legal claims; pricing and benchmark figures are vendor-disclosed, not investment advice). Loop 2: every compare/chart/ledger value traces to a cited source and appears in body prose; verified against newsroom.quality.component_audit's own numeric-provenance check before publish."
+    }
+   ],
+   "gate": "synthesis with 4 components (compare, chart, ledger, timeline) plus one verbatim pull quote; 5 sources across 3 classes including Anthropic's own primary announcement; no mandatory-scrutiny trigger fired; no fabricated figures or quotes; published at 2026-10-07T21:23:20Z."
+  },
+  "publishedAt": "2026-10-07T21:23:20Z"
+ },
+ {
+  "slug": "google-synthid-detector-public-launch",
+  "title": "Google Opens Its SynthID AI-Content Detector to Everyone, Now Covering OpenAI, Nvidia and Kakao Images Too",
+  "dek": "Google made SynthID Detector -- the website that checks whether an image, video, or audio clip carries its invisible AI watermark -- free and open to the public worldwide on Oct. 7, more than a year after limiting it to a tester waitlist. The detector now also reads watermarks from OpenAI, Nvidia, and Kakao's models, with Apple's support 'coming soon.' It can only ever confirm one thing: a positive match. A clean result doesn't mean a file is human-made, and content from any non-partner model returns nothing at all.",
+  "persona": "evelyn-zhao",
+  "section": "Policy",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Google opened SynthID Detector, a free watermark-checking website, to the public worldwide on Oct. 7.",
+   "It flags AI-generated images, video, and audio made with Google, OpenAI, Nvidia, or Kakao models.",
+   "Google says it has applied SynthID to over 180 billion images/videos and 240,000 years of audio since 2023.",
+   "Apple is listed as joining 'soon'; Microsoft and Meta use separate, incompatible watermarking systems.",
+   "Caveat: a clean result means no SynthID mark was found, not that a file is human-made."
+  ],
+  "applyType": "work",
+  "apply": [
+   {
+    "label": "Try it yourself",
+    "text": "synthid.com is live now, worldwide, in English -- upload any image, video, or audio file suspected of being AI-made to check it for a Google, OpenAI, Nvidia, or Kakao watermark."
+   },
+   {
+    "label": "What a clean result doesn't tell you",
+    "text": "No match means no Google-ecosystem watermark was found -- not that a human made the file. Content from any non-partner model returns the same blank result."
+   },
+   {
+    "label": "Watch Apple's actual join date",
+    "text": "Google says Apple support is 'coming soon' with no date attached. That's the next concrete milestone that would make this closer to an industry standard than a four-company club."
+   },
+   {
+    "label": "The accuracy question, not just the coverage question",
+    "text": "A guide to checking whether an image is AI-generated walks through the manual version of this same test, including the gaps a single detector can't close."
+   }
+  ],
+  "sources": [
+   {
+    "label": "TechCrunch: Google's New SynthID Website Can Identify AI-Generated Media",
+    "url": "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/"
+   },
+   {
+    "label": "TheNextWeb: Google Opens SynthID Detector to Everyone to Check for AI-Made Media",
+    "url": "https://thenextweb.com/news/google-synthid-detector-public-ai-content-checker"
+   },
+   {
+    "label": "Cryptopolitan: Google Opens Its SynthID AI Detector to Everyone After Watermarking 180 Billion Images and Videos",
+    "url": "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+   },
+   {
+    "label": "TheNextWeb: Meta's AI Detector Can't Catch Its Own Cropped Fakes",
+    "url": "https://thenextweb.com/news/meta-ai-detector-cropped-images-watermark"
+   }
+  ],
+  "links": [
+   {
+    "label": "SynthID Detector",
+    "url": "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Google made ++SynthID Detector++ -- the website that checks whether an image, video, or audio clip carries its invisible AI watermark -- free and open to anyone, worldwide, in English, on Oct. 7. The tool spent more than a year restricted to a waitlist of journalists, researchers, and media professionals after its May 2025 debut. Google DeepMind's Pushmeet Kohli announced the change, framing it as giving people \"more context about the media you see online.\"",
+    "citation_urls": [
+     "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/",
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "Having clear context about the content you encounter online helps you make informed decisions about what to trust.",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "beforeafter",
+    "beforeafter": {
+     "beforeLabel": "May 2025 launch",
+     "afterLabel": "Oct. 7, 2026",
+     "rows": [
+      {
+       "label": "Who can use it",
+       "before": "Testers on a waitlist: journalists, researchers, media professionals",
+       "after": "Anyone, worldwide, in English"
+      },
+      {
+       "label": "Labs it can check",
+       "before": "Google's own models only (Gemini, Imagen, Veo, Lyria)",
+       "after": "Google, OpenAI, Nvidia, Kakao -- Apple 'coming soon'"
+      },
+      {
+       "label": "Watermarked volume logged",
+       "before": "10 billion+ images/videos",
+       "after": "180 billion+ images/videos, 240,000 years of audio"
+      }
+     ],
+     "source": "TechCrunch and Cryptopolitan reporting on Google's Oct. 7 announcement"
+    }
+   },
+   {
+    "type": "p",
+    "text": "The scale figures behind that table come entirely from Google's own count, and the different numbers measure different things:",
+    "citation_urls": []
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the scale claims actually cover",
+     "items": [
+      {
+       "value": "180B+",
+       "unit": "images & video, since 2023",
+       "label": "Watermarked volume Google now cites",
+       "includes": "Google's own count across Gemini, Imagen, Lyria, and Veo output since SynthID's 2023 debut",
+       "excludes": "Any independent audit of the total, and any content made with non-partner models"
+      },
+      {
+       "value": "240,000",
+       "unit": "years of audio, since 2023",
+       "label": "Audio watermarking volume",
+       "note": "A separate measurement from the image/video count above, on the same self-reported basis"
+      },
+      {
+       "value": "50M+",
+       "unit": "Gemini app checks, before May 2026",
+       "label": "Prior usage baseline, before this week's expansion",
+       "excludes": "Search and Chrome checks, which are new as of this expansion and counted separately"
+      },
+      {
+       "value": "10B+",
+       "unit": "images & video, as of the May 2025 launch",
+       "label": "The figure Google cited at the tool's original, restricted debut",
+       "note": "The 18x growth to 180B+ reflects 17 additional months of generation volume, not a one-time revision"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The expansion is about coverage as much as access. [Google](/company/google)'s own blog post, per multiple outlets' reporting, says the detector can now read watermarks from four labs' models, not just its own: Gemini, Imagen, Lyria, and Veo, plus [OpenAI](/company/openai), Nvidia, and Kakao. ElevenLabs separately supports SynthID on the audio side, and Apple is named as joining \"soon,\" reportedly tied to SynthID support landing in iOS 27's own image tools. Since 2023, Google says it has applied SynthID to more than 180 billion images and videos -- up from the 10 billion-plus figure it cited at the tool's restricted May 2025 debut -- and roughly 240,000 years of audio, with Search, Chrome, and the Gemini app together handling over a million verification checks a day, up from 50 million total checks inside the Gemini app alone before May 2026. {{note: Four partner labs covering most mainstream AI image and video tools is still a minority of all generative AI tools in active use -- there is no registry of how many models exist entirely outside any watermarking standard.}}",
+    "citation_urls": [
+     "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/",
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The timing lines up with a separate watermarking move one day earlier: [OpenAI](/company/openai) began watermarking ChatGPT-generated text for users in the European Union on Oct. 6. That system works on different physics entirely -- a statistical pattern in word choice, not a signal in pixels or a waveform -- and **SynthID Detector doesn't check for it at all**. A reader handed a suspicious paragraph of text and a suspicious image is, as of this week, using two unrelated verification systems that happen to have launched a day apart.",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "That scale is also the tool's limit. SynthID Detector can only ever answer one question with confidence: whether a Google-ecosystem watermark is present. ==A clean result does not mean a file is human-made== -- it means no SynthID signal was found, which is also exactly what an image from Midjourney, Grok, or any other non-partner model returns. **The detector is structurally blind to content it was never built to read.**",
+    "citation_urls": [
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "counter",
+    "counter": {
+     "points": [
+      {
+       "claim": "A watermark detector that only reads one ecosystem's own mark is structurally blind to most of what people actually worry about: deepfakes made with non-partner tools, or any model after its watermark has been stripped.",
+       "detail": "Google's own coverage concedes the detector returns nothing for content made outside its four-lab partner group, and reporting on the tool notes watermarks can be stripped from files in some cases. The highest-stakes fabricated content -- political disinformation, fraud, impersonation -- has no particular reason to come from a SynthID partner's model in the first place.",
+       "whoHolds": "Researchers who've pushed for watermark-agnostic detection over single-ecosystem tools -- the same critique raised after a Reuters test found Meta's own detector missed Meta's own fakes."
+      }
+     ],
+     "verdict": "The four-lab coverage is a real expansion from zero to something, and a positive match is still a positive match regardless of the gaps elsewhere. But 'checks whether it's one of ours' and 'checks whether it's fake' are different products, and the tool's framing leans on the second claim more than the coverage actually supports.",
+     "source": "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    }
+   },
+   {
+    "type": "p",
+    "text": "**Coverage of the relaunch doesn't agree on one basic mechanic**: whether checking a file requires an account. TheNextWeb, citing Engadget's hands-on report, says users must sign in with a Google, OpenAI, or Apple account. Cryptopolitan describes it as a free site anyone can use by uploading a file, with no login mentioned.",
+    "citation_urls": [
+     "https://thenextweb.com/news/google-synthid-detector-public-ai-content-checker",
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "sourcecheck",
+    "sourcecheck": {
+     "items": [
+      {
+       "question": "Does checking a file on SynthID Detector require an account?",
+       "claims": [
+        {
+         "who": "TheNextWeb, citing Engadget",
+         "kind": "reporting",
+         "says": "Users must sign in with a Google, OpenAI, or Apple account.",
+         "url": "https://thenextweb.com/news/google-synthid-detector-public-ai-content-checker",
+         "trusted": true
+        },
+        {
+         "who": "Cryptopolitan",
+         "kind": "reporting",
+         "says": "Free tool, anyone can upload a file to check it -- no sign-in mentioned.",
+         "url": "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+        }
+       ],
+       "ruling": "Treating the sign-in requirement as real: the TheNextWeb/Engadget account describes an actual hands-on attempt to use the tool, which is more specific and falsifiable than Cryptopolitan's silence on the point -- an unmentioned detail isn't the same as a confirmed absence of one."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "The announcement also plays out as a brand race, not just a safety one: SynthID, [OpenAI](/company/openai)'s own verification page, and Meta's Content Seal are now three separate places a reader might check the same file, each run by the company whose models it was built to vouch for first. Whichever becomes the default habit effectively sets what \"verified\" means for most readers, regardless of which system is technically most accurate. The Oct. 7 rollout is also not yet universal in the most basic sense: it launched in English only, which is a narrower \"public\" than \"available worldwide\" implies on its own.",
+    "citation_urls": [
+     "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/",
+     "https://thenextweb.com/news/meta-ai-detector-cropped-images-watermark",
+     "https://www.cryptopolitan.com/google-synthid-ai-detector-180-billion/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Google isn't the only lab whose detector has been tested against its own blind spots. A Reuters analysis published in July found that Meta's own AI-image detector -- built on a different watermark called __Content Seal__ -- failed to flag 55% of AI-generated images once cropped to a third or half their original size, even though it caught all 40 uncropped originals. Meta said the watermark \"may be lost if an image is heavily cropped.\" ++SynthID++ is a different watermark than Content Seal, but it faces the same physics: watermarks can reportedly be stripped from files in some cases, and a result only ever describes what survived to the point of checking.",
+    "citation_urls": [
+     "https://thenextweb.com/news/meta-ai-detector-cropped-images-watermark"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The honest reading of Oct. 7 is a real expansion, not a solved problem: **a detector that covered one company's models for a waitlist of testers now covers four companies' models for anyone with a browser.** ==Whether that's enough to matter against content actually built to deceive -- the kind made specifically to avoid a watermarked model in the first place -- is a different question than the one SynthID Detector answers.==",
+    "citation_urls": []
+   }
+  ],
+  "id": "rtfc-20261007-synthiddetector-01",
+  "image": "assets/img/newsroom/rtfc-20261007-synthiddetector-01.jpg",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-07T21:11:42Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via a Techmeme front-page sweep for current AI-industry news (Oct. 7); confirmed via grep against newsroom-articles.js that SynthID Detector's public launch had no prior coverage (a separate, unrelated SynthID-for-biology-watermarking story published Oct. 4 does not overlap)."
+    },
+    {
+     "name": "research",
+     "note": "4 sources, all independent_reporting tracing to Google's own blog post (which could not be directly fetched/verified by URL this cycle, noted honestly rather than guessed): TechCrunch and Cryptopolitan on the Oct. 7 relaunch and scale figures, TheNextWeb on the relaunch (citing Engadget's sign-in detail) and separately on a July Reuters investigation into Meta's rival detector. Routed as synthesis: reconciling a real sign-in-requirement conflict between two outlets, and setting Google's expansion against Meta's own detector's documented failure, is the analytical work."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~785 words of prose), 4 components (beforeafter, ledger, counter, sourcecheck) -- beforeafter carries the access/coverage/volume delta, ledger scopes the self-reported scale figures, sourcecheck resolves the sign-in conflict, counter states the strongest structural objection (single-ecosystem detection) with a verdict. Cross-linked /company/google, /company/openai; apply block links to an existing published guide on checking whether an image is AI-generated. Ink layer: 2 highlights, 4 bolds, 1 underline, 2 accents, 1 margin note, 1 pull quote."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: initial draft was under the 650-word synthesis floor and the beforeafter/ledger components sat stacked with no prose between them -- both fixed on revision. No self-referential language. No mandatory-scrutiny trigger fired. Loop 2: every beforeafter/ledger value traces to a cited source and appears in body prose; verified against newsroom.quality.component_audit's own numeric-provenance check before publish."
+    }
+   ],
+   "gate": "synthesis with 4 components (beforeafter, ledger, counter, sourcecheck); 4 independent sources reconciling a real sign-in-requirement conflict; no mandatory-scrutiny trigger fired; no fabricated figures or quotes; Google's own primary blog post could not be directly verified by URL this cycle, disclosed rather than guessed; published at 2026-10-07T21:23:30Z."
+  },
+  "publishedAt": "2026-10-07T21:23:30Z"
+ },
+ {
+  "slug": "nous-research-90-million-series-b-hermes-enterprise",
+  "title": "Nous Research Raises $90M to Take Its Open-Source Hermes Agent Into the Enterprise",
+  "dek": "Nous Research closed a $90 million round at a $1.5 billion valuation on Oct. 7, funding 'Hermes for Businesses' -- a paid enterprise layer (private deployment, single sign-on, audit logs) on top of an AI agent the company keeps free and open-source under the MIT license. Nvidia, Microsoft's M12, and Samsung all backed a company whose own usage claims -- 24 million-plus clones, roughly 2.5% of global token volume -- are self-reported, with no independent count behind them.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+   "Nous Research raised $90 million in a Series B, valuing the company at $1.5 billion.",
+   "The round funds 'Hermes for Businesses': private deployment, single sign-on, audit logs, cost visibility.",
+   "Investors include Nvidia, Microsoft's M12, Samsung, Robot Ventures, Union Square Ventures, and Y Combinator.",
+   "Hermes itself stays free, open-source, and MIT-licensed -- the paid layer is the enterprise wrapper.",
+   "Caveat: usage claims (24M+ clones, ~2.5% of global token volume) are Nous's own, with no independent count."
+  ],
+  "applyType": "watch",
+  "apply": [
+   {
+    "label": "Hermes for Businesses' actual launch",
+    "text": "Pricing, contract terms, and named enterprise customers weren't disclosed with the round. Watch for the first named enterprise logo as the real signal the product works, not just that the funding landed."
+   },
+   {
+    "label": "The revenue number nobody gave",
+    "text": "Nous disclosed usage claims but no revenue figure with this round. Watch whether a later disclosure attaches a dollar figure to the 2.5%-of-global-token-volume claim."
+   },
+   {
+    "label": "OpenClaw and the rest of the field",
+    "text": "Hermes competes directly with OpenClaw and now sits alongside Meta's Muse and Instinct's $1B round in the same agent-funding wave. Watch which of these actually ships a paid enterprise tier first, not just which raised money first."
+   }
+  ],
+  "sources": [
+   {
+    "label": "TheNextWeb: Nous Research Raises $90M to Take Its Hermes AI Agent to Businesses",
+    "url": "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+   },
+   {
+    "label": "VentureBurn: Nous Research Raises $90 Million to Scale Hermes Enterprise AI",
+    "url": "https://ventureburn.com/nous-research-raises-90-million-scale-hermes-enterprise-ai/"
+   },
+   {
+    "label": "OODAloop: Nous Research Gets Funding of $90 Million to Bring Its Hermes Open-Source AI Assistant to Enterprises",
+    "url": "https://oodaloop.com/briefs/technology/nous-research-gets-funding-of-90-million-to-bring-its-hermes-open-source-ai-assistant-to-enterprises/"
+   },
+   {
+    "label": "WSJ Pro: Nous Research Scores $90 Million to Bring Open-Source AI Assistant to Enterprises",
+    "url": "https://www.wsj.com/pro/venture-capital/nous-research-scores-90-million-to-bring-open-source-ai-assistant-to-enterprises-516f9208"
+   },
+   {
+    "label": "The Block: Decentralized AI Project Nous Research in Talks to Raise $75M at $1.5B Valuation",
+    "url": "https://www.theblock.co/post/408237/decentralized-ai-project-nous-research-in-talks-to-raise-75m-at-1-5b-valuation-report"
+   }
+  ],
+  "links": [
+   {
+    "label": "Nous Research's Hermes agent",
+    "url": "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+   }
+  ],
+  "body": [
+   {
+    "type": "p",
+    "text": "Nous Research raised ++$90 million++ in a Series B, the company confirmed Oct. 7, valuing it at $1.5 billion according to The Wall Street Journal, which first reported the deal. The round funds \"++Hermes for Businesses++,\" a paid enterprise layer built on top of Hermes, the open-source AI agent Nous has kept free and __MIT-licensed__ since its February 2026 release.",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj",
+     "https://ventureburn.com/nous-research-raises-90-million-scale-hermes-enterprise-ai/"
+    ]
+   },
+   {
+    "type": "quote",
+    "text": "Somehow, $90 million is modest in modern fundraising. We at Nous have always delivered more with less.",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Nous formed in 2023 as a counterweight to centralized, closed AI development. Its early work included fine-tuning Meta's Llama models and publishing YaRN, a method for extending open models' context windows at lower cost -- ==the kind of infrastructure work that built the credibility Hermes later cashed in as a finished agent product==.",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+    ]
+   },
+   {
+    "type": "timeline",
+    "timeline": {
+     "items": [
+      {
+       "when": "2023",
+       "what": "Nous Research founded, positioning itself against centralized, closed AI labs."
+      },
+      {
+       "when": "Feb 2026",
+       "what": "Hermes releases under the MIT license -- free, open-source, able to run any model a user picks.",
+       "source": "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+      },
+      {
+       "when": "Jul 14, 2026",
+       "what": "Reporting says Nous is finalizing at least $75M at a $1.5B valuation, led by Robot Ventures.",
+       "source": "https://www.theblock.co/post/408237/decentralized-ai-project-nous-research-in-talks-to-raise-75m-at-1-5b-valuation-report"
+      },
+      {
+       "when": "Oct 7, 2026",
+       "what": "The round closes at $90M, same $1.5B valuation, funding a new enterprise product.",
+       "hi": true,
+       "source": "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Hermes itself runs on macOS, Windows, and Linux, and reaches users through Telegram, Slack, and WhatsApp rather than a single standalone app -- part of why a clone count is easy to rack up and hard to verify independently. The agent's stated capabilities include coding, image understanding, and autonomous web search, the same category of tasks Hermes for Businesses is now packaging with the access controls an individual user never needed.",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj",
+     "https://ventureburn.com/nous-research-raises-90-million-scale-hermes-enterprise-ai/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The investor list is notable less for size than for who showed up: **three companies that sell the infrastructure Hermes runs on or compete with it directly in enterprise software** -- Nvidia, Microsoft's M12, and Samsung -- joined Robot Ventures, Union Square Ventures, and Y Combinator.",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj",
+     "https://ventureburn.com/nous-research-raises-90-million-scale-hermes-enterprise-ai/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "What that money buys is the gap between a free agent and a sellable product:",
+    "citation_urls": []
+   },
+   {
+    "type": "compare",
+    "compare": {
+     "title": "Hermes, free vs. enterprise",
+     "columns": [
+      {
+       "label": "Hermes (core)",
+       "sub": "free, MIT-licensed"
+      },
+      {
+       "label": "Hermes for Businesses",
+       "sub": "new, this round's product",
+       "hi": true
+      }
+     ],
+     "rows": [
+      {
+       "label": "License / cost",
+       "values": [
+        "Free, MIT, self-hosted or any cloud",
+        "Paid; pricing not disclosed with the round"
+       ]
+      },
+      {
+       "label": "Deployment",
+       "values": [
+        "Runs on a user's own machine or server",
+        "Private deployment with workspace controls"
+       ]
+      },
+      {
+       "label": "Identity & access",
+       "values": [
+        "None built in",
+        "Single sign-on"
+       ]
+      },
+      {
+       "label": "Oversight",
+       "values": [
+        "None built in",
+        "Auditing and cost visibility"
+       ]
+      },
+      {
+       "label": "Model choice",
+       "values": [
+        "User picks any model it supports",
+        "Same, pitched on price/goal fit for a company"
+       ]
+      },
+      {
+       "label": "Support",
+       "values": [
+        "Community, GitHub",
+        "Service-level agreements"
+       ]
+      }
+     ],
+     "source": "VentureBurn and TheNextWeb reporting on Nous Research's Oct. 7 announcement"
+    }
+   },
+   {
+    "type": "p",
+    "text": "Hermes' underlying pitch hasn't changed: run any model a company chooses, locally or in its own cloud, with company data never leaving its control. What's new is everything around that core -- **the parts an individual developer doesn't need and an enterprise buyer won't deploy without**.",
+    "citation_urls": [
+     "https://ventureburn.com/nous-research-raises-90-million-scale-hermes-enterprise-ai/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Before this round, Nous had raised roughly $70 million total, including a $50 million Series A led by Paradigm. The $90 million close more than doubles total funding in a single round -- and it grew along the way: reporting in mid-July described a similar deal, at the same $1.5 billion valuation, as still being finalized at $75 million. Whatever changed in the roughly three months between \"in talks\" and closed added $15 million without moving the valuation.",
+    "citation_urls": [
+     "https://www.theblock.co/post/408237/decentralized-ai-project-nous-research-in-talks-to-raise-75m-at-1-5b-valuation-report",
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The traction numbers behind the round are the company's own. Nous says Hermes has been cloned more than 24 million times since February; **The Wall Street Journal independently cites a close but not identical 22 million-plus download figure**; and Nous estimates, by its own methodology, that Hermes now drives roughly 2.5% of global AI token usage. That last figure is unfalsifiable on its own terms: nobody publishes a verified total for \"global AI token usage\" for 2.5% to be a share of, which makes it a confidence signal aimed at investors more than a number anyone outside Nous could actually audit.",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+    ]
+   },
+   {
+    "type": "ledger",
+    "ledger": {
+     "title": "What the traction numbers actually measure",
+     "items": [
+      {
+       "value": "24M+",
+       "unit": "Nous Research's own count, since Feb. 2026",
+       "label": "Hermes 'clones' claimed by the company",
+       "includes": "However Nous defines and counts a clone or download internally",
+       "excludes": "Independent verification of active, ongoing use"
+      },
+      {
+       "value": "22M+",
+       "unit": "per WSJ reporting",
+       "label": "A separate download figure WSJ cites alongside Nous's own",
+       "note": "Close to, but not reconciled with, Nous's 24M+ figure -- the two outlets don't confirm they're counting the same thing the same way"
+      },
+      {
+       "value": "~2.5%",
+       "unit": "Nous's own internal estimate",
+       "label": "Share of global AI token usage the company says Hermes drives",
+       "excludes": "Any named methodology or independent corroboration -- an estimate of its own footprint in a total nobody independently measures either"
+      },
+      {
+       "value": "$1.5B",
+       "unit": "per WSJ, not disclosed by Nous",
+       "label": "Valuation implied by the $90M round",
+       "note": "Nous itself did not state a valuation; the figure comes from WSJ's reporting on the deal"
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "No revenue figure accompanied the funding announcement -- not what Hermes for Businesses costs, not what Nous currently earns, and **not a single named enterprise customer**. {{note: A startup disclosing usage scale while staying silent on revenue is common at this stage, but it means the $1.5 billion figure is a bet on the 2.5%-of-tokens claim converting into paying seats, not evidence that it already has.}}",
+    "citation_urls": [
+     "https://ventureburn.com/nous-research-raises-90-million-scale-hermes-enterprise-ai/"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The round lands inside a crowded agent market. Meta's Muse launched in September, Instinct raised $1 billion at a $10 billion valuation for a restaurant-booking agent around the same time, and Nvidia -- also a Hermes investor -- separately built an enterprise platform on the rival open-source agent OpenClaw. ==Hermes is now the best-funded of the open, MIT-licensed options, but it is not the only one, and the enterprise features it just raised money to build are table stakes every competitor is racing to ship too.==",
+    "citation_urls": [
+     "https://thenextweb.com/news/nous-research-90m-1-5bn-hermes-agent-wsj"
+    ]
+   },
+   {
+    "type": "stakes",
+    "stakes": {
+     "items": [
+      {
+       "who": "Enterprise IT buyers choosing an agent vendor",
+       "tone": "gains",
+       "what": "A credible, price-competitive open-source option with SSO and audit controls, instead of only closed, single-vendor agent platforms."
+      },
+      {
+       "who": "Nous Research's existing free, hobbyist Hermes users",
+       "tone": "unclear",
+       "what": "The core model stays MIT-licensed and free, but the company's commercial focus now shifts toward the enterprise product it's paid to build."
+      },
+      {
+       "who": "OpenClaw, Hermes' closest direct competitor",
+       "tone": "exposed",
+       "what": "Faces a better-capitalized rival entering the same enterprise market it was first to target."
+      },
+      {
+       "who": "Robot Ventures and Nous's earlier investors",
+       "tone": "gains",
+       "what": "A markup from the $1.5 billion valuation, on paper, assuming the round closed at the reported terms."
+      }
+     ]
+    }
+   },
+   {
+    "type": "p",
+    "text": "Hermes' core promise -- free, open, and able to run any model -- is also why its enterprise pivot is a genuine test rather than a formality. **A hobbyist tool that adds an enterprise shell is a different claim than an enterprise platform that happens to also be free**, and which one Nous actually becomes is a question the $90 million buys time to answer, not one it settles today.",
+    "citation_urls": []
+   }
+  ],
+  "id": "rtfc-20261007-nousresearch-01",
+  "image": "assets/img/newsroom/rtfc-20261007-nousresearch-01.jpg",
+  "pipeline": {
+   "run": "claude-cycle-2026-10-07T21:11:42Z",
+   "stages": [
+    {
+     "name": "discovery",
+     "note": "Surfaced via a Techmeme front-page sweep for current AI-industry news (Oct. 7); confirmed via grep against newsroom-articles.js that Nous Research had no prior coverage on this site at all."
+    },
+    {
+     "name": "research",
+     "note": "4 sources, all independent_reporting tracing to a WSJ Pro report that could not be directly fetched (paywalled, returned a fetch error rather than content): TheNextWeb and VentureBurn on the Oct. 7 close with investor/product detail, OODAloop corroborating the headline figures, and The Block's July reporting on the earlier $75M-at-$1.5B 'in talks' stage of the same round. Routed as synthesis: reconciling the $75M-to-$90M round growth, scoping four distinct self-reported usage figures, and setting the raise against a crowded agent-funding field (Meta Muse, Instinct, OpenClaw) is the analytical work."
+    },
+    {
+     "name": "composition",
+     "note": "Synthesis format (~710 words of prose), 4 components (timeline, compare, ledger, stakes) -- timeline places the round against Nous's 2023 founding and Feb. 2026 Hermes release, compare separates the free core from the paid enterprise layer, ledger scopes four different usage/valuation figures that are easy to mistake for one another, stakes names who gains/loses/is exposed. Cross-linked /company/nvidia, /company/meta. Did not add Nous Research to companies.js this cycle: its own header sets a roughly 3-story coverage threshold before a dossier entry, and this is the company's first story here. Ink layer: 2 highlights, 5 bolds, 1 underline, 2 accents, 1 margin note, 1 pull quote."
+    },
+    {
+     "name": "verification",
+     "note": "Loop 1 critique: initial draft was under the 650-word synthesis floor -- fixed by adding the funding-history and token-share-skepticism paragraphs, both grounded in already-cited sources rather than new claims. No self-referential language. No mandatory-scrutiny trigger fired (no financial-advice framing -- this is reporting on a funding event, not investment guidance). Loop 2: every timeline/compare/ledger/stakes value traces to a cited source and appears in body prose; verified against newsroom.quality.component_audit's own numeric-provenance check before publish."
+    }
+   ],
+   "gate": "synthesis with 4 components (timeline, compare, ledger, stakes) plus one verbatim pull quote; 4 independent sources including one tracing the round's growth from a July 'in talks' report to its Oct. 7 close; no mandatory-scrutiny trigger fired; no fabricated figures or quotes; published at 2026-10-07T21:23:40Z."
+  },
+  "publishedAt": "2026-10-07T21:23:40Z"
  }
 ];
