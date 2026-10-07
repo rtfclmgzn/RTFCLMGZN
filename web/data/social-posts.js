@@ -32275,8 +32275,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenSourceAI",
           "#MachineLearning"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxc3gvyutr22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxc3gvyutr22",
+        "posted_at": "2026-10-07T13:47:05Z"
       },
       {
         "platform": "x",
@@ -32532,7 +32534,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -32618,7 +32620,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -32687,8 +32689,10 @@ window.RTFC_SOCIAL_POSTS = [
         "variant": "second-wave",
         "not_before": "2026-10-07T06:50:00Z",
         "copy": "California's SB 53 and the EU AI Act both require fast incident reporting -- but a new analysis says incidents that happen 'during evaluation' may not count as reportable at all. Every one of OpenAI's 5 Australian breaches happened during evaluation.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeMfg4XoF66",
+        "remote_id": "18160973170499397",
+        "posted_at": "2026-10-07T13:42:56Z"
       }
     ]
   },
@@ -32763,8 +32767,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#CyberSecurity",
           "#OpenSource"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxc37on5b42t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxc37on5b42t",
+        "posted_at": "2026-10-07T13:43:03Z"
       },
       {
         "platform": "x",
