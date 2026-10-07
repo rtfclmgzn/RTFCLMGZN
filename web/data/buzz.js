@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-826", date:"2026-10-07",
+    source:{ name:"Microsoft", handle:"microsoft", platform:"web", kind:"lab" },
+    text:"Microsoft held its first major Windows event in over two years on Oct. 7, with CEO Satya Nadella joined onstage by NVIDIA's Jensen Huang to frame Windows, Surface, and the broader PC ecosystem around local, on-device AI -- centered on NVIDIA's RTX Spark hardware for running demanding AI workloads directly on a PC rather than in the cloud.",
+    why:"A hardware-and-OS reset built specifically around local inference is a bet that the next computing cycle isn't just about bigger cloud models -- it's the clearest signal yet that Microsoft sees on-device AI capability, not just chatbot features, as the next Windows selling point.",
+    heat:31, topics:["microsoft","nvidia","windows","surface","on-device ai","rtx spark"],
+    url:"https://digg.com/tech/nmukmkxs" },
 { id:"bz-825", date:"2026-10-06",
     source:{ name:"Morgan Stanley", handle:"morganstanley", platform:"web", kind:"news" },
     text:"Morgan Stanley now projects global AI-linked bond issuance will hit $570 billion in 2026 -- roughly four times last year's pace -- with Alphabet, Amazon, and Microsoft among the hyperscalers driving it as they fund data-center buildouts; the bank separately put total hyperscaler capex at $700 billion this year, surpassing $1 trillion next year.",
