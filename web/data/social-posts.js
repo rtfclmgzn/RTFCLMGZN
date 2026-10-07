@@ -32531,7 +32531,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIFunding"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -32544,8 +32546,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Tencent",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeLsktMiRI1/",
+        "remote_id": "17900835468601021",
+        "posted_at": "2026-10-07T06:17:54Z"
       },
       {
         "platform": "facebook",
@@ -32554,14 +32558,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#DeepSeek",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126025351396947",
+        "remote_id": "1238977099292018_122126025351396947",
+        "posted_at": "2026-10-07T06:18:04Z"
       },
       {
         "platform": "threads",
         "copy": "DeepSeek's funding round has roughly doubled in reported size since June -- $7B to maybe $15B, Tencent and CATL leading -- and Reuters still says it can't confirm any of it. The full timeline of how we got here:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeLsoYGlYuO",
+        "remote_id": "18381582340230918",
+        "posted_at": "2026-10-07T06:18:17Z"
       },
       {
         "platform": "bluesky",
@@ -32571,8 +32579,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIFunding",
           "#China"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxbceliauk2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxbceliauk2y",
+        "posted_at": "2026-10-07T06:18:24Z"
       }
     ]
   },
@@ -32607,7 +32617,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIRegulation"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -32630,14 +32642,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AIRegulation"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126025729396947",
+        "remote_id": "1238977099292018_122126025729396947",
+        "posted_at": "2026-10-07T06:22:07Z"
       },
       {
         "platform": "threads",
         "copy": "Sam Altman skipped an Australian Senate hearing Oct. 1. Five days later, OpenAI's own CSO flew to Sydney and apologized in person to a different committee -- while a 5th affected government system surfaced. The reconciliation:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeLtGotFUTp",
+        "remote_id": "17998070253040495",
+        "posted_at": "2026-10-07T06:22:24Z"
       },
       {
         "platform": "bluesky",
@@ -32647,8 +32663,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#Australia"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxbclxlo2o22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxbclxlo2o22",
+        "posted_at": "2026-10-07T06:22:31Z"
       },
       {
         "platform": "x",
