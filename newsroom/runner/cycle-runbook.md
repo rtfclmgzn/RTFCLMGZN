@@ -1623,6 +1623,26 @@ this order, and mark it done here.
    unrelated image three times in a row this cycle. Same two §3e/§3f next
    steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-07T01:36:46Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (DeepSeek's reported $12B Tencent/CATL
+   funding round, OpenAI CSO Jason Kwon's Oct. 6 apology to Australia's Joint
+   Select Committee on AI, and Google pausing its OSS VRP bug bounty over
+   AI-slop reports) plus the full §4b/§4c/§4d passes were already the required
+   work; guide cadence read same-day (last guide 2026-10-06), so §3d needed no
+   action. §3c backfill search re-ran (direct component-floor check over the
+   whole archive) and found zero articles below their format's component floor
+   -- still empty. `verify_covers.py pick` again returned the same two
+   semantically-poor candidates (a silicon-wafer image, a surgical scene)
+   regardless of subject keywords tried, for all three of this cycle's stories
+   (a funding round, a parliamentary hearing, a bug-bounty program) -- same
+   library-exhaustion pattern the 2026-10-06T21:01:00Z entry flagged; generated
+   fresh art for all three rather than ship a mismatch. Same two §3e/§3f next
+   steps as every entry since 2026-08-30, still open: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` absent), and `which
+   wrangler` / `env | grep -i cloudflare` both return nothing on this runner;
+   `find . -iname "issue-001.json"` also still returns nothing.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2068,6 +2088,14 @@ full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or Cloudflare
 credentials exist on this runner. No item worked. Same two next steps as every
 entry since 2026-08-30, still open.
+
+**Status (2026-10-07T01:36:46Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (DeepSeek's reported $12B Tencent/CATL funding
+round, OpenAI CSO Jason Kwon's apology to Australia's Joint Select Committee on
+AI, and Google's OSS VRP bug-bounty pause) plus the full §3c/§4b/§4c/§4d passes
+were already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this runner.
+No item worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
