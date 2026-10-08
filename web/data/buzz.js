@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-833", date:"2026-10-08",
+    source:{ name:"Reuters", handle:"reuters", platform:"web", kind:"news" },
+    text:"Firmus, the Nvidia-backed Australian AI data-center builder, fixed its ASX IPO share price at A$11 Thursday, valuing the company at about $30.6 billion -- and banks moved the institutional bookbuild close up a day, to Thursday, after indications of interest already exceeded the roughly $5 billion offer (potentially $5.5 billion with the over-allotment option), Reuters reported citing a term sheet. Nvidia, Meta and OpenAI are listed as customers; founders face escrow releasing only 10% of shares after one year.",
+    why:"A $30.6 billion valuation is well above the $12 billion figure reported when this float was first delayed over a lukewarm reception months ago -- worth watching whether an oversubscribed book at triple the original number is durable demand or a crowded-trade phenomenon once Firmus actually starts trading.",
+    heat:27, topics:["firmus","ipo","nvidia","data centers","australia"],
+    url:"https://www.dealstreetasia.com/?p=497151" },
+{ id:"bz-832", date:"2026-10-08",
+    source:{ name:"Yonhap / Korea Herald", handle:"yonhap", platform:"web", kind:"news" },
+    text:"South Korea's financial regulators escalated their response to the AI-linked bank breaches this week: the FSC held a second emergency meeting (Chairman Lee Eog-weon said \"we cannot rule out the possibility that AI was used\" and called for \"AI attacks defended by AI\"), the FSS alerted roughly 500 financial firms to malicious IPs and gave them until Thursday to complete emergency security checks, and police opened a full-scale investigation at President Lee Jae-myung's request. Welcome Savings Bank separately disclosed a leak of up to 2,200 corporate customer records.",
+    why:"The Oct. 5 breach story already covered seven hit institutions; this is the regulatory aftermath getting bigger, not smaller -- a 500-firm alert and a presidential-level investigation order is a different scale of response than the original breach disclosures implied.",
+    heat:24, topics:["south korea","cybersecurity","banks","ai agents","regulation"],
+    url:"https://www.koreajoongangdaily.com/business/ai-hackers-target-koreas-banks-trigger-industrywide-security-review/12904066" },
 { id:"bz-831", date:"2026-10-08",
     source:{ name:"Google", handle:"google", platform:"web", kind:"lab" },
     text:"Google released AI Edge Foresight on Oct. 8, an experimental Mac app that listens to meetings via microphone and system audio (working offline with any platform, including in-person) and expands a few typed bullet points into full notes using the live transcript. It runs entirely on-device on Apple Silicon, built on the new 740M-parameter EmbeddingGemma 2 model, and can also answer questions from a local folder of PDFs, Docs, and Markdown files.",

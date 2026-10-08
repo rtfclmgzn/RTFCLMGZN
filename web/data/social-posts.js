@@ -33823,5 +33823,197 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-50-billion-revenue-not-68-billion",
+    "ts": "2026-10-08T21:19:27Z",
+    "export": {
+      "article_id": "newsroom-openai-50-billion-revenue-not-68-billion",
+      "url": "https://rtfclmgzn.com/article/openai-50-billion-revenue-not-68-billion",
+      "headline": "OpenAI Disclosed a $50 Billion Revenue Run Rate. AI Stocks Fell Because Investors Had Priced In $68 Billion.",
+      "hook": "OpenAI told investors its real revenue run rate is $50 billion, not the $68 billion figure Wall Street had been using -- and AI-infrastructure stocks sold off anyway, even though OpenAI's own growth rates didn't change.",
+      "key_facts": [
+        "The $68B figure was built from a $40B estimate grown by a separately reported 70% growth claim -- never an official OpenAI number.",
+        "Oracle, Nvidia and CoreWeave led a broader AI-stock selloff; OpenAI's own disclosed growth (77% total, 107% enterprise) stayed strong.",
+        "At $50B, OpenAI's run rate is now below Anthropic's reported $65B -- though the two companies may count revenue differently."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/rtfc-20261008-openairevenue-01.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI told investors its revenue run rate is $50 billion. Wall Street had been pricing in $68 billion. AI stocks sold off Thursday anyway -- even though OpenAI's own growth rate didn't change at all:",
+        "reply_copy": "How a $68B number got built out of two separate anonymous leaks:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI told investors its annualized revenue run rate is $50 billion.\n\nWall Street had been using $68 billion.\n\nThe gap: a $40B estimate from mid-August, grown by a separately reported 70% growth claim. $40B x 1.7 = $68B -- clean arithmetic, built on two numbers OpenAI never actually confirmed.\n\nOracle, Nvidia and CoreWeave led a broader AI-stock selloff Thursday. But OpenAI's own disclosed growth -- 77% total, 107% enterprise -- didn't change at all.\n\nAt $50B, OpenAI's run rate is now below Anthropic's reported $65B. The two companies may not even count revenue the same way. Full story -- link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic",
+          "#AI",
+          "#Markets",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI told investors its annualized revenue run rate was about $50 billion at the end of September -- roughly $18 billion below the $68 billion figure that had circulated among investors for weeks. Oracle, Nvidia and CoreWeave led a broader AI-stock selloff on the news, even though OpenAI's own disclosed growth rates (77% total, 107% enterprise) didn't change. The gap traces to a measurement difference, not a reported slowdown.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "A $68 billion number that investors treated as confirmed turned out to be two anonymous leaks stacked on top of each other. OpenAI's actual disclosure is $50 billion. The stock selloff that followed is really a repricing of every multi-year compute contract built on the wrong base number.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI's real revenue run rate is $50B, not the $68B Wall Street had been using -- the $68B figure was a $40B estimate grown by a separately reported 70% growth claim, never an OpenAI number at all. Oracle/Nvidia/CoreWeave sold off anyway Thursday.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T02:19:27Z",
+        "copy": "The stranger detail in OpenAI's revenue correction: Anthropic's own $65B figure never changed Thursday, but it instantly looked bigger relative to OpenAI once the $68B number got corrected to $50B -- and nobody has shown the two companies count revenue the same way.",
+        "reply_copy": "The full reconciliation:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T02:19:27Z",
+        "copy": "Both OpenAI and Anthropic are still describing their own size to the public exclusively through investor leaks and conference-call color, not audited filings. Whichever one actually goes public first settles this with a real number -- as of Thursday, neither had.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-manus-500-million-funding-after-meta-unwind-revenue-growth",
+    "ts": "2026-10-08T21:23:48Z",
+    "export": {
+      "article_id": "newsroom-manus-500-million-funding-after-meta-unwind-revenue-growth",
+      "url": "https://rtfclmgzn.com/article/manus-500-million-funding-after-meta-unwind-revenue-growth",
+      "headline": "Manus Raised More Than $500 Million Today, Five Months After Beijing Forced Meta to Give Up Its $2 Billion Stake",
+      "hook": "Manus just raised $500 million-plus, five months after China's regulators forced Meta to unwind its $2 billion acquisition of the company -- and its revenue has reportedly grown four-to-five-fold in the meantime.",
+      "key_facts": [
+        "Boyu Capital and IDG Capital led the round, with Tencent, HSG and ZhenFund also participating; Manus didn't disclose the valuation.",
+        "Bloomberg reported in September the round would double Manus's valuation to $4B -- unconfirmed by the company itself.",
+        "Manus's revenue run rate reportedly grew from $100M to $400-500M since the Meta deal closed in December 2025."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20261008-manusfunding-01.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Manus just raised $500 million+, five months after Beijing forced Meta to give up its $2 billion stake in the company. Its revenue has reportedly grown 4-to-5x in the meantime -- which makes the new $4B valuation target look more conservative than it sounds:",
+        "reply_copy": "What's still unresolved about the China side of this:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Manus",
+          "#AI",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Manus just raised $500 million-plus.\n\nFive months ago, China's NDRC forced Meta to unwind its $2 billion acquisition of the AI agent startup, and barred two co-founders from leaving the country during the review.\n\nNow: Boyu Capital and IDG Capital lead a new round, with Tencent, HSG and ZhenFund also in. Bloomberg reported the round would double Manus's valuation to $4 billion -- Manus itself hasn't confirmed that number.\n\nWhat changed in between: Manus's revenue run rate reportedly grew from $100M to as much as $500M. A company growing revenue 4-to-5x while its valuation only doubles actually got cheaper on a multiple basis, not more expensive.\n\nStill open: nobody has said whether the co-founders can leave China yet. Full story -- link in bio.",
+        "hashtags": [
+          "#Manus",
+          "#AI",
+          "#China",
+          "#TechNews",
+          "#Funding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Manus's parent company, Butterfly Effect, announced Thursday it has raised more than $500 million, led by Boyu Capital and IDG Capital -- the AI agent startup's first new funding since China's regulators ordered Meta to unwind its roughly $2 billion acquisition of the company in April. Manus didn't disclose the resulting valuation; Bloomberg reported in September the round would roughly double it to $4 billion. The company's own revenue run rate has reportedly grown from about $100 million to as much as $500 million since the Meta deal closed.",
+        "hashtags": [
+          "#Manus",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "The company that spent nine months as a cautionary tale for cross-border AI acquisitions has also, in the same window, reportedly quadrupled its revenue and raised new money from some of China's largest tech investors. Both things are true at once, and neither one resolves the other.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Manus raised $500M+ today, five months after Beijing forced Meta to unwind its $2B stake in the company. Its revenue reportedly grew 4-5x in the meantime -- which makes the new $4B valuation target (unconfirmed by Manus itself) look conservative, not aggressive.",
+        "hashtags": [
+          "#Manus",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T02:23:48Z",
+        "copy": "Open question nobody's answered since March: are Manus's co-founders still barred from leaving China? The exit bans were real, reported by the FT -- and neither Thursday's funding news nor anything since has addressed their travel status.",
+        "hashtags": [
+          "#Manus",
+          "#China"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T02:23:48Z",
+        "copy": "Beijing's theory in the Manus case -- that offshore incorporation can't shield Chinese-origin AI technology -- has only been tested once. Whether it becomes a template other relocated AI startups have to plan around depends on whether a second case ever tests it.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
