@@ -1458,3 +1458,31 @@
   that grep step. Reinforces that the slug/title/publishedAt grep in §2 is not
   a formality to skip when a story feels novel -- it is exactly how a 5-day-old
   already-published story gets caught before tokens are spent drafting it.
+
+- **2026-10-08T17:15:47Z** (newsroom cycle): another aggregator-noise instance,
+  extending the 2026-10-07T21:32:00Z and 2026-10-08T01:38:21Z entries. A
+  Techmeme summary attributed to VentureBeat/Bloomberg/The Verge described a
+  "Gemini at Work 2026" event where Google shipped a "universal Gemini agent"
+  handling "multiday workflows" and -- per a single outlet, RuntimeWire --
+  routes tasks to Claude. Direct searches for "Gemini at Work 2026", for the
+  VentureBeat/Bloomberg coverage by name, and for the Claude-routing claim
+  specifically all came back empty or contradictory: what does exist is
+  Google's real Gemini Enterprise platform (formerly Agentspace), which
+  integrates with Microsoft 365/Slack/Salesforce/SAP but has no corroborated
+  claim anywhere of routing work to a competitor's model. Dropped the
+  candidate entirely (no article, no Buzz card) rather than publish on an
+  unconfirmed basis. Separately verified a second candidate from the same
+  Techmeme sweep, Scott Aaronson's "Mathocalypse" post on AI labs testing
+  cryptographic protocols, the opposite way: his own blog post couldn't be
+  located or fetched directly (scottaaronson.blog's URL structure didn't
+  resolve via search), but his direct quote ("important cryptographic
+  protocols and primitives") and the post's title/date were corroborated by
+  an independent secondary outlet (Startup Fortune) that had apparently read
+  the primary post -- used in this cycle's research piece, attributed to that
+  secondary report rather than implying a primary link, per the compliance
+  rule on quotes not verbatim-sourced to a primary post. Lesson: the same
+  aggregator sweep can produce one claim that's pure noise and one that's
+  real-but-only-secondarily-verifiable in the same batch; the fix in both
+  cases is the same (verify independently, attribute honestly to whatever
+  tier of source you actually reached), not a blanket accept or reject of
+  Techmeme-sourced leads.

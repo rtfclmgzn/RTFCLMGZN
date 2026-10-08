@@ -1668,6 +1668,41 @@ this order, and mark it done here.
    both return nothing on this runner; `find . -iname "issue-001.json"` also
    still returns nothing.
 
+   PARTIAL, checked (2026-10-08T17:15:47Z cycle) -- re-checked before writing,
+   since this cycle's own two articles (OpenAI's Oct. 6 372-math-result release
+   reconciled against its own advisory group's unmet disclosure ask, the AHM
+   boycott call, and a separate Aaronson/Drake/Buterin crypto-cryptography
+   alarm -- elevated to research tier on evidence depth, 9 independent threads
+   across 5 source classes, since the last research piece ran exactly 7 days
+   earlier on 2026-10-01; and Amazon's Fire-to-Alexa tablet line replacement)
+   plus the full §4b/§4c/§4d passes were already the required work; guide
+   cadence read 2 days (a guide published 2026-10-06), so §3d needed no action.
+   §3c backfill search re-ran (direct component-floor check over the whole
+   archive, now including this cycle's own two new articles) and found zero
+   articles below their format's component floor -- still empty. `verify_covers.py
+   pick` again returned the same two semantically mismatched candidates
+   (a silicon-wafer image, a surgical-suite image) for both of this cycle's
+   stories regardless of subject keywords tried -- same library-exhaustion
+   pattern every entry since 2026-09-28 has flagged; generated fresh art for
+   both rather than ship a mismatch ($0.12 total). No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Same two §3e/§3f next steps
+   as every entry since 2026-08-30, still open: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent, confirmed by reading the file directly), and `which wrangler` / `env
+   | grep -i cloudflare` both return nothing on this runner; `find . -iname
+   "issue-001.json"` also still returns nothing. Separately: this cycle's
+   research hit the same aggregator-noise pattern prior entries have logged --
+   a Techmeme-summarized claim that Google's new Gemini Enterprise agent
+   "routes jobs to Claude" as part of a "Gemini at Work 2026" event could not
+   be corroborated by any direct search of Google's own Gemini Enterprise
+   coverage or VentureBeat's archives, so it was dropped from both the article
+   slate and Buzz rather than published on an unconfirmed basis; full finding
+   in `living-notes.md`. This entry and the §3f entry below are, again, being
+   committed to a `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as
+   their own separate `runbook:`-prefixed commit, after the article/data commit
+   that already cleared the full §5 gate sequence.
+
    PARTIAL, checked (2026-10-08T02:15:54Z cycle) -- re-checked before writing,
    since this cycle's own two articles (Anthropic's $100M Claude Frontier
    Academy training program; Oracle's Fusion Claw agentic execution runtime)
@@ -2202,6 +2237,14 @@ still open.
 since this cycle's own two articles (Anthropic's $100M Claude Frontier Academy
 training program; Oracle's Fusion Claw agentic execution runtime) plus the
 full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next
+steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-08T17:15:47Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own two articles (OpenAI's 372-math-result fallout research
+piece; Amazon's Fire-to-Alexa tablet replacement synthesis) plus the full
+§3c/§4b/§4c/§4d passes were already the required work: `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or
 Cloudflare credentials exist on this runner. No item worked. Same two next
 steps as every entry since 2026-08-30, still open.
