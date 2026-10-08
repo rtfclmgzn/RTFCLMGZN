@@ -1417,3 +1417,44 @@
   turned up a prior Anthropic announcement actually stating that price --
   it may have been a transcription error from that scan, not a since-reversed
   real price change.
+
+- **2026-10-08T01:38:21Z** (newsroom cycle): a `WebFetch` pass over Techmeme's
+  front page this cycle produced an unusually high failure rate on independent
+  verification -- roughly 15 of the ~20 candidate headlines it surfaced did not
+  hold up on a direct follow-up search, well above the one-or-two-per-cycle rate
+  prior entries (2026-10-07T21:32:00Z above) have logged. Specific failures:
+  a claimed GPT-6 "Intelligent UI" rollout (no matching OpenAI announcement or
+  independent coverage found anywhere); a claim that Musk's Grok "routes" tasks
+  to Claude Opus, Midjourney, and Suno (no source at all -- the search that
+  produced this may have conflated a third-party multi-model API gateway's own
+  marketing with a Grok feature); a Google "Playground"/Unity "Spark" AI game-
+  maker (neither product name resolved to anything real); Mecka AI's "$60M
+  Series B" and Keyu Tian's "stealth world-model lab" funding figures, both of
+  which turned out real but materially different on direct search (Mecka's
+  $60M was actually a Series A + follow-on from June, not a Series B, and the
+  Sequoia $500M-valuation story that prompted the search was itself three weeks
+  stale, from Sept. 11; Tian's raise is "tens of millions" at a $200M valuation
+  per Chinese-language sources, not the specific $30M figure); a Sriram
+  Krishnan "$500M fund" (no trace at all -- the $500M figure in search results
+  was actually "$500 billion," referring to Stargate); and a Meta "Watermelon"
+  model "targeting October" that traced back to an August 24-30 leak, not
+  anything from this week. Lesson, extending the 2026-10-07T21:32:00Z entry:
+  the aggregator-noise problem isn't rare or occasional -- on a slow-ish news
+  day it can be the majority of what an aggregator sweep surfaces, and the
+  failure modes are varied enough (wrong date, wrong number, wrong company,
+  outright fabricated-sounding claim with zero source) that no single check
+  catches them all. Budget real search time to verify EVERY aggregator
+  headline independently before treating it as a candidate, not just the ones
+  that feel surprising.
+
+- **2026-10-08T01:38:21Z** (newsroom cycle, same run): a candidate this cycle
+  drafted toward ("California subpoenas OpenAI... dragnet widens") turned out
+  to already be published under slug `california-subpoenas-openai-rogue-
+  agents-dragnet-widens` (2026-10-03T14:44:33Z) -- caught only because this
+  cycle grepped existing slugs for keywords from the candidate BEFORE drafting,
+  per runbook §2's instruction to check `web/data/newsroom-articles.js` first.
+  The near-miss: the underlying Techmeme/search hit read as fresh (a subpoena
+  "Oct. 1" framing) and nothing about it screamed "already covered" without
+  that grep step. Reinforces that the slug/title/publishedAt grep in §2 is not
+  a formality to skip when a story feels novel -- it is exactly how a 5-day-old
+  already-published story gets caught before tokens are spent drafting it.

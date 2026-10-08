@@ -1668,6 +1668,35 @@ this order, and mark it done here.
    both return nothing on this runner; `find . -iname "issue-001.json"` also
    still returns nothing.
 
+   PARTIAL, checked (2026-10-08T02:15:54Z cycle) -- re-checked before writing,
+   since this cycle's own two articles (Anthropic's $100M Claude Frontier
+   Academy training program; Oracle's Fusion Claw agentic execution runtime)
+   plus the full §4b/§4c/§4d passes were already the required work; guide
+   cadence read 2 days (a guide published 2026-10-06), so §3d needed no
+   action. §3c backfill search re-ran (`component_audit`) and found zero
+   articles below their format's component floor -- still empty. Both
+   §3e/§3f blockers unchanged, re-confirmed by reading the files directly:
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), `find . -iname
+   "issue-001.json"` still returns nothing, and no `wrangler` binary or
+   Cloudflare credentials exist on this runner. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Separately: research this
+   cycle hit an unusually high rate of unverifiable aggregator headlines --
+   roughly 15 Techmeme-sourced candidates (a claimed GPT-6 "Intelligent UI"
+   rollout, a Grok-routes-to-Claude/Midjourney/Suno claim, a Google
+   "Playground"/Unity "Spark" game-maker, SpaceX/Apollo chip financing, the
+   Terafab/TSMC story, Mecka AI's funding round, a Keyu Tian stealth-lab
+   raise, a Sriram Krishnan fund, and Meta's "Watermelon" model, among
+   others) either failed independent corroboration outright or turned out to
+   be weeks stale on direct search -- full finding logged in
+   `living-notes.md` since it's a research-method finding, not a
+   Primer-content item. This entry and the §3f entry below are, again, being
+   committed to a `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as
+   their own separate `runbook:`-prefixed commit, after the article/data
+   commit that already cleared the full §5 gate sequence. Same two next
+   steps as every entry since 2026-08-30, still open.
+
    PARTIAL, checked (2026-10-07T21:32:00Z cycle) -- re-checked before writing,
    since this cycle's own three articles (Anthropic's Claude Haiku 5.5 launch
    and same-day Sonnet 5.5 cache-price cut; Google's SynthID Detector public
@@ -2168,6 +2197,14 @@ were already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30,
 still open.
+
+**Status (2026-10-08T02:15:54Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own two articles (Anthropic's $100M Claude Frontier Academy
+training program; Oracle's Fusion Claw agentic execution runtime) plus the
+full §3c/§4b/§4c/§4d passes were already the required work: `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next
+steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
