@@ -1703,6 +1703,47 @@ this order, and mark it done here.
    their own separate `runbook:`-prefixed commit, after the article/data commit
    that already cleared the full §5 gate sequence.
 
+   PARTIAL, checked (2026-10-08T21:19:27Z cycle) -- re-checked before writing,
+   since this cycle's own two articles (OpenAI's investor-disclosed $50B
+   revenue run rate reconciled against the $68B figure Wall Street had been
+   using, and Manus's $500M+ funding round and 4-5x revenue growth following
+   the Beijing-forced Meta unwind) plus the full §4b/§4c/§4d passes were
+   already the required work; guide cadence read 2 days (a guide published
+   2026-10-06), so §3d needed no action. §3c backfill search re-ran
+   (`component_audit`) and found zero articles below their format's component
+   floor -- still empty. `verify_covers.py pick` again returned the same two
+   semantically mismatched candidates (a silicon-wafer image, a surgical-suite
+   image) for both of this cycle's stories regardless of subject keywords
+   tried -- same library-exhaustion pattern every entry since 2026-09-28 has
+   flagged; generated fresh art for both rather than ship a mismatch ($0.12
+   total). No new `primer-issue.js`-only candidate found this cycle; did not
+   force one. Same two §3e/§3f next steps as every entry since 2026-08-30,
+   still open: `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads
+   `("web/", "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent, confirmed by reading the file
+   directly), and `which wrangler` / `env | grep -i cloudflare` both return
+   nothing on this runner; `find . -iname "issue-001.json"` also still returns
+   nothing. Separately: this cycle's research hit the same aggregator-noise
+   pattern prior entries have logged, at a similarly high rate to the
+   2026-10-08T01:38:21Z entry above -- a "Natura Interface" $99 smart ring and
+   a "Hone" $60M AI-agent seed round, both attributed to named outlets
+   (TechCrunch, Bloomberg) in the aggregator sweep, returned no corroborating
+   result on direct search at all; a Trump "AI" vs. "Super Intelligence"
+   "enemy" framing traced back to the already-covered 2026-09-22 executive
+   order with no independent confirmation of the specific "enemy" quote or a
+   White House site change. All three were dropped from the article slate and
+   Buzz rather than published unconfirmed. Two leads that DID verify and became
+   Buzz cards instead of articles: South Korea's regulatory escalation on the
+   AI-linked bank breaches (an FSC emergency meeting, a 500-firm FSS alert, a
+   police investigation opened at President Lee's request) on top of the
+   already-published 2026-10-05 breach story, and Firmus's ASX IPO bookbuild
+   -- oversubscribed and priced at a $30.6B valuation, well above the figure
+   in the stale "postponed" framing the aggregator sweep led with. This entry
+   and the §3f entry below are, again, being committed to a `newsroom/` path
+   outside `ALLOWED_PREFIXES` -- pushed as their own separate
+   `runbook:`-prefixed commit, after the article/data commit that already
+   cleared the full §5 gate sequence.
+
    PARTIAL, checked (2026-10-08T02:15:54Z cycle) -- re-checked before writing,
    since this cycle's own two articles (Anthropic's $100M Claude Frontier
    Academy training program; Oracle's Fusion Claw agentic execution runtime)
@@ -2248,6 +2289,14 @@ piece; Amazon's Fire-to-Alexa tablet replacement synthesis) plus the full
 "issue-001.json"` still returns nothing, and no `wrangler` binary or
 Cloudflare credentials exist on this runner. No item worked. Same two next
 steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-08T21:19:27Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own two articles (OpenAI's $50B-vs-$68B revenue-run-rate
+reconciliation synthesis; Manus's $500M+ post-unwind funding-round synthesis)
+plus the full §3c/§4b/§4c/§4d passes were already the required work:
+`find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
+binary or Cloudflare credentials exist on this runner. No item worked. Same
+two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
