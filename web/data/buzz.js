@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-831", date:"2026-10-08",
+    source:{ name:"Google", handle:"google", platform:"web", kind:"lab" },
+    text:"Google released AI Edge Foresight on Oct. 8, an experimental Mac app that listens to meetings via microphone and system audio (working offline with any platform, including in-person) and expands a few typed bullet points into full notes using the live transcript. It runs entirely on-device on Apple Silicon, built on the new 740M-parameter EmbeddingGemma 2 model, and can also answer questions from a local folder of PDFs, Docs, and Markdown files.",
+    why:"A fully offline meeting-notes app, positioned by Google itself as a showcase for how small its on-device models have gotten, is a direct challenge to cloud-based notetakers like Granola -- worth watching whether 'runs locally, never leaves your Mac' becomes the actual selling point once privacy-conscious enterprise buyers compare it.",
+    heat:23, topics:["google","on-device ai","embeddinggemma","meeting notes","privacy"],
+    url:"https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/" },
 { id:"bz-830", date:"2026-10-07",
     source:{ name:"Anthropic", handle:"anthropicai", platform:"web", kind:"lab" },
     text:"Anthropic released Claude Haiku 5.5 on Oct. 7, calling it 'the cheapest, fastest, and most capable small model we've ever released.' Pricing drops to $0.10 per million input tokens and $0.50 per million output tokens for prompts under 100K tokens (a 90% cut from Haiku 4.5's $1/$5 rate). The model scores 72.4% on OSWorld 2.1 computer-use benchmark with new effort controls, completing the Haiku/Sonnet/Opus 5.5 refresh cycle that began Sept. 22. A same-day price cut to Sonnet 5.5's cache-read rate accompanied the launch.",

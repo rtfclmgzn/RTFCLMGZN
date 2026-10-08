@@ -33621,5 +33621,203 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-372-math-results-mathematician-revolt-crypto-bunker-mode",
+    "ts": "2026-10-08T17:32:00Z",
+    "export": {
+      "article_id": "newsroom-openai-372-math-results-mathematician-revolt-crypto-bunker-mode",
+      "url": "https://rtfclmgzn.com/article/openai-372-math-results-mathematician-revolt-crypto-bunker-mode",
+      "headline": "OpenAI's 372 New Math Results Didn't Just Anger Mathematicians -- They Pushed a Crypto Researcher to Call for \"Bunker Mode\"",
+      "hook": "OpenAI released 372 math results from one prompt each, defied its own advisory group's disclosure ask, and triggered both a mathematician boycott call and a crypto researcher's warning about AI-cracked wallets.",
+      "key_facts": [
+        "OpenAI's own advisory group asked for the model, the prompts, and compute time -- it got only averages.",
+        "The Association for Human Mathematics called the release 'a demonstration of power' and urged a boycott.",
+        "Ethereum's Justin Drake tied the release to a wallet-cryptography warning; Vitalik Buterin says don't panic yet."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/rtfc-20261008-openaimath-01.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "OpenAI released 372 math results from one prompt each on Oct. 6 -- and ignored its own advisory group's ask to publish the model and prompts behind them. Mathematicians are calling it a power move. A crypto researcher is calling for 'bunker mode':",
+        "reply_copy": "What's actually confirmed, and what isn't:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "OpenAI published 372 claimed math results on Oct. 6 -- nearly all from a single prompt to a single AI agent, running a model it hasn't released.\n\nThe catch: OpenAI's own advisory group (hosted at Princeton's Institute for Advanced Study) had asked for the model, the exact prompts, and the compute time per problem. OpenAI released only averages.\n\nThe Association for Human Mathematics called it \"a demonstration of power\" and is urging mathematicians to stop working with the company. Terence Tao is more measured -- he says it marks the end of \"Math 1.0.\"\n\nThen it got stranger: Ethereum researcher Justin Drake tied the release to a warning that AI could eventually break the cryptography securing crypto wallets, calling for \"bunker mode.\" Vitalik Buterin agrees the risk is real -- but says don't rush your wallet migration today.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI",
+          "#Mathematics",
+          "#TerenceTao",
+          "#Crypto",
+          "#Ethereum",
+          "#TechNews",
+          "#AIResearch"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "OpenAI published 372 claimed mathematical results on Oct. 6, nearly all from a single prompt to one unreleased model -- defying its own Institute for Advanced Study-hosted advisory group's call to publish the model, the prompts, and the compute time behind each one. The Association for Human Mathematics is now urging mathematicians to stop working with OpenAI; Terence Tao is more measured, saying it marks the end of what he calls \"Math 1.0.\" Separately, Ethereum researcher Justin Drake tied the release to a warning that AI could eventually break the cryptography securing crypto wallets -- a risk Vitalik Buterin says is real, but not urgent enough to panic over yet.",
+        "hashtags": [
+          "#AI",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI dropped 372 math results from one prompt each, skipped the disclosure its own advisory group asked for, and now has mathematicians calling for a boycott AND a crypto researcher calling for 'bunker mode' on wallet security. Same release, two completely different alarms:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI: 372 math results, one prompt each, model still unreleased. Its own advisory group wanted the model + prompts + compute time. It got none of that. Mathematicians are furious. A crypto researcher wants 'bunker mode.' Nobody's independently checked a single result yet.",
+        "hashtags": [
+          "#OpenAI",
+          "#AI",
+          "#Mathematics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T22:30:12Z",
+        "copy": "Zero of OpenAI's 372 claimed math results have been independently replicated as of this week, per MIT's Andrew Sutherland. Lean verification checks the logic -- it doesn't confirm who actually did the thinking, or that the model itself works as described.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T22:30:12Z",
+        "copy": "The crypto angle nobody saw coming: Scott Aaronson noticed cryptography was conspicuously missing from OpenAI's 372 math results -- and says AI labs have quietly started testing whether their models can break the math underneath crypto wallets. That's a different, faster threat than the quantum computer everyone's been bracing for.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-amazon-alexa-tablets-replace-fire-android-google-play",
+    "ts": "2026-10-08T17:40:00Z",
+    "export": {
+      "article_id": "newsroom-amazon-alexa-tablets-replace-fire-android-google-play",
+      "url": "https://rtfclmgzn.com/article/amazon-alexa-tablets-replace-fire-android-google-play",
+      "headline": "Amazon Is Killing the Fire Tablet Line and Replacing It With $230-to-$550 Alexa Tablets That Run Real Android",
+      "hook": "Amazon just discontinued Fire tablets for good, replacing them with three pricier Alexa-branded tablets that, for the first time ever, run real Android with full Google Play access.",
+      "key_facts": [
+        "Three new tablets: Alexa Tablet 8 ($229.99), 11 (from $329.99), 12 Pro ($499.99-$549.99) -- shipping Oct. 14.",
+        "All three ditch Amazon's locked-down Fire OS for stock Android and the full Google Play Store.",
+        "Amazon denies the industry-wide memory-chip shortage shaped pricing -- even as its own devices chief says it made this 'quite tricky.'"
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/rtfc-20261008-alexatablets-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Fire tablets are dead. Amazon just announced three Alexa-branded replacements, $229.99 to $549.99 -- and for the first time ever, they run real Android with full Google Play access, not Amazon's old walled garden:",
+        "reply_copy": "What actually changed, spec by spec:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Amazon",
+          "#Android"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Amazon is done making Fire tablets.\n\nOn Oct. 8, it announced three new Alexa-branded tablets -- the Alexa Tablet 8 ($229.99), Alexa Tablet 11 (from $329.99), and Alexa Tablet 12 Pro ($499.99-$549.99), shipping Oct. 14.\n\nThe big change isn't just the price: every one of them runs stock Android with full Google Play Store access -- the first time an Amazon tablet has dropped Fire OS and the old Amazon Appstore.\n\nAlexa+ is built into all three, with an opt-in feature that can read your screen and act on it. The 12 Pro gets a 120Hz display, 8GB RAM, 128GB storage, and real accessories: a $149.99 keyboard, an $89.99 pen.\n\nThe cheapest new tablet still costs 48% more than the old Fire HD 10. Full story -- link in bio.",
+        "hashtags": [
+          "#Amazon",
+          "#Android",
+          "#Alexa",
+          "#Tablet",
+          "#TechNews",
+          "#GooglePlay"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Amazon announced three new Alexa-branded tablets on October 8 -- the Alexa Tablet 8 ($229.99), Alexa Tablet 11 (from $329.99), and Alexa Tablet 12 Pro ($499.99-$549.99) -- shipping October 14 in the US, Canada and Mexico. All three drop Amazon's locked-down Fire OS for stock Android with full Google Play access and build in the Alexa+ assistant. Amazon has stopped making new Fire tablets, though it will support existing ones for four years. The company denies the memory-chip shortage driving up its hardware prices all year shaped this launch, even as its own devices chief told CNBC it made building a reasonably priced premium tablet \"quite tricky.\"",
+        "hashtags": [
+          "#Amazon",
+          "#Android"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Amazon just killed the Fire tablet line after a decade of keeping it locked to its own app store. The replacement runs real Android with full Google Play -- and costs 48% more at the cheapest tier. That's the actual trade Amazon just made:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Amazon's Fire tablets are over. The Alexa Tablet 8/11/12 Pro ($230-$550) replace them, running real Android + full Google Play for the first time ever. No more sub-$150 option though -- the cheapest new one costs 48% more than the old Fire HD 10.",
+        "hashtags": [
+          "#Amazon",
+          "#Android",
+          "#Tablet"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T22:38:30Z",
+        "copy": "Amazon's devices chief Panos Panay built Microsoft's Surface line before coming to Amazon. He just told CNBC the memory-chip shortage made a reasonably priced premium tablet 'quite tricky' -- while Amazon's own PR line denies the shortage shaped the Alexa Tablets' pricing at all.",
+        "reply_copy": "The full strategy shift:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Amazon",
+          "#Tablet"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T22:38:30Z",
+        "copy": "The real story in Amazon's new tablets isn't the price -- it's that Amazon just gave up on its own walled-garden app store entirely. Full Google Play access on an Amazon-branded device would have been unthinkable two years ago.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
