@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-830", date:"2026-10-07",
+    source:{ name:"Anthropic", handle:"anthropicai", platform:"web", kind:"lab" },
+    text:"Anthropic released Claude Haiku 5.5 on Oct. 7, calling it 'the cheapest, fastest, and most capable small model we've ever released.' Pricing drops to $0.10 per million input tokens and $0.50 per million output tokens for prompts under 100K tokens (a 90% cut from Haiku 4.5's $1/$5 rate). The model scores 72.4% on OSWorld 2.1 computer-use benchmark with new effort controls, completing the Haiku/Sonnet/Opus 5.5 refresh cycle that began Sept. 22. A same-day price cut to Sonnet 5.5's cache-read rate accompanied the launch.",
+    why:"A 90% price reduction on a model that's getting faster and more capable is a direct signal that the small-model layer is maturing into commodity territory -- the third major price cut from a frontier lab in three weeks signals the market is shifting from 'how much does frontier cost' to 'which layer am I buying into.'",
+    heat:35, topics:["anthropic","claude haiku","pricing","models","product"],
+    url:"https://www.anthropic.com/claude-haiku-5-5" },
 { id:"bz-829", date:"2026-10-07",
     source:{ name:"Wolfspeed", handle:"wolfspeed", platform:"web", kind:"news" },
     text:"Wolfspeed said Oct. 7 it received a conditional loan commitment letter of up to $1.5 billion from the Department of War's Office of Strategic Capital -- a 30-year, senior secured delayed-draw term loan -- to support domestic silicon-carbide and wide-bandgap power-device production, with an explicit national-security angle. The company's CFO said the commitment is still subject to diligence and definitive agreements.",
