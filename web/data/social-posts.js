@@ -33442,7 +33442,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -33483,8 +33485,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#Funding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxdfmp72gj2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxdfmp72gj2y",
+        "posted_at": "2026-10-08T02:21:57Z"
       },
       {
         "platform": "x",
@@ -33541,7 +33545,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -33570,8 +33576,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Oracle's new Fusion Claw: a frontier model plans, deterministic code executes, every run gets an audit receipt. Oracle says it's cheaper. Analysts reviewing the launch say total cost still depends on tokens, exceptions, and a pricing structure where unused capacity expires unreimbursed:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeN15pbjRjy",
+        "remote_id": "18087407369282102",
+        "posted_at": "2026-10-08T02:17:47Z"
       },
       {
         "platform": "bluesky",
@@ -33581,8 +33589,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Oracle",
           "#Enterprise"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxdffif2462f",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxdffif2462f",
+        "posted_at": "2026-10-08T02:17:55Z"
       },
       {
         "platform": "x",
