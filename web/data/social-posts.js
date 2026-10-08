@@ -33230,7 +33230,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -33254,14 +33254,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Google",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126203965396947",
+        "remote_id": "1238977099292018_122126203965396947",
+        "posted_at": "2026-10-08T01:14:56Z"
       },
       {
         "platform": "threads",
         "copy": "Google opened SynthID Detector to everyone worldwide on Oct. 7 -- free, covering Google, OpenAI, Nvidia, and Kakao's models now. But it only ever proves one thing: a positive match. A clean result just means no SynthID signal was found, nothing more:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeNuvnWnRDt",
+        "remote_id": "18121687945894365",
+        "posted_at": "2026-10-08T01:15:14Z"
       },
       {
         "platform": "bluesky",
@@ -33271,8 +33275,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#SynthID"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxdbvn2uac2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxdbvn2uac2t",
+        "posted_at": "2026-10-08T01:15:22Z"
       },
       {
         "platform": "x",
@@ -33330,7 +33336,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -33344,8 +33350,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#AIAgents"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeNuOB1Hbwu/",
+        "remote_id": "18144637201576864",
+        "posted_at": "2026-10-08T01:10:43Z"
       },
       {
         "platform": "facebook",
@@ -33354,14 +33362,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Funding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126203119396947",
+        "remote_id": "1238977099292018_122126203119396947",
+        "posted_at": "2026-10-08T01:10:52Z"
       },
       {
         "platform": "threads",
         "copy": "Nous Research raised $90M at a $1.5B valuation for its free, open-source Hermes agent's new enterprise tier. Nvidia, Microsoft, Samsung all backed it. The usage numbers behind the round -- 24M+ clones, ~2.5% of global AI tokens -- are the company's own:",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeNuRScnXns",
+        "remote_id": "18431054695197311",
+        "posted_at": "2026-10-08T01:11:06Z"
       },
       {
         "platform": "bluesky",
@@ -33370,8 +33382,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Funding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxdbo7xvdj2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxdbo7xvdj2m",
+        "posted_at": "2026-10-08T01:11:13Z"
       },
       {
         "platform": "x",
