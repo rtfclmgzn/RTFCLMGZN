@@ -33410,5 +33410,202 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-anthropic-claude-frontier-academy-100-million-engineers",
+    "ts": "2026-10-08T02:05:00Z",
+    "export": {
+      "article_id": "newsroom-anthropic-claude-frontier-academy-100-million-engineers",
+      "url": "https://rtfclmgzn.com/article/anthropic-claude-frontier-academy-100-million-engineers",
+      "headline": "Anthropic Commits $100 Million to Train 10,000 \"Frontier Deployed\" Engineers by 2027",
+      "hook": "Anthropic is spending $100M to train 10,000 engineers who can deploy Claude inside real businesses -- the same week a leaked IPO prospectus reportedly showed an $8B+ operating loss.",
+      "key_facts": [
+        "The Claude Frontier Academy runs like a medical residency: training, then a 12-week live deployment.",
+        "First cohorts: Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, Novo Nordisk.",
+        "Anthropic never sizes the 'talent gap' the program claims to fix."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/rtfc-20261008-frontieracademy-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic is spending $100M to train 10,000 engineers who can deploy Claude inside real businesses by 2027 -- the same week a leaked IPO prospectus reportedly showed an $8B+ operating loss:",
+        "reply_copy": "What the $100M actually buys:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic launched the Claude Frontier Academy on Oct. 2: $100 million to train and credential 10,000 \"Frontier Deployed Engineers\" by the end of 2027.\n\nThe structure borrows from medical residency -- multi-day training, then a 12-week stint leading a real Claude deployment at the trainee's own employer.\n\nFirst cohorts: Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, Novo Nordisk. Entry is by nomination only.\n\nThe catch: Anthropic never puts a number on the \"talent gap\" it says this fixes -- and the announcement landed the same week a leaked IPO prospectus reportedly showed $4.6B in revenue against an operating loss above $8B. Full story -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic",
+          "#Claude",
+          "#EnterpriseAI",
+          "#TechNews",
+          "#AIJobs",
+          "#IPO"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic launched the Claude Frontier Academy on Oct. 2, committing $100 million to train and credential 10,000 \"Frontier Deployed Engineers\" by the end of 2027 -- a medical-residency-style program with first cohorts at Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, and Novo Nordisk. Anthropic never quantifies the \"AI talent gap\" it says the program fixes, and the announcement landed the same week a leaked IPO prospectus reportedly put the company's revenue at $4.6 billion against an operating loss above $8 billion.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic is spending $100M to train 10,000 \"Frontier Deployed Engineers\" by 2027 -- a medical-residency-style program with Accenture, Bain, Deloitte, McKinsey and more as first cohorts. It never says how big the \"talent gap\" actually is, and the news landed next to a reported $8B+ operating loss:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic: $100M to train 10,000 \"Frontier Deployed Engineers\" by 2027, residency-style, nomination-only. No number on the \"talent gap\" it fixes -- and a leaked prospectus reportedly shows an $8B+ operating loss the same week.",
+        "hashtags": [
+          "#AI",
+          "#Anthropic",
+          "#Funding"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T07:05:00Z",
+        "copy": "Commonwealth Bank of Australia says its engineers now produce up to 3x more code changes using Claude than a year ago -- that's Anthropic's own named-partner evidence for why the Academy exists. No independent audit of that number exists yet.",
+        "reply_copy": "The number behind the bet:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T07:05:00Z",
+        "copy": "$100M / 10,000 engineers = $10K per credentialed engineer, by Anthropic's own two headline numbers. Whether that's cheap or expensive depends entirely on whether the company hits the target -- which nobody can check yet.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-oracle-fusion-claw-agentic-execution-runtime",
+    "ts": "2026-10-08T02:06:00Z",
+    "export": {
+      "article_id": "newsroom-oracle-fusion-claw-agentic-execution-runtime",
+      "url": "https://rtfclmgzn.com/article/oracle-fusion-claw-agentic-execution-runtime",
+      "headline": "Oracle Launches Fusion Claw, Splitting AI Reasoning From Execution in Its Enterprise Agents",
+      "hook": "Oracle's new Fusion Claw runtime has a frontier model plan a task, then hands execution to deterministic code -- Oracle says it's cheaper; two analysts say that's unproven.",
+      "key_facts": [
+        "Fusion Claw launched Sept. 29 with 25 new \"Claw-powered\" agentic applications.",
+        "A frontier model (Gemini or OpenAI) plans; deterministic enterprise code executes at scale.",
+        "Oracle's own application-count tally (22+25+25) doesn't arithmetically reconcile with its claimed total of 75."
+      ],
+      "tone": "Austere, technically exacting, evaluation-first",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/rtfc-20261008-fusionclaw-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Oracle's new Fusion Claw has a frontier model plan a task, then hands execution to deterministic enterprise code. Oracle says it's cheaper. Two analysts who reviewed it say that claim is unproven:",
+        "reply_copy": "How it actually works:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Oracle",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Oracle launched Fusion Claw on Sept. 29 -- a governed runtime where a frontier model (Gemini or an OpenAI model) plans a task, then hands execution to deterministic enterprise code, with every run logged in an audit \"receipt.\"\n\n25 new \"Claw-powered\" applications shipped with it: Ledger, Shipping Consolidation, Workforce Staffing, Account Territory Growth Plan.\n\nOracle says the split makes agentic work cheaper. It discloses no pricing. Two independent analysts who reviewed the launch call the reliability case plausible -- and the cost claim unproven, since unused capacity reportedly expires without reimbursement. Full story -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Oracle",
+          "#EnterpriseAI",
+          "#AIAgents",
+          "#TechNews",
+          "#CloudComputing"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Oracle introduced Fusion Claw on Sept. 29 -- a governed runtime where a frontier model (Gemini or an OpenAI model) plans a task and hands execution to deterministic enterprise code, with every run bounded by a customer-set policy and logged in an audit \"receipt.\" Oracle says the split makes agentic work cheaper and more predictable but discloses no pricing; two analysts who reviewed the launch call the reliability case plausible and the cost claim unproven, since unused capacity reportedly expires without reimbursement.",
+        "hashtags": [
+          "#AI",
+          "#Oracle"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Oracle's new Fusion Claw: a frontier model plans, deterministic code executes, every run gets an audit receipt. Oracle says it's cheaper. Analysts reviewing the launch say total cost still depends on tokens, exceptions, and a pricing structure where unused capacity expires unreimbursed:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Oracle's Fusion Claw: a frontier model plans, deterministic code executes, an audit receipt logs it. The cost-savings claim is unproven per two analysts who reviewed it -- unused capacity reportedly expires without reimbursement.",
+        "hashtags": [
+          "#AI",
+          "#Oracle",
+          "#Enterprise"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T07:06:00Z",
+        "copy": "Oracle's own math doesn't add up cleanly: 22 apps (March) + 25 (April) + 25 Claw-powered (Sept.) = 72. Oracle claims the portfolio is now 75. The 3-app gap is unexplained in its own materials.",
+        "reply_copy": "The numbers, scoped:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Oracle",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-08T07:06:00Z",
+        "copy": "An analyst's actual advice on Oracle's new agentic runtime: run one bounded pilot, and get per-outcome pricing commitments in writing before you trust the cost-savings pitch at scale.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
