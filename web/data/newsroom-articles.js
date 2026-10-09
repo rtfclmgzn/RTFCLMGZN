@@ -4394,7 +4394,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "label": "Ask any coding-agent vendor what \"sandbox\" actually means.",
-    "text": "Sandboxed can mean an isolated VM with a scoped, read-only mount, or it can mean a VM with the whole host filesystem shared read-write. That's a one-question, high-value thing to confirm before granting an agent real authority."
+    "text": "Sandboxed can mean an isolated VM with a scoped, read-only mount, or it can mean a VM with the whole host filesystem shared read-write. That's a one-question, high-value thing to confirm before granting an agent real authority -- see [our fuller checklist](/article/vet-an-ai-coding-agents-sandbox-before-you-trust-it) for the other three questions worth asking alongside it."
    },
    {
     "label": "Treat public CVEs in your AI tooling's dependencies as your exposure too.",
@@ -56400,7 +56400,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "None of this has produced confirmed real-world exploitation yet -- CVE-2026-19592 does not appear in CISA's Known Exploited Vulnerabilities catalog, and Manifold's own writeup stops short of claiming an active campaign. The gap that matters is the one between disclosure and fix: three vendors have gone six or more weeks without a public patch for a report that grants full code execution before a user approves anything, on tools with a combined install base in the tens of millions.",
+    "text": "None of this has produced confirmed real-world exploitation yet -- CVE-2026-19592 does not appear in CISA's Known Exploited Vulnerabilities catalog, and Manifold's own writeup stops short of claiming an active campaign. The gap that matters is the one between disclosure and fix: three vendors have gone six or more weeks without a public patch for a report that grants full code execution before a user approves anything, on tools with a combined install base in the tens of millions. For the broader question this and the other disclosures above all point at -- what a given tool's sandbox actually does and doesn't contain -- see [our checklist for vetting a coding agent's sandbox before you trust it](/article/vet-an-ai-coding-agents-sandbox-before-you-trust-it).",
     "citation_urls": [
      "https://app.opencve.io/cve/CVE-2026-19592"
     ]
