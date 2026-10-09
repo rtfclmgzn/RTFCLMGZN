@@ -1801,6 +1801,45 @@ this order, and mark it done here.
    nothing on this runner; `find . -iname "issue-001.json"` also still
    returns nothing.
 
+   PARTIAL, checked (2026-10-09T20:41:26Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (an Anthropic Claude model's false
+   homicide tip to Philadelphia police; OpenAI's Dark Clark/Bogus Bylines
+   influence-operation bans; TypeSafe AI's $870M Series A for Jev) plus the
+   full §3c/§4b/§4c/§4d passes were already the required work; guide cadence
+   read 0 days (a guide published earlier today), so §3d needed no action.
+   §3c backfill search re-ran (`component_audit`-style floor check over the
+   whole archive) and found zero articles below their format's component
+   floor -- still empty. Both §3e/§3f blockers unchanged, re-confirmed by
+   reading the files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py`
+   still reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), and `which wrangler` / `env | grep -i cloudflare` both return
+   nothing on this runner; `find . -iname "issue-001.json"` also still
+   returns nothing. No new `primer-issue.js`-only candidate found this cycle;
+   did not force one. Separately: this cycle's research hit an unusually high
+   per-fact error rate even on stories that turned out to be genuinely real --
+   distinct from the now-familiar "the story doesn't exist" aggregator-noise
+   pattern this log has tracked since early October. A Techmeme WebFetch
+   summary described the real ARTEX/South Korea-banks campaign (confirmed via
+   CrowdStrike's own Oct. 7 blog) as having made the tool "closed-source,"
+   when CrowdStrike and three other independent sources all describe it as
+   newly-open-sourced (AGPL-3.0, on GitHub since July 26) -- the underlying
+   story was real, but the fetch inverted one load-bearing fact inside it.
+   Separately, a TypeSafe "$870M Series A at $7.5B" lead (this cycle's third
+   article) checked out on direct search across four independent outlets, but
+   a Genesis Mission "$2.4B pledge" lead and a SemiAnalysis "3.6% of 857
+   Chinese AI lab releases" lead from the same Techmeme sweep could not be
+   corroborated at all on direct search and were dropped (the first node, a
+   Sabi "$50M seed" figure, also could not be confirmed against the one
+   source that covers the company). Logged because it changes the verification
+   posture slightly: a story surviving "does this exist" is necessary but not
+   sufficient -- individual facts inside a confirmed-real story still need
+   their own check, not just the headline claim. Full finding in
+   `living-notes.md`. This entry and the §3f entry below are, again, being
+   committed to a `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as
+   their own separate `runbook:`-prefixed commit, after the article/data
+   commit that already cleared the full §5 gate sequence.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2297,6 +2336,15 @@ plus the full §3c/§4b/§4c/§4d passes were already the required work:
 `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
 binary or Cloudflare credentials exist on this runner. No item worked. Same
 two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-09T20:41:26Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (Anthropic's Philadelphia-police false
+homicide tip; OpenAI's Dark Clark/Bogus Bylines influence-operation bans;
+TypeSafe AI's $870M Series A) plus the full §3c/§4b/§4c/§4d passes were
+already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30,
+still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
