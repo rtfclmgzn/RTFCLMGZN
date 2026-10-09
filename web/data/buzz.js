@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-834", date:"2026-10-09",
+    source:{ name:"CrowdStrike", handle:"crowdstrike", platform:"web", kind:"news" },
+    text:"CrowdStrike published its own technical writeup Oct. 7 naming the tool behind this week's AI-linked South Korean bank breaches: ARTEX, an open-source (AGPL-3.0) agentic pentesting tool published on GitHub by an 'Autumn-27' account since July 26. CrowdStrike assesses the campaign -- active late September through early October, hitting at least seven financial firms including Shinhan and KB Kookmin -- as likely run by a Chinese-speaking, financially motivated actor, at moderate confidence and with no named group attributed. ARTEX's own maintainers have since updated its usage guidelines to prohibit unauthorized intrusions.",
+    why:"This is the first independent technical confirmation of which tool was actually used, not just that AI was suspected -- and that it's a legitimate open-source red-team tool repurposed for real intrusions, rather than a bespoke hacking model, shifts the policy question from 'ban this AI' to 'the model was never the hard part.'",
+    heat:28, topics:["south korea","cybersecurity","banks","artex","crowdstrike"],
+    url:"https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/" },
 { id:"bz-833", date:"2026-10-08",
     source:{ name:"Reuters", handle:"reuters", platform:"web", kind:"news" },
     text:"Firmus, the Nvidia-backed Australian AI data-center builder, fixed its ASX IPO share price at A$11 Thursday, valuing the company at about $30.6 billion -- and banks moved the institutional bookbuild close up a day, to Thursday, after indications of interest already exceeded the roughly $5 billion offer (potentially $5.5 billion with the over-allotment option), Reuters reported citing a term sheet. Nvidia, Meta and OpenAI are listed as customers; founders face escrow releasing only 10% of shares after one year.",

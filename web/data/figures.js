@@ -173,6 +173,12 @@ window.RTFC_FIGURES = {
       note:"A secondary-market price set by a sale of existing shares, not a primary round -- the company raised no new capital at this price. Its last primary round (Series D, Feb. 2026) priced it at $11B." },
     { id:"val-suno", kind:"valuation-usd", value:5.4,
       label:"Suno, post-money (Series D)", slug:"elevenlabs-22-billion-tender-offer-secondary-valuation",
-      note:"A genuine primary round, closed June 2026. Cited as comparison context for the ElevenLabs tender, not this publication's primary story on Suno." }
+      note:"A genuine primary round, closed June 2026. Cited as comparison context for the ElevenLabs tender, not this publication's primary story on Suno." },
+    { id:"val-typesafe", kind:"valuation-usd", value:7.5,
+      label:"TypeSafe AI, post-money (Series A)", slug:"typesafe-ai-870-million-series-a-7-5-billion-valuation",
+      note:"Up from a reported $200M seed valuation three weeks earlier. Below the $10B+ figure The Information reported in talks two weeks before this round closed." },
+    { id:"raise-typesafe-a", kind:"funding-raise-usd", value:0.87,
+      label:"TypeSafe AI, Series A", slug:"typesafe-ai-870-million-series-a-7-5-billion-valuation",
+      note:"Led by Andreessen Horowitz, with Sequoia Capital and DCVC also participating." }
   ]
 };
