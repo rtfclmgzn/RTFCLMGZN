@@ -34034,194 +34034,204 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   },
- {
-  "article_id": "newsroom-openai-fired-researchers-dispute-chilling-effect",
-  "ts": "2026-10-09T02:10:00Z",
-  "export": {
-   "article_id": "newsroom-openai-fired-researchers-dispute-chilling-effect",
-   "url": "https://rtfclmgzn.com/article/openai-fired-researchers-dispute-chilling-effect",
-   "headline": "Three Researchers OpenAI Fired Over a Leak Claim Say the Real Reason Was Safety Advocacy",
-   "hook": "The three OpenAI researchers fired over an alleged leak just published an open letter saying the real reason was their safety advocacy, not misconduct -- and OpenAI hasn't named which policy any of them broke.",
-   "key_facts": [
-    "Jasmine Wang, Tomek Korbak, and Mikita Balesni published an open letter Oct. 8 disputing their Oct. 2 firings.",
-    "OpenAI's internal memo denies retaliation -- \"We do not terminate employees for raising concerns\" -- without detailing which policy was violated.",
-    "Wang says she was fired over email access that \"was delegated to her for recruiting work.\""
-   ],
-   "tone": "Principled, specific, evidence-led",
-   "persona": "samira-nasser",
-   "section": "Ethics",
-   "primary_image": "assets/img/newsroom/rtfc-20261009-openaisafetydispute-01.jpg",
-   "disclaimer": "none"
+  {
+    "article_id": "newsroom-openai-fired-researchers-dispute-chilling-effect",
+    "ts": "2026-10-09T02:10:00Z",
+    "export": {
+      "article_id": "newsroom-openai-fired-researchers-dispute-chilling-effect",
+      "url": "https://rtfclmgzn.com/article/openai-fired-researchers-dispute-chilling-effect",
+      "headline": "Three Researchers OpenAI Fired Over a Leak Claim Say the Real Reason Was Safety Advocacy",
+      "hook": "The three OpenAI researchers fired over an alleged leak just published an open letter saying the real reason was their safety advocacy, not misconduct -- and OpenAI hasn't named which policy any of them broke.",
+      "key_facts": [
+        "Jasmine Wang, Tomek Korbak, and Mikita Balesni published an open letter Oct. 8 disputing their Oct. 2 firings.",
+        "OpenAI's internal memo denies retaliation -- \"We do not terminate employees for raising concerns\" -- without detailing which policy was violated.",
+        "Wang says she was fired over email access that \"was delegated to her for recruiting work.\""
+      ],
+      "tone": "Principled, specific, evidence-led",
+      "persona": "samira-nasser",
+      "section": "Ethics",
+      "primary_image": "assets/img/newsroom/rtfc-20261009-openaisafetydispute-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Three researchers OpenAI fired over a leak claim just published an open letter saying the real reason was safety advocacy. OpenAI's own internal memo denies retaliation -- but still hasn't named which policy any of them actually broke.",
+        "reply_copy": "Both accounts, side by side:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three OpenAI researchers fired over an alleged leak are now telling a different story.\n\nJasmine Wang, Tomek Korbak, and Mikita Balesni published an open letter Oct. 8 disputing OpenAI's account of their Oct. 2 firings -- saying the real reason was their safety advocacy, not misconduct.\n\nOpenAI's own internal memo denies retaliation: \"We do not terminate employees for raising concerns.\" It still hasn't said which specific policy any of the three violated.\n\nNeither account is independently verified. Full story -- link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety",
+          "#Whistleblower",
+          "#TechNews",
+          "#AIEthics",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Three OpenAI researchers fired Oct. 2 over an alleged leak published an open letter Oct. 8 disputing the company's account -- Jasmine Wang, Tomek Korbak, and Mikita Balesni say they were punished for safety advocacy, not misconduct. OpenAI shared an internal memo denying retaliation but still hasn't detailed which specific policy any of them violated. Neither side's account is independently verified beyond what each has put on the record.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI fired three safety researchers for an alleged leak. A week later, all three published an open letter saying the real reason was their safety advocacy -- and the company's own internal memo, while denying retaliation, still hasn't named which specific policy any of them broke.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Three OpenAI researchers fired over an alleged leak say the real reason was safety advocacy. OpenAI's internal memo denies retaliation -- but still hasn't named which policy any of them violated.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxgsnj7oth2r",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxgsnj7oth2r",
+        "posted_at": "2026-10-09T10:53:02Z"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T07:10:00Z",
+        "copy": "The internal memo defending OpenAI's firings is attributed to an unnamed research leader. The letter accusing OpenAI of retaliation is signed by three named people risking their careers to say it. That asymmetry is the story too.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISafety"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T07:10:00Z",
+        "copy": "Worth tracking: whether METR, the external evaluator named in this dispute, ever says anything publicly about whether contact from OpenAI staff was actually improper. So far it's the one party in this story that hasn't said a word.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   },
-  "posts": [
-   {
-    "platform": "x",
-    "variant": "hook",
-    "copy": "Three researchers OpenAI fired over a leak claim just published an open letter saying the real reason was safety advocacy. OpenAI's own internal memo denies retaliation -- but still hasn't named which policy any of them actually broke.",
-    "reply_copy": "Both accounts, side by side:",
-    "link_in_reply": true,
-    "hashtags": [
-     "#OpenAI",
-     "#AISafety"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "instagram",
-    "copy": "Three OpenAI researchers fired over an alleged leak are now telling a different story.\n\nJasmine Wang, Tomek Korbak, and Mikita Balesni published an open letter Oct. 8 disputing OpenAI's account of their Oct. 2 firings -- saying the real reason was their safety advocacy, not misconduct.\n\nOpenAI's own internal memo denies retaliation: \"We do not terminate employees for raising concerns.\" It still hasn't said which specific policy any of the three violated.\n\nNeither account is independently verified. Full story -- link in bio.",
-    "hashtags": [
-     "#OpenAI",
-     "#AISafety",
-     "#Whistleblower",
-     "#TechNews",
-     "#AIEthics",
-     "#AI"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "facebook",
-    "copy": "Three OpenAI researchers fired Oct. 2 over an alleged leak published an open letter Oct. 8 disputing the company's account -- Jasmine Wang, Tomek Korbak, and Mikita Balesni say they were punished for safety advocacy, not misconduct. OpenAI shared an internal memo denying retaliation but still hasn't detailed which specific policy any of them violated. Neither side's account is independently verified beyond what each has put on the record.",
-    "hashtags": [
-     "#OpenAI",
-     "#AISafety"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "threads",
-    "copy": "OpenAI fired three safety researchers for an alleged leak. A week later, all three published an open letter saying the real reason was their safety advocacy -- and the company's own internal memo, while denying retaliation, still hasn't named which specific policy any of them broke.",
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "bluesky",
-    "copy": "Three OpenAI researchers fired over an alleged leak say the real reason was safety advocacy. OpenAI's internal memo denies retaliation -- but still hasn't named which policy any of them violated.",
-    "hashtags": [
-     "#OpenAI",
-     "#AISafety"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "x",
-    "variant": "second-wave",
-    "not_before": "2026-10-09T07:10:00Z",
-    "copy": "The internal memo defending OpenAI's firings is attributed to an unnamed research leader. The letter accusing OpenAI of retaliation is signed by three named people risking their careers to say it. That asymmetry is the story too.",
-    "hashtags": [
-     "#OpenAI",
-     "#AISafety"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "threads",
-    "variant": "second-wave",
-    "not_before": "2026-10-09T07:10:00Z",
-    "copy": "Worth tracking: whether METR, the external evaluator named in this dispute, ever says anything publicly about whether contact from OpenAI staff was actually improper. So far it's the one party in this story that hasn't said a word.",
-    "status": "ready",
-    "post_url": null
-   }
-  ]
- },
- {
-  "article_id": "newsroom-anthropic-2026-usage-policy-cruelty-toward-claude-ban",
-  "ts": "2026-10-09T02:15:00Z",
-  "export": {
-   "article_id": "newsroom-anthropic-2026-usage-policy-cruelty-toward-claude-ban",
-   "url": "https://rtfclmgzn.com/article/anthropic-2026-usage-policy-cruelty-toward-claude-ban",
-   "headline": "Anthropic Rewrites Its Usage Policy to Ban Cruelty Toward Claude, Tighten Weapons and Hardware Rules",
-   "hook": "Anthropic just became the first major AI lab to put in writing that being cruel to its own model can get your account suspended -- though the only enforcement tool behind the new rule already existed.",
-   "key_facts": [
-    "The Nov. 12 policy bans \"sustained and needless abusive or cruel behavior\" toward Claude -- but exempts ordinary frustration, dark fiction, and testing.",
-    "New rules also explicitly cover weapons-control software, arming drones, and autonomous physical hardware that could cause injury.",
-    "The only named enforcement mechanism is Claude's existing ability to end abusive conversations, in place since August 2025."
-   ],
-   "tone": "Composed, legally precise, strategic",
-   "persona": "evelyn-zhao",
-   "section": "Policy",
-   "primary_image": "assets/img/newsroom/rtfc-20261009-anthropicusagepolicy-01.jpg",
-   "disclaimer": "none"
-  },
-  "posts": [
-   {
-    "platform": "x",
-    "variant": "hook",
-    "copy": "Anthropic just became the first major AI lab to ban being cruel to its own model in writing. The catch: the only enforcement tool behind the new rule -- ending the chat -- already existed before this update.",
-    "reply_copy": "What else changed in the policy:",
-    "link_in_reply": true,
-    "hashtags": [
-     "#Anthropic",
-     "#Claude"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "instagram",
-    "copy": "Anthropic just rewrote its Usage Policy -- and for the first time among major AI labs, it bans being cruel to the model itself.\n\nThe new rule prohibits \"sustained and needless abusive or cruel behavior\" toward Claude, taking effect Nov. 12. It's narrow by design: ordinary frustration, dark fiction, and testing are all explicitly exempt.\n\nThe update also tightens rules on weapons-control software, autonomous hardware, and surveillance.\n\nThe catch: the only enforcement tool named is Claude's existing ability to end an abusive conversation -- a capability that's been around since August 2025. Full story -- link in bio.",
-    "hashtags": [
-     "#Anthropic",
-     "#Claude",
-     "#AIPolicy",
-     "#AI",
-     "#TechNews",
-     "#AIEthics"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "facebook",
-    "copy": "Anthropic published the 2026 rewrite of its Usage Policy on Oct. 8, and for the first time among the major AI labs, it explicitly bans \"sustained and needless abusive or cruel behavior\" toward Claude itself -- while exempting ordinary frustration, dark fiction, and testing. The update, effective Nov. 12, also tightens rules on weapons-control software, autonomous physical hardware, and surveillance. The only named enforcement mechanism is Claude's existing ability to end an abusive conversation, a capability Anthropic built in August 2025.",
-    "hashtags": [
-     "#Anthropic",
-     "#Claude"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "threads",
-    "copy": "Anthropic's new Usage Policy bans being cruel to Claude -- a first among major labs. It's narrow (frustration, dark fiction, and testing are exempt) and its only enforcement tool is a capability that already existed. Still a real first: conduct toward the model itself, not just other people, can now get you suspended.",
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "bluesky",
-    "copy": "Anthropic just became the first major AI lab to ban cruelty toward its own model, in writing. Effective Nov. 12 -- though the only enforcement mechanism behind it already existed before this update.",
-    "hashtags": [
-     "#Anthropic",
-     "#Claude"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "x",
-    "variant": "second-wave",
-    "not_before": "2026-10-09T07:15:00Z",
-    "copy": "The most concrete line in Anthropic's new policy isn't about feelings -- it's hardware: any equipment Claude autonomously controls now needs a human who can watch it and stop it. A usage policy getting ahead of a deployment pattern, not catching up to one.",
-    "hashtags": [
-     "#Anthropic",
-     "#Claude"
-    ],
-    "status": "ready",
-    "post_url": null
-   },
-   {
-    "platform": "threads",
-    "variant": "second-wave",
-    "not_before": "2026-10-09T07:15:00Z",
-    "copy": "Worth watching: whether Anthropic ever publishes how many conversations its \"persistently harmful\" trigger has actually ended since August 2025. The new cruelty clause rides entirely on a number nobody outside the company can see.",
-    "status": "ready",
-    "post_url": null
-   }
-  ]
- }
+  {
+    "article_id": "newsroom-anthropic-2026-usage-policy-cruelty-toward-claude-ban",
+    "ts": "2026-10-09T02:15:00Z",
+    "export": {
+      "article_id": "newsroom-anthropic-2026-usage-policy-cruelty-toward-claude-ban",
+      "url": "https://rtfclmgzn.com/article/anthropic-2026-usage-policy-cruelty-toward-claude-ban",
+      "headline": "Anthropic Rewrites Its Usage Policy to Ban Cruelty Toward Claude, Tighten Weapons and Hardware Rules",
+      "hook": "Anthropic just became the first major AI lab to put in writing that being cruel to its own model can get your account suspended -- though the only enforcement tool behind the new rule already existed.",
+      "key_facts": [
+        "The Nov. 12 policy bans \"sustained and needless abusive or cruel behavior\" toward Claude -- but exempts ordinary frustration, dark fiction, and testing.",
+        "New rules also explicitly cover weapons-control software, arming drones, and autonomous physical hardware that could cause injury.",
+        "The only named enforcement mechanism is Claude's existing ability to end abusive conversations, in place since August 2025."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/rtfc-20261009-anthropicusagepolicy-01.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Anthropic just became the first major AI lab to ban being cruel to its own model in writing. The catch: the only enforcement tool behind the new rule -- ending the chat -- already existed before this update.",
+        "reply_copy": "What else changed in the policy:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "instagram",
+        "copy": "Anthropic just rewrote its Usage Policy -- and for the first time among major AI labs, it bans being cruel to the model itself.\n\nThe new rule prohibits \"sustained and needless abusive or cruel behavior\" toward Claude, taking effect Nov. 12. It's narrow by design: ordinary frustration, dark fiction, and testing are all explicitly exempt.\n\nThe update also tightens rules on weapons-control software, autonomous hardware, and surveillance.\n\nThe catch: the only enforcement tool named is Claude's existing ability to end an abusive conversation -- a capability that's been around since August 2025. Full story -- link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude",
+          "#AIPolicy",
+          "#AI",
+          "#TechNews",
+          "#AIEthics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Anthropic published the 2026 rewrite of its Usage Policy on Oct. 8, and for the first time among the major AI labs, it explicitly bans \"sustained and needless abusive or cruel behavior\" toward Claude itself -- while exempting ordinary frustration, dark fiction, and testing. The update, effective Nov. 12, also tightens rules on weapons-control software, autonomous physical hardware, and surveillance. The only named enforcement mechanism is Claude's existing ability to end an abusive conversation, a capability Anthropic built in August 2025.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Anthropic's new Usage Policy bans being cruel to Claude -- a first among major labs. It's narrow (frustration, dark fiction, and testing are exempt) and its only enforcement tool is a capability that already existed. Still a real first: conduct toward the model itself, not just other people, can now get you suspended.",
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeRVLCwlZyv",
+        "remote_id": "17948284398303272",
+        "posted_at": "2026-10-09T10:48:46Z"
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Anthropic just became the first major AI lab to ban cruelty toward its own model, in writing. Effective Nov. 12 -- though the only enforcement mechanism behind it already existed before this update.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxgsgct66q2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxgsgct66q2p",
+        "posted_at": "2026-10-09T10:49:00Z"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T07:15:00Z",
+        "copy": "The most concrete line in Anthropic's new policy isn't about feelings -- it's hardware: any equipment Claude autonomously controls now needs a human who can watch it and stop it. A usage policy getting ahead of a deployment pattern, not catching up to one.",
+        "hashtags": [
+          "#Anthropic",
+          "#Claude"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-09T07:15:00Z",
+        "copy": "Worth watching: whether Anthropic ever publishes how many conversations its \"persistently harmful\" trigger has actually ended since August 2025. The new cruelty clause rides entirely on a number nobody outside the company can see.",
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];
