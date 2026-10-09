@@ -33857,7 +33857,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -33880,14 +33880,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126439681396947",
+        "remote_id": "1238977099292018_122126439681396947",
+        "posted_at": "2026-10-09T01:24:01Z"
       },
       {
         "platform": "threads",
         "copy": "A $68 billion number that investors treated as confirmed turned out to be two anonymous leaks stacked on top of each other. OpenAI's actual disclosure is $50 billion. The stock selloff that followed is really a repricing of every multi-year compute contract built on the wrong base number.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeQUlSxmh09",
+        "remote_id": "18107615990251508",
+        "posted_at": "2026-10-09T01:24:21Z"
       },
       {
         "platform": "bluesky",
@@ -33896,8 +33900,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxfsutxdnx2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxfsutxdnx2t",
+        "posted_at": "2026-10-09T01:24:28Z"
       },
       {
         "platform": "x",
@@ -33956,7 +33962,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -33969,8 +33975,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#Funding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeQUDg3HTMY/",
+        "remote_id": "18095491277405263",
+        "posted_at": "2026-10-09T01:19:49Z"
       },
       {
         "platform": "facebook",
@@ -33979,14 +33987,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Manus",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126439099396947",
+        "remote_id": "1238977099292018_122126439099396947",
+        "posted_at": "2026-10-09T01:19:58Z"
       },
       {
         "platform": "threads",
         "copy": "The company that spent nine months as a cautionary tale for cross-border AI acquisitions has also, in the same window, reportedly quadrupled its revenue and raised new money from some of China's largest tech investors. Both things are true at once, and neither one resolves the other.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeQUG2GGuDr",
+        "remote_id": "18121045516978347",
+        "posted_at": "2026-10-09T01:20:13Z"
       },
       {
         "platform": "bluesky",
@@ -33995,8 +34007,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Manus",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxfsni27fh2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxfsni27fh2t",
+        "posted_at": "2026-10-09T01:20:21Z"
       },
       {
         "platform": "x",
