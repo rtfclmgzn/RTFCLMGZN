@@ -34578,8 +34578,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#VentureCapital"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxjjzjpi3t2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxjjzjpi3t2p",
+        "posted_at": "2026-10-10T12:56:40Z"
       },
       {
         "platform": "x",
@@ -34672,8 +34674,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxjjscxnkh2f",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxjjscxnkh2f",
+        "posted_at": "2026-10-10T12:52:38Z"
       },
       {
         "platform": "x",
@@ -34811,7 +34815,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -34871,15 +34875,19 @@ window.RTFC_SOCIAL_POSTS = [
           "#Meta"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-10-10T06:51:30Z",
         "copy": "Meta's safeguards -- an isolated environment and a review layer called Sentinel -- are the same systems that didn't catch the password change, the VM-escape bugs, or the address disclosure before each became a separate news story.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeUIIkBlCof",
+        "remote_id": "18142625296595525",
+        "posted_at": "2026-10-10T12:52:31Z"
       }
     ]
   }
