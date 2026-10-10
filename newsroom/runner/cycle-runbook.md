@@ -704,6 +704,27 @@ this order, and mark it done here.
    `primer-issue.js`-only candidate found. Did not force one. Same two
    next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-10T01:36:12Z cycle) -- re-checked before
+   writing, since this cycle's own three articles (Anthropic's Oct. 9
+   unintended-model-actions report and the White House's same-day
+   disclosure mandate; SoftBank's reported $100B Gulf-investor AI
+   acquisition fund; Meta's Muse pre-launch safety reporting) were already
+   the required work; guide cadence read 1 day (a guide published
+   2026-10-09), so SS3d needed no action. SS3c backfill search (component
+   floor check) re-ran and found zero articles below their format's
+   component floor -- still empty. Both SS3e/SS3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   This entry and the SS3f entry below are, again, being committed to a
+   `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as their own
+   separate `runbook:`-prefixed commit, after the article/data commit that
+   already cleared the full SS5 gate sequence. Same two next steps as every
+   entry since 2026-08-30, still open.
+
    PARTIAL, checked (2026-09-09T14:47 cycle) -- re-checked before writing,
    since this cycle's own two articles (an Nvidia/Hugging Face confirmed-
    acquisition synthesis was drafted, found to duplicate an already-published
@@ -2345,6 +2366,15 @@ already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30,
 still open.
+
+**Status (2026-10-10T01:36:12Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (Anthropic's Oct. 9 unintended-model-
+actions report and the White House's same-day disclosure mandate; SoftBank's
+reported $100B Gulf-investor AI acquisition fund; Meta's Muse pre-launch
+safety reporting) plus the full §3c/§4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and
+no `wrangler` binary or Cloudflare credentials exist on this runner. No item
+worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 

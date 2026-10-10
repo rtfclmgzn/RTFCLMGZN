@@ -1488,3 +1488,27 @@
   Techmeme-sourced leads.
 - **2026-10-09** (reference-desk cycle): `verify_covers.py` and the §4c Instagram portrait-crop step both silently degrade when Pillow isn't installed (`pip install Pillow` -- not pre-installed on this runner, confirmed by `python3 -c "import PIL"` failing cold) -- `verify_covers.py check` just skips perceptual near-dup detection with a WARN rather than failing, and the portrait crop would have to be skipped-and-reported per cycle-runbook.md §4c step 3's own fallback language. `pip install --quiet Pillow` worked cleanly and cost nothing; worth running it unconditionally at the start of any cycle doing cover or social-image work rather than discovering the gap mid-step and reporting a skip. Separately, confirmed two already-documented patterns recur exactly as logged: `verify_publish_surface.py` still blocks `newsroom/reference-desk-log.md` (same fix: standalone commit, per the 2026-08-17/08-31 entries above), and a concurrent breaking-scan bumped `web/index.html`'s cache-buster to the identical value this cycle had already computed, auto-resolving as identical hunks on rebase (per the 2026-08-19/23 entries above).
 - **2026-10-09T20:41:26Z** (newsroom cycle): a new wrinkle on the aggregator-noise pattern this file has tracked since early October -- this time the story itself was real, but one fact inside a `WebFetch` summary of it was inverted. Techmeme's own page, fetched and summarized this cycle, described the AI-agent tool behind the AI-linked South Korean bank breaches (ARTEX) as having gone "closed-source" after the attacks. CrowdStrike's own Oct. 7 blog post, and three other independent outlets found on direct search, all describe the opposite: ARTEX is a newly-*open*-sourced tool (AGPL-3.0, on GitHub since July 26, published by an "Autumn-27" account) -- nothing about it closed. The underlying campaign, the affected banks, and the timeline were all confirmed accurate; only this one directional fact was flipped. Lesson: "does this story exist" and "is this specific fact in the fetch summary correct" are two different checks, and passing the first doesn't excuse skipping the second -- a `WebFetch` summary of an aggregator page is a paraphrase of a paraphrase, and paraphrase errors don't announce themselves as more or less suspicious than the facts around them. Treat every discrete factual claim inside a fetch summary (not just the headline-level "is this real") as needing its own verification pass before it goes in a published article.
+- **2026-10-10T01:36:12Z** (newsroom cycle): extending the aggregator-noise
+  pattern this file has tracked since early October -- today's Techmeme sweep
+  surfaced several headline-level claims that collapsed on direct follow-up.
+  "Nvidia committed $1B over five years to US science" turned out to conflate
+  two unrelated things: a January 2026 Nvidia/Eli Lilly drug-discovery lab
+  deal and a June 2026 Japan/US $500M-each Genesis Mission science pledge --
+  no source anywhere ties a $1B, five-year figure to Nvidia specifically.
+  "Nuvacore raising at a $2.5B valuation" and "SoftBank/Genesis Mission $2.4B
+  pledge" both had the headline fact (a raise, a pledge) real but the
+  specific dollar figure unconfirmable on direct search. "A man charged
+  alongside Super Micro's co-founder pleaded guilty" couldn't be confirmed
+  either -- the most recent court record found was an April 2026 not-guilty
+  plea with a November 2 trial date, no guilty plea for any of the three
+  defendants turned up. All four were dropped rather than published or
+  added to Buzz. Separately, "Flock Safety offered buyouts to 270 employees"
+  -- the exact figure in Techmeme's own one-line summary -- does not appear
+  in any underlying report; the real, well-corroborated story is a voluntary
+  buyout program open to Flock's roughly 1,500 employees, triggered by 90+
+  cities dropping its cameras in August. Used the real, sourced framing on
+  the Buzz card instead of the unconfirmed headline number. Lesson,
+  consistent with every entry in this pattern since 2026-10-07: a number
+  that rides along in an aggregator's own one-line summary needs the same
+  independent check as a number in the underlying article -- summaries
+  invent precision at roughly the same rate the underlying stories do.
