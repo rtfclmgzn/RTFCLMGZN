@@ -34890,5 +34890,268 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-10T12:52:31Z"
       }
     ]
-  }
+  },
+  {
+  "article_id": "newsroom-firmus-ipo-withdrawn-after-weak-demand",
+  "ts": "2026-10-10T16:02:10Z",
+  "export": {
+    "article_id": "newsroom-firmus-ipo-withdrawn-after-weak-demand",
+    "url": "https://rtfclmgzn.com/article/firmus-ipo-withdrawn-after-weak-demand",
+    "headline": "Firmus Withdraws Its A$44 Billion ASX Listing After Investors Wouldn't Meet the Price",
+    "hook": "Firmus pulled its ASX IPO after investors wouldn't pay the A$43.7B asking price -- a figure more than 4x what the same backers paid in a private round two months ago.",
+    "key_facts": [
+      "Offer cut from A$11 to a proposed A$8.25 a share before collapsing entirely.",
+      "Only 46 of roughly 911 planned megawatts are actually operating today.",
+      "Firmus's own private backers priced it at $10.5B in August -- a quarter of the IPO ask."
+    ],
+    "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+    "persona": "kian-farzan",
+    "section": "Markets",
+    "primary_image": "assets/img/newsroom/rtfc-20261010-firmusipopull-01.jpg",
+    "disclaimer": "not-financial-advice"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Firmus just pulled its ASX IPO after investors wouldn't pay A$43.7B -- more than 4x what its own private backers (Nvidia, Coatue, Blackstone) paid two months ago. Only 46 of 911 planned megawatts are actually running.",
+      "reply_copy": "The four numbers that didn't add up:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Firmus"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Firmus, the Nvidia-backed Australian AI data-center builder, just withdrew its ASX listing application.\n\nThe ask: A$43.7 billion. That's more than 4x what Firmus's own private backers -- Nvidia, Coatue, Blackstone, Jane Street -- paid for the company just two months ago ($10.5B).\n\nThe banking syndicate cut the offer price from A$11 to a proposed A$8.25 a share. Investors still passed.\n\nOnly 46 of Firmus's planned 911 megawatts are actually operating today. Revenue is about A$50 million a year.\n\nFirmus says it will now raise from private markets instead.\n\nFull story -- link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Firmus",
+        "#Markets",
+        "#IPO",
+        "#DataCenters",
+        "#Nvidia"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Firmus withdrew its Australian Securities Exchange IPO application Friday after a week of trying to find a price investors would actually pay. The offer was cut from A$11 to a proposed A$8.25 a share before the whole listing collapsed -- investors balked at a A$43.7 billion ask that was more than four times what Firmus's own private backers paid just two months ago.",
+      "hashtags": [
+        "#AI",
+        "#Firmus"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Firmus pulled its ASX IPO after investors wouldn't meet the price -- A$43.7B, more than 4x what Nvidia, Coatue and Blackstone paid in a private round two months ago. Only 46 of 911 planned megawatts actually run.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Firmus just withdrew its ASX IPO. The ask was A$43.7B -- 4x+ what its own private backers paid two months ago. Only 46 of 911 planned megawatts are actually operating. Investors did the math too.",
+      "hashtags": [
+        "#AI",
+        "#Firmus"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-10T21:02:10Z",
+      "copy": "The pulled Firmus IPO leaves one question unresolved: private investors, not public shareholders, now decide what this company is actually worth. Whatever Nvidia or Blackstone pay in the next round settles the argument this IPO couldn't.",
+      "hashtags": [
+        "#AI",
+        "#Firmus"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-10-10T21:02:10Z",
+      "copy": "Firmus's construction partner Maas Group fell 22% and is in a trading halt over the pulled IPO -- a reminder that a withdrawn float isn't a bankruptcy, but it isn't free either. Someone always carries the repricing.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+  {
+  "article_id": "newsroom-senate-investigation-ai-data-center-costs-misleading",
+  "ts": "2026-10-10T16:02:20Z",
+  "export": {
+    "article_id": "newsroom-senate-investigation-ai-data-center-costs-misleading",
+    "url": "https://rtfclmgzn.com/article/senate-investigation-ai-data-center-costs-misleading",
+    "headline": "A Senate Investigation Says Seven AI Data-Center Builders Are Shifting Costs Onto Ratepayers",
+    "hook": "A Senate probe finds 7 AI data-center builders won't disclose permanent job counts and reject paying for the grid upgrades their facilities trigger.",
+    "key_facts": [
+      "By the companies' own ratio, a 100-megawatt facility creates roughly 100 permanent jobs.",
+      "Microsoft and Amazon will stop seeking local-government NDAs; Google and Meta won't commit.",
+      "A related bill passed the House 417-3 but died in the Senate 57-43."
+    ],
+    "tone": "Composed, legally precise, strategic",
+    "persona": "evelyn-zhao",
+    "section": "Policy",
+    "primary_image": "assets/img/newsroom/rtfc-20261010-senatedatacenters-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "A Senate investigation finds 7 AI data-center builders -- Amazon, Google, Meta, Microsoft, CoreWeave, Digital Realty, Equinix -- won't disclose permanent job counts and reject paying for the grid upgrades they trigger. One job per megawatt, by their own number.",
+      "reply_copy": "The company-by-company breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Policy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "A nearly yearlong Senate investigation, released Oct. 9, finds seven of the largest AI data-center builders -- Amazon, Google, Meta, Microsoft, CoreWeave, Digital Realty, Equinix -- routinely decline to disclose permanent job counts and use NDAs to limit public scrutiny.\n\nThe number that stands out: by the companies' own ratio, a 100-megawatt data center -- drawing as much power as 100,000 homes -- creates around 100 permanent jobs.\n\nMicrosoft and Amazon have agreed to stop seeking NDAs from local governments. Google and Meta haven't.\n\nIn Louisiana, a utility's bid to buy a power plant tied to Meta's planned 4,500-megawatt site could raise the average customer's bill $8-13 a month. Meta disputes the link.\n\nFull story -- link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Policy",
+        "#DataCenters",
+        "#Senate",
+        "#BigTech"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "A Senate investigation released Oct. 9 by Sens. Elizabeth Warren, Chris Van Hollen and Richard Blumenthal finds that seven major AI data-center developers -- Amazon, Google, Meta, Microsoft, CoreWeave, Digital Realty and Equinix -- won't disclose permanent job counts and reject cost standards that would make them pay for the grid upgrades their facilities trigger. Microsoft and Amazon have agreed to stop seeking NDAs from local governments; Google and Meta have not.",
+      "hashtags": [
+        "#AI",
+        "#Policy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Senate probe: 7 AI data-center builders won't disclose permanent job counts, reject paying for grid upgrades they trigger. One job per megawatt, by their own number. Microsoft and Amazon are easing up on NDAs; Google and Meta aren't.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "A Senate investigation says 7 AI data-center builders won't disclose permanent job counts and won't pay for the grid upgrades they trigger. By their own ratio: 1 job per megawatt. A related bill already died in the Senate 57-43.",
+      "hashtags": [
+        "#AI",
+        "#Policy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-10T21:02:20Z",
+      "copy": "The honest read on this report: it's not a law, and nothing in it forces a single company to change a single practice. Its leverage is that about half of Americans already say data-center construction is bad for the country -- this gives that half a specific number to point to.",
+      "hashtags": [
+        "#AI",
+        "#Policy"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "variant": "second-wave",
+      "not_before": "2026-10-10T21:02:20Z",
+      "copy": "Every company in this Senate report says it pays the 'full cost' of its own data center. The dispute is entirely about what that's measured against -- and none of the seven accepted the standard that would include the grid upgrades their own demand causes.",
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+  {
+  "article_id": "newsroom-book-publishers-quietly-using-ai-without-author-consent",
+  "ts": "2026-10-10T16:02:30Z",
+  "export": {
+    "article_id": "newsroom-book-publishers-quietly-using-ai-without-author-consent",
+    "url": "https://rtfclmgzn.com/article/book-publishers-quietly-using-ai-without-author-consent",
+    "headline": "HarperCollins, Hachette and Simon & Schuster Are Using AI on Books Without Telling Authors",
+    "hook": "Staff at 3 of the 5 largest US publishers say AI drafts book copy and even cover art -- without disclosure to readers or authors' consent.",
+    "key_facts": [
+      "HarperCollins pays for Claude, ChatGPT and Jasper licenses; did not respond to WIRED's request for comment.",
+      "Hachette and Simon & Schuster say AI use is 'operational' -- staff describe it drafting creative work anyway.",
+      "Simon & Schuster staff revolted Oct. 6 over a trial of KKR-linked monitoring software."
+    ],
+    "tone": "Principled, specific, evidence-led",
+    "persona": "samira-nasser",
+    "section": "Ethics",
+    "primary_image": "assets/img/newsroom/rtfc-20261010-publishersai-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "More than two dozen staff at HarperCollins, Hachette and Simon & Schuster say AI is drafting book copy, agent emails and even cover art -- without disclosure to readers or authors' consent.",
+      "reply_copy": "Three publishers, three different stories:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Publishing"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "More than two dozen staff at HarperCollins, Simon & Schuster and Hachette told WIRED their employers now use ChatGPT and Claude to draft the public-facing text readers see every day -- back-cover copy, Amazon and Goodreads descriptions, pitches to booksellers.\n\nWithout disclosing it to the public. Without asking the authors whose books it describes.\n\nHachette says AI use is 'operational only.' Staff describe it drafting cover art and copy anyway.\n\nOn Oct. 6, Simon & Schuster staff circulated an open letter opposing a trial of KKR-linked monitoring software.\n\nFull story -- link in bio.",
+      "hashtags": [
+        "#AI",
+        "#Publishing",
+        "#Books",
+        "#Authors",
+        "#Ethics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "More than two dozen staff at HarperCollins, Simon & Schuster and Hachette told WIRED their employers use ChatGPT and Claude to draft back-cover copy, marketing emails and in some cases cover art -- without disclosing it to readers or asking authors' consent. None of the three publishers has told staff what, if anything, to tell an author.",
+      "hashtags": [
+        "#AI",
+        "#Publishing"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Staff at HarperCollins, Hachette and Simon & Schuster say AI drafts book copy and cover art -- no disclosure to readers, no author consent. The policies say 'operational only.' The staff accounts say otherwise.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Staff at 3 of the 5 largest US publishers say AI drafts their back-cover copy and cover art now -- no disclosure, no author consent. None of the three has told staff what to say if an author asks.",
+      "hashtags": [
+        "#AI",
+        "#Publishing"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];

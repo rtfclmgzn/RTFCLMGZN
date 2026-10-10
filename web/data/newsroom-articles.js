@@ -101335,5 +101335,638 @@ window.RTFC_NEWSROOM_ARTICLES = [
    ],
    "gate": "synthesis with 3 components (compare, scorecard, sourcecheck); 5 independent sources; mandatory-scrutiny trigger 4 (accusatory claims about a named company) fired and remediated via full attribution and Meta's on-record rebuttal; no fabricated figures or quotes; published at 2026-10-10T01:51:30Z."
   }
+ },
+ {
+ "slug": "firmus-ipo-withdrawn-after-weak-demand",
+ "title": "Firmus Withdraws Its A$44 Billion ASX Listing After Investors Wouldn't Meet the Price",
+ "dek": "Firmus pulled its Australian Securities Exchange listing application on Oct. 9, four days after a planned partner split and a parliamentary-hearing no-show, and one day after its banking syndicate cut the offer price from A$11 to a proposed A$8.25 a share and still found demand too thin to close. The Nvidia-backed data-center builder says it will now raise from private markets instead -- the same backers (Nvidia, Coatue, Blackstone, Jane Street) who priced the company at $10.5 billion in a private round just two months ago, a number the IPO tried to reset above $43 billion.",
+ "persona": "kian-farzan",
+ "section": "Markets",
+ "format": "synthesis",
+ "disclaimer": "not-financial-advice",
+ "tldr": [
+  "Firmus withdrew its ASX IPO Oct. 9 after investors wouldn't meet its asking price.",
+  "The offer was cut from A$11 to a proposed A$8.25 a share before collapsing entirely.",
+  "Revenue runs about A$50 million a year against a A$43.7 billion valuation ask.",
+  "Only 46 of roughly 911 planned megawatts are actually operating today.",
+  "Caveat: the $10 billion debt facility funding its Asia build-out is unaffected by this."
+ ],
+ "applyType": "stakes",
+ "apply": [
+  {
+   "label": "Maas Group's trading halt",
+   "text": "Firmus's construction partner Maas Group fell 22% and remains in a trading halt tied to roughly A$1.2 billion of fit-out contracts linked to the float. Watch for when it resumes trading and at what price."
+  },
+  {
+   "label": "Who sets the next price test",
+   "text": "Private investors, not public shareholders, now decide Firmus's next valuation. Watch whether Nvidia, Coatue or Blackstone lead a fresh round -- whatever price they accept settles the argument this IPO couldn't."
+  },
+  {
+   "label": "The Nasdaq alternative",
+   "text": "At least one report floated a Nasdaq listing next year instead of the ASX. Watch for an actual filing -- the same revenue-to-valuation gap that sank this attempt would face US investors too."
+  }
+ ],
+ "sources": [
+  {
+   "label": "The Nightly: Blockbuster Firmus share market float pulled after investors baulk at valuation",
+   "url": "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497",
+   "outlet": "The Nightly",
+   "kind": "primary_company"
+  },
+  {
+   "label": "Forbes Australia: Explaining Firmus and its $44 billion IPO collapse",
+   "url": "https://www.forbes.com.au/news/investing/explaining-firmus-and-44-billion-ipo-collapse/",
+   "outlet": "Forbes Australia",
+   "kind": "reporting"
+  },
+  {
+   "label": "SmartCompany: Firmus could slash share price by nearly 20% or pull IPO",
+   "url": "https://www.smartcompany.com.au/artificial-intelligence/firmus-could-slash-share-price-by-nearly-20-or-pull-ipo/",
+   "outlet": "SmartCompany",
+   "kind": "reporting"
+  },
+  {
+   "label": "Capital Brief: Firmus float intrigue lingers as AI-driven IPO boom envelops Wall Street",
+   "url": "https://www.capitalbrief.com/article/firmus-float-intrigue-lingers-as-ai-driven-ipo-boom-envelops-wall-street-d3f30401-2b89-406a-8e25-77d8545f0fe5/",
+   "outlet": "Capital Brief",
+   "kind": "reporting"
+  },
+  {
+   "label": "Crypto Briefing: Firmus postpones IPO, considers private funding round",
+   "url": "https://cryptobriefing.com/firmus-postpones-ipo-private-funding-round/",
+   "outlet": "Crypto Briefing",
+   "kind": "reporting"
+  }
+ ],
+ "links": [],
+ "body": [
+  {
+   "type": "p",
+   "text": "Firmus's attempt to become the first Australian AI-infrastructure company on the ASX ended **Friday**, when the Nvidia-backed data-center builder withdrew its listing application rather than sell shares at a price investors were actually willing to pay. The company says it will now \"pursue capital from the private markets and consider alternative public and private market options\" -- walking back from a prospectus that had asked public investors to value it at up to **A$43.7 billion**, roughly eighteen times what the same company was worth thirteen months ago.",
+   "citation_urls": [
+    "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The collapse took four days, not four months:",
+   "citation_urls": []
+  },
+  {
+   "type": "timeline",
+   "timeline": {
+    "title": "How a listing unravels in four days",
+    "items": [
+     {
+      "when": "Oct. 6",
+      "what": "Firmus and CDC Data Centres confirm they've dissolved their Southgate data-center partnership, both sides calling it a mutual, amicable split.",
+      "source": "https://www.capitalbrief.com/article/firmus-float-intrigue-lingers-as-ai-driven-ipo-boom-envelops-wall-street-d3f30401-2b89-406a-8e25-77d8545f0fe5/"
+     },
+     {
+      "when": "Oct. 7",
+      "what": "Firmus withdraws from a scheduled federal parliamentary AI-inquiry hearing without giving a reason, the same day its banking syndicate starts sounding out investors about a lower price.",
+      "hi": true
+     },
+     {
+      "when": "Oct. 8",
+      "what": "Bookbuilding closes weak; the offer is cut from A$11 to a proposed A$8.25 a share, shrinking the target raise by roughly a third.",
+      "hi": true
+     },
+     {
+      "when": "Oct. 9",
+      "what": "Firmus formally withdraws its ASX application, saying the terms on offer \"would not appropriately reflect the strength of the company's business.\""
+     }
+    ],
+    "source": "SmartCompany, Capital Brief and The Nightly, Oct. 6-9, 2026."
+   }
+  },
+  {
+   "type": "p",
+   "text": "Even the price cut is contested in the reporting -- one account has the revised offer at A$9 a share, most put it at **A$8.25** -- but every version of the story agrees on the shape: a syndicate that spent a week trying to find a number the market would actually clear, and failing to find one low enough in the time it had.",
+   "citation_urls": [
+    "https://www.smartcompany.com.au/artificial-intelligence/firmus-could-slash-share-price-by-nearly-20-or-pull-ipo/",
+    "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Four numbers, four different questions"
+  },
+  {
+   "type": "p",
+   "text": "Part of what made this IPO hard to price is that \"Firmus's valuation\" has meant something different every time someone's said it this year. ==None of the four figures below are wrong -- they're just not measuring the same thing==, which is exactly the kind of gap a public listing is supposed to close and, this week, didn't:",
+   "citation_urls": []
+  },
+  {
+   "type": "ledger",
+   "ledger": {
+    "title": "Four numbers called \"Firmus's valuation,\" thirteen months apart",
+    "items": [
+     {
+      "value": "A$1.85B",
+      "unit": "Sept. 2025",
+      "label": "Nvidia's first investment, before the AI-factory pivot was complete",
+      "includes": "The whole company, at the point it was still mostly a Bitcoin-mining operation.",
+      "excludes": "Any of the AI-factory build-out contracts signed since."
+     },
+     {
+      "value": "$10.5B",
+      "unit": "US$ / A$15B, Aug. 2026",
+      "label": "Firmus's own figure from its last private funding round",
+      "includes": "A privately negotiated price among existing and new strategic backers -- Nvidia, Coatue, Blackstone, Jane Street.",
+      "excludes": "Any public-market scrutiny of the number."
+     },
+     {
+      "value": "A$43.7B",
+      "unit": "Oct. 2026 IPO ask",
+      "label": "What the original A$11-a-share offer implied",
+      "includes": "The company's own prospectus forecast of US$5.8 billion EBIT by 2029.",
+      "excludes": "Evidence that institutional demand actually matched this price -- it didn't."
+     },
+     {
+      "value": "<A$10B",
+      "unit": "analyst estimate",
+      "label": "Where Ten Cap's Jun Bei Liu says the price should sit",
+      "includes": "Her read of 46 megawatts of actual operating capacity against 865 still under construction.",
+      "excludes": "Any premium for Firmus's A$20 billion of disclosed contracted future revenue."
+     }
+    ],
+    "source": "Firmus's own disclosures, Forbes Australia and SmartCompany, compiled Oct. 8-9, 2026."
+   }
+  },
+  {
+   "type": "p",
+   "text": "The gap between the second and third rows is the whole story: a private round two months ago, among investors who already had skin in the game, priced Firmus at $10.5 billion. The IPO asked public investors -- who had never seen the company's books before this prospectus -- to pay more than **four times that**. eToro's Josh Gilbert put the mismatch plainly: investors wouldn't pay a high price upfront for capacity that's still \"largely on the drawing board.\" Only **46 megawatts** of Firmus's planned 911 are actually switched on; the rest is construction, contracts and projection.",
+   "citation_urls": [
+    "https://www.forbes.com.au/news/investing/explaining-firmus-and-44-billion-ipo-collapse/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The prospectus's own numbers gave skeptics more to work with than usual. Annual revenue today is about **A$50 million** -- against a valuation ask in the tens of billions. Lock-up restrictions covered only about 42% of shares, meaning early backers could sell large stakes soon after listing, with half the IPO allocation earmarked for those same early holders. University of Sydney professor Michael Biercuk questioned the valuation outright given what he called limited technological innovation in the underlying business. Morgan stockbroker Hugh Robertson was kinder, crediting the founders' \"vision and sheer chutzpah\" even as he passed on the price.",
+   "citation_urls": [
+    "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "{{note: Timing may have hurt, too. The float's final week overlapped with a Financial Times report that OpenAI's annualized revenue had come in near $50 billion -- below an earlier $70 billion estimate -- which rattled AI-adjacent stocks generally. One person close to the Firmus deal told The Nightly the link to its own demand was unclear, which is itself an honest answer: a bad week for AI-sector sentiment doesn't need a direct causal chain to matter to a book that was already thin.}}",
+   "citation_urls": [
+    "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Who actually carries this"
+  },
+  {
+   "type": "p",
+   "text": "A pulled IPO isn't a bankruptcy, and it's worth being specific about who it actually touches:",
+   "citation_urls": []
+  },
+  {
+   "type": "stakes",
+   "stakes": {
+    "items": [
+     {
+      "who": "Maas Group shareholders",
+      "tone": "loses",
+      "what": "Fell 22% in one session and remain in a trading halt, pending clarity on roughly A$1.2 billion of fit-out contracts tied to the float."
+     },
+     {
+      "who": "Firmus's private backers (Nvidia, Coatue, Blackstone, Jane Street)",
+      "tone": "unclear",
+      "what": "Keep their August stakes exactly as priced -- unaffected by the withdrawal, but denied the public mark-up the IPO was designed to deliver."
+     },
+     {
+      "who": "Firmus's founders",
+      "tone": "gains",
+      "what": "Avoid locking in a public price below their own target and keep the company private while they shop the deal to private-market investors instead."
+     },
+     {
+      "who": "Other AI-infrastructure IPO candidates",
+      "tone": "exposed",
+      "what": "Lose the test case that would have shown public markets are willing to pay 2026's private AI-infrastructure multiples."
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "text": "Having considered recent market volatility and prevailing market conditions, the terms on which the offer could proceed would not appropriately reflect the strength of the company's business, and proceeding with the offer was not in the best interests of the company and its shareholders.",
+   "citation_urls": [
+    "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "That statement is doing careful work: it blames \"market volatility,\" not Firmus's own numbers, for a price gap that the ledger above suggests was baked in well before this particular week. [Firmus](/company/firmus) has moved fast before -- [its private valuation climbed from $1.85 billion at Nvidia's first investment in September 2025 to $10.5 billion in August 2026](/article/firmus-2-billion-nvidia-blackstone-ai-factory-raise), each round drawing the same repeat backers rather than new entrants chasing a hot deal. The prospectus itself forecasts US$5.8 billion in EBIT by 2029, built on 865 megawatts still under construction beyond the 46 already operating, and points to roughly A$20 billion in contracted future revenue as the case for today's price. This week answers, for now, the question an earlier round's own \"watch\" item raised about when a prospectus would finally put those numbers in front of public shareholders: it did, and they didn't buy it at the price asked.",
+   "citation_urls": [
+    "https://www.forbes.com.au/news/investing/explaining-firmus-and-44-billion-ipo-collapse/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "None of this touches the roughly **$10 billion** debt facility, led by Blackstone's credit arms, that funds Firmus's Indonesia and Malaysia build-out -- a separate instrument from the equity round that just failed. Nor does it change the underlying customer list: [OpenAI](/company/openai) remains the anchor tenant for two Malaysian facilities, and Meta has commitments in Melbourne and Southeast Asia. ==What changes is who gets to set the next price.== CDC Data Centres' chief strategy officer Jack Dan, speaking generally about the sector rather than Firmus by name, argued some operators chase \"financial outcomes\" over \"business outcomes\" and called for government rules around disclosure -- a critique this week's outcome will make harder to wave away.",
+   "citation_urls": [
+    "https://www.capitalbrief.com/article/firmus-float-intrigue-lingers-as-ai-driven-ipo-boom-envelops-wall-street-d3f30401-2b89-406a-8e25-77d8545f0fe5/",
+    "https://cryptobriefing.com/firmus-postpones-ipo-private-funding-round/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The company says it will give shareholders more detail \"as those options progress,\" without a timeline. A follow-on private round would let Firmus avoid ever disclosing audited numbers the way a public company must -- the same opacity Jack Dan was pointing at -- while a Nasdaq attempt next year, floated in at least one report, would face the identical revenue-to-valuation gap in front of a different set of skeptical investors. Either path puts off the question this week's buyers just answered: not whether Firmus's build-out is real, but whether its price is.",
+   "citation_urls": [
+    "https://thenightly.com.au/business/blockbuster-firmus-share-market-float-pulled-after-investors-baulk-at-valuation-c-22991497"
+   ]
+  }
+ ],
+ "id": "rtfc-20261010-firmusipopull-01",
+ "image": "assets/img/newsroom/rtfc-20261010-firmusipopull-01.jpg",
+ "publishedAt": "2026-10-10T16:02:10Z",
+ "pipeline": {
+  "run": "claude-cycle-2026-10-10T15:47:09Z",
+  "stages": [
+   {
+    "name": "discovery",
+    "note": "Surfaced via a WebFetch sweep of Techmeme's Oct. 10 front page. Archive grep found prior Firmus coverage (firmus-2-billion-nvidia-blackstone-ai-factory-raise, Aug. 2026) and an un-promoted Buzz card (bz-833, Oct. 8) covering the oversubscribed book-build at A$11 -- confirmed the IPO's actual withdrawal on Oct. 9 was the genuine new development, resolving that card's own 'durable demand or crowded trade' question and the prior article's apply-block 'watch for Firmus's IPO timing' item."
+   },
+   {
+    "name": "research",
+    "note": "5 sources, all independent outlets: The Nightly (carries Firmus's own verbatim withdrawal statement, used as primary_company), Forbes Australia, SmartCompany, Capital Brief, and Crypto Briefing (relaying Bloomberg). Cross-checked the disputed revised offer price (A$9 vs. A$8.25 across outlets) and used A$8.25 per the two sources closest to the Oct. 8 event rather than picking one silently. Dropped an unverified claim from one lower-tier aggregator that Firmus carries ~$30B in debt -- it conflicts with the $10B figure in both this cycle's sourcing and the newsroom's own Aug. 2026 reporting, and no outlet used here corroborates the higher number."
+   },
+   {
+    "name": "composition",
+    "note": "Synthesis format (~880 words of prose), 3 components (timeline, ledger, stakes) -- timeline sequences the four-day collapse; ledger scopes four different 'Firmus valuation' figures against what each one measures; stakes names who is actually exposed (Maas Group, private backers, founders, future IPO candidates) rather than gesturing at 'the market.' Cross-linked /company/firmus, /company/openai, and the Aug. 2026 Firmus article by event. Ink layer: 2 highlights, 7 bolds, 1 margin note, 1 pull quote (verbatim company statement)."
+   },
+   {
+    "name": "verification",
+    "note": "Loop 1 critique: initial draft left the A$10B debt-facility figure only in a parenthetical; added a full sentence in body prose distinguishing it from the failed equity round, since a fact can't live only in a component-adjacent aside. No self-referential language found. Mandatory-scrutiny review: trigger 2 (financial/valuation claims) fired -- remediated with the not-financial-advice disclaimer and by keeping every valuation figure attributed to its source rather than stated as the newsroom's own assessment; trigger 4 considered for the Jack Dan quote but it names no company and is attributed as a general sector critique. Loop 2: every ledger/timeline/stakes value traces to a cited source and appears in body prose; re-verified against component_audit.py before publish."
+   }
+  ],
+  "gate": "synthesis with 3 components (timeline, ledger, stakes); 5 independent sources including the company's own withdrawal statement; mandatory-scrutiny trigger 2 (financial/valuation claims) fired and remediated via not-financial-advice disclaimer and full attribution; no fabricated figures or quotes; published at 2026-10-10T16:02:10Z."
  }
+},
+ {
+ "slug": "senate-investigation-ai-data-center-costs-misleading",
+ "title": "A Senate Investigation Says Seven AI Data-Center Builders Are Shifting Costs Onto Ratepayers",
+ "dek": "A nearly yearlong Senate investigation led by Sens. Elizabeth Warren, Chris Van Hollen and Richard Blumenthal, released Oct. 9, finds Amazon, Google, Meta, Microsoft, CoreWeave, Digital Realty and Equinix routinely decline to disclose permanent job counts, lean on NDAs to limit public scrutiny, and reject cost-allocation standards that would make them pay for the grid upgrades their data centers trigger. The companies dispute none of the report's specific findings; Microsoft and Amazon have already agreed to stop seeking NDAs from local governments, while Google and Meta have not.",
+ "persona": "evelyn-zhao",
+ "section": "Policy",
+ "format": "synthesis",
+ "disclaimer": "none",
+ "tldr": [
+  "A Senate probe says 7 AI data-center builders won't disclose permanent job counts.",
+  "Companies pay only costs that solely benefit their own site, not shared grid upgrades.",
+  "A 100-megawatt facility creates roughly 100 permanent jobs, by the companies' own ratio.",
+  "Microsoft and Amazon will stop seeking local-government NDAs; Google and Meta won't commit.",
+  "Caveat: this is a Democratic-staff report, not binding law -- a related bill already failed 57-43."
+ ],
+ "applyType": "work",
+ "apply": [
+  {
+   "label": "Check your own utility's rate case",
+   "text": "If a hyperscale data center is proposed near you, your state utility commission's rate-case filings will show whether new transmission costs are being spread across all ratepayers or charged to the data center alone -- the exact dispute this report documents."
+  },
+  {
+   "label": "The Louisiana precedent is still unresolved",
+   "text": "Entergy's bid to buy a power plant for Meta's Richland Parish site is the clearest test case of who pays. Watch whether Louisiana regulators approve the purchase, and at what rate increase."
+  },
+  {
+   "label": "A second attempt at cost-shifting legislation",
+   "text": "The House's Ratepayer Protection Act passed 417-3 before dying 57-43 in the Senate. Watch for whether Van Hollen or Blumenthal reintroduce a version that actually requires states to shift costs, not just \"consider\" it."
+  }
+ ],
+ "sources": [
+  {
+   "label": "Sen. Elizabeth Warren's office: AI Data Center Companies Reveal They Are Not Paying Their Full Costs",
+   "url": "https://www.warren.senate.gov/newsroom/press-releases/ai-data-center-companies-reveal-to-warren-blumenthal-van-hollen-they-are-not-paying-their-full-costs-will-continue-using-ndas-and-seeking-tax-breaks/",
+   "outlet": "Sen. Elizabeth Warren",
+   "kind": "filing_or_official"
+  },
+  {
+   "label": "TIME: Exclusive: Senate Investigation Challenges Big Tech's Case for AI Data Centers",
+   "url": "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/",
+   "outlet": "TIME",
+   "kind": "reporting"
+  },
+  {
+   "label": "Tom's Hardware: Senate investigation says that some AI data center claims are misleading",
+   "url": "https://www.tomshardware.com/tech-industry/data-centers/senate-investigation-says-that-some-ai-data-center-claims-are-misleading-senators-question-number-of-permanent-jobs-projects-bring-to-communities-but-companies-refuse-to-divulge-data",
+   "outlet": "Tom's Hardware",
+   "kind": "reporting"
+  }
+ ],
+ "links": [],
+ "body": [
+  {
+   "type": "p",
+   "text": "A **27-page report** released Oct. 9 by the offices of Sens. Elizabeth Warren, Chris Van Hollen and Richard Blumenthal lands on a specific, checkable claim: seven of the country's largest AI data-center developers -- [Amazon](/company/amazon), [Google](/company/google), [Meta](/company/meta), [Microsoft](/company/microsoft), CoreWeave, Digital Realty and Equinix -- told Senate investigators things that, read together, don't support the public case most of them have made for why their data centers are good deals for the communities hosting them.",
+   "citation_urls": [
+    "https://www.warren.senate.gov/newsroom/press-releases/ai-data-center-companies-reveal-to-warren-blumenthal-van-hollen-they-are-not-paying-their-full-costs-will-continue-using-ndas-and-seeking-tax-breaks/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The investigation ran nearly a year, starting with letters sent to all seven companies on **Dec. 15, 2025**. Investigators requested internal documents and interviewed employees rather than relying on public statements alone. None of the seven companies has disputed a specific factual finding in the report; what's contested is how to characterize what the facts add up to.",
+   "citation_urls": [
+    "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "\"Full cost\" turns out to mean something narrower"
+  },
+  {
+   "type": "p",
+   "text": "Every company in the report says, in some form, that it pays the full cost of serving its own data center. The dispute is over what \"full cost\" is being measured against:",
+   "citation_urls": []
+  },
+  {
+   "type": "sourcecheck",
+   "sourcecheck": {
+    "items": [
+     {
+      "question": "Are AI data-center developers paying their \"full\" share of the costs they create?",
+      "claims": [
+       {
+        "who": "The seven companies, per the Senate report",
+        "kind": "company",
+        "says": "They pay the full energy and infrastructure cost of serving their own facility.",
+        "url": "https://www.warren.senate.gov/newsroom/press-releases/ai-data-center-companies-reveal-to-warren-blumenthal-van-hollen-they-are-not-paying-their-full-costs-will-continue-using-ndas-and-seeking-tax-breaks/"
+       },
+       {
+        "who": "Warren, Van Hollen and Blumenthal's investigation",
+        "kind": "official",
+        "says": "Excludes shared grid upgrades their demand triggers; none of the seven accepted a \"but-for\" cost standard.",
+        "url": "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/",
+        "trusted": true
+       }
+      ],
+      "ruling": "Using the investigators' framing. It's not a matter of competing claims about the same fact -- the companies' own responses, as quoted in the report, confirm they reject the broader cost standard; the disagreement is only over whether that's reasonable, not over what each side actually said."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "On jobs, the companies gave investigators a number instead of a dodge, and the number is the finding. Several told Senate staff that permanent staffing runs at roughly **one worker per megawatt** of power demand. Applied to a typical large facility, that ratio means a **100-megawatt** data center -- drawing as much electricity as roughly 100,000 homes -- employs around 100 people once construction ends. {{note: Construction jobs are real and often substantial, which is exactly why companies cite them when seeking local tax incentives; the report's point is narrower -- that the permanent, ongoing employment base is far smaller than the construction-phase numbers imply.}}",
+   "citation_urls": [
+    "https://www.tomshardware.com/tech-industry/data-centers/senate-investigation-says-that-some-ai-data-center-claims-are-misleading-senators-question-number-of-permanent-jobs-projects-bring-to-communities-but-companies-refuse-to-divulge-data"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Louisiana offers the clearest live example of what the abstract cost-allocation dispute means in a specific bill. Utility Entergy is seeking to buy a power plant in Richland Parish, a purchase analysts link mainly to Meta's planned **$50 billion**, 4,500-megawatt data center there -- about four times the peak electricity demand of the entire city of New Orleans. Estimates put the resulting bill increase for the average Entergy customer at **$8 to $13 a month**. ==Meta disputes that its project is responsible for the cost increase== -- Entergy's own filing is what regulators will actually weigh.",
+   "citation_urls": [
+    "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/"
+   ]
+  },
+  {
+   "type": "h2",
+   "text": "Secrecy and disclosure split along company lines"
+  },
+  {
+   "type": "p",
+   "text": "The report also tracked who uses nondisclosure agreements, and against whom -- and here the four largest companies have started to diverge in response, not just in practice:",
+   "citation_urls": []
+  },
+  {
+   "type": "compare",
+   "compare": {
+    "title": "How the four largest respondents answered, after the report",
+    "columns": [
+     {
+      "label": "Microsoft"
+     },
+     {
+      "label": "Amazon"
+     },
+     {
+      "label": "Google",
+      "hi": true
+     },
+     {
+      "label": "Meta",
+      "hi": true
+     }
+    ],
+    "rows": [
+     {
+      "label": "NDAs with local governments",
+      "values": [
+       "Will stop",
+       "Will stop (similar policy)",
+       "Won't commit",
+       "Won't commit"
+      ]
+     },
+     {
+      "label": "NDAs with state agencies/utilities",
+      "values": [
+       "Continues",
+       "Not specified",
+       "Won't commit",
+       "Won't commit"
+      ]
+     },
+     {
+      "label": "Disputes a specific local cost claim",
+      "values": [
+       "Not disputed",
+       "Not disputed",
+       "Not disputed",
+       "Disputes Louisiana bill-increase link"
+      ]
+     },
+     {
+      "label": "Accepts \"but-for\" grid-cost standard",
+      "values": [
+       "No",
+       "No",
+       "No",
+       "No"
+      ]
+     }
+    ],
+    "source": "Sen. Warren's office press release and TIME's Oct. 8 reporting."
+   }
+  },
+  {
+   "type": "p",
+   "text": "Meta's own stated reason for seeking NDAs, quoted directly in the report, is that \"maintaining confidentiality during project development increases efficiency and speed\" -- an efficiency argument, not a denial that the practice limits what residents can see before a deal is signed. That the two companies with the most AI-industry visibility, Google and Meta, are also the two declining to extend Microsoft and Amazon's new local-government disclosure policy is the specific split this report leaves for the next news cycle to press on.",
+   "citation_urls": [
+    "https://www.warren.senate.gov/newsroom/press-releases/ai-data-center-companies-reveal-to-warren-blumenthal-van-hollen-they-are-not-paying-their-full-costs-will-continue-using-ndas-and-seeking-tax-breaks/",
+    "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "On tax breaks, the most valuable incentive isn't the headline-grabbing property-tax abatement -- it's sales-tax exemptions on the computer equipment itself, which Tom's Hardware's analysis of the underlying data puts at roughly **39%** of total spending on an average 1-gigawatt AI data center. All seven companies told investigators they intend to keep seeking that exemption specifically, even as some roll back other disclosure practices.",
+   "citation_urls": [
+    "https://www.tomshardware.com/tech-industry/data-centers/senate-investigation-says-that-some-ai-data-center-claims-are-misleading-senators-question-number-of-permanent-jobs-projects-bring-to-communities-but-companies-refuse-to-divulge-data"
+   ]
+  },
+  {
+   "type": "quote",
+   "text": "Congress must hold Big Tech accountable so these companies pay their fair share.",
+   "citation_urls": [
+    "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "That's Warren's own framing, and it's worth separating from what the report actually establishes. This is Democratic committee staff work, not a bipartisan finding and not a regulation -- and Congress has already tested the policy fix once this year. The House passed the bipartisan **Ratepayer Protection Act**, which would have directed states to consider shifting large-load infrastructure costs onto the companies that trigger them, by a lopsided **417-3**. The Senate rejected advancing it, **57-43**, with Democrats arguing the bill was too weak because it only told states to \"consider\" cost-shifting rather than requiring it. {{note: Warren has separately called for a national moratorium on new AI data centers until developers agree to cover full costs -- a far more aggressive ask than the bill that just failed, and one with essentially no present path through this Congress.}}",
+   "citation_urls": [
+    "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "That failed vote is also the honest answer to who this report is actually for. ==It isn't a law, and nothing in it forces a single company to change a single practice.== Its leverage is reputational and electoral -- about half of Americans told Economist/YouGov pollsters this year that data-center construction is bad for the country, a number Trump has warned could push the AI buildout overseas if opposition hardens. A report that gives that half of the public a specific number -- one job per megawatt, an $8-to-$13 monthly bill increase in one named county -- is the kind of ammunition a failed Senate vote doesn't provide on its own.",
+   "citation_urls": [
+    "https://time.com/article/2026/10/08/senate-investigation-ai-data-centers/"
+   ]
+  }
+ ],
+ "id": "rtfc-20261010-senatedatacenters-01",
+ "image": "assets/img/newsroom/rtfc-20261010-senatedatacenters-01.jpg",
+ "publishedAt": "2026-10-10T16:02:20Z",
+ "pipeline": {
+  "run": "claude-cycle-2026-10-10T15:47:09Z",
+  "stages": [
+   {
+    "name": "discovery",
+    "note": "Surfaced via the same Techmeme Oct. 10 sweep. Archive grep found this newsroom's prior sourcecheck on Sen. Warren's 267% residential-electricity-bill claim (in the Fluidstack coverage) but no coverage of this new, separate 27-page Senate staff report -- confirmed as genuinely new reporting, not a restatement."
+   },
+   {
+    "name": "research",
+    "note": "3 sources, 2 independent of each other plus the primary: Sen. Warren's own office press release (filing_or_official, carries the report's direct findings and company-by-company detail), TIME's Oct. 8 exclusive (first to receive the findings, carries the Louisiana case study and the failed Senate vote context), and Tom's Hardware's independent analysis of the jobs-per-megawatt math and GPU-spending share. Routed as synthesis: reconciling the companies' 'full cost' framing against the investigators' narrower reading of it, and separating which of the four largest respondents have actually changed policy versus declined to, is the analytical work."
+   },
+   {
+    "name": "composition",
+    "note": "Synthesis format (~820 words of prose), 3 components (sourcecheck, compare, stakes via prose rather than a dedicated block) -- sourcecheck resolves the 'are they paying full costs' framing dispute with a stated ruling; compare sets the four largest respondents' actual post-report policies side by side rather than treating 'the industry' as one position. Cross-linked /company/amazon, /company/google, /company/meta, /company/microsoft. Ink layer: 2 highlights, 10 bolds, 2 margin notes, 1 pull quote (verbatim, Sen. Warren)."
+   },
+   {
+    "name": "verification",
+    "note": "Loop 1 critique: initial draft stated the one-job-per-megawatt ratio only inside the sourcecheck's claims; added a full prose paragraph with the figure and its construction-vs-permanent distinction, since a figure can't live only inside a component. No self-referential language found. Mandatory-scrutiny review: trigger 3 (regulatory/investigative proceeding) and trigger 4 (accusatory claims against seven named companies) both fired -- remediated by attributing every finding to the report or to a company's own quoted response, including Meta's on-record dispute of the Louisiana cost claim given equal weight, and by stating plainly this is Democratic staff work, not an adjudicated or bipartisan finding. Loop 2: every sourcecheck/compare value traces to a cited source and appears in body prose; re-verified against component_audit.py before publish."
+   }
+  ],
+  "gate": "synthesis with 2 components (sourcecheck, compare); 3 sources including the Senate office's own report as primary; mandatory-scrutiny triggers 3 and 4 fired and remediated via full attribution, company on-record responses, and explicit framing as non-binding staff work; no fabricated figures or quotes; published at 2026-10-10T16:02:20Z."
+ }
+},
+ {
+ "slug": "book-publishers-quietly-using-ai-without-author-consent",
+ "title": "HarperCollins, Hachette and Simon & Schuster Are Using AI on Books Without Telling Authors",
+ "dek": "A WIRED investigation, drawing on accounts from more than two dozen staff, found three of the five largest US publishers using chatbots to draft back-cover copy, marketing emails and in at least one case cover art -- without disclosing it to readers or getting authors' consent. None of the three has told staff what, if anything, to tell authors.",
+ "persona": "samira-nasser",
+ "section": "Ethics",
+ "format": "brief",
+ "disclaimer": "none",
+ "tldr": [
+  "Staff at 3 major publishers describe AI drafting book copy, emails and cover art.",
+  "None of the three disclosed this to authors or sought their consent.",
+  "Hachette and Simon & Schuster say AI use is \"operational,\" not creative -- staff describe otherwise.",
+  "Simon & Schuster staff revolted Oct. 6 against trialing a KKR-linked monitoring tool.",
+  "Caveat: much of the reporting rests on anonymous staff accounts, not on-record admissions."
+ ],
+ "applyType": "watch",
+ "apply": [
+  {
+   "label": "The Skan AI decision",
+   "text": "Simon & Schuster CEO Greg Greeley told staff Oct. 6 no decision had been made on the workflow-monitoring tool. Watch for whether the company proceeds despite the open letter."
+  },
+  {
+   "label": "Contract clauses are already changing",
+   "text": "Some literary agents have added clauses barring publishers from running manuscripts through language models. Watch for whether that becomes standard industry practice rather than a few agents' response."
+  }
+ ],
+ "sources": [
+  {
+   "label": "WIRED: Book Publishers Are Quietly Using More AI. Staff Are Revolting.",
+   "url": "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/",
+   "outlet": "WIRED",
+   "kind": "reporting"
+  },
+  {
+   "label": "Martin Cid Magazine: HarperCollins, Hachette and Simon & Schuster quietly hand book copy to chatbots",
+   "url": "https://www.martincid.com/technology-sv/harpercollins-hachette-simon-schuster-ai-book-copy/",
+   "outlet": "Martin Cid Magazine",
+   "kind": "reporting"
+  }
+ ],
+ "links": [],
+ "body": [
+  {
+   "type": "p",
+   "text": "More than two dozen staff at HarperCollins, Simon & Schuster and Hachette told WIRED their employers now use ChatGPT and Claude to draft the public-facing text readers see every day -- back-cover copy, Amazon and Goodreads descriptions, pitches to booksellers and critics -- **without disclosing it to the public or asking the authors whose books it describes.** None of the three has given staff guidance on what, if anything, to tell an author whose book jacket copy came out of a chatbot.",
+   "citation_urls": [
+    "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/"
+   ]
+  },
+  {
+   "type": "keyfacts",
+   "keyfacts": {
+    "title": "Three publishers, three different stories",
+    "items": [
+     {
+      "label": "HarperCollins",
+      "value": "Claude, ChatGPT and Jasper licenses; AI-made marketing videos",
+      "note": "did not respond to WIRED's requests for comment"
+     },
+     {
+      "label": "Hachette",
+      "value": "Says AI is \"operational\" only",
+      "note": "staff describe it drafting copy and cover art anyway"
+     },
+     {
+      "label": "Simon & Schuster",
+      "value": "\"Limited, vetted\" tools; use optional",
+      "note": "staff revolted Oct. 6 over a trial of KKR-linked monitoring software"
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "==The gap between policy and practice is the actual story.== Hachette's public position limits AI to \"operational purposes\" and explicitly excludes creative work and author communication -- but employees described chatbots drafting exactly that: publicity copy, agent emails, and in some cases cover art. Simon & Schuster's marketing chief, Wibke Grutjen, said staff can use a small set of approved tools and that nobody is required to; current and former staff told WIRED the actual guidance on disclosure to authors is simply absent, and one HarperCollins employee said they believe management already knows the honest answer would cause an uproar.",
+   "citation_urls": [
+    "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/",
+    "https://www.martincid.com/technology-sv/harpercollins-hachette-simon-schuster-ai-book-copy/"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The friction isn't just about authors. On **Oct. 6**, Simon & Schuster staff circulated an open letter opposing a trial of Skan AI, a workflow-monitoring platform employees linked to KKR, the private-equity firm that has owned the publisher since 2023. CEO Greg Greeley -- a former Amazon executive who took over in March -- told staff the same day that no decision had been made to adopt it. {{note: Layoffs have left some teams managing two to three times as many titles as before, which several staff cited as the reason AI tools feel like a mandate rather than a convenience, whatever the official policy says.}} Literary agents, meanwhile, say some have started adding contract clauses barring their clients' manuscripts from being run through language models at all -- a response to editors' rejection letters that agents say increasingly carry AI's stylistic fingerprints.",
+   "citation_urls": [
+    "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/"
+   ]
+  }
+ ],
+ "id": "rtfc-20261010-publishersai-01",
+ "image": "assets/img/newsroom/rtfc-20261010-publishersai-01.jpg",
+ "publishedAt": "2026-10-10T16:02:30Z",
+ "pipeline": {
+  "run": "claude-cycle-2026-10-10T15:47:09Z",
+  "stages": [
+   {
+    "name": "discovery",
+    "note": "Surfaced via the same Techmeme Oct. 10 sweep (Adam Morgan/WIRED item). Archive grep confirmed no prior coverage of book publishing's AI practices on this site. Genuinely distinct from this cycle's other two stories and from the archive generally -- first consumer-publishing-industry piece."
+   },
+   {
+    "name": "research",
+    "note": "2 sources: WIRED's original investigation (the Wired URL itself was confirmed via a secondary outlet that quotes it directly as the source link, since direct WebFetch to wired.com is blocked on this runner) and Martin Cid Magazine's detailed summary of the same reporting, used to cross-check specific quotes and dates rather than as an independent second thread -- both describe the same underlying WIRED investigation, which is why this is routed as a brief (1-2 sources) rather than a synthesis despite the rich detail available. Dropped an unconfirmed claim from one low-tier aggregator about a specific HarperCollins internal tool name that WIRED's own reporting (via the secondary summaries available) does not corroborate."
+   },
+   {
+    "name": "composition",
+    "note": "Brief format (~325 words of prose), 1 component (keyfacts) -- scopes what each of the three publishers actually does differently, since the story is precisely that the three aren't uniform. Ink layer: 1 highlight, 2 bolds, 1 margin note -- no pull quote, since no single line in the sourcing rose to a magazine-grade quotation worth the size."
+   },
+   {
+    "name": "verification",
+    "note": "Loop 1 critique: initial draft only in the keyfacts component; confirmed each fact there also appears in body prose. No self-referential language found. Mandatory-scrutiny review: trigger 4 (accusatory framing about three named companies) fired -- remediated by attributing every specific claim to staff accounts as reported, including each company's own on-record statement where one exists (Hachette's, Simon & Schuster's), noting HarperCollins did not respond to WIRED's request for comment rather than treating silence as confirmation, and stating the anonymous-sourcing caveat explicitly in the TL;DR. Loop 2: the keyfacts component's values all trace to the cited sources and appear in body prose; re-verified against component_audit.py before publish."
+   }
+  ],
+  "gate": "brief with 1 component (keyfacts); 2 sources tracing to a single underlying investigation, correctly routed as brief rather than synthesis on thread count; mandatory-scrutiny trigger 4 fired and remediated via full attribution and each company's on-record response; no fabricated figures or quotes; published at 2026-10-10T16:02:30Z."
+ }
+}
 ];
