@@ -1512,3 +1512,22 @@
   that rides along in an aggregator's own one-line summary needs the same
   independent check as a number in the underlying article -- summaries
   invent precision at roughly the same rate the underlying stories do.
+- **2026-10-10T16:02Z** (newsroom cycle): independently re-confirmed two of the
+  2026-10-10T01:36:12Z entry's dropped leads as still unconfirmable on a fresh
+  search a few hours later -- "Nuvacore raising at a $2.5B valuation" (only a
+  July 2026 Series A with a blank valuation field turns up on direct search)
+  and "Super Micro co-founder pleaded guilty" (the only court record found is
+  an April 2026 *not-guilty* plea with a Nov. 2 trial date). Dropped both
+  again rather than reuse the earlier cycle's finding uncritically. Separately
+  caught a third, new instance of the same pattern: one aggregator (Techmeme's
+  WebFetch summary) gave Ramp's in-talks funding round as "$1.85 billion
+  at $60B," but direct search across five independent outlets (Bloomberg via
+  pymnts/thenextweb/dealroom/kucoin/cryptobriefing) consistently puts it at
+  "roughly $1 billion at $60B" -- used the corroborated figure, not the
+  WebFetch summary's. The image-library mismatch pattern (§4 of the runbook)
+  also reproduced for all three of this cycle's sections at once (Markets,
+  Policy, Ethics) -- `verify_covers.py pick` returned the same two candidates
+  (a silicon-wafer wallpaper, a surgical-arms photo) regardless of section or
+  subject keywords tried, confirming the pool is now effectively exhausted
+  across sections, not just the Policy/Markets ones prior entries flagged.
+  Generated fresh art for all three ($0.18 total) rather than ship a mismatch.
