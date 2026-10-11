@@ -34961,8 +34961,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Firmus"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxkqpsxxfk2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxkqpsxxfk2m",
+        "posted_at": "2026-10-11T00:29:11Z"
       },
       {
         "platform": "x",
@@ -35018,7 +35020,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -35041,14 +35043,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Policy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126891319396947",
+        "remote_id": "1238977099292018_122126891319396947",
+        "posted_at": "2026-10-11T00:24:36Z"
       },
       {
         "platform": "threads",
         "copy": "Senate probe: 7 AI data-center builders won't disclose permanent job counts, reject paying for grid upgrades they trigger. One job per megawatt, by their own number. Microsoft and Amazon are easing up on NDAs; Google and Meta aren't.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeVXX_4mdOG",
+        "remote_id": "17991646833051341",
+        "posted_at": "2026-10-11T00:25:00Z"
       },
       {
         "platform": "bluesky",
@@ -35057,8 +35063,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Policy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxkqil4ika2m",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxkqil4ika2m",
+        "posted_at": "2026-10-11T00:25:08Z"
       },
       {
         "platform": "x",
@@ -35114,7 +35122,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -35127,8 +35135,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Authors",
           "#Ethics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeVW2WwgXOl/",
+        "remote_id": "18126162556914111",
+        "posted_at": "2026-10-11T00:20:25Z"
       },
       {
         "platform": "facebook",
@@ -35137,14 +35147,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Publishing"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122126890611396947",
+        "remote_id": "1238977099292018_122126890611396947",
+        "posted_at": "2026-10-11T00:20:33Z"
       },
       {
         "platform": "threads",
         "copy": "Staff at HarperCollins, Hachette and Simon & Schuster say AI drafts book copy and cover art -- no disclosure to readers, no author consent. The policies say 'operational only.' The staff accounts say otherwise.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeVW5a5gFLL",
+        "remote_id": "18118188995086826",
+        "posted_at": "2026-10-11T00:20:49Z"
       },
       {
         "platform": "bluesky",
