@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-10-07",
+  updated: "2026-10-11",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -247,6 +247,12 @@ window.RTFC_ENTITIES = {
       kind:"open Mixture-of-Experts hybrid Mamba-Transformer model", access:"open-weights" },
     { re:/\bJev\b/, name:"Jev", maker:"TypeSafe AI", makerKey:"typesafe-ai",
       kind:"non-autoregressive \"System One\" decision model, no text output", access:"closed" },
+    { re:/\bClef-omni\b/, name:"Clef-omni", maker:"Cloudflare", makerKey:"cloudflare",
+      kind:"multimodal non-autoregressive decision model, Jev-API-compatible", access:"open-weights" },
+    { re:/\bClef-flash\b/, name:"Clef-flash", maker:"Cloudflare", makerKey:"cloudflare",
+      kind:"small/fast non-autoregressive decision model, Jev-API-compatible", access:"open-weights" },
+    { re:/\bClef\b(?!-)/, name:"Clef", maker:"Cloudflare", makerKey:"cloudflare",
+      kind:"non-autoregressive decision model, Jev-API-compatible", access:"open-weights" },
 
     // --- Hardware / systems that read like products in prose ---
     { re:/\bDGX SuperPOD\b/i, name:"DGX SuperPOD", maker:"NVIDIA", makerKey:"nvidia",
