@@ -35460,5 +35460,276 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
-  }
+  },
+{
+  "article_id": "newsroom-openai-math-manuscripts-boycott-association-human-mathematics",
+  "ts": "2026-10-11T20:40:00Z",
+  "export": {
+    "article_id": "newsroom-openai-math-manuscripts-boycott-association-human-mathematics",
+    "url": "https://rtfclmgzn.com/article/openai-math-manuscripts-boycott-association-human-mathematics",
+    "headline": "OpenAI Released 719 Math Manuscripts in a Single Day. A Group of 800+ Mathematicians Calls That the Problem.",
+    "hook": "OpenAI dropped 719 math manuscripts in one day, claiming progress on 370+ open problems -- and the advisory group it credits says its central recommendation was ignored.",
+    "key_facts": [
+      "Three of the 719 manuscripts were withdrawn within 24 hours for errors; 42% hadn't been formally verified at all.",
+      "The Association for Human Mathematics, 800+ members strong, called the release 'a demonstration of power, not scholarship.'",
+      "OpenAI's own advisory group first recommended NOT testing open problems on proprietary models at all."
+    ],
+    "tone": "Austere, technically exacting, evaluation-first",
+    "persona": "luka-petrovic",
+    "section": "Frontier",
+    "primary_image": "assets/img/newsroom/rtfc-20261011-openaimath-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "OpenAI published 719 math manuscripts in one day, claiming progress on 370+ open problems. The advisory group it credits says its first recommendation -- don't test open problems on proprietary models at all -- was the one thing the release didn't follow.",
+      "reply_copy": "The full reconciliation, number by number:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#OpenAI",
+        "#Mathematics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-12T01:40:00Z",
+      "copy": "3 of OpenAI's 719 new math manuscripts were withdrawn within 24 hours for errors. 42% were never formally verified at all. The split in reaction -- 'great for mathematics' vs. 'not a demonstration of scholarship' -- isn't about whether the proofs check.",
+      "reply_copy": "What's actually in dispute:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Research"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "OpenAI just published 719 math manuscripts in a single day, claiming progress on more than 370 open problems -- including partial progress on three Millennium Prize problems.\n\nThe next day, the Association for Human Mathematics -- 800+ members, including a Fields medalist -- called it \"a demonstration of power, not scholarship,\" and urged mathematicians to stop working with the company.\n\nThe twist: OpenAI's own advisory group first recommended NOT testing open problems on proprietary models at all. This release doesn't follow that.\n\nThree manuscripts were already withdrawn for errors. 42% were never formally verified.\n\nFull breakdown -- link in bio.",
+      "hashtags": [
+        "#OpenAI",
+        "#Mathematics",
+        "#AI",
+        "#AIResearch",
+        "#AcademicTwitter",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "OpenAI published 719 math manuscripts in a single day on October 6, claiming full or partial solutions to more than 370 open problems. The next day, the Association for Human Mathematics -- a group with more than 800 members -- called the release \"a demonstration of power, not scholarship,\" and urged its members to stop collaborating with the company. The twist most coverage missed: OpenAI's own advisory group, consulted specifically to avoid this kind of backlash, first recommended that OpenAI not test open problems on proprietary models at all. The October 6 release doesn't appear to follow that advice. Three of the manuscripts were already withdrawn within a day for errors, and 42% had not undergone formal verification. We reconciled who's actually right about what.",
+      "hashtags": [
+        "#OpenAI",
+        "#Mathematics"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "OpenAI published 719 math manuscripts in one day. 800+ mathematicians' own group says it ignored their advisory board's first recommendation -- don't test open problems on proprietary models at all. Three manuscripts already withdrawn for errors. Here's the actual dispute, not the headline version.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "OpenAI published 719 math manuscripts in one day. The advisory group it credits says its first recommendation was the one thing this release didn't follow. 3 withdrawn for errors already. The real dispute, reconciled:",
+      "hashtags": [
+        "#AI",
+        "#Math",
+        "#OpenAI"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-microsoft-surface-laptop-ultra-rtx-spark-local-ai-agents",
+  "ts": "2026-10-11T20:40:00Z",
+  "export": {
+    "article_id": "newsroom-microsoft-surface-laptop-ultra-rtx-spark-local-ai-agents",
+    "url": "https://rtfclmgzn.com/article/microsoft-surface-laptop-ultra-rtx-spark-local-ai-agents",
+    "headline": "Microsoft's New AI Laptop Runs a 137-Billion-Parameter Coding Model Without Calling the Cloud",
+    "hook": "Microsoft's new Surface Laptop Ultra runs a 137-billion-parameter coding model locally -- no cloud call, no metered inference charge -- and ships with a new tool that fences off exactly what an AI agent can touch.",
+    "key_facts": [
+      "Up to 128GB of unified memory and ~1 petaflop of AI compute, built around Nvidia's new RTX Spark chip.",
+      "Microsoft's own on-device model scores within 2 points of its cloud twin on SWE-Bench, and actually leads on Terminal-Bench.",
+      "Microsoft Execution Containers, generally available now, let IT define exactly which files and networks an agent can reach."
+    ],
+    "tone": "Technical, detail-obsessed",
+    "persona": "jin-park",
+    "section": "Compute",
+    "primary_image": "assets/img/newsroom/rtfc-20261011-surfaceultra-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Microsoft's new Surface Laptop Ultra runs a 137-billion-parameter coding model entirely on-device -- no cloud call, no metered charge. Nvidia's new RTX Spark chip gives it up to 128GB of unified memory to do it.",
+      "reply_copy": "The specs, pricing, and the sandboxing tool that ships alongside it:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Nvidia",
+        "#Microsoft"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-12T01:40:00Z",
+      "copy": "Microsoft's on-device coding model beats its own cloud version on one benchmark (66.29% vs. 62.9%) and trails on another (70.80% vs. 72.6%). Running it locally also means zero metered inference cost. The tradeoffs, spelled out:",
+      "reply_copy": "Full breakdown:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#OnDeviceAI"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Microsoft's new Surface Laptop Ultra can run a 137-billion-parameter coding model entirely on-device. No cloud call. No metered charge.\n\nThe hardware: Nvidia's new RTX Spark chip, up to 128GB of unified memory, ~1 petaflop of AI compute. Ships Oct. 16, roughly $2,600-$5,900 depending on configuration.\n\nThe model: Microsoft's own numbers put the on-device version within 2 points of its full cloud model on one benchmark -- and actually ahead on another.\n\nThe same announcement also made Microsoft Execution Containers generally available: a tool that lets IT define exactly which files and networks an AI agent can touch.\n\nFull breakdown -- link in bio.",
+      "hashtags": [
+        "#Microsoft",
+        "#Nvidia",
+        "#AI",
+        "#AIHardware",
+        "#OnDeviceAI",
+        "#TechNews",
+        "#Surface"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Microsoft unveiled the Surface Laptop Ultra on October 7, built around Nvidia's new RTX Spark chip with up to 128GB of unified memory -- enough to run a model above 120 billion parameters entirely on the device, no cloud call required. Microsoft's own benchmark numbers put its on-device coding model, MAI Code 1.1 Flash, within two points of its full cloud version on one test and actually ahead of it on another. The same announcement made Microsoft Execution Containers generally available on Windows 11: a tool that lets IT administrators define exactly which files and networks an AI coding agent is allowed to reach. It ships October 16, with reported pricing from about $2,600 to roughly $5,900 depending on configuration.",
+      "hashtags": [
+        "#Microsoft",
+        "#Nvidia"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Microsoft's new Surface Laptop Ultra runs a 137B-parameter coding model locally -- no cloud, no metered charge. Nvidia's RTX Spark chip gives it 128GB of unified memory to do it. Ships Oct. 16. The same announcement ships a tool that fences off exactly what an AI agent can touch on your machine.",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Microsoft's new laptop runs a 137B-param coding model with zero cloud calls. RTX Spark chip, 128GB unified memory, ships Oct. 16. Also ships a sandboxing tool for AI agents. The specs and the tradeoffs:",
+      "hashtags": [
+        "#AI",
+        "#Microsoft",
+        "#Nvidia"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+},
+{
+  "article_id": "newsroom-google-gemini-universal-work-agent-launch",
+  "ts": "2026-10-11T20:40:00Z",
+  "export": {
+    "article_id": "newsroom-google-gemini-universal-work-agent-launch",
+    "url": "https://rtfclmgzn.com/article/google-gemini-universal-work-agent-launch",
+    "headline": "Google Collapsed Its Enterprise AI Lineup Into One Agent. It Also Routes Work to Anthropic's Claude.",
+    "hook": "Google's new 'universal' Gemini work agent launched claiming near-90% Fortune 100 adoption -- and quietly routes some of its own jobs to Anthropic's Claude models instead of Gemini.",
+    "key_facts": [
+      "The agent spins up its own temporary sub-agents, and persistent ones can get their own email, calendar, and Drive storage.",
+      "Google says adoption is near 90% of the Fortune 100 and cites a 450,000-hours-saved customer example -- both self-reported, unaudited.",
+      "Google has discontinued or folded together similarly named products before; median lifespan of 308 discontinued products is about 4.1 years."
+    ],
+    "tone": "Energetic, conversational",
+    "persona": "nova-reyes",
+    "section": "Products",
+    "primary_image": "assets/img/newsroom/rtfc-20261011-geminiagent-01.jpg",
+    "disclaimer": "none"
+  },
+  "posts": [
+    {
+      "platform": "x",
+      "variant": "hook",
+      "copy": "Google just launched a 'single, universal' Gemini work agent. It spins up its own sub-agents, gives persistent ones their own email and calendar -- and sometimes routes the actual work to Anthropic's Claude instead of Gemini.",
+      "reply_copy": "The self-reported numbers vs. what's actually verified:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#Google",
+        "#Gemini"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "x",
+      "variant": "second-wave",
+      "not_before": "2026-10-12T01:40:00Z",
+      "copy": "Google says its new Gemini work agent has near-90% Fortune 100 adoption and saved one customer 450,000 hours a year. Both figures are Google's own, unaudited. Here's what's independently confirmed vs. what isn't:",
+      "reply_copy": "Full scorecard:",
+      "link_in_reply": true,
+      "hashtags": [
+        "#AI",
+        "#Enterprise"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "instagram",
+      "copy": "Google just collapsed its enterprise AI products into one 'universal' Gemini agent.\n\nGive it a goal, not step-by-step instructions. It spins up its own temporary sub-agents for complex jobs. Persistent ones can get their own email address, calendar, and Drive storage -- like an employee.\n\nThe twist: it doesn't always run on Gemini. Google says it routes some jobs to Anthropic's Claude models instead -- a platform built to sell Google's own AI, sometimes handing the work to a rival's.\n\nGoogle cites near-90% Fortune 100 adoption and a 450,000-hours-saved example. Both are the company's own, unaudited numbers.\n\nWe checked what's actually confirmed -- link in bio.",
+      "hashtags": [
+        "#Google",
+        "#Gemini",
+        "#AI",
+        "#EnterpriseAI",
+        "#Anthropic",
+        "#TechNews"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "facebook",
+      "copy": "Google Cloud introduced a new 'single, universal agent for work' on October 8, collapsing several separately branded enterprise AI products into one. Give it a goal rather than step-by-step instructions, and it creates its own temporary sub-agents for complex, multi-day jobs; persistent agents set up as named 'coworkers' can get their own Workspace account, email address, calendar, and Drive storage. The detail worth noting: the agent doesn't always run on Google's own models -- it currently routes some work to Anthropic's Claude family too. Google cites adoption near 90% of the Fortune 100 and one customer saving 450,000 hours a year, but both figures are the company's own and haven't been independently audited. We compared the claims against what's actually been verified.",
+      "hashtags": [
+        "#Google",
+        "#Gemini"
+      ],
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "threads",
+      "copy": "Google's new 'universal' Gemini work agent spins up its own sub-agents and gives persistent ones their own email and calendar. It also routes some jobs to Anthropic's Claude instead of Gemini. Google's adoption numbers (near 90% of the Fortune 100) are self-reported and unaudited. What we could actually verify:",
+      "status": "ready",
+      "post_url": null
+    },
+    {
+      "platform": "bluesky",
+      "copy": "Google's new 'universal' Gemini agent sometimes routes work to Anthropic's Claude instead of Gemini. Adoption claims (near 90% Fortune 100) are self-reported. What's actually confirmed vs. not:",
+      "hashtags": [
+        "#AI",
+        "#Google",
+        "#Gemini"
+      ],
+      "status": "ready",
+      "post_url": null
+    }
+  ]
+}
 ];

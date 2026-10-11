@@ -215,6 +215,10 @@ window.RTFC_ENTITIES = {
       kind:"vision-language model", access:"unknown" },
     { re:/\bInkling\b/i, name:"Inkling", maker:"Thinking Machines Lab", makerKey:"thinking-machines",
       kind:"open-weight multimodal model", access:"open-weights" },
+    { re:/\bMAI Code 1\.1 Flash\b/i, name:"MAI Code 1.1 Flash", maker:"Microsoft AI", makerKey:"microsoft",
+      kind:"on-device coding model", access:"closed" },
+    { re:/\bMicrosoft Decision-1\b|\bDecision-1\b/i, name:"Microsoft Decision-1", maker:"Microsoft AI", makerKey:"microsoft",
+      kind:"decision-scoring model", access:"closed" },
 
     // --- Previous generations (still referenced in coverage and comparisons) ---
     { re:/\bGPT-4o\b/i, name:"GPT-4o", maker:"OpenAI", makerKey:"openai",
