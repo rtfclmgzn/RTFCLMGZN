@@ -1913,6 +1913,28 @@ this order, and mark it done here.
    commit, after the article/data commit that already cleared the full §5
    gate sequence.
 
+   PARTIAL, checked (2026-10-11T20:18:56Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (OpenAI's Oct. 6 math-manuscript
+   release and the Association for Human Mathematics boycott call; Microsoft's
+   Surface Laptop Ultra / RTX Spark local-AI-agent launch; Google's new
+   "universal" Gemini work agent, which routes some jobs to Anthropic's Claude)
+   plus the full §3c/§4b/§4c/§4d passes were already the required work; guide
+   cadence read 0 days (a guide published earlier today, 2026-10-11), so §3d
+   needed no action. §3c backfill search (`component_audit`-style floor check)
+   re-ran and found zero articles below their format's component floor --
+   still empty. Both §3e/§3f blockers unchanged, re-confirmed by reading the
+   files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py` still
+   reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), and `which wrangler` / `env | grep -i cloudflare` both return
+   nothing on this runner; `find . -iname "issue-001.json"` also still returns
+   nothing. No new `primer-issue.js`-only candidate found this cycle; did not
+   force one. This entry and the §3f entry below are, again, being committed
+   to a `newsroom/` path outside `ALLOWED_PREFIXES` -- pushed as their own
+   separate `runbook:`-prefixed commit, after the article/data commit that
+   already cleared the full §5 gate sequence. Same two next steps as every
+   entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2439,6 +2461,15 @@ worked. Same two next steps as every entry since 2026-08-30, still open.
 **Status (2026-10-11T01:10 cycle, re-check):** re-confirmed, unchanged, since
 this cycle's own two articles (Cloudflare's Clef-omni vs. TypeSafe's Jev;
 Nadella's "emergency brake" post) plus the full §3c/§4b/§4c/§4d passes were
+already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30,
+still open.
+
+**Status (2026-10-11T20:18:56Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (OpenAI's Oct. 6 math-manuscript release and the
+AHM boycott call; Microsoft's Surface Laptop Ultra local-AI-agent launch; Google's
+new "universal" Gemini work agent) plus the full §3c/§4b/§4c/§4d passes were
 already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30,
