@@ -35383,5 +35383,80 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-11T06:10:29Z"
       }
     ]
+  },
+  {
+    "article_id": "g31",
+    "ts": "2026-10-11T16:30:00Z",
+    "export": {
+      "article_id": "g31",
+      "url": "https://rtfclmgzn.com/article/check-whether-an-ai-hiring-tool-legally-rejected-you",
+      "headline": "How to check whether an AI hiring tool legally rejected you",
+      "hook": "NYC requires a bias audit, Illinois just banned discriminatory AI hiring decisions, Colorado scrapped its own version in May 2026, and the EEOC stopped investigating these complaints in September 2025 -- here's how to check which rule actually covers your rejection.",
+      "key_facts": [
+        "NYC's Local Law 144 requires an independent bias audit and 10 business days' notice before an AI tool screens a candidate.",
+        "The EEOC stopped investigating AI-bias complaints on its own in September 2025; a private lawsuit is now the faster path.",
+        "Mobley v. Workday's core age and disability claims survived another dismissal motion in June 2026 -- no liability found yet."
+      ],
+      "tone": "Composed, legally precise, strategic",
+      "persona": "evelyn-zhao",
+      "section": "Guide",
+      "primary_image": "assets/img/newsroom/g31.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NYC requires a bias audit before an AI tool can screen you for a job. Illinois just banned discriminatory AI hiring decisions. Colorado scrapped its own version in May 2026. The EEOC stopped investigating AI-bias complaints in September 2025. What that means for your last rejection:",
+        "reply_copy": "The actual check, law by law:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Hiring"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Rejected by an AI hiring tool? Whether that had to follow a rule depends entirely on where the job is.\n\nNYC's Local Law 144 requires an independent bias audit and 10 business days' notice before an AI tool can screen you. Illinois just banned AI hiring decisions with a discriminatory effect, as of January 1, 2026. Colorado passed a bias-audit law in 2024 -- then scrapped it in May 2026 for a narrower rule, before the original ever took effect.\n\nMeanwhile the EEOC quietly stopped investigating AI-bias complaints on its own in September 2025. And one closely watched lawsuit, Mobley v. Workday, just saw its core age and disability claims survive another dismissal motion in June 2026 -- with no liability found yet either way.\n\nOur new guide turns all of it into one 15-minute check. Link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Hiring",
+          "#JobSearch",
+          "#EmploymentLaw",
+          "#AIPolicy",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "If an AI tool rejected your job application, the question that matters isn't whether using AI to screen candidates is legal -- almost everywhere, it still is. It's whether the specific company followed the specific rule that applies to them. NYC's Local Law 144 requires an independent bias audit and 10 business days' notice before an AI tool can screen a candidate. Illinois now bans AI hiring decisions that have a discriminatory effect, effective January 1, 2026. Colorado passed its own bias-audit law in 2024, then replaced it entirely in May 2026 with a narrower rule, before the original ever took effect. The EEOC, meanwhile, stopped investigating AI-bias complaints on its own in September 2025 -- a private lawsuit or state agency is now the faster path. And Mobley v. Workday, the case testing how much a hiring-software vendor itself can be held responsible, just saw its core claims survive another dismissal motion in June 2026, with no liability finding yet. Our new guide walks through what to actually check, state by state.",
+        "hashtags": [
+          "#AI",
+          "#Hiring"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NYC requires a bias audit before an AI tool screens you. Illinois just banned discriminatory AI hiring calls. Colorado scrapped its own version in May 2026, before it ever took effect. The EEOC stopped investigating these complaints in September 2025. What that actually means for a rejection you got this week -- and the one case, Mobley v. Workday, still deciding how much the software vendor itself is on the hook:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Rejected by an AI hiring tool? NYC requires a bias audit. Illinois just banned discriminatory AI decisions. Colorado scrapped its own law in May 2026. The EEOC stopped investigating these complaints in Sept. 2025. The actual check, state by state:",
+        "hashtags": [
+          "#AI",
+          "#Hiring"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

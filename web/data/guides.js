@@ -8474,5 +8474,394 @@ window.RTFC_GUIDES = [
       }
     ],
     "corrections": []
+  },
+  {
+    "id": "g31",
+    "slug": "check-whether-an-ai-hiring-tool-legally-rejected-you",
+    "image": "assets/img/newsroom/g31.jpg",
+    "title": "How to check whether an AI hiring tool legally rejected you",
+    "dek": "NYC requires an independent bias audit before an AI tool can screen a candidate; Illinois just banned AI hiring decisions with a discriminatory effect; Colorado scrapped its own 2024 bias-audit law in May 2026, before it ever took effect; and the EEOC stopped investigating AI-bias complaints on its own in September 2025. None of that tells you whether the specific tool that rejected you had to follow any of it -- here's the actual check.",
+    "persona": "evelyn-zhao",
+    "section": "Guide",
+    "format": "guide",
+    "publishedAt": "2026-10-11T16:30:00Z",
+    "readMins": 8,
+    "sample": false,
+    "disclaimer": "none",
+    "tldr": [
+      "NYC's Local Law 144 requires a bias audit and 10 business days' notice before screening.",
+      "Illinois bars AI hiring decisions with a discriminatory effect, effective January 1, 2026.",
+      "The EEOC stopped investigating AI-bias complaints in September 2025; private lawsuits still work.",
+      "Mobley v. Workday's age and disability claims survived another dismissal motion in June 2026.",
+      "Caveat: Colorado scrapped its 2024 bias-audit law in May 2026, before it ever took effect."
+    ],
+    "applyType": "work",
+    "apply": [
+      {
+        "label": "Find out which state's AI-hiring rule, if any, actually covers the job that rejected you.",
+        "text": "NYC, Illinois, Connecticut, and (from 2027) Colorado each define coverage differently -- most of the country has no AI-hiring-specific rule yet at all."
+      },
+      {
+        "label": "Ask for the specific thing the applicable law requires, not a vague 'is this legal.'",
+        "text": "In NYC, ask for the posted bias-audit summary and the notice you should have gotten 10 business days before screening. Elsewhere, ask whether a human actually reviewed the result."
+      },
+      {
+        "label": "Don't wait on the EEOC to flag anything on its own.",
+        "text": "The agency stopped investigating AI-bias complaints as a matter of policy in September 2025 -- a private attorney or your state's own civil rights agency is now the faster path."
+      },
+      {
+        "label": "Treat Mobley v. Workday as a map of live arguments, not a verdict.",
+        "text": "No court has found Workday liable for anything yet. What the case shows is which theories about a vendor's own responsibility a federal judge has let proceed so far."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Automated Employment Decision Tools",
+        "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+        "outlet": "NYC Department of Consumer and Worker Protection",
+        "kind": "primary"
+      },
+      {
+        "label": "NYC Artificial Intelligence Law: Key Takeaways From Newly Released FAQs",
+        "url": "https://www.gibsondunn.com/nyc-artificial-intelligence-law-key-takeaways-from-newly-released-faqs/",
+        "outlet": "Gibson Dunn",
+        "kind": "reporting"
+      },
+      {
+        "label": "NYC Local Law 144: Bias Audits for Hiring AI Tools",
+        "url": "https://www.deloitte.com/us/en/services/audit/articles/nyc-local-law-144-algorithmic-bias.html",
+        "outlet": "Deloitte",
+        "kind": "reporting"
+      },
+      {
+        "label": "Illinois Artificial Intelligence Video Interview Act: What You Need To Know",
+        "url": "http://fbtgibbons.com/illinois-artificial-intelligence-video-interview-act-what-you-need-to-know",
+        "outlet": "Frost Brown Todd",
+        "kind": "reporting"
+      },
+      {
+        "label": "Artificial Intelligence in Employment Update: Illinois Requires Notice and Prohibits Discriminatory Impact in Use of AI",
+        "url": "https://crowell.com/en/insights/client-alerts/artificial-intelligence-in-employment-update-illinois-requires-notice-and-prohibits-discriminatory-impact-in-use-of-ai",
+        "outlet": "Crowell & Moring",
+        "kind": "reporting"
+      },
+      {
+        "label": "Colorado Governor Signs SB 189, Significantly Amending the State's AI Law",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189",
+        "outlet": "Holland & Knight",
+        "kind": "reporting"
+      },
+      {
+        "label": "The EEOC's Shift Away from Disparate Impact Liability",
+        "url": "https://www.ebglaw.com/workforce-bulletin/artificial-intelligence-and-disparate-impact-liability-how-the-eeocs-end-to-disparate-impact-claims-affects-workplace-ai",
+        "outlet": "Epstein Becker Green (Workforce Bulletin)",
+        "kind": "reporting"
+      },
+      {
+        "label": "Workday Faces Landmark Lawsuit Over AI Hiring Feature: What HR Leaders Need to Know",
+        "url": "https://www.uctoday.com/talent-hcm-platforms/workday-faces-landmark-lawsuit-over-ai-hiring-feature-what-hr-leaders-need-to-know/",
+        "outlet": "UC Today",
+        "kind": "reporting"
+      },
+      {
+        "label": "Client Insight: Quarterly Employment Law Update -- Spring 2026",
+        "url": "https://www.gunder.com/en/news-insights/client-news/client-insight-quarterly-employment-law-update-spring-2026",
+        "outlet": "Gunderson Dettmer",
+        "kind": "reporting"
+      }
+    ],
+    "body": [
+      {
+        "type": "p",
+        "text": "If an AI tool rejected your job application, the question that actually matters isn't whether using AI to screen candidates is legal -- almost everywhere, it still is. It's whether the specific company and tool followed the specific rule that applies to them, and that answer now depends on four things that have nothing to do with how the rejection felt: where the job is based, which law is actually in force there today, whether a federal regulator would even look at a complaint, and one ongoing lawsuit that could change how much the software vendor itself is on the hook, separate from the employer.",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "This isn't an abstract compliance question. [AI-exposed entry-level jobs are already measurably harder to land](/article/stanford-ai-entry-level-jobs-nber-executive-survey-conflict) than they were two years ago, and a resume-screening tool is the exact point where that pressure turns into one specific rejection. None of the laws below ban using AI to screen candidates -- not one of them does. They specify what has to happen first, and most employers using these tools aren't volunteering whether they actually did it.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "Where the law actually reaches, right now",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "New York City has the most concrete rule in the country. Since July 5, 2023, Local Law 144 bars an employer or employment agency from using an [AEDT](/dictionary) -- an automated employment decision tool -- in hiring or promotion unless it has been checked by an independent auditor for disparate impact by sex and race/ethnicity within the past year, a summary of that audit is posted publicly, and candidates get at least 10 business days' notice before the tool is used on them. The city's Department of Consumer and Worker Protection enforces it.",
+        "citation_urls": [
+          "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Illinois runs two separate laws that cover different parts of the same process. The older one, the Artificial Intelligence Video Interview Act (in effect since 2020), requires an employer to tell an applicant before a video interview that AI may analyze it, explain in general terms how the AI works and what it evaluates, get the applicant's consent, and -- with no stated exceptions -- delete the recording within 30 days of a request, including copies held by anyone else it was shared with. The newer one, HB3773, amended the Illinois Human Rights Act effective January 1, 2026: it bars using AI in hiring, promotion, discipline, or discharge decisions where the AI use has a discriminatory effect on a protected class, separately bars using a zip code as a stand-in for one, and requires notice that AI is being used -- though the Illinois Department of Human Rights floated notice rules on May 15, 2026 and withdrew them 18 days later, so what a compliant notice actually has to say is still unsettled.",
+        "citation_urls": [
+          "http://fbtgibbons.com/illinois-artificial-intelligence-video-interview-act-what-you-need-to-know",
+          "https://crowell.com/en/insights/client-alerts/artificial-intelligence-in-employment-update-illinois-requires-notice-and-prohibits-discriminatory-impact-in-use-of-ai"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Colorado is the state to watch precisely because its first attempt never actually took effect. The 2024 Colorado AI Act would have required bias audits and risk-management programs for 'high-risk' hiring AI, but lawmakers delayed its start date twice and then Gov. Jared Polis signed a full replacement, SB 26-189, on May 14, 2026. The rewrite drops the audit and impact-assessment regime entirely and takes effect January 1, 2027 with a narrower set of rights instead: notice before a consequential decision, a plain-language explanation after an adverse one, the right to correct inaccurate personal data the tool used, and the right to request meaningful human review -- a reviewer with actual authority to overturn the system's call, not just restate it. [Connecticut's CART Act](/article/connecticut-ai-law-cart-act-phased-effective-dates) takes a third approach again: its clarification that automated hiring tools are no defense against a discrimination claim is already in force, but the fuller notice regime for employers doesn't become operational until October 2027.",
+        "citation_urls": [
+          "https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189"
+        ]
+      },
+      {
+        "type": "compare",
+        "compare": {
+          "kicker": "THREE RULES, THREE SHAPES",
+          "title": "What each AI-hiring law actually requires",
+          "columns": [
+            { "label": "NYC", "sub": "Local Law 144" },
+            { "label": "Illinois", "sub": "AIVIA + HB3773" },
+            { "label": "Colorado", "sub": "SB 26-189, 2027", "hi": true }
+          ],
+          "rows": [
+            {
+              "label": "What triggers it",
+              "values": [
+                "Any automated tool used to screen or rank candidates for hiring or promotion",
+                "AI analyzing a video interview, or any AI employment decision with a discriminatory effect",
+                "Automated decision tech that 'materially influences' a consequential decision"
+              ]
+            },
+            {
+              "label": "Core requirement",
+              "values": [
+                "Independent bias audit within the past year; summary posted publicly",
+                "Notice and consent for video analysis; ban on discriminatory effect and zip-code proxies",
+                "Notice, post-decision explanation, data-correction rights, human review on request"
+              ]
+            },
+            {
+              "label": "Advance notice",
+              "values": [
+                "10 business days before the tool is used",
+                "Before the interview (AIVIA); HB3773's own notice rules are still unset",
+                "Before use, and again after an adverse decision"
+              ]
+            },
+            {
+              "label": "Who enforces it",
+              "values": [
+                "NYC Dept. of Consumer and Worker Protection",
+                "Illinois Dept. of Human Rights, or a private civil action",
+                "Colorado Attorney General"
+              ]
+            },
+            {
+              "label": "In force since",
+              "values": [
+                "July 5, 2023",
+                "2020 (AIVIA); Jan. 1, 2026 (HB3773)",
+                "Jan. 1, 2027 -- replacing a 2024 law that never actually took effect"
+              ]
+            }
+          ],
+          "source": "NYC DCWP; Frost Brown Todd and Crowell & Moring on Illinois; Holland & Knight on Colorado SB 26-189, as cited above."
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The regulator that stepped back",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Until early 2025, the EEOC's own technical-assistance pages told employers directly to self-audit AI selection tools for adverse impact and warned that a vendor's assurance of fairness didn't shield the employer that used it. Both that May 2023 Title VII guidance and a May 2022 ADA companion document were pulled from the agency's site following a presidential executive order -- the Title VII page's own old web address now returns a flat 404, confirmed directly against the EEOC's own site. Then, on September 30, 2025, an internal memo directed EEOC field offices to administratively close every pending disparate-impact-only charge and begin issuing right-to-sue letters, rather than investigate them. **The underlying law didn't change -- Title VII, the ADA, and the ADEA are all still on the books -- only the agency's own willingness to investigate a disparate-impact theory on its own did.** A charge that also alleges intentional discrimination, not just disparate impact, is likelier to stay under EEOC review.",
+        "citation_urls": [
+          "https://www.ebglaw.com/workforce-bulletin/artificial-intelligence-and-disparate-impact-liability-how-the-eeocs-end-to-disparate-impact-claims-affects-workplace-ai"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Practically, that means a charge filed over an AI hiring tool's disparate impact alone is likely to get closed quickly and converted into a right-to-sue letter rather than investigated -- which sounds like a dead end but isn't one. The letter is what a private attorney needs to actually file the claim in federal court, and state and local laws with their own disparate-impact standards, including NYC's and Illinois's, aren't touched by anything the EEOC decided. The agency stepping back from the investigation doesn't mean the claim is weaker; it means the first move toward resolving it shifted from a federal agency to a private lawsuit or a state agency.",
+        "citation_urls": []
+      },
+      {
+        "type": "sourcecheck",
+        "sourcecheck": {
+          "kicker": "WHERE THE SOURCES DISAGREE",
+          "items": [
+            {
+              "question": "What does violating NYC's Local Law 144 actually cost an employer?",
+              "claims": [
+                {
+                  "who": "Gibson Dunn, citing the DCWP's own released FAQ",
+                  "kind": "reporting",
+                  "says": "$375 to $1,500 per violation",
+                  "url": "https://www.gibsondunn.com/nyc-artificial-intelligence-law-key-takeaways-from-newly-released-faqs/",
+                  "trusted": true
+                },
+                {
+                  "who": "Deloitte",
+                  "kind": "reporting",
+                  "says": "$500 for a first violation, $500-$1,500 for each one after, with each day of noncompliant use potentially counted as its own violation",
+                  "url": "https://www.deloitte.com/us/en/services/audit/articles/nyc-local-law-144-algorithmic-bias.html"
+                }
+              ],
+              "ruling": "Using Gibson Dunn's figure -- it's traced directly to the DCWP's own released FAQ document, where Deloitte's broader framing isn't pinned to a specific page. Either way, the fine is the smaller fact: for a candidate, whether the audit and notice happened at all matters more than what the penalty is if they didn't."
+            }
+          ]
+        }
+      },
+      {
+        "type": "h2",
+        "text": "The one case to actually watch",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "Mobley v. Workday, filed in the Northern District of California in 2023, is the case most likely to decide how much responsibility a hiring-software vendor carries, as opposed to the employer using it. Derek Mobley alleges Workday's AI-driven applicant-screening features produced age, race, and disability discrimination against him and a potential class of other rejected applicants. Workday disputes this directly -- its chief responsibility officer, Kelly Trindel, has said \"Workday AI does not make hiring decisions and is not designed to automatically reject candidates\" -- and no court has found otherwise. What makes the case worth tracking is a narrower, procedural question: can Workday be sued at all, given that it never makes the final hiring call itself?",
+        "citation_urls": [
+          "https://www.uctoday.com/talent-hcm-platforms/workday-faces-landmark-lawsuit-over-ai-hiring-feature-what-hr-leaders-need-to-know/"
+        ]
+      },
+      {
+        "type": "timeline",
+        "timeline": {
+          "kicker": "STILL UNRESOLVED",
+          "title": "Mobley v. Workday, so far -- allegations only, no liability finding",
+          "items": [
+            {
+              "when": "2023",
+              "what": "Derek Mobley sues Workday in the Northern District of California, alleging its screening tools produced age, race, and disability discrimination."
+            },
+            {
+              "when": "Jul 2024",
+              "what": "Judge Rita Lin denies Workday's motion to dismiss, letting the case proceed on the theory that Workday can be liable as an 'agent' of the employers who use its software -- not as an employer itself.",
+              "hi": true
+            },
+            {
+              "when": "Jan 2026",
+              "what": "The court authorizes notice to potential plaintiffs, letting other applicants over 40 join the age-discrimination claim as a collective action."
+            },
+            {
+              "when": "May 2026",
+              "what": "A discovery order requires Workday to produce its EEO-1 and federal-contractor compliance filings, while limiting plaintiffs' access to Workday's own internal bias-testing data."
+            },
+            {
+              "when": "Jun 2026",
+              "what": "The court again refuses to dismiss the core disability and age claims, while dismissing several newly added claims on procedural grounds.",
+              "detail": "Including some newly added race-based claims. Workday has also asked to appeal the case's class-action status before any of this reaches a verdict.",
+              "source": "https://www.gunder.com/en/news-insights/client-news/client-insight-quarterly-employment-law-update-spring-2026"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this is a reason to assume a rejection from a Workday-powered tool specifically was discriminatory, or that it wasn't. It's a reason to know that the question of who answers for an AI hiring tool's behavior -- the employer, the vendor, or both -- is still being argued in federal court, not settled, and that reporters and employers describing the case as a finished verdict are getting ahead of what's actually happened.",
+        "citation_urls": []
+      },
+      {
+        "type": "h2",
+        "text": "The actual check",
+        "citation_urls": []
+      },
+      {
+        "type": "p",
+        "text": "None of the above requires becoming an employment lawyer before your next job application. It requires running down five specific questions, in order, against the one rejection you're actually asking about.",
+        "citation_urls": []
+      },
+      {
+        "type": "procedure",
+        "procedure": {
+          "kicker": "DO IT",
+          "title": "Check whether the AI tool that rejected you had to follow a rule",
+          "sub": "Works whether you're mid-search right now or just got a rejection that felt instant.",
+          "est": "15 min",
+          "level": "Beginner",
+          "track": true,
+          "prereqs": [
+            "The job posting, or the location the company lists for the role.",
+            "Any rejection email or applicant-portal message you received."
+          ],
+          "steps": [
+            {
+              "do": "Find out if the job is based in NYC, Illinois, Connecticut, or Colorado (from Jan. 1, 2027).",
+              "detail": "These are the only places with an operative AI-hiring-specific rule right now. The company's headquarters doesn't count -- it's where the job itself is based.",
+              "verify": "You can name the specific city or state the posting lists for the role, not just the company's main office.",
+              "ifnot": "If the job is based somewhere without an AI-hiring law yet, skip to step 4 -- ordinary anti-discrimination law still applies even without an AI-specific audit or notice rule to check."
+            },
+            {
+              "do": "In NYC, ask for the employer's posted bias-audit summary and whether you got 10 business days' notice before screening.",
+              "detail": "Local Law 144 requires both before an AEDT can be used at all, and the audit summary is supposed to be public on the employer's own site.",
+              "verify": "You can locate the audit summary, or confirm the employer can't produce one at all.",
+              "ifnot": "No summary and no notice is itself the violation -- reportable to the NYC Department of Consumer and Worker Protection, separately from whether the rejection itself was fair."
+            },
+            {
+              "do": "In Illinois, ask what notice the employer gave and whether a person, not just the software, reviewed the result.",
+              "detail": "HB3773 bans a discriminatory-effect AI decision and requires notice, but the state hasn't finished rules defining what that notice has to contain -- so the honest question right now is what the employer actually did, not what a form should say.",
+              "verify": "The employer can describe, specifically, what the AI evaluated and who signed off on the final call.",
+              "ifnot": "A flat refusal to say anything about how the decision was made is worth documenting, even without a finalized notice rule to cite yet."
+            },
+            {
+              "do": "Don't expect the EEOC to open an investigation on its own.",
+              "detail": "Since September 30, 2025 the agency closes disparate-impact-only charges as a matter of policy, not case-by-case judgment about your specific facts.",
+              "verify": "You know the difference between an EEOC charge being closed and a charge being decided against you -- they are not the same thing.",
+              "ifnot": "If you still want an agency involved, a state or local civil rights agency may still investigate on the merits, and an EEOC right-to-sue letter still lets a private attorney take the claim to federal court.",
+              "hi": true
+            },
+            {
+              "do": "If the tool is Workday's, or another vendor's, know the vendor-liability question is still unsettled either way.",
+              "detail": "Mobley v. Workday has let claims proceed past a motion to dismiss four times without a liability finding -- that's evidence a court takes the theory seriously, not evidence the theory has won.",
+              "verify": "Any claim you make about a specific vendor's legal exposure cites what a court has actually ruled, not a lawsuit's existence alone.",
+              "ifnot": "Describe an ongoing case as an ongoing case -- 'faces allegations that' and 'claims survived dismissal,' not 'was found to have discriminated.'"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "Running those five checks takes longer than reading a rejection email, but it's the difference between having an actual complaint and having a feeling.",
+        "citation_urls": []
+      },
+      {
+        "type": "pitfalls",
+        "pitfalls": {
+          "kicker": "WHAT GOES WRONG",
+          "title": "Four ways this check gets skipped or botched",
+          "items": [
+            {
+              "mistake": "Assuming a law exists everywhere just because NYC or Illinois has one.",
+              "looks": "Reading a headline about an AI-hiring law and assuming it covers your own rejection.",
+              "why": "Only NYC, Illinois, Connecticut's narrow clarification, and -- from 2027 -- Colorado currently have an operative AI-hiring-specific rule. Most states have none.",
+              "fix": "Check the specific job's actual location against the specific law's actual effective date, not the headline.",
+              "cost": "medium"
+            },
+            {
+              "mistake": "Treating a closed EEOC charge as proof the claim had no merit.",
+              "looks": "Filing an EEOC charge, seeing it closed, and concluding the facts didn't hold up.",
+              "why": "Since September 2025 the EEOC closes disparate-impact-only charges by policy, before anyone evaluates the underlying facts.",
+              "fix": "Treat a closed charge as a procedural step toward a right-to-sue letter, not a verdict on your facts.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Describing Mobley v. Workday, or any pending case, as if liability has already been decided.",
+              "looks": "Citing the lawsuit as proof a specific vendor's tool has been found to discriminate.",
+              "why": "Every ruling in the case so far has only let claims proceed past a motion to dismiss -- none has reached a verdict, and Workday disputes the allegations directly.",
+              "fix": "Describe it as surviving claims and open allegations, not a finding.",
+              "cost": "high"
+            },
+            {
+              "mistake": "Trusting a hiring-tool vendor's own 'independently audited' or 'bias-free' claim at face value.",
+              "looks": "A vendor's marketing page asserting compliance or an unbiased result, cited as if that settles it.",
+              "why": "The same caution [a company's own AI claim deserves generally](/article/check-whether-a-companys-ai-claim-is-real) applies here -- NYC's own law only requires an audit be posted publicly, not that its findings be favorable.",
+              "fix": "Ask to see the actual audit summary and what it found, not just a claim that an audit happened.",
+              "cost": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "p",
+        "text": "None of this means an AI hiring tool rejected you unfairly, or that it didn't -- it means that question now has an actual, checkable paper trail behind it in a handful of places, and a real gap everywhere else. The same access-first instinct applies to [an AI meeting notetaker that needs everyone's consent before it starts recording](/article/check-whether-your-ai-notetaker-needs-consent): a tool quietly making a decision about you is worth the five minutes it takes to ask what, specifically, it was required to do first.",
+        "citation_urls": []
+      }
+    ],
+    "corrections": []
   }
 ];

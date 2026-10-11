@@ -4,6 +4,7 @@
 // jargon-free, and may use **bold** / ==highlight== markers. Never define a term with
 // another undefined term.
 window.RTFC_DICT = [
+  { term:"AEDT (Automated Employment Decision Tool)", def:"The legal term several US laws use for software that screens, scores, or ranks job candidates — any algorithm materially shaping who gets hired, promoted, disciplined, or let go. NYC's Local Law 144 requires an independent bias audit and advance notice before one can be used in hiring; most states still have no AEDT-specific rule at all. See [our guide to checking whether an AI hiring tool legally rejected you](/article/check-whether-an-ai-hiring-tool-legally-rejected-you)." },
   { term:"Agent", def:"An AI that doesn't just answer — it **acts**: takes a goal, breaks it into steps, uses tools and apps, and finishes work on its own. The difference between asking for directions and hiring a driver." },
   { term:"AGI (Artificial General Intelligence)", def:"The hypothetical point where AI matches humans at ==most economically useful work==, not just narrow tasks. No one agrees on the exact definition, which is why every lab claims a different distance from it." },
   { term:"Agentic", def:"Work done **by an agent rather than for one** — an AI system that acts autonomously: books your flights, writes and runs code, places orders. The adjective form of 'agent.' See: Agent." },

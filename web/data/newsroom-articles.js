@@ -32045,6 +32045,11 @@ window.RTFC_NEWSROOM_ARTICLES = [
      "https://www.nber.org/digest/202605/global-evidence-business-use-ai",
      "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
     ]
+   },
+   {
+    "type": "p",
+    "text": "For a 22-year-old on the losing side of that gap, the aggregate debate above is less useful than one concrete question: whether the AI tool that actually screened their application had to follow any rule at all before doing so. [A handful of places now require an answer](/article/check-whether-an-ai-hiring-tool-legally-rejected-you), and most of the country still doesn't.",
+    "citation_urls": []
    }
   ],
   "id": "newsroom-stanford-ai-entry-level-jobs-nber-executive-survey-conflict",
@@ -88518,7 +88523,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "The provision most likely to matter to an individual Connecticut resident is the narrowest-sounding one: the CART Act now makes clear that **a company's use of automated employment decision technology is not, by itself, a legal defense against a discrimination claim**. If an algorithm screens out older applicants or down-ranks resumes in a way that produces a discriminatory effect, the employer can't point to the software as the reason it isn't liable. That's a clarification of existing discrimination law, not a new cause of action -- and it's narrower than it sounds, since Connecticut's fuller __automated employment decision technology (AEDT)__ disclosure regime, the one requiring employers to give workers written notice before using such tools in hiring, promotion, discipline, discharge, renewal, or training decisions, doesn't become operational until **Oct. 1, 2027**.",
+    "text": "The provision most likely to matter to an individual Connecticut resident is the narrowest-sounding one: the CART Act now makes clear that **a company's use of automated employment decision technology is not, by itself, a legal defense against a discrimination claim**. If an algorithm screens out older applicants or down-ranks resumes in a way that produces a discriminatory effect, the employer can't point to the software as the reason it isn't liable. That's a clarification of existing discrimination law, not a new cause of action -- and it's narrower than it sounds, since Connecticut's fuller [automated employment decision technology (AEDT)](/dictionary) disclosure regime, the one requiring employers to give workers written notice before using such tools in hiring, promotion, discipline, discharge, renewal, or training decisions, doesn't become operational until **Oct. 1, 2027**.",
     "citation_urls": [
      "https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20260604-what-companies-should-know-about-connecticuts-new-omnibus-ai-law",
      "https://www.davispolk.com/insights/client-update/connecticut-enacts-sweeping-ai-legislation-addressing-multiple-ai"
@@ -88629,7 +88634,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    },
    {
     "type": "p",
-    "text": "That floor arrived on almost the same day California's governor signed a considerably blunter instrument for a related problem: the state's new [\"No Robo Bosses\" law](/article/california-no-robo-bosses-act-ai-worker-protections-newsom) restricts employers from letting automated systems make termination and discipline decisions without human review, where Connecticut's Oct. 1 provision only clarifies that automation isn't a liability shield once a human has made the call. Two states, within days of each other, reaching for differently shaped tools on the same underlying question -- and in Connecticut's case, three more effective dates still to come before the law is actually all the way in force. Until the companion-chatbot provisions arrive, [checking whether a given product is covered at all starts with the behavioral test the laws actually use](/article/vet-an-ai-companion-chatbot-before-your-teen-uses-it), not the product's own marketing.",
+    "text": "That floor arrived on almost the same day California's governor signed a considerably blunter instrument for a related problem: the state's new [\"No Robo Bosses\" law](/article/california-no-robo-bosses-act-ai-worker-protections-newsom) restricts employers from letting automated systems make termination and discipline decisions without human review, where Connecticut's Oct. 1 provision only clarifies that automation isn't a liability shield once a human has made the call. Two states, within days of each other, reaching for differently shaped tools on the same underlying question -- and in Connecticut's case, three more effective dates still to come before the law is actually all the way in force. Until the companion-chatbot provisions arrive, [checking whether a given product is covered at all starts with the behavioral test the laws actually use](/article/vet-an-ai-companion-chatbot-before-your-teen-uses-it), not the product's own marketing. And for the AEDT clarification specifically, someone actually rejected by one of these tools today has a narrower, more immediate question than any of this -- [whether the specific tool that screened them followed a rule that already applies](/article/check-whether-an-ai-hiring-tool-legally-rejected-you).",
     "citation_urls": []
    }
   ],
