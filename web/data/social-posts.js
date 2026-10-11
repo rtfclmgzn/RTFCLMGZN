@@ -35205,7 +35205,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIBenchmarks"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -35267,8 +35269,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Cloudflare",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxldzdgolg2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxldzdgolg2p",
+        "posted_at": "2026-10-11T06:14:31Z"
       }
     ]
   },
@@ -35303,7 +35307,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -35346,8 +35352,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Nadella wants AI treated like an insider threat: assume it's compromised, contain it by design, keep a human override. He posted this 3 days after Anthropic's false police tip and incomplete government filings went public. None of his 4 proposed controls are binding on anyone yet, including Microsoft.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeV-57Dlg47",
+        "remote_id": "18637854934039120",
+        "posted_at": "2026-10-11T06:10:22Z"
       },
       {
         "platform": "threads",
@@ -35365,8 +35373,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AISafety",
           "#Microsoft"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxlds4zmbo24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxlds4zmbo24",
+        "posted_at": "2026-10-11T06:10:29Z"
       }
     ]
   }
