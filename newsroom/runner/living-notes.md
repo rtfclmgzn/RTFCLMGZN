@@ -1531,3 +1531,36 @@
   subject keywords tried, confirming the pool is now effectively exhausted
   across sections, not just the Policy/Markets ones prior entries flagged.
   Generated fresh art for all three ($0.18 total) rather than ship a mismatch.
+- **2026-10-11T01:10Z** (newsroom cycle): extending the aggregator-noise
+  pattern this file has tracked since early October -- today's sweep
+  surfaced five distinct leads that each failed independent verification
+  for a different reason, all from the same Techmeme front-page pass. A
+  claimed Sen. Sanders call for "criminal prosecution of AI CEOs" over the
+  Anthropic Philadelphia false-tip incident: direct search found only his
+  earlier, broader August letter urging a development pause, nothing about
+  prosecution. A Gary Marcus "recall open-ended AI agents" post this week:
+  could not be located at all, despite Marcus being a real, frequently
+  quoted critic on exactly this topic -- the specific claim appears to be
+  the aggregator's own gloss, not a real post. A Nikkei-sourced claim that
+  Synopsys is exploring chip-design partnerships with Chinese AI labs: one
+  secondary outlet (Crypto Briefing) explicitly contradicts it, saying
+  Synopsys made no such announcement and the claim traces to a single X
+  post. A CMS Medicare Slack workspace with 1,700 members where Microsoft
+  and OpenAI "shape AI policy": no trace anywhere on direct search; the
+  closest real things are CMS's unrelated Health Technology Ecosystem
+  pledge program and ordinary vendor health-AI products. And an Nvidia-
+  backed Reflection AI "in talks to acquire or invest more" lead that
+  looked current on Techmeme's front page turned out, on direct search, to
+  be a stale restatement of a March 2026 funding-talks report (a $2.5B
+  raise at a $25B pre-money valuation) -- not a fresh Oct. 10 development.
+  All five were dropped from the article slate and from Buzz. Lesson,
+  consistent with every entry in this pattern since 2026-10-07: a
+  Techmeme-surfaced claim needs its own independent search before it's
+  usable anywhere, even a Buzz card -- and "this sounds like something a
+  real critic/outlet would say" is not a substitute for finding the actual
+  post or report. Separately, confirmed two already-documented patterns
+  recur exactly as logged: `verify_publish_surface.py` still blocks
+  `newsroom/runner/cycle-runbook.md` and `living-notes.md` themselves (same
+  fix: standalone `runbook:`-prefixed commit, per the 2026-08-17/08-31
+  entries above), and Pillow is still not pre-installed on this runner
+  (`pip install --quiet Pillow` fixed it again, cost nothing).
