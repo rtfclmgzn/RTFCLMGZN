@@ -35924,8 +35924,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Gaming"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxofeqdwnw2w",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxofeqdwnw2w",
+        "posted_at": "2026-10-12T11:16:47Z"
       }
     ]
   },
@@ -35960,7 +35962,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -35974,7 +35978,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Compute"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -36004,7 +36010,9 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "Nvidia's $1B US science pledge made headlines alone. It's actually one line in an 11-company, $2.4B White House total -- and every pledge is compute/software credits, not cash. Who pledged what, and what's still undisclosed:",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 12-Oct-26 04:12:42 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AjG660_bt7n9-V0fGEHGmoa\"}}"
       },
       {
         "platform": "bluesky",
@@ -36014,8 +36022,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Compute"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxof5jochc2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxof5jochc2y",
+        "posted_at": "2026-10-12T11:12:44Z"
       }
     ]
   }
