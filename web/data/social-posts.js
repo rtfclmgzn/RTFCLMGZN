@@ -35749,5 +35749,274 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-amazon-decart-7-billion-deal-talks-anthropic-walked-away",
+    "ts": "2026-10-12T01:35:00Z",
+    "export": {
+      "article_id": "newsroom-amazon-decart-7-billion-deal-talks-anthropic-walked-away",
+      "url": "https://rtfclmgzn.com/article/amazon-decart-7-billion-deal-talks-anthropic-walked-away",
+      "headline": "Amazon is reportedly in talks to buy Decart for $7 billion, after Anthropic walked away",
+      "hook": "Decart has now drawn three different reported suitors in four months -- Nvidia, then Anthropic (who walked away after due diligence), and now Amazon at $7B.",
+      "key_facts": [
+        "Anthropic reportedly completed due diligence on a $6B Decart deal, then walked away in September -- no reason given.",
+        "Decart's DOS software lets AI workloads shift between Nvidia, Google and Amazon's own Trainium chips.",
+        "Amazon has committed up to $33B to Anthropic, which has committed $100B+ to AWS over 10 years -- making this deal land inside its own investment."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-amazon-decart-7-billion-deal-talks-anthropic-walked-away.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Decart has drawn three reported buyers in four months: Nvidia passed over, Anthropic walked away after due diligence, and now Amazon is reportedly in talks at $7B. One irony: Amazon is also one of Anthropic's biggest investors.",
+        "reply_copy": "Nothing is signed. What's actually confirmed vs. reported:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Amazon",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-12T06:26:22Z",
+        "copy": "Anthropic reportedly finished due diligence on a $6B Decart deal, then walked away with no reason given. A month later, Amazon is reportedly circling the same company at $7B. The chip-portability software at the center of it, explained:",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three bidders. Four months. One startup.\n\nDecart makes software that lets AI workloads switch between Nvidia, Google and Amazon chips without months of retuning.\n\nNvidia passed on a deal. Anthropic reportedly got through due diligence on a $6B offer -- then walked away in September, no reason given.\n\nNow Amazon is reportedly in talks at $7B. The twist: Amazon is also one of Anthropic's biggest backers, having committed up to $33B to the company Decart almost sold to.\n\nNothing is signed yet -- link in bio for what's actually confirmed.",
+        "hashtags": [
+          "#Amazon",
+          "#Anthropic",
+          "#Decart",
+          "#AI",
+          "#Markets",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Amazon is reportedly in advanced talks to buy AI infrastructure startup Decart for about $7 billion, the Wall Street Journal reported October 11. It's the third different buyer linked to Decart in four months: Nvidia discussed a deal before Decart's founders favored a competing offer from Anthropic, who then reportedly completed due diligence on a $6 billion acquisition before walking away in September for reasons neither side has disclosed. The strategic logic for Amazon tracks the same one Anthropic had: Decart's software lets AI workloads shift cheaply between Nvidia, Google and Amazon's own chips. One wrinkle worth noting -- Amazon has committed up to $33 billion to Anthropic itself, the company that just passed on this deal.",
+        "hashtags": [
+          "#Amazon",
+          "#Anthropic"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Decart has now had three reported suitors in four months: Nvidia, then Anthropic (who walked away after due diligence), now Amazon at $7B. Amazon is also one of Anthropic's biggest investors. Nothing's signed. What's confirmed vs. reported:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia passed. Anthropic did due diligence on a $6B deal, then walked away. Now Amazon's reportedly in at $7B. Same startup, four months, three suitors -- and Amazon is also one of Anthropic's biggest backers.",
+        "hashtags": [
+          "#AI",
+          "#Markets",
+          "#Amazon"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-ai-decompiled-game-ports-publisher-crackdown",
+    "ts": "2026-10-12T01:35:10Z",
+    "export": {
+      "article_id": "newsroom-ai-decompiled-game-ports-publisher-crackdown",
+      "url": "https://rtfclmgzn.com/article/ai-decompiled-game-ports-publisher-crackdown",
+      "headline": "AI agents are decompiling old games into browser ports overnight. Publishers are starting to shut them down.",
+      "hook": "Fan coders are using Claude Opus 5.5 to decompile console-era games like Halo and GTA: Vice City into playable browser ports overnight -- and Activision and Bethesda have both started sending takedowns.",
+      "key_facts": [
+        "Kotaku counted hundreds of AI-decompiled game ports appearing in roughly two weeks.",
+        "Bethesda sent a cease-and-desist over a Fallout-style browser game; Activision disabled Modern Warfare 2 decompilation footage.",
+        "A 2026 legal analysis argues decompilations DO infringe copyright, but should count as fair use for preservation -- a distinction most of this wave doesn't actually fit."
+      ],
+      "tone": "Energetic, conversational",
+      "persona": "nova-reyes",
+      "section": "Products",
+      "primary_image": "assets/img/newsroom/newsroom-ai-decompiled-game-ports-publisher-crackdown.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Fan coders are using AI agents to decompile old console games -- Halo, GTA: Vice City, Fallout -- into playable browser ports overnight. Activision and Bethesda have both started sending takedowns. Nobody's sued yet.",
+        "reply_copy": "The legal question nobody's actually tested:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Gaming"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-12T06:26:27Z",
+        "copy": "A developer ran 17 AI agents in parallel overnight and decompiled Modern Warfare 2 into a fully playable build. Activision disabled the footage within days. The AI model he used? His own posts never say.",
+        "reply_copy": "What's actually legal here, scored:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gaming",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Your PC doesn't need the game installed.\n\nFan coders are feeding old console games' compiled code to AI agents like Claude Opus 5.5 -- and getting playable browser ports back overnight. Halo. GTA: Vice City. Skate 3. The Simpsons: Hit and Run, reportedly running at 240fps.\n\nPublishers are starting to notice. Bethesda sent a cease-and-desist over an AI-decompiled Fallout game. Activision disabled footage of a Modern Warfare 2 recreation within days.\n\nThe twist: a 2026 legal analysis says decompilation DOES infringe copyright -- but argues it should count as fair use when it's about preserving a game that's otherwise unplayable. Most of this wave is still-sold, still-supported games. That's the gap nobody's tested in court yet.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#AI",
+          "#Gaming",
+          "#RetroGaming",
+          "#GameDev",
+          "#ClaudeAI",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "A wave of AI-decompiled game ports has hit the browser in the last two weeks, and publishers are starting to push back. Fan coders are feeding old console games' compiled code to AI agents -- Kotaku attributes much of the surge to Anthropic's Claude Opus 5.5 specifically -- and getting back playable browser ports of titles like Halo, GTA: Vice City and The Simpsons: Hit and Run, no original game files required. Bethesda has sent a cease-and-desist over an AI-decompiled Fallout-style game, and Activision disabled footage of a Modern Warfare 2 recreation. But neither publisher has sued anyone, and a real legal question -- whether AI-assisted decompilation itself is actually illegal -- remains untested in court. We laid out what's actually established versus what's still contested.",
+        "hashtags": [
+          "#AI",
+          "#Gaming"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "AI agents are decompiling old console games into browser ports overnight -- Halo, GTA: Vice City, Fallout. Activision and Bethesda have both sent takedowns. Nobody's sued yet, and the actual legal question is untested. Breaking down what's established vs. contested:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Fan coders are using AI to decompile old console games into browser ports overnight. Publishers are sending takedowns (Bethesda, Activision both have). Nobody's tested in court whether this is actually legal. The real gap:",
+        "hashtags": [
+          "#AI",
+          "#Gaming"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-nvidia-genesis-mission-1-billion-science-pledge",
+    "ts": "2026-10-12T01:35:20Z",
+    "export": {
+      "article_id": "newsroom-nvidia-genesis-mission-1-billion-science-pledge",
+      "url": "https://rtfclmgzn.com/article/nvidia-genesis-mission-1-billion-science-pledge",
+      "headline": "Nvidia's $1 billion US science pledge is one line in a $2.4 billion White House push -- and almost none of it is cash",
+      "hook": "Nvidia's headline $1B, five-year US science pledge is actually less than half of an 11-company, $2.4B White House commitment -- and every dollar of it is compute credits, not cash.",
+      "key_facts": [
+        "Ten other companies pledged a combined $1.4B more -- AMD ($500M), OpenAI ($200M), Anthropic and Google ($150M each), and six more.",
+        "The White House describes every company's pledge as compute or software credits, not cash grants to researchers.",
+        "Nvidia hasn't disclosed how the $1B splits between universities, quantum research and cloud partners, or on what schedule."
+      ],
+      "tone": "Technical, detail-obsessed",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-nvidia-genesis-mission-1-billion-science-pledge.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Nvidia's $1B US science pledge made headlines alone. Next to the event it was announced at, it's one line in an 11-company, $2.4B White House total -- and none of it is cash. It's compute and software credits.",
+        "reply_copy": "The full company-by-company breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-12T06:26:30Z",
+        "copy": "If Nvidia's $1B science pledge were new annual spending, it'd average $200M/year -- against quarterly revenue in the tens of billions. Nvidia hasn't said whether it's new money or a relabeling of work already underway.",
+        "reply_copy": "What's actually confirmed vs. not:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Nvidia",
+          "#Compute"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Nvidia's $1 billion science pledge made every headline alone.\n\nHere's what the headlines left out: it's one line in a bigger White House announcement. Eleven companies pledged $2.4 billion total for the Genesis Mission Consortium -- AMD ($500M), OpenAI ($200M), Anthropic and Google ($150M each), and six more.\n\nEvery single pledge, Nvidia's included, is compute or software credits. Not cash.\n\nNvidia hasn't said how the $1B splits between universities, quantum research and cloud partners -- or whether any of it is new spending versus work it was already doing.\n\nWe broke down who pledged what, and what's actually confirmed -- link in bio.",
+        "hashtags": [
+          "#Nvidia",
+          "#AI",
+          "#Compute",
+          "#GenesisMission",
+          "#TechNews",
+          "#Quantum"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Nvidia announced on October 8 that it would commit $1 billion over five years to advance US science, at a White House event billed as the 'Science: A New Golden Age' summit. Framed alone, it reads as a major company bet on American research. Framed next to the event it was actually announced at, it's one line in a larger total: the same summit produced a White House fact sheet listing pledges from eleven companies totaling $2.4 billion to support the Genesis Mission Consortium -- AMD at $500 million, OpenAI at $200 million, Anthropic and Google at $150 million each, and six more at $50-100 million. Every figure on that list, Nvidia's included, is described as compute, cloud or software credits, not a cash grant. Nvidia hasn't disclosed how its $1 billion splits between universities, quantum initiatives and cloud-provider access, or on what schedule.",
+        "hashtags": [
+          "#Nvidia",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Nvidia's $1B US science pledge made headlines alone. It's actually one line in an 11-company, $2.4B White House total -- and every pledge is compute/software credits, not cash. Who pledged what, and what's still undisclosed:",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Nvidia's $1B science pledge, alone, made headlines. It's actually <50% of an 11-company $2.4B White House total -- and it's compute credits, not cash. Nvidia hasn't said how it's allocated.",
+        "hashtags": [
+          "#Nvidia",
+          "#AI",
+          "#Compute"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

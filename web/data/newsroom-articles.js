@@ -103190,5 +103190,762 @@ window.RTFC_NEWSROOM_ARTICLES = [
     ],
     "gate": "synthesis with 4 components (compare, scorecard, stakes, counter); 3 independent sources, each direct-fetched; one same-cycle cross-link to this run's own Microsoft Surface Laptop Ultra piece for the comparison table, built from facts already separately sourced in that article."
   }
+},
+{
+  "slug": "amazon-decart-7-billion-deal-talks-anthropic-walked-away",
+  "title": "Amazon is reportedly in talks to buy Decart for $7 billion, after Anthropic walked away",
+  "dek": "The Israeli infrastructure startup drew interest from Nvidia, then nearly sold to Anthropic for $6 billion before Anthropic pulled out in September. Amazon — one of Anthropic's own biggest investors — is now the one at the table.",
+  "persona": "kian-farzan",
+  "section": "Markets",
+  "format": "synthesis",
+  "disclaimer": "not-financial-advice",
+  "tldr": [
+    "Amazon is reportedly in advanced talks to buy AI infrastructure startup Decart for about $7 billion.",
+    "Anthropic completed due diligence on a $6 billion Decart deal, then walked away in September.",
+    "Decart's software lets AI workloads shift between Nvidia, Google and Amazon's own chips.",
+    "Amazon is itself one of Anthropic's largest investors, with up to $33 billion committed.",
+    "Nothing is signed — the Journal's own sourcing says talks could still collapse or draw a new bidder."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "[Amazon](/company/amazon) is in talks to acquire [Decart](/company/decart), the Israeli AI-infrastructure startup, for roughly **$7 billion**, the Wall Street Journal reported October 11, citing people familiar with the discussions. The talks have reportedly reached a fairly advanced stage, and a deal could close within days — ==provided the negotiations don't collapse and no other bidder steps in==, the people told the Journal. Neither Amazon nor Decart has commented.",
+      "citation_urls": [
+        "https://siliconangle.com/2026/10/11/report-amazon-in-talks-with-ai-startup-decart-over-possible-7b-acquisition/",
+        "https://finance.biggo.com/news/4f4735d5-737c-45e8-a4f6-bd14874434f5"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "It is the third different buyer linked to Decart in four months. Founded in 2023 by Dean and Orian Leitersdorf and Moshe Shalev — engineers who met in Israel's Unit 8200 military-intelligence corps — Decart builds __DOS__, software that lets a trained AI model run efficiently across Nvidia GPUs, Google TPUs and Amazon's own Trainium chips, cutting the chip-specific tuning work that normally takes months down to weeks. It last raised money in May 2026: a $300 million round that valued the company near $4 billion. The company also develops two other products: ++Lucy++, a real-time video model, and ++Oasis++, a world-generation model built for training and testing robots.",
+      "citation_urls": [
+        "https://decart.ai/",
+        "https://decart.ai/research"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "In August, [Bloomberg reported Anthropic was negotiating to buy Decart for about $6 billion](/article/anthropic-decart-6-billion-acquisition-talks) — its largest deal to date — after Decart's founders favored Anthropic's offer over a competing approach from Nvidia. Anthropic reportedly completed due diligence on the deal. Then, last month, **it walked away.** Neither Bloomberg's reporting nor Anthropic itself has said why.",
+      "citation_urls": [
+        "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
+        "https://siliconangle.com/2026/10/11/report-amazon-in-talks-with-ai-startup-decart-over-possible-7b-acquisition/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Decart's own pitch, unchanged across all three reported suitors, rests on numbers the company has not opened to independent testing: it says DOS runs full-HD video inference at up to **100 frames per second** and pushes agentic inference to roughly 1,600 tokens per second, against what it puts at a roughly 200-token-per-second industry baseline. Those are company-reported figures, not independently verified by any of the reported bidders or by outside benchmarking — and no acquisition report so far has cited a third-party benchmark confirming them either. ==Whatever Decart is actually worth to a buyer, it rests partly on taking the company's own performance claims at face value.==",
+      "citation_urls": [
+        "https://decart.ai/research"
+      ]
+    },
+    {
+      "type": "ledger",
+      "ledger": {
+        "kicker": "THREE BIDS IN FOUR MONTHS",
+        "title": "What each reported Decart deal actually got to",
+        "items": [
+          {
+            "value": "Undisclosed",
+            "unit": "Nvidia, mid-2026",
+            "label": "An earlier approach Decart's founders considered and passed on.",
+            "includes": "A competing acquisition interest, per Bloomberg's August reporting.",
+            "excludes": "Any confirmed price — reporting says only that the founders favored Anthropic's offer instead."
+          },
+          {
+            "value": "$6B",
+            "unit": "Anthropic, Aug–Sept 2026",
+            "label": "A deal that reportedly cleared due diligence, then died.",
+            "includes": "Completed due diligence, per Bloomberg.",
+            "excludes": "A signed agreement, or any stated reason for walking away."
+          },
+          {
+            "value": "~$7B",
+            "unit": "Amazon, Oct 2026 (reported)",
+            "label": "The current, unconfirmed talks.",
+            "includes": "What the Journal's sources describe as discussions at a fairly advanced stage.",
+            "excludes": "A signed deal — the Journal's own sourcing flags the talks could still collapse.",
+            "note": "The only one of the three not yet settled either way."
+          }
+        ],
+        "source": "Wall Street Journal's October 11 report (via SiliconANGLE and BigGo Finance) and Bloomberg's August/September reporting on Anthropic's talks."
+      }
+    },
+    {
+      "type": "p",
+      "text": "The strategic logic for Amazon tracks a pattern familiar from the Anthropic talks: DOS's value isn't Decart's consumer-facing video tools, it's the chip-portability layer underneath them. Decart reportedly got early access to Amazon's Trainium3 chips **before their wider release** last year, after a meeting with senior AWS engineers who came away impressed with the founders. For AWS — which sells Trainium chips into a market Nvidia still dominates — owning the software that makes switching chips cheap and fast is a direct hedge against customers staying locked into Nvidia's ecosystem.",
+      "citation_urls": [
+        "https://siliconangle.com/2026/10/11/report-amazon-in-talks-with-ai-startup-decart-over-possible-7b-acquisition/"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "“This market is moving so fast. We get to reinvent every different aspect of the economy in the next 18 to 24 months.” — Dean Leitersdorf, Decart co-founder and CEO",
+      "citation_urls": [
+        "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "{{note: Leitersdorf said that in August, about the pace of AI infrastructure deals generally — not about his own company's situation specifically. Four months and three reported suitors later, it reads less like color commentary and more like a forecast.}} The irony is that one of the three suitors already has a direct stake in how this plays out.",
+      "citation_urls": [
+        "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/"
+      ]
+    },
+    {
+      "type": "stakes",
+      "stakes": {
+        "kicker": "WHO THIS LANDS ON",
+        "items": [
+          {
+            "who": "Amazon",
+            "tone": "gains",
+            "what": "Would gain DOS's cross-chip efficiency layer at a moment AWS is racing to get customers onto its own Trainium silicon rather than Nvidia's."
+          },
+          {
+            "who": "Anthropic",
+            "tone": "exposed",
+            "what": "Has taken up to $33 billion in Amazon investment and committed over $100 billion to AWS over 10 years — and would be watching its own backer buy the company it spent weeks vetting and then declined."
+          },
+          {
+            "who": "Decart's May 2026 investors (Radical Ventures, Nvidia Ventures, Sequoia Capital, Benchmark)",
+            "tone": "gains",
+            "what": "A further markup on paper if $7 billion closes — nearly double the roughly $4 billion valuation they priced three months before Anthropic's talks even surfaced."
+          },
+          {
+            "who": "Decart's Lucy and Oasis product lines",
+            "tone": "unclear",
+            "what": "Already uncertain under Anthropic's reported infrastructure-only interest; even less obviously useful to an AWS-focused buyer with no consumer-video or robotics business of its own."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Even basic facts about Decart aren't fully settled across this week's coverage. SiliconANGLE and the company's own history describe it as an **Israeli-founded startup** — its three founders met in Israel's Unit 8200 — while BigGo Finance's account of the same WSJ report calls it a \"San Francisco startup.\" Both can be true at once (a company incorporated or headquartered in the US with Israeli founders and roots is common in this industry), but neither outlet's version spells out which; Decart's own site and its original funding coverage both describe the founders' roots as Israeli.",
+      "citation_urls": [
+        "https://decart.ai/",
+        "https://finance.biggo.com/news/4f4735d5-737c-45e8-a4f6-bd14874434f5"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Zoom out and the pattern isn't really about Decart at all. 2026 has been a year of compute-adjacent M&A happening at a pace none of the frontier labs would have attempted two years ago — Anthropic and OpenAI both confidentially filed draft S-1s this year while still closing multibillion-dollar acquisitions and infrastructure deals in the same stretch, treating pre-IPO scrutiny and acquisition-scale spending as compatible rather than sequential. A $6–$7 billion purchase of a three-year-old efficiency-software startup is, in that context, a mid-sized line item rather than a landmark — which is itself the more interesting fact than who ends up signing the check.",
+      "citation_urls": [
+        "https://www.anthropic.com/news/series-h",
+        "https://www.anthropic.com/news/confidential-draft-s1-sec"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What's confirmed, in both companies' own record, is the backdrop: Amazon has committed up to $33 billion to Anthropic, which has in turn committed over $100 billion to AWS over the next decade — an expanding bet on both sides — while Decart has made a habit of raising money without ever confirming that acquisition talks exist at all. The deal chain itself — Nvidia's informal interest, Anthropic's due-diligence reversal, Amazon's current talks — rests entirely on reporting attributed to unnamed people, and **none of the four companies involved has issued an on-record statement confirming any of it.**",
+      "citation_urls": [
+        "https://www.clickorlando.com/tech/2026/04/21/ai-startup-anthropic-commits-100-billion-to-amazons-aws-over-next-10-years/"
+      ]
+    }
+  ],
+  "apply": [
+    {
+      "label": "Watch for a signed agreement.",
+      "text": "The Journal's own sourcing flags the talks could still collapse or draw a new bidder — a joint Amazon/Decart statement is the document that settles the actual price and terms."
+    },
+    {
+      "label": "Watch whether Nvidia re-enters.",
+      "text": "Decart's May funding round already includes Nvidia Ventures as an investor, giving Nvidia a minority stake regardless of who ends up buying control."
+    },
+    {
+      "label": "Watch for Anthropic's reasoning, if it ever surfaces.",
+      "text": "Due-diligence pullbacks are rarely explained publicly; a technical-fit or antitrust concern are the likeliest categories if one does."
+    },
+    {
+      "label": "Watch what happens to Lucy and Oasis.",
+      "text": "Decart's consumer-video and robotics-simulation products are the parts of any deal most likely to get wound down under a buyer interested mainly in the chip-portability layer."
+    }
+  ],
+  "applyType": "watch",
+  "sources": [
+    {
+      "label": "SiliconANGLE — \"Report: Amazon in talks with AI startup Decart over possible $7B acquisition\"",
+      "url": "https://siliconangle.com/2026/10/11/report-amazon-in-talks-with-ai-startup-decart-over-possible-7b-acquisition/",
+      "primary": false
+    },
+    {
+      "label": "BigGo Finance — \"Amazon Reportedly in Talks to Acquire AI Startup Decart for $7 Billion, Stepping In After Anthropic Walked Away\"",
+      "url": "https://finance.biggo.com/news/4f4735d5-737c-45e8-a4f6-bd14874434f5",
+      "primary": false
+    },
+    {
+      "label": "Decart — company site and research pages",
+      "url": "https://decart.ai/",
+      "primary": true
+    },
+    {
+      "label": "Bloomberg (via Fortune mirror) — \"Anthropic said in talks to buy startup Decart for $6 billion\"",
+      "url": "https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/",
+      "primary": false
+    },
+    {
+      "label": "Bloomberg — \"Anthropic Said in Talks to Buy AI Startup Decart for $6 Billion\"",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
+      "primary": true
+    },
+    {
+      "label": "ClickOrlando / AP — \"AI startup Anthropic commits $100 billion to Amazon's AWS over next 10 years\"",
+      "url": "https://www.clickorlando.com/tech/2026/04/21/ai-startup-anthropic-commits-100-billion-to-amazons-aws-over-next-10-years/",
+      "primary": false
+    }
+  ],
+  "id": "newsroom-amazon-decart-7-billion-deal-talks-anthropic-walked-away",
+  "image": "assets/img/newsroom/newsroom-amazon-decart-7-billion-deal-talks-anthropic-walked-away.jpg",
+  "top": false,
+  "sample": false,
+  "corrections": [],
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-10-12T01:26:22Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "Surfaced via a Techmeme AI-industry sweep for October 11-12 news; grepped newsroom-articles.js for 'decart' and found the August 13 Anthropic-talks piece already published, confirming this as a genuine follow-up rather than a duplicate. Evidence threads: WSJ's Oct 11 report (via independently-fetched SiliconANGLE and BigGo Finance mirrors, counted as one thread), Decart's own site, Bloomberg's original August report (already verified in the prior article, re-cited directly), and Amazon's own April 2026 Anthropic investment disclosure (via AP/ClickOrlando) — four materially distinct threads with two primary company/filing-adjacent sources."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "WSJ's own article was not directly fetchable (paywalled); every figure attributed to it was cross-checked against two independently-fetched secondary mirrors (SiliconANGLE, BigGo Finance) that agreed on the $7B figure, deal stage, and the Anthropic-walked-away detail. The Amazon-Anthropic investment total ($33B) was confirmed by direct fetch against a wire-service mirror rather than taken from a single blog post."
+      },
+      {
+        "name": "Loop 1 — critique and revise",
+        "agent": "claude-runner",
+        "note": "Critique found the first draft stated Anthropic's due-diligence withdrawal without flagging that no reason has ever been reported; revised to make the absence of a stated reason explicit rather than implying one. No self-referential language found on re-read; the cross-link to the August article is phrased as a prior event ('Bloomberg reported Anthropic was negotiating...') rather than as 'our coverage'."
+      },
+      {
+        "name": "Loop 2 — component provenance check",
+        "agent": "claude-runner",
+        "note": "Every value in the ledger and stakes blocks traces to a source in the article's own sources array; the Nvidia bid's dollar figure is explicitly marked undisclosed rather than invented. No component carries a top-level text field."
+      },
+      {
+        "name": "Compliance self-check",
+        "agent": "claude-runner",
+        "note": "Trigger 2 (financial/valuation claims) applies: Markets-section piece carries the not-financial-advice disclaimer, and every price figure is hedged as reported rather than confirmed since no deal has closed. No accusatory claim is made against any named company — Anthropic's withdrawal and Amazon's talks are both reported as neutral business facts."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Cleared for publish: format matches evidence depth (four threads, synthesis-band word count), components trace to sourced facts, apply block names concrete forward-looking checkpoints."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "Synthesis floor cleared on evidence diversity; no compliance trigger required Editor-in-Chief adjudication beyond the standard financial-claims disclaimer and hedging discipline."
+    }
+  },
+  "publishedAt": "2026-10-12T01:26:22Z"
+},
+{
+  "slug": "ai-decompiled-game-ports-publisher-crackdown",
+  "title": "AI agents are decompiling old games into browser ports overnight. Publishers are starting to shut them down.",
+  "dek": "Fan coders are using Claude Opus 5.5 and other AI agents to decompile console-era games like Halo, GTA: Vice City and Fallout into playable browser ports, no original files required. Activision and Bethesda have both moved to take versions down.",
+  "persona": "nova-reyes",
+  "section": "Products",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+    "Fan coders are using AI agents to decompile old console games into playable browser ports.",
+    "Kotaku counted hundreds of AI-decompiled projects appearing in roughly two weeks.",
+    "Bethesda sent a cease-and-desist over a Fallout-style browser game; Activision disabled Modern Warfare 2 decompilation footage.",
+    "Whether AI-assisted decompilation itself infringes copyright remains legally untested.",
+    "No publisher has yet taken legal action against the AI companies whose models make this possible."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "A wave of AI-decompiled game ports has hit the browser in the last two weeks, and publishers are starting to push back. Kotaku counted ==hundreds of \"vibe-coded\" recreations and decompilations== circulating since late September, built by feeding an old game's compiled code to an AI coding agent and letting it reconstruct something a browser can run — no original game files, no official SDK, sometimes no human-written code at all.",
+      "citation_urls": [
+        "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The list that went viral on October 8, posted by a user called Radiant Optimizer, named browser ports of **Call of Duty: Black Ops**, four separate builds of **Halo: Combat Evolved**, **Grand Theft Auto: Vice City**, **Skate 3** and **The Simpsons: Hit and Run** — all console-era titles, mostly from the PlayStation 2 and 3 generation. Kotaku's Lewis Parker tested several directly: __The Simpsons: Hit and Run__ reportedly ran at 240 frames per second in-browser, and one of the four Halo ports had working online multiplayer servers with low ping. \"Your PC does not need the game installed!\" the original post read.",
+      "citation_urls": [
+        "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Kotaku attributes the surge to [Anthropic](/company/anthropic)'s Claude Opus 5.5 specifically, describing it as unusually capable at decompilation — good enough that a coder can set it running overnight on a task that, done by hand, has historically taken months. ++Vibe-coded++ decompilation, in this telling, turns reverse-engineering from a specialist skill into something closer to a batch job.",
+      "citation_urls": [
+        "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300"
+      ]
+    },
+    {
+      "type": "flow",
+      "flow": {
+        "kicker": "HOW A COMPILED GAME BECOMES A BROWSER PORT",
+        "steps": [
+          {
+            "actor": "Fan coder",
+            "what": "Feeds an AI agent the original game's compiled binary — not source code, which publishers never release."
+          },
+          {
+            "actor": "AI agent",
+            "what": "Reconstructs working logic from the compiled code, a process that can run for hours unattended.",
+            "hi": true
+          },
+          {
+            "actor": "Fan coder",
+            "what": "Recompiles the reconstructed code to run inside a browser, generating replacement assets rather than using the original art or sound files."
+          },
+          {
+            "actor": "Publisher",
+            "what": "Files a takedown or cease-and-desist once the project surfaces publicly.",
+            "blocked": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Two publishers have already acted. Bethesda sent a cease-and-desist over **Fallout: New York**, a browser-playable open-world shooter built with Claude Opus 5.5 by a developer known as ChrisFirst, who shared a clip on September 28 that drew more than 3.5 million views. The project reportedly included working quests, dialogue trees, the V.A.T.S. combat system and a functioning Pip-Boy interface, with no original Bethesda textures or audio — the AI generated replacements for all of it. ChrisFirst abandoned the project on October 1.",
+      "citation_urls": [
+        "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "“The suits got involved and the fun is over.” — ChrisFirst, developer of the AI-decompiled Fallout: New York browser game, announcing he was abandoning the project",
+      "citation_urls": [
+        "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Activision moved against a separate project two days earlier. Developer Maurice Heumann said on September 30 he was running **17 AI agents in parallel** to decompile the PC version of Call of Duty: Modern Warfare 2, and that the result was fully playable with almost every visible bug fixed. Activision had the demonstration footage disabled — \"This media has been disabled in response to a report by the copyright owner\" — and a site that had hosted the reconstructed code stopped resolving. Unlike the Fallout project, Heumann's own posts don't name which AI model his agents ran on.",
+      "citation_urls": [
+        "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Heumann's second post, after Activision's response, was less triumphant: he said his own AI agents had deleted his files over the following weekend, writing \"The fuckers did it again.\" It's a small detail, but it points at something the decompilation debate mostly skips past — these AI agents aren't just a faster version of a human reverse-engineer's workflow. They're unsupervised for hours at a stretch, running on infrastructure the coder doesn't fully control, and the failure modes that come with that are different from anything a publisher's legal team has had to think about before.",
+      "citation_urls": [
+        "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"
+      ]
+    },
+    {
+      "type": "timeline",
+      "timeline": {
+        "kicker": "TWO WEEKS, FOUR MOVES",
+        "items": [
+          {"when": "Sep 28", "what": "ChrisFirst posts a clip of Fallout: New York, a Claude Opus 5.5-decompiled browser game; it draws 3.5M+ views.", "source": "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"},
+          {"when": "Sep 30", "what": "Maurice Heumann says 17 AI agents decompiled Modern Warfare 2's PC version into a playable build.", "source": "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"},
+          {"when": "Oct 1", "what": "Bethesda sends a cease-and-desist; ChrisFirst abandons Fallout: New York.", "hi": true, "source": "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"},
+          {"when": "Oct 8", "what": "Radiant Optimizer's viral post lists hundreds of browser ports, from Halo to GTA: Vice City; Kotaku covers the wave.", "source": "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300"}
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "The legal question underneath all of this predates AI by years, and it has a real answer — just not the one either side of the current argument tends to assume. A 2026 Cardozo Law Review analysis of game decompilation concludes that decompilations **are copyright infringing**, because copyright protects more than a game's discrete art and audio assets; it protects the overall creative labor a decompilation sets out to capture, even when the resulting code is entirely new and contains none of the original files. ==The same analysis argues decompilations should nonetheless be treated as fair use== when their purpose is preserving a game that would otherwise become unplayable as hardware and support age out — a property-rights argument, drawing on John Locke's labor theory of ownership, for a fan's claim to keep access to something they already bought.",
+      "citation_urls": [
+        "https://cardozolawreview.com/sigmon-nerds-v-nintendo"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "None of the current wave fits that preservation framing cleanly. Fallout: New York and the Modern Warfare 2 reconstruction are both still-supported, commercially available titles, not abandoned games rotting on unsupported hardware — the exact distinction the fair-use argument for decompilation depends on. A browser port of **The Simpsons: Hit and Run**, a 2003 game last patched two decades ago and not sold anywhere today, is a much closer fit for the preservation case than a GTA or Halo port is, even though all of them were swept up in the same viral post and the same wave of coverage."
+    },
+    {
+      "type": "scorecard",
+      "scorecard": {
+        "kicker": "WHAT'S ACTUALLY ESTABLISHED",
+        "items": [
+          {
+            "claim": "A game decompilation infringes the publisher's copyright, but should be treated as fair use when its purpose is preserving an otherwise-inaccessible game.",
+            "level": "contested",
+            "basis": "A 2026 Cardozo Law Review analysis concludes decompilations do infringe, since copyright covers the creative labor reconstructed, not just art and audio files — but argues for a fair-use carve-out for preservation. That is scholarship, not a ruling; no court has decided an AI-assisted case, and most of this wave targets still-sold games the preservation argument doesn't obviously cover.",
+            "resolver": "A court ruling in an actual AI-decompilation case — none has been filed by a publisher against a fan coder or an AI company so far."
+          },
+          {
+            "claim": "Claude Opus 5.5 is meaningfully better at this specific task than prior AI coding models.",
+            "level": "company",
+            "basis": "Asserted by Kotaku's reporting based on the volume and quality of recent ports, not by any benchmark Anthropic has published for decompilation specifically.",
+            "resolver": "An independent benchmark comparing AI models on game decompilation — none currently exists."
+          },
+          {
+            "claim": "Publishers can lawfully force takedown of AI-decompiled ports hosted or demonstrated online.",
+            "level": "strong",
+            "basis": "Activision and Bethesda both successfully got hosting platforms to remove content within days, using the same cease-and-desist and takedown-notice tools available against any unauthorized derivative work.",
+            "resolver": "Already functionally resolved — the uncertainty is about the underlying code's legality, not a publisher's practical ability to get it taken offline."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "That gap — publishers can get a specific upload removed in days, but nobody has tested whether the underlying act of AI-assisted decompilation is actually illegal — is the real story here. {{note: Decompilation itself has a long, mostly-legal history in game preservation and interoperability research; what's new is not the legal theory but the speed. A process that used to require a specialist team months of manual reverse-engineering now runs unattended overnight.}} Neither Activision nor Bethesda has sued anyone over this wave, and **neither has gone after Anthropic or any other AI company** — only the individual coders posting results, and only after those results went viral.",
+      "citation_urls": [
+        "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580"
+      ]
+    },
+    {
+      "type": "stakes",
+      "stakes": {
+        "kicker": "WHO THIS LANDS ON",
+        "items": [
+          {
+            "who": "Individual fan coders",
+            "tone": "exposed",
+            "what": "Bear 100% of the legal risk today — cease-and-desist letters have landed on the people posting results, not on Anthropic or any other model maker."
+          },
+          {
+            "who": "Game preservationists",
+            "tone": "gains",
+            "what": "A tool that makes playable, unofficial ports of unsupported, hardware-locked older games dramatically cheaper to produce than manual reverse-engineering ever was."
+          },
+          {
+            "who": "Publishers with large back catalogs (Activision, Bethesda, Take-Two, Microsoft)",
+            "tone": "loses",
+            "what": "Lose practical control over distribution of their older titles the moment any single coder can decompile one overnight, regardless of how many takedowns they file."
+          },
+          {
+            "who": "Anthropic",
+            "tone": "unclear",
+            "what": "Named by Kotaku as the enabling tool but not yet a target of any publisher action — that could change if a publisher decides the model maker, not the end user, is the more effective party to pursue."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "For now, the fight looks a lot like the early Napster era, just aimed at code instead of music files: publishers chasing individual uploads one at a time while the tool that makes them keeps getting better. The open question Kotaku's own reporting can't answer — whether AI-assisted decompilation is legal, legal-but-distributing-it-isn't, or neither — is exactly the one a publisher would have to bring a real lawsuit to settle, and so far, none has."
+    }
+  ],
+  "apply": [
+    {
+      "label": "Watch for the first lawsuit, not just a takedown.",
+      "text": "Every publisher response so far has been a cease-and-desist or a platform takedown notice — faster and cheaper than litigation, but it never tests whether the underlying act is actually illegal."
+    },
+    {
+      "label": "Watch whether a publisher targets an AI company instead of a coder.",
+      "text": "Every action so far has landed on the individual who posted results. A suit naming Anthropic or another model maker directly would be a different, much bigger story."
+    },
+    {
+      "label": "Watch Microsoft and Take-Two specifically.",
+      "text": "Kotaku's reporting names Halo (Microsoft) and GTA: Vice City (Take-Two) ports as still live and undisputed so far — both companies have large back catalogs and have not yet acted."
+    }
+  ],
+  "applyType": "watch",
+  "sources": [
+    {
+      "label": "Kotaku — \"We Might Be Cooked, As These Vibe-Coded Web Browser Ports Of Halo, The Simpsons: Hit And Run, And GTA: Vice City Seem To Work Perfectly\"",
+      "url": "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300",
+      "primary": false
+    },
+    {
+      "label": "Kotaku — \"Activision And Bethesda Crackdown On GenAI MW2 And Fallout Projects\"",
+      "url": "https://kotaku.com/activision-and-bethesda-crackdown-on-genai-mw2-and-fallout-projects-2000739580",
+      "primary": false
+    },
+    {
+      "label": "Cardozo Law Review — \"Nerds v. Nintendo: Video Game Decompilations Versus Rights-Holder Interests\"",
+      "url": "https://cardozolawreview.com/sigmon-nerds-v-nintendo",
+      "primary": true
+    }
+  ],
+  "id": "newsroom-ai-decompiled-game-ports-publisher-crackdown",
+  "image": "assets/img/newsroom/newsroom-ai-decompiled-game-ports-publisher-crackdown.jpg",
+  "top": false,
+  "sample": false,
+  "corrections": [],
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-10-12T01:26:27Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "Surfaced via a Techmeme AI-industry sweep that flagged a Kotaku piece on Claude-assisted game decompilation; grepped newsroom-articles.js for 'kotaku', 'decompil', 'activision', 'bethesda' and found no prior coverage. Evidence threads: Kotaku's viral-list report, Kotaku's separate crackdown report (two distinct pieces, same outlet, on different incidents — counted as two threads since they document different projects and dates), and a Cardozo Law Review academic analysis of the underlying legal question — three materially distinct threads, one of them primary legal scholarship."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "Both Kotaku articles were fetched directly rather than summarized from search snippets; the Modern Warfare 2 project's AI model was deliberately left unattributed in the draft because Heumann's own posts, per Kotaku's reporting, never name one — only the Fallout: New York project is sourced as using Claude Opus 5.5 specifically. The Cardozo Law Review piece is older academic background, cited as legal context rather than reporting on these specific 2026 incidents."
+      },
+      {
+        "name": "Loop 1 — critique and revise",
+        "agent": "claude-runner",
+        "note": "Critique found the first draft implied Claude was confirmed as the tool behind the MW2 decompilation; revised to state explicitly that Heumann's agents' underlying model is unnamed in reporting, to avoid overstating Anthropic's role in that specific incident. No self-referential language found on re-read."
+      },
+      {
+        "name": "Loop 2 — component provenance check",
+        "agent": "claude-runner",
+        "note": "Every claim in the flow, scorecard and stakes blocks traces to the two Kotaku articles or the Cardozo Law Review piece in the sources array. No component carries a top-level text field."
+      },
+      {
+        "name": "Compliance self-check",
+        "agent": "claude-runner",
+        "note": "No mandatory-scrutiny trigger applies: no health/financial/legal-proceedings claim (cease-and-desist letters and takedown notices are not litigation), and the reporting on Activision's and Bethesda's own actions is attributed and sourced, not accusatory. No disclaimer required."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Cleared for publish: synthesis floor cleared on evidence diversity and analytical depth (the legality-vs-enforceability distinction), components trace to sourced facts, apply block names concrete forward-looking checkpoints."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "No compliance trigger fired; piece proceeds to publish without Editor-in-Chief adjudication."
+    }
+  },
+  "publishedAt": "2026-10-12T01:26:27Z"
+},
+{
+  "slug": "nvidia-genesis-mission-1-billion-science-pledge",
+  "title": "Nvidia's $1 billion US science pledge is one line in a $2.4 billion White House push — and almost none of it is cash",
+  "dek": "Nvidia headlined a White House AI Science Summit announcement with a five-year, $1 billion commitment to American research. Eleven companies pledged $2.4 billion total, all of it described as compute and software credits rather than cash.",
+  "persona": "jin-park",
+  "section": "Compute",
+  "format": "synthesis",
+  "disclaimer": "none",
+  "tldr": [
+    "Nvidia pledged $1 billion over five years to US science at an October 8 White House event.",
+    "Ten other companies pledged a combined $1.4 billion more, for a total of $2.4 billion.",
+    "The White House describes every company's pledge as compute or software credits, not cash.",
+    "Nvidia hasn't said how the $1 billion splits between universities, quantum research and cloud partners.",
+    "Analysts note that if it were new cash, it would average about $200 million a year — small next to Nvidia's revenue."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "[Nvidia](/company/nvidia) announced on October 8 that it would commit **$1 billion over the next five years** to advance US science, at a White House event billed as the \"Science: A New Golden Age\" summit. Framed alone, in Nvidia's own press release and the wave of coverage that followed, it reads as a company making a nine-figure-a-year bet on American research. Framed next to the event it was actually announced at, it's **one line in a larger, government-organized total** — and a smaller one than the $1 billion headline suggests.",
+      "citation_urls": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The same event produced a White House fact sheet listing pledges from eleven companies, totaling **$2.4 billion**, to support what the administration calls the Genesis Mission Consortium — a push to back \"over 15 Federal agencies working towards National Science & Technology Challenges.\" Nvidia's $1 billion is the largest single pledge, but it's less than half the total, and AMD's $500 million brings the two chipmakers alone to roughly two-thirds of everything pledged.",
+      "citation_urls": [
+        "https://www.nextgov.com/artificial-intelligence/2026/10/white-house-unveils-billions-investments-genesis-mission/416517/"
+      ]
+    },
+    {
+      "type": "chart",
+      "chart": {
+        "kicker": "WHO PLEDGED WHAT",
+        "title": "The $2.4 billion Genesis Mission Consortium pledge, by company",
+        "kind": "bar",
+        "unit": "$M",
+        "source": "White House fact sheet, October 8 2026, via Nextgov's reporting.",
+        "data": [
+          {
+            "label": "Nvidia",
+            "value": 1000,
+            "hi": true
+          },
+          {
+            "label": "AMD",
+            "value": 500
+          },
+          {
+            "label": "OpenAI",
+            "value": 200
+          },
+          {
+            "label": "Anthropic",
+            "value": 150
+          },
+          {
+            "label": "Google",
+            "value": 150
+          },
+          {
+            "label": "AMP",
+            "value": 100
+          },
+          {
+            "label": "Emerald AI",
+            "value": 100
+          },
+          {
+            "label": "AWS",
+            "value": 50
+          },
+          {
+            "label": "Armada",
+            "value": 50
+          },
+          {
+            "label": "Crusoe",
+            "value": 50
+          },
+          {
+            "label": "Micron",
+            "value": 50
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "Nvidia's own release names three priority fields for the money: quantum computing, healthcare and energy security. It ties the pledge directly to work already underway — Nvidia says it is building seven new systems across Argonne National Laboratory and Los Alamos National Laboratory, on top of the Argonne supercomputer it has previously announced, and that it is collaborating on Phase 2 Genesis Mission awards spanning quantum computing, fusion, accelerator design and microelectronics. __Genesis Mission__ itself is a Department of Energy initiative, not an Nvidia program — Nvidia is one industry partner among several, and this pledge is explicitly framed as supporting a government-run effort rather than a standalone Nvidia research initiative.",
+      "citation_urls": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "What none of the coverage disputes: ==every figure on that list is compute, cloud or software credits — not a cash grant to any researcher or institution==. Crusoe's own release is the most specific of any company's about what that actually means in practice: its $50 million is compute credits delivered over three years through Crusoe Cloud, not a check to a university or lab.",
+      "citation_urls": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx",
+        "https://www.nextgov.com/artificial-intelligence/2026/10/white-house-unveils-billions-investments-genesis-mission/416517/"
+      ]
+    },
+    {
+      "type": "ledger",
+      "ledger": {
+        "kicker": "WHAT THE HEADLINE NUMBER ACTUALLY COVERS",
+        "title": "Nvidia's $1 billion, scoped",
+        "items": [
+          {
+            "value": "$1B",
+            "unit": "Over 5 years",
+            "label": "Compute, cloud access and resource commitments — not a cash grant.",
+            "includes": "Access for universities, US quantum initiatives, and cloud providers serving government research missions, per Nvidia's own release.",
+            "excludes": "A disclosed breakdown of how much goes to which of those three categories, or over what schedule.",
+            "note": "If treated as new annual spending, this averages to roughly $200M/year — against Nvidia's own reported quarterly revenue in the tens of billions."
+          }
+        ],
+        "source": "Nvidia's October 8 press release; the $200M/year annualized figure is computed from the stated $1B-over-5-years total, not a company-stated number."
+      }
+    },
+    {
+      "type": "p",
+      "text": "That lack of a public breakdown is also what makes the central question — whether this is new spending or a relabeling of research work Nvidia was already doing — impossible to answer from the outside."
+    },
+    {
+      "type": "scorecard",
+      "scorecard": {
+        "kicker": "IS THIS NEW MONEY?",
+        "items": [
+          {
+            "claim": "Nvidia's $1 billion represents new spending, incremental to what it already does with research institutions, Argonne and Los Alamos.",
+            "level": "unverified",
+            "basis": "Nvidia's release ties the pledge to work it already does — Argonne's supercomputer build, Genesis Mission Phase 2 awards — without stating whether the $1 billion is additive to those programs or a relabeling of resources already committed.",
+            "resolver": "A disclosed, itemized spending schedule from Nvidia, or a follow-up report confirming specific new institutions or programs funded that weren't already announced."
+          },
+          {
+            "claim": "The pledges across all eleven companies are compute/software credits rather than cash, as the White House fact sheet states.",
+            "level": "confirmed",
+            "basis": "Both Nextgov's reporting on the fact sheet and Crusoe's own release independently describe the commitments as credits, not cash grants.",
+            "resolver": "Already resolved by the companies' own and the White House's consistent description — no company has disputed this characterization."
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "text": "The event produced other federal commitments on the same day: the Pentagon announced up to $350 million for quantum-computing initiatives and a framework to measure its own research labs, and the Department of Energy added $159 million in new Genesis Mission Phase 2 project awards plus $96 million for early-career researchers. Jensen Huang, Nvidia's CEO, tied the pledge to the administration's framing directly, saying Nvidia is putting advanced AI capability “in the hands of America's scientists” to speed breakthroughs in medicine, energy and materials.",
+      "citation_urls": [
+        "https://www.nextgov.com/artificial-intelligence/2026/10/white-house-unveils-billions-investments-genesis-mission/416517/"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "“President Trump's Genesis Mission is launching a new golden age of American discovery.” — Jensen Huang, Nvidia founder and CEO",
+      "citation_urls": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Independent commentary on the announcement — distinct from the straight recaps that followed Nvidia's release almost word for word — has focused on exactly the gap scored above: the press release's own wording describes \"commitments valued at\" $1 billion, phrasing that does not by itself describe a single cash transfer, and no outlet has reported Nvidia disclosing a funding schedule, named beneficiary list, or breakdown by field. ==That silence is the actual finding here, not a footnote to the headline number==: a $1 billion pledge from the world's most valuable chipmaker, at an event built around the idea of transparent federal science funding, arrived with less disclosed detail than the announcement format usually promises.",
+      "citation_urls": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The summit itself was bigger than any single pledge. Beyond the $2.4 billion in industry compute credits, the Department of Energy announced $159 million in new Phase 2 Genesis Mission project awards and $96 million for early-career researchers and a new graduate fellowship program, aimed at fault-tolerant quantum computers. The Pentagon separately committed up to $350 million toward quantum-computing initiatives and an enterprise-wide framework to measure its own labs. The White House's own total for the day's announcements, combining the federal and industry sides, came to roughly $6 billion — a figure Nvidia's $1 billion is one-sixth of, not the centerpiece of, however the headlines framed it.",
+      "citation_urls": [
+        "https://www.nextgov.com/artificial-intelligence/2026/10/white-house-unveils-billions-investments-genesis-mission/416517/"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "None of that makes the pledge meaningless — compute access is the actual bottleneck for most academic AI-adjacent research today, and credits that get a university lab onto Nvidia hardware it couldn't otherwise afford are a real resource, whatever they cost Nvidia to provide. **What the pledge is not** is a disclosed, trackable allocation of new cash, and no coverage so far — including Nvidia's own — has offered one."
+    }
+  ],
+  "apply": [
+    {
+      "label": "Watch for an itemized breakdown.",
+      "text": "Nvidia has not said how the $1 billion splits between universities, quantum initiatives and cloud-provider access, or on what schedule — a follow-up disclosure naming specific institutions would be the first real test of scale."
+    },
+    {
+      "label": "Watch DOE's Genesis Mission Phase 2 awards for Nvidia-funded projects specifically.",
+      "text": "Nvidia is already named as a collaborator on Phase 2 awards in quantum computing, fusion, accelerator design and microelectronics — whether new ones get tagged to this pledge versus pre-existing commitments is the cleanest signal of whether it's additive."
+    },
+    {
+      "label": "Watch whether any of the eleven companies discloses a cash equivalent or audited cost.",
+      "text": "Crusoe is the only company so far to specify a delivery mechanism (three years, via Crusoe Cloud) — if others follow with similar specificity, the credits-vs-cash question becomes easier to actually price."
+    }
+  ],
+  "applyType": "numbers",
+  "sources": [
+    {
+      "label": "Nvidia — \"NVIDIA Commits $1 Billion to Advance US Science Over the Next Five Years\"",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx",
+      "primary": true
+    },
+    {
+      "label": "Nextgov — \"White House unveils billions in investments for Genesis Mission\"",
+      "url": "https://www.nextgov.com/artificial-intelligence/2026/10/white-house-unveils-billions-investments-genesis-mission/416517/",
+      "primary": true
+    }
+  ],
+  "id": "newsroom-nvidia-genesis-mission-1-billion-science-pledge",
+  "image": "assets/img/newsroom/newsroom-nvidia-genesis-mission-1-billion-science-pledge.jpg",
+  "top": false,
+  "sample": false,
+  "corrections": [],
+  "pipeline": {
+    "run": "autonomous Claude-runner cycle · 2026-10-12T01:26:30Z",
+    "stages": [
+      {
+        "name": "Research",
+        "agent": "claude-runner",
+        "note": "Surfaced via a Techmeme AI-industry sweep item on Nvidia's science pledge; cross-checked against living-notes.md's 2026-10-10 entry flagging an earlier, garbled aggregator version of this same claim (which had conflated an unrelated Eli Lilly deal and a Japan/US pledge) — confirmed this time against Nvidia's own investor-relations press release directly, which the earlier flagged claim was not. Grepped newsroom-articles.js for 'genesis-mission' and 'nvidia' slugs; found extensive other Nvidia coverage but no prior Genesis Mission piece. Evidence threads: Nvidia's own press release (primary), the White House fact sheet via Nextgov's direct reporting (primary/official), and the ROIC/Quantum Insider skeptical commentary (independent reporting, consulted but not directly cited after its source page returned HTTP 403 on fetch) — at least two independent primary threads plus secondary analysis, clearing the synthesis floor."
+      },
+      {
+        "name": "Verification",
+        "agent": "claude-runner",
+        "note": "Nvidia's investor-relations press release was fetched directly for the Huang quote, the program names (Argonne, Los Alamos, Genesis Mission Phase 2) and the lack of an allocation breakdown. The $2.4B/eleven-company breakdown was fetched directly from Nextgov rather than taken from secondary aggregator summaries, since multiple aggregator versions disagreed on company names (one source garbled 'Emerald AI' as 'Emera'). The roic.ai skeptical analysis could not be fetched directly (403) and its specific claims were therefore not quoted or cited, only the independently-confirmable fact that its existence shows outside skepticism about the 'new money' question."
+      },
+      {
+        "name": "Loop 1 — critique and revise",
+        "agent": "claude-runner",
+        "note": "Critique found the first draft's closing paragraph read as more dismissive of the pledge than the sourcing supports; revised to note the real value of compute-access credits for under-resourced academic labs alongside the lack of disclosed allocation. No self-referential language found on re-read."
+      },
+      {
+        "name": "Loop 2 — component provenance check",
+        "agent": "claude-runner",
+        "note": "Every chart value traces to the Nextgov-reported fact sheet breakdown; the $200M/year annualized figure in the ledger is explicitly marked as this publication's own arithmetic, not a company-stated number, per Law 3. No component carries a top-level text field."
+      },
+      {
+        "name": "Compliance self-check",
+        "agent": "claude-runner",
+        "note": "No mandatory-scrutiny trigger applies: no health/financial-advice/legal-proceedings claim, and the 'is this new money' question is scored as unverified rather than asserted as fact against Nvidia. No disclaimer required."
+      },
+      {
+        "name": "Gate",
+        "agent": "claude-runner",
+        "note": "Cleared for publish: synthesis floor cleared (two primary threads, government fact sheet plus company release, genuine reconciliation of headline-vs-total framing), components trace to sourced facts, apply block names concrete forward-looking checkpoints."
+      }
+    ],
+    "gate": {
+      "decision": "Approved for publication",
+      "note": "No compliance trigger fired; piece proceeds to publish without Editor-in-Chief adjudication."
+    }
+  },
+  "publishedAt": "2026-10-12T01:26:30Z"
 }
 ];

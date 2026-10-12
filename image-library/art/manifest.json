@@ -4330,7 +4330,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-29-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "newsroom-nvidia-genesis-mission-1-billion-science-pledge",
+     "used_at": "2026-10-12"
+    }
+   ]
   },
   {
    "id": "art-wp-silicon-beyond-10",
