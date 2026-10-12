@@ -1602,3 +1602,4 @@
   aggregator blend. Used the Buzz card to state only the confirmed facts
   (Shenzhen's March nighttime-delivery policy, Neolix's own pivot statement)
   and skipped the disputed fleet number entirely rather than picking a side.
+- **2026-10-12** (weekly evolution): Scoreboard scan caught Claude Haiku 5.5 score appearing (null→43) five days after its Oct 7 release. Extensions verification caught Claude docs URL change (docs.claude.com→platform.claude.com/docs); site_guard's "DeepSeek V4 Pro 0813 scored but no entities.js entry" warning needed a separate entities.js row despite regex already matching via optional group—the guard's substring test doesn't credit regex-only matches. Grid enrichment (power/chips/since/capex primary-source research) and dictionary growth deferred this run—both within "up to N" allowance but worth prioritizing in future evolutions.
