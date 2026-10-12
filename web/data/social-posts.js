@@ -36055,9 +36055,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Meta's new Muse Wonder Full independently scores ahead of Claude Fable 5.1 and GPT-6 Astra on Artificial Analysis's Intelligence Index -- behind only Opus 5.5. The catch: it's Muse Code subscribers only. The model on Meta's public API scores lower.",
         "reply_copy": "The numbers, and what Meta didn't price:",
         "link_in_reply": true,
-        "hashtags": ["#Meta", "#AI"],
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -36066,21 +36071,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Meta says Muse Wonder performs 'comparably to Fable 5.1 and GPT-6 Astra' -- and independent testing confirms that's true of Wonder, the model on the API. Wonder Full, the one that actually beats them, isn't sold there. Full breakdown:",
         "reply_copy": "Full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Frontier"],
+        "hashtags": [
+          "#AI",
+          "#Frontier"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Meta finally shipped a model that beats the frontier -- and you probably can't use it.\n\nMuse Wonder Full, released Oct. 12, independently scores 56 on Artificial Analysis's Intelligence Index: ahead of Claude Fable 5.1 and GPT-6 Astra (53 each), behind only Claude Opus 5.5 (58).\n\nBut Wonder Full only ships through Muse Code, Meta's coding-agent subscription -- no API, no published price.\n\nThe model Meta actually sells through its API, plain Muse Wonder, scores 52. Roughly tied with the rivals Meta's own marketing compares it to.\n\nWe pulled apart what's independently verified, what's Meta's own unaudited claim, and the one pricing figure that doesn't check out -- link in bio.",
-        "hashtags": ["#Meta", "#AI", "#MuseWonder", "#TechNews", "#Frontier"],
+        "hashtags": [
+          "#Meta",
+          "#AI",
+          "#MuseWonder",
+          "#TechNews",
+          "#Frontier"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Meta released Muse Wonder and Muse Wonder Full on October 12 -- its first genuinely frontier-class models, after months of a Muse Spark lineup even Meta's own AI chief called behind the leaders. Independent testing from Artificial Analysis puts Wonder Full at 56 on its Intelligence Index, ahead of Claude Fable 5.1 and GPT-6 Astra (53 each) and behind only Claude Opus 5.5 (58). The catch: Wonder Full is available only to subscribers of Muse Code, Meta's coding-agent product, with no published price and no API access. The model Meta actually sells through its API -- plain Muse Wonder -- scores 52, which matches Meta's own 'comparable to Fable 5.1 and GPT-6 Astra' framing almost exactly. One pricing claim from a single outlet ($50-$200/month for Wonder Full) isn't corroborated anywhere else we checked.",
-        "hashtags": ["#Meta", "#AI"],
+        "hashtags": [
+          "#Meta",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -36093,7 +36110,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Meta's Muse Wonder Full independently scores above Claude Fable 5.1 and GPT-6 Astra -- behind only Opus 5.5. It's locked to a paid subscription with no published price. The model on Meta's public API scores lower.",
-        "hashtags": ["#AI", "#Meta"],
+        "hashtags": [
+          "#AI",
+          "#Meta"
+        ],
         "status": "ready",
         "post_url": null
       }
@@ -36125,9 +36145,14 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Microsoft unveiled Maia 300 today: 8 HBM4 stacks, 18 TB/s bandwidth, 950W, built on TSMC's N2P node. Microsoft claims 40% more tokens per megawatt than 'leading GPU-based systems' -- without naming a single one of them.",
         "reply_copy": "The specs, the claims, and what's still internal-only:",
         "link_in_reply": true,
-        "hashtags": ["#Microsoft", "#AI"],
+        "hashtags": [
+          "#Microsoft",
+          "#AI"
+        ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -36136,21 +36161,33 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Unlike Amazon's Trainium or Google's TPUs, Microsoft's new Maia 300 doesn't reach paying Azure customers -- it only runs Microsoft's own AI. Nvidia remains Microsoft's biggest supplier for everything else. The chip, the capex context, and the math:",
         "reply_copy": "Full breakdown:",
         "link_in_reply": true,
-        "hashtags": ["#AI", "#Compute"],
+        "hashtags": [
+          "#AI",
+          "#Compute"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "instagram",
         "copy": "Microsoft just unveiled its third in-house AI chip -- and the efficiency claim behind it has no named comparison.\n\nMaia 300, announced Oct. 12: 8 HBM4 memory stacks (288GB), 18 terabytes/sec of bandwidth, 950 watts, built on TSMC's newest N2P node. A full rack holds 96 chips, draws 167kW, and carries 27.6 terabytes of memory.\n\nMicrosoft says it delivers 40% more tokens per megawatt than 'leading GPU-based systems.' It doesn't say which systems.\n\nAnd here's the part that matters more than the spec sheet: unlike Amazon's Trainium or Google's TPUs, Maia 300 doesn't rent out to Azure customers. It only runs Microsoft's own AI. Microsoft is still one of Nvidia's biggest buyers for everything else.\n\nProduction starts 2027. We broke down the real numbers behind the launch -- link in bio.",
-        "hashtags": ["#Microsoft", "#AI", "#Maia300", "#Compute", "#TechNews"],
+        "hashtags": [
+          "#Microsoft",
+          "#AI",
+          "#Maia300",
+          "#Compute",
+          "#TechNews"
+        ],
         "status": "ready",
         "post_url": null
       },
       {
         "platform": "facebook",
         "copy": "Microsoft unveiled Maia 300, its third-generation in-house AI chip, on October 12 -- part of a plan, laid out by Cloud + AI chief Scott Guthrie, to scale the Azure Maia chip family to multi-gigawatt deployments starting in 2027. The chip itself: 8 HBM4 memory stacks per unit (roughly 288GB), 18 terabytes per second of memory bandwidth, a 950-watt power envelope, built on TSMC's newest N2P process. A full rack holds 96 accelerators, draws 167 kilowatts, and carries 27.6 terabytes of total memory. Microsoft's headline claim -- 40% more tokens per megawatt than 'leading GPU-based systems' -- names no comparison system and cites no independent test. And despite the ambition, Maia 300 still serves only Microsoft's own AI workloads; unlike Amazon's Trainium or Google's TPUs, it isn't capacity Azure customers can rent, and Microsoft remains a major Nvidia buyer for everything outside its own services.",
-        "hashtags": ["#Microsoft", "#AI"],
+        "hashtags": [
+          "#Microsoft",
+          "#AI"
+        ],
         "status": "ready",
         "post_url": null
       },
@@ -36158,14 +36195,22 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "Microsoft's new Maia 300 chip claims 40% more tokens per megawatt than 'leading GPU systems' -- without naming one. It's a real chip (8 HBM4 stacks, 18TB/s, 950W, TSMC N2P) but it only runs Microsoft's own AI, not anything Azure customers can rent. The numbers:",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 12-Oct-26 13:08:47 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AsZSq8wK10tC-5WYICFno8j\"}}"
       },
       {
         "platform": "bluesky",
         "copy": "Microsoft's new Maia 300 chip: 8 HBM4 stacks, 18 TB/s bandwidth, 950W, TSMC N2P. Claims 40% better efficiency than unnamed rival systems. Still runs only Microsoft's own AI -- not capacity Azure customers can rent, unlike Amazon's or Google's chips.",
-        "hashtags": ["#AI", "#Microsoft", "#Compute"],
-        "status": "ready",
-        "post_url": null
+        "hashtags": [
+          "#AI",
+          "#Microsoft",
+          "#Compute"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxpd43yekf24",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxpd43yekf24",
+        "posted_at": "2026-10-12T20:08:49Z"
       }
     ]
   }
