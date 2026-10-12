@@ -35493,7 +35493,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -35521,8 +35521,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AcademicTwitter",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeX-ChtDnKW/",
+        "remote_id": "18113502245329983",
+        "posted_at": "2026-10-12T00:41:20Z"
       },
       {
         "platform": "facebook",
@@ -35531,14 +35533,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Mathematics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127119115396947",
+        "remote_id": "1238977099292018_122127119115396947",
+        "posted_at": "2026-10-12T00:41:30Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI published 719 math manuscripts in one day. 800+ mathematicians' own group says it ignored their advisory board's first recommendation -- don't test open problems on proprietary models at all. Three manuscripts already withdrawn for errors. Here's the actual dispute, not the headline version.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeX-Fpjlhf6",
+        "remote_id": "18138794180501629",
+        "posted_at": "2026-10-12T00:41:43Z"
       },
       {
         "platform": "bluesky",
@@ -35548,8 +35554,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Math",
           "#OpenAI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxnbvf4rvu22",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxnbvf4rvu22",
+        "posted_at": "2026-10-12T00:41:51Z"
       }
     ]
   },
@@ -35585,7 +35593,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -35624,14 +35632,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Microsoft",
           "#Nvidia"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127119961396947",
+        "remote_id": "1238977099292018_122127119961396947",
+        "posted_at": "2026-10-12T00:45:33Z"
       },
       {
         "platform": "threads",
         "copy": "Microsoft's new Surface Laptop Ultra runs a 137B-parameter coding model locally -- no cloud, no metered charge. Nvidia's RTX Spark chip gives it 128GB of unified memory to do it. Ships Oct. 16. The same announcement ships a tool that fences off exactly what an AI agent can touch on your machine.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.threads.com/@rtfclmgzn/post/DeX-j_fFqiu",
+        "remote_id": "18131277775685081",
+        "posted_at": "2026-10-12T00:45:51Z"
       },
       {
         "platform": "bluesky",
@@ -35641,8 +35653,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Microsoft",
           "#Nvidia"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxnc4ql6dy2i",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxnc4ql6dy2i",
+        "posted_at": "2026-10-12T00:45:57Z"
       }
     ]
   },
