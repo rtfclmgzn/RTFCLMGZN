@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-10-11",
+  updated: "2026-10-12",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -119,6 +119,10 @@ window.RTFC_ENTITIES = {
       kind:"model family", access:"closed" },
 
     // --- Meta ---
+    { re:/\bMuse Wonder Full\b/i, name:"Muse Wonder Full", maker:"Meta", makerKey:"meta",
+      kind:"frontier model", access:"closed" },
+    { re:/\bMuse Wonder\b/i, name:"Muse Wonder", maker:"Meta", makerKey:"meta",
+      kind:"frontier model", access:"closed" },
     { re:/\bMuse Spark 1\.3\b/i, name:"Muse Spark 1.3", maker:"Meta", makerKey:"meta",
       kind:"frontier model", access:"partial" },
     { re:/\bMuse Spark 1\.2\b/i, name:"Muse Spark 1.2", maker:"Meta", makerKey:"meta",

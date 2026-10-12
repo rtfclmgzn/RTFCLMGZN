@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-851", date:"2026-10-12",
+    source:{ name:"The Decoder", handle:"the-decoder", platform:"web", kind:"news" },
+    text:"The White House has reversed a September order that told OpenAI, Anthropic and Google DeepMind to hold new frontier models back from the UK's AI Security Institute pending a US-first review. Following diplomatic pressure from UK AI minister Kanishka Narayan, AISI regains early access to new models; Anthropic had restricted Claude Mythos 5.1 to US organizations only under the now-reversed policy.",
+    why:"The original block was a real, if quiet, crack in US-UK AI safety cooperation -- this reversal matters less for what it changes today than for confirming the block was a deliberate policy choice, not a one-off, and that it was reversible under pressure from an ally.",
+    heat:14, topics:["uk aisi","white house","policy","safety testing"],
+    url:"https://the-decoder.com/the-white-house-reverses-course-and-restores-uk-ai-safety-institute-access-to-frontier-models/" },
 { id:"bz-850", date:"2026-10-12",
     source:{ name:"SiliconANGLE / Pulse2", handle:"siliconangle", platform:"web", kind:"news" },
     text:"Rein Security, an Israeli-American startup building runtime security for enterprise AI agents, raised a $25 million Series A led by Glilot Capital and Sienna Venture Capital on Oct. 8, bringing total funding to $35 million. Its sidecar technology watches agent actions at runtime and can block harmful ones in real time; named customers include Flex, Swimlane, Lemonade and Dun & Bradstreet.",

@@ -4363,7 +4363,12 @@
    "text_space": "dark lower-left",
    "brand_visible": null,
    "source": "wallpaper-archive-vol1/02_Chipsets_GPU_and_Post_Silicon/RTFCLMGZN-Silicon-Beyond-Wallpaper-30-4K.jpg",
-   "used_in": []
+   "used_in": [
+    {
+     "article_id": "rtfc-20261012-maia300-01",
+     "used_at": "2026-10-12"
+    }
+   ]
   },
   {
    "id": "art-wp-autonomous-lab-01",
