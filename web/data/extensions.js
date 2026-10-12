@@ -21,7 +21,7 @@
 // bottom of the page, because a directory that does not say when it was last
 // checked is asking the reader to trust it blindly.
 window.RTFC_EXTENSIONS_META = {
-  updated: "2026-08-17",
+  updated: "2026-10-12",
   cadence: "Re-verified weekly by the newsroom's evolution run.",
   note: "Every link points at the maker's own site. No pricing is printed: in this industry a printed price is a future lie, so the link is the truth."
 };
@@ -31,7 +31,7 @@ window.RTFC_EXTENSIONS = [
   { cat:"Frontier model APIs", id:"frontier", group:"Access the models", order:1, icon:"⬡",
     desc:"Direct, metered access to the frontier models themselves — the raw material every other tool on this page is built around.",
     items:[
-      { name:"Claude API", by:"Anthropic", kind:"api", url:"https://docs.claude.com",
+      { name:"Claude API", by:"Anthropic", kind:"api", url:"https://platform.claude.com/docs",
         desc:"Anthropic's developer platform for the Claude family — Fable, Opus, Sonnet and Haiku — with tool use, vision, batching and prompt caching.", tags:["official","hosted"] },
       { name:"OpenAI API", by:"OpenAI", kind:"api", url:"https://platform.openai.com",
         desc:"The GPT model line plus image, audio and realtime endpoints, behind the industry's most-copied API shape.", tags:["official","hosted"] },

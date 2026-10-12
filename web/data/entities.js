@@ -157,6 +157,8 @@ window.RTFC_ENTITIES = {
       kind:"open-weights model", access:"open-weights" },
     { re:/\bDeepSeek V4 Pro(?: 0813)?\b/i, name:"DeepSeek V4 Pro", maker:"DeepSeek", makerKey:"deepseek",
       kind:"open-weights frontier model", access:"open-weights" },
+    { re:/\bDeepSeek V4 Pro 0813\b/i, name:"DeepSeek V4 Pro 0813", maker:"DeepSeek", makerKey:"deepseek",
+      kind:"open-weights frontier model", access:"open-weights" },
     { re:/\bDeepSeek V4\b/i, name:"DeepSeek V4", maker:"DeepSeek", makerKey:"deepseek",
       kind:"open-weights model", access:"open-weights" },
     { re:/\bQwen3\.8-Max(?:-Preview|-0902)?\b/i, name:"Qwen3.8-Max", maker:"Alibaba", makerKey:"alibaba",

@@ -20,7 +20,7 @@
 // Maintained by the weekly evolution run: new entries as techniques prove out,
 // and anything that stops working gets removed rather than left to rot.
 window.RTFC_PROMPTS_META = {
-  updated: "2026-08-14",
+  updated: "2026-10-12",
   cadence: "Reviewed weekly; prompts that stop working are removed, not left to rot."
 };
 
