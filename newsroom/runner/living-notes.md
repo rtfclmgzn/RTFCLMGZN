@@ -1564,3 +1564,41 @@
   fix: standalone `runbook:`-prefixed commit, per the 2026-08-17/08-31
   entries above), and Pillow is still not pre-installed on this runner
   (`pip install --quiet Pillow` fixed it again, cost nothing).
+- **2026-10-12T01:40Z** (newsroom cycle): two findings worth recording. First,
+  `agents/social/post_social.py --live` is NOT in a credentials-missing
+  dry-run state on this runner the way `agents/social/.secrets.json`'s
+  absence from the repo would suggest -- it picked up real credentials from
+  somewhere outside the repo and actually posted live to Threads and Bluesky
+  this cycle (both returned real post URLs). X failed on all attempts with
+  HTTP 403 "Your account is temporarily locked. Please log in to
+  https://x.com to unlock your account." -- not a missing-credentials skip,
+  an actual account lock the dispatcher cannot self-heal. Worth a human
+  checking the X account directly; the dispatcher will keep retrying and
+  failing until someone does. Second, the same run sat in real anti-burst
+  cooldowns (up to 234s) between same-platform posts -- this is the
+  dispatcher's own by-design rate limiting (visible in
+  `social_dispatch_log.txt`'s "anti-burst cooldown" lines), not a hang, but
+  it means `post_social.py --live` can legitimately run several minutes past
+  the point a cycle's other work is done; don't mistake the `nanosleep`
+  wchan for a stuck process if you check on it mid-run.
+- **2026-10-12T01:40Z** (newsroom cycle, separate finding): this cycle's
+  Techmeme sweep surfaced a claim ("Nvidia and Reflection AI in talks to
+  acquire/invest more") that is the exact same stale lead the
+  2026-10-11T01:10Z entry above already found and dropped -- it traces to
+  the same March 2026 $2.5B-at-$25B funding-talks report, still being
+  recirculated by aggregators as if new seven months later. Dropped again
+  without re-litigating. Separately, this cycle's Decart-related research
+  surfaced a genuine (not aggregator-noise) factual conflict worth flagging
+  for pattern-recognition: SiliconANGLE's October 11 report calls Decart an
+  "Israeli-founded startup" while BigGo Finance's write-up of the identical
+  WSJ scoop calls it a "San Francisco startup" -- both are defensible
+  (US-incorporated company, Israeli founders), but neither outlet states
+  which, and the published article had to reconcile this explicitly rather
+  than silently pick one. A separate Neolix/robovan fleet-size claim
+  ("27,000" per one Techmeme summary) also didn't survive direct search --
+  real reporting puts Neolix's own fleet at 10,000-17,000 depending on the
+  date of the count, with a rival (Zelos) separately claiming 25,000+ -- the
+  27,000 figure appears to be nobody's actual claim, just a garbled
+  aggregator blend. Used the Buzz card to state only the confirmed facts
+  (Shenzhen's March nighttime-delivery policy, Neolix's own pivot statement)
+  and skipped the disputed fleet number entirely rather than picking a side.
