@@ -1603,3 +1603,20 @@
   (Shenzhen's March nighttime-delivery policy, Neolix's own pivot statement)
   and skipped the disputed fleet number entirely rather than picking a side.
 - **2026-10-12** (weekly evolution): Scoreboard scan caught Claude Haiku 5.5 score appearing (null→43) five days after its Oct 7 release. Extensions verification caught Claude docs URL change (docs.claude.com→platform.claude.com/docs); site_guard's "DeepSeek V4 Pro 0813 scored but no entities.js entry" warning needed a separate entities.js row despite regex already matching via optional group—the guard's substring test doesn't credit regex-only matches. Grid enrichment (power/chips/since/capex primary-source research) and dictionary growth deferred this run—both within "up to N" allowance but worth prioritizing in future evolutions.
+- **2026-10-12T19:40Z** (newsroom cycle): `render_smoke.py` (run for the first time
+  in a while on this runner -- required installing both `pip install playwright`
+  and `python3 -m playwright install chromium --with-deps`, neither pre-installed)
+  flagged one pre-existing crash this cycle did not cause and did not touch:
+  `article/jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton`
+  renders a crash screen. The record itself looks complete (has `pipeline.gate`,
+  all expected top-level fields, `format:"synthesis"`) so this is not the
+  missing-gate-block failure mode Law 2 already covers -- something else in this
+  specific record's body is tripping an unguarded renderer read. A quick manual
+  Playwright check against a plain static server (not render_smoke's own SPA-aware
+  server) only surfaced a 404-resource console message, not the real in-app error,
+  so the actual root cause is still unisolated. Flagging rather than fixing blind:
+  whoever picks this up next should reproduce with render_smoke's own server setup
+  (or `page.on("pageerror")` against the real dev server) to get the actual stack,
+  then decide whether it's a renderer gap (new check needed, Law 7) or a bad field
+  in this one record (fix the record). Separately: Pillow was also not pre-installed
+  this cycle (`pip install Pillow` fixed it, consistent with prior entries).
