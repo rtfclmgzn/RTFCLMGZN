@@ -1671,3 +1671,19 @@
   weight section/subject match more heavily than recency, or cap the
   never-used bonus at or below what a long-unused-but-matched image can
   reach -- worth a dedicated pass, left here for whoever picks it up.
+- **2026-10-13T21:35Z** (newsroom cycle): a sharper version of the "verify
+  search-surfaced claims independently" lesson this file has logged repeatedly
+  since 2026-10-07 -- this time the fabrication wasn't a stale date, it was a
+  WebSearch AI-summary inventing an attribution that exists in no underlying
+  source. One summary attributed a specific "CXMT mass production isn't until
+  2028" skepticism to "Mizuho" analysts; a direct fetch of the actual article
+  the summary cited showed no Mizuho reference anywhere in it, and no other
+  named analyst or firm either -- the attribution appears to have been
+  synthesized across multiple real-but-separate articles the search blended
+  together. Caught only because the component-sourcing discipline (every
+  component value must trace to a source actually in the article's `sources`
+  array) forced a direct-fetch re-verification before the claim went into a
+  `counter` component. The reusable lesson: a WebSearch summary's named
+  attributions ("Analyst X says...") need the same direct-fetch verification
+  as its dates and figures -- a plausible-sounding citation is not evidence
+  the citation exists.

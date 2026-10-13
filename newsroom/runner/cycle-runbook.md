@@ -2017,6 +2017,32 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-10-13T21:35Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (an OpenAI engineer's federal
+   wiretapping charge over a bugged executive conference room; the Kospi's
+   5.46% selloff on CXMT memory-chip competition fears; NTT Data's reported
+   talks to build Anthropic's first Japan data center) plus the full
+   §4b/§4c/§4d passes were already the required work. §3c backfill search
+   (`component_audit`) re-ran and found zero articles below their format's
+   component floor -- still empty. Both §3e/§3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner; `find . -iname
+   "issue-001.json"` also still returns nothing. No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Separately: `verify_covers.py
+   pick` returned the same generic `art-073-surgical-suite-dual-robot-arms` top
+   candidate for all three of this cycle's articles again (Policy, Markets,
+   Compute -- none a surgical story), the same flat-age-bonus pattern the
+   entry directly above root-caused; generated fresh covers for all three
+   rather than ship the mismatch ($0.06 each, $0.18 total). This entry and the
+   §3f entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Same two next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2580,6 +2606,14 @@ deal) plus the full §4b/§4c/§4d passes were already the required work:
 `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
 binary or Cloudflare credentials exist on this runner. No item worked. Same
 two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-13T21:35Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (OpenAI's conference-room bugging charge;
+the Kospi/CXMT memory-chip selloff; NTT Data's reported Anthropic Japan
+data-center talks) plus the full §4b/§4c/§4d passes were already the
+required work: `find . -iname "issue-001.json"` still returns nothing, and
+no `wrangler` binary or Cloudflare credentials exist on this runner. No item
+worked. Same two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
