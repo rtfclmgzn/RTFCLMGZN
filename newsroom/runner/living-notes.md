@@ -1647,3 +1647,27 @@
   "didn't," "wasn't," or similar. This also means the article's own `pipeline`
   record and content do NOT need investigation -- the earlier entry's open question
   is resolved as "check bug," not "record bug."
+- **2026-10-13T18:03:41Z** (newsroom cycle): `verify_covers.py pick`'s scoring
+  function gives any never-used library image a flat `age_bonus` of 5, which
+  beats every previously-used-but-now-clean image (capped below 4 until 360
+  days post-use) regardless of actual subject or section match. This is why
+  the same generic `art-073-surgical-suite-dual-robot-arms` topped the pick
+  for all three of this cycle's completely different stories (Markets,
+  Robotics, Health) -- confirmed by reading `score()` in
+  `newsroom/runner/verify_covers.py` directly, not just inferred from
+  behavior. For Health/Robotics it had a real `best_for_sections` match (so
+  the high score was structurally explainable, just visually wrong for a
+  non-surgical story); for the Markets query it had zero section or subject
+  overlap and still won purely on the flat unused-bonus, meaning no
+  currently-clean Markets-tagged image in the library currently outscores it.
+  This generalizes the library-thinness pattern 2026-09-28/09-29 already
+  logged for Policy/Markets/Frontier to Robotics and Health as well, and adds
+  a root cause: it isn't only that the library is thin on a given section,
+  it's that an unused-but-poorly-matched image is mechanically favored over a
+  well-matched once-used one. Did not fix the scorer (Law 6, and §0b's "never
+  edit `newsroom/quality/*`" doesn't even strictly cover this file, but the
+  same spirit applies to any check/tool an agent didn't author this cycle);
+  generated fresh covers for all three articles instead. A real fix would
+  weight section/subject match more heavily than recency, or cap the
+  never-used bonus at or below what a long-unused-but-matched image can
+  reach -- worth a dedicated pass, left here for whoever picks it up.

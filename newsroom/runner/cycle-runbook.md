@@ -1982,6 +1982,41 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-10-13T18:03:41Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (Arena's $200M Series B/Alignment
+   Index and investor-conflict synthesis; South Korea's Robros humanoid
+   factory-sandbox approval; GSK's Chai Discovery AI protein-design deal)
+   plus the full §4b/§4c/§4d passes were already the required work. Both
+   §3e/§3f blockers unchanged, re-confirmed by reading the files directly:
+   `ALLOWED_PREFIXES` in `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: `verify_covers.py pick` returned the same generic
+   `art-073-surgical-suite-dual-robot-arms` top candidate for all three of
+   this cycle's articles -- Markets, Robotics, and Health -- despite none of
+   them being a surgical story. Traced the cause in the tool itself: its
+   `score()` gives any never-used image a flat `age_bonus` of 5, which beats
+   every previously-used-but-now-clean image (capped below 4 until 360 days
+   post-use) regardless of actual subject or section match -- so an unused,
+   loosely-tagged image can outrank a well-matched but once-used one. For
+   Health and Robotics the image also carries a literal `best_for_sections`
+   match, so the score was high for a structurally sound reason even though
+   the visual (surgical arms) was wrong; for Markets it had zero section or
+   subject match and still won on the flat unused-bonus alone, meaning no
+   currently-clean Markets-tagged image currently outscores it -- the same
+   library-thinness pattern 2026-09-28/09-29's entries already tracked for
+   Policy, Markets, and Frontier, now confirmed to also catch Robotics and
+   Health queries when the match happens to be this specific image. Did not
+   edit the tool (Law 6); generated fresh covers for all three articles
+   instead of shipping the mismatch ($0.06 each). This entry and the §3f
+   entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Same two next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2537,6 +2572,14 @@ capital-bottleneck warnings) plus the full §3c/§4b/§4c/§4d passes were alrea
 the required work: `find . -iname "issue-001.json"` still returns nothing, and
 no `wrangler` binary or Cloudflare credentials exist on this runner. No item
 worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-13T18:03:41Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (Arena's $200M Series B/Alignment Index
+synthesis, Robros's Korea humanoid-sandbox approval, GSK's Chai Discovery
+deal) plus the full §4b/§4c/§4d passes were already the required work:
+`find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
+binary or Cloudflare credentials exist on this runner. No item worked. Same
+two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
