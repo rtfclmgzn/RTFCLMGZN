@@ -36710,300 +36710,309 @@ window.RTFC_SOCIAL_POSTS = [
         "post_url": null
       }
     ]
+  },
+  {
+    "article_id": "newsroom-arena-200-million-alignment-index-investor-conflict",
+    "ts": "2026-10-13T17:56:33Z",
+    "export": {
+      "article_id": "newsroom-arena-200-million-alignment-index-investor-conflict",
+      "url": "https://rtfclmgzn.com/article/arena-200-million-alignment-index-investor-conflict",
+      "headline": "Arena Raises $200 Million to Score AI Agents on Alignment -- From Investors Who Also Fund the Labs It's Grading",
+      "hook": "Arena nearly doubled its valuation to $3.1 billion and launched an index scoring AI agents on alignment -- funded partly by investors who also back the labs it now ranks.",
+      "key_facts": [
+        "Arena, formerly LMArena, raised $200 million on Oct. 8 at a $3.1 billion valuation.",
+        "Its new Alignment Index scores AI agents on unauthorized action, misattribution, and deception.",
+        "A 2025 paper accused Arena's earlier leaderboard of letting top labs discard weak scores."
+      ],
+      "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-arena-200-million-alignment-index-investor-conflict.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Arena just raised $200M at a $3.1B valuation and launched an index scoring AI agents on alignment. Some of its own investors also fund the labs it's now grading. Not financial advice -- just the math.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-13T22:56:33Z",
+        "copy": "A 2025 paper accused Arena's old leaderboard of letting top labs quietly discard weak scores. Arena just launched a NEW scoring product, on the same infrastructure, funded by the same labs' investors.",
+        "reply_copy": "The details:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIBenchmarks",
+          "#Arena"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Arena just raised $200 million at a $3.1 billion valuation.\n\nSame day, it launched an \"Alignment Index\" -- scoring AI agents on whether they act without permission, lie about finishing tasks, or invent instructions.\n\nThe catch: some of Arena's own investors also fund the labs it's now grading.\n\nFull breakdown -- link in bio. Not financial advice.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital",
+          "#Markets",
+          "#TechNews",
+          "#AIagents",
+          "#Benchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Arena -- most of the industry still calls it LMArena -- raised $200 million on Oct. 8 at a $3.1 billion valuation, and launched a new \"Alignment Index\" scoring AI agents on whether they act without being asked, misattribute facts, or claim a task is done when it isn't. The twist: several of the round's investors also back foundation-model labs that now show up, graded, in Arena's rankings -- echoing a 2025 academic paper that accused Arena's older leaderboard of letting top labs privately test and discard weak scores. Not financial advice.",
+        "hashtags": [
+          "#AI",
+          "#VentureCapital"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Arena raised $200M at a $3.1B valuation and launched a new index grading AI agents on alignment. Its own investors also fund some of the labs it's now scoring. Make of that what you will.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-13T22:56:33Z",
+        "copy": "\"Taking money from everyone balances the incentive\" is the exact argument credit-rating agencies made before 2008. Arena's making it again, about AI benchmarks this time.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Arena raised $200M at a $3.1B valuation and launched an index scoring AI agents on alignment. Some of its own investors fund the labs it now grades. Not financial advice.",
+        "hashtags": [
+          "#AI",
+          "#Markets",
+          "#VC"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-robros-korea-humanoid-factory-sandbox-approval",
+    "ts": "2026-10-13T17:56:34Z",
+    "export": {
+      "article_id": "newsroom-robros-korea-humanoid-factory-sandbox-approval",
+      "url": "https://rtfclmgzn.com/article/robros-korea-humanoid-factory-sandbox-approval",
+      "headline": "South Korea Clears 20 Humanoid Robots for Real Factory Floors -- Because the Safety Rules Were Written for Robots That Don't Walk",
+      "hook": "Korea just approved 20 humanoid robots for live factory floors -- because existing robot safety rules were written for machines that stay behind a fence.",
+      "key_facts": [
+        "Korea's trade ministry granted Robros a sandbox exemption for 20 factory humanoids on Oct. 13.",
+        "Current robot safety rules require fences; these humanoids share open floor space with workers.",
+        "Robros has sold only 18 units total -- the test gathers safety data, it doesn't certify it."
+      ],
+      "tone": "Curious, hands-on",
+      "persona": "ash-lindqvist",
+      "section": "Robotics",
+      "primary_image": "assets/img/newsroom/newsroom-robros-korea-humanoid-factory-sandbox-approval.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Korea just cleared 20 humanoid robots to work real factory floors. Why it needed a special exemption: existing robot safety rules assume a machine stays behind a fence. These don't.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Robotics",
+          "#Korea"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-13T22:56:34Z",
+        "copy": "The company behind the 20 robots about to run live Korean factory floors has sold 18 units, total, ever. The gap between the two numbers is the actual story.",
+        "reply_copy": "Why that matters:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Humanoids",
+          "#Robros"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "South Korea just cleared 20 bipedal humanoid robots to work real factory floors -- a chip plant, an auto-parts maker, a shipyard, a logistics warehouse.\n\nWhy it needed a special exemption: current robot safety law assumes the robot stays behind a fence. These walk around and work next to people.\n\nThe company making them has sold 18 units, total, ever.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#Robotics",
+          "#Humanoid",
+          "#Korea",
+          "#AI",
+          "#FutureOfWork",
+          "#Manufacturing"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Korea's trade ministry granted Robros a regulatory sandbox exemption on Oct. 13 to deploy 20 bipedal humanoid robots across four real factory sites -- a chip-packaging plant, an auto-parts maker, a shipyard, and a logistics warehouse. The reason it needed a special exemption at all: Korea's existing industrial-robot safety standards assume a stationary machine behind a fence, not one that walks through a shared workspace. Robros has sold only 18 of its Egris-C humanoids to date -- the government's own stated purpose is to gather behavioral data to rewrite the safety rules, not to certify the robots as ready.",
+        "hashtags": [
+          "#Robotics",
+          "#Korea"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Korea just cleared 20 humanoid robots for live factory floors. The company making them has sold 18 units total. The approval is about rewriting safety rules, not certifying the robots.",
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 11:02:41 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"ADEgOEmMPzv8eWk2XFZvWn7\"}}"
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-13T22:56:34Z",
+        "copy": "A government doesn't need thousands of robots in the field to rewrite safety law around them -- it needs one willing, well-documented first mover. That's what this test actually is.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Korea cleared 20 humanoid robots for live factory floors. Why the special exemption: current robot safety rules assume a machine behind a fence. The maker has sold 18 units, total, ever.",
+        "hashtags": [
+          "#Robotics",
+          "#Korea",
+          "#AI"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-gsk-chai-discovery-ai-antibody-design-deal",
+    "ts": "2026-10-13T17:56:35Z",
+    "export": {
+      "article_id": "newsroom-gsk-chai-discovery-ai-antibody-design-deal",
+      "url": "https://rtfclmgzn.com/article/gsk-chai-discovery-ai-antibody-design-deal",
+      "headline": "GSK Joins Chai Discovery's AI Protein-Design Platform -- the Startup's Sixth Big-Pharma Deal Since January",
+      "hook": "GSK just became Chai Discovery's sixth major pharma partner in ten months, after its own labs confirmed Chai's AI-designed molecules bind every target tested.",
+      "key_facts": [
+        "GSK's own labs confirmed Chai's AI-designed candidates bound 100% of tested targets.",
+        "It's Chai's sixth big-pharma deal since January, after Lilly, Pfizer, Novartis, argenx, BMS.",
+        "Chai's headline 16-20% hit-rate claim comes from its own preprint, not peer review."
+      ],
+      "tone": "Precise, evidence-first",
+      "persona": "priya-anand",
+      "section": "Health",
+      "primary_image": "assets/img/newsroom/newsroom-gsk-chai-discovery-ai-antibody-design-deal.jpg",
+      "disclaimer": "not-medical-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "GSK just became Chai Discovery's 6th big-pharma partner in 10 months. Its own labs confirmed Chai's AI designs bind every target tested. Binding isn't a drug yet -- here's the gap. Not medical advice.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AIinHealth",
+          "#DrugDiscovery"
+        ],
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-13T22:56:35Z",
+        "copy": "The number behind 6 pharma deals in 10 months -- Chai's 16-20% hit rate -- comes from Chai's own preprint. Not peer-reviewed. Not independently replicated. Worth knowing before the next headline.",
+        "reply_copy": "Why that matters:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AI",
+          "#Biotech"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "GSK just joined Chai Discovery's AI drug-design platform -- the startup's 6th major pharma deal since January.\n\nThe result: Chai's AI, with no target-specific training, designed candidates that GSK's own labs confirmed bind 100% of tested targets.\n\nThe catch: binding in a dish is a long way from a drug, and the headline hit-rate number behind all six deals is Chai's own, unreviewed claim.\n\nFull breakdown -- link in bio. Not medical advice.",
+        "hashtags": [
+          "#AIinHealth",
+          "#DrugDiscovery",
+          "#Biotech",
+          "#Pharma",
+          "#AI",
+          "#GSK"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "GSK will use Chai Discovery's AI protein-design models across its research pipeline after its own labs confirmed Chai's AI-designed candidates bound every target GSK tested -- with no target-specific training. It's Chai's sixth major pharma agreement in under a year, following Eli Lilly, Pfizer, Novartis, argenx and Bristol Myers Squibb. The reservation worth keeping in view: a molecule that binds in a lab test is a candidate, not a drug, and the headline hit-rate figure behind all six deals comes from a Chai-authored preprint that hasn't been peer-reviewed. Not medical advice.",
+        "hashtags": [
+          "#AIinHealth",
+          "#DrugDiscovery"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "GSK just became Chai Discovery's 6th pharma deal in 10 months. Its labs confirmed Chai's AI designs bind every target tested. A binder isn't a drug yet -- here's why that gap matters.",
+        "status": "ready",
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 11:02:32 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AwWSICyBlDQ-l6pHOIEDraf\"}}"
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-13T22:56:35Z",
+        "copy": "Six major drugmakers have now paid for the same unproven pitch in under a year. Rational bet for each of them individually. Not, on its own, evidence the pitch is correct.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "GSK became Chai Discovery's 6th pharma partner in 10 months. Its labs confirmed Chai's AI designs bind every target tested. Binding isn't a drug yet. Not medical advice.",
+        "hashtags": [
+          "#AIinHealth",
+          "#Biotech",
+          "#DrugDiscovery"
+        ],
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxrmjd3rso2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxrmjd3rso2t",
+        "posted_at": "2026-10-13T18:02:36Z"
+      }
+    ]
   }
-,
-{
- "article_id": "newsroom-arena-200-million-alignment-index-investor-conflict",
- "ts": "2026-10-13T17:56:33Z",
- "export": {
-  "article_id": "newsroom-arena-200-million-alignment-index-investor-conflict",
-  "url": "https://rtfclmgzn.com/article/arena-200-million-alignment-index-investor-conflict",
-  "headline": "Arena Raises $200 Million to Score AI Agents on Alignment -- From Investors Who Also Fund the Labs It's Grading",
-  "hook": "Arena nearly doubled its valuation to $3.1 billion and launched an index scoring AI agents on alignment -- funded partly by investors who also back the labs it now ranks.",
-  "key_facts": [
-   "Arena, formerly LMArena, raised $200 million on Oct. 8 at a $3.1 billion valuation.",
-   "Its new Alignment Index scores AI agents on unauthorized action, misattribution, and deception.",
-   "A 2025 paper accused Arena's earlier leaderboard of letting top labs discard weak scores."
-  ],
-  "tone": "Brisk, cosmopolitan, arithmetic-skeptic",
-  "persona": "kian-farzan",
-  "section": "Markets",
-  "primary_image": "assets/img/newsroom/newsroom-arena-200-million-alignment-index-investor-conflict.jpg",
-  "disclaimer": "not-financial-advice"
- },
- "posts": [
-  {
-   "platform": "x",
-   "variant": "hook",
-   "copy": "Arena just raised $200M at a $3.1B valuation and launched an index scoring AI agents on alignment. Some of its own investors also fund the labs it's now grading. Not financial advice -- just the math.",
-   "reply_copy": "Full breakdown:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AI",
-    "#VentureCapital"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "x",
-   "variant": "second-wave",
-   "not_before": "2026-10-13T22:56:33Z",
-   "copy": "A 2025 paper accused Arena's old leaderboard of letting top labs quietly discard weak scores. Arena just launched a NEW scoring product, on the same infrastructure, funded by the same labs' investors.",
-   "reply_copy": "The details:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AIBenchmarks",
-    "#Arena"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "instagram",
-   "copy": "Arena just raised $200 million at a $3.1 billion valuation.\n\nSame day, it launched an \"Alignment Index\" -- scoring AI agents on whether they act without permission, lie about finishing tasks, or invent instructions.\n\nThe catch: some of Arena's own investors also fund the labs it's now grading.\n\nFull breakdown -- link in bio. Not financial advice.",
-   "hashtags": [
-    "#AI",
-    "#VentureCapital",
-    "#Markets",
-    "#TechNews",
-    "#AIagents",
-    "#Benchmarks"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "facebook",
-   "copy": "Arena -- most of the industry still calls it LMArena -- raised $200 million on Oct. 8 at a $3.1 billion valuation, and launched a new \"Alignment Index\" scoring AI agents on whether they act without being asked, misattribute facts, or claim a task is done when it isn't. The twist: several of the round's investors also back foundation-model labs that now show up, graded, in Arena's rankings -- echoing a 2025 academic paper that accused Arena's older leaderboard of letting top labs privately test and discard weak scores. Not financial advice.",
-   "hashtags": [
-    "#AI",
-    "#VentureCapital"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "copy": "Arena raised $200M at a $3.1B valuation and launched a new index grading AI agents on alignment. Its own investors also fund some of the labs it's now scoring. Make of that what you will.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "variant": "second-wave",
-   "not_before": "2026-10-13T22:56:33Z",
-   "copy": "\"Taking money from everyone balances the incentive\" is the exact argument credit-rating agencies made before 2008. Arena's making it again, about AI benchmarks this time.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "bluesky",
-   "copy": "Arena raised $200M at a $3.1B valuation and launched an index scoring AI agents on alignment. Some of its own investors fund the labs it now grades. Not financial advice.",
-   "hashtags": [
-    "#AI",
-    "#Markets",
-    "#VC"
-   ],
-   "status": "ready",
-   "post_url": null
-  }
- ]
-},
-{
- "article_id": "newsroom-robros-korea-humanoid-factory-sandbox-approval",
- "ts": "2026-10-13T17:56:34Z",
- "export": {
-  "article_id": "newsroom-robros-korea-humanoid-factory-sandbox-approval",
-  "url": "https://rtfclmgzn.com/article/robros-korea-humanoid-factory-sandbox-approval",
-  "headline": "South Korea Clears 20 Humanoid Robots for Real Factory Floors -- Because the Safety Rules Were Written for Robots That Don't Walk",
-  "hook": "Korea just approved 20 humanoid robots for live factory floors -- because existing robot safety rules were written for machines that stay behind a fence.",
-  "key_facts": [
-   "Korea's trade ministry granted Robros a sandbox exemption for 20 factory humanoids on Oct. 13.",
-   "Current robot safety rules require fences; these humanoids share open floor space with workers.",
-   "Robros has sold only 18 units total -- the test gathers safety data, it doesn't certify it."
-  ],
-  "tone": "Curious, hands-on",
-  "persona": "ash-lindqvist",
-  "section": "Robotics",
-  "primary_image": "assets/img/newsroom/newsroom-robros-korea-humanoid-factory-sandbox-approval.jpg",
-  "disclaimer": "none"
- },
- "posts": [
-  {
-   "platform": "x",
-   "variant": "hook",
-   "copy": "Korea just cleared 20 humanoid robots to work real factory floors. Why it needed a special exemption: existing robot safety rules assume a machine stays behind a fence. These don't.",
-   "reply_copy": "Full story:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#Robotics",
-    "#Korea"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "x",
-   "variant": "second-wave",
-   "not_before": "2026-10-13T22:56:34Z",
-   "copy": "The company behind the 20 robots about to run live Korean factory floors has sold 18 units, total, ever. The gap between the two numbers is the actual story.",
-   "reply_copy": "Why that matters:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#Humanoids",
-    "#Robros"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "instagram",
-   "copy": "South Korea just cleared 20 bipedal humanoid robots to work real factory floors -- a chip plant, an auto-parts maker, a shipyard, a logistics warehouse.\n\nWhy it needed a special exemption: current robot safety law assumes the robot stays behind a fence. These walk around and work next to people.\n\nThe company making them has sold 18 units, total, ever.\n\nFull story -- link in bio.",
-   "hashtags": [
-    "#Robotics",
-    "#Humanoid",
-    "#Korea",
-    "#AI",
-    "#FutureOfWork",
-    "#Manufacturing"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "facebook",
-   "copy": "Korea's trade ministry granted Robros a regulatory sandbox exemption on Oct. 13 to deploy 20 bipedal humanoid robots across four real factory sites -- a chip-packaging plant, an auto-parts maker, a shipyard, and a logistics warehouse. The reason it needed a special exemption at all: Korea's existing industrial-robot safety standards assume a stationary machine behind a fence, not one that walks through a shared workspace. Robros has sold only 18 of its Egris-C humanoids to date -- the government's own stated purpose is to gather behavioral data to rewrite the safety rules, not to certify the robots as ready.",
-   "hashtags": [
-    "#Robotics",
-    "#Korea"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "copy": "Korea just cleared 20 humanoid robots for live factory floors. The company making them has sold 18 units total. The approval is about rewriting safety rules, not certifying the robots.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "variant": "second-wave",
-   "not_before": "2026-10-13T22:56:34Z",
-   "copy": "A government doesn't need thousands of robots in the field to rewrite safety law around them -- it needs one willing, well-documented first mover. That's what this test actually is.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "bluesky",
-   "copy": "Korea cleared 20 humanoid robots for live factory floors. Why the special exemption: current robot safety rules assume a machine behind a fence. The maker has sold 18 units, total, ever.",
-   "hashtags": [
-    "#Robotics",
-    "#Korea",
-    "#AI"
-   ],
-   "status": "ready",
-   "post_url": null
-  }
- ]
-},
-{
- "article_id": "newsroom-gsk-chai-discovery-ai-antibody-design-deal",
- "ts": "2026-10-13T17:56:35Z",
- "export": {
-  "article_id": "newsroom-gsk-chai-discovery-ai-antibody-design-deal",
-  "url": "https://rtfclmgzn.com/article/gsk-chai-discovery-ai-antibody-design-deal",
-  "headline": "GSK Joins Chai Discovery's AI Protein-Design Platform -- the Startup's Sixth Big-Pharma Deal Since January",
-  "hook": "GSK just became Chai Discovery's sixth major pharma partner in ten months, after its own labs confirmed Chai's AI-designed molecules bind every target tested.",
-  "key_facts": [
-   "GSK's own labs confirmed Chai's AI-designed candidates bound 100% of tested targets.",
-   "It's Chai's sixth big-pharma deal since January, after Lilly, Pfizer, Novartis, argenx, BMS.",
-   "Chai's headline 16-20% hit-rate claim comes from its own preprint, not peer review."
-  ],
-  "tone": "Precise, evidence-first",
-  "persona": "priya-anand",
-  "section": "Health",
-  "primary_image": "assets/img/newsroom/newsroom-gsk-chai-discovery-ai-antibody-design-deal.jpg",
-  "disclaimer": "not-medical-advice"
- },
- "posts": [
-  {
-   "platform": "x",
-   "variant": "hook",
-   "copy": "GSK just became Chai Discovery's 6th big-pharma partner in 10 months. Its own labs confirmed Chai's AI designs bind every target tested. Binding isn't a drug yet -- here's the gap. Not medical advice.",
-   "reply_copy": "Full breakdown:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AIinHealth",
-    "#DrugDiscovery"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "x",
-   "variant": "second-wave",
-   "not_before": "2026-10-13T22:56:35Z",
-   "copy": "The number behind 6 pharma deals in 10 months -- Chai's 16-20% hit rate -- comes from Chai's own preprint. Not peer-reviewed. Not independently replicated. Worth knowing before the next headline.",
-   "reply_copy": "Why that matters:",
-   "link_in_reply": true,
-   "hashtags": [
-    "#AI",
-    "#Biotech"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "instagram",
-   "copy": "GSK just joined Chai Discovery's AI drug-design platform -- the startup's 6th major pharma deal since January.\n\nThe result: Chai's AI, with no target-specific training, designed candidates that GSK's own labs confirmed bind 100% of tested targets.\n\nThe catch: binding in a dish is a long way from a drug, and the headline hit-rate number behind all six deals is Chai's own, unreviewed claim.\n\nFull breakdown -- link in bio. Not medical advice.",
-   "hashtags": [
-    "#AIinHealth",
-    "#DrugDiscovery",
-    "#Biotech",
-    "#Pharma",
-    "#AI",
-    "#GSK"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "facebook",
-   "copy": "GSK will use Chai Discovery's AI protein-design models across its research pipeline after its own labs confirmed Chai's AI-designed candidates bound every target GSK tested -- with no target-specific training. It's Chai's sixth major pharma agreement in under a year, following Eli Lilly, Pfizer, Novartis, argenx and Bristol Myers Squibb. The reservation worth keeping in view: a molecule that binds in a lab test is a candidate, not a drug, and the headline hit-rate figure behind all six deals comes from a Chai-authored preprint that hasn't been peer-reviewed. Not medical advice.",
-   "hashtags": [
-    "#AIinHealth",
-    "#DrugDiscovery"
-   ],
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "copy": "GSK just became Chai Discovery's 6th pharma deal in 10 months. Its labs confirmed Chai's AI designs bind every target tested. A binder isn't a drug yet -- here's why that gap matters.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "threads",
-   "variant": "second-wave",
-   "not_before": "2026-10-13T22:56:35Z",
-   "copy": "Six major drugmakers have now paid for the same unproven pitch in under a year. Rational bet for each of them individually. Not, on its own, evidence the pitch is correct.",
-   "status": "ready",
-   "post_url": null
-  },
-  {
-   "platform": "bluesky",
-   "copy": "GSK became Chai Discovery's 6th pharma partner in 10 months. Its labs confirmed Chai's AI designs bind every target tested. Binding isn't a drug yet. Not medical advice.",
-   "hashtags": [
-    "#AIinHealth",
-    "#Biotech",
-    "#DrugDiscovery"
-   ],
-   "status": "ready",
-   "post_url": null
-  }
- ]
-}
 ];
