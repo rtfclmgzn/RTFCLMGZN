@@ -1620,3 +1620,30 @@
   then decide whether it's a renderer gap (new check needed, Law 7) or a bad field
   in this one record (fix the record). Separately: Pillow was also not pre-installed
   this cycle (`pip install Pillow` fixed it, consistent with prior entries).
+- **2026-10-13T03:26Z** (newsroom cycle): root-caused the
+  `jacob-coxon-anthropic-resignation-ai-extinction-risk-hubinger-hinton` render_smoke
+  failure the 2026-10-12T19:40Z entry above left open. **It is a false positive in
+  `render_smoke.py` itself, not a bad record and not a renderer bug.** The script's
+  crash-detection `PROBE` does `h.textContent.indexOf('didn') >= 0` against the
+  article's own `<h1>` (the rendered title) -- meant to catch the real crash markup's
+  exact text, `<h1>This page didn’t render</h1>` (app.js line ~8440, curly
+  apostrophe U+2019). This article's own real, correctly-rendered title legitimately
+  contains the word "didn't" (straight apostrophe U+0027) as ordinary prose -- "His
+  former colleague didn't dispute it" -- which the loose substring match also matches.
+  Reproduced definitively with a standalone Playwright script reusing render_smoke's
+  own `serve()`/PORT and its exact visit sequence (RTFC_ARTICLES+LIVE+NEWSROOM+
+  RESEARCH+GUIDES concatenated, settle=140ms): the article renders its full, correct
+  body with zero console/pageerror output every time; `crashed` still flips `true`
+  purely because of the headline text. A standalone single-page visit to the same URL
+  (no preceding navigations, longer settle) also renders cleanly, which is why an
+  isolated check looked fine while the full-sequence run kept failing -- not a
+  flaky race, a deterministic string match on legitimate content. Did NOT fix
+  `render_smoke.py` -- Law 6 and the runbook's own §0b line ("Never edit
+  `newsroom/quality/*` to make a check pass") forbid it even though the fix is a
+  one-line, high-confidence change. Recorded here instead, left failing for the
+  owner: change the PROBE's crash test to match the exact phrase `didn’t render`
+  (or check for the `.back` link + absence of real body content) instead of the bare
+  substring `didn`, which will false-positive on any future headline containing
+  "didn't," "wasn't," or similar. This also means the article's own `pipeline`
+  record and content do NOT need investigation -- the earlier entry's open question
+  is resolved as "check bug," not "record bug."
