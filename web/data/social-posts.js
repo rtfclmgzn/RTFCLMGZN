@@ -37014,5 +37014,276 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-13T18:02:36Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-openai-engineer-charged-bugging-executive-conference-room",
+    "ts": "2026-10-13T21:24:26Z",
+    "export": {
+      "article_id": "newsroom-openai-engineer-charged-bugging-executive-conference-room",
+      "url": "https://rtfclmgzn.com/article/openai-engineer-charged-bugging-executive-conference-room",
+      "headline": "OpenAI Engineer Charged With Bugging the Company's Own Executive Conference Room",
+      "hook": "Federal prosecutors say an OpenAI engineer hid a recorder behind a conference-room TV -- and was caught checking on it by a camera OpenAI had placed there for exactly that reason.",
+      "key_facts": [
+        "Abdulrahman Alfozan, 35, faces up to 5 years in prison on a single federal wiretapping charge.",
+        "OpenAI's own hidden camera allegedly caught him checking the device on Oct. 5.",
+        "OpenAI says it's found no sign model weights or customer data were taken -- so far."
+      ],
+      "tone": "Formal, precise, allegation-framed",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/newsroom-openai-engineer-charged-bugging-executive-conference-room.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "An OpenAI engineer is charged with secretly recording its own executive conference room. Prosecutors say he researched the room and device beforehand -- then was caught on camera checking on it. He faces up to 5 years.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AISecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T02:24:26Z",
+        "copy": "OpenAI says it used its own AI models to trace the hidden recorder back to the employee who allegedly planted it -- the company's tools turned on the hardware aimed at them.",
+        "reply_copy": "The full timeline:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#OpenAI",
+          "#AISecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "An OpenAI engineer has been charged with secretly bugging the company's own executive conference room.\n\nProsecutors say he researched the room and the device beforehand. OpenAI's own hidden camera allegedly caught him checking on it on Oct. 5.\n\nHe faces up to 5 years in prison. OpenAI says it's found no sign model weights or data were taken -- so far.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISecurity",
+          "#TechNews",
+          "#AI",
+          "#CorporateEspionage",
+          "#SiliconValley"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Federal prosecutors have charged an OpenAI engineer with secretly recording the company's own executive conference room. Abdulrahman Alfozan allegedly researched the room's layout and the recording device beforehand, installed it behind a TV, and was later caught on a hidden camera OpenAI had placed there checking on it. He faces up to five years in prison on a single federal wiretapping count. OpenAI says it has found no sign that model weights, source code, or customer data were taken -- but the case is still at the allegation stage.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISecurity"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "OpenAI engineer charged with bugging its own exec conference room. Prosecutors say chatbot records show him researching the room first. He was allegedly caught on a camera OpenAI put there for exactly this. Faces up to 5 years.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T02:24:26Z",
+        "copy": "The detail that stands out: OpenAI says it traced the hidden recorder using its own AI models, not an outside forensics firm. The tools turned on the hardware aimed at them.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "OpenAI engineer charged with secretly recording its own exec conference room. Caught, per prosecutors, by a camera OpenAI placed there to watch for exactly that. Up to 5 years if convicted.",
+        "hashtags": [
+          "#OpenAI",
+          "#AISecurity",
+          "#TechNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-kospi-selloff-cxmt-samsung-sk-hynix-memory-fears",
+    "ts": "2026-10-13T21:24:27Z",
+    "export": {
+      "article_id": "newsroom-kospi-selloff-cxmt-samsung-sk-hynix-memory-fears",
+      "url": "https://rtfclmgzn.com/article/kospi-selloff-cxmt-samsung-sk-hynix-memory-fears",
+      "headline": "Kospi Falls 5.46% as a New CXMT Chip Claim Revives Fears Over Samsung and SK Hynix's Memory Lead",
+      "hook": "South Korea's Kospi had its worst day in two months after China's CXMT said it would launch a new server-memory design by the end of 2026 -- but CXMT's own disclosure has no yield or customer data attached.",
+      "key_facts": [
+        "Kospi closed down 5.46% at 6,035.35, after sinking as much as 7.4% intraday.",
+        "Samsung fell 7.19% and SK Hynix 10.09% on the day.",
+        "On HBM, the memory AI chips actually need, CXMT remains ~4 years behind SK Hynix."
+      ],
+      "tone": "Brisk, numbers-driven, skeptical",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/newsroom-kospi-selloff-cxmt-samsung-sk-hynix-memory-fears.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Kospi closed down 5.46% Tuesday -- its worst day in 2 months -- after China's CXMT said it'll launch new server memory by end of 2026. Samsung -7.19%, SK Hynix -10.09%. CXMT's own claim has no yield or customer data attached. Not financial advice.",
+        "reply_copy": "The full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Kospi",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T02:24:27Z",
+        "copy": "On the memory that actually matters for AI chips -- HBM -- independent analysts still put China's CXMT roughly 4 years behind SK Hynix. Tuesday's panic was about ordinary server DRAM, not HBM.",
+        "reply_copy": "Full context:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Kospi",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "South Korea's Kospi just had its worst day in two months.\n\nThe trigger: China's CXMT said it'll launch a new server-memory design by the end of 2026. Samsung fell 7.19%. SK Hynix fell 10.09%.\n\nThe catch: CXMT's disclosure is pre-launch -- no yield, no customers named. And on HBM, the memory AI chips actually need, CXMT is still ~4 years behind SK Hynix.\n\nFull breakdown -- link in bio. Not financial advice.",
+        "hashtags": [
+          "#Kospi",
+          "#Semiconductors",
+          "#Samsung",
+          "#SKHynix",
+          "#AIBubble",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "South Korea's Kospi closed down 5.46% Tuesday, its worst session in more than two months, after Chinese memory maker CXMT said it would introduce a new server-DRAM design by the end of 2026. Samsung fell 7.19% and SK Hynix 10.09%, and the selloff spread to Japan, Taiwan, and Wall Street's own chip stocks a day earlier. The reservation worth keeping in view: CXMT's disclosure is pre-launch, with no yield or customer data attached, and on HBM -- the memory AI accelerators actually need -- independent estimates still put it roughly four years behind SK Hynix. Not financial advice.",
+        "hashtags": [
+          "#Kospi",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Kospi's worst day in 2 months: -5.46%, after sinking 7.4% intraday. Samsung -7.19%, SK Hynix -10.09%. Trigger: a pre-launch CXMT memory-chip claim with no yield or customer data behind it yet.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T02:24:27Z",
+        "copy": "Samsung flagged a record quarter (107.4 trillion won operating profit, +782.5% YoY) just 5 days before Tuesday's selloff. The panic is a bet on a multi-year threat, not a read on today's business.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Kospi's worst day in 2 months (-5.46%) on a CXMT memory-chip claim that's still pre-launch. Samsung -7.19%, SK Hynix -10.09%. On HBM specifically, CXMT's still ~4 years behind. Not financial advice.",
+        "hashtags": [
+          "#Kospi",
+          "#Semiconductors",
+          "#Markets"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-ntt-data-anthropic-osaka-data-center-talks",
+    "ts": "2026-10-13T21:24:28Z",
+    "export": {
+      "article_id": "newsroom-ntt-data-anthropic-osaka-data-center-talks",
+      "url": "https://rtfclmgzn.com/article/ntt-data-anthropic-osaka-data-center-talks",
+      "headline": "NTT Data Nears Deal to Build Anthropic's First Data Center in Japan",
+      "hook": "NTT Data is reportedly close to building Anthropic's first dedicated Japan data center -- a planned 500MW facility that would, on paper, exceed NTT Group's entire current IT capacity.",
+      "key_facts": [
+        "Reported construction cost: up to 1 trillion yen ($6.3 billion).",
+        "Planned power intake of 500MW would exceed NTT Group's current IT capacity (~300MW).",
+        "Signing targeted by March 31; partial operations could start as early as 2028."
+      ],
+      "tone": "Technical, precise, scoped",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/newsroom-ntt-data-anthropic-osaka-data-center-talks.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "NTT Data is reportedly close to building Anthropic's first Japan data center: ~$6.3B, 500MW in Osaka. That power figure alone would exceed NTT Group's entire current IT capacity. Still unconfirmed by either company.",
+        "reply_copy": "Full details:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Anthropic",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "NTT Data is reportedly in final talks to build Anthropic's first dedicated data center in Japan.\n\nThe numbers: up to $6.3B to build, 500MW of planned power intake -- on paper, more than NTT Group's entire current IT capacity.\n\nSigning targeted by March 31. Partial operations as early as 2028. Still unconfirmed by either company.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#Anthropic",
+          "#DataCenters",
+          "#Japan",
+          "#AIInfrastructure",
+          "#Compute"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "NTT Data Group is reportedly in final-stage talks to build Anthropic's first dedicated data center in Japan -- a roughly 500-megawatt facility in Osaka that could cost as much as 1 trillion yen ($6.3 billion). The power figure alone, on paper, would exceed NTT Group's entire current IT capacity nationwide. The two sides are aiming to sign by the end of Japan's fiscal year in March, with partial operations targeted as early as 2028. Neither company has confirmed the talks.",
+        "hashtags": [
+          "#Anthropic",
+          "#DataCenters"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "NTT Data reportedly close to building Anthropic's first Japan data center: ~$6.3B, 500MW in Osaka. That power number alone would top NTT Group's entire current IT capacity. Unconfirmed by either side.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "NTT Data reportedly near a deal to build Anthropic's first Japan data center: $6.3B, 500MW in Osaka -- more power than NTT Group's entire current IT fleet, on paper. Still unconfirmed.",
+        "hashtags": [
+          "#Anthropic",
+          "#DataCenters",
+          "#Japan"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];

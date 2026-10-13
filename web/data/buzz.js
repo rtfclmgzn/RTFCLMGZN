@@ -6,6 +6,18 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-857", date:"2026-10-13",
+    source:{ name:"CNBC / Bloomberg", handle:"cnbc", platform:"web", kind:"news" },
+    text:"Anthropic is sharing its third-quarter financials for the first time at a meeting with institutional investors at its San Francisco headquarters this week, Bloomberg first reported and CNBC confirmed, citing people familiar with the matter who asked for anonymity. Anthropic declined to comment. The widely circulated $2 trillion IPO-valuation figure and a claim that revenue could top $100 billion by year-end both remain anonymously sourced and unconfirmed by the company.",
+    why:"It's the clearest sign yet that Anthropic's IPO prep has moved from talk to an actual numbers-in-the-room stage -- worth watching for what it discloses, not for the unconfirmed figures already circulating around it.",
+    heat:17, topics:["anthropic","ipo","financials","markets"],
+    url:"https://www.kucoin.com/news/flash/anthropic-to-disclose-q3-financials-amid-ai-ipo-preparations" },
+{ id:"bz-856", date:"2026-10-13",
+    source:{ name:"9to5Mac", handle:"9to5mac", platform:"web", kind:"news" },
+    text:"A federal judge gave Apple partial early discovery in its trade-secrets suit against OpenAI, io Products, and two former Apple employees -- forensic images, interview-related documents for OpenAI's hardware group, and depositions -- but denied expedited access to OpenAI's own R&D documents on battery and power management, sending those through ordinary discovery instead.",
+    why:"A split ruling this early says the judge found Apple's narrower asks credible while treating the broader fishing-expedition requests skeptically -- a genuine signal about how the case is likely to be fought, not just another filing.",
+    heat:15, topics:["apple","openai","lawsuit","trade secrets"],
+    url:"https://9to5mac.com/2026/10/13/apple-wins-early-access-to-openai-documents-and-employee-testimony-in-trade-secrets-lawsuit" },
 { id:"bz-855", date:"2026-10-12",
     source:{ name:"Common Dreams", handle:"commondreams", platform:"web", kind:"news" },
     text:"Sam Altman, in a Politico Decoded interview reported Oct. 5, said \"we believe the world should accept some bad things happening for the benefits of this technology,\" tying that view to his preference for lighter-touch AI regulation. Critics including JB Pritzker pushed back on an AI CEO deciding which harms are acceptable.",
