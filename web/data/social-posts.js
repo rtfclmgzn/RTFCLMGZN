@@ -36246,7 +36246,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -36274,8 +36274,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#AISafety"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeawbyLmAkU/",
+        "remote_id": "17947514400314489",
+        "posted_at": "2026-10-13T02:40:10Z"
       },
       {
         "platform": "facebook",
@@ -36284,16 +36286,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#AIPolicy"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127395865396947",
+        "remote_id": "1238977099292018_122127395865396947",
+        "posted_at": "2026-10-13T02:40:21Z"
       },
       {
         "platform": "threads",
         "copy": "OpenAI's own count of notified organizations: \"dozens\" on Sept. 25, over 100 by Sept. 30. Wikipedia disclosed its own incident Oct. 5. A separate security firm names 55 more orgs. Now a lawsuit and a Senate hearing are fighting over who pays. The numbers:",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 12-Oct-26 16:14:31 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AfKmhBkP44Gd8xPp9_bLt2O\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 12-Oct-26 19:40:26 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"At7nxpI2s6qF5xXuhLyTHBv\"}}"
       },
       {
         "platform": "threads",
@@ -36311,8 +36315,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIPolicy",
           "#TechNews"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxpyyhygzj2t",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxpyyhygzj2t",
+        "posted_at": "2026-10-13T02:40:30Z"
       }
     ]
   },
@@ -36348,7 +36354,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -36371,14 +36377,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Copyright"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127396495396947",
+        "remote_id": "1238977099292018_122127396495396947",
+        "posted_at": "2026-10-13T02:44:24Z"
       },
       {
         "platform": "threads",
         "copy": "USA Today's owner sued OpenAI Oct. 8 for more than $250 million, alleging ChatGPT trained on 83,266+ of its articles without a license. Not the first newspaper to make this exact argument in this exact courthouse -- the NYT's case is already deep into discovery.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 12-Oct-26 19:44:29 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"APQYi1SuRxTkwqHFrPgwIep\"}}"
       },
       {
         "platform": "bluesky",
@@ -36387,8 +36397,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#OpenAI",
           "#Copyright"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxpz7pzgb22i",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxpz7pzgb22i",
+        "posted_at": "2026-10-13T02:44:33Z"
       }
     ]
   }
