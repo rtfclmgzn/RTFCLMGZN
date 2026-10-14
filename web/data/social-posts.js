@@ -37335,7 +37335,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIBusiness"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -37379,7 +37381,9 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "Character.AI filed Chapter 11. Disney's $20M bid buys a license to some IP, not the company -- the same shape as the $2.7B Google deal in 2024. Twice now, big money changed hands without anyone actually buying Character.AI.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 18:27:29 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AW-gsDgOalAafzdKDWzI4vN\"}}"
       },
       {
         "platform": "bluesky",
@@ -37389,8 +37393,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIBusiness",
           "#Disney"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxsfev4uln2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxsfev4uln2y",
+        "posted_at": "2026-10-14T01:27:30Z"
       }
     ]
   },
@@ -37425,7 +37431,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIBenchmarks"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -37470,7 +37478,9 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "Gemini 4 Argon is generally available now. #1 on the independent Vals Index, tied for 2nd on the broader Artificial Analysis Index -- both real, both measuring different things. Google's own employees reportedly say real coding lags the scores either way.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 18:27:35 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A-1kkQQoOJ03VCYOYhpu4Rs\"}}"
       },
       {
         "platform": "bluesky",
@@ -37480,8 +37490,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AI",
           "#Benchmarks"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxsfm34dat23",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxsfm34dat23",
+        "posted_at": "2026-10-14T01:31:32Z"
       }
     ]
   },
