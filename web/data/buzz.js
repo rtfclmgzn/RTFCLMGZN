@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-871", date:"2026-10-12",
+    source:{ name:"TechNode", handle:"technode", platform:"web", kind:"news" },
+    text:"Shanghai-based Infinigence AI closed a RMB 2.3 billion (about $344 million) Series C on Oct. 12, bringing cumulative funding to RMB 4.3 billion since the company's 2023 founding. The company builds software that lets AI models run across different chip types and connects 37,000 petaflops of computing capacity across 16 chip types. Investors include Tencent, Baidu, Lenovo, Sequoia China and Qiming Venture Partners; the company has also confidentially filed for an IPO on the Hong Kong Stock Exchange, with a possible debut as early as H1 2027.",
+    why:"An AI infrastructure company raising $344M with explicit IPO-readiness signals a shift from research to operational runway -- and the multi-chip abstraction layer Infinigence built is the thing running frontier-lab compute across competing hardware suppliers, making their scale genuinely material.",
+    heat:25, topics:["infinigence ai","ai infrastructure","funding","ipo","china"],
+    url:"https://technode.com/2026/10/12/ai-infrastructure-provider-infinigence-ai-raises-rmb-2-3-billion-in-series-c-funding/" },
 { id:"bz-866", date:"2026-10-13",
     source:{ name:"Financial Times", handle:"ft", platform:"web", kind:"news" },
     text:"The Financial Times reported Oct. 13 that Chinese tech firms have bought more than 1 million Nvidia gaming and workstation chips this year -- mostly RTX 5090, RTX Pro 6000D and RTX Pro 5000 cards, none covered by US export controls -- to cover a domestic AI-chip shortfall. Industry estimates cited put China's 2026 AI-chip supply (including these workarounds) around 3.5 million units against demand well over 5 million.",
