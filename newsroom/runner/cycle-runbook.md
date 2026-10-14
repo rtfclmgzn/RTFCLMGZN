@@ -2043,6 +2043,33 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-10-14T01:12:51Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (Character.AI's Chapter 11 filing and
+   Disney's $20M stalking-horse IP bid; Google's Gemini 4 Argon general-
+   availability release; Anthropic and OpenAI's reported push for control over
+   embedded-evaluator publications, per Reuters) plus the full §4b/§4c/§4d
+   passes were already the required work. §3c backfill search (`component_audit`)
+   re-ran and found zero articles below their format's component floor --
+   still empty. Both §3e/§3f blockers unchanged, re-confirmed by reading the
+   files directly: `ALLOWED_PREFIXES` in `verify_publish_surface.py` still
+   reads `("web/", "docs/operations/releases/",
+   "image-library/art/manifest.json")` (`functions/` and `newsroom/` both
+   absent), and `which wrangler` / `env | grep -i cloudflare` both return
+   nothing on this runner. No new `primer-issue.js`-only candidate found this
+   cycle; did not force one. Separately: `verify_covers.py pick` again
+   surfaced the same handful of generic, mismatched top candidates (a
+   surgical-robot image for a bankruptcy/markets story, an AGI-core and
+   twin-chambers image that both turned out to be inside the 90-day reuse
+   window despite the picker surfacing them as eligible -- confirmed via
+   `verify_covers.py check`, which correctly FAILed both before anything
+   shipped). Generated fresh covers for all three articles instead of
+   forcing a mismatch or a stale reuse ($0.06 each, $0.18 total). This entry
+   and the §3f entry below are, again, being committed to a `newsroom/` path
+   outside `ALLOWED_PREFIXES` -- pushed as their own separate
+   `runbook:`-prefixed commit, after the article/data commit that already
+   cleared the full §5 gate sequence. Same two next steps as every entry
+   since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2614,6 +2641,15 @@ data-center talks) plus the full §4b/§4c/§4d passes were already the
 required work: `find . -iname "issue-001.json"` still returns nothing, and
 no `wrangler` binary or Cloudflare credentials exist on this runner. No item
 worked. Same two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-10-14T01:12:51Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (Character.AI's Chapter 11 filing,
+Google's Gemini 4 Argon GA release, and the Reuters report on Anthropic/
+OpenAI evaluator-publication control) plus the full §4b/§4c/§4d passes were
+already the required work: `find . -iname "issue-001.json"` still returns
+nothing, and no `wrangler` binary or Cloudflare credentials exist on this
+runner. No item worked. Same two next steps as every entry since 2026-08-30,
+still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
