@@ -37145,7 +37145,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -37183,16 +37183,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Kospi",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127565083396947",
+        "remote_id": "1238977099292018_122127565083396947",
+        "posted_at": "2026-10-14T00:32:58Z"
       },
       {
         "platform": "threads",
         "copy": "Kospi's worst day in 2 months: -5.46%, after sinking 7.4% intraday. Samsung -7.19%, SK Hynix -10.09%. Trigger: a pre-launch CXMT memory-chip claim with no yield or customer data behind it yet.",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 14:40:07 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AylKTdHrQ6jUjuQG7xKMOPs\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 17:33:03 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AHWlBkEeN8BSe8ZUxf6ILzT\"}}"
       },
       {
         "platform": "threads",
@@ -37210,8 +37212,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Semiconductors",
           "#Markets"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxscdlkkx622",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxscdlkkx622",
+        "posted_at": "2026-10-14T00:33:06Z"
       }
     ]
   },
@@ -37247,7 +37251,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -37260,8 +37264,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIInfrastructure",
           "#Compute"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DedGL7yj3TC/",
+        "remote_id": "18001796762805153",
+        "posted_at": "2026-10-14T00:28:45Z"
       },
       {
         "platform": "facebook",
@@ -37270,16 +37276,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#DataCenters"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127564381396947",
+        "remote_id": "1238977099292018_122127564381396947",
+        "posted_at": "2026-10-14T00:28:55Z"
       },
       {
         "platform": "threads",
         "copy": "NTT Data reportedly close to building Anthropic's first Japan data center: ~$6.3B, 500MW in Osaka. That power number alone would top NTT Group's entire current IT capacity. Unconfirmed by either side.",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 14:40:06 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AgQSDJr5tYkABA25ZY9vOne\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 17:29:00 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A7UwxXqBLrUFuurDkcSocUV\"}}"
       },
       {
         "platform": "bluesky",
@@ -37289,8 +37297,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#DataCenters",
           "#Japan"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxsc4e5hn32w",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxsc4e5hn32w",
+        "posted_at": "2026-10-14T00:29:03Z"
       }
     ]
   }
