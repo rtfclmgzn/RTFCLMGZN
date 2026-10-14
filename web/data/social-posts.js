@@ -37587,8 +37587,7 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-14T05:16:19Z"
       }
     ]
-  }
-,
+  },
   {
     "article_id": "newsroom-asml-q3-2026-record-quarter-2027-2028-supply-shortfall",
     "ts": "2026-10-14T15:19:26Z",
@@ -37620,7 +37619,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Semiconductors"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -37664,7 +37665,9 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "ASML posted a record €11.7B quarter and still told customers its planned 2027-2028 EUV output won't meet demand -- some are ordering for 2029-2030. It's the only maker of these machines; TSMC, Samsung and Intel all depend on it.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Wednesday, 14-Oct-26 08:29:02 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AotAdwF-zkoP0uREr6pMa9h\"}}"
       },
       {
         "platform": "bluesky",
@@ -37709,7 +37712,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Ukraine"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "x",
@@ -37753,7 +37758,9 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "Three Ukrainian drone strikes in four days hit every site housing one of Yandex's three AI-training supercomputers. Russian outlet T-Invariant says all three may now be down; Yandex hasn't confirmed it. Rebuilding is gated by sanctioned chips, not construction.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Wednesday, 14-Oct-26 08:29:02 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A_v3STgpynG2z46PPoDySPN\"}}"
       },
       {
         "platform": "bluesky",
