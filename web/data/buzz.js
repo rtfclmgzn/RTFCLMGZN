@@ -6,6 +6,14 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-873", date:"2026-10-14",
+    source:{ name:"Google DeepMind", handle:"blog.google", platform:"web", kind:"lab" },
+    text:"Google released Gemini 4 Argon on October 13–14, 2026, with a 1-million-token context window and thinking-token capability for reasoning before answering. The model scores 77.9% on DeepSWE (software engineering), 91.7% on LVBench (long-video understanding), and 51.3% on AutomationBench (business automation). Introductory pricing through November: $2 input, $10 output per million tokens; standard pricing after December: $4/$20. Initial availability: Fairwind Program for trusted defenders, Gemini API/Studio, Google Cloud; broader rollout phased.",
+    why:"A major frontier model release with new capabilities (thinking tokens, 1M context) that substantially improve on prior Gemini versions, plus a pricing introduction that undercuts Anthropic Claude Opus 5.5 during the promotional window.",
+    heat:35, topics:["google","gemini 4 argon","frontier models","AI releases"],
+    url:"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" },
+
+
 { id:"bz-872", date:"2026-10-14",
     source:{ name:"CryptoBriefing", handle:"cryptobriefing", platform:"web", kind:"news" },
     text:"Nvidia has discussed investing roughly $1 billion more in humanoid-robot maker Figure AI, per a report citing a person familiar with the talks; nothing is confirmed and no deal terms have surfaced. Nvidia already joined Figure's $1B+ Series C in September 2025 at a $39 billion post-money valuation, and separately supplies the GPUs behind Figure's Helix models and its new Nscale compute deal.",
