@@ -37303,5 +37303,275 @@ window.RTFC_SOCIAL_POSTS = [
         "posted_at": "2026-10-14T00:29:03Z"
       }
     ]
+  },
+  {
+    "article_id": "newsroom-character-ai-bankruptcy-disney-20-million-stalking-horse-bid",
+    "ts": "2026-10-14T01:12:51Z",
+    "export": {
+      "article_id": "newsroom-character-ai-bankruptcy-disney-20-million-stalking-horse-bid",
+      "url": "https://rtfclmgzn.com/article/character-ai-bankruptcy-disney-20-million-stalking-horse-bid",
+      "headline": "Character.AI Files for Chapter 11; Disney's $20 Million Bid Buys a License, Not the Company",
+      "hook": "Character.AI filed for bankruptcy and named Disney as the stalking-horse bidder for a $20 million IP license -- a fraction of the $2.7 billion Google paid for a similar license in 2024, and not a sale of the company.",
+      "key_facts": [
+        "Chapter 11 filed Oct. 12 in Delaware; assets and liabilities listed at $50M-$100M.",
+        "Disney's $20M bid is a non-exclusive license, not an acquisition -- rival bidders can still top it.",
+        "CEO Karandeep Anand left for a newly created Disney CTO role on Oct. 2, ten days before the filing."
+      ],
+      "tone": "Arithmetic-skeptic, numbers-first",
+      "persona": "kian-farzan",
+      "section": "Markets",
+      "primary_image": "assets/img/newsroom/character-ai-bankruptcy-disney-20-million-stalking-horse-bid.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Character.AI filed Chapter 11. Disney's bid: $20M for a license to some IP -- not the company. Google paid $2.7B for a similar license in 2024. Neither deal was ever a sale of Character.AI itself.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#CharacterAI",
+          "#AIBusiness"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T06:12:51Z",
+        "copy": "The CEO who ran Character.AI left for Disney on Oct. 2. Ten days later, Disney is the stalking-horse bidder for the company's bankrupt estate. Nobody's called those two events connected -- but the timing is the story.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#CharacterAI",
+          "#Disney"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Character.AI filed for Chapter 11 bankruptcy this week.\n\nDisney's $20 million bid sounds like a sale -- it isn't. It's a non-exclusive license to some IP, not a purchase of the company.\n\nGoogle paid $2.7 billion for a similar license back in 2024. Twice now, the technology changed hands without the company ever being sold.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#CharacterAI",
+          "#Disney",
+          "#Bankruptcy",
+          "#AIBusiness",
+          "#TechNews",
+          "#StartupNews"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Character.AI filed for Chapter 11 bankruptcy on October 12 and named Disney as the stalking-horse bidder for a $20 million license to some of its intellectual property -- not a purchase of the company itself. It's the second time Character.AI's technology has changed hands for a headline number that wasn't a company sale: Google paid a reported $2.7 billion for a similar license back in 2024. The filing follows state lawsuits over chatbot harm to minors and lands ten days after CEO Karandeep Anand left for a newly created chief technology officer role at Disney.",
+        "hashtags": [
+          "#CharacterAI",
+          "#Disney"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Character.AI filed Chapter 11. Disney's $20M bid buys a license to some IP, not the company -- the same shape as the $2.7B Google deal in 2024. Twice now, big money changed hands without anyone actually buying Character.AI.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Character.AI filed Chapter 11. Disney's $20M bid buys a license, not the company -- same shape as Google's $2.7B deal in 2024. Nobody has actually bought Character.AI yet.",
+        "hashtags": [
+          "#CharacterAI",
+          "#AIBusiness",
+          "#Disney"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-google-gemini-4-argon-general-availability-pricing-benchmarks",
+    "ts": "2026-10-14T01:12:51Z",
+    "export": {
+      "article_id": "newsroom-google-gemini-4-argon-general-availability-pricing-benchmarks",
+      "url": "https://rtfclmgzn.com/article/google-gemini-4-argon-general-availability-pricing-benchmarks",
+      "headline": "Google Makes Gemini 4 Argon Generally Available, Two Weeks After Giving It Only to Cyber Defenders",
+      "hook": "Argon genuinely ranks #1 on the independent Vals Index -- but ties for second on the broader Artificial Analysis Intelligence Index, and Google's own employees reportedly say it's weaker at real coding than either score suggests.",
+      "key_facts": [
+        "API pricing: $2/$10 per million tokens through Nov. 30, then $4/$20 after.",
+        "#1 on the independent Vals Index (68.90%); ties GPT-6 Astra at 53 on the Artificial Analysis Index, 5 points behind Claude Opus 5.5.",
+        "Bloomberg reports Google employees find it weaker on real-world coding and front-end work than its benchmarks imply."
+      ],
+      "tone": "Evaluation-first, austere",
+      "persona": "luka-petrovic",
+      "section": "Frontier",
+      "primary_image": "assets/img/newsroom/google-gemini-4-argon-general-availability-pricing-benchmarks.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Gemini 4 Argon is now generally available. It's #1 on the independent Vals Index -- and tied for 2nd/3rd on the broader Artificial Analysis Index, 5 points behind Opus 5.5. Google's own employees reportedly say it's weaker at real coding than either score suggests.",
+        "reply_copy": "Full breakdown:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#AIBenchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T06:12:51Z",
+        "copy": "Google employees compared Gemini 4 Argon to a student with a perfect SAT score who can't actually do the job the test predicted. The company's own DeepMind lead disagrees. Neither side has published the benchmark that would settle it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Gemini",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Gemini 4 Argon is now generally available -- two weeks after Google gave it only to vetted cyber defenders.\n\nThe pricing is cheap for 7 weeks: $2/$10 per million tokens until Nov. 30, then it doubles.\n\nThe benchmarks are genuinely split: #1 on the independent Vals Index, tied for 2nd on the broader Artificial Analysis Index.\n\nAnd Google's own employees reportedly say it's weaker at real coding than either number suggests.\n\nFull breakdown -- link in bio.",
+        "hashtags": [
+          "#Gemini",
+          "#Google",
+          "#AI",
+          "#LLM",
+          "#Benchmarks",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Google made Gemini 4 Argon generally available on October 13, two weeks after restricting it to roughly 650 vetted cybersecurity organizations. Introductory API pricing of $2/$10 per million tokens holds only through November 30, after which it roughly doubles. The model genuinely ranks #1 on the independent Vals Index, but ties for second on the broader Artificial Analysis Intelligence Index -- five points behind Claude Opus 5.5. Bloomberg reported that Google employees with early access found it strong on standardized tests but weaker on real-world coding and front-end work.",
+        "hashtags": [
+          "#Gemini",
+          "#Google"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Gemini 4 Argon is generally available now. #1 on the independent Vals Index, tied for 2nd on the broader Artificial Analysis Index -- both real, both measuring different things. Google's own employees reportedly say real coding lags the scores either way.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Gemini 4 Argon is GA now. #1 on Vals Index, tied for 2nd on Artificial Analysis -- different benchmarks, both real. Google employees reportedly say real coding still lags the scores.",
+        "hashtags": [
+          "#Gemini",
+          "#AI",
+          "#Benchmarks"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-anthropic-openai-evaluator-publication-control-reuters",
+    "ts": "2026-10-14T01:12:51Z",
+    "export": {
+      "article_id": "newsroom-anthropic-openai-evaluator-publication-control-reuters",
+      "url": "https://rtfclmgzn.com/article/anthropic-openai-evaluator-publication-control-reuters",
+      "headline": "Anthropic and OpenAI Sought Control Over What Outside AI Evaluators Can Publish, Reuters Reports",
+      "hook": "Reuters reports Anthropic and OpenAI pushed for significant control over what embedded safety evaluators can publish -- weeks after both companies publicly pledged evaluators editorial independence.",
+      "key_facts": [
+        "Per Reuters, as late as Oct. 5 both labs sought strict editorial control over evaluator publications.",
+        "In September, Amodei pledged evaluators could publish 'without editorial control'; OpenAI echoed 'editorial independence' days later.",
+        "OpenAI previously redacted parts of a METR/Redwood Research report on a Hugging Face hacking incident involving its own models."
+      ],
+      "tone": "Composed, legally precise",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/anthropic-openai-evaluator-publication-control-reuters.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Reuters: Anthropic and OpenAI sought significant control over what embedded safety evaluators can publish -- weeks after both pledged evaluators 'editorial independence.' Both companies dispute the characterization.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T06:12:51Z",
+        "copy": "A probe that was supposed to take 2 days took 6, over 3 visits. OpenAI's evaluators needed that long for a complete record after a Hugging Face hack -- then OpenAI redacted the report. That's the precedent this week's bigger dispute sits on top of.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#AISafety",
+          "#OpenAI"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Reuters reports Anthropic and OpenAI sought significant control over what their own embedded safety evaluators can publish.\n\nWeeks earlier, both companies had publicly pledged evaluators 'editorial independence.'\n\nBoth labs dispute Reuters' characterization. A scorecard in our full story breaks down what's actually established, what's just the company's word, and what's genuinely contested.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#AISafety",
+          "#Anthropic",
+          "#OpenAI",
+          "#AIPolicy",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Reuters reported October 13 that Anthropic and OpenAI pushed for significant control over what outside evaluators embedded inside their companies can publish -- a position that sits awkwardly against both companies' own public pledges from weeks earlier promising evaluators 'editorial independence.' Both companies dispute Reuters' characterization, saying current evaluators control their own findings. The dispute echoes an already-documented case: OpenAI's redaction of parts of a report on a Hugging Face hacking incident involving its own models.",
+        "hashtags": [
+          "#AISafety",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Reuters: Anthropic and OpenAI sought control over what embedded AI safety evaluators can publish -- weeks after both pledged 'editorial independence.' Both dispute it. A real precedent already exists: OpenAI redacted a METR/Redwood report on its own models' Hugging Face hack.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Reuters: Anthropic and OpenAI sought control over what embedded evaluators can publish -- weeks after pledging 'editorial independence.' Both dispute it. Precedent: OpenAI already redacted a METR/Redwood report on its own models.",
+        "hashtags": [
+          "#AISafety",
+          "#AIPolicy"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
   }
 ];
