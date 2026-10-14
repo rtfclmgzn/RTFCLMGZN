@@ -37588,4 +37588,183 @@ window.RTFC_SOCIAL_POSTS = [
       }
     ]
   }
+,
+  {
+    "article_id": "newsroom-asml-q3-2026-record-quarter-2027-2028-supply-shortfall",
+    "ts": "2026-10-14T15:19:26Z",
+    "export": {
+      "article_id": "newsroom-asml-q3-2026-record-quarter-2027-2028-supply-shortfall",
+      "url": "https://rtfclmgzn.com/article/asml-q3-2026-record-quarter-2027-2028-supply-shortfall",
+      "headline": "ASML Posted a Record €11.7 Billion Quarter -- and Said It Still Can't Build Enough Chip Machines Through 2028",
+      "hook": "ASML just posted a record quarter and told customers its planned 2027-2028 EUV output still won't meet demand -- some are now ordering for 2029 and 2030.",
+      "key_facts": [
+        "Q3 2026 net sales hit a record €11.66 billion, beating guidance.",
+        "CEO Fouquet: 'our supply as currently planned for both 2027 and 2028 will not fully meet the demand of our customers.'",
+        "ASML is the sole maker of EUV lithography tools -- TSMC, Samsung and Intel all depend on its output."
+      ],
+      "tone": "technical, numbers-first",
+      "persona": "jin-park",
+      "section": "Compute",
+      "primary_image": "assets/img/newsroom/asml-q3-2026-record-quarter-2027-2028-supply-shortfall.jpg",
+      "disclaimer": "not-financial-advice"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "ASML just posted a record €11.7B quarter -- and told customers its planned 2027-2028 chip-tool output still won't meet demand. Some are already ordering for 2029 and 2030.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#ASML",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T20:19:26Z",
+        "copy": "The AI buildout's real bottleneck isn't GPUs -- it's one Dutch company's factory schedule. ASML is the only maker of EUV lithography tools, and its own CEO says planned supply through 2028 still falls short.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#ASML",
+          "#AIInfrastructure"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "ASML just posted a record €11.66 billion quarter.\n\nThen its CEO told customers the quiet part: planned chip-tool supply for 2027 AND 2028 still won't meet demand. Some customers are now ordering for 2029 and 2030.\n\nASML is the only company on Earth that makes EUV lithography machines. TSMC, Samsung and Intel all depend on its output -- which means the pace of the entire AI buildout is gated by one company's factory schedule.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#ASML",
+          "#Semiconductors",
+          "#AIChips",
+          "#TSMC",
+          "#TechNews",
+          "#ArtificialIntelligence"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "ASML reported record third-quarter revenue of €11.66 billion Wednesday and raised its full-year outlook -- then told investors its planned 2027 and 2028 supply still won't fully meet customer demand, with some now ordering for 2029 and 2030. Three months after ASML pressed TSMC for higher prices because it was effectively sold out through 2027, the bottleneck has only tightened. As the sole maker of EUV lithography machines, ASML's production schedule is the real physical constraint behind the pace of the AI buildout.",
+        "hashtags": [
+          "#ASML",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "ASML posted a record €11.7B quarter and still told customers its planned 2027-2028 EUV output won't meet demand -- some are ordering for 2029-2030. It's the only maker of these machines; TSMC, Samsung and Intel all depend on it.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "ASML: record €11.7B quarter, and still can't make enough EUV tools through 2028. Sole supplier, every leading chipmaker depends on it. Customers are now ordering for 2029-2030.",
+        "hashtags": [
+          "#ASML",
+          "#Semiconductors"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  },
+  {
+    "article_id": "newsroom-ukraine-drone-strikes-yandex-ai-supercomputers",
+    "ts": "2026-10-14T15:19:32Z",
+    "export": {
+      "article_id": "newsroom-ukraine-drone-strikes-yandex-ai-supercomputers",
+      "url": "https://rtfclmgzn.com/article/ukraine-drone-strikes-yandex-ai-supercomputers",
+      "headline": "Ukraine's Drone Strikes Hit All Three Sites Housing Yandex's AI-Training Supercomputers in Four Days",
+      "hook": "Three Ukrainian drone strikes in four days hit every site where Yandex houses its AI-training supercomputers -- a claim that all three are now offline remains unconfirmed by Yandex.",
+      "key_facts": [
+        "Strikes hit Yandex's Sasovo (Oct 8), Kaluga (Oct 9) and Vladimir (Oct 11) data centers.",
+        "Those three sites house all three of Yandex's AI-training supercomputers, per the company's own 2021 announcement.",
+        "Russian outlet T-Invariant reports all three may now be down; Yandex has not confirmed or denied it."
+      ],
+      "tone": "composed, geopolitically precise",
+      "persona": "evelyn-zhao",
+      "section": "Policy",
+      "primary_image": "assets/img/newsroom/ukraine-drone-strikes-yandex-ai-supercomputers.jpg",
+      "disclaimer": "none"
+    },
+    "posts": [
+      {
+        "platform": "x",
+        "variant": "hook",
+        "copy": "Three Ukrainian drone strikes in four days hit every site where Yandex houses its AI-training supercomputers. Russian outlet T-Invariant reports all three may now be down -- Yandex hasn't confirmed or denied it.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Yandex",
+          "#Ukraine"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "x",
+        "variant": "second-wave",
+        "not_before": "2026-10-14T20:19:32Z",
+        "copy": "Rebuilding Yandex's struck AI supercomputers isn't mainly a construction problem -- it's a chip problem. All three ran on Nvidia A100s the US restricted from export to Russia back in 2022.",
+        "reply_copy": "Full story:",
+        "link_in_reply": true,
+        "hashtags": [
+          "#Yandex",
+          "#Sanctions"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "instagram",
+        "copy": "Three Ukrainian drone strikes. Four days. Every single site where Yandex houses the supercomputers it uses to train its AI models.\n\nSasovo (Oct 8), Kaluga (Oct 9), Vladimir (Oct 11) -- Yandex confirms two are fully shut down, one is degraded. Russian outlet T-Invariant reports all three AI-training supercomputers may now be offline. Yandex hasn't confirmed or denied it.\n\nRebuilding depends more on sanctioned chips than on repairing the buildings.\n\nFull story -- link in bio.",
+        "hashtags": [
+          "#Yandex",
+          "#Ukraine",
+          "#AIInfrastructure",
+          "#Russia",
+          "#TechNews",
+          "#Geopolitics"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "facebook",
+        "copy": "Three Ukrainian drone strikes in four days have hit the only three sites where Yandex houses the supercomputers it uses to train its AI models, the Russian search and cloud giant confirms. Sasovo and Vladimir are fully shut down; Kaluga is degraded. Russian outlet T-Invariant reports -- not yet confirmed by Yandex -- that all three of the company's AI-training supercomputers may now be offline, and experts say rebuilding depends more on sanctioned chips than on repairing the buildings.",
+        "hashtags": [
+          "#Yandex",
+          "#Ukraine"
+        ],
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "threads",
+        "copy": "Three Ukrainian drone strikes in four days hit every site housing one of Yandex's three AI-training supercomputers. Russian outlet T-Invariant says all three may now be down; Yandex hasn't confirmed it. Rebuilding is gated by sanctioned chips, not construction.",
+        "status": "ready",
+        "post_url": null
+      },
+      {
+        "platform": "bluesky",
+        "copy": "Ukraine's drone strikes hit all three sites housing Yandex's AI-training supercomputers in four days. Unconfirmed claim: all three now offline. Confirmed: two sites fully shut down, one degraded.",
+        "hashtags": [
+          "#Yandex",
+          "#Ukraine"
+        ],
+        "status": "ready",
+        "post_url": null
+      }
+    ]
+  }
 ];

@@ -6,6 +6,12 @@
    - `heat` 0-100: the desk's judgment of how loud this is across the feed today.
    - Keep up to ~48 items; retire anything older than one week (~7 days) on each run. */
 window.RTFC_BUZZ = [
+{ id:"bz-872", date:"2026-10-14",
+    source:{ name:"CryptoBriefing", handle:"cryptobriefing", platform:"web", kind:"news" },
+    text:"Nvidia has discussed investing roughly $1 billion more in humanoid-robot maker Figure AI, per a report citing a person familiar with the talks; nothing is confirmed and no deal terms have surfaced. Nvidia already joined Figure's $1B+ Series C in September 2025 at a $39 billion post-money valuation, and separately supplies the GPUs behind Figure's Helix models and its new Nscale compute deal.",
+    why:"A second Nvidia check into the same humanoid-robot company, on top of an existing chip-supply relationship, is the kind of compounding bet worth watching even unconfirmed -- it would deepen Nvidia's stake in whichever humanoid platform actually scales.",
+    heat:18, topics:["nvidia","figure ai","robotics","investment"],
+    url:"https://cryptobriefing.com/nvidia-discusses-1-billion-figure-ai-investment/" },
 { id:"bz-871", date:"2026-10-12",
     source:{ name:"TechNode", handle:"technode", platform:"web", kind:"news" },
     text:"Shanghai-based Infinigence AI closed a RMB 2.3 billion (about $344 million) Series C on Oct. 12, bringing cumulative funding to RMB 4.3 billion since the company's 2023 founding. The company builds software that lets AI models run across different chip types and connects 37,000 petaflops of computing capacity across 16 chip types. Investors include Tencent, Baidu, Lenovo, Sequoia China and Qiming Venture Partners; the company has also confidentially filed for an IPO on the Hong Kong Stock Exchange, with a possible debut as early as H1 2027.",

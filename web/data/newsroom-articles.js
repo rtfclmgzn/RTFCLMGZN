@@ -107906,4 +107906,505 @@ window.RTFC_NEWSROOM_ARTICLES = [
    "run": "autonomous Claude-runner cycle · 2026-10-14T01:13:01Z"
   }
  }
+,
+{
+ "slug": "asml-q3-2026-record-quarter-2027-2028-supply-shortfall",
+ "title": "ASML Posted a Record €11.7 Billion Quarter -- and Said It Still Can't Build Enough Chip Machines Through 2028",
+ "dek": "The sole maker of extreme-ultraviolet lithography machines reported record Q3 revenue and a raised full-year outlook Wednesday, then told investors its planned 2027 and 2028 output still won't meet customer demand -- some of it now reaching for 2029 and 2030 delivery slots. Three months after ASML pressed TSMC for higher prices because it was effectively sold out through 2027, the bottleneck has only tightened.",
+ "persona": "jin-park",
+ "section": "Compute",
+ "format": "synthesis",
+ "disclaimer": "not-financial-advice",
+ "applyType": "watch",
+ "apply": [
+  {
+   "label": "Whether the 2028 capacity increase actually lands",
+   "text": "Fouquet says ASML is \"investigating ways to increase capacity for 2028 beyond the 30% increase we previously communicated\" -- that's a study, not a commitment. The next earnings call (mid-January 2027) is where a firm number, or its absence, shows up."
+  },
+  {
+   "label": "Who gets squeezed if the shortfall holds",
+   "text": "TSMC, Samsung and Intel all depend on the same finite pool of EUV tools for their most advanced nodes. A buyer that can't get a 2028 slot either waits, pays up for an earlier one, or ships a less advanced chip than planned -- watch which foundries disclose delivery delays on their own earnings calls this winter."
+  },
+  {
+   "label": "The 2029-2030 order book as a sentiment gauge",
+   "text": "Customers placing orders four-plus years out is itself a data point about how long AI-chip demand is expected to stay elevated. If that order book softens in future quarters, it's an earlier tell than any single AI lab's own guidance."
+  }
+ ],
+ "sources": [
+  {
+   "label": "ASML Reports Third Quarter 2026 Results (Form 6-K)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm",
+   "outlet": "ASML / SEC EDGAR",
+   "kind": "primary"
+  },
+  {
+   "label": "ASML plans to build EUV machines 30% faster as AI demand outstrips its production capacity",
+   "url": "https://thenextweb.com/news/asml-euv-cycle-time-cut-capacity-ai-demand",
+   "outlet": "The Next Web",
+   "kind": "analysis"
+  },
+  {
+   "label": "ASML reportedly seeks higher tool prices as TSMC pushes back; mature DUV tools could see 10% hike",
+   "url": "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/",
+   "outlet": "TrendForce",
+   "kind": "reporting"
+  }
+ ],
+ "tldr": [
+  "ASML posted record Q3 2026 revenue of 11.66 billion euros, beating its own prior guidance range.",
+  "CEO Fouquet says planned 2027 and 2028 EUV supply still won't fully meet customer demand.",
+  "Some customers are now placing orders for 2029 and 2030 delivery, a rare multi-year lead time.",
+  "ASML is the sole maker of EUV machines; TSMC, Samsung and Intel all depend on its output.",
+  "Caveat: a further 2028 capacity increase is under study, not yet committed to or quantified."
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "[ASML](/company/asml) reported record third-quarter revenue of **11.66 billion euros** on Wednesday, beat its own prior guidance, and raised its full-year 2026 outlook to 44-45 billion euros -- and then told investors the good quarter doesn't change the underlying problem. Chief executive Christophe Fouquet said plainly in the earnings release: \"our supply as currently planned for both 2027 and 2028 will not fully meet the demand of our customers.\" Some customers, he added, are now placing orders for 2029 and even 2030 -- delivery windows that are normally years away from being discussed, let alone booked.",
+   "citation_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The numbers behind the record quarter are straightforward. Net income reached **4.96 billion euros** on a 57.5% gross margin, up from 54.0% on 9.33 billion euros of net sales the quarter before; ASML sold 113 new lithography systems and 8 used ones, closed the quarter with 12.74 billion euros in cash, and guided Q4 revenue to a range of 14.2 to 15.2 billion euros. It also repurchased 4.1 billion euros of its own shares in the quarter under its 2026-2028 buyback program and will pay an interim dividend of 1.88 euros per share on November 4. ++None of that is the actual news.++ A company beating guidance and raising its outlook is routine; a monopoly supplier telling its own customers it cannot build enough of its product for two years running is not.",
+   "citation_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  },
+  {
+   "type": "ledger",
+   "ledger": {
+    "title": "The quarter, scoped",
+    "items": [
+     {
+      "value": "€11.66B",
+      "unit": "Q3 2026 net sales",
+      "label": "A record quarter, per ASML's own release",
+      "includes": "All ASML systems sold and serviced in the quarter, new and used, across all customers",
+      "excludes": "Bookings/order intake for future quarters -- ASML did not disclose a specific Q3 bookings figure",
+      "note": "Up from €9.33B in Q2 2026."
+     },
+     {
+      "value": "€44-45B",
+      "unit": "Full-year 2026 guidance",
+      "label": "Raised from the prior range",
+      "includes": "ASML's own forward guidance, confirmed alongside Q3 results",
+      "excludes": "Any 2027 or 2028 revenue commitment -- those years are described only in capacity and demand terms, not sales guidance",
+      "note": "Gross margin guided around 56% for the year."
+     },
+     {
+      "value": "\"Will not fully meet\"",
+      "unit": "2027-2028 demand, per CEO Fouquet",
+      "label": "ASML's own characterization of its supply gap",
+      "includes": "Planned EUV output as currently committed for 2027 and 2028",
+      "excludes": "A quantified shortfall -- ASML did not state a specific unit gap between planned supply and demand",
+      "note": "Some customers are now ordering for 2029-2030 delivery."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "The quarter-on-quarter jump is the plainest evidence that demand hasn't eased.",
+   "citation_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": {
+    "kind": "bar",
+    "title": "Quarterly net sales, 2026",
+    "unit": "€B",
+    "source": "ASML Q2 and Q3 2026 earnings releases",
+    "data": [
+     {
+      "label": "Q2 2026",
+      "value": 9.33
+     },
+     {
+      "label": "Q3 2026",
+      "value": 11.66,
+      "hi": true,
+      "note": "Record quarter"
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "This is not a new complaint from ASML -- it is the same bottleneck getting visibly worse. In July, after its Q2 results, ASML raised its 2026 guidance for the first time to this 43-45 billion euro range and began pressing its largest customer, TSMC, for higher prices on both its most advanced EUV tools and its older DUV systems, on the logic that a sole supplier that is effectively sold out through 2027 has no reason to keep prices where they were. TSMC resisted the increase at the time; some Chinese customers agreed to pay it. Wednesday's results confirm that the \"sold out\" framing from July wasn't a negotiating position -- it was accurate, and ==it has since extended a full year further, into 2028==.",
+   "citation_urls": [
+    "https://www.trendforce.com/news/2026/07/16/news-asml-reportedly-seeks-higher-tool-prices-as-tsmc-pushes-back-mature-duv-tools-could-see-10-hike/",
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "ASML's own response has been to speed up, not just to expand. Chief financial officer Roger Dassen has described cutting the time from production start to shipping on its EUV machines from roughly 22 weeks a few quarters ago toward a **target of 15 to 16 weeks**, by trimming testing protocols while holding quality, shifting cleanroom space from research to production, and working with suppliers to clear component bottlenecks. ==That is a company trying to manufacture its way out of a shortage it cannot simply build new factories to fix in time== -- EUV machines are custom-engineered, multi-story installations years in the making, not a product line that scales by adding a shift. The company expects to produce roughly 65 of its low-NA EUV systems this year, and has already committed to a 30% capacity increase on top of that for 2027 -- which, by that arithmetic alone, is still, per Fouquet's own account, short of what customers want.",
+   "citation_urls": [
+    "https://thenextweb.com/news/asml-euv-cycle-time-cut-capacity-ai-demand"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "It is worth being explicit about why one Dutch company's production schedule is a story about artificial intelligence at all. Every frontier AI model, from the largest labs to the smaller challengers, ultimately runs on chips fabricated at a small number of leading-edge foundries -- and every one of those foundries' most advanced nodes depends on EUV tools that only ASML makes. A GPU shortage usually reads, in the press, as Nvidia's problem or a hyperscaler's procurement headache. This earnings call is the reminder that the actual physical constraint sits one layer further upstream, at a single company whose 2026 output, record quarter included, still isn't enough -- which means **the pace of the AI buildout through 2028 is, in a very literal sense, already decided by a production schedule ASML published this week**, not by how much capital any AI lab or cloud provider is willing to spend.",
+   "citation_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  },
+  {
+   "type": "stakes",
+   "stakes": {
+    "items": [
+     {
+      "who": "TSMC, Samsung and Intel",
+      "tone": "loses",
+      "what": "Every leading-edge chip any of the three ships depends on EUV tools only ASML makes; a 2027-2028 shortfall means some planned node transitions slip, regardless of how much capital any foundry is willing to spend."
+     },
+     {
+      "who": "ASML shareholders",
+      "tone": "gains",
+      "what": "A sole supplier facing demand it cannot fill is a company with pricing power it has already started to use, on top of a record quarter and an active buyback."
+     },
+     {
+      "who": "AI labs and hyperscalers further down the chain",
+      "tone": "exposed",
+      "what": "The pace of the entire AI buildout is gated by how fast the three foundries above can get leading-edge capacity -- which is in turn gated by ASML's tool deliveries, a dependency most AI capex announcements don't mention."
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "text": "“Our supply as currently planned for both 2027 and 2028 will not fully meet the demand of our customers.” — Christophe Fouquet, CEO of ASML, Q3 2026 earnings release",
+   "citation_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Fouquet's own hedge is worth reading precisely: ASML is \"investigating ways to increase capacity for 2028 beyond the 30% increase we previously communicated,\" not committing to one. That is a company studying a bigger expansion, not announcing it -- the distinction between the two is exactly where a reader should watch next. __Capacity expansion__ at this scale means new assembly lines for a machine with roughly 100,000 parts, built by a workforce ASML has to train as fast as it hires; it is not a decision that converts into shipped tools inside a single quarter, however strong this one was.",
+   "citation_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0000937966/000162828026065813/pressreleasefinancialresul.htm"
+   ]
+  }
+ ],
+ "id": "newsroom-asml-q3-2026-record-quarter-2027-2028-supply-shortfall",
+ "image": "assets/img/newsroom/asml-q3-2026-record-quarter-2027-2028-supply-shortfall.jpg",
+ "publishedAt": "2026-10-14T15:19:26Z",
+ "pipeline": {
+  "stages": [
+   {
+    "name": "Research",
+    "agent": "claude-runner",
+    "note": "3 sources across 3 independent evidence threads: (1) ASML's own Q3 2026 earnings release, filed as a Form 6-K with the SEC (primary, official), (2) The Next Web's analysis of ASML's cycle-time reduction strategy and the EUV monopoly dynamic (independent analysis), and (3) TrendForce's July 2026 reporting on ASML's pricing pressure against TSMC, used here as established prior context rather than re-reported as new. Declined to use several aggregator summaries of a September JPMorgan analyst note (110-EUV-tools-in-2028 figure) after being unable to independently verify them against a primary or clearly-attributable outlet."
+   },
+   {
+    "name": "Verification",
+    "agent": "claude-runner",
+    "note": "Fouquet's 'will not fully meet the demand' quote verified against ASML's own SEC filing text, not a paraphrase. All financial figures (revenue, margin, guidance, buyback, dividend) cross-checked against the same primary filing. No invented shortfall figure -- the piece states explicitly that ASML did not quantify the 2027-2028 supply/demand gap in units. Disclaimer attached per compliance-rulebook.md §2 given the earnings, guidance and buyback figures discussed; no specific trading recommendation made anywhere in the piece."
+   },
+   {
+    "name": "Loop 1 - critique and revise",
+    "agent": "claude-runner",
+    "note": "Self-referential-language check: clean. Critique found the first draft implied a specific 2028 capacity number was already committed; revised to state plainly that Fouquet's own wording ('investigating ways to increase') is a study, not a commitment, and added it as the apply block's first watch item. Critique also found the two-quarter bar chart needed an explicit note that ASML did not disclose a Q3 bookings figure, to avoid the ledger implying more precision than the filing supports; added to the ledger's 'excludes' field."
+   },
+   {
+    "name": "Loop 2 - component provenance check",
+    "agent": "claude-runner",
+    "note": "ledger's three items trace to the Q3 revenue, FY26 guidance, and Fouquet's quoted characterization, all in paragraphs 1-2. chart's two values (9.33, 11.66) trace to the Q2 comparison stated in paragraph 1 and the Q3 figure in paragraph 1; both sourced to ASML's own releases per the chart's source field. stakes' three items trace to the EUV-dependency, pricing-power and buildout-pacing facts in paragraphs 1, 4 and 6. No component carries a top-level text field. No two components sit back to back."
+   },
+   {
+    "name": "Gate",
+    "agent": "claude-runner",
+    "note": "Approved. 3 sources, 3 independent evidence threads, correctly routed as synthesis (~850 words). 3 components (ledger, chart, stakes) plus one pull quote, chart and ledger both satisfying the synthesis data-carrying-component requirement. Cross-links the newsroom's own July ASML/TSMC pricing story as prior context, phrased about the event rather than about this outlet's coverage of it."
+   }
+  ],
+  "gate": {
+   "decision": "Approved for publication",
+   "note": "States the genuinely new fact (2027-2028 supply still short, now with 2029-2030 orders) against its own prior reporting (July's sold-out-through-2027 framing) rather than re-reporting the record quarter alone, which a wire rewrite would have stopped at."
+  },
+  "run": "autonomous Claude-runner cycle · 2026-10-14T15:19:26Z"
+ }
+},
+{
+ "slug": "ukraine-drone-strikes-yandex-ai-supercomputers",
+ "title": "Ukraine's Drone Strikes Hit All Three Sites Housing Yandex's AI-Training Supercomputers in Four Days",
+ "dek": "Sasovo and Vladimir are fully shut down and Kaluga is degraded, Yandex confirms. Russian outlet T-Invariant reports -- not yet confirmed by Yandex -- that all three of the company's AI-training supercomputers may now be offline, and experts say rebuilding depends more on sanctioned chips than on repairing the buildings.",
+ "persona": "evelyn-zhao",
+ "section": "Policy",
+ "format": "synthesis",
+ "disclaimer": "none",
+ "applyType": "watch",
+ "apply": [
+  {
+   "label": "Whether Yandex confirms the supercomputers' own status",
+   "text": "Every public Yandex statement so far describes the buildings and power/cooling systems, not the AI-training hardware inside them. A technical status update naming Chervonenkis, Lyapunov, or Galushkin specifically -- rather than just the sites -- is the document that actually resolves T-Invariant's claim."
+  },
+  {
+   "label": "Russia's sanctioned chip-replacement options",
+   "text": "All three machines run on Nvidia A100 GPUs the US has restricted since 2022. Experts cited by T-Invariant say the gray-market import pipeline, not physical repair, is the real bottleneck to rebuilding -- watch for any confirmed delivery of replacement accelerators to either site."
+  },
+  {
+   "label": "Whether the strikes expand to Russia's remaining big systems",
+   "text": "Russia's next-largest machine-learning capacity -- Sberbank's Christofari Neo and MTS's GROM -- sits closer to Moscow, which is more heavily air-defended. Whether that holds is itself a signal of where this campaign goes next."
+  }
+ ],
+ "sources": [
+  {
+   "label": "Yandex Supercomputers: Top Entries from Russia and Eastern Europe Among World's Most Powerful Computing Systems",
+   "url": "https://yandex.com/blog/yacompany-com/yandex-supercomputers-top-entries-from-russia-and-eastern-europe-among-world-s-most-powerful-computing-systems",
+   "outlet": "Yandex",
+   "kind": "primary"
+  },
+  {
+   "label": "Ukraine strikes Yandex data center housing two of the company's supercomputers",
+   "url": "https://meduza.io/en/feature/2026/10/08/ukraine-strikes-yandex-data-center-housing-two-of-the-company-s-supercomputers",
+   "outlet": "Meduza",
+   "kind": "reporting"
+  },
+  {
+   "label": "Ukraine takes aim at Russia's AI data infrastructure",
+   "url": "https://www.aljazeera.com/news/2026/10/9/ukraine-takes-aim-at-russias-ai-data-infrastructure",
+   "outlet": "Al Jazeera",
+   "kind": "reporting"
+  },
+  {
+   "label": "Russia's Yandex says data centre in Vladimir shut down after drone attack",
+   "url": "https://www.aljazeera.com/news/2026/10/11/russias-yandex-says-data-centre-in-vladimir-shut-down-after-drone-attack",
+   "outlet": "Al Jazeera",
+   "kind": "reporting"
+  },
+  {
+   "label": "Drone attack shuts down Yandex data centre in Russia's Vladimir",
+   "url": "https://www.pravda.com.ua/eng/news/2026/10/11/8057416/",
+   "outlet": "Ukrainska Pravda",
+   "kind": "reporting"
+  },
+  {
+   "label": "Three Yandex Data Centers Hit in Four Days -- Now All of Its Supercomputers May Be Down",
+   "url": "https://united24media.com/defense-tech/three-yandex-data-centers-hit-in-four-days-now-all-of-its-supercomputers-may-be-down-23332",
+   "outlet": "United24 Media",
+   "kind": "analysis"
+  }
+ ],
+ "tldr": [
+  "Ukrainian drones hit three Yandex data centers in four days: Sasovo, Kaluga, then Vladimir.",
+  "Those three sites house all three supercomputers Yandex uses to train its AI models.",
+  "Russian outlet T-Invariant reports all three may now be down; Yandex hasn't confirmed that.",
+  "Yandex says services are gradually recovering; its own status page gives no fixed timeline.",
+  "Caveat: experts say sanctions-driven chip shortages, not physical repairs, may slow rebuilding most."
+ ],
+ "body": [
+  {
+   "type": "p",
+   "text": "Three Ukrainian drone strikes in four days have hit the only three sites where [Yandex](/company/yandex) houses the supercomputers it uses to train its AI models, the Russian search and cloud giant has confirmed. A strike on the company's Sasovo data center on October 8 was followed by one on its Kaluga facility the next day, then a third on its Vladimir site on October 11. Yandex says the Sasovo and Vladimir centers are **fully shut down**; Kaluga is running in a degraded state. Russian tech outlet T-Invariant reported October 11, citing unnamed experts, that ==all three of Yandex's AI-training supercomputers may now be offline== -- a claim Yandex has not confirmed or denied.",
+   "citation_urls": [
+    "https://meduza.io/en/feature/2026/10/08/ukraine-strikes-yandex-data-center-housing-two-of-the-company-s-supercomputers",
+    "https://united24media.com/defense-tech/three-yandex-data-centers-hit-in-four-days-now-all-of-its-supercomputers-may-be-down-23332"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Yandex's own account of each strike is specific enough to be checked. At Sasovo -- operating since 2014 -- the company said \"some of its services may be unavailable\" as a fire took the site fully offline; Yandex shares **fell more than 3%** on the Moscow Exchange within the hour, and outages reached Yandex Cloud, Yandex Disk and Yandex Documents, plus third-party users including the property site Cian and Russian Railways. Ukrainian president Volodymyr Zelensky, asked about the strike, said only, ++\"We always respond in mirror-like fashion\"++ -- not a claim of responsibility, and Ukraine has not officially claimed credit for any of the three strikes individually.",
+   "citation_urls": [
+    "https://meduza.io/en/feature/2026/10/08/ukraine-strikes-yandex-data-center-housing-two-of-the-company-s-supercomputers"
+   ]
+  },
+  {
+   "type": "timeline",
+   "timeline": {
+    "title": "Three strikes, four days",
+    "items": [
+     {
+      "when": "Oct 8, 2026",
+      "what": "Drone strike starts a fire at Yandex's Sasovo data center (Ryazan region); site fully shut down.",
+      "hi": true
+     },
+     {
+      "when": "Oct 9, 2026",
+      "what": "Drone strike partially disables Yandex's Kaluga data center, the company's largest."
+     },
+     {
+      "when": "Oct 11, 2026",
+      "what": "Drone strike fully shuts down Yandex's Vladimir data center; residents nearby evacuated.",
+      "hi": true
+     },
+     {
+      "when": "Oct 11, 2026",
+      "what": "Russian outlet T-Invariant reports all three of Yandex's AI-training supercomputers may now be down -- unconfirmed by Yandex."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "The Kaluga site, in the Grabtsevo industrial park, is what Yandex itself describes as its largest data center and one of the biggest in Russia; the company said only that \"several modules\" were disabled, with no count given. Two days later, a drone hit Yandex's newer Vladimir facility -- a 40-megawatt, 2,800-server-rack site that opened in March 2026 alongside the company's original 2017 building there. The regional governor confirmed the strike and a resulting fire, and nearby residents were evacuated; no injuries were reported at any of the three sites. Yandex's own status updates described the site as running in **emergency mode** and told customers to activate their own disaster-recovery plans -- advice that implies no restoration date, not just that one hadn't been announced yet.",
+   "citation_urls": [
+    "https://www.pravda.com.ua/eng/news/2026/10/11/8057416/",
+    "https://www.aljazeera.com/news/2026/10/11/russias-yandex-says-data-centre-in-vladimir-shut-down-after-drone-attack"
+   ]
+  },
+  {
+   "type": "ledger",
+   "ledger": {
+    "title": "What's actually known, site by site",
+    "items": [
+     {
+      "value": "Fully shut down",
+      "unit": "Sasovo, Ryazan region",
+      "label": "Houses 2 of Yandex's 3 AI-training supercomputers",
+      "includes": "Chervonenkis and Lyapunov, per Yandex's own 2021 announcement naming both systems' location",
+      "excludes": "Confirmation of whether the supercomputers themselves were damaged, versus just power or building systems",
+      "note": "Operating since 2014; struck overnight Oct. 8."
+     },
+     {
+      "value": "Partially disabled",
+      "unit": "Kaluga region",
+      "label": "Yandex's largest data center",
+      "includes": "\"Several modules,\" per Yandex's own statement",
+      "excludes": "A specific count of servers or modules affected",
+      "note": "Struck Oct. 9, one day after Sasovo."
+     },
+     {
+      "value": "Fully shut down",
+      "unit": "Vladimir",
+      "label": "Houses Yandex's 3rd AI-training supercomputer, Galushkin",
+      "includes": "A 40MW, 2,800-rack facility opened March 2026, alongside the original 2017 site",
+      "excludes": "Confirmation of damage to the newer versus older building specifically",
+      "note": "Struck Oct. 11 -- the third strike in four days."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "The reason three outage reports add up to one story is a detail Yandex itself published in 2021: Sasovo is where it placed ++Chervonenkis++, its most powerful machine and then the __19th-ranked system__ on the global TOP500 list, alongside a second system, Lyapunov; Vladimir is where it placed the third, Galushkin. All three exist to **train the neural networks** behind Yandex's AI products, not to run its ordinary cloud business. That is the specific claim T-Invariant's October 11 report makes -- that ==the Ukrainian strikes have now reached every site hosting one of those three systems== -- and it is also the specific claim that remains unconfirmed by the one party that would actually know.",
+   "citation_urls": [
+    "https://yandex.com/blog/yacompany-com/yandex-supercomputers-top-entries-from-russia-and-eastern-europe-among-world-s-most-powerful-computing-systems",
+    "https://united24media.com/defense-tech/three-yandex-data-centers-hit-in-four-days-now-all-of-its-supercomputers-may-be-down-23332"
+   ]
+  },
+  {
+   "type": "scorecard",
+   "scorecard": {
+    "title": "What's established, what's still a claim",
+    "items": [
+     {
+      "claim": "Drone strikes hit Yandex's Sasovo, Kaluga and Vladimir data centers on Oct. 8, 9 and 11.",
+      "level": "confirmed",
+      "basis": "Yandex's own statements and regional officials (including the Vladimir Oblast governor) confirmed each strike separately.",
+      "resolver": "Already resolved -- this is the one fact in this story no party disputes."
+     },
+     {
+      "claim": "All three of Yandex's AI-training supercomputers (Chervonenkis, Lyapunov, Galushkin) are now offline.",
+      "level": "contested",
+      "basis": "Reported by Russian outlet T-Invariant on Oct. 11, citing unnamed technical experts. Yandex has confirmed the sites are down but has not addressed the supercomputers by name.",
+      "resolver": "A Yandex technical statement naming the three systems' status, or an independent technical assessment of the sites."
+     },
+     {
+      "claim": "Yandex has no fixed timeline for full restoration.",
+      "level": "confirmed",
+      "basis": "Yandex's own status updates described the Vladimir site as operating in emergency mode and advised customers to activate their own disaster-recovery plans -- language that states uncertainty rather than a date.",
+      "resolver": "A dated, complete status-page update from Yandex naming a restoration date, or independent outage-monitoring data showing full recovery."
+     }
+    ]
+   }
+  },
+  {
+   "type": "p",
+   "text": "Rebuilding, if the supercomputers really are down, is not mainly a construction problem. All three systems run on **Nvidia A100 GPUs** -- hardware the United States restricted from export to Russia in 2022, well before the newer H100 ban that followed. Experts T-Invariant consulted said the sites were built for peacetime, in regions with no history of drone threat, so physical hardening was never a priority; the harder constraint on any rebuild is ==the same gray-market import pipeline Russian firms have relied on since 2022 to bring in sanctioned chips at all==, which neither moves fast nor moves at the volumes a supercomputer rebuild would need. {{note: Russia's remaining heavy machine-learning capacity -- Sberbank's Christofari Neo and the telecom operator MTS's GROM system -- sits closer to Moscow, which has denser air defenses than Ryazan, Kaluga or Vladimir.}}",
+   "citation_urls": [
+    "https://united24media.com/defense-tech/three-yandex-data-centers-hit-in-four-days-now-all-of-its-supercomputers-may-be-down-23332"
+   ]
+  },
+  {
+   "type": "stakes",
+   "stakes": {
+    "items": [
+     {
+      "who": "Yandex's AI research and product timeline",
+      "tone": "loses",
+      "what": "If the supercomputer damage is real, the training runs that depended on them are delayed for as long as sanctioned-chip replacement takes -- which experts say is the harder constraint, not the physical rebuild."
+     },
+     {
+      "who": "Russian civilian and corporate cloud users",
+      "tone": "loses",
+      "what": "Services from Cian to Russian Railways to regional government sites have already gone down as collateral effects of strikes aimed at the AI infrastructure specifically."
+     },
+     {
+      "who": "Ukraine's campaign against Russian digital infrastructure",
+      "tone": "gains",
+      "what": "Three strikes in four days reaching every site tied to Yandex's AI training, whoever conducted them, is a materially different result than three strikes on arbitrary data centers."
+     },
+     {
+      "who": "Russia's remaining Moscow-area compute (Sberbank, MTS)",
+      "tone": "unclear",
+      "what": "Better air defenses around the capital may or may not hold if the campaign continues -- there is no public evidence yet either way."
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "text": "“We always respond in mirror-like fashion.” — Volodymyr Zelensky, President of Ukraine, asked about the Oct. 8 strike on Yandex's Sasovo site",
+   "citation_urls": [
+    "https://meduza.io/en/feature/2026/10/08/ukraine-strikes-yandex-data-center-housing-two-of-the-company-s-supercomputers"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The pattern these strikes fit is a reciprocal one: Russia has struck Ukrainian data centers and telecom facilities repeatedly over the past month, including targets in central Kyiv, and Zelensky's framing -- responding \"in mirror-like fashion\" -- describes a tit-for-tat campaign against digital infrastructure on both sides rather than a one-off operation. What makes the Yandex strikes specifically notable is precision, not scale: of everywhere in Russia these drones could have reached, all three hit sites that, per Yandex's own public record, exist to train its AI models. Whether that is coincidence, degraded aim, or the actual target list is not something either government has stated on the record.",
+   "citation_urls": [
+    "https://www.aljazeera.com/news/2026/10/9/ukraine-takes-aim-at-russias-ai-data-infrastructure"
+   ]
+  },
+  {
+   "type": "p",
+   "text": "It is worth being precise about which Yandex this is. The company spun off its international business -- including the cloud unit that now trades independently as Nebius on Nasdaq -- in 2024, severing it from the Russia-based parent. {{note: Nebius operates independently today and has no ownership link to the struck sites; this newsroom has covered its own, separate compute deals, including a 2026 sale of more than $1 billion in capacity to Reflection AI.}} The company hit this week is the domestic remainder: Russia's largest search engine and cloud provider, and -- per its own 2021 announcement -- the home of the country's most powerful AI-training hardware. That distinction matters because it is domestic Yandex, not Nebius, whose infrastructure decisions sit closest to the Russian government and whose recovery options are most directly shaped by US and EU export sanctions.",
+   "citation_urls": [
+    "https://yandex.com/blog/yacompany-com/yandex-supercomputers-top-entries-from-russia-and-eastern-europe-among-world-s-most-powerful-computing-systems"
+   ]
+  }
+ ],
+ "id": "newsroom-ukraine-drone-strikes-yandex-ai-supercomputers",
+ "image": "assets/img/newsroom/ukraine-drone-strikes-yandex-ai-supercomputers.jpg",
+ "publishedAt": "2026-10-14T15:19:32Z",
+ "pipeline": {
+  "stages": [
+   {
+    "name": "Research",
+    "agent": "claude-runner",
+    "note": "6 sources across 5 independent evidence threads: (1) Yandex's own 2021 blog post naming and locating its three supercomputers (primary), (2) Meduza's Oct. 8 reporting on the Sasovo strike, Yandex's statement, and the stock move, (3) Al Jazeera's Oct. 9 and (4) Oct. 11 reporting on the Kaluga and Vladimir strikes and Zelensky's quote, (5) Ukrainska Pravda's Oct. 11 reporting with the Vladimir facility's specs and the governor's confirmation, and (6) United24 Media's Oct. 12 analysis of T-Invariant's claim that all three supercomputers may be down, including expert commentary on sanctioned-chip rebuild constraints. Declined to use an unverified third-party blog claim of a specific GPU count destroyed at Sasovo -- the claim's own source flagged it as unconfirmed and no outlet corroborated it."
+   },
+   {
+    "name": "Verification",
+    "agent": "claude-runner",
+    "note": "The central claim -- all three supercomputers offline -- traces to one outlet (T-Invariant, via United24's reporting of it) and is explicitly hedged there; marked 'contested' in the scorecard rather than stated as fact, satisfying mandatory-scrutiny trigger 6 (unverifiable central claim). No claim of Ukrainian government responsibility is asserted -- Zelensky's quote is reproduced verbatim and flagged as not a claim of credit, since Ukraine has not officially claimed any of the three strikes. No health or financial disclaimer trigger applies."
+   },
+   {
+    "name": "Loop 1 - critique and revise",
+    "agent": "claude-runner",
+    "note": "Self-referential-language check: clean. Critique found the first draft used conflicting petaflops figures for the three supercomputers across two sources (Yandex's 2021 post and United24's Oct. 12 figures disagreed on which number belonged to which machine) -- dropped the petaflops chart entirely rather than risk publishing a reconciled-looking number that wasn't actually reconciled; used a ledger and timeline instead, both built only from facts that didn't conflict across sources. Critique also found the Zelensky quote needed the explicit 'not a claim of responsibility' caveat attached in the same sentence, not two paragraphs later; fixed."
+   },
+   {
+    "name": "Loop 2 - component provenance check",
+    "agent": "claude-runner",
+    "note": "timeline's four items trace to the dated strikes and the T-Invariant report in paragraphs 1-4. ledger's three items trace to Yandex's own per-site statements and the Pravda-sourced Vladimir facility specs. scorecard's three items each trace to an attributed claim in body prose, each with a resolver naming a concrete document. stakes' four items trace to the AI-delay, collateral-outage, strike-pattern and Moscow-defense facts in paragraphs 5, 7 and 9. No component carries a top-level text field. No two components sit back to back -- prose separates each."
+   },
+   {
+    "name": "Gate",
+    "agent": "claude-runner",
+    "note": "Approved. 6 sources, 5 independent evidence threads, correctly routed as synthesis (~1,150 words). 3 components (timeline, ledger, scorecard) plus stakes and a pull quote -- ledger and timeline both satisfy the synthesis data-carrying-component requirement. Central contested claim clearly marked as such rather than adopted; Yandex added to companies.js given this is the newsroom's first dedicated story on the company."
+   }
+  ],
+  "gate": {
+   "decision": "Approved for publication",
+   "note": "Treats a single-outlet, hedged claim (all three supercomputers down) as exactly that -- contested, not established -- while still reporting the specific, checkable fact underneath it: every site Yandex itself has named as AI-training infrastructure has now been struck."
+  },
+  "run": "autonomous Claude-runner cycle · 2026-10-14T15:19:32Z"
+ }
+}
 ];
