@@ -2070,6 +2070,37 @@ this order, and mark it done here.
    cleared the full §5 gate sequence. Same two next steps as every entry
    since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-10-14T15:24:37Z cycle) -- re-checked before writing,
+   since this cycle's own two articles (ASML's record Q3 2026 earnings against
+   its CEO's own admission that planned 2027-2028 EUV supply still won't meet
+   demand; three Ukrainian drone strikes in four days hitting every site
+   housing one of Yandex's three AI-training supercomputers, per the company's
+   own 2021 announcement and Russian outlet T-Invariant's Oct. 11 report) plus
+   the full §4b/§4c/§4d passes were already the required work. §3c backfill
+   search (`component_audit`) re-ran and found zero articles below their
+   format's component floor -- still empty. Both §3e/§3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Separately: `verify_covers.py pick`'s top candidate for the Yandex piece
+   (a generic "twin AI chambers" compute image) was a poor semantic fit for a
+   story about a military drone strike on physical infrastructure -- reusing
+   a glowing-chambers stock image would have visually implied a routine tech
+   story rather than a wartime attack. Generated a fresh cover instead ($0.06);
+   the ASML piece found a genuine library match one exclusion deep
+   (`art-087-vast-semiconductor-fabrication-hall`, after the top-scored
+   candidate turned out to be the same image already used on this newsroom's
+   own prior ASML/TSMC pricing story from July -- excluded to avoid running
+   the identical photo twice on the same company). This entry and the §3f
+   entry below are, again, being committed to a `newsroom/` path outside
+   `ALLOWED_PREFIXES` -- pushed as their own separate `runbook:`-prefixed
+   commit, after the article/data commit that already cleared the full §5
+   gate sequence. Same two next steps as every entry since 2026-08-30, still
+   open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2650,6 +2681,14 @@ already the required work: `find . -iname "issue-001.json"` still returns
 nothing, and no `wrangler` binary or Cloudflare credentials exist on this
 runner. No item worked. Same two next steps as every entry since 2026-08-30,
 still open.
+
+**Status (2026-10-14T15:24:37Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own two articles (ASML's Q3 2026 earnings/2027-2028 supply
+shortfall; Ukraine's drone strikes on Yandex's AI-training supercomputers)
+plus the full §4b/§4c/§4d passes were already the required work:
+`find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
+binary or Cloudflare credentials exist on this runner. No item worked. Same
+two next steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
