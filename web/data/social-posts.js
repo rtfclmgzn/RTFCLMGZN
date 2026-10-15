@@ -36804,8 +36804,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Markets",
           "#VC"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxwkstszoc2y",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxwkstszoc2y",
+        "posted_at": "2026-10-15T17:15:27Z"
       }
     ]
   },
@@ -37384,10 +37386,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Character.AI filed Chapter 11. Disney's $20M bid buys a license to some IP, not the company -- the same shape as the $2.7B Google deal in 2024. Twice now, big money changed hands without anyone actually buying Character.AI.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 22:16:15 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AJtqHxFbAJtRLGECYtrOEl5\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Thursday, 15-Oct-26 10:15:24 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AHcxOANajHRrk7of66aJz01\"}}"
       },
       {
         "platform": "bluesky",
@@ -37481,10 +37483,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Gemini 4 Argon is generally available now. #1 on the independent Vals Index, tied for 2nd on the broader Artificial Analysis Index -- both real, both measuring different things. Google's own employees reportedly say real coding lags the scores either way.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 22:16:16 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A-vpWNLDcFxRKoVmu6N_wZd\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Thursday, 15-Oct-26 10:15:24 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"APHriIshJMPXCqgYDBW_nN-\"}}"
       },
       {
         "platform": "bluesky",
@@ -37624,7 +37626,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -37735,9 +37737,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Yandex",
           "#Sanctions"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
