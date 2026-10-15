@@ -37658,16 +37658,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#ASML",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127827091396947",
+        "remote_id": "1238977099292018_122127827091396947",
+        "posted_at": "2026-10-15T05:03:46Z"
       },
       {
         "platform": "threads",
         "copy": "ASML posted a record €11.7B quarter and still told customers its planned 2027-2028 EUV output won't meet demand -- some are ordering for 2029-2030. It's the only maker of these machines; TSMC, Samsung and Intel all depend on it.",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Wednesday, 14-Oct-26 08:29:02 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AotAdwF-zkoP0uREr6pMa9h\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Wednesday, 14-Oct-26 22:03:51 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A21HmiLRXxiatnpdeJgWvx1\"}}"
       },
       {
         "platform": "bluesky",
@@ -37676,8 +37678,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#ASML",
           "#Semiconductors"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxvbwpymbk2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxvbwpymbk2p",
+        "posted_at": "2026-10-15T05:03:53Z"
       }
     ]
   },
@@ -37713,7 +37717,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -37728,7 +37732,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#Sanctions"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -37741,8 +37747,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#Geopolitics"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DegJ-LpD7s3/",
+        "remote_id": "17931215247162755",
+        "posted_at": "2026-10-15T04:59:32Z"
       },
       {
         "platform": "facebook",
@@ -37751,16 +37759,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Yandex",
           "#Ukraine"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122127826497396947",
+        "remote_id": "1238977099292018_122127826497396947",
+        "posted_at": "2026-10-15T04:59:41Z"
       },
       {
         "platform": "threads",
         "copy": "Three Ukrainian drone strikes in four days hit every site housing one of Yandex's three AI-training supercomputers. Russian outlet T-Invariant says all three may now be down; Yandex hasn't confirmed it. Rebuilding is gated by sanctioned chips, not construction.",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Wednesday, 14-Oct-26 08:29:02 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A_v3STgpynG2z46PPoDySPN\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Wednesday, 14-Oct-26 21:59:46 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"ANUg1e1ukkD6ubJuFcm0Ewz\"}}"
       },
       {
         "platform": "bluesky",
@@ -37769,8 +37779,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Yandex",
           "#Ukraine"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3mxvbphlgzc2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3mxvbphlgzc2p",
+        "posted_at": "2026-10-15T04:59:50Z"
       }
     ]
   }
