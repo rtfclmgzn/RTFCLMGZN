@@ -37290,10 +37290,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "NTT Data reportedly close to building Anthropic's first Japan data center: ~$6.3B, 500MW in Osaka. That power number alone would top NTT Group's entire current IT capacity. Unconfirmed by either side.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Tuesday, 13-Oct-26 17:29:00 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A7UwxXqBLrUFuurDkcSocUV\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Thursday, 15-Oct-26 21:53:35 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AkIZFafjhPcg0PYmSCtTnWo\"}}"
       },
       {
         "platform": "bluesky",
@@ -37380,8 +37380,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#CharacterAI",
           "#Disney"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122128016169396947",
+        "remote_id": "1238977099292018_122128016169396947",
+        "posted_at": "2026-10-16T04:49:25Z"
       },
       {
         "platform": "threads",
@@ -37477,8 +37479,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Gemini",
           "#Google"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122128016493396947",
+        "remote_id": "1238977099292018_122128016493396947",
+        "posted_at": "2026-10-16T04:53:29Z"
       },
       {
         "platform": "threads",
@@ -37578,7 +37582,9 @@ window.RTFC_SOCIAL_POSTS = [
         "platform": "threads",
         "copy": "Reuters: Anthropic and OpenAI sought control over what embedded AI safety evaluators can publish -- weeks after both pledged 'editorial independence.' Both dispute it. A real precedent already exists: OpenAI redacted a METR/Redwood report on its own models' Hugging Face hack.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Thursday, 15-Oct-26 21:53:35 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"ACv00NskN8YF-c8A-a4Ypa0\"}}"
       },
       {
         "platform": "bluesky",
@@ -37624,9 +37630,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#ASML",
           "#Semiconductors"
         ],
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
+        "attempts": 3,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -37641,7 +37647,9 @@ window.RTFC_SOCIAL_POSTS = [
           "#AIInfrastructure"
         ],
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
         "platform": "instagram",
@@ -37654,8 +37662,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#TechNews",
           "#ArtificialIntelligence"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DeitlFEjISx/",
+        "remote_id": "17905204881356491",
+        "posted_at": "2026-10-16T04:49:09Z"
       },
       {
         "platform": "facebook",
