@@ -2925,8 +2925,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Startups",
           "#AIFunding"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.instagram.com/p/DelSX0NEcqk/",
+        "remote_id": "18108420020351260",
+        "posted_at": "2026-10-17T04:49:10Z"
       },
       {
         "platform": "facebook",
@@ -2935,14 +2937,18 @@ window.RTFC_SOCIAL_POSTS = [
           "#Anthropic",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122128202517396947",
+        "remote_id": "1238977099292018_122128202517396947",
+        "posted_at": "2026-10-17T04:49:21Z"
       },
       {
         "platform": "threads",
         "copy": "Anthropic's preliminary Q2 revenue reportedly beat its own $10.9B forecast, landing above $11.5B with a first-ever profit. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount during those same two months. Doesn't make it fake -- but it's a coincidence worth knowing about.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Friday, 16-Oct-26 21:49:26 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"ARgWhh5QXUfGYxwXqZxM530\"}}"
       },
       {
         "platform": "threads",
@@ -2950,7 +2956,9 @@ window.RTFC_SOCIAL_POSTS = [
         "not_before": "2026-08-16T03:37:39Z",
         "copy": "The part of this story that's hardest to resolve: Anthropic's CFO told a federal court revenue was \"exceeding $5 billion to date\" in March. Separately, the company has cited a $19B run-rate around the same time. Neither is defined precisely enough to say if they actually agree.",
         "status": "ready",
-        "post_url": null
+        "post_url": null,
+        "attempts": 1,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Friday, 16-Oct-26 21:49:26 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A-UOTcOOLw5c1f7cVfKWk9R\"}}"
       },
       {
         "platform": "bluesky",
@@ -3038,8 +3046,10 @@ window.RTFC_SOCIAL_POSTS = [
           "#Meta",
           "#AI"
         ],
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://www.facebook.com/1238977099292018_122128203321396947",
+        "remote_id": "1238977099292018_122128203321396947",
+        "posted_at": "2026-10-17T04:53:26Z"
       },
       {
         "platform": "threads",
@@ -37648,7 +37658,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
