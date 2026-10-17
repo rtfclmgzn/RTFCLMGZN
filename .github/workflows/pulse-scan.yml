@@ -40,7 +40,8 @@ jobs:
       - uses: actions/checkout@v6
         with: { fetch-depth: 0 }
       - uses: astral-sh/setup-uv@v5
-      - uses: anthropics/claude-code-action@v1
+      - id: agent
+        uses: anthropics/claude-code-action@v1
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         with:
@@ -66,8 +67,14 @@ jobs:
       # displays those separately. Never delete this step; if it starts writing
       # unmetered rows, the transcript path changed and log_usage.py needs a new
       # candidate, which its own output will tell you.
+      - name: Show the agent's real error
+        if: failure() && steps.agent.outcome == 'failure'
+        run: python3 newsroom/runner/report_agent_error.py "${{ steps.agent.outputs.execution_file }}"
+
       - name: Log measured usage to the public ledger
         if: always()
+        env:
+          RTFC_AGENT_OUTCOME: ${{ steps.agent.outcome }}
         run: |
           python3 newsroom/runner/log_usage.py \
             --agent pulse-scan --task-type maintenance --model claude-haiku-4-5 \

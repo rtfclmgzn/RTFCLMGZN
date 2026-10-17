@@ -636,6 +636,12 @@ def repair_future_timestamps(fix: bool) -> None:
         io.open(p, "w", encoding="utf-8", newline="").write("".join(out))
 
 
+# 2026-10-17: 3 hand-written magazine rows (Aug/Sep) and 42 zero-token rows
+# (mostly the Oct 14-17 auth outage, before runs were tagged with an outcome)
+# were reviewed and acknowledged. Everything after this instant is checked.
+LEDGER_ACK_BEFORE = datetime(2026, 10, 17, 4, 0, tzinfo=timezone.utc)
+
+
 def ledger_cutover():
     """When the harness became the ledger's only writer, from engine.config.json."""
     import json
@@ -840,6 +846,11 @@ def check_ledger():
             ts = parse_ts(r.get("ts"))
             if ts is None or ts < cut:
                 continue
+            # Rows from before LEDGER_ACK_BEFORE were reviewed by hand on that
+            # date and cannot be repaired after the fact (no transcript exists
+            # any more). Only NEW untagged/unmeasured rows are alarms.
+            if ts < LEDGER_ACK_BEFORE:
+                continue
             tag = r.get("run")
             if not tag:
                 untagged += 1
@@ -847,6 +858,8 @@ def check_ledger():
                 if tag in seen_runs:
                     err("ledger", "run %s is logged twice (%s and %s)" % (tag, seen_runs[tag], r.get("id")))
                 seen_runs[tag] = r.get("id")
+                if r.get("outcome") == "failed":
+                    continue  # agent never ran; see log_usage.py RTFC_AGENT_OUTCOME
                 if not ((r.get("input_tokens") or 0) or (r.get("output_tokens") or 0) or r.get("images")):
                     unmeasured += 1
         if untagged:

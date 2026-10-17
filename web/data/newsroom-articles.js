@@ -194,7 +194,7 @@ window.RTFC_NEWSROOM_ARTICLES = [
    }
   ],
   "id": "a-2026-10-14-gemini-4-argon",
-  "image": "assets/img/newsroom/gemini-4-argon.jpg",
+  "image": "assets/img/newsroom/gemini-4-argon-v2.jpg",
   "pipeline": {
    "run": "breaking-scan-2026-10-14",
    "stages": [

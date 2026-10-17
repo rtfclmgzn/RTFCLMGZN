@@ -42,7 +42,8 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
 
-      - uses: anthropics/claude-code-action@v1
+      - id: agent
+        uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # If the Claude GitHub App is not installed on this repo, uncomment the next
@@ -85,8 +86,14 @@ jobs:
       # MEASURED USAGE. The agent cannot see its own token accounting, so this
       # step reads the finished transcript and writes the ONE ledger row for the
       # run, using the sentence the agent left in $RTFC_RUN_SUMMARY.
+      - name: Show the agent's real error
+        if: failure() && steps.agent.outcome == 'failure'
+        run: python3 newsroom/runner/report_agent_error.py "${{ steps.agent.outputs.execution_file }}"
+
       - name: Log measured usage to the public ledger
         if: always()
+        env:
+          RTFC_AGENT_OUTCOME: ${{ steps.agent.outcome }}
         run: |
           python3 newsroom/runner/log_usage.py \
             --agent resources-desk --task-type site --model claude-sonnet-5 \

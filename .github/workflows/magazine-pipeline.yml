@@ -88,7 +88,8 @@ jobs:
         if: steps.p.outputs.phase == 'none'
         run: echo "No phase maps to this day. Exiting cleanly."
 
-      - uses: anthropics/claude-code-action@v1
+      - id: agent
+        uses: anthropics/claude-code-action@v1
         if: steps.p.outputs.phase != 'none'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

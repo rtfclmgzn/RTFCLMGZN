@@ -101,7 +101,8 @@ jobs:
           echo "runbook=$BOOK"  >> "$GITHUB_OUTPUT"
           echo "::notice::desk=$DESK (hour ${HOUR} UTC, reference hour ${REFERENCE_DESK_UTC_HOUR}) runbook=$BOOK"
 
-      - uses: anthropics/claude-code-action@v1
+      - id: agent
+        uses: anthropics/claude-code-action@v1
         env:
           # Without this, image generation is impossible on the runner and every
           # article draws from the finite library — which is how the 2026-08-10
@@ -166,8 +167,14 @@ jobs:
       # displays those separately. Never delete this step; if it starts writing
       # unmetered rows, the transcript path changed and log_usage.py needs a new
       # candidate, which its own output will tell you.
+      - name: Show the agent's real error
+        if: failure() && steps.agent.outcome == 'failure'
+        run: python3 newsroom/runner/report_agent_error.py "${{ steps.agent.outputs.execution_file }}"
+
       - name: Log measured usage to the public ledger
         if: always()
+        env:
+          RTFC_AGENT_OUTCOME: ${{ steps.agent.outcome }}
         run: |
           python3 newsroom/runner/log_usage.py \
             --agent newsroom-cycle --task-type publish --model claude-sonnet-5 \

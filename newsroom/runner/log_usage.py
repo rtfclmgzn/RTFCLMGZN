@@ -254,7 +254,17 @@ def main() -> int:
               "explicitly UNMETERED row (the site shows these separately; "
               "it never counts them as $0 of real work)")
 
+    # A RUN WHERE THE AGENT NEVER STARTED IS NOT A MEASUREMENT BUG (2026-10-17).
+    # The workflow passes the agent step's outcome. When it failed (auth, quota,
+    # the API being down) there is no transcript to measure, and site_guard
+    # must not read that as "the harness lost the transcript" - that false
+    # alarm kept Site Guard red for days while the real failure sat elsewhere.
+    outcome = os.environ.get("RTFC_AGENT_OUTCOME", "").strip().lower()
+    agent_failed = outcome in ("failure", "cancelled")
+
     desc = a.description or ("%s run" % a.agent)
+    if agent_failed and not metered:
+        desc += " [agent step %s - no work was done this run]" % outcome
     if not metered:
         desc += (" [unmetered: this run's token accounting was not available "
                  "to the harness, so its cost is not included in the total]")
@@ -286,6 +296,8 @@ def main() -> int:
     fields.append('measured:"%s"' % ("metered" if metered else "unmetered"))
     if run_tag:
         fields.append('run:"%s"' % run_tag)
+    if agent_failed:
+        fields.append('outcome:"failed"')
 
     row = "    { " + ", ".join(fields) + " },\n"
 
