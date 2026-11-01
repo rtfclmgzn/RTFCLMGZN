@@ -2945,20 +2945,20 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Anthropic's preliminary Q2 revenue reportedly beat its own $10.9B forecast, landing above $11.5B with a first-ever profit. SpaceX's IPO filing shows the $45B compute deal behind it ramped in at a discount during those same two months. Doesn't make it fake -- but it's a coincidence worth knowing about.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Saturday, 17-Oct-26 21:55:11 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AVShDsK1C73jgMUP464tkyn\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Sunday, 01-Nov-26 15:12:59 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A2hvpiTvu524yVYgMJZvUan\"}}"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-08-16T03:37:39Z",
         "copy": "The part of this story that's hardest to resolve: Anthropic's CFO told a federal court revenue was \"exceeding $5 billion to date\" in March. Separately, the company has cited a $19B run-rate around the same time. Neither is defined precisely enough to say if they actually agree.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Saturday, 17-Oct-26 21:55:11 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A-y_jplaXG_J_rB7WIn7wei\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Sunday, 01-Nov-26 15:12:59 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AGiwL9cMSWOkGo2k187tkB0\"}}"
       },
       {
         "platform": "bluesky",
