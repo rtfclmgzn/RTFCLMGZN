@@ -18,6 +18,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write   # login_alert.py: one ACTION NEEDED issue per expired platform login
 
 jobs:
   dispatch:
@@ -37,7 +38,18 @@ jobs:
             echo "the ENTIRE contents of agents/social/.secrets.json"
             exit 0
           fi
-          python3 agents/social/post_social.py --live --verbose
+          # Tee the output so login_alert.py can spot an expired platform token.
+          # A dead login opens ONE issue with fix steps (and closes itself when
+          # the platform posts again) instead of a red run every 3 hours. The
+          # run only goes red for failures that are NOT an expired login.
+          set +e
+          python3 agents/social/post_social.py --live --verbose 2>&1 | tee dispatch.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          alert_rc=0
+          GH_TOKEN="${{ github.token }}" python3 newsroom/runner/login_alert.py social dispatch.log || alert_rc=$?
+          rm -f dispatch.log
+          if [ "$rc" -ne 0 ] && [ "$alert_rc" -ne 0 ]; then exit "$rc"; fi
 
       - name: Commit dispatch status updates
         run: |

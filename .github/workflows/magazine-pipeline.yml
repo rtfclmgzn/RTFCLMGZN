@@ -36,6 +36,7 @@ jobs:
     permissions:
       contents: write
       id-token: write
+      issues: write           # login_alert.py opens/closes the ACTION NEEDED issue
     steps:
       - uses: actions/checkout@v6
         with: { fetch-depth: 0 }
@@ -113,6 +114,12 @@ jobs:
           claude_args: |
             --model ${{ steps.m.outputs.model }}
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
+
+      - name: Login alert - one issue with fix steps instead of an email flood
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 newsroom/runner/login_alert.py claude "${{ steps.agent.outputs.execution_file }}" "${{ steps.agent.outcome }}"
 
       - name: Upload the draft for review
         if: steps.p.outputs.phase == 'verify' || steps.p.outputs.phase == 'build'

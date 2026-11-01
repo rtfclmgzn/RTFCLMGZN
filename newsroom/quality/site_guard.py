@@ -2045,6 +2045,42 @@ def check_workflow_contexts():
                                ", ".join(sorted(CONTEXT_SCOPE[scope]))))
 
 
+def check_login_alerts():
+    """Every workflow that runs the Claude agent must raise the login alert.
+
+    WHY (2026-11-01). The CI Claude login was revoked on 2026-10-14 and the
+    Threads token expired on 2026-10-12. Every scheduled run failed for 2.5
+    weeks and nothing published. The only signal was 100+ identical "Run
+    failed" emails that read like broken code, so the two-minute fix (renew
+    two tokens) never happened. report_agent_error.py (2026-10-17) had already
+    put the real reason on the run page; nobody opens the run page.
+
+    login_alert.py turns a dead login into ONE "ACTION NEEDED" GitHub issue
+    with click-by-click fix steps, and closes it on the next good run. This
+    check makes sure no agent workflow, current or future, ships without it.
+    """
+    wf = ROOT / ".github" / "workflows"
+    files = sorted(wf.glob("*.yml")) + sorted(wf.glob("*.yaml")) if wf.is_dir() else []
+    if not expect("check_login_alerts", len(files), 3, "workflow files"):
+        return
+    for f in files:
+        text = io.open(f, encoding="utf-8", errors="replace").read()
+        if "claude_code_oauth_token" in text and "id: agent" in text:
+            if "login_alert.py claude" not in text:
+                err("workflow", "%s runs the Claude agent but never calls "
+                    "`login_alert.py claude`. If the login dies, this workflow "
+                    "fails silently into the inbox instead of opening the "
+                    "ACTION NEEDED issue." % f.name)
+            elif not re.search(r"^\s*issues:\s*write", text, re.M):
+                err("workflow", "%s calls login_alert.py but lacks "
+                    "`issues: write` permission, so the alert cannot be opened."
+                    % f.name)
+        if "post_social.py" in text and "login_alert.py social" not in text:
+            err("workflow", "%s posts to social but never calls "
+                "`login_alert.py social`; an expired platform token would go "
+                "unnoticed." % f.name)
+
+
 # --------------------------------------------------------------------------
 def run(label, fn, *args, **kwargs):
     """Run one check. If it throws, that becomes a FINDING, not the end of the run.
@@ -2178,6 +2214,7 @@ def main() -> int:
     run("check_engine_config", check_engine_config)
     run("check_workflow_staging", check_workflow_staging)
     run("check_workflow_contexts", check_workflow_contexts)
+    run("check_login_alerts", check_login_alerts)
     run("check_live_check_parity", check_live_check_parity)
     run("check_ssr_shell_markers", check_ssr_shell_markers)
     run("check_desk_routing", check_desk_routing)
