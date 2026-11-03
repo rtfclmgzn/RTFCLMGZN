@@ -3056,20 +3056,20 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "threads",
         "copy": "Zuckerberg's new AI manifesto says personal AI will free up time for what you enjoy. Two days later, Meta's own CTO told staff he puts his AI-driven time savings into more work, not less. Same company, same week, two different answers about who benefits.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 02-Nov-26 11:40:42 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AfOQnElum-b06wrOhJW6M3p\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 02-Nov-26 18:59:51 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AinFWasDE5-0oy5iS7h9Sy6\"}}"
       },
       {
         "platform": "threads",
         "variant": "second-wave",
         "not_before": "2026-08-16T03:41:08Z",
         "copy": "A critic's read: Meta pushed the open ActivityPub standard behind Threads while it needed the credibility, then let it slide once Threads had scale. Same pattern now applies to the AI-openness argument in Zuckerberg's manifesto -- even critics say the argument itself is sound.",
-        "status": "ready",
+        "status": "failed",
         "post_url": null,
-        "attempts": 2,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 02-Nov-26 11:40:42 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A_TkGtZG6PWdLM3TrstaEj2\"}}"
+        "attempts": 3,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Monday, 02-Nov-26 18:59:51 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A0kHfSC6gK3uQdwfUYhBrVS\"}}"
       },
       {
         "platform": "bluesky",
