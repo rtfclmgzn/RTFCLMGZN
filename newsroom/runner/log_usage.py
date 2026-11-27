@@ -260,7 +260,7 @@ def main() -> int:
     # must not read that as "the harness lost the transcript" - that false
     # alarm kept Site Guard red for days while the real failure sat elsewhere.
     outcome = os.environ.get("RTFC_AGENT_OUTCOME", "").strip().lower()
-    agent_failed = outcome in ("failure", "cancelled")
+    agent_failed = outcome in ("failure", "cancelled", "skipped")
 
     desc = a.description or ("%s run" % a.agent)
     if agent_failed and not metered:
