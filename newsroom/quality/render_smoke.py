@@ -183,7 +183,7 @@ def main() -> int:
                 const app = document.getElementById('app') || {};
                 const h = document.querySelector('#app h1');
                 return {len: (app.innerHTML || '').length,
-                        crashed: !!h && h.textContent.indexOf('didn') >= 0,
+                        crashed: !!h && /^This page didn.t render/.test(h.textContent.trim()),  // exact crash heading; a headline saying "didn't" is not a crash (2026-11-27)
                         blockFail: document.querySelectorAll('.block-fail').length};
             }"""
 
