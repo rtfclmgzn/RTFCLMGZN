@@ -37899,8 +37899,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "Anthropic priced at $83, opened +34%, closed up more like 15-17%. $107.3B raised total. Revenue +1,200% YoY; the $104B loss is mostly derivative accounting, not cash burn.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3n3fb2vv6dv2p",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3n3fb2vv6dv2p",
+        "posted_at": "2026-11-28T17:46:31Z"
       }
     ]
   },
@@ -37984,8 +37986,10 @@ window.RTFC_SOCIAL_POSTS = [
       {
         "platform": "bluesky",
         "copy": "OpenAI countersued Apple with 11 claims Nov. 27 -- supplier pressure, a 'trap' for departing staff. Apple's July suit named two ex-Apple hires now at OpenAI. Neither side's claims are proven.",
-        "status": "ready",
-        "post_url": null
+        "status": "posted",
+        "post_url": "https://bsky.app/profile/rtfclmgzn.bsky.social/post/3n3fatoihm72s",
+        "remote_id": "at://did:plc:py2jwahd54gp6uipnutjefw5/app.bsky.feed.post/3n3fatoihm72s",
+        "posted_at": "2026-11-28T17:42:28Z"
       }
     ]
   },
@@ -38021,7 +38025,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -38070,8 +38074,8 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Bloomberg traced restricted Nvidia Blackwell chips to a Shanghai data center via Chinese loan-collateral filings, not a smuggling bust. The site is tied to Megaspeed, a firm 4 US agencies want blacklisted -- Commerce hasn't acted, though Nvidia itself cut the company off back in June 2025.",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Saturday, 28-Nov-26 00:20:08 PST.\",\"code\":190,\"type\":\"OAuthException\",\"error_subcode\":0,\"fbtrace_id\":\"A13Qg1uaIMSROiDMFXIKjra\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Saturday, 28-Nov-26 09:42:26 PST.\",\"code\":190,\"type\":\"OAuthException\",\"error_subcode\":0,\"fbtrace_id\":\"AUBWJ3_yKz-wmns858CKsLe\"}}"
       },
       {
         "platform": "bluesky",
@@ -38115,7 +38119,7 @@ window.RTFC_SOCIAL_POSTS = [
         ],
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
+        "attempts": 2,
         "last_error": "HTTP 403 https://api.x.com/2/tweets: {\"detail\":\"Your account is temporarily locked. Please log in to https://x.com to unlock your account.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"about:blank\"}"
       },
       {
@@ -38151,8 +38155,8 @@ window.RTFC_SOCIAL_POSTS = [
         "copy": "Quick test for a video call you're not sure about: ask them to turn sideways, wave a hand, or share their screen. Live deepfakes still struggle with all three. Add a pre-agreed codeword and you've closed most of the gap.",
         "status": "ready",
         "post_url": null,
-        "attempts": 1,
-        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Saturday, 28-Nov-26 00:16:05 PST.\",\"code\":190,\"type\":\"OAuthException\",\"error_subcode\":0,\"fbtrace_id\":\"ADHWC9scXHgdO6OQ60z340r\"}}"
+        "attempts": 2,
+        "last_error": "HTTP 400 https://graph.threads.net/v1.0/37645701721741382/threads: {\"error\":{\"message\":\"Error validating access token: Session has expired on Monday, 12-Oct-26 01:59:35 PDT. The current time is Saturday, 28-Nov-26 09:42:25 PST.\",\"code\":190,\"type\":\"OAuthException\",\"error_subcode\":0,\"fbtrace_id\":\"AB0fXDVsjLz6lOaUNQ6SPk-\"}}"
       },
       {
         "platform": "bluesky",
