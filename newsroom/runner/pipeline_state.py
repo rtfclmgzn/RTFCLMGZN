@@ -103,6 +103,10 @@ def resolve_cycle_month(now: _dt.datetime | None = None) -> str:
     belongs to the PREVIOUS month's cycle, not a brand new one; nothing else
     ever fires that early in a month.
     """
+    # Back issues (2026-11-27): the workflow names the month outright.
+    forced = os.environ.get("RTFC_CYCLE_MONTH", "").strip()
+    if forced and now is None:
+        return forced
     now = now or _dt.datetime.now()
     if now.day <= 4:
         first = now.replace(day=1)

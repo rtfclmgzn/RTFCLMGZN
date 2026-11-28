@@ -24,6 +24,16 @@ on:
         default: auto
         type: choice
         options: [auto, gather, curate, build, verify]
+      months:
+        description: "BACK ISSUES: comma list of YYYY-MM to build in order (e.g. 2026-09,2026-10,2026-11). Leave empty for the normal monthly run."
+        required: false
+        default: ""
+        type: string
+      first_issue:
+        description: "Issue number of the FIRST month in the list (e.g. 3). Each next month is +1."
+        required: false
+        default: ""
+        type: string
 
 concurrency:
   group: magazine-pipeline
@@ -35,6 +45,7 @@ jobs:
     timeout-minutes: 180        # build generates ~60 images; give it room
     permissions:
       contents: write
+      actions: write            # back-issue chain: download the last run's work, dispatch the next phase
       id-token: write
       issues: write           # login_alert.py opens/closes the ACTION NEEDED issue
     steps:
@@ -43,13 +54,72 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
 
+      # BACK ISSUES (2026-11-27). The newsroom was offline Oct 14 - Nov 27 and the
+      # Sep/Oct/Nov issues never got built. A back-issue run names its month instead
+      # of reading it off the calendar, and its work survives between runs as a
+      # private artifact (the paid payload must never be committed to this public
+      # repo, so the draft cannot ride on a pushed branch).
+      - name: Which month is this run building
+        id: mo
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          MONTHS="${{ github.event.inputs.months || '' }}"
+          MONTHS="$(echo "$MONTHS" | tr -d ' ')"
+          if [ -n "$MONTHS" ]; then
+            MONTH="${MONTHS%%,*}"
+            echo "RTFC_CYCLE_MONTH=$MONTH" >> "$GITHUB_ENV"
+          else
+            MONTH="$(python3 newsroom/runner/pipeline_state.py month)"
+          fi
+          echo "month=$MONTH" >> "$GITHUB_OUTPUT"
+          echo "months=$MONTHS" >> "$GITHUB_OUTPUT"
+          python3 newsroom/runner/magazine_work.py restore "$MONTH"
+
+      - name: Issue number for a back issue
+        id: num
+        run: |
+          set -euo pipefail
+          FIRST="${{ github.event.inputs.first_issue || '' }}"
+          if [ -n "$FIRST" ]; then
+            printf 'nnn=%03d\n' "$((10#$FIRST))" >> "$GITHUB_OUTPUT"
+          else
+            echo "nnn=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Back-issue instructions for the agent
+        id: note
+        run: |
+          set -euo pipefail
+          M="${{ steps.mo.outputs.month }}"; N="${{ steps.num.outputs.nnn }}"
+          {
+            echo "text<<RTFC_EOF"
+            if [ -n "${{ steps.mo.outputs.months }}" ]; then
+              echo "BACK ISSUE. This run builds the $M issue, missed while the newsroom was offline."
+              echo "Today is later than that month; that is expected. RTFC_CYCLE_MONTH=$M is set, so"
+              echo "pipeline_state.load() opens the right state file. Cover ONLY what happened in $M:"
+              echo "gather from web research on that month and from this site's own articles dated in"
+              echo "that month. Never present later events as news from $M. The issue number for $M is"
+              echo "$N (id issue-$N); its previous issue is the one before it in sequence even if that"
+              echo "one is not published yet. Do not refuse because of the calendar date. Your local"
+              echo "draft branch vanishes with this runner; that is fine, files are carried forward."
+            fi
+            echo "RTFC_EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Work out which phase this is
         id: p
         run: |
           set -euo pipefail
           CHOICE="${{ github.event.inputs.phase || 'auto' }}"
+          if [ -n "${{ steps.mo.outputs.months }}" ] && [ "$CHOICE" = "auto" ]; then
+            CHOICE="$(python3 newsroom/runner/magazine_work.py next-phase "${{ steps.mo.outputs.month }}")"
+          fi
           DAY=$(date -u +%-d)
-          if [ "$CHOICE" != "auto" ] && [ -n "$CHOICE" ]; then
+          if [ "$CHOICE" = "done" ] || [ "$CHOICE" = "stuck" ]; then
+            PHASE=none
+          elif [ "$CHOICE" != "auto" ] && [ -n "$CHOICE" ]; then
             PHASE="$CHOICE"
           else
             case "$DAY" in
@@ -111,6 +181,7 @@ jobs:
             you finish, or the next phase has no idea what you did.
 
             Never publish and never merge to main. The pipeline stops at a draft for review.
+            ${{ steps.note.outputs.text }}
           claude_args: |
             --model ${{ steps.m.outputs.model }}
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,WebSearch,WebFetch"
@@ -131,3 +202,41 @@ jobs:
             newsroom/runner/magazine-state/
           if-no-files-found: ignore
           retention-days: 30
+
+      - name: Carry this run's work forward (private artifact)
+        if: always() && steps.p.outputs.phase != 'none'
+        run: python3 newsroom/runner/magazine_work.py pack "${{ steps.mo.outputs.month }}"
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.p.outputs.phase != 'none'
+        with:
+          name: magazine-work-${{ steps.mo.outputs.month }}
+          path: magazine-work.tgz
+          if-no-files-found: ignore
+          retention-days: 60
+          overwrite: true
+
+      - name: Back issues - start the next phase or the next month
+        if: success() && steps.mo.outputs.months != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          MONTH="${{ steps.mo.outputs.month }}"
+          MONTHS="${{ steps.mo.outputs.months }}"
+          FIRST="${{ github.event.inputs.first_issue }}"
+          NEXT="$(python3 newsroom/runner/magazine_work.py next-phase "$MONTH")"
+          if [ "$NEXT" = "stuck" ]; then
+            echo "::error::$MONTH is stuck - chain stopped, needs a look"; exit 1
+          elif [ "$NEXT" != "done" ]; then
+            gh workflow run magazine-pipeline.yml --ref main -f phase=auto -f months="$MONTHS" -f first_issue="$FIRST"
+            echo "::notice::$MONTH -> next phase $NEXT dispatched"
+          else
+            REST="${MONTHS#*,}"
+            if [ "$REST" = "$MONTHS" ] || [ -z "$REST" ]; then
+              echo "::notice::all back issues drafted - ready for review"
+            else
+              gh workflow run magazine-pipeline.yml --ref main -f phase=auto -f months="$REST" -f first_issue="$(( 10#$FIRST + 1 ))"
+              echo "::notice::$MONTH drafted - starting ${REST%%,*}"
+            fi
+          fi
