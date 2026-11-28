@@ -166,6 +166,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Back-issue chain: each phase is dispatched by the previous run (github-actions bot).
+          allowed_bots: "github-actions"
           # If the Claude GitHub App is not installed on this repo, uncomment the next
           # line. The action defaults to authenticating as the app; GITHUB_TOKEN is the
           # documented alternative and GitHub provides it to every run automatically.
