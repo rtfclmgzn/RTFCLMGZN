@@ -1718,3 +1718,26 @@
   positive for over six weeks can still get fixed once someone's actually
   looking, so re-verifying "is this still broken" before assuming a logged
   false positive is permanent is worth the one extra command.
+- **2026-11-28T18:42:01Z cycle** (newsroom cycle): `cycle-runbook.md` §5 step 1
+  still says "bump every `?b=N` cache-buster by 1" -- that is stale. A prior
+  commit (`8fd00c00`, "content-hashed cache-buster") replaced the counter with
+  a content hash computed by `ship_preflight.py`'s `bump()` function at repo
+  root: every `?b=` in `web/index.html` is now a 10-char hex digest over
+  index.html's own markup plus every local script/link asset it references, in
+  load order. There is no numeric `?b=N` left anywhere in the file to
+  increment -- running the runbook's literal instruction on today's file would
+  find nothing to bump. `ship_preflight.py` is a standalone, cross-platform
+  Python script (its docstring explains it exists to dodge `cmd.exe`/`.bat`
+  quoting bugs for the owner's local Windows ship path) and it is safe and
+  correct to run directly: `python3 ship_preflight.py` recomputes the hash
+  AND, as a side effect, re-runs several checks that overlap this runbook's
+  own (`component_audit`, a UTF-8 scan, a script-tag 404 check, a
+  guides-have-a-procedure check, a Buzz-freshness warning) -- none of them
+  conflicted with this cycle's own separate runs of the same checks, and it
+  exits 0/1 the same way. It also drops a scratch `.newb` file at repo root
+  (the hash, for a `.bat` caller to read) that is not gitignored and should
+  NOT be `git add`-ed -- it's transient handoff state, not a tracked artifact.
+  This cycle used it instead of hand-editing `?b=` and it worked cleanly;
+  worth updating §5 step 1's prose to describe the actual mechanism instead of
+  the retired counter, so the next cycle doesn't go looking for a `?b=N` that
+  no longer exists.

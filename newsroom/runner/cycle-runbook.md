@@ -2132,6 +2132,31 @@ this order, and mark it done here.
    `primer-issue.js`-only candidate found this cycle; did not force one.
    Same two next steps as every entry since 2026-08-30, still open.
 
+   PARTIAL, checked (2026-11-28T18:42:01Z cycle) -- re-checked before writing,
+   since this cycle's own three articles (Anthropic's Claude-sabotage/
+   overcaution denial, reconciled against an independent developer's own
+   "proactivity reads as sabotage" analysis; AI data centers' resource
+   competition with aerospace/defense manufacturers, reconciled against
+   Boeing's own account of its production delays; and Nvidia CEO Jensen
+   Huang's 11-day resignation-then-reinstatement, reported with full
+   attribution and denials on the unverified China-intelligence allegation
+   involved) plus the full §4b/§4c/§4d passes were already the required work;
+   guide cadence read 0 days (a guide published earlier today), so §3d needed
+   no action. §3c backfill search re-ran and found zero articles below their
+   format's component floor -- still empty. Both §3e/§3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent). No new `primer-issue.js`-only
+   candidate found this cycle; did not force one. Separately: this cycle
+   found the runbook's own §5 step 1 ("bump every `?b=N` cache-buster by 1")
+   is stale -- a prior commit replaced the numeric counter with a content
+   hash computed by the repo-root `ship_preflight.py` script, and there is no
+   `?b=N` left to increment. Ran `ship_preflight.py` directly instead (it is
+   plain cross-platform Python, safe to run outside its `.bat` wrapper); full
+   finding logged in `living-notes.md` this timestamp. Same two §3e/§3f next
+   steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2730,6 +2755,16 @@ Claude-login outage this run was the first to clear. `find . -iname
 "issue-001.json"` still returns nothing, and no `wrangler` binary or
 Cloudflare credentials exist on this runner. No item worked. Same two next
 steps as every entry since 2026-08-30, still open.
+
+**Status (2026-11-28T18:42:01Z cycle, re-check):** re-confirmed, unchanged,
+since this cycle's own three articles (Anthropic's Claude-sabotage/
+overcaution denial, the AI-data-centers-vs-aerospace resource-competition
+synthesis, and Nvidia CEO Jensen Huang's resignation-then-reinstatement) plus
+the full §4b/§4c/§4d passes were already the required work; see the §3e entry
+above for full context, including this cycle's finding that §5 step 1's
+cache-buster instruction is itself stale. `find . -iname "issue-001.json"`
+still returns nothing. No item worked. Same two next steps as every entry
+since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
