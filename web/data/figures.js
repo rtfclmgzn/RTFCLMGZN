@@ -112,6 +112,9 @@ window.RTFC_FIGURES = {
       note:"Disclosed in Anthropic's own confidential IPO prospectus, as reviewed by Reuters -- covers roughly a third of Anthropic's separate $125.2B, 5-year TPU lease commitment. Matches, dollar for dollar, the $42B senior tranche of the $60B bank syndication Broadcom's lenders began raising the same week; a distinct, larger, and unconfirmed up-to-$100B figure reported in late August for the same financing talks is deliberately excluded here as never having been priced or closed." },
 
     // ---- closed raises (USD B) ----
+    { id:"raise-anthropic-ipo", kind:"funding-raise-usd", value:107.3,
+      label:"Anthropic, Nasdaq IPO + concurrent private placement", slug:"anthropic-ipo-83-nasdaq-debut-volatility",
+      note:"$81.3B public offering (980M Class A shares at $83) plus a $26B private placement to seven strategic investors (AMD, Broadcom, Google, Micron, Microsoft, Nvidia, TSMC) at the same price. Anthropic itself receives proceeds only from the 956.35M shares it sold directly, not this full combined figure." },
     { id:"raise-cxmt-ipo", kind:"funding-raise-usd", value:8.6,
       label:"CXMT, Shanghai STAR Market IPO", slug:"cxmt-shanghai-ipo-489-billion-debut-no-hbm",
       note:"57.92 billion yuan. Largest semiconductor listing in the exchange's history." },
