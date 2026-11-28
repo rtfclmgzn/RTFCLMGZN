@@ -1687,3 +1687,34 @@
   attributions ("Analyst X says...") need the same direct-fetch verification
   as its dates and figures -- a plausible-sounding citation is not evidence
   the citation exists.
+- **2026-11-28T00:16Z** (newsroom cycle, first successful run after a ~6-week
+  Claude-login outage -- see the §3e entry in `cycle-runbook.md` dated the
+  same timestamp for full context): two operational findings. First, when
+  appending new entries to a hand-formatted `window.RTFC_X = [...]` data file
+  (`web/data/guides.js`, `web/data/social-posts.js`), do NOT load the whole
+  array with `json.loads` and rewrite it with `json.dumps(..., indent=1)` --
+  these two files are valid strict JSON but are NOT formatted the way
+  `json.dumps` would format them (different line-wrapping, multiple fields
+  per line in places), so a full reserialize produces a massive line-level
+  diff (17,807 and 75,950 changed lines respectively, for what was actually
+  a 1-record and 4-record addition) even though the data is correct and
+  every guard passed. `web/data/newsroom-articles.js` and `web/data/
+  figures.js` happen to already be formatted exactly like `json.dumps(...,
+  indent=1)` output, which is why the same approach produced a clean,
+  reviewable diff there. The fix for the two drifted files: insert the new
+  record's hand-formatted text directly before the closing `];`, matching
+  the file's own existing style, the same way an Edit-tool-based insertion
+  would -- never round-trip the whole array through a generic serializer
+  unless you've first confirmed (as I did for newsroom-articles.js, but
+  should have also done for the other two before writing) that the
+  round-trip reproduces the original file byte-for-byte. Second: this
+  cycle's own `render_smoke.py` run reproduced the exact `didn't`-substring
+  false positive the 2026-10-13T03:26Z entry already root-caused on
+  `jacob-coxon-anthropic-resignation-...` -- left unfixed per Law 6, as that
+  entry did, and before this cycle's own push landed, a separate concurrent
+  run (commit `e7da0a0f`, "render smoke: detect the real crash heading, not
+  any headline containing didn't") fixed it properly. Confirmed post-fix:
+  worth noting for pattern-recognition that a check flagged as a known false
+  positive for over six weeks can still get fixed once someone's actually
+  looking, so re-verifying "is this still broken" before assuming a logged
+  false positive is permanent is worth the one extra command.

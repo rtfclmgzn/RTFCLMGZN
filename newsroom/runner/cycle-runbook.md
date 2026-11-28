@@ -2101,6 +2101,37 @@ this order, and mark it done here.
    gate sequence. Same two next steps as every entry since 2026-08-30, still
    open.
 
+   PARTIAL, checked (2026-11-28T00:16Z cycle) -- re-checked before writing,
+   since this cycle was the first successful agent run after a roughly
+   six-week outage: the Claude OAuth token backing every scheduled workflow
+   (newsroom-cycle, breaking-scan, pulse-scan, magazine-pipeline, site-guard)
+   had been silently expired since on or before 2026-11-01 (GitHub issue #2,
+   "ACTION NEEDED: Claude login for the newsroom expired"), so every one of
+   those runs since roughly 2026-10-17 produced only a zero-token ledger row
+   and no actual content -- the gap in commit history between the last real
+   `newsroom:`/`Publish:` commit (2026-10-17) and this cycle is that outage,
+   not idle cycles. The owner renewed the token immediately before this run;
+   issue #2 closed itself at 2026-11-27T23:52:21Z. This cycle's own three
+   articles (Anthropic's record-breaking, volatile IPO debut; OpenAI's 11
+   counterclaims against Apple; Blackwell chips reported at a Shanghai site
+   tied to Megaspeed) plus an overdue guide (47 days since the last one,
+   well past SS3d's 4-day trigger) plus SS4b/4c/4d were already the required
+   work; SS3c backfill search re-ran and found zero articles below their
+   format's component floor -- still empty. Also fixed two pre-existing
+   component_audit HARD FAILUREs this cycle found on an already-published
+   record (google-gemini-4-argon...): a keyfacts value with no textual
+   support, and a chart data point carrying a schema-invalid `label_suffix`
+   field -- both predate this cycle and were not caused by it, but Law 6
+   says fix what a guard finds, so both were corrected (not just unstaged)
+   before anything else shipped. Both SS3e/SS3f blockers unchanged,
+   re-confirmed by reading the files directly: `ALLOWED_PREFIXES` in
+   `verify_publish_surface.py` still reads `("web/",
+   "docs/operations/releases/", "image-library/art/manifest.json")`
+   (`functions/` and `newsroom/` both absent), and `which wrangler` / `env |
+   grep -i cloudflare` both return nothing on this runner. No new
+   `primer-issue.js`-only candidate found this cycle; did not force one.
+   Same two next steps as every entry since 2026-08-30, still open.
+
 ## 3f. Magazine sourcing — the Issue 001 work order (REQUIRED, one item per cycle)
 
 ### What was found (2026-07-31 audit)
@@ -2689,6 +2720,16 @@ plus the full §4b/§4c/§4d passes were already the required work:
 `find . -iname "issue-001.json"` still returns nothing, and no `wrangler`
 binary or Cloudflare credentials exist on this runner. No item worked. Same
 two next steps as every entry since 2026-08-30, still open.
+
+**Status (2026-11-28T00:16Z cycle, re-check):** re-confirmed, unchanged, since
+this cycle's own three articles (Anthropic's IPO debut, OpenAI's countersuit
+against Apple, Nvidia Blackwell chips reported in Shanghai) plus the overdue
+guide and the full §4b/§4c/§4d passes were already the required work -- see
+the §3e entry above for full context on this cycle, including the six-week
+Claude-login outage this run was the first to clear. `find . -iname
+"issue-001.json"` still returns nothing, and no `wrangler` binary or
+Cloudflare credentials exist on this runner. No item worked. Same two next
+steps as every entry since 2026-08-30, still open.
 
 ### Standing rule for every FUTURE issue (effective immediately)
 
