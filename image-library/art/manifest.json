@@ -1255,6 +1255,10 @@
     {
      "article_id": "newsroom-asml-euv-price-tsmc",
      "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "ai-data-centers-squeeze-aerospace-defense-supply-chains",
+     "used_at": "2026-11-28"
     }
    ]
   },
@@ -1396,6 +1400,10 @@
     {
      "article_id": "newsroom-openai-kill-switch-act",
      "used_at": "2026-07-24"
+    },
+    {
+     "article_id": "nvidia-jensen-huang-resignation-reinstatement-trump",
+     "used_at": "2026-11-28"
     }
    ]
   },
@@ -2222,6 +2230,10 @@
     {
      "article_id": "newsroom-kimi-k3-open-model",
      "used_at": "2026-07-16"
+    },
+    {
+     "article_id": "anthropic-claude-sabotage-denial-overcaution",
+     "used_at": "2026-11-28"
     }
    ]
   },

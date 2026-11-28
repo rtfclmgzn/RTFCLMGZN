@@ -31,7 +31,7 @@
 //     flag still render, but they render WITHOUT the unverified sub-claim.
 // ============================================================================
 window.RTFC_ENTITIES = {
-  updated: "2026-10-12",
+  updated: "2026-11-28",
 
   // ---------------------------------------------------------------------------
   // MODELS — matched against article prose, first mention only, per article.
@@ -39,8 +39,10 @@ window.RTFC_ENTITIES = {
   // ---------------------------------------------------------------------------
   models: [
     // --- Anthropic ---
+    { re:/\bClaude Fable 5\.2\b|\bFable 5\.2\b/i, name:"Claude Fable 5.2", maker:"Anthropic", makerKey:"anthropic",
+      kind:"frontier reasoning model, launched Nov. 9, 2026 with a disclosed cap on frontier-AI-R&D capabilities", access:"closed" },
     { re:/\bClaude Fable 5\.1\b|\bFable 5\.1\b/i, name:"Claude Fable 5.1", maker:"Anthropic", makerKey:"anthropic",
-      kind:"frontier reasoning model", access:"closed" },
+      kind:"frontier reasoning model, superseded by Claude Fable 5.2", access:"closed" },
     { re:/\bClaude Fable 5\b|\bFable 5\b/i, name:"Claude Fable 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"frontier reasoning model", access:"closed" },
     { re:/\bClaude Opus 5\.5\b/i, name:"Claude Opus 5.5", maker:"Anthropic", makerKey:"anthropic",
@@ -53,8 +55,10 @@ window.RTFC_ENTITIES = {
       kind:"mid-tier workhorse model, #2 on the independent Intelligence Index", access:"closed" },
     { re:/\bClaude Sonnet 5\b/i, name:"Claude Sonnet 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"mid-tier workhorse model, superseded by Claude Sonnet 5.5", access:"closed" },
+    { re:/\bClaude Mythos 5\.2\b|\bMythos 5\.2\b/i, name:"Claude Mythos 5.2", maker:"Anthropic", makerKey:"anthropic",
+      kind:"restricted-access research model, launched Nov. 9, 2026; disclosed early-stopping/overcaution rates in its own system card", access:"closed" },
     { re:/\bClaude Mythos 5\.1\b|\bMythos 5\.1\b/i, name:"Claude Mythos 5.1", maker:"Anthropic", makerKey:"anthropic",
-      kind:"smaller safety-focused model, restricted-access", access:"closed" },
+      kind:"smaller safety-focused model, restricted-access, superseded by Claude Mythos 5.2", access:"closed" },
     { re:/\bClaude Mythos 5\b|\bMythos 5\b/i, name:"Claude Mythos 5", maker:"Anthropic", makerKey:"anthropic",
       kind:"smaller safety-focused model", access:"closed" },
     { re:/\bClaude Mythos Preview\b|\bMythos Preview\b/i, name:"Claude Mythos Preview", maker:"Anthropic", makerKey:"anthropic",
